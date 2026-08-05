@@ -39958,7 +39958,7 @@ export const checkForSimpleEmbedMessage = function checkForSimpleEmbedMessage(ar
           if (obj.isEmbedInline(first1)) {
             items = [];
           }
-          obj = require(4617) /* getEffectiveVideoProvider */;
+          obj = require("../../utils/EmbedUtils.tsx") /* getEffectiveVideoProvider */;
         }
       } else {
         items = arg0;
@@ -40147,7 +40147,7 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
             if (obj3.isEmbedInline(first1)) {
               items2 = [];
             }
-            obj3 = _require(4617);
+            obj3 = _require("../../utils/EmbedUtils.tsx");
           }
         } else {
           items2 = arr;

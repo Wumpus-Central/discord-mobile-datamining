@@ -50,7 +50,7 @@ export default function NewMemberActionsCompleted(arg0) {
   obj1[3] = intl.format(sharedValue(1236).t.pGj5u2, { count: numActions });
   const items1 = [callback(sharedValue(4281).Text, obj1), ];
   const items2 = [tmp.progressForeground, animatedStyle];
-  items1[1] = callback(View, { style: tmp.progressBackground, children: callback(importDefault(4146).View, { style: items2 }) });
+  items1[1] = callback(View, { style: tmp.progressBackground, children: callback(require("../../reanimated/ReanimatedRexport.tsx").View, { style: items2 }) });
   obj[1] = items1;
   return callback2(View, obj);
 };

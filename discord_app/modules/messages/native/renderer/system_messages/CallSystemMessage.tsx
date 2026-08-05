@@ -14,9 +14,9 @@ export const createCallSystemMessage = function createCallSystemMessage(message)
   const channelId = message.getChannelId();
   const call = message.call;
   userVoiceChannelId = userVoiceChannelId.getUserVoiceChannelId(ME, id);
-  const tmp6 = importDefault(7897)(message);
+  const tmp6 = require("../../../getHumanizedCallDuration.tsx")(message);
   participants = participants.getParticipants(channelId);
-  let obj = require(7898) /* useIsCallActive */;
+  let obj = require("../../../../calls/mobile/useIsCallActive.tsx") /* useIsCallActive */;
   const checkIsCallActiveResult = obj.checkIsCallActive(channelId, message.id);
   let tmp9 = !checkIsCallActiveResult;
   if (!checkIsCallActiveResult) {
@@ -70,6 +70,6 @@ export const createCallSystemMessage = function createCallSystemMessage(message)
   }
   obj = { title: stringResult1, description: formatToPlainStringResult, isCallActive: checkIsCallActiveResult, missed: tmp9, avatarURLs: mapped, rawMilliseconds: timestamp.valueOf() };
   timestamp = message.timestamp;
-  const merged = Object.assign(importDefault(7882)(message));
+  const merged = Object.assign(require("createCommonMessage.tsx")(message));
   return obj;
 };

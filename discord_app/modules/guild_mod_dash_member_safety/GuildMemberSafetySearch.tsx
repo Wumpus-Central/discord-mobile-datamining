@@ -51,7 +51,7 @@ prototype["updateSearchState"] = function updateSearchState(arg0) {
   const merged = Object.assign(this._searchState);
   const merged1 = Object.assign(arg0);
   this._searchState = {};
-  this.hasDefaultQuery = importDefault(4444)(this._searchState, closure_4);
+  this.hasDefaultQuery = require("../../../_runtime/04444_isEqual.js")(this._searchState, closure_4);
   return true;
 };
 prototype["resetSearchState"] = function resetSearchState() {
@@ -162,15 +162,15 @@ prototype["isMemberIncludedInSearchResults"] = function isMemberIncludedInSearch
         if (!(null != selectedJoinDateOption.beforeDate && joinedAtTimestamp.joinedAtTimestamp > selectedJoinDateOption.beforeDate)) {
           let tmp12 = null != selectedAccountAgeOption.afterDate;
           if (tmp12) {
-            tmp12 = importDefault(11).extractTimestamp(joinedAtTimestamp.userId) < selectedAccountAgeOption.afterDate;
-            const obj2 = importDefault(11);
+            tmp12 = require("../../utils/SnowflakeUtils.tsx").extractTimestamp(joinedAtTimestamp.userId) < selectedAccountAgeOption.afterDate;
+            const obj2 = require("../../utils/SnowflakeUtils.tsx");
           }
           let tmp15 = !tmp12;
           if (!tmp12) {
             let tmp16 = null != selectedAccountAgeOption.beforeDate;
             if (tmp16) {
-              tmp16 = importDefault(11).extractTimestamp(joinedAtTimestamp.userId) > selectedAccountAgeOption.beforeDate;
-              let obj3 = importDefault(11);
+              tmp16 = require("../../utils/SnowflakeUtils.tsx").extractTimestamp(joinedAtTimestamp.userId) > selectedAccountAgeOption.beforeDate;
+              let obj3 = require("../../utils/SnowflakeUtils.tsx");
             }
             let tmp19 = !tmp16;
             if (!tmp16) {
@@ -198,8 +198,8 @@ prototype["isMemberIncludedInSearchResults"] = function isMemberIncludedInSearch
                     if (tmp24) {
                       let tmp26 = !requireCommunicationDisabled;
                       if (requireCommunicationDisabled) {
-                        tmp26 = !_require(3902).isMemberCommunicationDisabled(joinedAtTimestamp);
-                        const obj4 = _require(3902);
+                        tmp26 = !_require("../guild_communication_disabled/CommunicationDisabledUtils.tsx").isMemberCommunicationDisabled(joinedAtTimestamp);
+                        const obj4 = _require("../guild_communication_disabled/CommunicationDisabledUtils.tsx");
                       }
                       let tmp29 = !tmp26;
                       if (tmp26) {
@@ -211,8 +211,8 @@ prototype["isMemberIncludedInSearchResults"] = function isMemberIncludedInSearch
                         if (tmp30) {
                           let tmp32 = !requireUsernameQuarantined;
                           if (requireUsernameQuarantined) {
-                            tmp32 = !_require(3919).hasAutomodQuarantinedProfile(joinedAtTimestamp);
-                            const obj5 = _require(3919);
+                            tmp32 = !_require("../guild_automod/AutomodPermissionUtils.tsx").hasAutomodQuarantinedProfile(joinedAtTimestamp);
+                            const obj5 = _require("../guild_automod/AutomodPermissionUtils.tsx");
                           }
                           tmp31 = !tmp32;
                         }

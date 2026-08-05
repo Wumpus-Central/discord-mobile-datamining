@@ -532,7 +532,7 @@ let closure_11 = {
   [PlatformTypes.YOUTUBE]: obj,
   mp: {
     deserialize(str) {
-      importDefault(38)(null != window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT, "MEDIA_PROXY_ENDPOINT not configured");
+      require("../../_runtime/metro/00038__.js")(null != window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT, "MEDIA_PROXY_ENDPOINT not configured");
       try {
         const _URL = URL;
         const _location = location;
@@ -601,7 +601,7 @@ export const getAssetImage = function getAssetImage(application_id, media_assets
             const obj5 = closure_11[tmp23.TWITCH];
           }
         }
-        const obj3 = new importDefault(3)("ApplicationAssetUtils");
+        const obj3 = new require("../modules/debug/Logger.tsx")("ApplicationAssetUtils");
         obj3.warn("getAssetImage: size must === [number, number] for Twitch");
       } else {
         const _Object = Object;
@@ -630,8 +630,8 @@ export const getAssetImage = function getAssetImage(application_id, media_assets
       let str4 = "";
       if (typeof applyResult === "number") {
         const _HermesInternal3 = HermesInternal;
-        str4 = "?size=" + require(1450) /* handleImageLoad */.getBestMediaProxySize(applyResult);
-        const obj4 = require(1450) /* handleImageLoad */;
+        str4 = "?size=" + require("../modules/image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */.getBestMediaProxySize(applyResult);
+        const obj4 = require("../modules/image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */;
       }
       const _window = window;
       if (null != window.GLOBAL_ENV.CDN_HOST) {
@@ -641,8 +641,8 @@ export const getAssetImage = function getAssetImage(application_id, media_assets
         let combined = "" + location.protocol + "//" + window.GLOBAL_ENV.CDN_HOST + "/app-assets/" + application_id + "/" + media_assets_large_image + "." + str + str4;
       } else {
         const _HermesInternal = HermesInternal;
-        combined = "" + require(530) /* sendRequest */.getAPIBaseURL() + "/applications/" + application_id + "/app-assets/" + media_assets_large_image + "." + str + str4;
-        const obj = require(530) /* sendRequest */;
+        combined = "" + require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.getAPIBaseURL() + "/applications/" + application_id + "/app-assets/" + media_assets_large_image + "." + str + str4;
+        const obj = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */;
       }
       return combined;
     }

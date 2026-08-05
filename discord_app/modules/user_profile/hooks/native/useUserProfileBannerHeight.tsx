@@ -4,7 +4,7 @@ import { BANNER_ASPECT_RATIO } from "ARBITRARY_LARGE_OFFSET";
 const result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileBannerHeight.tsx");
 
 export default function useUserProfileBannerHeight(arg0) {
-  const width = importDefault(1474)().width;
+  const width = require("../../../screen/useWindowDimensions.native.tsx")().width;
   let bound = width;
   if (null != arg0) {
     const _Math = Math;

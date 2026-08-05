@@ -15,8 +15,8 @@ export default function SkipHeaderButton(label) {
   const tmp = createCacheKey();
   label = label.label;
   if (label == null) {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    label = intl.string(require(1236) /* getSystemLocale */.t["5Wxrcd"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    label = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["5Wxrcd"]);
   }
   const obj = {};
   const merged = Object.assign(label);
@@ -29,5 +29,5 @@ export default function SkipHeaderButton(label) {
   obj.labelStyle = items;
   obj.label = label;
   obj.accessibilityLabel = label;
-  return jsx(require(8193) /* GenericHeaderTitle */.HeaderTextButton, {});
+  return jsx(require("../../../main_tabs_v2/native/shared_components/HeaderShared.tsx") /* GenericHeaderTitle */.HeaderTextButton, {});
 };

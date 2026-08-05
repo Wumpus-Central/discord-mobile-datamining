@@ -65,10 +65,10 @@ export const getLinearGradientForGuildThemePreset = function getLinearGradientFo
 export const getSingleColorGuildThemeGradientColors = function getSingleColorGuildThemeGradientColors(first, theme) {
   const tmp2 = theme === ThemeTypes.LIGHT ? { minTone: 55, maxTone: 75 } : { minTone: 15, maxTone: 35 };
   const minTone = tmp2.minTone;
-  const obj = importDefault(689)(first);
+  const obj = require("../../../_runtime/00689_n.js")(first);
   const result = obj.set("hsl.l", (minTone + (Math.max(15, Math.min(75, 100 * obj.get("hsl.l"))) - 15) / 60 * (tmp2.maxTone - minTone)) / 100);
   const hexResult = result.hex();
-  const obj3 = importDefault(689)(hexResult);
+  const obj3 = require("../../../_runtime/00689_n.js")(hexResult);
   let num = -0.2;
   if (theme === ThemeTypes.LIGHT) {
     num = 0.2;
@@ -79,25 +79,25 @@ export const getSingleColorGuildThemeGradientColors = function getSingleColorGui
   return items;
 };
 export const getRandomSingleColorGuildTheme = function getRandomSingleColorGuildTheme() {
-  const diff = require(4134) /* items */.COLOR_PALETTE.length - 1;
-  const tmp2 = require(4134) /* items */.COLOR_PALETTE[Math.floor(Math, Math.random(Math) * (diff + 1))];
+  const diff = require("../client_themes/CustomThemesRandomUtils.tsx") /* items */.COLOR_PALETTE.length - 1;
+  const tmp2 = require("../client_themes/CustomThemesRandomUtils.tsx") /* items */.COLOR_PALETTE[Math.floor(Math, Math.random(Math) * (diff + 1))];
   const obj = { color: null, baseMix: null };
-  const bound = Math.min(45, Math.round(100 * importDefault(689)(tmp2).get("hsl.l")));
-  const obj2 = importDefault(689)(tmp2);
-  const result = importDefault(689)(tmp2).set("hsl.l", Math.max(0.15, Math.min(0.75, bound / 100)));
-  const obj3 = importDefault(689)(tmp2);
+  const bound = Math.min(45, Math.round(100 * require("../../../_runtime/00689_n.js")(tmp2).get("hsl.l")));
+  const obj2 = require("../../../_runtime/00689_n.js")(tmp2);
+  const result = require("../../../_runtime/00689_n.js")(tmp2).set("hsl.l", Math.max(0.15, Math.min(0.75, bound / 100)));
+  const obj3 = require("../../../_runtime/00689_n.js")(tmp2);
   const hexResult = result.hex();
-  const result1 = importDefault(689)(result.hex()).set("hsl.s", 0.4);
+  const result1 = require("../../../_runtime/00689_n.js")(result.hex()).set("hsl.s", 0.4);
   obj[0] = result1.hex();
   obj[1] = Math.floor(Math.random() * 11) + 70;
   return obj;
 };
 export const getSaturationPinnedColor = function getSaturationPinnedColor(arg0) {
-  const result = importDefault(689)(arg0).set("hsl.s", 0.4);
+  const result = require("../../../_runtime/00689_n.js")(arg0).set("hsl.s", 0.4);
   return result.hex();
 };
 export const getToneAdjustedColor = function getToneAdjustedColor(arg0, arg1) {
-  const result = importDefault(689)(arg0).set("hsl.l", Math.max(0.15, Math.min(0.75, arg1 / 100)));
+  const result = require("../../../_runtime/00689_n.js")(arg0).set("hsl.l", Math.max(0.15, Math.min(0.75, arg1 / 100)));
   return result.hex();
 };
 export const getGuildThemeToneRange = function getGuildThemeToneRange(arg0) {
@@ -106,11 +106,11 @@ export const getGuildThemeToneRange = function getGuildThemeToneRange(arg0) {
 export const getThemeAdjustedToneColor = function getThemeAdjustedToneColor(arg0, arg1) {
   const tmp = arg1 === ThemeTypes.LIGHT ? { minTone: 55, maxTone: 75 } : { minTone: 15, maxTone: 35 };
   const minTone = tmp.minTone;
-  const obj = importDefault(689)(arg0);
+  const obj = require("../../../_runtime/00689_n.js")(arg0);
   const result = obj.set("hsl.l", (minTone + (Math.max(15, Math.min(75, 100 * obj.get("hsl.l"))) - 15) / 60 * (tmp.maxTone - minTone)) / 100);
   return result.hex();
 };
 export const getHueAdjustedColor = function getHueAdjustedColor(arg0, arg1) {
-  const result = importDefault(689)(arg0).set("hsl.h", arg1);
+  const result = require("../../../_runtime/00689_n.js")(arg0).set("hsl.h", arg1);
   return result.hex();
 };

@@ -31,12 +31,12 @@ let closure_22 = createCacheKey.createStyles((arg0) => {
   let obj = { privateChannelButtonsWrapper: { flexDirection: "row", gap: 12, paddingEnd: 1 }, button: null, disabledButton: null, overflowBadge: null };
   let prop;
   if (!arg0) {
-    prop = importDefault(712).colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND;
+    prop = require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND;
   }
-  obj = { backgroundColor: prop, borderRadius: importDefault(712).modules.button.BORDER_RADIUS, minHeight: importDefault(712).space.PX_32, minWidth: importDefault(712).space.PX_32, padding: importDefault(712).space.PX_4, justifyContent: "center", flexDirection: "row", alignItems: "center" };
+  obj = { backgroundColor: prop, borderRadius: require("../../../../../../discord_common/js/packages/tokens/native.tsx").modules.button.BORDER_RADIUS, minHeight: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_32, minWidth: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_32, padding: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, justifyContent: "center", flexDirection: "row", alignItems: "center" };
   obj[1] = obj;
   obj[2] = { opacity: 0.6 };
-  obj = { backgroundColor: importDefault(712).colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderRadius: importDefault(712).radii.round, width: closure_20, height: closure_20, justifyContent: "center", alignItems: "center", marginLeft: -6 };
+  obj = { backgroundColor: require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderRadius: require("../../../../../../discord_common/js/packages/tokens/native.tsx").radii.round, width: closure_20, height: closure_20, justifyContent: "center", alignItems: "center", marginLeft: -6 };
   obj[3] = obj;
   return obj;
 });

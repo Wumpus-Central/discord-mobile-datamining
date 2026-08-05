@@ -12,13 +12,13 @@ export default function trackHttpRequest(url) {
     const str2 = str.split(/[?#]/)[0];
   }
   obj.url = replaced;
-  importDefault(16222)(obj);
+  require("trackZoomedInHttpRequest.android.tsx")(obj);
   const random = Math.random();
   if (random < obj2.getHttpRequestSampleRate()) {
     obj = {};
     const merged1 = Object.assign(obj);
     obj.source = "sample";
-    importDefault(698).track(AnalyticEvents.HTTP_REQUEST, obj);
-    const tmp3Result = importDefault(698);
+    require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.HTTP_REQUEST, obj);
+    const tmp3Result = require("../../utils/AnalyticsUtils.tsx");
   }
 };

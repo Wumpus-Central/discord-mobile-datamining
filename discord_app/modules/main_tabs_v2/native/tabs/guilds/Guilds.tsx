@@ -8,19 +8,19 @@ let c5;
 const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 const memoResult = require("noop").memo(function GuildsOnly() {
-  let obj = require(15045) /* trackTabPressed */;
+  let obj = require("../TabsPerformanceTracker.tsx") /* trackTabPressed */;
   const trackTabPerformance = obj.useTrackTabPerformance(YouBarNavigatorScreens.GUILDS);
   const tmp3 = importDefault;
-  const tmp4 = importDefault(4132)();
-  let isEligibleForQuests = require(10375) /* getIsEligibleForQuests */.getIsEligibleForQuests();
+  const tmp4 = require("../../../../client_themes/native/useColorThemeBackground.tsx")();
+  let isEligibleForQuests = require("../../../../quests/lib/QuestsEligibility.tsx") /* getIsEligibleForQuests */.getIsEligibleForQuests();
   obj = { gradient: tmp4, children: null };
-  const items = [callback(importDefault(15046), {}), callback(importDefault(15358), {}), ];
+  const items = [callback(require("../../../../../components_native/MainChannels.tsx"), {}), callback(require("../../you_bar/YouBar.tsx"), {}), ];
   if (isEligibleForQuests) {
     isEligibleForQuests = tmp6(tmp3(14324), {});
   }
   items[2] = isEligibleForQuests;
-  obj[1] = closure_5(require(14244) /* QuestDockMode */.QuestDockExternalCoordinationContextProvider, { children: items });
-  return callback(require(3997) /* ManaContext */.ThemeContextProvider, obj);
+  obj[1] = closure_5(require("../../../../quests/native/QuestDock/QuestDockExternalCoordinationContext.tsx") /* QuestDockMode */.QuestDockExternalCoordinationContextProvider, { children: items });
+  return callback(require("../../../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */.ThemeContextProvider, obj);
 }, () => true);
 const result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/Guilds.tsx");
 

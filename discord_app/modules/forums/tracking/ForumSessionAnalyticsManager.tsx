@@ -6,16 +6,16 @@ ForumSessionAnalyticsManager.prototype["getForumChannelSessionId"] = function ge
   if (null == this.session) {
     let obj = { channelId: null, sessionId: null };
     obj[0] = arg0;
-    obj[1] = require(514) /* v1 */.v4();
+    obj[1] = require("../../../../_runtime/00514_v1.js") /* v1 */.v4();
     self.session = obj;
-    const obj2 = require(514) /* v1 */;
+    const obj2 = require("../../../../_runtime/00514_v1.js") /* v1 */;
   }
   if (self.session.channelId !== arg0) {
     obj = { channelId: null, sessionId: null };
     obj[0] = arg0;
-    obj[1] = require(514) /* v1 */.v4();
+    obj[1] = require("../../../../_runtime/00514_v1.js") /* v1 */.v4();
     self.session = obj;
-    const obj4 = require(514) /* v1 */;
+    const obj4 = require("../../../../_runtime/00514_v1.js") /* v1 */;
   }
   return self.session.sessionId;
 };

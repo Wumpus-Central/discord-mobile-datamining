@@ -33,7 +33,7 @@ export const setOrientationLockState = function setOrientationLockState(embedded
     }
   }
   if (null != arg1) {
-    let obj = importDefault(709);
+    let obj = require("../../../Dispatcher.tsx");
     obj = { type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE", applicationId: null, lockState: null };
     obj[1] = embeddedActivityConfig.id;
     obj[2] = tmp;

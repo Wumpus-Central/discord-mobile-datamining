@@ -65,7 +65,7 @@ obj = {
       if (retryAfter == null) {
         num = 7;
       }
-      const result = validations.set(username, obj, num * importDefault(687).Millis.SECOND);
+      const result = validations.set(username, obj, num * require("../../utils/Durations.tsx").Millis.SECOND);
       let tmp = obj;
       const tmp3 = obj;
     } else {
@@ -78,7 +78,7 @@ obj = {
     if (null != retryAfter) {
       const _Date = Date;
       const timestamp = Date.now();
-      tmp.retryAfterTime = timestamp + retryAfter * importDefault(687).Millis.SECOND;
+      tmp.retryAfterTime = timestamp + retryAfter * require("../../utils/Durations.tsx").Millis.SECOND;
     }
   },
   UNIQUE_USERNAME_SUGGESTIONS_RESET: function handleUniqueUsernameSuggestionsReset() {

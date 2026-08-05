@@ -20,20 +20,20 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
   }
   let items = [];
   let formatToPlainStringResult = dependencyMap;
-  let tmp3 = importDefault(15334)(arg0);
+  let tmp3 = require("getGuildBarNeighbors.tsx")(arg0);
   if (null == tmp3) {
     return items;
   } else {
     ({ containingFolder, above, below } = tmp3);
     let ejhw4S = _require;
-    const intl13 = _require(1236).intl;
+    const intl13 = _require("../../../../intl/index.native.tsx").intl;
     let obj = { name: null };
     obj[0] = str;
-    importDefault = intl13.formatToPlainString(_require(1236).t["2XShGC"], obj);
-    const intl14 = _require(1236).intl;
+    importDefault = intl13.formatToPlainString(_require("../../../../intl/index.native.tsx").t["2XShGC"], obj);
+    const intl14 = _require("../../../../intl/index.native.tsx").intl;
     obj = { name: null };
     obj[0] = str;
-    dependencyMap = intl14.formatToPlainString(_require(1236).t.D4maKL, obj);
+    dependencyMap = intl14.formatToPlainString(_require("../../../../intl/index.native.tsx").t.D4maKL, obj);
     if (null == containingFolder) {
       obj = { name: "create-new-folder", label: null, action: null };
       const intl = ejhw4S(1236).intl;

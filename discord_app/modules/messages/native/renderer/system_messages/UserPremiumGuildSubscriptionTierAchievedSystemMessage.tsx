@@ -9,19 +9,19 @@ export const createUserPremiumGuildSubscriptionTierAchievedSystemMessage = funct
   message = message.message;
   channel = channel.getChannel(message.getChannelId());
   if (null == channel) {
-    return require(7920) /* createUserPremiumGuildSubscriptionSystemMessage */.createUserPremiumGuildSubscriptionSystemMessage(message);
+    return require("UserPremiumGuildSubscriptionSystemMessage.tsx") /* createUserPremiumGuildSubscriptionSystemMessage */.createUserPremiumGuildSubscriptionSystemMessage(message);
   } else {
     guild = guild.getGuild(channel.getGuildId());
     if (null == guild) {
-      return require(7920) /* createUserPremiumGuildSubscriptionSystemMessage */.createUserPremiumGuildSubscriptionSystemMessage(message);
+      return require("UserPremiumGuildSubscriptionSystemMessage.tsx") /* createUserPremiumGuildSubscriptionSystemMessage */.createUserPremiumGuildSubscriptionSystemMessage(message);
     } else {
-      const tmp13 = importDefault(7921)(message);
-      const messageAuthorWithProcessedColor = require(7879) /* getMessageAuthorWithProcessedColor */.getMessageAuthorWithProcessedColor(message);
+      const tmp13 = require("../../../../premium/getNumSubscriptionsPurchasedFromSystemMessage.tsx")(message);
+      const messageAuthorWithProcessedColor = require("useAuthorWithProcessedColor.tsx") /* getMessageAuthorWithProcessedColor */.getMessageAuthorWithProcessedColor(message);
       let obj = { message: null, author: null, roleStyle: null };
       obj[0] = message;
       obj[1] = messageAuthorWithProcessedColor;
       obj[2] = message.roleStyle;
-      const tmp16 = importDefault(7881)(obj);
+      const tmp16 = require("formatUsernameOnClick.tsx")(obj);
       if (tmp13 > 1) {
         const intl2 = tmp14(1236).intl;
         obj = { username: null, usernameOnClick: null, guildName: null, newTierName: null, numSubscriptions: null };
@@ -44,7 +44,7 @@ export const createUserPremiumGuildSubscriptionTierAchievedSystemMessage = funct
       }
       const obj2 = { content: null };
       obj2[0] = formatToPartsResult;
-      const merged = Object.assign(importDefault(7882)(message));
+      const merged = Object.assign(require("createCommonMessage.tsx")(message));
       return obj2;
     }
   }

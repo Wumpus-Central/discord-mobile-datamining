@@ -224,7 +224,7 @@ function _shouldConvertToWebP2() {
 }
 function hashImageData(data) {
   const uint8Array = new Uint8Array(data.data.buffer);
-  return importDefault(1217)(uint8Array).toString(16);
+  return require("../../../_runtime/01217_MurmurHashV3.js")(uint8Array).toString(16);
 }
 function _performWebPConversion() {
   const self = this;

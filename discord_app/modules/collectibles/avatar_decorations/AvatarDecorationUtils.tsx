@@ -4,7 +4,7 @@ let result = require("set").fileFinishedImporting("modules/collectibles/avatar_d
 export const parseAvatarDecorationData = function parseAvatarDecorationData(avatar_decoration_data) {
   if (typeof avatar_decoration_data === "object") {
     if (null != avatar_decoration_data) {
-      let obj = require(1853) /* parseSkuIdFromServerData */;
+      let obj = require("../utils/mappers.tsx") /* parseSkuIdFromServerData */;
       const result = obj.parseSkuIdFromServerData(avatar_decoration_data);
       if (null == result) {
         return null;
@@ -96,8 +96,8 @@ export const isEqualAvatarDecoration = function isEqualAvatarDecoration(avatarDe
           }
         }
       }
-      let isEqualResult = require(12) /* apply */.isEqual(tmp2, tmp6);
-      const obj5 = require(12) /* apply */;
+      let isEqualResult = require("../../../../_runtime/00012_apply.js") /* apply */.isEqual(tmp2, tmp6);
+      const obj5 = require("../../../../_runtime/00012_apply.js") /* apply */;
     }
     return isEqualResult;
   }

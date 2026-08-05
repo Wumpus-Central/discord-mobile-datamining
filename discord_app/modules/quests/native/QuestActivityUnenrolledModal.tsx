@@ -188,24 +188,24 @@ function QuestActivityUnenrolledModalInner(quest) {
 }
 function CloseButton() {
   const obj = { source: null, onPress: null, accessibilityLabel: null };
-  obj[0] = importDefault(7837);
+  obj[0] = require("../../../../_runtime/07837_registerAsset.js");
   obj[1] = function onPress() {
     return callback(table[22]).pop();
   };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl.string(require(1236) /* getSystemLocale */.t.cpT0Cq);
-  return callback2(require(5917) /* HeaderActionButton */.HeaderActionButton, obj);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.cpT0Cq);
+  return callback2(require("../../../design/components/Navigator/native/HeaderActionButton.native.tsx") /* HeaderActionButton */.HeaderActionButton, obj);
 }
 ({ Pressable: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let closure_13 = { MAIN: "main" };
 let closure_14 = createCacheKey.createStyles((arg0) => {
   let obj = { container: null, content: null, imagesContainer: null, baseShadow: null, appIconContainer: null, appIcon: null, rewardTileContainer: null, questRewardTile: null, textContainer: null, buttonsContainer: null, footer: null };
-  obj = { flex: 1, paddingHorizontal: importDefault(712).space.PX_24, paddingVertical: importDefault(712).space.PX_16, paddingBottom: importDefault(712).space.PX_48 };
+  obj = { flex: 1, paddingHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24, paddingVertical: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, paddingBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_48 };
   obj[0] = obj;
   obj[1] = { marginTop: "auto" };
-  obj = { flexDirection: "row", justifyContent: "center", alignItems: "center", marginBottom: importDefault(712).space.PX_32 };
-  let obj3 = require(501) /* PlatformTypes */;
+  obj = { flexDirection: "row", justifyContent: "center", alignItems: "center", marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_32 };
+  let obj3 = require("../../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */;
   if (obj3.isIOS()) {
     if (arg0) {
       const obj1 = { shadowColor: "rgb(144, 144, 251)", shadowOffset: null, shadowOpacity: 0.6, shadowRadius: 85 };
@@ -267,7 +267,7 @@ let closure_14 = createCacheKey.createStyles((arg0) => {
       obj[10] = { flexDirection: "column", width: "100%", marginTop: "auto" };
       return obj;
     }
-    tmp3Result = require(501) /* PlatformTypes */;
+    tmp3Result = require("../../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */;
   }
 });
 let result = require("noop").fileFinishedImporting("modules/quests/native/QuestActivityUnenrolledModal.tsx");

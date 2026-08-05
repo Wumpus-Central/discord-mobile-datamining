@@ -10,12 +10,12 @@ let closure_0 = arg1;
 function sendReply(status, message) {
   const merged = Object.assign(arg2);
   const json = JSON.stringify({ type: "response", status, message });
-  importDefault(4143).logToDevice(json);
+  require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx").logToDevice(json);
 }
 function sendStatus(message) {
   tmp2.log(message);
   const json = JSON.stringify({ type: "status", message });
-  importDefault(4143).logToDevice(json);
+  require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx").logToDevice(json);
 }
 function getErrorDetails(headers) {
   if (null != headers) {
@@ -365,7 +365,7 @@ let obj = {
   "setup-test": setupTTITest,
   ping() {
     const json = JSON.stringify({ type: "pong" });
-    importDefault(4143).logToDevice(json);
+    require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx").logToDevice(json);
   },
   () => {
     let obj = callback(9791);
@@ -373,7 +373,7 @@ let obj = {
     obj = { type: "response", status: "success", message: "reset-component-profiler" };
     const merged = Object.assign(undefined);
     const json = JSON.stringify(obj);
-    importDefault(4143).logToDevice(json);
+    require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx").logToDevice(json);
   },
   () => {
     let obj = callback(9791);
@@ -381,7 +381,7 @@ let obj = {
     obj = { type: "response", status: "success", message: "pause-component-profiler" };
     const merged = Object.assign(undefined);
     const json = JSON.stringify(obj);
-    importDefault(4143).logToDevice(json);
+    require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx").logToDevice(json);
   },
   () => {
     let obj = callback(9791);
@@ -389,7 +389,7 @@ let obj = {
     obj = { type: "response", status: "success", message: "resume-component-profiler" };
     const merged = Object.assign(undefined);
     const json = JSON.stringify(obj);
-    importDefault(4143).logToDevice(json);
+    require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx").logToDevice(json);
   },
   () => {
     let obj = { stats: null };
@@ -398,10 +398,10 @@ let obj = {
     const merged = Object.assign(obj);
     const json = JSON.stringify(obj);
     const obj2 = callback(9791);
-    importDefault(4143).logToDevice(json);
+    require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx").logToDevice(json);
   },
   () => {
-    let obj = importDefault(16355);
+    let obj = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeJankStatsModule.tsx");
     let report;
     if (obj != null) {
       report = obj.requestReport();
@@ -410,53 +410,53 @@ let obj = {
     obj = { type: "response", status: "success", message: "dump-jank-stats" };
     const merged = Object.assign(obj);
     const json = JSON.stringify(obj);
-    importDefault(4143).logToDevice(json);
+    require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx").logToDevice(json);
   },
   (multiplier) => {
-    let obj = importDefault(16355);
+    let obj = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeJankStatsModule.tsx");
     if (obj != null) {
       const result = obj.setJankHeuristicMultiplier(multiplier.multiplier);
     }
     obj = { type: "response", status: "success", message: "set-jank-multiplier" };
     const merged = Object.assign(undefined);
     const json = JSON.stringify(obj);
-    importDefault(4143).logToDevice(json);
+    require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx").logToDevice(json);
   },
   () => {
-    let obj = importDefault(16355);
+    let obj = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeJankStatsModule.tsx");
     if (obj != null) {
       obj.startTracking();
     }
     obj = { type: "response", status: "success", message: "start-jank-stats" };
     const merged = Object.assign(undefined);
     const json = JSON.stringify(obj);
-    importDefault(4143).logToDevice(json);
+    require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx").logToDevice(json);
   },
   (action) => {
-    let obj = importDefault(709);
+    let obj = require("../../../Dispatcher.tsx");
     obj.dispatch(action.action);
     obj = { type: "response", status: "success", message: "flux-dispatch" };
     const merged = Object.assign(undefined);
     const json = JSON.stringify(obj);
-    importDefault(4143).logToDevice(json);
+    require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx").logToDevice(json);
   },
   () => {
     let obj = { token: token.getToken() };
     obj = { type: "response", status: "success", message: "get-token" };
     const merged = Object.assign(obj);
     const json = JSON.stringify(obj);
-    importDefault(4143).logToDevice(json);
+    require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx").logToDevice(json);
   },
   () => {
     let obj = { cumulativeCPU: null, currentMemoryUsage: null };
-    obj[0] = importDefault(7055).getCumulativeCPUUsage();
-    const obj2 = importDefault(7055);
-    obj[1] = importDefault(7055).getCurrentMemoryUsageKB();
+    obj[0] = require("../../../utils/ProcessUtils.native.tsx").getCumulativeCPUUsage();
+    const obj2 = require("../../../utils/ProcessUtils.native.tsx");
+    obj[1] = require("../../../utils/ProcessUtils.native.tsx").getCurrentMemoryUsageKB();
     obj = { type: "response", status: "success", message: "get-resource-usage" };
     const merged = Object.assign(obj);
     const json = JSON.stringify(obj);
-    const obj3 = importDefault(7055);
-    importDefault(4143).logToDevice(json);
+    const obj3 = require("../../../utils/ProcessUtils.native.tsx");
+    require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx").logToDevice(json);
   },
   backchannel: null
 };

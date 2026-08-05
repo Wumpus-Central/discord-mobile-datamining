@@ -21,8 +21,8 @@ export const installApplication = function installApplication(arg0) {
     let obj = { application_id: null, auth_type: "custom_url", source: null, device_platform: "mobile_native" };
     obj[0] = applicationId;
     obj[2] = source;
-    importDefault(698).track(AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, obj);
-    const obj12 = importDefault(698);
+    require("../AnalyticsUtils.tsx").track(AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, obj);
+    const obj12 = require("../AnalyticsUtils.tsx");
     obj = { href: null, onConfirm: null };
     obj[0] = customInstallUrl;
     obj[1] = function onConfirm() {
@@ -48,7 +48,7 @@ export const installApplication = function installApplication(arg0) {
         }
         return tmp2;
       })) {
-        obj5 = importDefault(698);
+        obj5 = require("../AnalyticsUtils.tsx");
         let obj1 = { application_id: null, auth_type: "in_app", source: null, device_platform: "mobile_native" };
         obj1[0] = applicationId;
         obj1[2] = source;
@@ -65,10 +65,10 @@ export const installApplication = function installApplication(arg0) {
           }
         };
         obj5 = obj2;
-        importDefault(4490).popWithKey(closure_5);
-        const obj9 = importDefault(4490);
+        require("../../actions/ModalActionCreators.tsx").popWithKey(closure_5);
+        const obj9 = require("../../actions/ModalActionCreators.tsx");
         const obj3 = {};
-        const obj10 = importDefault(4490);
+        const obj10 = require("../../actions/ModalActionCreators.tsx");
         const merged = Object.assign(obj2);
         obj3.dismissOAuthModal = function dismissOAuthModal() {
           const dismissOAuthModal = obj5.dismissOAuthModal;
@@ -84,7 +84,7 @@ export const installApplication = function installApplication(arg0) {
       const obj4 = { application_id: null, auth_type: "in_app", source: null, device_platform: "mobile_native" };
       obj4[0] = applicationId;
       obj4[2] = source;
-      importDefault(698).track(AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, obj4);
+      require("../AnalyticsUtils.tsx").track(AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, obj4);
       obj5 = { clientId: null, guildId: null, channelId: null, disableGuildSelect: null, scopes: null, permissions: null, callback: null };
       obj5[0] = applicationId;
       obj5[1] = guildId;
@@ -119,7 +119,7 @@ export const installApplication = function installApplication(arg0) {
       tmp32Result.popWithKey(closure_5);
       tmp32Result = tmp32(4490);
       const obj6 = {};
-      const obj16 = importDefault(698);
+      const obj16 = require("../AnalyticsUtils.tsx");
       const tmp33 = dependencyMap;
       const merged1 = Object.assign(obj5);
       obj6.dismissOAuthModal = function dismissOAuthModal() {
@@ -136,10 +136,10 @@ export const installApplication = function installApplication(arg0) {
 };
 export const openOAuth2Modal = function openOAuth2Modal(arg0) {
   const _require = arg0;
-  let obj = importDefault(4490);
+  let obj = require("../../actions/ModalActionCreators.tsx");
   obj.popWithKey(closure_5);
   obj = {};
-  const obj2 = importDefault(4490);
+  const obj2 = require("../../actions/ModalActionCreators.tsx");
   const merged = Object.assign(arg0);
   obj.dismissOAuthModal = function dismissOAuthModal() {
     const dismissOAuthModal = obj5.dismissOAuthModal;
@@ -148,21 +148,21 @@ export const openOAuth2Modal = function openOAuth2Modal(arg0) {
     }
     outer1_1(outer1_3[7]).popWithKey(outer1_5);
   };
-  obj2.pushLazy(_require(1959)(10852, dependencyMap.paths), obj, closure_5);
+  obj2.pushLazy(_require("../../../_runtime/01959_asyncRequireImpl.js")(10852, dependencyMap.paths), obj, closure_5);
 };
 export const installPrivateChannelIntegration = function installPrivateChannelIntegration(arg0) {
   let applicationId;
   let callback;
   let channelId;
   ({ applicationId, channelId, callback } = arg0);
-  let obj = importDefault(4490);
+  let obj = require("../../actions/ModalActionCreators.tsx");
   obj = { clientId: applicationId, scopes: null, channelId: null, dismissOAuthModal: null, disableGuildSelect: true, callback: null };
-  const items = [require(8824) /* set */.OAuth2Scopes.APPLICATIONS_COMMANDS];
+  const items = [require("../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx") /* set */.OAuth2Scopes.APPLICATIONS_COMMANDS];
   obj[1] = items;
   obj[2] = channelId;
   obj[3] = function dismissOAuthModal() {
     return callback(table[7]).popWithKey(closure_5);
   };
   obj[5] = callback;
-  obj.pushLazy(require(1959) /* asyncRequireImpl */(10852, dependencyMap.paths), obj, closure_5);
+  obj.pushLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(10852, dependencyMap.paths), obj, closure_5);
 };

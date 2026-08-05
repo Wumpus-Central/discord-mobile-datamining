@@ -89,19 +89,19 @@ let closure_3 = ["style"];
 let closure_12 = require("module_4146").createAnimatedComponent(Pressable);
 let closure_13 = createCacheKey.createStyles(() => {
   let obj = { outerContainer: null, ctaPressable: null, cta: null, ctaLogoContainer: null, ctaLogo: null, ctaInfo: null };
-  obj = { position: "absolute", bottom: 0, left: 0, right: 0, paddingHorizontal: importDefault(712).space.PX_16, paddingBottom: importDefault(712).space.PX_16, alignItems: "center" };
+  obj = { position: "absolute", bottom: 0, left: 0, right: 0, paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, paddingBottom: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, alignItems: "center" };
   obj[0] = obj;
   obj = {};
-  const merged = Object.assign(importDefault(712).shadows.SHADOW_TOP_HIGH);
+  const merged = Object.assign(require("../../../../../discord_common/js/packages/tokens/native.tsx").shadows.SHADOW_TOP_HIGH);
   obj.alignSelf = "stretch";
   obj.borderWidth = 1;
   obj.borderColor = "transparent";
-  obj.borderRadius = importDefault(712).radii.lg;
+  obj.borderRadius = require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg;
   obj.overflow = "hidden";
   obj[1] = obj;
-  obj[2] = { flexDirection: "row", alignItems: "center", paddingLeft: importDefault(712).space.PX_12, paddingRight: importDefault(712).space.PX_16, paddingVertical: importDefault(712).space.PX_12, gap: importDefault(712).space.PX_12 };
-  const obj1 = { flexDirection: "row", alignItems: "center", paddingLeft: importDefault(712).space.PX_12, paddingRight: importDefault(712).space.PX_16, paddingVertical: importDefault(712).space.PX_12, gap: importDefault(712).space.PX_12 };
-  obj[3] = { width: 40, height: 40, backgroundColor: importDefault(712).colors.BACKGROUND_SURFACE_HIGH, borderRadius: importDefault(712).radii.md, overflow: "hidden" };
+  obj[2] = { flexDirection: "row", alignItems: "center", paddingLeft: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, paddingRight: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, paddingVertical: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 };
+  const obj1 = { flexDirection: "row", alignItems: "center", paddingLeft: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, paddingRight: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, paddingVertical: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 };
+  obj[3] = { width: 40, height: 40, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.md, overflow: "hidden" };
   const merged1 = Object.assign(absoluteFillObject.absoluteFillObject);
   obj[4] = {};
   obj[5] = { flex: 1, justifyContent: "center", gap: 2 };
@@ -109,7 +109,7 @@ let closure_13 = createCacheKey.createStyles(() => {
 });
 let fn = function n(value) {
   const obj = { opacity: null };
-  obj[0] = require(4286) /* CONFIG_NEVER_ANIMATE_TIMING */.withTiming(value, require(4289) /* timingNone */.timingStandard, "respect-motion-settings");
+  obj[0] = require("../../../../design/animation/reanimated/timing/timing.tsx") /* CONFIG_NEVER_ANIMATE_TIMING */.withTiming(value, require("../../../../design/animation/reanimated/timing/timingPresets.tsx") /* timingNone */.timingStandard, "respect-motion-settings");
   return obj;
 };
 let obj = { withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, timingStandard: require("timingNone").timingStandard };
@@ -118,7 +118,7 @@ fn.__workletHash = 2981824910249;
 fn.__initData = { code: "function BountiesModalAdvertiserCtaTsx1(visible){const{withTiming,timingStandard}=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};}" };
 const fn2 = function s(value, fn2) {
   const obj = { opacity: null };
-  obj[0] = require(4286) /* CONFIG_NEVER_ANIMATE_TIMING */.withTiming(value, require(4289) /* timingNone */.timingFast, "respect-motion-settings", fn2);
+  obj[0] = require("../../../../design/animation/reanimated/timing/timing.tsx") /* CONFIG_NEVER_ANIMATE_TIMING */.withTiming(value, require("../../../../design/animation/reanimated/timing/timingPresets.tsx") /* timingNone */.timingFast, "respect-motion-settings", fn2);
   return obj;
 };
 obj = { withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, timingFast: require("timingNone").timingFast };

@@ -75,10 +75,10 @@ export default function GuildRoleSubscriptionTierDetailsModal(arg0) {
   }
   let obj = { title: null, description: null, canProceedToNextStep: null, nextStep: null };
   const tmp = callback(usePriceTiers.useGroupCoverState(), 2);
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.EPOLQD);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require(1236) /* getSystemLocale */.t["LeAm+L"]);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.EPOLQD);
+  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["LeAm+L"]);
   obj[2] = tmp5;
   obj[3] = constants.DETAILS;
   const merged = Object.assign(arg0);
@@ -89,6 +89,6 @@ export default function GuildRoleSubscriptionTierDetailsModal(arg0) {
   obj.description = first;
   obj.setDescription = tmp4[1];
   obj.children = callback2(Content, obj);
-  return callback2(importDefault(16693), obj);
+  return callback2(require("GuildRoleSubscriptionTierEditStep.tsx"), obj);
 };
 export { Content };

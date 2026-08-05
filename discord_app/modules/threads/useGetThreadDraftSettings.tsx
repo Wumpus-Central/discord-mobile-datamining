@@ -7,7 +7,7 @@ const result = require("DISCORD_EPOCH").fileFinishedImporting("modules/threads/u
 export default function useGetThreadDraftSettings(arg0) {
   const _require = arg0;
   const items = [handleChanged];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != closure_0) {
       let threadSettings = outer1_3.getThreadSettings(tmp);
@@ -24,7 +24,7 @@ export default function useGetThreadDraftSettings(arg0) {
 export const useHasThreadDraft = function useHasThreadDraft(arg0) {
   const _require = arg0;
   const items = [handleChanged];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
       let threadSettings = outer1_3.getThreadSettings(tmp);

@@ -5,7 +5,7 @@ export default function getSoundboardEmojiUrl(emojiId) {
   emojiId = emojiId.emojiId;
   let emojiURL;
   if (null != emojiId) {
-    let obj = importDefault(1416);
+    let obj = require("../../../../utils/AvatarUtils.tsx");
     obj = { id: null, animated: false, size: null };
     obj[0] = emojiId;
     obj[2] = arg1;

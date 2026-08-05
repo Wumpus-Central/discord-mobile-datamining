@@ -65,7 +65,7 @@ prototype["_initialize"] = function _initialize() {
   this.subscriptions = items;
   let MediaPlayerManager = closure_4.MediaPlayerManager;
   const result = MediaPlayerManager.subscribeToPlaybackEvents();
-  const rootNavigationRef = require(4137) /* getRootNavigationRef */.getRootNavigationRef();
+  const rootNavigationRef = require("../../main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */.getRootNavigationRef();
   if (rootNavigationRef != null) {
     rootNavigationRef.addListener("state", self.updateDisplayState);
   }
@@ -73,10 +73,10 @@ prototype["_initialize"] = function _initialize() {
   participantFromServer.addChangeListener(self.handleEmbeddedActivitiesUpdated);
   ensureGuildLoaded.addChangeListener(self.updateMediaPermissions);
   getUncachedChannelPermissions.addChangeListener(self.updateMediaPermissions);
-  const obj2 = require(4137) /* getRootNavigationRef */;
+  const obj2 = require("../../main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */;
   const tmp2 = require;
-  const subscription = importDefault(709).subscribe("LOGOUT", self.userDidClosePip);
-  const obj4 = importDefault(709);
+  const subscription = require("../../../Dispatcher.tsx").subscribe("LOGOUT", self.userDidClosePip);
+  const obj4 = require("../../../Dispatcher.tsx");
   if (tmp2Result.isIOS()) {
     self.showPipUnsubscribe = obj.subscribe((showPip, showPip2) => {
       if (showPip2.showPip) {
@@ -125,7 +125,7 @@ prototype["_terminate"] = function _terminate() {
   const subscriptions = this.subscriptions;
   const item = subscriptions.forEach((remove) => remove.remove());
   this.subscriptions = [];
-  const rootNavigationRef = require(4137) /* getRootNavigationRef */.getRootNavigationRef();
+  const rootNavigationRef = require("../../main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */.getRootNavigationRef();
   if (rootNavigationRef != null) {
     rootNavigationRef.removeListener("state", self.updateDisplayState);
   }
@@ -140,8 +140,8 @@ prototype["_terminate"] = function _terminate() {
   participantFromServer.removeChangeListener(self.handleEmbeddedActivitiesUpdated);
   ensureGuildLoaded.removeChangeListener(self.updateMediaPermissions);
   getUncachedChannelPermissions.removeChangeListener(self.updateMediaPermissions);
-  const obj = require(4137) /* getRootNavigationRef */;
-  importDefault(709).unsubscribe("LOGOUT", self.userDidClosePip);
+  const obj = require("../../main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */;
+  require("../../../Dispatcher.tsx").unsubscribe("LOGOUT", self.userDidClosePip);
 };
 prototype["pauseCurrentPlayer"] = function pauseCurrentPlayer(arg0) {
   const MediaPlayerManager = closure_4.MediaPlayerManager;
@@ -152,7 +152,7 @@ prototype["playCurrentPlayer"] = function playCurrentPlayer() {
   MediaPlayerManager.playCurrentPlayer();
 };
 prototype["userDidClosePip"] = function userDidClosePip() {
-  require(705) /* batchUpdates */.batchUpdates(() => state.setState({ wasPipClosedByUser: true, showPip: false }));
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => state.setState({ wasPipClosedByUser: true, showPip: false }));
 };
 prototype["pauseAndClosePip"] = function pauseAndClosePip() {
   const self = this;
@@ -230,7 +230,7 @@ prototype["handleMediaPlayerPlaybackProgressUpdated"] = function handleMediaPlay
   let importDefault;
   let require;
   ({ source: require, time: importDefault, duration: dependencyMap } = arg0);
-  require(705) /* batchUpdates */.batchUpdates(() => {
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => {
     let obj = outer1_17;
     const state = outer1_17.getState();
     if (tmp2(state.activeMediaPlayerSource, closure_0)) {
@@ -348,7 +348,7 @@ prototype["getOrFetchMediaSourceMessage"] = function getOrFetchMediaSourceMessag
 };
 prototype["handleMediaSourceMessageUpdated"] = function handleMediaSourceMessageUpdated(arg0) {
   const _require = arg0;
-  _require(705).batchUpdates(() => {
+  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
     let obj = outer1_17;
     const activeMediaPlayerSource = outer1_17.getState().activeMediaPlayerSource;
     let messageId;
@@ -403,7 +403,7 @@ prototype["handleMediaPlayerViewDidDisappear"] = function handleMediaPlayerViewD
   });
 };
 function updateDisplayState(MediaPlayerManager, arg1, arg2, prototype, MediaPlayerManager2, arg5, require) {
-  require(705) /* batchUpdates */.batchUpdates(() => {
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => {
     let activeMediaPlayerSource;
     let displayedMediaItemIdsPerChannel;
     let isPlaying;

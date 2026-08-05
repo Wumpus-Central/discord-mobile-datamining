@@ -172,7 +172,7 @@ let obj = {
   sendForwards(outer1_8, c1, arg2) {
     let closure_0 = outer1_8;
     const importDefault = arg2;
-    return importDefault(4523)(c1.map((alsoForwardToChannelId) => outer1_9.sendForward(closure_0, alsoForwardToChannelId, closure_1)));
+    return require("../../../_runtime/04523_allSettled.js")(c1.map((alsoForwardToChannelId) => outer1_9.sendForward(closure_0, alsoForwardToChannelId, closure_1)));
   }
 };
 let result = require("ensureGuildLoaded").fileFinishedImporting("modules/forwarding/ForwardActionCreators.tsx");

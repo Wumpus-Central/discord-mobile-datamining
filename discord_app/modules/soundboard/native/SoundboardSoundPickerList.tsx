@@ -15,7 +15,7 @@ let metroImportAll;
 const require = arg1;
 function getSectionLabel(category) {
   const type = category.category.categoryInfo.type;
-  if (require(4737) /* SoundButtonOverlay */.SoundboardSoundGridSectionType.GUILD === type) {
+  if (require("../SoundboardTypes.tsx") /* SoundButtonOverlay */.SoundboardSoundGridSectionType.GUILD === type) {
     return category.category.categoryInfo.guild.name;
   } else if (tmp(4737).SoundboardSoundGridSectionType.DEFAULTS === type) {
     const intl3 = tmp(1236).intl;
@@ -367,7 +367,7 @@ const memoResult = importAllResult.memo(function SoundboardSoundPickerListCompon
     optimizeListItemRender: true,
     inActionSheet: true
   };
-  return callback(importDefault(7818), obj);
+  return callback(require("../../../lib/native/FastList.tsx"), obj);
 });
 let result = require("mergeGuildAvatar").fileFinishedImporting("modules/soundboard/native/SoundboardSoundPickerList.tsx");
 

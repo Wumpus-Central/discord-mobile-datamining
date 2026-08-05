@@ -28,7 +28,7 @@ function GuildProfileBackground(guildProfile) {
     if (null != guildProfile.customBanner) {
       obj = { id: null, splash: null, size: null };
       ({ id: obj3[0], customBanner: obj3[1] } = guildProfile);
-      obj[2] = tmp3(9174)() * importDefault(1474)().width;
+      obj[2] = tmp3(9174)() * require("../../../screen/useWindowDimensions.native.tsx")().width;
       obj = { style: null, source: null };
       obj[0] = tmp4.imageBanner;
       obj[1] = tmp3(1416).getGuildDiscoverySplashSource(obj);
@@ -39,17 +39,17 @@ function GuildProfileBackground(guildProfile) {
 }
 function GuildProfileGradient(guildProfile) {
   const tmp = createCacheKey();
-  let obj = require(3989) /* map */;
-  const token = obj.useToken(importDefault(712).colors.BACKGROUND_BASE_LOWEST);
-  const tmp2 = importDefault(4221)();
-  const profilePrimaryColor = require(9175) /* useProfilePrimaryColor */.useProfilePrimaryColor(guildProfile.guildProfile, token);
+  let obj = require("../../../../design/tokens/native/useToken.tsx") /* map */;
+  const token = obj.useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOWEST);
+  const tmp2 = require("../../../../hooks/useTheme.tsx")();
+  const profilePrimaryColor = require("../GuildProfileUtils.tsx") /* useProfilePrimaryColor */.useProfilePrimaryColor(guildProfile.guildProfile, token);
   obj = { style: tmp.colorBanner, start: frozen.START, end: frozen.END, colors: null };
   const items = [profilePrimaryColor, ];
-  const obj2 = require(9175) /* useProfilePrimaryColor */;
+  const obj2 = require("../GuildProfileUtils.tsx") /* useProfilePrimaryColor */;
   const tmp5 = closure_8;
-  const tmp6 = importDefault(4706);
-  const obj4 = require(3995) /* isThemeLight */;
-  const obj5 = require(3997) /* ManaContext */;
+  const tmp6 = require("../../../../../_runtime/04706_LinearGradient.js");
+  const obj4 = require("../../../../design/utils/shared/themes.tsx") /* isThemeLight */;
+  const obj5 = require("../../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */;
   if (isThemeDarkResult) {
     let brightenColorResult = obj5.brightenColor(profilePrimaryColor, 0.8);
   } else {
@@ -98,7 +98,7 @@ export default function GuildProfileView(guildProfile) {
     }
     tmp = guildProfile;
   }, items);
-  const items1 = [callback(GuildProfileBackground, { guildProfile }), callback(importDefault(9176), { profile: guildProfile, guildIconSource: memo }), ];
+  const items1 = [callback(GuildProfileBackground, { guildProfile }), callback(require("GuildProfileHeader.tsx"), { profile: guildProfile, guildIconSource: memo }), ];
   obj = { style: tmp.body, children: null };
   let tmp5Result = null != guildProfile.description;
   if (tmp5Result) {
@@ -109,7 +109,7 @@ export default function GuildProfileView(guildProfile) {
     obj[2] = guildProfile.description;
     tmp5Result = tmp5(guildProfile(4281).Text, obj);
   }
-  const items2 = [tmp5Result, callback(importDefault(9188), { profile: guildProfile }), callback(importDefault(12118), { profile: guildProfile })];
+  const items2 = [tmp5Result, callback(require("GuildProfileGames.tsx"), { profile: guildProfile }), callback(require("GuildProfileTraits.tsx"), { profile: guildProfile })];
   obj[1] = items2;
   items1[2] = closure_9(closure_4, obj);
   obj[1] = items1;
@@ -117,8 +117,8 @@ export default function GuildProfileView(guildProfile) {
 };
 export const getBackgroundForProfile = function getBackgroundForProfile(closure_2, token) {
   const items = [token, ];
-  const obj = require(3995) /* isThemeLight */;
-  const obj2 = require(3997) /* ManaContext */;
+  const obj = require("../../../../design/utils/shared/themes.tsx") /* isThemeLight */;
+  const obj2 = require("../../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */;
   if (isThemeDarkResult) {
     let brightenColorResult = obj2.brightenColor(token, 0.8);
   } else {

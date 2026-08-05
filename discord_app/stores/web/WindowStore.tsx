@@ -12,7 +12,7 @@ const prototype = WindowStore.prototype;
 prototype["isFocused"] = function isFocused() {
   let mainWindowId = arg0;
   if (arg0 === undefined) {
-    let obj = require(5285) /* getWindowId */;
+    let obj = require("../../utils/web/WindowIdUtils.tsx") /* getWindowId */;
     mainWindowId = obj.getMainWindowId();
   }
   let value = map.get(mainWindowId);
@@ -30,7 +30,7 @@ prototype["isAppFocused"] = function isAppFocused() {
 prototype["isVisible"] = function isVisible() {
   let mainWindowId = arg0;
   if (arg0 === undefined) {
-    let obj = require(5285) /* getWindowId */;
+    let obj = require("../../utils/web/WindowIdUtils.tsx") /* getWindowId */;
     mainWindowId = obj.getMainWindowId();
   }
   let value = map.get(mainWindowId);
@@ -57,7 +57,7 @@ prototype["getLastFocusedWindowId"] = function getLastFocusedWindowId() {
 prototype["isElementFullScreen"] = function isElementFullScreen() {
   let mainWindowId = arg0;
   if (arg0 === undefined) {
-    let obj = require(5285) /* getWindowId */;
+    let obj = require("../../utils/web/WindowIdUtils.tsx") /* getWindowId */;
     mainWindowId = obj.getMainWindowId();
   }
   let value = map.get(mainWindowId);
@@ -72,7 +72,7 @@ prototype["isElementFullScreen"] = function isElementFullScreen() {
 prototype["windowSize"] = function windowSize() {
   let mainWindowId = arg0;
   if (arg0 === undefined) {
-    let obj = require(5285) /* getWindowId */;
+    let obj = require("../../utils/web/WindowIdUtils.tsx") /* getWindowId */;
     mainWindowId = obj.getMainWindowId();
   }
   let value = map.get(mainWindowId);
@@ -87,7 +87,7 @@ prototype["windowSize"] = function windowSize() {
 WindowStore.displayName = "WindowStore";
 const windowStore = new WindowStore(require("dispatcher"), {
   WINDOW_INIT: function handleWindowInit(isElementFullscreen) {
-    importDefault(38)(!map.has(isElementFullscreen.windowId), "Window initialized multiple times");
+    require("../../../_runtime/metro/00038__.js")(!map.has(isElementFullscreen.windowId), "Window initialized multiple times");
     const focused = isElementFullscreen.focused;
     obj = { windowSize: obj, isElementFullscreen: isElementFullscreen.isElementFullscreen, focused, visible: isElementFullscreen.visible };
     obj = { width: isElementFullscreen.width, height: isElementFullscreen.height };

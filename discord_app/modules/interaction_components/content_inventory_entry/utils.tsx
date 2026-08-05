@@ -8,5 +8,5 @@ export const isContentInventoryFallbackEmbed = function isContentInventoryFallba
   if (num == null) {
     num = 0;
   }
-  return require(1384) /* hasFlag */.hasFlag(num, MessageEmbedFlags.IS_CONTENT_INVENTORY_ENTRY);
+  return require("../../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(num, MessageEmbedFlags.IS_CONTENT_INVENTORY_ENTRY);
 };

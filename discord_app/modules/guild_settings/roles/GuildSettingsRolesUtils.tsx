@@ -182,14 +182,14 @@ export const filterFullMembersByQuery = function filterFullMembersByQuery(str, i
   const formatted = str.trim().toLowerCase();
   let tmp8Result = id.id === formatted;
   if (!tmp8Result) {
-    tmp8Result = importDefault(5197)(formatted, id.name.toLowerCase());
+    tmp8Result = require("../../../../_runtime/05197_fuzzysearch.js")(formatted, id.name.toLowerCase());
     const str2 = id.name;
-    const tmp5 = importDefault(5197);
+    const tmp5 = require("../../../../_runtime/05197_fuzzysearch.js");
   }
   if (!tmp8Result) {
-    tmp8Result = importDefault(5197)(formatted, id.userTag.toLowerCase());
+    tmp8Result = require("../../../../_runtime/05197_fuzzysearch.js")(formatted, id.userTag.toLowerCase());
     const str3 = id.userTag;
-    const tmp8 = importDefault(5197);
+    const tmp8 = require("../../../../_runtime/05197_fuzzysearch.js");
   }
   return tmp8Result;
 };
@@ -203,7 +203,7 @@ export const getSectionAnalyticsName = function getSectionAnalyticsName(DISPLAY)
   } else if (tmp.VERIFICATIONS === DISPLAY) {
     return "Connections";
   } else {
-    require(1351) /* isDiscordFrontendDevelopment */.assertNever(DISPLAY);
+    require("../../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.assertNever(DISPLAY);
   }
 };
 export const filterRole = function filterRole(name, str) {

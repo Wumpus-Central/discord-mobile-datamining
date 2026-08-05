@@ -42,7 +42,7 @@ export default function useVoiceMessageTooltip() {
       };
     }
   }, items1);
-  let obj = require(8576) /* useTooltip */;
+  let obj = require("../../../design/components/Tooltip/native/useTooltip.native.tsx") /* useTooltip */;
   const tooltip = obj.useTooltip(ref, memo);
   obj = { tooltipTargetRef: ref, showVoiceMessagesTooltip: closure_5 };
   return obj;

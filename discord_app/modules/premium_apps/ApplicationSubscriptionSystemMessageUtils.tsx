@@ -7,18 +7,18 @@ export const getApplicationSubscriptionSystemMessageASTContent = function getApp
   let usernameOnClick;
   ({ application, username, usernameOnClick } = arg0);
   if (null != application) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     let obj = { username: null, applicationName: null, usernameOnClick: null };
     obj[0] = username;
     obj[1] = application.name;
     obj[2] = usernameOnClick;
-    let formatToPartsResult = intl2.formatToParts(require(1236) /* getSystemLocale */.t.Tes5Ou, obj);
+    let formatToPartsResult = intl2.formatToParts(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Tes5Ou, obj);
   } else {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { username: null, usernameOnClick: null };
     obj[0] = username;
     obj[1] = usernameOnClick;
-    formatToPartsResult = intl.formatToParts(require(1236) /* getSystemLocale */.t.PUJtgi, obj);
+    formatToPartsResult = intl.formatToParts(require("../../intl/index.native.tsx") /* getSystemLocale */.t.PUJtgi, obj);
   }
   return formatToPartsResult;
 };

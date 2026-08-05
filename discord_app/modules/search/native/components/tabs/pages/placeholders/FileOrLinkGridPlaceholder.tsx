@@ -19,5 +19,5 @@ export default function FileOrLinkGridPlaceholderItem(imageStyle) {
   obj = { style: items1, pointerEvents: "none", children: null };
   items1 = [imageStyle.containerStyle, placeholderAnimatedStyle];
   obj[2] = jsx(width(15624).SearchListCardContainer, { containerStyle: memo });
-  return jsx(importDefault(4146).View, { style: items1, pointerEvents: "none", children: null });
+  return jsx(require("../../../../../../reanimated/ReanimatedRexport.tsx").View, { style: items1, pointerEvents: "none", children: null });
 };

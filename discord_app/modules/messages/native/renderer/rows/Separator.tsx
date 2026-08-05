@@ -47,7 +47,7 @@ export const generateSeparatorRowData = function generateSeparatorRowData(text, 
     obj1[6] = changeType;
     return obj1;
   } else {
-    obj = require(1351) /* isDiscordFrontendDevelopment */;
+    obj = require("../../../../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */;
     obj.assertNever(rowType);
   }
 };

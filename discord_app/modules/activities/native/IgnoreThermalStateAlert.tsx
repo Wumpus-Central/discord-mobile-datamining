@@ -35,5 +35,5 @@ export const IgnoreThermalStateAlert = function IgnoreThermalStateAlert(onConfir
   obj[2] = intl4.string(onConfirm(1236).t.VOgTjy);
   items[1] = callback(onConfirm(4281).Text, obj);
   obj.children = items;
-  return callback2(importDefault(4713), obj);
+  return callback2(require("../../../components_native/common/Alert.tsx"), obj);
 };

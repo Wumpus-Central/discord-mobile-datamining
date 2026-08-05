@@ -141,7 +141,7 @@ function mergeVoiceState(guildId, userId) {
 }
 function handleGuildCreateOrDelete(guild) {
   guild = guild.guild;
-  const item = importDefault(12).forEach(dependencyMap[guild.id], (userId) => {
+  const item = require("../../_runtime/00012_apply.js").forEach(dependencyMap[guild.id], (userId) => {
     outer1_18(guild.id, userId.userId, () => null);
   });
   delete tmp2[tmp];
@@ -349,8 +349,8 @@ prototype["getVoicePlatformForChannel"] = function getVoicePlatformForChannel(ch
   }
   if (id === closure_3) {
     if (channelId === tmp) {
-      require(1577) /* isMetaQuest */.isMetaQuest() ? VoicePlatforms.QUEST : VoicePlatforms.MOBILE;
-      const obj = require(1577) /* isMetaQuest */;
+      require("../modules/device/MetaQuestUtils.android.tsx") /* isMetaQuest */.isMetaQuest() ? VoicePlatforms.QUEST : VoicePlatforms.MOBILE;
+      const obj = require("../modules/device/MetaQuestUtils.android.tsx") /* isMetaQuest */;
     }
   }
   return table["" + id + ":" + channelId];
@@ -480,7 +480,7 @@ const voiceStateStore = new VoiceStateStore(require("dispatcher"), {
     if (obj == null) {
       obj = {};
     }
-    importDefault(12).each(obj, (channelId) => {
+    require("../../_runtime/00012_apply.js").each(obj, (channelId) => {
       if (channelId.channelId === channelId) {
         outer1_18(outer1_7, arg1, () => null);
       }
@@ -492,7 +492,7 @@ const voiceStateStore = new VoiceStateStore(require("dispatcher"), {
     if (obj == null) {
       obj = {};
     }
-    importDefault(12).each(obj, (channelId) => {
+    require("../../_runtime/00012_apply.js").each(obj, (channelId) => {
       if (channelId.channelId === channelId) {
         outer1_18(outer1_7, arg1, () => null);
       }

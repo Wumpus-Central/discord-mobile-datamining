@@ -7,9 +7,9 @@ import { ChannelFlags } from "set";
 
 const require = arg1;
 function getCreationDefaultFormatter() {
-  const obj = { minutes: require(1236) /* getSystemLocale */.t.nFt9ck, hours: require(1236) /* getSystemLocale */.t.jzCewe, days: require(1236) /* getSystemLocale */.t.U4I0sw, month: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[3] = intl.string(require(1236) /* getSystemLocale */.t["nBNJ/L"]);
+  const obj = { minutes: require("../../intl/index.native.tsx") /* getSystemLocale */.t.nFt9ck, hours: require("../../intl/index.native.tsx") /* getSystemLocale */.t.jzCewe, days: require("../../intl/index.native.tsx") /* getSystemLocale */.t.U4I0sw, month: null };
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[3] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["nBNJ/L"]);
   return obj;
 }
 const result = require("generateOldThreadCutoff").fileFinishedImporting("modules/forums/ForumUtils.tsx");
@@ -76,7 +76,7 @@ export const getForumPostReadStatesById = function getForumPostReadStatesById(ar
 };
 export const getForumTimestampFormatter = function getForumTimestampFormatter(closure_1, DURATION_AGO) {
   if (DURATION_AGO === ForumTimestampFormats.POSTED_DURATION_AGO) {
-    if (closure_1 === require(1381) /* set */.ThreadSortOrder.CREATION_DATE) {
+    if (closure_1 === require("../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx") /* set */.ThreadSortOrder.CREATION_DATE) {
       return getCreationDefaultFormatter;
     }
   }

@@ -5,7 +5,7 @@ import { UserSettingsSections } from "ME";
 const result = require("getRootNavigationRef").fileFinishedImporting("modules/user_settings/core/native/openUserSettings.tsx");
 
 export const openUserSettings = (screen) => {
-  let obj = require(4137) /* getRootNavigationRef */;
+  let obj = require("../../../main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */;
   const rootNavigationRef = obj.getRootNavigationRef();
   if (tmp2) {
     screen = undefined;
@@ -17,11 +17,11 @@ export const openUserSettings = (screen) => {
     }
     obj = { type: "USER_SETTINGS_MODAL_INIT", section: null };
     obj[1] = screen;
-    importDefault(709).dispatch(obj);
+    require("../../../../Dispatcher.tsx").dispatch(obj);
     rootNavigationRef.navigate("settings", screen);
     if (arg1 != null) {
       arg1();
     }
-    const obj3 = importDefault(709);
+    const obj3 = require("../../../../Dispatcher.tsx");
   }
 };

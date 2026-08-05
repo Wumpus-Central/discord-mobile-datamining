@@ -5,16 +5,16 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["St+DJK"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["St+DJK"]);
   },
   parent: require("MobileSetting").MobileSetting.ACCESSIBILITY,
   useValue: function useReducedMotionSyncSettingValue() {
     const items = [maybeApplyNoTextColorForLightCustomTheme];
-    return require(589) /* initialize */.useStateFromStores(items, () => "auto" === obj.rawPrefersReducedMotion);
+    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => "auto" === obj.rawPrefersReducedMotion);
   },
   onValueChange: function onReducedMotionSyncSettingValueChange(arg0) {
-    const obj = require(13617) /* setFontSize */;
+    const obj = require("../../../a11y/AccessibilityActionCreators.tsx") /* setFontSize */;
     let str = "auto";
     if (!arg0) {
       str = obj.systemPrefersReducedMotion;

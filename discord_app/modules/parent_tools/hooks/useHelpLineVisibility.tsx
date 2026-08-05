@@ -10,7 +10,7 @@ const set1 = new Set(["en-US", "es-ES"]);
 const result = set.fileFinishedImporting("modules/parent_tools/hooks/useHelpLineVisibility.tsx");
 
 export const useShouldShowHelplineLink = function useShouldShowHelplineLink() {
-  const tmp = importDefault(7260)();
+  const tmp = require("useIsInAdultAgeGroup.tsx")();
   const items = [freshTeenActivityWithMap];
   stateFromStores = stateFromStores(647).useStateFromStores(items, () => userCountry.getUserCountry());
   const obj = stateFromStores(647);
@@ -36,9 +36,9 @@ export const useShouldShowHelplineLink = function useShouldShowHelplineLink() {
   return hasItem;
 };
 export const useShouldShowThroughlineLink = function useShouldShowThroughlineLink() {
-  const tmp = importDefault(7260)();
+  const tmp = require("useIsInAdultAgeGroup.tsx")();
   let stateFromStores;
-  const tmp2 = importDefault(7260)();
+  const tmp2 = require("useIsInAdultAgeGroup.tsx")();
   const items = [freshTeenActivityWithMap];
   stateFromStores = stateFromStores(647).useStateFromStores(items, () => userCountry.getUserCountry());
   let obj = stateFromStores(647);

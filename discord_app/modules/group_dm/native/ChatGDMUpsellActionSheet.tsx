@@ -40,13 +40,13 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   let obj = { showGradient: true, scrollable: true, startExpanded: true, header: null, footer: null, children: null };
   obj = { style: tmp.titleImage, children: null };
   obj = { source: null, resizeMode: "contain" };
-  obj[0] = importDefault(10982);
-  obj[1] = callback(importDefault(5236), obj);
+  obj[0] = require("../../../../_runtime/10982_registerAsset.js");
+  obj[1] = callback(require("../../../components_native/common/FastImage.tsx"), obj);
   obj[3] = callback(View, obj);
   const obj1 = { style: items1, children: null };
   items1 = [tmp.footer, ];
-  const tmp3 = importDefault(5236);
-  items1[1] = { padding: 16, paddingBottom: importDefault(1581)().bottom + 16 };
+  const tmp3 = require("../../../components_native/common/FastImage.tsx");
+  items1[1] = { padding: 16, paddingBottom: require("../../safe_area/useSafeAreaInsets.native.tsx")().bottom + 16 };
   const obj3 = { text: null, onPress: null };
   const intl = onClick(1236).intl;
   obj3[0] = intl.string(onClick(1236).t["3PatSz"]);
@@ -74,7 +74,7 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   items3[1] = callback(onClick(4281).Text, obj8);
   const obj9 = { style: tmp.noticeContainer, children: null };
   const obj10 = { style: tmp.innerContainer, children: null };
-  const obj2 = { padding: 16, paddingBottom: importDefault(1581)().bottom + 16 };
+  const obj2 = { padding: 16, paddingBottom: require("../../safe_area/useSafeAreaInsets.native.tsx")().bottom + 16 };
   const items4 = [callback(View, { style: tmp.item, children: callback(onClick(10983).TimerIcon, { size: "sm" }) }), ];
   const obj12 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
   const intl5 = onClick(1236).intl;

@@ -200,7 +200,7 @@ function mapMessageComponentLocalStateForAPI(type) {
     return null;
   } else {
     type = type.type;
-    if (require(1906) /* PermissionOverwriteType */.ComponentType.TEXT_INPUT !== type) {
+    if (require("../../flow/Server.tsx") /* PermissionOverwriteType */.ComponentType.TEXT_INPUT !== type) {
       if (tmp(1906).ComponentType.FILE_UPLOAD !== type) {
         if (tmp(1906).ComponentType.RADIO_GROUP !== type) {
           if (tmp(1906).ComponentType.CHECKBOX_GROUP !== type) {
@@ -234,8 +234,8 @@ function mapMessageComponentLocalStateForAPI(type) {
 function handleInteractionResponse(nonce, ok, applicationId, channelId, guildId) {
   if (!ok.ok) {
     if (ok.hasErr) {
-      require(8031) /* _fetchMessageInteractionData */.setFailed(nonce);
-      const obj10 = require(8031) /* _fetchMessageInteractionData */;
+      require("InteractionActionCreators.tsx") /* _fetchMessageInteractionData */.setFailed(nonce);
+      const obj10 = require("InteractionActionCreators.tsx") /* _fetchMessageInteractionData */;
     } else {
       if (ok.status >= 400) {
         if (ok.status < 500) {
@@ -243,7 +243,7 @@ function handleInteractionResponse(nonce, ok, applicationId, channelId, guildId)
             let tmp9 = guildId;
             if (ok.body.code === constants.INVALID_FORM_BODY) {
               if (ok.body.errors) {
-                const firstSkemaError = require(8032) /* getFirstSkemaFieldError */.getFirstSkemaError(ok.body.errors);
+                const firstSkemaError = require("SkemaUtils.tsx") /* getFirstSkemaFieldError */.getFirstSkemaError(ok.body.errors);
                 let tmp28 = null == firstSkemaError;
                 if (!tmp28) {
                   let tmp29 = "INTERACTION_APPLICATION_COMMAND_INVALID_VERSION" !== firstSkemaError.code;
@@ -260,16 +260,16 @@ function handleInteractionResponse(nonce, ok, applicationId, channelId, guildId)
                     tmp9 = null;
                   }
                   obj[3] = tmp9;
-                  importDefault(709).dispatch(obj);
-                  const obj7 = importDefault(709);
+                  require("../../Dispatcher.tsx").dispatch(obj);
+                  const obj7 = require("../../Dispatcher.tsx");
                 }
-                const obj6 = require(8032) /* getFirstSkemaFieldError */;
+                const obj6 = require("SkemaUtils.tsx") /* getFirstSkemaFieldError */;
                 const tmp24 = require;
                 let message;
                 if (firstSkemaError != null) {
                   message = firstSkemaError.message;
                 }
-                require(8031) /* _fetchMessageInteractionData */.setFailed(nonce, undefined, message);
+                require("InteractionActionCreators.tsx") /* _fetchMessageInteractionData */.setFailed(nonce, undefined, message);
               }
             }
             if (ok.body.code === constants.UNKNOWN_INTEGRATION) {
@@ -281,19 +281,19 @@ function handleInteractionResponse(nonce, ok, applicationId, channelId, guildId)
                 tmp20 = null;
               }
               obj[3] = tmp20;
-              importDefault(709).dispatch(obj);
-              const obj3 = importDefault(709);
-              require(8031) /* _fetchMessageInteractionData */.setFailed(nonce, undefined, ok.body.message);
-              const obj5 = require(8031) /* _fetchMessageInteractionData */;
+              require("../../Dispatcher.tsx").dispatch(obj);
+              const obj3 = require("../../Dispatcher.tsx");
+              require("InteractionActionCreators.tsx") /* _fetchMessageInteractionData */.setFailed(nonce, undefined, ok.body.message);
+              const obj5 = require("InteractionActionCreators.tsx") /* _fetchMessageInteractionData */;
             } else {
-              const obj2 = require(8031) /* _fetchMessageInteractionData */;
+              const obj2 = require("InteractionActionCreators.tsx") /* _fetchMessageInteractionData */;
               obj2.setFailed(nonce, ok.body.code, ok.body.message, ok.status);
             }
             return tmp16;
           }
         }
       }
-      obj = require(8031) /* _fetchMessageInteractionData */;
+      obj = require("InteractionActionCreators.tsx") /* _fetchMessageInteractionData */;
       const body = ok.body;
       let code;
       if (body != null) {
@@ -312,8 +312,8 @@ export const getInteractionTimeoutTimestamp = function getInteractionTimeoutTime
     if ("" !== arg0) {
       const _Number = Number;
       if (!Number.isNaN(arg0)) {
-        let sum = importDefault(11).extractTimestamp(arg0) + 900000;
-        const obj = importDefault(11);
+        let sum = require("../../utils/SnowflakeUtils.tsx").extractTimestamp(arg0) + 900000;
+        const obj = require("../../utils/SnowflakeUtils.tsx");
       }
       return sum;
     }
@@ -325,8 +325,8 @@ export const getInteractionInitialResponseDeadlineTimestamp = function getIntera
     if ("" !== arg0) {
       const _Number = Number;
       if (!Number.isNaN(arg0)) {
-        let sum = importDefault(11).extractTimestamp(arg0) + 3000;
-        const obj = importDefault(11);
+        let sum = require("../../utils/SnowflakeUtils.tsx").extractTimestamp(arg0) + 3000;
+        const obj = require("../../utils/SnowflakeUtils.tsx");
       }
       return sum;
     }
@@ -355,7 +355,7 @@ export const getInteractionStatusViewState = function getInteractionStatusViewSt
       if (state2 != null) {
         interactionType = state2.data.interactionType;
       }
-      const tmp21 = interactionType === require(1906) /* PermissionOverwriteType */.InteractionTypes.APPLICATION_COMMAND;
+      const tmp21 = interactionType === require("../../flow/Server.tsx") /* PermissionOverwriteType */.InteractionTypes.APPLICATION_COMMAND;
       const isCommandTypeResult = state.isCommandType();
       if (!tmp21) {
         if (isCommandTypeResult) {
@@ -387,8 +387,8 @@ export const getInteractionStatusViewState = function getInteractionStatusViewSt
         if ("" !== id2) {
           const _Number2 = Number;
           if (!Number.isNaN(id2)) {
-            let sum = importDefault(11).extractTimestamp(id2) + 3000;
-            const obj2 = importDefault(11);
+            let sum = require("../../utils/SnowflakeUtils.tsx").extractTimestamp(id2) + 3000;
+            const obj2 = require("../../utils/SnowflakeUtils.tsx");
           }
           const _Date4 = Date;
           sum < Date.now();
@@ -403,7 +403,7 @@ export const getInteractionStatusViewState = function getInteractionStatusViewSt
       if ("" !== id) {
         const _Number = Number;
         if (!Number.isNaN(id)) {
-          obj = importDefault(11);
+          obj = require("../../utils/SnowflakeUtils.tsx");
           let sum1 = obj.extractTimestamp(id) + 900000;
         }
         const _Date2 = Date;
@@ -423,7 +423,7 @@ export const canRetryInteractionData = function canRetryInteractionData(interact
   let items = options;
   if (1 === length) {
     let tmp4 = options;
-    if (options[0].type === require(1906) /* PermissionOverwriteType */.ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
+    if (options[0].type === require("../../flow/Server.tsx") /* PermissionOverwriteType */.ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
       while (true) {
         let options1 = tmp4[0].options;
         let length1;
@@ -439,7 +439,7 @@ export const canRetryInteractionData = function canRetryInteractionData(interact
           let tmp8 = dependencyMap;
           let tmp9 = dependencyMap;
           tmp4 = options1;
-          if (options1[0].type === require(1906) /* PermissionOverwriteType */.ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
+          if (options1[0].type === require("../../flow/Server.tsx") /* PermissionOverwriteType */.ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
             continue;
           } else {
             let tmp10 = tmp6;
@@ -469,7 +469,7 @@ export const canRetryInteractionData = function canRetryInteractionData(interact
     let tmp13 = require;
     let tmp14 = dependencyMap;
     let tmp15 = dependencyMap;
-    if (item10042.type === require(1906) /* PermissionOverwriteType */.ApplicationCommandOptionType.ATTACHMENT) {
+    if (item10042.type === require("../../flow/Server.tsx") /* PermissionOverwriteType */.ApplicationCommandOptionType.ATTACHMENT) {
       let tmp16 = obj;
       obj.return();
       let flag = false;

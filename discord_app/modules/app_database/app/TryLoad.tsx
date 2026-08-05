@@ -220,7 +220,7 @@ export const tryLoadOrResetCacheGateway = function tryLoadOrResetCacheGateway(ar
     let tmp4 = ensureGuildLoaded;
     const _HermesInternal = HermesInternal;
     tmp2.log("" + arg0 + ": exception thrown, resetting socket.", tmp2, tmp2.stack);
-    let obj = importDefault(709);
+    let obj = require("../../../Dispatcher.tsx");
     obj = { error: null, action: null, metricAction: null };
     obj[0] = tmp2;
     const _HermesInternal2 = HermesInternal;

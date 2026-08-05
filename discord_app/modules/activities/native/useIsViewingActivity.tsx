@@ -6,8 +6,8 @@ const result = require("navigationToRootTabHelper").fileFinishedImporting("modul
 
 export const useIsViewingActivity = function useIsViewingActivity(channelId) {
   channelId = channelId.channelId;
-  let tmp = importDefault(10559)(channelId);
-  const isModalOpen = channelId(4136).useIsModalOpen(importDefault(10556));
+  let tmp = require("../useIsActivityFocused.tsx")(channelId);
+  const isModalOpen = channelId(4136).useIsModalOpen(require("../../video_calls/native/components/ChannelCallModal.tsx"));
   const obj = channelId(4136);
   const items = [getParticipants];
   const items1 = [channelId];

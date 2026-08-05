@@ -19,7 +19,7 @@ export const collectThreadMetadata = function collectThreadMetadata(channel, arg
     if (THREAD_CHANNEL_TYPES.has(channel.type)) {
       let lastRouteChangeSource;
       if (flag) {
-        let obj = require(1222) /* transitionTo */;
+        let obj = require("../routing/router_utils.tsx") /* transitionTo */;
         lastRouteChangeSource = obj.getLastRouteChangeSource();
       }
       obj = { location: null, thread_approximate_member_count: null, thread_approximate_message_count: null, thread_archived: null, thread_locked: null, thread_auto_archive_duration_minutes: null, thread_approximate_creation_date: null, can_send_message: null, parent_channel_type: null };
@@ -50,11 +50,11 @@ export const collectThreadMetadata = function collectThreadMetadata(channel, arg
         num = 0;
       }
       obj[5] = num;
-      obj[6] = importDefault(11).extractTimestamp(channel.id);
+      obj[6] = require("../../utils/SnowflakeUtils.tsx").extractTimestamp(channel.id);
       obj[7] = getUncachedChannelPermissions.can(Permissions.SEND_MESSAGES, channel);
       obj[8] = channel.parentChannelThreadType;
       tmp = obj;
-      const obj3 = importDefault(11);
+      const obj3 = require("../../utils/SnowflakeUtils.tsx");
     }
   }
   return tmp;

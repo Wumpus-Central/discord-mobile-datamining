@@ -7,7 +7,7 @@ import createCacheKey from "createCacheKey";
 
 const require = arg1;
 function PerkText(children) {
-  return jsx(require(4281) /* Text */.Text, { color: "text-overlay-light", variant: "text-sm/semibold", children: children.powerup.title });
+  return jsx(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { color: "text-overlay-light", variant: "text-sm/semibold", children: children.powerup.title });
 }
 createCacheKey = { container: null, text: null };
 createCacheKey = { padding: require("Themes").space.PX_12, backgroundColor: null };
@@ -26,7 +26,7 @@ const result = require("calculateAppliedBoosts").fileFinishedImporting("modules/
 export default function GuildPowerupsMarketingHeader(guild) {
   guild = guild.guild;
   const tmp = createCacheKey();
-  const arr = importDefault(12755)(guild.id);
+  const arr = require("../hooks/useMarketablePowerupPerks.tsx")(guild.id);
   const items = [guild.id];
   const effect = React.useEffect(() => {
     if (outer1_5.shouldFetchCatalogForGuild(guild.id)) {
@@ -34,7 +34,7 @@ export default function GuildPowerupsMarketingHeader(guild) {
       const obj = guild(outer1_2[9]);
     }
   }, items);
-  if (importDefault(11786)(guild.id)) {
+  if (require("../hooks/useHasAllocateBoostPermission.tsx")(guild.id)) {
     let num;
     if (arr != null) {
       num = arr.length;

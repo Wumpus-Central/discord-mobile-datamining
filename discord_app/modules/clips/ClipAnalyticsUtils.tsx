@@ -38,7 +38,7 @@ function getPostSaveClipAnalytics(arg0, framesEncodedByEncoder) {
     let tmp7 = key10011;
     let tmp8 = require;
     let tmp9 = dependencyMap;
-    let obj3 = require(7121) /* parseEncoder */;
+    let obj3 = require("../../lib/VideoQualityStats.tsx") /* parseEncoder */;
     let parseEncoderResult = obj3.parseEncoder(key10011);
     let num = map.get(parseEncoderResult);
     if (num == null) {
@@ -49,7 +49,7 @@ function getPostSaveClipAnalytics(arg0, framesEncodedByEncoder) {
   }
   const obj = {};
   const merged = Object.assign(arg0);
-  let num2 = map.get(require(7121) /* parseEncoder */.Encoders.NVIDIA_CUDA);
+  let num2 = map.get(require("../../lib/VideoQualityStats.tsx") /* parseEncoder */.Encoders.NVIDIA_CUDA);
   if (num2 == null) {
     num2 = 0;
   }
@@ -191,7 +191,7 @@ export const getClipBaseProperties = function getClipBaseProperties(clip) {
 };
 export const getClipContextProperties = function getClipContextProperties(trackClipsShared) {
   const obj = { clip_runtime: null, current_clip_session_id: null };
-  obj[0] = require(4821) /* apexExperiment */.getClipsRuntime(trackClipsShared);
+  obj[0] = require("ClipsV3RuntimeExperiment.tsx") /* apexExperiment */.getClipsRuntime(trackClipsShared);
   const currentClipsSession = store.getCurrentClipsSession();
   let id;
   if (currentClipsSession != null) {
@@ -205,7 +205,7 @@ export const getPreSaveClipAnalytics = function getPreSaveClipAnalytics(decision
   currentUserActiveStream = currentUserActiveStream.getCurrentUserActiveStream();
   let rTCConnection = null;
   if (null != currentUserActiveStream) {
-    let obj = require(4348) /* isStreamKey */;
+    let obj = require("../go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */;
     rTCConnection = rTCConnection.getRTCConnection(obj.encodeStreamKey(currentUserActiveStream));
   }
   decision = decision.decision;
@@ -232,7 +232,7 @@ export const getPreSaveClipAnalytics = function getPreSaveClipAnalytics(decision
   obj = { clip_type: str, num_clip_participants: decision.users.length, clip_session_id: decision.gameSessionId, is_candidate: decision.isCandidate };
   const merged = Object.assign(obj);
   const obj1 = { clip_runtime: null, current_clip_session_id: null };
-  obj1[0] = require(4821) /* apexExperiment */.getClipsRuntime("getPreSaveClipAnalytics");
+  obj1[0] = require("ClipsV3RuntimeExperiment.tsx") /* apexExperiment */.getClipsRuntime("getPreSaveClipAnalytics");
   const currentClipsSession = store.getCurrentClipsSession();
   let id;
   if (currentClipsSession != null) {
@@ -280,7 +280,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   isFavorite = isFavorite.isFavorite;
   let tmp2;
   if (null != isFavorite) {
-    if (!importDefault(4444)(isFavorite, tmp)) {
+    if (!require("../../../_runtime/04444_isEqual.js")(isFavorite, tmp)) {
       tmp2 = isFavorite;
     }
   }
@@ -288,7 +288,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   const name = isFavorite.name;
   let tmp6;
   if (null != name) {
-    if (!importDefault(4444)(name, tmp5)) {
+    if (!require("../../../_runtime/04444_isEqual.js")(name, tmp5)) {
       tmp6 = name;
     }
   }
@@ -308,7 +308,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp11;
   if (null != start) {
-    if (!importDefault(4444)(start, start)) {
+    if (!require("../../../_runtime/04444_isEqual.js")(start, start)) {
       tmp11 = start;
     }
   }
@@ -324,7 +324,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp15;
   if (null != end) {
-    if (!importDefault(4444)(end, end)) {
+    if (!require("../../../_runtime/04444_isEqual.js")(end, end)) {
       tmp15 = end;
     }
   }
@@ -340,7 +340,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp19;
   if (null != applicationAudio) {
-    if (!importDefault(4444)(applicationAudio, applicationAudio)) {
+    if (!require("../../../_runtime/04444_isEqual.js")(applicationAudio, applicationAudio)) {
       tmp19 = applicationAudio;
     }
   }
@@ -356,7 +356,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp23;
   if (null != voiceAudio) {
-    if (!importDefault(4444)(voiceAudio, voiceAudio)) {
+    if (!require("../../../_runtime/04444_isEqual.js")(voiceAudio, voiceAudio)) {
       tmp23 = voiceAudio;
     }
   }
@@ -372,7 +372,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp27;
   if (null != soundboardAudio) {
-    if (!importDefault(4444)(soundboardAudio, soundboardAudio)) {
+    if (!require("../../../_runtime/04444_isEqual.js")(soundboardAudio, soundboardAudio)) {
       tmp27 = soundboardAudio;
     }
   }
@@ -394,7 +394,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp31;
   if (null != preset) {
-    if (!importDefault(4444)(preset, preset)) {
+    if (!require("../../../_runtime/04444_isEqual.js")(preset, preset)) {
       tmp31 = preset;
     }
   }
@@ -402,8 +402,8 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   const values = Object.values(obj);
   if (!values.every((arg0) => null == arg0)) {
     obj = { clip_runtime: null, current_clip_session_id: null };
-    const obj3 = importDefault(698);
-    obj[0] = require(4821) /* apexExperiment */.getClipsRuntime("updateClipMetadata");
+    const obj3 = require("../../utils/AnalyticsUtils.tsx");
+    obj[0] = require("ClipsV3RuntimeExperiment.tsx") /* apexExperiment */.getClipsRuntime("updateClipMetadata");
     const currentClipsSession = store.getCurrentClipsSession();
     let id;
     if (currentClipsSession != null) {
@@ -415,6 +415,6 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
     obj.clip_uuid = editMetadata.id;
     const merged1 = Object.assign(obj);
     obj3.track(AnalyticEvents.CLIP_EDITED, obj);
-    const obj5 = require(4821) /* apexExperiment */;
+    const obj5 = require("ClipsV3RuntimeExperiment.tsx") /* apexExperiment */;
   }
 };

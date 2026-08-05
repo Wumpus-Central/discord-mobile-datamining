@@ -17,7 +17,7 @@ export default function authorizeCallback(arg0) {
   let wasDeepLink;
   ({ location: _location, canceled, wasDeepLink } = arg0);
   if (null != _location) {
-    let toURLSafeResult = importDefault(1467).toURLSafe(_location);
+    let toURLSafeResult = require("../../../utils/URLUtils.tsx").toURLSafe(_location);
     if (toURLSafeResult == null) {
       toURLSafeResult = {};
     }
@@ -31,7 +31,7 @@ export default function authorizeCallback(arg0) {
             let obj = { application: null, guild: null };
             obj[0] = tmp;
             obj[1] = tmp2;
-            tmp8Result.pushLazy(require(1959) /* asyncRequireImpl */(10890, tmp9.paths), obj, closure_3);
+            tmp8Result.pushLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(10890, tmp9.paths), obj, closure_3);
           } else if (null != pathname.match(closure_6)) {
             if (!canceled) {
               let str;
@@ -55,27 +55,27 @@ export default function authorizeCallback(arg0) {
               }
               obj = { error: null };
               obj[0] = str;
-              tmp8Result1.pushLazy(require(1959) /* asyncRequireImpl */(10435, tmp9.paths), obj, closure_4);
-              const tmp17 = require(1959) /* asyncRequireImpl */(10435, tmp9.paths);
+              tmp8Result1.pushLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(10435, tmp9.paths), obj, closure_4);
+              const tmp17 = require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(10435, tmp9.paths);
             }
           }
         }
       }
     }
     if (wasDeepLink) {
-      const browserManagerSelectedBrowser = require(4251) /* NativeModules */.getBrowserManagerSelectedBrowser();
-      wasDeepLink = browserManagerSelectedBrowser === require(691) /* keys */.WebBrowserType.IN_APP;
-      const obj5 = require(4251) /* NativeModules */;
+      const browserManagerSelectedBrowser = require("../../links/native/BrowserManager.tsx") /* NativeModules */.getBrowserManagerSelectedBrowser();
+      wasDeepLink = browserManagerSelectedBrowser === require("../../../ConstantsIOS.tsx") /* keys */.WebBrowserType.IN_APP;
+      const obj5 = require("../../links/native/BrowserManager.tsx") /* NativeModules */;
     }
-    const obj2 = importDefault(1467);
+    const obj2 = require("../../../utils/URLUtils.tsx");
     let SAFARI;
     if (wasDeepLink) {
-      SAFARI = require(691) /* keys */.WebBrowserType.SAFARI;
+      SAFARI = require("../../../ConstantsIOS.tsx") /* keys */.WebBrowserType.SAFARI;
     }
-    importDefault(3982).openURL(_location, SAFARI);
-    const tmp8Result2 = importDefault(3982);
+    require("../../../lib/native/Linking.tsx").openURL(_location, SAFARI);
+    const tmp8Result2 = require("../../../lib/native/Linking.tsx");
   } else if (!canceled) {
-    obj = importDefault(4490);
-    obj.pushLazy(require(1959) /* asyncRequireImpl */(10435, dependencyMap.paths), undefined, closure_4);
+    obj = require("../../../actions/ModalActionCreators.tsx");
+    obj.pushLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(10435, dependencyMap.paths), undefined, closure_4);
   }
 };

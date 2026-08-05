@@ -10,7 +10,7 @@ const result = set.fileFinishedImporting("modules/creator_monetization_eligibili
 
 export const useIsUserInCreatorMonetizationEligibleCountry = function useIsUserInCreatorMonetizationEligibleCountry() {
   const items = [mergeGuildAvatar, handlePaymentSourceCreateEnd];
-  return require(589) /* initialize */.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let country;
     if (currentUser != null) {

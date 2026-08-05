@@ -8,11 +8,11 @@ const require = arg1;
 let c3 = importAllResult;
 let closure_6 = createCacheKey.createStyles((height) => {
   let obj = { container: null, gifImage: null, gifImageSelected: null };
-  obj = { paddingBottom: require(9853) /* transformFavoriteGifUrl */.GIF_PICKER_GUTTER_SPACING, paddingHorizontal: require(9853) /* transformFavoriteGifUrl */.GIF_PICKER_GUTTER_SPACING / 2, borderRadius: importDefault(712).radii.xs, width: "100%", height, flex: 1 };
+  obj = { paddingBottom: require("GIFPickerUtils.tsx") /* transformFavoriteGifUrl */.GIF_PICKER_GUTTER_SPACING, paddingHorizontal: require("GIFPickerUtils.tsx") /* transformFavoriteGifUrl */.GIF_PICKER_GUTTER_SPACING / 2, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.xs, width: "100%", height, flex: 1 };
   obj[0] = obj;
-  obj = { backgroundColor: importDefault(712).colors.BORDER_SUBTLE, borderRadius: importDefault(712).radii.xs, flex: 1 };
+  obj = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.xs, flex: 1 };
   obj[1] = obj;
-  obj[2] = { borderWidth: 2, borderColor: importDefault(712).colors.BACKGROUND_BRAND };
+  obj[2] = { borderWidth: 2, borderColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BRAND };
   return obj;
 });
 const memoResult = importAllResult.memo((height) => {

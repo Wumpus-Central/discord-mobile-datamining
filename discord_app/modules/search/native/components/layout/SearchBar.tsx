@@ -23,7 +23,7 @@ let closure_15 = createCacheKey.createStyles((arg0, minHeight) => {
     obj[0] = minHeight + 2;
   } else {
     obj = { borderRadius: null, minHeight: null };
-    obj[0] = importDefault(712).radii.round;
+    obj[0] = require("../../../../../../discord_common/js/packages/tokens/native.tsx").radii.round;
     obj[1] = minHeight;
   }
   obj = { searchBar: null, icon: null };

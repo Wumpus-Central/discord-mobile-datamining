@@ -19,9 +19,9 @@ export const getRoleIconData = function getRoleIconData(role, arg1) {
   } else {
     let byName;
     if (null != role.unicodeEmoji) {
-      let obj = importDefault(3926);
-      byName = obj.getByName(importDefault(3926).convertSurrogateToName(role.unicodeEmoji, false));
-      const obj2 = importDefault(3926);
+      let obj = require("../emojis/UnicodeEmojis.tsx");
+      byName = obj.getByName(require("../emojis/UnicodeEmojis.tsx").convertSurrogateToName(role.unicodeEmoji, false));
+      const obj2 = require("../emojis/UnicodeEmojis.tsx");
     }
     ({ id, icon } = role);
     let tmp4;
@@ -29,7 +29,7 @@ export const getRoleIconData = function getRoleIconData(role, arg1) {
       tmp4 = icon;
       if (!icon.startsWith("data:")) {
         let str2 = "png";
-        if (require(1416) /* getAvatarURL */.SUPPORTS_WEBP) {
+        if (require("../../utils/AvatarUtils.tsx") /* getAvatarURL */.SUPPORTS_WEBP) {
           str2 = "webp";
         }
         let str3 = "quality=lossless";
@@ -63,8 +63,8 @@ export const getRoleIconData = function getRoleIconData(role, arg1) {
   }
 };
 export const replaceRoleIconSourceSize = function replaceRoleIconSourceSize(str) {
-  const obj = require(1450) /* handleImageLoad */;
-  return str.replace(/size=[0-9]+/g, "size=" + obj.getBestMediaProxySize(arg1 * require(1450) /* handleImageLoad */.getDevicePixelRatio()));
+  const obj = require("../image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */;
+  return str.replace(/size=[0-9]+/g, "size=" + obj.getBestMediaProxySize(arg1 * require("../image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */.getDevicePixelRatio()));
 };
 export const isRoleIconAssetUrl = function isRoleIconAssetUrl(str) {
   let startsWithResult = str.startsWith(closure_5);

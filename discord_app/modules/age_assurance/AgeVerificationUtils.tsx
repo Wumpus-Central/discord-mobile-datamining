@@ -165,7 +165,7 @@ function useAgeVerificationRunner(onComplete) {
 }
 function useShouldCallReactiveCheck() {
   const items = [mergeGuildAvatar];
-  const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
   let prop;
   if (stateFromStores != null) {
     prop = stateFromStores.ageVerificationStatus;
@@ -202,7 +202,7 @@ function shouldCallReactiveCheck() {
   if (currentUser != null) {
     prop = currentUser.ageVerificationStatus;
   }
-  let tmp5 = prop !== require(1906) /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.UNVERIFIED;
+  let tmp5 = prop !== require("../../flow/Server.tsx") /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.UNVERIFIED;
   if (tmp5) {
     let prop1;
     if (currentUser != null) {
@@ -309,7 +309,7 @@ export const shouldShowTiggerPawtect = function shouldShowTiggerPawtect() {
   if (currentUser != null) {
     prop = currentUser.ageVerificationStatus;
   }
-  let tmp5 = prop !== require(1906) /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
+  let tmp5 = prop !== require("../../flow/Server.tsx") /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
   if (tmp5) {
     const isFeatureAgeGatedResult = getRegionalFeatureConfig.isFeatureAgeGated(tmp3(5108).AgeGatedFeature.REACTIVE_CHECK);
     let tmp8 = !isFeatureAgeGatedResult;
@@ -322,9 +322,9 @@ export const shouldShowTiggerPawtect = function shouldShowTiggerPawtect() {
 };
 export const useShouldShowTiggerPawtect = function useShouldShowTiggerPawtect() {
   const items = [mergeGuildAvatar];
-  const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj = require(589) /* initialize */;
-  let isFeatureAgeGated = require(3964) /* isFeatureAgeGated */.useIsFeatureAgeGated(require(5108) /* AgeGatedFeature */.AgeGatedFeature.REACTIVE_CHECK);
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let isFeatureAgeGated = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.useIsFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.REACTIVE_CHECK);
   if (isFeatureAgeGated) {
     let prop;
     if (stateFromStores != null) {
@@ -336,8 +336,8 @@ export const useShouldShowTiggerPawtect = function useShouldShowTiggerPawtect() 
   if (stateFromStores != null) {
     prop1 = stateFromStores.ageVerificationStatus;
   }
-  const obj2 = require(3964) /* isFeatureAgeGated */;
-  return prop1 !== require(1906) /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT && !isFeatureAgeGated;
+  const obj2 = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */;
+  return prop1 !== require("../../flow/Server.tsx") /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT && !isFeatureAgeGated;
 };
 export const isVerifiedTeen = function isVerifiedTeen() {
   const currentUser = authStore.getCurrentUser();
@@ -345,16 +345,16 @@ export const isVerifiedTeen = function isVerifiedTeen() {
   if (currentUser != null) {
     prop = currentUser.ageVerificationStatus;
   }
-  return prop === require(1906) /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.VERIFIED_TEEN;
+  return prop === require("../../flow/Server.tsx") /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.VERIFIED_TEEN;
 };
 export const useIsVerifiedTeen = function useIsVerifiedTeen() {
   const items = [mergeGuildAvatar];
-  const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
   let prop;
   if (stateFromStores != null) {
     prop = stateFromStores.ageVerificationStatus;
   }
-  return prop === require(1906) /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.VERIFIED_TEEN;
+  return prop === require("../../flow/Server.tsx") /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.VERIFIED_TEEN;
 };
 export const isVerifiedAdult = function isVerifiedAdult() {
   const currentUser = authStore.getCurrentUser();
@@ -362,7 +362,7 @@ export const isVerifiedAdult = function isVerifiedAdult() {
   if (currentUser != null) {
     prop = currentUser.ageVerificationStatus;
   }
-  let tmp5 = prop === require(1906) /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
+  let tmp5 = prop === require("../../flow/Server.tsx") /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
   if (!tmp5) {
     tmp5 = getRegionalFeatureConfig.isFeatureAgeGated(tmp3(5108).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1906).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
     const tmp7 = getRegionalFeatureConfig.isFeatureAgeGated(tmp3(5108).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1906).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
@@ -371,9 +371,9 @@ export const isVerifiedAdult = function isVerifiedAdult() {
 };
 export const useIsVerifiedAdult = function useIsVerifiedAdult() {
   const items = [mergeGuildAvatar];
-  const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj = require(589) /* initialize */;
-  let isFeatureAgeGated = require(3964) /* isFeatureAgeGated */.useIsFeatureAgeGated(require(5108) /* AgeGatedFeature */.AgeGatedFeature.REACTIVE_CHECK);
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let isFeatureAgeGated = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.useIsFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.REACTIVE_CHECK);
   if (isFeatureAgeGated) {
     let prop;
     if (stateFromStores != null) {
@@ -385,17 +385,17 @@ export const useIsVerifiedAdult = function useIsVerifiedAdult() {
   if (stateFromStores != null) {
     prop1 = stateFromStores.ageVerificationStatus;
   }
-  const obj2 = require(3964) /* isFeatureAgeGated */;
-  return prop1 === require(1906) /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT || isFeatureAgeGated;
+  const obj2 = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */;
+  return prop1 === require("../../flow/Server.tsx") /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT || isFeatureAgeGated;
 };
 export const useIsExplicitlyVerifiedAdult = function useIsExplicitlyVerifiedAdult() {
   const items = [mergeGuildAvatar];
-  const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
   let prop;
   if (stateFromStores != null) {
     prop = stateFromStores.ageVerificationStatus;
   }
-  return prop === require(1906) /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
+  return prop === require("../../flow/Server.tsx") /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
 };
 export const isAssignedByDiscord = function isAssignedByDiscord() {
   const currentUser = authStore.getCurrentUser();
@@ -403,11 +403,11 @@ export const isAssignedByDiscord = function isAssignedByDiscord() {
   if (currentUser != null) {
     prop = currentUser.ageVerificationStatus;
   }
-  return prop === require(1906) /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
+  return prop === require("../../flow/Server.tsx") /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
 };
 export const useIsAssignedByDiscord = function useIsAssignedByDiscord() {
   const items = [mergeGuildAvatar];
-  return require(589) /* initialize */.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let prop;
     if (currentUser != null) {
@@ -418,7 +418,7 @@ export const useIsAssignedByDiscord = function useIsAssignedByDiscord() {
 };
 export const useShowAssignedAgeGroupSettings = function useShowAssignedAgeGroupSettings() {
   const items = [mergeGuildAvatar];
-  const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => {
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let prop;
     if (currentUser != null) {
@@ -426,9 +426,9 @@ export const useShowAssignedAgeGroupSettings = function useShowAssignedAgeGroupS
     }
     return prop === callback(table[16]).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
   });
-  const obj = require(589) /* initialize */;
-  const obj2 = require(3964) /* isFeatureAgeGated */;
-  return require(3964) /* isFeatureAgeGated */.useIsFeatureAgeGated(require(5108) /* AgeGatedFeature */.AgeGatedFeature.REACTIVE_CHECK) && stateFromStores;
+  const obj = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const obj2 = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */;
+  return require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.useIsFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.REACTIVE_CHECK) && stateFromStores;
 };
 export const AgeVerificationSystemNotificationEmbedKeys = obj;
 export const AgeVerificationSystemNotificationCtaTypes = obj;
@@ -476,7 +476,7 @@ export const isAgeVerificationMessageWithConnectToTeenCta = function isAgeVerifi
               }
               let enabled = true === hasItem;
               if (enabled) {
-                const FamilyCenterConnectionPrereqExperiment = require(11247) /* apexExperiment */.FamilyCenterConnectionPrereqExperiment;
+                const FamilyCenterConnectionPrereqExperiment = require("../parent_tools/FamilyCenterConnectionPrereqExperiment.tsx") /* apexExperiment */.FamilyCenterConnectionPrereqExperiment;
                 enabled = FamilyCenterConnectionPrereqExperiment.getConfig({ location: "isAgeVerificationMessageWithConnectToTeenCta" }).enabled;
               }
               return enabled;
@@ -494,19 +494,19 @@ export const isAgeVerified = function isAgeVerified() {
   if (currentUser != null) {
     prop = currentUser.ageVerificationStatus;
   }
-  let tmp5 = prop !== require(1906) /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.UNVERIFIED;
+  let tmp5 = prop !== require("../../flow/Server.tsx") /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.UNVERIFIED;
   if (tmp5) {
     let prop1;
     if (currentUser != null) {
       prop1 = currentUser.ageVerificationStatus;
     }
-    tmp5 = prop1 !== require(1906) /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
+    tmp5 = prop1 !== require("../../flow/Server.tsx") /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
   }
   return tmp5;
 };
 export const useIsAgeVerified = function useIsAgeVerified() {
   const items = [mergeGuildAvatar];
-  const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
   let prop;
   if (stateFromStores != null) {
     prop = stateFromStores.ageVerificationStatus;
@@ -571,7 +571,7 @@ export const useInitiateAgeVerificationV2 = function useInitiateAgeVerificationV
 export const useWatchAgeVerificationStatusChange = function useWatchAgeVerificationStatusChange(callback1) {
   const _require = callback1;
   const items = [mergeGuildAvatar];
-  const stateFromStores = _require(589).useStateFromStores(items, () => {
+  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let prop;
     if (currentUser != null) {
@@ -579,14 +579,14 @@ export const useWatchAgeVerificationStatusChange = function useWatchAgeVerificat
     }
     return prop;
   });
-  const tmp2 = importDefault(8775)(stateFromStores);
-  const obj = _require(589);
+  const tmp2 = require("../../hooks/usePrevious.tsx")(stateFromStores);
+  const obj = _require("../../../discord_common/js/packages/flux/index.tsx");
   const items1 = [closure_8];
-  const stateFromStores1 = _require(589).useStateFromStores(items1, () => null != closure_8.getSuspendedUserToken());
-  const obj2 = _require(589);
+  const stateFromStores1 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => null != closure_8.getSuspendedUserToken());
+  const obj2 = _require("../../../discord_common/js/packages/flux/index.tsx");
   const items2 = [closure_8];
   let tmp5 = null != tmp2;
-  const stateFromStores2 = _require(589).useStateFromStores(items2, () => closure_8.isAuthenticated());
+  const stateFromStores2 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => closure_8.isAuthenticated());
   if (tmp5) {
     tmp5 = null != stateFromStores;
   }
@@ -619,9 +619,9 @@ export const isFullscreenAgeVerificationEntryPoint = function isFullscreenAgeVer
 };
 export const getAgeVerificationGetStartedTitle = function getAgeVerificationGetStartedTitle(entryPoint) {
   const hasItem = set.has(entryPoint);
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
   const string = intl.string;
-  const t = require(1236) /* getSystemLocale */.t;
+  const t = require("../../intl/index.native.tsx") /* getSystemLocale */.t;
   if (hasItem) {
     let stringResult = string(t.lSWVTM);
   } else {
@@ -635,19 +635,19 @@ export const getAgeVerificationGetStartedSubtitle = function getAgeVerificationG
     flag = false;
   }
   if (set.has(entryPoint)) {
-    const intl4 = require(1236) /* getSystemLocale */.intl;
-    let stringResult = intl4.string(require(1236) /* getSystemLocale */.t["S/xS/w"]);
+    const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    let stringResult = intl4.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["S/xS/w"]);
   } else if (flag) {
-    const intl3 = require(1236) /* getSystemLocale */.intl;
-    stringResult = intl3.string(importDefault(2803).h7qzoa);
+    const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    stringResult = intl3.string(require("AgeAssurance.messages.js").h7qzoa);
   } else if (null != arg1) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj = { handleOnHelpUrlHook: null };
     obj[0] = arg1;
-    stringResult = intl2.format(importDefault(2803).RpMIT0, obj);
+    stringResult = intl2.format(require("AgeAssurance.messages.js").RpMIT0, obj);
   } else {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    stringResult = intl.string(require(1236) /* getSystemLocale */.t.HxS3oQ);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    stringResult = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.HxS3oQ);
   }
   return stringResult;
 };

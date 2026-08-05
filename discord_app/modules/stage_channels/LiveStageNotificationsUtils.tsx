@@ -10,7 +10,7 @@ export const useCanSendStageStartNotification = function useCanSendStageStartNot
   const _require = first;
   const items = [getUncachedChannelPermissions];
   const items1 = [first];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
       canResult = outer1_3.can(outer1_4.MENTION_EVERYONE, tmp);

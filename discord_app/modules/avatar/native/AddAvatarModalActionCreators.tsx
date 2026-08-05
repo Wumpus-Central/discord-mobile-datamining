@@ -9,35 +9,35 @@ export const handlePressNext = function handlePressNext(pendingImage, first, fn)
     let obj = { default_avatar_selected: null, is_guild_profile: false, location: null };
     obj[0] = first;
     obj[2] = { page: "Onboarding" };
-    importDefault(698).track(AnalyticEvents.USER_AVATAR_UPDATED, obj);
-    const obj3 = importDefault(698);
+    require("../../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.USER_AVATAR_UPDATED, obj);
+    const obj3 = require("../../../utils/AnalyticsUtils.tsx");
     obj = { avatar: null, avatar_description: null };
     ({ imageUri: obj6[0], description: obj6[1] } = pendingImage);
-    const result = require(8321) /* saveProfileAndAccountRequest */.saveProfileAndAccountRequest(obj);
-    const obj5 = require(8321) /* saveProfileAndAccountRequest */;
+    const result = require("../../../actions/UserSettingsAccountActionCreators.tsx") /* saveProfileAndAccountRequest */.saveProfileAndAccountRequest(obj);
+    const obj5 = require("../../../actions/UserSettingsAccountActionCreators.tsx") /* saveProfileAndAccountRequest */;
   }
   if (null != fn) {
     fn();
   } else {
-    obj = importDefault(4490);
+    obj = require("../../../actions/ModalActionCreators.tsx");
     obj.popWithKey(ADD_AVATAR_MODAL_KEY);
-    require(11971) /* _startContactSyncForDiscoverability */.nextOnboardingStep({ skip: false });
-    const obj2 = require(11971) /* _startContactSyncForDiscoverability */;
+    require("../../nuf/native/NUFActionCreators.tsx") /* _startContactSyncForDiscoverability */.nextOnboardingStep({ skip: false });
+    const obj2 = require("../../nuf/native/NUFActionCreators.tsx") /* _startContactSyncForDiscoverability */;
   }
 };
 export const showSkipAvatarModal = function showSkipAvatarModal(arg0) {
   const _require = arg0;
-  let obj = importDefault(698);
+  let obj = require("../../../utils/AnalyticsUtils.tsx");
   obj.track(AnalyticEvents.NUO_TRANSITION, { flow_type: "Mobile NUX Post Reg", from_step: "Skip avatar modal", skip_attempt: true });
   obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, hideActionSheet: false };
-  const intl = _require(1236).intl;
-  obj[0] = intl.string(_require(1236).t.DnKHuV);
-  const intl2 = _require(1236).intl;
-  obj[1] = intl2.string(_require(1236).t["1EPySE"]);
-  const intl3 = _require(1236).intl;
-  obj[2] = intl3.string(_require(1236).t["7eZ3ji"]);
-  const intl4 = _require(1236).intl;
-  obj[3] = intl4.string(_require(1236).t.nhJ8OC);
+  const intl = _require("../../../intl/index.native.tsx").intl;
+  obj[0] = intl.string(_require("../../../intl/index.native.tsx").t.DnKHuV);
+  const intl2 = _require("../../../intl/index.native.tsx").intl;
+  obj[1] = intl2.string(_require("../../../intl/index.native.tsx").t["1EPySE"]);
+  const intl3 = _require("../../../intl/index.native.tsx").intl;
+  obj[2] = intl3.string(_require("../../../intl/index.native.tsx").t["7eZ3ji"]);
+  const intl4 = _require("../../../intl/index.native.tsx").intl;
+  obj[3] = intl4.string(_require("../../../intl/index.native.tsx").t.nhJ8OC);
   obj[4] = function onConfirm() {
     callback(outer1_2[6]).setPendingChanges({ avatar: null });
     const obj = callback(outer1_2[6]);
@@ -52,8 +52,8 @@ export const showSkipAvatarModal = function showSkipAvatarModal(arg0) {
       const tmpResult = tmp(tmp2[11]);
     }
   };
-  importDefault(4623).show(obj);
+  require("../../../actions/AlertActionCreators.tsx").show(obj);
 };
 export const openAddAvatarModal = function openAddAvatarModal() {
-  importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(16379, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
+  require("../../../actions/ModalActionCreators.tsx").pushLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(16379, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
 };

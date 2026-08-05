@@ -7,7 +7,7 @@ const result = require("initialize").fileFinishedImporting("modules/guild_tag/us
 
 export const useUserAvailableGuildsWithTags = function useUserAvailableGuildsWithTags() {
   const items = [createGuildRecordFromRust, trackCommunicationDisabled];
-  return require(589) /* initialize */.useStateFromStoresArray(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStoresArray(items, () => {
     guildsArray = guildsArray.getGuildsArray();
     return guildsArray.filter((id) => {
       selfMember = selfMember.getSelfMember(id.id);

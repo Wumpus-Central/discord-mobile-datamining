@@ -17,18 +17,18 @@ let result = require("createGuildRecordFromRust").fileFinishedImporting("modules
 export const getMuteSettingLabel = function getMuteSettingLabel(channel, guild) {
   if (null != channel) {
     if (channel.isPrivate()) {
-      const intl5 = require(1236) /* getSystemLocale */.intl;
-      let stringResult = intl5.string(require(1236) /* getSystemLocale */.t["Z/uD9+"]);
+      const intl5 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      let stringResult = intl5.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t["Z/uD9+"]);
     } else if (channel.type === constants.GUILD_CATEGORY) {
-      const intl4 = require(1236) /* getSystemLocale */.intl;
-      stringResult = intl4.string(require(1236) /* getSystemLocale */.t.Z33kYz);
+      const intl4 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      stringResult = intl4.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.Z33kYz);
     } else if (channel.isForumPost()) {
-      const intl3 = require(1236) /* getSystemLocale */.intl;
-      stringResult = intl3.string(require(1236) /* getSystemLocale */.t.lbN8mz);
+      const intl3 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      stringResult = intl3.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.lbN8mz);
     } else {
-      const intl2 = require(1236) /* getSystemLocale */.intl;
+      const intl2 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
       const string = intl2.string;
-      const t = require(1236) /* getSystemLocale */.t;
+      const t = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t;
       if (isThreadResult) {
         stringResult = string(t["wR+Fuo"]);
       } else {
@@ -39,15 +39,15 @@ export const getMuteSettingLabel = function getMuteSettingLabel(channel, guild) 
   } else {
     let stringResult1;
     if (null != guild) {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      stringResult1 = intl.string(require(1236) /* getSystemLocale */.t.mvxGko);
+      const intl = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      stringResult1 = intl.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.mvxGko);
     }
     return stringResult1;
   }
 };
 export const getMuteSettingSublabel = function getMuteSettingSublabel(channel, guild) {
   if (null != channel) {
-    const obj = require(4475) /* computeChannelName */;
+    const obj = require("../../../../../channel/useChannelName.tsx") /* computeChannelName */;
     let name = obj.computeChannelName(channel, mergeGuildAvatar, upsertRelationship, true);
   } else if (null != guild) {
     name = guild.name;
@@ -62,7 +62,7 @@ export const handleUnmutePress = function handleUnmutePress(channelId, guildId) 
       const result = tmp7Result.setNotificationSettings(channel, { muted: false });
     } else {
       tmp7Result = tmp7(5230);
-      const result1 = tmp7Result.updateChannelOverrideSettings(guildId, channel.id, { muted: false, mute_config: null }, require(5225) /* UserNotificationSettings */.NotificationLabels.Unmuted);
+      const result1 = tmp7Result.updateChannelOverrideSettings(guildId, channel.id, { muted: false, mute_config: null }, require("../../../../../../utils/NotificationSettingsUtils.tsx") /* UserNotificationSettings */.NotificationLabels.Unmuted);
     }
   }
 };
@@ -84,11 +84,11 @@ export const handleMuteSettingPress = function handleMuteSettingPress(arg0) {
       const result = tmp4Result.setNotificationSettings(channel, muteSettings);
     } else {
       tmp4Result = tmp4(5230);
-      const result1 = tmp4Result.updateChannelOverrideSettings(guildId, channel.id, muteSettings, require(5225) /* UserNotificationSettings */.NotificationLabels.Muted);
+      const result1 = tmp4Result.updateChannelOverrideSettings(guildId, channel.id, muteSettings, require("../../../../../../utils/NotificationSettingsUtils.tsx") /* UserNotificationSettings */.NotificationLabels.Muted);
     }
   } else if (null != guild) {
-    const result2 = importDefault(5230).updateGuildNotificationSettings(guild.id, muteSettings, require(5225) /* UserNotificationSettings */.NotificationLabels.Muted);
-    const obj5 = importDefault(5230);
+    const result2 = require("../../../../../../actions/NotificationSettingsModalActionCreators.tsx").updateGuildNotificationSettings(guild.id, muteSettings, require("../../../../../../utils/NotificationSettingsUtils.tsx") /* UserNotificationSettings */.NotificationLabels.Muted);
+    const obj5 = require("../../../../../../actions/NotificationSettingsModalActionCreators.tsx");
   }
 };
 export const getMuteSettings = function getMuteSettings(arg0) {
@@ -118,47 +118,47 @@ export const getMuteSettings = function getMuteSettings(arg0) {
 };
 export const getMessageNotificationsText = function getMessageNotificationsText(messageNotifications) {
   if (constants2.ALL_MESSAGES === messageNotifications) {
-    const intl3 = require(1236) /* getSystemLocale */.intl;
-    return intl3.string(require(1236) /* getSystemLocale */.t.DZi15z);
+    const intl3 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl3.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.DZi15z);
   } else if (tmp.ONLY_MENTIONS === messageNotifications) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    return intl2.string(require(1236) /* getSystemLocale */.t.xGICju);
+    const intl2 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl2.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.xGICju);
   } else if (tmp.NO_MESSAGES === messageNotifications) {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.CtVGyQ);
+    const intl = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.CtVGyQ);
   } else {
     return null;
   }
 };
 export const getMuteOptions = function getMuteOptions() {
   let obj = { label: null, duration: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t["8ot6gv"]);
+  const intl = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t["8ot6gv"]);
   obj[1] = MuteUntilSeconds.MINUTES_15;
   const items = [obj, , , , , ];
   obj = { label: null, duration: null };
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl2.string(require(1236) /* getSystemLocale */.t.UMWBZr);
+  const intl2 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl2.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.UMWBZr);
   obj[1] = MuteUntilSeconds.HOURS_1;
   items[1] = obj;
   obj = { label: null, duration: null };
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl3.string(require(1236) /* getSystemLocale */.t.QmYWtu);
+  const intl3 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl3.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.QmYWtu);
   obj[1] = MuteUntilSeconds.HOURS_3;
   items[2] = obj;
   const obj1 = { label: null, duration: null };
-  const intl4 = require(1236) /* getSystemLocale */.intl;
-  obj1[0] = intl4.string(require(1236) /* getSystemLocale */.t.EpAXPC);
+  const intl4 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj1[0] = intl4.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.EpAXPC);
   obj1[1] = MuteUntilSeconds.HOURS_8;
   items[3] = obj1;
   const obj2 = { label: null, duration: null };
-  const intl5 = require(1236) /* getSystemLocale */.intl;
-  obj2[0] = intl5.string(require(1236) /* getSystemLocale */.t["755t4q"]);
+  const intl5 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj2[0] = intl5.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t["755t4q"]);
   obj2[1] = MuteUntilSeconds.HOURS_24;
   items[4] = obj2;
   const obj3 = { label: null, duration: null };
-  const intl6 = require(1236) /* getSystemLocale */.intl;
-  obj3[0] = intl6.string(require(1236) /* getSystemLocale */.t.r3LawO);
+  const intl6 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj3[0] = intl6.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.r3LawO);
   obj3[1] = MuteUntilSeconds.ALWAYS;
   items[5] = obj3;
   return items;

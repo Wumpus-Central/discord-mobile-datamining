@@ -4,44 +4,44 @@ import { NotificationSettingsUpdateType as closure_4 } from "AccountNotification
 import createToggle from "createToggle";
 
 function onChange(custom_status_push_notifications) {
-  const CustomStatusPushNotifications = require(3958) /* explicitContentFromProto */.CustomStatusPushNotifications;
-  const CustomStatusPushNotificationType = require(1306) /* create */.CustomStatusPushNotificationType;
+  const CustomStatusPushNotifications = require("../../UserSettings.tsx") /* explicitContentFromProto */.CustomStatusPushNotifications;
+  const CustomStatusPushNotificationType = require("../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.CustomStatusPushNotificationType;
   CustomStatusPushNotifications.updateSetting(custom_status_push_notifications ? CustomStatusPushNotificationType.STATUS_PUSH_ENABLED : CustomStatusPushNotificationType.STATUS_PUSH_DISABLED);
-  let obj = importDefault(698);
+  let obj = require("../../../../utils/AnalyticsUtils.tsx");
   obj = { update_type: constants.ACCOUNT, custom_status_push_notifications };
   obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
 }
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.PTtxi9);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.PTtxi9);
   },
   useDescription() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["/+OQEs"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["/+OQEs"]);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue() {
-    const CustomStatusPushNotifications = require(3958) /* explicitContentFromProto */.CustomStatusPushNotifications;
+    const CustomStatusPushNotifications = require("../../UserSettings.tsx") /* explicitContentFromProto */.CustomStatusPushNotifications;
     const setting = CustomStatusPushNotifications.useSetting();
-    return setting !== require(1306) /* create */.CustomStatusPushNotificationType.STATUS_PUSH_DISABLED;
+    return setting !== require("../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.CustomStatusPushNotificationType.STATUS_PUSH_DISABLED;
   },
   onValueChange: onChange
 });
 let obj = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.PTtxi9);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.PTtxi9);
   },
   useDescription() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["/+OQEs"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["/+OQEs"]);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue() {
-    const CustomStatusPushNotifications = require(3958) /* explicitContentFromProto */.CustomStatusPushNotifications;
+    const CustomStatusPushNotifications = require("../../UserSettings.tsx") /* explicitContentFromProto */.CustomStatusPushNotifications;
     const setting = CustomStatusPushNotifications.useSetting();
-    return setting !== require(1306) /* create */.CustomStatusPushNotificationType.STATUS_PUSH_DISABLED;
+    return setting !== require("../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.CustomStatusPushNotificationType.STATUS_PUSH_DISABLED;
   },
   onValueChange: onChange
 };

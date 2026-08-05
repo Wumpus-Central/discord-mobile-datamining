@@ -5,7 +5,7 @@ let obj = { uiViewClassName: "NativeLottieNode", validAttributes: {} };
 obj = {
   setup(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) {
     const items = [arg1, arg2, arg3, arg4, arg5, arg6, arg7];
-    require(114) /* renderElement */.dispatchCommand(arg0, "setup", items);
+    require("../../../../../_runtime/00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "setup", items);
   }
 };
 const value = setRuntimeConfigProvider.get("NativeLottieNode", () => obj);

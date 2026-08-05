@@ -31,9 +31,9 @@ export default function ProfileEffectSample(hideBackground) {
   obj = { style: items1, source: null, accessible: false, resizeMode: "cover" };
   items1 = [tmp.sampleProfileImage];
   obj = { uri: null };
-  obj[0] = importDefault(9296);
+  obj[0] = require("../../../../discord_assets/assets/collectibles/previews/sample_profile.png.js");
   obj[1] = obj;
-  const items2 = [callback(importDefault(5236), obj), , ];
+  const items2 = [callback(require("../../../components_native/common/FastImage.tsx"), obj), , ];
   let tmp4Result = !flag;
   if (!flag) {
     const obj1 = { style: null };
@@ -41,7 +41,7 @@ export default function ProfileEffectSample(hideBackground) {
     tmp4Result = tmp4(tmp3, obj1);
   }
   items2[1] = tmp4Result;
-  items2[2] = callback(importDefault(9297), { skuId: hideBackground.item.skuId, bannerAdjustment: 0, useThumbnail: true });
+  items2[2] = callback(require("../profile_effects/native/ProfileEffect.tsx"), { skuId: hideBackground.item.skuId, bannerAdjustment: 0, useThumbnail: true });
   obj[1] = items2;
   return closure_4(View, obj);
 };

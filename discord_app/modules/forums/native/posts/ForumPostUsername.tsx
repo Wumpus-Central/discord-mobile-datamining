@@ -24,10 +24,10 @@ function ForumPostUsername(arg0) {
   ({ containerStyle, roleDotStyle, textStyle, suffix, hasUnreads } = arg0);
   const tmp = callback2();
   let num = 158;
-  if (useForumChannelStore(thread.parent_id).layoutType === require(1382) /* set */.ForumLayout.GRID) {
+  if (useForumChannelStore(thread.parent_id).layoutType === require("../../../../../discord_common/js/shared/shared-constants/ForumLayout.tsx") /* set */.ForumLayout.GRID) {
     num = 72;
   }
-  const diff = importDefault(10910)() - tmp2(11309).GRID_HORIZONTAL_PADDING - num;
+  const diff = require("../../../chat/native/useChatWidth.tsx")() - tmp2(11309).GRID_HORIZONTAL_PADDING - num;
   let tmp2Result = tmp2(589);
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = tmp2Result.useStateFromStores(items, () => roleStyle.roleStyle);
@@ -92,7 +92,7 @@ export const ForumPostAuthor = function ForumPostAuthor(thread) {
   let user;
   thread = thread.thread;
   ({ hasUnreads, suffix, containerStyle, roleDotStyle, textStyle } = thread);
-  let obj = require(8214) /* useLoadForumUnreadCounts */;
+  let obj = require("../../ForumHooks.tsx") /* useLoadForumUnreadCounts */;
   const forumPostAuthor = obj.useForumPostAuthor(thread);
   ({ user, author } = forumPostAuthor);
   let nick;
@@ -147,7 +147,7 @@ export const ForumPostMessageAuthor = function ForumPostMessageAuthor(thread) {
   let textStyle;
   thread = thread.thread;
   ({ message, hasUnreads, suffix, containerStyle, roleDotStyle, textStyle } = thread);
-  let obj = require(8214) /* useLoadForumUnreadCounts */;
+  let obj = require("../../ForumHooks.tsx") /* useLoadForumUnreadCounts */;
   const forumPostMessageAuthor = obj.useForumPostMessageAuthor(message, thread);
   const user = forumPostMessageAuthor.user;
   obj = { thread, authorId: null, authorName: null, authorColor: null, authorColors: null, suffix: null, containerStyle: null, roleDotStyle: null, textStyle: null, hasUnreads: null };

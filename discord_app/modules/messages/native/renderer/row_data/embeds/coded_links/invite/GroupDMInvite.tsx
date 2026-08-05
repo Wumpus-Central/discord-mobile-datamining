@@ -14,9 +14,9 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, cl
   let channel;
   let colors;
   let recipients_;
-  ({ colors, baseColors } = importDefault(7863)(closure_2));
-  const tmp2 = importDefault(7863)(closure_2);
-  ({ channel, recipients_ } = importDefault(10907)(invite));
+  ({ colors, baseColors } = require("../../getEmbedThemeColors.tsx")(closure_2));
+  const tmp2 = require("../../getEmbedThemeColors.tsx")(closure_2);
+  ({ channel, recipients_ } = require("getChannelAndRecipientsFromInvite.tsx")(invite));
   let id;
   if (channel != null) {
     id = channel.id;
@@ -26,9 +26,9 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, cl
   if (null != channel) {
     flag = true;
   }
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   const string = intl.string;
-  const t = require(1236) /* getSystemLocale */.t;
+  const t = require("../../../../../../../../intl/index.native.tsx") /* getSystemLocale */.t;
   if (arg1) {
     let str = string(t.qmtuXE);
     let tmp8 = tmp7;

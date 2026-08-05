@@ -12,10 +12,10 @@ export const useDerivedPendingRequests = function useDerivedPendingRequests(arr,
   const _require = arr;
   const dependencyMap = stateFromStores1;
   let items = [freshTeenActivityWithMap];
-  const stateFromStores = _require(589).useStateFromStores(items, () => linkedUsers.getLinkedUsers());
-  let obj = _require(589);
+  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => linkedUsers.getLinkedUsers());
+  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
   const items1 = [mergeGuildAvatar];
-  stateFromStores1 = _require(589).useStateFromStores(items1, () => {
+  stateFromStores1 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
     currentUser = currentUser.getCurrentUser();
     let id;
     if (currentUser != null) {

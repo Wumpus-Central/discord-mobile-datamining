@@ -14,10 +14,10 @@ function reset() {
   let c4;
 }
 function handleSyncedModeChange() {
-  return require(1347) /* isPerModeThemingActive */.isPerModeThemingActive(isSyncedModeThemesEnabled);
+  return require("../../user_settings/isPerModeThemingActive.tsx") /* isPerModeThemingActive */.isPerModeThemingActive(isSyncedModeThemesEnabled);
 }
 function handleSameAsDeviceThemeToggle() {
-  return require(1348) /* useIsMobileVisualRefreshExperimentEnabled */.isMobileVisualRefreshEnabled("CustomThemeMobileStore");
+  return require("../../themes/experiments/MobileVisualRefreshExperiment.tsx") /* useIsMobileVisualRefreshExperimentEnabled */.isMobileVisualRefreshEnabled("CustomThemeMobileStore");
 }
 function loadFromProtoSettings() {
   if (initialize.shouldSync("appearance")) {
@@ -25,7 +25,7 @@ function loadFromProtoSettings() {
     if (null != appearance) {
       let UNSET = appearance.theme;
       if (UNSET == null) {
-        UNSET = require(1306) /* create */.Theme.UNSET;
+        UNSET = require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.Theme.UNSET;
       }
       let closure_2 = PROTO_THEME_MAP_MOBILE[UNSET];
       const clientThemeSettings = appearance.clientThemeSettings;
@@ -42,7 +42,7 @@ function handleSelectivelySyncedUserSettingsUpdate() {
     if (null != appearance) {
       let UNSET = appearance.theme;
       if (UNSET == null) {
-        UNSET = require(1306) /* create */.Theme.UNSET;
+        UNSET = require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.Theme.UNSET;
       }
       let closure_2 = PROTO_THEME_MAP_MOBILE[UNSET];
       const clientThemeSettings = appearance.clientThemeSettings;
@@ -54,7 +54,7 @@ function handleSelectivelySyncedUserSettingsUpdate() {
   }
 }
 function isSyncedModeThemesEnabled() {
-  return require(1348) /* useIsMobileVisualRefreshExperimentEnabled */.isMobileVisualRefreshEnabled("CustomThemeMobileStore");
+  return require("../../themes/experiments/MobileVisualRefreshExperiment.tsx") /* useIsMobileVisualRefreshExperimentEnabled */.isMobileVisualRefreshEnabled("CustomThemeMobileStore");
 }
 class CustomThemeMobileStore extends PersistedStore {
 }
@@ -84,7 +84,7 @@ prototype["getState"] = function getState() {
   return obj;
 };
 prototype["getCustomTheme"] = function getCustomTheme() {
-  let obj = require(1347) /* isPerModeThemingActive */;
+  let obj = require("../../user_settings/isPerModeThemingActive.tsx") /* isPerModeThemingActive */;
   obj = { baseTheme: null, customTheme: null };
   if (obj.isPerModeThemingActive(isSyncedModeThemesEnabled)) {
     obj[0] = store.theme;
@@ -112,7 +112,7 @@ prototype["getCustomTheme"] = function getCustomTheme() {
   return customTheme;
 };
 prototype["getBaseTheme"] = function getBaseTheme() {
-  let obj = require(1347) /* isPerModeThemingActive */;
+  let obj = require("../../user_settings/isPerModeThemingActive.tsx") /* isPerModeThemingActive */;
   obj = { baseTheme: null, customTheme: null };
   if (obj.isPerModeThemingActive(isSyncedModeThemesEnabled)) {
     obj[0] = store.theme;
@@ -176,7 +176,7 @@ prototype["getCustomThemeDisplaySettings"] = function getCustomThemeDisplaySetti
   }
 };
 prototype["hasCustomTheme"] = function hasCustomTheme() {
-  let obj = require(1347) /* isPerModeThemingActive */;
+  let obj = require("../../user_settings/isPerModeThemingActive.tsx") /* isPerModeThemingActive */;
   obj = { baseTheme: null, customTheme: null };
   if (obj.isPerModeThemingActive(isSyncedModeThemesEnabled)) {
     obj[0] = store.theme;
@@ -236,7 +236,7 @@ const customThemeMobileStore = new CustomThemeMobileStore(require("dispatcher"),
       if (null != tmp3) {
         let UNSET = tmp3.theme;
         if (UNSET == null) {
-          UNSET = require(1306) /* create */.Theme.UNSET;
+          UNSET = require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.Theme.UNSET;
         }
         let closure_2 = PROTO_THEME_MAP_MOBILE[UNSET];
         const clientThemeSettings = tmp3.clientThemeSettings;

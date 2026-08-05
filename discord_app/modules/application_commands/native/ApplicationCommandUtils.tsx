@@ -12,12 +12,12 @@ export const getApplicationCommandsIconSource = function getApplicationCommandsI
   } else {
     const id = section.id;
     if (BuiltInSectionId.BUILT_IN === id) {
-      return importDefault(1416).makeSource(importDefault(11515));
+      return require("../../../utils/AvatarUtils.tsx").makeSource(require("../../../../_runtime/11515_registerAsset.js"));
     } else if (tmp10.FRECENCY === id) {
-      return importDefault(1416).makeSource(importDefault(11516));
+      return require("../../../utils/AvatarUtils.tsx").makeSource(require("../../../../_runtime/11516_registerAsset.js"));
     } else {
-      if (section.type === require(6891) /* ApplicationCommandSectionType */.ApplicationCommandSectionType.APPLICATION) {
-        let obj = importDefault(1416);
+      if (section.type === require("../ApplicationCommandTypes.tsx") /* ApplicationCommandSectionType */.ApplicationCommandSectionType.APPLICATION) {
+        let obj = require("../../../utils/AvatarUtils.tsx");
         obj = { id: null, icon: null, bot: null, botIconFirst: true, guildMember: null };
         ({ id: obj2[0], icon: obj2[1], application } = section);
         let bot;
@@ -28,7 +28,7 @@ export const getApplicationCommandsIconSource = function getApplicationCommandsI
         obj[4] = stateFromStores;
         let applicationIconSource = obj.getApplicationIconSource(obj);
       } else {
-        applicationIconSource = importDefault(1855);
+        applicationIconSource = require("../../../../_runtime/01855_registerAsset.js");
       }
       return applicationIconSource;
     }
@@ -62,6 +62,6 @@ export const openCommandAttachmentPreview = function openCommandAttachmentPrevie
       }
     };
     obj[4] = upload;
-    importDefault(9922)(obj);
+    require("../../media_uploads/native/showUploadPreviewActionSheet.tsx")(obj);
   }
 };

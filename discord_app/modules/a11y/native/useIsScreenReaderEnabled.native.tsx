@@ -38,7 +38,7 @@ let closure_5 = keys.create((arg0) => {
     }));
   });
   const listener = AccessibilityInfo.addEventListener("screenReaderChanged", updateScreenReaderEnabled);
-  let Storage = _require(595).Storage;
+  let Storage = _require("../../../../discord_common/js/packages/storage/Storage.tsx").Storage;
   screenReaderEnabled = Storage.get(screenReaderEnabled);
   if (screenReaderEnabled == null) {
     screenReaderEnabled = false;

@@ -16,7 +16,7 @@ export default function UserSettingsCommunityNotifications() {
   let items = [computeAlertSettings];
   stateFromStores = obj.useStateFromStores(items, () => guildAlertSettings.getGuildAlertSettings());
   const tmp = callback2();
-  const keys = importDefault(11).keys(stateFromStores);
+  const keys = require("../../../../utils/SnowflakeUtils.tsx").keys(stateFromStores);
   let tmp5 = null;
   if (0 !== keys.length) {
     obj = { children: null };

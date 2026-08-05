@@ -7,7 +7,7 @@ const result = require("set").fileFinishedImporting("modules/app_dms/useIsAppDM.
 export default function useIsAppDM(arg0) {
   const _require = arg0;
   const items = [mergeGuildAvatar];
-  return _require(647).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
     let tmp = null != closure_0 && obj.isDM();
     if (tmp) {
       tmp = 1 === obj.recipients.length;

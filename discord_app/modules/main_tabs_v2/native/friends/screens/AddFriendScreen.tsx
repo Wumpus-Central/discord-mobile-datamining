@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/friends/screens/AddFriendScreen.tsx
 import _slicedToArray from "_slicedToArray";
-import module_13111 from "module_13111";
+import ContactSyncUpsellCTA from "../../../../contact_sync/native/components/ContactSyncUpsellCTA.tsx";
 import get_ActivityIndicator from "Text";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { AnalyticEvents } from "ME";

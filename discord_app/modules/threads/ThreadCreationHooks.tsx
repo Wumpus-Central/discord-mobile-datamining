@@ -89,9 +89,9 @@ function getDefaultThreadName(stateFromStores, parentMessageId) {
     if (str3 == null) {
       str3 = "";
     }
-    const obj = importDefault(7062);
+    const obj = require("../messages/MessageParser.tsx");
     const tmp17 = importDefault;
-    const str4 = importDefault(7062).unparse(str3, stateFromStores.id, true);
+    const str4 = require("../messages/MessageParser.tsx").unparse(str3, stateFromStores.id, true);
     const tmp17Result = tmp17(8166);
     let str7 = tmp17(8166)(str4.split("\n")[0], true).replace(/^[ #-]+/, "");
     const items = [];
@@ -566,7 +566,7 @@ let result = require("noop").fileFinishedImporting("modules/threads/ThreadCreati
 
 export const PrivateThreadMode = obj;
 export const usePrivateThreadMode = function usePrivateThreadMode(parentChannel) {
-  const obj = require(5798) /* useCanUnarchiveThread */;
+  const obj = require("ThreadHooks.tsx") /* useCanUnarchiveThread */;
   const canStartPublicThread = obj.useCanStartPublicThread(parentChannel);
   if (!obj2.useCanStartPrivateThread(parentChannel)) {
     return tmp2.Disabled;

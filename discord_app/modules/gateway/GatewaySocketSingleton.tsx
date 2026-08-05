@@ -17,16 +17,16 @@ obj.handleIdentify = () => {
   if (null == token) {
     return null;
   } else {
-    const state = importDefault(10384).getState();
+    const state = require("../app_state/DiscordAppState.native.tsx").getState();
     const installationForTracking = obj.getInstallationForTracking();
     obj = { token: null, properties: null, presence: null };
     obj[0] = token;
     const obj1 = {};
-    const obj5 = importDefault(10384);
-    const merged = Object.assign(importDefault(698).getSuperProperties());
+    const obj5 = require("../app_state/DiscordAppState.native.tsx");
+    const merged = Object.assign(require("../../utils/AnalyticsUtils.tsx").getSuperProperties());
     obj1.client_app_state = state;
     obj1.is_fast_connect = false;
-    const obj8 = importDefault(698);
+    const obj8 = require("../../utils/AnalyticsUtils.tsx");
     obj1.gateway_connect_reasons = importAll(675).describeConnectionReasons();
     if (null != installationForTracking) {
       const obj2 = { installation_id: null };
@@ -58,13 +58,13 @@ obj.on("disconnect", (arg0) => {
   let code;
   let reason;
   ({ code, reason } = arg0);
-  importDefault(709).dispatch({ type: "CONNECTION_CLOSED", code, reason });
+  require("../../Dispatcher.tsx").dispatch({ type: "CONNECTION_CLOSED", code, reason });
 });
 obj.on("close", (arg0) => {
   let code;
   let reason;
   ({ code, reason } = arg0);
-  importDefault(709).dispatch({ type: "CONNECTION_INTERRUPTED", code, reason });
+  require("../../Dispatcher.tsx").dispatch({ type: "CONNECTION_INTERRUPTED", code, reason });
 });
 const result = set.fileFinishedImporting("modules/gateway/GatewaySocketSingleton.tsx");
 

@@ -15,7 +15,7 @@ export const getIncomingFriendRequestCount = function getIncomingFriendRequestCo
 };
 export const useIncomingFriendRequestCount = function useIncomingFriendRequestCount() {
   let items = [upsertRelationship, recountRelationshipTypes];
-  return require(589) /* initialize */.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
     let obj;
     let obj2;
     const items = [upsertRelationship, recountRelationshipTypes];

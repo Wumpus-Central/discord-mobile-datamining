@@ -65,7 +65,7 @@ prototype["scheduleReport"] = function scheduleReport() {
   }
 };
 prototype["sendReport"] = function sendReport(background) {
-  let obj = importDefault(16355);
+  let obj = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeJankStatsModule.tsx");
   let report;
   if (obj != null) {
     report = obj.requestReport();
@@ -77,13 +77,13 @@ prototype["sendReport"] = function sendReport(background) {
   }
   if (!tmp4) {
     obj = {};
-    const tmpResult = importDefault(698);
-    const merged = Object.assign(require(6843) /* getDeviceMetadata */.getDeviceMetadata());
+    const tmpResult = require("../../../utils/AnalyticsUtils.tsx");
+    const merged = Object.assign(require("../../tti_analytics/native/TTIAnalyticsUtils.tsx") /* getDeviceMetadata */.getDeviceMetadata());
     obj.version = 2;
     ({ totalFrameCount: obj3.total_frame_count, jankFrameCount: obj3.jank_frame_count, frameMetricsTotalFrameCount: obj3.frame_metrics_total_frame_count, frameMetricsJankFrameCount: obj3.frame_metrics_jank_frame_count } = report);
     obj.trigger = background;
     tmpResult.track(constants2.ANDROID_JANK_STATS, obj);
-    const obj4 = require(6843) /* getDeviceMetadata */;
+    const obj4 = require("../../tti_analytics/native/TTIAnalyticsUtils.tsx") /* getDeviceMetadata */;
   }
 };
 const jankStatsManager = new JankStatsManager();

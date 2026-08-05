@@ -45,7 +45,7 @@ function optIntoAllChannelsForExistingMember(id, arg1) {
 let result = require("trackCommunicationDisabled").fileFinishedImporting("modules/opt_in_channels/OptInOnboardingUtils.tsx");
 
 export const hasNotSetUpChannelOptIn = function hasNotSetUpChannelOptIn(guildId) {
-  const result = require(6903) /* useOptInEnabledForGuild */.isOptInEnabledForGuild(guildId);
+  const result = require("isOptInEnabled.tsx") /* useOptInEnabledForGuild */.isOptInEnabledForGuild(guildId);
   const selfMember = store.getSelfMember(guildId);
   let num;
   if (selfMember != null) {
@@ -54,11 +54,11 @@ export const hasNotSetUpChannelOptIn = function hasNotSetUpChannelOptIn(guildId)
   if (num == null) {
     num = 0;
   }
-  const obj = require(6903) /* useOptInEnabledForGuild */;
+  const obj = require("isOptInEnabled.tsx") /* useOptInEnabledForGuild */;
   const tmp = require;
-  const tmpResult = require(1384) /* hasFlag */;
+  const tmpResult = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
   let tmp7 = !result;
-  const hasFlagResult = require(1384) /* hasFlag */.hasFlag(num, GuildMemberFlags.COMPLETED_ONBOARDING);
+  const hasFlagResult = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(num, GuildMemberFlags.COMPLETED_ONBOARDING);
   if (!result) {
     tmp7 = !hasFlagResult;
   }
@@ -68,7 +68,7 @@ export const hasNotSetUpChannelOptIn = function hasNotSetUpChannelOptIn(guildId)
   return tmp7;
 };
 export const toggleShowAllChannels = function toggleShowAllChannels(id) {
-  const result = require(6903) /* useOptInEnabledForGuild */.isOptInEnabledForGuild(id);
+  const result = require("isOptInEnabled.tsx") /* useOptInEnabledForGuild */.isOptInEnabledForGuild(id);
   const selfMember = store.getSelfMember(id);
   let num;
   if (selfMember != null) {
@@ -78,7 +78,7 @@ export const toggleShowAllChannels = function toggleShowAllChannels(id) {
     num = 0;
   }
   let tmpResult = tmp(1384);
-  const obj = require(6903) /* useOptInEnabledForGuild */;
+  const obj = require("isOptInEnabled.tsx") /* useOptInEnabledForGuild */;
   let tmp7 = !result;
   const hasFlagResult = tmpResult.hasFlag(num, GuildMemberFlags.COMPLETED_ONBOARDING);
   if (!result) {
@@ -114,8 +114,8 @@ export const hasClearedGuildOnboardingNotice = function hasClearedGuildOnboardin
     if (num == null) {
       num = 0;
     }
-    hasFlagResult = require(1384) /* hasFlag */.hasFlag(num, require(1306) /* create */.GuildOnboardingProgress.GUILD_NOTICE_CLEARED);
-    const obj = require(1384) /* hasFlag */;
+    hasFlagResult = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(num, require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.GuildOnboardingProgress.GUILD_NOTICE_CLEARED);
+    const obj = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
     const tmp3 = require;
   }
   return hasFlagResult;

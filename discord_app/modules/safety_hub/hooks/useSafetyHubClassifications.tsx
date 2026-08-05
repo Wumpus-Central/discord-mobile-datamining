@@ -8,7 +8,7 @@ const result = require("SafetyHubView").fileFinishedImporting("modules/safety_hu
 
 export const useSafetyHubClassifications = function useSafetyHubClassifications() {
   const items = [handleSafetyHubRequestAgeVerificationResetModalAction];
-  const stateFromStoresArray = require(589) /* initialize */.useStateFromStoresArray(items, () => classifications.getClassifications());
+  const stateFromStoresArray = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStoresArray(items, () => classifications.getClassifications());
   return stateFromStoresArray.sort((id, id2) => {
     const obj = callback(11);
     const extractTimestampResult = callback(11).extractTimestamp(id2.id);
@@ -17,19 +17,19 @@ export const useSafetyHubClassifications = function useSafetyHubClassifications(
 };
 export const useSafetyHubClassification = function useSafetyHubClassification(classificationId) {
   const _require = classificationId;
-  let obj = _require(589);
+  let obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const items = [handleSafetyHubRequestAgeVerificationResetModalAction];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getClassification(closure_0));
   const items1 = [handleSafetyHubRequestAgeVerificationResetModalAction];
-  const stateFromStores1 = _require(589).useStateFromStores(items1, () => outer1_5.getClassificationRequestState(closure_0));
-  const obj2 = _require(589);
+  const stateFromStores1 = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => outer1_5.getClassificationRequestState(closure_0));
+  const obj2 = _require("../../../../discord_common/js/packages/flux/index.tsx");
   let tmp = _require;
   const items2 = [handleSafetyHubRequestAgeVerificationResetModalAction];
-  const stateFromStores2 = _require(589).useStateFromStores(items2, () => store.getIsDsaEligible());
-  const obj3 = _require(589);
+  const stateFromStores2 = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => store.getIsDsaEligible());
+  const obj3 = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const items3 = [handleSafetyHubRequestAgeVerificationResetModalAction];
-  let stateFromStores3 = _require(589).useStateFromStores(items3, () => store.getIsAppealEligible());
-  const obj4 = _require(589);
+  let stateFromStores3 = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items3, () => store.getIsAppealEligible());
+  const obj4 = _require("../../../../discord_common/js/packages/flux/index.tsx");
   if (obj5.isGuildClassification(stateFromStores)) {
     const guild_metadata = stateFromStores.guild_metadata;
     let member_type;
@@ -98,5 +98,5 @@ export const useExpiredSafetyHubClassifications = function useExpiredSafetyHubCl
 };
 export const useSafetyHubAppealSignal = function useSafetyHubAppealSignal() {
   const items = [handleSafetyHubRequestAgeVerificationResetModalAction];
-  return require(589) /* initialize */.useStateFromStores(items, () => appealSignal.getAppealSignal());
+  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => appealSignal.getAppealSignal());
 };

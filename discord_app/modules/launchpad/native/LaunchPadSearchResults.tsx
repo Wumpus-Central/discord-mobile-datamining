@@ -18,25 +18,25 @@ function renderItemJSX(result) {
     return null;
   } else {
     const type = result.type;
-    if (require(7230) /* sortByMatchScore */.AutocompleterResultTypes.GUILD === type) {
+    if (require("../../autocompleter/index.tsx") /* sortByMatchScore */.AutocompleterResultTypes.GUILD === type) {
       let obj = { guild: null };
       obj[0] = result.record;
       return callback(closure_14, obj);
     } else if (tmp14(7230).AutocompleterResultTypes.TEXT_CHANNEL === type) {
       obj = { channel: null, navigationReplace: true, showGuildBadgeIcon: true };
       obj[0] = result.record;
-      return callback(importDefault(15929), obj);
+      return callback(require("shared/TextChannel.tsx"), obj);
     } else if (tmp14(7230).AutocompleterResultTypes.GROUP_DM === type) {
       const obj1 = { channel: null, navigationReplace: true };
       obj1[0] = result.record;
-      return callback(importDefault(15935), obj1);
+      return callback(require("shared/DMChannel.tsx"), obj1);
     } else if (tmp14(7230).AutocompleterResultTypes.VOICE_CHANNEL === type) {
       const obj2 = { channel: null };
       obj2[0] = result.record;
-      return callback(importDefault(15936), obj2);
+      return callback(require("shared/VoiceOrStageChannel.tsx"), obj2);
     } else if (tmp14(7230).AutocompleterResultTypes.USER === type) {
       ({ record: obj4[0], comparator: obj4[1] } = result);
-      return callback(importDefault(15938), { user: null, comparator: null });
+      return callback(require("LaunchPadSearchResultUser.tsx"), { user: null, comparator: null });
     } else if (tmp14(7230).AutocompleterResultTypes.HEADER === type) {
       const obj4 = { name: null, styles: null, isRefreshEnabled: null };
       obj4[0] = result.record.text;
@@ -52,8 +52,8 @@ function renderItemJSX(result) {
 }
 function renderSearchResultsSection() {
   const obj = { name: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t["zkoeq/"]);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["zkoeq/"]);
   return callback(closure_16, obj);
 }
 let c3 = importAllResult;
@@ -73,7 +73,7 @@ let closure_14 = importAllResult.memo((guild) => {
   let unread;
   guild = guild.guild;
   const tmp = callback3();
-  const tmp2 = importDefault(15921)();
+  const tmp2 = require("shared/getLayoutStyles.tsx")();
   const items = [guild.id];
   const callback = importAllResult.useCallback(() => {
     guild(outer1_2[10]).transitionToGuild(guild.id);
@@ -90,16 +90,16 @@ let closure_14 = importAllResult.memo((guild) => {
   obj = { onPress: callback, underlayColor: tmp.pressableUnderlayColor.backgroundColor, style: items3, children: null };
   items3 = [tmp.pressable, { borderRadius: tmp2.container.borderRadius }];
   obj = { children: null };
-  const tmp7 = importDefault(15922);
+  const tmp7 = require("shared/renderChannelPressableWrapper.tsx");
   obj1 = { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES };
-  const items4 = [callback(importDefault(15925), obj1), , ];
+  const items4 = [callback(require("shared/UnreadBadge.tsx"), obj1), , ];
   obj2 = { size: tmp2.icon.guildIconSize, guild, style: items5 };
   items5 = [tmp.guildIcon, tmp2.icon.margin];
-  items4[1] = callback(importDefault(5661), obj2);
+  items4[1] = callback(require("../../guild/native/GuildIcon.tsx"), obj2);
   const obj3 = { name: guild.name, mentionBadge: null };
-  const tmp8 = importDefault(15923);
-  obj3[1] = importDefault(15928)({ mentionCount, locale: stateFromStores, isMentionLowImportance });
-  items4[2] = importDefault(15926)(obj3);
+  const tmp8 = require("shared/renderChannelWrapper.tsx");
+  obj3[1] = require("shared/renderChannelBadge.tsx")({ mentionCount, locale: stateFromStores, isMentionLowImportance });
+  items4[2] = require("shared/renderChannelContent.tsx")(obj3);
   obj[0] = items4;
   obj[3] = tmp8(callback2(closure_10, obj), { fontScale });
   return tmp7(callback(guild(4812).PressableHighlight, obj));
@@ -109,11 +109,11 @@ let closure_16 = importAllResult.memo((arg0) => {
   let note;
   let onPress;
   ({ name, onPress, note } = arg0);
-  let obj = require(15133) /* renderCategoryItem */;
+  let obj = require("../../channel_list_v2/native/items/RedesignCategory.tsx") /* renderCategoryItem */;
   const categoryStyles = obj.useCategoryStyles();
   const tmp = callback3();
-  const tmp3 = importDefault(1348)("WrappedCategoryItem");
-  obj = { style: tmp.categoryWrapper, children: require(15133) /* renderCategoryItem */.renderCategoryItem({ name, onPress, note, styles: categoryStyles, isRefreshEnabled: tmp3 }) };
+  const tmp3 = require("../../themes/experiments/MobileVisualRefreshExperiment.tsx")("WrappedCategoryItem");
+  obj = { style: tmp.categoryWrapper, children: require("../../channel_list_v2/native/items/RedesignCategory.tsx") /* renderCategoryItem */.renderCategoryItem({ name, onPress, note, styles: categoryStyles, isRefreshEnabled: tmp3 }) };
   return callback(View, obj);
 });
 let obj2 = { backgroundColor: require("Themes").colors.INTERACTIVE_BACKGROUND_ACTIVE };

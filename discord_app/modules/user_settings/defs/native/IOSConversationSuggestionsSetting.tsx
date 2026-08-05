@@ -8,8 +8,8 @@ let closure_4 = identity.createWithEqualityFn(() => ({ isEnabled: true }));
 require("get ActivityIndicator").NativeModules.IntentsHandler;
 identity = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.J8foZq);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.J8foZq);
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useIOSConversationSuggestionsSettingValue() {
@@ -20,7 +20,7 @@ identity = {
         callback(table[4]).batchUpdates(() => outer1_4.setState({ isEnabled: closure_0 }));
       });
     }, []);
-    return callback((isEnabled) => isEnabled.isEnabled, require(3898) /* isIterable */.shallow);
+    return callback((isEnabled) => isEnabled.isEnabled, require("../../../../../_runtime/03898_isIterable.js") /* isIterable */.shallow);
   },
   onValueChange: function onIOSConversationSuggestionsSettingValueChange(arg0) {
     const result = IntentsHandler.setConversationSuggestionsEnabled(arg0);
@@ -32,7 +32,7 @@ identity = {
     });
   },
   usePredicate: function useHasIOSConversationSuggestionsSetting() {
-    return !require(500) /* set */.isAndroid();
+    return !require("../../../../utils/PlatformUtils.tsx") /* set */.isAndroid();
   }
 };
 identity = createToggle.createToggle(identity);

@@ -6,7 +6,7 @@ export const ensureValidMode = function ensureValidMode(arg0) {
   if ("typescript" === arg0) {
     str = arg0;
   } else {
-    const obj = require(1868) /* fluxApi */;
+    const obj = require("../FluxApi.tsx") /* fluxApi */;
   }
   return str;
 };

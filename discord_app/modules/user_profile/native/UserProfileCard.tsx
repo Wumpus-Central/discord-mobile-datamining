@@ -45,7 +45,7 @@ export default function UserProfileCard(arg0) {
   ({ titleLeadingIcon, titleIcon, titleStyle, children, style } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
   const tmp2 = createCacheKey();
-  const tmp4 = importDefault(1348)("UserProfileCard");
+  const tmp4 = require("../../themes/experiments/MobileVisualRefreshExperiment.tsx")("UserProfileCard");
   let obj = { style };
   const merged1 = Object.assign(merged);
   let tmp5Result = null != title || null != trailingAction;
@@ -71,7 +71,7 @@ export default function UserProfileCard(arg0) {
       }
       obj1[3] = str2;
       obj1[5] = title;
-      items1[1] = closure_6(require(4281) /* Text */.Text, obj1);
+      items1[1] = closure_6(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
       items1[2] = titleIcon;
       obj[1] = items1;
       tmp5Result = tmp5(tmp6, obj);
@@ -116,7 +116,7 @@ export const UserProfileFormRow = function UserProfileFormRow(arg0) {
   if (labelColor == null) {
     labelColor = str2;
   }
-  items[1] = callback(require(4281) /* Text */.Text, { variant: "text-md/semibold", color: labelColor, style: tmp.rowLabelText, children: label });
+  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-md/semibold", color: labelColor, style: tmp.rowLabelText, children: label });
   tmp6Result = null != hint;
   if (tmp6Result) {
     const obj2 = { size: null, color: null };
@@ -126,7 +126,7 @@ export const UserProfileFormRow = function UserProfileFormRow(arg0) {
   }
   items[2] = tmp6Result;
   if (tmp6Result) {
-    tmp6Result = tmp6(require(5660) /* ChevronSmallRightIcon */.ChevronSmallRightIcon, { size: "sm" });
+    tmp6Result = tmp6(require("../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx") /* ChevronSmallRightIcon */.ChevronSmallRightIcon, { size: "sm" });
   }
   items[3] = tmp6Result;
   obj[1] = items;
@@ -140,11 +140,11 @@ export const UserProfileFormRow = function UserProfileFormRow(arg0) {
   }
   items1[1] = tmp6Result1;
   obj[5] = items1;
-  return closure_7(require(4812) /* PressableBase */.PressableOpacity, obj);
+  return closure_7(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
 };
 export const UserProfileCardRows = function UserProfileCardRows(children) {
   let closure_0;
-  closure_0 = importDefault(1348)("UserProfileCardRows");
+  closure_0 = require("../../themes/experiments/MobileVisualRefreshExperiment.tsx")("UserProfileCardRows");
   const Children = React.Children;
   return callback(closure_8, {
     children: Children.map(children.children, (arg0, arg1) => {

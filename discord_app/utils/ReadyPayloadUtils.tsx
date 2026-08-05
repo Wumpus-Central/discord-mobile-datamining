@@ -357,8 +357,8 @@ export const hydrateReadySupplementalPayload = function hydrateReadySupplemental
   return obj;
 };
 export const preloadReadyPayloadData = function preloadReadyPayloadData() {
-  const databaseResult = importDefault(1907).database();
-  const obj = importDefault(1907);
+  const databaseResult = require("../modules/app_database/DatabaseDaos.tsx").database();
+  const obj = require("../modules/app_database/DatabaseDaos.tsx");
   const tmp4 = require;
   if (obj2.isCacheEnabled()) {
     let tmpResult = tmp(7034);
@@ -366,7 +366,7 @@ export const preloadReadyPayloadData = function preloadReadyPayloadData() {
   } else {
     committedVersions = Promise.resolve({});
   }
-  obj2 = require(7030) /* isCacheEnabled */;
+  obj2 = require("../modules/cache/isCacheEnabled.native.tsx") /* isCacheEnabled */;
   if (tmp4Result.isCacheEnabled()) {
     tmpResult = tmp(1927);
     let guildIds = tmpResult.getGuildIds();
@@ -398,7 +398,7 @@ export const hydrateReadyPayloadPrioritized = function hydrateReadyPayloadPriori
   let users;
   ({ users, private_channels, merged_members: require, guilds } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  let obj = importDefault(1907);
+  let obj = require("../modules/app_database/DatabaseDaos.tsx");
   let tmp4 = null != obj.database();
   if (tmp4) {
     tmp4 = false === closure_1.databaseOk;

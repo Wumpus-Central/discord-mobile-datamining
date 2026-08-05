@@ -14,11 +14,11 @@ prototype["isGenericIapConnected"] = function isGenericIapConnected() {
 prototype["genericProductsLoaded"] = function genericProductsLoaded() {
   let tmp = null != c3;
   if (tmp) {
-    tmp = importDefault(12).filter(c3, (identifier) => {
+    tmp = require("../../../../_runtime/00012_apply.js").filter(c3, (identifier) => {
       const GenericProductIds = callback(table[2]).GenericProductIds;
       return GenericProductIds.includes(identifier.identifier);
-    }).length === require(5770) /* SubscriptionPlans */.GenericProductIds.length;
-    const arr = importDefault(12);
+    }).length === require("../../premium/native/ProductIds.android.tsx") /* SubscriptionPlans */.GenericProductIds.length;
+    const arr = require("../../../../_runtime/00012_apply.js");
   }
   return tmp;
 };

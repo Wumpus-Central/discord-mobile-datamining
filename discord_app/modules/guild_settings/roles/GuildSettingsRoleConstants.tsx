@@ -26,18 +26,18 @@ obj = { key: "template_cosmetic", color: null, permissions: null, title: null, d
 obj[1] = unsafe_getRawColor.unsafe_getRawColor("BRAND_500");
 obj[2] = require("applyOverwrites").NONE;
 obj[3] = function title() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  return intl.string(require(1236) /* getSystemLocale */.t.M8jQyg);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.M8jQyg);
 };
 obj[4] = function description() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  return intl.string(require(1236) /* getSystemLocale */.t["7nF/S/"]);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["7nF/S/"]);
 };
 obj[5] = function contents() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  const items = [intl.string(require(1236) /* getSystemLocale */.t.uwLDAb), ];
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  items[1] = intl2.string(require(1236) /* getSystemLocale */.t.gqngN7);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const items = [intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.uwLDAb), ];
+  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  items[1] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.gqngN7);
   return items;
 };
 obj[6] = function contentPreface() {
@@ -49,20 +49,20 @@ obj1[1] = unsafe_getRawColor.unsafe_getRawColor("GREEN_360");
 obj1[2] = require("applyOverwrites").DEFAULT;
 obj1[3] = removeResult;
 obj1[4] = function title() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  return intl.string(require(1236) /* getSystemLocale */.t["9BsHzh"]);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["9BsHzh"]);
 };
 obj1[5] = function description() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  return intl.string(require(1236) /* getSystemLocale */.t.ywKYtw);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ywKYtw);
 };
 obj1[6] = function contents() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  const items = [intl.string(require(1236) /* getSystemLocale */.t["9Vhbnl"]), , ];
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  items[1] = intl2.string(require(1236) /* getSystemLocale */.t["0xn+w1"]);
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  items[2] = intl3.string(require(1236) /* getSystemLocale */.t.ieWVpB);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const items = [intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["9Vhbnl"]), , ];
+  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  items[1] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["0xn+w1"]);
+  const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  items[2] = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ieWVpB);
   return items;
 };
 obj1[7] = function contentPreface() {
@@ -73,27 +73,27 @@ const obj2 = { key: "template_moderator", color: null, permissions: null, title:
 obj2[1] = unsafe_getRawColor.unsafe_getRawColor("YELLOW_300");
 obj2[2] = combineResult;
 obj2[3] = function title() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  return intl.string(require(1236) /* getSystemLocale */.t["m/GC8z"]);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["m/GC8z"]);
 };
 obj2[4] = function description() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  return intl.string(require(1236) /* getSystemLocale */.t.ERrMJZ);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ERrMJZ);
 };
 obj2[5] = function contents() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  const items = [intl.string(require(1236) /* getSystemLocale */.t.YOSxcd), , , ];
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  items[1] = intl2.string(require(1236) /* getSystemLocale */.t.q9H4Fm);
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  items[2] = intl3.string(require(1236) /* getSystemLocale */.t["9nHnCj"]);
-  const intl4 = require(1236) /* getSystemLocale */.intl;
-  items[3] = intl4.string(require(1236) /* getSystemLocale */.t.iqwXvc);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const items = [intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.YOSxcd), , , ];
+  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  items[1] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.q9H4Fm);
+  const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  items[2] = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["9nHnCj"]);
+  const intl4 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  items[3] = intl4.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.iqwXvc);
   return items;
 };
 obj2[6] = function contentPreface() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  return intl.string(require(1236) /* getSystemLocale */.t.amGM7K);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.amGM7K);
 };
 obj[obj.MODERATOR] = obj2;
 const obj3 = { key: "template_manager", color: null, permissions: null, communityPermissions: null, title: null, description: null, contents: null, contentPreface: null };
@@ -101,27 +101,27 @@ obj3[1] = unsafe_getRawColor.unsafe_getRawColor("RED_400");
 obj3[2] = combineResult1;
 obj3[3] = require("fromString").add(combineResult1, Permissions.VIEW_GUILD_ANALYTICS);
 obj3[4] = function title() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  return intl.string(require(1236) /* getSystemLocale */.t.qKmu3w);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.qKmu3w);
 };
 obj3[5] = function description() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  return intl.string(require(1236) /* getSystemLocale */.t.WxWPYV);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.WxWPYV);
 };
 obj3[6] = function contents() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  const items = [intl.string(require(1236) /* getSystemLocale */.t.Hx1Vox), , , ];
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  items[1] = intl2.string(require(1236) /* getSystemLocale */.t["aUZ/zD"]);
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  items[2] = intl3.string(require(1236) /* getSystemLocale */.t["8lQujv"]);
-  const intl4 = require(1236) /* getSystemLocale */.intl;
-  items[3] = intl4.string(require(1236) /* getSystemLocale */.t.cUP4pl);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const items = [intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Hx1Vox), , , ];
+  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  items[1] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["aUZ/zD"]);
+  const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  items[2] = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["8lQujv"]);
+  const intl4 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  items[3] = intl4.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.cUP4pl);
   return items;
 };
 obj3[7] = function contentPreface() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  return intl.string(require(1236) /* getSystemLocale */.t["7Dkb62"]);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["7Dkb62"]);
 };
 obj[obj.MANAGER] = obj3;
 const addResult = require("fromString").add(combineResult1, Permissions.VIEW_GUILD_ANALYTICS);

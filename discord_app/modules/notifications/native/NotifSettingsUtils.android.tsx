@@ -19,13 +19,13 @@ function inferImportanceFromBehavior(visibility) {
 }
 function formatCategory(id) {
   const obj = { id: id.string_id, name: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   obj[1] = intl.string(id.title);
   return obj;
 }
 function formatSetting(item10022, arg1) {
   const obj = { id: item10022.string_id, groupId: item10022.category, name: null, importance: null, ringtone: null, badge: null, vibrate: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   obj[2] = intl.string(item10022.title);
   if (arg1 != null) {
     obj[3] = arg1;
@@ -155,7 +155,7 @@ export default {
   clear() {
     let registerAndroidNotifGroupsAndChannels;
     let registerAndroidNotifTypeMappings;
-    let obj = importDefault(13629);
+    let obj = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeNotifSettingsModule.tsx");
     if (obj == null) {
       obj = {};
     }
@@ -173,7 +173,7 @@ export default {
     let mapping;
     let registerAndroidNotifGroupsAndChannels;
     let registerAndroidNotifTypeMappings;
-    let obj = importDefault(13629);
+    let obj = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeNotifSettingsModule.tsx");
     if (obj == null) {
       obj = {};
     }
@@ -186,7 +186,7 @@ export default {
         obj = { channels: null, inheritedImportances: null };
         obj[0] = channels.map((id) => id.id);
         const _Array = Array;
-        const tmpResult = importDefault(1208);
+        const tmpResult = require("../../../utils/SentryUtils.native.tsx");
         obj[1] = Array.from(inheritedImportances.entries()).map((arg0) => {
           let tmp;
           let tmp2;

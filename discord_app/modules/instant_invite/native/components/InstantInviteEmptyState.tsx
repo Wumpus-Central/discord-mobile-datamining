@@ -28,7 +28,7 @@ export default function _default(link) {
   stateFromStores = obj.useStateFromStores(items, () => inviteSettings.getInviteSettings());
   obj = { style: tmp.container, children: null };
   obj = { containerStyle: tmp.emptyStateContainer, imageStyle: tmp.emptyStateArt, titleStyle: tmp.emptyStateTitle, source: null, title: null, body: null };
-  obj[3] = importDefault(9009);
+  obj[3] = require("../../../../../_runtime/09009_registerAsset.js");
   const intl = stateFromStores(1236).intl;
   obj[4] = intl.string(stateFromStores(1236).t.tQc0l8);
   const intl2 = stateFromStores(1236).intl;
@@ -42,7 +42,7 @@ export default function _default(link) {
   obj2[3] = str;
   obj2[4] = tmp.inviteInput;
   obj2[6] = stateFromStores(1297).ClearButtonVisibility.NEVER;
-  const items2 = [callback(importDefault(8278), obj2), ];
+  const items2 = [callback(require("../../../../design/void/Form/native/FreeFormTextInput.tsx"), obj2), ];
   const obj3 = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, style: null, children: null };
   const intl3 = tmp2(1236).intl;
   obj3[0] = intl3.string(stateFromStores(1236).t["3D5yo/"]);

@@ -277,7 +277,7 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(it
   }
   const notification_center_v2 = "notification_center_v2";
   let tmp2 = _require;
-  let obj = _require(647);
+  let obj = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx");
   const items = [id];
   const stateFromStores = obj.useStateFromStores(items, () => {
     const message = item.message;
@@ -287,7 +287,7 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(it
     }
     return id.getChannel(channel_id);
   });
-  let obj1 = _require(7893);
+  let obj1 = _require("../../replies/canReplyToMessage.tsx");
   let message = item.message;
   const canReplyToMessage = obj1.useCanReplyToMessage(stateFromStores, item.message);
   if (message != null) {

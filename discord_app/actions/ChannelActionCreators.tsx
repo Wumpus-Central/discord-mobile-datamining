@@ -289,11 +289,11 @@ export default {
           tmp3 = channel;
           const tmp6Result = tmp6(4293);
         } else {
-          const privateChannel = importDefault(5096).selectPrivateChannel(channel.id);
+          const privateChannel = require("SelectedChannelActionCreators.tsx").selectPrivateChannel(channel.id);
           tmp3 = channel;
-          const obj3 = importDefault(5096);
+          const obj3 = require("SelectedChannelActionCreators.tsx");
         }
-        obj2 = require(4137) /* getRootNavigationRef */;
+        obj2 = require("../modules/main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */;
         tmp6 = require;
       }
     }
@@ -416,8 +416,8 @@ export default {
   },
   _openPrivateChannel(body) {
     const tmp = callback2(body);
-    importDefault(709).dispatch({ type: "CHANNEL_CREATE", channel: tmp });
-    const obj = importDefault(709);
+    require("../Dispatcher.tsx").dispatch({ type: "CHANNEL_CREATE", channel: tmp });
+    const obj = require("../Dispatcher.tsx");
     const tmp2 = importDefault;
     const tmp5 = require;
     if (null != obj2.getRootNavigationRef()) {
@@ -438,7 +438,7 @@ export default {
     if (arg2 === undefined) {
       flag2 = false;
     }
-    if (importDefault(8858)(id)) {
+    if (require("../modules/changelog/utils/isChangelogChannel.tsx")(id)) {
       let tmpResult = tmp(698);
       let obj = { last_changelog_id: null, unread_count: null };
       obj[0] = handleUserSettingsProtoStoreChange.latestChangelogId();
@@ -449,13 +449,13 @@ export default {
     obj = { id, guild_id: "Array", parent_id: "isArray" };
     tmpResult.dispatch({ type: "CHANNEL_DELETE", channel: obj, silent: flag2 });
     if (flag) {
-      require(1222) /* transitionTo */.transitionTo(constants2.FRIENDS);
-      const obj5 = require(1222) /* transitionTo */;
+      require("../modules/routing/router_utils.tsx") /* transitionTo */.transitionTo(constants2.FRIENDS);
+      const obj5 = require("../modules/routing/router_utils.tsx") /* transitionTo */;
     }
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     const obj1 = { url: closure_11.CHANNEL(id), query: { silent: flag2 }, oldFormErrors: true, rejectWithError: null };
-    obj1[3] = require(530) /* sendRequest */.rejectWithMigratedError();
-    const obj7 = require(530) /* sendRequest */;
+    obj1[3] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+    const obj7 = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */;
     const delResult = HTTP.del(obj1);
     return HTTP.del(obj1).then(() => {
       const AccessibilityAnnouncer = callback(4131).AccessibilityAnnouncer;
@@ -468,7 +468,7 @@ export default {
     });
   },
   bulkLeaveGroupDMs(channel_ids) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: closure_11.USER_CHANNELS_BULK_LEAVE, body: obj, oldFormErrors: true, rejectWithError: true };
     obj = { channel_ids };
     return HTTP.post(obj);
@@ -550,11 +550,11 @@ export default {
     });
   },
   removeRecipient(arg0, arg1) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     return HTTP.del({ url: closure_11.CHANNEL_RECIPIENT(arg0, arg1), oldFormErrors: true, rejectWithError: true });
   },
   setDMOwner(arg0, owner) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: closure_11.CHANNEL(arg0), body: obj, oldFormErrors: true, rejectWithError: true };
     obj = { owner };
     return HTTP.patch(obj);
@@ -894,11 +894,11 @@ export default {
     })();
   },
   convertToGuild(arg0) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     return HTTP.post({ url: closure_11.CHANNEL_CONVERT(arg0), oldFormErrors: true, rejectWithError: true });
   },
   preload(arg0, channelId) {
-    let obj = importDefault(709);
+    let obj = require("../Dispatcher.tsx");
     let tmp = null;
     if (arg0 !== closure_13) {
       tmp = arg0;
@@ -913,7 +913,7 @@ export default {
     } else {
       result = closure_11.CHANNEL_STORE_LISTING(arg0);
     }
-    const result1 = _require(4522).httpGetWithCountryCodeQuery(result);
+    const result1 = _require("../utils/StoreUtils.tsx").httpGetWithCountryCodeQuery(result);
     return result1.then((body) => {
       let obj = outer1_1(outer1_2[13]);
       obj = { type: "STORE_LISTING_FETCH_SUCCESS", channelId: closure_0, storeListing: body.body };

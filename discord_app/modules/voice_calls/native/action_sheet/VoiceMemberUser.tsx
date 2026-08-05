@@ -469,7 +469,7 @@ const memoResult1 = importAllResult.memo(function VoiceMemberUser(voiceState) {
     }
     return outer1_7.getChannel(channelId);
   });
-  const name = importDefault(4124).useName(voiceState.user);
+  const name = require("../../../../utils/UserUtils.tsx").useName(voiceState.user);
   if (null != voiceState) {
     if (voiceState.selfStream) {
       obj = {};

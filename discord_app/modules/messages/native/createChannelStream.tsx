@@ -590,9 +590,9 @@ export default function createChannelStream(forceRender) {
     arr[1] = forceRender ? closure_6.UPDATE : closure_6.NOOP;
     arr[2] = roleStyle;
     arr[3] = messages.loadingMore;
-    roleStyle = require(1236) /* getSystemLocale */.intl;
+    roleStyle = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     messages = roleStyle.string;
-    arr[4] = messages(require(1236) /* getSystemLocale */.t.XBlaiC);
+    arr[4] = messages(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.XBlaiC);
     arr = items.push(arr);
   }
 };

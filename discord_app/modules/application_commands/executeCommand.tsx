@@ -1612,7 +1612,7 @@ function _displayInteractionLifecycleInChat() {
   return applyArgumentsResult;
 }
 function getAnalyticsLocationFromCommandOrigin(arg0) {
-  if (require(6891) /* ApplicationCommandSectionType */.CommandOrigin.APPLICATION_LAUNCHER === arg0) {
+  if (require("ApplicationCommandTypes.tsx") /* ApplicationCommandSectionType */.CommandOrigin.APPLICATION_LAUNCHER === arg0) {
     return tmp(6891).ApplicationCommandTriggerLocations.APP_LAUNCHER;
   } else if (tmp(6891).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW === arg0) {
     return tmp(6891).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW;

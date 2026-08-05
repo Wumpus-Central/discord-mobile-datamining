@@ -14,11 +14,11 @@ let result = require("createGuildRecordFromRust").fileFinishedImporting("modules
 
 export const useCanSeeOnboardingHome = function useCanSeeOnboardingHome(guild_id) {
   const _require = guild_id;
-  const tmp = importDefault(5754)(guild_id);
+  const tmp = require("useIsNewMember.tsx")(guild_id);
   importDefault = tmp;
   const items = [ensureGuildLoaded, createGuildRecordFromRust, initialize];
   const items1 = [guild_id, tmp];
-  return _require(647).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
     if (guild_id !== outer1_8) {
       if (!obj3.isFavoritesGuildId(tmp2)) {
         let has = outer1_5.getGuild(tmp2);
@@ -136,7 +136,7 @@ export const canSeeOnboardingHome = function canSeeOnboardingHome(id) {
           return hasItem1;
         }
       }
-      obj3 = require(1865) /* getFavoritesAwareGuildName */;
+      obj3 = require("../favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
       tmp14 = require;
     }
     return false;

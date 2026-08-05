@@ -10,7 +10,7 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
   const _require = arg0;
   let closure_1 = arg1;
   let dependencyMap = arg2;
-  let obj = _require(589);
+  let obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const items = [ensureGuildLoaded];
   const items1 = [arg1, arg0];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {

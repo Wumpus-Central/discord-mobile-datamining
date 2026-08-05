@@ -54,7 +54,7 @@ function getEmbeddedActivityLaunchability(arg0) {
     } else {
       return obj.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS;
     }
-    obj2 = require(10530) /* useIsActivitiesEnabledForCurrentPlatform */;
+    obj2 = require("../useIsActivitiesEnabledForCurrentPlatform.tsx") /* useIsActivitiesEnabledForCurrentPlatform */;
   } else {
     return obj.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL;
   }
@@ -71,17 +71,17 @@ export const useEmbeddedActivityLaunchability = function useEmbeddedActivityLaun
   const _require = channelId;
   const items = [ensureGuildLoaded, createGuildRecordFromRust, getUncachedChannelPermissions, updateVoiceState];
   const items1 = [channelId];
-  return _require(589).useStateFromStores(items, () => outer1_9({ channelId: closure_0, ChannelStore: outer1_2, GuildStore: outer1_3, PermissionStore: outer1_4, VoiceStateStore: outer1_5 }), items1);
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_9({ channelId: closure_0, ChannelStore: outer1_2, GuildStore: outer1_3, PermissionStore: outer1_4, VoiceStateStore: outer1_5 }), items1);
 };
 export const getEmbeddedActivityLaunchabilityLabel = function getEmbeddedActivityLaunchabilityLabel(arg0) {
   if (obj.CAN_LAUNCH === arg0) {
-    const intl3 = require(1236) /* getSystemLocale */.intl;
-    return intl3.string(require(1236) /* getSystemLocale */.t.qJvTKQ);
+    const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.qJvTKQ);
   } else if (tmp.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION === arg0) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    return intl2.string(require(1236) /* getSystemLocale */.t.hHGrWz);
+    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.hHGrWz);
   } else {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.j29zCr);
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.j29zCr);
   }
 };

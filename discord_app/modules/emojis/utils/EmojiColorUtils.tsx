@@ -17,9 +17,9 @@ function buildPlatformedThemedEmojiColorPalette(shouldProcessMobileColors) {
   if (null != colors) {
     palette = null;
     if (colors.length >= 1) {
-      let obj = require(4129) /* hexToRgba */;
+      let obj = require("../../../utils/ColorUtils.tsx") /* hexToRgba */;
       const findColorByHsvResult = obj.findColorByHsv(colors);
-      let obj1 = importDefault(4130);
+      let obj1 = require("../../../utils/Color.tsx");
       const parseStringResult = obj1.parseString(findColorByHsvResult);
       palette = null;
       if (null != parseStringResult) {
@@ -120,7 +120,7 @@ function buildPlatformedThemedEmojiColorPalette(shouldProcessMobileColors) {
       }
     }
   }
-  return importDefault(7162).applyPlatformToThemedEmojiColorPalette({ palette, shouldProcessMobileColors });
+  return require("../../../utils/EmojiUtilsPlatformed.native.tsx").applyPlatformToThemedEmojiColorPalette({ palette, shouldProcessMobileColors });
 }
 let c3 = "#ffffff";
 let c4 = "#36393e";

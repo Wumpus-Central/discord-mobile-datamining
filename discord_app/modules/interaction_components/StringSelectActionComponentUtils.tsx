@@ -10,7 +10,7 @@ export const getInitialStringSelectOptions = function getInitialStringSelectOpti
   if (interactionComponentState != null) {
     type = interactionComponentState.type;
   }
-  if (type === require(1906) /* PermissionOverwriteType */.ComponentType.STRING_SELECT) {
+  if (type === require("../../flow/Server.tsx") /* PermissionOverwriteType */.ComponentType.STRING_SELECT) {
     let mapped = interactionComponentState.values;
   } else {
     const options = selectionActionComponent.options;

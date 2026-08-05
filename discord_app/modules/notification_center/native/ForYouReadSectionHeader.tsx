@@ -20,8 +20,8 @@ export const ForYouReadSectionHeader = function ForYouReadSectionHeader() {
   const tmp = createCacheKey();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.textHeader, variant: "text-sm/semibold", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl.string(require(1236) /* getSystemLocale */.t.hftC1K);
-  obj[1] = jsx(require(4281) /* Text */.Text, { style: tmp.textHeader, variant: "text-sm/semibold", children: null });
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.hftC1K);
+  obj[1] = jsx(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: tmp.textHeader, variant: "text-sm/semibold", children: null });
   return <closure_2 style={tmp.textHeader} variant="text-sm/semibold">{null}</closure_2>;
 };

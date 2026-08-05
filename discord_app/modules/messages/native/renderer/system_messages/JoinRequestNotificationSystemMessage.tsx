@@ -10,7 +10,7 @@ const result = require("createGuildRecordFromRust").fileFinishedImporting("modul
 
 export const createJoinRequestNotificationSystemMessage = function createJoinRequestNotificationSystemMessage(message) {
   message = message.message;
-  let obj = importDefault(11);
+  let obj = require("../../../../../utils/SnowflakeUtils.tsx");
   request = request.getRequest(obj.cast(message.channel_id));
   let tmp4;
   if (null != request) {
@@ -45,48 +45,48 @@ export const createJoinRequestNotificationSystemMessage = function createJoinReq
   }
   if (MessageTypes.GUILD_JOIN_REQUEST_ACCEPT_NOTIFICATION === type) {
     if (null == username) {
-      const intl5 = require(1236) /* getSystemLocale */.intl;
-      let stringResult = intl5.string(require(1236) /* getSystemLocale */.t["2VLV0d"]);
+      const intl5 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      let stringResult = intl5.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["2VLV0d"]);
     }
-    const intl6 = require(1236) /* getSystemLocale */.intl;
+    const intl6 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { username: null, guildName: null };
     obj[0] = username;
     obj[1] = name;
-    stringResult = intl6.formatToParts(require(1236) /* getSystemLocale */.t.EloBG4, obj);
+    stringResult = intl6.formatToParts(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.EloBG4, obj);
   } else {
     if (tmp13.GUILD_JOIN_REQUEST_REJECT_NOTIFICATION === type) {
       if (null != username) {
         if (null != name) {
-          const intl4 = require(1236) /* getSystemLocale */.intl;
+          const intl4 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
           obj = { username: null, guildName: null };
           obj[0] = username;
           obj[1] = name;
-          let formatToPartsResult = intl4.formatToParts(require(1236) /* getSystemLocale */.t["UGN/Yy"], obj);
+          let formatToPartsResult = intl4.formatToParts(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["UGN/Yy"], obj);
         }
         let str = formatToPartsResult;
       }
-      const intl3 = require(1236) /* getSystemLocale */.intl;
-      formatToPartsResult = intl3.string(require(1236) /* getSystemLocale */.t.FVF6qU);
+      const intl3 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      formatToPartsResult = intl3.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.FVF6qU);
     } else {
       str = "";
       if (tmp13.GUILD_JOIN_REQUEST_WITHDRAWN_NOTIFICATION === type) {
         if (null != username) {
           if (null != name) {
-            const intl2 = require(1236) /* getSystemLocale */.intl;
+            const intl2 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
             const obj1 = { username: null, guildName: null };
             obj1[0] = username;
             obj1[1] = name;
-            let formatToPartsResult1 = intl2.formatToParts(require(1236) /* getSystemLocale */.t.u4movT, obj1);
+            let formatToPartsResult1 = intl2.formatToParts(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.u4movT, obj1);
           }
           str = formatToPartsResult1;
         }
-        const intl = require(1236) /* getSystemLocale */.intl;
-        formatToPartsResult1 = intl.string(require(1236) /* getSystemLocale */.t.BMlbE7);
+        const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        formatToPartsResult1 = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.BMlbE7);
       }
     }
     const obj2 = { content: null };
     obj2[0] = str;
-    const merged = Object.assign(importDefault(7882)(message));
+    const merged = Object.assign(require("createCommonMessage.tsx")(message));
     return obj2;
   }
 };

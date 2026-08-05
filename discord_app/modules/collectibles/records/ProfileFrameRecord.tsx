@@ -6,7 +6,7 @@ let prototype;
 prototype = function ProfileFrameRecord(arg0) {
   const tmp2 = new prototype(arg0, new.target, new.target, tmp);
   // ThrowIfThisInitialized (0x7c)
-  tmp2.type = require(1901) /* CollectiblesItemType */.CollectiblesItemType.PROFILE_FRAME;
+  tmp2.type = require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.PROFILE_FRAME;
   ({ label: tmp2.label, layers: tmp2.layers, innerWidth: tmp2.innerWidth, overflowTop: tmp2.overflowTop, overflowBottom: tmp2.overflowBottom, overflowHorizontal: tmp2.overflowHorizontal } = arg0);
   return tmp2;
 }.prototype;
@@ -33,7 +33,7 @@ prototype["fromServer"] = function fromServer(arg0) {
   }
   tmp3 = new tmp3(obj, merged, obj, this);
   // ThrowIfThisInitialized (0x7c)
-  tmp3.type = require(1901) /* CollectiblesItemType */.CollectiblesItemType.PROFILE_FRAME;
+  tmp3.type = require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.PROFILE_FRAME;
   ({ label: tmp6.label, layers: tmp6.layers, innerWidth: tmp6.innerWidth, overflowTop: tmp6.overflowTop, overflowBottom: tmp6.overflowBottom, overflowHorizontal: tmp6.overflowHorizontal } = obj);
   return tmp3;
 };

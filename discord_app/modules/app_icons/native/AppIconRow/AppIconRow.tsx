@@ -7,24 +7,24 @@ import createCacheKey from "createCacheKey";
 const require = arg1;
 const items = [
   () => {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["EgWTY+"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["EgWTY+"]);
   },
   () => {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.umBn5f);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.umBn5f);
   },
   () => {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.dG1wD1);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.dG1wD1);
   },
   () => {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.SesI4S);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.SesI4S);
   },
   () => {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.RnMLvl);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.RnMLvl);
   }
 ];
 createCacheKey = { icon: null };

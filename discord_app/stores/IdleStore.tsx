@@ -13,24 +13,24 @@ function checkIdleAFK() {
       tmp2 = c12;
     }
     if (!tmp2) {
-      let obj = require(500) /* set */;
+      let obj = require("../utils/PlatformUtils.tsx") /* set */;
       tmp2 = obj.isAndroid() && c13;
       const tmp5 = obj.isAndroid() && c13;
     }
     if (!tmp2) {
       if (c9) {
-        importDefault(709).dispatch({ type: "IDLE", idle: false });
-        const obj2 = importDefault(709);
+        require("../Dispatcher.tsx").dispatch({ type: "IDLE", idle: false });
+        const obj2 = require("../Dispatcher.tsx");
       }
     }
-    const AfkTimeout = require(3958) /* explicitContentFromProto */.AfkTimeout;
+    const AfkTimeout = require("../modules/user_settings/UserSettings.tsx") /* explicitContentFromProto */.AfkTimeout;
     const setting = AfkTimeout.getSetting();
     if (0 !== setting) {
       if (null == closure_3) {
         const _Date = Date;
         const _Math = Math;
         const diff = Date.now() - closure_8;
-        if (diff <= Math.min(setting * importDefault(687).Millis.SECOND, tmp)) {
+        if (diff <= Math.min(setting * require("../utils/Durations.tsx").Millis.SECOND, tmp)) {
           let tmp17 = c11;
           if (!c11) {
             tmp17 = c12;
@@ -51,16 +51,16 @@ function checkIdleAFK() {
       }
     }
     if (!c10) {
-      importDefault(709).dispatch({ type: "AFK", afk: true });
-      const obj7 = importDefault(709);
+      require("../Dispatcher.tsx").dispatch({ type: "AFK", afk: true });
+      const obj7 = require("../Dispatcher.tsx");
     }
     tmp14 = require;
   }
   if (!c9) {
     obj = { type: "IDLE", idle: true, idleSince: null };
     obj[2] = closure_8;
-    importDefault(709).dispatch(obj);
-    const obj3 = importDefault(709);
+    require("../Dispatcher.tsx").dispatch(obj);
+    const obj3 = require("../Dispatcher.tsx");
   }
 }
 ({ IDLE_DURATION: c5, AppStates: closure_6 } = ME);
@@ -78,7 +78,7 @@ if (require("set").isPlatformEmbedded) {
   }
   if (null != powerMonitor) {
     function checkNativeIdle() {
-      const tmp3 = importDefault(3896);
+      const tmp3 = require("../lib/DiscordNative.tsx");
       let getSystemIdleTimeMs;
       if (tmp3 != null) {
         const powerMonitor = tmp3.powerMonitor;
@@ -133,7 +133,7 @@ if (require("set").isPlatformEmbedded) {
       let c11 = true;
       let closure_3 = Date.now();
       checkIdleAFK();
-      importDefault(5096).disconnect();
+      require("../actions/SelectedChannelActionCreators.tsx").disconnect();
     });
     const powerMonitor3 = require("set").powerMonitor;
     class IdleStore extends r10079 {

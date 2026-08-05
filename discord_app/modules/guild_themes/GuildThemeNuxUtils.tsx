@@ -99,7 +99,7 @@ let result = require("GuildThemeSourcePreference").fileFinishedImporting("module
 
 export const getInitialGuildThemeNuxSelection = function getInitialGuildThemeNuxSelection() {
   defaultGuildThemePreference = defaultGuildThemePreference.getDefaultGuildThemePreference();
-  if (defaultGuildThemePreference === require(4217) /* GuildThemeSourcePreference */.GuildThemeSourcePreference.PERSONAL) {
+  if (defaultGuildThemePreference === require("../../flow/Client.tsx") /* GuildThemeSourcePreference */.GuildThemeSourcePreference.PERSONAL) {
     let GUILD = tmp2(4217).GuildThemeSourcePreference.PERSONAL;
   } else {
     GUILD = tmp2(4217).GuildThemeSourcePreference.GUILD;

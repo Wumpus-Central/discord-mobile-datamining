@@ -37,7 +37,7 @@ export default function useGuildMemberDisplayRole(arg0, arg1) {
   let closure_1 = arg1;
   let items = [createGuildRecordFromRust, trackCommunicationDisabled];
   const items1 = [arg0, arg1];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const items = [outer1_4, outer1_3];
     return outer1_5(closure_0, closure_1, items);
   }, items1);

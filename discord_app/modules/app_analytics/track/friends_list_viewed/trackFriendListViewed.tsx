@@ -5,8 +5,8 @@ const result = require("expandEventProperties").fileFinishedImporting("modules/a
 
 export default function trackFriendsListViewed(source) {
   let str = source.tab_opened;
-  const tmp = importDefault(15699)();
-  let obj = importDefault(698);
+  const tmp = require("getTrackFriendsListViewedData.native.tsx")();
+  let obj = require("../../../../utils/AnalyticsUtils.tsx");
   obj = { tab_opened: str, source: source.source };
   const merged = Object.assign(tmp);
   obj.track(AnalyticEvents.FRIENDS_LIST_VIEWED, obj);
@@ -29,5 +29,5 @@ export default function trackFriendsListViewed(source) {
     num2 = 0;
   }
   obj[3] = num2;
-  require(6835) /* isClickstreamEnabled */.trackClickstream(AnalyticEvents.FRIENDS_LIST_VIEWED_CLICKSTREAM, obj);
+  require("../../clickstream/Clickstream.tsx") /* isClickstreamEnabled */.trackClickstream(AnalyticEvents.FRIENDS_LIST_VIEWED_CLICKSTREAM, obj);
 };

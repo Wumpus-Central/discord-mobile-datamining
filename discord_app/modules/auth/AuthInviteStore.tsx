@@ -15,7 +15,7 @@ const authInviteStore = new AuthInviteStore(require("dispatcher"), {
     if (null == guild) {
       return false;
     } else {
-      closure_2[guild.id] = require(1411) /* fromGuildPropertiesWithAdditionalFields */.fromInviteGuild(guild);
+      closure_2[guild.id] = require("../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */.fromInviteGuild(guild);
     }
   }
 });

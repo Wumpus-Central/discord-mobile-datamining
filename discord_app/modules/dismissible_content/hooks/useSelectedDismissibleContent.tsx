@@ -11,10 +11,10 @@ export const useSelectedDismissibleContent = function useSelectedDismissibleCont
   if (bypassAutoDismiss === undefined) {
     flag = false;
   }
-  const obj = require(5932) /* canShowTimeRecurringContent */;
-  [tmp2, tmp3] = callback(require(5932) /* canShowTimeRecurringContent */.useGetDismissibleContent(items, APP_LAUNCHER_ONBOARDING), 2);
-  const tmp = callback(require(5932) /* canShowTimeRecurringContent */.useGetDismissibleContent(items, APP_LAUNCHER_ONBOARDING), 2);
-  const selectedDismissibleContentShared = require(5934) /* useSelectedDismissibleContentShared */.useSelectedDismissibleContentShared(tmp2, tmp3, flag);
+  const obj = require("../useGetDismissibleContent.tsx") /* canShowTimeRecurringContent */;
+  [tmp2, tmp3] = callback(require("../useGetDismissibleContent.tsx") /* canShowTimeRecurringContent */.useGetDismissibleContent(items, APP_LAUNCHER_ONBOARDING), 2);
+  const tmp = callback(require("../useGetDismissibleContent.tsx") /* canShowTimeRecurringContent */.useGetDismissibleContent(items, APP_LAUNCHER_ONBOARDING), 2);
+  const selectedDismissibleContentShared = require("../useSelectedDismissibleContentShared.tsx") /* useSelectedDismissibleContentShared */.useSelectedDismissibleContentShared(tmp2, tmp3, flag);
   items = [tmp2, tmp3];
   return items;
 };
@@ -24,10 +24,10 @@ export const useSelectedSingleUseGuildDismissibleContent = function useSelectedS
   if (flag === undefined) {
     flag = false;
   }
-  const obj = require(5932) /* canShowTimeRecurringContent */;
-  [tmp2, tmp3] = callback(require(5932) /* canShowTimeRecurringContent */.useGetSingleUseGuildDismissibleContent_UNSAFE(items4, id, CHANNEL_NOTICES), 2);
-  const tmp = callback(require(5932) /* canShowTimeRecurringContent */.useGetSingleUseGuildDismissibleContent_UNSAFE(items4, id, CHANNEL_NOTICES), 2);
-  const selectedDismissibleContentShared = require(5934) /* useSelectedDismissibleContentShared */.useSelectedDismissibleContentShared(tmp2, tmp3, flag, id);
+  const obj = require("../useGetDismissibleContent.tsx") /* canShowTimeRecurringContent */;
+  [tmp2, tmp3] = callback(require("../useGetDismissibleContent.tsx") /* canShowTimeRecurringContent */.useGetSingleUseGuildDismissibleContent_UNSAFE(items4, id, CHANNEL_NOTICES), 2);
+  const tmp = callback(require("../useGetDismissibleContent.tsx") /* canShowTimeRecurringContent */.useGetSingleUseGuildDismissibleContent_UNSAFE(items4, id, CHANNEL_NOTICES), 2);
+  const selectedDismissibleContentShared = require("../useSelectedDismissibleContentShared.tsx") /* useSelectedDismissibleContentShared */.useSelectedDismissibleContentShared(tmp2, tmp3, flag, id);
   const items = [tmp2, tmp3];
   return items;
 };
@@ -38,10 +38,10 @@ export const useSelectedVersionedDismissibleContent = function useSelectedVersio
   if (bypassAutoDismiss === undefined) {
     flag = false;
   }
-  const obj = require(5932) /* canShowTimeRecurringContent */;
-  [tmp2, tmp3] = callback(require(5932) /* canShowTimeRecurringContent */.useGetVersionedDismissibleContent(COLLECTIBLES_SHOP_ENTRY_MARKETING, latestVersion, groupName), 2);
-  const tmp = callback(require(5932) /* canShowTimeRecurringContent */.useGetVersionedDismissibleContent(COLLECTIBLES_SHOP_ENTRY_MARKETING, latestVersion, groupName), 2);
-  const selectedDismissibleContentShared = require(5934) /* useSelectedDismissibleContentShared */.useSelectedDismissibleContentShared(tmp2, tmp3, flag);
+  const obj = require("../useGetDismissibleContent.tsx") /* canShowTimeRecurringContent */;
+  [tmp2, tmp3] = callback(require("../useGetDismissibleContent.tsx") /* canShowTimeRecurringContent */.useGetVersionedDismissibleContent(COLLECTIBLES_SHOP_ENTRY_MARKETING, latestVersion, groupName), 2);
+  const tmp = callback(require("../useGetDismissibleContent.tsx") /* canShowTimeRecurringContent */.useGetVersionedDismissibleContent(COLLECTIBLES_SHOP_ENTRY_MARKETING, latestVersion, groupName), 2);
+  const selectedDismissibleContentShared = require("../useSelectedDismissibleContentShared.tsx") /* useSelectedDismissibleContentShared */.useSelectedDismissibleContentShared(tmp2, tmp3, flag);
   const items = [tmp2, tmp3];
   return items;
 };
@@ -52,10 +52,10 @@ export const useSelectedTimeRecurringDismissibleContent = function useSelectedTi
   if (bypassAutoDismiss === undefined) {
     flag = false;
   }
-  const obj = require(5932) /* canShowTimeRecurringContent */;
-  [tmp2, tmp3] = callback(require(5932) /* canShowTimeRecurringContent */.useGetTimeRecurringDismissibleContent(prop, closure_12, groupName), 2);
-  const tmp = callback(require(5932) /* canShowTimeRecurringContent */.useGetTimeRecurringDismissibleContent(prop, closure_12, groupName), 2);
-  const selectedDismissibleContentShared = require(5934) /* useSelectedDismissibleContentShared */.useSelectedDismissibleContentShared(tmp2, tmp3, flag);
+  const obj = require("../useGetDismissibleContent.tsx") /* canShowTimeRecurringContent */;
+  [tmp2, tmp3] = callback(require("../useGetDismissibleContent.tsx") /* canShowTimeRecurringContent */.useGetTimeRecurringDismissibleContent(prop, closure_12, groupName), 2);
+  const tmp = callback(require("../useGetDismissibleContent.tsx") /* canShowTimeRecurringContent */.useGetTimeRecurringDismissibleContent(prop, closure_12, groupName), 2);
+  const selectedDismissibleContentShared = require("../useSelectedDismissibleContentShared.tsx") /* useSelectedDismissibleContentShared */.useSelectedDismissibleContentShared(tmp2, tmp3, flag);
   const items = [tmp2, tmp3];
   return items;
 };
@@ -66,10 +66,10 @@ export const useSelectedSnowflakeBoundDismissibleContent = function useSelectedS
   if (bypassAutoDismiss === undefined) {
     flag = false;
   }
-  const obj = require(5932) /* canShowTimeRecurringContent */;
-  [tmp2, tmp3] = callback(require(5932) /* canShowTimeRecurringContent */.useGetSnowflakeBoundDismissibleContent(prop, newSnowflakeId, groupName), 2);
-  const tmp = callback(require(5932) /* canShowTimeRecurringContent */.useGetSnowflakeBoundDismissibleContent(prop, newSnowflakeId, groupName), 2);
-  const selectedDismissibleContentShared = require(5934) /* useSelectedDismissibleContentShared */.useSelectedDismissibleContentShared(tmp2, tmp3, flag);
+  const obj = require("../useGetDismissibleContent.tsx") /* canShowTimeRecurringContent */;
+  [tmp2, tmp3] = callback(require("../useGetDismissibleContent.tsx") /* canShowTimeRecurringContent */.useGetSnowflakeBoundDismissibleContent(prop, newSnowflakeId, groupName), 2);
+  const tmp = callback(require("../useGetDismissibleContent.tsx") /* canShowTimeRecurringContent */.useGetSnowflakeBoundDismissibleContent(prop, newSnowflakeId, groupName), 2);
+  const selectedDismissibleContentShared = require("../useSelectedDismissibleContentShared.tsx") /* useSelectedDismissibleContentShared */.useSelectedDismissibleContentShared(tmp2, tmp3, flag);
   const items = [tmp2, tmp3];
   return items;
 };
@@ -79,10 +79,10 @@ export const useSelectedSnowflakeBoundGuildDismissibleContent = function useSele
   if (flag === undefined) {
     flag = false;
   }
-  const obj = require(5932) /* canShowTimeRecurringContent */;
-  [tmp2, tmp3] = callback(require(5932) /* canShowTimeRecurringContent */.useGetSnowflakeBoundGuildDismissibleContent_UNSAFE(prop, arg2, id, arg3), 2);
-  const tmp = callback(require(5932) /* canShowTimeRecurringContent */.useGetSnowflakeBoundGuildDismissibleContent_UNSAFE(prop, arg2, id, arg3), 2);
-  const selectedDismissibleContentShared = require(5934) /* useSelectedDismissibleContentShared */.useSelectedDismissibleContentShared(tmp2, tmp3, flag, id);
+  const obj = require("../useGetDismissibleContent.tsx") /* canShowTimeRecurringContent */;
+  [tmp2, tmp3] = callback(require("../useGetDismissibleContent.tsx") /* canShowTimeRecurringContent */.useGetSnowflakeBoundGuildDismissibleContent_UNSAFE(prop, arg2, id, arg3), 2);
+  const tmp = callback(require("../useGetDismissibleContent.tsx") /* canShowTimeRecurringContent */.useGetSnowflakeBoundGuildDismissibleContent_UNSAFE(prop, arg2, id, arg3), 2);
+  const selectedDismissibleContentShared = require("../useSelectedDismissibleContentShared.tsx") /* useSelectedDismissibleContentShared */.useSelectedDismissibleContentShared(tmp2, tmp3, flag, id);
   const items = [tmp2, tmp3];
   return items;
 };
@@ -93,20 +93,20 @@ export const useSelectedTimeRecurringSnowflakeBoundDismissibleContent = function
   if (bypassAutoDismiss === undefined) {
     flag = false;
   }
-  const obj = require(5932) /* canShowTimeRecurringContent */;
-  [tmp2, tmp3] = callback(require(5932) /* canShowTimeRecurringContent */.useGetTimeRecurringSnowflakeBoundDismissibleContent(contentType, timeRecurringConfig, newSnowflakeId, groupName), 2);
-  const tmp = callback(require(5932) /* canShowTimeRecurringContent */.useGetTimeRecurringSnowflakeBoundDismissibleContent(contentType, timeRecurringConfig, newSnowflakeId, groupName), 2);
-  const selectedDismissibleContentShared = require(5934) /* useSelectedDismissibleContentShared */.useSelectedDismissibleContentShared(tmp2, tmp3, flag);
+  const obj = require("../useGetDismissibleContent.tsx") /* canShowTimeRecurringContent */;
+  [tmp2, tmp3] = callback(require("../useGetDismissibleContent.tsx") /* canShowTimeRecurringContent */.useGetTimeRecurringSnowflakeBoundDismissibleContent(contentType, timeRecurringConfig, newSnowflakeId, groupName), 2);
+  const tmp = callback(require("../useGetDismissibleContent.tsx") /* canShowTimeRecurringContent */.useGetTimeRecurringSnowflakeBoundDismissibleContent(contentType, timeRecurringConfig, newSnowflakeId, groupName), 2);
+  const selectedDismissibleContentShared = require("../useSelectedDismissibleContentShared.tsx") /* useSelectedDismissibleContentShared */.useSelectedDismissibleContentShared(tmp2, tmp3, flag);
   const items = [tmp2, tmp3];
   return items;
 };
 export const useSelectedTimeRecurringGuildDismissibleContent = function useSelectedTimeRecurringGuildDismissibleContent(prop, id, closure_17, GUILD_HEADER_TOOLTIPS) {
   let tmp2;
   let tmp3;
-  const obj = require(5932) /* canShowTimeRecurringContent */;
-  [tmp2, tmp3] = callback(require(5932) /* canShowTimeRecurringContent */.useGetTimeRecurringGuildDismissibleContent_UNSAFE(prop, id, closure_17, GUILD_HEADER_TOOLTIPS), 2);
-  const tmp = callback(require(5932) /* canShowTimeRecurringContent */.useGetTimeRecurringGuildDismissibleContent_UNSAFE(prop, id, closure_17, GUILD_HEADER_TOOLTIPS), 2);
-  const selectedDismissibleContentShared = require(5934) /* useSelectedDismissibleContentShared */.useSelectedDismissibleContentShared(tmp2, tmp3, false, id);
+  const obj = require("../useGetDismissibleContent.tsx") /* canShowTimeRecurringContent */;
+  [tmp2, tmp3] = callback(require("../useGetDismissibleContent.tsx") /* canShowTimeRecurringContent */.useGetTimeRecurringGuildDismissibleContent_UNSAFE(prop, id, closure_17, GUILD_HEADER_TOOLTIPS), 2);
+  const tmp = callback(require("../useGetDismissibleContent.tsx") /* canShowTimeRecurringContent */.useGetTimeRecurringGuildDismissibleContent_UNSAFE(prop, id, closure_17, GUILD_HEADER_TOOLTIPS), 2);
+  const selectedDismissibleContentShared = require("../useSelectedDismissibleContentShared.tsx") /* useSelectedDismissibleContentShared */.useSelectedDismissibleContentShared(tmp2, tmp3, false, id);
   const items = [tmp2, tmp3];
   return items;
 };

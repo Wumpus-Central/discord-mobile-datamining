@@ -4,5 +4,5 @@ import { ActivityFlags } from "ME";
 const result = require("set").fileFinishedImporting("modules/activities/utils/isEmbeddedActivity.tsx");
 
 export default function isEmbeddedActivity(arg0) {
-  return importDefault(5837)(arg0, ActivityFlags.EMBEDDED);
+  return require("hasFlag.tsx")(arg0, ActivityFlags.EMBEDDED);
 };

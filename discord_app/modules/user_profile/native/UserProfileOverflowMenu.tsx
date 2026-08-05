@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/native/UserProfileOverflowMenu.tsx
-import module_4490 from "module_4490";
+import ModalActionCreators from "../../../actions/ModalActionCreators.tsx";
 import apexExperiment from "apexExperiment";
 import { View } from "QUICK_SWITCHER";
 import getParticipants from "getParticipants";

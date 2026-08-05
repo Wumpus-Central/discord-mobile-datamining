@@ -14,15 +14,15 @@ function getChannelIcon(channel, ignoreTraits) {
   }
   ({ isRulesChannel, locked } = obj);
   const items = [createGuildRecordFromRust, mergeGuildAvatar, trackCommunicationDisabled];
-  const result = require(4771) /* shouldShowMembershipVerificationGate */.shouldShowMembershipVerificationGate(channel.guild_id, items);
+  const result = require("../../modules/guild_member_verification/hooks/useShowMemberVerificationGate.tsx") /* shouldShowMembershipVerificationGate */.shouldShowMembershipVerificationGate(channel.guild_id, items);
   if (channel.isForumPost()) {
-    return importDefault(4764);
+    return require("../../../_runtime/04764_registerAsset.js");
   } else {
     const type = channel.type;
     if (ChannelTypes.PRIVATE_THREAD === type) {
-      let tmp4 = importDefault(4746);
+      let tmp4 = require("../../../_runtime/04746_registerAsset.js");
     } else if (tmp3.ANNOUNCEMENT_THREAD === type) {
-      tmp4 = importDefault(4747);
+      tmp4 = require("../../../_runtime/04747_registerAsset.js");
     } else {
       tmp4 = null;
     }
@@ -36,10 +36,10 @@ function getChannelIcon(channel, ignoreTraits) {
         if (tmp3.ANNOUNCEMENT_THREAD !== type3) {
           if (tmp3.PUBLIC_THREAD !== type3) {
             if (tmp3.GUILD_CATEGORY === type3) {
-              return importDefault(4748);
+              return require("../../../_runtime/04748_registerAsset.js");
             } else if (tmp3.GUILD_TEXT === type3) {
               if (isRulesChannel) {
-                let tmp69 = importDefault(4774);
+                let tmp69 = require("../../../_runtime/04774_registerAsset.js");
               } else {
                 if (isNSFWResult) {
                   ignoreTraits = undefined;
@@ -47,7 +47,7 @@ function getChannelIcon(channel, ignoreTraits) {
                     ignoreTraits = ignoreTraits.ignoreTraits;
                   }
                   if (!ignoreTraits) {
-                    tmp69 = importDefault(4760);
+                    tmp69 = require("../../../_runtime/04760_registerAsset.js");
                   }
                 }
                 if (channel.isSpoilerChannel()) {
@@ -56,10 +56,10 @@ function getChannelIcon(channel, ignoreTraits) {
                     ignoreTraits1 = ignoreTraits.ignoreTraits;
                   }
                   if (!ignoreTraits1) {
-                    importDefault(4761);
+                    require("../../../_runtime/04761_registerAsset.js");
                   }
                 }
-                if (importDefault(4775)(channel)) {
+                if (require("../../modules/channel/isRoleRequired.tsx")(channel)) {
                   let ignoreTraits2;
                   if (ignoreTraits != null) {
                     ignoreTraits2 = ignoreTraits.ignoreTraits;
@@ -77,7 +77,7 @@ function getChannelIcon(channel, ignoreTraits) {
               return tmp69;
             } else if (tmp3.GUILD_FORUM === type3) {
               if (isRulesChannel) {
-                let tmp58 = importDefault(4774);
+                let tmp58 = require("../../../_runtime/04774_registerAsset.js");
               } else {
                 if (isNSFWResult) {
                   let ignoreTraits3;
@@ -94,10 +94,10 @@ function getChannelIcon(channel, ignoreTraits) {
                     ignoreTraits4 = ignoreTraits.ignoreTraits;
                   }
                   if (!ignoreTraits4) {
-                    importDefault(4767);
+                    require("../../../_runtime/04767_registerAsset.js");
                   }
                 }
-                if (importDefault(4775)(channel)) {
+                if (require("../../modules/channel/isRoleRequired.tsx")(channel)) {
                   let ignoreTraits5;
                   if (ignoreTraits != null) {
                     ignoreTraits5 = ignoreTraits.ignoreTraits;
@@ -111,7 +111,7 @@ function getChannelIcon(channel, ignoreTraits) {
               return tmp58;
             } else if (tmp3.GUILD_MEDIA === type3) {
               if (isRulesChannel) {
-                let tmp48 = importDefault(4774);
+                let tmp48 = require("../../../_runtime/04774_registerAsset.js");
               } else {
                 if (isNSFWResult) {
                   let ignoreTraits6;
@@ -119,7 +119,7 @@ function getChannelIcon(channel, ignoreTraits) {
                     ignoreTraits6 = ignoreTraits.ignoreTraits;
                   }
                   if (!ignoreTraits6) {
-                    tmp48 = importDefault(4769);
+                    tmp48 = require("../../../_runtime/04769_registerAsset.js");
                   }
                 }
                 if (channel.isSpoilerChannel()) {
@@ -128,10 +128,10 @@ function getChannelIcon(channel, ignoreTraits) {
                     ignoreTraits7 = ignoreTraits.ignoreTraits;
                   }
                   if (!ignoreTraits7) {
-                    importDefault(4767);
+                    require("../../../_runtime/04767_registerAsset.js");
                   }
                 }
-                if (importDefault(4775)(channel)) {
+                if (require("../../modules/channel/isRoleRequired.tsx")(channel)) {
                   let ignoreTraits8;
                   if (ignoreTraits != null) {
                     ignoreTraits8 = ignoreTraits.ignoreTraits;
@@ -144,12 +144,12 @@ function getChannelIcon(channel, ignoreTraits) {
               }
               return tmp48;
             } else if (tmp3.GROUP_DM === type3) {
-              return importDefault(4750);
+              return require("../../../_runtime/04750_registerAsset.js");
             } else if (tmp3.DM === type3) {
-              return importDefault(4751);
+              return require("../../../_runtime/04751_registerAsset.js");
             } else if (tmp3.GUILD_ANNOUNCEMENT === type3) {
               if (isRulesChannel) {
-                let tmp35 = importDefault(4774);
+                let tmp35 = require("../../../_runtime/04774_registerAsset.js");
               } else {
                 if (isNSFWResult) {
                   let ignoreTraits9;
@@ -157,7 +157,7 @@ function getChannelIcon(channel, ignoreTraits) {
                     ignoreTraits9 = ignoreTraits.ignoreTraits;
                   }
                   if (!ignoreTraits9) {
-                    tmp35 = importDefault(4762);
+                    tmp35 = require("../../../_runtime/04762_registerAsset.js");
                   }
                 }
                 if (channel.isSpoilerChannel()) {
@@ -166,10 +166,10 @@ function getChannelIcon(channel, ignoreTraits) {
                     ignoreTraits10 = ignoreTraits.ignoreTraits;
                   }
                   if (!ignoreTraits10) {
-                    importDefault(4763);
+                    require("../../../_runtime/04763_registerAsset.js");
                   }
                 }
-                if (importDefault(4775)(channel)) {
+                if (require("../../modules/channel/isRoleRequired.tsx")(channel)) {
                   let ignoreTraits11;
                   if (ignoreTraits != null) {
                     ignoreTraits11 = ignoreTraits.ignoreTraits;
@@ -188,7 +188,7 @@ function getChannelIcon(channel, ignoreTraits) {
                   ignoreTraits12 = ignoreTraits.ignoreTraits;
                 }
                 if (!ignoreTraits12) {
-                  if (importDefault(4775)(channel)) {
+                  if (require("../../modules/channel/isRoleRequired.tsx")(channel)) {
                     let tmp24Result = tmp24(4780);
                   } else {
                     tmp24Result = tmp24(4759);
@@ -202,10 +202,10 @@ function getChannelIcon(channel, ignoreTraits) {
                   ignoreTraits13 = ignoreTraits.ignoreTraits;
                 }
                 if (!ignoreTraits13) {
-                  importDefault(4780);
+                  require("../../../_runtime/04780_registerAsset.js");
                 }
               }
-              if (importDefault(4775)(channel)) {
+              if (require("../../modules/channel/isRoleRequired.tsx")(channel)) {
                 let ignoreTraits14;
                 if (ignoreTraits != null) {
                   ignoreTraits14 = ignoreTraits.ignoreTraits;
@@ -217,7 +217,7 @@ function getChannelIcon(channel, ignoreTraits) {
               tmp28Result = tmp28(4753);
             } else if (tmp3.GUILD_VOICE === type3) {
               if (obj.textFocused) {
-                let tmp9Result = importDefault(4764);
+                let tmp9Result = require("../../../_runtime/04764_registerAsset.js");
               } else {
                 if (result) {
                   let ignoreTraits15;
@@ -225,7 +225,7 @@ function getChannelIcon(channel, ignoreTraits) {
                     ignoreTraits15 = ignoreTraits.ignoreTraits;
                   }
                   if (!ignoreTraits15) {
-                    if (importDefault(4775)(channel)) {
+                    if (require("../../modules/channel/isRoleRequired.tsx")(channel)) {
                       tmp9Result = tmp9(4780);
                     } else {
                       tmp9Result = tmp9(4756);
@@ -238,10 +238,10 @@ function getChannelIcon(channel, ignoreTraits) {
                     ignoreTraits16 = ignoreTraits.ignoreTraits;
                   }
                   if (!ignoreTraits16) {
-                    importDefault(4780);
+                    require("../../../_runtime/04780_registerAsset.js");
                   }
                 }
-                if (importDefault(4775)(channel)) {
+                if (require("../../modules/channel/isRoleRequired.tsx")(channel)) {
                   let ignoreTraits17;
                   if (ignoreTraits != null) {
                     ignoreTraits17 = ignoreTraits.ignoreTraits;
@@ -272,7 +272,7 @@ function getChannelIcon(channel, ignoreTraits) {
               }
               return tmp9Result;
             } else if (tmp3.GUILD_DIRECTORY === type3) {
-              return importDefault(4755);
+              return require("../../../_runtime/04755_registerAsset.js");
             } else {
               return null;
             }
@@ -281,16 +281,16 @@ function getChannelIcon(channel, ignoreTraits) {
       }
       const type2 = channel.type;
       if (tmp3.PRIVATE_THREAD === type2) {
-        let tmp80 = importDefault(4746);
+        let tmp80 = require("../../../_runtime/04746_registerAsset.js");
       } else if (tmp3.ANNOUNCEMENT_THREAD === type2) {
-        tmp80 = importDefault(4747);
+        tmp80 = require("../../../_runtime/04747_registerAsset.js");
       } else {
         tmp80 = null;
       }
       return tmp80;
     }
   }
-  const obj2 = require(4771) /* shouldShowMembershipVerificationGate */;
+  const obj2 = require("../../modules/guild_member_verification/hooks/useShowMemberVerificationGate.tsx") /* shouldShowMembershipVerificationGate */;
 }
 function getChannelIconComponent(channel, ignoreTraits) {
   let isRulesChannel;
@@ -301,7 +301,7 @@ function getChannelIconComponent(channel, ignoreTraits) {
   }
   ({ isRulesChannel, locked } = obj);
   const items = [createGuildRecordFromRust, mergeGuildAvatar, trackCommunicationDisabled];
-  const result = require(4771) /* shouldShowMembershipVerificationGate */.shouldShowMembershipVerificationGate(channel.guild_id, items);
+  const result = require("../../modules/guild_member_verification/hooks/useShowMemberVerificationGate.tsx") /* shouldShowMembershipVerificationGate */.shouldShowMembershipVerificationGate(channel.guild_id, items);
   if (channel.isForumPost()) {
     return tmp(4781).ChatIcon;
   } else {
@@ -337,7 +337,7 @@ function getChannelIconComponent(channel, ignoreTraits) {
                   const TextSpoilerIcon = tmp(4787).TextSpoilerIcon;
                 }
               }
-              if (importDefault(4775)(channel)) {
+              if (require("../../modules/channel/isRoleRequired.tsx")(channel)) {
                 let ignoreTraits2;
                 if (ignoreTraits != null) {
                   ignoreTraits2 = ignoreTraits.ignoreTraits;
@@ -379,7 +379,7 @@ function getChannelIconComponent(channel, ignoreTraits) {
                   const ForumSpoilerIcon2 = tmp(4793).ForumSpoilerIcon;
                 }
               }
-              if (importDefault(4775)(channel)) {
+              if (require("../../modules/channel/isRoleRequired.tsx")(channel)) {
                 let ignoreTraits5;
                 if (ignoreTraits != null) {
                   ignoreTraits5 = ignoreTraits.ignoreTraits;
@@ -421,7 +421,7 @@ function getChannelIconComponent(channel, ignoreTraits) {
                   const ForumSpoilerIcon = tmp(4793).ForumSpoilerIcon;
                 }
               }
-              if (importDefault(4775)(channel)) {
+              if (require("../../modules/channel/isRoleRequired.tsx")(channel)) {
                 let ignoreTraits8;
                 if (ignoreTraits != null) {
                   ignoreTraits8 = ignoreTraits.ignoreTraits;
@@ -459,7 +459,7 @@ function getChannelIconComponent(channel, ignoreTraits) {
                   const AnnouncementsSpoilerIcon = tmp(4801).AnnouncementsSpoilerIcon;
                 }
               }
-              if (importDefault(4775)(channel)) {
+              if (require("../../modules/channel/isRoleRequired.tsx")(channel)) {
                 let ignoreTraits11;
                 if (ignoreTraits != null) {
                   ignoreTraits11 = ignoreTraits.ignoreTraits;
@@ -478,7 +478,7 @@ function getChannelIconComponent(channel, ignoreTraits) {
                 ignoreTraits12 = ignoreTraits.ignoreTraits;
               }
               if (!ignoreTraits12) {
-                if (importDefault(4775)(channel)) {
+                if (require("../../modules/channel/isRoleRequired.tsx")(channel)) {
                   let StageLockIcon = tmp(4804).LockIcon;
                 } else {
                   StageLockIcon = tmp(4805).StageLockIcon;
@@ -495,7 +495,7 @@ function getChannelIconComponent(channel, ignoreTraits) {
                 const LockIcon2 = tmp(4804).LockIcon;
               }
             }
-            if (importDefault(4775)(channel)) {
+            if (require("../../modules/channel/isRoleRequired.tsx")(channel)) {
               let ignoreTraits14;
               if (ignoreTraits != null) {
                 ignoreTraits14 = ignoreTraits.ignoreTraits;
@@ -515,7 +515,7 @@ function getChannelIconComponent(channel, ignoreTraits) {
                   ignoreTraits15 = ignoreTraits.ignoreTraits;
                 }
                 if (!ignoreTraits15) {
-                  if (importDefault(4775)(channel)) {
+                  if (require("../../modules/channel/isRoleRequired.tsx")(channel)) {
                     VoiceLockIcon = tmp(4804).LockIcon;
                   } else {
                     VoiceLockIcon = tmp(4807).VoiceLockIcon;
@@ -531,7 +531,7 @@ function getChannelIconComponent(channel, ignoreTraits) {
                   const LockIcon = tmp(4804).LockIcon;
                 }
               }
-              if (importDefault(4775)(channel)) {
+              if (require("../../modules/channel/isRoleRequired.tsx")(channel)) {
                 let ignoreTraits17;
                 if (ignoreTraits != null) {
                   ignoreTraits17 = ignoreTraits.ignoreTraits;
@@ -569,28 +569,28 @@ function getChannelIconComponent(channel, ignoreTraits) {
       return tmp(4783).ThreadIcon;
     }
   }
-  const obj2 = require(4771) /* shouldShowMembershipVerificationGate */;
+  const obj2 = require("../../modules/guild_member_verification/hooks/useShowMemberVerificationGate.tsx") /* shouldShowMembershipVerificationGate */;
 }
 let result = require("mergeGuildAvatar").fileFinishedImporting("utils/native/ChannelUtils.tsx");
 
 export const getThreadChannelIcon = function getThreadChannelIcon(arg0) {
   if (ChannelTypes.PRIVATE_THREAD === arg0) {
-    return importDefault(4746);
+    return require("../../../_runtime/04746_registerAsset.js");
   } else {
     if (tmp.ANNOUNCEMENT_THREAD !== arg0) {
       if (tmp.PUBLIC_THREAD !== arg0) {
         return null;
       }
     }
-    return importDefault(4747);
+    return require("../../../_runtime/04747_registerAsset.js");
   }
 };
 export const getSimpleChannelIcon = function getSimpleChannelIcon(channel) {
   const type = channel.type;
   if (ChannelTypes.PRIVATE_THREAD === type) {
-    let tmp2 = importDefault(4746);
+    let tmp2 = require("../../../_runtime/04746_registerAsset.js");
   } else if (tmp.ANNOUNCEMENT_THREAD === type) {
-    tmp2 = importDefault(4747);
+    tmp2 = require("../../../_runtime/04747_registerAsset.js");
   } else {
     tmp2 = null;
   }
@@ -602,39 +602,39 @@ export const getSimpleChannelIcon = function getSimpleChannelIcon(channel) {
       if (tmp.ANNOUNCEMENT_THREAD !== type3) {
         if (tmp.PUBLIC_THREAD !== type3) {
           if (tmp.GUILD_CATEGORY === type3) {
-            return importDefault(4748);
+            return require("../../../_runtime/04748_registerAsset.js");
           } else {
             if (tmp.GUILD_TEXT !== type3) {
               if (tmp.GUILD_FORUM !== type3) {
                 if (tmp.GUILD_MEDIA !== type3) {
                   if (tmp.GROUP_DM === type3) {
-                    return importDefault(4750);
+                    return require("../../../_runtime/04750_registerAsset.js");
                   } else if (tmp.DM === type3) {
-                    return importDefault(4751);
+                    return require("../../../_runtime/04751_registerAsset.js");
                   } else if (tmp.GUILD_ANNOUNCEMENT === type3) {
-                    return importDefault(4752);
+                    return require("../../../_runtime/04752_registerAsset.js");
                   } else if (tmp.GUILD_STAGE_VOICE === type3) {
-                    return importDefault(4753);
+                    return require("../../../_runtime/04753_registerAsset.js");
                   } else if (tmp.GUILD_VOICE === type3) {
-                    return importDefault(4754);
+                    return require("../../../_runtime/04754_registerAsset.js");
                   } else if (tmp.GUILD_DIRECTORY === type3) {
-                    return importDefault(4755);
+                    return require("../../../_runtime/04755_registerAsset.js");
                   } else {
                     return null;
                   }
                 }
               }
             }
-            return importDefault(4749);
+            return require("../../../_runtime/04749_registerAsset.js");
           }
         }
       }
     }
     const type2 = channel.type;
     if (tmp.PRIVATE_THREAD === type2) {
-      let tmp23 = importDefault(4746);
+      let tmp23 = require("../../../_runtime/04746_registerAsset.js");
     } else if (tmp.ANNOUNCEMENT_THREAD === type2) {
-      tmp23 = importDefault(4747);
+      tmp23 = require("../../../_runtime/04747_registerAsset.js");
     } else {
       tmp23 = null;
     }
@@ -865,89 +865,89 @@ export const getChannelMentionIcon = function getChannelMentionIcon(iconType) {
     case "fill":
     break;
     case "find":
-      return importDefault(4754);
+      return require("../../../_runtime/04754_registerAsset.js");
     case "ind":
     break;
     case "flags":
-      return importDefault(4756);
+      return require("../../../_runtime/04756_registerAsset.js");
     case "forEach":
     break;
     case "gap":
-      return importDefault(4757);
+      return require("../../../_runtime/04757_registerAsset.js");
     case "get":
     break;
     case "getChannel":
-      return importDefault(4758);
+      return require("../../../_runtime/04758_registerAsset.js");
     case "getCurrentUser":
     break;
     case "getGuild":
-      return importDefault(4753);
+      return require("../../../_runtime/04753_registerAsset.js");
     case "guild":
     break;
     case "guildId":
-      return importDefault(4759);
+      return require("../../../_runtime/04759_registerAsset.js");
     case "guild_id":
     break;
     case "has":
-      return importDefault(4749);
+      return require("../../../_runtime/04749_registerAsset.js");
     case "hasDiversityParent":
     break;
     case "hash":
-      return importDefault(4760);
+      return require("../../../_runtime/04760_registerAsset.js");
     case "hd":
     break;
     case "header":
-      return importDefault(4761);
+      return require("../../../_runtime/04761_registerAsset.js");
     case "height":
     break;
     case "httpServerLocation":
-      return importDefault(4752);
+      return require("../../../_runtime/04752_registerAsset.js");
     case "icon":
     break;
     case "includes":
-      return importDefault(4762);
+      return require("../../../_runtime/04762_registerAsset.js");
     case "index":
     break;
     case "indexOf":
-      return importDefault(4763);
+      return require("../../../_runtime/04763_registerAsset.js");
     case "intl":
     break;
     case "items":
-      return importDefault(4747);
+      return require("../../../_runtime/04747_registerAsset.js");
     case "join":
     break;
     case "jsx":
-      let tmp15 = importDefault(4764);
+      let tmp15 = require("../../../_runtime/04764_registerAsset.js");
       return tmp15;
     case "jsxs":
     break;
     case "justifyContent":
-      tmp15 = importDefault(4764);
+      tmp15 = require("../../../_runtime/04764_registerAsset.js");
       return tmp15;
     case "key":
     break;
     case "keys":
-      return importDefault(4765);
+      return require("../../../_runtime/04765_registerAsset.js");
     case "kind":
     break;
     case "ks":
-      return importDefault(4766);
+      return require("../../../_runtime/04766_registerAsset.js");
     case "space":
     break;
     case "label":
-      return importDefault(4767);
+      return require("../../../_runtime/04767_registerAsset.js");
     case "lc":
     break;
     case "left":
-      return importDefault(4768);
+      return require("../../../_runtime/04768_registerAsset.js");
     case "length":
     break;
     case "lj":
-      return importDefault(4769);
+      return require("../../../_runtime/04769_registerAsset.js");
     case "loadJsonAsset":
     break;
     case "location":
-      return importDefault(4770);
+      return require("../../../_runtime/04770_registerAsset.js");
     case "map":
     break;
     case "marginTop":
@@ -1555,25 +1555,25 @@ export const getSimpleChannelIconComponent = function getSimpleChannelIconCompon
     if (tmp.ANNOUNCEMENT_THREAD !== type) {
       if (tmp.PUBLIC_THREAD !== type) {
         if (tmp.GUILD_CATEGORY === type) {
-          return require(4784) /* FolderIcon */.FolderIcon;
+          return require("../../design/components/Icon/native/redesign/generated/FolderIcon.tsx") /* FolderIcon */.FolderIcon;
         } else if (tmp.GUILD_TEXT === type) {
-          return require(4790) /* TextIcon */.TextIcon;
+          return require("../../design/components/Icon/native/redesign/generated/TextIcon.tsx") /* TextIcon */.TextIcon;
         } else if (tmp.GUILD_FORUM === type) {
-          return require(4797) /* ForumIcon */.ForumIcon;
+          return require("../../design/components/Icon/native/redesign/generated/ForumIcon.tsx") /* ForumIcon */.ForumIcon;
         } else if (tmp.GUILD_MEDIA === type) {
-          return require(4796) /* ImageIcon */.ImageIcon;
+          return require("../../design/components/Icon/native/redesign/generated/ImageIcon.tsx") /* ImageIcon */.ImageIcon;
         } else if (tmp.GROUP_DM === type) {
-          return require(4798) /* GroupIcon */.GroupIcon;
+          return require("../../design/components/Icon/native/redesign/generated/GroupIcon.tsx") /* GroupIcon */.GroupIcon;
         } else if (tmp.DM === type) {
-          return require(4799) /* AtIcon */.AtIcon;
+          return require("../../design/components/Icon/native/redesign/generated/AtIcon.tsx") /* AtIcon */.AtIcon;
         } else if (tmp.GUILD_ANNOUNCEMENT === type) {
-          return require(4803) /* AnnouncementsIcon */.AnnouncementsIcon;
+          return require("../../design/components/Icon/native/redesign/generated/AnnouncementsIcon.tsx") /* AnnouncementsIcon */.AnnouncementsIcon;
         } else if (tmp.GUILD_STAGE_VOICE === type) {
-          return require(4806) /* StageIcon */.StageIcon;
+          return require("../../design/components/Icon/native/redesign/generated/StageIcon.tsx") /* StageIcon */.StageIcon;
         } else if (tmp.GUILD_VOICE === type) {
-          return require(4810) /* VoiceNormalIcon */.VoiceNormalIcon;
+          return require("../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx") /* VoiceNormalIcon */.VoiceNormalIcon;
         } else if (tmp.GUILD_DIRECTORY === type) {
-          return require(4811) /* HubIcon */.HubIcon;
+          return require("../../design/components/Icon/native/redesign/generated/HubIcon.tsx") /* HubIcon */.HubIcon;
         } else {
           return null;
         }

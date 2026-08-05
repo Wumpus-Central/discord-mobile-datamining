@@ -72,11 +72,11 @@ export default function PremiumUpsellTooltipActionSheet(arg0) {
   }
   const items1 = [tmp2Result, , , ];
   const obj1 = { style: tmp.header, children: null };
-  const items2 = [closure_6(require(1297) /* Button */.NitroWheel, { style: tmp.nitroWheel }), closure_6(require(4281) /* Text */.Text, { variant: "heading-xl/bold", style: tmp.title, color: "mobile-text-heading-primary", accessibilityRole: "header", children: title })];
+  const items2 = [closure_6(require("../../../design/void/native.tsx") /* Button */.NitroWheel, { style: tmp.nitroWheel }), closure_6(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "heading-xl/bold", style: tmp.title, color: "mobile-text-heading-primary", accessibilityRole: "header", children: title })];
   obj1[1] = items2;
   items1[1] = closure_7(closure_4, obj1);
   const items3 = [tmp.description, descriptionStyle];
-  items1[2] = closure_6(require(4281) /* Text */.Text, { style: items3, variant: "text-md/medium", color: "text-default", children: description });
+  items1[2] = closure_6(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: items3, variant: "text-md/medium", color: "text-default", children: description });
   const obj4 = { style: tmp.buttonContainer, children: null };
   const obj5 = {
     variant: "active",
@@ -103,7 +103,7 @@ export default function PremiumUpsellTooltipActionSheet(arg0) {
     primaryButtonIconResult = primaryButtonIcon();
   }
   obj5[3] = primaryButtonIconResult;
-  const items4 = [closure_6(require(4695) /* Button */.Button, obj5), ];
+  const items4 = [closure_6(require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj5), ];
   tmp2Result = null;
   if (null != secondaryButtonText) {
     const obj6 = { variant: "secondary", text: null, onPress: null, size: "lg" };
@@ -131,5 +131,5 @@ export default function PremiumUpsellTooltipActionSheet(arg0) {
   items1[3] = closure_7(closure_4, obj4);
   obj[1] = items1;
   obj.children = closure_7(closure_4, obj);
-  return closure_6(require(5338) /* Background */.BottomSheet, obj);
+  return closure_6(require("../../../design/components/Sheet/native/BottomSheet.native.tsx") /* Background */.BottomSheet, obj);
 };

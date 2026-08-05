@@ -21,7 +21,7 @@ Object.defineProperty(prototype, "jumpTargetId", {
 });
 prototype["getMessage"] = function getMessage(arg0) {
   let closure_0 = arg0;
-  return importDefault(12).find(c3, (id) => id.id === closure_0 || id.nonce === closure_0);
+  return require("../../../_runtime/00012_apply.js").find(c3, (id) => id.id === closure_0 || id.nonce === closure_0);
 };
 MessagePreviewStore.displayName = "MessagePreviewStore";
 const messagePreviewStore = new MessagePreviewStore(require("dispatcher"), {

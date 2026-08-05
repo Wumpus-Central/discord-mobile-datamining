@@ -29,21 +29,21 @@ export default function GuildRoleSubscriptionTierArchiveOrDeleteActionSheet(grou
   groupListingId = groupListingId.groupListingId;
   ({ editStateId, guildId } = groupListingId);
   const tmp = createCacheKey();
-  importDefault(38)(null != groupListingId, "group listing id cannot be null");
-  const tmp4 = importDefault(16697)(guildId, groupListingId, editStateId);
+  require("../../../../../_runtime/metro/00038__.js")(null != groupListingId, "group listing id cannot be null");
+  const tmp4 = require("useArchiveOrDelete.tsx")(guildId, groupListingId, editStateId);
   let deleting = tmp4.deleting;
   ({ headerText, buttonText, descriptionText, handleArchiveOrDelete, archiving } = tmp4);
   let obj = { style: tmp.container, children: null };
-  obj = { contentContainerStyle: { paddingBottom: importDefault(1581)().bottom }, children: null };
-  const items = [callback(require(4281) /* Text */.Text, { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: headerText }), callback(require(1297) /* Button */.Spacer, { size: 12 }), callback(require(4281) /* Text */.Text, { variant: "text-sm/normal", color: "text-default", children: descriptionText }), callback(require(1297) /* Button */.Spacer, { size: 24 }), , , ];
+  obj = { contentContainerStyle: { paddingBottom: require("../../../safe_area/useSafeAreaInsets.native.tsx")().bottom }, children: null };
+  const items = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: headerText }), callback(require("../../../../design/void/native.tsx") /* Button */.Spacer, { size: 12 }), callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-sm/normal", color: "text-default", children: descriptionText }), callback(require("../../../../design/void/native.tsx") /* Button */.Spacer, { size: 24 }), , , ];
   obj = { text: buttonText, variant: "destructive", grow: true, onPress: handleArchiveOrDelete, disabled: null };
   if (!deleting) {
     deleting = archiving;
   }
   const obj1 = { backdropOpacity: 0.8, children: null };
   obj[4] = deleting;
-  items[4] = callback(require(4695) /* Button */.Button, obj);
-  items[5] = callback(require(1297) /* Button */.Spacer, { size: 24 });
+  items[4] = callback(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj);
+  items[5] = callback(require("../../../../design/void/native.tsx") /* Button */.Spacer, { size: 24 });
   const obj2 = {
     onPress() {
       return callback(table[13]).hideActionSheet();
@@ -54,11 +54,11 @@ export default function GuildRoleSubscriptionTierArchiveOrDeleteActionSheet(grou
   };
   const obj3 = { variant: "text-sm/semibold", color: "interactive-text-active", children: null };
   const intl = tmp6(1236).intl;
-  obj3[2] = intl.string(require(1236) /* getSystemLocale */.t["ETE/oC"]);
-  obj2[3] = callback(require(4281) /* Text */.Text, obj3);
+  obj3[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["ETE/oC"]);
+  obj2[3] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj3);
   items[6] = callback(closure_3, obj2);
   obj[1] = items;
-  obj[1] = closure_6(require(5340) /* BottomSheetModal */.BottomSheetScrollView, obj);
+  obj[1] = closure_6(require("../../../../../_runtime/05340_BottomSheetModal.js") /* BottomSheetModal */.BottomSheetScrollView, obj);
   obj1[1] = callback(closure_4, obj);
-  return callback(require(5338) /* Background */.BottomSheet, obj1);
+  return callback(require("../../../../design/components/Sheet/native/BottomSheet.native.tsx") /* Background */.BottomSheet, obj1);
 };

@@ -1,6 +1,6 @@
 // discord_app/modules/guild_progress/native/action_sheet/GuildProgressActionSheet.tsx
 import closure_3 from "Steps";
-import module_8943 from "module_8943";
+import GuildSettingsActionCreators from "../../../guild_settings/GuildSettingsActionCreators.tsx";
 import { View } from "metadata";
 import handleFormInit from "handleFormInit";
 import comparator from "comparator";

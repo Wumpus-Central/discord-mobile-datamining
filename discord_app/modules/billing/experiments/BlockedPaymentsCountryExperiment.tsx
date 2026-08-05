@@ -15,7 +15,7 @@ export const useBlockedPaymentsConfig = function useBlockedPaymentsConfig() {
     enabled = closure_3.useConfig({ location: "c519a9_1" }).enabled;
   }
   if (!enabled) {
-    enabled = "RU" === importDefault(6791)().defaultBillingCountryCode;
+    enabled = "RU" === require("../../premium/hooks/useGeoForUser.native.tsx")().defaultBillingCountryCode;
   }
   return enabled;
 };

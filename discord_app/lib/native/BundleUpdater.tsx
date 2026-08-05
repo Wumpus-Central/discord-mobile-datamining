@@ -122,8 +122,8 @@ prototype["setupOTAAssetFallback"] = function setupOTAAssetFallback() {
   })();
 };
 prototype["emitOtaMetric"] = function emitOtaMetric(item10010) {
-  const match = require(4484) /* t */.match(item10010);
-  const str = require(4484) /* t */;
+  const match = require("../../../_runtime/04484_t.js") /* t */.match(item10010);
+  const str = require("../../../_runtime/04484_t.js") /* t */;
   const withResult = match.with({ type: "OtaCheckAttempt" }, (result) => {
     closure_5.verbose("OTA check attempt", result);
     let obj = callback(698);

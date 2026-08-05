@@ -273,13 +273,13 @@ function _getSkusHandler() {
 }
 function getEntitlementsHandler(socket) {
   socket = socket.socket;
-  let obj = require(13668) /* validateTransportType */;
+  let obj = require("../../helpers/validateTransportType.tsx") /* validateTransportType */;
   const result = obj.validateTransportType(socket.transport);
   const id = socket.application.id;
   if (null == id) {
     obj = { errorCode: null };
     obj[0] = constants.INVALID_COMMAND;
-    const tmp9 = new importDefault(10543)(obj, "No application.");
+    const tmp9 = new require("../../RPCError.tsx")(obj, "No application.");
     throw tmp9;
   } else {
     return importAll(6771).fetchUserEntitlementsForApplication(id);

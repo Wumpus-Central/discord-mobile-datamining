@@ -11,7 +11,7 @@ let error;
 let metroImportAll;
 const require = arg1;
 function closeActionSheet() {
-  importDefault(4253).hideActionSheet();
+  require("../../action_sheet/native/ActionSheetActionCreators.tsx").hideActionSheet();
 }
 ({ jsx: error, Fragment: metroImportAll, jsxs: c9 } = jsxProd);
 createCacheKey = { container: null, ratingsBody: null, problemsList: null };
@@ -62,9 +62,9 @@ export default function FeedbackActionSheetV2(optionsTree) {
   let tmp = first2();
   let obj = ref;
   ref = ref.useRef(null);
-  const tmp5 = importDefault(8775)(optionsTree);
+  const tmp5 = require("../../../hooks/usePrevious.tsx")(optionsTree);
   c5 = tmp5;
-  let obj1 = importDefault(12);
+  let obj1 = require("../../../../_runtime/00012_apply.js");
   const tmp7 = callback(ref.useState(obj1.shuffle(optionsTree.map((problemOptions) => {
     const obj = {};
     const merged = Object.assign(problemOptions);
@@ -112,7 +112,7 @@ export default function FeedbackActionSheetV2(optionsTree) {
   first5 = tmp6Result[0];
   closure_15 = tmp6Result[1];
   [c16, c17] = callback(obj.useState(false), 2);
-  importDefault(4711)(() => {
+  require("../../../hooks/useMountEffect.tsx")(() => {
     if (closure_1 != null) {
       tmp();
     }

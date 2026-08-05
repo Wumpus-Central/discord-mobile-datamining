@@ -17,7 +17,7 @@ const result = require("createNativeStackNavigator").fileFinishedImporting("modu
 
 export default function ICYMICustomScoresModal() {
   const _require = createNativeStackNavigator();
-  let obj = _require(5665);
+  let obj = _require("../../../../design/components/Navigator/native/Navigator.native.tsx");
   let closure_1 = obj.useAccessibilityNativeStackOptions();
   obj = {
     screenOptions() {

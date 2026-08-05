@@ -24,7 +24,7 @@ export default function TwoFASetupModal(initialRouteName) {
   }
   let obj = {
     initialRouteName: LANDING,
-    screens: importDefault(5598)(() => {
+    screens: require("../../../../../hooks/useInitialValue.tsx")(() => {
       let obj = callback(8289);
       callback = obj.generateTotpSecret();
       obj = {};
@@ -68,9 +68,9 @@ export default function TwoFASetupModal(initialRouteName) {
     headerBackTitle: null,
     headerTitleAlign: "center"
   };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl.string(require(1236) /* getSystemLocale */.t["13/7kX"]);
-  return callback(require(5665) /* NavigationStack */.Navigator, obj);
+  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["13/7kX"]);
+  return callback(require("../../../../../design/components/Navigator/native/Navigator.native.tsx") /* NavigationStack */.Navigator, obj);
 };
 export const TwoFASetupModalScreen = function TwoFASetupModalScreen(children) {
   let navigation;

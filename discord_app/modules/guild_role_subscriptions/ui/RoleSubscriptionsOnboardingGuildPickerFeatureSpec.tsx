@@ -7,17 +7,17 @@ let result = require("getSystemLocale").fileFinishedImporting("modules/guild_rol
 
 export default {
   title() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["KzCF/6"]);
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["KzCF/6"]);
   },
   description() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.xMW8FH);
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.xMW8FH);
   },
   canCreateGuild: false,
   useIsGuildSupported() {
     const items = [getHash];
-    return require(589) /* initialize */.useStateFromStores(items, () => (id) => {
+    return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => (id) => {
       let result = callback2(id, arg1);
       if (result) {
         let obj = callback(5789);
@@ -30,6 +30,6 @@ export default {
         const obj4 = callback(3906);
       }
       return result;
-    }, [], require(589) /* initialize */.statesWillNeverBeEqual);
+    }, [], require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.statesWillNeverBeEqual);
   }
 };

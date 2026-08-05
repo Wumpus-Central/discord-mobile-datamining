@@ -103,11 +103,11 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
     }
     return content;
   };
-  let obj = require(11624) /* SearchTokenTypes */;
-  const tokenizeQueryResult = require(11624) /* SearchTokenTypes */.tokenizeQuery(searchQueryString);
-  const searchQueryFromTokens = require(11624) /* SearchTokenTypes */.getSearchQueryFromTokens(tokenizeQueryResult);
-  const obj2 = require(11624) /* SearchTokenTypes */;
-  const str = require(11624) /* SearchTokenTypes */.getQueryContentString(searchQueryFromTokens);
+  let obj = require("../../SearchUtils.tsx") /* SearchTokenTypes */;
+  const tokenizeQueryResult = require("../../SearchUtils.tsx") /* SearchTokenTypes */.tokenizeQuery(searchQueryString);
+  const searchQueryFromTokens = require("../../SearchUtils.tsx") /* SearchTokenTypes */.getSearchQueryFromTokens(tokenizeQueryResult);
+  const obj2 = require("../../SearchUtils.tsx") /* SearchTokenTypes */;
+  const str = require("../../SearchUtils.tsx") /* SearchTokenTypes */.getQueryContentString(searchQueryFromTokens);
   let str2;
   if (str != null) {
     str2 = str.trim();

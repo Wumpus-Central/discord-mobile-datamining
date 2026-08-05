@@ -13,7 +13,7 @@ export default function trackRepliedMessageClicked(messageReference, state, chan
   let tmp3 = null;
   let tmp4 = null;
   if (state.state === ReferencedMessageState.LOADED) {
-    const tmp9 = importDefault(9254)(state.message);
+    const tmp9 = require("../forwarding/maybeCreateMessageRecordFromSnapshot.tsx")(state.message);
     const content = tmp9.content;
     let num;
     if (content != null) {
@@ -26,7 +26,7 @@ export default function trackRepliedMessageClicked(messageReference, state, chan
     tmp4 = tmp9.attachments.length > 0 || tmp9.embeds.length > 0 || tmp9.stickerItems.length > 0 || tmp9.stickers.length > 0;
     const tmp5 = tmp9.attachments.length > 0 || tmp9.embeds.length > 0 || tmp9.stickerItems.length > 0 || tmp9.stickers.length > 0;
   }
-  let obj = require(4479) /* collectGuildAnalyticsMetadata */;
+  let obj = require("../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */;
   const guild_id = channel_id.guild_id;
   obj = { guild_id, channel_id: channel_id.id, reply_message_id: messageReference.id, replied_message_id: message_id, replied_message_is_loaded: state.state === ReferencedMessageState.LOADED, replied_message_has_media: tmp4, replied_message_length: tmp3 };
   obj.trackWithMetadata(AnalyticEvents.REPLIED_MESSAGE_CLICKED, obj);

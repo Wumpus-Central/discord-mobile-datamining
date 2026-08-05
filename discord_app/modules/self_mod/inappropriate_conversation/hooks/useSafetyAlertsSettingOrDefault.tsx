@@ -8,7 +8,7 @@ const result = require("initialize").fileFinishedImporting("modules/self_mod/ina
 export const useSafetyAlertsSettingOrDefault = function useSafetyAlertsSettingOrDefault() {
   currentUser = currentUser.getCurrentUser();
   const items = [handleConnectionClosedOrResumed];
-  const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => {
+  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
     const privacy = settings.settings.privacy;
     let flag;
     if (privacy != null) {
@@ -21,9 +21,9 @@ export const useSafetyAlertsSettingOrDefault = function useSafetyAlertsSettingOr
     }
     return flag;
   });
-  const obj2 = require(589) /* initialize */;
-  let userIsTeen = require(7846) /* useUserIsTeen */.useUserIsTeen();
-  const obj3 = require(7846) /* useUserIsTeen */;
+  const obj2 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let userIsTeen = require("../../hooks/useUserIsTeen.tsx") /* useUserIsTeen */.useUserIsTeen();
+  const obj3 = require("../../hooks/useUserIsTeen.tsx") /* useUserIsTeen */;
   let tmp3 = !userIsTeen;
   if (userIsTeen) {
     tmp3 = !obj4.useIsEligibleForInappropriateConversationDefaultOn({ location: "useSafetyAlertsSettingOrDefault" });

@@ -18,7 +18,7 @@ export const GAME_INVITES_CHANNEL_NO_MIC_TAG_NAME = "No Mic";
 export const useIsGameInvitesPost = function useIsGameInvitesPost(channel) {
   const _require = channel;
   const items = [ensureGuildLoaded];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let tmp = null != closure_0;
     if (tmp) {
       const isForumPostResult = obj.isForumPost();
@@ -44,12 +44,12 @@ export const useIsGameInvitesPost = function useIsGameInvitesPost(channel) {
   });
 };
 export const useIsGameInvitePostVoiceEnabled = function useIsGameInvitePostVoiceEnabled(thread) {
-  const appliedTags = _require(5802).useAppliedTags(thread);
+  const appliedTags = _require("../forums/ForumTagHooks.tsx").useAppliedTags(thread);
   _require = thread;
-  const obj = _require(5802);
+  const obj = _require("../forums/ForumTagHooks.tsx");
   const items = [ensureGuildLoaded];
-  const obj3 = _require(589);
-  return _require(589).useStateFromStores(items, () => {
+  const obj3 = _require("../../../discord_common/js/packages/flux/index.tsx");
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let tmp = null != closure_0;
     if (tmp) {
       const isForumPostResult = obj.isForumPost();
@@ -75,7 +75,7 @@ export const useIsGameInvitePostVoiceEnabled = function useIsGameInvitePostVoice
   }) && !appliedTags.some((name) => name.name === closure_11);
 };
 export const useFirstMessage = function useFirstMessage(stateFromStores, enabled) {
-  let obj = require(5829) /* loadForumPostData */;
+  let obj = require("../forums/ForumPostDataLoader.tsx") /* loadForumPostData */;
   obj = { enabled, allowArchived: true };
   return obj.useFirstForumPostMessage(stateFromStores, obj);
 };
@@ -84,7 +84,7 @@ export const useGameInvitesChannelApplicationId = function useGameInvitesChannel
   const items = [createGuildRecordFromRust];
   const items1 = [arg0];
   let tmp2 = null;
-  const stateFromStores = _require(589).useStateFromStores(items, () => {
+  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != application) {
       const guild = outer1_7.getGuild(tmp);
@@ -155,7 +155,7 @@ export const useSubscribeToGameInvitePostAuthors = function useSubscribeToGameIn
   const dependencyMap = isGameInvitesChannelResult;
   let items = [ensureGuildLoaded];
   const items1 = [isGameInvitesChannelResult, arg1];
-  const stateFromStoresArray = _require(589).useStateFromStoresArray(items, () => {
+  const stateFromStoresArray = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
     if (closure_2) {
       const _Set = Set;
       const set = new Set();
@@ -187,7 +187,7 @@ export const useSubscribeToGameInvitePostAuthors = function useSubscribeToGameIn
     }
   }, items1);
   const items2 = [stateFromStoresArray, isGameInvitesChannel.guild_id, isGameInvitesChannelResult];
-  let obj = _require(589);
+  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
   const tmp3 = useMemo(() => {
     const obj = {};
     if (closure_2) {
@@ -198,12 +198,12 @@ export const useSubscribeToGameInvitePostAuthors = function useSubscribeToGameIn
     }
     return tmp;
   }, items2);
-  const subscribeGuildMembers = _require(5835).useSubscribeGuildMembers(tmp3, "GameInvitesChannelPostAuthors");
+  const subscribeGuildMembers = _require("../../lib/guild/subscribeGuildMembers.tsx").useSubscribeGuildMembers(tmp3, "GameInvitesChannelPostAuthors");
 };
 export const canInviteToActivity = function canInviteToActivity(type) {
   let tmp = type.type === constants2.PLAYING;
   if (tmp) {
-    tmp = importDefault(5837)(type, constants.JOIN);
+    tmp = require("../activities/utils/hasFlag.tsx")(type, constants.JOIN);
   }
   return tmp;
 };

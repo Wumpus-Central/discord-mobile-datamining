@@ -11,9 +11,9 @@ export const PlayStationLinkError = function PlayStationLinkError(arg0) {
   let errorCode;
   let onClose;
   ({ onClose, errorCode } = arg0);
-  let obj = require(1480) /* useNavigation */;
+  let obj = require("../../../../../../design/components/Navigator/native/useNavigation.native.tsx") /* useNavigation */;
   const navigation = obj.useNavigation();
-  const connectRetry = require(10468) /* useConnectRetry */.useConnectRetry(navigation, constants.PRE_CONNECT);
+  const connectRetry = require("../useConnectRetry.tsx") /* useConnectRetry */.useConnectRetry(navigation, constants.PRE_CONNECT);
   if (errorCode === AbortCodes.UNDER_MINIMUM_AGE) {
     const intl2 = tmp(1236).intl;
     let stringResult = intl2.string(tmp(1236).t["3dIn2A"]);
@@ -23,9 +23,9 @@ export const PlayStationLinkError = function PlayStationLinkError(arg0) {
   }
   obj = { title: null, body: null, onClose: null, onRetry: null };
   const intl3 = tmp(1236).intl;
-  obj[0] = intl3.string(require(1236) /* getSystemLocale */.t.eY3qHd);
+  obj[0] = intl3.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.eY3qHd);
   obj[1] = stringResult;
   obj[2] = onClose;
   obj[3] = connectRetry;
-  return jsx(require(10469) /* TwoWayLinkError */.TwoWayLinkError, { title: null, body: null, onClose: null, onRetry: null });
+  return jsx(require("../TwoWayLinkError.tsx") /* TwoWayLinkError */.TwoWayLinkError, { title: null, body: null, onClose: null, onRetry: null });
 };

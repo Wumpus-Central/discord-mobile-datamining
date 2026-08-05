@@ -3,14 +3,14 @@ import createToggle from "createToggle";
 
 obj = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.piqs0o);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.piqs0o);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   useTrailing() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    return "" + intl.string(require(1236) /* getSystemLocale */.t.XxRj7f) + " \u2022 " + intl2.string(importDefault(2803).FTawSP);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return "" + intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.XxRj7f) + " \u2022 " + intl2.string(require("../../../age_assurance/AgeAssurance.messages.js").FTawSP);
   },
   usePredicate: require("useAgeVerificationRunner").useShowAssignedAgeGroupSettings,
   screen: obj
@@ -18,7 +18,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.AGE_GROUP,
   getComponent() {
-    return require(13920) /* SettingsAgeGroupHeader */.default;
+    return require("../../age_group/native/SettingsAgeGroupScreen.tsx") /* SettingsAgeGroupHeader */.default;
   }
 };
 const route = createToggle.createRoute(obj);

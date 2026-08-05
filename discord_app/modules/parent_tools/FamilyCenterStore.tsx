@@ -123,7 +123,7 @@ function handleInitialLoad(arg0) {
     ageGroup = null;
   }
   let c20 = false;
-  let closure_21 = importDefault(11).fromTimestamp(Date.now());
+  let closure_21 = require("../../utils/SnowflakeUtils.tsx").fromTimestamp(Date.now());
   let c19 = true;
 }
 function handleLinkedUserFetch(linkedUsers) {
@@ -231,7 +231,7 @@ function handleTeenActivityFetch(familyCenterTeenActivity) {
     }
     let c20 = false;
     const _Date = Date;
-    let closure_21 = importDefault(11).fromTimestamp(Date.now());
+    let closure_21 = require("../../utils/SnowflakeUtils.tsx").fromTimestamp(Date.now());
     if (spendingLimit == null) {
       spendingLimit = null;
     }
@@ -318,8 +318,8 @@ function handleCurrentUserUpdate(user) {
     if (linked_users.some((arg0) => undefined === table[arg0.user_id])) {
       const _Object = Object;
       if (user.linked_users.length > Object.keys(reduced).length) {
-        const linkedUsers = importDefault(6907).fetchLinkedUsers();
-        const obj2 = importDefault(6907);
+        const linkedUsers = require("FamilyCenterActionCreators.tsx").fetchLinkedUsers();
+        const obj2 = require("FamilyCenterActionCreators.tsx");
       }
     }
     linked_users = user.linked_users;
@@ -607,8 +607,8 @@ prototype["getLinkTimestamp"] = function getLinkTimestamp(closure_0) {
 prototype["getRangeStartTimestamp"] = function getRangeStartTimestamp() {
   let extractTimestampResult = null;
   if (null != c11) {
-    extractTimestampResult = importDefault(11).extractTimestamp(c11);
-    const obj = importDefault(11);
+    extractTimestampResult = require("../../utils/SnowflakeUtils.tsx").extractTimestamp(c11);
+    const obj = require("../../utils/SnowflakeUtils.tsx");
   }
   return extractTimestampResult;
 };
@@ -720,8 +720,8 @@ prototype["getAgeGroup"] = function getAgeGroup() {
 prototype["canRefetch"] = function canRefetch() {
   let tmp = null === c21;
   if (!tmp) {
-    tmp = importDefault(11).age(c21) > closure_6;
-    const obj = importDefault(11);
+    tmp = require("../../utils/SnowflakeUtils.tsx").age(c21) > closure_6;
+    const obj = require("../../utils/SnowflakeUtils.tsx");
   }
   return tmp;
 };

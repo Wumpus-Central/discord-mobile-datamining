@@ -10,7 +10,7 @@ export const getCanSendInvite = function getCanSendInvite(findActivityResult, au
   if (author.author.id === id1) {
     return false;
   } else {
-    if (importDefault(11067)(findActivityResult, author, application.id)) {
+    if (require("isInviteActive.tsx")(findActivityResult, author, application.id)) {
       const activity = author.activity;
       let type;
       if (activity != null) {
@@ -19,10 +19,10 @@ export const getCanSendInvite = function getCanSendInvite(findActivityResult, au
       if (type !== constants2.JOIN_REQUEST) {
         return false;
       } else if (tmp11(5837)(findActivityResult, constants.JOIN)) {
-        const partySize = require(11068) /* getPartySize */.getPartySize(findActivityResult);
-        const obj = require(11068) /* getPartySize */;
+        const partySize = require("getPartySize.tsx") /* getPartySize */.getPartySize(findActivityResult);
+        const obj = require("getPartySize.tsx") /* getPartySize */;
         const tmp5 = require;
-        const hasPartySizeResult = require(11069) /* hasPartySize */.hasPartySize(partySize);
+        const hasPartySizeResult = require("hasPartySize.tsx") /* hasPartySize */.hasPartySize(partySize);
         let isPartyFullResult = !hasPartySizeResult;
         if (hasPartySizeResult) {
           isPartyFullResult = tmp5(11070).isPartyFull(partySize);

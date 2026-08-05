@@ -19,9 +19,9 @@ export const convertComboId = function convertComboId(str) {
   return { applicationId: tmp[0], branchId: tmp[1] };
 };
 export const shouldShareApplicationActivity = function shouldShareApplicationActivity(application_id, closure_7) {
-  const ShowCurrentGame = require(3958) /* explicitContentFromProto */.ShowCurrentGame;
+  const ShowCurrentGame = require("../modules/user_settings/UserSettings.tsx") /* explicitContentFromProto */.ShowCurrentGame;
   if (ShowCurrentGame.getSetting()) {
-    const StatusSetting = require(3958) /* explicitContentFromProto */.StatusSetting;
+    const StatusSetting = require("../modules/user_settings/UserSettings.tsx") /* explicitContentFromProto */.StatusSetting;
     if (StatusSetting.getSetting() !== constants3.INVISIBLE) {
       const activeLibraryApplication = closure_7.getActiveLibraryApplication(application_id);
       let tmp7 = null == activeLibraryApplication;

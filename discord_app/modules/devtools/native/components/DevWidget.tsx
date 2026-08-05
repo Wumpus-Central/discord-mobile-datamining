@@ -144,23 +144,23 @@ let closure_16 = importAllResult.memo(() => {
     activeOpacity: 0.5,
     children: null
   };
-  obj[4] = callback(require(14654) /* StaffBadgeIcon */.StaffBadgeIcon, { size: "md", color: "white" });
-  return callback(require(4812) /* PressableBase */.PressableOpacity, obj);
+  obj[4] = callback(require("../../../../design/components/Icon/native/redesign/generated/StaffBadgeIcon.tsx") /* StaffBadgeIcon */.StaffBadgeIcon, { size: "md", color: "white" });
+  return callback(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
 });
 let result = require("STORAGE_KEY_LOG_DISPATCHES").fileFinishedImporting("modules/devtools/native/components/DevWidget.tsx");
 
 export default function DevWidget() {
-  let obj = require(4146);
+  let obj = require("../../../reanimated/ReanimatedRexport.tsx");
   const sharedValue = obj.useSharedValue(initialize.devWidgetPosition.x);
-  const sharedValue1 = require(4146).useSharedValue(initialize.devWidgetPosition.y);
+  const sharedValue1 = require("../../../reanimated/ReanimatedRexport.tsx").useSharedValue(initialize.devWidgetPosition.y);
   obj = { children: null };
-  const items = [callback(importDefault(14957), { x: sharedValue, y: sharedValue1 }), ];
+  const items = [callback(require("../../../visual_effect_view/native/overrides/VEVOO.tsx"), { x: sharedValue, y: sharedValue1 }), ];
   obj = {
     x: sharedValue,
     y: sharedValue1,
     contentWidth: DEV_WIDGET_SIZE,
     contentHeight: DEV_WIDGET_SIZE,
-    dragBoundsPadding: importDefault(712).space.PX_4,
+    dragBoundsPadding: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4,
     onChangePosition(devWidgetPosition) {
       let obj = callback(table[16]);
       obj = { devWidgetPosition };

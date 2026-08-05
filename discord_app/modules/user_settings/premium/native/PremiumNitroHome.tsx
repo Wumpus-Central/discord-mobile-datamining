@@ -93,12 +93,12 @@ function NewTab(arg0) {
   let _require;
   ({ extraBottomHeight, scrollToSectionId } = arg0);
   const tmp = callback3();
-  let obj = _require(7972);
+  let obj = _require("../../../premium/referral_program/hooks/useIsEligibleSenderForReferralProgram.tsx");
   const isEligibleSenderForReferralProgram = obj.useIsEligibleSenderForReferralProgram();
-  let obj1 = _require(12596);
+  let obj1 = _require("../../../premium/native/PremiumPerkCard.tsx");
   const premiumPerkCard = obj1.usePremiumPerkCard();
-  let obj2 = _require(7564);
-  const promotionMarketingComponent = obj2.usePromotionMarketingComponent(_require(7568).MarketingComponentType.MARKETING_PAGE_BANNER);
+  let obj2 = _require("../../../premium/hooks/usePromotionMarketingComponent.tsx");
+  const promotionMarketingComponent = obj2.usePromotionMarketingComponent(_require("../../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx").MarketingComponentType.MARKETING_PAGE_BANNER);
   _require = React.useRef(false);
   const ref = React.useRef(null);
   const callback = React.useCallback((nativeEvent) => {
@@ -123,11 +123,11 @@ function NewTab(arg0) {
     obj[4] = promotionMarketingComponent.id;
     tmp12 = callback2(tmp8Result, obj);
   }
-  const items1 = [tmp12, callback2(_require(12619).TieredTenureBadgePerkCard, {}), , , , , ];
+  const items1 = [tmp12, callback2(_require("../../../premium/tiered_tenure_badging/native/TieredTenureBadgePerkCard.tsx").TieredTenureBadgePerkCard, {}), , , , , ];
   let tmp15Result = null;
   if (isEligibleSenderForReferralProgram) {
     obj2 = { onLayout: null, children: null };
-    obj2[0] = importDefault(12617)(ref, scrollToSectionId).createSectionLayoutHandler(NitroHomeSectionId.REFERRAL_PROGRAM);
+    obj2[0] = require("useScrollToSection.tsx")(ref, scrollToSectionId).createSectionLayoutHandler(NitroHomeSectionId.REFERRAL_PROGRAM);
     obj2[1] = tmp15(tmp2(12623).ReferralProgramPerkCard, {});
     tmp15Result = tmp15(closure_5, obj2);
   }
@@ -136,19 +136,19 @@ function NewTab(arg0) {
   const merged = Object.assign(premiumPerkCard.xboxGamePass);
   items1[3] = callback2(tmp8Result, {});
   const merged1 = Object.assign(premiumPerkCard.memberPricing);
-  items1[4] = callback2(importDefault(12596), {});
+  items1[4] = callback2(require("../../../premium/native/PremiumPerkCard.tsx"), {});
   const obj3 = {};
   const obj4 = {};
   const obj5 = {};
   const tmp10 = closure_18;
   const tmp11 = closure_6;
-  const tmp8Result1 = importDefault(12596);
+  const tmp8Result1 = require("../../../premium/native/PremiumPerkCard.tsx");
   const merged2 = Object.assign(premiumPerkCard.earlyAccess);
-  items1[5] = callback2(importDefault(12596), obj5);
+  items1[5] = callback2(require("../../../premium/native/PremiumPerkCard.tsx"), obj5);
   const obj6 = {};
-  const tmp8Result2 = importDefault(12596);
+  const tmp8Result2 = require("../../../premium/native/PremiumPerkCard.tsx");
   const merged3 = Object.assign(premiumPerkCard.superReactions);
-  items1[6] = callback2(importDefault(12596), obj6);
+  items1[6] = callback2(require("../../../premium/native/PremiumPerkCard.tsx"), obj6);
   obj[6] = items1;
   return tmp10(tmp11, obj);
 }
@@ -158,7 +158,7 @@ function PerksTab(extraBottomHeight) {
   ({ fractionalState, isInReverseTrial } = extraBottomHeight);
   let _require;
   let importDefault;
-  let obj = _require(12596);
+  let obj = _require("../../../premium/native/PremiumPerkCard.tsx");
   const premiumPerkCard = obj.usePremiumPerkCard();
   _require = React.useCallback((section_name) => {
     let obj = callback2(table[20]);
@@ -177,8 +177,8 @@ function PerksTab(extraBottomHeight) {
   const tmp = callback4();
   const tmp6 = closure_18;
   const tmp7 = closure_6;
-  const intl = _require(1236).intl;
-  obj[0] = intl.string(_require(1236).t.DOb6x0);
+  const intl = _require("../../../../intl/index.native.tsx").intl;
+  obj[0] = intl.string(_require("../../../../intl/index.native.tsx").t.DOb6x0);
   if (fractionalState === FractionalPremiumStates.FP_ONLY) {
     let clientThemes = premiumPerkCard.customProfile;
     if (isInReverseTrial) {

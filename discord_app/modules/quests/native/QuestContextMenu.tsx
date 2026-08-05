@@ -9,13 +9,13 @@ const require = arg1;
 function renderDefaultButton(ref) {
   const obj = { ref: ref.ref };
   const merged = Object.assign(callback(ref, closure_3));
-  obj.icon = importDefault(8415);
+  obj.icon = require("../../../../_runtime/08415_registerAsset.js");
   obj.variant = "secondary";
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj.accessibilityLabel = intl.string(require(1236) /* getSystemLocale */.t.CAgr1w);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj.accessibilityHint = intl2.string(require(1236) /* getSystemLocale */.t.hd0b7t);
-  return jsx(require(7672) /* IconButton */.IconButton, { ref: ref.ref });
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj.accessibilityLabel = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.CAgr1w);
+  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj.accessibilityHint = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.hd0b7t);
+  return jsx(require("../../../design/components/Button/native/IconButton.native.tsx") /* IconButton */.IconButton, { ref: ref.ref });
 }
 let closure_3 = ["ref"];
 let c5 = importAllResult;

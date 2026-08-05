@@ -8,7 +8,7 @@ createNativeStackNavigator = createNativeStackNavigator.createNativeStackNavigat
 const memoResult = require("noop").memo(function PaymentFlowTestModal() {
   let Navigator;
   let Screen;
-  let obj = _require(5665);
+  let obj = _require("../../../../design/components/Navigator/native/Navigator.native.tsx");
   _require = obj.useAccessibilityNativeStackOptions();
   obj = {
     screenOptions(navigation) {
@@ -33,15 +33,15 @@ const memoResult = require("noop").memo(function PaymentFlowTestModal() {
     options() {
       return { title: "Payment Flow Test" };
     },
-    component: importDefault(14909)
+    component: require("PaymentFlowTest.android.tsx")
   };
   ({ Navigator, Screen } = createNativeStackNavigator);
   obj[1] = <Screen name="PaymentFlowTest" options={function options() {
     return { title: "Payment Flow Test" };
-  }} component={importDefault(14909)} />;
+  }} component={require("PaymentFlowTest.android.tsx")} />;
   return <Navigator name="PaymentFlowTest" options={function options() {
     return { title: "Payment Flow Test" };
-  }} component={importDefault(14909)} />;
+  }} component={require("PaymentFlowTest.android.tsx")} />;
 });
 const result = require("createNativeStackNavigator").fileFinishedImporting("modules/user_settings/billing/native/PaymentFlowTestModal.tsx");
 

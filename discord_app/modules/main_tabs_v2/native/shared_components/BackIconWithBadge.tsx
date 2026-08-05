@@ -16,7 +16,7 @@ function IconWithBadge(includeNotificationsCount) {
   let _require;
   let memo;
   const tmp = createCacheKey();
-  let obj = _require(589);
+  let obj = _require("../../../../../discord_common/js/packages/flux/index.tsx");
   const items = [updateGuildUnreadSentinel];
   const stateFromStores = obj.useStateFromStores(items, () => totalMentionCount.getTotalMentionCount());
   let num = 0;
@@ -59,7 +59,7 @@ function IconWithBadge(includeNotificationsCount) {
   obj = { style: obj, children: null };
   const obj1 = { style: tmp.backIcon, children: null };
   const tmp11 = closure_7;
-  tmp2Result = _require(501);
+  tmp2Result = _require("../../../../../discord_common/js/shared/utils/PlatformUtils.tsx");
   const tmp5 = memo;
   if (null != memo1) {
     const items3 = [memo1];
@@ -113,17 +113,17 @@ export const LeftBackIconWithBadge = function LeftBackIconWithBadge(includeNotif
   if (flag === undefined) {
     flag = false;
   }
-  return callback(IconWithBadge, { includeNotificationsCount: flag, Icon: require(5242) /* ArrowLargeLeftIcon */.ArrowLargeLeftIcon });
+  return callback(IconWithBadge, { includeNotificationsCount: flag, Icon: require("../../../../design/components/Icon/native/redesign/generated/ArrowLargeLeftIcon.tsx") /* ArrowLargeLeftIcon */.ArrowLargeLeftIcon });
 };
 export const CloseIconWithBadgeOnSide = function CloseIconWithBadgeOnSide(count) {
   count = count.count;
   let obj = { style: createCacheKey().iconWithBadge, children: null };
-  const items = [callback(require(4239) /* XLargeIcon */.XLargeIcon, { size: "sm", color: "white" }), ];
+  const items = [callback(require("../../../../design/components/Icon/native/redesign/generated/XLargeIcon.tsx") /* XLargeIcon */.XLargeIcon, { size: "sm", color: "white" }), ];
   let tmp3Result = null;
   if (count > 0) {
     obj = { value: null };
     obj[0] = count;
-    tmp3Result = callback(require(1297) /* Button */.Badge, obj);
+    tmp3Result = callback(require("../../../../design/void/native.tsx") /* Button */.Badge, obj);
   }
   items[1] = tmp3Result;
   obj[1] = items;

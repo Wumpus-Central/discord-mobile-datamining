@@ -9,11 +9,11 @@ function validateOptionContent(allowEmptyValues) {
   let option;
   ({ option, content, guildId, channelId, commandOrigin } = allowEmptyValues);
   if (commandOrigin === undefined) {
-    commandOrigin = require(6891) /* ApplicationCommandSectionType */.CommandOrigin.CHAT;
+    commandOrigin = require("ApplicationCommandTypes.tsx") /* ApplicationCommandSectionType */.CommandOrigin.CHAT;
   }
   let str = "";
   if (null != content) {
-    let obj = require(9911) /* getString */;
+    let obj = require("ApplicationCommandOptionUtils.tsx") /* getString */;
     obj = { content: null };
     obj[0] = content;
     str = obj.getString(obj, "content").trim();
@@ -23,8 +23,8 @@ function validateOptionContent(allowEmptyValues) {
   if (null == content) {
     if (required) {
       obj = { success: false, error: null };
-      const intl2 = require(1236) /* getSystemLocale */.intl;
-      obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.JZJQL2);
+      const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      obj[1] = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.JZJQL2);
       let obj1 = obj;
     } else {
       obj1 = { success: true };
@@ -36,8 +36,8 @@ function validateOptionContent(allowEmptyValues) {
     } else {
       const obj3 = { success: false, error: null };
       if (required) {
-        const intl = require(1236) /* getSystemLocale */.intl;
-        obj3[1] = intl.string(require(1236) /* getSystemLocale */.t.JZJQL2);
+        const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        obj3[1] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.JZJQL2);
         obj2 = obj3;
       } else {
         obj3[1] = getValidationErrorText(option);
@@ -53,7 +53,7 @@ function validateOptionContent(allowEmptyValues) {
     } else {
       first = content[0];
     }
-    const tmp8 = importDefault(11456);
+    const tmp8 = require("ApplicationCommandValidators.tsx");
     const tmp15 = tmp8[option.type](first, option, channelId, guildId, commandOrigin);
     if (!tmp16) {
       tmp15.error = getValidationErrorText(option);

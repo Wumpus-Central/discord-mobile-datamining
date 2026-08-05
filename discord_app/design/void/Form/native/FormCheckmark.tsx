@@ -9,8 +9,8 @@ export default function RowCheckmark(selected) {
   let tmp = null;
   if (selected.selected) {
     const obj = { color: null };
-    obj[0] = importDefault(712).unsafe_rawColors.BRAND_500;
-    tmp = jsx(require(5304) /* CheckmarkSmallIcon */.CheckmarkSmallIcon, { color: null });
+    obj[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.BRAND_500;
+    tmp = jsx(require("../../../components/Icon/native/redesign/generated/CheckmarkSmallIcon.tsx") /* CheckmarkSmallIcon */.CheckmarkSmallIcon, { color: null });
   }
   return tmp;
 };

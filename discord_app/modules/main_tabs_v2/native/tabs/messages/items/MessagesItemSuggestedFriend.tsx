@@ -140,7 +140,7 @@ const memoResult = importAllResult.memo((arg0) => {
 const memoResult1 = importAllResult.memo((suggestedFriend) => {
   let tmp2;
   let tmp3;
-  let obj = require(7666) /* noop */;
+  let obj = require("../../../../../../../discord_common/js/packages/flash-list/index.js") /* noop */;
   const items = [suggestedFriend.suggestedFriend.user.id];
   obj = {};
   [tmp2, tmp3] = callback(obj.useRecyclingState(false, items), 2);
@@ -152,7 +152,7 @@ const memoResult1 = importAllResult.memo((suggestedFriend) => {
 const memoResult2 = importAllResult.memo((arg0) => {
   let tmp2;
   let tmp3;
-  let obj = require(15071) /* toNativeHorizontalOffset */;
+  let obj = require("../../../../../../../_runtime/15071_toNativeHorizontalOffset.js") /* toNativeHorizontalOffset */;
   obj = {};
   [tmp2, tmp3] = callback(obj.useRecyclingState(false), 2);
   const merged = Object.assign(arg0);
@@ -163,10 +163,10 @@ const memoResult2 = importAllResult.memo((arg0) => {
 const result = require("get ActivityIndicator").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemSuggestedFriend.tsx");
 
 export const getMessagesItemSuggestedFriendHeight = function getMessagesItemSuggestedFriendHeight(fontScale) {
-  const obj = require(9370) /* map */;
-  const scaleTextLineHeightResult = require(9370) /* map */.scaleTextLineHeight("redesign/channel-title/semibold", fontScale);
-  const sum = scaleTextLineHeightResult + require(9370) /* map */.scaleTextLineHeight("text-xs/medium", fontScale);
-  return sum + importDefault(712).space.PX_16;
+  const obj = require("../../../../../screen/native/useScaledTextLineHeight.android.tsx") /* map */;
+  const scaleTextLineHeightResult = require("../../../../../screen/native/useScaledTextLineHeight.android.tsx") /* map */.scaleTextLineHeight("redesign/channel-title/semibold", fontScale);
+  const sum = scaleTextLineHeightResult + require("../../../../../screen/native/useScaledTextLineHeight.android.tsx") /* map */.scaleTextLineHeight("text-xs/medium", fontScale);
+  return sum + require("../../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16;
 };
 export const MessagesItemSuggestedFriendFast = memoResult;
 export const MessagesItemSuggestedFriendFlash = memoResult1;

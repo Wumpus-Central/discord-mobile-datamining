@@ -19,7 +19,7 @@ export default function getMessageJumpData(messages, isAtBottom, messages2) {
   messages2 = messages2.messages;
   const lastResult1 = messages2.last();
   currentUser = currentUser.getCurrentUser();
-  const ANIMATED = require(4217) /* GuildThemeSourcePreference */.JumpType.ANIMATED;
+  const ANIMATED = require("../../flow/Client.tsx") /* GuildThemeSourcePreference */.JumpType.ANIMATED;
   let tmp7 = tmp6;
   ({ jumpSequenceId, focusTargetId } = messages);
   if (messages.initialScrollSequenceId === messages2.initialScrollSequenceId) {
@@ -46,7 +46,7 @@ export default function getMessageJumpData(messages, isAtBottom, messages2) {
           if (null != currentUser) {
             if (lastResult.author.id === currentUser.id) {
               if (null != lastResult1) {
-                let obj = importDefault(11);
+                let obj = require("../../utils/SnowflakeUtils.tsx");
               }
               let id = lastResult.id;
               let flag = false;
@@ -90,7 +90,7 @@ export default function getMessageJumpData(messages, isAtBottom, messages2) {
     }
   }
   const tmp4 = require;
-  const tmp4Result = require(500) /* set */;
+  const tmp4Result = require("../../utils/PlatformUtils.tsx") /* set */;
   flag = false;
   tmp12 = ANIMATED;
   tmp13 = null;
@@ -111,7 +111,7 @@ export const useMessageJumpAndroidKeyboardHeight = function useMessageJumpAndroi
     const tmpResult = tmp(1847);
   }
   const obj = React;
-  obj2 = require(500) /* set */;
+  obj2 = require("../../utils/PlatformUtils.tsx") /* set */;
   tmp = require;
   [tmp4, require] = callback(React.useState(num), 2);
   const effect = obj.useEffect(() => outer1_5((keyboardHeight) => {

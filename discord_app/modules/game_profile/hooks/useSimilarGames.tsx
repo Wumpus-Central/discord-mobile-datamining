@@ -16,7 +16,7 @@ export default function useSimilarGames(arg0, arg1) {
   if (arg1) {
     tmp = !set.has(arg0);
   }
-  let obj = require(9258) /* _getShopCollection */;
+  let obj = require("../GameProfileHttpUtils.tsx") /* _getShopCollection */;
   const similarGameIds = obj.useSimilarGameIds(arg0, tmp);
   ({ data, isLoading, error } = similarGameIds);
   if (!tmp) {
@@ -31,7 +31,7 @@ export default function useSimilarGames(arg0, arg1) {
   const items = [handleLoadMessages];
   const items1 = [tmp7];
   const stateFromStores = tmp3Result.useStateFromStores(items, () => tmp7.some((gameId) => null == game.getGame(gameId) && !game.hasNoData(gameId) && !game.didFetchingFail(gameId)), items1);
-  require(589) /* initialize */;
+  require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items2 = [handleLoadMessages, mergeGuildAvatar];
   [][0] = tmp7;
   if (tmp) {

@@ -15,8 +15,8 @@ function updateVoiceSettings() {
     if (tmp5) {
       obj = { type: "SET_CHANNEL_BITRATE", bitrate: null };
       obj[1] = channel.bitrate;
-      importDefault(709).dispatch(obj);
-      const obj2 = importDefault(709);
+      require("../Dispatcher.tsx").dispatch(obj);
+      const obj2 = require("../Dispatcher.tsx");
     }
     tmp5 = null != channel && tmp2 !== channel.bitrate;
   }
@@ -31,8 +31,8 @@ function updateVoiceSettings() {
       if (tmp10 !== AUTO) {
         obj = { type: "SET_CHANNEL_VIDEO_QUALITY_MODE", mode: null };
         obj[1] = AUTO;
-        importDefault(709).dispatch(obj);
-        const obj4 = importDefault(709);
+        require("../Dispatcher.tsx").dispatch(obj);
+        const obj4 = require("../Dispatcher.tsx");
       }
     }
   }

@@ -6,9 +6,9 @@ const result = require("set").fileFinishedImporting("modules/go_live/utils/getSt
 export default function getStreamIssueReportOptions(isEndStream) {
   isEndStream = isEndStream.isEndStream;
   let obj = { id: "black-screen", value: StreamIssueReportReasons.BLACK_SCREEN, label: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   const string = intl.string;
-  const t = require(1236) /* getSystemLocale */.t;
+  const t = require("../../../intl/index.native.tsx") /* getSystemLocale */.t;
   if (isEndStream) {
     let stringResult = string(t["0X5Zbq"]);
     let tmp6 = tmp2;

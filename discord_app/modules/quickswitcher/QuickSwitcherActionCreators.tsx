@@ -30,14 +30,14 @@ function trackClose(QUICKSWITCHER_CLOSED, type) {
   ({ results, queryMode, query } = props);
   const guildId = store2.getGuildId();
   const channelId = store.getChannelId(guildId);
-  const obj2 = require(7230) /* sortByMatchScore */;
+  const obj2 = require("../autocompleter/index.tsx") /* sortByMatchScore */;
   const tmp6 = results[obj2.findNextSelectedResult(obj2, require(undefined, 7230) /* sortByMatchScore */.FindResultDirections.DOWN, -1, results)];
-  const isEmailResult = importDefault(8860).isEmail(query);
-  const obj3 = importDefault(8860);
+  const isEmailResult = require("../../utils/ValidationUtils.tsx").isEmail(query);
+  const obj3 = require("../../utils/ValidationUtils.tsx");
   const tmp7 = importDefault;
-  const isPhoneNumberResult = importDefault(8860).isPhoneNumber(query);
-  const obj4 = importDefault(8860);
-  const isUserTagLikeResult = importDefault(8860).isUserTagLike(query);
+  const isPhoneNumberResult = require("../../utils/ValidationUtils.tsx").isPhoneNumber(query);
+  const obj4 = require("../../utils/ValidationUtils.tsx");
+  const isUserTagLikeResult = require("../../utils/ValidationUtils.tsx").isUserTagLike(query);
   let tmp11 = null != channelId;
   if (tmp11) {
     tmp11 = isStaticChannelRoute(channelId);
@@ -155,7 +155,7 @@ function show() {
       }
       tmp6 = type;
     }
-    let obj = importDefault(698);
+    let obj = require("../../utils/AnalyticsUtils.tsx");
     obj = { source: null, current_guild_id: null, current_channel_id: null, current_channel_type: null };
     obj[0] = str;
     obj[1] = guildId;
@@ -171,7 +171,7 @@ function show() {
   const items = [str2.replace(regExp, ""), tmp14];
   const tmp15 = callback2(items, 2);
   const merged = Object.assign({ query: tmp15[0], queryMode: tmp15[1] });
-  importDefault(709).dispatch(obj);
+  require("../../Dispatcher.tsx").dispatch(obj);
 }
 function _openInviteFromQuickSwitcher() {
   const self = this;
@@ -288,7 +288,7 @@ export const trackOpen = function trackOpen(arg0) {
       }
       tmp6 = type;
     }
-    let obj = importDefault(698);
+    let obj = require("../../utils/AnalyticsUtils.tsx");
     obj = { source: null, current_guild_id: null, current_channel_id: null, current_channel_type: null };
     obj[0] = arg0;
     obj[1] = guildId;
@@ -301,7 +301,7 @@ export { trackClose };
 export { show };
 export const hide = function hide() {
   trackClose(constants.QUICKSWITCHER_CLOSED);
-  importDefault(709).dispatch({ type: "QUICKSWITCHER_HIDE" });
+  require("../../Dispatcher.tsx").dispatch({ type: "QUICKSWITCHER_HIDE" });
 };
 export const toggle = function toggle() {
   let str = arg0;
@@ -310,14 +310,14 @@ export const toggle = function toggle() {
   }
   if (closure_11.isOpen()) {
     trackClose(constants.QUICKSWITCHER_CLOSED);
-    importDefault(709).dispatch({ type: "QUICKSWITCHER_HIDE" });
-    const obj = importDefault(709);
+    require("../../Dispatcher.tsx").dispatch({ type: "QUICKSWITCHER_HIDE" });
+    const obj = require("../../Dispatcher.tsx");
   } else {
     show(str);
   }
 };
 export const search = function search(str) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   let tmp = dependencyMap[str.charAt(str, 0)];
   if (tmp == null) {
     tmp = null;
@@ -330,7 +330,7 @@ export const search = function search(str) {
   obj.dispatch(obj);
 };
 export const selectResult = function selectResult(selectedIndex) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "QUICKSWITCHER_SELECT", selectedIndex };
   obj.dispatch(obj);
 };
@@ -342,12 +342,12 @@ export const switchToResult = function switchToResult(record) {
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj.dispatch({ type: "QUICKSWITCHER_HIDE" });
   trackClose(constants.QUICKSWITCHER_RESULT_SELECTED, record);
   ({ type, record } = record);
   obj = { page: constants2.QUICK_SWITCHER };
-  if (require(7230) /* sortByMatchScore */.AutocompleterResultTypes.GUILD === type) {
+  if (require("../autocompleter/index.tsx") /* sortByMatchScore */.AutocompleterResultTypes.GUILD === type) {
     let tmp5Result = tmp5(5866);
     tmp5Result.transitionToGuild(record.id, { navigationReplace: true });
   } else if (tmp5(7230).AutocompleterResultTypes.TEXT_CHANNEL === type) {
@@ -436,5 +436,5 @@ export const switchToResult = function switchToResult(record) {
       }
     }
   }
-  importDefault(709).dispatch({ type: "QUICKSWITCHER_SWITCH_TO", result: record });
+  require("../../Dispatcher.tsx").dispatch({ type: "QUICKSWITCHER_SWITCH_TO", result: record });
 };

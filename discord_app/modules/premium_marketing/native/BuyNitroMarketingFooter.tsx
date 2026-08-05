@@ -31,12 +31,12 @@ export default function BuyNitroMarketingFooter(arg0) {
   obj = { style: createCacheKey().footer, collapsable: false, children: null };
   obj = { location: null, planSelection: null, applicationId: null, onPaymentSuccess: null, onPaymentDismiss: null };
   const tmp = createCacheKey();
-  obj[0] = importDefault(5630).PREMIUM_MARKETING_FOOTER;
+  obj[0] = require("../../app_analytics/AnalyticsLocation.tsx").PREMIUM_MARKETING_FOOTER;
   obj[1] = planSelection;
   obj[2] = applicationId;
   obj[3] = onPaymentSuccess;
   obj[4] = onPaymentDismiss;
-  obj[2] = jsx(importDefault(7658), { location: null, planSelection: null, applicationId: null, onPaymentSuccess: null, onPaymentDismiss: null });
+  obj[2] = jsx(require("components/purchase_button/BuyNitroPurchaseButton.tsx"), { location: null, planSelection: null, applicationId: null, onPaymentSuccess: null, onPaymentDismiss: null });
   obj[1] = <closure_4 location={null} planSelection={null} applicationId={null} onPaymentSuccess={null} onPaymentDismiss={null} />;
-  return jsx(require(5368) /* Directions */.GestureDetector, { location: null, planSelection: null, applicationId: null, onPaymentSuccess: null, onPaymentDismiss: null });
+  return jsx(require("../../../../_runtime/05368_Directions.js") /* Directions */.GestureDetector, { location: null, planSelection: null, applicationId: null, onPaymentSuccess: null, onPaymentDismiss: null });
 };

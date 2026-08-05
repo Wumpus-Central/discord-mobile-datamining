@@ -46,7 +46,7 @@ export default function useMessagePreview(guild_id) {
     return hasUnreadResult;
   });
   if (!disabled) {
-    disabled = importDefault(8213)(guild_id);
+    disabled = require("../age_gate/useIsNsfwGated.tsx")(guild_id);
   }
   if (!disabled) {
     disabled = stateFromStores === tmp(3963).MessagePreviewTypes.NONE;
@@ -61,12 +61,12 @@ export default function useMessagePreview(guild_id) {
     }
     disabled = tmp6;
   }
-  return importDefault(14454)(guild_id, disabled);
+  return require("../message_previews/useLatestChannelMessage.tsx")(guild_id, disabled);
 };
 export const useMessagePreviewSetting = function useMessagePreviewSetting(arg0) {
   const _require = arg0;
   const items = [handleConnectionClosedOrResumed];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const guilds = outer1_3.settings.guilds;
     let tmp2 = null;
     if (null != guild_id) {

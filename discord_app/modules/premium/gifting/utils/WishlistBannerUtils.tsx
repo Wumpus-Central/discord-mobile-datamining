@@ -10,29 +10,29 @@ obj = { FULL_WISHLIST: null, MIXED: null, SHOP_ONLY: null, SOCIAL_LAYER_STOREFRO
 obj = { title: null, getSubtitle: null, showIcons: false };
 obj[0] = intl.string(require("getSystemLocale").t["7lZ31J"]);
 obj[1] = function getSubtitle(username) {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.BjEX38, { username });
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.BjEX38, { username });
 };
 obj[0] = obj;
 let obj1 = { title: null, getSubtitle: null, showIcons: true };
 obj1[0] = intl2.string(require("getSystemLocale").t.pWG4ze);
 obj1[1] = function getSubtitle(username) {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.dIDKgi, { username });
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.dIDKgi, { username });
 };
 obj[1] = obj1;
 let obj2 = { title: null, getSubtitle: null, showIcons: false };
 obj2[0] = intl3.string(require("getSystemLocale").t.SK5rmi);
 obj2[1] = function getSubtitle(username) {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.wyMp1j, { username });
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.wyMp1j, { username });
 };
 obj[2] = obj2;
 const obj3 = { title: null, getSubtitle: null, showIcons: false };
 obj3[0] = intl4.string(require("getSystemLocale").t.BCi1gT);
 obj3[1] = function getSubtitle(username) {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.BjEX38, { username });
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.BjEX38, { username });
 };
 obj[3] = obj3;
 const result = require("getUserWishlistKey").fileFinishedImporting("modules/premium/gifting/utils/WishlistBannerUtils.tsx");

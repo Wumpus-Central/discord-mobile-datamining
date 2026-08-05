@@ -4,9 +4,9 @@ import { LaunchPadTypes } from "LAUNCH_PAD_SPRING_CONFIG";
 const result = require("create").fileFinishedImporting("modules/launchpad/native/useLaunchPadType.tsx");
 
 export default function useLaunchPadType() {
-  const LaunchPadModeSetting = require(3958) /* explicitContentFromProto */.LaunchPadModeSetting;
+  const LaunchPadModeSetting = require("../../user_settings/UserSettings.tsx") /* explicitContentFromProto */.LaunchPadModeSetting;
   const setting = LaunchPadModeSetting.useSetting();
-  if (require(1306) /* create */.LaunchPadMode.LAUNCH_PAD_DISABLED === setting) {
+  if (require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.LaunchPadMode.LAUNCH_PAD_DISABLED === setting) {
     return LaunchPadTypes.DISABLED;
   } else if (tmp(1306).LaunchPadMode.LAUNCH_PAD_GESTURE_FULL_SCREEN === setting) {
     return LaunchPadTypes.GESTURE_FULL;

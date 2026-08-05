@@ -21,9 +21,9 @@ const memoResult = require("noop").memo(function ChannelUnreadBadge(panelVariant
     flag = false;
   }
   const tmp = callback();
-  let obj = require(9711) /* getLayoutStyles */;
+  let obj = require("layouts/ChannelListLayout.tsx") /* getLayoutStyles */;
   const layoutStyles = obj.getLayoutStyles(layout, launchpad);
-  require(4701) /* getFontScale */;
+  require("../../../../screen/native/useFontScale.tsx") /* getFontScale */;
   let tmp8Result = null;
   if (unread) {
     const items = [tmp.unreadBadge, , , ];
@@ -52,9 +52,9 @@ const memoResult = require("noop").memo(function ChannelUnreadBadge(panelVariant
     obj1[0] = num2;
     const items1 = [obj1];
     obj[2] = items1;
-    obj[1] = jsx(importDefault(8199), { classic: null, size: null, badgeStyle: null });
+    obj[1] = jsx(require("../Badge.tsx"), { classic: null, size: null, badgeStyle: null });
     tmp8Result = tmp8(tmp9, obj);
-    const tmp12 = importDefault(8199);
+    const tmp12 = require("../Badge.tsx");
   }
   return tmp8Result;
 });

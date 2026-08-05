@@ -37,9 +37,9 @@ function getAllCachedMessages() {
 }
 function messageTimestampIsInInterval(arg0, arg1) {
   if (null != arg0) {
-    const tmp4 = importDefault(3867)();
-    const tmp5 = importDefault(3867)(arg0);
-    return require(3955) /* resetCache */.isWithinInterval(tmp4, tmp5, arg1);
+    const tmp4 = require("../../../_runtime/03867_t.js")();
+    const tmp5 = require("../../../_runtime/03867_t.js")(arg0);
+    return require("../../utils/DateUtils.tsx") /* resetCache */.isWithinInterval(tmp4, tmp5, arg1);
   } else {
     return false;
   }
@@ -327,7 +327,7 @@ const LocalMessageCacheManagerMessageCacheKey = "LocalMessageCacheManagerMessage
 let closure_13 = 5 * require("set").Millis.MINUTE;
 let closure_14 = 14 * require("set").Millis.DAY;
 function _getMessages(outer1_2) {
-  const Storage = require(595) /* Storage */.Storage;
+  const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
   let obj = Storage.get(LocalMessageCacheManagerMessageCacheKey);
   if (null == obj) {
     obj = {};
@@ -351,7 +351,7 @@ function _writeMessage(arg0, id) {
   if (typeof _getMessages !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const Storage = require(595) /* Storage */.Storage;
+  const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
   obj = Storage.get(LocalMessageCacheManagerMessageCacheKey);
   if (null == obj) {
     obj = {};
@@ -369,7 +369,7 @@ function _writeMessage(arg0, id) {
   } else {
     delete tmp[tmp2];
   }
-  const Storage2 = require(595) /* Storage */.Storage;
+  const Storage2 = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
   const result = Storage2.set(LocalMessageCacheManagerMessageCacheKey, obj);
   return obj;
 }
@@ -1003,48 +1003,48 @@ class LocalMessageCacheManager extends tmp3 {
 }
 const prototype = LocalMessageCacheManager.prototype;
 prototype["_terminate"] = function _terminate() {
-  importDefault(709).unsubscribe("LOGOUT", this.handleLogout);
-  const obj = importDefault(709);
-  importDefault(709).unsubscribe("MESSAGE_CREATE", this.handleMessageCreate);
-  const obj2 = importDefault(709);
-  importDefault(709).unsubscribe("MESSAGE_SEND_FAILED", this.handleTextMessageFailed);
-  const obj3 = importDefault(709);
-  importDefault(709).unsubscribe("UPLOAD_START", this.handleFileUploadStart);
-  const obj4 = importDefault(709);
-  importDefault(709).unsubscribe("MESSAGE_DELETE", this.handleMessageDelete);
-  const obj5 = importDefault(709);
-  importDefault(709).unsubscribe("UPLOAD_RESTORE_FAILED_UPLOAD", this.handleRestoreFailedUpload);
-  const obj6 = importDefault(709);
-  importDefault(709).unsubscribe("UPLOAD_COMPLETE", this.handleUploadComplete);
-  const obj7 = importDefault(709);
-  importDefault(709).unsubscribe("UPLOAD_PROGRESS", this.handleUploadProgress);
-  const obj8 = importDefault(709);
-  importDefault(709).unsubscribe("LOAD_MESSAGES_SUCCESS", this.handleLoadMessagesSuccess);
-  const obj9 = importDefault(709);
-  importDefault(709).unsubscribe("CACHE_LOADED", this.handleCacheLoaded);
-  const obj10 = importDefault(709);
-  importDefault(709).unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
+  require("../../Dispatcher.tsx").unsubscribe("LOGOUT", this.handleLogout);
+  const obj = require("../../Dispatcher.tsx");
+  require("../../Dispatcher.tsx").unsubscribe("MESSAGE_CREATE", this.handleMessageCreate);
+  const obj2 = require("../../Dispatcher.tsx");
+  require("../../Dispatcher.tsx").unsubscribe("MESSAGE_SEND_FAILED", this.handleTextMessageFailed);
+  const obj3 = require("../../Dispatcher.tsx");
+  require("../../Dispatcher.tsx").unsubscribe("UPLOAD_START", this.handleFileUploadStart);
+  const obj4 = require("../../Dispatcher.tsx");
+  require("../../Dispatcher.tsx").unsubscribe("MESSAGE_DELETE", this.handleMessageDelete);
+  const obj5 = require("../../Dispatcher.tsx");
+  require("../../Dispatcher.tsx").unsubscribe("UPLOAD_RESTORE_FAILED_UPLOAD", this.handleRestoreFailedUpload);
+  const obj6 = require("../../Dispatcher.tsx");
+  require("../../Dispatcher.tsx").unsubscribe("UPLOAD_COMPLETE", this.handleUploadComplete);
+  const obj7 = require("../../Dispatcher.tsx");
+  require("../../Dispatcher.tsx").unsubscribe("UPLOAD_PROGRESS", this.handleUploadProgress);
+  const obj8 = require("../../Dispatcher.tsx");
+  require("../../Dispatcher.tsx").unsubscribe("LOAD_MESSAGES_SUCCESS", this.handleLoadMessagesSuccess);
+  const obj9 = require("../../Dispatcher.tsx");
+  require("../../Dispatcher.tsx").unsubscribe("CACHE_LOADED", this.handleCacheLoaded);
+  const obj10 = require("../../Dispatcher.tsx");
+  require("../../Dispatcher.tsx").unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
 };
 prototype["_initialize"] = function _initialize() {
   const self = this;
   tmp2.verbose("cache manager initialize");
-  let subscription = importDefault(709).subscribe("LOGOUT", this.handleLogout);
-  let obj = importDefault(709);
-  let subscription1 = importDefault(709).subscribe("MESSAGE_CREATE", this.handleMessageCreate);
-  let obj2 = importDefault(709);
-  const subscription2 = importDefault(709).subscribe("MESSAGE_SEND_FAILED", this.handleTextMessageFailed);
-  let obj3 = importDefault(709);
-  const subscription3 = importDefault(709).subscribe("UPLOAD_START", this.handleFileUploadStart);
-  const obj4 = importDefault(709);
-  const subscription4 = importDefault(709).subscribe("MESSAGE_DELETE", this.handleMessageDelete);
-  const obj5 = importDefault(709);
-  const subscription5 = importDefault(709).subscribe("UPLOAD_RESTORE_FAILED_UPLOAD", this.handleRestoreFailedUpload);
-  const obj6 = importDefault(709);
-  const subscription6 = importDefault(709).subscribe("UPLOAD_COMPLETE", this.handleUploadComplete);
-  const obj7 = importDefault(709);
-  const subscription7 = importDefault(709).subscribe("UPLOAD_PROGRESS", this.handleUploadProgress);
-  const obj8 = importDefault(709);
-  const subscription8 = importDefault(709).subscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
+  let subscription = require("../../Dispatcher.tsx").subscribe("LOGOUT", this.handleLogout);
+  let obj = require("../../Dispatcher.tsx");
+  let subscription1 = require("../../Dispatcher.tsx").subscribe("MESSAGE_CREATE", this.handleMessageCreate);
+  let obj2 = require("../../Dispatcher.tsx");
+  const subscription2 = require("../../Dispatcher.tsx").subscribe("MESSAGE_SEND_FAILED", this.handleTextMessageFailed);
+  let obj3 = require("../../Dispatcher.tsx");
+  const subscription3 = require("../../Dispatcher.tsx").subscribe("UPLOAD_START", this.handleFileUploadStart);
+  const obj4 = require("../../Dispatcher.tsx");
+  const subscription4 = require("../../Dispatcher.tsx").subscribe("MESSAGE_DELETE", this.handleMessageDelete);
+  const obj5 = require("../../Dispatcher.tsx");
+  const subscription5 = require("../../Dispatcher.tsx").subscribe("UPLOAD_RESTORE_FAILED_UPLOAD", this.handleRestoreFailedUpload);
+  const obj6 = require("../../Dispatcher.tsx");
+  const subscription6 = require("../../Dispatcher.tsx").subscribe("UPLOAD_COMPLETE", this.handleUploadComplete);
+  const obj7 = require("../../Dispatcher.tsx");
+  const subscription7 = require("../../Dispatcher.tsx").subscribe("UPLOAD_PROGRESS", this.handleUploadProgress);
+  const obj8 = require("../../Dispatcher.tsx");
+  const subscription8 = require("../../Dispatcher.tsx").subscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
   callback(function*() {
     if (c8 === 2) {
       c8 = 3;

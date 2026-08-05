@@ -13,8 +13,8 @@ export const getCanJoin = function getCanJoin(currentUserId) {
   if (message.author.id === currentUserId.currentUserId) {
     return { canJoin: false, remoteJoinPlatform: null };
   } else {
-    if (importDefault(11067)(presenceActivity, message, tmp2.id)) {
-      let obj = require(11068) /* getPartySize */;
+    if (require("isInviteActive.tsx")(presenceActivity, message, tmp2.id)) {
+      let obj = require("getPartySize.tsx") /* getPartySize */;
       const partySize = obj.getPartySize(presenceActivity);
       if (obj2.hasPartySize(partySize)) {
         let tmp6Result = tmp6(11070);
@@ -72,11 +72,11 @@ export const getCanJoin = function getCanJoin(currentUserId) {
 export const getCanSync = function getCanSync(activity, tmp8Result, arg2, id) {
   let tmp = null != activity;
   if (tmp) {
-    let tmp6 = importDefault(11067)(activity, arg2, id.id);
+    let tmp6 = require("isInviteActive.tsx")(activity, arg2, id.id);
     if (tmp6) {
       let tmp8 = tmp4(5837)(activity, constants2.SYNC);
       if (tmp8) {
-        let isPlatformEmbedded = require(500) /* set */.isPlatformEmbedded;
+        let isPlatformEmbedded = require("../../../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded;
         if (isPlatformEmbedded) {
           isPlatformEmbedded = !tmp9(11071).getIsInParty(tmp8Result, activity);
           const tmp9Result = tmp9(11071);

@@ -13,7 +13,7 @@ function handleLoadThreadsSuccess(arg0) {
     return true;
   });
   if (mostRecentMessages != null) {
-    const found = mostRecentMessages.filter(require(1351) /* isDiscordFrontendDevelopment */.isNotNullish);
+    const found = mostRecentMessages.filter(require("../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
     const item1 = found.forEach((channel_id) => {
       let messageRecord = null;
       if (null != channel_id) {
@@ -69,8 +69,8 @@ const forumPostRecentMessageStore = new ForumPostRecentMessageStore(require("dis
               id1 = message2.id;
             }
           }
-          flag = importDefault(11).compare(id, id1) > -1;
-          const obj2 = importDefault(11);
+          flag = require("../../utils/SnowflakeUtils.tsx").compare(id, id1) > -1;
+          const obj2 = require("../../utils/SnowflakeUtils.tsx");
         }
       }
       if (flag) {
@@ -78,14 +78,14 @@ const forumPostRecentMessageStore = new ForumPostRecentMessageStore(require("dis
           const message3 = tmp.message;
           let messageRecord = null;
           if (null != message3) {
-            messageRecord = require(4504) /* createMinimalMessageRecord */.createMessageRecord(message3);
-            const obj4 = require(4504) /* createMinimalMessageRecord */;
+            messageRecord = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */.createMessageRecord(message3);
+            const obj4 = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */;
           }
           let obj = { loaded: true, message: null };
           obj[1] = messageRecord;
           dependencyMap[tmp.message.channel_id] = obj;
         }
-        obj3 = importDefault(11);
+        obj3 = require("../../utils/SnowflakeUtils.tsx");
       }
       tmp = dependencyMap;
       obj = { loaded: true, message: null };
@@ -115,8 +115,8 @@ const forumPostRecentMessageStore = new ForumPostRecentMessageStore(require("dis
             id1 = message2.id;
           }
         }
-        flag = importDefault(11).compare(id, id1) > -1;
-        const obj2 = importDefault(11);
+        flag = require("../../utils/SnowflakeUtils.tsx").compare(id, id1) > -1;
+        const obj2 = require("../../utils/SnowflakeUtils.tsx");
       }
     }
     let tmp9 = flag;
@@ -130,9 +130,9 @@ const forumPostRecentMessageStore = new ForumPostRecentMessageStore(require("dis
         if (tmp16) {
           const obj = {};
           const merged = Object.assign(tmp12);
-          obj.message = require(4504) /* createMinimalMessageRecord */.updateMessageRecord(message, message.message);
+          obj.message = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */.updateMessageRecord(message, message.message);
           dependencyMap[channel_id] = obj;
-          const obj4 = require(4504) /* createMinimalMessageRecord */;
+          const obj4 = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */;
         }
         tmp16 = null != dependencyMap[channel_id] && null != message;
       }
@@ -165,7 +165,7 @@ const forumPostRecentMessageStore = new ForumPostRecentMessageStore(require("dis
       if (null != most_recent_message) {
         let tmp = require;
         let tmp2 = dependencyMap;
-        let obj = require(4504) /* createMinimalMessageRecord */;
+        let obj = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */;
         messageRecord = obj.createMessageRecord(most_recent_message);
       }
       let tmp4 = closure_5;

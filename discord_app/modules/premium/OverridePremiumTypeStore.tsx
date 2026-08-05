@@ -3,7 +3,7 @@ import GuildFeatures from "GuildFeatures";
 import { PersistedStore } from "initialize";
 
 function setPremiumTypeActual(user) {
-  closure_4.premiumTypeActual = require(1880) /* validatePremiumType */.getPremiumTypeFromRawValue(user.user.premium_type);
+  closure_4.premiumTypeActual = require("../user/UserStoreUtils.tsx") /* validatePremiumType */.getPremiumTypeFromRawValue(user.user.premium_type);
 }
 const UNSELECTED_CREATED_AT_DATE = GuildFeatures.UNSELECTED_CREATED_AT_DATE;
 const UNSELECTED_PREMIUM_TYPE_OVERRIDE = GuildFeatures.UNSELECTED_PREMIUM_TYPE_OVERRIDE;

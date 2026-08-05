@@ -6,11 +6,11 @@ const result = require("module_38").fileFinishedImporting("modules/collectibles/
 
 export const useCurrentUser = function useCurrentUser() {
   const items = [mergeGuildAvatar];
-  const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
-  importDefault(38)(null != stateFromStores, "user has to be signed in before accessing shop");
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
+  require("../../../../_runtime/metro/00038__.js")(null != stateFromStores, "user has to be signed in before accessing shop");
   return stateFromStores;
 };
 export const useCurrentUserIfAvailable = function useCurrentUserIfAvailable() {
   const items = [mergeGuildAvatar];
-  return require(589) /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
+  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
 };

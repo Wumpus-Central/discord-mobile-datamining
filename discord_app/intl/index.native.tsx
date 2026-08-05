@@ -5,7 +5,7 @@ import { jsx } from "jsxProd";
 import get_ActivityIndicator from "get ActivityIndicator";
 import set from "set";
 import getAvailableLocales from "getAvailableLocales";
-import module_1274 from "module_1274";
+import 01274__ from "../../_runtime/metro/01274__.js";
 import set from "jsxProd";
 
 const require = arg1;
@@ -23,7 +23,7 @@ if (null != LocalizationManager) {
 }
 function getSystemLocale(arg0) {
   const tmp = require;
-  const tmp3 = require(17) /* get ActivityIndicator */;
+  const tmp3 = require("../../_runtime/00017_get_ActivityIndicator.js") /* get ActivityIndicator */;
   if (obj.isAndroid()) {
     let LocalizationManager = tmp(666).default;
   } else {
@@ -38,24 +38,24 @@ function getSystemLocale(arg0) {
 const normalizedLocale = getAvailableLocales.getNormalizedLocale(str, "en-US");
 obj = {
   $i(children) {
-    return jsx(require(1297) /* Button */.LegacyText, { style: closure_3.italic, children }, arg1);
+    return jsx(require("../design/void/native.tsx") /* Button */.LegacyText, { style: closure_3.italic, children }, arg1);
   },
   $b(children) {
-    return jsx(require(1297) /* Button */.LegacyText, { style: closure_3.strong, children }, arg1);
+    return jsx(require("../design/void/native.tsx") /* Button */.LegacyText, { style: closure_3.strong, children }, arg1);
   },
   $del(children) {
-    return jsx(require(1297) /* Button */.LegacyText, { style: closure_3.del, children }, arg1);
+    return jsx(require("../design/void/native.tsx") /* Button */.LegacyText, { style: closure_3.del, children }, arg1);
   },
   $p(children) {
-    return jsx(require(1297) /* Button */.LegacyText, { children }, arg1);
+    return jsx(require("../design/void/native.tsx") /* Button */.LegacyText, { children }, arg1);
   },
   $code(children) {
-    return jsx(require(1297) /* Button */.LegacyText, { style: closure_3.code, children }, arg1);
+    return jsx(require("../design/void/native.tsx") /* Button */.LegacyText, { style: closure_3.code, children }, arg1);
   },
   $link(children) {
     let tmp;
     [tmp] = arg2;
-    return jsx(require(13352) /* IntlLink */.IntlLink, { target: tmp, children }, arg1);
+    return jsx(require("native/migration.tsx") /* IntlLink */.IntlLink, { target: tmp, children }, arg1);
   }
 };
 const reactFormatter = module_1274.makeReactFormatter(obj);
@@ -69,7 +69,7 @@ export { getSystemLocale };
 export const getAvailableLocales = require("getAvailableLocales").getAvailableLocales;
 export const getLanguages = require("getAvailableLocales").getLanguages;
 export const useSyncMessages = function useSyncMessages(arg0) {
-  return require(1237) /* getAvailableLocales */.useSyncMessages(arg0, set);
+  return require("util.tsx") /* getAvailableLocales */.useSyncMessages(arg0, set);
 };
 export const t = require("_defaultMessages")._defaultMessages;
 export const international = require("messagesProxy");

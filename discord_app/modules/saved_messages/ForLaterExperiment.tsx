@@ -35,8 +35,8 @@ const obj2 = {
       HermesBuiltin.throwTypeError();
     }
     const obj = Object.create(ForLaterFreemiumConfig.prototype);
-    importDefault(38)(null != parsed.b, "Config is missing bookmark limit");
-    importDefault(38)(null != parsed.r, "Config is missing reminder limit");
+    require("../../../_runtime/metro/00038__.js")(null != parsed.b, "Config is missing bookmark limit");
+    require("../../../_runtime/metro/00038__.js")(null != parsed.r, "Config is missing reminder limit");
     obj.enabled = true;
     ({ b: tmp3.bookmarkLimit, r: tmp3.reminderLimit } = parsed);
     return obj;
@@ -48,8 +48,8 @@ obj2[2] = (arg0) => {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(ForLaterFreemiumConfig.prototype);
-  importDefault(38)(null != parsed.b, "Config is missing bookmark limit");
-  importDefault(38)(null != parsed.r, "Config is missing reminder limit");
+  require("../../../_runtime/metro/00038__.js")(null != parsed.b, "Config is missing bookmark limit");
+  require("../../../_runtime/metro/00038__.js")(null != parsed.r, "Config is missing reminder limit");
   obj.enabled = true;
   ({ b: tmp3.bookmarkLimit, r: tmp3.reminderLimit } = parsed);
   return obj;
@@ -87,7 +87,7 @@ export const useHasForLaterAccess = function useHasForLaterAccess(ForLaterOpenAc
   if (!enabled) {
     let enabled1 = store.useConfig(obj).enabled;
     if (enabled1) {
-      enabled1 = importDefault(8187)();
+      enabled1 = require("hasForLaterPremiumType.tsx")();
     }
     enabled = enabled1;
   }
@@ -100,7 +100,7 @@ export const hasForLaterAccess = function hasForLaterAccess(addOrUpdateSavedMess
   if (!enabled) {
     let enabled1 = store.getConfig(obj).enabled;
     if (enabled1) {
-      enabled1 = importDefault(8187)();
+      enabled1 = require("hasForLaterPremiumType.tsx")();
     }
     enabled = enabled1;
   }
@@ -110,7 +110,7 @@ export const getForLaterLimit = function getForLaterLimit(addOrUpdateSavedMessag
   let obj = { location: addOrUpdateSavedMessage };
   const config = store2.getConfig(obj);
   obj = { location: addOrUpdateSavedMessage };
-  const tmp2 = importDefault(8187)();
+  const tmp2 = require("hasForLaterPremiumType.tsx")();
   if (!config.enabled) {
     let num = 0;
     if (store.getConfig(obj).enabled) {
@@ -124,7 +124,7 @@ export const useForLaterLimit = function useForLaterLimit(ForLaterScreen, arg1) 
   const config = store2.useConfig(obj);
   obj = { location: ForLaterScreen };
   const config1 = store.useConfig(obj);
-  const hasForLaterPremiumType = require(8187) /* hasForLaterPremiumType */.useHasForLaterPremiumType();
+  const hasForLaterPremiumType = require("hasForLaterPremiumType.tsx") /* hasForLaterPremiumType */.useHasForLaterPremiumType();
   if (!config.enabled) {
     let num = 0;
     if (tmp4) {
@@ -136,7 +136,7 @@ export const useForLaterLimit = function useForLaterLimit(ForLaterScreen, arg1) 
 export const isForLaterLimitUpgradable = function isForLaterLimitUpgradable(addOrUpdateSavedMessage) {
   let enabled = store2.getConfig({ location: addOrUpdateSavedMessage }).enabled;
   if (enabled) {
-    enabled = !importDefault(8187)();
+    enabled = !require("hasForLaterPremiumType.tsx")();
   }
   return enabled;
 };

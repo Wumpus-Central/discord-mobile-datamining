@@ -6,25 +6,25 @@ function useChannelListLayoutPredicate() {
 }
 const radio = createToggle.createRadio({
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.eY1X1e);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.eY1X1e);
   },
   parent: require("MobileSetting").MobileSetting.ADVANCED,
   useValue: require("explicitContentFromProto").ChannelListLayoutSetting.useSetting,
   onValueChange: function onChannelListLayoutValueChange(arg0) {
-    const ChannelListLayoutSetting = require(3958) /* explicitContentFromProto */.ChannelListLayoutSetting;
+    const ChannelListLayoutSetting = require("../../UserSettings.tsx") /* explicitContentFromProto */.ChannelListLayoutSetting;
     ChannelListLayoutSetting.updateSetting(arg0);
   },
   useOptions: function useChannelListLayoutOptions() {
     let obj = { label: null, value: null };
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[0] = intl.string(require(1236) /* getSystemLocale */.t.T7G4Y0);
-    obj[1] = require(3963) /* ChannelListLayoutTypes */.ChannelListLayoutTypes.COZY;
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.T7G4Y0);
+    obj[1] = require("../../../main_tabs_v2/ChannelListLayoutTypes.tsx") /* ChannelListLayoutTypes */.ChannelListLayoutTypes.COZY;
     const items = [obj, ];
     obj = { label: null, value: null };
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    obj[0] = intl2.string(require(1236) /* getSystemLocale */.t["7iegX4"]);
-    obj[1] = require(3963) /* ChannelListLayoutTypes */.ChannelListLayoutTypes.COMPACT;
+    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[0] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["7iegX4"]);
+    obj[1] = require("../../../main_tabs_v2/ChannelListLayoutTypes.tsx") /* ChannelListLayoutTypes */.ChannelListLayoutTypes.COMPACT;
     items[1] = obj;
     return items;
   },
@@ -32,25 +32,25 @@ const radio = createToggle.createRadio({
 });
 let obj = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.eY1X1e);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.eY1X1e);
   },
   parent: require("MobileSetting").MobileSetting.ADVANCED,
   useValue: require("explicitContentFromProto").ChannelListLayoutSetting.useSetting,
   onValueChange: function onChannelListLayoutValueChange(arg0) {
-    const ChannelListLayoutSetting = require(3958) /* explicitContentFromProto */.ChannelListLayoutSetting;
+    const ChannelListLayoutSetting = require("../../UserSettings.tsx") /* explicitContentFromProto */.ChannelListLayoutSetting;
     ChannelListLayoutSetting.updateSetting(arg0);
   },
   useOptions: function useChannelListLayoutOptions() {
     let obj = { label: null, value: null };
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[0] = intl.string(require(1236) /* getSystemLocale */.t.T7G4Y0);
-    obj[1] = require(3963) /* ChannelListLayoutTypes */.ChannelListLayoutTypes.COZY;
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.T7G4Y0);
+    obj[1] = require("../../../main_tabs_v2/ChannelListLayoutTypes.tsx") /* ChannelListLayoutTypes */.ChannelListLayoutTypes.COZY;
     const items = [obj, ];
     obj = { label: null, value: null };
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    obj[0] = intl2.string(require(1236) /* getSystemLocale */.t["7iegX4"]);
-    obj[1] = require(3963) /* ChannelListLayoutTypes */.ChannelListLayoutTypes.COMPACT;
+    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[0] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["7iegX4"]);
+    obj[1] = require("../../../main_tabs_v2/ChannelListLayoutTypes.tsx") /* ChannelListLayoutTypes */.ChannelListLayoutTypes.COMPACT;
     items[1] = obj;
     return items;
   },

@@ -42,5 +42,5 @@ export default function GuildHomeChannelRow(selected) {
   obj = { mode: DEFAULT, IconComponent: null };
   obj[1] = tmp5(13097).SignPostIcon;
   obj[7] = jsx(tmp5(11665).BaseChannelIcon, { mode: DEFAULT, IconComponent: null });
-  return jsx(importDefault(11665), { mode: DEFAULT, IconComponent: null });
+  return jsx(require("../../../../guild_sidebar/native/BaseChannelItem.tsx"), { mode: DEFAULT, IconComponent: null });
 };

@@ -5,7 +5,7 @@ export const openEditCustomStatusModal = function openEditCustomStatusModal(arg0
   let _prompt;
   let analyticsLocations;
   ({ analyticsLocations, prompt: _prompt } = arg0);
-  let obj = importDefault(4490);
+  let obj = require("../../../actions/ModalActionCreators.tsx");
   obj = { analyticsLocations, prompt: _prompt };
-  obj.pushLazy(require(1959) /* asyncRequireImpl */(9373, dependencyMap.paths), obj, undefined, { presentation: "modal" });
+  obj.pushLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(9373, dependencyMap.paths), obj, undefined, { presentation: "modal" });
 };

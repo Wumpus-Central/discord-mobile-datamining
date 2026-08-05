@@ -586,16 +586,16 @@ function authenticate(authorization) {
   if (authorization.authorization.accessToken) {
     let obj = { errorCode: null };
     obj[0] = constants2.INVALID_COMMAND;
-    const tmp19 = new importDefault(10543)(obj, "Already authenticated");
+    const tmp19 = new require("../../RPCError.tsx")(obj, "Already authenticated");
     throw tmp19;
   } else if (authorization.authorization.authing) {
     obj = { errorCode: null };
     obj[0] = constants2.INVALID_COMMAND;
-    const tmp11 = new importDefault(10543)(obj, "Already authenticating");
+    const tmp11 = new require("../../RPCError.tsx")(obj, "Already authenticating");
     throw tmp11;
   } else {
     authorization.authorization.authing = true;
-    const HTTP = _require(530).HTTP;
+    const HTTP = _require("../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     obj = { url: null, headers: null, oldFormErrors: true, rejectWithError: false };
     obj[0] = OAUTH2_CURRENT_AUTH.OAUTH2_CURRENT_AUTH;
     let obj1 = { Authorization: null };
@@ -824,7 +824,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
       }
     }
   };
-  obj[constants.AUTHENTICATE] = _require(13650).createRPCCommand(constants.AUTHENTICATE, obj);
+  obj[constants.AUTHENTICATE] = _require("../../../../../discord_common/js/packages/rpc-schema/rpc-schema.tsx").createRPCCommand(constants.AUTHENTICATE, obj);
   obj[constants.AUTHORIZE] = {
     handler(socket) {
       socket = socket.socket;

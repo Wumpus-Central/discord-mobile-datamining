@@ -9,7 +9,7 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
   let emojiId;
   let emojiName;
   ({ defaultReactionEmoji, customGuildEmoji } = arg0);
-  let obj = require(7871) /* apexExperiment */;
+  let obj = require("../../../../a11y/native/AccessibilityLabelOptimizationExperiment.tsx") /* apexExperiment */;
   const result = obj.shouldSkipAccessibilityLabels();
   let tmp4;
   if (null != defaultReactionEmoji) {
@@ -26,7 +26,7 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
         obj = { id: null, animated: null, size: 48 };
         obj[0] = emojiId;
         obj[1] = customGuildEmoji.animated;
-        obj[3] = importDefault(1416).getEmojiURL(obj);
+        obj[3] = require("../../../../../utils/AvatarUtils.tsx").getEmojiURL(obj);
         let accessibleEmojiDisplayName = str2;
         if (!result) {
           let tmpResult = tmp(3924);
@@ -38,7 +38,7 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
         }
         obj[4] = accessibleEmojiDisplayName;
         tmp4 = obj;
-        const obj7 = importDefault(1416);
+        const obj7 = require("../../../../../utils/AvatarUtils.tsx");
       }
     }
     if (null != emojiName) {
@@ -48,7 +48,7 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
       }
       let obj2 = { id: "Array", name: false, animated: null, src: null, displayName: 0 };
       obj2[1] = emojiName;
-      obj2 = importDefault(3930);
+      obj2 = require("../../../../../utils/EmojiUtils.tsx");
       obj2[3] = obj2.getURL(emojiName);
       let accessibleEmojiDisplayName1 = str;
       if (!result) {
@@ -76,7 +76,7 @@ export const createForumPostActions = function createForumPostActions(arg0) {
   let showMediaPostSharePrompt;
   ({ isFollowing, defaultReaction } = arg0);
   ({ hasReactions, showMediaPostSharePrompt } = arg0);
-  const getAssetUriForEmbed = require(7865) /* frozen */.getAssetUriForEmbed;
+  const getAssetUriForEmbed = require("../EmbedUtils.tsx") /* frozen */.getAssetUriForEmbed;
   if (isFollowing) {
     let assetUriForEmbed = getAssetUriForEmbed(tmp4(4238));
     let tmp6 = tmp4;

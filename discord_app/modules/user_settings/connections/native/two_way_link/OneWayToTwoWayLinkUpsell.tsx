@@ -48,7 +48,7 @@ export const OneWayToTwoWayLinkUpsell = function OneWayToTwoWayLinkUpsell(newInd
   obj = { style: tmp.titleContainer, children: null };
   const items = [newIndicatorDismissibleContent];
   const items1 = [
-    callback(importDefault(9916), {
+    callback(require("../../../../dismissible_content/native/SelectedDismissibleContent.tsx"), {
       contentTypes: items,
       children(visibleContent) {
         let tmp2 = null;

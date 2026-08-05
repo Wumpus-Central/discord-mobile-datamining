@@ -10,31 +10,31 @@ obj.getConstants = function getConstants() {
 };
 obj.setInputDevice = function setInputDevice(str) {
   if (typeof str === "string") {
-    let setInputDeviceByIdResult = importDefault(4337).setInputDeviceById(str);
-    const obj = importDefault(4337);
+    let setInputDeviceByIdResult = require("../../../rtn-codegen/js/NativeMediaEngineModule.tsx").setInputDeviceById(str);
+    const obj = require("../../../rtn-codegen/js/NativeMediaEngineModule.tsx");
   } else {
-    setInputDeviceByIdResult = importDefault(4337).setInputDevice(str);
-    const obj2 = importDefault(4337);
+    setInputDeviceByIdResult = require("../../../rtn-codegen/js/NativeMediaEngineModule.tsx").setInputDevice(str);
+    const obj2 = require("../../../rtn-codegen/js/NativeMediaEngineModule.tsx");
   }
   return setInputDeviceByIdResult;
 };
 obj.setOutputDevice = function setOutputDevice(str) {
   if (typeof str === "string") {
-    let setOutputDeviceByIdResult = importDefault(4337).setOutputDeviceById(str);
-    const obj = importDefault(4337);
+    let setOutputDeviceByIdResult = require("../../../rtn-codegen/js/NativeMediaEngineModule.tsx").setOutputDeviceById(str);
+    const obj = require("../../../rtn-codegen/js/NativeMediaEngineModule.tsx");
   } else {
-    setOutputDeviceByIdResult = importDefault(4337).setOutputDevice(str);
-    const obj2 = importDefault(4337);
+    setOutputDeviceByIdResult = require("../../../rtn-codegen/js/NativeMediaEngineModule.tsx").setOutputDevice(str);
+    const obj2 = require("../../../rtn-codegen/js/NativeMediaEngineModule.tsx");
   }
   return setOutputDeviceByIdResult;
 };
 obj.setVideoInputDevice = function setVideoInputDevice(str) {
   if (typeof str === "string") {
-    let result = importDefault(4337).setVideoInputDeviceById(str);
-    const obj = importDefault(4337);
+    let result = require("../../../rtn-codegen/js/NativeMediaEngineModule.tsx").setVideoInputDeviceById(str);
+    const obj = require("../../../rtn-codegen/js/NativeMediaEngineModule.tsx");
   } else {
-    result = importDefault(4337).setVideoInputDevice(str);
-    const obj2 = importDefault(4337);
+    result = require("../../../rtn-codegen/js/NativeMediaEngineModule.tsx").setVideoInputDevice(str);
+    const obj2 = require("../../../rtn-codegen/js/NativeMediaEngineModule.tsx");
   }
   return result;
 };

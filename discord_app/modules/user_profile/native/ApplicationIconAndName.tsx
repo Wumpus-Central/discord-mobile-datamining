@@ -8,7 +8,7 @@ let c5;
 ({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles((width) => {
   let obj = { gameIcon: null };
-  obj = { width, height: width, marginTop: -1, marginRight: 4, borderRadius: importDefault(712).radii.xs };
+  obj = { width, height: width, marginTop: -1, marginRight: 4, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.xs };
   obj[0] = obj;
   return obj;
 });
@@ -28,7 +28,7 @@ export default function ApplicationIconAndName(textVariant) {
     str = "";
   }
   obj[2] = { uri: str };
-  const items = [closure_3(require(1297) /* Button */.Icon, obj, application.id), ];
+  const items = [closure_3(require("../../../design/void/native.tsx") /* Button */.Icon, obj, application.id), ];
   obj = { variant: textVariant.textVariant, children: null };
   let str2 = "";
   if (useComma) {
@@ -36,7 +36,7 @@ export default function ApplicationIconAndName(textVariant) {
   }
   obj = { children: null };
   obj[1] = "" + application.name + str2;
-  items[1] = closure_3(require(4281) /* Text */.Text, obj);
+  items[1] = closure_3(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   obj[0] = items;
   return closure_5(closure_4, obj);
 };

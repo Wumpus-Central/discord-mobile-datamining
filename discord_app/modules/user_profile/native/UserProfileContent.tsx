@@ -273,13 +273,13 @@ function UserProfileWidgetsBoardContainer(isCurrentUser) {
   let userId;
   isCurrentUser = isCurrentUser.isCurrentUser;
   ({ userId, isVisible, containerBackground } = isCurrentUser);
-  const tmp3 = importDefault(8757)();
+  const tmp3 = require("UserProfileSharedStyles.tsx")();
   const items = [tmp3.card, { backgroundColor: containerBackground }];
   const obj = { style: tmp3.profileContent, children: null };
   if (isCurrentUser) {
     isCurrentUser = callback(tmp(12251), {});
   }
-  const items1 = [isCurrentUser, callback(importDefault(12252), { userId, isVisible, cardStyle: items })];
+  const items1 = [isCurrentUser, callback(require("UserProfileWidgetsBoard.tsx"), { userId, isVisible, cardStyle: items })];
   obj[1] = items1;
   return closure_20(closure_6, obj);
 }

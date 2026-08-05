@@ -28,7 +28,7 @@ const require = arg1;
 function StreamIcon(voicePlatform) {
   voicePlatform = voicePlatform.voicePlatform;
   let controlsSpecs;
-  controlsSpecs = importAllResult.useContext(importDefault(11557)).controlsSpecs;
+  controlsSpecs = importAllResult.useContext(require("../VoicePanelStateContext.tsx")).controlsSpecs;
   let obj = controlsSpecs(4146);
   const fn = function o() {
     const tmp = controlsSpecs.get().mode === outer1_11.HIDDEN;
@@ -49,7 +49,7 @@ function StreamIcon(voicePlatform) {
   fn.__workletHash = 3270040588948;
   fn.__initData = closure_23;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  let source = importDefault(16052);
+  let source = require("../../../../../_runtime/16052_registerAsset.js");
   if (voicePlatform === constants2.XBOX) {
     source = tmp(16097);
   } else if (voicePlatform === tmp6.MOBILE) {
@@ -57,14 +57,14 @@ function StreamIcon(voicePlatform) {
   } else if (voicePlatform === tmp6.QUEST) {
     source = tmp(16098);
   }
-  const style = [callback2(importDefault(1348)("VoicePanelCardFloatingControls")).iconWithoutBackground, animatedStyle];
+  const style = [callback2(require("../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("VoicePanelCardFloatingControls")).iconWithoutBackground, animatedStyle];
   return callback(closure_19, { source, style });
 }
 function AnimatedLabelIcon(icon) {
   icon = icon.icon;
-  const tmp3 = callback2(importDefault(1348)("VoicePanelCardFloatingControls"));
+  const tmp3 = callback2(require("../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("VoicePanelCardFloatingControls"));
   const type = icon.type;
-  if (require(16050) /* useVoicePanelCardUserStateIcons */.VoicePanelCardUserStateIconType.STREAM_ICON === type) {
+  if (require("../hooks/useVoicePanelCardUserStateIcons.tsx") /* useVoicePanelCardUserStateIcons */.VoicePanelCardUserStateIconType.STREAM_ICON === type) {
     let obj = { voicePlatform: null };
     obj[0] = icon.voicePlatform;
     return callback(StreamIcon, obj);
@@ -116,7 +116,7 @@ let closure_20 = require("module_4146").createAnimatedComponent(Pressable);
 let c21 = 28;
 let closure_22 = createCacheKey.createStyles((arg0) => {
   let obj = { labelPositionContainer: { position: "absolute", left: 8, right: 8, bottom: 8, justifyContent: "center", alignItems: "center", marginHorizontal: 8 }, labelOuterContainer: null, initialIcons: null, icon: null, iconWithoutBackground: null, iconContainer: null, speakerMuteIcon: null, floatingContainer: null, floatingText: null, ringingIconContainer: null, ringingIcon: null, secureFramesIcon: null };
-  const radii = importDefault(712).radii;
+  const radii = require("../../../../../discord_common/js/packages/tokens/native.tsx").radii;
   if (arg0) {
     let round = radii.sm;
     let tmp4 = tmp;
@@ -389,7 +389,7 @@ let closure_37 = importAllResult.memo((controlsHidden) => {
 let closure_38 = importAllResult.memo((controlsHidden) => {
   const obj = { theme: ThemeTypes.LIGHT, children: null };
   obj[1] = callback(closure_37, { controlsHidden: controlsHidden.controlsHidden });
-  return callback(require(3997) /* ManaContext */.ThemeContextProvider, obj);
+  return callback(require("../../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */.ThemeContextProvider, obj);
 });
 let closure_39 = { code: "function VoicePanelCardFloatingControlsTsx10(){const{hasHiddenVisibleIcon,focused,connected,mode,VoicePanelModes,controlsHidden}=this.__closure;const showIcon=hasHiddenVisibleIcon&&focused.get()==null;return!connected.get()||mode.get()===VoicePanelModes.PIP||!showIcon&&controlsHidden.get();}" };
 let closure_40 = { code: "function VoicePanelCardFloatingControlsTsx11(){const{isPillHidden}=this.__closure;return isPillHidden.get();}" };

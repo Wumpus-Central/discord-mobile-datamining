@@ -8,10 +8,10 @@ function truncateOldMessageData(channelId) {
   if (null != dependencyMap2[channelId]) {
     let nowResult = globalThis;
     const _Date2 = Date;
-    importDefault = importDefault(11).fromTimestamp(Date.now() - c5);
-    const obj = importDefault(11);
+    importDefault = require("../../utils/SnowflakeUtils.tsx").fromTimestamp(Date.now() - c5);
+    const obj = require("../../utils/SnowflakeUtils.tsx");
     const tmp6 = importDefault;
-    const findIndexResult = importDefault(12).findIndex(arr, (id) => callback(outer1_1[3]).compare(id.id, callback) > 0);
+    const findIndexResult = require("../../../_runtime/00012_apply.js").findIndex(arr, (id) => callback(outer1_1[3]).compare(id.id, callback) > 0);
     if (-1 === findIndexResult) {
       dependencyMap2[channelId] = [];
     } else {
@@ -23,7 +23,7 @@ function truncateOldMessageData(channelId) {
     const _Date = nowResult.Date;
     nowResult = _Date.now();
     closure_8[channelId] = nowResult;
-    const obj2 = importDefault(12);
+    const obj2 = require("../../../_runtime/00012_apply.js");
   }
 }
 function handleChannelDelete(channel) {
@@ -82,9 +82,9 @@ const activeChannelsStore = new ActiveChannelsStore(require("dispatcher"), {
             }
           });
           const _Array = Array;
-          const obj = importDefault(12);
-          const found = importDefault(12).chain(Array.from(arr)).filter((arg0) => arg0 in closure_7);
-          const chainResult = importDefault(12).chain(Array.from(arr));
+          const obj = require("../../../_runtime/00012_apply.js");
+          const found = require("../../../_runtime/00012_apply.js").chain(Array.from(arr)).filter((arg0) => arg0 in closure_7);
+          const chainResult = require("../../../_runtime/00012_apply.js").chain(Array.from(arr));
           const _Set = Set;
           const set = new Set(found.sortBy((arg0) => {
             let num;

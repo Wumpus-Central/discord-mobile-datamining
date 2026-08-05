@@ -12,9 +12,9 @@ const require = arg1;
 function CoachmarkImage() {
   const tmp = createCacheKey();
   let obj = { style: tmp.coachmarkImageContainer, children: null };
-  const items = [callback(require(5936) /* AccountAgeTier10LargeBadge */.DisplayNameLockeAbstractUI, { width: 160, height: 68, resizeMode: "contain" }), ];
+  const items = [callback(require("../../../design/assets/native.tsx") /* AccountAgeTier10LargeBadge */.DisplayNameLockeAbstractUI, { width: 160, height: 68, resizeMode: "contain" }), ];
   obj = { style: tmp.betaTag };
-  items[1] = callback(require(1297) /* Button */.BetaTag, obj);
+  items[1] = callback(require("../../../design/void/native.tsx") /* Button */.BetaTag, obj);
   obj[1] = items;
   return callback2(View, obj);
 }

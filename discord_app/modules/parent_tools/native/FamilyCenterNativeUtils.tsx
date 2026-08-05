@@ -16,31 +16,31 @@ export const handleFamilyCenterQRCodeScan = function handleFamilyCenterQRCodeSca
   if (null === match) {
     return null;
   } else {
-    let obj = importDefault(698);
+    let obj = require("../../../utils/AnalyticsUtils.tsx");
     obj = { action: null, selected_teen_id: null, source: null };
     obj[0] = ScanQRCode.ScanQRCode;
     obj[1] = match[1];
     obj[2] = FamilyCenterQRCodeScan;
     obj.track(AnalyticEvents.FAMILY_CENTER_ACTION, obj);
-    importDefault(6907).setPendingConnection(match[1], match[2]);
-    const obj3 = importDefault(6907);
+    require("../FamilyCenterActionCreators.tsx").setPendingConnection(match[1], match[2]);
+    const obj3 = require("../FamilyCenterActionCreators.tsx");
     obj = { userId: null, linkCode: null };
     obj[0] = match[1];
     obj[1] = match[2];
-    importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(11234, dependencyMap.paths), obj, c7);
+    require("../../../actions/ModalActionCreators.tsx").pushLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(11234, dependencyMap.paths), obj, c7);
   }
 };
 export const resumeFamilyCenterConnection = function resumeFamilyCenterConnection() {
   pendingConnection = pendingConnection.getPendingConnection();
   let flag = null != pendingConnection;
   if (flag) {
-    let obj = importDefault(4490);
+    let obj = require("../../../actions/ModalActionCreators.tsx");
     obj.popWithKey(c7);
     obj = { userId: null, linkCode: null };
     ({ teenId: obj3[0], linkCode: obj3[1] } = pendingConnection);
-    importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(11234, dependencyMap.paths), obj, c7);
+    require("../../../actions/ModalActionCreators.tsx").pushLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(11234, dependencyMap.paths), obj, c7);
     flag = true;
-    const obj2 = importDefault(4490);
+    const obj2 = require("../../../actions/ModalActionCreators.tsx");
   }
   return flag;
 };

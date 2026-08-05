@@ -21,7 +21,7 @@ function canConnectToChannel(type) {
   }
   let canBasicChannelResult = null != type;
   if (canBasicChannelResult) {
-    canBasicChannelResult = type.type !== require(692) /* set */.ChannelTypes.GUILD_STAGE_VOICE;
+    canBasicChannelResult = type.type !== require("../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx") /* set */.ChannelTypes.GUILD_STAGE_VOICE;
   }
   if (canBasicChannelResult) {
     canBasicChannelResult = arg1 !== type.id;

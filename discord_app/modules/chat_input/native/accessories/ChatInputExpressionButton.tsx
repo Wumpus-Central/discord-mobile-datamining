@@ -6,7 +6,7 @@ import createCacheKey from "createCacheKey";
 const require = arg1;
 let c3 = importAllResult;
 let closure_5 = createCacheKey.createStyles((arg0, arg1, height) => {
-  const radii = importDefault(712).radii;
+  const radii = require("../../../../../discord_common/js/packages/tokens/native.tsx").radii;
   if (arg0) {
     let round = radii.sm;
     let tmp4 = tmp;
@@ -45,17 +45,17 @@ const memoResult = importAllResult.memo((active) => {
   let obj = onPress(1348);
   const mobileVisualRefreshConfig = obj.useMobileVisualRefreshConfig({ location: "ChatInputExpressionButton" });
   ({ enabled, chatInputFloating } = mobileVisualRefreshConfig);
-  const token = onPress(3989).useToken(importDefault(712).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
+  const token = onPress(3989).useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
   const obj2 = onPress(3989);
   const tmp4 = importDefault;
-  const token1 = onPress(3989).useToken(importDefault(712).modules.mobile.CHAT_INPUT_PILL_PADDING);
+  const token1 = onPress(3989).useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_PILL_PADDING);
   const obj3 = onPress(3989);
-  const token2 = onPress(3989).useToken(importDefault(712).modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH);
+  const token2 = onPress(3989).useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH);
   const obj4 = onPress(3989);
-  const token3 = onPress(3989).useToken(importDefault(712).modules.mobile.CHAT_INPUT_ICON_SIZE);
+  const token3 = onPress(3989).useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_ICON_SIZE);
   const obj5 = onPress(3989);
   let diff = token;
-  const token4 = onPress(3989).useToken(importDefault(712).modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
+  const token4 = onPress(3989).useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
   if (!enabled) {
     diff = token - 2 * (token1 + token2);
   }

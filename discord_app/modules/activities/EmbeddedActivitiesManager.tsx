@@ -23,9 +23,9 @@ function getShelfItemTrackingProperties(activity) {
   if (activity != null) {
     activity = activity.activity;
     if (activity != null) {
-      const obj = require(500) /* set */;
-      releasePhase = activity.client_platform_config[importDefault(10522)(undefined, obj.getOS(obj))].release_phase;
-      const tmp4 = importDefault(10522);
+      const obj = require("../../utils/PlatformUtils.tsx") /* set */;
+      releasePhase = activity.client_platform_config[require("utils/getPlatform.tsx")(undefined, obj.getOS(obj))].release_phase;
+      const tmp4 = require("utils/getPlatform.tsx");
     }
   }
   return { releasePhase };
@@ -303,8 +303,8 @@ function handleOpenEmbeddedActivity(applicationId) {
       isFirstActivityInChannel = null == found;
     }
     if (isFirstActivityInChannel) {
-      const participant = importDefault(4478).selectParticipant(channel.id, null);
-      const obj6 = importDefault(4478);
+      const participant = require("../../actions/ChannelRTCActionCreators.tsx").selectParticipant(channel.id, null);
+      const obj6 = require("../../actions/ChannelRTCActionCreators.tsx");
     }
     if (null != found) {
       const mediaSessionId = store2.getMediaSessionId();
@@ -338,7 +338,7 @@ function handleOpenEmbeddedActivity(applicationId) {
             obj = { applicationId: null, activityConfigs: null };
             obj[0] = applicationId;
             obj[1] = shelfActivities;
-            const tmp53 = importDefault(10523)(obj);
+            const tmp53 = require("getShelfItemData.tsx")(obj);
             const sum = 1 + shelfOrder.findIndex((arg0) => arg0 === applicationId);
             let release_phase;
             if (tmp53 != null) {
@@ -430,9 +430,9 @@ function handleOpenEmbeddedActivity(applicationId) {
             }
             obj2[18] = interactionId;
             obj2[19] = _location.kind;
-            importDefault(698).track(constants.ACTIVITY_SESSION_JOINED, obj2);
+            require("../../utils/AnalyticsUtils.tsx").track(constants.ACTIVITY_SESSION_JOINED, obj2);
             const tmp29 = constants;
-            const tmp52Result1 = importDefault(698);
+            const tmp52Result1 = require("../../utils/AnalyticsUtils.tsx");
             let locations1;
             if (dependencyMap2[applicationId] != null) {
               locations1 = tmp26.locations;
@@ -467,8 +467,8 @@ function handleOpenEmbeddedActivity(applicationId) {
             obj3[11] = tmp44;
             obj3[12] = num2;
             obj3[13] = _location.kind;
-            importDefault(698).track(tmp29.ACTIVITY_IFRAME_MOUNT, obj3);
-            const tmp52Result2 = importDefault(698);
+            require("../../utils/AnalyticsUtils.tsx").track(tmp29.ACTIVITY_IFRAME_MOUNT, obj3);
+            const tmp52Result2 = require("../../utils/AnalyticsUtils.tsx");
           }
           const tmpResult4 = tmp(514);
         }
@@ -1168,75 +1168,75 @@ class EmbeddedActivitiesManager extends tmp3 {
 const prototype = EmbeddedActivitiesManager.prototype;
 prototype["_initialize"] = function _initialize() {
   handleConnectionOpen.addChangeListener(this.handleSelectedChannelUpdate);
-  const ComponentDispatch = require(1231) /* ComponentDispatcher */.ComponentDispatch;
+  const ComponentDispatch = require("../../utils/ComponentDispatchUtils.tsx") /* ComponentDispatcher */.ComponentDispatch;
   const subscription = ComponentDispatch.subscribe(constants2.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease);
-  const ComponentDispatch2 = require(1231) /* ComponentDispatcher */.ComponentDispatch;
+  const ComponentDispatch2 = require("../../utils/ComponentDispatchUtils.tsx") /* ComponentDispatcher */.ComponentDispatch;
   const subscription1 = ComponentDispatch2.subscribe(constants2.OPEN_EMBEDDED_ACTIVITY, handleOpenEmbeddedActivity);
-  const subscription2 = importDefault(709).subscribe("EMBEDDED_ACTIVITY_LAUNCH_START", handleActivityLaunchStart);
-  const obj = importDefault(709);
-  const subscription3 = importDefault(709).subscribe("EMBEDDED_ACTIVITY_LAUNCH_SUCCESS", this.handleActivityLaunchSuccess);
-  const obj2 = importDefault(709);
-  const subscription4 = importDefault(709).subscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail);
-  const obj3 = importDefault(709);
-  const subscription5 = importDefault(709).subscribe("EMBEDDED_ACTIVITY_LAUNCH_CANCEL", this.handleActivityLaunchCancel);
-  const obj4 = importDefault(709);
-  const subscription6 = importDefault(709).subscribe("EMBEDDED_ACTIVITY_CLOSE", handleActivityClose);
-  const obj5 = importDefault(709);
-  const subscription7 = importDefault(709).subscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen);
-  const obj6 = importDefault(709);
-  const subscription8 = importDefault(709).subscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect);
-  const obj7 = importDefault(709);
-  const subscription9 = importDefault(709).subscribe("CALL_DELETE", this.handleCallDelete);
-  const obj8 = importDefault(709);
-  const subscription10 = importDefault(709).subscribe("RTC_CONNECTION_STATE", this.handleRTCConnectionState);
-  const obj9 = importDefault(709);
-  const subscription11 = importDefault(709).subscribe("GUILD_DELETE", this.handleGuildDelete);
-  const obj10 = importDefault(709);
-  const subscription12 = importDefault(709).subscribe("CHANNEL_DELETE", this.handleChannelDelete);
-  const obj11 = importDefault(709);
-  const subscription13 = importDefault(709).subscribe("INTERACTION_QUEUE", this.handleInteractionQueue);
-  const obj12 = importDefault(709);
-  const subscription14 = importDefault(709).subscribe("INTERACTION_CREATE", this.handleInteractionCreate);
-  const obj13 = importDefault(709);
-  const subscription15 = importDefault(709).subscribe("INTERACTION_SUCCESS", this.handleInteractionSuccess);
-  const obj14 = importDefault(709);
-  const subscription16 = importDefault(709).subscribe("INTERACTION_FAILURE", this.handleInteractionFailure);
+  const subscription2 = require("../../Dispatcher.tsx").subscribe("EMBEDDED_ACTIVITY_LAUNCH_START", handleActivityLaunchStart);
+  const obj = require("../../Dispatcher.tsx");
+  const subscription3 = require("../../Dispatcher.tsx").subscribe("EMBEDDED_ACTIVITY_LAUNCH_SUCCESS", this.handleActivityLaunchSuccess);
+  const obj2 = require("../../Dispatcher.tsx");
+  const subscription4 = require("../../Dispatcher.tsx").subscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail);
+  const obj3 = require("../../Dispatcher.tsx");
+  const subscription5 = require("../../Dispatcher.tsx").subscribe("EMBEDDED_ACTIVITY_LAUNCH_CANCEL", this.handleActivityLaunchCancel);
+  const obj4 = require("../../Dispatcher.tsx");
+  const subscription6 = require("../../Dispatcher.tsx").subscribe("EMBEDDED_ACTIVITY_CLOSE", handleActivityClose);
+  const obj5 = require("../../Dispatcher.tsx");
+  const subscription7 = require("../../Dispatcher.tsx").subscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen);
+  const obj6 = require("../../Dispatcher.tsx");
+  const subscription8 = require("../../Dispatcher.tsx").subscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect);
+  const obj7 = require("../../Dispatcher.tsx");
+  const subscription9 = require("../../Dispatcher.tsx").subscribe("CALL_DELETE", this.handleCallDelete);
+  const obj8 = require("../../Dispatcher.tsx");
+  const subscription10 = require("../../Dispatcher.tsx").subscribe("RTC_CONNECTION_STATE", this.handleRTCConnectionState);
+  const obj9 = require("../../Dispatcher.tsx");
+  const subscription11 = require("../../Dispatcher.tsx").subscribe("GUILD_DELETE", this.handleGuildDelete);
+  const obj10 = require("../../Dispatcher.tsx");
+  const subscription12 = require("../../Dispatcher.tsx").subscribe("CHANNEL_DELETE", this.handleChannelDelete);
+  const obj11 = require("../../Dispatcher.tsx");
+  const subscription13 = require("../../Dispatcher.tsx").subscribe("INTERACTION_QUEUE", this.handleInteractionQueue);
+  const obj12 = require("../../Dispatcher.tsx");
+  const subscription14 = require("../../Dispatcher.tsx").subscribe("INTERACTION_CREATE", this.handleInteractionCreate);
+  const obj13 = require("../../Dispatcher.tsx");
+  const subscription15 = require("../../Dispatcher.tsx").subscribe("INTERACTION_SUCCESS", this.handleInteractionSuccess);
+  const obj14 = require("../../Dispatcher.tsx");
+  const subscription16 = require("../../Dispatcher.tsx").subscribe("INTERACTION_FAILURE", this.handleInteractionFailure);
 };
 prototype["_terminate"] = function _terminate() {
   handleConnectionOpen.removeChangeListener(this.handleSelectedChannelUpdate);
-  const ComponentDispatch = require(1231) /* ComponentDispatcher */.ComponentDispatch;
+  const ComponentDispatch = require("../../utils/ComponentDispatchUtils.tsx") /* ComponentDispatcher */.ComponentDispatch;
   ComponentDispatch.unsubscribe(constants2.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease);
-  const ComponentDispatch2 = require(1231) /* ComponentDispatcher */.ComponentDispatch;
+  const ComponentDispatch2 = require("../../utils/ComponentDispatchUtils.tsx") /* ComponentDispatcher */.ComponentDispatch;
   ComponentDispatch2.unsubscribe(constants2.OPEN_EMBEDDED_ACTIVITY, handleOpenEmbeddedActivity);
-  importDefault(709).unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_START", handleActivityLaunchStart);
-  const obj = importDefault(709);
-  importDefault(709).unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_SUCCESS", this.handleActivityLaunchSuccess);
-  const obj2 = importDefault(709);
-  importDefault(709).unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail);
-  const obj3 = importDefault(709);
-  importDefault(709).unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_CANCEL", this.handleActivityLaunchCancel);
-  const obj4 = importDefault(709);
-  importDefault(709).unsubscribe("EMBEDDED_ACTIVITY_CLOSE", handleActivityClose);
-  const obj5 = importDefault(709);
-  importDefault(709).unsubscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen);
-  const obj6 = importDefault(709);
-  importDefault(709).unsubscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect);
-  const obj7 = importDefault(709);
-  importDefault(709).unsubscribe("CALL_DELETE", this.handleCallDelete);
-  const obj8 = importDefault(709);
-  importDefault(709).unsubscribe("RTC_CONNECTION_STATE", this.handleRTCConnectionState);
-  const obj9 = importDefault(709);
-  importDefault(709).unsubscribe("GUILD_DELETE", this.handleGuildDelete);
-  const obj10 = importDefault(709);
-  importDefault(709).unsubscribe("CHANNEL_DELETE", this.handleChannelDelete);
-  const obj11 = importDefault(709);
-  importDefault(709).unsubscribe("INTERACTION_QUEUE", this.handleInteractionQueue);
-  const obj12 = importDefault(709);
-  importDefault(709).unsubscribe("INTERACTION_CREATE", this.handleInteractionCreate);
-  const obj13 = importDefault(709);
-  importDefault(709).unsubscribe("INTERACTION_SUCCESS", this.handleInteractionSuccess);
-  const obj14 = importDefault(709);
-  importDefault(709).unsubscribe("INTERACTION_FAILURE", this.handleInteractionFailure);
+  require("../../Dispatcher.tsx").unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_START", handleActivityLaunchStart);
+  const obj = require("../../Dispatcher.tsx");
+  require("../../Dispatcher.tsx").unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_SUCCESS", this.handleActivityLaunchSuccess);
+  const obj2 = require("../../Dispatcher.tsx");
+  require("../../Dispatcher.tsx").unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail);
+  const obj3 = require("../../Dispatcher.tsx");
+  require("../../Dispatcher.tsx").unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_CANCEL", this.handleActivityLaunchCancel);
+  const obj4 = require("../../Dispatcher.tsx");
+  require("../../Dispatcher.tsx").unsubscribe("EMBEDDED_ACTIVITY_CLOSE", handleActivityClose);
+  const obj5 = require("../../Dispatcher.tsx");
+  require("../../Dispatcher.tsx").unsubscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen);
+  const obj6 = require("../../Dispatcher.tsx");
+  require("../../Dispatcher.tsx").unsubscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect);
+  const obj7 = require("../../Dispatcher.tsx");
+  require("../../Dispatcher.tsx").unsubscribe("CALL_DELETE", this.handleCallDelete);
+  const obj8 = require("../../Dispatcher.tsx");
+  require("../../Dispatcher.tsx").unsubscribe("RTC_CONNECTION_STATE", this.handleRTCConnectionState);
+  const obj9 = require("../../Dispatcher.tsx");
+  require("../../Dispatcher.tsx").unsubscribe("GUILD_DELETE", this.handleGuildDelete);
+  const obj10 = require("../../Dispatcher.tsx");
+  require("../../Dispatcher.tsx").unsubscribe("CHANNEL_DELETE", this.handleChannelDelete);
+  const obj11 = require("../../Dispatcher.tsx");
+  require("../../Dispatcher.tsx").unsubscribe("INTERACTION_QUEUE", this.handleInteractionQueue);
+  const obj12 = require("../../Dispatcher.tsx");
+  require("../../Dispatcher.tsx").unsubscribe("INTERACTION_CREATE", this.handleInteractionCreate);
+  const obj13 = require("../../Dispatcher.tsx");
+  require("../../Dispatcher.tsx").unsubscribe("INTERACTION_SUCCESS", this.handleInteractionSuccess);
+  const obj14 = require("../../Dispatcher.tsx");
+  require("../../Dispatcher.tsx").unsubscribe("INTERACTION_FAILURE", this.handleInteractionFailure);
 };
 let result = require("createChannelRecord").fileFinishedImporting("modules/activities/EmbeddedActivitiesManager.tsx");
 
@@ -1250,7 +1250,7 @@ export const trackFrameSessionStart = function trackFrameSessionStart(applicatio
   let launchId;
   let locationKind;
   const _require = applicationId;
-  let obj = _require(10527);
+  let obj = _require("utils/pendingFrameLaunch.tsx");
   const result = obj.consumePendingFrameLaunch(applicationId);
   if (null != result) {
     ({ isStart, channelId, guildId, locationKind, launchId, compositeInstanceId, activitiesInfraVersion } = result);
@@ -1286,7 +1286,7 @@ export const trackFrameSessionStart = function trackFrameSessionStart(applicatio
       obj = { applicationId: null, activityConfigs: null };
       obj[0] = applicationId;
       obj[1] = shelfActivities;
-      const tmp15 = importDefault(10523)(obj);
+      const tmp15 = require("getShelfItemData.tsx")(obj);
       const sum = 1 + shelfOrder.findIndex((arg0) => arg0 === closure_0);
       let release_phase;
       if (tmp15 != null) {
@@ -1356,8 +1356,8 @@ export const trackFrameSessionStart = function trackFrameSessionStart(applicatio
       }
       obj1[18] = interactionId;
       obj1[19] = locationKind;
-      importDefault(698).track(constants.ACTIVITY_SESSION_JOINED, obj1);
-      const tmp14Result1 = importDefault(698);
+      require("../../utils/AnalyticsUtils.tsx").track(constants.ACTIVITY_SESSION_JOINED, obj1);
+      const tmp14Result1 = require("../../utils/AnalyticsUtils.tsx");
       const tmp22 = constants;
       let locations1;
       if (dependencyMap2[applicationId] != null) {
@@ -1393,8 +1393,8 @@ export const trackFrameSessionStart = function trackFrameSessionStart(applicatio
       obj2[11] = tmp37;
       obj2[12] = activitiesInfraVersion;
       obj2[13] = locationKind;
-      importDefault(698).track(tmp22.ACTIVITY_IFRAME_MOUNT, obj2);
-      const tmp14Result2 = importDefault(698);
+      require("../../utils/AnalyticsUtils.tsx").track(tmp22.ACTIVITY_IFRAME_MOUNT, obj2);
+      const tmp14Result2 = require("../../utils/AnalyticsUtils.tsx");
     }
   }
 };
@@ -1421,13 +1421,13 @@ export const trackFrameSessionEnd = function trackFrameSessionEnd(applicationId)
       let obj = { applicationId: null, activityConfigs: null };
       obj[0] = applicationId;
       obj[1] = shelfActivities;
-      const tmp13 = importDefault(10523)(obj);
+      const tmp13 = require("getShelfItemData.tsx")(obj);
       let release_phase;
       if (tmp13 != null) {
         const activity = tmp13.activity;
         if (activity != null) {
           let tmp11Result = tmp11(10522);
-          const obj2 = require(500) /* set */;
+          const obj2 = require("../../utils/PlatformUtils.tsx") /* set */;
           release_phase = activity.client_platform_config[tmp11Result(undefined, obj2.getOS(obj2))].release_phase;
         }
       }
@@ -1463,8 +1463,8 @@ export const trackFrameSessionEnd = function trackFrameSessionEnd(applicationId)
       }
       obj[11] = type;
       ({ mediaSessionIds: obj5[12], frameLocationKind: obj5[13] } = tmp3);
-      importDefault(698).track(constants.ACTIVITY_SESSION_LEFT, obj);
-      const tmp11Result1 = importDefault(698);
+      require("../../utils/AnalyticsUtils.tsx").track(constants.ACTIVITY_SESSION_LEFT, obj);
+      const tmp11Result1 = require("../../utils/AnalyticsUtils.tsx");
       const tmp20 = constants;
       obj = { channel_id: null, guild_id: null, application_id: null, instance_ids: null, media_session_ids: null, activity_user_session_id: null, raw_thermal_state: null, duration_ms: null, embedded_activity_location_kind: null };
       obj[0] = frameChannelId;
@@ -1480,9 +1480,9 @@ export const trackFrameSessionEnd = function trackFrameSessionEnd(applicationId)
       obj[6] = rawThermalState;
       obj[7] = diff;
       obj[8] = tmp3.frameLocationKind;
-      importDefault(698).track(tmp20.ACTIVITY_IFRAME_UNMOUNT, obj);
+      require("../../utils/AnalyticsUtils.tsx").track(tmp20.ACTIVITY_IFRAME_UNMOUNT, obj);
       delete tmp[tmp2];
-      const tmp11Result2 = importDefault(698);
+      const tmp11Result2 = require("../../utils/AnalyticsUtils.tsx");
     }
   }
 };

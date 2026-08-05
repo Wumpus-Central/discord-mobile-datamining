@@ -1,5 +1,5 @@
 // discord_app/Constants.tsx
-import module_16 from "module_16";
+import checkEnv from "utils/checkEnv.tsx";
 import INVITE from "INVITE";
 import sum from "sum";
 import getAuthenticationPath from "getAuthenticationPath";

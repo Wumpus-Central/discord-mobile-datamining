@@ -3,7 +3,7 @@ const result = require("set").fileFinishedImporting("modules/tooltip/TooltipActi
 
 export default {
   acknowledgeTooltip(GIF_PICKER_TOOLTIP) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "TOOLTIP_ACKNOWLEDGE", tooltip: GIF_PICKER_TOOLTIP };
     obj.dispatch(obj);
   },
@@ -11,7 +11,7 @@ export default {
     if (flag === undefined) {
       flag = false;
     }
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "TOOLTIP_SHOW_ATTEMPT", tooltip: closure_0, ignoreMaxShownLimit: flag };
     obj.dispatch(obj);
   }

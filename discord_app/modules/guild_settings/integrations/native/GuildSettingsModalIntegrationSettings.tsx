@@ -30,29 +30,29 @@ function ForceSyncIcon(isSyncing) {
     let tmp2Result = tmp2(closure_4, { animating: true, size: "small" });
   } else {
     let obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[1] = intl.string(require(1236) /* getSystemLocale */.t["+Josox"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["+Josox"]);
     obj[2] = tmp;
     obj = { source: null };
-    obj[0] = importDefault(16552);
-    obj[3] = tmp2(require(5315) /* TableRowInner */.TableRow.Icon, obj);
-    tmp2Result = tmp2(require(4812) /* PressableBase */.PressableOpacity, obj);
+    obj[0] = require("../../../../../_runtime/16552_registerAsset.js");
+    obj[3] = tmp2(require("../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow.Icon, obj);
+    tmp2Result = tmp2(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
   }
   return tmp2Result;
 }
 function TwitchEmoticonsRow(integration) {
   integration = integration.integration;
   let obj = { helperText: null, hasIcons: false, children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t["7r4OKg"]);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["7r4OKg"]);
   obj = { label: null, value: null, onValueChange: null, disabled: null };
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl2.string(require(1236) /* getSystemLocale */.t.bZBLBs);
+  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.bZBLBs);
   obj[1] = Boolean(integration.enable_emoticons);
   obj[2] = integration.onPress;
   obj[3] = integration.syncing;
-  obj[2] = callback(require(5650) /* TableSwitchRow */.TableSwitchRow, obj);
-  return callback(require(5649) /* TableRowGroupTitle */.TableRowGroup, obj);
+  obj[2] = callback(require("../../../../design/components/TableRow/native/TableSwitchRow.native.tsx") /* TableSwitchRow */.TableSwitchRow, obj);
+  return callback(require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj);
 }
 ({ Image: c3, ActivityIndicator: c4 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: metroImportAll, Fragment: c9 } = jsxProd);

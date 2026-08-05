@@ -4,5 +4,5 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/collec
 
 export const SHOP_THIS_LOOK_ACTION_SHEET_KEY = "Shop This Look";
 export const openShopThisLookActionSheet = function openShopThisLookActionSheet(arg0) {
-  importDefault(4253).openLazy(require(1959) /* asyncRequireImpl */(12411, dependencyMap.paths), c3, arg0, "stack");
+  require("../../../action_sheet/native/ActionSheetActionCreators.tsx").openLazy(require("../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(12411, dependencyMap.paths), c3, arg0, "stack");
 };

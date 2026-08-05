@@ -39,11 +39,11 @@ function getGuildBadgeSource(guild, flag) {
             hasItem = Boolean(hasItem1);
           }
         }
-        obj2 = require(1411) /* fromGuildPropertiesWithAdditionalFields */;
+        obj2 = require("../../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */;
       }
     }
   } else {
-    obj = require(1411) /* fromGuildPropertiesWithAdditionalFields */;
+    obj = require("../../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */;
     if (obj.isGuildRecord(has)) {
       const features3 = has.features;
       let hasItem2 = features3.has(VERIFIED);

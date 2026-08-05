@@ -8,11 +8,11 @@ function canFetchNitroProgramReward(canUseMonthlyOrbs) {
   if (canUseMonthlyOrbs === undefined) {
     str = "ProgramRewardsUtils";
   }
-  const NITRO = require(12894) /* RewardProgram */.RewardProgram.NITRO;
+  const NITRO = require("ProgramRewardsTypes.tsx") /* RewardProgram */.RewardProgram.NITRO;
   if (str === undefined) {
     str = "ProgramRewardsUtils";
   }
-  if (require(12894) /* RewardProgram */.RewardProgram.NITRO === NITRO) {
+  if (require("ProgramRewardsTypes.tsx") /* RewardProgram */.RewardProgram.NITRO === NITRO) {
     let tmpResult = tmp(12897);
     let flag = tmpResult.getPremiumRewardsOrbsExperiment(str).isInTreatment;
   } else {
@@ -34,11 +34,11 @@ function canFetchXboxProgramReward(canUseMonthlyOrbs) {
   if (canUseMonthlyOrbs === undefined) {
     str = "ProgramRewardsUtils";
   }
-  const XBOX = require(12894) /* RewardProgram */.RewardProgram.XBOX;
+  const XBOX = require("ProgramRewardsTypes.tsx") /* RewardProgram */.RewardProgram.XBOX;
   if (str === undefined) {
     str = "ProgramRewardsUtils";
   }
-  if (require(12894) /* RewardProgram */.RewardProgram.NITRO === XBOX) {
+  if (require("ProgramRewardsTypes.tsx") /* RewardProgram */.RewardProgram.NITRO === XBOX) {
     let tmpResult = tmp(12897);
     let flag = tmpResult.getPremiumRewardsOrbsExperiment(str).isInTreatment;
   } else {
@@ -69,8 +69,8 @@ export const isProgramRewardStale = function isProgramRewardStale(next_reward_da
     if (tmp) {
       const _Date = Date;
       const date = new Date(next_reward_date);
-      tmp = importDefault(3708)(date);
-      const tmp4 = importDefault(3708);
+      tmp = require("../../../_runtime/03708_isPast.js")(date);
+      const tmp4 = require("../../../_runtime/03708_isPast.js");
     }
     return tmp;
   }
@@ -80,7 +80,7 @@ export const isEligibleForProgramReward = function isEligibleForProgramReward(ar
   if (canUseMonthlyOrbs === undefined) {
     str = "ProgramRewardsUtils";
   }
-  if (require(12894) /* RewardProgram */.RewardProgram.NITRO === arg0) {
+  if (require("ProgramRewardsTypes.tsx") /* RewardProgram */.RewardProgram.NITRO === arg0) {
     let tmpResult = tmp(12897);
     return tmpResult.getPremiumRewardsOrbsExperiment(str).isInTreatment;
   } else if (tmp(12894).RewardProgram.XBOX === arg0) {
@@ -95,17 +95,17 @@ export const useIsEligibleForProgramReward = function useIsEligibleForProgramRew
   if (location === undefined) {
     str = "ProgramRewardsUtils";
   }
-  const obj = require(12897) /* PremiumRewardsOrbsTreatment */;
+  const obj = require("../premium/tenure_reward/experiments/PremiumRewardsOrbsExperiment.tsx") /* PremiumRewardsOrbsTreatment */;
   const tmp = require;
-  const isCrepeEnabled = require(6924) /* apexExperiment */.useIsCrepeEnabled(str);
-  if (require(12894) /* RewardProgram */.RewardProgram.NITRO === arg0) {
+  const isCrepeEnabled = require("../croissant/crepe/CrepeExperiment.tsx") /* apexExperiment */.useIsCrepeEnabled(str);
+  if (require("ProgramRewardsTypes.tsx") /* RewardProgram */.RewardProgram.NITRO === arg0) {
     return obj.usePremiumRewardsOrbsExperiment(str).isInTreatment;
   } else if (tmp(12894).RewardProgram.XBOX === arg0) {
     return isCrepeEnabled;
   } else {
     return false;
   }
-  const obj2 = require(6924) /* apexExperiment */;
+  const obj2 = require("../croissant/crepe/CrepeExperiment.tsx") /* apexExperiment */;
 };
 export { canFetchNitroProgramReward };
 export { canFetchXboxProgramReward };
@@ -114,7 +114,7 @@ export const canFetchAnyProgramReward = function canFetchAnyProgramReward(Progra
   if (ProgramRewardsStore === undefined) {
     str = "ProgramRewardsUtils";
   }
-  const values = Object.values(require(12894) /* RewardProgram */.RewardProgram);
+  const values = Object.values(require("ProgramRewardsTypes.tsx") /* RewardProgram */.RewardProgram);
   for (const item10015 of values) {
     if (typeof item10015 === "number") {
       let tmp4 = dependencyMap;
@@ -134,5 +134,5 @@ export const hasNecessaryPremiumSubscriptionStatus = function hasNecessaryPremiu
   if (currentUser == null) {
     currentUser = authStore.getCurrentUser();
   }
-  return require(3931) /* getPremiumPlanItem */.isPremiumExactly(currentUser, PremiumTypes.TIER_2);
+  return require("../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */.isPremiumExactly(currentUser, PremiumTypes.TIER_2);
 };

@@ -6,7 +6,7 @@ const require = arg1;
 const result = require("module_3949").fileFinishedImporting("utils/BraintreeUtils.tsx");
 
 export const getBraintreeSDK = function getBraintreeSDK() {
-  let obj = require(3949);
+  let obj = require("../modules/core/CodeSplittingUtils.tsx");
   obj = {
     createPromise() {
       return callback(paths[4])(paths[3], paths.paths);

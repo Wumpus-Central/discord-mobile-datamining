@@ -19,11 +19,11 @@ function VoiceChatCallScreenHeaderIconInner(onPress) {
   let obj = { style: tmp.chatIconContainer, children: null };
   obj = { containerStyle: tmp.chatIcon, accessibilityLabel, source, onPress: null, children: null };
   if (noop == null) {
-    noop = importDefault(12).noop;
+    noop = require("../../../../../_runtime/00012_apply.js").noop;
   }
   obj[3] = noop;
   obj[4] = children;
-  obj[1] = closure_6(importDefault(10696), obj);
+  obj[1] = closure_6(require("../../../video_calls/native/components/ChannelCallNavigatorIcon.tsx"), obj);
   return closure_6(View, obj);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
@@ -55,21 +55,21 @@ export default function VoiceChatHeaderIcon(disabled) {
   items[1] = disabledOpacity;
   obj[5] = items;
   obj = { source, color: tmp.badge.backgroundColor, size: null };
-  obj[2] = require(1297) /* Button */.Icon.Sizes.SMALL_20;
-  const items1 = [callback(require(1297) /* Button */.Icon, obj), children];
+  obj[2] = require("../../../../design/void/native.tsx") /* Button */.Icon.Sizes.SMALL_20;
+  const items1 = [callback(require("../../../../design/void/native.tsx") /* Button */.Icon, obj), children];
   obj[6] = items1;
-  return closure_7(require(4812) /* PressableBase */.PressableOpacity, obj);
+  return closure_7(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
 };
 export const useVoiceChatMentions = function useVoiceChatMentions(arg0) {
   const _require = arg0;
   const items = [generateOldThreadCutoff];
   const items1 = [arg0];
-  return _require(589).useStateFromStoresObject(items, () => ({ unreadCount: outer1_4.getUnreadCount(closure_0), mentionCount: outer1_4.getMentionCount(closure_0) }), items1);
+  return _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => ({ unreadCount: outer1_4.getUnreadCount(closure_0), mentionCount: outer1_4.getMentionCount(closure_0) }), items1);
 };
 export const VoiceChatCallScreenHeaderIcon = function VoiceChatCallScreenHeaderIcon(arg0) {
   let obj = { theme: ThemeTypes.DARK, children: null };
   obj = {};
   const merged = Object.assign(arg0);
   obj[1] = callback(VoiceChatCallScreenHeaderIconInner, obj);
-  return callback(require(3997) /* ManaContext */.ThemeContextProvider, obj);
+  return callback(require("../../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */.ThemeContextProvider, obj);
 };

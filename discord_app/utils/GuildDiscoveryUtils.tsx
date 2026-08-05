@@ -477,12 +477,12 @@ export const trackDiscoveryExited = function trackDiscoveryExited(load_id, guild
   if (arg2 === undefined) {
     tmp = null;
   }
-  let obj = importDefault(698);
+  let obj = require("AnalyticsUtils.tsx");
   obj = { load_id, guild_ids_viewed, recommendations_source: tmp };
   obj.track(constants.GUILD_DISCOVERY_EXITED, obj);
 };
 export const trackSearchClosed = function trackSearchClosed(load_id) {
-  let obj = importDefault(698);
+  let obj = require("AnalyticsUtils.tsx");
   obj = { load_id };
   obj.track(constants.SEARCH_CLOSED, obj);
 };
@@ -492,13 +492,13 @@ export const trackSearchStarted = function trackSearchStarted(load_id, category_
     obj = {};
   }
   obj = { search_type: constants2.GUILD_DISCOVERY, load_id, location: obj.location, category_id };
-  importDefault(698).track(constants.SEARCH_STARTED, obj);
+  require("AnalyticsUtils.tsx").track(constants.SEARCH_STARTED, obj);
 };
 export const trackGuildDiscoverySearchStart = function trackGuildDiscoverySearchStart(arg0) {
   let offset;
   let withCounts;
   ({ withCounts, offset } = arg0);
-  importDefault(698).track(constants.GUILD_DISCOVERY_SEARCH_START, { with_counts: withCounts, offset });
+  require("AnalyticsUtils.tsx").track(constants.GUILD_DISCOVERY_SEARCH_START, { with_counts: withCounts, offset });
 };
 export const trackSearchFailed = function trackSearchFailed(error) {
   let categoryId;
@@ -506,12 +506,12 @@ export const trackSearchFailed = function trackSearchFailed(error) {
   let willRequestRetry;
   error = error.error;
   ({ categoryId, willRequestRetry, isRequestRetry } = error);
-  let obj = importDefault(698);
+  let obj = require("AnalyticsUtils.tsx");
   obj = { category_id: categoryId, request_status: error.status, request_error_code: error.code, will_request_retry: willRequestRetry, is_request_retry: isRequestRetry };
   obj.track(constants.GUILD_DISCOVERY_SEARCH_FAILED, obj);
 };
 export const trackGuildDiscoveryGetFeaturedGuildsFailed = function trackGuildDiscoveryGetFeaturedGuildsFailed(category_id) {
-  importDefault(698).track(constants.GUILD_DISCOVERY_GET_FEATURED_GUILDS_FAILED, { category_id: category_id.categoryId });
+  require("AnalyticsUtils.tsx").track(constants.GUILD_DISCOVERY_GET_FEATURED_GUILDS_FAILED, { category_id: category_id.categoryId });
 };
 export const trackSearchResultsViewed = function trackSearchResultsViewed(guildResults) {
   let analyticsContext;
@@ -521,7 +521,7 @@ export const trackSearchResultsViewed = function trackSearchResultsViewed(guildR
   let query;
   let searchId;
   ({ loadId, searchId, query, analyticsContext, categoryId, isTagSearch } = guildResults);
-  let obj = importDefault(698);
+  let obj = require("AnalyticsUtils.tsx");
   obj = { search_type: isTagSearch ? tmp.GUILD_DISCOVERY_TAG : tmp.GUILD_DISCOVERY, load_id: loadId, search_id: searchId, total_results: null, guild_ids: null, query: null, location: null, category_id: null };
   let length = null;
   if (undefined !== guildResults.guildResults) {
@@ -540,7 +540,7 @@ export const trackSearchResultsViewed = function trackSearchResultsViewed(guildR
 };
 export const trackGuildJoinClicked = function trackGuildJoinClicked(guild_id) {
   loadId = loadId.getLoadId(guild_id);
-  let obj = importDefault(698);
+  let obj = require("AnalyticsUtils.tsx");
   obj = { guild_id, load_id: loadId, guild_size: memberCount.getMemberCount(guild_id) };
   obj.track(constants.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, obj);
 };

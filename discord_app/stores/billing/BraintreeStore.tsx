@@ -20,7 +20,7 @@ if (set.isDesktop()) {
       const error = new Error("popupBridgeState is unset");
       throw error;
     } else {
-      const aPIBaseURL = require(530) /* sendRequest */.getAPIBaseURL();
+      const aPIBaseURL = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.getAPIBaseURL();
       return aPIBaseURL + closure_4.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(constants.BRAINTREE, closure_2);
     }
   };

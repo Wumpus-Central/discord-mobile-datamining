@@ -5,8 +5,8 @@ const require = arg1;
 const result = require("module_1274").fileFinishedImporting("intl/util.tsx");
 
 export const getAvailableLocales = function getAvailableLocales() {
-  _require = _require(1238).default;
-  const found = _require(1296).filter((enabled) => enabled.enabled);
+  _require = _require("messages/en-US.messages.js").default;
+  const found = _require("../../_runtime/01296_items.js").filter((enabled) => enabled.enabled);
   const mapped = found.map((code) => {
     code = code.code;
     const obj = { value: code, name: code.name, localizedName: null };
@@ -29,7 +29,7 @@ export const getAvailableLocales = function getAvailableLocales() {
   });
 };
 export const getLanguages = function getLanguages() {
-  return require(1296) /* items */;
+  return require("../../_runtime/01296_items.js") /* items */;
 };
 export const getNormalizedLocale = function getNormalizedLocale(str, arg1) {
   const found = parts(1296).filter((enabled) => enabled.enabled);

@@ -291,7 +291,7 @@ function MarkupBlockQuote(state) {
     textColor = state.textColor;
   }
   obj[1] = textColor;
-  obj[2] = require(9471) /* smartOutput */.smartOutput(node, output, state);
+  obj[2] = require("MarkupRulesUtils.tsx") /* smartOutput */.smartOutput(node, output, state);
   return closure_16(MarkupText, obj, state.key);
 }
 function MarkupInlineCode(arg0) {
@@ -357,7 +357,7 @@ function MarkupCodeBlock(state) {
     textColor = state.textColor;
   }
   obj[1] = textColor;
-  const items = [require(9471) /* smartOutput */.smartOutput(node, output, state), "\n"];
+  const items = [require("MarkupRulesUtils.tsx") /* smartOutput */.smartOutput(node, output, state), "\n"];
   obj[2] = items;
   return closure_17(MarkupText, obj, state.key);
 }
@@ -365,9 +365,9 @@ function MarkupCustomEmoji(styles) {
   let node;
   let state;
   ({ state, node } = styles);
-  const AnimateEmoji = require(3958) /* explicitContentFromProto */.AnimateEmoji;
+  const AnimateEmoji = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.AnimateEmoji;
   const setting = AnimateEmoji.useSetting();
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   if (node.src) {
@@ -396,8 +396,8 @@ function MarkupCustomEmoji(styles) {
       tmp13 = setting;
     }
     obj1[2] = tmp13;
-    let tmp4Result = tmp4(importDefault(5236), obj1, state.key);
-    const tmp10 = importDefault(5236);
+    let tmp4Result = tmp4(require("../../components_native/common/FastImage.tsx"), obj1, state.key);
+    const tmp10 = require("../../components_native/common/FastImage.tsx");
   } else {
     let textColor;
     if (state != null) {
@@ -608,7 +608,7 @@ function MarkupCommandMention(state) {
     mention = tmp.mention;
   }
   obj[3] = mention;
-  return tmp2(importDefault(9461), obj, state.key);
+  return tmp2(require("native/MarkupReactCommandRule.tsx"), obj, state.key);
 }
 ({ PixelRatio: c4, Pressable: c5, View: closure_6, Text: error } = get_ActivityIndicator);
 ({ EMOJI_CHAT_SIZE, GuildFeatures: map1 } = ME);
@@ -1246,8 +1246,8 @@ export const plainMentionRenderer = function plainMentionRenderer(content, outpu
   if (typeof content.content === "string") {
     content = content.content;
   } else {
-    content = require(9471) /* smartOutput */.smartOutput(content, output, state);
-    const obj = require(9471) /* smartOutput */;
+    content = require("MarkupRulesUtils.tsx") /* smartOutput */.smartOutput(content, output, state);
+    const obj = require("MarkupRulesUtils.tsx") /* smartOutput */;
   }
   return content;
 };

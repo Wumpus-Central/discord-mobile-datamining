@@ -16,7 +16,7 @@ export const isSourceError = function isSourceError(error) {
     }
     let isIOSResult = hasItem;
   } else {
-    isIOSResult = require(500) /* set */.isIOS();
+    isIOSResult = require("../../../utils/PlatformUtils.tsx") /* set */.isIOS();
     if (isIOSResult) {
       let hasItem1 = null != code;
       if (hasItem1) {
@@ -24,7 +24,7 @@ export const isSourceError = function isSourceError(error) {
       }
       isIOSResult = hasItem1;
     }
-    const tmpResult = require(500) /* set */;
+    const tmpResult = require("../../../utils/PlatformUtils.tsx") /* set */;
   }
   return isIOSResult;
 };

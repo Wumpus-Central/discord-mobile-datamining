@@ -142,7 +142,7 @@ let closure_5 = createCacheKey.createStyles(() => {
     flag = false;
   }
   let obj = { card: null, cardWithBlur: null };
-  obj = { padding: num, borderTopStartRadius: importDefault(712).modules.mobile.TABLE_ROW_BORDER_RADIUS, borderTopEndRadius: importDefault(712).modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomStartRadius: importDefault(712).modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomEndRadius: importDefault(712).modules.mobile.TABLE_ROW_BORDER_RADIUS };
+  obj = { padding: num, borderTopStartRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_BORDER_RADIUS, borderTopEndRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomStartRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomEndRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_BORDER_RADIUS };
   obj[0] = obj;
   obj[1] = { overflow: "hidden" };
   return obj;

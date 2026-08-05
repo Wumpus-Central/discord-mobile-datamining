@@ -12,8 +12,8 @@ function areStatesEqual(items, current) {
   if (Array.isArray(items)) {
     const _Array = Array;
     if (Array.isArray(current)) {
-      let result = require(643) /* shallowEqual */.areArraysShallowEqual(items, current);
-      const obj = require(643) /* shallowEqual */;
+      let result = require("../shallow-equal/shallowEqual.tsx") /* shallowEqual */.areArraysShallowEqual(items, current);
+      const obj = require("../shallow-equal/shallowEqual.tsx") /* shallowEqual */;
     }
     return result;
   }
@@ -31,7 +31,7 @@ function defaultRetryableErrors(status) {
   return tmp;
 }
 function defaultBackoff() {
-  return new importDefault(584)();
+  return new require("../backoff/Backoff.tsx")();
 }
 ({ useCallback: c5, useEffect: closure_6, useState: error } = noop);
 const SymbolResult = Symbol("NO_DATA");
@@ -53,7 +53,7 @@ prototype["setRetryAfter"] = function setRetryAfter(retryAfter) {
 };
 let closure_13 = keys.create(() => {
   const obj = { isLoading: false, error: null, backoff: null, lastSuccessAt: null, failureLockedUntil: null };
-  obj[2] = new importDefault(584)();
+  obj[2] = new require("../backoff/Backoff.tsx")();
   return obj;
 });
 let result = require("noop").fileFinishedImporting("../discord_common/js/packages/flux/createFetchStore.tsx");

@@ -18,23 +18,23 @@ const result = require("scheduledEventSort").fileFinishedImporting("modules/guil
 
 export default {
   startEvent(arg0, arg1) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: closure_10.GUILD_EVENT(arg1, arg0), body: obj, rejectWithError: null };
     obj = { status: constants.ACTIVE };
-    obj[2] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.patch(obj);
   },
   endEvent(arg0, arg1) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: closure_10.GUILD_EVENT(arg1, arg0), body: obj, rejectWithError: null };
     obj = { status: constants.COMPLETED };
-    obj[2] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.patch(obj);
   },
   joinVoiceEvent(arg0, id) {
-    const voiceChannel = importDefault(5096).selectVoiceChannel(id);
-    const obj = importDefault(5096);
-    require(1222) /* transitionTo */.transitionTo(closure_11.CHANNEL(arg0, id));
+    const voiceChannel = require("../../actions/SelectedChannelActionCreators.tsx").selectVoiceChannel(id);
+    const obj = require("../../actions/SelectedChannelActionCreators.tsx");
+    require("../routing/router_utils.tsx") /* transitionTo */.transitionTo(closure_11.CHANNEL(arg0, id));
   },
   saveEvent(arg0, entityType) {
     let channelId = null;
@@ -51,20 +51,20 @@ export default {
       let obj = /^data:/;
     }
     obj = { name: entityType.name, description: entityType.description, image, privacy_level: entityType.privacyLevel, scheduled_start_time: entityType.scheduledStartTime, scheduled_end_time: entityType.scheduledEndTime, entity_type: entityType.entityType, channel_id: channelId, entity_metadata: entityMetadata, recurrence_rule: null };
-    obj[9] = require(8863) /* EditGuildEventScreens */.recurrenceRuleToServer(entityType.recurrenceRule);
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    obj[9] = require("utils/EditGuildEventUtils.tsx") /* EditGuildEventScreens */.recurrenceRuleToServer(entityType.recurrenceRule);
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: closure_10.GUILD_EVENT(arg2, arg0), body: obj, rejectWithError: null };
-    const obj3 = require(8863) /* EditGuildEventScreens */;
-    obj[2] = require(530) /* sendRequest */.rejectWithMigratedError();
+    const obj3 = require("utils/EditGuildEventUtils.tsx") /* EditGuildEventScreens */;
+    obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.patch(obj);
   },
   createGuildEvent(first, id) {
     let obj = { name: first.name, description: first.description, image: first.image, privacy_level: first.privacyLevel, scheduled_start_time: first.scheduledStartTime, scheduled_end_time: first.scheduledEndTime, entity_type: first.entityType, channel_id: first.channelId, entity_metadata: first.entityMetadata, recurrence_rule: null };
-    obj[9] = require(8863) /* EditGuildEventScreens */.recurrenceRuleToServer(first.recurrenceRule);
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    obj[9] = require("utils/EditGuildEventUtils.tsx") /* EditGuildEventScreens */.recurrenceRuleToServer(first.recurrenceRule);
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: closure_10.GUILD_EVENTS_FOR_GUILD(id), body: obj, rejectWithError: null };
-    const obj2 = require(8863) /* EditGuildEventScreens */;
-    obj[2] = require(530) /* sendRequest */.rejectWithMigratedError();
+    const obj2 = require("utils/EditGuildEventUtils.tsx") /* EditGuildEventScreens */;
+    obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.post(obj);
   },
   fetchGuildEvent(outer1_0, outer1_1) {
@@ -134,16 +134,16 @@ export default {
     })();
   },
   cancelGuildEvent(arg0, arg1) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: closure_10.GUILD_EVENT(arg1, arg0), body: obj, rejectWithError: null };
     obj = { status: constants.CANCELED };
-    obj[2] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.patch(obj);
   },
   deleteGuildEvent(outer1_0, c1) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     const obj = { url: closure_10.GUILD_EVENT(c1, outer1_0), rejectWithError: null };
-    obj[1] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[1] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.del(obj);
   },
   getGuildEventsForCurrentUser(arg0) {
@@ -624,9 +624,9 @@ export default {
     let scheduled_end_time;
     let scheduled_start_time;
     ({ original_scheduled_start_time, scheduled_start_time, scheduled_end_time, is_canceled } = arg0);
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     const obj = { url: closure_10.GUILD_EVENT_EXCEPTIONS(guild_id, id), body: { original_scheduled_start_time, scheduled_start_time, scheduled_end_time, is_canceled }, rejectWithError: null };
-    obj[2] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.post(obj);
   },
   updateGuildEventException(arg0, guild_id, id, c2) {
@@ -634,15 +634,15 @@ export default {
     let scheduled_end_time;
     let scheduled_start_time;
     ({ scheduled_start_time, scheduled_end_time, is_canceled } = arg0);
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     const obj = { url: closure_10.GUILD_EVENT_EXCEPTION(guild_id, id, c2), body: { scheduled_start_time, scheduled_end_time, is_canceled }, rejectWithError: null };
-    obj[2] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.patch(obj);
   },
   deleteGuildEventException(guild_id, id, event_exception_id) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     const obj = { url: closure_10.GUILD_EVENT_EXCEPTION(guild_id, id, event_exception_id), rejectWithError: null };
-    obj[1] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[1] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.del(obj);
   },
   deleteRecurrence(c1, outer1_0, c2, outer1_3) {
@@ -652,7 +652,7 @@ export default {
       ({ scheduled_start_time: obj4[0], scheduled_end_time: obj4[1] } = outer1_3);
       return self.updateGuildEventException(obj, c1, outer1_0, c2);
     } else {
-      obj = importDefault(11);
+      obj = require("../../utils/SnowflakeUtils.tsx");
       obj = { original_scheduled_start_time: null, is_canceled: true };
       const _Date = Date;
       const date = new Date(obj.extractTimestamp(c2));

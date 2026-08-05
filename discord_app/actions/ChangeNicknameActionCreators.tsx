@@ -7,11 +7,11 @@ export default {
   changeNickname(guildId, arg1, closure_4) {
     const _require = arg1;
     let closure_1 = arg3;
-    const HTTP = _require(530).HTTP;
+    const HTTP = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     obj = { url: Endpoints.GUILD_MEMBER_NICK(guildId, closure_4), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { nick: closure_1 };
-    obj[3] = _require(530).rejectWithMigratedError();
-    const obj3 = _require(530);
+    obj[3] = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+    const obj3 = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
     return HTTP.patch(obj).then((body) => {
       const nick = body.body.nick;
       callback2(outer1_2[2]);

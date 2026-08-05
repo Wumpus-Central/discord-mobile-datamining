@@ -9,7 +9,7 @@ const require = arg1;
 let result = require("UNSAFE_isDismissibleContentDismissed").fileFinishedImporting("modules/video_calls/native/useOnConnectToConsole.tsx");
 
 export const onConnectToConsole = function onConnectToConsole(channel, closure_0) {
-  const result = require(4101) /* UNSAFE_isDismissibleContentDismissed */.UNSAFE_markDismissibleContentAsDismissed(require(1358) /* DismissibleContent */.DismissibleContent.DONUT_MOBILE_NUX);
+  const result = require("../../dismissible_content/DismissibleContentUnsafeUtils.tsx") /* UNSAFE_isDismissibleContentDismissed */.UNSAFE_markDismissibleContentAsDismissed(require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.DONUT_MOBILE_NUX);
   if (closure_0.twoWayLink) {
     if (!closure_0.revoked) {
       tmp(10772).beginConsoleTransfer(channel, closure_0.type);
@@ -18,12 +18,12 @@ export const onConnectToConsole = function onConnectToConsole(channel, closure_0
   const type = closure_0.type;
   if (constants2.XBOX === type) {
     const items = [constants.CHANNEL_CALL];
-    return importDefault(10407).showModal(items);
+    return require("../../user_settings/connections/native/two_way_link/xbox/XboxLinkModalActionCreators.tsx").showModal(items);
   } else {
     const items1 = [constants.CHANNEL_CALL];
-    return importDefault(10472).showModal(items1, closure_0.type);
+    return require("../../user_settings/connections/native/two_way_link/playstation/PlayStationLinkModalActionCreators.tsx").showModal(items1, closure_0.type);
   }
-  const obj = require(4101) /* UNSAFE_isDismissibleContentDismissed */;
+  const obj = require("../../dismissible_content/DismissibleContentUnsafeUtils.tsx") /* UNSAFE_isDismissibleContentDismissed */;
   tmp = require;
 };
 export const useOnConnectToConsole = function useOnConnectToConsole(channel, account) {

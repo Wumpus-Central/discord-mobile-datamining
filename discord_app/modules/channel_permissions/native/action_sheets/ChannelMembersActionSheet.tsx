@@ -36,10 +36,10 @@ export default function ChannelMembersActionSheet(arg0) {
   let c5;
   const tmp = createCacheKey();
   dependencyMap = tmp;
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [ensureGuildLoaded];
   stateFromStores = obj.useStateFromStores(items, () => channel.getChannel(closure_0));
-  let obj1 = require(589) /* initialize */;
+  let obj1 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items1 = [createGuildRecordFromRust, createGuildRoleRecordFromRust];
   const items2 = [stateFromStores];
   const stateFromStoresObject = obj1.useStateFromStoresObject(items1, () => {
@@ -58,7 +58,7 @@ export default function ChannelMembersActionSheet(arg0) {
     return obj;
   }, items2);
   ({ guild, sortedGuildRoles } = stateFromStoresObject);
-  let obj2 = require(589) /* initialize */;
+  let obj2 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items3 = [c5];
   const items4 = [stateFromStores];
   const stateFromStoresArray = obj2.useStateFromStoresArray(items3, () => {
@@ -68,7 +68,7 @@ export default function ChannelMembersActionSheet(arg0) {
     }
     return _undefined2.getMemberIds(guildId);
   }, items4);
-  let obj3 = require(1480) /* useNavigation */;
+  let obj3 = require("../../../../design/components/Navigator/native/useNavigation.native.tsx") /* useNavigation */;
   ensureGuildLoaded = obj3.useNavigation();
   if (null != stateFromStores) {
     if (null != guild) {
@@ -137,7 +137,7 @@ export default function ChannelMembersActionSheet(arg0) {
         const items6 = [tmp29Result, ];
         const obj8 = { contentContainerStyle: null, renderItem: null, renderSectionHeader: null, sections: null, stickySectionHeadersEnabled: false };
         const obj9 = { paddingBottom: null };
-        obj9[0] = tmp4.bottom + importDefault(712).space.PX_16;
+        obj9[0] = tmp4.bottom + require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16;
         obj8[0] = obj9;
         obj8[1] = function renderItem(index) {
           let item;

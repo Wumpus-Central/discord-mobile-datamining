@@ -13,7 +13,7 @@ export default function FramePanelController(children) {
   let hasConnectedActivity;
   let mode;
   let orientationLockStateForApp;
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [map, addApplication];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     let obj = store;
@@ -38,13 +38,13 @@ export default function FramePanelController(children) {
   }, []);
   ({ mode, hasConnectedActivity, connectedActivityAppId, currentApp, orientationLockStateForApp } = stateFromStoresObject);
   obj = { context: null, orientationLockStateForApp: null, mode: null, hasConnectedActivity: null, connectedActivityAppId: null, currentApp: null, updateActivityPanelMode: null, children: null };
-  obj[0] = importDefault(15985);
+  obj[0] = require("FramePanelStateContext.tsx");
   obj[1] = orientationLockStateForApp;
   obj[2] = mode;
   obj[3] = hasConnectedActivity;
   obj[4] = connectedActivityAppId;
   obj[5] = currentApp;
-  obj[6] = importDefault(10510).updateFramePanelMode;
+  obj[6] = require("../../FramesActionCreators.native.tsx").updateFramePanelMode;
   obj[7] = children.children;
-  return jsx(require(15951) /* BaseActivityPanelController */.BaseActivityPanelController, { context: null, orientationLockStateForApp: null, mode: null, hasConnectedActivity: null, connectedActivityAppId: null, currentApp: null, updateActivityPanelMode: null, children: null });
+  return jsx(require("../../../activities/panel/native/ActivityPanelController.tsx") /* BaseActivityPanelController */.BaseActivityPanelController, { context: null, orientationLockStateForApp: null, mode: null, hasConnectedActivity: null, connectedActivityAppId: null, currentApp: null, updateActivityPanelMode: null, children: null });
 };

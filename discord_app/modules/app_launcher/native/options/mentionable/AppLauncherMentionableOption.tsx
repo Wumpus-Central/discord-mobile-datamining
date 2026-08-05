@@ -11,14 +11,14 @@ import createCacheKey from "createCacheKey";
 const require = arg1;
 function MentionableIcon(mentionable) {
   mentionable = mentionable.mentionable;
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   obj = { icon: null, wrapperStyle: null };
   const tmp = createCacheKey();
-  obj[0] = jsx(require(9589) /* UserCircleIcon */.UserCircleIcon, { size: "sm", color: "interactive-text-default" });
+  obj[0] = jsx(require("../../../../../design/components/Icon/native/redesign/generated/UserCircleIcon.tsx") /* UserCircleIcon */.UserCircleIcon, { size: "sm", color: "interactive-text-default" });
   obj[1] = tmp.iconWrapper;
-  const tmp7 = jsx(importDefault(11479), { icon: null, wrapperStyle: null });
+  const tmp7 = jsx(require("../../base_components/AppLauncherOptionIcon.tsx"), { icon: null, wrapperStyle: null });
   if (null == mentionable) {
     return tmp7;
   } else {
@@ -39,7 +39,7 @@ function MentionableIcon(mentionable) {
       return tmp7;
     }
   }
-  const tmp6 = importDefault(11479);
+  const tmp6 = require("../../base_components/AppLauncherOptionIcon.tsx");
 }
 createCacheKey = { iconWrapper: null };
 createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE };

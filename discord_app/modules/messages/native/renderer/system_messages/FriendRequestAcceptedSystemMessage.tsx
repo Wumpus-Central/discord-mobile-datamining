@@ -15,7 +15,7 @@ export const createFriendRequestAcceptedSystemMessage = function createFriendReq
       const currentUser = authStore.getCurrentUser();
       if (null != user) {
         if (null != currentUser) {
-          let colorString = require(7879) /* getMessageAuthorWithProcessedColor */.getUserAuthorWithProcessedColor(user, channel);
+          let colorString = require("useAuthorWithProcessedColor.tsx") /* getMessageAuthorWithProcessedColor */.getUserAuthorWithProcessedColor(user, channel);
           let obj = { userId: null, message: null, author: null, roleStyle: null };
           obj[0] = recipientId;
           obj[1] = message;
@@ -23,7 +23,7 @@ export const createFriendRequestAcceptedSystemMessage = function createFriendReq
           obj[3] = message.roleStyle;
           obj = { username: null, usernameOnClick: null };
           obj[0] = colorString.nick;
-          obj[1] = importDefault(7881)(obj);
+          obj[1] = require("formatUsernameOnClick.tsx")(obj);
           let content = message.content;
           if (null != content) {
             if ("" !== content) {
@@ -65,7 +65,7 @@ export const createFriendRequestAcceptedSystemMessage = function createFriendReq
           const obj4 = { content: null, iconUrl: null, textColor: null };
           obj4[0] = formatToPartsResult;
           tmp15Result = tmp15(7865);
-          obj4[1] = tmp15Result.getAssetUriForEmbed(importDefault(7985));
+          obj4[1] = tmp15Result.getAssetUriForEmbed(require("../../../../../../_runtime/07985_registerAsset.js"));
           obj4[2] = undefined;
           const merged1 = Object.assign(tmp17(7882)(message));
           return obj4;

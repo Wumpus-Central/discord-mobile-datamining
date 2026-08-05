@@ -6,7 +6,7 @@ let require = arg1;
 const result = require("useIsMobileVisualRefreshExperimentEnabled").fileFinishedImporting("modules/themes/native/useNativeThemeUpdater.tsx");
 
 export default function useNativeThemeUpdater() {
-  const tmp = importDefault(1348)("useNativeThemeUpdater");
+  const tmp = require("../experiments/MobileVisualRefreshExperiment.tsx")("useNativeThemeUpdater");
   const require = tmp;
   importDefault = React.useRef(theme.theme);
   const items = [tmp];

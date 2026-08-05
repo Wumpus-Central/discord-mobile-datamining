@@ -367,8 +367,8 @@ export default function NUFGuildTemplates() {
     return obj;
   }, []);
   obj[1] = Keyboard.dismiss;
-  let intl = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl.string(require(1236) /* getSystemLocale */.t["13/7kX"]);
+  let intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["13/7kX"]);
   obj[3] = constants.GUILD_TEMPLATES;
-  return jsx(require(5665) /* NavigationStack */.Navigator, { screens: null, onWillFocus: null, headerBackTitle: null, initialRouteName: null });
+  return jsx(require("../../../../design/components/Navigator/native/Navigator.native.tsx") /* NavigationStack */.Navigator, { screens: null, onWillFocus: null, headerBackTitle: null, initialRouteName: null });
 };

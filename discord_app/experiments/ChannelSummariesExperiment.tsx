@@ -52,8 +52,8 @@ function canSeeChannelSummaries(channel, flag, arg2) {
           if (tmp15) {
             let isFavoritesGuildIdResult = id === closure_4;
             if (!isFavoritesGuildIdResult) {
-              isFavoritesGuildIdResult = require(1865) /* getFavoritesAwareGuildName */.isFavoritesGuildId(id);
-              const obj = require(1865) /* getFavoritesAwareGuildName */;
+              isFavoritesGuildIdResult = require("../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */.isFavoritesGuildId(id);
+              const obj = require("../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
             }
             tmp15 = isFavoritesGuildIdResult;
           }
@@ -100,8 +100,8 @@ export const canGuildUseConversationSummaries = function canGuildUseConversation
     if (tmp2) {
       let isFavoritesGuildIdResult = id === closure_4;
       if (!isFavoritesGuildIdResult) {
-        isFavoritesGuildIdResult = require(1865) /* getFavoritesAwareGuildName */.isFavoritesGuildId(id);
-        const obj = require(1865) /* getFavoritesAwareGuildName */;
+        isFavoritesGuildIdResult = require("../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */.isFavoritesGuildId(id);
+        const obj = require("../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
       }
       tmp2 = isFavoritesGuildIdResult;
     }
@@ -133,7 +133,7 @@ export const useGuildEligibleForSummaries = function useGuildEligibleForSummarie
   const _require = arg0;
   const items = [createGuildRecordFromRust];
   const items1 = [arg0];
-  return _require(647).useStateFromStores(items, () => {
+  return _require("../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
     let id;
     if (lib != null) {
       id = lib.id;

@@ -7,8 +7,8 @@ let setAndroidNotificationVibrationsEnabled;
 ({ useAndroidNotificationVibrationsEnabled: obj1, setAndroidNotificationVibrationsEnabled } = _initializeAndroidNotificationSettingsStore);
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["lFg/O1"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["lFg/O1"]);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: function useAndroidNotificationVibrationsSettingValue() {
@@ -22,7 +22,7 @@ const toggle = createToggle.createToggle({
   usePredicate: function useHasAndroidNotificationVibrationsSetting() {
     const tmp = callback();
     const tmp2 = require;
-    const isIOSResult = require(500) /* set */.isIOS();
+    const isIOSResult = require("../../../../utils/PlatformUtils.tsx") /* set */.isIOS();
     let tmp5 = !isIOSResult;
     if (!isIOSResult) {
       tmp5 = !tmp2(14561).hasAndroidNotificationChannels();
@@ -36,8 +36,8 @@ const toggle = createToggle.createToggle({
 });
 const obj = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["lFg/O1"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["lFg/O1"]);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: function useAndroidNotificationVibrationsSettingValue() {
@@ -51,7 +51,7 @@ const obj = {
   usePredicate: function useHasAndroidNotificationVibrationsSetting() {
     const tmp = callback();
     const tmp2 = require;
-    const isIOSResult = require(500) /* set */.isIOS();
+    const isIOSResult = require("../../../../utils/PlatformUtils.tsx") /* set */.isIOS();
     let tmp5 = !isIOSResult;
     if (!isIOSResult) {
       tmp5 = !tmp2(14561).hasAndroidNotificationChannels();

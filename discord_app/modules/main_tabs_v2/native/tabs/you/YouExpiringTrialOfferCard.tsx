@@ -35,7 +35,7 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
   let stateFromStores;
   let premiumTrialOffer;
   let shouldShowExpiringTrialOfferCard;
-  let obj = importDefault(3867)();
+  let obj = require("../../../../../../_runtime/03867_t.js")();
   importDefault = obj.add(5, "days");
   const tmp3 = createCacheKey();
   dependencyMap = tmp3;
@@ -52,7 +52,7 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
       num = Date.parse(premiumTrialOffer.expires_at);
     }
   }
-  const tmp7Result = importDefault(6812)(num, closure_15);
+  const tmp7Result = require("../../../../../hooks/useCountdown.tsx")(num, closure_15);
   let tmp4Result = tmp4(15750);
   shouldShowExpiringTrialOfferCard = tmp4Result.useShouldShowExpiringTrialOfferCard();
   const items1 = [stateFromStores, shouldShowExpiringTrialOfferCard, premiumTrialOffer];
@@ -195,5 +195,5 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
   } else {
     return null;
   }
-  const tmp7 = importDefault(6812);
+  const tmp7 = require("../../../../../hooks/useCountdown.tsx");
 };

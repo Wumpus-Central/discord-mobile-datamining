@@ -165,7 +165,7 @@ let closure_19 = importAllResult.memo(function ActivityPanelHeaderContentInner(w
   ({ landscape, setMode } = wrapperOffset);
   let obj = { landscape, setMode, wrapperOffset: wrapperOffset.wrapperOffset, pipState: wrapperOffset.pipState };
   ({ gesture, headerWrapperStyles, headerStyles } = useBaseActivityPanelHeaderContent(obj));
-  let obj1 = require(589) /* initialize */;
+  let obj1 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [participantFromServer];
   const stateFromStores = obj1.useStateFromStores(items, () => store.getSelfEmbeddedActivityForLocation(store.getConnectedActivityLocation()), []);
   let applicationId;
@@ -173,14 +173,14 @@ let closure_19 = importAllResult.memo(function ActivityPanelHeaderContentInner(w
     applicationId = stateFromStores.applicationId;
   }
   const items1 = [applicationId];
-  const first = callback(importDefault(5616)(items1), 1)[0];
+  const first = callback(require("../../../applications/useGetOrFetchApplications.tsx")(items1), 1)[0];
   const tmp7 = styles();
   let id;
   const tmp = useBaseActivityPanelHeaderContent(obj);
   if (first != null) {
     id = first.id;
   }
-  let tmp8Result = tmp8(importDefault(15970), { applicationId: id });
+  let tmp8Result = tmp8(require("InviteActivityButton.tsx"), { applicationId: id });
   obj = { hasConnectedActivity: null != stateFromStores, gesture, headerWrapperStyles, headerStyles, landscape, children: null };
   const items2 = [tmp7.buttonContainer, ];
   let prop;

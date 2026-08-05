@@ -53,15 +53,15 @@ function Integration(integration) {
     obj2[0] = integration.guild;
     obj2[1] = tmp(5661).GuildIconSizes.SMALL;
     obj2[2] = legacyClassComponentStyles.integrationGuildIcon;
-    const items4 = [callback3(importDefault(5661), obj2), , ];
+    const items4 = [callback3(require("../../../guild/native/GuildIcon.tsx"), obj2), , ];
     const obj3 = { style: null, children: null };
     obj3[0] = legacyClassComponentStyles.integrationTextRowContainer;
     const obj4 = { lineClamp: 1, variant: "text-sm/medium", children: null };
     obj4[2] = integration.guild.name;
     const items5 = [callback3(tmp(4281).Text, obj4), ];
     const tmp16 = callback3;
-    const tmp18 = importDefault(5661);
-    const value = importDefault(4966).get(integration.type);
+    const tmp18 = require("../../../guild/native/GuildIcon.tsx");
+    const value = require("../../../../lib/Platforms.tsx").get(integration.type);
     let platformUserUrl;
     if (value != null) {
       const getPlatformUserUrl = value.getPlatformUserUrl;
@@ -108,7 +108,7 @@ function Integration(integration) {
 function RowSwitch(label) {
   const merged = Object.assign(label, Object.create(null));
   const merged1 = Object.assign(merged);
-  return callback3(require(5650) /* TableSwitchRow */.TableSwitchRow, { label: label.label });
+  return callback3(require("../../../../design/components/TableRow/native/TableSwitchRow.native.tsx") /* TableSwitchRow */.TableSwitchRow, { label: label.label });
 }
 let c5 = importAllResult;
 ({ FRIEND_SYNC_PLATFORM_TYPES: c9, ACTIVITY_PLATFORM_TYPES: c10, PlatformTypes: unpackModuleId, HelpdeskArticles: closure_12, Fonts } = ME);
@@ -426,14 +426,14 @@ prototype["componentDidUpdate"] = function componentDidUpdate(account) {
       if (null != inProgressVisibility) {
         obj.isVisible = 1 === inProgressVisibility;
         obj.inProgressVisibility = null;
-        obj = importDefault(5090);
+        obj = require("../../../../actions/ConnectedAccountsActionCreators.tsx");
         obj.setVisibility(account.type, account.id, inProgressVisibility);
       }
       if (null != inProgressMetadataVisibility) {
         obj.isMetadataVisible = 1 === inProgressMetadataVisibility;
         obj.inProgressMetadataVisibility = null;
-        const result = importDefault(5090).setMetadataVisibility(account.type, account.id, inProgressMetadataVisibility);
-        const obj2 = importDefault(5090);
+        const result = require("../../../../actions/ConnectedAccountsActionCreators.tsx").setMetadataVisibility(account.type, account.id, inProgressMetadataVisibility);
+        const obj2 = require("../../../../actions/ConnectedAccountsActionCreators.tsx");
       }
     }
     self.setState(obj);
@@ -444,18 +444,18 @@ prototype["renderUpsell"] = function renderUpsell() {
   if (account.twoWayLink) {
     return null;
   } else if (account.type === constants.XBOX) {
-    let tmp2 = callback3(require(14115) /* XboxTwoWayLinkUpsell */.XboxTwoWayLinkUpsell, {});
+    let tmp2 = callback3(require("two_way_link/xbox/XboxTwoWayLinkUpsell.tsx") /* XboxTwoWayLinkUpsell */.XboxTwoWayLinkUpsell, {});
   } else {
     tmp2 = null;
     if (account.type === tmp.PLAYSTATION) {
-      tmp2 = callback3(require(14118) /* PlayStationTwoWayLinkUpsell */.PlayStationTwoWayLinkUpsell, {});
+      tmp2 = callback3(require("two_way_link/playstation/PlayStationTwoWayLinkUpsell.tsx") /* PlayStationTwoWayLinkUpsell */.PlayStationTwoWayLinkUpsell, {});
     }
   }
 };
 prototype["renderVisibilityCheckRow"] = function renderVisibilityCheckRow() {
   const obj = { label: null, value: null, onValueChange: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.f7yOAX);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.f7yOAX);
   obj[1] = this.state.isVisible;
   obj[2] = this.handleVisibilityChange;
   return callback3(RowSwitch, obj);
@@ -464,7 +464,7 @@ prototype["renderMetadataVisibilityCheckRow"] = function renderMetadataVisibilit
   let isMetadataVisible;
   let isVisible;
   const self = this;
-  let obj = importDefault(4966);
+  let obj = require("../../../../lib/Platforms.tsx");
   const value = obj.get(this.props.account.type);
   let hasMetadata;
   if (value != null) {
@@ -475,8 +475,8 @@ prototype["renderMetadataVisibilityCheckRow"] = function renderMetadataVisibilit
   } else {
     obj = { label: null, value: null, disabled: null, onValueChange: null };
     ({ isMetadataVisible, isVisible } = self.state);
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[0] = intl.string(require(1236) /* getSystemLocale */.t.FYKGsL);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.FYKGsL);
     obj[1] = isMetadataVisible;
     obj[2] = !isVisible;
     obj[3] = self.handleMetadataVisibilityChange;
@@ -642,12 +642,12 @@ prototype["renderMetadata"] = function renderMetadata() {
   }
 };
 prototype["renderFriendSyncCheckRow"] = function renderFriendSyncCheckRow() {
-  let obj = importDefault(4966);
+  let obj = require("../../../../lib/Platforms.tsx");
   let tmp2 = null;
   if (set.has(obj.get(this.props.account.type).type)) {
     obj = { label: null, value: null, onValueChange: null };
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[0] = intl.string(require(1236) /* getSystemLocale */.t["+KCMSi"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["+KCMSi"]);
     obj[1] = this.state.friendSync;
     obj[2] = this.handleFriendSyncChange;
     tmp2 = callback3(RowSwitch, obj);
@@ -655,15 +655,15 @@ prototype["renderFriendSyncCheckRow"] = function renderFriendSyncCheckRow() {
   return tmp2;
 };
 prototype["renderActivityCheckRow"] = function renderActivityCheckRow() {
-  let obj = importDefault(4966);
+  let obj = require("../../../../lib/Platforms.tsx");
   const value = obj.get(this.props.account.type);
   let tmp3 = null;
   if (set2.has(value.type)) {
     obj = { label: null, value: null, onValueChange: null };
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { platform: null };
     obj[0] = value.name;
-    obj[0] = intl.formatToPlainString(require(1236) /* getSystemLocale */.t["6u6J0q"], obj);
+    obj[0] = intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["6u6J0q"], obj);
     obj[1] = this.state.showActivity;
     obj[2] = this.handleShowActivityChange;
     tmp3 = callback3(RowSwitch, obj);
@@ -685,9 +685,9 @@ prototype["renderIntegrationsRow"] = function renderIntegrationsRow() {
       obj[0] = { paddingHorizontal: 16, paddingVertical: 8 };
       const obj1 = { style: null, variant: "eyebrow", color: "mobile-text-heading-primary", children: null };
       obj1[0] = tmp.integrationCategoryLabel;
-      const intl = require(1236) /* getSystemLocale */.intl;
-      obj1[3] = intl.string(require(1236) /* getSystemLocale */.t.fOe3fZ);
-      const items1 = [callback3(require(4281) /* Text */.Text, obj1), ];
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      obj1[3] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.fOe3fZ);
+      const items1 = [callback3(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1), ];
       const integrations = account.integrations;
       items1[1] = integrations.map((id) => callback(closure_17, { integration: id }, id.id));
       obj[1] = items1;
@@ -703,7 +703,7 @@ prototype["render"] = function render() {
   const tmp = createCacheKey(this.context);
   const props = this.props;
   const account = props.account;
-  let obj = importDefault(4966);
+  let obj = require("../../../../lib/Platforms.tsx");
   const value = obj.get(account.type);
   const migrationData = value.migrationData;
   let migrationExperimentEnabled;
@@ -711,7 +711,7 @@ prototype["render"] = function render() {
     migrationExperimentEnabled = migrationData.getMigrationExperimentEnabled("User Settings Connections Mobile");
   }
   if (migrationExperimentEnabled) {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { platformName: null };
     obj[0] = account.name;
     let name = intl.format(tmp2(2835).Glhokn, obj);
@@ -719,22 +719,22 @@ prototype["render"] = function render() {
     name = account.name;
   }
   obj = { accessible: true, accessibilityLabel: value.name, style: tmp.platformIcon, size: null, source: null, disableColor: true };
-  obj[3] = require(1297) /* Button */.Icon.Sizes.LARGE;
-  let obj3 = require(1416) /* getAvatarURL */;
-  let obj4 = require(4131) /* AccessibilityAnnouncer */;
+  obj[3] = require("../../../../design/void/native.tsx") /* Button */.Icon.Sizes.LARGE;
+  let obj3 = require("../../../../utils/AvatarUtils.tsx") /* getAvatarURL */;
+  let obj4 = require("../../../../design/shared.tsx") /* AccessibilityAnnouncer */;
   const icon = value.icon;
   obj[4] = obj3.makeSource(obj4.isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG);
-  let tmp7Result = tmp7(require(1297) /* Button */.Icon, obj);
+  let tmp7Result = tmp7(require("../../../../design/void/native.tsx") /* Button */.Icon, obj);
   const obj1 = { spacing: 8, direction: "horizontal", align: "center", children: null };
   const obj2 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
   const intl2 = tmp8(1236).intl;
-  obj2[1] = intl2.string(require(1236) /* getSystemLocale */.t["DT39A+"]);
+  obj2[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["DT39A+"]);
   obj2[2] = self.handleDisconnect;
   obj2[3] = { top: 5, left: 5, bottom: 5, right: 5 };
   obj3 = { style: tmp.deleteConnectionIcon, source: null };
-  obj3[1] = importDefault(7837);
-  obj2[4] = closure_14(require(1297) /* Button */.Icon, obj3);
-  obj1[3] = closure_14(require(4812) /* PressableBase */.PressableOpacity, obj2);
+  obj3[1] = require("../../../../../_runtime/07837_registerAsset.js");
+  obj2[4] = closure_14(require("../../../../design/void/native.tsx") /* Button */.Icon, obj3);
+  obj1[3] = closure_14(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj2);
   tmp7Result = tmp7(tmp8(4693).Stack, obj1);
   const result = self.renderIntegrationsRow();
   const result1 = self.renderFriendSyncCheckRow();
@@ -744,12 +744,12 @@ prototype["render"] = function render() {
   const obj5 = { style: tmp.connectedAccountItem, children: null };
   const obj6 = { style: tmp.connectedAccountTopContainer, children: null };
   const result4 = self.renderVisibilityCheckRow();
-  obj6[1] = closure_14(require(5315) /* TableRowInner */.TableRow, { label: name, icon: tmp7Result, trailing: tmp7Result });
+  obj6[1] = closure_14(require("../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, { label: name, icon: tmp7Result, trailing: tmp7Result });
   const items = [closure_14(View, obj6), ];
   const obj7 = { style: tmp.connectedAccountContentContainer, children: null };
   const items1 = [self.renderUpsell(), self.renderMetadata(), , ];
   const items2 = [result4, result3, result2, result1];
-  items1[2] = callback4(require(5649) /* TableRowGroupTitle */.TableRowGroup, { hasIcons: false, children: items2 });
+  items1[2] = callback4(require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, { hasIcons: false, children: items2 });
   items1[3] = result;
   obj7[1] = items1;
   items[1] = callback4(View, obj7);

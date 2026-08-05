@@ -9,7 +9,7 @@ const result = require("fromServer").fileFinishedImporting("modules/collectibles
 export default function useProfileFrame(arg0) {
   const _require = arg0;
   const items = [updateCategoriesAndProducts, map];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null != closure_0) {
       const product = outer1_2.getProduct(tmp);
       let first;

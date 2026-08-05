@@ -143,7 +143,7 @@ function getQuarantineEventFromMessage(embeds) {
   return null != tmp2 ? tmp2 : undefined;
 }
 function _getUserProfileRuleHeaderText(arg0, arg1, arg2) {
-  if (require(6878) /* AutomodQuarantineUserActionMessageEmbedKeys */.AutomodQuarantineUserActionMessageEmbedKeys.BLOCK_PROFILE_UPDATE === arg1) {
+  if (require("../../../discord_common/js/shared/shared-constants/AutomodQuarantineUserActionMessageEmbedKeys.tsx") /* AutomodQuarantineUserActionMessageEmbedKeys */.AutomodQuarantineUserActionMessageEmbedKeys.BLOCK_PROFILE_UPDATE === arg1) {
     if (tmp(6879).AutomodBlockProfileUpdateMessageEmbedKeys.NICKNAME_UPDATE === arg0) {
       const intl6 = tmp(1236).intl;
       let stringResult = intl6.string(tmp(1236).t.t98DPb);
@@ -668,14 +668,14 @@ export const getActionHeaderText = function getActionHeaderText(embeds, channel)
     intl = closure_10;
   }
   if (null != channel) {
-    let obj2 = _require(4475);
+    let obj2 = _require("../channel/useChannelName.tsx");
     let channelName = obj2.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
     let obj = dependencyMap;
     let format = _require;
     let obj3 = dependencyMap;
   } else {
-    const intl2 = _require(1236).intl;
-    channelName = intl2.string(_require(1236).t.J90oLW);
+    const intl2 = _require("../../intl/index.native.tsx").intl;
+    channelName = intl2.string(_require("../../intl/index.native.tsx").t.J90oLW);
     obj = dependencyMap;
     format = _require;
     obj3 = dependencyMap;
@@ -832,7 +832,7 @@ export const getActionHeaderText = function getActionHeaderText(embeds, channel)
   }
 };
 export const getQuarantineReasonString = function getQuarantineReasonString(quarantineType) {
-  if (require(6883) /* AutomodQuarantineUserMessageEmbedKeys */.AutomodQuarantineUserMessageEmbedKeys.NICKNAME === quarantineType) {
+  if (require("../../../discord_common/js/shared/shared-constants/AutomodQuarantineUserMessageEmbedKeys.tsx") /* AutomodQuarantineUserMessageEmbedKeys */.AutomodQuarantineUserMessageEmbedKeys.NICKNAME === quarantineType) {
     const intl5 = tmp(1236).intl;
     return intl5.string(tmp(1236).t["fkBQa/"]);
   } else if (tmp(6883).AutomodQuarantineUserMessageEmbedKeys.USERNAME === quarantineType) {
@@ -850,7 +850,7 @@ export const getQuarantineReasonString = function getQuarantineReasonString(quar
   }
 };
 export const extractAutomodNotificationFields = function extractAutomodNotificationFields(message) {
-  _require = _require(6884).AutomodNotificationEmbedKeys.NOTIFICATION_TYPE;
+  _require = _require("../../../discord_common/js/shared/shared-constants/AutomodNotificationEmbedKeys.tsx").AutomodNotificationEmbedKeys.NOTIFICATION_TYPE;
   let embeds = message.embeds;
   if (embeds == null) {
     embeds = [];
@@ -1094,9 +1094,9 @@ export const useAutomodAlertActions = function useAutomodAlertActions(message) {
 };
 export const getRaidAlertResolveCTAText = function getRaidAlertResolveCTAText(resolvedReason) {
   if (null == resolvedReason) {
-    const intl5 = require(1236) /* getSystemLocale */.intl;
-    return intl5.string(require(1236) /* getSystemLocale */.t.Gh3A0O);
-  } else if (require(6886) /* Feedback */.RaidResolutionType.LEGITIMATE_ACTIVITY === resolvedReason) {
+    const intl5 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl5.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Gh3A0O);
+  } else if (require("AutomodFeedback.tsx") /* Feedback */.RaidResolutionType.LEGITIMATE_ACTIVITY === resolvedReason) {
     const intl4 = tmp3(1236).intl;
     return intl4.string(tmp3(1236).t["riQ+HH"]);
   } else if (tmp3(6886).RaidResolutionType.DM_SPAM === resolvedReason) {

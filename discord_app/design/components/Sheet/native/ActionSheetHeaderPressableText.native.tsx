@@ -10,7 +10,7 @@ export const ActionSheetHeaderPressableText = function ActionSheetHeaderPressabl
   let label;
   ({ label, accessibilityLabel } = onPress);
   let str = "text-md/semibold";
-  if (importDefault(1348)("ActionSheetHeaderPressableText")) {
+  if (require("../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx")("ActionSheetHeaderPressableText")) {
     str = "text-md/medium";
   }
   const obj = { style: callback().container, accessibilityRole: "button", onPress: onPress.onPress, accessibilityLabel: null, children: null };
@@ -19,6 +19,6 @@ export const ActionSheetHeaderPressableText = function ActionSheetHeaderPressabl
     tmp5 = accessibilityLabel;
   }
   obj[3] = tmp5;
-  obj[4] = jsx(require(4281) /* Text */.Text, { variant: str, color: "text-brand", children: label });
-  return jsx(require(4812) /* PressableBase */.PressableOpacity, { style: callback().container, accessibilityRole: "button", onPress: onPress.onPress, accessibilityLabel: null, children: null });
+  obj[4] = jsx(require("../../Text/native/Text.tsx") /* Text */.Text, { variant: str, color: "text-brand", children: label });
+  return jsx(require("../../../void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, { style: callback().container, accessibilityRole: "button", onPress: onPress.onPress, accessibilityLabel: null, children: null });
 };

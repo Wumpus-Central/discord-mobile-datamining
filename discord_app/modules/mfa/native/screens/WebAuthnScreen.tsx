@@ -101,7 +101,7 @@ export default function WebAuthnScreen(arg0) {
   const intl2 = tmp5(1236).intl;
   obj[1] = intl2.string(finish(1236).t.YpMrqM);
   obj[2] = challenge(finish(13889).KeyImage, {});
-  let shouldDisplayAndroidFidoSelector = importDefault(8287).shouldDisplayAndroidFidoSelector;
+  let shouldDisplayAndroidFidoSelector = require("../../../webauthn/native/NativeCeremonies.tsx").shouldDisplayAndroidFidoSelector;
   if (shouldDisplayAndroidFidoSelector) {
     obj = { authenticatorSelection: null, setAuthenticator: null, inProgress: null };
     obj[0] = first;
@@ -116,7 +116,7 @@ export default function WebAuthnScreen(arg0) {
   }
   obj[3] = shouldDisplayAndroidFidoSelector;
   obj1 = { variant: "primary", text: null, loading: null, disabled: null, onPress: null };
-  const tmp16 = importDefault(14887);
+  const tmp16 = require("MfaOptionScreen.tsx");
   const intl3 = tmp5(1236).intl;
   obj1[1] = intl3.string(finish(1236).t.Xr3Eks);
   let tmp20 = tmp3;

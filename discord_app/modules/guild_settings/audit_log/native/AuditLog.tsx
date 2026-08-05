@@ -19,13 +19,13 @@ let map1;
 let unpackModuleId;
 let require = arg1;
 function ApplicationHook(applicationId) {
-  let obj = require(5616) /* useGetOrFetchApplications */;
+  let obj = require("../../../applications/useGetOrFetchApplications.tsx") /* useGetOrFetchApplications */;
   const getOrFetchApplication = obj.useGetOrFetchApplication(applicationId.applicationId);
   let tmp4 = null;
   if (null != getOrFetchApplication) {
     obj = { variant: "text-md/normal", color: "text-default", children: null };
     obj[2] = getOrFetchApplication.name;
-    tmp4 = callback(require(4281) /* Text */.Text, obj);
+    tmp4 = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   }
   return tmp4;
 }
@@ -486,7 +486,7 @@ prototype["render"] = function render() {
     obj = { style: null, children: null };
     obj[0] = tmp.timestamp;
     obj[1] = calendarResult;
-    let tmp8 = callback(require(1297) /* Button */.LegacyText, obj);
+    let tmp8 = callback(require("../../../../design/void/native.tsx") /* Button */.LegacyText, obj);
     let tmp9 = require;
     let tmp10 = require;
   } else {
@@ -494,7 +494,7 @@ prototype["render"] = function render() {
     obj[0] = tmp.timestamp;
     const items = [calendarResult, "\u2014", calendarResult1];
     obj[1] = items;
-    tmp8 = callback2(require(1297) /* Button */.LegacyText, obj);
+    tmp8 = callback2(require("../../../../design/void/native.tsx") /* Button */.LegacyText, obj);
     tmp9 = require;
     tmp10 = require;
   }

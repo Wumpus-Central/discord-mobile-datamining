@@ -7,7 +7,7 @@ const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("design/components/Illustration/native/redesign/generated/TopPattern.tsx");
 
 export const getTopPatternSource = function getTopPatternSource(theme) {
-  let obj = require(7544) /* getIllustrationSource */;
+  let obj = require("../../index.tsx") /* getIllustrationSource */;
   obj = {
     dark() {
       return callback(12696);
@@ -22,7 +22,7 @@ export const getTopPatternSource = function getTopPatternSource(theme) {
   return obj.getIllustrationSource(theme, obj);
 };
 export const useTopPatternSource = function useTopPatternSource() {
-  let obj = require(4131) /* AccessibilityAnnouncer */;
+  let obj = require("../../../../../shared.tsx") /* AccessibilityAnnouncer */;
   obj = {
     dark() {
       return callback(12696);
@@ -34,10 +34,10 @@ export const useTopPatternSource = function useTopPatternSource() {
       return callback(12698);
     }
   };
-  return require(7544) /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
+  return require("../../index.tsx") /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const TopPattern = function TopPattern(arg0) {
-  let obj = require(4131) /* AccessibilityAnnouncer */;
+  let obj = require("../../../../../shared.tsx") /* AccessibilityAnnouncer */;
   obj = {
     dark() {
       return callback(12696);
@@ -50,7 +50,7 @@ export const TopPattern = function TopPattern(arg0) {
     }
   };
   obj = {};
-  const illustrationSource = require(7544) /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
+  const illustrationSource = require("../../index.tsx") /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;
   return <Image />;

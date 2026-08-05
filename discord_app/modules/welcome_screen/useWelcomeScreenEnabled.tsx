@@ -11,7 +11,7 @@ export default function useWelcomeScreenEnabled(arg0, arg1) {
   const _require = arg0;
   const dependencyMap = arg1;
   const items = [ensureGuildLoaded, createGuildRecordFromRust, handleConnectionOpen];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const guild = outer1_4.getGuild(closure_1);
     let hasItem;
     if (guild != null) {

@@ -9,12 +9,12 @@ const require = arg1;
 const result = require("getSystemLocale").fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupFeaturesTableCardText.tsx");
 
 export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
-  let obj = { useCachedData: true, fetch: arg0 === require(1892) /* create */.PremiumSubscriptionGroupRole.MEMBER };
-  const tmp4 = importDefault(12663)(obj);
-  let obj1 = require(589) /* initialize */;
+  let obj = { useCachedData: true, fetch: arg0 === require("../../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx") /* create */.PremiumSubscriptionGroupRole.MEMBER };
+  const tmp4 = require("usePremiumGroupPrimaryName.tsx")(obj);
+  let obj1 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [reset];
   const stateFromStores = obj1.useStateFromStores(items, () => premiumGroupSubscription.getPremiumGroupSubscription());
-  if (arg0 === require(1892) /* create */.PremiumSubscriptionGroupRole.UNSPECIFIED) {
+  if (arg0 === require("../../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx") /* create */.PremiumSubscriptionGroupRole.UNSPECIFIED) {
     return null;
   } else {
     if (arg0 === tmp(1892).PremiumSubscriptionGroupRole.PRIMARY) {

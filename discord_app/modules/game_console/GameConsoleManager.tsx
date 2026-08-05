@@ -103,9 +103,9 @@ function _syncLocalState() {
 let prototype = function GameConsoleManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   const require = applyArgumentsResult;
-  const timeout = new require(4170) /* start */.Timeout();
+  const timeout = new require("../../../discord_common/js/packages/timers/Timers.tsx") /* start */.Timeout();
   applyArgumentsResult.rollbackCommandTimeout = timeout;
-  const timeout1 = new require(4170) /* start */.Timeout();
+  const timeout1 = new require("../../../discord_common/js/packages/timers/Timers.tsx") /* start */.Timeout();
   applyArgumentsResult.awaitRemoteTimeout = timeout1;
   applyArgumentsResult.actions = {
     WAIT_FOR_REMOTE_SESSION() {

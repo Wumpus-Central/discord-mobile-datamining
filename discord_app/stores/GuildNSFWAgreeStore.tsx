@@ -8,7 +8,7 @@ class GuildNSFWAgreeStore extends Store {
 }
 const prototype = GuildNSFWAgreeStore.prototype;
 prototype["initialize"] = function initialize() {
-  const Storage = require(595) /* Storage */.Storage;
+  const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
   let value = Storage.get(GuildNSFWAgreeStore);
   if (value == null) {
     value = closure_3;
@@ -18,14 +18,14 @@ prototype["initialize"] = function initialize() {
 prototype["didAgree"] = function didAgree(arg0) {
   let tmp = null != arg0;
   if (tmp) {
-    const result = require(4498) /* shouldShowAgeGateForVoiceChannel */.shouldAgeVerifyForAgeGate();
+    const result = require("../modules/age_gate/AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */.shouldAgeVerifyForAgeGate();
     let tmp5 = !result;
     if (!result) {
       tmp5 = table[arg0] || false;
       const tmp7 = table[arg0] || false;
     }
     tmp = tmp5;
-    const obj = require(4498) /* shouldShowAgeGateForVoiceChannel */;
+    const obj = require("../modules/age_gate/AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */;
   }
   return tmp;
 };
@@ -33,7 +33,7 @@ GuildNSFWAgreeStore.displayName = "GuildNSFWAgreeStore";
 const guildNSFWAgreeStore = new GuildNSFWAgreeStore(require("dispatcher"), {
   GUILD_NSFW_AGREE: function handleGuildNSFWAgree(guildId) {
     closure_3[guildId.guildId] = true;
-    const Storage = require(595) /* Storage */.Storage;
+    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     const result = Storage.set(GuildNSFWAgreeStore, closure_3);
   }
 });

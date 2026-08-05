@@ -10,7 +10,7 @@ export const useCanInviteMembers = function useCanInviteMembers(channelId) {
   const _require = channelId;
   const items = [ensureGuildLoaded, getUncachedChannelPermissions];
   const items1 = [channelId];
-  return _require(647).useStateFromStores(items, () => {
+  return _require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
     const channel = outer1_2.getChannel(closure_0);
     let canResult = null != channel;
     if (canResult) {

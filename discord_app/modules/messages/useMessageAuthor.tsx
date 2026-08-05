@@ -233,7 +233,7 @@ function computeMessageAuthor(channel) {
   let str = "???";
   if (null != user) {
     if (userName == null) {
-      let obj = importDefault(4124);
+      let obj = require("../../utils/UserUtils.tsx");
       userName = obj.getName(user);
     }
     str = userName;
@@ -296,7 +296,7 @@ const result = require("createGuildRoleRecordFromRust").fileFinishedImporting("m
 export default function useMessageNickAndColor(message) {
   let tmp = arg1;
   const tmp2 = useNullableMessageAuthor(message);
-  importDefault(38)(null != tmp2, "Result cannot be null because the message is not null");
+  require("../../../_runtime/metro/00038__.js")(null != tmp2, "Result cannot be null because the message is not null");
   if (arg1 == null) {
     tmp = tmp2;
   }
@@ -307,7 +307,7 @@ export const getMessageAuthor = function getMessageAuthor(message) {
   return getUserAuthor(message.author, channel.getChannel(message.channel_id));
 };
 export const useUserNickAndColor = function useUserNickAndColor(author, channel) {
-  importDefault(38)(true, "Result cannot be null because user and channel are not null");
+  require("../../../_runtime/metro/00038__.js")(true, "Result cannot be null because user and channel are not null");
   return useNullableUserAuthor(author, channel);
 };
 export { useNullableUserAuthor };

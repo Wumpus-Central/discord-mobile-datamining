@@ -13,13 +13,13 @@ let metroImportAll;
 const require = arg1;
 function PurchasedAssetOverlay() {
   const tmp = callback3();
-  obj = { style: tmp.overlayContainer, children: callback2(require(9151) /* CheckmarkLargeBoldIcon */.CheckmarkLargeBoldIcon, obj) };
+  obj = { style: tmp.overlayContainer, children: callback2(require("../../../design/components/Icon/native/redesign/generated/CheckmarkLargeBoldIcon.tsx") /* CheckmarkLargeBoldIcon */.CheckmarkLargeBoldIcon, obj) };
   obj = { size: "lg", style: tmp.overlayIcon };
   return callback2(closure_5, obj);
 }
 function DisabledAssetOverlay() {
   const tmp = callback3();
-  obj = { style: tmp.overlayContainer, children: callback2(require(4804) /* LockIcon */.LockIcon, obj) };
+  obj = { style: tmp.overlayContainer, children: callback2(require("../../../design/components/Icon/native/redesign/generated/LockIcon.tsx") /* LockIcon */.LockIcon, obj) };
   obj = { size: "lg", style: tmp.overlayIcon };
   return callback2(closure_5, obj);
 }
@@ -33,9 +33,9 @@ function ProductPreview(arg0) {
   ({ product, isPurchased } = arg0);
   ({ isDisabled, disableBundleStaticBackground, muteBundleStaticBackground, cardWidth } = arg0);
   const tmp = callback3();
-  let obj = require(6921) /* getProductOrbPrice */;
+  let obj = require("../utils/CollectiblesProductUtils.tsx") /* getProductOrbPrice */;
   const productType = obj.getProductType(product);
-  if (productType !== require(1901) /* CollectiblesItemType */.CollectiblesItemType.PROFILE_EFFECT) {
+  if (productType !== require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.PROFILE_EFFECT) {
     if (productType !== tmp2(1901).CollectiblesItemType.PROFILE_FRAME) {
       let str = "75%";
     }
@@ -93,14 +93,14 @@ function ProductPreviewInner(arg0) {
     obj[5] = disableBundleStaticBackground;
     obj[6] = muteBundleStaticBackground;
     obj[7] = memo;
-    return callback2(importDefault(9293), obj);
+    return callback2(require("BundleSampleV2.tsx"), obj);
   } else if (product.skuId === EXTERNAL_PRODUCT_SKU_IDS.ORB_PROFILE_BADGE) {
     obj = { source: null, style: null };
     const obj1 = { uri: null };
-    obj1[0] = importDefault(9334);
+    obj1[0] = require("../../../../discord_assets/assets/orbs/orb_profile_badge_icon-2x.png.js");
     obj[0] = obj1;
     obj[1] = tmp.externalProductImage;
-    return callback2(importDefault(5236), obj);
+    return callback2(require("../../../components_native/common/FastImage.tsx"), obj);
   } else {
     const ALL = tmp2(679).FractionalPremiumSKUsSets.ALL;
     if (ALL.has(product.skuId)) {
@@ -118,28 +118,28 @@ function ProductPreviewInner(arg0) {
       if (tmp2(1901).CollectiblesItemType.AVATAR_DECORATION === type) {
         const obj3 = { item: null, size: 100 };
         obj3[0] = first;
-        return callback2(importDefault(9305), obj3);
+        return callback2(require("AvatarDecorationSampleV2.tsx"), obj3);
       } else if (tmp2(1901).CollectiblesItemType.PROFILE_EFFECT === type) {
         const obj4 = { style: null, children: null };
         obj4[0] = tmp.profileEffectContainer;
         const obj5 = { item: null, hideBackground: true };
         obj5[0] = first;
-        obj4[1] = callback2(importDefault(9295), obj5);
+        obj4[1] = callback2(require("ProfileEffectSampleV2.tsx"), obj5);
         return callback2(closure_5, obj4);
       } else if (tmp2(1901).CollectiblesItemType.PROFILE_FRAME === type) {
         const obj6 = { style: null, children: null };
         obj6[0] = tmp.profileFrameContainer;
         const obj7 = { profileFrame: null, previewWidth: null, previewHeight: null, profileBackgroundColor: null };
         obj7[0] = first;
-        obj7[1] = tmp2(9262).COLLECTIBLES_SHOP_CARD_WIDTH - importDefault(712).space.PX_32;
+        obj7[1] = tmp2(9262).COLLECTIBLES_SHOP_CARD_WIDTH - require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_32;
         obj7[2] = closure_9;
-        obj7[3] = importDefault(712).colors.BACKGROUND_BASE_LOW;
-        obj6[1] = callback2(importDefault(9313), obj7);
+        obj7[3] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW;
+        obj6[1] = callback2(require("../profile_frames/native/previews/ProfileFrameSamplePreview.tsx"), obj7);
         return callback2(closure_5, obj6);
       } else if (tmp2(1901).CollectiblesItemType.NAMEPLATE === type) {
         const obj8 = { item: null };
         obj8[0] = first;
-        return callback2(importDefault(9315), obj8);
+        return callback2(require("../nameplates/native/NameplateCardPreview.tsx"), obj8);
       } else {
         return null;
       }
@@ -151,11 +151,11 @@ function AssetTileInternal(solidBackground) {
   if (flag === undefined) {
     flag = false;
   }
-  let obj = require(4129) /* hexToRgba */;
+  let obj = require("../../../utils/ColorUtils.tsx") /* hexToRgba */;
   const tmp = callback3();
-  const obj2 = require(4129) /* hexToRgba */;
+  const obj2 = require("../../../utils/ColorUtils.tsx") /* hexToRgba */;
   let num = 0.8;
-  const token = require(3989) /* map */.useToken(importDefault(712).colors.BACKGROUND_BASE_LOW);
+  const token = require("../../../design/tokens/native/useToken.tsx") /* map */.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW);
   if (flag) {
     num = 1;
   }
@@ -200,10 +200,10 @@ const memoResult = importAllResult.memo(function AssetTileV2(arg0) {
   let solidBackground;
   ({ product, isPurchased, isDisabled } = arg0);
   ({ solidBackground, disableBundleStaticBackground, muteBundleStaticBackground, cardWidth } = arg0);
-  let obj = require(9263) /* useDefaultVariantIndex */;
+  let obj = require("../hooks/useDefaultVariantIndex.tsx") /* useDefaultVariantIndex */;
   const defaultVariantIndex = obj.useDefaultVariantIndex(product);
   obj = { solidBackground, children: null };
-  obj = { product: require(6921) /* getProductOrbPrice */.getSelectedProduct(product, defaultVariantIndex), isPurchased, isDisabled, disableBundleStaticBackground, muteBundleStaticBackground, cardWidth };
+  obj = { product: require("../utils/CollectiblesProductUtils.tsx") /* getProductOrbPrice */.getSelectedProduct(product, defaultVariantIndex), isPurchased, isDisabled, disableBundleStaticBackground, muteBundleStaticBackground, cardWidth };
   const items = [callback2(ProductPreview, obj), , ];
   let tmp4Result = isPurchased;
   if (isPurchased) {

@@ -8,9 +8,9 @@ let result = require("ME").fileFinishedImporting("modules/guilds_bar/native/Guil
 
 export const getGuildFolderMenuItems = function getGuildFolderMenuItems(guildFolderMenuItems) {
   const _require = guildFolderMenuItems;
-  let obj = { IconComponent: _require(8359).EnvelopeIcon, label: null, action: null };
-  const intl = _require(1236).intl;
-  obj[1] = intl.string(_require(1236).t.e6RscS);
+  let obj = { IconComponent: _require("../../../design/components/Icon/native/redesign/generated/EnvelopeIcon.tsx").EnvelopeIcon, label: null, action: null };
+  const intl = _require("../../../intl/index.native.tsx").intl;
+  obj[1] = intl.string(_require("../../../intl/index.native.tsx").t.e6RscS);
   obj[2] = function action() {
     return outer1_2(function*() {
       if (guildFolderById === 2) {
@@ -71,9 +71,9 @@ export const getGuildFolderMenuItems = function getGuildFolderMenuItems(guildFol
     })();
   };
   const items = [obj, ];
-  obj = { IconComponent: _require(5920).SettingsIcon, label: null, action: null };
-  const intl2 = _require(1236).intl;
-  obj[1] = intl2.string(_require(1236).t.Dx7im5);
+  obj = { IconComponent: _require("../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx").SettingsIcon, label: null, action: null };
+  const intl2 = _require("../../../intl/index.native.tsx").intl;
+  obj[1] = intl2.string(_require("../../../intl/index.native.tsx").t.Dx7im5);
   obj[2] = function action() {
     return outer1_2(function*() {
       if (c2 === 2) {

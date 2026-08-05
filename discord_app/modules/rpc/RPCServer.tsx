@@ -54,7 +54,7 @@ prototype["handleConnect"] = function handleConnect(v) {
     if (null == currentUser) {
       v.close(constants2.CLOSE_NORMAL, "User logged out");
     } else {
-      obj.user = importDefault(10549)(currentUser);
+      obj.user = require("helpers/transformUser.tsx")(currentUser);
     }
   }
   self.dispatch(v, null, constants3.DISPATCH, constants5.READY, obj);
@@ -545,7 +545,7 @@ prototype["error"] = function error(arg0) {
   if (arg4 === undefined) {
     str = "Unknown Error";
   }
-  let obj = importDefault(698);
+  let obj = require("../../utils/AnalyticsUtils.tsx");
   obj.track(constants.RPC_SERVER_ERROR_CAUGHT, { command: DISPATCH, code: UNKNOWN_ERROR, message: str });
   obj = { code: UNKNOWN_ERROR, message: str };
   this.dispatch(arg0, tmp, DISPATCH, constants5.ERROR, obj);
@@ -641,7 +641,7 @@ prototype["removeSubscription"] = function removeSubscription(arg0, arg1, arg2) 
   const importDefault = arg0;
   const dependencyMap = arg1;
   let prototype = arg2;
-  importDefault(12).remove(this.subscriptions, (socket) => {
+  require("../../../_runtime/00012_apply.js").remove(this.subscriptions, (socket) => {
     let isEqualResult = socket.socket === callback;
     if (isEqualResult) {
       isEqualResult = socket.evt === table;
@@ -656,7 +656,7 @@ prototype["removeSubscription"] = function removeSubscription(arg0, arg1, arg2) 
 };
 prototype["removeSubscriptions"] = function removeSubscriptions(abortController) {
   const importDefault = abortController;
-  importDefault(12).remove(this.subscriptions, (socket) => socket.socket === closure_0);
+  require("../../../_runtime/00012_apply.js").remove(this.subscriptions, (socket) => socket.socket === closure_0);
   const result = this.dispatchIsSubscribedUpdate();
 };
 prototype["dispatchToSubscriptions"] = function dispatchToSubscriptions(RELATIONSHIP_UPDATE, arg1, closure_3, combined) {

@@ -119,7 +119,7 @@ function _startContactSyncForDiscoverability() {
 let result = require("set").fileFinishedImporting("modules/nuf/native/NUFActionCreators.tsx");
 
 export const startOnboarding = function startOnboarding() {
-  importDefault(709).dispatch({ type: "ONBOARDING_START" });
+  require("../../../Dispatcher.tsx").dispatch({ type: "ONBOARDING_START" });
 };
 export const nextOnboardingStep = function nextOnboardingStep(skip) {
   let flag = skip.skip;
@@ -130,14 +130,14 @@ export const nextOnboardingStep = function nextOnboardingStep(skip) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  importDefault(709).dispatch({ type: "ONBOARDING_STEP", skip: flag, skipAttempt: flag2 });
+  require("../../../Dispatcher.tsx").dispatch({ type: "ONBOARDING_STEP", skip: flag, skipAttempt: flag2 });
 };
 export const previousOnboardingStep = function previousOnboardingStep() {
-  importDefault(709).dispatch({ type: "ONBOARDING_STEP", back: true });
+  require("../../../Dispatcher.tsx").dispatch({ type: "ONBOARDING_STEP", back: true });
 };
 export const transitionToNUFGuildTemplatesModal = function transitionToNUFGuildTemplatesModal(SLIDE_IN) {
   let closure_0 = SLIDE_IN;
-  importDefault(4490).pushLazy(callback(function*() {
+  require("../../../actions/ModalActionCreators.tsx").pushLazy(callback(function*() {
     let closure_1 = tmp5;
     let closure_0 = tmp2;
     yield outer1_0(paths[10])(paths[9], paths.paths);
@@ -153,7 +153,7 @@ export const transitionToHubEmailConnectionModal = function transitionToHubEmail
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = importDefault(12010);
+  let obj = require("../../hub/native/components/HubEmailConnectionModalActionCreators.tsx");
   obj = {
     onCloseExtra(arg0) {
       if (arg0) {
@@ -169,7 +169,7 @@ export const transitionToHubEmailConnectionModal = function transitionToHubEmail
   obj.open(obj, SLIDE_IN);
 };
 export const openDiscoverabilityModal = function openDiscoverabilityModal() {
-  importDefault(4490).pushLazy(callback(function*() {
+  require("../../../actions/ModalActionCreators.tsx").pushLazy(callback(function*() {
     let closure_1 = tmp5;
     let callback = tmp2;
     yield outer1_0(paths[10])(paths[13], paths.paths);
@@ -181,10 +181,10 @@ export const openDiscoverabilityModal = function openDiscoverabilityModal() {
   }), {}, closure_10);
 };
 export const closeDiscoverabilityModal = function closeDiscoverabilityModal(skip) {
-  let obj = importDefault(4490);
+  let obj = require("../../../actions/ModalActionCreators.tsx");
   obj.popWithKey(closure_10);
   obj = { type: "ONBOARDING_STEP", skip };
-  importDefault(709).dispatch(obj);
+  require("../../../Dispatcher.tsx").dispatch(obj);
 };
 export const startContactSyncForDiscoverability = function startContactSyncForDiscoverability(arg0) {
   const self = this;

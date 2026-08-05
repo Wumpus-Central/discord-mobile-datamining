@@ -7,7 +7,7 @@ const result = require("initialize").fileFinishedImporting("modules/guild_role_s
 
 export default function useUserRoleSubscriptionRelationship() {
   let items = [computeRolesForGuild];
-  return require(589) /* initialize */.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
     let obj;
     const items = [computeRolesForGuild];
     [obj] = items;

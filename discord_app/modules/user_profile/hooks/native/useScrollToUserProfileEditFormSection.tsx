@@ -12,7 +12,7 @@ export default function useScrollToUserProfileEditFormSection(arg0, arg1) {
   const dependencyMap = arg1;
   ref = ref.useRef({});
   const items = [maybeApplyNoTextColorForLightCustomTheme];
-  let closure_3 = _require(589).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  let closure_3 = _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const effect = ref.useEffect(() => {
     let tmp2 = null != closure_1;
     if (tmp2) {

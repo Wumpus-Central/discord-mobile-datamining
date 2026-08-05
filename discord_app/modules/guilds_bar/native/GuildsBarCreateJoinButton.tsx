@@ -126,20 +126,20 @@ function _handleCreateJoinGuildPress() {
 let closure_10 = createCacheKey.createStyles({ stretch: { alignSelf: "stretch" } });
 let closure_12 = { onPress: handleCreateJoinGuildPress };
 const memoResult = require("set").memo(function GuildsBarCreateJoinButton() {
-  const tmp = importDefault(1348)("GuildsBarCreateJoinButton");
-  let obj = require(15291) /* UnreadIndicator */;
+  const tmp = require("../../themes/experiments/MobileVisualRefreshExperiment.tsx")("GuildsBarCreateJoinButton");
+  let obj = require("GuildsBarAnimatedItemWrapper.tsx") /* UnreadIndicator */;
   obj = { style: callback2().stretch, children: null };
   const tmp2 = callback2();
   obj = { selected: false, circle: !tmp, unread: false, styles: obj.useGuildsBarAnimatedWrapperStyles(), overState: "y", config: 2010, label: null, expandedChildren: null, children: false };
   obj[5] = closure_12;
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles();
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[6] = intl.string(require(1236) /* getSystemLocale */.t.l5WIbf);
-  obj[7] = jsx(require(15348) /* HomeDrawerAddServerRowExpandedChildren */.HomeDrawerAddServerRowExpandedChildren, {});
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[6] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.l5WIbf);
+  obj[7] = jsx(require("../../home_drawer/native/HomeDrawerAddServerRow.tsx") /* HomeDrawerAddServerRowExpandedChildren */.HomeDrawerAddServerRowExpandedChildren, {});
   const obj1 = { size: "md", color: null };
-  obj1[1] = importDefault(712).colors.MOBILE_GUILDBAR_ICON_DEFAULT;
-  obj[8] = jsx(require(9445) /* CirclePlusIcon */.CirclePlusIcon, { size: "md", color: null });
-  obj[1] = jsx(importDefault(15291), { selected: false, circle: !tmp, unread: false, styles: obj.useGuildsBarAnimatedWrapperStyles(), overState: "y", config: 2010, label: null, expandedChildren: null, children: false });
+  obj1[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_GUILDBAR_ICON_DEFAULT;
+  obj[8] = jsx(require("../../../design/components/Icon/native/redesign/generated/CirclePlusIcon.tsx") /* CirclePlusIcon */.CirclePlusIcon, { size: "md", color: null });
+  obj[1] = jsx(require("GuildsBarAnimatedItemWrapper.tsx"), { selected: false, circle: !tmp, unread: false, styles: obj.useGuildsBarAnimatedWrapperStyles(), overState: "y", config: 2010, label: null, expandedChildren: null, children: false });
   return <View selected={false} circle={!tmp} unread={false} styles={obj.useGuildsBarAnimatedWrapperStyles()} overState="y" config={2010} label={null} expandedChildren={null}>{false}</View>;
 });
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/guilds_bar/native/GuildsBarCreateJoinButton.tsx");

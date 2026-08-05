@@ -3,9 +3,9 @@ const result = require("set").fileFinishedImporting("modules/self_mod/inappropri
 
 export const updateDmSafetyAlertsSetting = function updateDmSafetyAlertsSetting(arg0) {
   const _require = arg0;
-  const PreloadedUserSettingsActionCreators = _require(1355).PreloadedUserSettingsActionCreators;
+  const PreloadedUserSettingsActionCreators = _require("../../user_settings/UserSettingsProtoActionCreators.tsx").PreloadedUserSettingsActionCreators;
   return PreloadedUserSettingsActionCreators.updateAsync("privacy", (arg0) => {
     const BoolValue = callback(outer1_1[1]).BoolValue;
     arg0.inappropriateConversationWarnings = BoolValue.create({ value: callback });
-  }, _require(1355).UserSettingsDelay.INFREQUENT_USER_ACTION);
+  }, _require("../../user_settings/UserSettingsProtoActionCreators.tsx").UserSettingsDelay.INFREQUENT_USER_ACTION);
 };

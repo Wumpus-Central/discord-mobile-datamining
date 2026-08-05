@@ -11,16 +11,16 @@ export default function InAppReportsFeedbackActionSheet(arg0) {
   let importDefault;
   let require;
   ({ reportId: require, reportType: importDefault } = arg0);
-  let obj = require(16300) /* newGetEnglishMessageText */;
+  let obj = require("../../../../../intl/migration.tsx") /* newGetEnglishMessageText */;
   const result = obj.improperGetEnglishIntlMessageText("CALL_FEEDBACK_OPTION_OTHER");
   obj = { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, feedbackReasons: null, otherKey: null, trackOpen: null, trackReport: null };
-  const tmp = importDefault(16299)();
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.MP5lDj);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[3] = intl2.string(require(1236) /* getSystemLocale */.t["7Ct0Dj"]);
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj[4] = intl3.string(require(1236) /* getSystemLocale */.t.FJmoxF);
+  const tmp = require("../../../getInAppReportsFeedbackOptions.tsx")();
+  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.MP5lDj);
+  const intl2 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[3] = intl2.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["7Ct0Dj"]);
+  const intl3 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[4] = intl3.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.FJmoxF);
   obj[5] = tmp;
   const items = [result];
   obj[6] = items;
@@ -64,5 +64,5 @@ export default function InAppReportsFeedbackActionSheet(arg0) {
       const obj4 = outer1_0(tmp2[11]);
     }
   };
-  return jsx(importDefault(11022), { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, feedbackReasons: null, otherKey: null, trackOpen: null, trackReport: null });
+  return jsx(require("../../../../feedback/native/FeedbackActionSheet.tsx"), { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, feedbackReasons: null, otherKey: null, trackOpen: null, trackReport: null });
 };

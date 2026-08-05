@@ -32,7 +32,7 @@ function deepEqualImpl(set, set1, map, arg3) {
               if (set instanceof Set) {
                 const _Set2 = Set;
                 if (set1 instanceof Set) {
-                  return require(1414) /* areSetsEqual */.areSetsEqual(set, set1);
+                  return require("../../../../discord_common/js/shared/utils/SetUtils.tsx") /* areSetsEqual */.areSetsEqual(set, set1);
                 }
               }
               const _Array = Array;
@@ -485,8 +485,8 @@ function logErrorsToAnalytics(arg0, items) {
             ({ numMissingKeys: obj5[2], numExtraKeys: obj5[3] } = tmp21);
             const _JSON = JSON;
             obj[4] = JSON.stringify(tmp21.mismatchedFields);
-            importDefault(698).track(AnalyticEvents.LIBDISCORE_KV_DUAL_READ_ERROR, obj);
-            const obj4 = importDefault(698);
+            require("../../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.LIBDISCORE_KV_DUAL_READ_ERROR, obj);
+            const obj4 = require("../../../utils/AnalyticsUtils.tsx");
           }
         }
       }

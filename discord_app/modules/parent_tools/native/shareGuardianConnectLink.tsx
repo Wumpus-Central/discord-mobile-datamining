@@ -8,9 +8,9 @@ export const shareGuardianConnectLink = function shareGuardianConnectLink(global
   if (username == null) {
     username = globalName.username;
   }
-  let obj = require(8845) /* showShareActionSheet */;
+  let obj = require("../../action_sheet/native/showShareActionSheet.tsx") /* showShareActionSheet */;
   obj = { message: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.formatToPlainString(importDefault(2285).lVD5Nd, { username, url: callback(globalName.id, closure_2) });
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.formatToPlainString(require("../FamilyCenter.messages.js").lVD5Nd, { username, url: callback(globalName.id, closure_2) });
   obj.showShareActionSheet(obj, "Family Center Connect Guardian");
 };

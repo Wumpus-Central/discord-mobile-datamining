@@ -46,7 +46,7 @@ function VideoStream(streamId) {
   return callback(setHasActiveVideoOutputSink(10614), obj);
 }
 function markContentReady() {
-  const ComponentDispatch = require(1231) /* ComponentDispatcher */.ComponentDispatch;
+  const ComponentDispatch = require("../../../../utils/ComponentDispatchUtils.tsx") /* ComponentDispatcher */.ComponentDispatch;
   ComponentDispatch.dispatch(constants2.VOICE_PANEL_PIP_CONTENT_READY);
 }
 function InnerStroke(style) {
@@ -519,7 +519,7 @@ function AnimatedVideoWrapper(arg0) {
   let style;
   let targetDimensionsSubscription;
   ({ participantId, style, children } = arg0);
-  targetDimensionsSubscription = targetDimensionsSubscription(11560).useTargetDimensionsSubscription(participantId, importAllResult.useContext(importDefault(11557)).layoutManager);
+  targetDimensionsSubscription = targetDimensionsSubscription(11560).useTargetDimensionsSubscription(participantId, importAllResult.useContext(require("../VoicePanelStateContext.tsx")).layoutManager);
   const obj = targetDimensionsSubscription(11560);
   const fn = function u() {
     let height;
@@ -541,7 +541,7 @@ function AnimatedVideoWrapper(arg0) {
   style = [, ];
   style[0] = style;
   style[1] = animatedStyle;
-  return callback(importDefault(7819), { style, children });
+  return callback(require("../../../core/native/ReanimatedNativeView.tsx"), { style, children });
 }
 function Stream(participantId) {
   let c2;

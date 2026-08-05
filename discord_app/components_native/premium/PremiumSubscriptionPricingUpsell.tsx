@@ -227,13 +227,13 @@ let result = require("get ActivityIndicator").fileFinishedImporting("components_
 
 export default function PremiumSubscriptionPricingUpsell() {
   const tmp = callback3();
-  let obj = require(12597) /* getSubscriptionPlansLoaded */;
+  let obj = require("../../modules/billing/hooks/useSubscriptionPlansLoaded.tsx") /* getSubscriptionPlansLoaded */;
   obj = { style: tmp.pricingSection, children: null };
   const subscriptionPlansLoaded = obj.useSubscriptionPlansLoaded();
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[4] = intl.string(require(1236) /* getSystemLocale */.t["3x1PFE"]);
-  const items = [callback(require(4281) /* Text */.Text, obj), ];
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[4] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["3x1PFE"]);
+  const items = [callback(require("../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
   let tmp5Result = null;
   if (subscriptionPlansLoaded) {
     tmp5Result = callback(PricingSubheadingCopy, {});

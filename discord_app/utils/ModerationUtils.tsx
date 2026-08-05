@@ -31,7 +31,7 @@ function mapColorToHighlightColor(arg0) {
       }
     }
   }
-  obj = require(711) /* unsafe_getRawColor */;
+  obj = require("../../discord_common/js/packages/tokens/shims.native.tsx") /* unsafe_getRawColor */;
 }
 ({ VerificationLevels: obj1, VerificationCriteria: c3, GuildExplicitContentFilterTypes: c4 } = ME);
 const result = require("unsafe_getRawColor").fileFinishedImporting("utils/ModerationUtils.tsx");
@@ -50,11 +50,11 @@ export const generateVerificationLevelOptions = function generateVerificationLev
     flag2 = false;
   }
   let obj = { name: null, desc: null, value: null, disabled: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.PEzffq);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.PEzffq);
+  const intl2 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
   const string = intl2.string;
-  const t = require(1236) /* getSystemLocale */.t;
+  const t = require("../intl/index.native.tsx") /* getSystemLocale */.t;
   if (flag) {
     let stringResult = string(t.j9WtHx);
   } else {
@@ -66,9 +66,9 @@ export const generateVerificationLevelOptions = function generateVerificationLev
   const items = [obj, , , , ];
   obj = { name: null, desc: null, value: null, color: null };
   const intl3 = tmp(1236).intl;
-  obj[0] = intl3.string(require(1236) /* getSystemLocale */.t.SsCK8I);
+  obj[0] = intl3.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.SsCK8I);
   const intl4 = tmp(1236).intl;
-  obj[1] = intl4.string(require(1236) /* getSystemLocale */.t["8GCOX6"]);
+  obj[1] = intl4.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["8GCOX6"]);
   obj[2] = constants.LOW;
   let unsafe_getRawColorResult;
   if (!flag2) {
@@ -79,9 +79,9 @@ export const generateVerificationLevelOptions = function generateVerificationLev
   items[1] = obj;
   obj = { name: null, desc: null, value: null, color: null };
   const intl5 = tmp(1236).intl;
-  obj[0] = intl5.string(require(1236) /* getSystemLocale */.t.WwNoR4);
+  obj[0] = intl5.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.WwNoR4);
   const intl6 = tmp(1236).intl;
-  obj[1] = intl6.formatToPlainString(require(1236) /* getSystemLocale */.t.VS14ga, { min: constants2.ACCOUNT_AGE });
+  obj[1] = intl6.formatToPlainString(require("../intl/index.native.tsx") /* getSystemLocale */.t.VS14ga, { min: constants2.ACCOUNT_AGE });
   obj[2] = constants.MEDIUM;
   let unsafe_getRawColorResult1;
   if (!flag2) {
@@ -92,9 +92,9 @@ export const generateVerificationLevelOptions = function generateVerificationLev
   items[2] = obj;
   const obj2 = { name: null, desc: null, value: null, color: null };
   const intl7 = tmp(1236).intl;
-  obj2[0] = intl7.string(require(1236) /* getSystemLocale */.t.I2jMUF);
+  obj2[0] = intl7.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.I2jMUF);
   const intl8 = tmp(1236).intl;
-  obj2[1] = intl8.formatToPlainString(require(1236) /* getSystemLocale */.t["r+b3I4"], { min: constants2.MEMBER_AGE });
+  obj2[1] = intl8.formatToPlainString(require("../intl/index.native.tsx") /* getSystemLocale */.t["r+b3I4"], { min: constants2.MEMBER_AGE });
   obj2[2] = constants.HIGH;
   let unsafe_getRawColorResult2;
   if (!flag2) {
@@ -105,9 +105,9 @@ export const generateVerificationLevelOptions = function generateVerificationLev
   items[3] = obj2;
   const obj4 = { name: null, desc: null, value: null, color: null };
   const intl9 = tmp(1236).intl;
-  obj4[0] = intl9.string(require(1236) /* getSystemLocale */.t.cJY8w9);
+  obj4[0] = intl9.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.cJY8w9);
   const intl10 = tmp(1236).intl;
-  obj4[1] = intl10.string(require(1236) /* getSystemLocale */.t.PWaKme);
+  obj4[1] = intl10.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.PWaKme);
   obj4[2] = constants.VERY_HIGH;
   let unsafe_getRawColorResult3;
   if (!flag2) {
@@ -124,19 +124,19 @@ export const generateContentFilterHighlightedOptions = function generateContentF
     flag = false;
   }
   let obj = { name: null, desc: null, value: null, color: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.iHuPE6);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require(1236) /* getSystemLocale */.t["Z+yUWF"]);
+  const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.iHuPE6);
+  const intl2 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl2.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["Z+yUWF"]);
   obj[2] = constants3.ALL_MEMBERS;
-  obj[3] = require(711) /* unsafe_getRawColor */.unsafe_getRawColor("RED_400");
+  obj[3] = require("../../discord_common/js/packages/tokens/shims.native.tsx") /* unsafe_getRawColor */.unsafe_getRawColor("RED_400");
   const items = [obj, , ];
   obj = { name: null, desc: null, value: null, disabled: null, color: null };
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl3.string(require(1236) /* getSystemLocale */.t.ynfFaI);
-  const intl4 = require(1236) /* getSystemLocale */.intl;
+  const intl3 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl3.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.ynfFaI);
+  const intl4 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
   const string = intl4.string;
-  const t = require(1236) /* getSystemLocale */.t;
+  const t = require("../intl/index.native.tsx") /* getSystemLocale */.t;
   if (flag) {
     let stringResult = string(t.j9WtHx);
   } else {
@@ -150,7 +150,7 @@ export const generateContentFilterHighlightedOptions = function generateContentF
   items[1] = obj;
   obj = { name: null, desc: null, value: null, disabled: null, color: null };
   const intl5 = tmp(1236).intl;
-  obj[0] = intl5.string(require(1236) /* getSystemLocale */.t.VbSyAx);
+  obj[0] = intl5.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.VbSyAx);
   const intl6 = tmp(1236).intl;
   const string2 = intl6.string;
   const t2 = tmp(1236).t;
@@ -173,18 +173,18 @@ export const generateContentFilterOptions = function generateContentFilterOption
     flag = false;
   }
   let obj = { name: null, desc: null, value: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.iHuPE6);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require(1236) /* getSystemLocale */.t["Z+yUWF"]);
+  const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.iHuPE6);
+  const intl2 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl2.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["Z+yUWF"]);
   obj[2] = constants3.ALL_MEMBERS;
   const items = [obj, , ];
   obj = { name: null, desc: null, value: null, disabled: null };
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl3.string(require(1236) /* getSystemLocale */.t.ynfFaI);
-  const intl4 = require(1236) /* getSystemLocale */.intl;
+  const intl3 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl3.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.ynfFaI);
+  const intl4 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
   const string = intl4.string;
-  const t = require(1236) /* getSystemLocale */.t;
+  const t = require("../intl/index.native.tsx") /* getSystemLocale */.t;
   if (flag) {
     let stringResult = string(t.j9WtHx);
   } else {
@@ -196,7 +196,7 @@ export const generateContentFilterOptions = function generateContentFilterOption
   items[1] = obj;
   obj = { name: null, desc: null, value: null, disabled: null };
   const intl5 = tmp(1236).intl;
-  obj[0] = intl5.string(require(1236) /* getSystemLocale */.t.VbSyAx);
+  obj[0] = intl5.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.VbSyAx);
   const intl6 = tmp(1236).intl;
   const string2 = intl6.string;
   const t2 = tmp(1236).t;
@@ -213,54 +213,54 @@ export const generateContentFilterOptions = function generateContentFilterOption
 };
 export const generateDmSpamOptions = function generateDmSpamOptions() {
   let obj = { name: null, desc: null, value: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t["4IaoCI"]);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.TgipjE);
-  obj[2] = require(1306) /* create */.DmSpamFilterV2.FRIENDS_AND_NON_FRIENDS;
+  const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["4IaoCI"]);
+  const intl2 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl2.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.TgipjE);
+  obj[2] = require("../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.DmSpamFilterV2.FRIENDS_AND_NON_FRIENDS;
   const items = [obj, , ];
   obj = { name: null, desc: null, value: null };
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl3.string(require(1236) /* getSystemLocale */.t["6NnX6F"]);
-  const intl4 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl4.string(require(1236) /* getSystemLocale */.t["+dw1qu"]);
-  obj[2] = require(1306) /* create */.DmSpamFilterV2.NON_FRIENDS;
+  const intl3 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl3.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["6NnX6F"]);
+  const intl4 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl4.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["+dw1qu"]);
+  obj[2] = require("../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.DmSpamFilterV2.NON_FRIENDS;
   items[1] = obj;
   obj = { name: null, desc: null, value: null };
-  const intl5 = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl5.string(require(1236) /* getSystemLocale */.t["1tiAFz"]);
-  const intl6 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl6.string(require(1236) /* getSystemLocale */.t.LKTyeA);
-  obj[2] = require(1306) /* create */.DmSpamFilterV2.DISABLED;
+  const intl5 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl5.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["1tiAFz"]);
+  const intl6 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl6.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.LKTyeA);
+  obj[2] = require("../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.DmSpamFilterV2.DISABLED;
   items[2] = obj;
   return items;
 };
 export const generateExplicitImageOptions = function generateExplicitImageOptions() {
   let obj = { name: null, desc: null, value: null, color: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.PhNlhz);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require(1236) /* getSystemLocale */.t["Fw+Lvp"]);
+  const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.PhNlhz);
+  const intl2 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl2.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["Fw+Lvp"]);
   obj[2] = constants4.FRIENDS_AND_NON_FRIENDS;
-  obj[3] = require(711) /* unsafe_getRawColor */.unsafe_getRawColor("GREEN_360");
+  obj[3] = require("../../discord_common/js/packages/tokens/shims.native.tsx") /* unsafe_getRawColor */.unsafe_getRawColor("GREEN_360");
   const items = [obj, , ];
   obj = { name: null, desc: null, value: null, color: null };
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl3.string(require(1236) /* getSystemLocale */.t["8ioJ4S"]);
-  const intl4 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl4.string(require(1236) /* getSystemLocale */.t.z4l4Cr);
+  const intl3 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl3.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["8ioJ4S"]);
+  const intl4 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl4.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.z4l4Cr);
   obj[2] = constants4.NON_FRIENDS;
-  const obj2 = require(711) /* unsafe_getRawColor */;
-  obj[3] = require(711) /* unsafe_getRawColor */.unsafe_getRawColor("YELLOW_360");
+  const obj2 = require("../../discord_common/js/packages/tokens/shims.native.tsx") /* unsafe_getRawColor */;
+  obj[3] = require("../../discord_common/js/packages/tokens/shims.native.tsx") /* unsafe_getRawColor */.unsafe_getRawColor("YELLOW_360");
   items[1] = obj;
   obj = { name: null, desc: null, value: null, color: null };
-  const intl5 = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl5.string(require(1236) /* getSystemLocale */.t.FLfuhL);
-  const intl6 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl6.string(require(1236) /* getSystemLocale */.t.MoZlaD);
+  const intl5 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl5.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.FLfuhL);
+  const intl6 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl6.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.MoZlaD);
   obj[2] = constants4.DISABLED;
-  const obj4 = require(711) /* unsafe_getRawColor */;
-  obj[3] = require(711) /* unsafe_getRawColor */.unsafe_getRawColor("RED_400");
+  const obj4 = require("../../discord_common/js/packages/tokens/shims.native.tsx") /* unsafe_getRawColor */;
+  obj[3] = require("../../discord_common/js/packages/tokens/shims.native.tsx") /* unsafe_getRawColor */.unsafe_getRawColor("RED_400");
   items[2] = obj;
   return items;
 };

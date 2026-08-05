@@ -5,8 +5,8 @@ const result = require("enforcing").fileFinishedImporting("modules/gateway/Gatew
 
 export const supportsZstd = function supportsZstd() {
   if (obj.isAndroid()) {
-    let flag = importDefault(12825).getConstants().supportsZstd;
-    const obj2 = importDefault(12825);
+    let flag = require("../../../discord_common/js/packages/rtn-codegen/js/NativeCompressionModule.tsx").getConstants().supportsZstd;
+    const obj2 = require("../../../discord_common/js/packages/rtn-codegen/js/NativeCompressionModule.tsx");
   } else {
     const DCDCompressionManager = NativeModules.DCDCompressionManager;
     flag = undefined;

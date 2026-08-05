@@ -23,7 +23,7 @@ export default function ShowAllRow(users) {
   let obj = { onPress, end: true, height: "100%", label: null, trailing: null };
   obj = { style: tmp.labelContainer, children: null };
   obj = { size: null, "aria-label": "", children: null };
-  obj[0] = require(1297) /* Button */.AvatarSizes.XSMALL_20;
+  obj[0] = require("../../../../../design/void/native.tsx") /* Button */.AvatarSizes.XSMALL_20;
   const substr = users.slice(0, 2);
   obj[2] = substr.map((getAvatarSource) => {
     const obj = { source: null, size: null };
@@ -31,13 +31,13 @@ export default function ShowAllRow(users) {
     obj[1] = callback(1297).AvatarSizes.XSMALL_20;
     return callback2(callback(1297).Avatar, obj, arg1);
   });
-  const items = [callback(require(13335) /* AvatarDuoPile */.AvatarDuoPile, obj), ];
+  const items = [callback(require("../../../../../design/components/Pile/native/AvatarDuoPile.native.tsx") /* AvatarDuoPile */.AvatarDuoPile, obj), ];
   const obj1 = { style: tmp.showAllText, variant: "text-md/semibold", color: "text-brand", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj1[3] = intl.format(require(1236) /* getSystemLocale */.t.NrzztX, { count });
-  items[1] = callback(require(4281) /* Text */.Text, obj1);
+  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj1[3] = intl.format(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.NrzztX, { count });
+  items[1] = callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
   obj[1] = items;
   obj[3] = callback2(View, obj);
-  obj[4] = callback(require(5315) /* TableRowInner */.TableRow.Arrow, {});
-  return callback(require(5315) /* TableRowInner */.TableRow, obj);
+  obj[4] = callback(require("../../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow.Arrow, {});
+  return callback(require("../../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj);
 };

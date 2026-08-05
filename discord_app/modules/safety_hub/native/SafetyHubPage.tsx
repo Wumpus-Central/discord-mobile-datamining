@@ -16,7 +16,7 @@ let map1;
 let unpackModuleId;
 const require = arg1;
 function AutomatedUnderageAppealStatus() {
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [handleSafetyHubRequestAgeVerificationResetModalAction];
   const stateFromStores = obj.useStateFromStores(items, () => ageCheckStatus.getAgeCheckStatus());
   if (AgeCheckStatus.SUCCESS === stateFromStores) {

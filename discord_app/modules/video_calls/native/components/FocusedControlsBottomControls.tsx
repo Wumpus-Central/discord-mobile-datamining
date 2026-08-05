@@ -86,7 +86,7 @@ function FocusedControlsBottomDrawerTooltip(positionY) {
     const intl = tmp2(1236).intl;
     obj1[7] = intl.string(tmp2(1236).t.zYzy2i);
     obj[1] = callback2(tmp2(1297).Tooltip, obj1);
-    tmp7 = callback2(importDefault(4146).View, obj);
+    tmp7 = callback2(require("../../../reanimated/ReanimatedRexport.tsx").View, obj);
   }
   return tmp7;
 }
@@ -291,7 +291,7 @@ class FocusedControlsBottomDrawer {
       if (!tmp) {
         num = -derivedValue.get();
       }
-      const result = first1.set(require(4286) /* CONFIG_NEVER_ANIMATE_TIMING */.withTiming(num, obj3));
+      const result = first1.set(require("../../../../design/animation/reanimated/timing/timing.tsx") /* CONFIG_NEVER_ANIMATE_TIMING */.withTiming(num, obj3));
       if (tmp) {
         outer2_9();
         callback();
@@ -630,12 +630,12 @@ export default function FocusedControlsBottomControls(omitPTT) {
   let tmp4Result = null;
   if (!flag) {
     obj = { look: null, style: null, sendCallback: null, stopCallback: null };
-    obj[0] = _require(10228).CallPTTButtonLooks.BLUR;
+    obj[0] = _require("../../../../components_native/calls/CallPTTButton.tsx").CallPTTButtonLooks.BLUR;
     obj[1] = tmp.ptbButton;
     obj[2] = closure_8;
     obj[3] = closure_9;
-    tmp4Result = tmp4(importDefault(10228), obj);
-    const tmp11 = importDefault(10228);
+    tmp4Result = tmp4(require("../../../../components_native/calls/CallPTTButton.tsx"), obj);
+    const tmp11 = require("../../../../components_native/calls/CallPTTButton.tsx");
   }
   items[2] = tmp4Result;
   obj[1] = items;

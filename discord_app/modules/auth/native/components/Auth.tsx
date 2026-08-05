@@ -17,14 +17,14 @@ const require = arg1;
 function NavigatorWithCaptchaHook() {
   let require;
   let tmp9;
-  let obj = require(15026) /* useIsHCaptchaModalOpenTracking */;
+  let obj = require("utils/useIsHCaptchaModalOpenTracking.tsx") /* useIsHCaptchaModalOpenTracking */;
   const isHCaptchaModalOpenTracking = obj.useIsHCaptchaModalOpenTracking();
   const tmp6 = callback3();
-  const tmp5 = importDefault(8283)();
+  const tmp5 = require("../useWideAuthView.tsx")();
   [tmp9, require] = callback(importAllResult.useState(AuthStates.WELCOME), 2);
   const tmp10 = callback(importAllResult.useState(false), 2);
   importDefault = tmp11;
-  let obj1 = require(1595) /* KeyboardChatScrollView */;
+  let obj1 = require("../../../../../_runtime/01595_KeyboardChatScrollView.js") /* KeyboardChatScrollView */;
   const keyboardState = obj1.useKeyboardState((height) => height.height);
   callback = importAllResult.useCallback((arg0) => {
     let name;
@@ -43,8 +43,8 @@ function NavigatorWithCaptchaHook() {
   const tmp15 = closure_10;
   const tmp16 = closure_9;
   const tmp8 = callback(importAllResult.useState(AuthStates.WELCOME), 2);
-  obj[0] = require(15027) /* registerAsset */;
-  const children = [callback2(importDefault(8313), obj), ];
+  obj[0] = require("../../../../../_runtime/15027_registerAsset.js") /* registerAsset */;
+  const children = [callback2(require("atoms/BackgroundImage.tsx"), obj), ];
   if (tmp5) {
     obj = { value: null, children: null };
     obj[0] = tmp11;
@@ -166,7 +166,7 @@ let closure_12 = Object.fromEntries(headerTitle.map((arg0) => {
   let tmp8 = null;
   if (set.has(tmp)) {
     const obj1 = { cardStyleInterpolator: null };
-    obj1[0] = require(5667) /* createStackNavigator */.CardStyleInterpolators.forFadeFromCenter;
+    obj1[0] = require("../../../../../_runtime/05667_createStackNavigator.js") /* createStackNavigator */.CardStyleInterpolators.forFadeFromCenter;
     tmp8 = obj1;
   }
   const merged3 = Object.assign(tmp8);
@@ -197,7 +197,7 @@ const memoResult = importAllResult.memo(function Auth() {
     return () => callback(table[21]).terminate();
   }, []);
   const layoutEffect = importAllResult.useLayoutEffect(() => callback(6843).trackAppUIViewed(), []);
-  importDefault(15032)();
+  require("../useOrientationLock.tsx")();
   let closure_0 = importAllResult.useRef(undefined);
   return callback2(context.Provider, { value: importAllResult.useCallback(() => callback(outer1_2[7]).getTrackRegTransition(callback), [])(), children: callback2(NavigatorWithCaptchaHook, {}) });
 });

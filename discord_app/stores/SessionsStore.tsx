@@ -31,7 +31,7 @@ prototype["getSession"] = function getSession() {
 };
 prototype["getRemoteActivities"] = function getRemoteActivities() {
   const importDefault = store.getSessionId();
-  const found = importDefault(12).find(closure_4, (active) => {
+  const found = require("../../_runtime/00012_apply.js").find(closure_4, (active) => {
     active = active.active;
     if (active) {
       active = active.sessionId !== closure_0;
@@ -42,7 +42,7 @@ prototype["getRemoteActivities"] = function getRemoteActivities() {
 };
 prototype["getHiddenActivities"] = function getHiddenActivities() {
   const importDefault = store.getSessionId();
-  const found = importDefault(12).find(closure_4, (active) => {
+  const found = require("../../_runtime/00012_apply.js").find(closure_4, (active) => {
     active = active.active;
     if (active) {
       active = active.sessionId !== closure_0;
@@ -61,7 +61,7 @@ prototype["getSessionById"] = function getSessionById(sessionId) {
   return table[sessionId];
 };
 prototype["getActiveSession"] = function getActiveSession() {
-  return importDefault(12).find(closure_4, (active) => active.active);
+  return require("../../_runtime/00012_apply.js").find(closure_4, (active) => active.active);
 };
 prototype["getRemoteApplicationActivity"] = function getRemoteApplicationActivity(application_id) {
   const importDefault = application_id;
@@ -69,7 +69,7 @@ prototype["getRemoteApplicationActivity"] = function getRemoteApplicationActivit
     return null;
   } else {
     const dependencyMap = store.getSessionId();
-    const found = importDefault(12).find(closure_4, (active) => {
+    const found = require("../../_runtime/00012_apply.js").find(closure_4, (active) => {
       active = active.active;
       if (active) {
         active = active.sessionId !== closure_1;
@@ -91,7 +91,7 @@ prototype["getRemoteApplicationActivity"] = function getRemoteApplicationActivit
       }
       return found1;
     }
-    const arr3 = importDefault(12);
+    const arr3 = require("../../_runtime/00012_apply.js");
   }
 };
 SessionsStore.displayName = "SessionsStore";

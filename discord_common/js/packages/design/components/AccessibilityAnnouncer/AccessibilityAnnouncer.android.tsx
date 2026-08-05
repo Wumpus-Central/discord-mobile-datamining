@@ -6,8 +6,8 @@ let result = require("set").fileFinishedImporting("../discord_common/js/packages
 export const AccessibilityAnnouncer = {
   announce(intl, polite) {
     if ("polite" === polite) {
-      const result = require(3999) /* updateAccessibilityAnnouncerLiveRegionMessage */.updateAccessibilityAnnouncerLiveRegionMessage(intl);
-      const obj = require(3999) /* updateAccessibilityAnnouncerLiveRegionMessage */;
+      const result = require("AccessibilityAnnouncerLiveRegion.native.tsx") /* updateAccessibilityAnnouncerLiveRegionMessage */.updateAccessibilityAnnouncerLiveRegionMessage(intl);
+      const obj = require("AccessibilityAnnouncerLiveRegion.native.tsx") /* updateAccessibilityAnnouncerLiveRegionMessage */;
     } else {
       const result1 = AccessibilityInfo.announceForAccessibility(intl);
     }

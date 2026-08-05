@@ -129,7 +129,7 @@ InvoiceRecord["createInvoiceFromServer"] = function createInvoiceFromServer(body
   const invoice_items = body.invoice_items;
   let mapped;
   if (invoice_items != null) {
-    mapped = invoice_items.map(require(3941) /* coalesceInvoiceItems */.createInvoiceItemFromServer);
+    mapped = invoice_items.map(require("../modules/premium/PremiumSubscriptionInvoiceItem.tsx") /* coalesceInvoiceItems */.createInvoiceItemFromServer);
     const tmp3 = require;
   }
   obj[1] = mapped;
@@ -158,7 +158,7 @@ InvoiceRecord["createFromOTPPreview"] = function createFromOTPPreview(invoice_it
   invoice_items = invoice_items.invoice_items;
   let mapped;
   if (invoice_items != null) {
-    mapped = invoice_items.map(require(3941) /* coalesceInvoiceItems */.createInvoiceItemFromServer);
+    mapped = invoice_items.map(require("../modules/premium/PremiumSubscriptionInvoiceItem.tsx") /* coalesceInvoiceItems */.createInvoiceItemFromServer);
     const tmp3 = require;
   }
   const obj = { id: "", invoiceItems: mapped, total: invoice_items.amount, subtotal: invoice_items.subtotal, currency: invoice_items.currency, tax: invoice_items.tax, taxInclusive: invoice_items.tax_inclusive, subscriptionPeriodStart: null, subscriptionPeriodEnd: null, orbsReward: null, checkoutContext: null };

@@ -10,7 +10,7 @@ export default function useMuteAwareLocalVolume(arg0, arg1) {
   let closure_1 = arg1;
   let obj = { effectiveVolume: null, handleVolumeChange: null };
   const items = [_detectH265HardwareDecode];
-  obj[0] = _require(589).useStateFromStores(items, () => {
+  obj[0] = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let num = 0;
     if (null != closure_0) {
       num = 0;

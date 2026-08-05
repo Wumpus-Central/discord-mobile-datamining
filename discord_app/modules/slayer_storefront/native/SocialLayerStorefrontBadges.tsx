@@ -25,12 +25,12 @@ export const ExclusiveBadge = function ExclusiveBadge() {
   const tmp = createCacheKey();
   let obj = { style: tmp.exclusiveBadge, children: null };
   obj = { size: "xs", color: null };
-  obj[1] = importDefault(712).colors.WHITE;
-  const items = [callback(require(9451) /* ClydeIcon */.ClydeIcon, obj), ];
+  obj[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE;
+  const items = [callback(require("../../../design/components/Icon/native/redesign/generated/ClydeIcon.tsx") /* ClydeIcon */.ClydeIcon, obj), ];
   obj = { variant: "text-xs/bold", color: "text-overlay-light", style: tmp.exclusiveBadgeText, children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[3] = intl.string(require(1236) /* getSystemLocale */.t.RiDMFz);
-  items[1] = callback(require(4281) /* Text */.Text, obj);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[3] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.RiDMFz);
+  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 };

@@ -51,7 +51,7 @@ export const useUserPrimaryGuild = function useUserPrimaryGuild(arg0) {
   let profile;
   let tmp = arg0;
   const _require = arg0;
-  let obj = _require(589);
+  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
   const items = [createGuildRecordFromRust];
   const items1 = [arg0];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_3.getGuild(closure_0), items1);
@@ -81,13 +81,13 @@ export const useShouldDisplayGuildTag = function useShouldDisplayGuildTag(arg0, 
   const _require = arg0;
   const dependencyMap = arg1;
   let tmp = arg2;
-  let obj = _require(589);
+  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
   const items = [mergeGuildAvatar];
   const items1 = [arg0];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getUser(closure_0), items1);
   const items2 = [trackCommunicationDisabled];
   const items3 = [arg1, arg0];
-  const stateFromStores1 = _require(589).useStateFromStores(items2, () => {
+  const stateFromStores1 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
     if (null != table) {
       if (null != callback) {
         const member = outer1_2.getMember(tmp, tmp2);
@@ -131,8 +131,8 @@ export const shouldDisplayGuildTag = function shouldDisplayGuildTag(id, merged) 
     if (tmp5) {
       let result = null != merged && null != id;
       if (result) {
-        result = require(3919) /* GuildMemberFlags */.hasAutomodQuarantinedProfile(member.getMember(merged, id));
-        const obj3 = require(3919) /* GuildMemberFlags */;
+        result = require("../guild_automod/AutomodPermissionUtils.tsx") /* GuildMemberFlags */.hasAutomodQuarantinedProfile(member.getMember(merged, id));
+        const obj3 = require("../guild_automod/AutomodPermissionUtils.tsx") /* GuildMemberFlags */;
       }
       tmp5 = !result;
     }

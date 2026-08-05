@@ -27,10 +27,10 @@ function PromptHeader(currentPrompt) {
   const tmp = createCacheKey();
   let obj = { style: tmp.promptHeader, children: null };
   obj = { style: tmp.countText, variant: "text-sm/medium", color: "text-muted", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   obj = { currentQuestion: currentPromptIndex + 1, questionCount: numberOfPrompts };
-  obj[3] = intl.format(require(1236) /* getSystemLocale */.t.isV0NW, obj);
-  const items = [callback2(require(4281) /* Text */.Text, obj), ];
+  obj[3] = intl.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.isV0NW, obj);
+  const items = [callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
   let required;
   if (currentPrompt != null) {
     required = currentPrompt.required;
@@ -51,7 +51,7 @@ function PromptHeader(currentPrompt) {
   const obj4 = { children: null };
   items[1] = tmp2Result;
   obj[1] = items;
-  const items2 = [closure_16(closure_6, obj), callback2(require(4281) /* Text */.Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: currentPrompt.title })];
+  const items2 = [closure_16(closure_6, obj), callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: currentPrompt.title })];
   obj4[0] = items2;
   return closure_16(closure_17, obj4);
 }
@@ -176,7 +176,7 @@ function PromptFooter(onPress) {
   return closure_16(closure_6, obj);
 }
 function formattedNameHighlight(children) {
-  return callback2(require(4281) /* Text */.Text, { variant: "text-xs/medium", color: "mobile-text-heading-primary", children }, arg1);
+  return callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-xs/medium", color: "mobile-text-heading-primary", children }, arg1);
 }
 function DropdownOption(option) {
   option = option.option;
@@ -208,8 +208,8 @@ function DropdownOption(option) {
     const obj2 = { id: null, animated: null, size: null };
     ({ id: obj6[0], animated: obj6[1] } = stateFromStores);
     obj2[2] = EMOJI_URL_BASE_SIZE;
-    emojiURL = importDefault(1416).getEmojiURL(obj2);
-    const tmp8Result = importDefault(1416);
+    emojiURL = require("../../../utils/AvatarUtils.tsx").getEmojiURL(obj2);
+    const tmp8Result = require("../../../utils/AvatarUtils.tsx");
   }
   obj1[2] = emojiURL;
   let emoji = option.emoji;
@@ -221,7 +221,7 @@ function DropdownOption(option) {
     str = "";
   }
   obj1[3] = str;
-  obj[1] = closure_15(importDefault(5301), obj1);
+  obj[1] = closure_15(require("../../emojis/native/Emoji.tsx"), obj1);
   const items1 = [closure_15(closure_6, obj), closure_15(option(4281).Text, { variant: "text-md/semibold", children: option.title })];
   obj[1] = items1;
   return closure_16(closure_6, obj);

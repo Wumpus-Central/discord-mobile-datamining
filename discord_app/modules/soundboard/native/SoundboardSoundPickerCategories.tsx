@@ -27,19 +27,19 @@ function SoundCategoryItem(style) {
   }
   const tmp = callback3();
   const type = category.categoryInfo.type;
-  if (require(4737) /* SoundButtonOverlay */.SoundboardSoundGridSectionType.GUILD === type) {
+  if (require("../SoundboardTypes.tsx") /* SoundButtonOverlay */.SoundboardSoundGridSectionType.GUILD === type) {
     const guild = category.categoryInfo.guild;
     let name = guild.name;
     let obj = { guild: null, style: null };
     obj[0] = guild;
     obj[1] = tmp.guildItem;
-    let tmp13Result = callback(importDefault(5661), obj);
+    let tmp13Result = callback(require("../../guild/native/GuildIcon.tsx"), obj);
     let tmp4 = null;
     let tmp5 = null;
   } else if (tmp2(4737).SoundboardSoundGridSectionType.FAVORITES === type) {
     const intl3 = tmp2(1236).intl;
     name = intl3.string(tmp2(1236).t.y3LQCG);
-    tmp4 = importDefault(9876);
+    tmp4 = require("../../../../_runtime/09876_registerAsset.js");
     tmp5 = null;
     tmp13Result = null;
   } else if (tmp2(4737).SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
@@ -53,7 +53,7 @@ function SoundCategoryItem(style) {
   } else if (tmp2(4737).SoundboardSoundGridSectionType.DEFAULTS === type) {
     const intl = tmp2(1236).intl;
     name = intl.string(tmp2(1236).t.Rtvk9X);
-    tmp4 = importDefault(16021);
+    tmp4 = require("../../../../_runtime/16021_registerAsset.js");
     tmp5 = null;
     tmp13Result = null;
   } else {
@@ -64,7 +64,7 @@ function SoundCategoryItem(style) {
     if (tmp2(4737).SoundboardSoundGridSectionType.SEARCH === type) {
       const intl4 = tmp2(1236).intl;
       name = intl4.string(tmp2(1236).t.sKt3xS);
-      tmp4 = importDefault(16021);
+      tmp4 = require("../../../../_runtime/16021_registerAsset.js");
       tmp5 = null;
       tmp13Result = null;
     }
@@ -100,7 +100,7 @@ function SoundCategoryItem(style) {
   items1[1] = locked;
   obj1[1] = items1;
   obj[3] = closure_11(closure_5, obj1);
-  return callback(require(4812) /* PressableBase */.PressableOpacity, obj, name);
+  return callback(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj, name);
 }
 function getItemLayout(arg0, index) {
   return { length: closure_9, offset: closure_9 * index, index };

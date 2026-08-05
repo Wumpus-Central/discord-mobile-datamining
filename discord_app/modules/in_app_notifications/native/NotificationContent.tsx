@@ -216,19 +216,19 @@ export default function NotificationContent(arg0) {
   if ("message" === header.type) {
     const obj3 = {};
     const merged = Object.assign(header);
-    let tmp10Result = tmp10(importDefault(9770), obj3);
-    const tmp7Result = importDefault(9770);
+    let tmp10Result = tmp10(require("MessageNotificationHeader.tsx"), obj3);
+    const tmp7Result = require("MessageNotificationHeader.tsx");
   } else {
     const obj4 = {};
     const merged1 = Object.assign(header);
-    tmp10Result = tmp10(require(9770) /* LocationText */.SimpleNotificationHeader, obj4);
+    tmp10Result = tmp10(require("MessageNotificationHeader.tsx") /* LocationText */.SimpleNotificationHeader, obj4);
   }
   obj2[1] = tmp10Result;
   items2[1] = callback2(closure_6, obj2);
   obj1[1] = items2;
   const items3 = [closure_9(closure_6, obj1), children];
   obj[1] = items3;
-  items[1] = closure_9(importDefault(4146).View, obj);
+  items[1] = closure_9(require("../../reanimated/ReanimatedRexport.tsx").View, obj);
   items[2] = rightAccessory;
   obj[1] = items;
   children = [closure_9(closure_6, obj), ];

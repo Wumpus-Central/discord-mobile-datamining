@@ -38,7 +38,7 @@ obj = {
       application_directory_collection_items.application_directory_collection_items = callback(table[0]).sortBy(application_directory_collection_items.application_directory_collection_items, ["position", "id"]);
       return application_directory_collection_items;
     });
-    let obj = importDefault(12);
+    let obj = require("../../../../_runtime/00012_apply.js");
     obj = {};
     const merged = Object.assign(obj);
     obj[combined] = obj.sortBy(mapped, ["position", "id"]);

@@ -15,21 +15,21 @@ const result = require("noop").fileFinishedImporting("modules/connections/native
 
 export default function FederatedSocialModal(platformType) {
   const _require = platformType;
-  let screens = importDefault(4966);
+  let screens = require("../../../lib/Platforms.tsx");
   let value = screens.get(platformType.platformType);
   let name;
   if (value != null) {
     name = value.name;
   }
   if (name == null) {
-    let intl = _require(1236).intl;
-    name = intl.string(_require(1236).t["bU/GZm"]);
+    let intl = _require("../../../intl/index.native.tsx").intl;
+    name = intl.string(_require("../../../intl/index.native.tsx").t["bU/GZm"]);
   }
   screens = { root: null };
   let obj = { headerTitle: null, headerLeft: null, render: null };
-  let intl2 = _require(1236).intl;
-  obj[0] = intl2.formatToPlainString(_require(1236).t["ImMhq+"], { serviceName: name });
-  obj[1] = _require(5238).getHeaderBackButton(platformType.onClose);
+  let intl2 = _require("../../../intl/index.native.tsx").intl;
+  obj[0] = intl2.formatToPlainString(_require("../../../intl/index.native.tsx").t["ImMhq+"], { serviceName: name });
+  obj[1] = _require("../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderBackButton(platformType.onClose);
   obj[2] = function render() {
     let closure_0;
     let closure_1;
@@ -192,5 +192,5 @@ export default function FederatedSocialModal(platformType) {
     return outer1_8(platformType(outer1_2[11]).SafeAreaPaddingView, obj);
   };
   screens[0] = obj;
-  return callback(_require(5665).Navigator, { initialRouteName: "root", screens });
+  return callback(_require("../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, { initialRouteName: "root", screens });
 };

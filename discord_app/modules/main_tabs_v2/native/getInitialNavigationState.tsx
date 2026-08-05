@@ -16,7 +16,7 @@ function getInitialGuildState(closure_6, channelId, flag, flag2) {
   if (channelId == null) {
     channelId = channelId.getChannelId(closure_6);
   }
-  let obj = require(4139) /* useChatLayout */;
+  let obj = require("../../chat/native/useChatLayout.tsx") /* useChatLayout */;
   const isChatLockedOpen = obj.getChatLayout().isChatLockedOpen;
   if (flag) {
     if (null != channelId) {
@@ -65,15 +65,15 @@ function computeInitialNavigationStateWithoutLogging() {
   let channelId;
   let guildId;
   if (null != token.getToken()) {
-    let obj1 = require(1222) /* transitionTo */;
+    let obj1 = require("../../routing/router_utils.tsx") /* transitionTo */;
     const _location = obj1.getHistory().location;
-    let obj2 = require(4107) /* matchPath */;
+    let obj2 = require("../../routing/matchPathCompat.tsx") /* matchPath */;
     let obj = { path: null };
-    const RouteParam = require(4120) /* RouteParam */.RouteParam;
-    const RouteParam2 = require(4120) /* RouteParam */.RouteParam;
+    const RouteParam = require("../../routing/RouteUtils.tsx") /* RouteParam */.RouteParam;
+    const RouteParam2 = require("../../routing/RouteUtils.tsx") /* RouteParam */.RouteParam;
     obj[0] = closure_7.CHANNEL(RouteParam.guildId(), RouteParam2.channelId({ optional: true }), ":messageId?");
     const matchPathResult = obj2.matchPath(_location.pathname, obj);
-    const MobileHomeDrawerExperiment = require(4142) /* MobileHomeDrawerExperiment */.MobileHomeDrawerExperiment;
+    const MobileHomeDrawerExperiment = require("../../home_drawer/native/HomeDrawerExperiment.tsx") /* MobileHomeDrawerExperiment */.MobileHomeDrawerExperiment;
     const tmp5 = MobileHomeDrawerExperiment.getConfig({ location: "app-start" }).landOnHome && null == matchPathResult;
     if (null == matchPathResult) {
       obj = { path: null };

@@ -91,17 +91,17 @@ function _saveProfileAndAccountRequest() {
 let result = require("str2").fileFinishedImporting("actions/UserSettingsAccountActionCreators.tsx");
 
 export const accountDetailsInit = function accountDetailsInit() {
-  importDefault(709).dispatch({ type: "USER_PROFILE_SETTINGS_INIT" });
+  require("../Dispatcher.tsx").dispatch({ type: "USER_PROFILE_SETTINGS_INIT" });
 };
 export const accountDetailsClose = function accountDetailsClose() {
-  importDefault(709).dispatch({ type: "USER_PROFILE_SETTINGS_CLOSE" });
+  require("../Dispatcher.tsx").dispatch({ type: "USER_PROFILE_SETTINGS_CLOSE" });
 };
 export const disableAccount = function disableAccount(password, arg1) {
-  const HTTP = require(530) /* sendRequest */.HTTP;
+  const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
   obj = { url: arg1 ? closure_4.DELETE_ACCOUNT : closure_4.DISABLE_ACCOUNT, body: obj, oldFormErrors: true, rejectWithError: null };
   obj = { password };
-  obj[3] = require(530) /* sendRequest */.rejectWithMigratedError();
-  const obj3 = require(530) /* sendRequest */;
+  obj[3] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+  const obj3 = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */;
   const tmp2 = arg1 ? closure_4.DELETE_ACCOUNT : closure_4.DISABLE_ACCOUNT;
   return HTTP.post(obj).then(() => {
     callback2(5736).logoutInternal();
@@ -204,46 +204,46 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
   });
 };
 export const getHarvestStatus = function getHarvestStatus() {
-  const HTTP = require(530) /* sendRequest */.HTTP;
+  const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
   const obj = { url: constants.USER_HARVEST, oldFormErrors: true, rejectWithError: null };
-  obj[2] = require(530) /* sendRequest */.rejectWithMigratedError();
+  obj[2] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
   return HTTP.get(obj);
 };
 export const requestHarvest = function requestHarvest(backends) {
-  const HTTP = require(530) /* sendRequest */.HTTP;
+  const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
   obj = { url: constants.USER_HARVEST, body: obj, oldFormErrors: true, rejectWithError: null };
   obj = { backends };
-  obj[3] = require(530) /* sendRequest */.rejectWithMigratedError();
+  obj[3] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
   return HTTP.post(obj);
 };
 export const clearErrors = function clearErrors() {
-  importDefault(709).dispatch({ type: "USER_PROFILE_SETTINGS_CLEAR_ERRORS" });
+  require("../Dispatcher.tsx").dispatch({ type: "USER_PROFILE_SETTINGS_CLEAR_ERRORS" });
 };
 export const resetPendingAccountChanges = function resetPendingAccountChanges() {
-  importDefault(709).dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES" });
+  require("../Dispatcher.tsx").dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES" });
 };
 export const resetAllPending = function resetAllPending() {
-  importDefault(709).dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES" });
+  require("../Dispatcher.tsx").dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES" });
 };
 export const resetAllTryItOut = function resetAllTryItOut() {
-  importDefault(709).dispatch({ type: "USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES" });
+  require("../Dispatcher.tsx").dispatch({ type: "USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES" });
 };
 export const resetAndCloseUserProfileForm = function resetAndCloseUserProfileForm() {
-  importDefault(709).dispatch({ type: "USER_PROFILE_SETTINGS_RESET_AND_CLOSE_FORM" });
+  require("../Dispatcher.tsx").dispatch({ type: "USER_PROFILE_SETTINGS_RESET_AND_CLOSE_FORM" });
 };
 export const resetPendingLegacyUsernameDisabled = function resetPendingLegacyUsernameDisabled() {
-  importDefault(709).dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_LEGACY_USERNAME_DISABLED" });
+  require("../Dispatcher.tsx").dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_LEGACY_USERNAME_DISABLED" });
 };
 export const resetPendingPrimaryGuildChanges = function resetPendingPrimaryGuildChanges() {
-  importDefault(709).dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES" });
+  require("../Dispatcher.tsx").dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES" });
 };
 export const updateAccount = function updateAccount(settings) {
-  let obj = importDefault(709);
+  let obj = require("../Dispatcher.tsx");
   obj = { type: "USER_SETTINGS_MODAL_UPDATE_ACCOUNT", settings };
   obj.dispatch(obj);
 };
 export const resetAccount = function resetAccount() {
-  importDefault(709).dispatch({ type: "USER_SETTINGS_MODAL_RESET" });
+  require("../Dispatcher.tsx").dispatch({ type: "USER_SETTINGS_MODAL_RESET" });
 };
 export const saveAccountChanges = function saveAccountChanges(closure_0, close) {
   let obj = avatar(newPassword[3]);

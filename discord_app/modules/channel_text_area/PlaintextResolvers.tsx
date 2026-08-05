@@ -109,7 +109,7 @@ function resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, intention) {
       return null;
     })(text, throwTypeErrorResult, id, tmp, tmp2);
   } else if (":" === first) {
-    const EMOJI_NAME_RE = importDefault(3926).EMOJI_NAME_RE;
+    const EMOJI_NAME_RE = require("../emojis/UnicodeEmojis.tsx").EMOJI_NAME_RE;
     const match = EMOJI_NAME_RE.exec(text);
     let tmp7 = null;
     if (null != match) {
@@ -143,7 +143,7 @@ function resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, intention) {
           const _HermesInternal = HermesInternal;
           const combined = ":" + obj2.name + ":";
         }
-        tmp4Result = importDefault(3930);
+        tmp4Result = require("../../utils/EmojiUtils.tsx");
       }
     }
     return tmp7;
@@ -201,8 +201,8 @@ export const resolveApplicationCommandOption = function resolveApplicationComman
   const tmp = resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, intention);
   let voidToOptionValueResult = null;
   if (null != tmp) {
-    voidToOptionValueResult = require(7065) /* createEmptyState */.voidToOptionValue(tmp);
-    const obj = require(7065) /* createEmptyState */;
+    voidToOptionValueResult = require("slate/SlateUtils.tsx") /* createEmptyState */.voidToOptionValue(tmp);
+    const obj = require("slate/SlateUtils.tsx") /* createEmptyState */;
   }
   return voidToOptionValueResult;
 };

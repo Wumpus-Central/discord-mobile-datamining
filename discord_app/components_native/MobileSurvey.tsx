@@ -12,7 +12,7 @@ const result = require("fetchSurveyIfNeeded").fileFinishedImporting("components_
 
 export default function MobileSurvey() {
   const _require = callback();
-  let obj = _require(589);
+  let obj = _require("../../discord_common/js/packages/flux/index.tsx");
   const items = [fetchSurveyIfNeeded];
   const stateFromStores = obj.useStateFromStores(items, () => currentSurvey.getCurrentSurvey());
   const items1 = [stateFromStores];

@@ -26,21 +26,21 @@ export default function SubscriptionRenewalMutationsNotice(arg0) {
   const tmp = createCacheKey();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.icon };
-  const items = [callback(require(1297) /* Button */.WarningCircle, obj), ];
+  const items = [callback(require("../../../design/void/native.tsx") /* Button */.WarningCircle, obj), ];
   obj = { style: tmp.text, children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   if (!subscription.hasExternalPlanChange) {
     if (!isNoneSubscription(renewalMutations.planId)) {
-      let displayName = importDefault(3931).getDisplayName(renewalMutations.planId);
-      const obj4 = importDefault(3931);
+      let displayName = require("../../../utils/PremiumUtils.tsx").getDisplayName(renewalMutations.planId);
+      const obj4 = require("../../../utils/PremiumUtils.tsx");
     }
     const obj1 = { planName: null, date: null };
     obj1[0] = displayName;
     obj1[1] = subscription.currentPeriodEnd;
     obj[1] = intl.format(tmp7, obj1);
-    items[1] = callback(require(1297) /* Button */.LegacyText, obj);
+    items[1] = callback(require("../../../design/void/native.tsx") /* Button */.LegacyText, obj);
     obj[1] = items;
     return closure_6(View, obj);
   }
-  displayName = require(3931) /* getPremiumPlanItem */.getExternalPlanDisplayName(renewalMutations);
+  displayName = require("../../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */.getExternalPlanDisplayName(renewalMutations);
 };

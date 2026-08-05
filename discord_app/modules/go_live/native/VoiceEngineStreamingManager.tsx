@@ -168,7 +168,7 @@ class VoiceEngineStreamingManager extends tmp6 {
 }
 const prototype = VoiceEngineStreamingManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const voiceEngine = require(4334) /* inject */.getVoiceEngine();
+  const voiceEngine = require("../../../../discord_common/js/packages/media-engine/native/inject.tsx") /* inject */.getVoiceEngine();
   let result = voiceEngine.setBroadcastRequestCallback(() => {
     logger.log("Broadcast Requested");
     callback2(38)(null != voiceEngine, "Voice Engine should be initialized in callback");
@@ -228,12 +228,12 @@ prototype["_initialize"] = function _initialize() {
     obj[0] = intl.string(callback(1236).t.iYQlwv);
     const result = obj.presentLocalNotification(obj);
   });
-  let obj = require(4334) /* inject */;
+  let obj = require("../../../../discord_common/js/packages/media-engine/native/inject.tsx") /* inject */;
   // GetOwnPrivateBySym (0x65)
-  const subscription = importDefault(709).subscribe("VOICE_CHANNEL_SELECT", importDefault);
+  const subscription = require("../../../Dispatcher.tsx").subscribe("VOICE_CHANNEL_SELECT", importDefault);
 };
 prototype["_terminate"] = function _terminate() {
-  const voiceEngine = require(4334) /* inject */.getVoiceEngine();
+  const voiceEngine = require("../../../../discord_common/js/packages/media-engine/native/inject.tsx") /* inject */.getVoiceEngine();
   if (null != voiceEngine) {
     const result = voiceEngine.setBroadcastRequestCallback(closure_10);
     const result1 = voiceEngine.setBroadcastFinishedCallback(closure_10);
@@ -242,9 +242,9 @@ prototype["_terminate"] = function _terminate() {
   }
   timeout.stop();
   timeout1.stop();
-  const obj = require(4334) /* inject */;
+  const obj = require("../../../../discord_common/js/packages/media-engine/native/inject.tsx") /* inject */;
   // GetOwnPrivateBySym (0x65)
-  importDefault(709).unsubscribe("VOICE_CHANNEL_SELECT", this);
+  require("../../../Dispatcher.tsx").unsubscribe("VOICE_CHANNEL_SELECT", this);
 };
 prototype["getApplicationNames"] = function getApplicationNames() {
   return closure_16;

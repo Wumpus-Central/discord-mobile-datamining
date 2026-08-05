@@ -15,10 +15,10 @@ export const useGlobalStatusIndicatorState = function useGlobalStatusIndicatorSt
   let importDefault;
   let obj = stateFromStores(10571);
   let hasPipParticipant = obj.useHasPipParticipant({ isActivityViewFocused: false });
-  const tmp5 = importDefault(10662)();
+  const tmp5 = require("../../game_console/hooks/useVoiceStateForRemoteSession.tsx")();
   const items = [createRTCConnection];
   stateFromStores = stateFromStores(589).useStateFromStores(items, () => channelId.getChannelId());
-  const tmp7 = importDefault(10659)();
+  const tmp7 = require("../../stage_channels/useIsInvitedToSpeak.tsx")();
   importDefault = tmp7;
   const obj2 = stateFromStores(589);
   const tmp4 = importDefault;

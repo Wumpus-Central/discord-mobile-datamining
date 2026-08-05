@@ -33,15 +33,15 @@ const memoResult = importAllResult.memo((arg0) => {
   let require;
   ({ guild, markAsDismissed: require } = arg0);
   const tmp = callback4();
-  let obj = require(15196) /* fetchUnclaimedGames */;
+  let obj = require("../UnclaimedGamesActionCreators.tsx") /* fetchUnclaimedGames */;
   let first = obj.useUnclaimedGameIdsForGuild(guild.id)[0];
   if (first == null) {
     first = null;
   }
   const intl = tmp2(1236).intl;
   const tmp5 = importDefault;
-  const tmp6 = importDefault(12257);
-  const coverImageUrl = importDefault(12257)(first, intl.string(require(1236) /* getSystemLocale */.t.VQq92a)).coverImageUrl;
+  const tmp6 = require("../../games/hooks/useGameNameAndCoverImage.tsx");
+  const coverImageUrl = require("../../games/hooks/useGameNameAndCoverImage.tsx")(first, intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.VQq92a)).coverImageUrl;
   if (null == coverImageUrl) {
     return null;
   } else {
@@ -144,7 +144,7 @@ const memoResult = importAllResult.memo((arg0) => {
     obj[2] = items;
     return callback3(tmp2(5317).Card, obj);
   }
-  const tmp6Result = importDefault(12257)(first, intl.string(require(1236) /* getSystemLocale */.t.VQq92a));
+  const tmp6Result = require("../../games/hooks/useGameNameAndCoverImage.tsx")(first, intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.VQq92a));
 });
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/game_claim/native/GameClaimCoachmark.tsx");
 
@@ -153,11 +153,11 @@ export const GAME_CLAIM_NOTICE_MARGIN_TOP = PX_8;
 export const GAME_CLAIM_NOTICE_MARGIN_BOTTOM = PX_82;
 export const getScaledGameClaimNoticeHeight = function getScaledGameClaimNoticeHeight(fontScale) {
   const sum = PX_8 + closure_12;
-  const sum1 = sum + require(15195) /* importDefaultResult1 */.CARD_STACK_HEIGHT;
-  const sum2 = sum1 + require(9370) /* map */.scaleTextLineHeight("text-md/medium", fontScale);
-  const sum3 = sum2 + importDefault(712).space.PX_4;
-  const obj = require(9370) /* map */;
-  const result = 2 * require(9370) /* map */.scaleTextLineHeight("text-sm/normal", fontScale);
-  const sum4 = sum3 + result + importDefault(712).space.PX_8;
-  return sum4 + require(4699) /* MINIMUM_HIT_AREA */.SMALL_BUTTON_HEIGHT + PX_82;
+  const sum1 = sum + require("GameClaimCardStack.tsx") /* importDefaultResult1 */.CARD_STACK_HEIGHT;
+  const sum2 = sum1 + require("../../screen/native/useScaledTextLineHeight.android.tsx") /* map */.scaleTextLineHeight("text-md/medium", fontScale);
+  const sum3 = sum2 + require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4;
+  const obj = require("../../screen/native/useScaledTextLineHeight.android.tsx") /* map */;
+  const result = 2 * require("../../screen/native/useScaledTextLineHeight.android.tsx") /* map */.scaleTextLineHeight("text-sm/normal", fontScale);
+  const sum4 = sum3 + result + require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8;
+  return sum4 + require("../../../design/components/Button/native/ButtonConstants.native.tsx") /* MINIMUM_HIT_AREA */.SMALL_BUTTON_HEIGHT + PX_82;
 };

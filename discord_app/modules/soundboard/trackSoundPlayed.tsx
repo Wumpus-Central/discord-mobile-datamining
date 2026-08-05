@@ -52,5 +52,5 @@ export default function trackSoundPlayed(location_stack, in_overlay, guildId) {
     sum = arg4 + 1;
   }
   obj[13] = sum;
-  importDefault(698).track(AnalyticEvents.PREMIUM_FEATURE_USAGE, obj);
+  require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.PREMIUM_FEATURE_USAGE, obj);
 };

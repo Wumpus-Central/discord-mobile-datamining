@@ -4,6 +4,6 @@ const result = require("set").fileFinishedImporting("modules/gateway/PrivateChan
 
 export const PRIVATE_CHANNEL_OBFUSCATION_KEY = "private_channel_obfuscation";
 export const getCachedPrivateChannelObfuscation = function getCachedPrivateChannelObfuscation() {
-  const Storage = require(595) /* Storage */.Storage;
+  const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
   return null != Storage.get(private_channel_obfuscation);
 };

@@ -3,8 +3,8 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/suspic
 
 export default {
   show(href) {
-    let obj = importDefault(4253);
+    let obj = require("../action_sheet/native/ActionSheetActionCreators.tsx");
     obj = { href };
-    obj.openLazy(require(1959) /* asyncRequireImpl */(12133, dependencyMap.paths), "suspicious-download", obj);
+    obj.openLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(12133, dependencyMap.paths), "suspicious-download", obj);
   }
 };

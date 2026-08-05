@@ -8,7 +8,7 @@ const result = require("initialize").fileFinishedImporting("modules/channel_list
 export default function useStickyServerHeaderSubtitle(arg0) {
   const _require = arg0;
   const items = [handleInviteData];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     features = features.features;
     let memberCount;
     if (features.has(outer1_3.COMMUNITY)) {

@@ -14,13 +14,13 @@ export const canBypassSlowmode = function canBypassSlowmode(channel) {
 export const useCanBypassSlowmode = function useCanBypassSlowmode(channel) {
   const _require = channel;
   const items = [getUncachedChannelPermissions];
-  return _require(589).useStateFromStores(items, () => outer1_3.can(outer1_4.BYPASS_SLOWMODE, closure_0));
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_3.can(outer1_4.BYPASS_SLOWMODE, closure_0));
 };
 export const getSlowmodeIndicatorText = function getSlowmodeIndicatorText(stateFromStores, canBypassSlowmode) {
   if (canBypassSlowmode) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    return intl2.string(require(1236) /* getSystemLocale */.t["8+NidX"]);
-  } else if (stateFromStores >= importDefault(687).Millis.HOUR) {
+    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["8+NidX"]);
+  } else if (stateFromStores >= require("../../utils/Durations.tsx").Millis.HOUR) {
     let tmp2Result = tmp2(3867);
     const durationResult = tmp2Result.duration(stateFromStores);
     const _HermesInternal3 = HermesInternal;
@@ -38,8 +38,8 @@ export const getSlowmodeIndicatorText = function getSlowmodeIndicatorText(stateF
     const _HermesInternal2 = HermesInternal;
     return "" + durationResult1.minutes() + ":" + combined2.padStart(2, "0");
   } else {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.Icu3bf);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Icu3bf);
   }
 };
 export const getSlowmodeDescription = function getSlowmodeDescription(rateLimitPerUser) {
@@ -47,7 +47,7 @@ export const getSlowmodeDescription = function getSlowmodeDescription(rateLimitP
   if (arg1 === undefined) {
     flag = false;
   }
-  if (rateLimitPerUser >= importDefault(687).Seconds.HOUR) {
+  if (rateLimitPerUser >= require("../../utils/Durations.tsx").Seconds.HOUR) {
     const _Math2 = Math;
     const rounded = Math.floor(rateLimitPerUser / tmp(687).Seconds.HOUR);
     const _Math3 = Math;
@@ -55,8 +55,8 @@ export const getSlowmodeDescription = function getSlowmodeDescription(rateLimitP
     const rounded1 = Math.floor(diff / tmp(687).Seconds.MINUTE);
     const diff1 = rateLimitPerUser - rounded * tmp(687).Seconds.HOUR;
     const diff2 = diff1 - rounded1 * tmp(687).Seconds.MINUTE;
-    const intl3 = require(1236) /* getSystemLocale */.intl;
-    const t3 = require(1236) /* getSystemLocale */.t;
+    const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const t3 = require("../../intl/index.native.tsx") /* getSystemLocale */.t;
     let obj = { hours: null, minutes: null, seconds: null };
     obj[0] = rounded;
     obj[1] = rounded1;
@@ -65,15 +65,15 @@ export const getSlowmodeDescription = function getSlowmodeDescription(rateLimitP
   } else if (rateLimitPerUser >= 60) {
     const _Math = Math;
     const rounded2 = Math.floor(rateLimitPerUser / 60);
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    const t2 = require(1236) /* getSystemLocale */.t;
+    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const t2 = require("../../intl/index.native.tsx") /* getSystemLocale */.t;
     obj = { minutes: null, seconds: null };
     obj[0] = rounded2;
     obj[1] = rateLimitPerUser - 60 * rounded2;
     return intl2.formatToPlainString(flag ? t2.DARKYm : t2.sY3wlG, obj);
   } else {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    const t = require(1236) /* getSystemLocale */.t;
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const t = require("../../intl/index.native.tsx") /* getSystemLocale */.t;
     obj = { seconds: null };
     obj[0] = rateLimitPerUser;
     return intl.formatToPlainString(flag ? t["9yE8Ga"] : t.IWntYg, obj);

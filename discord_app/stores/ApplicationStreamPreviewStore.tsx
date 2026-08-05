@@ -14,7 +14,7 @@ class ApplicationStreamPreviewStore extends Store {
 }
 const prototype = ApplicationStreamPreviewStore.prototype;
 prototype["getPreviewURL"] = function getPreviewURL(closure_0, channelId, closure_2) {
-  let obj = require(4348) /* isStreamKey */;
+  let obj = require("../modules/go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */;
   if (null != closure_0) {
     let CALL = StreamTypes.GUILD;
   } else {
@@ -29,7 +29,7 @@ prototype["getPreviewURL"] = function getPreviewURL(closure_0, channelId, closur
   return url;
 };
 prototype["shouldFetchPreview"] = function shouldFetchPreview(c0, closure_1, closure_2) {
-  let obj = require(4348) /* isStreamKey */;
+  let obj = require("../modules/go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */;
   if (null != c0) {
     let CALL = StreamTypes.GUILD;
   } else {
@@ -59,11 +59,11 @@ prototype["shouldFetchPreview"] = function shouldFetchPreview(c0, closure_1, clo
   return tmp7;
 };
 prototype["getPreviewURLForStreamKey"] = function getPreviewURLForStreamKey(streamKey) {
-  const decodeStreamKeyResult = require(4348) /* isStreamKey */.decodeStreamKey(streamKey);
+  const decodeStreamKeyResult = require("../modules/go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */.decodeStreamKey(streamKey);
   return this.getPreviewURL(decodeStreamKeyResult.guildId, decodeStreamKeyResult.channelId, decodeStreamKeyResult.ownerId);
 };
 prototype["getIsPreviewLoading"] = function getIsPreviewLoading(closure_0, closure_1, closure_2) {
-  let obj = require(4348) /* isStreamKey */;
+  let obj = require("../modules/go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */;
   if (null != closure_0) {
     let CALL = StreamTypes.GUILD;
   } else {
@@ -104,11 +104,11 @@ const applicationStreamPreviewStore = new ApplicationStreamPreviewStore(require(
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
-    const isEmptyResult = importDefault(12).isEmpty(closure_4);
+    const isEmptyResult = require("../../_runtime/00012_apply.js").isEmpty(closure_4);
     let reduced = !isEmptyResult;
     if (isEmptyResult) {
-      reduced = !importDefault(12).isEmpty(closure_5);
-      const tmpResult = importDefault(12);
+      reduced = !require("../../_runtime/00012_apply.js").isEmpty(closure_5);
+      const tmpResult = require("../../_runtime/00012_apply.js");
     }
     if (reduced) {
       reduced = voiceStates.reduce((arg0, guildId) => {

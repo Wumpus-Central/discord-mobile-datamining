@@ -32,8 +32,8 @@ function shouldShowMembershipVerificationGate(guildId, items) {
       flag = flag2;
     }
     if (flag) {
-      flag = require(4772) /* isValidFormResponse */.guildHasVerificationGate(guild);
-      const obj4 = require(4772) /* isValidFormResponse */;
+      flag = require("../MemberVerificationUtils.tsx") /* isValidFormResponse */.guildHasVerificationGate(guild);
+      const obj4 = require("../MemberVerificationUtils.tsx") /* isValidFormResponse */;
     }
     return flag;
   }
@@ -45,7 +45,7 @@ export const useShowMemberVerificationGate = function useShowMemberVerificationG
   const _require = guild_id;
   let items = [createGuildRecordFromRust, mergeGuildAvatar, trackCommunicationDisabled];
   const items1 = [guild_id];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
       const items = [outer1_3, outer1_4, outer1_2];

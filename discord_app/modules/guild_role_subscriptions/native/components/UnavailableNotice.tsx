@@ -31,15 +31,15 @@ export default function UnavailableNotice(brightTitle) {
   ({ container: arr[0], unavailableContainer: arr[1] } = tmp);
   obj = { style: tmp.unavailableInfo, children: null };
   obj = { source: null };
-  obj[0] = importDefault(15247);
-  const items1 = [callback(importDefault(5236), obj), , ];
+  obj[0] = require("../../../../../_runtime/15247_registerAsset.js");
+  const items1 = [callback(require("../../../../components_native/common/FastImage.tsx"), obj), , ];
   const items2 = [tmp.joinCtaTitle, ];
   if (brightTitle) {
     brightTitle = tmp.brightTitle;
   }
   items2[1] = brightTitle;
-  items1[1] = callback(require(4281) /* Text */.Text, { variant: "heading-lg/extrabold", color: "text-default", style: items2, children: title });
-  items1[2] = callback(require(4281) /* Text */.Text, { style: tmp.unavailableDescription, variant: "text-sm/medium", color: "text-default", children: description });
+  items1[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "heading-lg/extrabold", color: "text-default", style: items2, children: title });
+  items1[2] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: tmp.unavailableDescription, variant: "text-sm/medium", color: "text-default", children: description });
   obj[1] = items1;
   obj[1] = closure_5(View, obj);
   return callback(View, obj);

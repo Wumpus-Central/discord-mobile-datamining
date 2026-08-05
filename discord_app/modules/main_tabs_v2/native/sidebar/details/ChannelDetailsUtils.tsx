@@ -8,7 +8,7 @@ export const getChannelDetailsButtons = function getChannelDetailsButtons(channe
   if (stateFromStores === undefined) {
     flag = false;
   }
-  if (channel.type === require(692) /* set */.ChannelTypes.GUILD_DIRECTORY) {
+  if (channel.type === require("../../../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx") /* set */.ChannelTypes.GUILD_DIRECTORY) {
     let items = [];
   } else {
     items = [, , ];

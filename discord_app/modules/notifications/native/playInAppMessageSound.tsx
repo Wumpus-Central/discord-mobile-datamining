@@ -23,7 +23,7 @@ export const playInAppMessageSound = function playInAppMessageSound(notification
         tmp3 = message1;
       }
     }
-    obj2 = require(1577) /* isMetaQuest */;
+    obj2 = require("../../device/MetaQuestUtils.android.tsx") /* isMetaQuest */;
     tmp8 = require;
   }
 };

@@ -45,5 +45,5 @@ export const participantMemberInfo = function participantMemberInfo(participant)
     }
     return stringResult;
   }
-  obj = require(4124) /* nameFromUser */;
+  obj = require("../../utils/UserUtils.tsx") /* nameFromUser */;
 };

@@ -11,7 +11,7 @@ function areStableParticipantsEqual(arg0, arg1) {
   if (!tmp) {
     let tmp3 = null != arg0 && null != arg1;
     if (tmp3) {
-      tmp3 = importDefault(643)(arg0, arg1);
+      tmp3 = require("../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx")(arg0, arg1);
     }
     tmp = tmp3;
   }
@@ -25,7 +25,7 @@ export default function useStableParticipant(arg0, arg1, arg2) {
   const dependencyMap = arg2;
   const items = [getParticipants, mergeGuildAvatar, fetchFingerprint, _detectH265HardwareDecode];
   const items1 = [arg0, arg1, arg2];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let streamId;
     let streamId2;
     let voiceState;

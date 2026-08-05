@@ -24,10 +24,10 @@ class NetworkStoreClass extends Store {
 }
 const prototype = NetworkStoreClass.prototype;
 prototype["initialize"] = function initialize() {
-  const networkInformation = importDefault(1454).getNetworkInformation();
+  const networkInformation = require("../utils/NetworkUtils.tsx").getNetworkInformation();
   networkInformation.then(handleConnectionInfoChange);
-  const obj = importDefault(1454);
-  importDefault(1454).addChangeCallback(handleConnectionInfoChange);
+  const obj = require("../utils/NetworkUtils.tsx");
+  require("../utils/NetworkUtils.tsx").addChangeCallback(handleConnectionInfoChange);
 };
 prototype["getType"] = function getType() {
   return UNKNOWN;

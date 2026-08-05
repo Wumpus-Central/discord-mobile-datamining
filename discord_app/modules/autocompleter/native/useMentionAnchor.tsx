@@ -33,7 +33,7 @@ export default function useMentionAnchor(c22) {
       startsWithResult = arg1 >= anchor + arg3.length;
     }
     if (startsWithResult) {
-      let obj1 = _require(9831);
+      let obj1 = _require("AutocompleteUtils.tsx");
       startsWithResult = obj1.isUnbrokenRun(c22, anchor + arg3.length, arg1);
     }
     tmp5 = startsWithResult;
@@ -71,7 +71,7 @@ export default function useMentionAnchor(c22) {
           }
         }
         tmp16 = tmp18;
-        obj9 = _require(9831);
+        obj9 = _require("AutocompleteUtils.tsx");
         tmp25 = _require;
       }
       if (null != tmp16) {

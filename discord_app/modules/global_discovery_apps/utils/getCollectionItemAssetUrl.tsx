@@ -14,13 +14,13 @@ export const getCollectionItemAssetUrl = function getCollectionItemAssetUrl(arg0
   if (containerWidth === undefined) {
     containerWidth = 1024;
   }
-  let obj = require(1450) /* handleImageLoad */;
-  let str = obj.getBestMediaProxySize(containerWidth * require(1450) /* handleImageLoad */.getDevicePixelRatio());
+  let obj = require("../../image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */;
+  let str = obj.getBestMediaProxySize(containerWidth * require("../../image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */.getDevicePixelRatio());
   obj = { size: str.toString() };
-  const obj2 = require(1450) /* handleImageLoad */;
+  const obj2 = require("../../image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */;
   str = new URLSearchParams(obj).toString();
   let str3 = "png";
-  if (require(1416) /* getAvatarURL */.SUPPORTS_WEBP) {
+  if (require("../../../utils/AvatarUtils.tsx") /* getAvatarURL */.SUPPORTS_WEBP) {
     str3 = "webp";
   }
   if (null != closure_4) {

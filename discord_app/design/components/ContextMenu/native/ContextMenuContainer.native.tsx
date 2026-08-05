@@ -23,7 +23,7 @@ function EMPTY_CALLBACK() {
 
 }
 function renderItem(arg0, menu, transitionState, cleanUp) {
-  return jsx(require(13326) /* ContextMenuDivider */.ContextMenuPopout, { menu, transitionState, cleanUp }, arg0);
+  return jsx(require("ContextMenuPopout.native.tsx") /* ContextMenuDivider */.ContextMenuPopout, { menu, transitionState, cleanUp }, arg0);
 }
 const result = require("jsxProd").fileFinishedImporting("design/components/ContextMenu/native/ContextMenuContainer.native.tsx");
 

@@ -25,7 +25,7 @@ function NavigationBar(onClose) {
     return onClose();
   };
   obj = { source: null };
-  obj[0] = importDefault(7870);
+  obj[0] = require("../../../../../_runtime/07870_registerAsset.js");
   obj[3] = callback(onClose(1297).Icon, obj);
   obj[0] = callback(onClose(4812).PressableOpacity, obj);
   return callback(View, obj);
@@ -34,11 +34,11 @@ function StartEventHeader(children) {
   const tmp = createCacheKey();
   let obj = { style: tmp.header, children: null };
   obj = { style: tmp.headerPrivacyLevel, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[3] = intl.string(require(1236) /* getSystemLocale */.t["q+fFJv"]);
-  const items = [callback(require(4281) /* Text */.Text, obj), ];
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[3] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["q+fFJv"]);
+  const items = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
   obj = { style: tmp.headerTitle, variant: "text-md/medium", color: "text-default", children: children.event.name };
-  items[1] = callback(require(4281) /* Text */.Text, obj);
+  items[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 }

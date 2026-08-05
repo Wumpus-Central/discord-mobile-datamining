@@ -30,8 +30,8 @@ function getAttachmentsRestriction(type) {
       let tmp4;
       if (!getUncachedChannelPermissions.can(constants.ATTACH_FILES, type)) {
         const obj = { label: null };
-        const intl = require(1236) /* getSystemLocale */.intl;
-        obj[0] = intl.string(require(1236) /* getSystemLocale */.t.P7yvbm);
+        const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.P7yvbm);
         tmp4 = obj;
       }
       return tmp4;

@@ -30,13 +30,13 @@ function isAnimatedBackgroundOption(closure_0) {
     }
     hasItem = tmp3;
     if (hasItem) {
-      let isAnimatedIconHashResult = require(1416) /* getAvatarURL */.isAnimatedIconHash(closure_0.asset);
+      let isAnimatedIconHashResult = require("../../utils/AvatarUtils.tsx") /* getAvatarURL */.isAnimatedIconHash(closure_0.asset);
       if (!isAnimatedIconHashResult) {
         isAnimatedIconHashResult = tmp6(1416).isVideoAssetHash(closure_0.asset);
         const tmp6Result = tmp6(1416);
       }
       hasItem = isAnimatedIconHashResult;
-      const obj = require(1416) /* getAvatarURL */;
+      const obj = require("../../utils/AvatarUtils.tsx") /* getAvatarURL */;
       tmp6 = require;
     }
   }
@@ -133,8 +133,8 @@ export const trackBackgroundOptionUpdated = function trackBackgroundOptionUpdate
   const guildId = store.getGuildId();
   const channelId = store.getChannelId();
   channel = channel.getChannel(channelId);
-  const voiceStateMetadata = require(4479) /* collectGuildAnalyticsMetadata */.getVoiceStateMetadata(guildId, channelId, true);
-  const obj2 = require(4479) /* collectGuildAnalyticsMetadata */;
+  const voiceStateMetadata = require("../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */.getVoiceStateMetadata(guildId, channelId, true);
+  const obj2 = require("../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */;
   obj = { location, effect_type: null, effect_detail: null, effect_state: null, channel_id: null, channel_type: null, guild_id: null, voice_state_count: null, video_stream_count: null, media_session_id: null, rtc_connection_id: null, is_animated: null };
   let str = "None";
   if (null != closure_0) {
@@ -154,15 +154,15 @@ export const trackBackgroundOptionUpdated = function trackBackgroundOptionUpdate
   obj[9] = obj.getMediaSessionId();
   obj[10] = obj.getRTCConnectionId();
   obj[11] = isAnimatedBackgroundOption(closure_0);
-  importDefault(698).track(AnalyticEvents.VIDEO_EFFECT_UPDATED, obj);
+  require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.VIDEO_EFFECT_UPDATED, obj);
 };
 export const trackBackgroundOptionAdded = function trackBackgroundOptionAdded(closure_0, is_video, is_from_tenor) {
-  let obj = importDefault(698);
+  let obj = require("../../utils/AnalyticsUtils.tsx");
   obj = { is_animated: isAnimatedBackgroundOption(closure_0), is_video, is_from_tenor };
   obj.track(AnalyticEvents.VIDEO_BACKGROUND_ADDED, obj);
 };
 export const trackBackgroundOptionDeleted = function trackBackgroundOptionDeleted(closure_0) {
-  let obj = importDefault(698);
+  let obj = require("../../utils/AnalyticsUtils.tsx");
   obj = { is_animated: isAnimatedBackgroundOption(closure_0) };
   obj.track(AnalyticEvents.VIDEO_BACKGROUND_DELETED, obj);
 };

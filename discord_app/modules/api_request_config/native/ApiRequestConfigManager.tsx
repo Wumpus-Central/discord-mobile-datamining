@@ -8,20 +8,20 @@ function updateApiRequestConfig() {
   if (NativeCacheModule != null) {
     const _JSON = JSON;
     let obj = { apiBaseUrl: null, headers: null };
-    obj[0] = require(530) /* sendRequest */.getAPIBaseURL();
+    obj[0] = require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.getAPIBaseURL();
     obj = { "X-Super-Properties": null, "X-Fingerprint": null, "X-Installation-ID": null };
-    const obj2 = require(530) /* sendRequest */;
-    obj[0] = importDefault(698).getSuperPropertiesBase64();
+    const obj2 = require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */;
+    obj[0] = require("../../../utils/AnalyticsUtils.tsx").getSuperPropertiesBase64();
     obj[1] = store.getFingerprint();
     obj[2] = store.getInstallationForTracking();
     obj[1] = obj;
     const result = NativeCacheModule.setItem("discordApiRequestConfig", JSON.stringify(obj));
-    const obj4 = importDefault(698);
+    const obj4 = require("../../../utils/AnalyticsUtils.tsx");
   }
 }
 let prototype = function ApiRequestConfigManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult.handleUpdate = require(500) /* set */.isAndroid() ? updateApiRequestConfig : (() => {
+  applyArgumentsResult.handleUpdate = require("../../../utils/PlatformUtils.tsx") /* set */.isAndroid() ? updateApiRequestConfig : (() => {
 
   });
   applyArgumentsResult.actions = { POST_CONNECTION_OPEN: applyArgumentsResult.handleUpdate, APP_STATE_UPDATE: applyArgumentsResult.handleUpdate };

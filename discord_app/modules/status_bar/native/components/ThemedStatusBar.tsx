@@ -8,19 +8,19 @@ const require = arg1;
 const result = require("fetchFingerprint").fileFinishedImporting("modules/status_bar/native/components/ThemedStatusBar.tsx");
 
 export default function ThemedStatusBar() {
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [fetchFingerprint];
   const stateFromStores = obj.useStateFromStores(items, () => authenticated.isAuthenticated());
-  const isModalOpen = require(4136) /* navigationToRootTabHelper */.useIsModalOpen();
-  const obj2 = require(4136) /* navigationToRootTabHelper */;
+  const isModalOpen = require("../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */.useIsModalOpen();
+  const obj2 = require("../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */;
   const items1 = [handleThemeChange];
-  const stateFromStores1 = require(589) /* initialize */.useStateFromStores(items1, () => callback(table[6]).isThemeDark(theme.theme));
-  const obj3 = require(589) /* initialize */;
-  const globalStatusIndicatorState = require(10660) /* useGlobalStatusIndicatorState */.useGlobalStatusIndicatorState();
+  const stateFromStores1 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items1, () => callback(table[6]).isThemeDark(theme.theme));
+  const obj3 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const globalStatusIndicatorState = require("../../../connectivity/native/useGlobalStatusIndicatorState.tsx") /* useGlobalStatusIndicatorState */.useGlobalStatusIndicatorState();
   if (!stateFromStores) {
     obj = { barStyle: null };
     obj[0] = "light-content";
-    return jsx(importDefault(7669), { barStyle: null });
+    return jsx(require("StatusBar.android.tsx"), { barStyle: null });
   } else if (isModalOpen) {
     let str2 = "dark-content";
     if (stateFromStores1) {

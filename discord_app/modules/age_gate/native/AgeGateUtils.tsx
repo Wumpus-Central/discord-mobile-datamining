@@ -27,7 +27,7 @@ export const isNSFWInvite = function isNSFWInvite(guild) {
   return set.has(nsfw_level);
 };
 export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite) {
-  let obj = require(500) /* set */;
+  let obj = require("../../../utils/PlatformUtils.tsx") /* set */;
   if (obj.isIOS()) {
     let nsfw_level;
     if (invite != null) {
@@ -53,7 +53,7 @@ export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite) {
     let flag2 = !tmp10;
     if (!tmp10) {
       id = undefined;
-      const obj2 = importDefault(4490);
+      const obj2 = require("../../../actions/ModalActionCreators.tsx");
       if (invite != null) {
         const guild3 = invite.guild;
         if (guild3 != null) {
@@ -101,6 +101,6 @@ export const shouldNSFWGateGuild = function shouldNSFWGateGuild(guildId) {
   } else {
     return false;
   }
-  obj = require(500) /* set */;
+  obj = require("../../../utils/PlatformUtils.tsx") /* set */;
   tmp = require;
 };

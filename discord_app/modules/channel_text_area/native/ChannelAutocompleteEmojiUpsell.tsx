@@ -44,10 +44,10 @@ export default function ChannelAutocompleteEmojiUpsell(results) {
   });
   const result = 24 * substr.length;
   obj = { style: tmp.title, accessibilityRole: "header", variant: "text-sm/medium", children: null };
-  const intl = _require(1236).intl;
+  const intl = _require("../../../intl/index.native.tsx").intl;
   obj = { count: results.length };
-  obj[3] = intl.format(_require(1236).t.uEky42, obj);
-  let items = [callback(_require(4281).Text, obj), ];
+  obj[3] = intl.format(_require("../../../intl/index.native.tsx").t.uEky42, obj);
+  let items = [callback(_require("../../../design/components/Text/native/Text.tsx").Text, obj), ];
   const items1 = [tmp.emojis, { width: result + 16 }];
   items[1] = callback(View, { style: items1, children: mapped });
   obj[1] = items;

@@ -12,8 +12,8 @@ const result = require("createCacheKey").fileFinishedImporting("modules/in_app_r
 
 export default function Arrow() {
   const obj = { source: null, size: null, style: null };
-  obj[0] = importDefault(7841);
-  obj[1] = require(1297) /* Button */.Icon.Sizes.MEDIUM;
+  obj[0] = require("../../../../../_runtime/07841_registerAsset.js");
+  obj[1] = require("../../../../design/void/native.tsx") /* Button */.Icon.Sizes.MEDIUM;
   obj[2] = createCacheKey().tintColor;
-  return jsx(require(1297) /* Button */.Icon, { source: null, size: null, style: null });
+  return jsx(require("../../../../design/void/native.tsx") /* Button */.Icon, { source: null, size: null, style: null });
 };

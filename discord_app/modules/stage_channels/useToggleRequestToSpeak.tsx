@@ -9,10 +9,10 @@ let result = require("fetchFingerprint").fileFinishedImporting("modules/stage_ch
 export default function useToggleRequestToSpeak(id) {
   const _require = id;
   const items = [fetchFingerprint];
-  const stateFromStores = _require(589).useStateFromStores(items, () => id2.getId());
-  const tmp4 = importDefault(4469)(stateFromStores, id.id);
+  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => id2.getId());
+  const tmp4 = require("useAudienceRequestToSpeakState.tsx")(stateFromStores, id.id);
   importDefault = tmp4;
-  const tmp5 = tmp4 === _require(4469).RequestToSpeakStates.REQUESTED_TO_SPEAK || tmp4 === _require(4469).RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+  const tmp5 = tmp4 === _require("useAudienceRequestToSpeakState.tsx").RequestToSpeakStates.REQUESTED_TO_SPEAK || tmp4 === _require("useAudienceRequestToSpeakState.tsx").RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
   const dependencyMap = tmp5;
   const tmp6 = first(React.useState(tmp5), 2);
   first = tmp6[0];

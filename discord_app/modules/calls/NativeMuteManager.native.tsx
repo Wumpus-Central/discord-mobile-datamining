@@ -44,8 +44,8 @@ prototype["nativeMuteChanged"] = function nativeMuteChanged() {
     } else if (!self.ignoreForAudioRouteChange) {
       self.needToUnmuteNative = true;
       obj2.log("Native mute changed > toggling mute");
-      importDefault(9077).toggleSelfMute({ playSoundEffect: false });
-      const obj = importDefault(9077);
+      require("../../actions/AudioActionCreators.tsx").toggleSelfMute({ playSoundEffect: false });
+      const obj = require("../../actions/AudioActionCreators.tsx");
     }
   }
 };

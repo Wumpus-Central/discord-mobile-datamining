@@ -153,5 +153,5 @@ export const showReportModal = function showReportModal(arg0, arg1, arg2) {
   return applyArgumentsResult;
 };
 export const hideReportModal = function hideReportModal() {
-  importDefault(4490).popWithKey(IN_APP_REPORT_MODAL_KEY);
+  require("../../actions/ModalActionCreators.tsx").popWithKey(IN_APP_REPORT_MODAL_KEY);
 };

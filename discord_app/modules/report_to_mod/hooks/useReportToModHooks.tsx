@@ -8,7 +8,7 @@ const result = require("reinjectEphemerals").fileFinishedImporting("modules/repo
 export const useIsReportToModEnabled = function useIsReportToModEnabled(arg0) {
   const _require = arg0;
   const items = [createGuildRecordFromRust];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null == closure_0) {
       return false;
     } else {
@@ -27,7 +27,7 @@ export const useIsReportToModEnabled = function useIsReportToModEnabled(arg0) {
 export const useReportToModChannelId = function useReportToModChannelId(arg0) {
   const _require = arg0;
   const items = [createGuildRecordFromRust];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let guild = null;
     if (null != closure_0) {
       guild = outer1_4.getGuild(tmp);
@@ -44,10 +44,10 @@ export const useReportToModChannelId = function useReportToModChannelId(arg0) {
   });
 };
 export const useIsModeratorReportOrPostChannel = function useIsModeratorReportOrPostChannel(isModeratorReportChannel) {
-  return require(5803) /* canReportMessageToMods */.isModeratorReportOrPostChannel(isModeratorReportChannel);
+  return require("../ReportToModUtils.tsx") /* canReportMessageToMods */.isModeratorReportOrPostChannel(isModeratorReportChannel);
 };
 export const useIsModeratorReportPostChannel = function useIsModeratorReportPostChannel(isModeratorReportChannel) {
-  return require(5803) /* canReportMessageToMods */.isModeratorReportPostChannel(isModeratorReportChannel);
+  return require("../ReportToModUtils.tsx") /* canReportMessageToMods */.isModeratorReportPostChannel(isModeratorReportChannel);
 };
 export const useLoadReportedMessage = function useLoadReportedMessage(messageReference) {
   messageReference = messageReference.messageReference;
@@ -88,7 +88,7 @@ export const loadOriginalAuthorFromSnapshot = function loadOriginalAuthorFromSna
     }
   }
   if (null != reported_user_id) {
-    const user = require(8119) /* _fetchProfile */.getUser(reported_user_id);
-    const obj = require(8119) /* _fetchProfile */;
+    const user = require("../../../actions/UserActionCreators.tsx") /* _fetchProfile */.getUser(reported_user_id);
+    const obj = require("../../../actions/UserActionCreators.tsx") /* _fetchProfile */;
   }
 };

@@ -10,9 +10,9 @@ let error;
 let metroImportAll;
 const require = arg1;
 function close() {
-  importDefault(16471).terminate();
-  const obj = importDefault(16471);
-  importDefault(8943).close();
+  require("../GuildSettingsModalChannelsActionCreators.tsx").terminate();
+  const obj = require("../GuildSettingsModalChannelsActionCreators.tsx");
+  require("../GuildSettingsActionCreators.tsx").close();
 }
 ({ GuildSettingsSections: error, WebhookTypes: metroImportAll } = ME);
 const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModal.tsx");

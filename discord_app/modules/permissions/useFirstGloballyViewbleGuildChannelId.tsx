@@ -9,7 +9,7 @@ export const useFirstGloballyViewbleGuildChannelId = function useFirstGloballyVi
   const _require = guildId;
   const items = [comparator];
   const items1 = [guildId];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null != closure_0) {
       const selectableChannels = outer1_3.getSelectableChannels(tmp);
       for (const item10010 of selectableChannels) {

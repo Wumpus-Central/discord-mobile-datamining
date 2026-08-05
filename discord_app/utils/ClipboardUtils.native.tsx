@@ -88,5 +88,5 @@ export const copy = function copy() {
   return applyArgumentsResult;
 };
 export const getString = function getString() {
-  return importDefault(5639).getString();
+  return require("../../_runtime/05639_useClipboard.js").getString();
 };

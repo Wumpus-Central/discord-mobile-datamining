@@ -33,7 +33,7 @@ export default function SubscriptionAccountHoldNotice(subscription) {
     obj = { size: null, style: null, source: null };
     obj[0] = subscription(1297).IconSizes.MEDIUM;
     obj[1] = tmp.icon;
-    obj[2] = importDefault(7556);
+    obj[2] = require("../../../../_runtime/07556_registerAsset.js");
     const items = [callback(subscription(1297).Icon, obj), ];
     const obj1 = { style: null, variant: "text-sm/medium", children: null };
     obj1[0] = tmp.text;

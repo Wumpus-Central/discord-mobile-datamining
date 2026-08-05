@@ -13,9 +13,9 @@ export default function LabelLayoutComponent(arg0) {
   let renderComponent;
   ({ component, renderComponent } = arg0);
   ({ label, description } = arg0);
-  let obj = require(8026) /* isInteractionComponent */;
+  let obj = require("../../ComponentStateContext.tsx") /* isInteractionComponent */;
   const componentError = obj.useComponentError(component);
-  if (component.type === require(1906) /* PermissionOverwriteType */.ComponentType.CHECKBOX) {
+  if (component.type === require("../../../../flow/Server.tsx") /* PermissionOverwriteType */.ComponentType.CHECKBOX) {
     let renderComponentResult = renderComponent(component, "label-child");
   } else {
     obj = { label: null, description: null, required: null, errorMessage: null, children: null };
@@ -27,7 +27,7 @@ export default function LabelLayoutComponent(arg0) {
     obj[0] = { width: "100%" };
     obj[1] = renderComponent(component, "label-child");
     obj[4] = <View style={null}>{null}</View>;
-    renderComponentResult = jsx(require(7714) /* Input */.Input, { style: null, children: null });
+    renderComponentResult = jsx(require("../../../../design/components/Input/native/Input.native.tsx") /* Input */.Input, { style: null, children: null });
   }
   return renderComponentResult;
 };

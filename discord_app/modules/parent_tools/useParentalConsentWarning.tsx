@@ -6,5 +6,5 @@ const result = require("set").fileFinishedImporting("modules/parent_tools/usePar
 
 export const useParentalConsentWarning = function useParentalConsentWarning() {
   const items = [initialize];
-  return require(589) /* initialize */.useStateFromStores(items, () => warning.getWarning());
+  return require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => warning.getWarning());
 };

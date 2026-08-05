@@ -6,10 +6,10 @@ const result = require("initialize").fileFinishedImporting("modules/guild_role_s
 
 export default function useSubscriptionRole(arg0, editStateId) {
   const _require = arg0;
-  const dependencyMap = _require(14348).useSubscriptionListing(editStateId);
-  const obj = _require(14348);
+  const dependencyMap = _require("GuildRoleSubscriptionsHooks.tsx").useSubscriptionListing(editStateId);
+  const obj = _require("GuildRoleSubscriptionsHooks.tsx");
   const items = [createGuildRoleRecordFromRust];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let role;
     if (null != closure_0) {
       if (null != closure_1) {

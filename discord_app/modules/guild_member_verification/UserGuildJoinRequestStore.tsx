@@ -16,7 +16,7 @@ function handleGatewayJoinRequestUpdate(arg0) {
         return false;
       }
     }
-    obj = require(4104) /* isActionedApplicationStatus */;
+    obj = require("GuildJoinRequestUtils.tsx") /* isActionedApplicationStatus */;
     if (obj.isApprovedAndAcked(obj)) {
       delete tmp[tmp2];
       if (c3 === guildId) {
@@ -54,8 +54,8 @@ prototype["computeGuildIds"] = function computeGuildIds() {
 prototype["getJoinRequestGuild"] = function getJoinRequestGuild(guildId) {
   let fromGuildBasicResult = null;
   if (null != dependencyMap[guildId]) {
-    fromGuildBasicResult = require(1411) /* fromGuildPropertiesWithAdditionalFields */.fromGuildBasic(dependencyMap[guildId]);
-    const obj = require(1411) /* fromGuildPropertiesWithAdditionalFields */;
+    fromGuildBasicResult = require("../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */.fromGuildBasic(dependencyMap[guildId]);
+    const obj = require("../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */;
   }
   return fromGuildBasicResult;
 };
@@ -107,7 +107,7 @@ const userGuildJoinRequestStore = new UserGuildJoinRequestStore(require("dispatc
       } else {
         tmp8[guildId] = obj;
       }
-      obj2 = require(4104) /* isActionedApplicationStatus */;
+      obj2 = require("GuildJoinRequestUtils.tsx") /* isActionedApplicationStatus */;
     } else {
       delete tmp3[tmp2];
       if (c3 === guildId) {

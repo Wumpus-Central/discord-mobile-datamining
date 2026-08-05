@@ -8,12 +8,12 @@ function defaultMobileWebNitroManagementSuccessCallback() {
 }
 function defaultMobileWebNitroManagementFailureCallback(arg0) {
   tmp2.error("Failed to open mobile web Nitro Management page, error response: ", arg0);
-  let obj = importDefault(4624);
+  let obj = require("../../../../actions/native/AlertActionCreators.tsx");
   obj = { title: null, body: null, hideActionSheet: true };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.NrBVjw);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require(1236) /* getSystemLocale */.t["gD+grx"]);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.NrBVjw);
+  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["gD+grx"]);
   obj.show(obj);
 }
 let closure_6 = new require("timestamp")("PremiumManagementUtils");
@@ -120,7 +120,7 @@ export const getExternalManagementMessage = function getExternalManagementMessag
         } else {
           return null;
         }
-        obj7 = require(500) /* set */;
+        obj7 = require("../../../../utils/PlatformUtils.tsx") /* set */;
       }
     }
     return null;

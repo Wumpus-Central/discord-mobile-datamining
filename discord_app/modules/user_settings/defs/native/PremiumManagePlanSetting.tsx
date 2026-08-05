@@ -3,8 +3,8 @@ import createToggle from "createToggle";
 
 obj = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["8jmdON"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["8jmdON"]);
   },
   parent: require("MobileSetting").MobileSetting.PREMIUM,
   screen: obj
@@ -12,7 +12,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.PREMIUM_MANAGE_PLAN,
   getComponent() {
-    return require(14135) /* PremiumPlanSelectSettingScreen */.default;
+    return require("../../premium/native/PremiumManagePlanScreen.tsx") /* PremiumPlanSelectSettingScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

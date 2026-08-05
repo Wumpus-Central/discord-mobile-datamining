@@ -3,7 +3,7 @@ const result = require("set").fileFinishedImporting("modules/voice_overlay/nativ
 
 export default {
   setEnabled(enabled) {
-    let obj = importDefault(709);
+    let obj = require("../../../Dispatcher.tsx");
     obj = { type: "MOBILE_VOICE_OVERLAY_STATE_CHANGED", enabled };
     obj.dispatch(obj);
   }

@@ -7,14 +7,14 @@ let c5;
 function setLaunchPadPullTabExclusionRect() {
   let tmp = arg0;
   if (arg0 === undefined) {
-    const Storage = require(595) /* Storage */.Storage;
+    const Storage = require("../../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     let value = Storage.get(LAUNCH_PAD_PULL_TAB_POSITION_CACHE_KEY);
     if (value == null) {
       value = closure_4;
     }
     tmp = value;
   }
-  let obj = require(500) /* set */;
+  let obj = require("../../../utils/PlatformUtils.tsx") /* set */;
   if (obj.isAndroid()) {
     let tmp7Result = tmp7(1474);
     const diff = tmp7Result.getWindowDimensions().width - closure_5;
@@ -54,8 +54,8 @@ function setLaunchPadPullTabExclusionRect() {
       obj[2] = tmp;
       obj[3] = sum;
       const items = [obj];
-      const result = importDefault(4836).setSystemGestureExclusionRects(items);
-      const obj5 = importDefault(4836);
+      const result = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceSettingsModule.tsx").setSystemGestureExclusionRects(items);
+      const obj5 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceSettingsModule.tsx");
     }
   }
 }
@@ -66,7 +66,7 @@ let c8;
 let result = require("set").fileFinishedImporting("modules/launchpad/native/LaunchPadPullTabCache.tsx");
 
 export const getLaunchPadPullTabPositionCached = function getLaunchPadPullTabPositionCached() {
-  const Storage = require(595) /* Storage */.Storage;
+  const Storage = require("../../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
   let value = Storage.get(LAUNCH_PAD_PULL_TAB_POSITION_CACHE_KEY);
   if (value == null) {
     value = closure_4;
@@ -74,7 +74,7 @@ export const getLaunchPadPullTabPositionCached = function getLaunchPadPullTabPos
   return value;
 };
 export const setLaunchPadPullTabPositionCached = function setLaunchPadPullTabPositionCached(arg0) {
-  const Storage = require(595) /* Storage */.Storage;
+  const Storage = require("../../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
   const result = Storage.set(LAUNCH_PAD_PULL_TAB_POSITION_CACHE_KEY, arg0);
 };
 export const persistLaunchPadPullTabPosition = function persistLaunchPadPullTabPosition(arg0) {
@@ -89,14 +89,14 @@ export const persistLaunchPadPullTabPosition = function persistLaunchPadPullTabP
   }, 300);
 };
 export const clearLaunchPadPullTabExclusionRect = function clearLaunchPadPullTabExclusionRect() {
-  let isAndroidResult = require(500) /* set */.isAndroid();
+  let isAndroidResult = require("../../../utils/PlatformUtils.tsx") /* set */.isAndroid();
   if (isAndroidResult) {
     isAndroidResult = null != c8;
   }
   if (isAndroidResult) {
     c8 = undefined;
-    const result = importDefault(4836).setSystemGestureExclusionRects([]);
-    const obj2 = importDefault(4836);
+    const result = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceSettingsModule.tsx").setSystemGestureExclusionRects([]);
+    const obj2 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceSettingsModule.tsx");
   }
 };
 export { setLaunchPadPullTabExclusionRect };

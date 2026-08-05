@@ -86,22 +86,22 @@ class VoiceMessagesPlaybackManager extends tmp3 {
 }
 const prototype = VoiceMessagesPlaybackManager.prototype;
 prototype["_terminate"] = function _terminate() {
-  importDefault(709).unsubscribe("LOGOUT", this.handleLogout);
-  const obj = importDefault(709);
-  importDefault(709).unsubscribe("MESSAGE_DELETE", this.handleMessageDelete);
-  const obj2 = importDefault(709);
-  importDefault(709).unsubscribe("APP_STATE_UPDATE", this.handleAppStateChanged);
-  const obj3 = importDefault(709);
-  importDefault(709).unsubscribe("ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION", this.handleSetPrefersReducedMotion);
+  require("../../../Dispatcher.tsx").unsubscribe("LOGOUT", this.handleLogout);
+  const obj = require("../../../Dispatcher.tsx");
+  require("../../../Dispatcher.tsx").unsubscribe("MESSAGE_DELETE", this.handleMessageDelete);
+  const obj2 = require("../../../Dispatcher.tsx");
+  require("../../../Dispatcher.tsx").unsubscribe("APP_STATE_UPDATE", this.handleAppStateChanged);
+  const obj3 = require("../../../Dispatcher.tsx");
+  require("../../../Dispatcher.tsx").unsubscribe("ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION", this.handleSetPrefersReducedMotion);
 };
 prototype["_initialize"] = function _initialize() {
-  let obj = importDefault(709);
+  let obj = require("../../../Dispatcher.tsx");
   const subscription = obj.subscribe("LOGOUT", this.handleLogout);
-  const subscription1 = importDefault(709).subscribe("MESSAGE_DELETE", this.handleMessageDelete);
-  const obj2 = importDefault(709);
-  const subscription2 = importDefault(709).subscribe("APP_STATE_UPDATE", this.handleAppStateChanged);
-  const obj3 = importDefault(709);
-  const subscription3 = importDefault(709).subscribe("ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION", this.handleSetPrefersReducedMotion);
+  const subscription1 = require("../../../Dispatcher.tsx").subscribe("MESSAGE_DELETE", this.handleMessageDelete);
+  const obj2 = require("../../../Dispatcher.tsx");
+  const subscription2 = require("../../../Dispatcher.tsx").subscribe("APP_STATE_UPDATE", this.handleAppStateChanged);
+  const obj3 = require("../../../Dispatcher.tsx");
+  const subscription3 = require("../../../Dispatcher.tsx").subscribe("ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION", this.handleSetPrefersReducedMotion);
   obj = { type: "ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION", prefersReducedMotion: obj.rawPrefersReducedMotion };
   const result = this.handleSetPrefersReducedMotion(obj);
 };
@@ -111,8 +111,8 @@ let result = require("handleConnectionOpen").fileFinishedImporting("modules/voic
 export default voiceMessagesPlaybackManager;
 export const pauseCurrentAudioPlayer = function pauseCurrentAudioPlayer(arg0) {
   if (obj.isAndroid()) {
-    importDefault(13712).pauseCurrentPlayer(arg0);
-    const obj2 = importDefault(13712);
+    require("../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioPlayerModule.tsx").pauseCurrentPlayer(arg0);
+    const obj2 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioPlayerModule.tsx");
   } else {
     const DCDAudioPlayerManager = closure_4.DCDAudioPlayerManager;
     if (DCDAudioPlayerManager != null) {
@@ -122,8 +122,8 @@ export const pauseCurrentAudioPlayer = function pauseCurrentAudioPlayer(arg0) {
 };
 export const playCurrentAudioPlayer = function playCurrentAudioPlayer() {
   if (obj.isAndroid()) {
-    const result = importDefault(13712).maybePlayCurrentPlayer();
-    const obj2 = importDefault(13712);
+    const result = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioPlayerModule.tsx").maybePlayCurrentPlayer();
+    const obj2 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioPlayerModule.tsx");
   } else {
     const DCDAudioPlayerManager = closure_4.DCDAudioPlayerManager;
     if (DCDAudioPlayerManager != null) {
@@ -133,8 +133,8 @@ export const playCurrentAudioPlayer = function playCurrentAudioPlayer() {
 };
 export const handleVoiceMessageDeleted = function handleVoiceMessageDeleted(id) {
   if (obj.isAndroid()) {
-    const result = importDefault(13712).handleVoiceMessageDeleted(id);
-    const obj2 = importDefault(13712);
+    const result = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioPlayerModule.tsx").handleVoiceMessageDeleted(id);
+    const obj2 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioPlayerModule.tsx");
   } else {
     const DCDAudioPlayerManager = closure_4.DCDAudioPlayerManager;
     if (DCDAudioPlayerManager != null) {

@@ -13,7 +13,7 @@ function connectToStage(channel, flag) {
   }
   if (!flag) {
     const _require = channel;
-    const canResult = getUncachedChannelPermissions.can(_require(1380).JOIN_VOCAL_CHANNEL_PERMISSIONS, channel);
+    const canResult = getUncachedChannelPermissions.can(_require("StageChannelPermissions.tsx").JOIN_VOCAL_CHANNEL_PERMISSIONS, channel);
     let tmp6 = !canResult;
     if (canResult) {
       let num = importAll(7697).shouldShowBlockedUsers(channel.id) && tmp !== channel.id;
@@ -32,22 +32,22 @@ function connectToStage(channel, flag) {
       return false;
     }
   }
-  importDefault(12569).initialize();
+  require("StageChannelNewUserManager.tsx").initialize();
   const obj = closure_9;
-  const obj4 = importDefault(12569);
-  const voiceChannel = importDefault(5096).selectVoiceChannel(channel.id);
+  const obj4 = require("StageChannelNewUserManager.tsx");
+  const voiceChannel = require("../../actions/SelectedChannelActionCreators.tsx").selectVoiceChannel(channel.id);
   if (obj.getVoiceChannelId() !== channel.id) {
     return false;
   } else {
     allApplicationStreamsForChannel = allApplicationStreamsForChannel.getAllApplicationStreamsForChannel(channel.id);
     const found = allApplicationStreamsForChannel.find((currentUserActiveStream) => !streamMarkedFull.isStreamMarkedFull(channel(table[13]).encodeStreamKey(currentUserActiveStream)));
     if (null != found) {
-      _require(4464).watchStream(found, { noFocus: true });
-      const obj6 = _require(4464);
+      _require("../../actions/StreamActionCreators.tsx").watchStream(found, { noFocus: true });
+      const obj6 = _require("../../actions/StreamActionCreators.tsx");
     }
     return true;
   }
-  const obj5 = importDefault(5096);
+  const obj5 = require("../../actions/SelectedChannelActionCreators.tsx");
 }
 function connectAndOpen(channel, flag) {
   const _require = channel;
@@ -68,8 +68,8 @@ function connectAndOpen(channel, flag) {
     result = voiceChannelId !== channel.id;
   }
   if (result) {
-    result = _require(12571).shouldShowVoiceChannelChangeConfirmation(channel);
-    const obj = _require(12571);
+    result = _require("../channel/shouldShowVoiceChannelChangeConfirmation.tsx").shouldShowVoiceChannelChangeConfirmation(channel);
+    const obj = _require("../channel/shouldShowVoiceChannelChangeConfirmation.tsx");
   }
   if (result) {
     result = flag2(7697).showChannelChangeConfirmationAlert(channel, () => {

@@ -10,17 +10,17 @@ export default function useFavoritesGuildChannelActions(channelId, FavoritesGuil
   let hasAccess;
   let hasHigherPrivileges;
   const _require = channelId;
-  let obj = _require(9629);
+  let obj = _require("../../FavoritesHooks.tsx");
   const favoritesAccess = obj.useFavoritesAccess(FavoritesGuildChannelList);
   ({ hasAccess, hasHigherPrivileges } = favoritesAccess);
-  let result = _require(1865).canFavoriteChannelType(channelId, hasHigherPrivileges);
-  const obj2 = _require(1865);
+  let result = _require("../../FavoritesUtils.tsx").canFavoriteChannelType(channelId, hasHigherPrivileges);
+  const obj2 = _require("../../FavoritesUtils.tsx");
   const tmp = _require;
   const items = [initializeFromUserSettings];
-  const stateFromStores = _require(589).useStateFromStores(items, () => outer1_4.isFavorite(channelId.id));
-  const obj3 = _require(589);
-  const isFavoritesGuildSelected = _require(9629).useIsFavoritesGuildSelected();
-  const obj4 = _require(9629);
+  const stateFromStores = _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_4.isFavorite(channelId.id));
+  const obj3 = _require("../../../../../discord_common/js/packages/flux/index.tsx");
+  const isFavoritesGuildSelected = _require("../../FavoritesHooks.tsx").useIsFavoritesGuildSelected();
+  const obj4 = _require("../../FavoritesHooks.tsx");
   const items1 = [trackCommunicationDisabled, fetchFingerprint];
   if (result) {
     result = obj5.useStateFromStores(items1, () => {
@@ -31,7 +31,7 @@ export default function useFavoritesGuildChannelActions(channelId, FavoritesGuil
       return isMemberResult;
     });
   }
-  obj5 = _require(589);
+  obj5 = _require("../../../../../discord_common/js/packages/flux/index.tsx");
   let tmp7 = hasAccess;
   if (hasAccess) {
     tmp7 = result;

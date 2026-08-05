@@ -41,10 +41,10 @@ class StageChannelNewUserManager extends tmp2 {
 }
 const prototype = StageChannelNewUserManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const subscription = importDefault(709).subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates);
+  const subscription = require("../../Dispatcher.tsx").subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates);
 };
 prototype["_terminate"] = function _terminate() {
-  importDefault(709).unsubscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates);
+  require("../../Dispatcher.tsx").unsubscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates);
 };
 const stageChannelNewUserManager = new StageChannelNewUserManager();
 let result = require("buildStageChannelUserRoles").fileFinishedImporting("modules/stage_channels/StageChannelNewUserManager.tsx");

@@ -17,17 +17,17 @@ export const getPriceString = function getPriceString(hasAnyPremiumGroup) {
         if (null == value) {
           return null;
         } else {
-          const price = require(3931) /* getPremiumPlanItem */.getPrice(planIdFromItems);
-          const obj2 = require(3931) /* getPremiumPlanItem */;
+          const price = require("../../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */.getPrice(planIdFromItems);
+          const obj2 = require("../../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */;
           const tmp2 = require;
-          const formatPriceResult = require(5764) /* formatSingleCurrencyPrice */.formatPrice(price.amount, price.currency);
+          const formatPriceResult = require("../../../utils/PriceUtils.tsx") /* formatSingleCurrencyPrice */.formatPrice(price.amount, price.currency);
           if (tmp) {
             ({ interval, intervalCount } = value);
             return tmp2(5764).formatRate(formatPriceResult, interval, intervalCount);
           } else {
             return formatPriceResult;
           }
-          const obj3 = require(5764) /* formatSingleCurrencyPrice */;
+          const obj3 = require("../../../utils/PriceUtils.tsx") /* formatSingleCurrencyPrice */;
         }
       }
     }

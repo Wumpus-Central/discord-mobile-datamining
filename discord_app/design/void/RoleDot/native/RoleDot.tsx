@@ -35,7 +35,7 @@ export const RoleDot = function RoleDot(background) {
   }
   ({ containerStyles, guildId } = background);
   const tmp = createCacheKey();
-  let obj = require(4701) /* getFontScale */;
+  let obj = require("../../../../modules/screen/native/useFontScale.tsx") /* getFontScale */;
   const fontScale = obj.useFontScale();
   if (null == color) {
     if (null == colors) {
@@ -49,7 +49,7 @@ export const RoleDot = function RoleDot(background) {
   const result = num * fontScale;
   obj = { paddingRight: 2 * fontScale, paddingTop: null, height: null };
   const tmp5 = importDefault;
-  const tmp6 = importDefault(4723)(guildId, null);
+  const tmp6 = require("../../../../modules/premium/powerups/hooks/useHasEnhancedRoleColors.tsx")(guildId, null);
   if (tmp2Result.isAndroid()) {
     let result1 = 3 * fontScale;
   } else {

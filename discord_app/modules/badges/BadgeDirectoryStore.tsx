@@ -231,15 +231,15 @@ const badgeDirectoryStore = new BadgeDirectoryStore(require("dispatcher"), {
         if (Date.now() >= num2) {
           value = map2.get(id);
           if (value == null) {
-            value = new importDefault(584)(importDefault(687).Millis.MINUTE, HOUR, true);
-            const tmp13 = importDefault(584);
+            value = new require("../../../discord_common/js/packages/backoff/Backoff.tsx")(require("../../utils/Durations.tsx").Millis.MINUTE, HOUR, true);
+            const tmp13 = require("../../../discord_common/js/packages/backoff/Backoff.tsx");
           }
           const result = map2.set(id, value);
           const _Date2 = Date;
           const timestamp = Date.now();
           const result1 = obj3.set(id, timestamp + value.fail());
-          const badgeDirectory = require(8715) /* urlUserId */.fetchBadgeDirectory(id);
-          const obj5 = require(8715) /* urlUserId */;
+          const badgeDirectory = require("BadgeDirectoryActionCreators.tsx") /* urlUserId */.fetchBadgeDirectory(id);
+          const obj5 = require("BadgeDirectoryActionCreators.tsx") /* urlUserId */;
           const obj6 = map2;
         }
         obj3 = map3;

@@ -19,7 +19,7 @@ let closure_8 = importAllResult.memo(function FramePanelHeaderContentInner(arg0)
   let wrapperOffset;
   ({ landscape, setMode } = arg0);
   ({ pipState, wrapperOffset } = arg0);
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [map];
   const stateFromStores = obj.useStateFromStores(items, () => connectedFrame.getConnectedFrame(), []);
   let applicationId;
@@ -27,7 +27,7 @@ let closure_8 = importAllResult.memo(function FramePanelHeaderContentInner(arg0)
     applicationId = stateFromStores.applicationId;
   }
   const items1 = [applicationId];
-  const first = callback(importDefault(5616)(items1), 1)[0];
+  const first = callback(require("../../../applications/useGetOrFetchApplications.tsx")(items1), 1)[0];
   let tmpResult = tmp(15968);
   const baseActivityPanelHeaderContent = tmpResult.useBaseActivityPanelHeaderContent({ landscape, setMode, wrapperOffset, pipState });
   ({ gesture, headerWrapperStyles, headerStyles } = baseActivityPanelHeaderContent);
@@ -99,8 +99,8 @@ let closure_8 = importAllResult.memo(function FramePanelHeaderContentInner(arg0)
   }
 });
 const memoResult = importAllResult.memo(() => {
-  let obj = require(15968) /* useBaseActivityPanelHeaderContent */;
-  obj = { context: importDefault(15985) };
+  let obj = require("../../../activities/panel/native/ActivityPanelHeader.tsx") /* useBaseActivityPanelHeaderContent */;
+  obj = { context: require("FramePanelStateContext.tsx") };
   const baseActivityPanelHeader = obj.useBaseActivityPanelHeader(obj);
   obj = { style: baseActivityPanelHeader.headerStyles, children: callback2(closure_8, obj1) };
   return callback2(View, obj);

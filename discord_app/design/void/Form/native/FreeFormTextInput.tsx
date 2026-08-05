@@ -12,16 +12,16 @@ let metroImportAll;
 const require = arg1;
 function ClearButton(onPress) {
   let obj = { style: { borderRadius: 20, padding: 8 }, accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl.string(require(1236) /* getSystemLocale */.t.VkKicb);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.VkKicb);
   obj[3] = onPress.onPress;
   obj[4] = { top: 8, bottom: 8, right: 8 };
   obj = { source: null, style: null, size: null };
-  obj[0] = importDefault(8279);
+  obj[0] = require("../../../../../_runtime/08279_registerAsset.js");
   obj[1] = callback2().closeIcon;
-  obj[2] = require(1297) /* Button */.Icon.Sizes.MEDIUM;
-  obj[5] = callback(require(1297) /* Button */.Icon, obj);
-  return callback(require(4812) /* PressableBase */.PressableOpacity, obj);
+  obj[2] = require("../../native.tsx") /* Button */.Icon.Sizes.MEDIUM;
+  obj[5] = callback(require("../../native.tsx") /* Button */.Icon, obj);
+  return callback(require("../../Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
 }
 let c3 = importAllResult;
 ({ TouchableWithoutFeedback: c4, View: c5, TouchableOpacity: closure_6 } = get_ActivityIndicator);
@@ -89,7 +89,7 @@ const forwardRefResult = importAllResult.forwardRef((editable, ref) => {
   if (tmp11) {
     tmp11 = flag;
   }
-  importDefault(38)(!tmp11, "Cannot have an editable input w/ onPress handler");
+  require("../../../../../_runtime/metro/00038__.js")(!tmp11, "Cannot have an editable input w/ onPress handler");
   let items = [tmp4.container, , ];
   error = null;
   if (error) {

@@ -51,14 +51,14 @@ function handleFormInit(location) {
     OPEN = FormStates.OPEN;
     let closure_37 = {};
     let c38 = null;
-    let closure_10 = importDefault(11).castGuildIdAsEveryoneGuildRoleId(guildId);
+    let closure_10 = require("../../utils/SnowflakeUtils.tsx").castGuildIdAsEveryoneGuildRoleId(guildId);
     mfaLevel = guild.mfaLevel;
     let closure_52 = obj;
     let c12 = null;
     closure_44 = {};
     location = location.location;
     if (section === constants.TAG) {
-      obj = require(8946) /* canUseMobileServerTagSettings */;
+      obj = require("GuildSettingsServerTagUtils.tsx") /* canUseMobileServerTagSettings */;
       if (!obj.canUseMobileServerTagSettings(guildId)) {
         obj2 = undefined;
       }
@@ -79,7 +79,7 @@ function handleFormInit(location) {
       obj2 = { type: "stack", routes: null };
       obj2[1] = items;
     }
-    const obj5 = importDefault(11);
+    const obj5 = require("../../utils/SnowflakeUtils.tsx");
   }
 }
 function _createInvite(code) {
@@ -93,13 +93,13 @@ function _createInvite(code) {
   obj[4] = callback(code.channel);
   let fromInviteGuildResult = null;
   if (null != code.guild) {
-    fromInviteGuildResult = require(1411) /* fromGuildPropertiesWithAdditionalFields */.fromInviteGuild(code.guild);
-    const obj2 = require(1411) /* fromGuildPropertiesWithAdditionalFields */;
+    fromInviteGuildResult = require("../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */.fromInviteGuild(code.guild);
+    const obj2 = require("../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */;
   }
   obj[5] = fromInviteGuildResult;
   ({ uses: obj[6], max_uses: obj[7], max_age: obj[8] } = code);
   const created_at = code.created_at;
-  obj[9] = importDefault(3867)(created_at);
+  obj[9] = require("../../../_runtime/03867_t.js")(created_at);
   ({ flags: obj[10], roles: obj[11] } = code);
   tmp = new tmp(obj);
   return tmp;
@@ -115,8 +115,8 @@ function handleIntegrationsUpdate(type) {
       tmp5 = type.guildId === user.id;
     }
     if (tmp5) {
-      const guildIntegrationsApplications = require(8950) /* _fetchGuildIntegrationsApplications */.fetchGuildIntegrationsApplications(user.id);
-      const obj = require(8950) /* _fetchGuildIntegrationsApplications */;
+      const guildIntegrationsApplications = require("GuildSettingsFetchActionCreators.tsx") /* _fetchGuildIntegrationsApplications */.fetchGuildIntegrationsApplications(user.id);
+      const obj = require("GuildSettingsFetchActionCreators.tsx") /* _fetchGuildIntegrationsApplications */;
     }
     tmp = tmp5;
   }
@@ -189,7 +189,7 @@ prototype["widgetHasChanges"] = function widgetHasChanges() {
   return tmp;
 };
 prototype["hasChanges"] = function hasChanges() {
-  const obj = importDefault(12);
+  const obj = require("../../../_runtime/00012_apply.js");
   const isEqualResult = obj.isEqual(closure_7, closure_6);
   let widgetHasChangesResult = !isEqualResult;
   if (isEqualResult) {
@@ -226,7 +226,7 @@ prototype["getGuildId"] = function getGuildId() {
   return id;
 };
 prototype["showPublicSuccessModal"] = function showPublicSuccessModal() {
-  const Storage = require(595) /* Storage */.Storage;
+  const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
   return !Storage.get(closure_28);
 };
 prototype["getGuild"] = function getGuild() {
@@ -399,16 +399,16 @@ obj = {
       tmp = user.id === guild.guild.id;
     }
     if (tmp) {
-      fromGuildResult = require(1411) /* fromGuildPropertiesWithAdditionalFields */.fromGuild(guild.guild, fromGuildResult);
+      fromGuildResult = require("../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */.fromGuild(guild.guild, fromGuildResult);
       user = fromGuildResult;
-      const obj = require(1411) /* fromGuildPropertiesWithAdditionalFields */;
+      const obj = require("../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */;
     }
   },
   GUILD_SETTINGS_SUBMIT_FAILURE: function handleFormSubmitFailure(errors) {
     const OPEN = FormStates.OPEN;
     if (defaultGuildSettingsSection == null) {
-      defaultGuildSettingsSection = require(8949) /* getDefaultGuildSettingsSection */.getDefaultGuildSettingsSection();
-      const obj = require(8949) /* getDefaultGuildSettingsSection */;
+      defaultGuildSettingsSection = require("utils/getDefaultGuildSettingsSection.tsx") /* getDefaultGuildSettingsSection */.getDefaultGuildSettingsSection();
+      const obj = require("utils/getDefaultGuildSettingsSection.tsx") /* getDefaultGuildSettingsSection */;
     }
     let c4 = null;
     errors = errors.errors;
@@ -430,8 +430,8 @@ obj = {
               if (closure_3 === tmp27.MEMBERS) {
                 let c10 = getGuildEveryoneRoleId(user);
               } else if (closure_3 === tmp27.VANITY_URL) {
-                const vanityUrl = require(8948) /* fetchVanityUrl */.fetchVanityUrl(user.id);
-                const obj2 = require(8948) /* fetchVanityUrl */;
+                const vanityUrl = require("server_monetization/boost_perks/GuildSettingsVanityURLActionCreators.tsx") /* fetchVanityUrl */.fetchVanityUrl(user.id);
+                const obj2 = require("server_monetization/boost_perks/GuildSettingsVanityURLActionCreators.tsx") /* fetchVanityUrl */;
               } else if (closure_3 === tmp27.SAFETY) {
                 if (null == closure_4) {
                   let SAFETY_OVERVIEW = constants2.SAFETY_OVERVIEW;
@@ -440,8 +440,8 @@ obj = {
                 }
                 let obj = { type: "GUILD_SETTINGS_SAFETY_SET_SUBSECTION", subsection: null };
                 obj[1] = SAFETY_OVERVIEW;
-                importDefault(709).dispatch(obj);
-                const obj5 = importDefault(709);
+                require("../../Dispatcher.tsx").dispatch(obj);
+                const obj5 = require("../../Dispatcher.tsx");
               }
             }
           }
@@ -457,8 +457,8 @@ obj = {
                 tmp13 = section.guildId === user.id;
               }
               if (tmp13) {
-                const guildIntegrationsApplications = require(8950) /* _fetchGuildIntegrationsApplications */.fetchGuildIntegrationsApplications(user.id);
-                const obj3 = require(8950) /* _fetchGuildIntegrationsApplications */;
+                const guildIntegrationsApplications = require("GuildSettingsFetchActionCreators.tsx") /* _fetchGuildIntegrationsApplications */.fetchGuildIntegrationsApplications(user.id);
+                const obj3 = require("GuildSettingsFetchActionCreators.tsx") /* _fetchGuildIntegrationsApplications */;
               }
               tmp12 = tmp13;
             }
@@ -466,7 +466,7 @@ obj = {
           }
         }
       }
-      const HTTP = require(530) /* sendRequest */.HTTP;
+      const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
       obj = { url: null, oldFormErrors: true, rejectWithError: true };
       obj[0] = closure_25.GUILD_INSTANT_INVITES(user.id);
       const value = HTTP.get(obj);
@@ -756,9 +756,9 @@ obj = {
     }
     let tmp2 = profile.id === id;
     if (tmp2) {
-      const result = require(8946) /* canUseMobileServerTagSettings */.isServerTagDraftDirty(profile, profile);
+      const result = require("GuildSettingsServerTagUtils.tsx") /* canUseMobileServerTagSettings */.isServerTagDraftDirty(profile, profile);
       tmp2 = !result;
-      const obj = require(8946) /* canUseMobileServerTagSettings */;
+      const obj = require("GuildSettingsServerTagUtils.tsx") /* canUseMobileServerTagSettings */;
       const tmp8 = !result;
     }
     return tmp2;

@@ -2,7 +2,7 @@
 const result = require("set").fileFinishedImporting("utils/native/FabricUtils.tsx");
 
 export const isFabric = function isFabric() {
-  const obj = importDefault(4150);
+  const obj = require("../../../discord_common/js/packages/rtn-codegen/js/NativeArchitectureProvider.tsx");
   let flag;
   if (obj != null) {
     flag = obj.isFabric();
@@ -13,9 +13,9 @@ export const isFabric = function isFabric() {
   return flag;
 };
 export const isIosFabric = function isIosFabric() {
-  let isIOSResult = require(500) /* set */.isIOS();
+  let isIOSResult = require("../PlatformUtils.tsx") /* set */.isIOS();
   if (isIOSResult) {
-    const obj2 = importDefault(4150);
+    const obj2 = require("../../../discord_common/js/packages/rtn-codegen/js/NativeArchitectureProvider.tsx");
     let flag;
     if (obj2 != null) {
       flag = obj2.isFabric();

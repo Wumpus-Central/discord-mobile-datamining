@@ -14,9 +14,9 @@ function SampleCard(arg0) {
   let noScroll;
   let title;
   ({ title, noScroll, children } = arg0);
-  const tmp3 = callback(require(4693) /* Stack */.Stack, { spacing: 16, children });
+  const tmp3 = callback(require("../../../../design/components/Stack/native/Stack.native.tsx") /* Stack */.Stack, { spacing: 16, children });
   let obj = { style: callback3().card, children: null };
-  const items = [callback(require(4281) /* Text */.Text, { variant: "text-lg/bold", children: title }), ];
+  const items = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-lg/bold", children: title }), ];
   let tmp2Result = tmp3;
   if (!noScroll) {
     obj = { horizontal: true, children: null };
@@ -25,7 +25,7 @@ function SampleCard(arg0) {
   }
   items[1] = tmp2Result;
   obj[1] = items;
-  return closure_6(require(5317) /* PressableCard */.Card, obj);
+  return closure_6(require("../../../../design/components/Card/native/Card.native.tsx") /* PressableCard */.Card, obj);
 }
 ({ View: c3, ScrollView: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
@@ -184,7 +184,7 @@ export default function UserSettingsDesignSystemPile() {
     })
   });
   const obj5 = { title: "Weird Piles", noScroll: true, children: null };
-  items1 = [callback2(require(4281) /* Text */.Text, { variant: "text-md/medium", color: "text-subtle", children: ["These examples explore the edge cases of the underlying ", "<Pile>", " component and aren't recommended uses."] }), ];
+  items1 = [callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-md/medium", color: "text-subtle", children: ["These examples explore the edge cases of the underlying ", "<Pile>", " component and aren't recommended uses."] }), ];
   let items2 = [[1, 1], [0.5, 0.5], [null, 0.5], [0.5, null], [0, 0.5], [0.5, 0], [0, 0]];
   items1[1] = items2.map((arg0) => {
     let tmp;

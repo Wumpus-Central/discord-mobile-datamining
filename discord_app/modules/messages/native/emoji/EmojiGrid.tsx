@@ -18,7 +18,7 @@ function Emoji(guildEmoji) {
     uRL = tmp3Result.getEmojiURL(obj);
   }
   obj = { src: uRL, fastImageStyle: tmp.gridEmojiFastImage, textEmojiStyle: tmp.gridEmojiText, name: guildEmoji.name };
-  return jsx(importDefault(5301), { src: uRL, fastImageStyle: tmp.gridEmojiFastImage, textEmojiStyle: tmp.gridEmojiText, name: guildEmoji.name }, guildEmoji.id);
+  return jsx(require("../../../emojis/native/Emoji.tsx"), { src: uRL, fastImageStyle: tmp.gridEmojiFastImage, textEmojiStyle: tmp.gridEmojiText, name: guildEmoji.name }, guildEmoji.id);
 }
 createCacheKey = { gridEmojiFastImage: null, gridEmojiText: null, emojiGridRowContainer: null, emojiGridContainer: null };
 createCacheKey = { height: 40, width: 40, borderRadius: require("Themes").radii.sm };

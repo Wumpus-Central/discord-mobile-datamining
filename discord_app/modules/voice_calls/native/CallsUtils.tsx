@@ -118,103 +118,103 @@ export const handleToggleVideo = function handleToggleVideo(channel) {
   return applyArgumentsResult;
 };
 export const handleToggleSelfDeaf = function handleToggleSelfDeaf() {
-  importDefault(9077).toggleSelfDeaf();
+  require("../../../actions/AudioActionCreators.tsx").toggleSelfDeaf();
 };
 export const handleToggleSelfMute = function handleToggleSelfMute() {
-  const permission = importDefault(4827).requestPermission(NativePermissionTypes.AUDIO, { showAuthorizationError: true });
-  const obj = importDefault(4827);
-  importDefault(9077).toggleSelfMute();
+  const permission = require("../../native_permissions/NativePermissionUtils.tsx").requestPermission(NativePermissionTypes.AUDIO, { showAuthorizationError: true });
+  const obj = require("../../native_permissions/NativePermissionUtils.tsx");
+  require("../../../actions/AudioActionCreators.tsx").toggleSelfMute();
 };
 export const showSuppressedAlert = function showSuppressedAlert() {
-  let obj = importDefault(4624);
+  let obj = require("../../../actions/native/AlertActionCreators.tsx");
   obj = { title: null, body: null, hideActionSheet: false };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.FJSZVM);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.etJjgW);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.FJSZVM);
+  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.etJjgW);
   obj.show(obj);
 };
 export const showServerMuteAlert = function showServerMuteAlert() {
-  let obj = importDefault(4624);
+  let obj = require("../../../actions/native/AlertActionCreators.tsx");
   obj = { title: null, body: null, hideActionSheet: false };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t["+JQCa/"]);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.hsNm7d);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["+JQCa/"]);
+  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.hsNm7d);
   obj.show(obj);
 };
 export const showServerDeafenAlert = function showServerDeafenAlert() {
-  let obj = importDefault(4624);
+  let obj = require("../../../actions/native/AlertActionCreators.tsx");
   obj = { title: null, body: null, hideActionSheet: false };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.QZ7WSS);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.Tl9JpL);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.QZ7WSS);
+  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Tl9JpL);
   obj.show(obj);
 };
 export const showCameraDisabledAlert = function showCameraDisabledAlert() {
-  let obj = importDefault(4624);
+  let obj = require("../../../actions/native/AlertActionCreators.tsx");
   obj = { title: null, body: null, hideActionSheet: false };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.OYzPcW);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.oBH7Y2);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.OYzPcW);
+  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.oBH7Y2);
   obj.show(obj);
 };
 export const showScreenshareDisabledAlert = function showScreenshareDisabledAlert() {
-  let obj = importDefault(4624);
+  let obj = require("../../../actions/native/AlertActionCreators.tsx");
   obj = { title: null, body: null, hideActionSheet: false };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t["/x4knx"]);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.PpfzUE);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["/x4knx"]);
+  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.PpfzUE);
   obj.show(obj);
 };
 export const showMinOSScreenshareRequirementAlert = function showMinOSScreenshareRequirementAlert() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  let obj = require(9091) /* mapped */;
-  const errorInfo = obj.getErrorInfo(require(9091) /* mapped */.AVError.SCREENSHARE_OS_NOT_SUPPORTED);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  let obj = require("../../errors/av_errors/AVError.tsx") /* mapped */;
+  const errorInfo = obj.getErrorInfo(require("../../errors/av_errors/AVError.tsx") /* mapped */.AVError.SCREENSHARE_OS_NOT_SUPPORTED);
   let errorCode;
   if (errorInfo != null) {
     errorCode = errorInfo.errorCode;
   }
-  const formatToPlainStringResult = intl.formatToPlainString(require(1236) /* getSystemLocale */.t.ejOT95, { errorCode });
+  const formatToPlainStringResult = intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ejOT95, { errorCode });
   obj = { title: null, body: null, hideActionSheet: false };
   const intl2 = tmp(1236).intl;
-  obj[0] = intl2.string(require(1236) /* getSystemLocale */.t.oblMYa);
+  obj[0] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.oblMYa);
   const intl3 = tmp(1236).intl;
-  obj[1] = "" + intl3.string(require(1236) /* getSystemLocale */.t.Wnhd3q) + "\n\n" + formatToPlainStringResult;
-  importDefault(4624).show(obj);
+  obj[1] = "" + intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Wnhd3q) + "\n\n" + formatToPlainStringResult;
+  require("../../../actions/native/AlertActionCreators.tsx").show(obj);
 };
 export const showTabletRequirementAlert = function showTabletRequirementAlert() {
-  let obj = importDefault(4624);
+  let obj = require("../../../actions/native/AlertActionCreators.tsx");
   obj = { title: null, body: null, hideActionSheet: false };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t["1N0dxa"]);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.qqDFVb);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["1N0dxa"]);
+  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.qqDFVb);
   obj.show(obj);
 };
 export const handleDisconnect = function handleDisconnect(channel) {
   const result = importAll(1844).dismissGlobalKeyboard();
   const obj = importAll(1844);
-  const result1 = require(4494) /* openChannelCallModal */.dismissVoiceChannelScreens(channel, () => {
+  const result1 = require("../../../utils/native/PrivateChannelCallUtils.tsx") /* openChannelCallModal */.dismissVoiceChannelScreens(channel, () => {
     const voiceChannel = callback(table[20]).selectVoiceChannel(null);
   });
 };
 export const audioDeviceToIconMap = obj;
 export const getAudioDeviceToDisplayText = function getAudioDeviceToDisplayText(deviceType) {
   const obj = { EARPIECE: null, BLUETOOTH_HEADSET: null, WIRED_HEADSET: null, SPEAKERPHONE: null, INVALID: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.Ouoi6E);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.i6eV3z);
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl3.string(require(1236) /* getSystemLocale */.t.Dluojr);
-  const intl4 = require(1236) /* getSystemLocale */.intl;
-  obj[3] = intl4.string(require(1236) /* getSystemLocale */.t.snEhlu);
-  const intl5 = require(1236) /* getSystemLocale */.intl;
-  obj[4] = intl5.string(require(1236) /* getSystemLocale */.t.kCBL6t);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Ouoi6E);
+  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.i6eV3z);
+  const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Dluojr);
+  const intl4 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[3] = intl4.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.snEhlu);
+  const intl5 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[4] = intl5.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.kCBL6t);
   if (deviceType.deviceType === constants.TYPE_BLE_HEADSET) {
     const intl6 = tmp(1236).intl;
     let stringResult = intl6.string(tmp(1236).t.BtXSp9);
@@ -225,7 +225,7 @@ export const getAudioDeviceToDisplayText = function getAudioDeviceToDisplayText(
 };
 export const useMaskedSpeakerStates = set.isAndroid() ? (() => {
   const items = [nativeEventEmitter];
-  return require(589) /* initialize */.useStateFromStoresObject(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStoresObject(items, () => {
     activeAudioDevice = activeAudioDevice.getActiveAudioDevice();
     const obj = { isAudioRouteEnabled: true, toggleAudio: callback(table[27]).showAudioOutputSelector, routeSource: null };
     let simpleDeviceType;
@@ -282,13 +282,13 @@ export const useMaskedSpeakerStates = set.isAndroid() ? (() => {
   return obj;
 });
 export const useImmediateMaskedSpeakerStates = () => {
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [handleAudioRouteChanged];
   const stateFromStores = obj.useStateFromStores(items, () => currentRouteType.getCurrentRouteType());
-  const tmp4 = importDefault(10738)();
+  const tmp4 = require("../../video_calls/native/useIsVideoMode.tsx")();
   require = tmp4;
-  let tmp5 = stateFromStores === require(9072) /* RouteTypes */.RouteTypes.SPEAKER;
-  const tmp6 = stateFromStores === require(9072) /* RouteTypes */.RouteTypes.BLUETOOTH;
+  let tmp5 = stateFromStores === require("../VoiceCallTypes.tsx") /* RouteTypes */.RouteTypes.SPEAKER;
+  const tmp6 = stateFromStores === require("../VoiceCallTypes.tsx") /* RouteTypes */.RouteTypes.BLUETOOTH;
   if (!tmp5) {
     tmp5 = tmp6;
   }

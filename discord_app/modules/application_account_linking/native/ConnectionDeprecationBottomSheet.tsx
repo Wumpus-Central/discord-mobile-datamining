@@ -15,18 +15,18 @@ function ConnectionIcon(arg0) {
   let theme;
   ({ platform, theme } = arg0);
   const tmp = createCacheKey();
-  let obj = require(3995) /* isThemeLight */;
+  let obj = require("../../../design/utils/shared/themes.tsx") /* isThemeLight */;
   const isThemeDarkResult = obj.isThemeDark(theme);
   const tmp2 = require;
   const icon = platform.icon;
   obj = { style: tmp.iconContainer, children: null };
-  const source = require(1416) /* getAvatarURL */.makeSource(isThemeDarkResult ? icon.darkPNG : icon.lightPNG);
+  const source = require("../../../utils/AvatarUtils.tsx") /* getAvatarURL */.makeSource(isThemeDarkResult ? icon.darkPNG : icon.lightPNG);
   obj = { size: null, source: null, disableColor: true, style: null };
-  const obj2 = require(1416) /* getAvatarURL */;
+  const obj2 = require("../../../utils/AvatarUtils.tsx") /* getAvatarURL */;
   obj[0] = tmp2(4697).IconSizes.CUSTOM;
   obj[1] = source;
   obj[3] = tmp.connectionIcon;
-  obj[1] = callback(importDefault(4697), obj);
+  obj[1] = callback(require("../../../design/void/Icon/native/Icon.tsx"), obj);
   return callback(View, obj);
 }
 function ApplicationIcon(application) {
@@ -36,9 +36,9 @@ function ApplicationIcon(application) {
   if (null != application) {
     obj = { game: null, size: null };
     obj[0] = application;
-    obj[1] = require(5620) /* GameIcon */.GameIconSizes.NORMAL;
-    tmpResult = tmp(importDefault(5620), obj);
-    const tmp6 = importDefault(5620);
+    obj[1] = require("../../game_detection/native/GameIcon.tsx") /* GameIcon */.GameIconSizes.NORMAL;
+    tmpResult = tmp(require("../../game_detection/native/GameIcon.tsx"), obj);
+    const tmp6 = require("../../game_detection/native/GameIcon.tsx");
   }
   obj[1] = tmpResult;
   return closure_8(View, obj);
@@ -210,7 +210,7 @@ export const useShouldShowConnectionDeprecationBottomSheet = function useShouldS
     }
   }
   const getOrFetchApplication = deprecatedPlatformTypes(5616).useGetOrFetchApplication(replacedBy);
-  const tmp5 = importDefault(5613)(getOrFetchApplication);
+  const tmp5 = require("useStartAuthorize.tsx")(getOrFetchApplication);
   ({ hasAlreadyLinked, canStartAuthorization } = tmp5);
   if (!fetchingConnections) {
     fetchingConnections = !tmp5.fetched;

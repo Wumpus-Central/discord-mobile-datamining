@@ -4,23 +4,23 @@ import createToggle from "createToggle";
 
 const pressable = createToggle.createPressable({
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.KGFTww);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.KGFTww);
   },
   parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
   onPress: function onPrivacyPolicyPress() {
-    importDefault(3982).openURL(MarketingURLs.PRIVACY);
+    require("../../../../lib/native/Linking.tsx").openURL(MarketingURLs.PRIVACY);
   },
   withArrow: true
 });
 const obj = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.KGFTww);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.KGFTww);
   },
   parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
   onPress: function onPrivacyPolicyPress() {
-    importDefault(3982).openURL(MarketingURLs.PRIVACY);
+    require("../../../../lib/native/Linking.tsx").openURL(MarketingURLs.PRIVACY);
   },
   withArrow: true
 };

@@ -23,7 +23,7 @@ function checkReactionResponse(arg0, arg1, isRetry) {
       const _isNaN = isNaN;
       if (!isNaN(parsed)) {
         const _setTimeout = setTimeout;
-        const timerId = setTimeout(arg1, parsed * importDefault(687).Millis.SECOND);
+        const timerId = setTimeout(arg1, parsed * require("../../utils/Durations.tsx").Millis.SECOND);
       }
       return false;
     }
@@ -34,17 +34,17 @@ function checkReactionResponse(arg0, arg1, isRetry) {
         code = body.code;
       }
       if (constants.TOO_MANY_REACTIONS === code) {
-        let obj = importDefault(4623);
+        let obj = require("../../actions/AlertActionCreators.tsx");
         obj = { title: null, body: null, confirmText: null };
-        const intl = require(1236) /* getSystemLocale */.intl;
-        obj[0] = intl.string(require(1236) /* getSystemLocale */.t.lFddsR);
-        const intl2 = require(1236) /* getSystemLocale */.intl;
-        obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.h27eIm);
-        const intl3 = require(1236) /* getSystemLocale */.intl;
-        obj[2] = intl3.string(require(1236) /* getSystemLocale */.t.BddRzS);
+        const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        obj[0] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.lFddsR);
+        const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        obj[1] = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.h27eIm);
+        const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        obj[2] = intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.BddRzS);
         obj.show(obj);
       } else if (tmp3.REACTION_BLOCKED === code) {
-        const ComponentDispatch = require(1231) /* ComponentDispatcher */.ComponentDispatch;
+        const ComponentDispatch = require("../../utils/ComponentDispatchUtils.tsx") /* ComponentDispatcher */.ComponentDispatch;
         ComponentDispatch.dispatch(constants2.SHAKE_APP, { duration: 200, intensity: 2 });
       }
     } else if (!isRetry.isRetry) {
@@ -55,7 +55,7 @@ function checkReactionResponse(arg0, arg1, isRetry) {
   }
 }
 function optimisticDispatch(type, channelId, messageId, arg3, userId) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type, channelId, messageId, userId: null, emoji: null, optimistic: true, colors: null, reactionType: null };
   userId = userId.userId;
   if (userId == null) {
@@ -68,7 +68,7 @@ function optimisticDispatch(type, channelId, messageId, arg3, userId) {
     colors = [];
   }
   obj[6] = colors;
-  const ReactionTypes = require(7142) /* ReactionTypes */.ReactionTypes;
+  const ReactionTypes = require("../messages/MessageReactionsTypes.tsx") /* ReactionTypes */.ReactionTypes;
   obj[7] = userId.burst ? ReactionTypes.BURST : ReactionTypes.NORMAL;
   obj.dispatch(obj);
 }
@@ -84,7 +84,7 @@ function makeURL(type) {
   }
   let NORMAL = type.type;
   if (NORMAL === undefined) {
-    NORMAL = require(7142) /* ReactionTypes */.ReactionTypes.NORMAL;
+    NORMAL = require("../messages/MessageReactionsTypes.tsx") /* ReactionTypes */.ReactionTypes.NORMAL;
   }
   if (null != emoji.id) {
     const _HermesInternal = HermesInternal;
@@ -1024,7 +1024,7 @@ export const playBurstReaction = function playBurstReaction(arg0) {
   let key;
   let messageId;
   ({ channelId, messageId, emoji, key } = arg0);
-  importDefault(709).dispatch({ type: "BURST_REACTION_EFFECT_PLAY", channelId, messageId, emoji, key });
+  require("../../Dispatcher.tsx").dispatch({ type: "BURST_REACTION_EFFECT_PLAY", channelId, messageId, emoji, key });
 };
 export { removeAllReactions };
 export { removeEmojiReactions };

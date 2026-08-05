@@ -19,7 +19,7 @@ function maybeApplyNoTextColorForLightCustomTheme() {
       tmp3 = theme.theme !== ThemeTypes.LIGHT;
     }
     if (!tmp3) {
-      const ClientThemeSettings = require(3958) /* explicitContentFromProto */.ClientThemeSettings;
+      const ClientThemeSettings = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.ClientThemeSettings;
       const setting = ClientThemeSettings.getSetting();
       let tmp10 = null != setting.backgroundGradientPresetId;
       if (!tmp10) {
@@ -198,7 +198,7 @@ Object.defineProperty(prototype, "messageGroupSpacing", {
     if (null != obj.messageGroupSpacing) {
       let messageGroupSpacing = obj.messageGroupSpacing;
     } else {
-      const MessageDisplayCompact = require(3958) /* explicitContentFromProto */.MessageDisplayCompact;
+      const MessageDisplayCompact = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.MessageDisplayCompact;
       messageGroupSpacing = MessageDisplayCompact.getSetting() ? closure_10 : closure_11;
     }
     return messageGroupSpacing;
@@ -207,14 +207,14 @@ Object.defineProperty(prototype, "messageGroupSpacing", {
 });
 Object.defineProperty(prototype, "isMessageGroupSpacingIncreased", {
   get: function isMessageGroupSpacingIncreased() {
-    const MessageDisplayCompact = require(3958) /* explicitContentFromProto */.MessageDisplayCompact;
+    const MessageDisplayCompact = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.MessageDisplayCompact;
     return this.messageGroupSpacing > (MessageDisplayCompact.getSetting() ? closure_10 : closure_11);
   },
   set: undefined
 });
 Object.defineProperty(prototype, "isMessageGroupSpacingDecreased", {
   get: function isMessageGroupSpacingDecreased() {
-    const MessageDisplayCompact = require(3958) /* explicitContentFromProto */.MessageDisplayCompact;
+    const MessageDisplayCompact = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.MessageDisplayCompact;
     return this.messageGroupSpacing < (MessageDisplayCompact.getSetting() ? closure_10 : closure_11);
   },
   set: undefined
@@ -376,7 +376,7 @@ AccessibilityStore.displayName = "AccessibilityStore";
 AccessibilityStore.persistKey = "AccessibilityStore";
 let items = [
   () => {
-    const Storage = require(595) /* Storage */.Storage;
+    const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     const fontScale = Storage.get("a11yFontScale") || 100;
     const Storage2 = tmp(595).Storage;
     let zoom = Storage2.get("a11yZoom");
@@ -441,7 +441,7 @@ let items = [
   (saturation) => {
     const obj = {};
     const merged = Object.assign(saturation);
-    obj.alwaysShowLinkDecorations = saturation.saturation <= require(4131) /* AccessibilityAnnouncer */.LOW_SATURATION_THRESHOLD;
+    obj.alwaysShowLinkDecorations = saturation.saturation <= require("../../design/shared.tsx") /* AccessibilityAnnouncer */.LOW_SATURATION_THRESHOLD;
     return obj;
   },
   (arg0) => {
@@ -508,7 +508,7 @@ const accessibilityStore = new AccessibilityStore(require("dispatcher"), {
           obj = {};
           const merged = Object.assign(obj);
           obj.zoom = zoom.zoom;
-          importDefault(4279).setZoomFactor(obj.zoom);
+          require("../../utils/CrossPlatformNativeUtils.native.tsx").setZoomFactor(obj.zoom);
         }
       }
     }
@@ -527,8 +527,8 @@ const accessibilityStore = new AccessibilityStore(require("dispatcher"), {
     }
     if (obj.zoom !== Accessibility.ZOOM_DEFAULT) {
       obj.zoom = tmp.ZOOM_DEFAULT;
-      importDefault(4279).setZoomFactor(obj.zoom);
-      const obj2 = importDefault(4279);
+      require("../../utils/CrossPlatformNativeUtils.native.tsx").setZoomFactor(obj.zoom);
+      const obj2 = require("../../utils/CrossPlatformNativeUtils.native.tsx");
     }
   },
   ACCESSIBILITY_KEYBOARD_MODE_ENABLE: function handleEnableKeyboardMode() {

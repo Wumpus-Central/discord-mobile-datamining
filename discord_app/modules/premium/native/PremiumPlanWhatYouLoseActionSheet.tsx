@@ -14,9 +14,9 @@ function WhatYouLoseItem(arg0) {
   ({ imageSource, text } = arg0);
   const tmp = createCacheKey();
   let obj = { style: tmp.item, children: null };
-  const items = [callback(importDefault(5236), { source: imageSource }), ];
+  const items = [callback(require("../../../components_native/common/FastImage.tsx"), { source: imageSource }), ];
   obj = { variant: "text-md/medium", style: tmp.itemLabel, children: text };
-  items[1] = callback(require(4281) /* Text */.Text, obj);
+  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 }

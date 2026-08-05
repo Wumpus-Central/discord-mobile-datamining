@@ -6,17 +6,17 @@ let c4;
 let c5;
 const require = arg1;
 function showRequestFailedAlert(arg0) {
-  const aPIError = new require(4184) /* V6OrEarlierAPIError */.APIError(arg0);
+  const aPIError = new require("../../errors/index.tsx") /* V6OrEarlierAPIError */.APIError(arg0);
   let anyErrorMessage = aPIError.getAnyErrorMessage();
   const obj = { title: null, body: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t["328j/I"]);
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["328j/I"]);
   if (null == anyErrorMessage) {
     const intl2 = tmp(1236).intl;
     anyErrorMessage = intl2.string(tmp(1236).t.fEptJP);
   }
   obj[1] = anyErrorMessage;
-  importDefault(4623).show(obj);
+  require("../../actions/AlertActionCreators.tsx").show(obj);
 }
 function deleteGameRelationship() {
   const self = this;

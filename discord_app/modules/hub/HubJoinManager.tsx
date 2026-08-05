@@ -34,10 +34,10 @@ class HubJoinManager extends tmp2 {
 const prototype = HubJoinManager.prototype;
 prototype["_initialize"] = function _initialize(onClose) {
   this.onClose = onClose;
-  const subscription = importDefault(709).subscribe("GUILD_CREATE", this.handleGuildCreate);
+  const subscription = require("../../Dispatcher.tsx").subscribe("GUILD_CREATE", this.handleGuildCreate);
 };
 prototype["_terminate"] = function _terminate() {
-  importDefault(709).unsubscribe("GUILD_CREATE", this.handleGuildCreate);
+  require("../../Dispatcher.tsx").unsubscribe("GUILD_CREATE", this.handleGuildCreate);
 };
 const hubJoinManager = new HubJoinManager();
 const result = require("initialize").fileFinishedImporting("modules/hub/HubJoinManager.tsx");

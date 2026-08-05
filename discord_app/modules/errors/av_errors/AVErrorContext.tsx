@@ -13,7 +13,7 @@ export const getVoiceChannelErrorContext = function getVoiceChannelErrorContext(
   mediaSessionId = mediaSessionId.getMediaSessionId();
   obj[1] = mediaSessionId;
   obj[2] = mediaSessionId.getRTCConnectionId();
-  obj[3] = require(4381) /* BaseConnectionEvent */.MediaEngineContextTypes.DEFAULT;
+  obj[3] = require("../../../../discord_common/js/packages/media-engine/index.tsx") /* BaseConnectionEvent */.MediaEngineContextTypes.DEFAULT;
   const videoDevices = store.getVideoDevices();
   const tmp4 = videoDevices[store.getVideoDeviceId(store)];
   let name;
@@ -41,7 +41,7 @@ export const getVoiceChannelErrorContext = function getVoiceChannelErrorContext(
 export const getStreamErrorContext = function getStreamErrorContext(streamKey) {
   let channelId;
   let ownerId;
-  let obj = require(4348) /* isStreamKey */;
+  let obj = require("../../go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */;
   ({ channelId, ownerId } = obj.decodeStreamKey(streamKey));
   rTCConnection = rTCConnection.getRTCConnection(streamKey);
   obj = { channelId, mediaSessionId: null, rtcConnectionId: null, mediaContext: null, streamKey: null, userId: null };
@@ -55,7 +55,7 @@ export const getStreamErrorContext = function getStreamErrorContext(streamKey) {
     rTCConnectionId = rTCConnection.getRTCConnectionId();
   }
   obj[2] = rTCConnectionId;
-  obj[3] = require(4381) /* BaseConnectionEvent */.MediaEngineContextTypes.STREAM;
+  obj[3] = require("../../../../discord_common/js/packages/media-engine/index.tsx") /* BaseConnectionEvent */.MediaEngineContextTypes.STREAM;
   obj[4] = streamKey;
   obj[5] = ownerId;
   const videoDevices = store.getVideoDevices();

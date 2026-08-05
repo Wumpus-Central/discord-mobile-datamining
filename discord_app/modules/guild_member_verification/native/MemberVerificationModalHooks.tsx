@@ -51,7 +51,7 @@ export const useSetInitialVerificationEffect = function useSetInitialVerificatio
 };
 export const useUserVerificationState = function useUserVerificationState() {
   const items = [mergeGuildAvatar];
-  return require(589) /* initialize */.useStateFromStoresObject(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStoresObject(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;
     if (currentUser != null) {
@@ -77,5 +77,5 @@ export const useInitialVerification = function useInitialVerification(id) {
   const _require = id;
   const items = [map];
   const items1 = [id];
-  return _require(589).useStateFromStores(items, () => outer1_4.getInitialVerificationState(closure_0), items1);
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_4.getInitialVerificationState(closure_0), items1);
 };

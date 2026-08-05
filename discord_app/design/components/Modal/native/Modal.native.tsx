@@ -8,7 +8,7 @@ const result = require("useSafeAreaInsets").fileFinishedImporting("design/compon
 export const Modal = function Modal(arg0) {
   let obj = {};
   const merged = Object.assign(arg0);
-  obj = { height: require(5235) /* NAV_BAR_HEIGHT */.NAV_BAR_HEIGHT + importDefault(1581)().top };
+  obj = { height: require("../../Navigator/native/NavigatorConstants.native.tsx") /* NAV_BAR_HEIGHT */.NAV_BAR_HEIGHT + require("../../../../modules/safe_area/useSafeAreaInsets.native.tsx")().top };
   obj.headerStyle = obj;
-  return jsx(require(5665) /* NavigationStack */.Navigator, { height: require(5235) /* NAV_BAR_HEIGHT */.NAV_BAR_HEIGHT + importDefault(1581)().top });
+  return jsx(require("../../Navigator/native/Navigator.native.tsx") /* NavigationStack */.Navigator, { height: require("../../Navigator/native/NavigatorConstants.native.tsx") /* NAV_BAR_HEIGHT */.NAV_BAR_HEIGHT + require("../../../../modules/safe_area/useSafeAreaInsets.native.tsx")().top });
 };

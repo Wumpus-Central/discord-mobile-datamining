@@ -108,8 +108,8 @@ prototype["getComboScore"] = function getComboScore(arg0, arg1) {
   const value = secondaryIndexMap.get("" + arg0 + "-" + arg1);
   let num = 0;
   if (null != value) {
-    num = require(7211) /* getComboShakeIntensity */.getComboScore(value);
-    const obj = require(7211) /* getComboShakeIntensity */;
+    num = require("PoggermodeUtils.tsx") /* getComboShakeIntensity */.getComboScore(value);
+    const obj = require("PoggermodeUtils.tsx") /* getComboShakeIntensity */;
   }
   return num;
 };
@@ -155,8 +155,8 @@ prototype["getUserComboShakeIntensity"] = function getUserComboShakeIntensity(id
   const userCombo = this.getUserCombo(id, throwTypeErrorResult);
   let num = 0;
   if (null != userCombo) {
-    num = require(7211) /* getComboShakeIntensity */.getComboShakeIntensity(userCombo, LEVEL_4) * arg2;
-    const obj = require(7211) /* getComboShakeIntensity */;
+    num = require("PoggermodeUtils.tsx") /* getComboShakeIntensity */.getComboShakeIntensity(userCombo, LEVEL_4) * arg2;
+    const obj = require("PoggermodeUtils.tsx") /* getComboShakeIntensity */;
   }
   return num;
 };

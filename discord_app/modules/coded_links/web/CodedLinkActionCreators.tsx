@@ -8,12 +8,12 @@ export default {
 
   },
   nativeModalOpened(code) {
-    let obj = importDefault(709);
+    let obj = require("../../../Dispatcher.tsx");
     obj = { type: "NATIVE_APP_MODAL_OPENED", code };
     obj.dispatch(obj);
   },
   nativeModalOpenFailed(code) {
-    let obj = importDefault(709);
+    let obj = require("../../../Dispatcher.tsx");
     obj = { type: "NATIVE_APP_MODAL_OPEN_FAILED", code };
     obj.dispatch(obj);
   }

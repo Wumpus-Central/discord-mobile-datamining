@@ -4,8 +4,8 @@ const result = require("set").fileFinishedImporting("modules/forums/FormError.ts
 
 export const FormSubmitErrorType = obj;
 export const makeEmptyTitleError = function makeEmptyTitleError() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  let stringResult = intl.string(require(1236) /* getSystemLocale */.t["71wuR0"]);
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  let stringResult = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["71wuR0"]);
   obj = { type: obj.EmptyContent, message: null };
   if (stringResult == null) {
     stringResult = null;
@@ -14,8 +14,8 @@ export const makeEmptyTitleError = function makeEmptyTitleError() {
   return obj;
 };
 export const makeEmptyMessageError = function makeEmptyMessageError() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  let stringResult = intl.string(require(1236) /* getSystemLocale */.t["w/BT3G"]);
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  let stringResult = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["w/BT3G"]);
   obj = { type: obj.EmptyContent, message: null };
   if (stringResult == null) {
     stringResult = null;
@@ -24,7 +24,7 @@ export const makeEmptyMessageError = function makeEmptyMessageError() {
   return obj;
 };
 export const makeAutomodViolationError = function makeAutomodViolationError(errorResponseBody, id) {
-  let obj = require(7245) /* getAutomodErrorMessageFromErrorResponse */;
+  let obj = require("../guild_automod/AutomodErrorUtils.tsx") /* getAutomodErrorMessageFromErrorResponse */;
   id = undefined;
   if (id != null) {
     id = id.id;
@@ -38,8 +38,8 @@ export const makeAutomodViolationError = function makeAutomodViolationError(erro
   return obj;
 };
 export const makeApiNameValidationError = function makeApiNameValidationError() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  let stringResult = intl.string(require(1236) /* getSystemLocale */.t["71wuR0"]);
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  let stringResult = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["71wuR0"]);
   obj = { type: obj.ApiValidation, message: null };
   if (stringResult == null) {
     stringResult = null;
@@ -48,8 +48,8 @@ export const makeApiNameValidationError = function makeApiNameValidationError() 
   return obj;
 };
 export const makeEmptyTagsError = function makeEmptyTagsError() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  let stringResult = intl.string(require(1236) /* getSystemLocale */.t.xPfNQi);
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  let stringResult = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.xPfNQi);
   obj = { type: obj.EmptyTags, message: null };
   if (stringResult == null) {
     stringResult = null;

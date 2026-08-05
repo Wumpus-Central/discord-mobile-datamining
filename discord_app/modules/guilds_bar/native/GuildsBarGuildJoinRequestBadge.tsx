@@ -16,16 +16,16 @@ const result = require("jsxProd").fileFinishedImporting("modules/guilds_bar/nati
 export default function GuildsBarGuildJoinRequestBadge(joinRequestState) {
   joinRequestState = joinRequestState.joinRequestState;
   const tmp = createCacheKey();
-  if (require(4105) /* MAX_RESULTS_PER_PAGE */.GuildJoinRequestApplicationStatuses.REJECTED === joinRequestState) {
-    let tmp4 = importDefault(15296);
+  if (require("../../guild_member_verification/MemberVerificationTypes.tsx") /* MAX_RESULTS_PER_PAGE */.GuildJoinRequestApplicationStatuses.REJECTED === joinRequestState) {
+    let tmp4 = require("../../../../_runtime/15296_registerAsset.js");
   } else if (tmp2(4105).GuildJoinRequestApplicationStatuses.SUBMITTED === joinRequestState) {
-    tmp4 = importDefault(15297);
+    tmp4 = require("../../../../_runtime/15297_registerAsset.js");
   } else if (tmp2(4105).GuildJoinRequestApplicationStatuses.STARTED === joinRequestState) {
-    tmp4 = importDefault(15298);
+    tmp4 = require("../../../../_runtime/15298_registerAsset.js");
   } else {
     tmp4 = null;
     if (tmp2(4105).GuildJoinRequestApplicationStatuses.APPROVED === joinRequestState) {
-      tmp4 = importDefault(11573);
+      tmp4 = require("../../../../_runtime/11573_registerAsset.js");
     }
   }
   let tmp9 = null;
@@ -36,7 +36,7 @@ export default function GuildsBarGuildJoinRequestBadge(joinRequestState) {
     obj = { source: null, style: null };
     obj[0] = tmp4;
     obj[1] = tmp.badgeImage;
-    obj[2] = jsx(importDefault(5236), { source: null, style: null });
+    obj[2] = jsx(require("../../../components_native/common/FastImage.tsx"), { source: null, style: null });
     tmp9 = <View source={null} style={null} />;
   }
   return tmp9;

@@ -11,5 +11,5 @@ export const useFrecencySettings = function useFrecencySettings() {
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   }, []);
   const items = [handleConnectionClosedOrResumed];
-  return require(589) /* initialize */.useStateFromStores(items, () => obj.frecencyWithoutFetchingLatest);
+  return require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => obj.frecencyWithoutFetchingLatest);
 };

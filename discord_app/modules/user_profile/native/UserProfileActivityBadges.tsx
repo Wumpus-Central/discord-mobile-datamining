@@ -15,7 +15,7 @@ const result = require("ME").fileFinishedImporting("modules/user_profile/native/
 export const TimestampBadge = function TimestampBadge(activity) {
   activity = activity.activity;
   const tmp = callback3();
-  let obj = require(12193) /* useTimestampTickedNow */;
+  let obj = require("../../content_inventory/memberlist/useTimestampTickedNow.tsx") /* useTimestampTickedNow */;
   const timestamps = activity.timestamps;
   let start;
   if (timestamps != null) {
@@ -25,7 +25,7 @@ export const TimestampBadge = function TimestampBadge(activity) {
     start = activity.created_at;
   }
   if (null != start) {
-    if (!importDefault(12194)(activity)) {
+    if (!require("../utils/shouldShowActivityTimeBar.tsx")(activity)) {
       const timestamps2 = activity.timestamps;
       let end;
       if (timestamps2 != null) {
@@ -81,15 +81,15 @@ export const TimestampBadge = function TimestampBadge(activity) {
 };
 export const PartyBadge = function PartyBadge(activity) {
   activity = activity.activity;
-  if (!importDefault(7119)(activity)) {
+  if (!require("../../activities/utils/isEmbeddedActivity.tsx")(activity)) {
     if (null != activity.party) {
-      const richGameStateBadgeText = require(8048) /* calculateTimestampDurations */.getRichGameStateBadgeText(activity.state, activity.party);
+      const richGameStateBadgeText = require("../../content_inventory/utils.tsx") /* calculateTimestampDurations */.getRichGameStateBadgeText(activity.state, activity.party);
       let tmp8 = null;
       if (null != richGameStateBadgeText) {
         let obj = { style: null, children: null };
         obj[0] = tmp.container;
         obj = { size: "xxs", color: null };
-        obj[1] = importDefault(712).colors.TEXT_MUTED;
+        obj[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_MUTED;
         const items = [callback(tmp9(4798).GroupIcon, obj), ];
         obj = { variant: "text-sm/medium", color: "text-muted", children: null };
         obj[2] = richGameStateBadgeText;
@@ -103,7 +103,7 @@ export const PartyBadge = function PartyBadge(activity) {
   return null;
 };
 export const EpisodeBadge = function EpisodeBadge(activity) {
-  let obj = require(8048) /* calculateTimestampDurations */;
+  let obj = require("../../content_inventory/utils.tsx") /* calculateTimestampDurations */;
   const assets = activity.activity.assets;
   let large_text;
   if (assets != null) {
@@ -115,7 +115,7 @@ export const EpisodeBadge = function EpisodeBadge(activity) {
     obj = { style: null, children: null };
     obj[0] = tmp.container;
     obj = { size: "xxs", color: null };
-    obj[1] = importDefault(712).colors.TEXT_MUTED;
+    obj[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_MUTED;
     const items = [callback(tmp2(11030).TopicsIcon, obj), ];
     const obj1 = { variant: "text-sm/medium", color: "text-muted", children: null };
     obj1[2] = episodeBadgeText;

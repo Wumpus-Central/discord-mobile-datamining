@@ -934,7 +934,7 @@ prototype["setSelfMute"] = function setSelfMute(selfMute) {
   this.selfMute = selfMute;
   const conn = this.conn;
   conn.setSelfMute(selfMute);
-  this.emit(require(4381) /* BaseConnectionEvent */.BaseConnectionEvent.Mute, selfMute);
+  this.emit(require("../index.tsx") /* BaseConnectionEvent */.BaseConnectionEvent.Mute, selfMute);
 };
 prototype["getSelfMute"] = function getSelfMute() {
   return this.selfMute;
@@ -946,7 +946,7 @@ prototype["setSelfDeaf"] = function setSelfDeaf(deaf) {
   this.selfDeaf = deaf;
   const conn = this.conn;
   conn.setSelfDeafen(deaf);
-  this.emit(require(4381) /* BaseConnectionEvent */.BaseConnectionEvent.Deafen, deaf);
+  this.emit(require("../index.tsx") /* BaseConnectionEvent */.BaseConnectionEvent.Deafen, deaf);
 };
 prototype["setSoundshareSource"] = function setSoundshareSource(arg0, arg1) {
   const self = this;
@@ -970,7 +970,7 @@ prototype["setLocalMute"] = function setLocalMute(closure_0, flag) {
   this.localMutes[closure_0] = flag;
   const conn = this.conn;
   conn.setLocalMute(closure_0, flag);
-  this.emit(require(4381) /* BaseConnectionEvent */.BaseConnectionEvent.LocalMute, closure_0, flag);
+  this.emit(require("../index.tsx") /* BaseConnectionEvent */.BaseConnectionEvent.LocalMute, closure_0, flag);
 };
 prototype["setUserPosition"] = function setUserPosition(arg0, arg1) {
   const conn = this.conn;
@@ -1024,7 +1024,7 @@ prototype["wasRemoteDisconnected"] = function wasRemoteDisconnected() {
 };
 prototype["setLocalVideoDisabled"] = function setLocalVideoDisabled(arg0, arg1) {
   this.disabledLocalVideos[arg0] = arg1;
-  this.emit(require(4381) /* BaseConnectionEvent */.BaseConnectionEvent.LocalVideoDisabled, arg0, arg1);
+  this.emit(require("../index.tsx") /* BaseConnectionEvent */.BaseConnectionEvent.LocalVideoDisabled, arg0, arg1);
 };
 prototype["setMinimumJitterBufferLevel"] = function setMinimumJitterBufferLevel(minimumJitterBufferLevel) {
   this.minimumJitterBufferLevel = minimumJitterBufferLevel;
@@ -1176,42 +1176,42 @@ prototype["setCameraBitRate"] = function setCameraBitRate(arg0, bitrateMax) {
 };
 prototype["setEchoCancellation"] = function setEchoCancellation(echoCancellation) {
   this.echoCancellation = echoCancellation;
-  let obj = require(4334) /* inject */;
+  let obj = require("inject.tsx") /* inject */;
   const voiceEngine = obj.getVoiceEngine();
   obj = { echoCancellation: this.echoCancellation };
   voiceEngine.setTransportOptions(obj);
 };
 prototype["setNoiseSuppression"] = function setNoiseSuppression(noiseSuppression) {
   this.noiseSuppression = noiseSuppression;
-  let obj = require(4334) /* inject */;
+  let obj = require("inject.tsx") /* inject */;
   const voiceEngine = obj.getVoiceEngine();
   obj = { noiseSuppression: this.noiseSuppression };
   voiceEngine.setTransportOptions(obj);
 };
 prototype["setAutomaticGainControl"] = function setAutomaticGainControl(automaticGainControl) {
   this.automaticGainControl = automaticGainControl;
-  let obj = require(4334) /* inject */;
+  let obj = require("inject.tsx") /* inject */;
   const voiceEngine = obj.getVoiceEngine();
   obj = { automaticGainControl: this.automaticGainControl.enabled, automaticGainControlConfig: this.automaticGainControl };
   voiceEngine.setTransportOptions(obj);
 };
 prototype["setNoiseCancellation"] = function setNoiseCancellation(noiseCancellation) {
   this.noiseCancellation = noiseCancellation;
-  let obj = require(4334) /* inject */;
+  let obj = require("inject.tsx") /* inject */;
   const voiceEngine = obj.getVoiceEngine();
   obj = { noiseCancellation: this.noiseCancellation };
   voiceEngine.setTransportOptions(obj);
 };
 prototype["setNoiseCancellationDuringProcessing"] = function setNoiseCancellationDuringProcessing(noiseCancellationDuringProcessing) {
   this.noiseCancellationDuringProcessing = noiseCancellationDuringProcessing;
-  let obj = require(4334) /* inject */;
+  let obj = require("inject.tsx") /* inject */;
   const voiceEngine = obj.getVoiceEngine();
   obj = { noiseCancellationDuringProcessing: this.noiseCancellationDuringProcessing };
   voiceEngine.setTransportOptions(obj);
 };
 prototype["setEchoReferenceMode"] = function setEchoReferenceMode(echoReferenceMode) {
   this.echoReferenceMode = echoReferenceMode;
-  let obj = require(4334) /* inject */;
+  let obj = require("inject.tsx") /* inject */;
   const voiceEngine = obj.getVoiceEngine();
   obj = { echoReferenceMode: this.echoReferenceMode };
   voiceEngine.setTransportOptions(obj);
@@ -1245,7 +1245,7 @@ prototype["setInputMode"] = function setInputMode(inputMode, pttReleaseDelay) {
   conn.setTransportOptions({ inputMode: dependencyMap[self.inputMode], inputModeOptions: self.createInputModeOptions() });
 };
 prototype["setSilenceThreshold"] = function setSilenceThreshold(arg0) {
-  const voiceEngine = require(4334) /* inject */.getVoiceEngine();
+  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
   voiceEngine.setNoInputThreshold(arg0);
 };
 prototype["setForceAudioInput"] = function setForceAudioInput(closure_0, flag, arg2) {
@@ -1574,7 +1574,7 @@ prototype["setDesktopEncodingOptions"] = function setDesktopEncodingOptions(resu
       obj[2] = frameRate;
       const videoQualityManager = self.videoQualityManager;
       const quality = videoQualityManager.getQuality();
-      const VideoQuality = require(4393) /* WantsVideoQuality */.VideoQuality;
+      const VideoQuality = require("../VideoQualityManager.tsx") /* WantsVideoQuality */.VideoQuality;
       const equalsResult = VideoQuality.equals(obj, quality.capture);
       let tmp12 = !equalsResult;
       if (equalsResult) {
@@ -1875,7 +1875,7 @@ prototype["createInputModeOptions"] = function createInputModeOptions() {
   if (constants3.VOICE_ACTIVITY === inputMode) {
     let obj = { vadThreshold: null, vadAutoThreshold: null, vadUseKrisp: null, vadLeading: null, vadTrailing: null, vadKrispActivationThreshold: null, vadDuringPreProcess: null };
     obj[0] = self.vadThreshold;
-    const VADAggressiveness = require(4445) /* VADAggressiveness */.VADAggressiveness;
+    const VADAggressiveness = require("VoiceEngine.tsx") /* VADAggressiveness */.VADAggressiveness;
     obj[1] = self.vadAutoThreshold ? VADAggressiveness.VERY_AGGRESSIVE : VADAggressiveness.DISABLED;
     ({ vadUseKrisp: obj2[2], vadLeading: obj2[3], vadTrailing: obj2[4], vadKrispActivationThreshold: obj2[5], vadDuringPreProcess: obj2[6] } = self);
     return obj;
@@ -1899,7 +1899,7 @@ prototype["getCodecParams"] = function getCodecParams(name, arg1) {
   } else if (arg1) {
     obj = { "level-asymmetry-allowed": "1", "packetization-mode": "1", "profile-level-id": "42e034" };
   } else {
-    obj = require(4334) /* inject */;
+    obj = require("inject.tsx") /* inject */;
     let str = "4d0033";
     if ("android" === obj.getVoiceEngine().platform) {
       str = "42e01f";
@@ -1947,7 +1947,7 @@ prototype["getCodecOptions"] = function getCodecOptions(name, H264, closure_0) {
       let obj = { name: null, type: null, rtxType: null, params: null };
       let tmp25 = _require;
       let tmp26 = dependencyMap;
-      let obj5 = _require(4440);
+      let obj5 = _require("../utils/VideoCodecUtils.tsx");
       let tmp27 = nextResult;
       obj[0] = obj5.codecNameToPayloadName(tmp4.name);
       let num3;
@@ -2065,7 +2065,7 @@ prototype["getConnectionTransportOptions"] = function getConnectionTransportOpti
   obj.callMinBitRate = closure_24;
   obj.callMaxBitRate = closure_25;
   ({ videoDegradationPreference: obj.encodingVideoDegradationPreference, reconnectInterval: obj.reconnectInterval } = this);
-  let supportsFeatureResult = require(4334) /* inject */.supportsFeature(constants8.VIDEO_EFFECTS);
+  let supportsFeatureResult = require("inject.tsx") /* inject */.supportsFeature(constants8.VIDEO_EFFECTS);
   if (supportsFeatureResult) {
     supportsFeatureResult = this.context === constants5.STREAM;
   }
@@ -2183,7 +2183,7 @@ prototype["presentDesktopSourcePicker"] = function presentDesktopSourcePicker(ar
 prototype["mergeUsers"] = function mergeUsers(items4) {
   const conn = this.conn;
   conn.mergeUsers(items4);
-  this.emit(require(4381) /* BaseConnectionEvent */.BaseConnectionEvent.UsersMerged, items4);
+  this.emit(require("../index.tsx") /* BaseConnectionEvent */.BaseConnectionEvent.UsersMerged, items4);
 };
 let result = require("AudioSubsystems").fileFinishedImporting("../discord_common/js/packages/media-engine/native/Connection.tsx");
 

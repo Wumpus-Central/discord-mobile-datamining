@@ -147,11 +147,11 @@ export const useDueInString = function useDueInString(arg0) {
     return { string: "", isOverdue: false };
   } else {
     if (type === obj.LONG) {
-      let H4gnX9 = require(1236) /* getSystemLocale */.t.TjNWNF;
+      let H4gnX9 = require("../../intl/index.native.tsx") /* getSystemLocale */.t.TjNWNF;
       let tmp = require;
     } else {
       tmp = require;
-      H4gnX9 = require(1236) /* getSystemLocale */.t.H4gnX9;
+      H4gnX9 = require("../../intl/index.native.tsx") /* getSystemLocale */.t.H4gnX9;
     }
     if (type === tmp8.LONG) {
       Uq7Y_7 = tmp(1236).t.haia16;
@@ -165,9 +165,9 @@ export const useDueInString = function useDueInString(arg0) {
     const intl = tmp(1236).intl;
     obj = { duration: null };
     const time = dueAt.getTime();
-    const obj3 = importDefault(3867);
+    const obj3 = require("../../../_runtime/03867_t.js");
     tmp8 = obj;
-    obj[0] = importDefault(3867).duration(time - now.getTime(), "millisecond").humanize();
+    obj[0] = require("../../../_runtime/03867_t.js").duration(time - now.getTime(), "millisecond").humanize();
     obj[0] = intl.formatToPlainString(H4gnX9, obj);
     obj[1] = now > dueAt;
     return obj;
@@ -176,7 +176,7 @@ export const useDueInString = function useDueInString(arg0) {
 export const useSavedMessageChannel = function useSavedMessageChannel(savedMessage) {
   const _require = savedMessage;
   const items = [ensureGuildLoaded];
-  const stateFromStores = _require(589).useStateFromStores(items, () => outer1_6.getChannel(savedMessage.saveData.channelId));
+  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_6.getChannel(savedMessage.saveData.channelId));
   const items1 = [stateFromStores, savedMessage];
   return React.useMemo(() => {
     let tmp = stateFromStores;

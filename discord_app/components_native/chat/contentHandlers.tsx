@@ -12,7 +12,7 @@ let obj = {
     if (tmp) {
       const obj = { urlString: null };
       obj[0] = url;
-      importDefault(10971)(obj);
+      require("../../modules/links/native/showLongPressURLActionSheet.tsx")(obj);
     }
   },
   onTapAttachmentLink: null,
@@ -146,10 +146,10 @@ obj[3] = function onTapMention(closure_0) {
     obj = { userId: null, channelId: null, sourceAnalyticsLocations: null };
     obj[0] = userId;
     obj[1] = channelId;
-    const items = [importDefault(5630).USER_MENTION];
+    const items = [require("../../modules/app_analytics/AnalyticsLocation.tsx").USER_MENTION];
     obj[2] = items;
-    importDefault(8705)(obj);
-    const tmp15 = importDefault(8705);
+    require("../../modules/user_profile/native/showUserProfileActionSheet.tsx")(obj);
+    const tmp15 = require("../../modules/user_profile/native/showUserProfileActionSheet.tsx");
   } else {
     if (null != roleId) {
       if (null != guildId) {
@@ -157,20 +157,20 @@ obj[3] = function onTapMention(closure_0) {
         obj[0] = guildId;
         obj[1] = roleId;
         obj[2] = channelId;
-        importDefault(4253).openLazy(tmp(1959)(10974, tmp2.paths), "RoleMembersActionSheet", obj);
-        const obj9 = importDefault(4253);
+        require("../../modules/action_sheet/native/ActionSheetActionCreators.tsx").openLazy(tmp(1959)(10974, tmp2.paths), "RoleMembersActionSheet", obj);
+        const obj9 = require("../../modules/action_sheet/native/ActionSheetActionCreators.tsx");
       }
     }
     if ("@everyone" === roleName) {
       if (null != guildId) {
         const obj1 = { guildId: null, roleId: null, channelId: null };
         obj1[0] = guildId;
-        const obj6 = importDefault(4253);
+        const obj6 = require("../../modules/action_sheet/native/ActionSheetActionCreators.tsx");
         const tmp10 = tmp(1959)(10974, tmp2.paths);
-        obj1[1] = importDefault(11).castGuildIdAsEveryoneGuildRoleId(guildId);
+        obj1[1] = require("../../utils/SnowflakeUtils.tsx").castGuildIdAsEveryoneGuildRoleId(guildId);
         obj1[2] = channelId;
         obj6.openLazy(tmp10, "RoleMembersActionSheet", obj1);
-        const obj8 = importDefault(11);
+        const obj8 = require("../../utils/SnowflakeUtils.tsx");
       }
     }
     if (null == roleName) {
@@ -187,7 +187,7 @@ obj[3] = function onTapMention(closure_0) {
           };
           let obj4 = obj2;
         }
-        let obj3 = importDefault(4623);
+        let obj3 = require("../../actions/AlertActionCreators.tsx");
         obj3 = { title: null, body: null, confirmText: null, isDismissable: true };
         const intl2 = tmp(1236).intl;
         obj3[0] = intl2.string(tmp(1236).t.r0DLNm);
@@ -203,19 +203,19 @@ obj[3] = function onTapMention(closure_0) {
   }
 };
 obj[4] = function onTapTimestamp(nativeEvent) {
-  require(3985) /* presentAddedFriendToast */.presentTimestamp(nativeEvent.nativeEvent.node.full);
+  require("../../modules/toast/native/ToastUtils.tsx") /* presentAddedFriendToast */.presentTimestamp(nativeEvent.nativeEvent.node.full);
 };
 obj[5] = function onTapInlineCode(nativeEvent) {
   const node = nativeEvent.nativeEvent.node;
   if (tmp) {
-    require(5638) /* _copy */.copy(node.content);
-    const obj = require(5638) /* _copy */;
-    const result = require(3985) /* presentAddedFriendToast */.presentCopiedToClipboard();
-    const obj2 = require(3985) /* presentAddedFriendToast */;
+    require("../../utils/ClipboardUtils.native.tsx") /* _copy */.copy(node.content);
+    const obj = require("../../utils/ClipboardUtils.native.tsx") /* _copy */;
+    const result = require("../../modules/toast/native/ToastUtils.tsx") /* presentAddedFriendToast */.presentCopiedToClipboard();
+    const obj2 = require("../../modules/toast/native/ToastUtils.tsx") /* presentAddedFriendToast */;
   }
 };
 obj[6] = function onTapEmoji(emojiNode) {
-  importDefault(4253).openLazy(require(1959) /* asyncRequireImpl */(8656, dependencyMap.paths), "MessageEmojiActionSheet", { emojiNode: emojiNode.nativeEvent.node });
+  require("../../modules/action_sheet/native/ActionSheetActionCreators.tsx").openLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(8656, dependencyMap.paths), "MessageEmojiActionSheet", { emojiNode: emojiNode.nativeEvent.node });
 };
 let result = require("shouldRefreshAttachmentUrl").fileFinishedImporting("components_native/chat/contentHandlers.tsx");
 

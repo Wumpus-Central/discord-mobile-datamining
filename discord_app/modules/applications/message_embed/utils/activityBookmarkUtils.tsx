@@ -2,7 +2,7 @@
 const result = require("set").fileFinishedImporting("modules/applications/message_embed/utils/activityBookmarkUtils.tsx");
 
 export const extractActivityBookmarkParams = function extractActivityBookmarkParams(url) {
-  let obj = importDefault(1467);
+  let obj = require("../../../../utils/URLUtils.tsx");
   const toURLSafeResult = obj.toURLSafe(url);
   let value;
   if (toURLSafeResult != null) {

@@ -31,18 +31,18 @@ function ApplicationStatusNotice(arg0) {
     obj[0] = items;
     obj = { children: null };
     obj[0] = resubmissionError.getAnyErrorMessage();
-    obj[1] = callback(importDefault(11506), obj);
+    obj[1] = callback(require("../../components/ErrorBlock.tsx"), obj);
     return callback(closure_6, obj);
   } else {
     if (isApplicationPending) {
-      const intl2 = require(1236) /* getSystemLocale */.intl;
-      requestRejectedNoticeText = intl2.string(require(1236) /* getSystemLocale */.t.OrkTBn);
+      const intl2 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      requestRejectedNoticeText = intl2.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.OrkTBn);
     } else if (null == requestRejectedNoticeText) {
       requestRejectedNoticeText = null;
       if (null != reapplyNoticeText) {
-        const intl = require(1236) /* getSystemLocale */.intl;
+        const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
         requestRejectedNoticeText = reapplyNoticeText;
-        const stringResult = intl.string(require(1236) /* getSystemLocale */.t["YKw/NQ"]);
+        const stringResult = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["YKw/NQ"]);
       }
     }
     let tmp7 = null;
@@ -55,7 +55,7 @@ function ApplicationStatusNotice(arg0) {
       obj1[1] = stringResult;
       obj1[2] = createEnableRequest;
       obj1[3] = resubmittingEnableRequest;
-      obj[1] = callback(importDefault(16643), obj1);
+      obj[1] = callback(require("../../components/WarningNotice.tsx"), obj1);
       tmp7 = callback(closure_6, obj);
     }
     return tmp7;

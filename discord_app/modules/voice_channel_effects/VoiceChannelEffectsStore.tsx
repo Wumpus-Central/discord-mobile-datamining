@@ -9,8 +9,8 @@ let closure_7 = [];
 let closure_8 = [];
 let closure_9 = 10 * require("set").Millis.SECOND;
 let closure_10 = apply.debounce(() => {
-  const effectAnnouncement = require(5873) /* VoiceChannelEffectAnimationType */.getEffectAnnouncement(closure_7);
-  const AccessibilityAnnouncer = require(4131) /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
+  const effectAnnouncement = require("VoiceChannelEffectsUtils.tsx") /* VoiceChannelEffectAnimationType */.getEffectAnnouncement(closure_7);
+  const AccessibilityAnnouncer = require("../../design/shared.tsx") /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
   AccessibilityAnnouncer.announce(effectAnnouncement, "polite");
   closure_7 = [];
 }, 500);
@@ -55,12 +55,12 @@ const voiceChannelEffectsStore = new VoiceChannelEffectsStore(require("dispatche
     emoji = emoji.emoji;
     if (null != emoji) {
       arr = arr.unshift(emoji);
-      const uniqByResult = require(12) /* apply */.uniqBy(arr, "name");
+      const uniqByResult = require("../../../_runtime/00012_apply.js") /* apply */.uniqBy(arr, "name");
       arr = uniqByResult;
       if (uniqByResult.length > closure_4 + 1) {
         arr = arr.pop();
       }
-      const obj = require(12) /* apply */;
+      const obj = require("../../../_runtime/00012_apply.js") /* apply */;
     }
   },
   VOICE_CHANNEL_EFFECT_SEND: function handleReceivedVoiceChannelEffect(arg0) {
@@ -106,7 +106,7 @@ const result = require("set").fileFinishedImporting("modules/voice_channel_effec
 export default voiceChannelEffectsStore;
 export const clearVoiceChannelEffectForUser = function clearVoiceChannelEffectForUser(arg0) {
   if (null != arg0) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "VOICE_CHANNEL_EFFECT_CLEAR", userId: null };
     obj[1] = arg0;
     obj.dispatch(obj);

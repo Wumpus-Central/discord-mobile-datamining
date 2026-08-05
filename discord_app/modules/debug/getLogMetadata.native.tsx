@@ -22,8 +22,8 @@ export default function getLogMetadata() {
   obj[6] = importAll(1578).getBuildNumberLabel();
   obj[7] = DeviceVendorID;
   const obj4 = importAll(1578);
-  obj[8] = require(4265) /* DCDDeviceManager */.getDeviceInfo();
-  const obj5 = require(4265) /* DCDDeviceManager */;
-  obj[9] = require(4265) /* DCDDeviceManager */.getSystemVersion();
+  obj[8] = require("../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */.getDeviceInfo();
+  const obj5 = require("../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */;
+  obj[9] = require("../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */.getSystemVersion();
   return obj;
 };

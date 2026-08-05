@@ -27,7 +27,7 @@ export default function NUFChannelsActionSheet(markAsDismissed) {
     children: null
   };
   obj = { illustration: null, title: null, description: null, CTALabel: null, onCTAPress: null };
-  obj[0] = jsx(importDefault(12942), {});
+  obj[0] = jsx(require("NUFChannelIllustration.tsx"), {});
   const intl = markAsDismissed(1236).intl;
   obj[1] = intl.string(markAsDismissed(1236).t.Ay9424);
   const intl2 = markAsDismissed(1236).intl;
@@ -35,6 +35,6 @@ export default function NUFChannelsActionSheet(markAsDismissed) {
   const intl3 = markAsDismissed(1236).intl;
   obj[3] = intl3.string(markAsDismissed(1236).t.BddRzS);
   obj[4] = callback;
-  obj[2] = jsx(importDefault(12941), { illustration: null, title: null, description: null, CTALabel: null, onCTAPress: null });
+  obj[2] = jsx(require("NUFTemplateV2.tsx"), { illustration: null, title: null, description: null, CTALabel: null, onCTAPress: null });
   return jsx(markAsDismissed(5338).BottomSheet, { illustration: null, title: null, description: null, CTALabel: null, onCTAPress: null });
 };

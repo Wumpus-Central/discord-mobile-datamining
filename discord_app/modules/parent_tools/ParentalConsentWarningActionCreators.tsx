@@ -155,7 +155,7 @@ function fetchWarning() {
   } else {
     return Promise.resolve();
   }
-  obj = _require(16419);
+  obj = _require("ParentalConsentWarningFetchExperiment.tsx");
 }
 function maybeFetchWarning() {
   const self = this;
@@ -334,5 +334,5 @@ export const resetFetchState = function resetFetchState() {
   importDefaultResult.succeed();
 };
 export const clearWarning = function clearWarning() {
-  importDefault(709).dispatch({ type: "PARENTAL_CONSENT_WARNING_CLEARED" });
+  require("../../Dispatcher.tsx").dispatch({ type: "PARENTAL_CONSENT_WARNING_CLEARED" });
 };

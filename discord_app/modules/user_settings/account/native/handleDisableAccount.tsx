@@ -26,8 +26,8 @@ export default function handleDisableAccount() {
     let obj = { title: null, body: null };
     obj[0] = stringResult;
     obj[1] = stringResult1;
-    importDefault(4623).show(obj);
-    const obj3 = importDefault(4623);
+    require("../../../../actions/AlertActionCreators.tsx").show(obj);
+    const obj3 = require("../../../../actions/AlertActionCreators.tsx");
   } else {
     const formatted = string(t["CIGa+7"]).toUpperCase();
     obj = { onSubmit: null, title: null, placeholder: null, closeOnSuccess: true };
@@ -50,7 +50,7 @@ export default function handleDisableAccount() {
       tmp8 = obj;
       const str2 = intl2.string(tmp4(1236).t.jf5GGb);
     }
-    importDefault(13946)(tmp8);
+    require("showUserSettingsInputAlert.tsx")(tmp8);
     const str = string(t["CIGa+7"]);
   }
 };

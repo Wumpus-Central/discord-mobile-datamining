@@ -93,7 +93,7 @@ prototype["updateState"] = function updateState(arr, windowHeight) {
   windowHeight = windowHeight.windowHeight;
   const obj = { windowHeight, windowWidth: windowHeight.windowWidth, chunkSize: windowHeight / closure_11, safeAreaLeft: Math.max(windowHeight.safeAreaLeft, closure_12), safeAreaRight: Math.max(safeAreaRight, closure_12), safeAreaBottom: Math.max(safeAreaBottom, closure_12), safeAreaTop, gutter: closure_13, controlBarSize };
   ({ safeAreaRight, safeAreaTop, safeAreaBottom, controlBarSize } = windowHeight);
-  if (!importDefault(643)(obj, this.props)) {
+  if (!require("../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx")(obj, this.props)) {
     self.props = obj;
     self.setDirty(true);
   }

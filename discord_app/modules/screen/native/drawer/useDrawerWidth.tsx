@@ -8,9 +8,9 @@ const result = require("useChatLayout").fileFinishedImporting("modules/screen/na
 
 export const DRAWER_LEFT_WIDTH_MIN = sum;
 export const getDrawerWidth = function getDrawerWidth() {
-  const width = require(4141) /* useBaseAppContainerDimensions */.getBaseAppContainerDimensions().width;
-  const obj = require(4141) /* useBaseAppContainerDimensions */;
-  const chatLayout = require(4139) /* useChatLayout */.getChatLayout();
+  const width = require("../useBaseAppContainerDimensions.tsx") /* useBaseAppContainerDimensions */.getBaseAppContainerDimensions().width;
+  const obj = require("../useBaseAppContainerDimensions.tsx") /* useBaseAppContainerDimensions */;
+  const chatLayout = require("../../../chat/native/useChatLayout.tsx") /* useChatLayout */.getChatLayout();
   if (!chatLayout.isChatBesideChannelList) {
     return width;
   } else if (tmp2) {
@@ -21,7 +21,7 @@ export const getDrawerWidth = function getDrawerWidth() {
   }
 };
 export const useDrawerWidth = function useDrawerWidth() {
-  const width = importDefault(4141)().width;
+  const width = require("../useBaseAppContainerDimensions.tsx")().width;
   if (!tmp.isChatBesideChannelList) {
     return width;
   } else if (tmp2) {

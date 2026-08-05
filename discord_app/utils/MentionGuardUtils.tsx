@@ -47,7 +47,7 @@ const result = require("getUncachedChannelPermissions").fileFinishedImporting("u
 export default {
   shouldShowEveryoneGuard(extractEveryoneRoleResult, getGuildId) {
     const guildId = getGuildId.getGuildId();
-    importDefault(38)(null != guildId, "isGuildChannel with null guildId");
+    require("../../_runtime/metro/00038__.js")(null != guildId, "isGuildChannel with null guildId");
     importDefault = extractEveryoneRoleResult;
     const dependencyMap = 0;
     if (getGuildId.isThread()) {
@@ -100,8 +100,8 @@ export default {
     return tmp3;
   },
   extractEveryoneRole(arg0, getGuildId) {
-    const obj = importDefault(7062);
-    const obj2 = importDefault(7062).parsePreprocessor(getGuildId, arg0)[Symbol.iterator]();
+    const obj = require("../modules/messages/MessageParser.tsx");
+    const obj2 = require("../modules/messages/MessageParser.tsx").parsePreprocessor(getGuildId, arg0)[Symbol.iterator]();
     while (obj2 !== undefined) {
       let tmp3 = parsedItemUsesEveryoneRole;
       let tmp4 = parsedItemUsesEveryoneRole(tmp2);

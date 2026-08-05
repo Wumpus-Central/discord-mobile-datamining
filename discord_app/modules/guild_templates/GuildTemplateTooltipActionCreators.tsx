@@ -65,11 +65,11 @@ export default {
     })();
   },
   hideGuildTemplateDirtyTooltip(guildId) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "GUILD_TEMPLATE_DIRTY_TOOLTIP_HIDE", guildId };
     obj.dispatch(obj);
   },
   hideGuildTemplatePromotionTooltip() {
-    importDefault(709).dispatch({ type: "GUILD_TEMPLATE_PROMOTION_TOOLTIP_HIDE" });
+    require("../../Dispatcher.tsx").dispatch({ type: "GUILD_TEMPLATE_PROMOTION_TOOLTIP_HIDE" });
   }
 };

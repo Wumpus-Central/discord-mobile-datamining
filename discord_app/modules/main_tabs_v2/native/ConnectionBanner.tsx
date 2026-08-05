@@ -17,7 +17,7 @@ let require = arg1;
 function ConnectionBannerIcon(state) {
   state = state.state;
   const tmp = createCacheKey();
-  require(3989) /* map */;
+  require("../../../design/tokens/native/useToken.tsx") /* map */;
   if (constants.WAITING_FOR_NETWORK === state) {
     let obj = { style: null, children: null };
     obj[0] = tmp.leadingSlot;
@@ -62,7 +62,7 @@ function ConnectionBannerContent(state) {
     stringResult = intl3.string(tmp4(1236).t.j8lYE2);
   }
   obj[3] = stringResult;
-  items[1] = callback2(require(4281) /* Text */.Text, obj);
+  items[1] = callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   obj[1] = items;
   return closure_13(closure_6, obj);
 }
@@ -70,7 +70,7 @@ function BackOnlineGlow(opacity) {
   let token;
   const tmp = createCacheKey();
   let obj = token(3989);
-  token = obj.useToken(importDefault(712).colors.ICON_FEEDBACK_POSITIVE);
+  token = obj.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").colors.ICON_FEEDBACK_POSITIVE);
   let items = [token];
   const memo = React.useMemo(() => {
     const obj = outer1_1(outer1_2[14])(token);
@@ -86,10 +86,10 @@ function BackOnlineGlow(opacity) {
   obj = { style: items1, pointerEvents: "none", children: null };
   items1 = [tmp.glow, { opacity: opacity.progress }];
   obj = { style: tmp.glow, maskElement: null, children: null };
-  obj[1] = callback2(importDefault(4706), { style: tmp.glowMaskGradient, colors: closure_14, locations: closure_15, start: closure_16, end: closure_17 });
-  obj[2] = callback2(importDefault(4706), { style: tmp.glowMaskGradient, colors: memo, locations: closure_18, start: closure_19, end: closure_20 });
-  obj[2] = callback2(importDefault(5260), obj);
-  return callback2(importDefault(4146).View, obj);
+  obj[1] = callback2(require("../../../../_runtime/04706_LinearGradient.js"), { style: tmp.glowMaskGradient, colors: closure_14, locations: closure_15, start: closure_16, end: closure_17 });
+  obj[2] = callback2(require("../../../../_runtime/04706_LinearGradient.js"), { style: tmp.glowMaskGradient, colors: memo, locations: closure_18, start: closure_19, end: closure_20 });
+  obj[2] = callback2(require("../../../../_runtime/05260__isNativeReflectConstruct.js"), obj);
+  return callback2(require("../../reanimated/ReanimatedRexport.tsx").View, obj);
 }
 function ConnectionBannerInner() {
   let tmp12;

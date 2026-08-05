@@ -8,10 +8,10 @@ const result = require("initialize").fileFinishedImporting("modules/video_calls/
 export const useIsFiveButtonLayout = function useIsFiveButtonLayout(id) {
   const _require = id;
   const items = [ensureGuildLoaded];
-  const stateFromStores = _require(589).useStateFromStores(items, () => outer1_3.getChannel(closure_0));
-  const obj = _require(589);
+  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_3.getChannel(closure_0));
+  const obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const tmp = _require;
-  let isConnectedToVoiceChannel = _require(9659).useIsConnectedToVoiceChannel(stateFromStores);
+  let isConnectedToVoiceChannel = _require("../../voice_chat/VoiceChatHooks.tsx").useIsConnectedToVoiceChannel(stateFromStores);
   let guild_id;
   if (stateFromStores != null) {
     guild_id = stateFromStores.guild_id;
@@ -20,7 +20,7 @@ export const useIsFiveButtonLayout = function useIsFiveButtonLayout(id) {
     guild_id = null;
   }
   let guild_id1;
-  const obj3 = _require(9659);
+  const obj3 = _require("../../voice_chat/VoiceChatHooks.tsx");
   if (stateFromStores != null) {
     guild_id1 = stateFromStores.guild_id;
   }

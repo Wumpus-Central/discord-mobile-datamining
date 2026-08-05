@@ -25,16 +25,16 @@ function FriendPresence(user) {
   ({ type, animate, guildId } = user);
   if (type === constants.PENDING_INCOMING) {
     let obj = { lineClamp: 1, variant: "text-sm/medium", color: "text-default", children: null };
-    obj[3] = require(4124) /* nameFromUser */.getUserTag(user);
-    let tmp5 = callback(require(4281) /* Text */.Text, obj);
-    const obj3 = require(4124) /* nameFromUser */;
+    obj[3] = require("../../../../../../utils/UserUtils.tsx") /* nameFromUser */.getUserTag(user);
+    let tmp5 = callback(require("../../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+    const obj3 = require("../../../../../../utils/UserUtils.tsx") /* nameFromUser */;
   } else {
     obj = { userId: null, guildId: null, iconStyle: null, textStyle: null, emojiSize: 16, animate: null };
     obj[0] = user.id;
     obj[1] = guildId;
     ({ activityStatusIcon: obj[2], activityStatusText: obj[3] } = tmp);
     obj[5] = animate;
-    tmp5 = callback(importDefault(9557), obj);
+    tmp5 = callback(require("../../../../../activity_status/native/ActivityStatus.tsx"), obj);
   }
   return tmp5;
 }

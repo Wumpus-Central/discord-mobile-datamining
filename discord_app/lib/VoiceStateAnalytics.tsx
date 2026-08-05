@@ -50,10 +50,10 @@ prototype["getUserVoiceSettingsStats"] = function getUserVoiceSettingsStats(arg0
   set.delete(this.userId);
   const obj = { num_local_voice_user_mutes: null, num_local_voice_volumes: null };
   let arr = Array.from(set);
-  obj[0] = require(12) /* apply */.intersection(arr, Array.from(this.totalParticipants)).length;
-  const obj4 = require(12) /* apply */;
+  obj[0] = require("../../_runtime/00012_apply.js") /* apply */.intersection(arr, Array.from(this.totalParticipants)).length;
+  const obj4 = require("../../_runtime/00012_apply.js") /* apply */;
   arr = Array.from(set1);
-  obj[1] = require(12) /* apply */.intersection(arr, Array.from(this.totalParticipants)).length;
+  obj[1] = require("../../_runtime/00012_apply.js") /* apply */.intersection(arr, Array.from(this.totalParticipants)).length;
   return obj;
 };
 prototype["setSpeaking"] = function setSpeaking(userId, speaking) {

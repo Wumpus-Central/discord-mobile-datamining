@@ -28,10 +28,10 @@ export default function AppealIngestionBreadcrumbs(reasons) {
     obj[0] = tmp.container;
     obj = { style: null, accessibilityRole: "header", variant: "text-xs/bold", children: null };
     obj[0] = tmp.title;
-    const intl = _require(1236).intl;
-    obj[3] = intl.string(_require(1236).t.eQg0Ck);
+    const intl = _require("../../../intl/index.native.tsx").intl;
+    obj[3] = intl.string(_require("../../../intl/index.native.tsx").t.eQg0Ck);
     let items = [
-      callback(_require(4281).Text, obj),
+      callback(_require("../../../design/components/Text/native/Text.tsx").Text, obj),
       reasons.map((children) => {
           let obj = { style: _undefined.breadCrumbItemContainer, children: null };
           obj = { style: _undefined.breadCrumbBar };

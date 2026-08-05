@@ -12,10 +12,10 @@ let c9;
 let metroImportAll;
 const require = arg1;
 function useIsMobileQuestDockRenderedBase(deliveredQuest) {
-  const tmp2 = importDefault(7562)();
+  const tmp2 = require("../../screen/native/useIsWindowLarge.tsx")();
   const items = [initializeState];
   let userStatus;
-  const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => null != questPreviewOverride.getQuestPreviewOverride(callback(table[11]).QuestContent.QUEST_BAR_MOBILE), []);
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => null != questPreviewOverride.getQuestPreviewOverride(callback(table[11]).QuestContent.QUEST_BAR_MOBILE), []);
   if (deliveredQuest != null) {
     userStatus = deliveredQuest.userStatus;
   }
@@ -33,8 +33,8 @@ function useIsMobileQuestDockRenderedBase(deliveredQuest) {
   }
   tmp3Result = tmp3(10374);
   const isQuestExpired = tmp3Result.useIsQuestExpired(deliveredQuest);
-  const obj = require(589) /* initialize */;
-  const isEligibleForQuests = require(10375) /* getIsEligibleForQuests */.getIsEligibleForQuests();
+  const obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const isEligibleForQuests = require("../lib/QuestsEligibility.tsx") /* getIsEligibleForQuests */.getIsEligibleForQuests();
   if (stateFromStores) {
     if (!tmp8) {
       let tmp11 = null != deliveredQuest && !tmp2;
@@ -44,7 +44,7 @@ function useIsMobileQuestDockRenderedBase(deliveredQuest) {
   tmp11 = null != deliveredQuest && isEligibleForQuests && !isQuestExpired && null == claimedAt && !isDismissedResult && !tmp2;
 }
 function useIsMobileQuestDockRendered() {
-  const obj = importDefault(7095);
+  const obj = require("../experiments/NewAdRequestBehaviorExperiment.tsx");
   const items = [initializeState];
   let stateFromStores = stateFromStores2(589).useStateFromStores(items, () => questPreviewOverride.getQuestPreviewOverride(stateFromStores2(5131).QuestContent.QUEST_BAR_MOBILE), []);
   const obj2 = stateFromStores2(589);
@@ -107,7 +107,7 @@ export const useMobileQuestDockHeight = function useMobileQuestDockHeight() {
   return num;
 };
 export const useMobileQuestDock = function useMobileQuestDock() {
-  let obj = importDefault(7095);
+  let obj = require("../experiments/NewAdRequestBehaviorExperiment.tsx");
   const items = [initializeState];
   stateFromStores = stateFromStores(589).useStateFromStores(items, () => questPreviewOverride.getQuestPreviewOverride(stateFromStores(5131).QuestContent.QUEST_BAR_MOBILE), []);
   const obj2 = stateFromStores(589);
@@ -145,23 +145,23 @@ export const useMobileQuestDock = function useMobileQuestDock() {
 export const useIsMobileQuestDockVisibleToUser = function useIsMobileQuestDockVisibleToUser(deliveredQuest, isMobileQuestDockRenderedBase) {
   const _require = deliveredQuest;
   let tmp = isMobileQuestDockRenderedBase;
-  const isChannelFocused = _require(9677).useIsChannelFocused();
-  const obj = _require(9677);
-  const currentNavigationRouteName = _require(4136).useCurrentNavigationRouteName();
-  const obj2 = _require(4136);
-  let tmp4 = null != _require(4136).coerceGuildsRoute({ name: currentNavigationRouteName });
-  const obj3 = _require(4136);
+  const isChannelFocused = _require("../../panels/isChannelFocused.native.tsx").useIsChannelFocused();
+  const obj = _require("../../panels/isChannelFocused.native.tsx");
+  const currentNavigationRouteName = _require("../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx").useCurrentNavigationRouteName();
+  const obj2 = _require("../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx");
+  let tmp4 = null != _require("../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx").coerceGuildsRoute({ name: currentNavigationRouteName });
+  const obj3 = _require("../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx");
   const items = [initializeState];
-  let stateFromStores = _require(589).useStateFromStores(items, () => {
+  let stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let isClaimingRewardResult = null != closure_0;
     if (isClaimingRewardResult) {
       isClaimingRewardResult = outer1_7.isClaimingReward(tmp.id);
     }
     return isClaimingRewardResult;
   });
-  const obj4 = _require(589);
+  const obj4 = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const items1 = [setContent];
-  const stateFromStores1 = _require(589).useStateFromStores(items1, () => {
+  const stateFromStores1 = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
     key = key.getKey();
     let tmp2 = key === closure_10;
     if (!tmp2) {

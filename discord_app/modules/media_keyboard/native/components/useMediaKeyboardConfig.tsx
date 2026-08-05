@@ -20,7 +20,7 @@ export default function useMediaKeyboardConfig(arg0) {
   let mediaKeyboardDraftType;
   const tmp4 = context(7140).useCanPostPollsInChannel(channel) && context.target !== MediaKeyboardTarget.COMMAND;
   importDefault = tmp4;
-  const tmp5 = importDefault(11519)(channel);
+  const tmp5 = require("../useUploadDisabled.tsx")(channel);
   dependencyMap = tmp5;
   let tmp2Result = tmp2(5798);
   canStartThread = tmp2Result.useCanStartThread(channel);

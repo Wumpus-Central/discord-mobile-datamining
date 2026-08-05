@@ -518,7 +518,7 @@ function _fetchSocialLayerStorefrontSkuWithUrl2() {
 function getOrCreateBackoff(get) {
   let value = get.get(arg1);
   if (null == value) {
-    const tmp8 = new importDefault(584)(closure_17, closure_18);
+    const tmp8 = new require("../../../discord_common/js/packages/backoff/Backoff.tsx")(closure_17, closure_18);
     const result = get.set(arg1, tmp8);
     value = tmp8;
   }
@@ -820,7 +820,7 @@ function _fetchSocialLayerStorefrontById() {
   return applyArgumentsResult;
 }
 function setSocialLayerStorefrontPreview(applicationId, storefrontId) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "SOCIAL_LAYER_STOREFRONT_SET_PREVIEW", applicationId, storefrontId };
   obj.dispatch(obj);
 }
@@ -1182,7 +1182,7 @@ export const fetchSocialLayerStorefrontSku = function fetchSocialLayerStorefront
   return _fetchSocialLayerStorefrontSkuWithUrl(id, Endpoints.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU(arg0, id), obj);
 };
 export const setSocialLayerStorefrontState = function setSocialLayerStorefrontState(applicationId, pageIndex, skuId) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "SET_SOCIAL_LAYER_STOREFRONT_STATE", applicationId, pageIndex, skuId };
   obj.dispatch(obj);
 };
@@ -1238,7 +1238,7 @@ export const fetchSocialLayerSKUPurchaseEligibility = function fetchSocialLayerS
     tmp2 = "ineligible" !== sKUEligibility;
   }
   if (tmp2) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_START", skuId: null };
     obj[1] = closure_0;
     obj.dispatch(obj);
@@ -1251,7 +1251,7 @@ export const fetchSocialLayerSKUPurchaseEligibility = function fetchSocialLayerS
         obj.dispatch(obj);
       }
     }, closure_11);
-    const HTTP = _require(530).HTTP;
+    const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     obj = { url: null, rejectWithError: true };
     obj[0] = Endpoints.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_ELIGIBILITY(arg0, closure_0);
     const postResult = HTTP.post(obj);

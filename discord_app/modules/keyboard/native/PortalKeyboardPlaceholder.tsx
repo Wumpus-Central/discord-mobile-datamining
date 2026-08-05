@@ -8,18 +8,18 @@ let c3;
 let c4;
 const require = arg1;
 function PortalKeyboardPlaceholderInner(keyboardType) {
-  const rect = importDefault(1581)();
-  const tmp = importDefault(7562)();
-  const tmp2 = importDefault(1474)();
-  let obj = require(8202) /* useGradientBottom */;
+  const rect = require("../../safe_area/useSafeAreaInsets.native.tsx")();
+  const tmp = require("../../screen/native/useIsWindowLarge.tsx")();
+  const tmp2 = require("../../screen/useWindowDimensions.native.tsx")();
+  let obj = require("../../client_themes/native/ClientThemesOverrides.tsx") /* useGradientBottom */;
   obj = { style: null };
-  const items = [callback(keyboardType.keyboardType, importDefault(1474)().width - rect.left - rect.right, importDefault(5313)(), tmp).container, obj.useGradientBottom()];
+  const items = [callback(keyboardType.keyboardType, require("../../screen/useWindowDimensions.native.tsx")().width - rect.left - rect.right, require("useCustomKeyboardHeight.tsx")(), tmp).container, obj.useGradientBottom()];
   obj[0] = items;
   return <closure_3 style={null} />;
 }
 ({ View: c3, StyleSheet: c4 } = get_ActivityIndicator);
 let closure_6 = createCacheKey.createStyles((arg0, arg1, arg2, arg3) => {
-  let container = require(500) /* set */;
+  let container = require("../../../utils/PlatformUtils.tsx") /* set */;
   let absoluteFillObject = null;
   if (container.isIOS()) {
     absoluteFillObject = closure_4.absoluteFillObject;
@@ -27,7 +27,7 @@ let closure_6 = createCacheKey.createStyles((arg0, arg1, arg2, arg3) => {
   container = {};
   const merged = Object.assign(absoluteFillObject);
   container.borderTopWidth = closure_4.hairlineWidth;
-  container.borderTopColor = importDefault(712).colors.BORDER_SUBTLE;
+  container.borderTopColor = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE;
   let BORDER_SUBTLE;
   if (arg3) {
     BORDER_SUBTLE = tmp7(712).colors.BORDER_SUBTLE;
@@ -49,7 +49,7 @@ let closure_6 = createCacheKey.createStyles((arg0, arg1, arg2, arg3) => {
   }
   container.borderLeftWidth = hairlineWidth1;
   const APP_LAUNCHER = tmp(1579).KeyboardTypes.APP_LAUNCHER;
-  container.backgroundColor = importDefault(712).colors.BACKGROUND_BASE_LOW;
+  container.backgroundColor = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW;
   let tmpResult = tmp(500);
   if (tmpResult.isIOS()) {
     const tmp12 = arg1;
@@ -63,13 +63,13 @@ let closure_6 = createCacheKey.createStyles((arg0, arg1, arg2, arg3) => {
   return { container };
 });
 const jsxResult = jsx(function PortalKeyboardPlaceholder() {
-  const tmp2 = importDefault(4151)();
-  let isAndroidResult = importDefault(1847)() > 0;
+  const tmp2 = require("useKeyboardType.tsx")();
+  let isAndroidResult = require("useSystemKeyboardHeight.native.tsx")() > 0;
   if (isAndroidResult) {
-    let obj = require(500) /* set */;
+    let obj = require("../../../utils/PlatformUtils.tsx") /* set */;
     isAndroidResult = obj.isAndroid();
   }
-  if (tmp2 !== require(1579) /* KeyboardTypes */.KeyboardTypes.SYSTEM) {
+  if (tmp2 !== require("KeyboardTypes.tsx") /* KeyboardTypes */.KeyboardTypes.SYSTEM) {
     let tmp6 = null;
     if (!isAndroidResult) {
       obj = { keyboardType: null };
@@ -78,7 +78,7 @@ const jsxResult = jsx(function PortalKeyboardPlaceholder() {
     }
   } else {
     tmp6 = null;
-    const tmp5Result = require(500) /* set */;
+    const tmp5Result = require("../../../utils/PlatformUtils.tsx") /* set */;
   }
   return tmp6;
 }, {});

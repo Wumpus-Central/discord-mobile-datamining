@@ -1,5 +1,5 @@
 // discord_app/modules/instant_invite/native/components/InstantInviteActionSheet.tsx
-import module_9010 from "module_9010";
+import InstantInviteShareApps from "InstantInviteShareApps.tsx";
 import getInviteURL from "getInviteURL";
 import get_ActivityIndicator from "initialize";
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
@@ -28,7 +28,7 @@ function Loading() {
     let tmp4 = dependencyMap;
     let obj = { row: null };
     obj[0] = num;
-    let arr = items.push(callback2(importDefault(8997), obj, num));
+    let arr = items.push(callback2(require("../../../main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx"), obj, num));
     num = num + 1;
   } while (num < 10);
   obj = { children: null };

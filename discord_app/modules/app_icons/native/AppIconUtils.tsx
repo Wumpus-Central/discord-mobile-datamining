@@ -180,7 +180,7 @@ if (set.isAndroid()) {
   DCDIconManager = require("isMetaQuest").NativeModules.DCDIconManager;
 }
 function useCurrentAppIcon() {
-  const tmp = callback(React.useState(_require(7584).FreemiumAppIconIds.DEFAULT), 2);
+  const tmp = callback(React.useState(_require("../AppIconTypes.tsx").FreemiumAppIconIds.DEFAULT), 2);
   _require = tmp[1];
   const importDefault = React.useCallback(callback2(function*() {
     if (c3 === 2) {
@@ -238,7 +238,7 @@ function useCurrentAppIcon() {
       }
     }
   }), []);
-  importDefault(4711)(() => {
+  require("../../../hooks/useMountEffect.tsx")(() => {
     callback();
     const subscription = callback(709).subscribe("APP_ICON_UPDATED", callback);
     return () => {
@@ -266,7 +266,7 @@ export const useAppIcons = function useAppIcons() {
   let closure_1;
   let tmp4;
   let tmp6;
-  const currentAppIcon = callback(React.useState(_require(7584).FreemiumAppIconIds.DEFAULT), 2);
+  const currentAppIcon = callback(React.useState(_require("../AppIconTypes.tsx").FreemiumAppIconIds.DEFAULT), 2);
   _require = currentAppIcon[1];
   const importDefault = React.useCallback(callback2(function*() {
     if (c3 === 2) {
@@ -324,7 +324,7 @@ export const useAppIcons = function useAppIcons() {
       }
     }
   }), []);
-  importDefault(4711)(() => {
+  require("../../../hooks/useMountEffect.tsx")(() => {
     callback();
     const subscription = callback(709).subscribe("APP_ICON_UPDATED", callback);
     return () => {
@@ -373,7 +373,7 @@ export const useAppIcons = function useAppIcons() {
     c4 = 0;
     return arg1;
   }), []);
-  importDefault(4711)(() => {
+  require("../../../hooks/useMountEffect.tsx")(() => {
     dependencyMap();
     const subscription = callback(709).subscribe("APP_ICON_UPDATED", dependencyMap);
     return () => {
@@ -383,10 +383,10 @@ export const useAppIcons = function useAppIcons() {
   return { officialAppIcons, limitedTimeAppIcons, currentAppIcon: currentAppIcon[0] };
 };
 export const navigateToAppIconSettings = function navigateToAppIconSettings() {
-  let obj = require(5925) /* openUserSettings */;
+  let obj = require("../../user_settings/core/native/openUserSettings.tsx") /* openUserSettings */;
   obj = { screen: constants.APP_ICONS };
   obj.openUserSettings(obj);
 };
 export const isAppIconsSupported = function isAppIconsSupported() {
-  return !require(1577) /* isMetaQuest */.isMetaQuest();
+  return !require("../../device/MetaQuestUtils.android.tsx") /* isMetaQuest */.isMetaQuest();
 };

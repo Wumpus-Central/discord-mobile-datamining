@@ -9,8 +9,8 @@ function updateProduct(currencyCode) {
   const result = currencyCode.price / 100;
   if ("BG" === c14) {
     if (formatted === CurrencyCodes.EUR) {
-      let formatDualPriceForBGResult = require(5764) /* formatSingleCurrencyPrice */.formatDualPriceForBG(result, { convertToMajorUnits: false });
-      const obj2 = require(5764) /* formatSingleCurrencyPrice */;
+      let formatDualPriceForBGResult = require("../../utils/PriceUtils.tsx") /* formatSingleCurrencyPrice */.formatDualPriceForBG(result, { convertToMajorUnits: false });
+      const obj2 = require("../../utils/PriceUtils.tsx") /* formatSingleCurrencyPrice */;
     }
     let obj = {};
     const merged = Object.assign(currencyCode);
@@ -19,7 +19,7 @@ function updateProduct(currencyCode) {
     obj.priceString = formatDualPriceForBGResult;
     return obj;
   }
-  obj = require(5764) /* formatSingleCurrencyPrice */;
+  obj = require("../../utils/PriceUtils.tsx") /* formatSingleCurrencyPrice */;
   formatDualPriceForBGResult = obj.formatSingleCurrencyPrice(result, formatted, { convertToMajorUnits: false });
 }
 function skusLoaded(arg0) {
@@ -62,8 +62,8 @@ function skusLoaded(arg0) {
       let c13 = false;
     }
   } catch (tmp7) {
-    let result = require(3946) /* _createGatewayCheckoutContext */.captureBillingException(tmp7);
-    const obj = require(3946) /* _createGatewayCheckoutContext */;
+    let result = require("../../utils/BillingUtils.tsx") /* _createGatewayCheckoutContext */.captureBillingException(tmp7);
+    const obj = require("../../utils/BillingUtils.tsx") /* _createGatewayCheckoutContext */;
   }
 }
 GPlayConnectionState = GPlayConnectionState.GPlayConnectionState;

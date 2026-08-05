@@ -9,6 +9,6 @@ export const useInappropriateConversationWarningsForChannel = function useInappr
   const _require = channelId;
   const items = [handleConnectionOpen];
   const items1 = [channelId];
-  const stateFromStores = _require(589).useStateFromStores(items, () => outer1_2.getChannelSafetyWarnings(closure_0), items1);
+  const stateFromStores = _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_2.getChannelSafetyWarnings(closure_0), items1);
   return stateFromStores.filter((type) => type.type === obj.INAPPROPRIATE_CONVERSATION_TIER_1 || type.type === tmp.INAPPROPRIATE_CONVERSATION_TIER_2);
 };

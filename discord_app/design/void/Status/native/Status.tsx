@@ -24,20 +24,20 @@ let closure_13 = createCacheKey.createStyles({ statusIcon: { width: "100%", heig
 let closure_14 = createCacheKey.createStyles((items) => {
   let dotSize;
   let height;
-  let obj = require(13261) /* getAnimatedTypingTranslateX */;
+  let obj = require("StatusUtils.tsx") /* getAnimatedTypingTranslateX */;
   const statusTypingDimensions = obj.getStatusTypingDimensions(items);
   ({ height, dotSize } = statusTypingDimensions);
   if (StatusTypes.ONLINE === arg1) {
-    let PRIMARY_400 = importDefault(712).unsafe_rawColors.GREEN_360;
+    let PRIMARY_400 = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.GREEN_360;
     let tmp5 = importDefault;
   } else if (tmp3.IDLE === arg1) {
-    PRIMARY_400 = importDefault(712).unsafe_rawColors.YELLOW_300;
+    PRIMARY_400 = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.YELLOW_300;
     tmp5 = importDefault;
   } else if (tmp3.DND === arg1) {
-    PRIMARY_400 = importDefault(712).unsafe_rawColors.RED_400;
+    PRIMARY_400 = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.RED_400;
     tmp5 = importDefault;
   } else if (tmp3.STREAMING === arg1) {
-    PRIMARY_400 = importDefault(712).unsafe_rawColors.PLATFORM_TWITCH;
+    PRIMARY_400 = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.PLATFORM_TWITCH;
     tmp5 = importDefault;
   } else {
     if (tmp3.INVISIBLE !== arg1) {
@@ -45,7 +45,7 @@ let closure_14 = createCacheKey.createStyles((items) => {
         const OFFLINE = tmp3.OFFLINE;
       }
     }
-    PRIMARY_400 = importDefault(712).unsafe_rawColors.PRIMARY_400;
+    PRIMARY_400 = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.PRIMARY_400;
     tmp5 = importDefault;
   }
   obj = { ellipsis: { backgroundColor: PRIMARY_400, borderRadius: height, height, width: statusTypingDimensions.width, paddingStart: 4, paddingEnd: 2, marginRight: 0 }, ellipsisDot: null };
@@ -75,7 +75,7 @@ export default function Status(isMobileOnline) {
     streaming = false;
   }
   let obj = { style: null, children: null };
-  const items = [importDefault(13262)(size, flag, flag2), style];
+  const items = [require("getStatusContainerStyle.tsx")(size, flag, flag2), style];
   obj[0] = items;
   obj = { style: callback2().statusIcon, source: null, resizeMode: "stretch" };
   if (streaming) {

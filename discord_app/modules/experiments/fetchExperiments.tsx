@@ -8,6 +8,6 @@ export const fetchExperiments = function fetchExperiments(arg0) {
   let headers;
   let withGuildExperiments;
   ({ withGuildExperiments, headers, context } = arg0);
-  const HTTP = require(530) /* sendRequest */.HTTP;
+  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
   return HTTP.get({ url: Endpoints.EXPERIMENTS, query: { with_guild_experiments: withGuildExperiments }, headers, context, retries: 3, oldFormErrors: true, rejectWithError: false });
 };

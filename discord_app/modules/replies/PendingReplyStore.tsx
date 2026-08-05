@@ -14,8 +14,8 @@ prototype["getState"] = function getState() {
   let tmp6;
   let tmp7;
   let obj = {};
-  const entries = importDefault(11).entries(closure_5);
-  const obj2 = importDefault(11);
+  const entries = require("../../utils/SnowflakeUtils.tsx").entries(closure_5);
+  const obj2 = require("../../utils/SnowflakeUtils.tsx");
   while (tmp2 !== undefined) {
     let tmp4 = callback;
     let tmp5 = callback(tmp3, 2);
@@ -107,7 +107,7 @@ const pendingReplyStore = new PendingReplyStore(require("dispatcher"), {
     delete tmp[tmp2];
   },
   CONNECTION_OPEN: function handleConnectionOpen() {
-    const keys = importDefault(11).keys(closure_6);
+    const keys = require("../../utils/SnowflakeUtils.tsx").keys(closure_6);
     const item = keys.forEach((arg0) => {
       if (null == channel.getChannel(arg0)) {
         delete tmp[tmp2];

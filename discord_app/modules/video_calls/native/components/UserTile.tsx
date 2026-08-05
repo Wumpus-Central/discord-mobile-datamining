@@ -151,11 +151,11 @@ let closure_19 = importAllResult.memo((userId) => {
   }, items1), 3);
   let tmp5 = tmp4[1];
   if (tmp4[0]) {
-    let tmp6 = importDefault(7811);
+    let tmp6 = require("../../../../../_runtime/07811_registerAsset.js");
   } else if (deafened) {
-    tmp6 = importDefault(10621);
+    tmp6 = require("../../../../../_runtime/10621_registerAsset.js");
   } else if (muted) {
-    tmp6 = importDefault(10622);
+    tmp6 = require("../../../../../_runtime/10622_registerAsset.js");
   }
   if (tmp5) {
     tmp5 = !tmp4[2];
@@ -167,7 +167,7 @@ let closure_19 = importAllResult.memo((userId) => {
       const items2 = [tmp.statusWrapper, style];
       obj[0] = items2;
       obj = { source: null, size: null, disableColor: true };
-      obj[0] = importDefault(10623);
+      obj[0] = require("../../../../../_runtime/10623_registerAsset.js");
       obj[1] = tmp2(1297).Icon.Sizes.SMALL;
       obj[1] = callback2(tmp2(1297).Icon, obj);
       tmp14 = callback2(View, obj);
@@ -186,8 +186,8 @@ let closure_19 = importAllResult.memo((userId) => {
       const obj3 = { source: null, size: null, color: null, disableColor: null };
       obj3[0] = tmp6;
       obj3[1] = tmp2(1297).Icon.Sizes.SMALL;
-      obj3[2] = importDefault(712).unsafe_rawColors.WHITE;
-      obj3[3] = tmp6 === importDefault(7811);
+      obj3[2] = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.WHITE;
+      obj3[3] = tmp6 === require("../../../../../_runtime/07811_registerAsset.js");
       obj2[1] = callback2(tmp2(1297).Icon, obj3);
       tmp19Result = tmp19(View, obj2);
       const tmp20 = View;

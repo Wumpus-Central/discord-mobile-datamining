@@ -63,7 +63,7 @@ export default function MessageGameIconActionSheet(applicationId) {
     const items3 = [intl.format(tmp2(1236).t.J3s8JP, obj7), " ", ];
     const intl2 = tmp2(1236).intl;
     const obj8 = { helpdeskArticle: null };
-    obj8[0] = importDefault(1945).getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS);
+    obj8[0] = require("../../../utils/HelpdeskUtils.tsx").getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS);
     items3[2] = intl2.format(tmp2(1236).t.BPDKoA, obj8);
     obj6[1] = items3;
     items2[1] = closure_7(tmp2(4281).Text, obj6);
@@ -73,7 +73,7 @@ export default function MessageGameIconActionSheet(applicationId) {
     obj[1] = closure_7(View, obj);
     obj2[1] = closure_6(View, obj);
     tmp5Result = tmp5(tmp2(5338).BottomSheet, obj2);
-    const obj13 = importDefault(1945);
+    const obj13 = require("../../../utils/HelpdeskUtils.tsx");
   }
   return tmp5Result;
 };

@@ -14,16 +14,16 @@ function getShelfBadgeTypeIfActive(application) {
   if (application.id !== BuiltInSectionId.BUILT_IN) {
     let hasApplicationFlagResult = application.id !== tmp.BUILT_IN;
     if (hasApplicationFlagResult) {
-      hasApplicationFlagResult = require(7510) /* getApplicationFlags */.hasApplicationFlag(application, ApplicationFlags.EMBEDDED);
-      const obj = require(7510) /* getApplicationFlags */;
+      hasApplicationFlagResult = require("../../applications/utils/ApplicationFlagUtils.tsx") /* getApplicationFlags */.hasApplicationFlag(application, ApplicationFlags.EMBEDDED);
+      const obj = require("../../applications/utils/ApplicationFlagUtils.tsx") /* getApplicationFlags */;
     }
     tmp2 = null;
   }
   let tmp9;
   if (tmp2 != null) {
-    const obj2 = require(500) /* set */;
-    tmp9 = tmp2.client_platform_config[importDefault(10522)(undefined, obj2.getOS(obj2))];
-    const tmp12 = importDefault(10522);
+    const obj2 = require("../../../utils/PlatformUtils.tsx") /* set */;
+    tmp9 = tmp2.client_platform_config[require("../../activities/utils/getPlatform.tsx")(undefined, obj2.getOS(obj2))];
+    const tmp12 = require("../../activities/utils/getPlatform.tsx");
   }
   const timestamp = Date.now();
   let label_until;
@@ -45,7 +45,7 @@ function getShelfBadgeTypeIfActive(application) {
             label_type = tmp9.label_type;
           }
           if (label_type == null) {
-            label_type = require(1906) /* PermissionOverwriteType */.EmbeddedActivityLabelTypes.NONE;
+            label_type = require("../../../flow/Server.tsx") /* PermissionOverwriteType */.EmbeddedActivityLabelTypes.NONE;
           }
           let NONE = label_type;
         }
@@ -53,7 +53,7 @@ function getShelfBadgeTypeIfActive(application) {
       }
     }
   }
-  NONE = require(1906) /* PermissionOverwriteType */.EmbeddedActivityLabelTypes.NONE;
+  NONE = require("../../../flow/Server.tsx") /* PermissionOverwriteType */.EmbeddedActivityLabelTypes.NONE;
 }
 let closure_3 = ["fakeAppIconURL"];
 let result = require("getIndexKey").fileFinishedImporting("modules/app_launcher/utils/AppLauncherUtils.tsx");
@@ -66,8 +66,8 @@ export const getSectionName = function getSectionName(FAKE_BUILT_IN_APP) {
   if (FAKE_BUILT_IN_APP.id !== BuiltInSectionId.BUILT_IN) {
     let name = FAKE_BUILT_IN_APP.name;
   } else {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    name = intl.string(require(1236) /* getSystemLocale */.t.UB2gG2);
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    name = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.UB2gG2);
   }
   return name;
 };
@@ -75,39 +75,39 @@ export const getSectionDescription = function getSectionDescription(FAKE_BUILT_I
   if (FAKE_BUILT_IN_APP.id !== BuiltInSectionId.BUILT_IN) {
     let description = FAKE_BUILT_IN_APP.description;
   } else {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    description = intl.string(require(1236) /* getSystemLocale */.t.X9fusn);
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    description = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.X9fusn);
   }
   return description;
 };
 export const isEmbeddedApp = function isEmbeddedApp(application) {
   let hasApplicationFlagResult = application.id !== BuiltInSectionId.BUILT_IN;
   if (hasApplicationFlagResult) {
-    hasApplicationFlagResult = require(7510) /* getApplicationFlags */.hasApplicationFlag(application, ApplicationFlags.EMBEDDED);
-    const obj = require(7510) /* getApplicationFlags */;
+    hasApplicationFlagResult = require("../../applications/utils/ApplicationFlagUtils.tsx") /* getApplicationFlags */.hasApplicationFlag(application, ApplicationFlags.EMBEDDED);
+    const obj = require("../../applications/utils/ApplicationFlagUtils.tsx") /* getApplicationFlags */;
   }
   return hasApplicationFlagResult;
 };
 export const isPartnerApplication = function isPartnerApplication(application) {
   let hasApplicationFlagResult = application.id !== BuiltInSectionId.BUILT_IN;
   if (hasApplicationFlagResult) {
-    hasApplicationFlagResult = require(7510) /* getApplicationFlags */.hasApplicationFlag(application, ApplicationFlags.PARTNER);
-    const obj = require(7510) /* getApplicationFlags */;
+    hasApplicationFlagResult = require("../../applications/utils/ApplicationFlagUtils.tsx") /* getApplicationFlags */.hasApplicationFlag(application, ApplicationFlags.PARTNER);
+    const obj = require("../../applications/utils/ApplicationFlagUtils.tsx") /* getApplicationFlags */;
   }
   return hasApplicationFlagResult;
 };
 export const isPromotedApplication = function isPromotedApplication(FAKE_BUILT_IN_APP2) {
   let hasApplicationFlagResult = FAKE_BUILT_IN_APP2.id !== BuiltInSectionId.BUILT_IN;
   if (hasApplicationFlagResult) {
-    hasApplicationFlagResult = require(7510) /* getApplicationFlags */.hasApplicationFlag(FAKE_BUILT_IN_APP2, ApplicationFlags.PROMOTED);
-    const obj = require(7510) /* getApplicationFlags */;
+    hasApplicationFlagResult = require("../../applications/utils/ApplicationFlagUtils.tsx") /* getApplicationFlags */.hasApplicationFlag(FAKE_BUILT_IN_APP2, ApplicationFlags.PROMOTED);
+    const obj = require("../../applications/utils/ApplicationFlagUtils.tsx") /* getApplicationFlags */;
   }
   return hasApplicationFlagResult;
 };
 export { getShelfBadgeTypeIfActive };
 export const getShelfBadgeNameIfActive = function getShelfBadgeNameIfActive(application) {
   const tmp = getShelfBadgeTypeIfActive(application);
-  if (require(1906) /* PermissionOverwriteType */.EmbeddedActivityLabelTypes.NEW === tmp) {
+  if (require("../../../flow/Server.tsx") /* PermissionOverwriteType */.EmbeddedActivityLabelTypes.NEW === tmp) {
     return "New";
   } else if (tmp2(1906).EmbeddedActivityLabelTypes.UPDATED === tmp) {
     return "Updated";
@@ -121,8 +121,8 @@ export const getEmbeddedActivityConfig = function getEmbeddedActivityConfig(id) 
   if (id.id !== BuiltInSectionId.BUILT_IN) {
     let hasApplicationFlagResult = id.id !== tmp.BUILT_IN;
     if (hasApplicationFlagResult) {
-      hasApplicationFlagResult = require(7510) /* getApplicationFlags */.hasApplicationFlag(id, ApplicationFlags.EMBEDDED);
-      const obj = require(7510) /* getApplicationFlags */;
+      hasApplicationFlagResult = require("../../applications/utils/ApplicationFlagUtils.tsx") /* getApplicationFlags */.hasApplicationFlag(id, ApplicationFlags.EMBEDDED);
+      const obj = require("../../applications/utils/ApplicationFlagUtils.tsx") /* getApplicationFlags */;
     }
     tmp2 = null;
   }
@@ -277,20 +277,20 @@ export const getApplicationDetails = function getApplicationDetails(id, guildMem
     obj = {};
     const merged = Object.assign(tmp2);
     ({ id: obj5.id, icon: obj5.icon } = id);
-    obj[0] = importDefault(1416).getApplicationIconURL(obj);
+    obj[0] = require("../../../utils/AvatarUtils.tsx").getApplicationIconURL(obj);
     ({ name: obj3[1], description: obj3[2] } = id);
     let obj1 = obj;
-    const obj4 = importDefault(1416);
+    const obj4 = require("../../../utils/AvatarUtils.tsx");
   } else {
     if (fakeAppIconURL == null) {
       fakeAppIconURL = null;
     }
     obj1 = { iconURL: null, name: null, description: null };
     obj1[0] = fakeAppIconURL;
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj1[1] = intl.string(require(1236) /* getSystemLocale */.t.UB2gG2);
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    obj1[2] = intl2.string(require(1236) /* getSystemLocale */.t.X9fusn);
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj1[1] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.UB2gG2);
+    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj1[2] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.X9fusn);
   }
   return obj1;
 };
@@ -304,15 +304,15 @@ export const isApplicationAdSupported = function isApplicationAdSupported(applic
   if (application.id !== BuiltInSectionId.BUILT_IN) {
     let hasApplicationFlagResult = application.id !== tmp.BUILT_IN;
     if (hasApplicationFlagResult) {
-      hasApplicationFlagResult = require(7510) /* getApplicationFlags */.hasApplicationFlag(application, ApplicationFlags.EMBEDDED);
-      const obj = require(7510) /* getApplicationFlags */;
+      hasApplicationFlagResult = require("../../applications/utils/ApplicationFlagUtils.tsx") /* getApplicationFlags */.hasApplicationFlag(application, ApplicationFlags.EMBEDDED);
+      const obj = require("../../applications/utils/ApplicationFlagUtils.tsx") /* getApplicationFlags */;
     }
     tmp2 = null;
   }
   return null != tmp2 && tmp2.displays_advertisements;
 };
 export const appLauncherShowsRecommendations = function appLauncherShowsRecommendations(entrypoint) {
-  return entrypoint === require(9467) /* AppLauncherEntrypoint */.AppLauncherEntrypoint.TEXT;
+  return entrypoint === require("../AppLauncherTypes.tsx") /* AppLauncherEntrypoint */.AppLauncherEntrypoint.TEXT;
 };
 export const formatPrimaryEntryPointCommandName = function formatPrimaryEntryPointCommandName(displayName) {
   let str = "";
@@ -378,9 +378,9 @@ export const isAppAvailableInAppLauncher = function isAppAvailableInAppLauncher(
   }
   let result = null != guildState;
   if (result) {
-    result = require(6889) /* buildCommand */.hasCommandIndexForApp(id.id, guildState);
-    const obj = require(6889) /* buildCommand */;
+    result = require("../../application_commands/ApplicationCommandUtils.tsx") /* buildCommand */.hasCommandIndexForApp(id.id, guildState);
+    const obj = require("../../application_commands/ApplicationCommandUtils.tsx") /* buildCommand */;
   }
-  const obj2 = require(10887) /* canInstallApplication */;
-  return require(10887) /* canInstallApplication */.isAppUserInstallable(id) || result;
+  const obj2 = require("../../applications/utils/ApplicationInstallUtils.tsx") /* canInstallApplication */;
+  return require("../../applications/utils/ApplicationInstallUtils.tsx") /* canInstallApplication */.isAppUserInstallable(id) || result;
 };

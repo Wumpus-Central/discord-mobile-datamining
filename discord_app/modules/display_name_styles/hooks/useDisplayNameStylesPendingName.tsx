@@ -8,11 +8,11 @@ const result = require("nameFromUser").fileFinishedImporting("modules/display_na
 export const useDisplayNameStylesPendingName = function useDisplayNameStylesPendingName(stateFromStores, guildId) {
   const _require = stateFromStores;
   const importDefault = guildId;
-  const name = importDefault(4124).useName(stateFromStores);
-  const obj = importDefault(4124);
+  const name = require("../../../utils/UserUtils.tsx").useName(stateFromStores);
+  const obj = require("../../../utils/UserUtils.tsx");
   const items = [handleFormOpen, trackCommunicationDisabled];
   const items1 = [guildId, stateFromStores];
-  let str = _require(589).useStateFromStores(items, () => {
+  let str = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const pendingChanges = outer1_3.getPendingChanges(closure_1);
     if (null != closure_1) {
       let pendingNickname = pendingChanges.pendingNickname;

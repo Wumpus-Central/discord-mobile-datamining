@@ -21,15 +21,15 @@ const result = require("jsxProd").fileFinishedImporting("modules/in_app_reports/
 
 export default function MessagePreview(message) {
   const tmp = createCacheKey();
-  let obj = require(4129) /* hexToRgba */;
+  let obj = require("../../../../utils/ColorUtils.tsx") /* hexToRgba */;
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[3] = intl.string(require(1236) /* getSystemLocale */.t.iouM3a);
-  const items = [callback(require(4281) /* Text */.Text, obj), ];
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[3] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.iouM3a);
+  const items = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
   const hexWithOpacityResult = obj.hexWithOpacity(tmp.borderColor.color, 0.08);
   const items1 = [tmp.chatItemContainer, { borderColor: hexWithOpacityResult }];
-  items[1] = callback(View, { style: items1, children: callback(importDefault(8399), obj2) });
+  items[1] = callback(View, { style: items1, children: callback(require("../../../../components_native/chat/ChatItem.tsx"), obj2) });
   obj[1] = items;
   return callback2(View, obj);
 };

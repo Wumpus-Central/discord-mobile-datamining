@@ -163,7 +163,7 @@ function CategorySync(category) {
 }
 function AddPermission(isEditing) {
   let _require;
-  let obj = _require(1480);
+  let obj = _require("../../design/components/Navigator/native/useNavigation.native.tsx");
   _require = obj.useNavigation();
   if (isEditing.isEditing) {
     return null;
@@ -206,14 +206,14 @@ function RoleRow(onDelete) {
   ({ name, colorString, colorStrings } = role);
   const tmp = isEveryoneRole(role);
   let obj = { label: null, arrow: null, icon: null, onPress: null };
-  obj[0] = callback(require(9839) /* RoleLabel */.RoleLabel, { name, color: colorString, colors: colorStrings });
+  obj[0] = callback(require("../../design/void/RoleLabel/native/RoleLabel.tsx") /* RoleLabel */.RoleLabel, { name, color: colorString, colors: colorStrings });
   obj[1] = !isEditing;
   let tmp2Result = null;
   if (isEditing) {
     tmp2Result = null;
     if (!tmp) {
       obj = { color: null, accessibilityLabel: null };
-      obj[0] = importDefault(712).colors.ICON_FEEDBACK_CRITICAL;
+      obj[0] = require("../../../discord_common/js/packages/tokens/native.tsx").colors.ICON_FEEDBACK_CRITICAL;
       const intl = tmp3(1236).intl;
       obj[1] = intl.string(tmp3(1236).t.N86XcP);
       tmp2Result = tmp2(tmp3(14448).CircleMinusIcon, obj);
@@ -228,7 +228,7 @@ function RoleRow(onDelete) {
     }
   }
   obj[3] = onDelete;
-  return callback(require(5315) /* TableRowInner */.TableRow, obj);
+  return callback(require("../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj);
 }
 function RoleOverwrites(guild) {
   let dependencyMap;
@@ -290,13 +290,13 @@ function MemberRow(arg0) {
   let tmpResult = null;
   if (isEditing) {
     obj = { color: null, accessibilityLabel: null };
-    obj[0] = importDefault(712).colors.ICON_FEEDBACK_CRITICAL;
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[1] = intl.string(require(1236) /* getSystemLocale */.t.N86XcP);
-    tmpResult = tmp(require(14448) /* CircleMinusIcon */.CircleMinusIcon, obj);
+    obj[0] = require("../../../discord_common/js/packages/tokens/native.tsx").colors.ICON_FEEDBACK_CRITICAL;
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[1] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.N86XcP);
+    tmpResult = tmp(require("../../design/components/Icon/native/redesign/generated/CircleMinusIcon.tsx") /* CircleMinusIcon */.CircleMinusIcon, obj);
   }
   obj[4] = tmpResult;
-  return closure_16(importDefault(9614), obj);
+  return closure_16(require("../../modules/guild_settings/native/DetailedGuildIdentityUserRow.tsx"), obj);
 }
 function MemberOverwrites(channel) {
   let dependencyMap;
@@ -306,10 +306,10 @@ function MemberOverwrites(channel) {
   const guild_id = channel.guild_id;
   ({ isEditing: importDefault, onSelectRow: importAll, onDeleteRow: dependencyMap } = channel);
   const tmp = createCacheKey();
-  const found = importDefault(12)(channel.permissionOverwrites).filter((type) => type.type === guild_id(table[29]).PermissionOverwriteType.MEMBER);
+  const found = require("../../../_runtime/00012_apply.js")(channel.permissionOverwrites).filter((type) => type.type === guild_id(table[29]).PermissionOverwriteType.MEMBER);
   const mapped = found.map((id) => user.getUser(id.id));
   const found1 = mapped.filter(guild_id(1351).isNotNullish);
-  const arr = importDefault(12)(channel.permissionOverwrites);
+  const arr = require("../../../_runtime/00012_apply.js")(channel.permissionOverwrites);
   const valueResult = found1.sortBy((username) => username.username.toLowerCase()).value();
   let tmp4 = null;
   if (valueResult.length > 0) {

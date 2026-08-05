@@ -14,35 +14,35 @@ let result = require("ME").fileFinishedImporting("modules/search/native/componen
 
 export const getSearchTokenLabel = function getSearchTokenLabel(closure_0, searchTokenType) {
   if (constants.FILTER_FROM === searchTokenType) {
-    const intl9 = require(1236) /* getSystemLocale */.intl;
-    return intl9.string(require(1236) /* getSystemLocale */.t["6iuVMn"]);
+    const intl9 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl9.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t["6iuVMn"]);
   } else if (tmp.FILTER_HAS === searchTokenType) {
-    const intl8 = require(1236) /* getSystemLocale */.intl;
-    return intl8.string(require(1236) /* getSystemLocale */.t.DMAzx8);
+    const intl8 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl8.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.DMAzx8);
   } else if (tmp.FILTER_MENTIONS === searchTokenType) {
-    const intl7 = require(1236) /* getSystemLocale */.intl;
-    return intl7.string(require(1236) /* getSystemLocale */.t.CMKzQx);
+    const intl7 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl7.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.CMKzQx);
   } else if (tmp.FILTER_IN === searchTokenType) {
     if (closure_0.type === constants2.DMS) {
-      const intl6 = require(1236) /* getSystemLocale */.intl;
-      let stringResult = intl6.string(require(1236) /* getSystemLocale */.t["8Fmo42"]);
+      const intl6 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      let stringResult = intl6.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t["8Fmo42"]);
     } else {
-      const intl5 = require(1236) /* getSystemLocale */.intl;
-      stringResult = intl5.string(require(1236) /* getSystemLocale */.t.cdPmq8);
+      const intl5 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      stringResult = intl5.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.cdPmq8);
     }
     return stringResult;
   } else if (tmp.FILTER_ON === searchTokenType) {
-    const intl4 = require(1236) /* getSystemLocale */.intl;
-    return intl4.string(require(1236) /* getSystemLocale */.t.h4qGfp);
+    const intl4 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl4.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.h4qGfp);
   } else if (tmp.FILTER_BEFORE === searchTokenType) {
-    const intl3 = require(1236) /* getSystemLocale */.intl;
-    return intl3.string(require(1236) /* getSystemLocale */.t.c9qSBR);
+    const intl3 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl3.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.c9qSBR);
   } else if (tmp.FILTER_AFTER === searchTokenType) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    return intl2.string(require(1236) /* getSystemLocale */.t.hcMwDW);
+    const intl2 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl2.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.hcMwDW);
   } else if (tmp.FILTER_AUTHOR_TYPE === searchTokenType) {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.C4r6xL);
+    const intl = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.C4r6xL);
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
@@ -52,29 +52,29 @@ export const getSearchTokenLabel = function getSearchTokenLabel(closure_0, searc
 };
 export const getSearchTokenSubLabel = function getSearchTokenSubLabel(searchTokenType) {
   if (constants.FILTER_FROM === searchTokenType) {
-    const intl8 = require(1236) /* getSystemLocale */.intl;
-    return intl8.string(require(1236) /* getSystemLocale */.t.kkGlww);
+    const intl8 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl8.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.kkGlww);
   } else if (tmp.FILTER_HAS === searchTokenType) {
-    const intl7 = require(1236) /* getSystemLocale */.intl;
-    return intl7.string(require(1236) /* getSystemLocale */.t.gUfZa2);
+    const intl7 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl7.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.gUfZa2);
   } else if (tmp.FILTER_IN === searchTokenType) {
-    const intl6 = require(1236) /* getSystemLocale */.intl;
-    return intl6.string(require(1236) /* getSystemLocale */.t.qDUdlT);
+    const intl6 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl6.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.qDUdlT);
   } else if (tmp.FILTER_MENTIONS === searchTokenType) {
-    const intl5 = require(1236) /* getSystemLocale */.intl;
-    return intl5.string(require(1236) /* getSystemLocale */.t.ILtwK5);
+    const intl5 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl5.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.ILtwK5);
   } else if (tmp.FILTER_ON === searchTokenType) {
-    const intl4 = require(1236) /* getSystemLocale */.intl;
-    return intl4.string(require(1236) /* getSystemLocale */.t.t8bWvr);
+    const intl4 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl4.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.t8bWvr);
   } else if (tmp.FILTER_BEFORE === searchTokenType) {
-    const intl3 = require(1236) /* getSystemLocale */.intl;
-    return intl3.string(require(1236) /* getSystemLocale */.t.YEN3uU);
+    const intl3 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl3.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.YEN3uU);
   } else if (tmp.FILTER_AFTER === searchTokenType) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    return intl2.string(require(1236) /* getSystemLocale */.t.hwbB7s);
+    const intl2 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl2.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.hwbB7s);
   } else if (tmp.FILTER_AUTHOR_TYPE === searchTokenType) {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.tJPdhZ);
+    const intl = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.tJPdhZ);
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
@@ -84,21 +84,21 @@ export const getSearchTokenSubLabel = function getSearchTokenSubLabel(searchToke
 };
 export const getSearchTokenIcon = function getSearchTokenIcon(searchTokenType) {
   if (constants.FILTER_FROM === searchTokenType) {
-    return require(11136) /* UserIcon */.UserIcon;
+    return require("../../../../../../design/components/Icon/native/redesign/generated/UserIcon.tsx") /* UserIcon */.UserIcon;
   } else if (tmp.FILTER_HAS === searchTokenType) {
-    return require(9706) /* AttachmentIcon */.AttachmentIcon;
+    return require("../../../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx") /* AttachmentIcon */.AttachmentIcon;
   } else if (tmp.FILTER_IN === searchTokenType) {
-    return require(13099) /* ChannelListMagnifyingGlassIcon */.ChannelListMagnifyingGlassIcon;
+    return require("../../../../../../design/components/Icon/native/redesign/generated/ChannelListMagnifyingGlassIcon.tsx") /* ChannelListMagnifyingGlassIcon */.ChannelListMagnifyingGlassIcon;
   } else if (tmp.FILTER_MENTIONS === searchTokenType) {
-    return require(4799) /* AtIcon */.AtIcon;
+    return require("../../../../../../design/components/Icon/native/redesign/generated/AtIcon.tsx") /* AtIcon */.AtIcon;
   } else if (tmp.FILTER_ON === searchTokenType) {
-    return require(8966) /* CalendarIcon */.CalendarIcon;
+    return require("../../../../../../design/components/Icon/native/redesign/generated/CalendarIcon.tsx") /* CalendarIcon */.CalendarIcon;
   } else if (tmp.FILTER_BEFORE === searchTokenType) {
-    return require(15587) /* CalendarMinusIcon */.CalendarMinusIcon;
+    return require("../../../../../../design/components/Icon/native/redesign/generated/CalendarMinusIcon.tsx") /* CalendarMinusIcon */.CalendarMinusIcon;
   } else if (tmp.FILTER_AFTER === searchTokenType) {
-    return require(15589) /* CalendarPlusIcon */.CalendarPlusIcon;
+    return require("../../../../../../design/components/Icon/native/redesign/generated/CalendarPlusIcon.tsx") /* CalendarPlusIcon */.CalendarPlusIcon;
   } else if (tmp.FILTER_AUTHOR_TYPE === searchTokenType) {
-    return require(10456) /* RobotIcon */.RobotIcon;
+    return require("../../../../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx") /* RobotIcon */.RobotIcon;
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;

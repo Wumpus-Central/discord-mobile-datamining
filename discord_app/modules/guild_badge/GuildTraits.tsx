@@ -18,12 +18,12 @@ export const getGuildTraits = function getGuildTraits(fromGuildProfileResult) {
     if (null == fromGuildProfileResult) {
       let num3 = 0;
       if (tmp5) {
-        let num4 = require(1411) /* fromGuildPropertiesWithAdditionalFields */.isGuildRecord(fromGuildProfileResult) ? fromGuildProfileResult.premiumSubscriberCount : fromGuildProfileResult.premiumSubscriptionCount;
+        let num4 = require("../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */.isGuildRecord(fromGuildProfileResult) ? fromGuildProfileResult.premiumSubscriberCount : fromGuildProfileResult.premiumSubscriptionCount;
         if (num4 == null) {
           num4 = 0;
         }
         num3 = num4;
-        const obj3 = require(1411) /* fromGuildPropertiesWithAdditionalFields */;
+        const obj3 = require("../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */;
       }
       if (obj4.isGuildRecord(fromGuildProfileResult)) {
         let NONE = fromGuildProfileResult.premiumTier;
@@ -53,7 +53,7 @@ export const getGuildTraits = function getGuildTraits(fromGuildProfileResult) {
           tmp8 = fromGuildProfileResult.premiumSubscriptionCount > 0;
         }
       }
-      obj2 = require(1411) /* fromGuildPropertiesWithAdditionalFields */;
+      obj2 = require("../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */;
     }
   }
   if (tmp3) {
@@ -78,7 +78,7 @@ export const isPremiumGuild = function isPremiumGuild(has) {
         tmp4 = premiumTier.premiumSubscriptionCount > 0;
       }
     }
-    obj = require(1411) /* fromGuildPropertiesWithAdditionalFields */;
+    obj = require("../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */;
   }
 };
 export const isDiscoverableGuild = function isDiscoverableGuild(features) {

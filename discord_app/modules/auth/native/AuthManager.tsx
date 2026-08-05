@@ -156,22 +156,22 @@ class AuthManager extends tmp3 {
 }
 const prototype = AuthManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const subscription = importDefault(709).subscribe("CONNECTION_OPEN", this.handleConnectionOpen);
-  const obj = importDefault(709);
-  const subscription1 = importDefault(709).subscribe("LOGIN_SUCCESS", this.handleLogin);
-  const obj2 = importDefault(709);
-  const subscription2 = importDefault(709).subscribe("REGISTER_SUCCESS", this.handleRegister);
-  const obj3 = importDefault(709);
-  const subscription3 = importDefault(709).subscribe("LOGOUT", this.handleLogout);
+  const subscription = require("../../../Dispatcher.tsx").subscribe("CONNECTION_OPEN", this.handleConnectionOpen);
+  const obj = require("../../../Dispatcher.tsx");
+  const subscription1 = require("../../../Dispatcher.tsx").subscribe("LOGIN_SUCCESS", this.handleLogin);
+  const obj2 = require("../../../Dispatcher.tsx");
+  const subscription2 = require("../../../Dispatcher.tsx").subscribe("REGISTER_SUCCESS", this.handleRegister);
+  const obj3 = require("../../../Dispatcher.tsx");
+  const subscription3 = require("../../../Dispatcher.tsx").subscribe("LOGOUT", this.handleLogout);
 };
 prototype["_terminate"] = function _terminate() {
-  importDefault(709).unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen);
-  const obj = importDefault(709);
-  importDefault(709).unsubscribe("LOGIN_SUCCESS", this.handleLogin);
-  const obj2 = importDefault(709);
-  importDefault(709).unsubscribe("REGISTER_SUCCESS", this.handleRegister);
-  const obj3 = importDefault(709);
-  importDefault(709).unsubscribe("LOGOUT", this.handleLogout);
+  require("../../../Dispatcher.tsx").unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen);
+  const obj = require("../../../Dispatcher.tsx");
+  require("../../../Dispatcher.tsx").unsubscribe("LOGIN_SUCCESS", this.handleLogin);
+  const obj2 = require("../../../Dispatcher.tsx");
+  require("../../../Dispatcher.tsx").unsubscribe("REGISTER_SUCCESS", this.handleRegister);
+  const obj3 = require("../../../Dispatcher.tsx");
+  require("../../../Dispatcher.tsx").unsubscribe("LOGOUT", this.handleLogout);
 };
 const authManager = new AuthManager();
 let result = require("set").fileFinishedImporting("modules/auth/native/AuthManager.tsx");

@@ -18,10 +18,10 @@ prototype["create"] = function create(arr) {
   let obj = { colors: [], angle: 0 };
   const _Object = Object;
   obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, require(1307).MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, require("../../../../../../../_runtime/metro/01307__.js").MESSAGE_TYPE, obj);
   if (undefined !== arr) {
-    const result = require(1307).reflectionMergePartial(this, obj, arr);
-    const tmpResult = require(1307);
+    const result = require("../../../../../../../_runtime/metro/01307__.js").reflectionMergePartial(this, obj, arr);
+    const tmpResult = require("../../../../../../../_runtime/metro/01307__.js");
   }
   return obj;
 };
@@ -66,7 +66,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
             if (true === onRead) {
               let tmp8 = require;
               let tmp9 = dependencyMap;
-              onRead = require(1307).UnknownFieldHandler.onRead;
+              onRead = require("../../../../../../../_runtime/metro/01307__.js").UnknownFieldHandler.onRead;
             }
             let tmp10 = obj;
             let tmp11 = tmp5;
@@ -87,20 +87,20 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(colors, tag, wri
     do {
       let tmp = require;
       let tmp2 = dependencyMap;
-      let tagResult = tag.tag(1, require(1307).WireType.LengthDelimited);
+      let tagResult = tag.tag(1, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
       let stringResult = tagResult.string(colors.colors[num]);
       num = num + 1;
       length = colors.colors.length;
     } while (num < length);
   }
   if (0 !== colors.angle) {
-    tag.tag(2, require(1307).WireType.Bit32).float(colors.angle);
-    const tagResult1 = tag.tag(2, require(1307).WireType.Bit32);
+    tag.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.Bit32).float(colors.angle);
+    const tagResult1 = tag.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.Bit32);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = require(1307).UnknownFieldHandler.onWrite;
+      onWrite = require("../../../../../../../_runtime/metro/01307__.js").UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, colors, tag);

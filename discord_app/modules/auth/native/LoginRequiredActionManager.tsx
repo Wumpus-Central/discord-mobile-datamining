@@ -39,7 +39,7 @@ LoginRequiredActionManager.prototype["handleConnectionOpen"] = function handleCo
       }
     }
     if (result1) {
-      obj = importDefault(5736);
+      obj = require("../../../actions/AuthenticationActionCreators.tsx");
       obj.logout("login_required_account_manager", constants2.LOGIN);
     }
   }

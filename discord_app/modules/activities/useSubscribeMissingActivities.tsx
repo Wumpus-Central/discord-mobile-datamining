@@ -43,7 +43,7 @@ export default function useSubscribeMissingActivities(arg0, arg1) {
   first = tmp[0];
   let items1 = [sortActivity];
   const items2 = [first];
-  stateFromStoresArray = _require(589).useStateFromStoresArray(items1, () => {
+  stateFromStoresArray = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items1, () => {
     let items = [];
     const item = first.forEach((author) => {
       const items = author;

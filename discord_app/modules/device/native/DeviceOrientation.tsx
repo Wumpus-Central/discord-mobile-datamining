@@ -8,7 +8,7 @@ import importDefaultResult2 from "get ActivityIndicator";
 
 const require = arg1;
 function handleOrientationChange(initialOrientation) {
-  const obj = require(500) /* set */;
+  const obj = require("../../../utils/PlatformUtils.tsx") /* set */;
   if (obj.isIOS()) {
     handleDeviceOrientationChange(initialOrientation);
   }
@@ -57,16 +57,16 @@ function handleDeviceOrientationChange(LANDSCAPE) {
             tmp14Result.getSystemVersionMajor() >= 16;
           }
         }
-        obj13 = require(500) /* set */;
-        importDefault(8818).ignoreAutoRotate(false);
-        const obj9 = importDefault(8818);
-        const result = importDefault(8818).unlockAllOrientations();
-        const obj10 = importDefault(8818);
-        require(705) /* batchUpdates */.batchUpdates(() => {
+        obj13 = require("../../../utils/PlatformUtils.tsx") /* set */;
+        require("../../../../_runtime/08818_get_ActivityIndicator.js").ignoreAutoRotate(false);
+        const obj9 = require("../../../../_runtime/08818_get_ActivityIndicator.js");
+        const result = require("../../../../_runtime/08818_get_ActivityIndicator.js").unlockAllOrientations();
+        const obj10 = require("../../../../_runtime/08818_get_ActivityIndicator.js");
+        require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => {
           state.setState({ orientationLock: null });
         });
         c8 = false;
-        const tmp14Result1 = require(705) /* batchUpdates */;
+        const tmp14Result1 = require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */;
       }
     } else if ("PORTRAIT" === LANDSCAPE) {
       if ("PORTRAIT" === orientationLock) {
@@ -78,22 +78,22 @@ function handleDeviceOrientationChange(LANDSCAPE) {
             tmp12Result.getSystemVersionMajor() >= 16;
           }
         }
-        obj12 = require(500) /* set */;
-        importDefault(8818).ignoreAutoRotate(false);
-        const obj4 = importDefault(8818);
-        const result1 = importDefault(8818).unlockAllOrientations();
-        const obj5 = importDefault(8818);
-        require(705) /* batchUpdates */.batchUpdates(() => {
+        obj12 = require("../../../utils/PlatformUtils.tsx") /* set */;
+        require("../../../../_runtime/08818_get_ActivityIndicator.js").ignoreAutoRotate(false);
+        const obj4 = require("../../../../_runtime/08818_get_ActivityIndicator.js");
+        const result1 = require("../../../../_runtime/08818_get_ActivityIndicator.js").unlockAllOrientations();
+        const obj5 = require("../../../../_runtime/08818_get_ActivityIndicator.js");
+        require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => {
           state.setState({ orientationLock: null });
         });
         c8 = false;
-        const tmp12Result1 = require(705) /* batchUpdates */;
+        const tmp12Result1 = require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */;
       }
     }
   }
 }
 function lockOrientationForiOS(PORTRAIT) {
-  let isAndroidResult = require(500) /* set */.isAndroid();
+  let isAndroidResult = require("../../../utils/PlatformUtils.tsx") /* set */.isAndroid();
   if (!isAndroidResult) {
     let tmpResult = tmp(4265);
     let isIpadOSResult = tmpResult.isIpadOS();
@@ -103,7 +103,7 @@ function lockOrientationForiOS(PORTRAIT) {
     isAndroidResult = isIpadOSResult;
   }
   if (!isAndroidResult) {
-    importDefault(8818).ignoreAutoRotate(false);
+    require("../../../../_runtime/08818_get_ActivityIndicator.js").ignoreAutoRotate(false);
     let c8 = false;
     if ("LANDSCAPE" === PORTRAIT) {
       let tmp6Result = tmp6(8818);
@@ -120,7 +120,7 @@ function lockOrientationForiOS(PORTRAIT) {
       });
       const tmpResult1 = tmp(705);
     }
-    const obj3 = importDefault(8818);
+    const obj3 = require("../../../../_runtime/08818_get_ActivityIndicator.js");
   }
 }
 let obj = { PORTRAIT: 0, [0]: "PORTRAIT", LANDSCAPE: 1, [1]: "LANDSCAPE" };
@@ -182,23 +182,23 @@ const listener = AppState.addEventListener("change", function applyLockStateOnAp
     tmp = null != orientationLock;
   }
   if (tmp) {
-    obj = importDefault(8818);
+    obj = require("../../../../_runtime/08818_get_ActivityIndicator.js");
     obj.ignoreAutoRotate(true);
     let c8 = false;
     if ("LANDSCAPE" === orientationLock) {
       let tmp3Result = tmp3(8818);
       tmp3Result.lockToLandscapeLeft();
-      require(705) /* batchUpdates */.batchUpdates(() => {
+      require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => {
         store.setState({ orientationLock: "LANDSCAPE" });
       });
-      const obj5 = require(705) /* batchUpdates */;
+      const obj5 = require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */;
     } else {
       tmp3Result = tmp3(8818);
       tmp3Result.lockToPortrait();
-      require(705) /* batchUpdates */.batchUpdates(() => {
+      require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => {
         store.setState({ orientationLock: "PORTRAIT" });
       });
-      const obj3 = require(705) /* batchUpdates */;
+      const obj3 = require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */;
     }
   }
 });
@@ -208,7 +208,7 @@ export const OrientationType = obj;
 export const useStore = obj;
 export { handleOrientationChange };
 export const unlockOrientation = function unlockOrientation(unlockAfterRotatingToPreviousLock) {
-  const obj = require(500) /* set */;
+  const obj = require("../../../utils/PlatformUtils.tsx") /* set */;
   if (obj.isAndroid()) {
     if (unlockAfterRotatingToPreviousLock.unlockAfterRotatingToPreviousLock) {
       if (null != obj.getState().orientationLock) {
@@ -221,11 +221,11 @@ export const unlockOrientation = function unlockOrientation(unlockAfterRotatingT
       tmpResult = tmp(4265);
     }
   }
-  importDefault(8818).ignoreAutoRotate(false);
-  const obj4 = importDefault(8818);
-  const result = importDefault(8818).unlockAllOrientations();
-  const obj5 = importDefault(8818);
-  require(705) /* batchUpdates */.batchUpdates(() => {
+  require("../../../../_runtime/08818_get_ActivityIndicator.js").ignoreAutoRotate(false);
+  const obj4 = require("../../../../_runtime/08818_get_ActivityIndicator.js");
+  const result = require("../../../../_runtime/08818_get_ActivityIndicator.js").unlockAllOrientations();
+  const obj5 = require("../../../../_runtime/08818_get_ActivityIndicator.js");
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => {
     state.setState({ orientationLock: null });
   });
 };
@@ -233,22 +233,22 @@ export const lockOrientation = function lockOrientation(PORTRAIT, flag) {
   if (flag == null) {
     flag = false;
   }
-  importDefault(8818).ignoreAutoRotate(flag);
+  require("../../../../_runtime/08818_get_ActivityIndicator.js").ignoreAutoRotate(flag);
   let c8 = false;
   if ("LANDSCAPE" === PORTRAIT) {
     let tmpResult = tmp(8818);
     tmpResult.lockToLandscapeLeft();
-    require(705) /* batchUpdates */.batchUpdates(() => {
+    require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => {
       store.setState({ orientationLock: "LANDSCAPE" });
     });
-    const obj5 = require(705) /* batchUpdates */;
+    const obj5 = require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */;
   } else {
     tmpResult = tmp(8818);
     tmpResult.lockToPortrait();
-    require(705) /* batchUpdates */.batchUpdates(() => {
+    require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => {
       store.setState({ orientationLock: "PORTRAIT" });
     });
-    const obj3 = require(705) /* batchUpdates */;
+    const obj3 = require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */;
   }
 };
 export { lockOrientationForiOS };
@@ -263,21 +263,21 @@ export const toggleOrientation = function toggleOrientation() {
   }
   if (orientation === obj.LANDSCAPE) {
     if ("LANDSCAPE" !== orientationLock) {
-      importDefault(8818).lockToPortrait();
-      const obj4 = importDefault(8818);
-      const result = importDefault(8818).unlockAllOrientations();
-      const obj5 = importDefault(8818);
-      require(705) /* batchUpdates */.batchUpdates(() => store.setState({ orientation: constants.PORTRAIT }));
-      const obj6 = require(705) /* batchUpdates */;
+      require("../../../../_runtime/08818_get_ActivityIndicator.js").lockToPortrait();
+      const obj4 = require("../../../../_runtime/08818_get_ActivityIndicator.js");
+      const result = require("../../../../_runtime/08818_get_ActivityIndicator.js").unlockAllOrientations();
+      const obj5 = require("../../../../_runtime/08818_get_ActivityIndicator.js");
+      require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => store.setState({ orientation: constants.PORTRAIT }));
+      const obj6 = require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */;
     }
   }
   if (!tmp5) {
-    obj = importDefault(8818);
+    obj = require("../../../../_runtime/08818_get_ActivityIndicator.js");
     obj.lockToLandscapeLeft();
-    const result1 = importDefault(8818).unlockAllOrientations();
-    const obj2 = importDefault(8818);
-    require(705) /* batchUpdates */.batchUpdates(() => store.setState({ orientation: constants.LANDSCAPE }));
-    const obj3 = require(705) /* batchUpdates */;
+    const result1 = require("../../../../_runtime/08818_get_ActivityIndicator.js").unlockAllOrientations();
+    const obj2 = require("../../../../_runtime/08818_get_ActivityIndicator.js");
+    require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => store.setState({ orientation: constants.LANDSCAPE }));
+    const obj3 = require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */;
   }
 };
 export const getOrientation = function getOrientation() {
@@ -295,7 +295,7 @@ export const useOrientationListener = function useOrientationListener(callback2)
   const effect = React.useEffect(() => outer1_6.subscribe(closure_0), items);
 };
 export const restoreDefaultOrientation = function restoreDefaultOrientation() {
-  const obj = require(500) /* set */;
+  const obj = require("../../../utils/PlatformUtils.tsx") /* set */;
   if (obj.isIOS()) {
     let tmpResult = tmp(4265);
   }
@@ -308,11 +308,11 @@ export const restoreDefaultOrientation = function restoreDefaultOrientation() {
     }
     tmpResult1 = tmp(500);
   }
-  importDefault(8818).ignoreAutoRotate(false);
-  const obj6 = importDefault(8818);
-  const result = importDefault(8818).unlockAllOrientations();
-  const obj7 = importDefault(8818);
-  require(705) /* batchUpdates */.batchUpdates(() => {
+  require("../../../../_runtime/08818_get_ActivityIndicator.js").ignoreAutoRotate(false);
+  const obj6 = require("../../../../_runtime/08818_get_ActivityIndicator.js");
+  const result = require("../../../../_runtime/08818_get_ActivityIndicator.js").unlockAllOrientations();
+  const obj7 = require("../../../../_runtime/08818_get_ActivityIndicator.js");
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => {
     state.setState({ orientationLock: null });
   });
   lockOrientationForiOS();

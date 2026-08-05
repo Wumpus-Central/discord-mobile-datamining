@@ -332,16 +332,16 @@ export const launchFrame = function launchFrame(closure_0) {
   return applyArgumentsResult;
 };
 export const stopFrame = function stopFrame(applicationId) {
-  importDefault(709).dispatch({ type: "FRAME_STOP", applicationId: applicationId.applicationId });
+  require("../../Dispatcher.tsx").dispatch({ type: "FRAME_STOP", applicationId: applicationId.applicationId });
 };
 export const updateFrameLayoutMode = function updateFrameLayoutMode(arg0) {
   let applicationId;
   let layoutMode;
   ({ applicationId, layoutMode } = arg0);
-  importDefault(709).dispatch({ type: "FRAME_UPDATE_LAYOUT_MODE", applicationId, layoutMode });
+  require("../../Dispatcher.tsx").dispatch({ type: "FRAME_UPDATE_LAYOUT_MODE", applicationId, layoutMode });
 };
 export const updateFramePanelMode = function updateFramePanelMode(PIP) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "FRAME_SET_PANEL_MODE", activityPanelMode: PIP };
   obj.dispatch(obj);
 };

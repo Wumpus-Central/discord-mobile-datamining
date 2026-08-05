@@ -13,9 +13,9 @@ let c4;
 let result = require("createGuildRecordFromRust").fileFinishedImporting("modules/quests/lib/analytics/BrandSafetyContext.tsx");
 
 export const getBrandSafetyContext = function getBrandSafetyContext(questContent) {
-  let obj = _require(7078);
+  let obj = _require("../../utils/QuestDataUtils.tsx");
   const result = obj.isBillableQuestContent(questContent);
-  let obj1 = _require(7078);
+  let obj1 = _require("../../utils/QuestDataUtils.tsx");
   const adContext = obj1.getAdContext(questContent);
   const tmp4 = callback2();
   const tmp5 = callback();
@@ -98,12 +98,12 @@ export const getBrandSafetyContext = function getBrandSafetyContext(questContent
             if (null != banner) {
               obj = { id: null, banner: null };
               ({ id: obj5[0], banner: obj5[1] } = guild);
-              let guildBannerURL = importDefault(1416).getGuildBannerURL(obj, true);
+              let guildBannerURL = require("../../../../utils/AvatarUtils.tsx").getGuildBannerURL(obj, true);
               if (guildBannerURL == null) {
                 guildBannerURL = null;
               }
               tmp15 = guildBannerURL;
-              const obj4 = importDefault(1416);
+              const obj4 = require("../../../../utils/AvatarUtils.tsx");
             }
             if (null !== tmp15) {
               obj.selected_guild_banner_url = tmp15;

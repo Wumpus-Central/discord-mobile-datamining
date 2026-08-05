@@ -23,12 +23,12 @@ export default {
   showCaptcha() {
     let RECAPTCHA = arg0;
     if (arg0 === undefined) {
-      RECAPTCHA = require(585) /* convertStringArrayToSkemaErrorItems */.CaptchaTypes.RECAPTCHA;
+      RECAPTCHA = require("../../../discord_common/js/packages/http-utils/V8APIError.tsx") /* convertStringArrayToSkemaErrorItems */.CaptchaTypes.RECAPTCHA;
     }
     const self = this;
     closure_4.dismiss();
-    importDefault(698).track(constants.OPEN_MODAL, { type: "CAPTCHA" });
-    if (RECAPTCHA === require(585) /* convertStringArrayToSkemaErrorItems */.CaptchaTypes.HCAPTCHA) {
+    require("../AnalyticsUtils.tsx").track(constants.OPEN_MODAL, { type: "CAPTCHA" });
+    if (RECAPTCHA === require("../../../discord_common/js/packages/http-utils/V8APIError.tsx") /* convertStringArrayToSkemaErrorItems */.CaptchaTypes.HCAPTCHA) {
       if (null != arg1) {
         let showHcaptchaResult = self.showHcaptcha(arg1, arg2);
       }
@@ -247,7 +247,7 @@ export const InlineHcaptcha = function InlineHcaptcha(siteKey) {
   };
   let obj2 = siteKey(514);
   const merged1 = Object.assign(merged);
-  return jsx(importDefault(16227), {
+  return jsx(require("../../../_runtime/16227_siteKey.js"), {
     siteKey,
     onMessage(nativeEvent) {
       if (null != nativeEvent.nativeEvent.data) {

@@ -15,11 +15,11 @@ let closure_6;
 let unpackModuleId;
 const require = arg1;
 function Placeholder() {
-  const tmp = importDefault(1348)("AppLauncherRecents-native");
+  const tmp = require("../../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("AppLauncherRecents-native");
   const tmp2 = createCacheKey();
-  let obj = require(11353) /* usePlaceholderWidth */;
+  let obj = require("../../hooks/usePlaceholderSize.tsx") /* usePlaceholderWidth */;
   const placeholderWidth = obj.usePlaceholderWidth(20, 90);
-  let obj1 = require(11353) /* usePlaceholderWidth */;
+  let obj1 = require("../../hooks/usePlaceholderSize.tsx") /* usePlaceholderWidth */;
   const items = [tmp2.commandContainer, ];
   let rowShadow = !tmp;
   const placeholderWidth1 = obj1.usePlaceholderWidth(20, 70);

@@ -28,20 +28,20 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
   if (null == interval) {
     return null;
   } else {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const format = intl.format;
     if (!isTrial) {
       if (isDiscounted) {
         let obj = { buttonText: null, interval: null, cancelSubscriptionArticle: null, paidServiceTermsArticle: null };
         obj[0] = ctaText;
-        obj[1] = importDefault(3931).formatInterval(item.interval);
-        const obj5 = importDefault(3931);
-        obj[2] = importDefault(1945).getArticleURL(constants.PREMIUM_DETAILS_CANCEL_SUB);
-        const obj6 = importDefault(1945);
-        obj[3] = importDefault(1945).getArticleURL(constants.PAID_TERMS);
+        obj[1] = require("../../../../../utils/PremiumUtils.tsx").formatInterval(item.interval);
+        const obj5 = require("../../../../../utils/PremiumUtils.tsx");
+        obj[2] = require("../../../../../utils/HelpdeskUtils.tsx").getArticleURL(constants.PREMIUM_DETAILS_CANCEL_SUB);
+        const obj6 = require("../../../../../utils/HelpdeskUtils.tsx");
+        obj[3] = require("../../../../../utils/HelpdeskUtils.tsx").getArticleURL(constants.PAID_TERMS);
         let formatResult = format(tmp3(1236).t["3uC7vj"], obj);
         let tmp10 = tmp3;
-        const obj7 = importDefault(1945);
+        const obj7 = require("../../../../../utils/HelpdeskUtils.tsx");
       } else {
         let tmp3Result = tmp3(500);
         let t = tmp3(1236).t;
@@ -60,17 +60,17 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
       obj1[2] = formatResult;
       jsx(tmp10(4281).Text, { style: null, variant: "text-xxs/medium", children: null });
     }
-    const tmp3Result1 = require(500) /* set */;
+    const tmp3Result1 = require("../../../../../utils/PlatformUtils.tsx") /* set */;
     t = tmp3(1236).t;
-    const isAndroidResult1 = require(500) /* set */.isAndroid();
+    const isAndroidResult1 = require("../../../../../utils/PlatformUtils.tsx") /* set */.isAndroid();
     t = { paidURL: null, interval: null, cancelURL: null };
     t[0] = constants2.PAID_TERMS;
-    const tmp14 = require(500) /* set */.isAndroid() ? t.tINI9V : t.ZWXtAj;
-    t[1] = require(3931) /* getPremiumPlanItem */.getIntervalStringAsNoun(item.interval);
-    const tmp3Result2 = require(3931) /* getPremiumPlanItem */;
-    item = importDefault(1945).getArticleURL(constants.PREMIUM_DETAILS_CANCEL_SUB);
+    const tmp14 = require("../../../../../utils/PlatformUtils.tsx") /* set */.isAndroid() ? t.tINI9V : t.ZWXtAj;
+    t[1] = require("../../../../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */.getIntervalStringAsNoun(item.interval);
+    const tmp3Result2 = require("../../../../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */;
+    item = require("../../../../../utils/HelpdeskUtils.tsx").getArticleURL(constants.PREMIUM_DETAILS_CANCEL_SUB);
     t[2] = item;
     format(tmp14, t);
-    const obj11 = importDefault(1945);
+    const obj11 = require("../../../../../utils/HelpdeskUtils.tsx");
   }
 };

@@ -22,7 +22,7 @@ export default function InRolePromptNotice(role) {
   role = role.role;
   let string = createCacheKey();
   let stringResult = dependencyMap;
-  let obj = require(1384) /* hasFlag */;
+  let obj = require("../../../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
   if (!obj.hasFlag(role.flags, RoleFlags.IN_PROMPT)) {
     return null;
   } else {
@@ -33,8 +33,8 @@ export default function InRolePromptNotice(role) {
     if (isRolePowerfulResult) {
       obj = { style: null, source: null, color: null };
       obj[0] = string.icon;
-      obj[1] = importDefault(8985);
-      obj[2] = importDefault(712).unsafe_rawColors.YELLOW_300;
+      obj[1] = require("../../../../../_runtime/08985_registerAsset.js");
+      obj[2] = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.YELLOW_300;
       const items = [tmp6(Icon, obj), ];
       const obj1 = { style: null, variant: "text-sm/medium", children: null };
       obj1[0] = string.promptText;
@@ -49,7 +49,7 @@ export default function InRolePromptNotice(role) {
     } else {
       const obj2 = { style: null, source: null };
       obj2[0] = string.icon;
-      obj2[1] = importDefault(8985);
+      obj2[1] = require("../../../../../_runtime/08985_registerAsset.js");
       const items1 = [tmp6(Icon, obj2), ];
       const obj3 = { style: null, variant: "text-sm/medium", children: null };
       obj3[0] = string.promptText;

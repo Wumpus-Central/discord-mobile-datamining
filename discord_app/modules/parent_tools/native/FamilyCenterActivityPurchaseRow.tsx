@@ -26,8 +26,8 @@ export default function FamilyCenterActivityPurchaseRow(arg0) {
   ({ skuId, subscriptionPlanId } = arg0);
   ({ total, currency } = arg0);
   const tmp = createCacheKey();
-  let product = importDefault(8088)(skuId).product;
-  let obj = require(14052) /* getCollectibleTypeName */;
+  let product = require("../../collectibles/hooks/useCollectiblesData.tsx")(skuId).product;
+  let obj = require("../FamilyCenterActivityPurchaseRowUtils.tsx") /* getCollectibleTypeName */;
   let tmp6 = product;
   if (product == null) {
     tmp6 = null;

@@ -7,15 +7,15 @@ const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkError.tsx");
 
 export default function CrunchyrollLinkDiscordError(onClose) {
-  let obj = require(1480) /* useNavigation */;
+  let obj = require("../../../../../../design/components/Navigator/native/useNavigation.native.tsx") /* useNavigation */;
   const navigation = obj.useNavigation();
-  const connectRetry = require(10468) /* useConnectRetry */.useConnectRetry(navigation, constants.PRE_CONNECT);
+  const connectRetry = require("../useConnectRetry.tsx") /* useConnectRetry */.useConnectRetry(navigation, constants.PRE_CONNECT);
   obj = { title: null, body: null, onClose: null, onRetry: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t["8YK70c"]);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.moyYLf);
+  const intl = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t["8YK70c"]);
+  const intl2 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl2.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.moyYLf);
   obj[2] = onClose.onClose;
   obj[3] = connectRetry;
-  return jsx(require(10469) /* TwoWayLinkError */.TwoWayLinkError, { title: null, body: null, onClose: null, onRetry: null });
+  return jsx(require("../TwoWayLinkError.tsx") /* TwoWayLinkError */.TwoWayLinkError, { title: null, body: null, onClose: null, onRetry: null });
 };

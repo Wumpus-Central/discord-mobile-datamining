@@ -28,7 +28,7 @@ const require = arg1;
 function MusicMuteButton(channelId) {
   channelId = channelId.channelId;
   let stateFromStores;
-  const tmp3 = importDefault(10808)(channelId);
+  const tmp3 = require("../../../stage_channels/useMyCurrentStageChannelRole.tsx")(channelId);
   if (tmp3 != null) {
     const speaker = tmp3.speaker;
   }

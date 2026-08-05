@@ -32,10 +32,10 @@ export const ActionSheetBackdropToast = function ActionSheetBackdropToast(childr
   let sharedValue;
   let sharedValue1;
   const tmp = set();
-  const height = importDefault(1474)().height;
+  const height = require("../../screen/useWindowDimensions.native.tsx")().height;
   let result = height * closure_5;
   importDefault = result;
-  const diff = height - isExpanded(5235).NAV_BAR_HEIGHT_MULTILINE - importDefault(1581)().top;
+  const diff = height - isExpanded(5235).NAV_BAR_HEIGHT_MULTILINE - require("../../safe_area/useSafeAreaInsets.native.tsx")().top;
   dependencyMap = diff;
   let obj = isExpanded(4146);
   sharedValue = obj.useSharedValue(0);
@@ -92,6 +92,6 @@ export const ActionSheetBackdropToast = function ActionSheetBackdropToast(childr
   obj1 = { style: items2, children: null };
   items2 = [tmp.toast, animatedStyle];
   obj1[1] = jsx(isExpanded(4281).Text, { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: children.text });
-  obj[2] = jsx(importDefault(4146).View, { style: items2, children: null });
+  obj[2] = jsx(require("../../reanimated/ReanimatedRexport.tsx").View, { style: items2, children: null });
   return <sharedValue1 style={items1} pointerEvents="none">{null}</sharedValue1>;
 };

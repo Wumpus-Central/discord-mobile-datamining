@@ -91,21 +91,21 @@ export default function UserSummaryItem(users) {
               if (flag === undefined) {
                 flag = false;
               }
-              const avatarURL = users.getAvatarURL(guildId, require(1297) /* Button */.AVATAR_SIZE_MAP[avatarSize], flag);
+              const avatarURL = users.getAvatarURL(guildId, require("../../design/void/native.tsx") /* Button */.AVATAR_SIZE_MAP[avatarSize], flag);
               let avatar;
               if (guildId != null) {
                 avatar = tmp3.avatar;
               }
               let tmp5 = avatarURL;
               if (null != avatar) {
-                let guildMemberAvatarURL = importDefault(1416).getGuildMemberAvatarURL(tmp3, flag);
+                let guildMemberAvatarURL = require("../../utils/AvatarUtils.tsx").getGuildMemberAvatarURL(tmp3, flag);
                 if (guildMemberAvatarURL == null) {
                   guildMemberAvatarURL = avatarURL;
                 }
                 tmp5 = guildMemberAvatarURL;
-                const obj = importDefault(1416);
+                const obj = require("../../utils/AvatarUtils.tsx");
               }
-              return importDefault(1416).makeSource(tmp5);
+              return require("../../utils/AvatarUtils.tsx").makeSource(tmp5);
             };
           }
           if (num < tmp8) {

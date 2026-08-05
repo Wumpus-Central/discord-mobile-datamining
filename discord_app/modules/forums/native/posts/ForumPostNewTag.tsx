@@ -12,5 +12,5 @@ const result = require("createCacheKey").fileFinishedImporting("modules/forums/n
 
 export default function ForumPostNewTag(containerStyle) {
   containerStyle = [containerStyle.containerStyle, createCacheKey().container];
-  return jsx(require(1297) /* Button */.NewTag, { containerStyle, variant: "text-xs/bold", color: "badge-text-brand" });
+  return jsx(require("../../../../design/void/native.tsx") /* Button */.NewTag, { containerStyle, variant: "text-xs/bold", color: "badge-text-brand" });
 };

@@ -10,10 +10,10 @@ export default function OnboardingHomeResourcesSheet(guildId) {
   guildId = guildId.guildId;
   let importDefault;
   let obj = guildId(3989);
-  importDefault = obj.useToken(importDefault(712).modules.mobile.TABLE_ROW_ICON_SIZE);
+  importDefault = obj.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_ICON_SIZE);
   obj = { children: null };
   obj = { hasIcons: true, children: null };
-  obj[1] = importDefault(15548)(guildId).map((label) => {
+  obj[1] = require("../useResourceChannels.tsx")(guildId).map((label) => {
     let closure_0 = label;
     let obj = callback(outer1_2[10]);
     const resourceChannelIconURL = obj.getResourceChannelIconURL(label);

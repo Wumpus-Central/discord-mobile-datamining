@@ -62,11 +62,11 @@ let closure_5 = require("asyncRequireImpl").memoize((arr) => {
   if (0 === found.length) {
     return [];
   } else {
-    const mapped = found.map(_require(16516).computeEmojiItem);
+    const mapped = found.map(_require("../../../../guild_settings/native/GuildSettingsModalEmoji.tsx").computeEmojiItem);
     const reversed = mapped.reverse();
-    const tmp4 = importDefault(16740)(arg1);
-    const intl = _require(1236).intl;
-    const items = [_require(16516).computeSectionItem(intl.string(_require(1236).t.sMOuuS), reversed.length, tmp4)];
+    const tmp4 = require("../../../getMaxRoleSubscriptionEmojiSlots.tsx")(arg1);
+    const intl = _require("../../../../../intl/index.native.tsx").intl;
+    const items = [_require("../../../../guild_settings/native/GuildSettingsModalEmoji.tsx").computeSectionItem(intl.string(_require("../../../../../intl/index.native.tsx").t.sMOuuS), reversed.length, tmp4)];
     HermesBuiltin.arraySpread(reversed, 1);
     return items;
   }
@@ -77,5 +77,5 @@ export default function GuildSettingsRoleSubscriptionEmojis(guildId) {
   guildId = guildId.guildId;
   const obj = { guildId, children: null };
   obj[1] = <GuildSettingsRoleSubscriptionEmojisInner guildId={guildId} />;
-  return jsx(importDefault(16694), { guildId, children: null });
+  return jsx(require("../GuildSettingsRoleSubscriptionContainer.tsx"), { guildId, children: null });
 };

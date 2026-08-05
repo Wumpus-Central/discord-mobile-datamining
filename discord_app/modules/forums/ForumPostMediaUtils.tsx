@@ -15,7 +15,7 @@ function isMediaAttachment(filename) {
   let flag = false;
   if (null != filename) {
     ({ height, width } = filename);
-    let tmp3 = require(4472) /* urlMatchesFileExtension */.isImageFile(filename.filename) && null != height;
+    let tmp3 = require("../messages/MediaFormatTesters.tsx") /* urlMatchesFileExtension */.isImageFile(filename.filename) && null != height;
     if (tmp3) {
       tmp3 = height > 0;
     }
@@ -26,15 +26,15 @@ function isMediaAttachment(filename) {
       tmp3 = width > 0;
     }
     flag = tmp3;
-    const obj = require(4472) /* urlMatchesFileExtension */;
+    const obj = require("../messages/MediaFormatTesters.tsx") /* urlMatchesFileExtension */;
   }
   if (!flag) {
     let tmp4 = null != filename;
     if (tmp4) {
       let isVideoFileResult = null != filename;
       if (isVideoFileResult) {
-        isVideoFileResult = require(4472) /* urlMatchesFileExtension */.isVideoFile(filename.filename);
-        const obj2 = require(4472) /* urlMatchesFileExtension */;
+        isVideoFileResult = require("../messages/MediaFormatTesters.tsx") /* urlMatchesFileExtension */.isVideoFile(filename.filename);
+        const obj2 = require("../messages/MediaFormatTesters.tsx") /* urlMatchesFileExtension */;
       }
       if (isVideoFileResult) {
         isVideoFileResult = null != filename.proxy_url;
@@ -48,7 +48,7 @@ function isMediaAttachment(filename) {
 function getForumPostMedia(attachments, InlineAttachmentMedia) {
   let setting = InlineAttachmentMedia;
   if (InlineAttachmentMedia === undefined) {
-    InlineAttachmentMedia = require(3958) /* explicitContentFromProto */.InlineAttachmentMedia;
+    InlineAttachmentMedia = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.InlineAttachmentMedia;
     setting = InlineAttachmentMedia.getSetting();
   }
   if (setting) {
@@ -132,7 +132,7 @@ function getForumPostMedia(attachments, InlineAttachmentMedia) {
           }
           return null;
         });
-        let found1 = mapped.filter(require(1351) /* isDiscordFrontendDevelopment */.isNotNullish);
+        let found1 = mapped.filter(require("../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
       }
       return found1;
     }
@@ -143,9 +143,9 @@ function getForumPostMedia(attachments, InlineAttachmentMedia) {
 }
 function useForumPostEmbeds(embeds, flag) {
   const _require = flag;
-  const InlineEmbedMedia = _require(3958).InlineEmbedMedia;
+  const InlineEmbedMedia = _require("../user_settings/UserSettings.tsx").InlineEmbedMedia;
   const setting = InlineEmbedMedia.useSetting();
-  const RenderEmbeds = _require(3958).RenderEmbeds;
+  const RenderEmbeds = _require("../user_settings/UserSettings.tsx").RenderEmbeds;
   if (null == embeds) {
     return [];
   } else {
@@ -213,7 +213,7 @@ function useForumPostEmbeds(embeds, flag) {
               }
             }
           });
-          let found = mapped.filter(_require(1351).isNotNullish);
+          let found = mapped.filter(_require("../../utils/GlobalUtils.tsx").isNotNullish);
         }
         return found;
       }
@@ -222,9 +222,9 @@ function useForumPostEmbeds(embeds, flag) {
   }
 }
 function useForumPostMediaProperties(firstResult, flag) {
-  const InlineAttachmentMedia = require(3958) /* explicitContentFromProto */.InlineAttachmentMedia;
+  const InlineAttachmentMedia = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.InlineAttachmentMedia;
   const items = [...getForumPostMedia(firstResult, InlineAttachmentMedia.useSetting()), ...useForumPostEmbeds(firstResult, flag)];
-  const InlineEmbedMedia = require(3958) /* explicitContentFromProto */.InlineEmbedMedia;
+  const InlineEmbedMedia = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.InlineEmbedMedia;
   if (null == firstResult) {
     let items1 = [];
   } else {
@@ -435,7 +435,7 @@ export const isValidImageAttachment = function isValidImageAttachment(filename) 
     return false;
   } else {
     ({ height, width } = filename);
-    let tmp3 = require(4472) /* urlMatchesFileExtension */.isImageFile(filename.filename) && null != height;
+    let tmp3 = require("../messages/MediaFormatTesters.tsx") /* urlMatchesFileExtension */.isImageFile(filename.filename) && null != height;
     if (tmp3) {
       tmp3 = height > 0;
     }
@@ -453,8 +453,8 @@ export const isValidVideoAttachment = function isValidVideoAttachment(filename) 
   if (tmp) {
     let isVideoFileResult = null != filename;
     if (isVideoFileResult) {
-      isVideoFileResult = require(4472) /* urlMatchesFileExtension */.isVideoFile(filename.filename);
-      const obj = require(4472) /* urlMatchesFileExtension */;
+      isVideoFileResult = require("../messages/MediaFormatTesters.tsx") /* urlMatchesFileExtension */.isVideoFile(filename.filename);
+      const obj = require("../messages/MediaFormatTesters.tsx") /* urlMatchesFileExtension */;
     }
     if (isVideoFileResult) {
       isVideoFileResult = null != filename.proxy_url;
@@ -467,7 +467,7 @@ export { isMediaAttachment };
 export const ForumPostMediaTypes = obj;
 export { getForumPostMedia };
 export const useForumPostComponentsMedia = function useForumPostComponentsMedia(components) {
-  const InlineEmbedMedia = require(3958) /* explicitContentFromProto */.InlineEmbedMedia;
+  const InlineEmbedMedia = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.InlineEmbedMedia;
   if (null == components) {
     return [];
   } else {
@@ -685,9 +685,9 @@ export const useForumPostMediaThumbnail = function useForumPostMediaThumbnail(fi
 };
 export { useForumPostMediaProperties };
 export const useFindFirstMediaProperties = function useFindFirstMediaProperties(firstMessage, hasSpoilerEmbeds) {
-  const InlineAttachmentMedia = require(3958) /* explicitContentFromProto */.InlineAttachmentMedia;
+  const InlineAttachmentMedia = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.InlineAttachmentMedia;
   const tmp3 = getForumPostMedia(firstMessage, InlineAttachmentMedia.useSetting());
-  const InlineEmbedMedia = require(3958) /* explicitContentFromProto */.InlineEmbedMedia;
+  const InlineEmbedMedia = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.InlineEmbedMedia;
   if (null == firstMessage) {
     let items = [];
   } else {
@@ -885,9 +885,9 @@ export const useFindFirstMediaProperties = function useFindFirstMediaProperties(
   return first;
 };
 export const useFirstMediaIsEmbed = function useFirstMediaIsEmbed(firstMessage, hasSpoilerEmbeds) {
-  const InlineAttachmentMedia = require(3958) /* explicitContentFromProto */.InlineAttachmentMedia;
+  const InlineAttachmentMedia = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.InlineAttachmentMedia;
   const tmp3 = getForumPostMedia(firstMessage, InlineAttachmentMedia.useSetting());
-  const InlineEmbedMedia = require(3958) /* explicitContentFromProto */.InlineEmbedMedia;
+  const InlineEmbedMedia = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.InlineEmbedMedia;
   if (null == firstMessage) {
     let items = [];
   } else {
@@ -1080,7 +1080,7 @@ export const shouldShowAddMediaToOriginalPostModal = function shouldShowAddMedia
   if (null == channel) {
     return false;
   } else {
-    message = message.getMessage(channel.id, importDefault(11).castChannelIdAsMessageId(channel.id));
+    message = message.getMessage(channel.id, require("../../utils/SnowflakeUtils.tsx").castChannelIdAsMessageId(channel.id));
     let tmp8 = null != message;
     if (tmp8) {
       let tmp2 = uploads.length > 0 && null != uploads.find((isImage) => isImage.isImage || isImage.isVideo) && channel.isForumPost();

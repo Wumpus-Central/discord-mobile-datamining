@@ -3,8 +3,8 @@ import createToggle from "createToggle";
 
 obj = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["+CbP2v"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["+CbP2v"]);
   },
   parent: null,
   IconComponent: require("BoostGemIcon").BoostGemIcon,
@@ -13,7 +13,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.GUILD_BOOSTING,
   getComponent() {
-    return require(12676) /* componentDidMount */.default;
+    return require("../../premium/native/UserSettingsPremiumGuildSubscriptions.tsx") /* componentDidMount */.default;
   }
 };
 const route = createToggle.createRoute(obj);

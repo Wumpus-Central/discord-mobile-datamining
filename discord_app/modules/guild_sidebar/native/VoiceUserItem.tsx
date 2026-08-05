@@ -53,10 +53,10 @@ const memoResult = importAllResult.memo(function VoiceUserItem(arg0) {
   ({ member: require, user: importDefault, guildId: dependencyMap, disabled, platform, ringing } = arg0);
   ({ collapsed, stream, serverMute, serverDeaf, mute, deaf, localMute, video, isInEmbeddedActivity, voicePlatform } = arg0);
   const tmp = callback2();
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [stateFromStores];
   stateFromStores = obj.useStateFromStores(items, () => !stateFromStores.useReducedMotion);
-  require(4146);
+  require("../../reanimated/ReanimatedRexport.tsx");
   const fn = function c() {
     if (ringing) {
       if (stateFromStores) {
@@ -79,7 +79,7 @@ const memoResult = importAllResult.memo(function VoiceUserItem(arg0) {
       return { opacity: 1 };
     }
   };
-  obj = { ringing, shouldAnimate: stateFromStores, PULSE_ENDING_OPACITY: 0.4, withRepeat: require(4146).withRepeat, withSequence: require(4146).withSequence, withDelay: require(4146).withDelay, INNER_PULSE_DELAY: 100, withTiming: require(4286) /* CONFIG_NEVER_ANIMATE_TIMING */.withTiming, PULSE_DURATION: 250, Easing: require(4146).Easing, PULSE_STARTING_OPACITY: 0.1, FADE_DURATION: 500 };
+  obj = { ringing, shouldAnimate: stateFromStores, PULSE_ENDING_OPACITY: 0.4, withRepeat: require("../../reanimated/ReanimatedRexport.tsx").withRepeat, withSequence: require("../../reanimated/ReanimatedRexport.tsx").withSequence, withDelay: require("../../reanimated/ReanimatedRexport.tsx").withDelay, INNER_PULSE_DELAY: 100, withTiming: require("../../../design/animation/reanimated/timing/timing.tsx") /* CONFIG_NEVER_ANIMATE_TIMING */.withTiming, PULSE_DURATION: 250, Easing: require("../../reanimated/ReanimatedRexport.tsx").Easing, PULSE_STARTING_OPACITY: 0.1, FADE_DURATION: 500 };
   fn.__closure = obj;
   fn.__workletHash = 9430639809025;
   fn.__initData = closure_11;
@@ -161,7 +161,7 @@ const memoResult = importAllResult.memo(function VoiceUserItem(arg0) {
         }
         items2[7] = tmp9Result2;
         obj2[1] = items2;
-        tmp7Result = tmp7(importDefault(4146).View, obj2);
+        tmp7Result = tmp7(require("../../reanimated/ReanimatedRexport.tsx").View, obj2);
       } else if (serverDeaf) {
         let obj9 = { style: null, color: "text-feedback-critical", size: "custom" };
         obj9[0] = tmp.voiceStateIcon;
@@ -201,6 +201,6 @@ const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedI
 
 export default memoResult;
 export const getVoiceUserHeight = function getVoiceUserHeight(fontScale) {
-  const obj = require(9370) /* map */;
-  return Math.max(require(9370) /* map */.scaleTextLineHeight(c7, fontScale), require(1297) /* Button */.AVATAR_SIZE_MAP[XSMALL_20]) + 10;
+  const obj = require("../../screen/native/useScaledTextLineHeight.android.tsx") /* map */;
+  return Math.max(require("../../screen/native/useScaledTextLineHeight.android.tsx") /* map */.scaleTextLineHeight(c7, fontScale), require("../../../design/void/native.tsx") /* Button */.AVATAR_SIZE_MAP[XSMALL_20]) + 10;
 };

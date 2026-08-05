@@ -573,7 +573,7 @@ function transformUnfurledMediaItem(file, shouldShowMedia) {
             }
             tmpResult = tmp(4472);
           }
-          obj = require(4472) /* urlMatchesFileExtension */;
+          obj = require("../../MediaFormatTesters.tsx") /* urlMatchesFileExtension */;
         }
         const size = {};
         const merged = Object.assign(file);
@@ -584,7 +584,7 @@ function transformUnfurledMediaItem(file, shouldShowMedia) {
           size.width = 0;
         }
         if (VISUAL_PLACEHOLDER === tmp4(8040).MediaGalleryItemType.IMAGE) {
-          const obj4 = importDefault(8021);
+          const obj4 = require("RowGeneratorUtils.tsx");
           ({ proxyUrl, width: width2 } = size);
           if (width2 == null) {
             width2 = 0;
@@ -602,7 +602,7 @@ function transformUnfurledMediaItem(file, shouldShowMedia) {
       }
     }
   }
-  VISUAL_PLACEHOLDER = require(8040) /* MediaGalleryItemType */.MediaGalleryItemType.VISUAL_PLACEHOLDER;
+  VISUAL_PLACEHOLDER = require("RowGeneratorTypes.tsx") /* MediaGalleryItemType */.MediaGalleryItemType.VISUAL_PLACEHOLDER;
   tmp4 = require;
 }
 let closure_3 = ["checkpointData"];
@@ -638,10 +638,10 @@ export const getUnfurledMediaItemType = function getUnfurledMediaItemType(arg0) 
             }
             tmpResult = tmp(4472);
           }
-          obj = require(4472) /* urlMatchesFileExtension */;
+          obj = require("../../MediaFormatTesters.tsx") /* urlMatchesFileExtension */;
         }
       }
     }
   }
-  return require(8040) /* MediaGalleryItemType */.MediaGalleryItemType.VISUAL_PLACEHOLDER;
+  return require("RowGeneratorTypes.tsx") /* MediaGalleryItemType */.MediaGalleryItemType.VISUAL_PLACEHOLDER;
 };

@@ -10,13 +10,13 @@ let closure_5 = createCacheKey.createStyles(obj);
 const result = require("createCacheKey").fileFinishedImporting("modules/guilds_bar/native/GuildsBarFooterWrapper.tsx");
 
 export default function GuildsBarFooterWrapper(children) {
-  let obj = require(3989) /* map */;
-  const token = obj.useToken(importDefault(712).modules.mobile.GUILD_BAR_ITEM_SIZE);
+  let obj = require("../../../design/tokens/native/useToken.tsx") /* map */;
+  const token = obj.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.GUILD_BAR_ITEM_SIZE);
   const tmp2 = callback();
-  const isHomeDrawerEnabled = require(15053) /* context */.useIsHomeDrawerEnabled();
+  const isHomeDrawerEnabled = require("../../home_drawer/native/useHomeDrawerGesture.tsx") /* context */.useIsHomeDrawerEnabled();
   const style = [tmp2.footerWrapper, ];
   let tmp6 = null;
-  const obj2 = require(15053) /* context */;
+  const obj2 = require("../../home_drawer/native/useHomeDrawerGesture.tsx") /* context */;
   const tmp4 = jsx;
   if (!isHomeDrawerEnabled) {
     obj = { width: null };
@@ -24,5 +24,5 @@ export default function GuildsBarFooterWrapper(children) {
     tmp6 = obj;
   }
   style[1] = tmp6;
-  return tmp4(importDefault(5663), { style, children: children.children });
+  return tmp4(require("../../core/native/NativeView.tsx"), { style, children: children.children });
 };

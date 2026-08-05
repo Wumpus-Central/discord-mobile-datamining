@@ -189,7 +189,7 @@ function handleUserSettingsProtoStoreChange() {
     }
   }
   if (null != value) {
-    let obj = importDefault(3926);
+    let obj = require("UnicodeEmojis.tsx");
     const result = obj.setDefaultDiversitySurrogate(value);
   }
   EmojiDisambiguations.reset();
@@ -210,7 +210,7 @@ function handleUserSettingsProtoStoreChange() {
   if (emojis1 == null) {
     emojis1 = {};
   }
-  importDefaultResult2.overwriteHistory(importDefault(12).mapValues(emojis, (recentUses) => {
+  importDefaultResult2.overwriteHistory(require("../../../_runtime/00012_apply.js").mapValues(emojis, (recentUses) => {
     const obj = {};
     const merged = Object.assign(recentUses);
     recentUses = recentUses.recentUses;
@@ -218,9 +218,9 @@ function handleUserSettingsProtoStoreChange() {
     obj.recentUses = mapped.filter((arg0) => arg0 > 0);
     return obj;
   }), obj.pendingUsages);
-  const obj4 = importDefault(12);
+  const obj4 = require("../../../_runtime/00012_apply.js");
   let tmp = closure_8;
-  importDefaultResult3.overwriteHistory(importDefault(12).mapValues(emojis1, (recentUses) => {
+  importDefaultResult3.overwriteHistory(require("../../../_runtime/00012_apply.js").mapValues(emojis1, (recentUses) => {
     const obj = {};
     const merged = Object.assign(recentUses);
     recentUses = recentUses.recentUses;
@@ -387,7 +387,7 @@ prototype["isUsable"] = function isUsable(emoji) {
   }
 };
 prototype["emojiIds"] = function emojiIds() {
-  return importDefault(11).keys(this._emojiMap);
+  return require("../../utils/SnowflakeUtils.tsx").keys(this._emojiMap);
 };
 Object.defineProperty(prototype, "emojis", {
   get: function emojis(database) {
@@ -429,9 +429,9 @@ prototype["_computeEmojiUsability"] = function _computeEmojiUsability() {
       }
       continue;
     }
-    self._usableEmojis = importDefault(12).sortBy(items, (name) => name.name);
+    self._usableEmojis = require("../../../_runtime/00012_apply.js").sortBy(items, (name) => name.name);
     self._hiddenEmojiIds = set;
-    const obj2 = importDefault(12);
+    const obj2 = require("../../../_runtime/00012_apply.js");
   }
 };
 Object.defineProperty(prototype, "usableEmojis", {
@@ -749,7 +749,7 @@ prototype2["getFrequentlyUsedEmojisWithoutFetchingLatest"] = function getFrequen
     });
     const found = mapped.filter(self(1351).isNotNullish);
     const items = [];
-    HermesBuiltin.arraySpread(importDefault(5150)(found).values(), 0);
+    HermesBuiltin.arraySpread(require("utils/dedupeEmojisByNameOrId.tsx")(found).values(), 0);
     self.frequentlyUsed = items;
     return self.frequentlyUsed;
   }
@@ -775,7 +775,7 @@ prototype2["rebuildFrequentlyUsedReactionsEmojisWithoutFetchingLatest"] = functi
     return byId;
   });
   const found = mapped.filter(self(1351).isNotNullish);
-  obj = importDefault(5150)(found);
+  obj = require("utils/dedupeEmojisByNameOrId.tsx")(found);
   const items = [...obj.values()];
   self.frequentlyUsedReactionEmojis = items;
   self.frequentlyUsedReactionNamesAndIds = new Set(obj.keys());
@@ -790,7 +790,7 @@ prototype2["isFrequentlyUsedReactionEmojiWithoutFetchingLatest"] = function isFr
   if (null != id.id) {
     return frequentlyUsedReactionNamesAndIds.has(id.id);
   } else {
-    let result = importDefault(3926).convertSurrogateToBase(id.surrogates);
+    let result = require("UnicodeEmojis.tsx").convertSurrogateToBase(id.surrogates);
     if (result == null) {
       result = id;
     }
@@ -824,7 +824,7 @@ prototype2["rebuildFavoriteEmojisWithoutFetchingLatest"] = function rebuildFavor
     return byId;
   });
   const found = mapped.filter(self(1351).isNotNullish);
-  obj = importDefault(5150)(found);
+  obj = require("utils/dedupeEmojisByNameOrId.tsx")(found);
   const items = [...obj.values()];
   self.favorites = items;
   self.favoriteNamesAndIds = new Set(obj.keys());
@@ -908,8 +908,8 @@ prototype2["getEscapedCustomEmoticonNames"] = function getEscapedCustomEmoticonN
 };
 prototype2["nameMatchesChain"] = function nameMatchesChain(matchComparator) {
   let closure_0 = matchComparator;
-  const tmp = importDefault(12);
-  return importDefault(12)(this.getDisambiguatedEmoji()).filter((arg0) => {
+  const tmp = require("../../../_runtime/00012_apply.js");
+  return require("../../../_runtime/00012_apply.js")(this.getDisambiguatedEmoji()).filter((arg0) => {
     let name;
     let names;
     ({ names, name } = arg0);
@@ -944,7 +944,7 @@ let merged = Object.assign({
     return 100;
   },
   lookupKey(id1) {
-    let byName = importDefault(3926).getByName(id1);
+    let byName = require("UnicodeEmojis.tsx").getByName(id1);
     if (byName == null) {
       const tmp3 = getEmojiToGroupId()[id1];
       let tmp4;
@@ -977,7 +977,7 @@ const merged1 = Object.assign({
     return 100;
   },
   lookupKey(id1) {
-    let byName = importDefault(3926).getByName(id1);
+    let byName = require("UnicodeEmojis.tsx").getByName(id1);
     if (byName == null) {
       const tmp3 = getEmojiToGroupId()[id1];
       let tmp4;
@@ -1064,7 +1064,7 @@ Object.defineProperty(prototype3, "categories", {
 });
 Object.defineProperty(prototype3, "diversitySurrogate", {
   get: function diversitySurrogate() {
-    let str = importDefault(3926).getDefaultDiversitySurrogate();
+    let str = require("UnicodeEmojis.tsx").getDefaultDiversitySurrogate();
     if (str == null) {
       str = "";
     }
@@ -1361,7 +1361,7 @@ prototype3["getTopEmojisMetadata"] = function getTopEmojisMetadata(guildId) {
 };
 prototype3["hasUsableEmojiInAnyGuild"] = function hasUsableEmojiInAnyGuild() {
   loadSavedEmojis();
-  const keys = importDefault(11).keys(closure_32);
+  const keys = require("../../utils/SnowflakeUtils.tsx").keys(closure_32);
   return keys.some((arg0) => table[arg0].usableEmojis.length > 0);
 };
 prototype3["hasFavoriteEmojis"] = function hasFavoriteEmojis(arg0) {
@@ -1552,9 +1552,9 @@ const emojiStore = new EmojiStore(require("dispatcher"), {
           trackUsage(items1);
         }
       }
-      let obj = importDefault(3926);
-      emoji = obj.getByName(importDefault(3926).convertSurrogateToName(optimistic.emoji.name, false));
-      const obj2 = importDefault(3926);
+      let obj = require("UnicodeEmojis.tsx");
+      emoji = obj.getByName(require("UnicodeEmojis.tsx").convertSurrogateToName(optimistic.emoji.name, false));
+      const obj2 = require("UnicodeEmojis.tsx");
     } else {
       return false;
     }
@@ -1563,7 +1563,7 @@ const emojiStore = new EmojiStore(require("dispatcher"), {
     trackUsage(emojiUsed.emojiUsed);
   },
   USER_SETTINGS_PROTO_UPDATE: function handleUserSettingsProtoUpdate(settings) {
-    const obj = importDefault(5151);
+    const obj = require("../emoji_terms/EmojiTerms.tsx");
     obj.setEmojiLocale(locale.locale);
     if (settings.settings.type === UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) {
       if (settings.wasSaved) {
@@ -1578,9 +1578,9 @@ const emojiStore = new EmojiStore(require("dispatcher"), {
   TOP_EMOJIS_FETCH_SUCCESS: function handleTopEmojisLoaded(topEmojisMetadata) {
     topEmojisMetadata = topEmojisMetadata.topEmojisMetadata;
     const obj = { emojiIds: topEmojisMetadata.map((emojiId) => emojiId.emojiId), topEmojisTTL: null };
-    const tmp = importDefault(3867);
-    const tmpResult = importDefault(3867)(importDefault(3867)());
-    obj[1] = importDefault(3867)(importDefault(3867)()).add(1, "days").valueOf();
+    const tmp = require("../../../_runtime/03867_t.js");
+    const tmpResult = require("../../../_runtime/03867_t.js")(require("../../../_runtime/03867_t.js")());
+    obj[1] = require("../../../_runtime/03867_t.js")(require("../../../_runtime/03867_t.js")()).add(1, "days").valueOf();
     const result = map.set(topEmojisMetadata.guildId, obj);
   },
   TOGGLE_GUILD_EXPANDED_STATE: function toggleGuildExpandedState(guildId) {

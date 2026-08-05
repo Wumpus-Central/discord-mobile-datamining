@@ -21,7 +21,7 @@ prototype["getState"] = function getState() {
   return closure_3;
 };
 prototype["getIsEnabled"] = function getIsEnabled() {
-  const DeveloperMode = require(3958) /* explicitContentFromProto */.DeveloperMode;
+  const DeveloperMode = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.DeveloperMode;
   let setting = DeveloperMode.getSetting();
   if (setting) {
     setting = closure_6.length > 0;

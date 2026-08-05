@@ -18,11 +18,11 @@ let closure_6 = createCacheKey.createStyles(obj);
 const forwardRefResult = require("noop").forwardRef((style, ref) => {
   const merged = Object.assign(style, Object.create(null));
   const tmp2 = callback();
-  let obj = require(4131) /* AccessibilityAnnouncer */;
+  let obj = require("../../../shared.tsx") /* AccessibilityAnnouncer */;
   const theme = obj.useThemeContext().theme;
-  const obj2 = require(4131) /* AccessibilityAnnouncer */;
-  const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  const tmp6 = require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme) ? unsafe_rawColors.PRIMARY_100 : unsafe_rawColors.PRIMARY_500;
+  const obj2 = require("../../../shared.tsx") /* AccessibilityAnnouncer */;
+  const unsafe_rawColors = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors;
+  const tmp6 = require("../../../shared.tsx") /* AccessibilityAnnouncer */.isThemeDark(theme) ? unsafe_rawColors.PRIMARY_100 : unsafe_rawColors.PRIMARY_500;
   obj = { ref, style: items, keyboardAppearance: null, placeholderTextColor: null, selectionColor: null };
   items = [tmp2.input, style.style];
   let tmp3Result = tmp3(4131);

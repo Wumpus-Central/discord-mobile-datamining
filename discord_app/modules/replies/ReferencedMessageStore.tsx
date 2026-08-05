@@ -32,14 +32,14 @@ function processMessage(message) {
           obj = { state: null, message: null };
           obj[0] = obj.LOADED;
           ({ channel_id, id } = referenced_message);
-          obj[1] = require(4504) /* createMinimalMessageRecord */.createMessageRecord(referenced_message);
+          obj[1] = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */.createMessageRecord(referenced_message);
           const result = obj.set(channel_id, id, obj);
           flag2 = true;
           if (message.type === constants.THREAD_STARTER_MESSAGE) {
             processMessage(referenced_message);
             flag2 = true;
           }
-          const obj5 = require(4504) /* createMinimalMessageRecord */;
+          const obj5 = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */;
         } else {
           obj = { state: null };
           obj[0] = obj.DELETED;
@@ -196,7 +196,7 @@ prototype2["set"] = function set(arg0, arg1, arg2) {
     obj[1] = function dispose(arg0, arg1) {
       return obj.handleCacheDisposed(arg0, arg1);
     };
-    const tmp7 = new importDefault(1386)(obj);
+    const tmp7 = new require("../../../_runtime/01386_priv.js")(obj);
     obj._cachedMessages = tmp7;
     const _Set = Set;
     const set = new Set();
@@ -217,10 +217,10 @@ prototype2["updateExistingMessageIfCached"] = function updateExistingMessageIfCa
     if (flag) {
       const obj = { state: null, message: null };
       obj[0] = obj.LOADED;
-      obj[1] = require(4504) /* createMinimalMessageRecord */.createMessageRecord(channel_id);
+      obj[1] = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */.createMessageRecord(channel_id);
       const result = value.set(channel_id.id, obj);
       flag = true;
-      const obj3 = require(4504) /* createMinimalMessageRecord */;
+      const obj3 = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */;
     }
     tmp = flag;
   }
@@ -332,7 +332,7 @@ const referencedMessageStore = new ReferencedMessageStore(require("dispatcher"),
         if (value.state === obj.LOADED) {
           obj = { state: null, message: null };
           obj[0] = tmp3.LOADED;
-          obj[1] = require(6968) /* redactionSettingToRenderedString */.handleExplicitMediaScanTimeoutForMessage(value.message);
+          obj[1] = require("../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx") /* redactionSettingToRenderedString */.handleExplicitMediaScanTimeoutForMessage(value.message);
           const result = obj.set(channelId, messageId, obj);
         }
       }
@@ -370,7 +370,7 @@ const referencedMessageStore = new ReferencedMessageStore(require("dispatcher"),
         if (value.state === obj.LOADED) {
           obj = { state: null, message: null };
           obj[0] = tmp3.LOADED;
-          obj[1] = require(4504) /* createMinimalMessageRecord */.updateMessageRecord(value.message, message);
+          obj[1] = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */.updateMessageRecord(value.message, message);
           const result = obj.set(channel_id, id, obj);
         }
       }

@@ -2,20 +2,20 @@
 let result = require("getItemRecordsFromPurchases").fileFinishedImporting("modules/collectibles/hooks/useCanGiftProduct.tsx");
 
 export const useCanGiftProduct = function useCanGiftProduct(product) {
-  const currentUser = require(9266) /* useCurrentUser */.useCurrentUser();
-  const obj = require(9266) /* useCurrentUser */;
-  const isProfileFrameGiftingEnabled = require(9269) /* apexExperiment */.useIsProfileFrameGiftingEnabled("useCanGiftProduct");
-  const obj2 = require(9269) /* apexExperiment */;
-  let result = require(6922) /* getItemRecordsFromPurchases */.isPremiumCollectiblesProduct(product);
-  const obj3 = require(6922) /* getItemRecordsFromPurchases */;
-  const result1 = require(6922) /* getItemRecordsFromPurchases */.isFreeCollectiblesProduct(product);
-  const obj4 = require(6922) /* getItemRecordsFromPurchases */;
-  const result2 = require(6921) /* getProductOrbPrice */.isOrbsExclusiveProduct(product);
-  const obj5 = require(6921) /* getProductOrbPrice */;
-  const tmp8 = product.type === require(1901) /* CollectiblesItemType */.CollectiblesItemType.PROFILE_FRAME && !isProfileFrameGiftingEnabled;
-  const obj6 = importDefault(3931);
+  const currentUser = require("useCurrentUser.tsx") /* useCurrentUser */.useCurrentUser();
+  const obj = require("useCurrentUser.tsx") /* useCurrentUser */;
+  const isProfileFrameGiftingEnabled = require("../experiments/CollectiblesProfileFrameGiftingExperiment.tsx") /* apexExperiment */.useIsProfileFrameGiftingEnabled("useCanGiftProduct");
+  const obj2 = require("../experiments/CollectiblesProfileFrameGiftingExperiment.tsx") /* apexExperiment */;
+  let result = require("../CollectiblesUtils.tsx") /* getItemRecordsFromPurchases */.isPremiumCollectiblesProduct(product);
+  const obj3 = require("../CollectiblesUtils.tsx") /* getItemRecordsFromPurchases */;
+  const result1 = require("../CollectiblesUtils.tsx") /* getItemRecordsFromPurchases */.isFreeCollectiblesProduct(product);
+  const obj4 = require("../CollectiblesUtils.tsx") /* getItemRecordsFromPurchases */;
+  const result2 = require("../utils/CollectiblesProductUtils.tsx") /* getProductOrbPrice */.isOrbsExclusiveProduct(product);
+  const obj5 = require("../utils/CollectiblesProductUtils.tsx") /* getProductOrbPrice */;
+  const tmp8 = product.type === require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.PROFILE_FRAME && !isProfileFrameGiftingEnabled;
+  const obj6 = require("../../../utils/PremiumUtils.tsx");
   let tmpResult = tmp(6922);
-  const defaultPriceSetAssignmentPurchaseType = tmpResult.getDefaultPriceSetAssignmentPurchaseType(importDefault(3931).canUseShopDiscounts(currentUser));
+  const defaultPriceSetAssignmentPurchaseType = tmpResult.getDefaultPriceSetAssignmentPurchaseType(require("../../../utils/PremiumUtils.tsx").canUseShopDiscounts(currentUser));
   tmpResult = tmp(6922);
   const result3 = tmpResult.extractPriceByPurchaseTypes(product, defaultPriceSetAssignmentPurchaseType);
   if (!result) {

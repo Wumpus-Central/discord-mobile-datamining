@@ -243,7 +243,7 @@ export const useIsSkuInWishlist = function useIsSkuInWishlist(stateFromStores, s
   const _require = stateFromStores;
   let closure_1 = skuId;
   const items = [get];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let hasSkuIdResult = null != closure_0;
     if (hasSkuIdResult) {
       hasSkuIdResult = outer1_9.hasSkuId(tmp, closure_1);

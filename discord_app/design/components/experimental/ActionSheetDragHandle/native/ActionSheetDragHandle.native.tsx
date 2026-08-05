@@ -23,8 +23,8 @@ const memoResult = require("noop").memo((accessibilityLabel) => {
   accessibilityLabel = accessibilityLabel.accessibilityLabel;
   ({ onPress, overlay } = accessibilityLabel);
   if (accessibilityLabel === undefined) {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    accessibilityLabel = intl.string(require(1236) /* getSystemLocale */.t.WAI6xu);
+    const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    accessibilityLabel = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.WAI6xu);
   }
   const animatedBarStyles = accessibilityLabel.animatedBarStyles;
   const tmp3 = callback();
@@ -40,7 +40,7 @@ const memoResult = require("noop").memo((accessibilityLabel) => {
     obj = { style: null };
     const items1 = [tmp3.bar, animatedBarStyles];
     obj[0] = items1;
-    let tmp4Result = tmp4(importDefault(4146).View, obj);
+    let tmp4Result = tmp4(require("../../../../../modules/reanimated/ReanimatedRexport.tsx").View, obj);
   } else {
     const obj1 = { style: null };
     obj1[0] = tmp3.bar;

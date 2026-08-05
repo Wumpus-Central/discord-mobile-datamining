@@ -8,22 +8,22 @@ let c4;
 let result = require("dispatcher").fileFinishedImporting("modules/premium/powerups/GuildPowerupsActionCreators.tsx");
 
 export const guildPowerupsAckNotification = function guildPowerupsAckNotification(closure_0) {
-  let obj = importDefault(709);
+  let obj = require("../../../Dispatcher.tsx");
   obj = { type: "GUILD_POWERUPS_ACK_NOTIFICATION", guildId: closure_0 };
   obj.dispatch(obj);
 };
 export const guildPowerupsResetNotifications = function guildPowerupsResetNotifications() {
-  importDefault(709).dispatch({ type: "GUILD_POWERUPS_RESET_NOTIFICATIONS" });
+  require("../../../Dispatcher.tsx").dispatch({ type: "GUILD_POWERUPS_RESET_NOTIFICATIONS" });
 };
 export const fetchPowerupCatalogForGuild = function fetchPowerupCatalogForGuild(closure_0) {
   const _require = closure_0;
   if (true === arg1) {
-    const MOCK_LEVELS = _require(11762).MOCK_LEVELS;
-    const combined = MOCK_LEVELS.concat(_require(11762).MOCK_PERKS);
+    const MOCK_LEVELS = _require("mocks/GuildPowerupMocks.tsx").MOCK_LEVELS;
+    const combined = MOCK_LEVELS.concat(_require("mocks/GuildPowerupMocks.tsx").MOCK_PERKS);
     let obj = {};
-    obj[constants.LEVEL] = _require(11762).MOCK_LEVELS;
-    obj[constants.PERK] = _require(11762).MOCK_PERKS;
-    let obj2 = importDefault(709);
+    obj[constants.LEVEL] = _require("mocks/GuildPowerupMocks.tsx").MOCK_LEVELS;
+    obj[constants.PERK] = _require("mocks/GuildPowerupMocks.tsx").MOCK_PERKS;
+    let obj2 = require("../../../Dispatcher.tsx");
     obj = { type: "GUILD_POWERUP_CATALOG_FETCH_SUCCESS", guildId: null, allPowerups: null, powerupCatalog: null };
     obj[1] = closure_0;
     let sorted = combined.sort((skuId, skuId2) => {
@@ -46,8 +46,8 @@ export const fetchPowerupCatalogForGuild = function fetchPowerupCatalogForGuild(
     obj2[0] = closure_3;
     obj2[1] = closure_0;
     obj1[1] = obj2;
-    const obj5 = _require(4522);
-    obj1[3] = _require(530).rejectWithMigratedError();
+    const obj5 = _require("../../../utils/StoreUtils.tsx");
+    obj1[3] = _require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
     const result = obj5.httpGetWithCountryCodeQuery(obj1);
     return result.then((body) => {
       let allPowerups;
@@ -90,9 +90,9 @@ export const fetchGuildBoostEntitlements = function fetchGuildBoostEntitlements(
   if (arg1 === undefined) {
     flag = true;
   }
-  let obj = _require(4522);
+  let obj = _require("../../../utils/StoreUtils.tsx");
   obj = { url: Endpoints.GUILD_POWERUPS(closure_0), query: { include_ends_at: flag }, oldFormErrors: true, rejectWithError: null };
-  obj[3] = _require(530).rejectWithMigratedError();
+  obj[3] = _require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
   const result = obj.httpGetWithCountryCodeQuery(obj);
   return result.then((body) => {
     let obj = {};
@@ -142,10 +142,10 @@ export const fetchGuildBoostEntitlements = function fetchGuildBoostEntitlements(
   });
 };
 export const enablePowerupForGuild = function enablePowerupForGuild(arg0, arg1) {
-  const HTTP = require(530) /* sendRequest */.HTTP;
+  const HTTP = require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
   return HTTP.post({ url: Endpoints.GUILD_POWERUP_TOGGLE(arg0, arg1), rejectWithError: true });
 };
 export const disablePowerupForGuild = function disablePowerupForGuild(arg0, arg1) {
-  const HTTP = require(530) /* sendRequest */.HTTP;
+  const HTTP = require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
   return HTTP.del({ url: Endpoints.GUILD_POWERUP_TOGGLE(arg0, arg1), rejectWithError: true });
 };

@@ -31,9 +31,9 @@ function ReportModal(onSubmit) {
     callback(_undefined[9]).openURL(closure_6);
   }, []);
   obj = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[3] = intl.format(require(1236) /* getSystemLocale */.t.Hg8Ee7, { onClick: callback });
-  const items1 = [callback2(require(4281) /* Text */.Text, obj), , ];
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[3] = intl.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Hg8Ee7, { onClick: callback });
+  const items1 = [callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), , ];
   obj = { style: tmp.formBody, children: null };
   const obj1 = { hasIcons: false, children: null };
   obj1[1] = closure_8.map((arg0, arg1) => {
@@ -46,15 +46,15 @@ function ReportModal(onSubmit) {
     };
     return outer1_9(outer1_0(_undefined[12]).TableCheckboxRow, obj, arg0);
   });
-  obj[1] = callback2(require(5649) /* TableRowGroupTitle */.TableRowGroup, obj1);
+  obj[1] = callback2(require("../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj1);
   items1[1] = callback2(View, obj);
   const obj2 = { style: items2, children: null };
-  items2 = [tmp.submitButtonContainer, { paddingBottom: importDefault(1581)().bottom + 16 }];
+  items2 = [tmp.submitButtonContainer, { paddingBottom: require("../../safe_area/useSafeAreaInsets.native.tsx")().bottom + 16 }];
   const obj4 = { size: "md", text: null, onPress: null };
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj4[1] = intl2.string(require(1236) /* getSystemLocale */.t.geKm7t);
+  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj4[1] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.geKm7t);
   obj4[2] = onSubmit.onSubmit;
-  obj2[1] = callback2(require(4695) /* Button */.Button, obj4);
+  obj2[1] = callback2(require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj4);
   items1[2] = callback2(View, obj2);
   obj[1] = items1;
   return callback3(View, obj);

@@ -28,7 +28,7 @@ prototype["getState"] = function getState() {
 };
 prototype["getTemp"] = function getTemp() {
   const obj = { x: null };
-  const StatusExpiresAtSetting = require(3958) /* explicitContentFromProto */.StatusExpiresAtSetting;
+  const StatusExpiresAtSetting = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.StatusExpiresAtSetting;
   obj[0] = StatusExpiresAtSetting.getSetting();
   return obj;
 };
@@ -37,7 +37,7 @@ HabitualDNDStore.persistKey = "habitualDND";
 const habitualDNDStore = new HabitualDNDStore(require("dispatcher"), {
   POST_CONNECTION_OPEN: function handleConnect() {
     if (status.getStatus() === StatusTypes.DND) {
-      const StatusExpiresAtSetting = require(3958) /* explicitContentFromProto */.StatusExpiresAtSetting;
+      const StatusExpiresAtSetting = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.StatusExpiresAtSetting;
       if ("0" === StatusExpiresAtSetting.getSetting()) {
         const _Date = Date;
         arr = arr.push(Date.now());
@@ -57,7 +57,7 @@ const habitualDNDStore = new HabitualDNDStore(require("dispatcher"), {
           const _setTimeout = setTimeout;
           const timerId = setTimeout(() => {
             callback(709).dispatch({ type: "HABITUAL_DND_CLEAR" });
-          }, 15 * importDefault(687).Millis.SECOND);
+          }, 15 * require("../../utils/Durations.tsx").Millis.SECOND);
         }
       }
     }

@@ -4,6 +4,6 @@ const result = require("set").fileFinishedImporting("modules/polls/transformMess
 export default function transformMessagePoll(expiry) {
   const obj = {};
   const merged = Object.assign(expiry);
-  obj.expiry = importDefault(3867)(expiry.expiry);
+  obj.expiry = require("../../../_runtime/03867_t.js")(expiry.expiry);
   return obj;
 };

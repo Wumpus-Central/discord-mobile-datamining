@@ -933,7 +933,7 @@ prototype2["reset"] = function reset() {
   this.save();
 };
 prototype2["save"] = function save() {
-  const Storage = require(595) /* Storage */.Storage;
+  const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
   const result = Storage.set(c15, this.keyMap);
 };
 prototype2["getLayoutMap"] = function getLayoutMap() {

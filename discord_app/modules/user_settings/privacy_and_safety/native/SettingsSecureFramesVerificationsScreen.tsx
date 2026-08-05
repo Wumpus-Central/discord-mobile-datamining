@@ -32,7 +32,7 @@ function VerificationListItem(userId) {
 }
 function SectionListItem(children) {
   const tmp = callback();
-  return jsx(require(4281) /* Text */.Text, { style: callback().section, variant: "text-sm/semibold", color: "text-default", children: children.title });
+  return jsx(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: callback().section, variant: "text-sm/semibold", color: "text-default", children: children.title });
 }
 function renderItem(item) {
   item = item.item;

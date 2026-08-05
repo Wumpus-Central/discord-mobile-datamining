@@ -10,13 +10,13 @@ createToggle = {
   parent: null,
   IconComponent: require("StaffBadgeIcon").StaffBadgeIcon,
   onValueChange: function handleShowDevWidgetSettingToggle(showDevWidget) {
-    let obj = require(13753) /* updateDevToolsSettings */;
+    let obj = require("../../../devtools/DevToolsActionCreators.tsx") /* updateDevToolsSettings */;
     obj = { showDevWidget };
     const result = obj.updateDevToolsSettings(obj);
   },
   useValue: function useShowDevWidgetSettingToggleValue() {
     const items = [initialize];
-    return require(589) /* initialize */.useStateFromStores(items, () => showDevWidget.showDevWidget);
+    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => showDevWidget.showDevWidget);
   },
   usePredicate: require("useStaffOrDeveloperSettingPredicate").useStaffOrDeveloperSettingPredicate
 };

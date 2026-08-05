@@ -65,12 +65,12 @@ export const activityInstanceConnectedParticipants = function activityInstanceCo
     obj[0] = [];
     return obj;
   } else {
-    _require = _require(3903).getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
-    const obj2 = _require(3903);
-    const embeddedActivityLocationChannelId = _require(3903).getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
+    _require = _require("../../activities/utils/embeddedActivityLocationUtils.tsx").getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
+    const obj2 = _require("../../activities/utils/embeddedActivityLocationUtils.tsx");
+    const embeddedActivityLocationChannelId = _require("../../activities/utils/embeddedActivityLocationUtils.tsx").getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
     obj = { participants: null };
     const _Array = Array;
-    const obj3 = _require(3903);
+    const obj3 = _require("../../activities/utils/embeddedActivityLocationUtils.tsx");
     obj[0] = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
       const user = outer1_4.getUser(arg0);
       if (null != user) {
@@ -81,7 +81,7 @@ export const activityInstanceConnectedParticipants = function activityInstanceCo
         obj.nickname = nickname;
         return obj;
       }
-    }).filter(_require(1351).isNotNullish);
+    }).filter(_require("../../../utils/GlobalUtils.tsx").isNotNullish);
     return obj;
   }
 };

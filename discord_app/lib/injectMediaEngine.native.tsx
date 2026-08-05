@@ -13,7 +13,7 @@ inject.inject({
 
   },
   getVoiceEngine() {
-    return require(4335) /* logger */.default;
+    return require("../../discord_common/js/packages/media-engine/native/ios/VoiceEngine.tsx") /* logger */.default;
   },
   getOpenH264LibraryPath() {
 

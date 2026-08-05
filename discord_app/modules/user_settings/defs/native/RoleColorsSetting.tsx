@@ -6,10 +6,10 @@ import createToggle from "createToggle";
 const require = arg1;
 function useRoleColorSettingValue() {
   const items = [maybeApplyNoTextColorForLightCustomTheme];
-  return require(589) /* initialize */.useStateFromStores(items, () => roleStyle.roleStyle);
+  return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => roleStyle.roleStyle);
 }
 function onRoleColorSettingValueChange(roleStyle) {
-  require(13617) /* setFontSize */.setRoleStyle(roleStyle);
+  require("../../../a11y/AccessibilityActionCreators.tsx") /* setFontSize */.setRoleStyle(roleStyle);
 }
 function useRoleColorSettingOptions() {
   return React.useMemo(() => {
@@ -30,8 +30,8 @@ function useRoleColorSettingOptions() {
 }
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.uSOPWm);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.uSOPWm);
   },
   parent: require("MobileSetting").MobileSetting.ACCESSIBILITY,
   useValue: useRoleColorSettingValue,

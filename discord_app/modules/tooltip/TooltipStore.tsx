@@ -22,7 +22,7 @@ class TooltipStore extends Store {
   }
 }
 TooltipStore.prototype["initialize"] = function initialize() {
-  const Storage = require(595) /* Storage */.Storage;
+  const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
   let items = Storage.get(StorageKeys.ACKNOWLEDGED_TOOLTIPS_KEY, []);
   if (items == null) {
     items = [];
@@ -35,7 +35,7 @@ const tooltipStore = new TooltipStore(require("dispatcher"), {
     if (set1 != null) {
       set1.add(tooltip.tooltip);
     }
-    const Storage = require(595) /* Storage */.Storage;
+    const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     const result = Storage.set(StorageKeys.ACKNOWLEDGED_TOOLTIPS_KEY, Array(set1));
   },
   TOOLTIP_SHOW_ATTEMPT: function hasAttemptedToShowTooltip(arg0) {

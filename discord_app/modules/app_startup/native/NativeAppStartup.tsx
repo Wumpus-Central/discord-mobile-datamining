@@ -1,7 +1,7 @@
 // discord_app/modules/app_startup/native/NativeAppStartup.tsx
 import onStageConnectionError from "onStageConnectionError";
 import closure_5 from "timestamp";
-import module_16166 from "module_16166";
+import index from "../../../i18n/native/index.tsx";
 import isAnalyticsEndpoint from "isAnalyticsEndpoint";
 import get_ActivityIndicator from "BundleUpdaterManager";
 import timestamp from "timestamp";
@@ -9,7 +9,7 @@ import { subscribeToIntlLoadingSuccess as closure_11 } from "_setAppLocale";
 import handleConnectionOpen from "handleConnectionOpen";
 import getState from "getState";
 import result from "result";
-import module_16237 from "module_16237";
+import ManagerRegistry.native from "../ManagerRegistry.native.tsx";
 import ME from "ME";
 import { loadImports } from "result";
 import { loadIndex } from "result";
@@ -412,12 +412,12 @@ function _loadStorage() {
 }
 function loadKvStorage() {
   try {
-    importDefault(1923).initialize();
+    require("../../app_database/system/DatabaseManager.tsx").initialize();
     return Promise.resolve();
   } catch (tmp4) {
     tmp10.warn("DatabaseManager.initialize errored.", tmp4);
-    importDefault(1208).captureException(tmp4);
-    const obj2 = importDefault(1208);
+    require("../../../utils/SentryUtils.native.tsx").captureException(tmp4);
+    const obj2 = require("../../../utils/SentryUtils.native.tsx");
   }
 }
 function initializeIntl() {
@@ -1085,11 +1085,11 @@ function _initHeadlessTask() {
   return applyArgumentsResult;
 }
 function initializeTokenStorage() {
-  const Storage = require(595) /* Storage */.Storage;
+  const Storage = require("../../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
   if (null == Storage.get(closure_17)) {
     if (tmpResult.isAndroid()) {
-      let token = importDefault(502).getConstants().token;
-      const obj3 = importDefault(502);
+      let token = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeFastConnectModule.tsx").getConstants().token;
+      const obj3 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeFastConnectModule.tsx");
     } else {
       token = closure_10.DCDFastConnectManager.token;
     }

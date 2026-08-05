@@ -4,10 +4,10 @@ import { HelpdeskArticles } from "ME";
 const result = require("combined").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/CreatorMonetizationAcceptTermCheckboxText.tsx");
 
 export const getCreatorMonetizationAcceptTermsCheckboxText = function getCreatorMonetizationAcceptTermsCheckboxText() {
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   const obj = { fullTermsUrl: null, creatorRevenuePolicyUrl: null };
-  obj[0] = importDefault(1945).getArticleURL(HelpdeskArticles.CREATOR_TERMS);
-  const obj2 = importDefault(1945);
-  obj[1] = importDefault(1945).getArticleURL(HelpdeskArticles.CREATOR_POLICY);
-  return intl.format(require(1236) /* getSystemLocale */.t["+ALa7+"], obj);
+  obj[0] = require("../../../utils/HelpdeskUtils.tsx").getArticleURL(HelpdeskArticles.CREATOR_TERMS);
+  const obj2 = require("../../../utils/HelpdeskUtils.tsx");
+  obj[1] = require("../../../utils/HelpdeskUtils.tsx").getArticleURL(HelpdeskArticles.CREATOR_POLICY);
+  return intl.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["+ALa7+"], obj);
 };

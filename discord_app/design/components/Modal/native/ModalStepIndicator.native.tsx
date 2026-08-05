@@ -103,9 +103,9 @@ export const ModalStepIndicator = function ModalStepIndicator(arg0) {
       obj[1] = items;
       return <View style={null}>{null}</View>;
     } else {
-      const intl = require(1236) /* getSystemLocale */.intl;
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
       const obj1 = { accessible: true, accessibilityRole: "progressbar", accessibilityLabel: null, accessibilityValue: null, importantForAccessibility: "yes", style: null, children: null };
-      obj1[2] = intl.string(importDefault(1961).KUwsC0);
+      obj1[2] = intl.string(require("../../../intl/Mana.messages.js").KUwsC0);
       const obj2 = { min: 1, max: null, now: null };
       obj2[1] = totalSteps;
       obj2[2] = currentStep + 1;

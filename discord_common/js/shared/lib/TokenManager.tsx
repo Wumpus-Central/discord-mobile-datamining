@@ -13,18 +13,18 @@ function setSecondaryToken(token, __analytics__) {
     let closure_8 = closure_7;
     let closure_11 = closure_10;
     if (c12) {
-      const Storage4 = require(595) /* Storage */.Storage;
+      const Storage4 = require("../../packages/storage/Storage.tsx") /* Storage */.Storage;
       Storage4.remove(closure_3);
-      const Storage5 = require(595) /* Storage */.Storage;
+      const Storage5 = require("../../packages/storage/Storage.tsx") /* Storage */.Storage;
       Storage5.remove(closure_2);
     } else {
       if (null != tmp3) {
-        const Storage2 = require(595) /* Storage */.Storage;
+        const Storage2 = require("../../packages/storage/Storage.tsx") /* Storage */.Storage;
         const result = Storage2.set(closure_3, closure_8);
         let tmp6 = require;
       } else {
         tmp6 = require;
-        const Storage = require(595) /* Storage */.Storage;
+        const Storage = require("../../packages/storage/Storage.tsx") /* Storage */.Storage;
         Storage.remove(closure_3);
       }
       const Storage3 = tmp6(595).Storage;
@@ -44,18 +44,18 @@ function removeToken(__analytics__) {
     let c8 = null;
   }
   if (c12) {
-    const Storage4 = require(595) /* Storage */.Storage;
+    const Storage4 = require("../../packages/storage/Storage.tsx") /* Storage */.Storage;
     Storage4.remove(closure_3);
-    const Storage5 = require(595) /* Storage */.Storage;
+    const Storage5 = require("../../packages/storage/Storage.tsx") /* Storage */.Storage;
     Storage5.remove(closure_2);
   } else {
     if (null != c8) {
-      const Storage2 = require(595) /* Storage */.Storage;
+      const Storage2 = require("../../packages/storage/Storage.tsx") /* Storage */.Storage;
       const result = Storage2.set(closure_3, c8);
       let tmp8 = require;
     } else {
       tmp8 = require;
-      const Storage = require(595) /* Storage */.Storage;
+      const Storage = require("../../packages/storage/Storage.tsx") /* Storage */.Storage;
       Storage.remove(closure_3);
     }
     const Storage3 = tmp8(595).Storage;
@@ -121,18 +121,18 @@ function encryptAndStoreTokens() {
     closure_11 = closure_10;
   }
   if (c12) {
-    const Storage4 = require(595) /* Storage */.Storage;
+    const Storage4 = require("../../packages/storage/Storage.tsx") /* Storage */.Storage;
     Storage4.remove(closure_3);
-    const Storage5 = require(595) /* Storage */.Storage;
+    const Storage5 = require("../../packages/storage/Storage.tsx") /* Storage */.Storage;
     Storage5.remove(closure_2);
   } else {
     if (null != combined) {
-      const Storage2 = require(595) /* Storage */.Storage;
+      const Storage2 = require("../../packages/storage/Storage.tsx") /* Storage */.Storage;
       const result2 = Storage2.set(closure_3, combined);
       let tmp13 = require;
     } else {
       tmp13 = require;
-      const Storage = require(595) /* Storage */.Storage;
+      const Storage = require("../../packages/storage/Storage.tsx") /* Storage */.Storage;
       Storage.remove(closure_3);
     }
     const Storage3 = tmp13(595).Storage;
@@ -165,9 +165,9 @@ export const init = function init() {
   let c9;
   let closure_7;
   if (!c13) {
-    const Storage = require(595) /* Storage */.Storage;
+    const Storage = require("../../packages/storage/Storage.tsx") /* Storage */.Storage;
     let closure_8 = Storage.get(closure_3);
-    const Storage2 = require(595) /* Storage */.Storage;
+    const Storage2 = require("../../packages/storage/Storage.tsx") /* Storage */.Storage;
     let closure_11 = Storage2.get(closure_2) || {};
     if (null != closure_8) {
       if (0 !== arr.length) {
@@ -262,9 +262,9 @@ export const setToken = function setToken(token, id) {
 export const hideToken = function hideToken() {
   if (!c12) {
     c12 = true;
-    const Storage = require(595) /* Storage */.Storage;
+    const Storage = require("../../packages/storage/Storage.tsx") /* Storage */.Storage;
     Storage.remove(closure_3);
-    const Storage2 = require(595) /* Storage */.Storage;
+    const Storage2 = require("../../packages/storage/Storage.tsx") /* Storage */.Storage;
     Storage2.remove(closure_2);
   }
 };
@@ -272,12 +272,12 @@ export const showToken = function showToken() {
   if (c12) {
     c12 = false;
     if (null != closure_8) {
-      const Storage2 = require(595) /* Storage */.Storage;
+      const Storage2 = require("../../packages/storage/Storage.tsx") /* Storage */.Storage;
       const result = Storage2.set(closure_3, closure_8);
       let tmp3 = require;
     } else {
       tmp3 = require;
-      const Storage = require(595) /* Storage */.Storage;
+      const Storage = require("../../packages/storage/Storage.tsx") /* Storage */.Storage;
       Storage.remove(closure_3);
     }
     const Storage3 = tmp3(595).Storage;

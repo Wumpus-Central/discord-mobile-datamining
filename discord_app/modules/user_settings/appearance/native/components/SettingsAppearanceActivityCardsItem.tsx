@@ -9,8 +9,8 @@ export default function ActivityCardsItem(animatedStyles) {
   animatedStyles = animatedStyles.animatedStyles;
   let obj = { contentContainerStyle: null, data: null, renderItem: null, keyExtractor: null, showsHorizontalScrollIndicator: false, horizontal: true };
   obj = { paddingVertical: null, paddingHorizontal: null };
-  obj[0] = importDefault(712).space.PX_16;
-  obj[1] = importDefault(712).space.PX_16;
+  obj[0] = require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16;
+  obj[1] = require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16;
   obj[0] = obj;
   obj[1] = animatedStyles.cards;
   obj[2] = function renderItem(item) {

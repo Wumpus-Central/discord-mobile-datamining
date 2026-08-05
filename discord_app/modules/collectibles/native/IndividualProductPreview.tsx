@@ -35,7 +35,7 @@ function ProfilePreviewWrapper(children) {
   obj = { style: tmp.profilePreviewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
   const items1 = ["" + tmp.profilePreviewGradient.color + "00", tmp.profilePreviewGradient.color];
   obj[3] = items1;
-  items[1] = callback(importDefault(4706), obj);
+  items[1] = callback(require("../../../../_runtime/04706_LinearGradient.js"), obj);
   obj[1] = items;
   obj[2] = callback2(closure_4, obj);
   return callback(closure_3, obj);
@@ -58,11 +58,11 @@ function ProfileFramePreview(arg0) {
   let profileFrame;
   let width;
   ({ profileFrame, width, handlePreviewPress, onTrackPress } = arg0);
-  let obj = require(9266) /* useCurrentUser */;
+  let obj = require("../hooks/useCurrentUser.tsx") /* useCurrentUser */;
   obj = { handlePreviewPress, onTrackPress, children: null };
   const currentUser = obj.useCurrentUser();
   obj = { profileFrame, user: currentUser, maxWidth: width, style: createCacheKey().profilePreview };
-  obj[2] = callback(importDefault(9472), obj);
+  obj[2] = callback(require("../profile_frames/native/previews/ProfileFrameUserPreview.tsx"), obj);
   return callback(ProfilePreviewWrapper, obj);
 }
 class AvatarDecorationPreview {
@@ -116,7 +116,7 @@ export const IndividualProductPreview = function IndividualProductPreview(arg0) 
   let width;
   ({ product, width, handlePreviewPress, onTrackPress } = arg0);
   const type = product.type;
-  if (require(1901) /* CollectiblesItemType */.CollectiblesItemType.NAMEPLATE === type) {
+  if (require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.NAMEPLATE === type) {
     let obj = { product: null };
     obj[0] = product;
     return callback(NameplatePreview, obj);

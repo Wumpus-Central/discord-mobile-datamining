@@ -28,7 +28,7 @@ function MediaMosaicVideo(source) {
   source = source.source;
   ({ height, width, autoplay, style } = source);
   const tmp = callback4();
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [filterStaffGuild];
   let isGIFV = obj.useStateFromStores(items, () => filterStaffGuild.videosMuted());
   let uri = source.videoURI;
@@ -44,7 +44,7 @@ function MediaMosaicVideo(source) {
     isGIFV = source.isGIFV;
   }
   obj[9] = isGIFV;
-  return closure_15(importDefault(8792), obj);
+  return closure_15(require("../../../../components_native/common/Video.tsx"), obj);
 }
 function MediaMosaicImage(source) {
   let dimensions;
@@ -246,7 +246,7 @@ function OneImageRow(widthOverride) {
   let source;
   widthOverride = widthOverride.widthOverride;
   ({ source, handlePressMedia } = widthOverride);
-  const context = React.useContext(require(15442) /* context */.ICYMIContext);
+  const context = React.useContext(require("../ICYMIContext.tsx") /* context */.ICYMIContext);
   if (null == widthOverride) {
     let width;
     if (context != null) {
@@ -304,7 +304,7 @@ function TwoImagesRow(arg0) {
   ({ sources, handlePressMedia: require, end, widthOverride } = arg0);
   let obj;
   const tmp = callback4();
-  const context = React.useContext(require(15442) /* context */.ICYMIContext);
+  const context = React.useContext(require("../ICYMIContext.tsx") /* context */.ICYMIContext);
   if (null == widthOverride) {
     let width;
     if (context != null) {
@@ -334,7 +334,7 @@ function ThreeImages(arg0) {
   let widthOverride;
   ({ sources, handlePressMedia, widthOverride } = arg0);
   const tmp = callback4();
-  const context = React.useContext(require(15442) /* context */.ICYMIContext);
+  const context = React.useContext(require("../ICYMIContext.tsx") /* context */.ICYMIContext);
   if (null == widthOverride) {
     let width;
     if (context != null) {
@@ -361,7 +361,7 @@ function FourImages(arg0) {
   let widthOverride;
   ({ sources, handlePressMedia, widthOverride } = arg0);
   const tmp = callback4();
-  const context = React.useContext(require(15442) /* context */.ICYMIContext);
+  const context = React.useContext(require("../ICYMIContext.tsx") /* context */.ICYMIContext);
   if (null == widthOverride) {
     let width;
     if (context != null) {
@@ -558,35 +558,35 @@ class GravityAttachmentMediaMosaic {
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
 let closure_18 = createCacheKey.createStyles(() => {
   let obj = { media: null, video: null, thumbhashMedia: null, container: null, imagesContainer: null, imageRow: null, topRow: null, bottomRow: null, videoIcon: null, muteIcon: null, spoilerText: null, leftColumn: null, rightColumn: null, singleImage: null, centerContainer: null, absoluteContainer: null, iconBg: null, iconBgSelected: null };
-  obj = { borderRadius: importDefault(712).radii.xs };
+  obj = { borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.xs };
   obj[0] = obj;
-  obj = { backgroundColor: importDefault(712).colors.BACKGROUND_SURFACE_HIGH };
+  obj = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SURFACE_HIGH };
   obj[1] = obj;
   obj[2] = { position: "absolute", top: 0, left: 0, zIndex: 1 };
   obj[3] = { gap: 4 };
   obj[4] = { justifyContent: "center", gap: 4, width: "100%" };
   obj[5] = { flexDirection: "row", gap: 4 };
-  obj[6] = { overflow: "hidden", borderTopEndRadius: importDefault(712).radii.lg, borderTopStartRadius: importDefault(712).radii.lg };
-  const obj1 = { overflow: "hidden", borderTopEndRadius: importDefault(712).radii.lg, borderTopStartRadius: importDefault(712).radii.lg };
-  obj[7] = { overflow: "hidden", borderBottomEndRadius: importDefault(712).radii.lg, borderBottomStartRadius: importDefault(712).radii.lg };
-  const obj2 = { overflow: "hidden", borderBottomEndRadius: importDefault(712).radii.lg, borderBottomStartRadius: importDefault(712).radii.lg };
-  obj[8] = { backgroundColor: importDefault(712).colors.BACKGROUND_BASE_LOW, borderRadius: importDefault(712).radii.round, padding: 16 };
-  const obj3 = { backgroundColor: importDefault(712).colors.BACKGROUND_BASE_LOW, borderRadius: importDefault(712).radii.round, padding: 16 };
-  obj[9] = { position: "absolute", borderRadius: importDefault(712).radii.round, padding: importDefault(712).space.PX_4, bottom: 8, right: 8 };
-  const obj4 = { position: "absolute", borderRadius: importDefault(712).radii.round, padding: importDefault(712).space.PX_4, bottom: 8, right: 8 };
-  obj[10] = { backgroundColor: importDefault(712).colors.SPOILER_HIDDEN_BACKGROUND, borderRadius: importDefault(712).radii.lg, paddingHorizontal: importDefault(712).space.PX_12, paddingVertical: 6 };
-  const obj5 = { backgroundColor: importDefault(712).colors.SPOILER_HIDDEN_BACKGROUND, borderRadius: importDefault(712).radii.lg, paddingHorizontal: importDefault(712).space.PX_12, paddingVertical: 6 };
-  obj[11] = { overflow: "hidden", borderTopStartRadius: importDefault(712).radii.lg, borderBottomStartRadius: importDefault(712).radii.lg };
-  const obj6 = { overflow: "hidden", borderTopStartRadius: importDefault(712).radii.lg, borderBottomStartRadius: importDefault(712).radii.lg };
-  obj[12] = { overflow: "hidden", borderTopEndRadius: importDefault(712).radii.lg, borderBottomEndRadius: importDefault(712).radii.lg, gap: 4 };
-  const obj7 = { overflow: "hidden", borderTopEndRadius: importDefault(712).radii.lg, borderBottomEndRadius: importDefault(712).radii.lg, gap: 4 };
-  obj[13] = { overflow: "hidden", borderRadius: importDefault(712).radii.lg };
+  obj[6] = { overflow: "hidden", borderTopEndRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, borderTopStartRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg };
+  const obj1 = { overflow: "hidden", borderTopEndRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, borderTopStartRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg };
+  obj[7] = { overflow: "hidden", borderBottomEndRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, borderBottomStartRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg };
+  const obj2 = { overflow: "hidden", borderBottomEndRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, borderBottomStartRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg };
+  obj[8] = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.round, padding: 16 };
+  const obj3 = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.round, padding: 16 };
+  obj[9] = { position: "absolute", borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.round, padding: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, bottom: 8, right: 8 };
+  const obj4 = { position: "absolute", borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.round, padding: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, bottom: 8, right: 8 };
+  obj[10] = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.SPOILER_HIDDEN_BACKGROUND, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, paddingVertical: 6 };
+  const obj5 = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.SPOILER_HIDDEN_BACKGROUND, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, paddingVertical: 6 };
+  obj[11] = { overflow: "hidden", borderTopStartRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, borderBottomStartRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg };
+  const obj6 = { overflow: "hidden", borderTopStartRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, borderBottomStartRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg };
+  obj[12] = { overflow: "hidden", borderTopEndRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, borderBottomEndRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, gap: 4 };
+  const obj7 = { overflow: "hidden", borderTopEndRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, borderBottomEndRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, gap: 4 };
+  obj[13] = { overflow: "hidden", borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg };
   obj[14] = { position: "absolute", width: "100%", height: "100%", alignItems: "center", justifyContent: "center", zIndex: 2 };
   obj[15] = { position: "absolute", width: "100%", height: "100%", zIndex: 2 };
-  const obj8 = { overflow: "hidden", borderRadius: importDefault(712).radii.lg };
-  obj[16] = { backgroundColor: importDefault(712).colors.BACKGROUND_BASE_LOWER };
-  const obj9 = { backgroundColor: importDefault(712).colors.BACKGROUND_BASE_LOWER };
-  obj[17] = { backgroundColor: importDefault(712).colors.WHITE };
+  const obj8 = { overflow: "hidden", borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg };
+  obj[16] = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOWER };
+  const obj9 = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOWER };
+  obj[17] = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE };
   return obj;
 });
 let closure_20 = { code: "function ICYMIMediaMosaicTsx1(){const{withTiming,imageFinishedLoading}=this.__closure;return{opacity:withTiming(imageFinishedLoading?0:1,{duration:150})};}" };

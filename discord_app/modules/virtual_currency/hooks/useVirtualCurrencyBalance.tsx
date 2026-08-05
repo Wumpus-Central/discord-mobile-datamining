@@ -6,12 +6,12 @@ const result = require("set").fileFinishedImporting("modules/virtual_currency/ho
 
 export const useVirtualCurrencyBalance = function useVirtualCurrencyBalance() {
   const items = [redeemError];
-  return require(589) /* initialize */.useStateFromStores(items, () => balance.balance);
+  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => balance.balance);
 };
 export const useHasEnoughVirtualCurrency = function useHasEnoughVirtualCurrency(arg0) {
   const _require = arg0;
   const items = [redeemError];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
       let num = outer1_2.balance;

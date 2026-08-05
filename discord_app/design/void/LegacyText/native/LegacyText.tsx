@@ -12,7 +12,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   let style;
   ({ style, children } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  let obj = require(7810) /* useLegacyTextMigrationHighlight */;
+  let obj = require("useLegacyTextMigrationHighlight.tsx") /* useLegacyTextMigrationHighlight */;
   obj = { ref };
   const legacyTextMigrationHighlight = obj.useLegacyTextMigrationHighlight();
   const merged1 = Object.assign(merged);

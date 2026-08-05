@@ -14,8 +14,8 @@ export default (arg0) => {
     let resolved = Promise.resolve();
   } else {
     if (!tmp) {
-      const result = importDefault(1923).carefullyOpenDatabase(id.getId());
-      const obj2 = importDefault(1923);
+      const result = require("../../app_database/system/DatabaseManager.tsx").carefullyOpenDatabase(id.getId());
+      const obj2 = require("../../app_database/system/DatabaseManager.tsx");
     }
     resolved = new Promise((arg0) => {
       outer1_6.log("Executing BackgroundSync with ", callback);

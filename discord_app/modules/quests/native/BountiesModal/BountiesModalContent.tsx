@@ -295,11 +295,11 @@ function BountiesModalContentInner(bounty) {
 let c13 = 0.5625;
 let closure_14 = createCacheKey.createStyles(() => {
   let obj = { videoWrapper: { position: "absolute" }, closeButton: { position: "absolute" }, bottomContainer: null, bottomContainerFullWidth: null, bottomContainerNotFullWidth: null };
-  obj = { position: "absolute", bottom: importDefault(712).space.PX_24, justifyContent: "flex-end" };
+  obj = { position: "absolute", bottom: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24, justifyContent: "flex-end" };
   obj[2] = obj;
-  obj = { left: importDefault(712).space.PX_16, right: importDefault(712).space.PX_16 };
+  obj = { left: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, right: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
   obj[3] = obj;
-  obj[4] = { paddingLeft: importDefault(712).space.PX_16, paddingRight: importDefault(712).space.PX_16 };
+  obj[4] = { paddingLeft: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, paddingRight: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
   return obj;
 });
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalContent.tsx");

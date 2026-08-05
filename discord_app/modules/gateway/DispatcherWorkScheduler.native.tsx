@@ -58,7 +58,7 @@ export const createDispatcherWorkScheduler = function createDispatcherWorkSchedu
   const tmp3 = new DispatcherWorkScheduler("Trying to call a non-function", tmp, DispatcherWorkScheduler, new.target, undefined);
   // ThrowIfThisInitialized (0x7c)
   importDefault = tmp3;
-  const subscription = importDefault(709).subscribe("APP_STATE_UPDATE", (arg0) => {
+  const subscription = require("../../Dispatcher.tsx").subscribe("APP_STATE_UPDATE", (arg0) => {
     const result = obj._trackAppBackgrounded(tmp2 === tmp);
   });
   return tmp3;

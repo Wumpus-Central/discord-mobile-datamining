@@ -30,15 +30,15 @@ obj = {
   IconComponent: require("registerAsset"),
   backgroundColor: require("Themes").unsafe_rawColors.BRAND_500,
   getLabel() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.wPadMa);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.wPadMa);
   },
   onPress(code) {
     let _location;
     let channel;
     let message;
     ({ channel, message, location: _location } = code);
-    return require(8987) /* showInstantInviteActionSheet */.handleOpenShareSheet(code.code, channel, message, _location);
+    return require("../InstantInviteUtils.tsx") /* showInstantInviteActionSheet */.handleOpenShareSheet(code.code, channel, message, _location);
   }
 };
 const items = [obj, , , , , , , , , , ];
@@ -48,15 +48,15 @@ obj = {
   isAvailable: Promise.resolve(true),
   IconComponent: require("registerAsset"),
   getLabel() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.WqhZss);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.WqhZss);
   },
   onPress(arg0) {
     let _location;
     let channel;
     let code;
     ({ channel, code, location: _location } = arg0);
-    return require(8987) /* showInstantInviteActionSheet */.handleCopy(code, channel, _location);
+    return require("../InstantInviteUtils.tsx") /* showInstantInviteActionSheet */.handleCopy(code, channel, _location);
   }
 };
 items[1] = obj;
@@ -64,21 +64,21 @@ let obj1 = { type: obj.QR_CODE, icon: require("registerAsset"), isAvailable: nul
 obj1[2] = Promise.resolve(!isMetaQuest.isMetaQuest());
 obj1[3] = require("registerAsset");
 obj1[4] = function getLabel() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  return intl.string(require(1236) /* getSystemLocale */.t.rriLm1);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.rriLm1);
 };
 obj1[5] = function onPress(code) {
   let _location;
   let channel;
   code = code.code;
   ({ channel, location: _location } = code);
-  let obj = importDefault(4253);
+  let obj = require("../../../action_sheet/native/ActionSheetActionCreators.tsx");
   obj = { link: null, location: null, channel: null };
   const combined = "InstantInviteQRCodeActionSheet-" + code;
-  obj[0] = importDefault(7138)(code);
+  obj[0] = require("../../getInviteURL.tsx")(code);
   obj[1] = _location;
   obj[2] = channel;
-  obj.openLazy(require(1959) /* asyncRequireImpl */(9019, dependencyMap.paths), combined, obj, "stack");
+  obj.openLazy(require("../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(9019, dependencyMap.paths), combined, obj, "stack");
 };
 items[2] = obj1;
 let obj2 = { type: obj.MESSAGES, fullIcon: null, icon: null, isAvailable: null, getLabel: null, onPress: null };
@@ -94,8 +94,8 @@ if (set.isAndroid()) {
 obj2[2] = importDefaultResult1;
 obj2[3] = sendSMS.canSendSMS();
 obj2[4] = function getLabel() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  return intl.string(require(1236) /* getSystemLocale */.t.AQKfCj);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.AQKfCj);
 };
 obj2[5] = function onPress(channel) {
   let _location;
@@ -152,8 +152,8 @@ if (set.isAndroid()) {
 obj3[2] = importDefaultResult3;
 obj3[3] = sendSMS.canSendMail();
 obj3[4] = function getLabel() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  return intl.string(require(1236) /* getSystemLocale */.t.QaAypP);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.QaAypP);
 };
 obj3[5] = function onPress(channel) {
   let _location;
@@ -200,39 +200,39 @@ items[4] = obj3;
 let obj4 = { type: obj.FB_MESSENGER, fullIcon: require("registerAsset"), isAvailable: null, getLabel: null, onPress: null };
 obj4[2] = showInstantInviteActionSheet.isAppInstalled(SHARE_APPS_KEY.MESSENGER);
 obj4[3] = function getLabel() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  return intl.string(require(1236) /* getSystemLocale */.t.P0R3ZF);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.P0R3ZF);
 };
 obj4[4] = function onPress(code) {
   let _location;
   let channel;
   code = code.code;
   ({ channel, location: _location } = code);
-  const tmp = importDefault(7138)(code);
-  require(8987) /* showInstantInviteActionSheet */.trackOptionClicked(code, channel, constants.MESSENGER, _location);
+  const tmp = require("../../getInviteURL.tsx")(code);
+  require("../InstantInviteUtils.tsx") /* showInstantInviteActionSheet */.trackOptionClicked(code, channel, constants.MESSENGER, _location);
   Linking.openURL(SHARE_URLS[SHARE_APPS_KEY.MESSENGER](tmp));
 };
 items[5] = obj4;
 const obj5 = { type: obj.GMAIL, fullIcon: require("registerAsset"), isAvailable: null, getLabel: null, onPress: null };
 obj5[2] = showInstantInviteActionSheet.isAppInstalled(SHARE_APPS_KEY.GMAIL);
 obj5[3] = function getLabel() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  return intl.string(require(1236) /* getSystemLocale */.t["14o9ZT"]);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["14o9ZT"]);
 };
 obj5[4] = function onPress(code) {
   let _location;
   let channel;
   let message;
   ({ channel, message, location: _location } = code);
-  require(8987) /* showInstantInviteActionSheet */.trackOptionClicked(code.code, channel, constants.GMAIL, _location);
+  require("../InstantInviteUtils.tsx") /* showInstantInviteActionSheet */.trackOptionClicked(code.code, channel, constants.GMAIL, _location);
   Linking.openURL(SHARE_URLS[SHARE_APPS_KEY.GMAIL]("", message));
 };
 items[6] = obj5;
 const obj6 = { type: obj.TELEGRAM, fullIcon: require("registerAsset"), isAvailable: null, getLabel: null, onPress: null };
 obj6[2] = showInstantInviteActionSheet.isAppInstalled(SHARE_APPS_KEY.TELEGRAM);
 obj6[3] = function getLabel() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  return intl.string(require(1236) /* getSystemLocale */.t["148qIV"]);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["148qIV"]);
 };
 obj6[4] = function onPress(code) {
   let _location;
@@ -240,53 +240,53 @@ obj6[4] = function onPress(code) {
   let message;
   code = code.code;
   ({ channel, message, location: _location } = code);
-  const tmp = importDefault(7138)(code);
-  require(8987) /* showInstantInviteActionSheet */.trackOptionClicked(code, channel, constants.TELEGRAM, _location);
+  const tmp = require("../../getInviteURL.tsx")(code);
+  require("../InstantInviteUtils.tsx") /* showInstantInviteActionSheet */.trackOptionClicked(code, channel, constants.TELEGRAM, _location);
   Linking.openURL(SHARE_URLS[SHARE_APPS_KEY.TELEGRAM](message, tmp));
 };
 items[7] = obj6;
 const obj7 = { type: obj.TWITTER, fullIcon: require("registerAsset"), isAvailable: null, getLabel: null, onPress: null };
 obj7[2] = showInstantInviteActionSheet.isAppInstalled(SHARE_APPS_KEY.TWITTER);
 obj7[3] = function getLabel() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  return intl.string(require(1236) /* getSystemLocale */.t.oAiltV);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.oAiltV);
 };
 obj7[4] = function onPress(code) {
   let _location;
   let channel;
   let message;
   ({ channel, message, location: _location } = code);
-  require(8987) /* showInstantInviteActionSheet */.trackOptionClicked(code.code, channel, constants.TWITTER, _location);
+  require("../InstantInviteUtils.tsx") /* showInstantInviteActionSheet */.trackOptionClicked(code.code, channel, constants.TWITTER, _location);
   Linking.openURL(SHARE_URLS[SHARE_APPS_KEY.TWITTER](message));
 };
 items[8] = obj7;
 const obj8 = { type: obj.WHATSAPP, fullIcon: require("registerAsset"), isAvailable: null, getLabel: null, onPress: null };
 obj8[2] = showInstantInviteActionSheet.isAppInstalled(SHARE_APPS_KEY.WHATSAPP);
 obj8[3] = function getLabel() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  return intl.string(require(1236) /* getSystemLocale */.t.viazhS);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.viazhS);
 };
 obj8[4] = function onPress(code) {
   let _location;
   let channel;
   let message;
   ({ channel, message, location: _location } = code);
-  require(8987) /* showInstantInviteActionSheet */.trackOptionClicked(code.code, channel, constants.WHATSAPP, _location);
+  require("../InstantInviteUtils.tsx") /* showInstantInviteActionSheet */.trackOptionClicked(code.code, channel, constants.WHATSAPP, _location);
   Linking.openURL(SHARE_URLS[SHARE_APPS_KEY.WHATSAPP](message));
 };
 items[9] = obj8;
 const obj9 = { type: obj.LINE, fullIcon: require("registerAsset"), isAvailable: null, getLabel: null, onPress: null };
 obj9[2] = showInstantInviteActionSheet.isAppInstalled(SHARE_APPS_KEY.LINE);
 obj9[3] = function getLabel() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  return intl.string(require(1236) /* getSystemLocale */.t.kqgslH);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.kqgslH);
 };
 obj9[4] = function onPress(code) {
   let _location;
   let channel;
   let message;
   ({ channel, message, location: _location } = code);
-  require(8987) /* showInstantInviteActionSheet */.trackOptionClicked(code.code, channel, constants.LINE, _location);
+  require("../InstantInviteUtils.tsx") /* showInstantInviteActionSheet */.trackOptionClicked(code.code, channel, constants.LINE, _location);
   Linking.openURL(SHARE_URLS[SHARE_APPS_KEY.LINE](message));
 };
 items[10] = obj9;

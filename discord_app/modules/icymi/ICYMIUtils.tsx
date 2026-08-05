@@ -406,9 +406,9 @@ let result = require("createChannelRecord").fileFinishedImporting("modules/icymi
 export { generateHydrationId };
 export const ICYMICustomScore = obj;
 export const isGuildItem = function isGuildItem(type) {
-  let tmp3 = type.type === require(7224) /* MessageEmbedTypes */.ICYMIItemTypes.MESSAGE;
+  let tmp3 = type.type === require("ICYMITypes.tsx") /* MessageEmbedTypes */.ICYMIItemTypes.MESSAGE;
   if (!tmp3) {
-    tmp3 = type.type === require(7224) /* MessageEmbedTypes */.ICYMIItemTypes.GUILD_EVENT;
+    tmp3 = type.type === require("ICYMITypes.tsx") /* MessageEmbedTypes */.ICYMIItemTypes.GUILD_EVENT;
   }
   return tmp3;
 };
@@ -457,7 +457,7 @@ export const hydrateNextPage = function hydrateNextPage() {
 export const createGravityMessageFromServer = function createGravityMessageFromServer(message, arg1) {
   const obj = {};
   const merged = Object.assign(arg1);
-  obj.message = require(4504) /* createMinimalMessageRecord */.createMessageRecord(message.message);
+  obj.message = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */.createMessageRecord(message.message);
   let fromServerResult;
   if (null != message.thread_channel) {
     fromServerResult = ThreadChannelRecord.fromServer(message.thread_channel, message.guild_id);
@@ -469,10 +469,10 @@ export const isItemUnreadInChannel = function isItemUnreadInChannel(channel_id, 
   trackedAckMessageId = trackedAckMessageId.getTrackedAckMessageId(channel_id);
   let tmp2 = null == trackedAckMessageId;
   if (!tmp2) {
-    const obj = importDefault(11);
-    const extractTimestampResult = importDefault(11).extractTimestamp(message_id);
-    tmp2 = extractTimestampResult > importDefault(11).extractTimestamp(trackedAckMessageId);
-    const obj2 = importDefault(11);
+    const obj = require("../../utils/SnowflakeUtils.tsx");
+    const extractTimestampResult = require("../../utils/SnowflakeUtils.tsx").extractTimestamp(message_id);
+    tmp2 = extractTimestampResult > require("../../utils/SnowflakeUtils.tsx").extractTimestamp(trackedAckMessageId);
+    const obj2 = require("../../utils/SnowflakeUtils.tsx");
   }
   return tmp2;
 };
@@ -480,7 +480,7 @@ export const useGravityMessage = function useGravityMessage(message) {
   const _require = message;
   const items = [closure_8, filterStaffGuild];
   const items1 = [message];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     message = outer1_8.getMessage(message.getChannelId(), message.id);
     if (message == null) {
       const hydratedItem = outer1_10.getHydratedItem(tmp.id);
@@ -500,14 +500,14 @@ export const useGravityMessageItem = function useGravityMessageItem(id) {
   const _require = id;
   const items = [filterStaffGuild];
   const items1 = [id.id];
-  return _require(589).useStateFromStores(items, () => outer1_10.getHydratedItem(id.id), items1);
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_10.getHydratedItem(id.id), items1);
 };
 export const useICYMIMessage = function useICYMIMessage(id, before_message_id) {
   const _require = id;
   let closure_1 = before_message_id;
   const items = [closure_8, filterStaffGuild];
   const items1 = [id, before_message_id];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != closure_1) {
       let message = outer1_8.getMessage(closure_0, tmp);
@@ -525,11 +525,11 @@ export const useICYMIMessage = function useICYMIMessage(id, before_message_id) {
   }, items1);
 };
 export const icymiEnabled = function icymiEnabled(customScores) {
-  return require(8836) /* apexExperiment */.getICYMIEnabled(customScores);
+  return require("ICYMIExperiment.tsx") /* apexExperiment */.getICYMIEnabled(customScores);
 };
 export const customStatusToContentInventoryEntry = function customStatusToContentInventoryEntry(data) {
-  let obj = { id: data.id, type: require(7224) /* MessageEmbedTypes */.ICYMIItemTypes.CUSTOM_STATUS, activity: null, score: null, score_components: null };
-  obj = { id: data.id, author_id: data.data.user_id, author_type: require(8840) /* ContentInventoryAuthorType */.ContentInventoryAuthorType.USER, traits: [], participants: [], content_type: require(8044) /* ContentInventoryEntryType */.ContentInventoryEntryType.CUSTOM_STATUS, extra: null };
+  let obj = { id: data.id, type: require("ICYMITypes.tsx") /* MessageEmbedTypes */.ICYMIItemTypes.CUSTOM_STATUS, activity: null, score: null, score_components: null };
+  obj = { id: data.id, author_id: data.data.user_id, author_type: require("../../../discord_common/js/shared/shared-constants/ContentInventoryAuthorType.tsx") /* ContentInventoryAuthorType */.ContentInventoryAuthorType.USER, traits: [], participants: [], content_type: require("../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx") /* ContentInventoryEntryType */.ContentInventoryEntryType.CUSTOM_STATUS, extra: null };
   let str = data.data.text;
   if (str == null) {
     str = "";
@@ -680,7 +680,7 @@ export const itemToType = function itemToType(item) {
       return "guild_event";
     } else if ("contentInventory" === kind) {
       let str8 = "hotwheels_gaming_activity";
-      if (item.data.content.content_type === require(8044) /* ContentInventoryEntryType */.ContentInventoryEntryType.CUSTOM_STATUS) {
+      if (item.data.content.content_type === require("../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx") /* ContentInventoryEntryType */.ContentInventoryEntryType.CUSTOM_STATUS) {
         str8 = "hotwheels_custom_status";
       }
       return str8;
@@ -697,9 +697,9 @@ export const itemToType = function itemToType(item) {
 };
 export const determineContentType = function determineContentType(channel, message) {
   if (channel.type === constants.GUILD_ANNOUNCEMENT) {
-    return require(7224) /* MessageEmbedTypes */.ContentType.ANNOUNCEMENT;
+    return require("ICYMITypes.tsx") /* MessageEmbedTypes */.ContentType.ANNOUNCEMENT;
   } else if (channel.type === tmp.GUILD_FORUM) {
-    return require(7224) /* MessageEmbedTypes */.ContentType.FORUM_POST;
+    return require("ICYMITypes.tsx") /* MessageEmbedTypes */.ContentType.FORUM_POST;
   } else {
     if (null != message.reactions) {
       const reactions = message.reactions;
@@ -720,7 +720,7 @@ export const determineContentType = function determineContentType(channel, messa
       });
       if (0 !== mapped.length) {
         if (mapped.reduce((arg0, arg1) => arg0 + arg1) > 10) {
-          return require(7224) /* MessageEmbedTypes */.ContentType.POPULAR_MESSAGE;
+          return require("ICYMITypes.tsx") /* MessageEmbedTypes */.ContentType.POPULAR_MESSAGE;
         }
       }
     }
@@ -735,12 +735,12 @@ export const determineContentType = function determineContentType(channel, messa
         IMAGE = result ? ContentType2.VIDEO : ContentType2.FILE;
         const tmp6Result = tmp6(8216);
       }
-      obj = require(8216) /* isMediaAttachment */;
+      obj = require("../forums/ForumPostMediaUtils.tsx") /* isMediaAttachment */;
     } else {
       if (message.embeds.length > 0) {
-        let INTERESTING = require(7224) /* MessageEmbedTypes */.ContentType.LINK;
+        let INTERESTING = require("ICYMITypes.tsx") /* MessageEmbedTypes */.ContentType.LINK;
       } else {
-        INTERESTING = require(7224) /* MessageEmbedTypes */.ContentType.INTERESTING;
+        INTERESTING = require("ICYMITypes.tsx") /* MessageEmbedTypes */.ContentType.INTERESTING;
       }
       return INTERESTING;
     }
@@ -751,7 +751,7 @@ export const contentTypeToText = function contentTypeToText(arg0) {
   if (arg1 === undefined) {
     flag = false;
   }
-  if (require(7224) /* MessageEmbedTypes */.ContentType.POPULAR_MESSAGE === arg0) {
+  if (require("ICYMITypes.tsx") /* MessageEmbedTypes */.ContentType.POPULAR_MESSAGE === arg0) {
     const intl10 = tmp(1236).intl;
     return intl10.string(tmp(1236).t["H/2+cl"]);
   } else if (tmp(7224).ContentType.IMAGE === arg0) {

@@ -43,9 +43,9 @@ class BaseChannelSubtitle {
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
 let closure_9 = createCacheKey.createStyles((arg0) => {
   let obj = { rowPaddingNoIcon: { paddingHorizontal: 6 }, rowSelected: null, unreadIndicator: null, channelIcon: null, redesignedChannelIcon: null, channelIconNormal: null, channelIconUnread: null, channelIconMuted: null, channel: null, channelNameContainer: null, channelName: null };
-  obj = { borderRadius: importDefault(712).modules.mobile.CHANNEL_ITEM_RADIUS, backgroundColor: importDefault(712).colors.MOBILE_CHANNEL_ITEM_BACKGROUND_SELECTED };
+  obj = { borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHANNEL_ITEM_RADIUS, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_CHANNEL_ITEM_BACKGROUND_SELECTED };
   obj[1] = obj;
-  obj = { left: -importDefault(712).space.PX_8 };
+  obj = { left: -require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
   obj[2] = obj;
   let num = 1;
   let num2 = 1;
@@ -58,11 +58,11 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
     num3 = 0.5;
   }
   obj[4] = { marginRight: 8, opacity: num3 };
-  obj[5] = { tintColor: importDefault(712).colors.CHANNEL_ICON };
-  const obj1 = { tintColor: importDefault(712).colors.CHANNEL_ICON };
-  obj[6] = { tintColor: importDefault(712).colors.INTERACTIVE_TEXT_ACTIVE };
-  const obj2 = { tintColor: importDefault(712).colors.INTERACTIVE_TEXT_ACTIVE };
-  obj[7] = { tintColor: importDefault(712).colors.ICON_MUTED };
+  obj[5] = { tintColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.CHANNEL_ICON };
+  const obj1 = { tintColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.CHANNEL_ICON };
+  obj[6] = { tintColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_TEXT_ACTIVE };
+  const obj2 = { tintColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_TEXT_ACTIVE };
+  obj[7] = { tintColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.ICON_MUTED };
   obj[8] = { paddingHorizontal: 8, paddingVertical: 8, flexDirection: "row", alignItems: "center", position: "relative" };
   obj[9] = { flex: 1, flexDirection: "column", alignItems: "stretch", justifyContent: "center" };
   const obj4 = { flexGrow: 1, textAlign: "left", lineHeight: CHANNEL_TITLE_LINE_HEIGHT, opacity: null };
@@ -185,10 +185,10 @@ export const BaseChannelIcon = function BaseChannelIcon(arg0) {
     } else {
       obj = { disableColor: null, size: null, style: null, source: null };
       obj[0] = disableColor;
-      obj[1] = require(1297) /* Button */.Icon.Sizes.CUSTOM;
+      obj[1] = require("../../../design/void/native.tsx") /* Button */.Icon.Sizes.CUSTOM;
       obj[2] = items;
       obj[3] = source;
-      tmp12Result = callback(require(1297) /* Button */.Icon, obj);
+      tmp12Result = callback(require("../../../design/void/native.tsx") /* Button */.Icon, obj);
     }
     return tmp12Result;
   } else {

@@ -18,7 +18,7 @@ export default function UserProfileTextButtonGroup(arg0) {
   let style;
   ({ primaryButton, secondaryButton, maxWidth, style } = arg0);
   let items = callback3();
-  const width = importDefault(1474)().width;
+  const width = require("../../screen/useWindowDimensions.native.tsx")().width;
   let bound = width;
   if (null != maxWidth) {
     const _Math = Math;

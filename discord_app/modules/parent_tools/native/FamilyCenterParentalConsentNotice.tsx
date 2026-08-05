@@ -14,9 +14,9 @@ const result = require("createCacheKey").fileFinishedImporting("modules/parent_t
 export default function FamilyCenterParentalConsentNotice() {
   const tmp = createCacheKey();
   const require = tmp;
-  let obj = require(14015) /* useIsParentalConsentBannerActive */;
+  let obj = require("../useIsParentalConsentBannerActive.tsx") /* useIsParentalConsentBannerActive */;
   const isParentalConsentBannerActive = obj.useIsParentalConsentBannerActive();
-  let obj1 = require(14016) /* useParentalConsentWarning */;
+  let obj1 = require("../useParentalConsentWarning.tsx") /* useParentalConsentWarning */;
   const parentalConsentWarning = obj1.useParentalConsentWarning();
   let daysRemaining;
   if (parentalConsentWarning != null) {
@@ -49,7 +49,7 @@ export default function FamilyCenterParentalConsentNotice() {
           formatResult = intl.format(tmp9(2285)["5jm+T3"], obj1);
         }
         obj[1] = formatResult;
-        return jsx(importDefault(14024), { style: null, text: null });
+        return jsx(require("FamilyCenterInlineWarningNotice.tsx"), { style: null, text: null });
       }
     }
   }

@@ -20,7 +20,7 @@ export default function SuspiciousDownloadActionSheet(href) {
   const tmp = createCacheKey();
   let obj = { startExpanded: true, children: null };
   obj = { spacing: 16, justify: "center", align: "center", style: items, children: null };
-  items = [tmp.container, { paddingBottom: importDefault(1581)().bottom }];
+  items = [tmp.container, { paddingBottom: require("../../safe_area/useSafeAreaInsets.native.tsx")().bottom }];
   obj = { spacing: 8, justify: "center", align: "center", children: null };
   const items1 = [callback(href(5936).TrafficConeSpotIllustration, {}), , ];
   const obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };

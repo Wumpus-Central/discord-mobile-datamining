@@ -7,7 +7,7 @@ import importAllResult from "noop";
 
 const require = arg1;
 let closure_6 = createCacheKey.createStyles((width) => {
-  width = require(4699) /* MINIMUM_HIT_AREA */.SMALL_BUTTON_HEIGHT + require(4699) /* MINIMUM_HIT_AREA */.SMALL_BUTTON_PADDING + 2;
+  width = require("../../../design/components/Button/native/ButtonConstants.native.tsx") /* MINIMUM_HIT_AREA */.SMALL_BUTTON_HEIGHT + require("../../../design/components/Button/native/ButtonConstants.native.tsx") /* MINIMUM_HIT_AREA */.SMALL_BUTTON_PADDING + 2;
   const containerRefresh = { position: "absolute", top: 0, left: 0, width, height: width, overflow: "visible", marginLeft: 0, zIndex: 0 };
   return { container: { position: "absolute", top: 0, left: 0, width, height: width, overflow: "visible", marginLeft: 4, zIndex: 0 }, containerRefresh, trinkets: { zIndex: 4, position: "absolute", pointerEvents: "none", width: "100%", height: "100%", top: 0, left: 0 }, trinketsRefresh: { zIndex: 4, position: "absolute", pointerEvents: "none", width: "175%", height: "175%", top: "-37.5%", left: "-37.5%" } };
 });
@@ -15,15 +15,15 @@ const memoResult = require("noop").memo((trinketsAnimationUrl) => {
   trinketsAnimationUrl = trinketsAnimationUrl.trinketsAnimationUrl;
   let APNGPlayer = require;
   let obj = dependencyMap;
-  let obj1 = require(1348) /* useIsMobileVisualRefreshExperimentEnabled */;
+  let obj1 = require("../../themes/experiments/MobileVisualRefreshExperiment.tsx") /* useIsMobileVisualRefreshExperimentEnabled */;
   const enabled = obj1.useMobileVisualRefreshConfig({ location: "GiftIconTrinketsAnimation" }).enabled;
-  const tmp2 = callback(require(3989) /* map */.useToken(importDefault(712).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE));
-  const obj3 = require(3989) /* map */;
+  const tmp2 = callback(require("../../../design/tokens/native/useToken.tsx") /* map */.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE));
+  const obj3 = require("../../../design/tokens/native/useToken.tsx") /* map */;
   const tmp = importDefault;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
-  const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const tmp4 = enabled ? tmp2.trinketsRefresh : tmp2.trinkets;
-  const obj4 = require(589) /* initialize */;
+  const obj4 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   if (APNGPlayerResult.isNullOrEmpty(trinketsAnimationUrl)) {
     return null;
   } else {

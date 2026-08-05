@@ -28,10 +28,10 @@ export default function FamilyCenterActivityGiftRow(arg0) {
   ({ skuId, subscriptionPlanId } = arg0);
   ({ price, gifterUserId, claimed, offeredAt, claimedAt } = arg0);
   const tmp = createCacheKey();
-  let product = importDefault(8088)(skuId).product;
-  let obj = require(14043) /* useSelectedTeenUser */;
+  let product = require("../../collectibles/hooks/useCollectiblesData.tsx")(skuId).product;
+  let obj = require("../hooks/useSelectedTeenUser.tsx") /* useSelectedTeenUser */;
   const teenUserForId = obj.useTeenUserForId(gifterUserId);
-  let obj1 = require(14052) /* getCollectibleTypeName */;
+  let obj1 = require("../FamilyCenterActivityPurchaseRowUtils.tsx") /* getCollectibleTypeName */;
   let tmp7 = product;
   if (product == null) {
     tmp7 = null;

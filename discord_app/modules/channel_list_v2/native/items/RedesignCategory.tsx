@@ -139,7 +139,7 @@ function renderCategoryItem(arg0) {
     obj7[1] = trailingAction.perform;
     obj7[2] = closure_15;
     obj7[3] = closure_16;
-    let colors = importDefault(712).colors;
+    let colors = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors;
     const obj8 = { size: "xxs", color: null };
     obj8[1] = muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE;
     colors = tmp6(trailingAction(12020).PlusMediumIcon, obj8);
@@ -171,10 +171,10 @@ const styles = createCacheKey.createStyles(() => {
   const merged1 = Object.assign(flag ? { marginLeft: 4 } : { marginRight: 3 });
   obj[3] = {};
   const obj1 = {};
-  obj4 = require(500) /* set */;
+  obj4 = require("../../../../utils/PlatformUtils.tsx") /* set */;
   const tmp = flag ? { flexShrink: 1 } : { flex: 1 };
   const tmp4 = flag ? { marginLeft: 4 } : { marginRight: 3 };
-  obj[4] = { paddingLeft: importDefault(712).space.PX_8, marginLeft: "auto" };
+  obj[4] = { paddingLeft: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, marginLeft: "auto" };
   return obj;
 });
 let closure_15 = { top: 16, bottom: 16, left: 16, right: 16 };

@@ -9,7 +9,7 @@ const result = require("initialize").fileFinishedImporting("modules/rtc/hooks/us
 export const useIsStreamRTCConnectionEmpty = function useIsStreamRTCConnectionEmpty(stateFromStores4) {
   const _require = stateFromStores4;
   const items = [initialize, fetchFingerprint];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null == closure_0) {
       return true;
     } else {
@@ -29,7 +29,7 @@ export const useIsStreamRTCConnectionEmpty = function useIsStreamRTCConnectionEm
 };
 export const useIsCallRTCConnectionEmpty = function useIsCallRTCConnectionEmpty() {
   const items = [createRTCConnection, fetchFingerprint];
-  return require(589) /* initialize */.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
     userIds = userIds.getUserIds();
     let tmp = null == userIds;
     if (!tmp) {

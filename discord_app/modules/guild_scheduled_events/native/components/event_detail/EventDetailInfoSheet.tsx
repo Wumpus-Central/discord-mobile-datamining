@@ -111,7 +111,7 @@ export default function EventDetailInfoSheet(guildEvent) {
   const items9 = [callback(guildEvent(9058).BellIcon, { size: "sm", style: tmp.interestedIcon }), ];
   const obj6 = { variant: "text-sm/medium", color: "text-default", children: null };
   const intl = guildEvent(1236).intl;
-  obj6[2] = intl.format(guildEvent(1236).t["+DLsD8"], { count: importDefault(8874)(guildEvent.guild_id, guildEvent.id, recurrenceId) });
+  obj6[2] = intl.format(guildEvent(1236).t["+DLsD8"], { count: require("../../../useGuildScheduledEventUserCount.tsx")(guildEvent.guild_id, guildEvent.id, recurrenceId) });
   items9[1] = callback(guildEvent(4281).Text, obj6);
   obj4[1] = items9;
   items8[4] = callback2(creator, obj4);
@@ -232,5 +232,5 @@ export default function EventDetailInfoSheet(guildEvent) {
   return callback2(creator, obj);
 };
 export const closeGuildEventInfoActionSheet = function closeGuildEventInfoActionSheet() {
-  importDefault(4253).hideActionSheet(closure_11);
+  require("../../../../action_sheet/native/ActionSheetActionCreators.tsx").hideActionSheet(closure_11);
 };

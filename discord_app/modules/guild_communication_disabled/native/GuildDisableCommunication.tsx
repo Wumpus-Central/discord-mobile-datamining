@@ -24,8 +24,8 @@ let c5 = importAllResult;
 let obj = {
   value: DisableCommunicationDuration.DURATION_60_SEC,
   getLabel() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.iruf5E, { minutes: 1 });
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.iruf5E, { minutes: 1 });
   }
 };
 let items = [
@@ -33,36 +33,36 @@ let items = [
   {
     value: DisableCommunicationDuration.DURATION_5_MIN,
     getLabel() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.iruf5E, { minutes: 5 });
+      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.iruf5E, { minutes: 5 });
     }
   },
   {
     value: DisableCommunicationDuration.DURATION_10_MIN,
     getLabel() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.iruf5E, { minutes: 10 });
+      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.iruf5E, { minutes: 10 });
     }
   },
   {
     value: DisableCommunicationDuration.DURATION_1_HOUR,
     getLabel() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.LnvrA3, { hours: 1 });
+      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.LnvrA3, { hours: 1 });
     }
   },
   {
     value: DisableCommunicationDuration.DURATION_1_DAY,
     getLabel() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.jzH70Z, { days: 1 });
+      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.jzH70Z, { days: 1 });
     }
   },
   {
     value: DisableCommunicationDuration.DURATION_1_WEEK,
     getLabel() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.iVZYyl, { weeks: 1 });
+      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.iVZYyl, { weeks: 1 });
     }
   }
 ];
@@ -167,28 +167,28 @@ const memoResult = importAllResult.memo(function GuildDisableCommunication(arg0)
   importAllResult = importAllResult.useRef("");
   const ref = importAllResult.useRef(null);
   const ref1 = importAllResult.useRef(null);
-  const insets = importDefault(5310)({ includeKeyboardHeight: true }).insets;
+  const insets = require("../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx")({ includeKeyboardHeight: true }).insets;
   const items = [{ ref: ref1, offset: { type: "toBottom" } }];
-  importDefault(9380)({ insets, inputs: items, scrollViewRef: ref });
-  importDefault(4711)(() => {
+  require("../../safe_area/useSafeAreaAvoidingInputs.native.tsx")({ insets, inputs: items, scrollViewRef: ref });
+  require("../../../hooks/useMountEffect.tsx")(() => {
     let obj = outer1_1(outer1_2[13]);
     obj = { type: outer1_9, guild_id: closure_1, other_user_id: lib.id };
     obj.track(outer1_10.OPEN_MODAL, obj);
   });
   let obj = { style: tmp.container, ref, contentContainerStyle: null, children: null };
-  obj = { paddingHorizontal: importDefault(712).space.PX_12, paddingBottom: insets.bottom };
+  obj = { paddingHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, paddingBottom: insets.bottom };
   obj[2] = obj;
   obj = { children: null };
   let obj1 = { style: null, variant: "heading-md/semibold", children: null };
   let obj2 = { marginVertical: null };
-  obj2[0] = importDefault(712).space.PX_16;
+  obj2[0] = require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16;
   obj1[0] = obj2;
-  let intl = require(1236) /* getSystemLocale */.intl;
-  obj1[2] = intl.format(require(1236) /* getSystemLocale */.t.Ns83GT, { helpdeskArticle: closure_8 });
-  const items1 = [callback2(require(4281) /* Text */.Text, obj1), , , ];
+  let intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj1[2] = intl.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Ns83GT, { helpdeskArticle: closure_8 });
+  const items1 = [callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1), , , ];
   const obj4 = { title: null, defaultValue: 0, onChange: null, hasIcons: false, children: null };
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj4[0] = intl2.string(require(1236) /* getSystemLocale */.t["9XsExm"]);
+  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj4[0] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["9XsExm"]);
   obj4[2] = function onChange(arg0) {
     _undefined2(arg0);
   };
@@ -197,20 +197,20 @@ const memoResult = importAllResult.memo(function GuildDisableCommunication(arg0)
     obj[1] = getLabel.getLabel();
     return callback(lib(table[20]).TableRadioRow, obj, value);
   });
-  items1[1] = callback2(require(7795) /* context */.TableRadioGroup, obj4);
+  items1[1] = callback2(require("../../../design/components/TableRow/native/TableRadioGroup.native.tsx") /* context */.TableRadioGroup, obj4);
   const obj5 = { ref: ref1, containerStyle: tmp.reasonTextArea, placeholder: null, label: null, maxLength: 512, onChange: null };
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj5[2] = intl3.string(require(1236) /* getSystemLocale */.t.GakiH1);
-  const intl4 = require(1236) /* getSystemLocale */.intl;
-  obj5[3] = intl4.string(require(1236) /* getSystemLocale */.t.ewHW15);
+  const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj5[2] = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.GakiH1);
+  const intl4 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj5[3] = intl4.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ewHW15);
   obj5[5] = function onChange(current) {
     closure_5.current = current;
   };
-  items1[2] = callback2(require(7786) /* TextArea */.TextArea, obj5);
+  items1[2] = callback2(require("../../../design/components/TextInput/native/TextArea.native.tsx") /* TextArea */.TextArea, obj5);
   const obj6 = { style: tmp.buttonContainer, children: null };
   const obj7 = { variant: "primary", text: null, onPress: null };
-  const intl5 = require(1236) /* getSystemLocale */.intl;
-  obj7[1] = intl5.string(require(1236) /* getSystemLocale */.t.MlPTIi);
+  const intl5 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj7[1] = intl5.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.MlPTIi);
   obj7[2] = function handleSubmitButtonPressed() {
     const self = this;
     const apply = _handleSubmitButtonPressed.apply;
@@ -221,7 +221,7 @@ const memoResult = importAllResult.memo(function GuildDisableCommunication(arg0)
     }
     return applyArgumentsResult;
   };
-  obj6[1] = callback2(require(4695) /* Button */.Button, obj7);
+  obj6[1] = callback2(require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj7);
   items1[3] = callback2(_handleSubmitButtonPressed, obj6);
   obj[0] = items1;
   obj[3] = callback3(closure_12, obj);

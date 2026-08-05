@@ -17,7 +17,7 @@ export default function UserProfileGameFriendsCard(arg0) {
   ({ applicationIds, style } = arg0);
   const tmp = callback();
   const tmp2 = importDefault;
-  found = importDefault(5616)(applicationIds).filter((arg0) => null != arg0);
+  found = require("../../applications/useGetOrFetchApplications.tsx")(applicationIds).filter((arg0) => null != arg0);
   if (0 === found.length) {
     return null;
   } else {
@@ -65,5 +65,5 @@ export default function UserProfileGameFriendsCard(arg0) {
     obj1[2] = jsx(tmp6(4281).Text, { variant: "text-md/normal", color: "text-default", children: null });
     return jsx(tmp2(5657), { style: null, title: null, children: null });
   }
-  const arr = importDefault(5616)(applicationIds);
+  const arr = require("../../applications/useGetOrFetchApplications.tsx")(applicationIds);
 };

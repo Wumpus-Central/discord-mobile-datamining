@@ -5,7 +5,7 @@ const require = arg1;
 const result = require("context").fileFinishedImporting("design/components/Navigator/native/useNavigatorShouldCrossfade.native.tsx");
 
 export const useNavigatorShouldCrossfade = function useNavigatorShouldCrossfade() {
-  const context = React.useContext(require(4004) /* context */.AccessibilityPreferencesContext);
+  const context = React.useContext(require("../../../../../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx") /* context */.AccessibilityPreferencesContext);
   let enabled = context.prefersCrossfades;
   if (obj.isAndroid()) {
     enabled = context.reducedMotion.enabled;

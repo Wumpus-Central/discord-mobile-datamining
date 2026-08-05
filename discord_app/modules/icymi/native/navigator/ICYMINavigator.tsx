@@ -9,7 +9,7 @@ createNativeStackNavigator = createNativeStackNavigator.createNativeStackNavigat
 const result = require("NavigationStack").fileFinishedImporting("modules/icymi/native/navigator/ICYMINavigator.tsx");
 
 export default function ICYMINavigator() {
-  let obj = _require(5665);
+  let obj = _require("../../../../design/components/Navigator/native/Navigator.native.tsx");
   _require = obj.useAccessibilityNativeStackOptions();
   obj = {
     screenOptions() {

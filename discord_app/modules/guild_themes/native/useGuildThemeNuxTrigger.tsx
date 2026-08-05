@@ -7,7 +7,7 @@ const result = require("initialize").fileFinishedImporting("modules/guild_themes
 
 export default function useGuildThemeNuxTrigger(arg0) {
   const items = [setContent];
-  const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => {
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
     key = key.getKey();
     return key === callback(paths[3]).GUILD_THEME_NUX_ACTION_SHEET_KEY;
   });
@@ -16,5 +16,5 @@ export default function useGuildThemeNuxTrigger(arg0) {
     callback2(paths[6]).openLazy(tmp, callback(paths[3]).GUILD_THEME_NUX_ACTION_SHEET_KEY, arg0, "stack");
     return tmp;
   }, []);
-  importDefault(15172)(arg0, { isNuxOpen: stateFromStores, openNux: callback });
+  require("../useGuildThemeNuxTrigger.tsx")(arg0, { isNuxOpen: stateFromStores, openNux: callback });
 };

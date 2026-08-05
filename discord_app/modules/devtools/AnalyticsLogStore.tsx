@@ -50,8 +50,8 @@ const analyticsLogStore = new AnalyticsLogStore(require("dispatcher"), {
       obj[1] = tmp;
       obj[2] = tmp2;
       if (null != fingerprint) {
-        let extractIdResult = require(513) /* extractId */.extractId(fingerprint);
-        const obj2 = require(513) /* extractId */;
+        let extractIdResult = require("../../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx") /* extractId */.extractId(fingerprint);
+        const obj2 = require("../../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx") /* extractId */;
       } else {
         extractIdResult = id.getId();
       }
@@ -83,7 +83,7 @@ const analyticsLogStore = new AnalyticsLogStore(require("dispatcher"), {
       const items = [];
       const obj = { key: null, experimentId: null, descriptor: null, exposureType: null, excluded: null, location: null, previouslyTracked: null, timestamp: null };
       const arraySpreadResult = HermesBuiltin.arraySpread(items, 0);
-      obj[0] = require(514) /* v1 */.v4();
+      obj[0] = require("../../../_runtime/00514_v1.js") /* v1 */.v4();
       obj[1] = experimentId;
       obj[2] = descriptor;
       obj[3] = exposureType;
@@ -95,7 +95,7 @@ const analyticsLogStore = new AnalyticsLogStore(require("dispatcher"), {
       obj[7] = date;
       items[arraySpreadResult] = obj;
       isDeveloper = items.length > 500;
-      const obj2 = require(514) /* v1 */;
+      const obj2 = require("../../../_runtime/00514_v1.js") /* v1 */;
     }
     if (isDeveloper) {
       items.shift();

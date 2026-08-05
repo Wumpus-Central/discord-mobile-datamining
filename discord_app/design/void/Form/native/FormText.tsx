@@ -6,7 +6,7 @@ import importAllResult from "noop";
 const require = arg1;
 let closure_3 = createCacheKey.createStyles((arg0) => {
   let obj = { primary: null, text: null };
-  obj = { color: require(5125) /* result */.DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+  obj = { color: require("../../../migrations/native/LegacyTokens.tsx") /* result */.DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
   obj[0] = obj;
   let num = 16;
   if ("small" === arg0) {
@@ -50,7 +50,7 @@ const forwardRefResult = importAllResult.forwardRef((size, ref) => {
   items[2] = size.style;
   obj[1] = items;
   obj[2] = size.children;
-  return jsx(require(1297) /* Button */.LegacyText, { ref, style: null, children: null });
+  return jsx(require("../../native.tsx") /* Button */.LegacyText, { ref, style: null, children: null });
 });
 const result = require("createCacheKey").fileFinishedImporting("design/void/Form/native/FormText.tsx");
 

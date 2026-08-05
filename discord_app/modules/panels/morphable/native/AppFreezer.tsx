@@ -1,6 +1,6 @@
 // discord_app/modules/panels/morphable/native/AppFreezer.tsx
 import "noop";
-import module_8784 from "module_8784";
+import AppFreezeStore from "../AppFreezeStore.tsx";
 import { jsx } from "jsxProd";
 import set from "set";
 

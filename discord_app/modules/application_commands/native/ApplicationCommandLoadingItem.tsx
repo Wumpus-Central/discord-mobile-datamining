@@ -15,17 +15,17 @@ let closure_8 = createCacheKey.createStyles((arg0) => {
   obj = { flexDirection: "row", paddingVertical: 4, paddingHorizontal: 16, alignItems: "center", height: Math.max(arg0 * AUTOCOMPLETE_ROW_HEIGHT, AUTOCOMPLETE_ROW_HEIGHT) };
   obj[0] = obj;
   obj[1] = { flexDirection: "column", width: "75%", height: "100%", justifyContent: "space-between" };
-  obj = { backgroundColor: importDefault(712).colors.BACKGROUND_MOD_STRONG, height: c7, borderRadius: c7, width: "20%" };
+  obj = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_STRONG, height: c7, borderRadius: c7, width: "20%" };
   obj[2] = obj;
-  obj[3] = { backgroundColor: importDefault(712).colors.BACKGROUND_BASE_LOW, height: c7, borderRadius: c7, width: "80%" };
-  const obj1 = { backgroundColor: importDefault(712).colors.BACKGROUND_BASE_LOW, height: c7, borderRadius: c7, width: "80%" };
-  obj[4] = { backgroundColor: importDefault(712).colors.BACKGROUND_MOD_STRONG, paddingLeft: 16, width: "25%", marginLeft: "auto", height: c7, borderRadius: c7 };
+  obj[3] = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW, height: c7, borderRadius: c7, width: "80%" };
+  const obj1 = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW, height: c7, borderRadius: c7, width: "80%" };
+  obj[4] = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_STRONG, paddingLeft: 16, width: "25%", marginLeft: "auto", height: c7, borderRadius: c7 };
   return obj;
 });
 const result = require("AUTOCOMPLETE_ROW_HEIGHT").fileFinishedImporting("modules/application_commands/native/ApplicationCommandLoadingItem.tsx");
 
 export default function ApplicationCommandLoadingItem() {
-  let obj = require(4701) /* getFontScale */;
+  let obj = require("../../screen/native/useFontScale.tsx") /* getFontScale */;
   const tmp = callback3(obj.useFontScale());
   obj = { style: tmp.applicationCommandLoadingItem, children: null };
   obj = { style: tmp.applicationCommandLoadingLeftWrapper, children: null };

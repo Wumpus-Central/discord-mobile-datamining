@@ -40,7 +40,7 @@ let c4 = new require("_fetchWebAuthnConditionalChallenge")("WebAuthnUtils");
 let obj = {};
 Object.defineProperty(obj, "hasAndroidPasskeySupport", {
   get: () => {
-    let isAndroidResult = require(500) /* set */.isAndroid();
+    let isAndroidResult = require("../../../utils/PlatformUtils.tsx") /* set */.isAndroid();
     if (isAndroidResult) {
       const DCDSecurityKeyManager = NativeModules.DCDSecurityKeyManager;
       let registerPasskey;
@@ -55,10 +55,10 @@ Object.defineProperty(obj, "hasAndroidPasskeySupport", {
 });
 Object.defineProperty(obj, "shouldDisplayAndroidFidoSelector", {
   get: () => {
-    let isAndroidResult = require(500) /* set */.isAndroid();
+    let isAndroidResult = require("../../../utils/PlatformUtils.tsx") /* set */.isAndroid();
     if (isAndroidResult) {
-      isAndroidResult = !require(1577) /* isMetaQuest */.isMetaQuest();
-      const tmpResult = require(1577) /* isMetaQuest */;
+      isAndroidResult = !require("../../device/MetaQuestUtils.android.tsx") /* isMetaQuest */.isMetaQuest();
+      const tmpResult = require("../../device/MetaQuestUtils.android.tsx") /* isMetaQuest */;
     }
     return isAndroidResult;
   },

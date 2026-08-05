@@ -210,7 +210,7 @@ let closure_33 = require("applyOverwrites").debounce(() => {
   if (c24) {
     if (null != user) {
       if (null != closure_25) {
-        let obj = importDefault(11697);
+        let obj = require("../../../utils/DragAndDropUtils.tsx");
         obj = { oldOrdering: null, newOrdering: null, idGetter: null, existingPositionGetter: null, ascending: false };
         obj[0] = store.getSortedRoles(user.id);
         obj[1] = closure_25;
@@ -301,10 +301,10 @@ prototype["hasSectionChanges"] = function hasSectionChanges(id, effectiveSection
     }
     let tmp7 = null != tmp;
     if (tmp7) {
-      const obj2 = importDefault(12);
-      const pickResult = importDefault(12).pick(tmp.role, tmp.fields);
-      tmp7 = !isRoleEqual(pickResult, importDefault(12).pick(tmp.original, tmp.fields));
-      const obj3 = importDefault(12);
+      const obj2 = require("../../../../_runtime/00012_apply.js");
+      const pickResult = require("../../../../_runtime/00012_apply.js").pick(tmp.role, tmp.fields);
+      tmp7 = !isRoleEqual(pickResult, require("../../../../_runtime/00012_apply.js").pick(tmp.original, tmp.fields));
+      const obj3 = require("../../../../_runtime/00012_apply.js");
     }
     return tmp7;
   }
@@ -363,7 +363,7 @@ Object.defineProperty(prototype, "formState", {
 prototype["getSortDeltas"] = function getSortDeltas() {
   if (null != user) {
     if (null != closure_25) {
-      let obj = importDefault(11697);
+      let obj = require("../../../utils/DragAndDropUtils.tsx");
       obj = { oldOrdering: null, newOrdering: null, idGetter: null, existingPositionGetter: null, ascending: false };
       obj[0] = store.getSortedRoles(user.id);
       obj[1] = closure_25;
@@ -409,7 +409,7 @@ obj = {
       let closure_0 = arg0;
       return closure_25.find((id) => id.id === closure_0);
     });
-    closure_25 = mapped.filter(require(1351) /* isDiscordFrontendDevelopment */.isNotNullish);
+    closure_25 = mapped.filter(require("../../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
     let c24 = true;
     callback();
   },
@@ -713,7 +713,7 @@ obj = {
       return false;
     } else {
       ({ fields, role, original } = tmp);
-      const pickResult = importDefault(12).pick(original, fields);
+      const pickResult = require("../../../../_runtime/00012_apply.js").pick(original, fields);
       const index = items.indexOf(role);
       if (index >= 0) {
         obj = {};
@@ -1028,7 +1028,7 @@ obj = {
         callback();
       }
       obj = map;
-      obj2 = importDefault(12);
+      obj2 = require("../../../../_runtime/00012_apply.js");
     }
   },
   GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS: function handleUpdateRoleConnectionConfigurations(roleId) {

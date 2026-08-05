@@ -16,7 +16,7 @@ export const setInitiatedPurchaseFromNewFlow = function setInitiatedPurchaseFrom
   let importDefault;
   let require;
   ({ productId: require, onPaymentSuccess: importDefault, onPaymentDismiss: dependencyMap } = arg0);
-  require(705) /* batchUpdates */.batchUpdates(() => {
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => {
     outer1_6.setState({ productId: closure_0, initiatedPurchaseFromNewFlow: true, onPaymentSuccess: closure_1, onPaymentDismiss: closure_2 });
   });
 };
@@ -24,16 +24,16 @@ export const setPaymentSuccess = function setPaymentSuccess() {
   if (keys.getState().initiatedPurchaseFromNewFlow) {
     const state = keys.getState();
     const onPaymentSuccess = state.onPaymentSuccess;
-    require(705) /* batchUpdates */.batchUpdates(() => state.setState({ isPaymentSuccess: true }));
+    require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => state.setState({ isPaymentSuccess: true }));
     if (onPaymentSuccess != null) {
       onPaymentSuccess(state.productId);
     }
-    const obj2 = require(705) /* batchUpdates */;
+    const obj2 = require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */;
   }
 };
 export const setMobileWebRedirectCheckoutStatus = function setMobileWebRedirectCheckoutStatus(arg0) {
   const _require = arg0;
-  _require(705).batchUpdates(() => outer1_6.setState({ mobileWebRedirectCheckoutStatus: closure_0 }));
+  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_6.setState({ mobileWebRedirectCheckoutStatus: closure_0 }));
 };
 export const handleMobileWebCheckoutStatus = function handleMobileWebCheckoutStatus(arg0) {
   const _require = arg0;
@@ -44,24 +44,24 @@ export const handleMobileWebCheckoutStatus = function handleMobileWebCheckoutSta
       if (key.getKey() !== closure_4) {
         const obj = { premiumType: null, analyticsLocations: null, analyticsLocation: null };
         obj[0] = TIER_2.TIER_2;
-        const items = [importDefault(5630).DEEPLINK];
+        const items = [require("../../app_analytics/AnalyticsLocation.tsx").DEEPLINK];
         obj[1] = items;
         obj[2] = {};
-        importDefault(6795)(obj);
-        const tmp3 = importDefault(6795);
+        require("openPremiumPlanSelectionActionSheet.tsx")(obj);
+        const tmp3 = require("openPremiumPlanSelectionActionSheet.tsx");
       }
-      _require(705).batchUpdates(() => outer1_6.setState({ isPaymentSuccess: true, mobileWebRedirectCheckoutStatus: closure_0 }));
+      _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_6.setState({ isPaymentSuccess: true, mobileWebRedirectCheckoutStatus: closure_0 }));
       if (null != onPaymentSuccess) {
         onPaymentSuccess(tmp13);
       }
-      const obj2 = _require(705);
+      const obj2 = _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx");
     }
   }
 };
 export const showOldPaymentFlowSuccess = function showOldPaymentFlowSuccess(arg0) {
   if (keys.getState().initiatedPurchaseFromNewFlow) {
-    require(705) /* batchUpdates */.batchUpdates(() => state.setState({ isPaymentSuccess: true }));
-    const obj = require(705) /* batchUpdates */;
+    require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => state.setState({ isPaymentSuccess: true }));
+    const obj = require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */;
   } else {
     arg0();
   }
@@ -77,7 +77,7 @@ export const reset = function reset() {
     obj[1] = tmp3;
     onPaymentDismiss(obj);
   }
-  require(705) /* batchUpdates */.batchUpdates(() => {
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => {
     let str = null;
     if (null != closure_0) {
       str = null;

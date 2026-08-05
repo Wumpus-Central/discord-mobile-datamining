@@ -8,9 +8,9 @@ export default function openStickerPackDetailActionSheet(stickerPack) {
   let analyticsPopoutType;
   stickerPack = stickerPack.stickerPack;
   ({ analyticsLocation, analyticsPopoutType } = stickerPack);
-  let obj = importDefault(698);
+  let obj = require("../../../utils/AnalyticsUtils.tsx");
   obj = { location: analyticsLocation, sticker_pack_id: stickerPack.id };
   obj.track(AnalyticEvents.STICKER_PACK_VIEW_ALL, obj);
-  importDefault(4253).openLazy(require(1959) /* asyncRequireImpl */(9880, dependencyMap.paths), "StickerPackDetailActionSheet", { stickerPack, analyticsPopoutType });
+  require("../../action_sheet/native/ActionSheetActionCreators.tsx").openLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(9880, dependencyMap.paths), "StickerPackDetailActionSheet", { stickerPack, analyticsPopoutType });
 };
 export const AnalyticsPopoutType = { EXPRESSION_SUGGESTIONS: "Sticker Pack Detail Sheet (Expression Suggestions Popout)", STICKER_PACK_DETAIL: "Sticker Pack Detail Sheet", STICKER_PACK_UPSELL: "Sticker Pack Detail Sheet (Sticker Upsell Popout)" };

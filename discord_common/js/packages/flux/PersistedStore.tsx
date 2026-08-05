@@ -214,8 +214,8 @@ prototype["initializeIfNeeded"] = function initializeIfNeeded() {
     const _Date2 = Date;
     const diff = Date.now() - timestamp;
     if (diff > 5) {
-      importDefault(10).mark("\u{1F9A5}", `${self.getName()}.initialize()`, diff);
-      const obj = importDefault(10);
+      require("../app-start-performance/AppStartPerformance.tsx").mark("\u{1F9A5}", `${self.getName()}.initialize()`, diff);
+      const obj = require("../app-start-performance/AppStartPerformance.tsx");
     }
   }
 };
@@ -224,14 +224,14 @@ PersistedStore["migrateAndReadStoreState"] = function migrateAndReadStoreState(E
   let _version;
   if (null != c7) {
     if (PersistedStore.shouldClear(c7, EmojiStore)) {
-      const Storage2 = require(595) /* Storage */.Storage;
+      const Storage2 = require("../storage/Storage.tsx") /* Storage */.Storage;
       Storage2.remove(EmojiStore);
       return { state: "ct", requiresPersist: "Array" };
     }
   }
   let value = null;
   if (null == PersistedStore._clearAllPromise) {
-    const Storage = require(595) /* Storage */.Storage;
+    const Storage = require("../storage/Storage.tsx") /* Storage */.Storage;
     value = Storage.get(EmojiStore);
   }
   if (value == null) {
@@ -303,11 +303,11 @@ prototype["asyncPersist"] = function asyncPersist() {
 };
 prototype["persist"] = function persist() {
   const state = this.getState();
-  const Storage = require(595) /* Storage */.Storage;
+  const Storage = require("../storage/Storage.tsx") /* Storage */.Storage;
   const result = Storage.set(this.getClass().persistKey, { _state: state, _version: this._version });
 };
 prototype["clear"] = function clear() {
-  const Storage = require(595) /* Storage */.Storage;
+  const Storage = require("../storage/Storage.tsx") /* Storage */.Storage;
   Storage.remove(this.getClass().persistKey);
 };
 let set = new Set();

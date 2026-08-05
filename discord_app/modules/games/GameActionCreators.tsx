@@ -202,12 +202,12 @@ const batchInvocationManager = new require("start").BatchInvocationManager(funct
     return !handleLoadMessages.hasNoData(gameId);
   },
   onQueued(gameIds) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "GAME_FETCH", gameIds };
     return obj.dispatch(obj);
   },
   onCancelled(gameIds) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "GAME_FETCH_CANCELLED", gameIds };
     return obj.dispatch(obj);
   }

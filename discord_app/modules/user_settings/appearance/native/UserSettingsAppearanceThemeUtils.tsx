@@ -17,8 +17,8 @@ const require = arg1;
 let result = require("handleThemeChange").fileFinishedImporting("modules/user_settings/appearance/native/UserSettingsAppearanceThemeUtils.tsx");
 
 export const handleSaveTheme = function handleSaveTheme(found, analyticsLocations, isSynced) {
-  if (found.type === require(4099) /* ClientThemeType */.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
-    let obj = importDefault(698);
+  if (found.type === require("../../../client_themes/ClientThemesTypes.tsx") /* ClientThemeType */.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
+    let obj = require("../../../../utils/AnalyticsUtils.tsx");
     obj = { feature_name: null, theme_name: null, is_persisted: null, is_synced: null, location_stack: null };
     obj[0] = constants3.CLIENT_THEME;
     obj[1] = "custom theme";
@@ -75,8 +75,8 @@ export const handleSaveTheme = function handleSaveTheme(found, analyticsLocation
 };
 export const handleSaveSyncedModeTheme = function handleSaveSyncedModeTheme(theme, systemTheme, analyticsLocations) {
   if ("system" !== theme.theme) {
-    if (theme.type === require(4099) /* ClientThemeType */.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
-      let obj = importDefault(698);
+    if (theme.type === require("../../../client_themes/ClientThemesTypes.tsx") /* ClientThemeType */.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
+      let obj = require("../../../../utils/AnalyticsUtils.tsx");
       obj = { feature_name: null, theme_name: null, is_persisted: null, is_synced: null, location_stack: null };
       obj[0] = constants3.CLIENT_THEME;
       obj[1] = "custom theme";
@@ -148,14 +148,14 @@ export const getSyncedModeThemeIndex = function getSyncedModeThemeIndex(memo2, c
 };
 export const enableSameAsDeviceTheme = function enableSameAsDeviceTheme() {
   const theme = syncedClientTheme.theme;
-  let obj = require(3995) /* isThemeLight */;
+  let obj = require("../../../../design/utils/shared/themes.tsx") /* isThemeLight */;
   const tmp4 = obj.isThemeDark(theme) ? closure_6.DARK : closure_6.LIGHT;
   customTheme = customTheme.getCustomTheme();
   gradientPreset = gradientPreset.gradientPreset;
   if (gradientPreset != null) {
     const id = gradientPreset.id;
   }
-  const result = importDefault(8620).setShouldSyncAppearanceSettings(false);
+  const result = require("../../../../actions/UserSettingsActionCreators.tsx").setShouldSyncAppearanceSettings(false);
   let tmpResult = tmp(4127);
   const result1 = tmpResult.updateThemePreferences({ [tmp4]: theme });
   if (null != customTheme) {
@@ -172,15 +172,15 @@ export const enableSameAsDeviceTheme = function enableSameAsDeviceTheme() {
     const result4 = tmp(4127).updateSyncedClientTheme(tmp4, undefined);
     const tmpResult2 = tmp(4127);
   }
-  const obj2 = importDefault(8620);
-  require(4127) /* setSystemTheme */.setUseSystemTheme(constants.ON);
-  const tmpResult3 = require(4127) /* setSystemTheme */;
-  const result5 = require(4127) /* setSystemTheme */.setSameAsDeviceThemeEnabled(true);
+  const obj2 = require("../../../../actions/UserSettingsActionCreators.tsx");
+  require("../../ThemeActionCreators.tsx") /* setSystemTheme */.setUseSystemTheme(constants.ON);
+  const tmpResult3 = require("../../ThemeActionCreators.tsx") /* setSystemTheme */;
+  const result5 = require("../../ThemeActionCreators.tsx") /* setSystemTheme */.setSameAsDeviceThemeEnabled(true);
 };
 export const disableSameAsDeviceTheme = function disableSameAsDeviceTheme() {
-  require(4127) /* setSystemTheme */.setUseSystemTheme(constants.OFF);
-  const obj = require(4127) /* setSystemTheme */;
-  const result = require(4127) /* setSystemTheme */.clearSyncedClientThemes();
+  require("../../ThemeActionCreators.tsx") /* setSystemTheme */.setUseSystemTheme(constants.OFF);
+  const obj = require("../../ThemeActionCreators.tsx") /* setSystemTheme */;
+  const result = require("../../ThemeActionCreators.tsx") /* setSystemTheme */.clearSyncedClientThemes();
 };
 export const trackClientThemeUpdated = function trackClientThemeUpdated(arg0) {
   let analyticsLocations;
@@ -188,7 +188,7 @@ export const trackClientThemeUpdated = function trackClientThemeUpdated(arg0) {
   let isSynced;
   let themeName;
   ({ isPersisted, isSynced, themeName, analyticsLocations } = arg0);
-  let obj = importDefault(698);
+  let obj = require("../../../../utils/AnalyticsUtils.tsx");
   obj = { feature_name: constants3.CLIENT_THEME, theme_name: themeName, is_persisted: isPersisted, is_synced: isSynced, location_stack: analyticsLocations };
   obj.track(constants2.CLIENT_THEME_UPDATED, obj);
 };

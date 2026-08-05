@@ -46,20 +46,20 @@ export default {
     });
   },
   hideActionSheet(key) {
-    let obj = importDefault(709);
+    let obj = require("../../../Dispatcher.tsx");
     obj = { type: "HIDE_ACTION_SHEET", key };
     obj.dispatch(obj);
   },
   hideAllActionSheets() {
-    importDefault(709).dispatch({ type: "HIDE_ALL_ACTION_SHEETS" });
+    require("../../../Dispatcher.tsx").dispatch({ type: "HIDE_ALL_ACTION_SHEETS" });
   },
   setActionSheetZIndex(zIndex) {
-    let obj = importDefault(709);
+    let obj = require("../../../Dispatcher.tsx");
     obj = { type: "SET_ACTION_SHEET_Z_INDEX", zIndex };
     obj.dispatch(obj);
   },
   resetActionSheetsForAppEntryKey(closure_0) {
-    let obj = importDefault(709);
+    let obj = require("../../../Dispatcher.tsx");
     obj = { type: "RESET_ACTION_SHEETS_FOR_APP_ENTRY_KEY", appEntryKey: closure_0 };
     obj.dispatch(obj);
   }
@@ -76,7 +76,7 @@ export const showActionSheet = function showActionSheet(arg0) {
   let jsx;
   let require;
   ({ content: require, key: importDefault, impressionName: dependencyMap, impressionProperties: closure_3, backdropKind: _objectWithoutProperties, stackingBehavior: jsx, disableHapticOnOpen: closure_6, appEntryKey: closure_7 } = arg0);
-  importDefault(709).wait(() => {
+  require("../../../Dispatcher.tsx").wait(() => {
     if (!disableHapticOnOpen) {
       let obj = callback(impressionName[4]);
       const result = obj.triggerHapticFeedback(callback2(impressionName[5]).IMPACT_LIGHT);

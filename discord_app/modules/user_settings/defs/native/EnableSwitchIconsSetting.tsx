@@ -5,18 +5,18 @@ import createToggle from "createToggle";
 const require = arg1;
 function useEnableSwitchIconsSettingValue() {
   const items = [maybeApplyNoTextColorForLightCustomTheme];
-  return require(589) /* initialize */.useStateFromStores(items, () => isSwitchIconsEnabled.isSwitchIconsEnabled);
+  return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => isSwitchIconsEnabled.isSwitchIconsEnabled);
 }
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["S3z+pV"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["S3z+pV"]);
   },
   parent: require("MobileSetting").MobileSetting.ACCESSIBILITY,
   useValue: useEnableSwitchIconsSettingValue,
   onValueChange: require("setFontSize").setSwitchIconsEnabled,
   usePredicate: function useShowSwitchIconsSetting() {
-    return importDefault(1348)("SettingsAccessibilityScreen");
+    return require("../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("SettingsAccessibilityScreen");
   },
   hasIcon: true
 };

@@ -3,7 +3,7 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/channe
 
 export const openChannelLongPressActionSheet = function openChannelLongPressActionSheet(id) {
   const combined = "ChannelLongPress-" + id;
-  let obj = importDefault(4253);
+  let obj = require("../../action_sheet/native/ActionSheetActionCreators.tsx");
   obj = {
     channelId: id,
     onClose() {

@@ -9,7 +9,7 @@ const result = require("ME").fileFinishedImporting("modules/video_calls/native/u
 export default function useTrackActivityPip(arg0) {
   const _require = arg0;
   const items = [initialize];
-  const stateFromStores = _require(647).useStateFromStores(items, () => pipEnabledWhileFocusedOnActivityOrStream.isPipEnabledWhileFocusedOnActivityOrStream());
+  const stateFromStores = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => pipEnabledWhileFocusedOnActivityOrStream.isPipEnabledWhileFocusedOnActivityOrStream());
   let tmp2 = stateFromStores(8775)(stateFromStores);
   const dependencyMap = tmp2;
   const tmp3 = stateFromStores(10628)();

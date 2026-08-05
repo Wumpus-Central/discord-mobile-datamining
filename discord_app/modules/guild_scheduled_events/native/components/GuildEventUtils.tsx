@@ -3,11 +3,11 @@ const result = require("getChannelIcon").fileFinishedImporting("modules/guild_sc
 
 export const getEventLocationIconSource = function getEventLocationIconSource(event, channel, stateFromStores2) {
   if (null != obj.getLocationFromEvent(event)) {
-    let tmp4 = importDefault(8894);
+    let tmp4 = require("../../../../../_runtime/08894_registerAsset.js");
   } else {
     tmp4 = null;
     if (null != channel) {
-      const tmpResult = require(4745) /* getChannelIcon */;
+      const tmpResult = require("../../../../utils/native/ChannelUtils.tsx") /* getChannelIcon */;
       if (stateFromStores2) {
         let channelIcon = tmpResult.getChannelIcon(channel);
       } else {

@@ -7,11 +7,11 @@ const result = require("module_5094").fileFinishedImporting("actions/HubActionCr
 
 export default {
   signup(email, school) {
-    let obj = importDefault(5094);
+    let obj = require("../utils/TrackedHTTPUtils.tsx");
     obj = { url: Endpoints.HUB_WAITLIST_SIGNUP, body: obj, trackedActionData: null, rejectWithError: null };
     obj = { email, school };
     obj[2] = {
-      event: require(503) /* encodeProperties */.NetworkActionNames.HUB_WAITLIST_SIGNUP,
+      event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.NetworkActionNames.HUB_WAITLIST_SIGNUP,
       properties(body) {
         let email_domain;
         if (body != null) {
@@ -29,7 +29,7 @@ export default {
       }
     };
     const obj1 = {
-      event: require(503) /* encodeProperties */.NetworkActionNames.HUB_WAITLIST_SIGNUP,
+      event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.NetworkActionNames.HUB_WAITLIST_SIGNUP,
       properties(body) {
         let email_domain;
         if (body != null) {
@@ -46,7 +46,7 @@ export default {
         return callback(table[4]).exact({ is_edu_email });
       }
     };
-    obj[3] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[3] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return obj.post(obj);
   },
   sendVerificationEmail(outer1_0, arg1, outer1_02) {

@@ -28,8 +28,8 @@ export const SummaryActionSheetButton = function SummaryActionSheetButton(label)
   obj = { style: items, children: null };
   items = [tmp.iconBox];
   obj = { style: tmp.icon, source: iconSource };
-  obj[1] = callback(require(1297) /* Button */.Icon, obj);
-  const items1 = [callback(View, obj), callback(require(4281) /* Text */.Text, { style: tmp.name, variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, children: label })];
+  obj[1] = callback(require("../../../design/void/native.tsx") /* Button */.Icon, obj);
+  const items1 = [callback(View, obj), callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: tmp.name, variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, children: label })];
   obj[4] = items1;
-  return callback2(require(4812) /* PressableBase */.PressableOpacity, obj);
+  return callback2(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
 };

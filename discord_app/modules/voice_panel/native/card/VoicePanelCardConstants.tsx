@@ -9,7 +9,7 @@ export const getCallTileGutter = function getCallTileGutter() {
   if (arg0 === undefined) {
     enabledExperiments = [];
   }
-  const VOICE_PANEL_GUTTER = importDefault(712).modules.mobile.VOICE_PANEL_GUTTER;
+  const VOICE_PANEL_GUTTER = require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.VOICE_PANEL_GUTTER;
   return VOICE_PANEL_GUTTER.resolve({ enabledExperiments });
 };
 export const getEdgeGutter = function getEdgeGutter() {
@@ -17,7 +17,7 @@ export const getEdgeGutter = function getEdgeGutter() {
   if (arg0 === undefined) {
     enabledExperiments = [];
   }
-  const VOICE_PANEL_GUTTER = importDefault(712).modules.mobile.VOICE_PANEL_GUTTER;
+  const VOICE_PANEL_GUTTER = require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.VOICE_PANEL_GUTTER;
   return VOICE_PANEL_GUTTER.resolve({ enabledExperiments });
 };
 export const CARD_BACKGROUND_OPACITY_ANDROID = 0.32;

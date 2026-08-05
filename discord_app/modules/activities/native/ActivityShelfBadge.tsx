@@ -26,7 +26,7 @@ export default function ActivityShelfBadge(arg0) {
   if (replacementStyles == null) {
     replacementStyles = tmp.badge;
   }
-  if (labelType === require(1906) /* PermissionOverwriteType */.EmbeddedActivityLabelTypes.NEW) {
+  if (labelType === require("../../../flow/Server.tsx") /* PermissionOverwriteType */.EmbeddedActivityLabelTypes.NEW) {
     let obj = { style: null, children: null };
     const items = [replacementStyles, , ];
     ({ newBadge: arr[1], elevationShadow: arr[2] } = tmp);

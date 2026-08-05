@@ -9,8 +9,8 @@ export default function openUserContextMenuCommands(analyticsLocations) {
   ({ userId, selectedChannel, showUserProfile } = analyticsLocations);
   let obj = analyticsLocations(8711);
   const result = obj.trackUserProfileAction({ action: "PRESS_VIEW_APP_COMMANDS", analyticsLocations });
-  importDefault(4253).hideActionSheet();
-  const obj2 = importDefault(4253);
+  require("../../action_sheet/native/ActionSheetActionCreators.tsx").hideActionSheet();
+  const obj2 = require("../../action_sheet/native/ActionSheetActionCreators.tsx");
   obj = {
     channel: selectedChannel,
     commandType: analyticsLocations(1906).ApplicationCommandType.USER,

@@ -15,7 +15,7 @@ const memoResult = importAllResult.memo(function GuildsBarPendingGuildFolder(id)
   let importDefault;
   ({ expanded, childNodes } = id);
   let obj = id(15291);
-  importDefault = importDefault(11104)();
+  importDefault = require("../usePendingFolderGuildIds.tsx")();
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: false });
   const items = [handleConnectionOpen];
   const items1 = [id];
@@ -75,7 +75,7 @@ const memoResult = importAllResult.memo(function GuildsBarPendingGuildFolder(id)
   }
   obj[13] = tmp8Result;
   obj[14] = jsx(id(12191).HourglassIcon, {});
-  return jsx(importDefault(15291), { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "HermesInternal", overState: "a", preventClipping: "CREATE_CHANNEL_MODAL_KEY", config: null, externalChildren: null, children: 30 });
+  return jsx(require("GuildsBarAnimatedItemWrapper.tsx"), { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "HermesInternal", overState: "a", preventClipping: "CREATE_CHANNEL_MODAL_KEY", config: null, externalChildren: null, children: 30 });
 });
 let result = require("ME").fileFinishedImporting("modules/guilds_bar/native/GuildsBarPendingGuildFolder.tsx");
 

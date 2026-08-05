@@ -179,7 +179,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen(unavailableGui
   const self = this;
   this.reset();
   const items = [...unavailableGuilds.unavailableGuilds];
-  const result = importDefault(1907).guildVersionsTransaction(database);
+  const result = require("../DatabaseDaos.tsx").guildVersionsTransaction(database);
   result.deleteAllExcept(items);
   for (const item10029 of tmp3) {
     let items1 = [item10029];
@@ -353,7 +353,7 @@ prototype["commit"] = function commit(database) {
   let tmp7;
   const self = this;
   if (this.pending.size > 0) {
-    const result = importDefault(1907).guildVersionsTransaction(database);
+    const result = require("../DatabaseDaos.tsx").guildVersionsTransaction(database);
     const pending2 = self.pending;
     const tmp21 = pending2[Symbol.iterator]();
     while (tmp21 !== undefined) {
@@ -380,7 +380,7 @@ prototype["commit"] = function commit(database) {
     }
     const pending = self.pending;
     pending.clear();
-    const obj2 = importDefault(1907);
+    const obj2 = require("../DatabaseDaos.tsx");
   }
 };
 let set = Object.create(GuildVersions.prototype);

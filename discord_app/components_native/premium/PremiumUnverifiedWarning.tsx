@@ -19,9 +19,9 @@ PremiumUnverifiedWarning.prototype["render"] = function render() {
     const obj = { style: null, children: null };
     const items = [tmp.warning, tmp2];
     obj[0] = items;
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[1] = intl.string(require(1236) /* getSystemLocale */.t["0LgOKH"]);
-    tmp3 = jsx(require(1297) /* Button */.LegacyText, { style: null, children: null });
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[1] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["0LgOKH"]);
+    tmp3 = jsx(require("../../design/void/native.tsx") /* Button */.LegacyText, { style: null, children: null });
   }
   return tmp3;
 };

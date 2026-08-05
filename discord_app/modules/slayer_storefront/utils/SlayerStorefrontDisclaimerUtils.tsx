@@ -17,18 +17,18 @@ export const getNotSupportedSentence = function getNotSupportedSentence(id) {
   }
   let str = "";
   if (0 !== arr.length) {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj = { platforms: null, count: null };
     const _Intl = Intl;
     const listFormat = new Intl.ListFormat(_getSystemLocale.locale);
     obj[0] = listFormat.format(arr.map((arg0) => table[arg0]));
     obj[1] = arr.length;
-    str = intl.formatToPlainString(importDefault(3223)["5h8p5P"], obj);
+    str = intl.formatToPlainString(require("../intl/SlayerStorefront.messages.js")["5h8p5P"], obj);
   }
   return str;
 };
 export const getCheckoutDisclaimerMessageForApplication = function getCheckoutDisclaimerMessageForApplication(id) {
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   id = undefined;
   if (id != null) {
     id = id.id;
@@ -41,15 +41,15 @@ export const getCheckoutDisclaimerMessageForApplication = function getCheckoutDi
   }
   let platforms_info = "";
   if (0 !== arr.length) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj = { platforms: null, count: null };
     const _Intl = Intl;
     const listFormat = new Intl.ListFormat(_getSystemLocale.locale);
     obj[0] = listFormat.format(arr.map((arg0) => table[arg0]));
     obj[1] = arr.length;
-    platforms_info = intl2.formatToPlainString(importDefault(3223)["5h8p5P"], obj);
+    platforms_info = intl2.formatToPlainString(require("../intl/SlayerStorefront.messages.js")["5h8p5P"], obj);
   }
-  return intl.format(importDefault(3223).Q0dHYO, { platforms_info });
+  return intl.format(require("../intl/SlayerStorefront.messages.js").Q0dHYO, { platforms_info });
 };
 export const getFinePrintMessageForApplication = function getFinePrintMessageForApplication(name, shouldAppendDisclaimer) {
   let str;
@@ -59,7 +59,7 @@ export const getFinePrintMessageForApplication = function getFinePrintMessageFor
   if (str == null) {
     str = "game's";
   }
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   const format = intl.format;
   if (shouldAppendDisclaimer.shouldAppendDisclaimer) {
     let obj = { applicationName: null, platforms_info: null };
@@ -87,8 +87,8 @@ export const getFinePrintMessageForApplication = function getFinePrintMessageFor
     }
     const obj1 = { platforms_info: null };
     obj1[0] = str2;
-    obj[1] = intl2.format(importDefault(3223).Q0dHYO, obj1);
-    let formatResult = format(importDefault(3223)["3ah/a2"], obj);
+    obj[1] = intl2.format(require("../intl/SlayerStorefront.messages.js").Q0dHYO, obj1);
+    let formatResult = format(require("../intl/SlayerStorefront.messages.js")["3ah/a2"], obj);
     tmp4 = importDefault;
   } else {
     obj = { applicationName: null };
@@ -106,9 +106,9 @@ export const getMobileFinePrintMessageForApplication = function getMobileFinePri
     str = "game's";
   }
   let obj = { buyButtonLabel: stringResult, paidServiceTermURL: MarketingURLs.PAID_TERMS, applicationName: str };
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   const format = intl.format;
-  const tmp4 = importDefault(3223);
+  const tmp4 = require("../intl/SlayerStorefront.messages.js");
   if (shouldAppendDisclaimer.shouldAppendDisclaimer) {
     let id;
     if (name != null) {
@@ -142,7 +142,7 @@ export const getMobileFinePrintMessageForApplication = function getMobileFinePri
   return items1;
 };
 export const getRedeemPurchaseDescriptionForApplication = function getRedeemPurchaseDescriptionForApplication(applicationName) {
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   let obj = { applicationName: applicationName.name, platforms_info: null };
   const id = applicationName.id;
   if (null == id) {
@@ -153,19 +153,19 @@ export const getRedeemPurchaseDescriptionForApplication = function getRedeemPurc
   }
   let str = "";
   if (0 !== arr.length) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { platforms: null, count: null };
     const _Intl = Intl;
     const listFormat = new Intl.ListFormat(_getSystemLocale.locale);
     obj[0] = listFormat.format(arr.map((arg0) => table[arg0]));
     obj[1] = arr.length;
-    str = intl2.formatToPlainString(importDefault(3223)["5h8p5P"], obj);
+    str = intl2.formatToPlainString(require("../intl/SlayerStorefront.messages.js")["5h8p5P"], obj);
   }
   obj[1] = str;
-  return intl.format(importDefault(3223).fO4b1C, obj);
+  return intl.format(require("../intl/SlayerStorefront.messages.js").fO4b1C, obj);
 };
 export const getGiftLinkAccountDescriptionForApplication = function getGiftLinkAccountDescriptionForApplication(applicationName, hasAlreadyLinked) {
-  const tmp3 = importDefault(3223);
+  const tmp3 = require("../intl/SlayerStorefront.messages.js");
   if (hasAlreadyLinked.hasAlreadyLinked) {
     let vyAtfo = tmp3.yqAKVO;
     let tmp4 = tmp;
@@ -173,7 +173,7 @@ export const getGiftLinkAccountDescriptionForApplication = function getGiftLinkA
     vyAtfo = tmp3.vyAtfo;
     tmp4 = tmp;
   }
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   let obj = { applicationName: applicationName.name, platforms_info: null };
   const id = applicationName.id;
   if (null == id) {
@@ -184,7 +184,7 @@ export const getGiftLinkAccountDescriptionForApplication = function getGiftLinkA
   }
   let str = "";
   if (0 !== arr.length) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { platforms: null, count: null };
     const _Intl = Intl;
     const listFormat = new Intl.ListFormat(_getSystemLocale.locale);

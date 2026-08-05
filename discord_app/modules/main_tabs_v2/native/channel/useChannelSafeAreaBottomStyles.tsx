@@ -13,11 +13,11 @@ const require = arg1;
 let closure_11 = { LURKER: "lurker", VOICE: "voice", CHAT: "chat", DIRECTORY: "directory", EXPRESSION_PICKER: "expression", MEDIA: "media", APPS: "apps", NONE: "none" };
 let closure_12 = createCacheKey.createStyles((backgroundColor) => {
   let obj = { lurker: null, chat: null, voice: null, expressionPickerBackground: null };
-  obj = { backgroundColor: importDefault(712).colors.BACKGROUND_BASE_LOWER };
+  obj = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOWER };
   obj[0] = obj;
   obj[1] = { backgroundColor };
   obj[2] = { backgroundColor };
-  obj = { backgroundColor: importDefault(712).colors.MOBILE_KEYBOARD_GAP_BACKGROUND };
+  obj = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_KEYBOARD_GAP_BACKGROUND };
   obj[3] = obj;
   return obj;
 });

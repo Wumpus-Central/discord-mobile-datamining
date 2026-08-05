@@ -185,7 +185,7 @@ const memoResult = importAllResult.memo(function VoicePanelAudioOutputActionShee
   let isConnectedToVoiceChannel;
   let require;
   ({ channelId: require, isConnectedToVoiceChannel } = arg0);
-  let obj = require(647) /* defaultAreStatesEqual */;
+  let obj = require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */;
   const items = [ensureGuildLoaded];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_7.getChannel(closure_0));
   let tmp5Result = null;
@@ -205,12 +205,12 @@ const memoResult = importAllResult.memo(function VoicePanelAudioOutputActionShee
     obj3[0] = stateFromStores;
     items1[1] = callback(VoicePanelAudioConsoleSection, obj3);
     obj2[0] = items1;
-    obj1[0] = closure_12(importDefault(5663), obj2);
+    obj1[0] = closure_12(require("../../../core/native/NativeView.tsx"), obj2);
     obj[1] = callback(ScrollView, obj1);
     tmp5Result = tmp5(tmp(5338).BottomSheet, obj);
     const tmp6 = ScrollView;
     const tmp7 = closure_12;
-    const tmp9 = importDefault(5663);
+    const tmp9 = require("../../../core/native/NativeView.tsx");
   }
   return tmp5Result;
 });

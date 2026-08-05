@@ -18,11 +18,11 @@ function CollectionItem(arg0) {
   if (componentConfig != null) {
     image = componentConfig.fields.image;
   }
-  const items = [require(12264) /* resolvedValuesFromUserApplicationIdentityProfile */.ResolvedValueType.MEDIA];
+  const items = [require("../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx") /* resolvedValuesFromUserApplicationIdentityProfile */.ResolvedValueType.MEDIA];
   const fieldValue = resolveFieldValue(image, items);
-  let obj = require(12264) /* resolvedValuesFromUserApplicationIdentityProfile */;
+  let obj = require("../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx") /* resolvedValuesFromUserApplicationIdentityProfile */;
   const singleStringOrSkeleton = obj.resolveSingleStringOrSkeleton(componentConfig, "name", resolveFieldValue);
-  let obj1 = require(12264) /* resolvedValuesFromUserApplicationIdentityProfile */;
+  let obj1 = require("../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx") /* resolvedValuesFromUserApplicationIdentityProfile */;
   const singleStringOrSkeleton1 = obj1.resolveSingleStringOrSkeleton(componentConfig, "description", resolveFieldValue);
   obj = { style: tmp.item, children: null };
   if (null != fieldValue) {

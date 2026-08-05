@@ -88,7 +88,7 @@ function handleGuild() {
 }
 let c3 = 10000000000000;
 const secondaryIndexMap = new require("version").SecondaryIndexMap((saveData) => {
-  const items = [require(8192) /* SavedMessageSortTypes */.SavedMessageSortTypes.ALL, ];
+  const items = [require("SavedMessagesTypes.tsx") /* SavedMessageSortTypes */.SavedMessageSortTypes.ALL, ];
   if (null != saveData.saveData.dueAt) {
     let BOOKMARK = tmp(8192).SavedMessageSortTypes.REMINDER;
   } else {
@@ -117,16 +117,16 @@ prototype["initialize"] = function initialize() {
   this.waitFor(mergeGuildAvatar);
 };
 prototype["getSavedMessages"] = function getSavedMessages() {
-  return secondaryIndexMap.values(require(8192) /* SavedMessageSortTypes */.SavedMessageSortTypes.ALL);
+  return secondaryIndexMap.values(require("SavedMessagesTypes.tsx") /* SavedMessageSortTypes */.SavedMessageSortTypes.ALL);
 };
 prototype["getSavedMessage"] = function getSavedMessage(channelId, messageId) {
   return secondaryIndexMap.get("" + channelId + "-" + messageId);
 };
 prototype["getMessageBookmarks"] = function getMessageBookmarks() {
-  return secondaryIndexMap.values(require(8192) /* SavedMessageSortTypes */.SavedMessageSortTypes.BOOKMARK);
+  return secondaryIndexMap.values(require("SavedMessagesTypes.tsx") /* SavedMessageSortTypes */.SavedMessageSortTypes.BOOKMARK);
 };
 prototype["getMessageReminders"] = function getMessageReminders() {
-  return secondaryIndexMap.values(require(8192) /* SavedMessageSortTypes */.SavedMessageSortTypes.REMINDER);
+  return secondaryIndexMap.values(require("SavedMessagesTypes.tsx") /* SavedMessageSortTypes */.SavedMessageSortTypes.REMINDER);
 };
 prototype["getOverdueMessageReminderCount"] = function getOverdueMessageReminderCount() {
   return set.size;
@@ -137,7 +137,7 @@ prototype["hasOverdueReminder"] = function hasOverdueReminder() {
 prototype["getMostRecentOverdueDueAt"] = function getMostRecentOverdueDueAt() {
   let num = 0;
   const timestamp = Date.now();
-  const values = secondaryIndexMap.values(require(8192) /* SavedMessageSortTypes */.SavedMessageSortTypes.REMINDER);
+  const values = secondaryIndexMap.values(require("SavedMessagesTypes.tsx") /* SavedMessageSortTypes */.SavedMessageSortTypes.REMINDER);
   for (const item10021 of values) {
     let tmp3 = getTimeSafe;
     let tmp4 = getTimeSafe(item10021.saveData.dueAt);
@@ -257,7 +257,7 @@ const savedMessagesStore = new SavedMessagesStore(require("dispatcher"), {
         } else {
           const obj = {};
           const merged = Object.assign(value);
-          obj.message = require(4504) /* createMinimalMessageRecord */.updateMessageRecord(value.message, message);
+          obj.message = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */.updateMessageRecord(value.message, message);
           const result = obj3.set(combined, obj);
         }
         obj3 = secondaryIndexMap;

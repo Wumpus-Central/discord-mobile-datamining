@@ -11,7 +11,7 @@ const require = arg1;
 function VariantOption(variant) {
   variant = variant.variant;
   const tmp = callback3(variant.isSelected);
-  let obj = require(9331) /* getProductPurchaseState */;
+  let obj = require("../hooks/useProductPurchaseState.tsx") /* getProductPurchaseState */;
   let isPurchased = obj.useProductPurchaseState(variant).isPurchased;
   obj = { style: items, children: null };
   items = [tmp.variantOption, { zIndex: variant.zIndex }];
@@ -27,10 +27,10 @@ function VariantOption(variant) {
   return closure_4(View, obj);
 }
 function VariantCheckmark(variant) {
-  const colors = importDefault(712).colors;
-  const tmp = importDefault(9349)(variant.variant);
+  const colors = require("../../../../discord_common/js/packages/tokens/native.tsx").colors;
+  const tmp = require("../hooks/useIsVariantColorLight.tsx")(variant.variant);
   const tmp2 = closure_4;
-  return tmp2(require(5304) /* CheckmarkSmallIcon */.CheckmarkSmallIcon, { color: importDefault(9349)(variant.variant) ? colors.BLACK : colors.WHITE, size: "xxs" });
+  return tmp2(require("../../../design/components/Icon/native/redesign/generated/CheckmarkSmallIcon.tsx") /* CheckmarkSmallIcon */.CheckmarkSmallIcon, { color: require("../hooks/useIsVariantColorLight.tsx")(variant.variant) ? colors.BLACK : colors.WHITE, size: "xxs" });
 }
 function VariantOverflowOption(isSelected) {
   const tmp = callback3(isSelected.isSelected);
@@ -40,8 +40,8 @@ function VariantOverflowOption(isSelected) {
   items1 = [, ];
   ({ variantOptionInner: arr2[0], variantOverflowInner: arr2[1] } = tmp);
   obj = { color: null, size: "xxs" };
-  obj[0] = importDefault(712).colors.WHITE;
-  obj[1] = callback(require(9350) /* PlusSmallIcon */.PlusSmallIcon, obj);
+  obj[0] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE;
+  obj[1] = callback(require("../../../design/components/Icon/native/redesign/generated/PlusSmallIcon.tsx") /* PlusSmallIcon */.PlusSmallIcon, obj);
   obj[1] = callback(View, obj);
   return callback(View, obj);
 }
@@ -52,17 +52,17 @@ obj[0] = obj;
 let closure_6 = createCacheKey.createStyles(obj);
 let closure_7 = createCacheKey.createStyles((arg0) => {
   let obj = { variantOption: null, variantOptionInner: null, variantOverflowInner: null };
-  obj = { marginStart: -importDefault(712).space.PX_4, width: 14, height: 14, borderWidth: 1, borderColor: importDefault(712).colors.BACKGROUND_BASE_LOW, borderRadius: importDefault(712).radii.round, justifyContent: "center", alignItems: "center" };
+  obj = { marginStart: -require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, width: 14, height: 14, borderWidth: 1, borderColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.round, justifyContent: "center", alignItems: "center" };
   obj[0] = obj;
-  obj = { width: "100%", height: "100%", justifyContent: "center", alignItems: "center", borderRadius: importDefault(712).radii.round, borderWidth: null, borderColor: null };
+  obj = { width: "100%", height: "100%", justifyContent: "center", alignItems: "center", borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.round, borderWidth: null, borderColor: null };
   let num = 0;
   if (arg0) {
     num = 1;
   }
   obj[5] = num;
-  obj[6] = importDefault(712).colors.BUTTON_OUTLINE_PRIMARY_TEXT;
+  obj[6] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BUTTON_OUTLINE_PRIMARY_TEXT;
   obj[1] = obj;
-  obj[2] = { backgroundColor: importDefault(712).colors.ICON_MUTED };
+  obj[2] = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.ICON_MUTED };
   return obj;
 });
 const memoResult = require("noop").memo(function CardProductVariants(product) {

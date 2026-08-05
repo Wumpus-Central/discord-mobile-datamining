@@ -15,33 +15,33 @@ let closure_12;
 let unpackModuleId;
 function getGiftStyleUrl(arg0) {
   if (constants.BOX === arg0) {
-    return importDefault(12485);
+    return require("../../../../../../../_runtime/12485_registerAsset.js");
   } else if (tmp.CUP === arg0) {
-    return importDefault(12486);
+    return require("../../../../../../../_runtime/12486_registerAsset.js");
   } else if (tmp.SNOWGLOBE === arg0) {
-    return importDefault(12487);
+    return require("../../../../../../../_runtime/12487_registerAsset.js");
   } else if (tmp.STANDARD_BOX === arg0) {
-    return importDefault(12488);
+    return require("../../../../../../../_runtime/12488_registerAsset.js");
   } else if (tmp.COFFEE === arg0) {
-    return importDefault(12489);
+    return require("../../../../../../../_runtime/12489_registerAsset.js");
   } else if (tmp.CAKE === arg0) {
-    return importDefault(12490);
+    return require("../../../../../../../_runtime/12490_registerAsset.js");
   } else if (tmp.CHEST === arg0) {
-    return importDefault(12491);
+    return require("../../../../../../../_runtime/12491_registerAsset.js");
   } else if (tmp.SEASONAL_STANDARD_BOX === arg0) {
-    return importDefault(12492);
+    return require("../../../../../../../_runtime/12492_registerAsset.js");
   } else if (tmp.SEASONAL_CAKE === arg0) {
-    return importDefault(12493);
+    return require("../../../../../../../_runtime/12493_registerAsset.js");
   } else if (tmp.SEASONAL_CHEST === arg0) {
-    return importDefault(12494);
+    return require("../../../../../../../_runtime/12494_registerAsset.js");
   } else if (tmp.SEASONAL_COFFEE === arg0) {
-    return importDefault(12495);
+    return require("../../../../../../../_runtime/12495_registerAsset.js");
   } else if (tmp.NITROWEEN_STANDARD === arg0) {
     const obj = { uri: null };
-    obj[0] = importDefault(12062);
+    obj[0] = require("../../../../../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js");
     return obj;
   } else {
-    return importDefault(12488);
+    return require("../../../../../../../_runtime/12488_registerAsset.js");
   }
 }
 ({ Image: c3, processColor: c4 } = get_ActivityIndicator);
@@ -66,19 +66,19 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
   const importDefault = forcedTheme;
   if (null != message.author) {
     if (0 !== message.giftCodes.length) {
-      const colors = importDefault(7863)(forcedTheme).colors;
+      const colors = require("getEmbedThemeColors.tsx")(forcedTheme).colors;
       ({ headerColor: dependencyMap, titleColor: closure_3, subtitleColor: closure_4, bodyTextColor: fetchFingerprint, backgroundColor, resolvingGradientStart: updateGiftCode, resolvingGradientEnd: mergeGuildAvatar, acceptLabelDisabledBackgroundColor: addSku, acceptLabelDisabledColor: closure_9, thumbnailBackgroundColor: closure_10, acceptLabelGreenColor: closure_11, acceptBlurpleLabelBackgroundColor: closure_12 } = colors);
       let obj = { borderColor: null, backgroundColor: null, thumbnailCornerRadius: 3 };
       obj[0] = colors.borderColor;
       let tmp4 = backgroundColor;
       if (obj2.isThemeDark(forcedTheme)) {
-        const embedBackground = _require(4096).getEmbedBackground();
+        const embedBackground = _require("../../../../../client_themes/native/ClientThemesUtils.tsx").getEmbedBackground();
         let tmp5Result = closure_4(embedBackground);
         if (tmp5Result == null) {
           tmp5Result = backgroundColor;
         }
         tmp4 = tmp5Result;
-        const tmp3Result = _require(4096);
+        const tmp3Result = _require("../../../../../client_themes/native/ClientThemesUtils.tsx");
         const tmp5 = closure_4;
       }
       obj[1] = tmp4;

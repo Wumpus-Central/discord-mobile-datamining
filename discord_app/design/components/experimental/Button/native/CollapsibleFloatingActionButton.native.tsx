@@ -54,13 +54,13 @@ export const CollapsibleFloatingActionButton = function CollapsibleFloatingActio
   let text;
   ({ icon, positionBottom, positionRight, text, state } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  let obj = require(8592) /* styles */;
+  let obj = require("../../../Button/native/FloatingActionButton.native.tsx") /* styles */;
   let obj1 = validElement;
   const styles = obj.useStyles();
   let cloneElementResult = icon;
   if (validElement.isValidElement(icon)) {
     obj = { color: null };
-    obj[0] = importDefault(712).colors.WHITE;
+    obj[0] = require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE;
     cloneElementResult = obj1.cloneElement(icon, obj);
   }
   const items = [styles.button, ];

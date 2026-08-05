@@ -70,7 +70,7 @@ export const fetchGuildIntegrationsApplications = function fetchGuildIntegration
   return applyArgumentsResult;
 };
 export const fetchGuildEmbed = function fetchGuildEmbed(arg0) {
-  const HTTP = require(530) /* sendRequest */.HTTP;
+  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
   const value = HTTP.get({ url: Endpoints.GUILD_WIDGET(arg0), oldFormErrors: true, rejectWithError: true });
   return value.then((body) => {
     let obj = callback(table[5]);

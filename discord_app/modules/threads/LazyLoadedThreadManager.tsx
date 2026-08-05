@@ -14,25 +14,25 @@ const require = arg1;
 function initialize() {
   if (!c12) {
     c12 = true;
-    const subscription = importDefault(709).subscribe("CONNECTION_OPEN", () => {
+    const subscription = require("../../Dispatcher.tsx").subscribe("CONNECTION_OPEN", () => {
       let closure_11 = {};
       channelId = channelId.getChannelId();
       if (tmp2) {
         callback(channelId);
       }
     });
-    const obj = importDefault(709);
+    const obj = require("../../Dispatcher.tsx");
   }
 }
 function dispatchLoadedThread(arg0, arg1) {
   const tmp = callback(arg0);
-  importDefault(709).dispatch({ type: "THREAD_CREATE", channel: tmp, messageId: undefined });
+  require("../../Dispatcher.tsx").dispatch({ type: "THREAD_CREATE", channel: tmp, messageId: undefined });
 }
 function loadThread(channelId) {
   const _require = channelId;
   if (null == channelId) {
     return Promise.resolve();
-  } else if (channelId === _require(5752).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+  } else if (channelId === _require("../channel/FakePlaceholderPrivateChannel.tsx").FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
     return Promise.resolve();
   } else if (isStaticChannelRoute(channelId)) {
     return Promise.resolve();
@@ -41,7 +41,7 @@ function loadThread(channelId) {
   } else {
     if (!c12) {
       c12 = true;
-      let obj = importDefault(709);
+      let obj = require("../../Dispatcher.tsx");
       const subscription = obj.subscribe("CONNECTION_OPEN", () => {
         let closure_11 = {};
         channelId = channelId.getChannelId();

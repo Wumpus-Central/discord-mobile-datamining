@@ -40,14 +40,14 @@ function MessageContent(arg0) {
   const items2 = [maybeApplyNoTextColorForLightCustomTheme];
   importDefault = message(589).useStateFromStores(items2, () => roleStyle.roleStyle);
   const obj3 = message(589);
-  ({ nick: c2, colorString: c3, colorStrings: c4 } = importDefault(4513)(message));
-  let tmp4 = importDefault(4513)(message);
-  const extractTimestampResult = importDefault(11).extractTimestamp(message.id);
-  const obj4 = importDefault(11);
+  ({ nick: c2, colorString: c3, colorStrings: c4 } = require("../../../messages/useMessageAuthor.tsx")(message));
+  let tmp4 = require("../../../messages/useMessageAuthor.tsx")(message);
+  const extractTimestampResult = require("../../../../utils/SnowflakeUtils.tsx").extractTimestamp(message.id);
+  const obj4 = require("../../../../utils/SnowflakeUtils.tsx");
   const timestampString = message(7160).getTimestampString(extractTimestampResult);
   const obj5 = message(7160);
   const timestampAccessibilityLabel = message(7160).getTimestampAccessibilityLabel(extractTimestampResult);
-  maybeApplyNoTextColorForLightCustomTheme = importDefault(4723)(thread.guild_id, stateFromStores.id);
+  maybeApplyNoTextColorForLightCustomTheme = require("../../../premium/powerups/hooks/useHasEnhancedRoleColors.tsx")(thread.guild_id, stateFromStores.id);
   obj = { user: stateFromStores, timestamp: timestampString, accessibilityLabel: timestampAccessibilityLabel, children: null };
   obj = { lineClamp: 1, ellipsizeMode: "tail", lineBreakMode: "tail", style: tmp.subtextContent, variant: "text-sm/medium", color: "text-default", children: null };
   const intl = message(1236).intl;
@@ -97,7 +97,7 @@ function SubstringRow(arg0) {
     obj[0] = tmp.timestamp;
     obj[1] = accessibilityLabel;
     obj[4] = ` ${timestamp}`;
-    obj[1] = callback(require(4281) /* Text */.Text, obj);
+    obj[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
     let tmp6 = callback(View, obj);
   } else {
     obj = { style: null, children: null };
@@ -111,7 +111,7 @@ function SubstringRow(arg0) {
     obj2[1] = accessibilityLabel;
     const _HermesInternal = HermesInternal;
     obj2[4] = "" + timestamp;
-    items[2] = callback(require(4281) /* Text */.Text, obj2);
+    items[2] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
     obj[1] = items;
     tmp6 = callback2(View, obj);
   }

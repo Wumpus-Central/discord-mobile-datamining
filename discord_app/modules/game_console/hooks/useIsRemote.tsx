@@ -6,5 +6,5 @@ const result = require("set").fileFinishedImporting("modules/game_console/hooks/
 
 export default function useIsRemote() {
   const items = [set];
-  return require(589) /* initialize */.useStateFromStores(items, () => null != remoteSessionId.getRemoteSessionId() || null != remoteSessionId.getAwaitingRemoteSessionInfo());
+  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => null != remoteSessionId.getRemoteSessionId() || null != remoteSessionId.getAwaitingRemoteSessionInfo());
 };

@@ -433,15 +433,15 @@ export const fetchBountyPreview = function fetchBountyPreview(arr, c3) {
   return applyArgumentsResult;
 };
 export const setBountyVideoProgress = function setBountyVideoProgress(bountyId, arg1) {
-  let obj = require(7100) /* getOrRefreshAdSession */;
+  let obj = require("../analytics_sessions/SessionAdGenerator.tsx") /* getOrRefreshAdSession */;
   if (null != obj.getCurrentAdSession()) {
-    const orRefreshAdSession = require(7100) /* getOrRefreshAdSession */.getOrRefreshAdSession(true);
-    const tmpResult = require(7100) /* getOrRefreshAdSession */;
+    const orRefreshAdSession = require("../analytics_sessions/SessionAdGenerator.tsx") /* getOrRefreshAdSession */.getOrRefreshAdSession(true);
+    const tmpResult = require("../analytics_sessions/SessionAdGenerator.tsx") /* getOrRefreshAdSession */;
     obj = { type: "BOUNTIES_VIDEO_PROGRESS_UPDATE", bountyId: null, timestampSec: null, maxTimestampSec: null, duration: null };
     obj[1] = bountyId;
     ({ timestampSec: obj4[2], maxTimestampSec: obj4[3], duration: obj4[4] } = arg1);
-    importDefault(709).dispatch(obj);
-    const obj3 = importDefault(709);
+    require("../../Dispatcher.tsx").dispatch(obj);
+    const obj3 = require("../../Dispatcher.tsx");
   }
 };
 export const claimBountyReward = function claimBountyReward(id, outer1_1) {

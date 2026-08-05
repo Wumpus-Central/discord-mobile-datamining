@@ -38,7 +38,7 @@ export default function WebAuthnDeleteActionSheet(credential) {
   obj[1] = callback(credential(5647).ActionSheetCloseButton, { onPress: handleClose });
   const items = [callback(credential(5337).BottomSheetTitleHeader, obj), , , ];
   const obj1 = { style: tmp.content, children: null };
-  const items1 = [callback(closure_3, { source: importDefault(13884) }), ];
+  const items1 = [callback(closure_3, { source: require("../../../../_runtime/13884_registerAsset.js") }), ];
   const obj3 = { variant: "heading-md/normal", style: tmp.subtitle, children: null };
   const intl2 = credential(1236).intl;
   obj3[2] = intl2.string(credential(1236).t.IfTbc1);

@@ -10,31 +10,31 @@ export default {
     let stackingBehavior;
     ({ gameId, gameProfileModalChecks } = arg0);
     ({ source, sourceUserId, stackingBehavior } = arg0);
-    importDefault(38)(gameProfileModalChecks.shouldOpenGameProfile, "Passed a false value for [gameProfileModalChecks]. Are you using the useShouldOpenGameProfile hook correctly?");
-    importDefault(38)(gameProfileModalChecks.gameId === gameId, "Passed an unexpected [gameId]. Are you passing a different one than you passed to useShouldOpenGameProfileModal?");
-    let obj = importDefault(4253);
+    require("../../../_runtime/metro/00038__.js")(gameProfileModalChecks.shouldOpenGameProfile, "Passed a false value for [gameProfileModalChecks]. Are you using the useShouldOpenGameProfile hook correctly?");
+    require("../../../_runtime/metro/00038__.js")(gameProfileModalChecks.gameId === gameId, "Passed an unexpected [gameId]. Are you passing a different one than you passed to useShouldOpenGameProfileModal?");
+    let obj = require("../action_sheet/native/ActionSheetActionCreators.tsx");
     obj = { gameId, source, sourceUserId };
-    obj.openLazy(require(1959) /* asyncRequireImpl */(9195, dependencyMap.paths), "game-profile-" + gameId, obj, stackingBehavior);
+    obj.openLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(9195, dependencyMap.paths), "game-profile-" + gameId, obj, stackingBehavior);
   },
   returnToGameProfile(gameId) {
     let initialScrollOffset;
     let source;
     gameId = gameId.gameId;
     ({ source, initialScrollOffset } = gameId);
-    importDefault(709).dispatch({ type: "GAME_PROFILE_CLEAR_PENDING_RETURN", gameId });
-    const obj = importDefault(709);
-    const obj2 = importDefault(4253);
-    obj2.openLazy(require(1959) /* asyncRequireImpl */(9195, dependencyMap.paths), "game-profile-" + gameId, { gameId, source, initialScrollOffset });
+    require("../../Dispatcher.tsx").dispatch({ type: "GAME_PROFILE_CLEAR_PENDING_RETURN", gameId });
+    const obj = require("../../Dispatcher.tsx");
+    const obj2 = require("../action_sheet/native/ActionSheetActionCreators.tsx");
+    obj2.openLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(9195, dependencyMap.paths), "game-profile-" + gameId, { gameId, source, initialScrollOffset });
   },
   setGameProfilePendingReturn(arg0) {
     let channelId;
     let gameId;
     let initialScrollOffset;
     ({ gameId, channelId, initialScrollOffset } = arg0);
-    importDefault(709).dispatch({ type: "GAME_PROFILE_SET_PENDING_RETURN", gameId, channelId, initialScrollOffset });
+    require("../../Dispatcher.tsx").dispatch({ type: "GAME_PROFILE_SET_PENDING_RETURN", gameId, channelId, initialScrollOffset });
   },
   clearGameProfilePendingReturn(id) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "GAME_PROFILE_CLEAR_PENDING_RETURN", gameId: id };
     obj.dispatch(obj);
   }

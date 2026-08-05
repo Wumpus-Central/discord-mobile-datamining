@@ -7,8 +7,8 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.y7SXYX);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.y7SXYX);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   usePreNavigationAction: function useAccountCanUseWebAuthnView() {
@@ -35,11 +35,11 @@ createToggle = {
   },
   useTrailing: function useAccountSecurityKeysSettingTrailing() {
     if (!hasFetchedCredentials.hasFetchedCredentials()) {
-      const webAuthnCredentials = require(5740) /* _fetchWebAuthnConditionalChallenge */.fetchWebAuthnCredentials();
-      let obj = require(5740) /* _fetchWebAuthnConditionalChallenge */;
+      const webAuthnCredentials = require("../../../webauthn/WebAuthnActionCreators.tsx") /* _fetchWebAuthnConditionalChallenge */.fetchWebAuthnCredentials();
+      let obj = require("../../../webauthn/WebAuthnActionCreators.tsx") /* _fetchWebAuthnConditionalChallenge */;
     }
     const items = [hasFetchedCredentials];
-    return require(589) /* initialize */.useStateFromStores(items, () => {
+    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
       const intl = callback(1236).intl;
       const obj = { count: null };
       obj[0] = credentials.getCredentials().length;
@@ -52,7 +52,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.WEBAUTHN_VIEW,
   getComponent() {
-    return require(13873) /* UserSettingsWebAuthn */.default;
+    return require("../../../webauthn/native/UserSettingsWebAuthn.tsx") /* UserSettingsWebAuthn */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

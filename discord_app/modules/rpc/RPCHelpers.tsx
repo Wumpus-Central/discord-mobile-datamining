@@ -60,7 +60,7 @@ function validateOrigin(arg0) {
   return items.indexOf(arg0) > -1;
 }
 function transformInternalTextMessage(message) {
-  let obj = importDefault(4275);
+  let obj = require("../markup/MarkupUtils.tsx");
   obj = { channelId: message.channel_id };
   const mapped = obj.parseToAST(message.content, true, obj).map(recurseReplaceContentTree);
   let tmp4;
@@ -70,8 +70,8 @@ function transformInternalTextMessage(message) {
   }
   let userAuthor;
   if (null != message.author) {
-    userAuthor = require(4513) /* useNullableMessageAuthor */.getUserAuthor(tmp4, channel);
-    const obj3 = require(4513) /* useNullableMessageAuthor */;
+    userAuthor = require("../messages/useMessageAuthor.tsx") /* useNullableMessageAuthor */.getUserAuthor(tmp4, channel);
+    const obj3 = require("../messages/useMessageAuthor.tsx") /* useNullableMessageAuthor */;
   }
   obj = { id: message.id, blocked: message.blocked, bot: message.bot, content: message.content, content_parsed: null, nick: null, author_color: null, edited_timestamp: null, timestamp: null, tts: null, mentions: null, mention_everyone: null, mention_roles: null, embeds: null, attachments: null, author: null, pinned: null, type: null };
   let tmp10;
@@ -96,14 +96,14 @@ function transformInternalTextMessage(message) {
   ({ embeds: obj4[13], attachments: obj4[14] } = message);
   let tmp13;
   if (null != tmp4) {
-    tmp13 = importDefault(10549)(tmp4);
+    tmp13 = require("helpers/transformUser.tsx")(tmp4);
   }
   obj[15] = tmp13;
   ({ pinned: obj4[16], type: obj4[17] } = message);
   return obj;
 }
 function fetchApplicationRPC(arg0) {
-  const HTTP = require(530) /* sendRequest */.HTTP;
+  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
   const value = HTTP.get({ url: closure_19.APPLICATION_RPC(arg0), oldFormErrors: true, retries: 3, rejectWithError: true });
   return value.then((body) => body.body, () => {
     throw new callback(table[26])({ closeCode: constants.INVALID_CLIENTID }, "Invalid Client ID");
@@ -394,7 +394,7 @@ function transformVoiceState(closure_2, id, userId) {
     throw error;
   } else {
     let obj = { nick: null, mute: null, volume: null, pan: null, voice_state: null, user: null };
-    obj[0] = importDefault(4474).getName(closure_2, id, user);
+    obj[0] = require("../../utils/NicknameUtils.tsx").getName(closure_2, id, user);
     obj[1] = store.isLocalMute(user.id);
     obj[2] = store.getLocalVolume(user.id);
     obj[3] = store.getLocalPan(user.id);
@@ -405,7 +405,7 @@ function transformVoiceState(closure_2, id, userId) {
     obj[3] = selfDeaf;
     obj[4] = suppress;
     obj[4] = obj;
-    obj[5] = importDefault(10549)(user);
+    obj[5] = require("helpers/transformUser.tsx")(user);
     return obj;
   }
 }
@@ -421,8 +421,8 @@ export const VALIDATE_SOCKET_PERIOD_MS = MINUTE;
 export const VALIDATE_SOCKET_THROTTLERS = obj;
 export { getRemoteIconURL };
 export const containsSameValues = function containsSameValues(arg0, arg1) {
-  const obj = importDefault(12);
-  return obj.isEqual(arg0, importDefault(12).pick(arg1, Object.keys(arg0)));
+  const obj = require("../../../_runtime/00012_apply.js");
+  return obj.isEqual(arg0, require("../../../_runtime/00012_apply.js").pick(arg1, Object.keys(arg0)));
 };
 export { validateOrigin };
 export const transformChannel = function transformChannel(channel, arg1) {
@@ -500,7 +500,7 @@ export const transformChannel = function transformChannel(channel, arg1) {
 export { transformInternalTextMessage };
 export { transformVoiceState };
 export const transformBaseRelationship = function transformBaseRelationship(relationshipType, user) {
-  let obj = { type: relationshipType, user: importDefault(10549)(user), presence: null };
+  let obj = { type: relationshipType, user: require("helpers/transformUser.tsx")(user), presence: null };
   obj = { status: store2.getStatus(user.id, null), activity: null };
   obj[2] = obj;
   return obj;
@@ -531,7 +531,7 @@ export const isMatchingOrigin = function isMatchingOrigin(str) {
       return true;
     } else {
       try {
-        const hostname = importDefault(1469).parse(str).hostname;
+        const hostname = require("../../../_runtime/01469_Url.js").parse(str).hostname;
         const _window = window;
         let tmp4 = window.location.hostname === hostname;
         if (tmp4) {
@@ -566,7 +566,7 @@ export const hasMessageReadPermission = function hasMessageReadPermission(channe
   }
   let tmp2 = application_id === id;
   if (!tmp2) {
-    tmp2 = scopes.indexOf(require(8824) /* set */.OAuth2Scopes.MESSAGES_READ) > -1;
+    tmp2 = scopes.indexOf(require("../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx") /* set */.OAuth2Scopes.MESSAGES_READ) > -1;
   }
   return tmp2;
 };
@@ -650,7 +650,7 @@ export const validatePostMessageTransport = function validatePostMessageTranspor
     const obj = { errorCode: null };
     obj[0] = constants4.INVALID_COMMAND;
     const _HermesInternal = HermesInternal;
-    let tmp3 = importDefault(10543);
+    let tmp3 = require("RPCError.tsx");
     tmp3 = new tmp3(obj, "command not available from \"" + transport + " transport");
     throw tmp3;
   }
@@ -659,7 +659,7 @@ export const validateApplication = function validateApplication(application) {
   if (null == application.id) {
     const obj = { errorCode: null };
     obj[0] = constants4.INVALID_COMMAND;
-    const tmp7 = new importDefault(10543)(obj, "Invalid application");
+    const tmp7 = new require("RPCError.tsx")(obj, "Invalid application");
     throw tmp7;
   } else {
     return application.id;

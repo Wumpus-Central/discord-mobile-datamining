@@ -15,8 +15,8 @@ export default function VoicePanelLockedIcon() {
   const tmp = createCacheKey();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.icon, source: null, size: null };
-  obj[1] = importDefault(16128);
-  obj[2] = require(1297) /* Button */.IconSizes.LARGE;
-  obj[1] = jsx(require(1297) /* Button */.Icon, { style: tmp.icon, source: null, size: null });
-  return jsx(importDefault(5663), { style: tmp.icon, source: null, size: null });
+  obj[1] = require("../../../../../_runtime/16128_registerAsset.js");
+  obj[2] = require("../../../../design/void/native.tsx") /* Button */.IconSizes.LARGE;
+  obj[1] = jsx(require("../../../../design/void/native.tsx") /* Button */.Icon, { style: tmp.icon, source: null, size: null });
+  return jsx(require("../../../core/native/NativeView.tsx"), { style: tmp.icon, source: null, size: null });
 };

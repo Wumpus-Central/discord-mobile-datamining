@@ -23,7 +23,7 @@ export const trackFlowStart = function trackFlowStart(arg0) {
     phone = currentUser.phone;
   }
   let closure_1 = null != phone;
-  obj = _require(11947);
+  obj = _require("ContactSyncUtils.tsx");
   const result = obj.checkContactPermissions();
   result.then((arg0) => {
     let tmp = null;
@@ -51,7 +51,7 @@ export const trackFlowStep = function trackFlowStep(LANDING, skip, back, locatio
   const tmp = getIsOnboarding();
   const timestamp = Date.now();
   const result = (timestamp - timestamp) / 1000;
-  let obj = importDefault(698);
+  let obj = require("../../../utils/AnalyticsUtils.tsx");
   obj = {};
   const merged = Object.assign(location);
   if (tmp) {
@@ -70,14 +70,14 @@ export const trackFlowStep = function trackFlowStep(LANDING, skip, back, locatio
   if (tmp) {
     obj = { skip: null };
     obj[0] = skip;
-    require(11950) /* trackNUFStep */.trackNUFStep(closure_8, LANDING, obj);
-    const obj3 = require(11950) /* trackNUFStep */;
+    require("../../nuf/native/NewUserAnalyticsUtils.tsx") /* trackNUFStep */.trackNUFStep(closure_8, LANDING, obj);
+    const obj3 = require("../../nuf/native/NewUserAnalyticsUtils.tsx") /* trackNUFStep */;
   }
   closure_8 = LANDING;
 };
 export const trackFlowEnd = function trackFlowEnd(flag, location) {
   const timestamp = Date.now();
-  let obj = importDefault(698);
+  let obj = require("../../../utils/AnalyticsUtils.tsx");
   obj = {};
   const merged = Object.assign(location);
   if (tmp) {

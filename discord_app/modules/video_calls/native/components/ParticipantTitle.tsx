@@ -17,6 +17,6 @@ export default function ParticipantTitle(arg0) {
   ({ channel, participant, style } = arg0);
   const obj = { style: items, numberOfLines: 1, children: null };
   items = [createCacheKey().usernameText, style];
-  obj[2] = importDefault(10823)(channel, participant);
-  return jsx(require(1297) /* Button */.LegacyText, { style: items, numberOfLines: 1, children: null });
+  obj[2] = require("../../getParticipantTitle.tsx")(channel, participant);
+  return jsx(require("../../../../design/void/native.tsx") /* Button */.LegacyText, { style: items, numberOfLines: 1, children: null });
 };

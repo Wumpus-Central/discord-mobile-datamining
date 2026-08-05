@@ -31,20 +31,20 @@ function EmptyStateNoQuestsAvailable() {
   obj[1] = intl.string(navigation(1236).t["/g10LC"]);
   obj[2] = callback;
   obj[0] = callback2(navigation(4695).Button, obj);
-  return callback2(importDefault(14209), obj);
+  return callback2(require("QuestHomeEmptyState.tsx"), obj);
 }
 function EmptyStateFiltered(onClearFilters) {
   let obj = { action: null, title: null, subtitle: null };
   obj = { variant: "secondary", text: null, onPress: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl.string(require(1236) /* getSystemLocale */.t.urZl31);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.urZl31);
   obj[2] = onClearFilters.onClearFilters;
-  obj[0] = callback2(require(4695) /* Button */.Button, obj);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.PBfFnx);
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl3.string(require(1236) /* getSystemLocale */.t.nwdKFC);
-  return callback2(importDefault(14209), obj);
+  obj[0] = callback2(require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj);
+  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.PBfFnx);
+  const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.nwdKFC);
+  return callback2(require("QuestHomeEmptyState.tsx"), obj);
 }
 function HeaderPreviewButton() {
   const callback = importAllResult.useCallback(() => {
@@ -53,7 +53,7 @@ function HeaderPreviewButton() {
     obj = { screen: QUEST_PREVIEW_TOOL_2.QUEST_PREVIEW_TOOL_2 };
     callback(5925).openUserSettings(obj);
   }, []);
-  let obj = require(10374) /* useQuests */;
+  let obj = require("../hooks/QuestHooks.tsx") /* useQuests */;
   let tmp5 = null;
   if (obj.useShouldShowPreviewToolTab()) {
     obj = { style: null, children: null };
@@ -73,7 +73,7 @@ function HeaderWithBounties(arg0) {
   let showOrbShopPlaceholderCarousel;
   ({ orbShopProducts, obtainableOrbRewards, showOrbShopPlaceholderCarousel } = arg0);
   const tmp = callback3();
-  let obj = require(10895) /* useBountiesExperience */;
+  let obj = require("../experiments/useBountiesExperience.tsx") /* useBountiesExperience */;
   const verticalScrollEnabled = obj.useBountiesExperience(QuestsExperimentLocations.QUEST_HOME_MOBILE).verticalScrollEnabled;
   const items = [callback2(HeaderPreviewButton, {}), , , ];
   let tmp4Result = !verticalScrollEnabled;
@@ -87,11 +87,11 @@ function HeaderWithBounties(arg0) {
     obj[2] = intl.string(tmp2(1236).t.qetVDw);
     const items2 = [tmp6(tmp2(4281).Text, obj), ];
     const obj1 = { onPress: null, hitSlop: 14, "aria-label": null, accessibilityRole: "button", children: null };
-    obj1[0] = importDefault(14211);
+    obj1[0] = require("openBountiesNuxPromoSheet.tsx");
     const intl2 = tmp2(1236).intl;
     obj1[2] = intl2.string(tmp2(1236).t.hvVgAZ);
     const obj2 = { size: "xs", color: null };
-    obj2[1] = importDefault(712).colors.ICON_SUBTLE;
+    obj2[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.ICON_SUBTLE;
     obj1[4] = tmp6(tmp2(4241).CircleInformationIcon, obj2);
     items2[1] = tmp6(tmp2(4812).PressableOpacity, obj1);
     obj[1] = items2;
@@ -99,14 +99,14 @@ function HeaderWithBounties(arg0) {
   }
   const obj3 = { children: null };
   items[1] = tmp4Result;
-  items[2] = callback2(importDefault(14213), { verticalScrollEnabled, orbShopProducts, obtainableOrbRewards, showOrbShopPlaceholderCarousel });
+  items[2] = callback2(require("QuestHomeBounties.tsx"), { verticalScrollEnabled, orbShopProducts, obtainableOrbRewards, showOrbShopPlaceholderCarousel });
   const obj4 = { style: items3, children: null };
   items3 = [, ];
   ({ sectionHeader: arr4[0], sectionHeaderWithTag: arr4[1] } = tmp);
   const obj5 = { variant: "text-lg/semibold", color: "text-strong", children: null };
   const intl3 = tmp2(1236).intl;
-  obj5[2] = intl3.string(require(1236) /* getSystemLocale */.t.JALI2K);
-  obj4[1] = callback2(require(4281) /* Text */.Text, obj5);
+  obj5[2] = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.JALI2K);
+  obj4[1] = callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj5);
   items[3] = callback2(closure_5, obj4);
   obj3[0] = items;
   return closure_15(closure_16, obj3);

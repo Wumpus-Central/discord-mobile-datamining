@@ -22,8 +22,8 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
   let merged5 = importDefault;
   let acceptBlurpleLabelBackgroundColor = dependencyMap;
   ({ theme, currentUser } = questId);
-  let acceptLabelGreenColor = importDefault(7863)(theme);
-  let obj = require(1577) /* isMetaQuest */;
+  let acceptLabelGreenColor = require("../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx")(theme);
+  let obj = require("../../device/MetaQuestUtils.android.tsx") /* isMetaQuest */;
   if (obj.isMetaQuest()) {
     const intl9 = tmp2(1236).intl;
     const intl10 = tmp2(1236).intl;

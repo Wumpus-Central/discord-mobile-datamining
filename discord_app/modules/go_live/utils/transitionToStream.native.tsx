@@ -7,11 +7,11 @@ const result = require("module_4490").fileFinishedImporting("modules/go_live/uti
 export default function transitionToStream(channelId) {
   channel = channel.getChannel(channelId.channelId);
   if (null != channel) {
-    importDefault(4253).hideActionSheet();
-    const obj = importDefault(4253);
-    importDefault(4490).popAll();
-    const obj2 = importDefault(4490);
-    require(4494) /* openChannelCallModal */.openGuildVoiceModal(channel, "Go Live");
-    const obj3 = require(4494) /* openChannelCallModal */;
+    require("../../action_sheet/native/ActionSheetActionCreators.tsx").hideActionSheet();
+    const obj = require("../../action_sheet/native/ActionSheetActionCreators.tsx");
+    require("../../../actions/ModalActionCreators.tsx").popAll();
+    const obj2 = require("../../../actions/ModalActionCreators.tsx");
+    require("../../../utils/native/PrivateChannelCallUtils.tsx") /* openChannelCallModal */.openGuildVoiceModal(channel, "Go Live");
+    const obj3 = require("../../../utils/native/PrivateChannelCallUtils.tsx") /* openChannelCallModal */;
   }
 };

@@ -156,10 +156,10 @@ prototype["showRPCDisconnectErrorUI"] = function showRPCDisconnectErrorUI(reason
   let code;
   let message;
   ({ code, message } = reason);
-  let obj = importDefault(4624);
+  let obj = require("../../../actions/native/AlertActionCreators.tsx");
   obj = { title: null, body: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.formatToPlainString(require(1236) /* getSystemLocale */.t.hbiAO6, { code });
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.hbiAO6, { code });
   obj[1] = message;
   obj.show(obj);
 };
@@ -167,7 +167,7 @@ prototype["leaveFrame"] = function leaveFrame(applicationId) {
   const self = this;
   applicationId = applicationId.applicationId;
   this.releaseWebView();
-  let obj = require(1351) /* isDiscordFrontendDevelopment */;
+  let obj = require("../../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */;
   if (obj.isNotNullish(applicationId)) {
     obj = { applicationId: null };
     obj[0] = applicationId;
@@ -176,14 +176,14 @@ prototype["leaveFrame"] = function leaveFrame(applicationId) {
 };
 prototype["clearFrameState"] = function clearFrameState(applicationId) {
   applicationId = applicationId.applicationId;
-  importDefault(10510).stopFrame({ applicationId });
-  const obj = importDefault(10510);
-  importDefault(709).dispatch({ type: "FRAME_SET_ORIENTATION_LOCK_STATE", applicationId, lockState: null, pictureInPictureLockState: null });
+  require("../FramesActionCreators.native.tsx").stopFrame({ applicationId });
+  const obj = require("../FramesActionCreators.native.tsx");
+  require("../../../Dispatcher.tsx").dispatch({ type: "FRAME_SET_ORIENTATION_LOCK_STATE", applicationId, lockState: null, pictureInPictureLockState: null });
 };
 prototype["releaseWebView"] = function releaseWebView() {
   const releaseIframeIdResult = this.releaseIframeId();
   if (null != releaseIframeIdResult) {
-    const ComponentDispatch = require(1231) /* ComponentDispatcher */.ComponentDispatch;
+    const ComponentDispatch = require("../../../utils/ComponentDispatchUtils.tsx") /* ComponentDispatcher */.ComponentDispatch;
     const obj = { id: null };
     obj[0] = releaseIframeIdResult;
     ComponentDispatch.dispatch(ComponentActions.IFRAME_UNMOUNT, obj);
@@ -203,7 +203,7 @@ prototype["getOrCreateIframeId"] = function getOrCreateIframeId() {
   if (null != iframeId) {
     return iframeId;
   } else {
-    const v4Result = require(514) /* v1 */.v4();
+    const v4Result = require("../../../../_runtime/00514_v1.js") /* v1 */.v4();
     tmp.iframeId = v4Result;
     return v4Result;
   }

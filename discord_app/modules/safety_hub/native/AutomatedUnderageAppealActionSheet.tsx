@@ -1,5 +1,5 @@
 // discord_app/modules/safety_hub/native/AutomatedUnderageAppealActionSheet.tsx
-import module_3982 from "module_3982";
+import Linking from "../../../lib/native/Linking.tsx";
 import { View } from "TableRowGroupTitle";
 import handleSafetyHubRequestAgeVerificationResetModalAction from "handleSafetyHubRequestAgeVerificationResetModalAction";
 import SafetyHubView from "SafetyHubView";

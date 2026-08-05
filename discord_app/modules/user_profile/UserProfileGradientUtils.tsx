@@ -6,10 +6,10 @@ import apply from "apply";
 
 const require = arg1;
 const memoizeResult = apply.memoize((arg0) => {
-  let obj = require(4131) /* AccessibilityAnnouncer */;
-  obj = { base: "#ffffff", contrastRatio: require(4131) /* AccessibilityAnnouncer */.WCAGContrastRatios.HighContrastText };
+  let obj = require("../../design/shared.tsx") /* AccessibilityAnnouncer */;
+  obj = { base: "#ffffff", contrastRatio: require("../../design/shared.tsx") /* AccessibilityAnnouncer */.WCAGContrastRatios.HighContrastText };
   const contrastingColor = obj.getContrastingColor(arg0, obj);
-  return require(688) /* int2hslRaw */.hex2int(contrastingColor);
+  return require("../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */.hex2int(contrastingColor);
 }, (arg0) => arg0);
 const memoizeResult1 = apply.memoize((hex2intResult) => {
   let tmp = arg2;
@@ -22,21 +22,21 @@ const memoizeResult1 = apply.memoize((hex2intResult) => {
       } else {
         LIGHT = ThemeTypes.LIGHT;
       }
-      obj = require(688) /* int2hslRaw */;
+      obj = require("../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */;
     }
   }
-  const obj2 = importDefault(689);
+  const obj2 = require("../../../_runtime/00689_n.js");
   const tmp8 = importDefault;
-  const mixResult = obj2.mix(importDefault(689)(hex2intResult), importDefault(689)(arg1), 0.5, "lab");
+  const mixResult = obj2.mix(require("../../../_runtime/00689_n.js")(hex2intResult), require("../../../_runtime/00689_n.js")(arg1), 0.5, "lab");
   const result = Math.round(100 * mixResult.get("hsl.l")) / 100;
   if (tmp !== ThemeTypes.LIGHT) {
-    let clampResult = require(12) /* apply */.clamp(result, 0, 0.1);
-    const obj5 = require(12) /* apply */;
+    let clampResult = require("../../../_runtime/00012_apply.js") /* apply */.clamp(result, 0, 0.1);
+    const obj5 = require("../../../_runtime/00012_apply.js") /* apply */;
   } else {
-    clampResult = require(12) /* apply */.clamp(result, 0.8, 1);
-    const obj4 = require(12) /* apply */;
+    clampResult = require("../../../_runtime/00012_apply.js") /* apply */.clamp(result, 0.8, 1);
+    const obj4 = require("../../../_runtime/00012_apply.js") /* apply */;
   }
-  const tmp10 = importDefault(689)(hex2intResult);
+  const tmp10 = require("../../../_runtime/00689_n.js")(hex2intResult);
   const result1 = tmp8(689)(mixResult).set("hsl.l", clampResult);
   return result1.num();
 }, (arg0, arg1, arg2) => "" + arg0 + "-" + arg1 + "-" + arg2);
@@ -51,7 +51,7 @@ export const getProfileTheme = function getProfileTheme(first) {
     } else {
       LIGHT = ThemeTypes.LIGHT;
     }
-    obj = require(688) /* int2hslRaw */;
+    obj = require("../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */;
   }
 };
 export const getValueInColorGradientByPercentage = function getValueInColorGradientByPercentage(items, items1, arg2) {
@@ -99,9 +99,9 @@ export const calculateGradientSplitColors = function calculateGradientSplitColor
   if (0 === arg2) {
     return [];
   } else {
-    const int2rgbArrayResult = require(688) /* int2hslRaw */.int2rgbArray(modalV2BackgroundColor);
-    const obj = require(688) /* int2hslRaw */;
-    const int2rgbArrayResult1 = require(688) /* int2hslRaw */.int2rgbArray(modalV2BackgroundColor);
+    const int2rgbArrayResult = require("../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */.int2rgbArray(modalV2BackgroundColor);
+    const obj = require("../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */;
+    const int2rgbArrayResult1 = require("../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */.int2rgbArray(modalV2BackgroundColor);
     const result = 100 * arg3 / arg2 / 100;
     const diff = 1 - result;
     const _Math = Math;
@@ -130,27 +130,27 @@ export const getUserProfileGradientContainerColors = function getUserProfileGrad
   if (typeof closure_2 === "string") {
     let int2rgbaResult = int2rgbaResult1;
     if (null != result) {
-      int2rgbaResult = require(688) /* int2hslRaw */.int2rgba(result, 1);
-      const obj3 = require(688) /* int2hslRaw */;
+      int2rgbaResult = require("../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */.int2rgba(result, 1);
+      const obj3 = require("../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */;
     }
     const items = [int2rgbaResult, ];
     if (null != result1) {
-      int2rgbaResult1 = require(688) /* int2hslRaw */.int2rgba(result1, 1);
-      const obj4 = require(688) /* int2hslRaw */;
+      int2rgbaResult1 = require("../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */.int2rgba(result1, 1);
+      const obj4 = require("../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */;
     }
     items[1] = int2rgbaResult1;
     let items1 = items;
   } else {
     if (null != result) {
-      let int2rgbaResult2 = require(688) /* int2hslRaw */.int2rgba(result, 1);
-      const obj = require(688) /* int2hslRaw */;
+      let int2rgbaResult2 = require("../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */.int2rgba(result, 1);
+      const obj = require("../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */;
     } else {
       int2rgbaResult2 = int2rgbaResult1[0];
     }
     items1 = [int2rgbaResult2, ];
     if (null != result1) {
-      let int2rgbaResult3 = require(688) /* int2hslRaw */.int2rgba(result1, 1);
-      const obj2 = require(688) /* int2hslRaw */;
+      let int2rgbaResult3 = require("../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */.int2rgba(result1, 1);
+      const obj2 = require("../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */;
     } else {
       int2rgbaResult3 = int2rgbaResult1[1];
     }

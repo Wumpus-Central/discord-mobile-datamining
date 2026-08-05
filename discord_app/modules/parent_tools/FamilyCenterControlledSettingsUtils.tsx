@@ -2,7 +2,7 @@
 function getGoreContentSettingOrDefault(arg0) {
   let goreContentFriendDm;
   let goreContentNonFriendDm;
-  const ParentalControlledGoreContent = require(13975) /* result */.ParentalControlledGoreContent;
+  const ParentalControlledGoreContent = require("../user_settings/family_center/ParentalControlledUserSettings.tsx") /* result */.ParentalControlledGoreContent;
   let controlledSetting = ParentalControlledGoreContent.getControlledSetting(arg0);
   if (controlledSetting == null) {
     controlledSetting = {};
@@ -13,19 +13,19 @@ function getGoreContentSettingOrDefault(arg0) {
     goreContentNonFriendDm = tmpResult.resolveGoreSettingWithDefaultsForTeen({ isDm: true });
   }
   const obj = { goreContentNonFriendDm, goreContentFriendDm: null, goreContentGuilds: null };
-  tmp3 = null != goreContentNonFriendDm && goreContentNonFriendDm !== require(1306) /* create */.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
+  tmp3 = null != goreContentNonFriendDm && goreContentNonFriendDm !== require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
   if (!tmp4) {
     tmpResult = tmp(5826);
     goreContentFriendDm = tmpResult.resolveGoreSettingWithDefaultsForTeen({ isDm: true, isFriend: true });
   }
   obj[1] = goreContentFriendDm;
-  obj[2] = require(1306) /* create */.ExplicitContentRedaction.BLUR;
+  obj[2] = require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.ExplicitContentRedaction.BLUR;
   return obj;
 }
 function getExplicitContentSettingOrDefault(teenId) {
   let isFriend;
   let setting;
-  const ParentalControlledExplicitContent = require(13975) /* result */.ParentalControlledExplicitContent;
+  const ParentalControlledExplicitContent = require("../user_settings/family_center/ParentalControlledUserSettings.tsx") /* result */.ParentalControlledExplicitContent;
   const controlledSetting = ParentalControlledExplicitContent.getControlledSetting(teenId);
   let obj = { teenId, setting: null };
   let prop;
@@ -69,13 +69,13 @@ let result = require("resolveGoreSettingWithDefaults").fileFinishedImporting("mo
 export const isSetAndNotDefault = function isSetAndNotDefault(goreContentFriendDm) {
   let tmp = null != goreContentFriendDm;
   if (tmp) {
-    tmp = goreContentFriendDm !== require(1306) /* create */.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
+    tmp = goreContentFriendDm !== require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
   }
   return tmp;
 };
 export { getGoreContentSettingOrDefault };
 export const updateGoreContentSetting = function updateGoreContentSetting(selectedTeenId) {
-  const ParentalControlledGoreContent = require(13975) /* result */.ParentalControlledGoreContent;
+  const ParentalControlledGoreContent = require("../user_settings/family_center/ParentalControlledUserSettings.tsx") /* result */.ParentalControlledGoreContent;
   const merged = Object.assign(getGoreContentSettingOrDefault(selectedTeenId));
   const merged1 = Object.assign(arg1);
   const result = ParentalControlledGoreContent.updateControlledSetting(selectedTeenId, {});
@@ -89,14 +89,14 @@ export const resolveExplicitContentSettingWithDefaultsForTeen = function resolve
   }
   let tmp = null != setting;
   if (tmp) {
-    tmp = setting !== require(1306) /* create */.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
+    tmp = setting !== require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
   }
   if (tmp) {
     return setting;
   } else {
-    const ParentalControlledLegacyExplicitContent = require(13975) /* result */.ParentalControlledLegacyExplicitContent;
+    const ParentalControlledLegacyExplicitContent = require("../user_settings/family_center/ParentalControlledUserSettings.tsx") /* result */.ParentalControlledLegacyExplicitContent;
     const controlledSetting = ParentalControlledLegacyExplicitContent.getControlledSetting(teenId.teenId);
-    const tmp7 = require(5824) /* resolveExplicitContentSettingWithDefaults */;
+    const tmp7 = require("../explicit_media_redaction/SensitiveMediaExplicitRedactionSettingsUtils.tsx") /* resolveExplicitContentSettingWithDefaults */;
     if (isFriend) {
       let tmp8 = tmp7.TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_FRIEND_DM[controlledSetting];
     } else {
@@ -107,7 +107,7 @@ export const resolveExplicitContentSettingWithDefaultsForTeen = function resolve
 };
 export { getExplicitContentSettingOrDefault };
 export const updateExplicitContentSetting = function updateExplicitContentSetting(selectedTeenId) {
-  const ParentalControlledExplicitContent = require(13975) /* result */.ParentalControlledExplicitContent;
+  const ParentalControlledExplicitContent = require("../user_settings/family_center/ParentalControlledUserSettings.tsx") /* result */.ParentalControlledExplicitContent;
   const merged = Object.assign(getExplicitContentSettingOrDefault(selectedTeenId));
   const merged1 = Object.assign(arg1);
   const result = ParentalControlledExplicitContent.updateControlledSetting(selectedTeenId, {});

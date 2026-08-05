@@ -16,7 +16,7 @@ function RestrictedHoursLogoutBlockingLayer(visible) {
   if (visible.visible) {
     const obj = { style: null, pointerEvents: "auto", accessibilityLiveRegion: "polite", children: null };
     obj[0] = tmp.logoutBlockingLayer;
-    obj[3] = callback2(require(5732) /* ActivityIndicator */.ActivityIndicator, { size: "large" });
+    obj[3] = callback2(require("../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx") /* ActivityIndicator */.ActivityIndicator, { size: "large" });
     tmp2 = callback2(closure_5, obj);
   }
   return tmp2;
@@ -199,7 +199,7 @@ let result = require("get ActivityIndicator").fileFinishedImporting("modules/par
 export default function RestrictedHoursModal() {
   let _slicedToArray;
   let tmp4;
-  const tmp = importDefault(16234)();
+  const tmp = require("../hooks/useIsInRestrictedHours.tsx")();
   let callback = tmp;
   importDefault = React.useRef(false);
   const dependencyMap = React.useRef(true);
@@ -247,7 +247,7 @@ export default function RestrictedHoursModal() {
       const obj = callback(16230);
     }
   }, items1);
-  importDefault(4692)(() => true);
+  require("../../routing/native/useBackPressHandler.tsx")(() => true);
   obj = { screens: navigatorScreens, initialRouteName: constants.MAIN };
   return callback2(callback(11248).Modal, obj);
 };

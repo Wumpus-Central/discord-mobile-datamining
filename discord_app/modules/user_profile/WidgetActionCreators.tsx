@@ -8,7 +8,7 @@ const result = require("ME").fileFinishedImporting("modules/user_profile/WidgetA
 
 export default {
   setPendingWidgets(items) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "WIDGET_PENDING_SET", widgets: items };
     obj.dispatch(obj);
   },
@@ -111,7 +111,7 @@ export default {
     })();
   },
   clearPendingWidgets() {
-    importDefault(709).dispatch({ type: "WIDGET_PENDING_CLEAR" });
+    require("../../Dispatcher.tsx").dispatch({ type: "WIDGET_PENDING_CLEAR" });
   },
   uploadWidgetAsset(arg0) {
     let closure_0 = arg0;
@@ -379,7 +379,7 @@ export default {
     })();
   },
   removeGameFromSuggestedGames(applicationId) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "WIDGET_SUGGESTED_REMOVE_GAME", applicationId };
     obj.dispatch(obj);
   }

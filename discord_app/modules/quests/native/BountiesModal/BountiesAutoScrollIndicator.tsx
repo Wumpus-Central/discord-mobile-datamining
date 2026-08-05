@@ -37,7 +37,7 @@ function BouncingArrow(children) {
   fn.__workletHash = 10126349088819;
   fn.__initData = closure_7;
   const style = sharedValue(4146).useAnimatedStyle(fn);
-  return callback(importDefault(4146).View, { style, children: children.children });
+  return callback(require("../../../reanimated/ReanimatedRexport.tsx").View, { style, children: children.children });
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = { code: "function BountiesAutoScrollIndicatorTsx1(){const{translateY}=this.__closure;return{transform:[{translateY:translateY.get()}]};}" };
@@ -55,17 +55,17 @@ export default function BountiesAutoScrollIndicator(showProgressRing) {
   }
   let _require;
   const tmp = createCacheKey();
-  let obj = _require(3989);
-  const token = obj.useToken(importDefault(712).colors.WHITE);
+  let obj = _require("../../../../design/tokens/native/useToken.tsx");
+  const token = obj.useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE);
   obj = { size: "md", color: null };
-  obj[1] = importDefault(712).colors.WHITE;
-  const tmp6 = callback(_require(14202).ArrowSmallUpIcon, obj);
+  obj[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE;
+  const tmp6 = callback(_require("../../../../design/components/Icon/native/redesign/generated/ArrowSmallUpIcon.tsx").ArrowSmallUpIcon, obj);
   _require = tmp6;
   obj = { style: tmp.root, children: null };
   const obj1 = { variant: "text-md/semibold", color: "text-default", children: null };
-  const intl = _require(1236).intl;
-  obj1[2] = intl.string(_require(1236).t.eafsh4);
-  const items = [callback(_require(4281).Text, obj1), ];
+  const intl = _require("../../../../intl/index.native.tsx").intl;
+  obj1[2] = intl.string(_require("../../../../intl/index.native.tsx").t.eafsh4);
+  const items = [callback(_require("../../../../design/components/Text/native/Text.tsx").Text, obj1), ];
   const obj2 = { style: tmp.ringContainer, children: null };
   if (flag) {
     const obj3 = { size: 40, width: 3, fill: null, duration: 0, rotation: 0, lineCap: "round", tintColor: null, backgroundColor: "rgba(255, 255, 255, 0.35)", children: null };
@@ -74,7 +74,7 @@ export default function BountiesAutoScrollIndicator(showProgressRing) {
     obj3[8] = function children() {
       return c0;
     };
-    let tmp5Result = tmp5(_require(14204).AnimatedCircularProgress, obj3);
+    let tmp5Result = tmp5(_require("../../../../../_runtime/14204_CircularProgress.js").AnimatedCircularProgress, obj3);
   } else {
     const obj4 = { children: null };
     obj4[0] = tmp6;

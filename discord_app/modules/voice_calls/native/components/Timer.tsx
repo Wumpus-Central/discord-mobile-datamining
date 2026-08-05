@@ -139,28 +139,28 @@ prototype["render"] = function render() {
   if (!props.hideHours) {
     const _String = String;
     const _HermesInternal = HermesInternal;
-    let str = "" + importDefault(12).padStart(String(hours), 2, "0") + ":";
-    const obj = importDefault(12);
+    let str = "" + require("../../../../../_runtime/00012_apply.js").padStart(String(hours), 2, "0") + ":";
+    const obj = require("../../../../../_runtime/00012_apply.js");
   } else {
     str = "";
   }
   if (!hideMinutes) {
     const _String2 = String;
     const _HermesInternal2 = HermesInternal;
-    let str5 = "" + importDefault(12).padStart(String(minutes), 2, "0") + ":";
-    const obj2 = importDefault(12);
+    let str5 = "" + require("../../../../../_runtime/00012_apply.js").padStart(String(minutes), 2, "0") + ":";
+    const obj2 = require("../../../../../_runtime/00012_apply.js");
   } else {
     str5 = "";
   }
   if (str.length > 0) {
     const _String3 = String;
-    let padStartResult = importDefault(12).padStart(String(seconds), 2, "0");
-    const obj3 = importDefault(12);
+    let padStartResult = require("../../../../../_runtime/00012_apply.js").padStart(String(seconds), 2, "0");
+    const obj3 = require("../../../../../_runtime/00012_apply.js");
   } else {
     padStartResult = seconds;
   }
   const children = [str, str5, padStartResult];
-  return jsxs(require(1297) /* Button */.LegacyText, { style, accessibilityRole: "timer", children });
+  return jsxs(require("../../../../design/void/native.tsx") /* Button */.LegacyText, { style, accessibilityRole: "timer", children });
 };
 Timer.defaultProps = { hideMinutes: false, hideHours: false };
 let result = require("apply").fileFinishedImporting("modules/voice_calls/native/components/Timer.tsx");

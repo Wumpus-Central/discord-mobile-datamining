@@ -5,7 +5,7 @@ const result = require("enforcing").fileFinishedImporting("utils/native/ClientIn
 
 export const getConstants = function getConstants() {
   if (obj.isAndroid()) {
-    if (null === importDefault(672)) {
+    if (null === require("../../../discord_common/js/packages/rtn-codegen/js/NativeClientInfoModule.tsx")) {
       const _Error = Error;
       const error = new Error("Turbo module RTNClientInfoManager is undefined for Android");
       throw error;
@@ -17,7 +17,7 @@ export const getConstants = function getConstants() {
     const InfoDictionaryManager = NativeModules.InfoDictionaryManager;
     return InfoDictionaryManager.getConstants();
   }
-  obj = require(500) /* set */;
+  obj = require("../PlatformUtils.tsx") /* set */;
 };
 export const getBuildNumberLabel = function getBuildNumberLabel() {
   const items = ["0", "123456", "1234567890"];

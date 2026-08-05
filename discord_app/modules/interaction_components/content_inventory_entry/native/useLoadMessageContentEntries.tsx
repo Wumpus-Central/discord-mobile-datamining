@@ -729,7 +729,7 @@ function isMessageRenderable(arg0) {
     let tmp2 = nextResult;
     let tmp3 = require;
     let tmp4 = dependencyMap;
-    if (nextResult.type === require(1906) /* PermissionOverwriteType */.ComponentType.CONTENT_INVENTORY_ENTRY) {
+    if (nextResult.type === require("../../../../flow/Server.tsx") /* PermissionOverwriteType */.ComponentType.CONTENT_INVENTORY_ENTRY) {
       let tmp3Result = tmp3(8043);
       let obj = { component: null, message: null };
       obj = { contentInventoryEntry: null };
@@ -766,7 +766,7 @@ export default function useLoadMessageContentEntries(arg0) {
   const tmp7 = first(first1.useState(new Set()), 2);
   first1 = tmp7[0];
   let addApplication = tmp7[1];
-  let obj = _require(8045);
+  let obj = _require("../../../avatar/useAvatarColor.tsx");
   _require = undefined;
   const colorStore = obj.useColorStore((palette) => palette.palette);
   _require = callback((arg0, arg1) => {

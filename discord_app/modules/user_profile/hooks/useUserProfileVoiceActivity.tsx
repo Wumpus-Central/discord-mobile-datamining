@@ -42,7 +42,7 @@ export const isUserProfileVoiceActivityForChannel = function isUserProfileVoiceA
   let voiceChannelId;
   voiceStateForSession = voiceStateForSession.voiceStateForSession;
   ({ activity, voiceChannelId } = voiceStateForSession);
-  let tmp = importDefault(7119)(activity);
+  let tmp = require("../../activities/utils/isEmbeddedActivity.tsx")(activity);
   if (tmp) {
     let channelId;
     if (voiceStateForSession != null) {

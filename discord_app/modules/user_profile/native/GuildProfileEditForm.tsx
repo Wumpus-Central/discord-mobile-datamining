@@ -35,13 +35,13 @@ function EditGuildProfileBanner(user) {
   let c4;
   let analyticsLocations;
   ({ displayProfile, guildMember, pendingAvatarSrc, pendingThemeColors, disabled } = user);
-  let obj = importDefault(3931);
+  let obj = require("../../../utils/PremiumUtils.tsx");
   let result = obj.canUsePremiumGuildMemberProfile(user);
   c4 = result;
-  analyticsLocations = importDefault(5610)(importDefault(5630).EDIT_BANNER).analyticsLocations;
+  analyticsLocations = require("../../app_analytics/useAnalyticsLocations.tsx")(require("../../app_analytics/AnalyticsLocation.tsx").EDIT_BANNER).analyticsLocations;
   obj = { value: analyticsLocations, children: null };
   obj = { user, displayProfile, pendingBanner, pendingAvatarSrc, pendingThemeColors, showProfilePreviewButton: false, showEditButton: null, onPressEdit: null, editButtonAccessibilityLabel: null, editDisabled: null };
-  const tmp3 = importDefault(5610);
+  const tmp3 = require("../../app_analytics/useAnalyticsLocations.tsx");
   if (result) {
     result = null != guildMember;
   }
@@ -86,7 +86,7 @@ function EditGuildProfileBanner(user) {
   let intl = tmp5(1236).intl;
   obj[8] = intl.string(user(1236).t["95hPAe"]);
   obj[9] = disabled;
-  obj[1] = closure_18(importDefault(13807), obj);
+  obj[1] = closure_18(require("UserProfileEditBannerButton.tsx"), obj);
   return closure_18(user(5610).AnalyticsLocationProvider, obj);
 }
 let closure_3 = ["nick", "bio", "guild_tag"];

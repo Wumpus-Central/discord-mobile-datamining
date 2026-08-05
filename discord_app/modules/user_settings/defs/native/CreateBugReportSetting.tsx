@@ -5,26 +5,26 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.aIkGJD);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.aIkGJD);
   },
   parent: null,
   IconComponent: require("WrenchIcon").WrenchIcon,
   onValueChange: function handleCreateBugReportSettingToggle(arg0) {
-    const setDeveloperOptionSettings = require(708) /* setDeveloperOptionSettings */.setDeveloperOptionSettings;
+    const setDeveloperOptionSettings = require("../../../../actions/DeveloperOptionsActionCreators.tsx") /* setDeveloperOptionSettings */.setDeveloperOptionSettings;
     if (arg0) {
       const result = setDeveloperOptionSettings({ bugReporterEnabled: true });
-      importDefault(9810).initialize();
-      const obj2 = importDefault(9810);
+      require("../../../bug_reporter/native/BugReportManager.tsx").initialize();
+      const obj2 = require("../../../bug_reporter/native/BugReportManager.tsx");
     } else {
       const result1 = setDeveloperOptionSettings({ bugReporterEnabled: false });
-      importDefault(9810).terminate(true);
-      const obj = importDefault(9810);
+      require("../../../bug_reporter/native/BugReportManager.tsx").terminate(true);
+      const obj = require("../../../bug_reporter/native/BugReportManager.tsx");
     }
   },
   useValue: function useCreateBugReportSettingToggleValue() {
     const items = [refreshSourceMapCookie];
-    return require(589) /* initialize */.useStateFromStores(items, () => isBugReporterEnabled.isBugReporterEnabled);
+    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => isBugReporterEnabled.isBugReporterEnabled);
   },
   useDescription: function useCreateBugReportSettingDescription() {
     return "Photo permission is required";

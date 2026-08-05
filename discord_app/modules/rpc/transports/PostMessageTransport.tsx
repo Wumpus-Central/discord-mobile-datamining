@@ -17,7 +17,7 @@ let closure_11 = 10 * require("set").Millis.SECOND;
 const map = new Map();
 let set = new Set();
 function postClose(source, arg1, postMessageToRPCClient) {
-  const items = [importDefault(10542).CLOSE, arg1];
+  const items = [require("../RPCOpcodes.tsx").CLOSE, arg1];
   postMessageToRPCClient(items, source.origin);
 }
 class PostMessageTransport extends EventEmitter {
@@ -528,7 +528,7 @@ PostMessageTransport.prototype["routeEvent"] = function routeEvent(value, iframe
   if (Array.isArray(arg2)) {
     const self = this;
     [tmp5, tmp6] = callback2(arg2, 2);
-    if (importDefault(10542).HANDSHAKE === tmp5) {
+    if (require("../RPCOpcodes.tsx").HANDSHAKE === tmp5) {
       if (null != value) {
         let obj = { closeCode: null };
         obj[0] = constants2.CLOSE_UNSUPPORTED;

@@ -44,7 +44,7 @@ function BrowseChannelsOption(guild) {
   guild = guild.guild;
   let obj = guild(4101);
   const result = obj.useIsDismissibleContentDismissed_UNSAFE(guild(1358).DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX);
-  const tmp2 = importDefault(5859)(guild);
+  const tmp2 = require("../../../guild_onboarding/useGuildOnboardingAvailable.tsx")(guild);
   const items = [generateOldThreadCutoff];
   const stateFromStores = guild(589).useStateFromStores(items, () => outer1_11.hasUnread(guild.id, outer1_20.GUILD_ONBOARDING_QUESTION));
   const obj2 = guild(589);
@@ -89,13 +89,13 @@ function ChangeIdentityOption(arg0) {
   ({ guild, user } = arg0);
   let _require;
   const tmp = createCacheKey();
-  let obj = importDefault(4474);
+  let obj = require("../../../../utils/NicknameUtils.tsx");
   const nickname = obj.getNickname(guild.id, undefined, user);
-  _require = importDefault(10050)({ guild, analyticsLocations: importDefault(5610)(importDefault(5630).GUILD_SETTINGS).analyticsLocations });
-  const intl = _require(1236).intl;
+  _require = require("../../../profile_customization/useOpenProfileSettings.tsx")({ guild, analyticsLocations: require("../../../app_analytics/useAnalyticsLocations.tsx")(require("../../../app_analytics/AnalyticsLocation.tsx").GUILD_SETTINGS).analyticsLocations });
+  const intl = _require("../../../../intl/index.native.tsx").intl;
   const features = guild.features;
   const hasItem = features.has(constants.HUB);
-  const t = _require(1236).t;
+  const t = _require("../../../../intl/index.native.tsx").t;
   obj = { label: intl.string(hasItem ? t["+MWrWt"] : t["PKQB/H"]), subLabel: null, onPress: null };
   let tmp9 = nickname;
   if (null != user) {
@@ -113,7 +113,7 @@ function ChangeIdentityOption(arg0) {
       obj2[0] = user;
       obj2[1] = nickname;
       ({ identityName: obj5[2], identityName: obj5[3], identityName: obj5[4] } = tmp);
-      items[1] = tmp6(importDefault(9052), obj2);
+      items[1] = tmp6(require("../../../user_profile/native/DiscordTag.tsx"), obj2);
       obj[1] = items;
       tmp9 = callback3(View, obj);
     }
@@ -123,7 +123,7 @@ function ChangeIdentityOption(arg0) {
     outer1_1(outer1_2[25]).hideActionSheet();
     callback();
   };
-  return closure_21(_require(5648).ActionSheetRow, obj);
+  return closure_21(_require("../../../../design/components/Sheet/native/ActionSheetRow.native.tsx").ActionSheetRow, obj);
 }
 function GuildThemePreferenceOption(guild) {
   guild = guild.guild;
@@ -377,16 +377,16 @@ export const GuildActionSheetPrimaryActions = function GuildActionSheetPrimaryAc
   return tmp12;
 };
 export const handleLeaveServer = function handleLeaveServer(guild) {
-  let obj = importDefault(4253);
+  let obj = require("../../../action_sheet/native/ActionSheetActionCreators.tsx");
   obj.hideActionSheet();
   const lazyResult = React.lazy(() => callback(paths[28])(paths[57], paths.paths));
   obj = { guild };
-  require(4625) /* useAlertStore */.openAlert("guild-action-sheet-leave-server", callback2(lazyResult, obj));
+  require("../../../../design/components/AlertModal/native/useAlertStore.native.tsx") /* useAlertStore */.openAlert("guild-action-sheet-leave-server", callback2(lazyResult, obj));
 };
 export const GuildActionSheetDirectoryActions = function GuildActionSheetDirectoryActions(guild) {
   guild = guild.guild;
   const currentUser = authStore.getCurrentUser();
-  importDefault(38)(null != currentUser, "GuildActionSheetDirectoryActions: user cannot be undefined");
+  require("../../../../../_runtime/metro/00038__.js")(null != currentUser, "GuildActionSheetDirectoryActions: user cannot be undefined");
   const items = [];
   items.push(callback2(NotificationAction, { guild }));
   items.push(callback2(ChangeIdentityOption, { guild, user: currentUser }));
@@ -538,7 +538,7 @@ export const GuildDeveloperOptionAction = function GuildDeveloperOptionAction(gu
   guild = guild.guild;
   const DeveloperMode = guild(3958).DeveloperMode;
   const setting = DeveloperMode.useSetting();
-  importDefault(5637);
+  require("../../../guild/TidaWebformExperiment.tsx");
   if (setting) {
     const items = [];
     let obj = { label: null, onPress: null };

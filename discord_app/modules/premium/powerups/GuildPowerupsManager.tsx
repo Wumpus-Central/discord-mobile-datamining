@@ -69,8 +69,8 @@ prototype["handleSelectedGuildChange"] = function handleSelectedGuildChange() {
             const tmp10Result5 = tmp10(15173);
           }
           if (showCoachmark) {
-            showCoachmark = importDefault(11775).getConfig({ location: "GuildPowerupsManager" }).showCoachmark;
-            const obj8 = importDefault(11775);
+            showCoachmark = require("../../guild_boosting/experiments/BoostToUnlockMobileCoachmarkExperiment.tsx").getConfig({ location: "GuildPowerupsManager" }).showCoachmark;
+            const obj8 = require("../../guild_boosting/experiments/BoostToUnlockMobileCoachmarkExperiment.tsx");
           }
           if (tmp10(4521).isMobile) {
             if (!isMobile) {
@@ -91,7 +91,7 @@ prototype["handleSelectedGuildChange"] = function handleSelectedGuildChange() {
         obj9 = calculateAppliedBoosts;
       }
     }
-    obj12 = require(1865) /* getFavoritesAwareGuildName */;
+    obj12 = require("../../favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
   }
 };
 prototype["handleEntitlementUpdate"] = function handleEntitlementUpdate(guildId) {

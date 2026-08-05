@@ -8,7 +8,7 @@ const result = require("getSystemLocale").fileFinishedImporting("modules/main_ta
 export const useRecipientsLabel = function useRecipientsLabel(channel) {
   const _require = channel;
   const items = [mergeGuildAvatar];
-  const stateFromStoresArray = _require(589).useStateFromStoresArray(items, () => {
+  const stateFromStoresArray = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
     const recipients = channel.recipients;
     const mapped = recipients.map((arg0) => user.getUser(arg0));
     const found = mapped.filter(channel(outer1_2[4]).isNotNullish);

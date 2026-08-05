@@ -26,8 +26,8 @@ prototype["canSubmitFpReport"] = function canSubmitFpReport(closure_1) {
     const reportSubmit = tmp.reportSubmit;
     let tmp3 = !reportSubmit;
     if (!reportSubmit) {
-      tmp3 = importDefault(11).age(tmp.messageId) < closure_3;
-      const obj = importDefault(11);
+      tmp3 = require("../../utils/SnowflakeUtils.tsx").age(tmp.messageId) < closure_3;
+      const obj = require("../../utils/SnowflakeUtils.tsx");
     }
     tmp2 = tmp3;
   }
@@ -49,7 +49,7 @@ Object.defineProperty(prototype, "validContentScanVersion", {
       const _Math = Math;
       return Math.min(num2, 4);
     }
-    obj = require(5820) /* apexExperiment */;
+    obj = require("SensitiveContentSelfHarmExperiment.tsx") /* apexExperiment */;
   },
   set: undefined
 });

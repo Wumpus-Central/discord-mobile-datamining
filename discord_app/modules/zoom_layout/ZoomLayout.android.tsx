@@ -46,7 +46,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   let obj = {};
   const merged = Object.assign(arg0);
   obj.ref = ref;
-  return jsx(importDefault(10612), {});
+  return jsx(require("../../../discord_common/js/packages/rtn-codegen/js/ZoomLayoutNativeComponent.tsx"), {});
 });
 let result = require("jsxProd").fileFinishedImporting("modules/zoom_layout/ZoomLayout.android.tsx");
 

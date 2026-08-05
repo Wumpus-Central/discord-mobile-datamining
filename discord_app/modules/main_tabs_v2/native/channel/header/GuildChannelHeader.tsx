@@ -30,7 +30,7 @@ function GuildChannelMemberCount(channel) {
   if (flag === undefined) {
     flag = false;
   }
-  const token = channel(3989).useToken(importDefault(712).modules.mobile.CHANNEL_HEADER_ICON_SIZE);
+  const token = channel(3989).useToken(require("../../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHANNEL_HEADER_ICON_SIZE);
   let obj = channel(3989);
   const items = [getMemberListId, initialize];
   const stateFromStoresObject = channel(589).useStateFromStoresObject(items, () => {

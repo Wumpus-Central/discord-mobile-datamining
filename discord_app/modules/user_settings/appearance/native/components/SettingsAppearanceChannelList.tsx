@@ -81,7 +81,7 @@ export default function ChannelListPreview(useGradientBackground) {
   const items2 = [tmp7, , ];
   const obj1 = { contentContainerStyle: null, data: null, renderItem: null, keyExtractor: null, showsVerticalScrollIndicator: false, importantForAccessibility: "no-hide-descendants" };
   const obj2 = { paddingVertical: null };
-  obj2[0] = importDefault(712).space.PX_16;
+  obj2[0] = require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16;
   obj1[0] = obj2;
   obj1[1] = data;
   obj1[2] = callback;
@@ -89,7 +89,7 @@ export default function ChannelListPreview(useGradientBackground) {
     return id.id;
   };
   items2[1] = callback(animatedStyles(7666).FlashList, obj1);
-  items2[2] = callback(importDefault(14437), { visible: isNitroLocked, theme: themes[themeIndex] });
+  items2[2] = callback(require("SettingsAppearanceChannelListPreviewNitroUpsell.tsx"), { visible: isNitroLocked, theme: themes[themeIndex] });
   obj[4] = items2;
-  return closure_6(importDefault(4146).View, obj);
+  return closure_6(require("../../../../reanimated/ReanimatedRexport.tsx").View, obj);
 };

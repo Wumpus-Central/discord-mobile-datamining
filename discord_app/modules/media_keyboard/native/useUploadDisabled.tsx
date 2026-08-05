@@ -12,7 +12,7 @@ const result = require("map").fileFinishedImporting("modules/media_keyboard/nati
 export default function useUploadDisabled(arg0) {
   const _require = arg0;
   const items = [getUncachedChannelPermissions, map];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let tmp = outer1_4.getUploads(lib.id, outer1_2.ChannelMessage).length >= outer1_5;
     if (!tmp) {
       let tmp4 = obj.id === lib(outer1_1[5]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;

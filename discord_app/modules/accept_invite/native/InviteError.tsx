@@ -19,14 +19,14 @@ function InviteErrorBase(invite) {
   let require;
   ({ onPressClose: require, inviteError } = invite);
   const tmp = createCacheKey();
-  let obj = require(4131) /* AccessibilityAnnouncer */;
+  let obj = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */;
   const tmp4 = importDefault;
-  const tmp4Result = importDefault(obj.isThemeDark(importDefault(4221)()) ? 11989 : 11990);
+  const tmp4Result = importDefault(obj.isThemeDark(require("../../../hooks/useTheme.tsx")()) ? 11989 : 11990);
   let code;
   if (inviteError != null) {
     code = inviteError.code;
   }
-  const descriptiveInviteError = require(11991) /* getDescriptiveInviteError */.getDescriptiveInviteError(code);
+  const descriptiveInviteError = require("../../../utils/InviteErrorUtils.tsx") /* getDescriptiveInviteError */.getDescriptiveInviteError(code);
   if (invite.invite.state === constants3.BANNED) {
     const intl2 = tmp2(1236).intl;
     let stringResult = intl2.string(tmp2(1236).t["GzD/aa"]);
@@ -56,13 +56,13 @@ function InviteErrorBase(invite) {
   function handlePressClose() {
     callback();
   }
-  items[1] = callback(require(4281) /* Text */.Text, obj);
-  items[2] = callback(require(4281) /* Text */.Text, { style: tmp.expiredBody, variant: "text-sm/medium", color: "text-default", children: stringResult });
+  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  items[2] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: tmp.expiredBody, variant: "text-sm/medium", color: "text-default", children: stringResult });
   const obj3 = { variant: "primary", size: "lg", text: null, onPress: null };
   const intl4 = tmp2(1236).intl;
-  obj3[2] = intl4.string(require(1236) /* getSystemLocale */.t.wcqOoF);
+  obj3[2] = intl4.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.wcqOoF);
   obj3[3] = handlePressClose;
-  items[3] = callback(require(4695) /* Button */.Button, obj3);
+  items[3] = callback(require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj3);
   obj1[0] = items;
   return closure_10(closure_9, obj1);
 }
@@ -76,7 +76,7 @@ function InviteDisabledError(onPressClose) {
     function handlePressClose() {
       onPressClose();
     }
-    let obj = importDefault(1416);
+    let obj = require("../../../utils/AvatarUtils.tsx");
     obj = { id: null, icon: null, size: 64, canAnimate: false };
     ({ id: obj2[0], icon: obj2[1] } = guild);
     obj = { children: null };
@@ -85,13 +85,13 @@ function InviteDisabledError(onPressClose) {
     const guildIconURL = obj.getGuildIconURL(obj);
     const obj2 = { style: null, source: null };
     obj2[0] = tmp.disabledPauseIcon;
-    obj2[1] = importDefault(11992);
+    obj2[1] = require("../../../../_runtime/11992_registerAsset.js");
     const items = [callback(onPressClose(1297).Icon, obj2), ];
     const obj3 = { style: null, icon: null, size: null };
     obj3[0] = tmp.guildIcon;
     obj3[1] = guildIconURL;
     obj3[2] = onPressClose(5661).GuildIconSizes.XLARGE;
-    items[1] = callback(importDefault(5661), obj3);
+    items[1] = callback(require("../../guild/native/GuildIcon.tsx"), obj3);
     obj1[1] = items;
     const items1 = [callback2(closure_4, obj1), , , ];
     const obj4 = { style: null, variant: "heading-xl/semibold", color: "text-feedback-critical", children: null };
@@ -103,8 +103,8 @@ function InviteDisabledError(onPressClose) {
     obj5[0] = tmp.disabledBody;
     const intl2 = onPressClose(1236).intl;
     const obj6 = { articleLink: null };
-    const tmp10 = importDefault(5661);
-    obj6[0] = importDefault(1945).getArticleURL(constants2.INVITE_DISABLED);
+    const tmp10 = require("../../guild/native/GuildIcon.tsx");
+    obj6[0] = require("../../../utils/HelpdeskUtils.tsx").getArticleURL(constants2.INVITE_DISABLED);
     obj5[3] = intl2.format(onPressClose(1236).t.RXSeLl, obj6);
     items1[2] = callback(onPressClose(4281).Text, obj5);
     const obj7 = { variant: "primary", size: "lg", text: null, onPress: null };

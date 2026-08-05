@@ -5,18 +5,18 @@ import "initialize";
 
 const require = arg1;
 function handleReferralMessages(type) {
-  if (type.type === require(686) /* set */.MessageTypes.PREMIUM_REFERRAL) {
+  if (type.type === require("../../../../../discord_common/js/shared/shared-constants/MessageTypes.tsx") /* set */.MessageTypes.PREMIUM_REFERRAL) {
     if (null != type.content) {
       if (obj3.isProbablyAValidSnowflake(type.content)) {
         premiumTypeSubscription = premiumTypeSubscription.getPremiumTypeSubscription();
         const tmp9Result = tmp9(11);
         if (tmp6) {
-          const userOffer = require(7513) /* _fetchUserOffer */.fetchUserOffer("ReferralMessageManager");
-          const tmpResult = require(7513) /* _fetchUserOffer */;
+          const userOffer = require("../../UserOfferActionCreators.tsx") /* _fetchUserOffer */.fetchUserOffer("ReferralMessageManager");
+          const tmpResult = require("../../UserOfferActionCreators.tsx") /* _fetchUserOffer */;
         }
         tmp6 = null == premiumTypeSubscription && emitChanges.shouldFetchReferralOffer(tmp9(11).extractTimestamp(type.content));
       }
-      obj3 = importDefault(11);
+      obj3 = require("../../../../utils/SnowflakeUtils.tsx");
       tmp9 = importDefault;
     }
   }

@@ -38,7 +38,7 @@ function GuildChannelMessageRowHeader(channel) {
   obj1 = { source: channelIcon, size: null, style: null };
   obj1[1] = channel(1297).Icon.Sizes.REFRESH_SMALL_16;
   obj1[2] = tmp.channelIcon;
-  const items1 = [callback(channel(1297).Icon, obj1), callback(channel(4281).Text, { lineClamp: 1, variant: "text-sm/semibold", color: "interactive-text-default", children: importDefault(4475)(channel) }), , , ];
+  const items1 = [callback(channel(1297).Icon, obj1), callback(channel(4281).Text, { lineClamp: 1, variant: "text-sm/semibold", color: "interactive-text-default", children: require("../../../../../channel/useChannelName.tsx")(channel) }), , , ];
   if (muted) {
     const obj2 = { source: null, size: null, style: null };
     obj2[0] = tmp6(9737);
@@ -69,9 +69,9 @@ function GuildChannelMessageRowHeader(channel) {
 function MessageRowIcon(guildId) {
   const message = guildId.message;
   const obj = { user: message.author, guildId: guildId.channel.guild_id, size: null, avatarDecoration: null };
-  obj[2] = require(1297) /* Button */.AvatarSizes.LARGE_48;
+  obj[2] = require("../../../../../../design/void/native.tsx") /* Button */.AvatarSizes.LARGE_48;
   obj[3] = message.author.avatarDecoration;
-  return callback(require(1297) /* Button */.Avatar, obj);
+  return callback(require("../../../../../../design/void/native.tsx") /* Button */.Avatar, obj);
 }
 function PrivateChannelMessageRowLabel(message) {
   let timestamp;
@@ -139,10 +139,10 @@ function GuildChannelMessageRowLabel(arg0) {
   let timestampAccessibilityLabel;
   ({ message, channel } = arg0);
   const tmp = callback2();
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => roleStyle.roleStyle);
-  ({ colorString, colorStrings } = importDefault(4513)(message));
+  ({ colorString, colorStrings } = require("../../../../../messages/useMessageAuthor.tsx")(message));
   if ("username" === stateFromStores) {
     if (null != colorString) {
       obj = { color: null };
@@ -196,7 +196,7 @@ function GuildChannelMessageRowLabel(arg0) {
     if (message.isPoll()) {
       const obj6 = { style: null };
       obj6[0] = tmp.pollBadge;
-      tmp21Result = tmp21(importDefault(15628), obj6);
+      tmp21Result = tmp21(require("../../../../../polls/native/PollBadge.tsx"), obj6);
     }
     items2[3] = tmp21Result;
     obj[1] = items2;

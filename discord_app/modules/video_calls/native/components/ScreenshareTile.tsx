@@ -31,18 +31,18 @@ export default function ScreenShareTile(onSingleTap) {
     onDoubleTap = NOOP;
   }
   const tmp = createCacheKey();
-  let obj = { gesture: importDefault(10590)({ onSingleTapStart: onSingleTap, onDoubleTapStart: onDoubleTap }), children: null };
+  let obj = { gesture: require("../useParticipantTileTapGesture.tsx")({ onSingleTapStart: onSingleTap, onDoubleTapStart: onDoubleTap }), children: null };
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.liveContainer, children: null };
-  obj[1] = callback(require(1297) /* Button */.LiveTag, {});
+  obj[1] = callback(require("../../../../design/void/native.tsx") /* Button */.LiveTag, {});
   const items = [callback(closure_3, obj), , ];
-  const tmp2 = importDefault(10590)({ onSingleTapStart: onSingleTap, onDoubleTapStart: onDoubleTap });
-  items[1] = callback(closure_4, { source: importDefault(10591), style: tmp.image, resizeMode: "contain" });
+  const tmp2 = require("../useParticipantTileTapGesture.tsx")({ onSingleTapStart: onSingleTap, onDoubleTapStart: onDoubleTap });
+  items[1] = callback(closure_4, { source: require("../../../../../_runtime/10591_registerAsset.js"), style: tmp.image, resizeMode: "contain" });
   const obj2 = { style: tmp.label, variant: "text-xs/bold", color: "text-overlay-light", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj2[3] = intl.string(require(1236) /* getSystemLocale */.t.G84gtR);
-  items[2] = callback(require(4281) /* Text */.Text, obj2);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj2[3] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.G84gtR);
+  items[2] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
   obj[1] = items;
   obj[1] = callback2(closure_3, obj);
-  return callback(require(5368) /* Directions */.GestureDetector, obj);
+  return callback(require("../../../../../_runtime/05368_Directions.js") /* Directions */.GestureDetector, obj);
 };

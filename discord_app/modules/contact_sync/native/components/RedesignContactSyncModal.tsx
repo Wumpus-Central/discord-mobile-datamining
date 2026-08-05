@@ -29,12 +29,12 @@ function headerLeft() {
 }
 function OnboardingTrailingLanding() {
   let obj = { style: createCacheKey().landingTrailing, variant: "text-sm/medium", color: "text-muted", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   obj = { learnMoreUrl: null };
   const tmp = createCacheKey();
-  obj[0] = require(11947) /* _uploadContacts */.getOpenLearnMoreUrl();
-  obj[3] = intl.format(require(1236) /* getSystemLocale */.t["84S6+Z"], obj);
-  return callback4(require(4281) /* Text */.Text, obj);
+  obj[0] = require("../ContactSyncUtils.tsx") /* _uploadContacts */.getOpenLearnMoreUrl();
+  obj[3] = intl.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["84S6+Z"], obj);
+  return callback4(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
 }
 function OnboardingTrailing(isOnboarding) {
   if (isOnboarding.isOnboarding) {
@@ -43,7 +43,7 @@ function OnboardingTrailing(isOnboarding) {
     const obj = { discoverabilityEnabled: null, onValueChanged: null };
     obj[0] = tmp;
     obj[1] = tmp2;
-    tmp3Result = tmp3(importDefault(11953), obj);
+    tmp3Result = tmp3(require("RedesignContactSyncDiscoverabilityFooter.tsx"), obj);
   }
   return tmp3Result;
 }
@@ -313,7 +313,7 @@ function ContactSyncNameInputScreen(navigateToLandingPage) {
   let first;
   let dependencyMap;
   let callback;
-  let obj = _require(1480);
+  let obj = _require("../../../../design/components/Navigator/native/useNavigation.native.tsx");
   const navigation = obj.useNavigation();
   _require = navigation;
   const tmp3 = callback(React.useState(false), 2);

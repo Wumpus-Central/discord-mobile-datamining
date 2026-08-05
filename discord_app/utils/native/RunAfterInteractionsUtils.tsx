@@ -13,7 +13,7 @@ function runAfterInteractions(arg0, MINUTE) {
     delayedCall.cancel();
     callback();
   });
-  delayedCall = new _require(4170).DelayedCall(num, () => {
+  delayedCall = new _require("../../../discord_common/js/packages/timers/Timers.tsx").DelayedCall(num, () => {
     closure_1.cancel();
     callback();
   });

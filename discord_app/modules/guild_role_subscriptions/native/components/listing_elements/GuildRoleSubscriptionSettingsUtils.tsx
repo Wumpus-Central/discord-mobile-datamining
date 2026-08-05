@@ -8,8 +8,8 @@ export const getCoverImageURI = function getCoverImageURI(subscriptionsSettings)
   applicationIdForGuild = applicationIdForGuild.getApplicationIdForGuild(subscriptionsSettings.guild_id);
   let uri = "";
   if (tmp2) {
-    uri = require(4522) /* _httpGetWithCountryCodeQuery */.getAssetURL(applicationIdForGuild, subscriptionsSettings.cover_image_asset, 1024);
-    const obj = require(4522) /* _httpGetWithCountryCodeQuery */;
+    uri = require("../../../../../utils/StoreUtils.tsx") /* _httpGetWithCountryCodeQuery */.getAssetURL(applicationIdForGuild, subscriptionsSettings.cover_image_asset, 1024);
+    const obj = require("../../../../../utils/StoreUtils.tsx") /* _httpGetWithCountryCodeQuery */;
   }
   return { uri };
 };

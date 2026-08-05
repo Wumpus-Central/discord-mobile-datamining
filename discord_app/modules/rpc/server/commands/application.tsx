@@ -10,12 +10,12 @@ const require = arg1;
 ({ ApplicationFlags: c4, Endpoints: c5, RPCCommands, RPCErrors: closure_6 } = ME);
 let obj = {
   validation(string) {
-    let obj = importDefault(10546)(string);
+    let obj = require("../../helpers/createRpcJoiSchemaObject.tsx")(string);
     obj = { event_name: null, event_properties: null };
     const requiredResult = obj.required();
     obj[0] = string.string().required();
     const stringResult = string.string();
-    obj[1] = importDefault(10546)(string).required();
+    obj[1] = require("../../helpers/createRpcJoiSchemaObject.tsx")(string).required();
     return requiredResult.keys(obj);
   },
   handler(arg0) {
@@ -23,12 +23,12 @@ let obj = {
     let socket;
     ({ socket, args } = arg0);
     const event_properties = args.event_properties;
-    let obj = require(10548) /* recurseReplaceContentTree */;
+    let obj = require("../../RPCHelpers.tsx") /* recurseReplaceContentTree */;
     const result = obj.validatePostMessageTransport(socket.transport);
-    let obj1 = require(10548) /* recurseReplaceContentTree */;
+    let obj1 = require("../../RPCHelpers.tsx") /* recurseReplaceContentTree */;
     obj1.validateApplication(socket.application);
     const id = socket.application.id;
-    const obj3 = importDefault(13642)();
+    const obj3 = require("../../helpers/getCurrentEmbeddedActivityChannel.tsx")();
     if (obj3 != null) {
       const guildId = obj3.getGuildId();
     }
@@ -69,16 +69,16 @@ obj = {
     if (null == id) {
       let obj = { errorCode: null };
       obj[0] = constants2.INVALID_COMMAND;
-      const tmp7 = new importDefault(10543)(obj, "No application.");
+      const tmp7 = new require("../../RPCError.tsx")(obj, "No application.");
       throw tmp7;
     } else {
-      const HTTP = require(530) /* sendRequest */.HTTP;
+      const HTTP = require("../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
       obj = { url: null, body: null, retries: 3, oldFormErrors: true, rejectWithError: false };
       obj[0] = closure_5.APPLICATION_TICKET(id);
       obj = { test_mode: null };
-      obj[0] = require(7508) /* isTestModeForApplication */.isTestModeForApplication(id);
+      obj[0] = require("../../../game_store/TestModeUtils.tsx") /* isTestModeForApplication */.isTestModeForApplication(id);
       obj[1] = obj;
-      const obj4 = require(7508) /* isTestModeForApplication */;
+      const obj4 = require("../../../game_store/TestModeUtils.tsx") /* isTestModeForApplication */;
       return HTTP.post(obj).then((body) => body.body);
     }
   }

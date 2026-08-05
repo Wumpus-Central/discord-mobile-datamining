@@ -44,27 +44,27 @@ export default function ChangeAvatarActionSheet(showRemoveAvatar) {
     flag = false;
   }
   const tmp = createCacheKey();
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = importDefault(3931);
+  let obj1 = require("../../../utils/PremiumUtils.tsx");
   let isPremiumResult = obj1.isPremium(stateFromStores);
   obj = { title: null, trailing: null, titleWrapperStyle: null, titleContainerStyle: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.lqaIxI);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.lqaIxI);
   if (isPremiumResult) {
     isPremiumResult = tmp8(tmp2(7625).NitroWheelIcon, {});
   }
   obj[1] = isPremiumResult;
   ({ titleWrapper: obj3[2], titleContainer: obj3[3] } = tmp);
-  const items1 = [closure_6(require(5337) /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj), ];
+  const items1 = [closure_6(require("../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx") /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj), ];
   obj = { label: null, subLabel: null, onPress: null };
   const intl2 = tmp2(1236).intl;
-  obj[0] = intl2.string(require(1236) /* getSystemLocale */.t["MsUY/S"]);
+  obj[0] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["MsUY/S"]);
   const intl3 = tmp2(1236).intl;
-  obj[1] = intl3.string(require(1236) /* getSystemLocale */.t.r5hKOy);
+  obj[1] = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.r5hKOy);
   obj[2] = handleUploadAvatarSelect;
-  const items2 = [closure_6(require(5315) /* TableRowInner */.TableRow, obj), , , , ];
+  const items2 = [closure_6(require("../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj), , , , ];
   let tmp8Result = null != handleUploadGIFAvatarSelect && !showAnimatedAvatarUpsell;
   if (tmp8Result) {
     obj1 = { label: null, onPress: null };
@@ -99,12 +99,12 @@ export default function ChangeAvatarActionSheet(showRemoveAvatar) {
     obj9[0] = AnalyticsObjects.ANIMATED_AVATAR;
     const intl7 = tmp2(1236).intl;
     obj9[1] = intl7.string(tmp2(1236).t.mr4K7D);
-    obj8[1] = tmp8(importDefault(13809), obj9);
+    obj8[1] = tmp8(require("UserProfileUpsellButton.tsx"), obj9);
     items4[1] = tmp8(View, obj8);
     obj6[0] = items4;
     obj2[1] = tmp7(closure_8, obj6);
     showAnimatedAvatarUpsell = tmp8(tmp2(5315).TableRow, obj2);
-    const tmp5Result = importDefault(13809);
+    const tmp5Result = require("UserProfileUpsellButton.tsx");
   }
   items2[2] = showAnimatedAvatarUpsell;
   tmp8Result = null != handleEditAvatarDecorationSelect;
@@ -135,7 +135,7 @@ export default function ChangeAvatarActionSheet(showRemoveAvatar) {
   }
   const obj15 = { children: null };
   items2[4] = flag;
-  items1[1] = closure_7(require(5649) /* TableRowGroupTitle */.TableRowGroup, { hasIcons: false, children: items2 });
+  items1[1] = closure_7(require("../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, { hasIcons: false, children: items2 });
   obj15[0] = items1;
-  return closure_7(require(5646) /* ActionSheet */.ActionSheet, obj15);
+  return closure_7(require("../../../design/components/Sheet/native/ActionSheet.native.tsx") /* ActionSheet */.ActionSheet, obj15);
 };

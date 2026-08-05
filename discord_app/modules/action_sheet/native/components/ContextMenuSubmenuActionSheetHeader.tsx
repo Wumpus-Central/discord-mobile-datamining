@@ -12,14 +12,14 @@ export default function ContextMenuSubmenuActionSheetHeader(onBack) {
   let fn = onBack.onBack;
   let obj = { style: callback().headerContainer, children: null };
   obj = { label: null, onPress: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t["13/7kX"]);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["13/7kX"]);
   if (fn == null) {
     fn = () => {
 
     };
   }
   obj[1] = fn;
-  obj[1] = jsx(require(8898) /* ActionSheetHeaderPressableText */.ActionSheetHeaderPressableText, { label: null, onPress: null });
+  obj[1] = jsx(require("../../../../design/components/Sheet/native/ActionSheetHeaderPressableText.native.tsx") /* ActionSheetHeaderPressableText */.ActionSheetHeaderPressableText, { label: null, onPress: null });
   return <View label={null} onPress={null} />;
 };

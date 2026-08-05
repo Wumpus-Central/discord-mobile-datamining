@@ -15,18 +15,18 @@ function getBotLabel(BOT) {
   if (BotTagTypes.SYSTEM_DM !== BOT) {
     if (tmp2.OFFICIAL !== BOT) {
       if (tmp2.SERVER === BOT) {
-        const intl2 = require(1236) /* getSystemLocale */.intl;
-        let stringResult = intl2.string(require(1236) /* getSystemLocale */.t.PuJGuM);
+        const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        let stringResult = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.PuJGuM);
       } else {
         const BOT2 = tmp2.BOT;
-        const intl = require(1236) /* getSystemLocale */.intl;
-        stringResult = intl.string(require(1236) /* getSystemLocale */.t["9RNkeF"]);
+        const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        stringResult = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["9RNkeF"]);
       }
     }
     return stringResult;
   }
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  stringResult = intl3.string(require(1236) /* getSystemLocale */.t.lKQ7Wt);
+  const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  stringResult = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.lKQ7Wt);
 }
 class BotTag {
   constructor(arg0) {

@@ -40,7 +40,7 @@ export default function ForumPostMessageCount(hasUnreads) {
   hasUnreads = hasUnreads.hasUnreads;
   ({ thread, containerStyle } = hasUnreads);
   const tmp = createCacheKey();
-  let obj = require(8214) /* useLoadForumUnreadCounts */;
+  let obj = require("../../ForumHooks.tsx") /* useLoadForumUnreadCounts */;
   messageCount = obj.useMessageCount(thread);
   ({ messageCountText, unreadCount } = messageCount);
   let str = "text-muted";
@@ -51,14 +51,14 @@ export default function ForumPostMessageCount(hasUnreads) {
   obj = { style: items, accessibilityLabel: null, children: null };
   items = [tmp.container, containerStyle];
   const intl = tmp2(1236).intl;
-  obj[1] = intl.formatToPlainString(require(1236) /* getSystemLocale */.t["8M0DrB"], { count: messageCountText });
+  obj[1] = intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["8M0DrB"], { count: messageCountText });
   obj = { size: "xs", style: hasUnreads ? tmp.iconUnread : tmp.iconRead, color: null };
   let str2 = "icon-muted";
   if (hasUnreads) {
     str2 = "interactive-text-default";
   }
   obj[2] = str2;
-  const items1 = [closure_4(require(4781) /* ChatIcon */.ChatIcon, obj), , ];
+  const items1 = [closure_4(require("../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx") /* ChatIcon */.ChatIcon, obj), , ];
   if (isMaxMessageCount) {
     const obj1 = { variant: "text-sm/semibold", color: null, children: null };
     obj1[1] = str;
@@ -68,7 +68,7 @@ export default function ForumPostMessageCount(hasUnreads) {
     const obj2 = { count: null, textVariant: "text-sm/semibold", textColor: null, animate: false };
     obj2[0] = messageCount;
     obj2[2] = str;
-    tmp7Result = tmp7(importDefault(10116), obj2);
+    tmp7Result = tmp7(require("AnimatedCounter.tsx"), obj2);
   }
   items1[1] = tmp7Result;
   let tmp5Result = null != unreadCount;

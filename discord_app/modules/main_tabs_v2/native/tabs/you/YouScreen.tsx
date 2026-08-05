@@ -13,7 +13,7 @@ import { CollectiblesMobileShopScreen as closure_17 } from "items";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET";
 import jsxProd from "defaultAreStatesEqual";
-import module_8696 from "module_8696";
+import VisualEffectViewThemed from "../../../../visual_effect_view/native/VisualEffectViewThemed.tsx";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "module_4146";
@@ -30,7 +30,7 @@ let closure_6;
 let map1;
 const require = arg1;
 function handleBackButtonPress() {
-  const navigation = require(4137) /* getRootNavigationRef */.getRootNavigationRef();
+  const navigation = require("../../../RootNavigationRef.native.tsx") /* getRootNavigationRef */.getRootNavigationRef();
   if (null != navigation) {
     if (navigation.canGoBack()) {
       navigation.goBack();
@@ -40,7 +40,7 @@ function handleBackButtonPress() {
   }
 }
 function BackButton(paddingTop) {
-  let obj = require(647) /* defaultAreStatesEqual */;
+  let obj = require("../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */;
   const items = [updateGuildUnreadSentinel];
   const stateFromStores = obj.useStateFromStores(items, () => totalMentionCount.getTotalMentionCount());
   if (stateFromStores > 0) {
@@ -54,8 +54,8 @@ function BackButton(paddingTop) {
   }
   obj = { style: items1, accessibilityRole: "button", accessibilityLabel: formatToPlainStringResult, onPress: handleBackButtonPress, children: null };
   items1 = [callback4().backButton, { top: paddingTop.paddingTop }];
-  obj[4] = callback2(require(15392) /* IconWithBadge */.CloseIconWithBadgeOnSide, { count: stateFromStores });
-  return callback2(require(4812) /* PressableBase */.PressableOpacity, obj);
+  obj[4] = callback2(require("../../shared_components/BackIconWithBadge.tsx") /* IconWithBadge */.CloseIconWithBadgeOnSide, { count: stateFromStores });
+  return callback2(require("../../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
 }
 function UnconnectedYouScreen(arg0) {
   let bannerAnimatedStyle;
@@ -564,15 +564,15 @@ function UnconnectedYouScreen(arg0) {
 ({ YOU_ACTION_SHEET_TOP_INSET: closure_12, YOU_AVATAR_SIZE: map1, YOU_SCREEN_ID: closure_14, YOU_SCROLL_EVENT_THROTTLE: closure_15 } = YOU_SCREEN_ID);
 ({ jsx: closure_20, jsxs: closure_21 } = jsxProd);
 let closure_23 = createCacheKey.createStyles((marginTop) => {
-  let obj = require(501) /* PlatformTypes */;
+  let obj = require("../../../../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */;
   let xl;
   if (obj.isIOS()) {
-    xl = importDefault(712).radii.xl;
+    xl = require("../../../../../../discord_common/js/packages/tokens/native.tsx").radii.xl;
   }
   obj = { borderTopLeftRadius: xl, borderTopRightRadius: null };
   let xl1;
   if (tmpResult.isIOS()) {
-    xl1 = importDefault(712).radii.xl;
+    xl1 = require("../../../../../../discord_common/js/packages/tokens/native.tsx").radii.xl;
   }
   obj[1] = xl1;
   obj = { container: null, background: null, scrollView: null, profileEffectLayer: null, banner: null, gifTag: null, gifTagText: null, content: null };
@@ -589,19 +589,19 @@ let closure_23 = createCacheKey.createStyles((marginTop) => {
   const obj2 = { overflow: "hidden" };
   const obj3 = { flex: 1 };
   const tmp = require;
-  tmpResult = require(501) /* PlatformTypes */;
-  const tmp10 = importDefault(689);
-  const tmp10Result = importDefault(689)(importDefault(712).unsafe_rawColors.WHITE);
-  obj4[5] = importDefault(689)(importDefault(712).unsafe_rawColors.WHITE).alpha(0.9).css();
+  tmpResult = require("../../../../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */;
+  const tmp10 = require("../../../../../../_runtime/00689_n.js");
+  const tmp10Result = require("../../../../../../_runtime/00689_n.js")(require("../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.WHITE);
+  obj4[5] = require("../../../../../../_runtime/00689_n.js")(require("../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.WHITE).alpha(0.9).css();
   obj[5] = obj4;
-  const alphaResult = importDefault(689)(importDefault(712).unsafe_rawColors.WHITE).alpha(0.9);
-  obj[6] = { color: importDefault(712).unsafe_rawColors.PRIMARY_800, fontSize: 14 };
+  const alphaResult = require("../../../../../../_runtime/00689_n.js")(require("../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.WHITE).alpha(0.9);
+  obj[6] = { color: require("../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.PRIMARY_800, fontSize: 14 };
   obj[7] = { marginTop, flex: 1, flexGrow: 1 };
   return obj;
 });
 let closure_24 = createCacheKey.createStyles(() => {
   let obj = { backButton: null };
-  obj = { position: "absolute", marginTop: importDefault(712).space.PX_4, left: importDefault(712).space.PX_16, zIndex: 99, alignItems: "center", justifyContent: "center" };
+  obj = { position: "absolute", marginTop: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, left: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, zIndex: 99, alignItems: "center", justifyContent: "center" };
   obj[0] = obj;
   return obj;
 });

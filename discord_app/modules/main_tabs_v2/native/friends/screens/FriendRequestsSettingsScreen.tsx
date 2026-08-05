@@ -16,8 +16,8 @@ const result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/na
 
 export default function FriendRequestsSettingsScreen() {
   let obj = { children: null };
-  const items = [callback(importDefault(4814), { absolute: true }), ];
-  obj = { style: createCacheKey().container, children: callback(importDefault(15725), {}) };
+  const items = [callback(require("../../../../client_themes/native/ThemedGradient.tsx"), { absolute: true }), ];
+  obj = { style: createCacheKey().container, children: callback(require("../../../../user_settings/content_and_social/native/UserSettingsFriendRequests.tsx"), {}) };
   items[1] = callback(ScrollView, obj);
   obj[0] = items;
   return callback2(closure_4, obj);

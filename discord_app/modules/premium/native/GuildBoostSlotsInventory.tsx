@@ -23,8 +23,8 @@ function GuildBoostSlotCooldown(cooldownEndsAt) {
   const items = [cooldownEndsAt];
   const memo = React.useMemo(() => new Date(cooldownEndsAt), items);
   const tmp = createCacheKey();
-  ({ days, hours, minutes } = importDefault(6812)(memo, 15000));
-  const tmp3 = importDefault(6812)(memo, 15000);
+  ({ days, hours, minutes } = require("../../../hooks/useCountdown.tsx")(memo, 15000));
+  const tmp3 = require("../../../hooks/useCountdown.tsx")(memo, 15000);
   let tmp5 = null;
   if (valueOfResult > Date.now()) {
     let obj = { style: null, variant: "text-xs/medium", color: "text-muted", children: null };
@@ -49,7 +49,7 @@ function GuildBoostSlotsInventoryRow(arg0) {
   let obj = { style: tmp.subscriptionSlot, children: null };
   obj = { style: tmp.subscriptionSlotInner, children: null };
   obj = { style: tmp.subscriptionSlotInfo, children: null };
-  const items = [callback(require(4281) /* Text */.Text, { style: tmp.subscriptionSlotInfoTitle, lineClamp: 1, variant: "text-md/semibold", color: "interactive-text-active", children: title }), subtitle];
+  const items = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: tmp.subscriptionSlotInfoTitle, lineClamp: 1, variant: "text-md/semibold", color: "interactive-text-active", children: title }), subtitle];
   obj[1] = items;
   const items1 = [callback2(closure_5, obj), action];
   obj[1] = items1;
@@ -75,7 +75,7 @@ function GuildBoostSlot(guildBoostSlot) {
     }
     let extractTimestampResult = null;
     if (null != id) {
-      let obj = importDefault(11);
+      let obj = require("../../../utils/SnowflakeUtils.tsx");
       extractTimestampResult = obj.extractTimestamp(id);
     }
     let formatToPlainStringResult = null;
@@ -192,34 +192,34 @@ function BoostedGuildInfo(guild) {
     obj[0] = tmp.guildInfoIcon;
     obj = { guild: null, size: null, selected: false };
     obj[0] = guild;
-    obj[1] = require(5661) /* GuildIconSizes */.GuildIconSizes.NORMAL;
-    obj[1] = callback(importDefault(5661), obj);
+    obj[1] = require("../../guild/native/GuildIcon.tsx") /* GuildIconSizes */.GuildIconSizes.NORMAL;
+    obj[1] = callback(require("../../guild/native/GuildIcon.tsx"), obj);
     const items = [callback(closure_5, obj), ];
     const obj1 = { children: null };
     const obj2 = { style: null, variant: "heading-lg/extrabold", color: "interactive-text-active", children: null };
     obj2[0] = tmp.guildInfoName;
     obj2[3] = guild.name;
-    const items1 = [callback(require(4281) /* Text */.Text, obj2), ];
+    const items1 = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2), ];
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.guildInfoRowBottom;
     const obj4 = { source: null, style: null };
-    obj4[0] = importDefault(12678);
+    obj4[0] = require("../../../../_runtime/12678_registerAsset.js");
     obj4[1] = tmp.guildInfoRowIcon;
     const items2 = [callback(closure_6, obj4), ];
     const obj5 = { style: null, variant: "text-xs/semibold", color: "interactive-text-active", children: null };
     obj5[0] = tmp.guildInfoSubscriptionCount;
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj6 = { numSubscriptions: null };
     obj6[0] = guild.numGuildBoostSlots;
-    obj5[3] = intl.format(require(1236) /* getSystemLocale */.t.bexfNy, obj6);
-    items2[1] = callback(require(4281) /* Text */.Text, obj5);
+    obj5[3] = intl.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.bexfNy, obj6);
+    items2[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj5);
     obj3[1] = items2;
     items1[1] = callback2(closure_5, obj3);
     obj1[0] = items1;
     items[1] = callback2(closure_5, obj1);
     obj[1] = items;
     tmp2 = callback2(closure_5, obj);
-    const tmp8 = importDefault(5661);
+    const tmp8 = require("../../guild/native/GuildIcon.tsx");
   }
   return tmp2;
 }
@@ -229,10 +229,10 @@ function BoostedGuild(arg0) {
   ({ guildId: require, guildBoostSlots } = arg0);
   let stateFromStores;
   const tmp = createCacheKey();
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [createGuildRecordFromRust];
   stateFromStores = obj.useStateFromStores(items, () => outer1_8.getGuild(closure_0));
-  let obj1 = require(589) /* initialize */;
+  let obj1 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items1 = [handleThemeChange];
   let guildBannerSource = null;
   const stateFromStores1 = obj1.useStateFromStores(items1, () => theme.theme);
@@ -243,7 +243,7 @@ function BoostedGuild(arg0) {
       guildBannerSource = obj2.getGuildBannerSource(stateFromStores);
     }
   }
-  let subscriptionPlaceholderPatternSource = require(12679) /* getSubscriptionPlaceholderPatternSource */.useSubscriptionPlaceholderPatternSource();
+  let subscriptionPlaceholderPatternSource = require("../../../design/components/Illustration/native/redesign/generated/SubscriptionPlaceholderPattern.tsx") /* getSubscriptionPlaceholderPatternSource */.useSubscriptionPlaceholderPatternSource();
   if (null != guildBannerSource) {
     subscriptionPlaceholderPatternSource = guildBannerSource;
   }
@@ -274,7 +274,7 @@ function BoostedGuild(arg0) {
   const obj4 = { guild: stateFromStores, numGuildBoostSlots: guildBoostSlots.length };
   const tmp12 = closure_6;
   const tmp2 = require;
-  const tmp2Result = require(12679) /* getSubscriptionPlaceholderPatternSource */;
+  const tmp2Result = require("../../../design/components/Illustration/native/redesign/generated/SubscriptionPlaceholderPattern.tsx") /* getSubscriptionPlaceholderPatternSource */;
   items5[1] = closure_11(closure_5, { children: guildBoostSlots.map((guildBoostSlot) => outer1_11(outer1_17, { guild: stateFromStores, guildBoostSlot, isLast: arg1 === guildBoostSlots.length - 1 }, guildBoostSlot.id)) });
   obj[1] = items5;
   return closure_12(closure_5, obj);
@@ -320,13 +320,13 @@ export default function GuildBoostSlotsInventory() {
     const obj = callback(4604);
     const guildBoostSlots = valueResult(4181).fetchGuildBoostSlots();
   }, []);
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [reset];
   const stateFromStores = obj.useStateFromStores(items, () => premiumTypeSubscription.getPremiumTypeSubscription());
-  let obj1 = require(589) /* initialize */;
+  let obj1 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items1 = [handleGuildBoostsUpdate];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => boostSlots.boostSlots);
-  let obj2 = importDefault(12)(stateFromStores1);
+  let obj2 = require("../../../../_runtime/00012_apply.js")(stateFromStores1);
   const valueResult = obj2.groupBy((premiumGuildSubscription) => {
     premiumGuildSubscription = premiumGuildSubscription.premiumGuildSubscription;
     let str = "0";

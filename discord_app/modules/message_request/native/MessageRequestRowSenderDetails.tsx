@@ -52,7 +52,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
   let obj1 = otherUser(15821);
   const messageRequestRelativeTimestampText = obj1.useMessageRequestRelativeTimestampText(channel);
   const random = Math.random();
-  const rounded = Math.floor(random * importDefault(1419).DEFAULT_AVATARS.length);
+  const rounded = Math.floor(random * require("../../../utils/native/AvatarUtils.tsx").DEFAULT_AVATARS.length);
   obj = { style: tmp.avatarContainer, children: null };
   if (null != otherUser) {
     obj = { avatarStyle: null, user: null, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: "Warning" };
@@ -67,7 +67,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
   } else {
     obj1 = { avatarStyle: null, source: null };
     obj1[0] = tmp.avatar;
-    obj1[1] = importDefault(1419).DEFAULT_AVATARS[rounded];
+    obj1[1] = require("../../../utils/native/AvatarUtils.tsx").DEFAULT_AVATARS[rounded];
   }
   obj[1] = closure_5(otherUser(1297).Avatar, obj1);
   const items1 = [closure_5(View, obj), ];

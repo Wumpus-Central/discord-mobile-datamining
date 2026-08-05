@@ -6,10 +6,10 @@ import createCacheKey from "createCacheKey";
 const require = arg1;
 function ShopEmptyState() {
   const obj = { style: { marginTop: 42 }, Illustration: null, body: null };
-  obj[1] = require(8749) /* getNoResultsSource */.NoResults;
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl.string(require(1236) /* getSystemLocale */.t.eAn6z2);
-  return jsx(require(1297) /* Button */.EmptyState, { style: { marginTop: 42 }, Illustration: null, body: null });
+  obj[1] = require("../../../design/components/Illustration/native/redesign/generated/NoResults.tsx") /* getNoResultsSource */.NoResults;
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.eAn6z2);
+  return jsx(require("../../../design/void/native.tsx") /* Button */.EmptyState, { style: { marginTop: 42 }, Illustration: null, body: null });
 }
 createCacheKey = { contentContainer: null };
 createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
@@ -24,7 +24,7 @@ export default function ShopFlashList(initialScrollIndex) {
   initialScrollIndex = initialScrollIndex.initialScrollIndex;
   ({ data, renderItem, getItemType } = initialScrollIndex);
   const ref = React.useRef(null);
-  let obj = require(14729) /* INITIAL_SCROLL_DELAY_MS */;
+  let obj = require("hooks/useScrollToInitialIndexOnce.tsx") /* INITIAL_SCROLL_DELAY_MS */;
   let tmp5 = null != initialScrollIndex;
   if (tmp5) {
     tmp5 = initialScrollIndex > 0;
@@ -32,5 +32,5 @@ export default function ShopFlashList(initialScrollIndex) {
   obj = { shouldScroll: tmp5, initialScrollIndex, flashListRef: ref, afterMs: tmp3(14729).INITIAL_SCROLL_DELAY_MS };
   const scrollToInitialIndexOnce = obj.useScrollToInitialIndexOnce(obj);
   obj = { ref, data, renderItem, showsVerticalScrollIndicator: false, ListEmptyComponent: ShopEmptyState, initialScrollIndex, getItemType, contentContainerStyle: createCacheKey().contentContainer };
-  return jsx(require(7666) /* noop */.FlashList, { ref, data, renderItem, showsVerticalScrollIndicator: false, ListEmptyComponent: ShopEmptyState, initialScrollIndex, getItemType, contentContainerStyle: createCacheKey().contentContainer });
+  return jsx(require("../../../../discord_common/js/packages/flash-list/index.js") /* noop */.FlashList, { ref, data, renderItem, showsVerticalScrollIndicator: false, ListEmptyComponent: ShopEmptyState, initialScrollIndex, getItemType, contentContainerStyle: createCacheKey().contentContainer });
 };

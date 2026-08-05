@@ -25,7 +25,7 @@ class CacheManager extends tmp3 {
 }
 const prototype = CacheManager.prototype;
 prototype["handleConnectionOpen"] = function handleConnectionOpen() {
-  const result = importDefault(7035).doesDatabaseVersionMatchJsConstants();
+  const result = require("../app_database/modules/KvCacheVersion.tsx").doesDatabaseVersionMatchJsConstants();
   result.then((arg0) => {
     if (!arg0) {
       callback(table[6]).writeCaches();
@@ -37,10 +37,10 @@ prototype["handleConnectionClose"] = function handleConnectionClose() {
   return false;
 };
 prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
-  const obj = require(500) /* set */;
+  const obj = require("../../utils/PlatformUtils.tsx") /* set */;
   const tmp = require;
-  const AppStates = require(691) /* keys */.AppStates;
-  let isConnectedResult = (require(500) /* set */.isAndroid() ? AppStates.BACKGROUND : AppStates.INACTIVE) === state.state;
+  const AppStates = require("../../ConstantsIOS.tsx") /* keys */.AppStates;
+  let isConnectedResult = (require("../../utils/PlatformUtils.tsx") /* set */.isAndroid() ? AppStates.BACKGROUND : AppStates.INACTIVE) === state.state;
   if (isConnectedResult) {
     isConnectedResult = connected.isConnected();
   }
@@ -55,8 +55,8 @@ prototype["handleWindowFocus"] = function handleWindowFocus(focused) {
     const _Date = Date;
     if (Date.now() - lastWriteTime.lastWriteTime > closure_6) {
       tmp2.verbose("Writing cache from window unfocus");
-      require(14650) /* _writeCaches */.writeCaches();
-      const obj = require(14650) /* _writeCaches */;
+      require("CacheActionCreators.tsx") /* _writeCaches */.writeCaches();
+      const obj = require("CacheActionCreators.tsx") /* _writeCaches */;
     } else {
       tmp2.verbose("Not writing cache from window unfocus");
     }

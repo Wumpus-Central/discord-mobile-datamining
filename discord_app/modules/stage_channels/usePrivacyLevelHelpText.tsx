@@ -9,7 +9,7 @@ const result = require("GUILD_EVENT_MAX_NAME_LENGTH").fileFinishedImporting("mod
 
 export default function useStagePrivacyLevelSettings(channel, privacy_level) {
   const _require = channel;
-  let obj = _require(589);
+  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
   const items = [getUncachedChannelPermissions];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_4.can(outer1_7.CREATE_INSTANT_INVITE, closure_0));
   const obj2 = importAll(3918);
@@ -27,9 +27,9 @@ export default function useStagePrivacyLevelSettings(channel, privacy_level) {
       if (arg2 === tmp6.PUBLIC) {
         const intl3 = tmp(1236).intl;
         obj = { articleURL: null };
-        obj[0] = importDefault(1945).getArticleURL(HelpdeskArticles.STAGE_CHANNEL_GUIDELINES);
+        obj[0] = require("../../utils/HelpdeskUtils.tsx").getArticleURL(HelpdeskArticles.STAGE_CHANNEL_GUIDELINES);
         formatResult = intl3.format(tmp(1236).t["ew/Jq4"], obj);
-        const obj5 = importDefault(1945);
+        const obj5 = require("../../utils/HelpdeskUtils.tsx");
       }
       let stringResult1 = formatResult;
     } else {

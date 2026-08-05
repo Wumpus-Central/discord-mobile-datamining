@@ -7,7 +7,7 @@ const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("design/components/Illustration/native/redesign/generated/FeedbackModalHappyDesaturated.tsx");
 
 export const getFeedbackModalHappyDesaturatedSource = function getFeedbackModalHappyDesaturatedSource(theme) {
-  let obj = require(7544) /* getIllustrationSource */;
+  let obj = require("../../index.tsx") /* getIllustrationSource */;
   obj = {
     dark() {
       return callback(11018);
@@ -22,7 +22,7 @@ export const getFeedbackModalHappyDesaturatedSource = function getFeedbackModalH
   return obj.getIllustrationSource(theme, obj);
 };
 export const useFeedbackModalHappyDesaturatedSource = function useFeedbackModalHappyDesaturatedSource() {
-  let obj = require(4131) /* AccessibilityAnnouncer */;
+  let obj = require("../../../../../shared.tsx") /* AccessibilityAnnouncer */;
   obj = {
     dark() {
       return callback(11018);
@@ -34,10 +34,10 @@ export const useFeedbackModalHappyDesaturatedSource = function useFeedbackModalH
       return callback(11020);
     }
   };
-  return require(7544) /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
+  return require("../../index.tsx") /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const FeedbackModalHappyDesaturated = function FeedbackModalHappyDesaturated(arg0) {
-  let obj = require(4131) /* AccessibilityAnnouncer */;
+  let obj = require("../../../../../shared.tsx") /* AccessibilityAnnouncer */;
   obj = {
     dark() {
       return callback(11018);
@@ -50,7 +50,7 @@ export const FeedbackModalHappyDesaturated = function FeedbackModalHappyDesatura
     }
   };
   obj = {};
-  const illustrationSource = require(7544) /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
+  const illustrationSource = require("../../index.tsx") /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;
   return <Image />;

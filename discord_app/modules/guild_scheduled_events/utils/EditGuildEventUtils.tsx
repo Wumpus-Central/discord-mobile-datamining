@@ -157,9 +157,9 @@ export const getInitialGuildEventData = function getInitialGuildEventData(initia
     scheduled_start_time = initialGuildEvent.scheduled_start_time;
   }
   if (scheduled_start_time == null) {
-    const initialEventStartDate = require(8864) /* getRRule */.getInitialEventStartDate();
+    const initialEventStartDate = require("ScheduleUtils.tsx") /* getRRule */.getInitialEventStartDate();
     scheduled_start_time = initialEventStartDate.toISOString();
-    const obj2 = require(8864) /* getRRule */;
+    const obj2 = require("ScheduleUtils.tsx") /* getRRule */;
   }
   obj[3] = scheduled_start_time;
   let entity_type;
@@ -234,13 +234,13 @@ export const getInitialGuildEventData = function getInitialGuildEventData(initia
       entity_type1 = initialGuildEvent.entity_type;
     }
     if (entity_type1 === constants.EXTERNAL) {
-      const locationFromEvent = require(8867) /* getChannelFromEvent */.getLocationFromEvent(initialGuildEvent);
+      const locationFromEvent = require("EntityUtils.tsx") /* getChannelFromEvent */.getLocationFromEvent(initialGuildEvent);
       if (null != locationFromEvent) {
         obj = { location: null };
         obj[0] = locationFromEvent;
         obj.entityMetadata = obj;
       }
-      const obj7 = require(8867) /* getChannelFromEvent */;
+      const obj7 = require("EntityUtils.tsx") /* getChannelFromEvent */;
     }
     return obj;
   }

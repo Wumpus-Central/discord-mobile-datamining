@@ -13,8 +13,8 @@ export const isVoiceChannelsSection = function isVoiceChannelsSection(section, g
   return section === guildChannels.voiceChannelsSectionNumber;
 };
 export const isNamedCategorySection = function isNamedCategorySection(section) {
-  return section >= require(6896) /* computeSubtitle */.SECTION_INDEX_FIRST_NAMED_CATEGORY;
+  return section >= require("../../guild_sidebar/ChannelListState.tsx") /* computeSubtitle */.SECTION_INDEX_FIRST_NAMED_CATEGORY;
 };
 export const logChannelListEndReached = function logChannelListEndReached() {
-  importDefault(4479).trackWithMetadata(AnalyticEvents.CHANNEL_LIST_END_REACHED);
+  require("../../app_analytics/AppAnalyticsUtils.tsx").trackWithMetadata(AnalyticEvents.CHANNEL_LIST_END_REACHED);
 };

@@ -7,7 +7,7 @@ const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("design/components/Illustration/native/redesign/generated/IntroHeader.tsx");
 
 export const getIntroHeaderSource = function getIntroHeaderSource(theme) {
-  let obj = require(7544) /* getIllustrationSource */;
+  let obj = require("../../index.tsx") /* getIllustrationSource */;
   obj = {
     dark() {
       return callback(16618);
@@ -22,7 +22,7 @@ export const getIntroHeaderSource = function getIntroHeaderSource(theme) {
   return obj.getIllustrationSource(theme, obj);
 };
 export const useIntroHeaderSource = function useIntroHeaderSource() {
-  let obj = require(4131) /* AccessibilityAnnouncer */;
+  let obj = require("../../../../../shared.tsx") /* AccessibilityAnnouncer */;
   obj = {
     dark() {
       return callback(16618);
@@ -34,10 +34,10 @@ export const useIntroHeaderSource = function useIntroHeaderSource() {
       return callback(16620);
     }
   };
-  return require(7544) /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
+  return require("../../index.tsx") /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const IntroHeader = function IntroHeader(arg0) {
-  let obj = require(4131) /* AccessibilityAnnouncer */;
+  let obj = require("../../../../../shared.tsx") /* AccessibilityAnnouncer */;
   obj = {
     dark() {
       return callback(16618);
@@ -50,7 +50,7 @@ export const IntroHeader = function IntroHeader(arg0) {
     }
   };
   obj = {};
-  const illustrationSource = require(7544) /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
+  const illustrationSource = require("../../index.tsx") /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;
   return <Image />;

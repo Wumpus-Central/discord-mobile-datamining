@@ -92,7 +92,7 @@ function isCountableChannel(channel, mentionCount, arg2) {
         }
       }
       if (!channel.isPrivate()) {
-        let result1 = require(6903) /* useOptInEnabledForGuild */.isOptInEnabledForGuild(channel.guild_id);
+        let result1 = require("../modules/opt_in_channels/isOptInEnabled.tsx") /* useOptInEnabledForGuild */.isOptInEnabledForGuild(channel.guild_id);
         let tmp11 = null != channel.guild_id;
         if (tmp11) {
           if (result1) {
@@ -112,7 +112,7 @@ function isCountableChannel(channel, mentionCount, arg2) {
         } else if (!getUncachedChannelPermissions.can(channel.accessPermissions, channel)) {
           return false;
         }
-        const obj = require(6903) /* useOptInEnabledForGuild */;
+        const obj = require("../modules/opt_in_channels/isOptInEnabled.tsx") /* useOptInEnabledForGuild */;
       }
       let tmp16 = num > 0;
       if (!tmp16) {
@@ -184,7 +184,7 @@ function aggregateGuildState(guild_id, unreadByType, unread) {
   });
   unreadByType.lowImportanceMentionCount = 0;
   unreadByType.highImportanceMentionCount = 0;
-  const item = importDefault(11).forEach(unreadByType.mentionCounts, (count) => {
+  const item = require("../utils/SnowflakeUtils.tsx").forEach(unreadByType.mentionCounts, (count) => {
     count = count.count;
     if (count.isMentionLowImportance) {
       tmp.lowImportanceMentionCount = tmp.lowImportanceMentionCount + count;
@@ -457,7 +457,7 @@ function recountGuild(guildId) {
       }
       const mutedChannels = obj11.getMutedChannels(tmp2);
       const channelOverrides = obj11.getChannelOverrides(tmp2);
-      let obj2 = require(6903) /* useOptInEnabledForGuild */;
+      let obj2 = require("../modules/opt_in_channels/isOptInEnabled.tsx") /* useOptInEnabledForGuild */;
       const result = obj2.isOptInEnabledForGuild(tmp2);
       const mutableBasicGuildChannelsForGuild = store2.getMutableBasicGuildChannelsForGuild(tmp2);
       for (const key10034 in mutableBasicGuildChannelsForGuild) {
@@ -896,7 +896,7 @@ function handleChannelSelect(arg0) {
   let channelId;
   let guildId;
   ({ channelId, guildId } = arg0);
-  const isFavoritesGuildIdResult = require(1865) /* getFavoritesAwareGuildName */.isFavoritesGuildId(guildId);
+  const isFavoritesGuildIdResult = require("../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */.isFavoritesGuildId(guildId);
   let tmp2 = !isFavoritesGuildIdResult;
   if (!isFavoritesGuildIdResult) {
     let tmp4 = null != channelId;
@@ -914,13 +914,13 @@ function handleChannelUpdate(channel) {
   return recountChannels(channel.getGuildId(), items);
 }
 function handleChannelUpdates(channels) {
-  const obj = importDefault(12)(channels.channels);
-  return importDefault(12)(channels.channels).groupBy((getGuildId) => getGuildId.getGuildId()).reduce((arg0, arr) => callback(arg2, arr.map((id) => id.id)) || arg0, false);
+  const obj = require("../../_runtime/00012_apply.js")(channels.channels);
+  return require("../../_runtime/00012_apply.js")(channels.channels).groupBy((getGuildId) => getGuildId.getGuildId()).reduce((arg0, arr) => callback(arg2, arr.map((id) => id.id)) || arg0, false);
 }
 function handleBulkAck(channels) {
-  const mapped = importDefault(12)(channels.channels).map((channelId) => channelId.channelId);
+  const mapped = require("../../_runtime/00012_apply.js")(channels.channels).map((channelId) => channelId.channelId);
   const found = mapped.filter((arg0) => null != store.getChannel(arg0));
-  const arr = importDefault(12)(channels.channels);
+  const arr = require("../../_runtime/00012_apply.js")(channels.channels);
   return found.groupBy((arg0) => {
     const channel = store.getChannel(arg0);
     let guildId;
@@ -950,7 +950,7 @@ function handleThreadMemberUpdate(id) {
   return recountChannels(id.guildId, items);
 }
 function handleThreadMembersUpdate(id) {
-  let result = require(3920) /* doesThreadMembersActionAffectMe */.doesThreadMembersActionAffectMe(id);
+  let result = require("../modules/threads/ThreadActionUtils.tsx") /* doesThreadMembersActionAffectMe */.doesThreadMembersActionAffectMe(id);
   if (result) {
     const items = [id.id];
     result = recountChannels(id.guildId, items);
@@ -986,7 +986,7 @@ function handleUserGuildSettingsFullUpdate(userGuildSettings) {
     }
     return guild_id;
   }));
-  const keys = importDefault(11).keys(closure_22);
+  const keys = require("../utils/SnowflakeUtils.tsx").keys(closure_22);
   return keys.reduce((arg0, arg1) => {
     let hasItem = set.has(arg1);
     if (hasItem) {

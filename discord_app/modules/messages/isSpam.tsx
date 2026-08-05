@@ -36,8 +36,8 @@ export const isSpam = function isSpam(author) {
     flag = false;
   }
   if (flag) {
-    flag = !require(6876) /* getDecisionOutcomeFromMessage */.isAutomodMessageRecord(author);
-    const obj2 = require(6876) /* getDecisionOutcomeFromMessage */;
+    flag = !require("../guild_automod/AutomodMessageUtils.tsx") /* getDecisionOutcomeFromMessage */.isAutomodMessageRecord(author);
+    const obj2 = require("../guild_automod/AutomodMessageUtils.tsx") /* getDecisionOutcomeFromMessage */;
   }
   return flag;
 };

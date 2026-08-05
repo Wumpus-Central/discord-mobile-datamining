@@ -5,7 +5,7 @@ const require = arg1;
 const result = require("context").fileFinishedImporting("modules/icymi/native/createICYMIStyles.tsx");
 
 export const createICYMIStyles = function createICYMIStyles(createCacheKey) {
-  _require = _require(4285).createStyles(createCacheKey);
+  _require = _require("../../../design/components/Styles/native/createStyles.tsx").createStyles(createCacheKey);
   return () => {
     const items = [...arguments];
     const useContext = outer1_2.useContext;

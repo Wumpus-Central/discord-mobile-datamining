@@ -396,13 +396,13 @@ export { syncContacts };
 export { updateFriendSync };
 export const handleSyncContacts = function handleSyncContacts(localAccount, phone, arg2) {
   if (null == localAccount) {
-    let obj = importDefault(698);
+    let obj = require("../../../../utils/AnalyticsUtils.tsx");
     obj = { type: null, location: null };
     obj[0] = constants3.CONTACT_SYNC_MODAL;
     obj[1] = { page: "User Settings" };
     obj.track(constants.OPEN_MODAL, obj);
-    require(11943) /* handleNameInputScreenOrSuggestions */.openContactSyncModal({}, { page: "User Settings" });
-    const obj3 = require(11943) /* handleNameInputScreenOrSuggestions */;
+    require("../ContactSyncModalActionCreators.tsx") /* handleNameInputScreenOrSuggestions */.openContactSyncModal({}, { page: "User Settings" });
+    const obj3 = require("../ContactSyncModalActionCreators.tsx") /* handleNameInputScreenOrSuggestions */;
   } else {
     updateFriendSync(localAccount, phone, arg2);
   }

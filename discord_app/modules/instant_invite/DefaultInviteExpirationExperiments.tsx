@@ -17,7 +17,7 @@ function getDefaultInviteExpiration(arg0) {
     hasItem = features.has(constants.HUB);
   }
   if (hasItem) {
-    return importDefault(8989).INVITE_OPTIONS_FOREVER.value;
+    return require("../../utils/InstantInviteUtils.tsx").INVITE_OPTIONS_FOREVER.value;
   } else if (null != experimentConfig) {
     let defaultMaxAge2 = experimentConfig.defaultMaxAge;
     if (defaultMaxAge2 == null) {
@@ -108,5 +108,5 @@ export const useMaxAgeOptions = function useMaxAgeOptions(arg0) {
     defaultMaxAge1 = experiment1.defaultMaxAge;
   }
   const includeExperimentalValues = [defaultMaxAge1];
-  return importDefault(8989).getMaxAgeOptions({ includeExperimentalValues });
+  return require("../../utils/InstantInviteUtils.tsx").getMaxAgeOptions({ includeExperimentalValues });
 };

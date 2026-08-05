@@ -7,9 +7,9 @@ const result = require("useIsMobileVisualRefreshExperimentEnabled").fileFinished
 
 export const useSyncedModeThemeName = function useSyncedModeThemeName(DARK) {
   const _require = DARK;
-  importDefault = importDefault(1348)("useSyncedModeThemeName");
+  importDefault = require("../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("useSyncedModeThemeName");
   const items = [handleThemeChange];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const syncedClientTheme = outer1_3.getSyncedClientTheme(DARK);
     const themeName = DARK(outer1_2[4]).getThemeName(outer1_3.themePreferenceForSystemTheme(DARK), callback);
     let prop;

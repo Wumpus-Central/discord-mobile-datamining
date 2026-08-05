@@ -11,7 +11,7 @@ let closure_6 = createCacheKey.createStyles((arg0) => {
     str = "column";
   }
   const container = { flexDirection: str, gap: null };
-  const space = importDefault(712).space;
+  const space = require("../../../../../../discord_common/js/packages/tokens/native.tsx").space;
   container[1] = arg0 ? space.PX_8 : space.PX_12;
   return { container, button: { flex: 1 } };
 });
@@ -19,7 +19,7 @@ const result = require("jsxProd").fileFinishedImporting("design/components/exper
 
 export const TwinButtons = function TwinButtons(children) {
   let _require;
-  let obj = _require(4701);
+  let obj = _require("../../../../../modules/screen/native/useFontScale.tsx");
   let tmp = callback(obj.useFontScale() > 1.2);
   _require = tmp;
   obj = {

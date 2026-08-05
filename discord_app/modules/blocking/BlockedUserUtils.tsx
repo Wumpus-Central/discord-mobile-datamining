@@ -45,7 +45,7 @@ export const voiceStateHasBlockedUsers = function voiceStateHasBlockedUsers(user
   return blockedOrIgnored.isBlockedOrIgnored(userId.userId);
 };
 export const filterBlockedUsersFromVoiceStates = function filterBlockedUsersFromVoiceStates(voiceStates) {
-  const found = importDefault(12)(voiceStates).filter((userId) => !blockedOrIgnored.isBlockedOrIgnored(userId.userId));
-  const arr = importDefault(12)(voiceStates);
+  const found = require("../../../_runtime/00012_apply.js")(voiceStates).filter((userId) => !blockedOrIgnored.isBlockedOrIgnored(userId.userId));
+  const arr = require("../../../_runtime/00012_apply.js")(voiceStates);
   return found.keyBy("userId").value();
 };

@@ -33,7 +33,7 @@ const multiAccountSwitchStore = new MultiAccountSwitchStore(require("dispatcher"
     ({ targetUserId: c9, location: c10 } = arg0);
   },
   MULTI_ACCOUNT_SWITCH_TIMEOUT: function handleSwitchTimeout() {
-    let obj = importDefault(698);
+    let obj = require("../../utils/AnalyticsUtils.tsx");
     obj = { from_user_id: c8, to_user_id: c9, linked_user_ids: null, has_ever_connected: null, switch_origin: null };
     const users = authStore.getUsers();
     obj[2] = users.map((id) => id.id);
@@ -50,10 +50,10 @@ const multiAccountSwitchStore = new MultiAccountSwitchStore(require("dispatcher"
       let obj = { current_user_id: null, expected_user_id: null, fast_connect_user_id: null, switch_origin: null };
       obj[0] = c7;
       obj[1] = c9;
-      obj[2] = require(15) /* createFastConnectSocket */.getLastFastConnectIdentifyUserId();
+      obj[2] = require("../gateway/native/fast_connect.tsx") /* createFastConnectSocket */.getLastFastConnectIdentifyUserId();
       obj[3] = c10;
       tmp2.log("logout from account switch", obj);
-      const obj3 = require(15) /* createFastConnectSocket */;
+      const obj3 = require("../gateway/native/fast_connect.tsx") /* createFastConnectSocket */;
     } else {
       goHomeAfterSwitching = false;
       obj = importAll(707);
@@ -257,7 +257,7 @@ let obj = {
     ({ targetUserId: c9, location: c10 } = arg0);
   },
   MULTI_ACCOUNT_SWITCH_TIMEOUT: function handleSwitchTimeout() {
-    let obj = importDefault(698);
+    let obj = require("../../utils/AnalyticsUtils.tsx");
     obj = { from_user_id: c8, to_user_id: c9, linked_user_ids: null, has_ever_connected: null, switch_origin: null };
     const users = authStore.getUsers();
     obj[2] = users.map((id) => id.id);
@@ -274,10 +274,10 @@ let obj = {
       let obj = { current_user_id: null, expected_user_id: null, fast_connect_user_id: null, switch_origin: null };
       obj[0] = c7;
       obj[1] = c9;
-      obj[2] = require(15) /* createFastConnectSocket */.getLastFastConnectIdentifyUserId();
+      obj[2] = require("../gateway/native/fast_connect.tsx") /* createFastConnectSocket */.getLastFastConnectIdentifyUserId();
       obj[3] = c10;
       tmp2.log("logout from account switch", obj);
-      const obj3 = require(15) /* createFastConnectSocket */;
+      const obj3 = require("../gateway/native/fast_connect.tsx") /* createFastConnectSocket */;
     } else {
       goHomeAfterSwitching = false;
       obj = importAll(707);

@@ -1,32 +1,32 @@
 // discord_common/js/packages/i18n/i18n.tsx
-import module_16178 from "module_16178";
-import module_16179 from "module_16179";
-import module_16180 from "module_16180";
-import module_16181 from "module_16181";
-import module_16182 from "module_16182";
-import module_16183 from "module_16183";
-import module_16184 from "module_16184";
-import module_16185 from "module_16185";
-import module_16186 from "module_16186";
-import module_16187 from "module_16187";
-import module_16188 from "module_16188";
-import module_16189 from "module_16189";
-import module_16190 from "module_16190";
-import module_16191 from "module_16191";
-import module_16192 from "module_16192";
-import module_16193 from "module_16193";
-import module_16194 from "module_16194";
-import module_16195 from "module_16195";
-import module_16196 from "module_16196";
-import module_16197 from "module_16197";
-import module_16198 from "module_16198";
-import module_16199 from "module_16199";
-import module_16200 from "module_16200";
-import module_16201 from "module_16201";
-import module_16202 from "module_16202";
-import module_16203 from "module_16203";
-import module_16204 from "module_16204";
-import module_16205 from "module_16205";
+import 16178__ from "../../../../_runtime/metro/16178__.js";
+import 16179__ from "../../../../_runtime/metro/16179__.js";
+import 16180__ from "../../../../_runtime/metro/16180__.js";
+import 16181__ from "../../../../_runtime/metro/16181__.js";
+import 16182__ from "../../../../_runtime/metro/16182__.js";
+import 16183__ from "../../../../_runtime/metro/16183__.js";
+import 16184__ from "../../../../_runtime/metro/16184__.js";
+import 16185__ from "../../../../_runtime/metro/16185__.js";
+import 16186__ from "../../../../_runtime/metro/16186__.js";
+import 16187__ from "../../../../_runtime/metro/16187__.js";
+import 16188__ from "../../../../_runtime/metro/16188__.js";
+import 16189__ from "../../../../_runtime/metro/16189__.js";
+import 16190__ from "../../../../_runtime/metro/16190__.js";
+import 16191__ from "../../../../_runtime/metro/16191__.js";
+import 16192__ from "../../../../_runtime/metro/16192__.js";
+import 16193__ from "../../../../_runtime/metro/16193__.js";
+import 16194__ from "../../../../_runtime/metro/16194__.js";
+import 16195__ from "../../../../_runtime/metro/16195__.js";
+import 16196__ from "../../../../_runtime/metro/16196__.js";
+import 16197__ from "../../../../_runtime/metro/16197__.js";
+import 16198__ from "../../../../_runtime/metro/16198__.js";
+import 16199__ from "../../../../_runtime/metro/16199__.js";
+import 16200__ from "../../../../_runtime/metro/16200__.js";
+import 16201__ from "../../../../_runtime/metro/16201__.js";
+import 16202__ from "../../../../_runtime/metro/16202__.js";
+import 16203__ from "../../../../_runtime/metro/16203__.js";
+import 16204__ from "../../../../_runtime/metro/16204__.js";
+import 16205__ from "../../../../_runtime/metro/16205__.js";
 import { EventEmitter } from "EventEmitter";
 
 let require = arg1;
@@ -213,7 +213,7 @@ prototype["setLocale"] = function setLocale(_requestedLocale) {
   }
 };
 prototype["setUpdateRules"] = function setUpdateRules(arg0) {
-  require(16211) /* format */.setUpdateRules(arg0);
+  require("parse.tsx") /* format */.setUpdateRules(arg0);
 };
 prototype["getLanguages"] = function getLanguages() {
   return this._languages;

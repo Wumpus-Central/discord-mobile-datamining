@@ -54,21 +54,21 @@ const memoResult = importAllResult.memo(function ChannelsEmpty(guild) {
     let tmp13 = tmp9;
   } else {
     obj = { source: null };
-    obj[0] = importDefault(15259);
+    obj[0] = require("../../../../../../../_runtime/15259_registerAsset.js");
     tmp9Result = tmp9(closure_5, obj);
     tmp13 = tmp9;
   }
   const intl = tmp2(1236).intl;
   const string = intl.string;
   if (isFavoritesGuildIdResult) {
-    let stringResult = string(importDefault(3031)["wh+Rz1"]);
+    let stringResult = string(require("../../../../../favorites/intl/FavoritesGuild.messages.js")["wh+Rz1"]);
   } else {
     stringResult = string(tmp2(1236).t.o4s29v);
   }
   const intl2 = tmp2(1236).intl;
   const string2 = intl2.string;
   if (isFavoritesGuildIdResult) {
-    let string2Result = string2(importDefault(3031)["+SuGKb"]);
+    let string2Result = string2(require("../../../../../favorites/intl/FavoritesGuild.messages.js")["+SuGKb"]);
   } else {
     string2Result = string2(tmp2(1236).t.iypvFu);
   }
@@ -79,7 +79,7 @@ const memoResult = importAllResult.memo(function ChannelsEmpty(guild) {
     obj1[0] = tmp.personalizeButtonWrapper;
     obj2 = { icon: null, label: null, onPress: null };
     const obj3 = { source: null, disableColor: true };
-    obj3[0] = importDefault(15260);
+    obj3[0] = require("../../../../../../../_runtime/15260_registerAsset.js");
     obj2[0] = tmp13(tmp2(1297).Icon, obj3);
     const intl3 = tmp2(1236).intl;
     obj2[1] = intl3.string(tmp2(1236).t["Yhi9/N"]);

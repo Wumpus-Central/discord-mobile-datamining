@@ -45,5 +45,5 @@ const result = require("jsxProd").fileFinishedImporting("modules/app_launcher/na
 
 export default forwardRefResult;
 export const useAppLauncherFlashListProps = function useAppLauncherFlashListProps(arg0) {
-  return importAllResult.useContext(require(11402) /* context */.ControlsGestureScrollLock)(arg0);
+  return importAllResult.useContext(require("../../../voice_panel/native/controls/utils/createUseAnimatedScrollLock.tsx") /* context */.ControlsGestureScrollLock)(arg0);
 };

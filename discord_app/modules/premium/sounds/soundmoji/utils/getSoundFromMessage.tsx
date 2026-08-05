@@ -24,7 +24,7 @@ export default function getSoundFromMessage(arg0, arg1, arg2, arr) {
     if (guild_id2 == null) {
       guild_id2 = DEFAULT_SOUND_GUILD_ID;
     }
-    return _require(4737).soundboardSoundFromAPI(found, guild_id2);
+    return _require("../../../../soundboard/SoundboardTypes.tsx").soundboardSoundFromAPI(found, guild_id2);
   } else {
     message = message.getMessage(arg0, arg1);
     if (null != message) {
@@ -35,7 +35,7 @@ export default function getSoundFromMessage(arg0, arg1, arg2, arr) {
           type = messageReference.type;
         }
       }
-      if (type === _require(694).MessageReferenceTypes.FORWARD) {
+      if (type === _require("../../../../../../discord_common/js/shared/shared-constants/MessageReferenceTypes.tsx").MessageReferenceTypes.FORWARD) {
         let messageSnapshots;
         if (message != null) {
           messageSnapshots = message.messageSnapshots;

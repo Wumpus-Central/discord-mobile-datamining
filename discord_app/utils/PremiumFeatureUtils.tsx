@@ -23,7 +23,7 @@ function getUserMaxFileSize(currentUser) {
       if (obj.isPremium(currentUser)) {
         fileSize = table[currentUser.premiumType].fileSize;
       }
-      obj = require(1897) /* isPremiumAtLeast */;
+      obj = require("PremiumTypeUtils.tsx") /* isPremiumAtLeast */;
     }
     fileSize = closure_3;
   }

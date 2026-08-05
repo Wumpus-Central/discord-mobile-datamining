@@ -40,9 +40,9 @@ function CancelButton(arg0) {
     accessibilityLabel: null,
     labelVisible: false
   };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl.string(require(1236) /* getSystemLocale */.t.cpT0Cq);
-  return callback(require(5245) /* Background */.HeaderBackButton, obj);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.cpT0Cq);
+  return callback(require("../../../../_runtime/05245_Background.js") /* Background */.HeaderBackButton, obj);
 }
 function ProductPurchaseGradientBackground(product) {
   product = product.product;
@@ -103,28 +103,28 @@ let closure_16 = createCacheKey.createStyles((arg0) => {
     flag = false;
   }
   let obj = { root: null, header: null, headerLeading: null, imageBackground: null, backdrop: null, main: null, curtain: null, body: null, preview: null, previewBundle: null, messages: null, title: null, footer: null, cta: null };
-  obj = { flex: 1, backgroundColor: importDefault(712).colors.BACKGROUND_BASE_LOW };
+  obj = { flex: 1, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW };
   obj[0] = obj;
-  obj = { flexDirection: "row", alignItems: "center", paddingHorizontal: importDefault(712).space.PX_16 };
+  obj = { flexDirection: "row", alignItems: "center", paddingHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
   obj[1] = obj;
   obj[2] = { flex: 1, flexDirection: "row", alignItems: "center" };
   obj[3] = { resizeMode: "cover", position: "absolute", top: 0, bottom: 0, left: 0, right: 0 };
   obj[4] = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0 };
   obj[5] = { flex: 1 };
-  obj[6] = { position: "absolute", backgroundColor: importDefault(712).colors.BLACK, top: 0, bottom: 0, left: 0, right: 0 };
+  obj[6] = { position: "absolute", backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BLACK, top: 0, bottom: 0, left: 0, right: 0 };
   obj[7] = { flexGrow: 1, flexDirection: "column", justifyContent: "center" };
   let num = 0;
-  if (arg0 === require(1901) /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION) {
+  if (arg0 === require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION) {
     num = 1;
   }
   const obj2 = { flexDirection: "row", justifyContent: "center", alignItems: "center", flex: num, marginTop: null, marginHorizontal: null };
   let str = 0;
-  if (arg0 === require(1901) /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION) {
+  if (arg0 === require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION) {
     str = "20%";
   }
   obj2[4] = str;
   let PX_32;
-  if (arg0 === require(1901) /* CollectiblesItemType */.CollectiblesItemType.NAMEPLATE) {
+  if (arg0 === require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.NAMEPLATE) {
     PX_32 = tmp(712).space.PX_32;
   }
   obj2[5] = PX_32;

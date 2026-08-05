@@ -8,5 +8,5 @@ export const useIsSpamMessageRequest = function useIsSpamMessageRequest(id) {
   const _require = id;
   const items = [processChannel];
   const items1 = [id];
-  return _require(589).useStateFromStores(items, () => outer1_2.isSpam(closure_0), items1);
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_2.isSpam(closure_0), items1);
 };

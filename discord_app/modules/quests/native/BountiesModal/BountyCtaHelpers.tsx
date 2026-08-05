@@ -3,8 +3,8 @@ const result = require("set").fileFinishedImporting("modules/quests/native/Bount
 
 export const getBountyCtaInfo = function getBountyCtaInfo(bounty) {
   const obj = { label: bounty.productName, subtext: bounty.cta.buttonLabel, buttonLabel: null, iconImageUri: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl.string(require(1236) /* getSystemLocale */.t.LLLLPD);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.LLLLPD);
   obj[3] = bounty.productIcon;
   return obj;
 };

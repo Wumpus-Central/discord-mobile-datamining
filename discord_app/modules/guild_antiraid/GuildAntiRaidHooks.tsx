@@ -14,7 +14,7 @@ const require = arg1;
 function getFirstGuildIncidentId(guildId) {
   currentUser = currentUser.getCurrentUser();
   const incidentsByGuild = store3.getIncidentsByGuild();
-  let obj = importDefault(11);
+  let obj = require("../../utils/SnowflakeUtils.tsx");
   const keys = obj.keys(incidentsByGuild);
   const mapped = keys.map((arg0) => guild.getGuild(arg0));
   const iter = mapped[Symbol.iterator]();
@@ -29,7 +29,7 @@ function getFirstGuildIncidentId(guildId) {
         let tmp19 = require;
         let tmp20 = dependencyMap;
         let tmp21 = dependencyMap;
-        let obj7 = require(7932) /* DATE_CONFIG */;
+        let obj7 = require("GuildAntiRaidUtils.tsx") /* DATE_CONFIG */;
         let tmp22 = tmp17;
         if (obj7.hasDetectedActivity(tmp18)) {
           let tmp8 = tmp20;
@@ -123,7 +123,7 @@ export const useFirstGuildIncidentId = function useFirstGuildIncidentId() {
 };
 export const useGuildIncidentsState = function useGuildIncidentsState(id) {
   const _require = id;
-  let obj = _require(647);
+  let obj = _require("../../../discord_common/js/packages/flux/useStateFromStores.tsx");
   const items = [createGuildRecordFromRust, getUncachedChannelPermissions];
   const stateFromStores = obj.useStateFromStores(items, () => {
     const guild = outer1_5.getGuild(closure_0);
@@ -140,7 +140,7 @@ export const useGuildIncidentsState = function useGuildIncidentsState(id) {
     }
   });
   const items1 = [computeAlertSettings];
-  const stateFromStores1 = _require(647).useStateFromStores(items1, () => {
+  const stateFromStores1 = _require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items1, () => {
     let guildIncident = null;
     if (null != closure_0) {
       guildIncident = outer1_9.getGuildIncident(tmp);
@@ -150,8 +150,8 @@ export const useGuildIncidentsState = function useGuildIncidentsState(id) {
   obj = { shouldShowIncidentActions: stateFromStores, incidentData: stateFromStores1, isUnderLockdown: null };
   let isUnderLockdownResult = null != stateFromStores1;
   if (isUnderLockdownResult) {
-    isUnderLockdownResult = _require(7932).isUnderLockdown(stateFromStores1);
-    const tmpResult = _require(7932);
+    isUnderLockdownResult = _require("GuildAntiRaidUtils.tsx").isUnderLockdown(stateFromStores1);
+    const tmpResult = _require("GuildAntiRaidUtils.tsx");
   }
   obj[2] = isUnderLockdownResult;
   return obj;
@@ -185,8 +185,8 @@ export const shouldShowRaidInAppNotification = function shouldShowRaidInAppNotif
   }
   let isUnderLockdownResult = null != guildIncident;
   if (isUnderLockdownResult) {
-    isUnderLockdownResult = require(7932) /* DATE_CONFIG */.isUnderLockdown(guildIncident);
-    const obj2 = require(7932) /* DATE_CONFIG */;
+    isUnderLockdownResult = require("GuildAntiRaidUtils.tsx") /* DATE_CONFIG */.isUnderLockdown(guildIncident);
+    const obj2 = require("GuildAntiRaidUtils.tsx") /* DATE_CONFIG */;
   }
   const show = null != guildId && !isUnderLockdownResult && !(null != tmp2 && tmp2.disableRaidAlertNag);
   return { show, guildId };
@@ -290,7 +290,7 @@ export const useDisabledActions = function useDisabledActions(id) {
 export const useShowAntiRaidInGuildNotifSettings = function useShowAntiRaidInGuildNotifSettings(arg0) {
   const _require = arg0;
   const items = [getUncachedChannelPermissions, createGuildRecordFromRust];
-  return _require(647).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
     const guild = outer1_5.getGuild(callback);
     return callback(outer1_3[13]).canReportRaid(guild, outer1_6);
   });

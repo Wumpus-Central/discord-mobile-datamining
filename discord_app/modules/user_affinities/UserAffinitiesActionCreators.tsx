@@ -16,9 +16,9 @@ export const fetchUserAffinitiesV2 = function fetchUserAffinitiesV2() {
   }
   if (recomputeAffinities.shouldFetch()) {
     if (hasConsented.hasConsented(constants.PERSONALIZATION)) {
-      let obj = importDefault(709);
+      let obj = require("../../Dispatcher.tsx");
       obj.dispatch({ type: "LOAD_USER_AFFINITIES_V2" });
-      const HTTP = require(530) /* sendRequest */.HTTP;
+      const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
       obj = { url: null, retries: null, oldFormErrors: true, rejectWithError: false };
       obj[0] = USER_AFFINITIES_V2.USER_AFFINITIES_V2;
       let num = 0;

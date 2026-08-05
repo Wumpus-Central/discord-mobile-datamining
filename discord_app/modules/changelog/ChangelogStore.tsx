@@ -9,7 +9,7 @@ let c4;
 let c5;
 const require = arg1;
 function handleUserSettingsProtoStoreChange() {
-  const LastReceivedChangelogId = require(3958) /* explicitContentFromProto */.LastReceivedChangelogId;
+  const LastReceivedChangelogId = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.LastReceivedChangelogId;
   const setting = LastReceivedChangelogId.getSetting();
 }
 ({ AssetType: c4, ChangelogLoadState: c5 } = CHANGELOG_MODAL_KEY);
@@ -31,7 +31,7 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items, () => true);
   const items1 = [handleConnectionClosedOrResumed];
   this.syncWith(items1, handleUserSettingsProtoStoreChange);
-  const Storage = require(595) /* Storage */.Storage;
+  const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
   const value = Storage.get(lastChangeLogDate);
   if (null != value) {
     try {
@@ -151,7 +151,7 @@ const changelogStore = new ChangelogStore(require("dispatcher"), {
   CHANGE_LOG_MARK_SEEN: function handleDismiss(changelogDate) {
     changelogDate = changelogDate.changelogDate;
     const date = new Date(changelogDate);
-    const Storage = require(595) /* Storage */.Storage;
+    const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     const result = Storage.set(lastChangeLogDate, changelogDate);
   }
 });

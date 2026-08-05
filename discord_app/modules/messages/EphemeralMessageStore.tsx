@@ -68,7 +68,7 @@ const ephemeralMessageStore = new EphemeralMessageStore(require("dispatcher"), {
     } else {
       return false;
     }
-    obj = require(1384) /* hasFlag */;
+    obj = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
     tmp = require;
   },
   MESSAGE_UPDATE: function handleMessageUpdate(message) {
@@ -86,7 +86,7 @@ const ephemeralMessageStore = new EphemeralMessageStore(require("dispatcher"), {
           if (null == value) {
             return false;
           } else {
-            const result = value.set(id, require(4504) /* createMinimalMessageRecord */.updateMessageRecord(value, message));
+            const result = value.set(id, require("MessageRecordUtils.tsx") /* createMinimalMessageRecord */.updateMessageRecord(value, message));
           }
         }
       }

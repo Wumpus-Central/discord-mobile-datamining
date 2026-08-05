@@ -4,9 +4,9 @@ import { useMemo } from "noop";
 const result = require("useNextTenureBadge").fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useTimeUntilNextBadge.tsx");
 
 export const computeDaysUntilNextBadgeDate = function computeDaysUntilNextBadgeDate(arg0, arg1) {
-  const obj = importDefault(3867)(arg0);
-  const addResult = importDefault(3867)(arg0).add(arg1, "months");
-  return Math.max(0, importDefault(3867)(arg0).add(arg1, "months").add(1, "day").diff(importDefault(3867)(), "days"));
+  const obj = require("../../../../../_runtime/03867_t.js")(arg0);
+  const addResult = require("../../../../../_runtime/03867_t.js")(arg0).add(arg1, "months");
+  return Math.max(0, require("../../../../../_runtime/03867_t.js")(arg0).add(arg1, "months").add(1, "day").diff(require("../../../../../_runtime/03867_t.js")(), "days"));
 };
 export const useTimeUntilNextBadge = function useTimeUntilNextBadge() {
   nextTenureBadge = nextTenureBadge(12621).useNextTenureBadge();

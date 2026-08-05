@@ -198,13 +198,13 @@ export default function SpamMessageList(goToMessageRequestPreview) {
   let closure_4;
   const tmp = createCacheKey();
   importDefault = tmp;
-  const bottom = importDefault(1581)().bottom;
+  const bottom = require("../../../safe_area/useSafeAreaInsets.native.tsx")().bottom;
   let obj = goToMessageRequestPreview(15829);
   dependencyMap = obj.useSpamMessageRequestCount();
-  arr = importDefault(15836)();
+  arr = require("../../hooks/useSortedSpamMessageRequests.tsx")();
   let obj1 = goToMessageRequestPreview(15827);
   closure_4 = obj1.useListHasSingleSpamMessageRequest();
-  importDefault(4711)(() => {
+  require("../../../../hooks/useMountEffect.tsx")(() => {
     let obj = _undefined(698);
     obj = { num_spam_message_requests: dependencyMap };
     obj.track(outer1_7.SPAM_MESSAGE_REQUESTS_VIEWED, obj);

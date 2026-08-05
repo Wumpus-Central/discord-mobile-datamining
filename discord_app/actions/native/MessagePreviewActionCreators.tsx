@@ -10,7 +10,7 @@ export default {
   fetchMessages(channelId, around) {
     const _require = channelId;
     let closure_1 = around;
-    const HTTP = _require(530).HTTP;
+    const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     obj = { url: closure_3.MESSAGES(channelId), query: obj, retries: 2, oldFormErrors: true, rejectWithError: true };
     obj = { limit: closure_4, around };
     const value = HTTP.get(obj);
@@ -21,6 +21,6 @@ export default {
     });
   },
   clearMessages() {
-    importDefault(709).dispatch({ type: "CLEAR_MESSAGES_AROUND_SUCCESS" });
+    require("../../Dispatcher.tsx").dispatch({ type: "CLEAR_MESSAGES_AROUND_SUCCESS" });
   }
 };

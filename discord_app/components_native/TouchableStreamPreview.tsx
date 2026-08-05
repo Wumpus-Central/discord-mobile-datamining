@@ -123,11 +123,11 @@ let result = require("set").fileFinishedImporting("components_native/TouchableSt
 
 export default function VoiceChannelSettingsStreamPreview(arg0) {
   const _require = arg0;
-  let obj = _require(589);
+  let obj = _require("../../discord_common/js/packages/flux/index.tsx");
   const items = [reset];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getStreamForUser(closure_0.userId, closure_0.guildId));
   const items1 = [ensureGuildLoaded];
-  const stateFromStores1 = _require(589).useStateFromStores(items1, () => {
+  const stateFromStores1 = _require("../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
     let channel = null;
     if (null != stateFromStores) {
       channel = outer1_8.getChannel(tmp.channelId);

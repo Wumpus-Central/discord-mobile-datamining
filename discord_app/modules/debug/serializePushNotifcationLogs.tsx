@@ -11,9 +11,9 @@ export default function serializePushNotificationLogs(arr) {
   if (0 === arr.length) {
     return "No logs";
   } else {
-    const Storage = _require(595).Storage;
+    const Storage = _require("../../../discord_common/js/packages/storage/Storage.tsx").Storage;
     let value = Storage.get(closure_2);
-    const Storage2 = _require(595).Storage;
+    const Storage2 = _require("../../../discord_common/js/packages/storage/Storage.tsx").Storage;
     value = Storage2.get(closure_3);
     let str2 = "";
     if (null != value) {

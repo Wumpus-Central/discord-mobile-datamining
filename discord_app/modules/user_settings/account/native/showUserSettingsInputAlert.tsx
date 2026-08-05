@@ -11,7 +11,7 @@ export default function showUserSettingsInputAlert(arg0) {
   let require;
   ({ onSubmit: require, onSuccess: importDefault, onError: dependencyMap } = arg0);
   let closure_3 = Object.assign(arg0, Object.create(null));
-  let obj = importDefault(4624);
+  let obj = require("../../../../actions/native/AlertActionCreators.tsx");
   obj = {
     importer() {
       return outer1_0(outer1_2[4])(outer1_2[3], outer1_2.paths).then((arg0) => {

@@ -12,8 +12,8 @@ export const getFavoritesAwareGuildName = function getFavoritesAwareGuildName(gu
       tmp2 = id === FAVORITES;
     }
     if (tmp2) {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      let name = intl.string(require(1236) /* getSystemLocale */.t.wMWyci);
+      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      let name = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.wMWyci);
     } else {
       name = guild.name;
     }

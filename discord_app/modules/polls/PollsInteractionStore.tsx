@@ -49,7 +49,7 @@ export const useMessagePollInteractions = function useMessagePollInteractions(ar
       }
     });
     return obj;
-  }, importDefault(643));
+  }, require("../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx"));
 };
 export const useChannelPollInteractions = function useChannelPollInteractions(arg0) {
   let closure_0 = arg0;
@@ -59,11 +59,11 @@ export const useChannelPollInteractions = function useChannelPollInteractions(ar
       tmp = outer1_3;
     }
     return tmp;
-  }, importDefault(643));
+  }, require("../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx"));
 };
 export const clearChannelPollState = function clearChannelPollState(arg0) {
   const _require = arg0;
-  _require(705).batchUpdates(() => {
+  _require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
     outer1_4.setState((arg0) => {
       let pollsByChannelId;
       let pollsByMessageId;
@@ -89,7 +89,7 @@ export const clearChannelPollState = function clearChannelPollState(arg0) {
 export const clearPollState = function clearPollState(arg0, arg1) {
   const _require = arg0;
   let closure_1 = arg1;
-  _require(705).batchUpdates(() => {
+  _require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
     outer1_4.setState((arg0) => {
       let pollsByChannelId;
       let pollsByMessageId;

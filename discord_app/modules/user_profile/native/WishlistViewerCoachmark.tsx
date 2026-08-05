@@ -12,11 +12,11 @@ function CoachmarkImage() {
   const tmp = callback();
   let obj = { style: tmp.imageContainer, children: null };
   obj = { source: null, style: null };
-  obj = { uri: importDefault(12432) };
+  obj = { uri: require("../../../../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js") };
   obj[0] = obj;
   obj[1] = tmp.image;
-  obj[1] = <closure_5 uri={importDefault(12432)} />;
-  return <closure_4 uri={importDefault(12432)} />;
+  obj[1] = <closure_5 uri={require("../../../../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js")} />;
+  return <closure_4 uri={require("../../../../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js")} />;
 }
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 let closure_8 = createCacheKey.createStyles({ imageContainer: { alignItems: "center", justifyContent: "center" }, image: { width: 160, height: 106 } });

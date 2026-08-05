@@ -8,7 +8,7 @@ const require = arg1;
 function startBackgroundTask(arg0) {
   let content;
   let title;
-  let obj = require(500) /* set */;
+  let obj = require("../../utils/PlatformUtils.tsx") /* set */;
   if (obj.isAndroid()) {
     if (null == arg0) {
       const promise = new Promise((arg0) => arg0(closure_5));
@@ -20,7 +20,7 @@ function startBackgroundTask(arg0) {
       obj[1] = content;
       obj[2] = tmp(7137).ServiceNotificationPriority.MEDIUM;
       obj[3] = tmp(7137).ServiceNotificationType.FILE_UPLOAD;
-      return importDefault(7136).addServiceHandler(obj);
+      return require("../foreground_service/mobile/ForegroundServiceManager.android.tsx").addServiceHandler(obj);
     }
   } else {
     const DCDBackgroundTaskManager = NativeModules.DCDBackgroundTaskManager;
@@ -34,13 +34,13 @@ if (!set.isAndroid()) {
 function endBackgroundTask(c7) {
   if (c7 !== num) {
     if (obj.isAndroid()) {
-      importDefault(7136).removeServiceHandler(c7);
-      const obj2 = importDefault(7136);
+      require("../foreground_service/mobile/ForegroundServiceManager.android.tsx").removeServiceHandler(c7);
+      const obj2 = require("../foreground_service/mobile/ForegroundServiceManager.android.tsx");
     } else {
       const DCDBackgroundTaskManager = NativeModules.DCDBackgroundTaskManager;
       DCDBackgroundTaskManager.endBackgroundTask(c7);
     }
-    obj = require(500) /* set */;
+    obj = require("../../utils/PlatformUtils.tsx") /* set */;
   }
 }
 function backgroundify(arg0, arg1) {

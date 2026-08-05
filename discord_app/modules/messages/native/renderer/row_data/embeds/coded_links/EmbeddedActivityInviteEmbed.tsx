@@ -27,7 +27,7 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
     if (invite.target_type === InviteTargetTypes.EMBEDDED_APPLICATION) {
       if (null != target_application) {
         if (null == application.getApplication(target_application.id)) {
-          let obj = importDefault(709);
+          let obj = require("../../../../../../../Dispatcher.tsx");
           obj = { type: "APPLICATION_UPDATE", application: null };
           obj[1] = target_application;
           obj.dispatch(obj);
@@ -37,7 +37,7 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
           let obj2 = id(8051);
           const assetIds = obj2.fetchAssetIds(id, closure_16);
         }
-        const tmp13 = importDefault(7863)(inviteCode.theme);
+        const tmp13 = require("../getEmbedThemeColors.tsx")(inviteCode.theme);
         const baseColors = tmp13.baseColors;
         const guild = invite.guild;
         let name;

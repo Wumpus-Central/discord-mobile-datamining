@@ -159,7 +159,7 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
   const intl3 = directoryChannelId(1236).intl;
   obj3[1] = intl3.string(directoryChannelId(1236).t.H9jxS1);
   obj3[2] = directoryChannelId;
-  items1[1] = callback(importDefault(11601), obj3);
+  items1[1] = callback(require("GuildDirectoryEditDescriptionTemplate.tsx"), obj3);
   obj[2] = items1;
   obj[0] = callback2(closure_5, obj);
   return callback(directoryChannelId(11593).GuildDirectoryAddModalScreen, obj);

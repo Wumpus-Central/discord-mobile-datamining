@@ -11,7 +11,7 @@ function IdentityApplicationRow(arg0) {
   let applicationId;
   let onPress;
   ({ applicationId, onPress } = arg0);
-  let obj = require(10950) /* request */;
+  let obj = require("../../../../applications/useGetOrFetchApplicationBatched.tsx") /* request */;
   const getOrFetchApplicationBatched = obj.useGetOrFetchApplicationBatched(applicationId);
   if (null == getOrFetchApplicationBatched) {
     return null;
@@ -49,10 +49,10 @@ export default function SelectConnectionActionSheet(arg0) {
   let require;
   ({ addConnection: require, excludedConnections: importDefault, excludedApplications: dependencyMap, integrations, onCompleteApplication: _slicedToArray, gameApplicationIds, onCompleteIdentityApplication } = arg0);
   let closure_5;
-  closure_5 = importDefault(4221)();
+  closure_5 = require("../../../../../hooks/useTheme.tsx")();
   let obj = { title: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.Sm0YG7);
+  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.Sm0YG7);
   const tmp5 = callback(onCompleteIdentityApplication.useState(0), 2);
   const first = tmp5[0];
   let found;
@@ -146,7 +146,7 @@ export default function SelectConnectionActionSheet(arg0) {
     num = 0;
   }
   const intl2 = tmp3(1236).intl;
-  const items = [intl2.string(require(1236) /* getSystemLocale */.t["3fe7U5"])];
+  const items = [intl2.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["3fe7U5"])];
   if (num > 0) {
     const intl3 = tmp3(1236).intl;
     items.push(intl3.string(tmp3(1236).t.PHjkRE));
@@ -169,7 +169,7 @@ export default function SelectConnectionActionSheet(arg0) {
       tmp15 = mapped2;
     }
   }
-  obj = { scrollable: true, header: callback2(require(5337) /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj), startExpanded: true, children: null };
+  obj = { scrollable: true, header: callback2(require("../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx") /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj), startExpanded: true, children: null };
   if (num > 0) {
     const obj1 = { children: null };
     const obj2 = { state: null };
@@ -182,9 +182,9 @@ export default function SelectConnectionActionSheet(arg0) {
   const items1 = [tmp2Result, ];
   const obj3 = { children: null };
   const obj4 = { bottom: true, children: null };
-  obj4[1] = callback2(require(5649) /* TableRowGroupTitle */.TableRowGroup, { hasIcons: true, children: tmp15 });
-  obj3[0] = callback2(require(5272) /* SafeAreaPaddingView */.SafeAreaPaddingView, obj4);
-  items1[1] = callback2(require(5340) /* BottomSheetModal */.BottomSheetScrollView, obj3);
+  obj4[1] = callback2(require("../../../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, { hasIcons: true, children: tmp15 });
+  obj3[0] = callback2(require("../../../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, obj4);
+  items1[1] = callback2(require("../../../../../../_runtime/05340_BottomSheetModal.js") /* BottomSheetModal */.BottomSheetScrollView, obj3);
   obj[3] = items1;
-  return closure_7(require(5646) /* ActionSheet */.ActionSheet, obj);
+  return closure_7(require("../../../../../design/components/Sheet/native/ActionSheet.native.tsx") /* ActionSheet */.ActionSheet, obj);
 };

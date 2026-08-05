@@ -24,10 +24,10 @@ export default {
     if (guildId !== closure_7) {
       tmp = guildId;
     }
-    importDefault(709).dispatch({ type: "CHANNEL_SELECT", guildId: tmp, channelId, messageId, jumpType, source, skipMessageFetch });
+    require("../Dispatcher.tsx").dispatch({ type: "CHANNEL_SELECT", guildId: tmp, channelId, messageId, jumpType, source, skipMessageFetch });
   },
   selectPrivateChannel(id) {
-    require(1222) /* transitionTo */.transitionTo(closure_8.CHANNEL(closure_7, id));
+    require("../modules/routing/router_utils.tsx") /* transitionTo */.transitionTo(closure_8.CHANNEL(closure_7, id));
   },
   selectVoiceChannel(id, c1, flag2) {
     let flag = c1;
@@ -50,7 +50,7 @@ export default {
         const mediaEngine = supported.getMediaEngine();
         mediaEngine.interact();
       }
-      const obj5 = require(5097) /* selectVoiceChannelAdditional */;
+      const obj5 = require("SelectedChannelActionCreatorsAdditional.native.tsx") /* selectVoiceChannelAdditional */;
       const voiceChannelAdditional = obj5.selectVoiceChannelAdditional(id, guildId, flag, flag2, obj);
     }
   },

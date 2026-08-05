@@ -7,15 +7,15 @@ const result = require("explicitContentFromProto").fileFinishedImporting("module
 
 export const useDerivedDmSpamFilterSettingValue = function useDerivedDmSpamFilterSettingValue() {
   let DmSpamFilterV2 = dependencyMap;
-  const DmSpamFilterV22 = require(3958) /* explicitContentFromProto */.DmSpamFilterV2;
+  const DmSpamFilterV22 = require("../UserSettings.tsx") /* explicitContentFromProto */.DmSpamFilterV2;
   const setting = DmSpamFilterV22.useSetting();
-  const ExplicitContentFilter = require(3958) /* explicitContentFromProto */.ExplicitContentFilter;
+  const ExplicitContentFilter = require("../UserSettings.tsx") /* explicitContentFromProto */.ExplicitContentFilter;
   const setting1 = ExplicitContentFilter.useSetting();
   const items = [mergeGuildAvatar];
-  const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj = require(589) /* initialize */;
-  const isSettingTeenByDefault = require(3964) /* isFeatureAgeGated */.useIsSettingTeenByDefault(require(3971) /* SettingsDefaultFeature */.SettingsDefaultFeature.SPAM_FILTERS);
-  if (setting !== require(1306) /* create */.DmSpamFilterV2.DEFAULT_UNSET) {
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const isSettingTeenByDefault = require("../../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.useIsSettingTeenByDefault(require("../../../../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx") /* SettingsDefaultFeature */.SettingsDefaultFeature.SPAM_FILTERS);
+  if (setting !== require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.DmSpamFilterV2.DEFAULT_UNSET) {
     return setting;
   } else {
     let nsfwAllowed;

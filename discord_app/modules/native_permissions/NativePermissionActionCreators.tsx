@@ -3,7 +3,7 @@ const prototype = function NativePermissionActionCreators() {
   return Object.create(new.target.prototype);
 }.prototype;
 prototype["setPermission"] = function setPermission(closure_0, c2) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "SET_NATIVE_PERMISSION", permissionType: closure_0, state: c2 };
   obj.dispatch(obj);
 };

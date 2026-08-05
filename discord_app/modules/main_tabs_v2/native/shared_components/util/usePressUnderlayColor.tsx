@@ -4,9 +4,9 @@ import { DEFAULT_CHANNEL_EMOJI_BACKGROUND_COLOR as closure_3 } from "CHANNEL_THE
 const result = require("map").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/util/usePressUnderlayColor.tsx");
 
 export default function usePressUnderlayColor(arr) {
-  const tmp2 = importDefault(4221)();
+  const tmp2 = require("../../../../../hooks/useTheme.tsx")();
   const tmp3 = require;
-  const token = require(3989) /* map */.useToken(importDefault(712).colors.INTERACTIVE_BACKGROUND_ACTIVE);
+  const token = require("../../../../../design/tokens/native/useToken.tsx") /* map */.useToken(require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_BACKGROUND_ACTIVE);
   let substr;
   if (arr != null) {
     substr = arr.slice(0, arr.length - 2);

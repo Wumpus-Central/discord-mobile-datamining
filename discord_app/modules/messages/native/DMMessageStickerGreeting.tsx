@@ -17,10 +17,10 @@ const require = arg1;
 let closure_13 = createCacheKey.createStyles((arg0) => {
   let BACKGROUND_BASE_LOWER = arg0;
   if (arg0 == null) {
-    BACKGROUND_BASE_LOWER = importDefault(712).colors.BACKGROUND_BASE_LOWER;
+    BACKGROUND_BASE_LOWER = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOWER;
   }
   let obj = { container: { backgroundColor: BACKGROUND_BASE_LOWER, alignItems: "center", paddingHorizontal: 16, paddingBottom: 16, paddingTop: 8 }, stickerContainer: { paddingBottom: 16 }, toastContainer: null, toastContent: null, gradient: null };
-  obj = { flexDirection: "row", backgroundColor: importDefault(712).colors.BACKGROUND_BASE_LOWEST, justifyContent: "center", alignItems: "center", gap: 8, height: 48, paddingHorizontal: 16, borderRadius: importDefault(712).radii.xxl };
+  obj = { flexDirection: "row", backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOWEST, justifyContent: "center", alignItems: "center", gap: 8, height: 48, paddingHorizontal: 16, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.xxl };
   obj[2] = obj;
   obj[3] = { lineHeight: 20 };
   obj[4] = { position: "absolute", right: 0, left: 0, top: 0, height: 30 };
@@ -44,17 +44,17 @@ export default function DMMessageStickerGreeting(channel) {
   let React;
   let Text = _require;
   let tmp = dependencyMap;
-  let obj = _require(4096);
+  let obj = _require("../../client_themes/native/ClientThemesUtils.tsx");
   let toastContent = callback3(obj.useGradientValue(END));
   dependencyMap = toastContent;
-  let obj1 = _require(589);
+  let obj1 = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const items = [closure_8];
   const stateFromStores = obj1.useStateFromStores(items, () => {
     const messages = outer1_8.getMessages(_undefined.id);
     return messages.filter((type) => type.type !== callback(table[19]).MessageTypes.FRIEND_REQUEST_ACCEPTED).length > 0;
   });
   first1 = stateFromStores;
-  let obj2 = _require(589);
+  let obj2 = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const items1 = [mergeGuildAvatar];
   let tmp5 = first;
   const stateFromStores1 = obj2.useStateFromStores(items1, () => outer1_9.getUser(_undefined.getRecipientId()));

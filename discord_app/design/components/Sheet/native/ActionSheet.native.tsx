@@ -13,7 +13,7 @@ const forwardRefResult = require("noop").forwardRef((arg0, ref) => {
   const obj = { ref };
   const merged = Object.assign(arg0);
   ({ content: obj.contentStyles, body: obj.bodyStyles } = callback());
-  return jsx(require(5338) /* Background */.BottomSheet, { ref });
+  return jsx(require("BottomSheet.native.tsx") /* Background */.BottomSheet, { ref });
 });
 const result = require("createCacheKey").fileFinishedImporting("design/components/Sheet/native/ActionSheet.native.tsx");
 

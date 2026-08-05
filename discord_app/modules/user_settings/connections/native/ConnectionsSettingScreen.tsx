@@ -4,7 +4,7 @@ import { jsx } from "jsxProd";
 
 const require = arg1;
 function onPress() {
-  importDefault(4253).openLazy(require(1959) /* asyncRequireImpl */(14107, dependencyMap.paths), "AddConnection");
+  require("../../../action_sheet/native/ActionSheetActionCreators.tsx").openLazy(require("../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(14107, dependencyMap.paths), "AddConnection");
 }
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(function ConnectionsSettingScreen() {

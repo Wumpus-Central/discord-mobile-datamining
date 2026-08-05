@@ -8,7 +8,7 @@ export const useGuildShopVisibleInGuild = function useGuildShopVisibleInGuild(id
   if (id != null) {
     id = id.id;
   }
-  const guildEligibleForGuildProducts = require(5787) /* useGuildEligibleForGuildProducts */.useGuildEligibleForGuildProducts(id);
+  const guildEligibleForGuildProducts = require("../../guild_products/GuildProductsEligibility.tsx") /* useGuildEligibleForGuildProducts */.useGuildEligibleForGuildProducts(id);
   let tmpResult = tmp(5779);
   let id1;
   if (id != null) {
@@ -17,12 +17,12 @@ export const useGuildShopVisibleInGuild = function useGuildShopVisibleInGuild(id
   const roleSubscriptionsVisibleInGuild = tmpResult.useRoleSubscriptionsVisibleInGuild(id1);
   tmpResult = tmp(5792);
   const guildShopPreviewVisible = tmpResult.useGuildShopPreviewVisible(id);
-  const obj = require(5787) /* useGuildEligibleForGuildProducts */;
+  const obj = require("../../guild_products/GuildProductsEligibility.tsx") /* useGuildEligibleForGuildProducts */;
   let id2;
   if (id != null) {
     id2 = id.id;
   }
-  const shouldHideGuildPurchaseEntryPoints = require(5782) /* useShouldHideGuildPurchaseEntryPoints */.useShouldHideGuildPurchaseEntryPoints(id2).shouldHideGuildPurchaseEntryPoints;
+  const shouldHideGuildPurchaseEntryPoints = require("../../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx") /* useShouldHideGuildPurchaseEntryPoints */.useShouldHideGuildPurchaseEntryPoints(id2).shouldHideGuildPurchaseEntryPoints;
   return false;
 };
 export const isGuildShopVisibleInGuild = function isGuildShopVisibleInGuild(closure_2, closure_3) {
@@ -30,13 +30,13 @@ export const isGuildShopVisibleInGuild = function isGuildShopVisibleInGuild(clos
   if (closure_2 != null) {
     id = closure_2.id;
   }
-  const result = require(5787) /* useGuildEligibleForGuildProducts */.isGuildEligibleForGuildProducts(id);
-  const obj = require(5787) /* useGuildEligibleForGuildProducts */;
+  const result = require("../../guild_products/GuildProductsEligibility.tsx") /* useGuildEligibleForGuildProducts */.isGuildEligibleForGuildProducts(id);
+  const obj = require("../../guild_products/GuildProductsEligibility.tsx") /* useGuildEligibleForGuildProducts */;
   const tmp = require;
   let id1;
   if (closure_2 != null) {
     id1 = closure_2.id;
   }
-  const result1 = require(5779) /* computeCanEveryoneInGuildSeeRoleSubscriptions */.areRoleSubscriptionsVisibleInGuild(id1, closure_3);
+  const result1 = require("../../guild_role_subscriptions/useRoleSubscriptionsVisibleInGuild.tsx") /* computeCanEveryoneInGuildSeeRoleSubscriptions */.areRoleSubscriptionsVisibleInGuild(id1, closure_3);
   return false;
 };

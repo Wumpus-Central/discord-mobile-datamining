@@ -48,7 +48,7 @@ function reinjectEphemerals(channelId, truncateResult) {
   }
 }
 function handleConnectionOpen() {
-  const item = importDefault(4955).forEach((mutate) => {
+  const item = require("../lib/ChannelMessages.tsx").forEach((mutate) => {
     callback(table[19]).commit(mutate.mutate({ ready: false, loadingMore: false }));
   });
   set.clear();
@@ -164,7 +164,7 @@ function receiveMediaMentionMessage(item10037) {
   }
   if (null != message_id) {
     const attachment_id = item10037.media_mention.attachment_id;
-    const orCreate = importDefault(4955).getOrCreate(attachment_id);
+    const orCreate = require("../lib/ChannelMessages.tsx").getOrCreate(attachment_id);
     let obj = {};
     const merged = Object.assign(item10037);
     obj.channel_id = attachment_id;
@@ -181,7 +181,7 @@ function receiveMediaMentionMessage(item10037) {
     }
     obj[3] = guild_id;
     obj.message_reference = obj;
-    const obj3 = importDefault(4955);
+    const obj3 = require("../lib/ChannelMessages.tsx");
     const tmp5 = importDefault;
     const mutation = orCreate.receiveMessage(obj, false).mutate({ ready: true });
     const receiveMessageResult = orCreate.receiveMessage(obj, false);
@@ -190,7 +190,7 @@ function receiveMediaMentionMessage(item10037) {
   }
 }
 function handleCleanup() {
-  const item = importDefault(4955).forEach((channelId) => {
+  const item = require("../lib/ChannelMessages.tsx").forEach((channelId) => {
     channelId = channelId.channelId;
     if (null == channel.getChannel(channelId)) {
       callback(table[19]).clear(channelId);
@@ -200,7 +200,7 @@ function handleCleanup() {
 }
 function handleRelationshipUpdate() {
   let c0 = false;
-  const item = importDefault(4955).forEach((reset) => {
+  const item = require("../lib/ChannelMessages.tsx").forEach((reset) => {
     outer1_1(outer1_2[19]).commit(reset.reset(reset.map((blocked) => {
       let result = blocked;
       if (blocked.blocked !== outer1_15.isBlockedForMessage(blocked)) {
@@ -219,7 +219,7 @@ function handleRelationshipUpdate() {
 }
 function performAuthorUpdate(guildId) {
   let closure_0 = guildId;
-  const item = importDefault(4955).forEach((channelId) => {
+  const item = require("../lib/ChannelMessages.tsx").forEach((channelId) => {
     const channel = outer1_9.getChannel(channelId.channelId);
     let guild_id;
     if (channel != null) {
@@ -257,7 +257,7 @@ function handleReaction(optimistic) {
   const _require = optimistic;
   ({ type: importDefault, emoji: dependencyMap, reactionType: canEditMessage } = optimistic);
   ({ channelId, messageId, userId } = optimistic);
-  const value = importDefault(4955).get(channelId);
+  const value = require("../lib/ChannelMessages.tsx").get(channelId);
   if (null == value) {
     return false;
   } else {
@@ -275,19 +275,19 @@ function handleReaction(optimistic) {
     } else {
       return false;
     }
-    obj3 = _require(3924);
+    obj3 = _require("../modules/reactions/ReactionUtils.tsx");
   }
-  const obj = importDefault(4955);
+  const obj = require("../lib/ChannelMessages.tsx");
   tmp = importDefault;
 }
 function handleMessageSendFailedAutomod(arg0) {
   let messageData;
   let require;
   ({ type: require, messageData } = arg0);
-  const failedMessageId = require(7213) /* items */.getFailedMessageId(messageData);
-  const obj = require(7213) /* items */;
+  const failedMessageId = require("../lib/MessageQueue.tsx") /* items */.getFailedMessageId(messageData);
+  const obj = require("../lib/MessageQueue.tsx") /* items */;
   const tmp3 = importDefault;
-  const orCreate = importDefault(4955).getOrCreate(messageData.message.channelId);
+  const orCreate = require("../lib/ChannelMessages.tsx").getOrCreate(messageData.message.channelId);
   if (orCreate.has(failedMessageId)) {
     const updateResult = orCreate.update(failedMessageId, (embeds) => {
       embeds = embeds.embeds;
@@ -310,7 +310,7 @@ function handleMessageSendFailedAutomod(arg0) {
   } else {
     return false;
   }
-  let obj2 = importDefault(4955);
+  let obj2 = require("../lib/ChannelMessages.tsx");
 }
 ({ MessageFlags: closure_19, MessageReferenceTypes: closure_20, MessageStates: closure_21, MessageTypes: closure_22, Permissions: closure_23 } = ME);
 let set = new Set();
@@ -335,22 +335,22 @@ prototype["getMessages"] = function getMessages(arg0) {
     }
     if (initialize.isViewingRoles(guildId)) {
       if (!getUncachedChannelPermissions.can(constants4.VIEW_CHANNEL, channel)) {
-        const tmp11 = new importDefault(4955)(arg0);
+        const tmp11 = new require("../lib/ChannelMessages.tsx")(arg0);
         return tmp11;
       }
     }
   }
-  return importDefault(4955).getOrCreate(arg0);
+  return require("../lib/ChannelMessages.tsx").getOrCreate(arg0);
 };
 prototype["getMessage"] = function getMessage(arg0, arg1) {
-  const orCreate = importDefault(4955).getOrCreate(arg0);
+  const orCreate = require("../lib/ChannelMessages.tsx").getOrCreate(arg0);
   return orCreate.get(arg1);
 };
 prototype["getLastEditableMessage"] = function getLastEditableMessage(id) {
   const currentUser = authStore.getCurrentUser();
   const messages = this.getMessages(id);
-  const tmp = importDefault(12);
-  const reversed = importDefault(12)(messages.toArray()).reverse();
+  const tmp = require("../../_runtime/00012_apply.js");
+  const reversed = require("../../_runtime/00012_apply.js")(messages.toArray()).reverse();
   return reversed.find((arg0) => {
     let id;
     if (id != null) {
@@ -390,15 +390,15 @@ prototype["getLastChatCommandMessage"] = function getLastChatCommandMessage(arg0
 };
 prototype["getLastMessage"] = function getLastMessage(channelId) {
   const messages = this.getMessages(channelId);
-  const tmp = importDefault(12);
-  const reversed = importDefault(12)(messages.toArray()).reverse();
+  const tmp = require("../../_runtime/00012_apply.js");
+  const reversed = require("../../_runtime/00012_apply.js")(messages.toArray()).reverse();
   return reversed.get(0);
 };
 prototype["getLastNonCurrentUserMessage"] = function getLastNonCurrentUserMessage(closure_0) {
   const currentUser = authStore.getCurrentUser();
   const messages = this.getMessages(closure_0);
-  const tmp = importDefault(12);
-  const reversed = importDefault(12)(messages.toArray()).reverse();
+  const tmp = require("../../_runtime/00012_apply.js");
+  const reversed = require("../../_runtime/00012_apply.js")(messages.toArray()).reverse();
   return reversed.find((author) => {
     let id;
     if (id != null) {
@@ -408,7 +408,7 @@ prototype["getLastNonCurrentUserMessage"] = function getLastNonCurrentUserMessag
   });
 };
 prototype["jumpedMessageId"] = function jumpedMessageId(arg0) {
-  const value = importDefault(4955).get(arg0);
+  const value = require("../lib/ChannelMessages.tsx").get(arg0);
   let jumpTargetId;
   if (value != null) {
     jumpTargetId = value.jumpTargetId;
@@ -416,7 +416,7 @@ prototype["jumpedMessageId"] = function jumpedMessageId(arg0) {
   return jumpTargetId;
 };
 prototype["focusedMessageId"] = function focusedMessageId(arg0) {
-  const value = importDefault(4955).get(arg0);
+  const value = require("../lib/ChannelMessages.tsx").get(arg0);
   let focusTargetId;
   if (value != null) {
     focusTargetId = value.focusTargetId;
@@ -424,12 +424,12 @@ prototype["focusedMessageId"] = function focusedMessageId(arg0) {
   return focusTargetId;
 };
 prototype["hasPresent"] = function hasPresent(arg0) {
-  const value = importDefault(4955).get(arg0);
-  const obj = importDefault(4955);
+  const value = require("../lib/ChannelMessages.tsx").get(arg0);
+  const obj = require("../lib/ChannelMessages.tsx");
   return null != value && value.ready && value.hasPresent();
 };
 prototype["isReady"] = function isReady(arg0) {
-  return importDefault(4955).getOrCreate(arg0).ready;
+  return require("../lib/ChannelMessages.tsx").getOrCreate(arg0).ready;
 };
 prototype["whenReady"] = function whenReady(arg0, arg1) {
   const self = this;
@@ -444,7 +444,7 @@ prototype["whenReady"] = function whenReady(arg0, arg1) {
   });
 };
 prototype["isLoadingMessages"] = function isLoadingMessages(channelId) {
-  return importDefault(4955).getOrCreate(channelId).loadingMore;
+  return require("../lib/ChannelMessages.tsx").getOrCreate(channelId).loadingMore;
 };
 prototype["hasCurrentUserSentMessage"] = function hasCurrentUserSentMessage(arg0) {
   const currentUser = authStore.getCurrentUser();
@@ -483,13 +483,13 @@ const messageStore = new MessageStore(require("dispatcher"), {
       let tmp9 = importDefault;
       let tmp8 = key10012;
       let tmp10 = dependencyMap;
-      let obj = importDefault(4955);
+      let obj = require("../lib/ChannelMessages.tsx");
       let value = obj.get(key10012);
       if (null == value) {
         continue;
       } else {
         let tmp = require;
-        let _default = require(4960) /* _handleConnectionOpen */.default;
+        let _default = require("../modules/gateway/GatewayConnectionStore.tsx") /* _handleConnectionOpen */.default;
         let isConnectedResult = _default.isConnected();
         if (!value.cached) {
           if (isConnectedResult) {
@@ -518,18 +518,18 @@ const messageStore = new MessageStore(require("dispatcher"), {
   CACHE_LOADED: function handleCacheLoaded(messages) {
     let tmp6;
     let tmp7;
-    const entries = importDefault(11).entries(messages.messages);
-    const obj = importDefault(11);
+    const entries = require("../utils/SnowflakeUtils.tsx").entries(messages.messages);
+    const obj = require("../utils/SnowflakeUtils.tsx");
     while (tmp2 !== undefined) {
       let tmp4 = callback;
       let tmp5 = callback(tmp3, 2);
       let tmp8 = importDefault;
       let tmp9 = dependencyMap;
       [tmp6, tmp7] = tmp5;
-      let obj2 = importDefault(4955);
+      let obj2 = require("../lib/ChannelMessages.tsx");
       let orCreate = obj2.getOrCreate(tmp6);
       let addCachedMessagesResult = orCreate.addCachedMessages(tmp7, true);
-      let obj4 = importDefault(4955);
+      let obj4 = require("../lib/ChannelMessages.tsx");
       let commitResult = obj4.commit(addCachedMessagesResult);
       continue;
     }
@@ -550,7 +550,7 @@ const messageStore = new MessageStore(require("dispatcher"), {
     let truncate;
     ({ channelId, isBefore, isAfter, messages } = arg0);
     ({ jump, hasMoreBefore, hasMoreAfter, isStale, truncate, avoidInitialScroll } = arg0);
-    const orCreate = importDefault(4955).getOrCreate(channelId);
+    const orCreate = require("../lib/ChannelMessages.tsx").getOrCreate(channelId);
     const complete = orCreate.loadComplete({ newMessages: messages, isBefore, isAfter, jump, hasMoreBefore, hasMoreAfter, cached: isStale, hasFetched: true, avoidInitialScroll });
     let tmp3 = null == truncate;
     if (!tmp3) {
@@ -571,7 +571,7 @@ const messageStore = new MessageStore(require("dispatcher"), {
     if (!tmp3) {
       truncateResult = complete.truncate(isBefore, isAfter);
     }
-    const obj = importDefault(4955);
+    const obj = require("../lib/ChannelMessages.tsx");
     const tmp = importDefault;
     const tmp7 = reinjectEphemerals(channelId, truncateResult);
     tmp(4955).commit(tmp7);
@@ -582,9 +582,9 @@ const messageStore = new MessageStore(require("dispatcher"), {
     }
   },
   LOAD_MESSAGES_FAILURE: function handleLoadMessagesFailure(channelId) {
-    const orCreate = importDefault(4955).getOrCreate(channelId.channelId);
-    const obj = importDefault(4955);
-    importDefault(4955).commit(orCreate.mutate({ loadingMore: false, error: true }));
+    const orCreate = require("../lib/ChannelMessages.tsx").getOrCreate(channelId.channelId);
+    const obj = require("../lib/ChannelMessages.tsx");
+    require("../lib/ChannelMessages.tsx").commit(orCreate.mutate({ loadingMore: false, error: true }));
   },
   LOAD_MESSAGES_SUCCESS_CACHED: function handleLoadMessagesSuccessCached(truncate) {
     let after;
@@ -661,7 +661,7 @@ const messageStore = new MessageStore(require("dispatcher"), {
     found(4955).commit(tmp10);
   },
   LOCAL_MESSAGES_LOADED: function handleLocalMessagesLoaded(channelId) {
-    let obj = importDefault(4955);
+    let obj = require("../lib/ChannelMessages.tsx");
     const orCreate = obj.getOrCreate(channelId.channelId);
     const addCachedMessagesResult = orCreate.addCachedMessages(channelId.messages, channelId.stale);
     let isForegroundCacheLoad = channelId.isForegroundCacheLoad;
@@ -678,16 +678,16 @@ const messageStore = new MessageStore(require("dispatcher"), {
       obj[1] = addCachedMessagesResult.suppressRowAnimationSequenceId + 1;
       mutation = addCachedMessagesResult.mutate(obj);
     }
-    importDefault(4955).commit(mutation);
+    require("../lib/ChannelMessages.tsx").commit(mutation);
   },
   LOAD_MESSAGE_INTERACTION_DATA_SUCCESS: function handleLoadMessageInteractionDataSuccess(messageId) {
     let closure_0 = messageId;
     messageId = messageId.messageId;
-    const value = importDefault(4955).get(messageId.channelId);
+    const value = require("../lib/ChannelMessages.tsx").get(messageId.channelId);
     if (null != value) {
       if (value.has(messageId)) {
         const updateResult = value.update(messageId, (set) => set.set("interactionData", messageId.interactionData));
-        importDefault(4955).commit(updateResult);
+        require("../lib/ChannelMessages.tsx").commit(updateResult);
       }
     }
     return false;
@@ -698,15 +698,15 @@ const messageStore = new MessageStore(require("dispatcher"), {
     let truncateTop;
     ({ channelId, truncateBottom, truncateTop } = arg0);
     tmp4.log("Truncating messages for " + channelId + " bottom:" + truncateBottom + " top:" + truncateTop);
-    const orCreate = importDefault(4955).getOrCreate(channelId);
-    const obj = importDefault(4955);
+    const orCreate = require("../lib/ChannelMessages.tsx").getOrCreate(channelId);
+    const obj = require("../lib/ChannelMessages.tsx");
     const truncateResult = orCreate.truncate(truncateBottom, truncateTop);
-    importDefault(4955).commit(truncateResult);
+    require("../lib/ChannelMessages.tsx").commit(truncateResult);
   },
   CLEAR_MESSAGES: function handleClearMessages(channelId) {
     channelId = channelId.channelId;
     tmp4.log("Clearing messages for " + channelId);
-    importDefault(4955).clear(channelId);
+    require("../lib/ChannelMessages.tsx").clear(channelId);
     set.clear();
   },
   MESSAGE_CREATE: function handleIncomingMessage(isPushNotification) {
@@ -714,10 +714,10 @@ const messageStore = new MessageStore(require("dispatcher"), {
     let message;
     let optimistic;
     ({ channelId, message, optimistic } = isPushNotification);
-    const orCreate = importDefault(4955).getOrCreate(channelId);
-    const obj = importDefault(4955);
+    const orCreate = require("../lib/ChannelMessages.tsx").getOrCreate(channelId);
+    const obj = require("../lib/ChannelMessages.tsx");
     const tmp3 = require;
-    const isConnectedResult = require(4960) /* _handleConnectionOpen */.default.isConnected();
+    const isConnectedResult = require("../modules/gateway/GatewayConnectionStore.tsx") /* _handleConnectionOpen */.default.isConnected();
     if (isPushNotification.isPushNotification) {
       if (tmp3Result.isIOSPushNotificationRawPayloadFixExperimentEnabled()) {
         (function addPushNotificationMessageIfNotCached(channelId, message, isConnectedResult) {
@@ -770,7 +770,7 @@ const messageStore = new MessageStore(require("dispatcher"), {
     let messageId;
     let require;
     ({ messageId, reason: require } = channelId);
-    const orCreate = importDefault(4955).getOrCreate(channelId.channelId);
+    const orCreate = require("../lib/ChannelMessages.tsx").getOrCreate(channelId.channelId);
     if (null != orCreate) {
       if (orCreate.has(messageId)) {
         const value = orCreate.get(messageId, true);
@@ -804,7 +804,7 @@ const messageStore = new MessageStore(require("dispatcher"), {
             return result2;
           });
         }
-        importDefault(4955).commit(removeResult);
+        require("../lib/ChannelMessages.tsx").commit(removeResult);
       }
     }
     return false;
@@ -813,7 +813,7 @@ const messageStore = new MessageStore(require("dispatcher"), {
   MESSAGE_EDIT_FAILED_AUTOMOD: handleMessageSendFailedAutomod,
   MESSAGE_UPDATE: function handleMessageUpdate(message) {
     const id = message.message.id;
-    const orCreate = importDefault(4955).getOrCreate(message.message.channel_id);
+    const orCreate = require("../lib/ChannelMessages.tsx").getOrCreate(message.message.channel_id);
     if (null != orCreate) {
       if (orCreate.has(id)) {
         let tmpResult = tmp(4955);
@@ -843,18 +843,18 @@ const messageStore = new MessageStore(require("dispatcher"), {
   },
   MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function handleMessageExplicitContentScanTimeout(messageId) {
     messageId = messageId.messageId;
-    const value = importDefault(4955).get(messageId.channelId);
+    const value = require("../lib/ChannelMessages.tsx").get(messageId.channelId);
     if (null != value) {
       if (value.has(messageId)) {
-        const updateResult = value.update(messageId, require(6968) /* redactionSettingToRenderedString */.handleExplicitMediaScanTimeoutForMessage);
-        importDefault(4955).commit(updateResult);
+        const updateResult = value.update(messageId, require("../modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx") /* redactionSettingToRenderedString */.handleExplicitMediaScanTimeoutForMessage);
+        require("../lib/ChannelMessages.tsx").commit(updateResult);
       }
     }
     return false;
   },
   MESSAGE_DELETE: function handleMessageDelete(id) {
     id = id.id;
-    let obj = importDefault(4955);
+    let obj = require("../lib/ChannelMessages.tsx");
     const orCreate = obj.getOrCreate(id.channelId);
     if (null != orCreate) {
       if (orCreate.has(id)) {
@@ -969,15 +969,15 @@ const messageStore = new MessageStore(require("dispatcher"), {
     let channelId;
     let messageId;
     ({ channelId, messageId } = arg0);
-    const orCreate = importDefault(4955).getOrCreate(channelId);
-    const obj = importDefault(4955);
-    importDefault(4955).commit(orCreate.mutate({ revealedMessageId: messageId }));
+    const orCreate = require("../lib/ChannelMessages.tsx").getOrCreate(channelId);
+    const obj = require("../lib/ChannelMessages.tsx");
+    require("../lib/ChannelMessages.tsx").commit(orCreate.mutate({ revealedMessageId: messageId }));
   },
   THREAD_CREATE_LOCAL: function handleThreadCreateLocal(channelId) {
-    const orCreate = importDefault(4955).getOrCreate(channelId.channelId);
+    const orCreate = require("../lib/ChannelMessages.tsx").getOrCreate(channelId.channelId);
     const complete = orCreate.loadComplete({ newMessages: [], hasMoreAfter: false, hasMoreBefore: false });
-    const obj = importDefault(4955);
-    importDefault(4955).commit(complete);
+    const obj = require("../lib/ChannelMessages.tsx");
+    require("../lib/ChannelMessages.tsx").commit(complete);
   },
   CHANNEL_DELETE: handleCleanup,
   THREAD_DELETE: handleCleanup,
@@ -994,7 +994,7 @@ const messageStore = new MessageStore(require("dispatcher"), {
   },
   THREAD_MEMBER_LIST_UPDATE: function handleThreadMemberListUpdate(guildId) {
     guildId = guildId.guildId;
-    let item = importDefault(4955).forEach((channelId) => {
+    let item = require("../lib/ChannelMessages.tsx").forEach((channelId) => {
       const channel = outer1_9.getChannel(channelId.channelId);
       let guild_id;
       if (channel != null) {
@@ -1028,7 +1028,7 @@ const messageStore = new MessageStore(require("dispatcher"), {
     let messageId;
     reactions = reactions.reactions;
     ({ channelId, messageId } = reactions);
-    const value = importDefault(4955).get(channelId);
+    const value = require("../lib/ChannelMessages.tsx").get(channelId);
     if (null == value) {
       return false;
     } else {
@@ -1042,7 +1042,7 @@ const messageStore = new MessageStore(require("dispatcher"), {
       });
       tmp(4955).commit(updateResult);
     }
-    const obj = importDefault(4955);
+    const obj = require("../lib/ChannelMessages.tsx");
     tmp = importDefault;
   },
   MESSAGE_REACTION_REMOVE: handleReaction,
@@ -1050,14 +1050,14 @@ const messageStore = new MessageStore(require("dispatcher"), {
     let channelId;
     let messageId;
     ({ channelId, messageId } = arg0);
-    const value = importDefault(4955).get(channelId);
+    const value = require("../lib/ChannelMessages.tsx").get(channelId);
     if (null == value) {
       return false;
     } else {
       const updateResult = value.update(messageId, (set) => set.set("reactions", []));
       tmp(4955).commit(updateResult);
     }
-    const obj = importDefault(4955);
+    const obj = require("../lib/ChannelMessages.tsx");
     tmp = importDefault;
   },
   MESSAGE_REACTION_REMOVE_EMOJI: function handleRemoveEmojiReactions(emoji) {
@@ -1065,18 +1065,18 @@ const messageStore = new MessageStore(require("dispatcher"), {
     let messageId;
     emoji = emoji.emoji;
     ({ channelId, messageId } = emoji);
-    const value = importDefault(4955).get(channelId);
+    const value = require("../lib/ChannelMessages.tsx").get(channelId);
     if (null == value) {
       return false;
     } else {
       const updateResult = value.update(messageId, (removeReactionsForEmoji) => removeReactionsForEmoji.removeReactionsForEmoji(emoji));
       tmp(4955).commit(updateResult);
     }
-    const obj = importDefault(4955);
+    const obj = require("../lib/ChannelMessages.tsx");
     tmp = importDefault;
   },
   LOGOUT: function handleLogout() {
-    const item = importDefault(4955).forEach((channelId) => {
+    const item = require("../lib/ChannelMessages.tsx").forEach((channelId) => {
       callback(table[19]).clear(channelId.channelId);
     });
     set.clear();
@@ -1097,7 +1097,7 @@ const messageStore = new MessageStore(require("dispatcher"), {
       return false;
     } else {
       if (set.has(messageId)) {
-        const orCreate = importDefault(4955).getOrCreate(tmp);
+        const orCreate = require("../lib/ChannelMessages.tsx").getOrCreate(tmp);
         const value = orCreate.get(messageId);
         if (null == value) {
           return false;
@@ -1108,7 +1108,7 @@ const messageStore = new MessageStore(require("dispatcher"), {
           const mergeResult = orCreate.remove(messageId).merge(items);
           tmp2(4955).commit(mergeResult);
         }
-        const obj = importDefault(4955);
+        const obj = require("../lib/ChannelMessages.tsx");
         tmp2 = importDefault;
       } else {
         return false;

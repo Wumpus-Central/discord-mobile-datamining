@@ -1,7 +1,7 @@
 // discord_app/modules/markup/UnicodeSanitizationUtils.tsx
 function safelyPartiallyDecodeURIComponent(hash) {
   let substr;
-  const result = importDefault(1467).safeDecodeURIComponent(hash);
+  const result = require("../../utils/URLUtils.tsx").safeDecodeURIComponent(hash);
   if (null == result) {
     return hash;
   } else {
@@ -171,7 +171,7 @@ function safelyPartiallyDecodeURIComponent(hash) {
     }
     return str4;
   }
-  const obj = importDefault(1467);
+  const obj = require("../../utils/URLUtils.tsx");
 }
 const items = ["\u034F", "\u17B4", "\u17B5", "\u1160", "\u3164", "\uFFA0"];
 const regExp = new RegExp("" + /(?:[\xAD\u0600-\u0605\u061C\u06DD\u070F\u0890\u0891\u08E2\u180E\u200B-\u200F\u202A-\u202E\u2060-\u2064\u2066-\u206F\uFEFF\uFFF9-\uFFFB]|\uD804[\uDCBD\uDCCD]|\uD80D[\uDC30-\uDC3F]|\uD82F[\uDCA0-\uDCA3]|\uD834[\uDD73-\uDD7A]|\uDB40[\uDC01\uDC20-\uDC7F])|\u2028|\u2029|[\0-\t\x0B-\x1F\x7F-\x9F]|[\xA0\u1680\u2000-\u200A\u202F\u205F\u3000]/g.source + "|" + items.join("|"), "gu");

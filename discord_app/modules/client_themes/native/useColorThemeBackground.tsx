@@ -5,8 +5,8 @@ import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
 
 let require = arg1;
 function getGuildThemeName() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  return intl.string(require(1236) /* getSystemLocale */.t.CFzDOG);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.CFzDOG);
 }
 const result = require("isSyncedModeThemesEnabled").fileFinishedImporting("modules/client_themes/native/useColorThemeBackground.tsx");
 
@@ -14,13 +14,13 @@ export default function useColorThemeBackground() {
   const tmp = stateFromStores(4135)();
   const require = tmp;
   let items = [handleThemeChange];
-  stateFromStores = require(647) /* defaultAreStatesEqual */.useStateFromStores(items, () => theme.theme);
-  let obj = require(647) /* defaultAreStatesEqual */;
+  stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */.useStateFromStores(items, () => theme.theme);
+  let obj = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */;
   const items1 = [isSyncedModeThemesEnabled];
-  const stateFromStores1 = require(647) /* defaultAreStatesEqual */.useStateFromStores(items1, () => gradientPreset.gradientPreset);
-  const obj2 = require(647) /* defaultAreStatesEqual */;
+  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */.useStateFromStores(items1, () => gradientPreset.gradientPreset);
+  const obj2 = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */;
   const items2 = [tmp, stateFromStores];
-  const customBackgroundGradient = require(4218) /* getCustomThemesName */.useCustomBackgroundGradient();
+  const customBackgroundGradient = require("MobileThemesUtils.tsx") /* getCustomThemesName */.useCustomBackgroundGradient();
   let memo = React.useMemo(() => {
     let colors;
     let tmp3 = null;

@@ -11,8 +11,8 @@ const result = require("timestamp").fileFinishedImporting("modules/app_startup/n
 export default function executeRunnable(arg0, arg1) {
   let closure_0 = arg0;
   const importDefault = arg1;
-  new importDefault(3)(arg0).log("Loading the " + arg0 + " Discord runnable");
-  const obj = new importDefault(3)(arg0);
+  new require("../../debug/Logger.tsx")(arg0).log("Loading the " + arg0 + " Discord runnable");
+  const obj = new require("../../debug/Logger.tsx")(arg0);
   importAll(12842).setIsPaused(false);
   const obj2 = importAll(12842);
   const combined = "executeRunnable:" + arg0;

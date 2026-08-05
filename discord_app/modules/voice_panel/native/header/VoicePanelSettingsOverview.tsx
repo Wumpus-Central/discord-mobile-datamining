@@ -111,16 +111,16 @@ function ShareActivityLogsButton() {
   }, []);
   let obj = { onPress: callback, icon: null, label: null, trailing: null };
   obj = { IconComponent: null, source: null };
-  obj[0] = require(14642) /* WrenchIcon */.WrenchIcon;
-  obj[1] = importDefault(7828);
-  obj[1] = callback(require(5321) /* TableRowIcon */.TableRowIcon, obj);
-  let intl = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl.string(require(1236) /* getSystemLocale */.t.iQzQs3);
-  obj[3] = callback(require(5322) /* TableRowArrow */.TableRowArrow, {});
-  return callback(require(5315) /* TableRowInner */.TableRow, obj);
+  obj[0] = require("../../../../design/components/Icon/native/redesign/generated/WrenchIcon.tsx") /* WrenchIcon */.WrenchIcon;
+  obj[1] = require("../../../../../_runtime/07828_registerAsset.js");
+  obj[1] = callback(require("../../../../design/components/TableRow/native/TableRowIcon.native.tsx") /* TableRowIcon */.TableRowIcon, obj);
+  let intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.iQzQs3);
+  obj[3] = callback(require("../../../../design/components/TableRow/native/TableRowArrow.native.tsx") /* TableRowArrow */.TableRowArrow, {});
+  return callback(require("../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj);
 }
 function ActivityDebugToggle() {
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [initialize];
   const stateFromStores = obj.useStateFromStores(items, () => showActivitiesDebugOverlay.getShowActivitiesDebugOverlay());
   const callback = importAllResult.useCallback((visible) => {
@@ -130,16 +130,16 @@ function ActivityDebugToggle() {
   }, []);
   obj = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null };
   obj = { IconComponent: null, source: null };
-  obj[0] = require(14642) /* WrenchIcon */.WrenchIcon;
-  obj[1] = importDefault(7828);
-  obj[0] = callback(require(5321) /* TableRowIcon */.TableRowIcon, obj);
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl.string(require(1236) /* getSystemLocale */.t["qv5/SP"]);
+  obj[0] = require("../../../../design/components/Icon/native/redesign/generated/WrenchIcon.tsx") /* WrenchIcon */.WrenchIcon;
+  obj[1] = require("../../../../../_runtime/07828_registerAsset.js");
+  obj[0] = callback(require("../../../../design/components/TableRow/native/TableRowIcon.native.tsx") /* TableRowIcon */.TableRowIcon, obj);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["qv5/SP"]);
   obj[2] = stateFromStores;
   obj[3] = callback;
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[4] = intl2.string(require(1236) /* getSystemLocale */.t["qv5/SP"]);
-  return callback(require(5650) /* TableSwitchRow */.TableSwitchRow, obj);
+  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[4] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["qv5/SP"]);
+  return callback(require("../../../../design/components/TableRow/native/TableSwitchRow.native.tsx") /* TableSwitchRow */.TableSwitchRow, obj);
 }
 let c3 = importAllResult;
 ({ AnalyticsSections: map1, Permissions: closure_14, RPC_APPLICATION_LOGGING_CATEGORY: closure_15 } = ME);

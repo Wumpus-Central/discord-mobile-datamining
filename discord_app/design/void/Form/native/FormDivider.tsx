@@ -15,7 +15,7 @@ const require = arg1;
 ({ View: c4, StyleSheet: c5, Platform } = get_ActivityIndicator);
 let closure_7 = createCacheKey.createStyles((arg0) => {
   let obj = { divider: {}, dividerOuter: null, dividerHasIcon: null };
-  obj = { marginLeft: 0, height: closure_5.hairlineWidth, backgroundColor: importDefault(712).colors.BORDER_SUBTLE, marginTop: -1 * closure_5.hairlineWidth };
+  obj = { marginLeft: 0, height: closure_5.hairlineWidth, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE, marginTop: -1 * closure_5.hairlineWidth };
   obj[1] = obj;
   obj[2] = { marginLeft: 56 };
   return obj;
@@ -35,11 +35,11 @@ export default function Divider(outer) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  const tmp2 = callback(importDefault(1348)("FormDivider"));
-  let obj = require(3997) /* ManaContext */;
+  const tmp2 = callback(require("../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx")("FormDivider"));
+  let obj = require("../../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */;
   const themeContext = obj.useThemeContext();
   ({ theme, primaryColor } = themeContext);
-  const profileThemeValues = require(5632) /* useProfileThemeValues */.useProfileThemeValues(theme);
+  const profileThemeValues = require("../../../../modules/user_profile/useProfileThemeValues.native.tsx") /* useProfileThemeValues */.useProfileThemeValues(theme);
   let tmp7 = null;
   if (tmp6) {
     obj = { backgroundColor: null };
@@ -48,7 +48,7 @@ export default function Divider(outer) {
     const tmp3Result = tmp3(4129);
   }
   let tmp10Result = null;
-  if (!React.useContext(require(5314) /* context */.RedesignCompatContext)) {
+  if (!React.useContext(require("../../../components/RedesignCompat/native/RedesignCompat.native.tsx") /* context */.RedesignCompatContext)) {
     const items = [flag ? tmp2.dividerOuter : tmp2.divider, , , ];
     if (flag2) {
       flag2 = tmp2.dividerHasIcon;

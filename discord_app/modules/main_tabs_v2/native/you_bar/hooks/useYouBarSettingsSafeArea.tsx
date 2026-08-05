@@ -2,16 +2,16 @@
 const result = require("PlatformTypes").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarSettingsSafeArea.tsx");
 
 export const useYouBarSettingsCustomHeaderPaddingTop = function useYouBarSettingsCustomHeaderPaddingTop() {
-  const tmp = importDefault(7562)();
-  const obj = require(501) /* PlatformTypes */;
+  const tmp = require("../../../../screen/native/useIsWindowLarge.tsx")();
+  const obj = require("../../../../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */;
   let num = 16;
   if (!tmp2) {
-    num = importDefault(1581)().top;
+    num = require("../../../../safe_area/useSafeAreaInsets.native.tsx")().top;
   }
   return num;
 };
 export const useYouBarSettingsOutsideSafeAreaTop = function useYouBarSettingsOutsideSafeAreaTop() {
-  const tmp = importDefault(7562)();
-  const obj = require(501) /* PlatformTypes */;
-  return require(501) /* PlatformTypes */.isIOS() || tmp;
+  const tmp = require("../../../../screen/native/useIsWindowLarge.tsx")();
+  const obj = require("../../../../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */;
+  return require("../../../../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */.isIOS() || tmp;
 };

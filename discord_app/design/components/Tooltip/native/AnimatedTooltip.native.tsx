@@ -12,10 +12,10 @@ function renderTooltipItem(arg0, arg1) {
   if (null != arg0) {
     obj = {};
     const merged = Object.assign(arg0);
-    tmpResult = tmp(require(8578) /* Tooltip */.Tooltip, obj);
+    tmpResult = tmp(require("Tooltip.native.tsx") /* Tooltip */.Tooltip, obj);
   }
   obj[2] = tmpResult;
-  return jsx(importDefault(4146).View, { style: items, pointerEvents: "box-none", children: null });
+  return jsx(require("../../../../modules/reanimated/ReanimatedRexport.tsx").View, { style: items, pointerEvents: "box-none", children: null });
 }
 let result = require("get ActivityIndicator").fileFinishedImporting("design/components/Tooltip/native/AnimatedTooltip.native.tsx");
 
@@ -40,5 +40,5 @@ export const AnimatedTooltip = function AnimatedTooltip(visible) {
   obj[2] = result;
   obj[3] = result;
   obj[4] = renderTooltipItem;
-  return jsx(importDefault(8581), { useReducedMotion: React.useContext(visible(4004).AccessibilityPreferencesContext).reducedMotion.enabled, item: null, entering: null, exiting: null, renderItem: null });
+  return jsx(require("../../AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx"), { useReducedMotion: React.useContext(visible(4004).AccessibilityPreferencesContext).reducedMotion.enabled, item: null, entering: null, exiting: null, renderItem: null });
 };

@@ -30,11 +30,11 @@ export default function NUFActionSheetTemplate(arg0) {
   const tmp = createCacheKey();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: title };
-  const items = [callback(require(4281) /* Text */.Text, obj), , , ];
+  const items = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), , , ];
   obj = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: description };
-  items[1] = callback(require(4281) /* Text */.Text, obj);
+  items[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   items[2] = callback(closure_3, { source: imageSrc, style: tmp.image });
-  items[3] = callback(require(4695) /* Button */.Button, { text: CTALabel, size: "md", onPress: onCTAPress, grow: true });
+  items[3] = callback(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, { text: CTALabel, size: "md", onPress: onCTAPress, grow: true });
   obj[1] = items;
   return callback2(closure_2, obj);
 };

@@ -71,7 +71,7 @@ function getPositionUpdates(arg0) {
   }
   let values = objectArray;
   if (!Array.isArray(objectArray)) {
-    let obj = importDefault(12);
+    let obj = require("../../_runtime/00012_apply.js");
     values = obj.values(objectArray);
   }
   obj = { oldOrdering: values, newOrdering: null, idGetter: null, existingPositionGetter: null, ascending: null };

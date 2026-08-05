@@ -58,50 +58,50 @@ function GuildDirectoryNicknameUpsell(arg0) {
     return applyArgumentsResult;
   }
   let tmp = createCacheKey();
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [createGuildRecordFromRust];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_8.getGuild(closure_0));
-  const insets = importDefault(5310)().insets;
+  const insets = require("../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx")().insets;
   [obj2, c2] = ref(_handleSubmit.useState(null), 2);
   const tmp7 = ref(_handleSubmit.useState(""), 2);
   first = tmp7[0];
   ref = _handleSubmit.useRef(null);
   obj = { ref, contentContainerStyle: null, children: null };
   const items1 = [tmp.container, ];
-  obj = { paddingBottom: insets.bottom + importDefault(712).space.PX_16, paddingTop: insets.top };
+  obj = { paddingBottom: insets.bottom + require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, paddingTop: insets.top };
   items1[1] = obj;
   obj[1] = items1;
   let obj1 = { style: tmp.guildIcon, guild: stateFromStores, size: null };
   const tmp11 = closure_7;
   const tmp5 = importDefault;
   const tmp6 = ref(_handleSubmit.useState(null), 2);
-  obj1[2] = require(5661) /* GuildIconSizes */.GuildIconSizes.XLARGE;
-  const items2 = [callback(importDefault(5661), obj1), , , , ];
+  obj1[2] = require("../../../guild/native/GuildIcon.tsx") /* GuildIconSizes */.GuildIconSizes.XLARGE;
+  const items2 = [callback(require("../../../guild/native/GuildIcon.tsx"), obj1), , , , ];
   obj2 = { style: tmp.header, children: null };
   const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   let name;
   if (stateFromStores != null) {
     name = stateFromStores.name;
   }
-  obj3[4] = intl.format(require(1236) /* getSystemLocale */.t["d+6kzl"], { guildName: name });
-  const items3 = [callback(require(4281) /* Text */.Text, obj3), ];
+  obj3[4] = intl.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["d+6kzl"], { guildName: name });
+  const items3 = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj3), ];
   const obj4 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = tmp2(1236).intl;
-  obj4[3] = intl2.string(require(1236) /* getSystemLocale */.t.b3L8yx);
-  items3[1] = callback(require(4281) /* Text */.Text, obj4);
+  obj4[3] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.b3L8yx);
+  items3[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj4);
   obj2[1] = items3;
   items2[1] = closure_11(closure_6, obj2);
   const obj5 = { label: null, placeholder: null, value: null, onChangeText: null, style: null, textStyle: null, clearButtonVisibility: null, error: null, onFocus: null, onBlur: null };
-  const tmp13 = importDefault(5661);
+  const tmp13 = require("../../../guild/native/GuildIcon.tsx");
   const intl3 = tmp2(1236).intl;
-  obj5[0] = intl3.string(require(1236) /* getSystemLocale */.t.ilDlmW);
+  obj5[0] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.ilDlmW);
   const intl4 = tmp2(1236).intl;
-  obj5[1] = intl4.string(require(1236) /* getSystemLocale */.t.RfWvWI);
+  obj5[1] = intl4.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.RfWvWI);
   obj5[2] = first;
   obj5[3] = tmp7[1];
   ({ input: obj9[4], redesignTextInput: obj9[5] } = tmp);
-  obj5[6] = require(1297) /* Button */.ClearButtonVisibility.WITH_CONTENT;
+  obj5[6] = require("../../../../design/void/native.tsx") /* Button */.ClearButtonVisibility.WITH_CONTENT;
   let firstFieldErrorMessage;
   if (obj1 != null) {
     firstFieldErrorMessage = obj1.getFirstFieldErrorMessage("name");
@@ -128,7 +128,7 @@ function GuildDirectoryNicknameUpsell(arg0) {
   const obj7 = { style: tmp.redesignButtonContainer, children: null };
   const obj8 = { size: "lg", text: null, onPress: null };
   const intl5 = tmp2(1236).intl;
-  obj8[1] = intl5.string(require(1236) /* getSystemLocale */.t.Np4yXU);
+  obj8[1] = intl5.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Np4yXU);
   obj8[2] = function handleSubmit() {
     const self = this;
     const apply = _handleSubmit.apply;
@@ -139,7 +139,7 @@ function GuildDirectoryNicknameUpsell(arg0) {
     }
     return applyArgumentsResult;
   };
-  obj7[1] = callback(require(4695) /* Button */.Button, obj8);
+  obj7[1] = callback(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj8);
   items2[4] = callback(closure_6, obj7);
   obj[2] = items2;
   return closure_11(tmp11, obj);
@@ -167,7 +167,7 @@ const result = require("noop").fileFinishedImporting("modules/directory_channels
 export default function GuildDirectoryNicknameUpsellModal(arg0) {
   const _require = arg0;
   let obj = { screens: null, initialRouteName: null };
-  obj[0] = importDefault(5598)(() => {
+  obj[0] = require("../../../../hooks/useInitialValue.tsx")(() => {
     let closure_0;
     let closure_1;
     ({ guildId: closure_0, onHide: closure_1 } = callback);
@@ -190,5 +190,5 @@ export default function GuildDirectoryNicknameUpsellModal(arg0) {
     return obj;
   });
   obj[1] = UPSELL_SCREEN_KEY;
-  return callback(_require(5665).Navigator, obj);
+  return callback(_require("../../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, obj);
 };

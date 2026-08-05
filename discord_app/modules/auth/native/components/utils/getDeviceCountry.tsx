@@ -24,6 +24,6 @@ export const getDeviceCountry = function getDeviceCountry() {
     }
     return formatted;
   }
-  obj = require(500) /* set */;
+  obj = require("../../../../../utils/PlatformUtils.tsx") /* set */;
   tmp = require;
 };

@@ -60,7 +60,7 @@ export default function ApplicationCommandDiscovery(channel) {
   let closure_19;
   let tmp = callback();
   dependencyMap = tmp;
-  let obj = require(4701) /* getFontScale */;
+  let obj = require("../../screen/native/useFontScale.tsx") /* getFontScale */;
   bound = Math.max(obj.useFontScale() * c11, c11);
   let obj1 = ref;
   ref = ref.useRef(null);
@@ -68,14 +68,14 @@ export default function ApplicationCommandDiscovery(channel) {
   first = tmp4[0];
   c7 = tmp6;
   closure_8 = ref.useRef(false);
-  let obj2 = require(11681) /* useCommandDiscoveryManager */;
+  let obj2 = require("../ApplicationCommandDiscoveryManager.tsx") /* useCommandDiscoveryManager */;
   commandDiscoveryManager = obj2.useCommandDiscoveryManager((initialSectionId) => initialSectionId.initialSectionId);
   let obj3 = channel(9455);
   obj = { context: { channel, type: "channel" }, filters: null, options: null, allowFetch: true };
   obj = { commandTypes: null, builtIns: null, applicationCommands: null };
-  let items = [require(1906) /* PermissionOverwriteType */.ApplicationCommandType.CHAT];
+  let items = [require("../../../flow/Server.tsx") /* PermissionOverwriteType */.ApplicationCommandType.CHAT];
   obj[0] = items;
-  const BuiltInCommandFilter = require(8158) /* ScoreMethod */.BuiltInCommandFilter;
+  const BuiltInCommandFilter = require("../ApplicationCommandQueryTypes.tsx") /* ScoreMethod */.BuiltInCommandFilter;
   obj[1] = canOnlyUseTextCommands ? BuiltInCommandFilter.ONLY_TEXT : BuiltInCommandFilter.ALLOW;
   obj[2] = !canOnlyUseTextCommands;
   obj[1] = obj;

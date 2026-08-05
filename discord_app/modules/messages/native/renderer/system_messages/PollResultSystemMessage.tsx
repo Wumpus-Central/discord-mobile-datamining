@@ -4,7 +4,7 @@ import { EMOJI_URL_BASE_SIZE } from "set";
 const result = require("formatUsernameOnClick").fileFinishedImporting("modules/messages/native/renderer/system_messages/PollResultSystemMessage.tsx");
 
 export const createPollResultSystemMessage = function createPollResultSystemMessage(message) {
-  const tmp3 = importDefault(7959)(message.message.embeds[0]);
+  const tmp3 = require("../../../../polls/parsePollResultSystemMessageEmbed.tsx")(message.message.embeds[0]);
   if (null == tmp3) {
     return null;
   } else if (null == message.message.messageReference) {

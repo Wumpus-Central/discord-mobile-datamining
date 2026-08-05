@@ -34,5 +34,5 @@ export default function SMSBackupWarningAlert(onConfirm) {
   obj[3] = intl4.string(onConfirm(1236).t.EDU2Eg);
   items[1] = callback(onConfirm(4281).Text, obj);
   obj[4] = items;
-  return callback2(importDefault(4713), obj);
+  return callback2(require("../../../../components_native/common/Alert.tsx"), obj);
 };

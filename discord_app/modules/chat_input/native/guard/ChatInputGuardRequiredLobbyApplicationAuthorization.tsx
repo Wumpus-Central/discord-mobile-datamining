@@ -40,10 +40,10 @@ const memoResult = require("noop").memo(function ChatInputGuardRequiredLobbyAppl
         fn = () => outer1_1(outer1_2[7]).openURLExternally(connectionEntrypointUrl);
       }
       obj[4] = fn;
-      return jsx(importDefault(11721), { name: null });
+      return jsx(require("ChatInputGuard.tsx"), { name: null });
     }
   }
-  return jsx(importDefault(11721), { type: "simple-action", message: "" });
+  return jsx(require("ChatInputGuard.tsx"), { type: "simple-action", message: "" });
 });
 const result = require("jsxProd").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardRequiredLobbyApplicationAuthorization.tsx");
 

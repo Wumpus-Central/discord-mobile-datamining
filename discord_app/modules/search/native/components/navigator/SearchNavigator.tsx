@@ -36,7 +36,7 @@ const memoResult = importAllResult.memo((route) => {
       obj.trackSearchClosed(obj);
     };
   }, items);
-  const rect = importDefault(1581)();
+  const rect = require("../../../../safe_area/useSafeAreaInsets.native.tsx")();
   obj = { style: items1, children: null };
   items1 = [callback3().container, { paddingLeft: rect.left, paddingRight: rect.right }];
   obj = { id: "search-navigator", screenOptions: null, children: null };

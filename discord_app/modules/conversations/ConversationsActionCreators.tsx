@@ -376,14 +376,14 @@ export const fetchChannelConversations = function fetchChannelConversations(arg0
   return applyArgumentsResult;
 };
 export const toggleConversationHighlighting = function toggleConversationHighlighting() {
-  importDefault(709).dispatch({ type: "CONVERSATIONS_TOGGLE_HIGHLIGHTING" });
+  require("../../Dispatcher.tsx").dispatch({ type: "CONVERSATIONS_TOGGLE_HIGHLIGHTING" });
 };
 export const setSelectedConversation = function setSelectedConversation(channelId, guildId, conversationId) {
   let flag = arg3;
   if (arg3 === undefined) {
     flag = true;
   }
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "SET_SELECTED_CONVERSATION", channelId, conversationId };
   obj.dispatch(obj);
   fetchConversationMessages(channelId, guildId, conversationId, { includeReactions: true, includeMessageReferences: true });
@@ -399,27 +399,27 @@ export const setSelectedConversation = function setSelectedConversation(channelI
     obj = { channelId: null, messageId: null, flash: false };
     obj[0] = channelId;
     obj[1] = conversationMetadata.conversation.startMessageId;
-    importDefault(6826).jumpToMessage(obj);
-    const tmpResult = importDefault(6826);
+    require("../../actions/MessageActionCreators.tsx").jumpToMessage(obj);
+    const tmpResult = require("../../actions/MessageActionCreators.tsx");
   }
 };
 export const clearConversationSelection = function clearConversationSelection(channelId, conversationId) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "CLEAR_CONVERSATION_SELECTION", channelId, conversationId };
   obj.dispatch(obj);
 };
 export const setConversationFeedbackRating = function setConversationFeedbackRating(closure_0, closure_1, down) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "SET_CONVERSATION_FEEDBACK_RATING", channelId: closure_0, conversationId: closure_1, rating: down };
   obj.dispatch(obj);
 };
 export { fetchConversationMessages };
 export const trackTopicalNavigationEntrypointImpression = function trackTopicalNavigationEntrypointImpression(id, stateFromStores1) {
-  const ConversationsAnalytics = require(8369) /* ConversationsAnalytics */.ConversationsAnalytics;
+  const ConversationsAnalytics = require("ConversationsAnalytics.tsx") /* ConversationsAnalytics */.ConversationsAnalytics;
   const result = ConversationsAnalytics.trackEntrypointImpression({ channelId: id, conversationCount: stateFromStores1 });
   if (initialize.shouldTriggerOnNextExposure()) {
-    importDefault(8370).fireSurveyAction(require(8377) /* SurveyActionTypes */.SurveyActionTypes.TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS);
-    const obj2 = importDefault(8370);
+    require("../qualtrics/QualtricsActionCreators.tsx").fireSurveyAction(require("../../../discord_common/js/shared/shared-constants/SurveyActionTypes.tsx") /* SurveyActionTypes */.SurveyActionTypes.TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS);
+    const obj2 = require("../qualtrics/QualtricsActionCreators.tsx");
   }
-  importDefault(709).dispatch({ type: "TOPICAL_NAVIGATION_ENTRYPOINT_IMPRESSION" });
+  require("../../Dispatcher.tsx").dispatch({ type: "TOPICAL_NAVIGATION_ENTRYPOINT_IMPRESSION" });
 };

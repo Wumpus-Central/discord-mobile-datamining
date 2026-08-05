@@ -45,8 +45,8 @@ function computeBasicPollChatData(message) {
     let str = "";
     if (message.state === MessageStates.SENT) {
       if (formattedExpirationLabel == null) {
-        formattedExpirationLabel = require(8133) /* formatExpirationLabel */.formatExpirationLabel(poll.expiry);
-        const obj2 = require(8133) /* formatExpirationLabel */;
+        formattedExpirationLabel = require("useFormattedExpirationLabel.tsx") /* formatExpirationLabel */.formatExpirationLabel(poll.expiry);
+        const obj2 = require("useFormattedExpirationLabel.tsx") /* formatExpirationLabel */;
       }
       str = formattedExpirationLabel;
     }
@@ -117,13 +117,13 @@ function computeBasicPollChatData(message) {
     if (null != guildId) {
       selfMember = selfMember.getSelfMember(guildId);
     }
-    const result = require(3919) /* GuildMemberFlags */.hasAutomodQuarantinedProfile(selfMember);
-    const obj4 = require(3919) /* GuildMemberFlags */;
+    const result = require("../../guild_automod/AutomodPermissionUtils.tsx") /* GuildMemberFlags */.hasAutomodQuarantinedProfile(selfMember);
+    const obj4 = require("../../guild_automod/AutomodPermissionUtils.tsx") /* GuildMemberFlags */;
     obj = { poll: null, canTapAnswers: null, canRemoveVote: null, canShowVoteCounts: null, canSubmitVote: null, expirationLabel: null, hasSelectedAnswer: null, hasVoted: null, hasVoteRecorded: null, isEditingVote: null, isExpired: null, isInteractive: null, isSent: null, reactions: null, selectedAnswerIds: null, submitting: null, tapShouldOpenVotersModal: null, showResults: null };
     obj[0] = poll;
     obj[1] = tmp19;
     let tmp30 = tmp16;
-    const result1 = require(3902) /* isCommunicationDisabled */.isMemberCommunicationDisabled(selfMember);
+    const result1 = require("../../guild_communication_disabled/CommunicationDisabledUtils.tsx") /* isCommunicationDisabled */.isMemberCommunicationDisabled(selfMember);
     if (tmp16) {
       tmp30 = tmp2;
     }

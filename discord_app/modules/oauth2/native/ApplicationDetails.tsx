@@ -19,7 +19,7 @@ function ApplicationDetailsEntry(children) {
   }
   const items = [iconComponentResult, ];
   obj = { variant: "text-sm/normal", color: "text-default", style: tmp.entryText, children: children.text };
-  items[1] = callback(require(4281) /* Text */.Text, obj);
+  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   obj[1] = items;
   return closure_5(View, obj);
 }
@@ -40,9 +40,9 @@ export default function ApplicationDetails(arg0) {
   let scopes;
   ({ application, scopes, redirectUri, approximateGuildCount, disclosures } = arg0);
   ({ isEmbeddedFlow, connectedAccount } = arg0);
-  let obj = importDefault(11);
+  let obj = require("../../../utils/SnowflakeUtils.tsx");
   const tmp2 = createCacheKey();
-  let obj1 = require(10425) /* items */;
+  let obj1 = require("../scopes.tsx") /* items */;
   let joined = null;
   const securityMessage = obj1.getSecurityMessage(scopes);
   if (null != redirectUri) {
@@ -71,11 +71,11 @@ export default function ApplicationDetails(arg0) {
     tmp15 = callback(ApplicationDetailsEntry, obj);
   }
   const items = [tmp15, , , , , , ];
-  const obj2 = { iconComponent: require(4804) /* LockIcon */.LockIcon, text: null };
+  const obj2 = { iconComponent: require("../../../design/components/Icon/native/redesign/generated/LockIcon.tsx") /* LockIcon */.LockIcon, text: null };
   const date = new Date(obj.extractTimestamp(application.id));
   const tmp13 = closure_5;
   const tmp14 = View;
-  obj2[1] = require(10429) /* getApplicationDetailsText */.getApplicationDetailsText(application);
+  obj2[1] = require("../Utils.tsx") /* getApplicationDetailsText */.getApplicationDetailsText(application);
   items[1] = callback(ApplicationDetailsEntry, obj2);
   let tmp18Result = null;
   if (null != connectedAccount) {
@@ -86,12 +86,12 @@ export default function ApplicationDetails(arg0) {
     tmp18Result = tmp18(tmp19, obj3);
   }
   items[2] = tmp18Result;
-  const obj4 = { iconComponent: require(4249) /* ClockIcon */.ClockIcon, text: null };
+  const obj4 = { iconComponent: require("../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx") /* ClockIcon */.ClockIcon, text: null };
   const intl3 = tmp5(1236).intl;
-  obj4[1] = intl3.formatToPlainString(require(1236) /* getSystemLocale */.t["+1bjc8"], { date });
+  obj4[1] = intl3.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["+1bjc8"], { date });
   items[3] = callback(ApplicationDetailsEntry, obj4);
   tmp18Result = null;
-  if (scopes.includes(require(8824) /* set */.OAuth2Scopes.BOT)) {
+  if (scopes.includes(require("../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx") /* set */.OAuth2Scopes.BOT)) {
     tmp18Result = null;
     if (null != approximateGuildCount) {
       const obj5 = { iconComponent: null, text: null };
@@ -104,8 +104,8 @@ export default function ApplicationDetails(arg0) {
     }
   }
   items[4] = tmp18Result;
-  const tmp5Result = require(10429) /* getApplicationDetailsText */;
-  items[5] = callback(ApplicationDetailsEntry, { iconComponent: require(10148) /* ShieldIcon */.ShieldIcon, text: securityMessage });
+  const tmp5Result = require("../Utils.tsx") /* getApplicationDetailsText */;
+  items[5] = callback(ApplicationDetailsEntry, { iconComponent: require("../../../design/components/Icon/native/redesign/generated/ShieldIcon.tsx") /* ShieldIcon */.ShieldIcon, text: securityMessage });
   let mapped = null;
   if (null != disclosures) {
     mapped = disclosures.map((toFixed) => {

@@ -6,5 +6,5 @@ const result = require("set").fileFinishedImporting("modules/activities/utils/us
 
 export default function useCurrentEmbeddedActivity() {
   const items = [participantFromServer];
-  return require(589) /* initialize */.useStateFromStores(items, () => currentEmbeddedActivity.getCurrentEmbeddedActivity());
+  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => currentEmbeddedActivity.getCurrentEmbeddedActivity());
 };

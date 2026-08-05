@@ -34,9 +34,9 @@ export default function ChannelHeader(channelId) {
     tmp4 = pressable;
   }
   if (channelId === StaticChannelRoute.ROLE_SUBSCRIPTIONS) {
-    let tmp8Result = jsx(importDefault(12450), {});
+    let tmp8Result = jsx(require("../../../../guild_role_subscriptions/native/overview_tab/GuildRoleSubscriptionsChannelHeader.tsx"), {});
   } else if (channelId === tmp5.GUILD_HOME) {
-    tmp8Result = jsx(importDefault(12451), {});
+    tmp8Result = jsx(require("HomeChannelHeader.tsx"), {});
   } else {
     let isPrivateResult;
     if (stateFromStores != null) {
@@ -47,7 +47,7 @@ export default function ChannelHeader(channelId) {
       obj[0] = channelId;
       obj[1] = tmp4;
       obj[2] = screenIndex;
-      tmp8Result = jsx(importDefault(12452), { channelId: null, pressable: null, screenIndex: null });
+      tmp8Result = jsx(require("PrivateChannelHeader.tsx"), { channelId: null, pressable: null, screenIndex: null });
     } else {
       let isForumLikeChannelResult;
       if (stateFromStores != null) {
@@ -94,7 +94,7 @@ export default function ChannelHeader(channelId) {
   return tmp8Result;
 };
 export const navigateToChannelDetails = function navigateToChannelDetails(channelId, screenIndex, arg2) {
-  let obj = require(500) /* set */;
+  let obj = require("../../../../../utils/PlatformUtils.tsx") /* set */;
   if (obj.isIOS()) {
     let tmpResult = tmp(4144);
     const chatInputRef = tmpResult.getChatInputRef(channelId, screenIndex);

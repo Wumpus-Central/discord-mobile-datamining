@@ -22,13 +22,13 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
   const tmp3 = constants;
   str = str.toString();
   if (type === constants.GUILD_CATEGORY) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    let stringResult = intl2.string(require(1236) /* getSystemLocale */.t.uV83yi);
+    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    let stringResult = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.uV83yi);
     let tmp8 = require;
     let tmp10 = require;
   } else {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    stringResult = intl.string(require(1236) /* getSystemLocale */.t["W/A4Qp"]);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    stringResult = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["W/A4Qp"]);
     tmp8 = require;
     tmp10 = require;
   }
@@ -142,7 +142,7 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
     }
     if (createPostsDisabled) {
       if (!type.isMediaChannel()) {
-        let obj10 = importDefault(7705);
+        let obj10 = require("../forums/ForumPlatformUtils.native.tsx");
         let LG9VAi = obj10.getForumChannelPermissionText();
       }
       WQ6zpT = LG9VAi;
@@ -153,11 +153,11 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
   } else if (tmp3.GUILD_ANNOUNCEMENT === type) {
     const intl11 = tmp8(1236).intl;
     const obj5 = { articleURL: null };
-    let obj9 = importDefault(1945);
+    let obj9 = require("../../utils/HelpdeskUtils.tsx");
     obj5[0] = obj9.getArticleURL(constants3.ANNOUNCEMENT_CHANNELS);
     WQ6zpT = intl11.format(tmp8(1236).t.WFwfSD, obj5);
   } else if (tmp3.GUILD_VOICE === type) {
-    let obj7 = importDefault(7706);
+    let obj7 = require("../text_in_voice/GuildTiVPlatformUtils.native.tsx");
     let sendMessagesDisabled;
     if (createPostsDisabled != null) {
       sendMessagesDisabled = createPostsDisabled.sendMessagesDisabled;
@@ -263,7 +263,7 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
   } else if (tmp3.GUILD_ANNOUNCEMENT === type) {
     const intl20 = tmp8(1236).intl;
     const obj13 = { articleURL: null };
-    let obj19 = importDefault(1945);
+    let obj19 = require("../../utils/HelpdeskUtils.tsx");
     obj13[0] = obj19.getArticleURL(constants3.ANNOUNCEMENT_CHANNELS);
     SeA_G9 = intl20.format(tmp8(1236).t.XRxOo0, obj13);
   } else {
@@ -325,7 +325,7 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
   if (tmp3.GUILD_CATEGORY === type) {
     let RqCc7i = tmp8(1236).t["cJRv/g"];
   } else if (tmp3.GUILD_VOICE === type) {
-    let obj24 = importDefault(7706);
+    let obj24 = require("../text_in_voice/GuildTiVPlatformUtils.native.tsx");
     let prop;
     if (createPostsDisabled != null) {
       prop = createPostsDisabled.readMessageHistoryDisabled;
@@ -522,7 +522,7 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
   if (tmp3.GUILD_CATEGORY === type) {
     const intl37 = tmp8(1236).intl;
     const obj28 = { helpCenterArticle: null };
-    let obj40 = importDefault(1945);
+    let obj40 = require("../../utils/HelpdeskUtils.tsx");
     obj28[0] = obj40.getArticleURL(constants3.SOUNDBOARD);
     let formatResult = intl37.format(tmp8(1236).t["0kBp/0"], obj28);
   } else {
@@ -531,7 +531,7 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
         if (tmp3.GUILD_MEDIA !== type) {
           const intl35 = tmp8(1236).intl;
           const obj29 = { helpCenterArticle: null };
-          let obj36 = importDefault(1945);
+          let obj36 = require("../../utils/HelpdeskUtils.tsx");
           obj29[0] = obj36.getArticleURL(constants3.SOUNDBOARD);
           formatResult = intl35.format(tmp8(1236).t.GEi6Ym, obj29);
         }
@@ -539,7 +539,7 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
     }
     const intl36 = tmp8(1236).intl;
     const obj30 = { helpCenterArticle: null };
-    let obj38 = importDefault(1945);
+    let obj38 = require("../../utils/HelpdeskUtils.tsx");
     obj30[0] = obj38.getArticleURL(constants3.SOUNDBOARD);
     formatResult = intl36.format(tmp8(1236).t["6eYqU1"], obj30);
   }

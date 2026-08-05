@@ -11,12 +11,12 @@ const styles = createCacheKey.createStyles(() => {
   }
   let obj = { button: null, iconButtonPill: null };
   obj = {};
-  const merged = Object.assign(importDefault(712).shadows.SHADOW_HIGH);
+  const merged = Object.assign(require("../../../../../discord_common/js/packages/tokens/native.tsx").shadows.SHADOW_HIGH);
   obj[0] = obj;
-  obj = { minWidth: require(4699) /* MINIMUM_HIT_AREA */.FAB_BUTTON_SIZE, minHeight: require(4699) /* MINIMUM_HIT_AREA */.FAB_BUTTON_SIZE, padding: 0 };
+  obj = { minWidth: require("ButtonConstants.native.tsx") /* MINIMUM_HIT_AREA */.FAB_BUTTON_SIZE, minHeight: require("ButtonConstants.native.tsx") /* MINIMUM_HIT_AREA */.FAB_BUTTON_SIZE, padding: 0 };
   if (flag) {
     const obj1 = { borderRadius: null };
-    obj1[0] = importDefault(712).radii.lg;
+    obj1[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg;
     let obj2 = obj1;
   } else {
     obj2 = {};

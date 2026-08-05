@@ -20,14 +20,14 @@ function EmojiImage(id) {
   if (animated === undefined) {
     animated = false;
   }
-  const AnimateEmoji = require(3958) /* explicitContentFromProto */.AnimateEmoji;
+  const AnimateEmoji = require("../../user_settings/UserSettings.tsx") /* explicitContentFromProto */.AnimateEmoji;
   const setting = AnimateEmoji.useSetting();
   let obj = { style: items, source: null, resizeMode: "contain" };
   items = [{ height: size, width: size }, id.style];
   const tmp2 = closure_8;
-  const tmp3 = importDefault(5236);
+  const tmp3 = require("../../../components_native/common/FastImage.tsx");
   obj = { id: id.emojiId, animated: null, size: null };
-  const obj2 = importDefault(1416);
+  const obj2 = require("../../../utils/AvatarUtils.tsx");
   obj = { uri: obj2.getEmojiURL(obj) };
   obj[1] = Boolean(animated) && setting;
   obj[2] = EMOJI_URL_BASE_SIZE;
@@ -98,9 +98,9 @@ function TextStatusContent(arg0) {
     }
     const items2 = [tmp7Result, text];
     obj[5] = items2;
-    return closure_10(require(4281) /* Text */.Text, obj);
+    return closure_10(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   } else {
-    obj1 = require(500) /* set */;
+    obj1 = require("../../../utils/PlatformUtils.tsx") /* set */;
     obj1.isAndroid() ? { fontFamily: "ggsans-NormalItalic, NotoSans-NormalItalic" } : { fontStyle: "italic" };
   }
 }
@@ -108,7 +108,7 @@ function EmojiOnlyStatusContent(arg0) {
   let emoji;
   let size;
   ({ emoji, size } = arg0);
-  const AnimateEmoji = require(3958) /* explicitContentFromProto */.AnimateEmoji;
+  const AnimateEmoji = require("../../user_settings/UserSettings.tsx") /* explicitContentFromProto */.AnimateEmoji;
   let id;
   const setting = AnimateEmoji.useSetting();
   if (emoji != null) {
@@ -116,7 +116,7 @@ function EmojiOnlyStatusContent(arg0) {
   }
   let emojiURL;
   if (null != id) {
-    let obj = importDefault(1416);
+    let obj = require("../../../utils/AvatarUtils.tsx");
     obj = { id: null, animated: null, size: null };
     obj[0] = emoji.id;
     let animated;
@@ -140,7 +140,7 @@ function EmojiOnlyStatusContent(arg0) {
     str = "";
   }
   obj1[3] = str;
-  obj[1] = closure_8(importDefault(5301), obj1);
+  obj[1] = closure_8(require("../../emojis/native/Emoji.tsx"), obj1);
   return closure_8(tmp12, obj);
 }
 let c4 = importAllResult;
@@ -148,7 +148,7 @@ let c4 = importAllResult;
 ({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles((arg0) => {
   let obj = { container: { position: "relative" }, bubble: null, statusBubble: null, statusBubbleMeasureable: null, smallCircle: null, largeCircle: null, largeCircleInner: null, addStatusIconSpacer: null, statusBubbleLeftAligned: null };
-  const colors = importDefault(712).colors;
+  const colors = require("../../../../discord_common/js/packages/tokens/native.tsx").colors;
   if (arg0) {
     let BACKGROUND_SURFACE_HIGH = colors.CUSTOM_STATUS_BUBBLE_BG;
     let tmp4 = tmp;

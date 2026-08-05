@@ -6,7 +6,7 @@ import { Store } from "initialize";
 
 const require = arg1;
 function clearDismissUntil(arg0) {
-  const Storage = require(595) /* Storage */.Storage;
+  const Storage = require("../../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
   Storage.remove(`${closure_8[arg0]}-untilAtLeast`);
 }
 function isNoticeDismissed(PREMIUM_TIER_0_TRIAL_ENDING) {
@@ -14,14 +14,14 @@ function isNoticeDismissed(PREMIUM_TIER_0_TRIAL_ENDING) {
     return false;
   } else {
     if (null != dependencyMap[PREMIUM_TIER_0_TRIAL_ENDING]) {
-      const Storage = require(595) /* Storage */.Storage;
+      const Storage = require("../../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
       const value = Storage.get(`${tmp10[PREMIUM_TIER_0_TRIAL_ENDING]}-untilAtLeast`);
       let tmp4 = null;
       if (null != value) {
-        tmp4 = importDefault(3867)(value);
+        tmp4 = require("../../../../_runtime/03867_t.js")(value);
       }
       if (null != tmp4) {
-        return tmp4.isAfter(importDefault(3867)());
+        return tmp4.isAfter(require("../../../../_runtime/03867_t.js")());
       }
     }
     let tmp6 = null != tmp11;
@@ -29,7 +29,7 @@ function isNoticeDismissed(PREMIUM_TIER_0_TRIAL_ENDING) {
       tmp6 = "" !== tmp11;
     }
     if (tmp6) {
-      const Storage2 = require(595) /* Storage */.Storage;
+      const Storage2 = require("../../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
       let flag = Storage2.get(tmp11);
       if (flag == null) {
         flag = false;
@@ -137,14 +137,14 @@ const noticeStore = new NoticeStore(require("dispatcher"), {
       if (null != c6) {
         result1 = dependencyMap;
         if (null != dependencyMap[text]) {
-          const Storage = require(595) /* Storage */.Storage;
+          const Storage = require("../../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
           const result = Storage.set(tmp13, true);
         }
         if (null == untilAtLeast) {
-          const Storage2 = require(595) /* Storage */.Storage;
+          const Storage2 = require("../../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
           Storage2.remove(`${tmp10[tmp9]}-untilAtLeast`);
         }
-        const Storage3 = require(595) /* Storage */.Storage;
+        const Storage3 = require("../../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
         text = `${tmp10[tmp9]}-untilAtLeast`;
         result1 = Storage3.set(`${tmp10[tmp9]}-untilAtLeast`, untilAtLeast.format("YYYY-MM-DDTHH:mm:ss.SSSZ"));
       }

@@ -16,12 +16,12 @@ function Header(arg0) {
   const tmp = createCacheKey();
   let obj = { top: true, style: tmp.headerContainer, children: null };
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: title };
-  const items = [callback(require(4281) /* Text */.Text, obj), , ];
+  const items = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), , ];
   obj = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: description };
-  items[1] = callback(require(4281) /* Text */.Text, obj);
-  items[2] = callback(importDefault(14353), { style: tmp.separator });
+  items[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  items[2] = callback(require("FormSeparator.tsx"), { style: tmp.separator });
   obj[2] = items;
-  return callback2(require(5272) /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  return callback2(require("../../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
 }
 function Footer(arg0) {
   let canProceedToNextStep;
@@ -30,17 +30,17 @@ function Footer(arg0) {
   let submitting;
   ({ canProceedToNextStep, nextStep, onProceed, submitting } = arg0);
   if (null == nextStep) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    let stringResult = intl2.string(require(1236) /* getSystemLocale */.t["4cAsqe"]);
+    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    let stringResult = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["4cAsqe"]);
     let tmp5 = require;
   } else {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    stringResult = intl.string(require(1236) /* getSystemLocale */.t["bm6P5/"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    stringResult = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["bm6P5/"]);
     tmp5 = require;
   }
   let obj = { style: null, children: null };
   const items = [createCacheKey().footerContainer, ];
-  obj = { paddingBottom: importDefault(1581)().bottom };
+  obj = { paddingBottom: require("../../../safe_area/useSafeAreaInsets.native.tsx")().bottom };
   items[1] = obj;
   obj[0] = items;
   obj = { loading: submitting, disabled: !canProceedToNextStep, text: stringResult, onPress: onProceed };

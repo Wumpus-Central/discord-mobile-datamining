@@ -28,11 +28,11 @@ export const createGuildProductPurchaseSystemMessage = function createGuildProdu
     if (channel != null) {
       const guildId = channel.getGuildId();
     }
-    let obj1 = require(4513) /* useNullableMessageAuthor */;
+    let obj1 = require("../../../useMessageAuthor.tsx") /* useNullableMessageAuthor */;
     const guildMemberAvatar = obj1.getMessageAuthor(message).guildMemberAvatar;
-    let obj2 = require(7879) /* getMessageAuthorWithProcessedColor */;
+    let obj2 = require("useAuthorWithProcessedColor.tsx") /* getMessageAuthorWithProcessedColor */;
     const messageAuthorWithProcessedColor = obj2.getMessageAuthorWithProcessedColor(message);
-    require(1419) /* ensureAvatarSource */;
+    require("../../../../../utils/native/AvatarUtils.tsx") /* ensureAvatarSource */;
     if (null != guildMemberAvatar) {
       if (null != guildId) {
         let tmp5Result = tmp5(1416);
@@ -50,14 +50,14 @@ export const createGuildProductPurchaseSystemMessage = function createGuildProdu
       obj2[0] = message;
       obj2[1] = messageAuthorWithProcessedColor;
       obj2[2] = message.roleStyle;
-      obj1[1] = importDefault(7881)(obj2);
+      obj1[1] = require("formatUsernameOnClick.tsx")(obj2);
       obj1[2] = product_name;
       obj[0] = tmp5Result.getGuildProductPurchaseSystemMessageContentMobile(obj1);
       obj[2] = messageAuthorWithProcessedColor.nick;
       obj[3] = tmp9(guildMemberAvatarSource).uri;
       const intl = tmp5(1236).intl;
       obj[4] = intl.string(tmp5(1236).t.s2N5HS);
-      const merged1 = Object.assign(importDefault(7882)(obj));
+      const merged1 = Object.assign(require("createCommonMessage.tsx")(obj));
       return obj;
     }
     guildMemberAvatarSource = author.getAvatarSource(undefined);

@@ -3,7 +3,7 @@ import module_1 from "createFastConnectSocket";
 import createFastConnectSocket from "promise";
 import toLocaleLowerCase from "toLocaleLowerCase";
 import module_16 from "promise";
-import module_1208 from "module_1208";
+import SentryUtils.native from "utils/SentryUtils.native.tsx";
 import { AppRegistry } from "promise";
 
 let GenerateInvite = require;

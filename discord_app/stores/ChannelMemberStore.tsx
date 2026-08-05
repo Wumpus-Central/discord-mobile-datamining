@@ -24,8 +24,8 @@ function getMemberListId(arg0) {
     if (obj.canEveryone(constants2.VIEW_CHANNEL, channel)) {
       let str = everyone;
     } else {
-      const obj2 = importDefault(1217);
-      const reduced = importDefault(12)(channel.permissionOverwrites).reduce((arr, id) => {
+      const obj2 = require("../../_runtime/01217_MurmurHashV3.js");
+      const reduced = require("../../_runtime/00012_apply.js")(channel.permissionOverwrites).reduce((arr, id) => {
         let allow;
         let deny;
         id = id.id;
@@ -44,7 +44,7 @@ function getMemberListId(arg0) {
       }, []);
       const sorted = reduced.sort();
       str = ",";
-      const arr = importDefault(12)(channel.permissionOverwrites);
+      const arr = require("../../_runtime/00012_apply.js")(channel.permissionOverwrites);
       str = obj2.v3(sorted.join(",")).toString();
       const str2 = obj2.v3(sorted.join(","));
     }
@@ -545,13 +545,13 @@ prototype2["forEach"] = function forEach(arg0, arg1) {
   const self = this;
   let closure_0 = arg1;
   if (null == arg0) {
-    let item = importDefault(12).forEach(self._guildLists, (arg0) => {
+    let item = require("../../_runtime/00012_apply.js").forEach(self._guildLists, (arg0) => {
       const item = outer1_1(outer1_3[15]).forEach(arg0, closure_0);
     });
-    const arr2 = importDefault(12);
+    const arr2 = require("../../_runtime/00012_apply.js");
   } else if (null != self._guildLists[arg0]) {
-    const item1 = importDefault(12).forEach(tmp, arg1);
-    const arr = importDefault(12);
+    const item1 = require("../../_runtime/00012_apply.js").forEach(tmp, arg1);
+    const arr = require("../../_runtime/00012_apply.js");
   }
 };
 prototype2["delete"] = function delete(arg0) {

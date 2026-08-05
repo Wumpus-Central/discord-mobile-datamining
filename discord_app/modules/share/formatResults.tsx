@@ -117,14 +117,14 @@ function _getOrResolveChannelIdFromDestinationId() {
   return applyArgumentsResult;
 }
 function canShareToChannel(type) {
-  if (type.type === require(7230) /* sortByMatchScore */.AutocompleterResultTypes.USER) {
+  if (type.type === require("../autocompleter/index.tsx") /* sortByMatchScore */.AutocompleterResultTypes.USER) {
     let tmp8 = arg1;
     if (!arg1) {
       tmp8 = null != authStore.getDMChannelFromUserId(type.record.id);
     }
     let tmp7 = tmp8;
   } else {
-    tmp7 = type.type === require(7230) /* sortByMatchScore */.AutocompleterResultTypes.GROUP_DM;
+    tmp7 = type.type === require("../autocompleter/index.tsx") /* sortByMatchScore */.AutocompleterResultTypes.GROUP_DM;
     if (!tmp7) {
       let tmp4 = type.record.type !== constants2.GUILD_FORUM && type.record.type !== tmp3.GUILD_MEDIA;
       if (tmp4) {
@@ -156,7 +156,7 @@ function mergeAndDedupeResultsWithHeaders(found, items1) {
       let tmp19 = nextResult;
       let tmp20 = require;
       let tmp21 = dependencyMap;
-      if (tmp9.type === require(7230) /* sortByMatchScore */.AutocompleterResultTypes.HEADER) {
+      if (tmp9.type === require("../autocompleter/index.tsx") /* sortByMatchScore */.AutocompleterResultTypes.HEADER) {
         let tmp = nextResult;
       } else {
         let tmp10 = nextResult;
@@ -301,7 +301,7 @@ export default function formatResults(hasQuery) {
         }
         let tmp9 = targetDestination;
       } else {
-        tmp9 = importDefault(7241)(targetDestination.id);
+        tmp9 = require("../autocompleter/createAutocompleterResultForChannelId.tsx")(targetDestination.id);
       }
     }
     mapped = [];
@@ -369,7 +369,7 @@ export const formatResultsWithHeaders = function formatResultsWithHeaders(hasNon
       items4 = [tmp(7230).createHeaderResult(intl2.string(tmp(1236).t["80lOZ1"])), , ];
       let tmp13 = null;
       if (null != selectedChannelId) {
-        const tmp7 = importDefault(7241)(selectedChannelId);
+        const tmp7 = require("../autocompleter/createAutocompleterResultForChannelId.tsx")(selectedChannelId);
         let tmp8 = null;
         if (null != tmp7) {
           let tmp9 = null;

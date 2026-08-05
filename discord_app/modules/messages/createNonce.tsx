@@ -8,5 +8,5 @@ export const createNonce = function createNonce() {
   if (timestamp !== timestamp) {
     snowflakeSequence.reset();
   }
-  return importDefault(11).fromTimestampWithSequence(timestamp, snowflakeSequence);
+  return require("../../utils/SnowflakeUtils.tsx").fromTimestampWithSequence(timestamp, snowflakeSequence);
 };

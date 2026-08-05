@@ -32,9 +32,9 @@ export default require("noop").memo(function MediaModalSpoilerOverlay(source) {
   ({ style, index } = source);
   let items2 = callback2();
   let stringResult = dependencyMap;
-  let obj = require(3989) /* map */;
-  const token = obj.useToken(importDefault(712).colors.SPOILER_HIDDEN_BACKGROUND);
-  let obj1 = require(12151) /* useMediaItemSpoilerState */;
+  let obj = require("../../../../design/tokens/native/useToken.tsx") /* map */;
+  const token = obj.useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.SPOILER_HIDDEN_BACKGROUND);
+  let obj1 = require("../useMediaItemSpoilerState.tsx") /* useMediaItemSpoilerState */;
   if (!tmp5[0]) {
     return null;
   } else {

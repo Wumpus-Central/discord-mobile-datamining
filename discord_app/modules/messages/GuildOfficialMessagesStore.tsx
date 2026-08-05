@@ -328,7 +328,7 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(require("dispa
             }
             return tmp5;
           }
-          obj6 = require(1384) /* hasFlag */;
+          obj6 = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
           tmp23 = require;
         }
         return false;

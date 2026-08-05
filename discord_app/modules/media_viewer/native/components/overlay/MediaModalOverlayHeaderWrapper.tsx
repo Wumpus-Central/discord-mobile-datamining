@@ -7,7 +7,7 @@ import createCacheKey from "createCacheKey";
 const require = arg1;
 let closure_5 = createCacheKey.createStyles((paddingTop) => {
   let obj = { bar: null };
-  obj = { flexDirection: "row", alignItems: "center", height: require(5235) /* NAV_BAR_HEIGHT */.NAV_BAR_HEIGHT + paddingTop, paddingTop, paddingLeft: arg1 + 6, paddingRight: arg2 + 6 };
+  obj = { flexDirection: "row", alignItems: "center", height: require("../../../../../design/components/Navigator/native/NavigatorConstants.native.tsx") /* NAV_BAR_HEIGHT */.NAV_BAR_HEIGHT + paddingTop, paddingTop, paddingLeft: arg1 + 6, paddingRight: arg2 + 6 };
   obj[0] = obj;
   return obj;
 });
@@ -17,7 +17,7 @@ export const MediaModalOverlayHeaderWrapper = function MediaModalOverlayHeaderWr
   let children;
   let style;
   ({ children, style } = arg0);
-  const rect = importDefault(1581)();
+  const rect = require("../../../../safe_area/useSafeAreaInsets.native.tsx")();
   const obj = { style: null, pointerEvents: "box-none", children: null };
   const items = [callback(rect.top, rect.left, rect.right).bar, style];
   obj[0] = items;

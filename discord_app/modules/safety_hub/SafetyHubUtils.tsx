@@ -50,14 +50,14 @@ function parseMessageEmbedForProps(fields) {
 const result = require("ME").fileFinishedImporting("modules/safety_hub/SafetyHubUtils.tsx");
 
 export const getClassificationRelativeIncidentTime = function getClassificationRelativeIncidentTime(timestamp) {
-  return importDefault(3867)().to(importDefault(3867)(timestamp));
+  return require("../../../_runtime/03867_t.js")().to(require("../../../_runtime/03867_t.js")(timestamp));
 };
 export const getSpoilerFlagsForAttachment = function getSpoilerFlagsForAttachment(filename) {
   if (obj.isImageFile(filename.filename)) {
     let num = constants5.IS_SPOILER;
   } else {
     num = 0;
-    const tmpResult = require(4472) /* urlMatchesFileExtension */;
+    const tmpResult = require("../messages/MediaFormatTesters.tsx") /* urlMatchesFileExtension */;
   }
   return num;
 };
@@ -69,8 +69,8 @@ export const mapCtaToNativeData = function mapCtaToNativeData(arg0, learn_more_l
   if (constants2.LEARN_MORE_LINK === arg0) {
     let str2 = learn_more_link;
     let obj = { text: null, type: null, key: null };
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    obj[0] = intl2.string(require(1236) /* getSystemLocale */.t["8/GdRB"]);
+    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[0] = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["8/GdRB"]);
     obj[1] = tmp.LEARN_MORE_LINK;
     if (learn_more_link == null) {
       str2 = "";
@@ -80,8 +80,8 @@ export const mapCtaToNativeData = function mapCtaToNativeData(arg0, learn_more_l
   } else if (tmp.POLICY_VIOLATION_DETAIL === arg0) {
     let str = classification_id;
     obj = { text: null, type: null, key: null };
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[0] = intl.string(require(1236) /* getSystemLocale */.t.QsqdXC);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[0] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.QsqdXC);
     obj[1] = tmp.POLICY_VIOLATION_DETAIL;
     if (classification_id == null) {
       str = "";
@@ -91,7 +91,7 @@ export const mapCtaToNativeData = function mapCtaToNativeData(arg0, learn_more_l
   }
 };
 export const isFlaggedContentEmpty = function isFlaggedContentEmpty(first) {
-  let tmp = first.type !== require(7729) /* ContentIdType */.ContentIdType.MESSAGE;
+  let tmp = first.type !== require("SafetyHubModels.tsx") /* ContentIdType */.ContentIdType.MESSAGE;
   if (!tmp) {
     let tmp2 = "" === first.content;
     if (tmp2) {
@@ -103,14 +103,14 @@ export const isFlaggedContentEmpty = function isFlaggedContentEmpty(first) {
 };
 export const getAppealSignalDisplayText = function getAppealSignalDisplayText(signal) {
   const obj = {};
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[constants.DIDNT_VIOLATE_POLICY] = intl.string(require(1236) /* getSystemLocale */.t.mZffAi);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[constants.TOO_STRICT_UNFAIR] = intl2.string(require(1236) /* getSystemLocale */.t.wgZVAn);
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj[constants.DONT_AGREE_PENALTY] = intl3.string(require(1236) /* getSystemLocale */.t.eu8G4k);
-  const intl4 = require(1236) /* getSystemLocale */.intl;
-  obj[constants.SOMETHING_ELSE] = intl4.string(require(1236) /* getSystemLocale */.t.XU3s6r);
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[constants.DIDNT_VIOLATE_POLICY] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.mZffAi);
+  const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[constants.TOO_STRICT_UNFAIR] = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.wgZVAn);
+  const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[constants.DONT_AGREE_PENALTY] = intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.eu8G4k);
+  const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[constants.SOMETHING_ELSE] = intl4.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.XU3s6r);
   return obj[signal];
 };
 export const capitalizeText = function capitalizeText(description) {
@@ -135,11 +135,11 @@ export const isGuildClassification = function isGuildClassification(stateFromSto
 };
 export const getRequestReviewErrorFromCode = function getRequestReviewErrorFromCode(code) {
   if (code === constants4.DSA_APPEAL_REQUEST_DEFLECTION) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    let stringResult = intl2.string(require(1236) /* getSystemLocale */.t["0qyXXH"]);
+    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    let stringResult = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["0qyXXH"]);
   } else {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    stringResult = intl.string(require(1236) /* getSystemLocale */.t.aPmsx3);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    stringResult = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.aPmsx3);
   }
   return stringResult;
 };
@@ -159,7 +159,7 @@ export const getClassificationExpiration = function getClassificationExpiration(
 };
 export const useIsSuspendedUser = function useIsSuspendedUser() {
   const items = [fetchFingerprint];
-  return null != require(589) /* initialize */.useStateFromStores(items, () => suspendedUserToken.getSuspendedUserToken());
+  return null != require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => suspendedUserToken.getSuspendedUserToken());
 };
 export const isCurrentUserSuspended = function isCurrentUserSuspended() {
   return null != suspendedUserToken.getSuspendedUserToken();

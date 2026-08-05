@@ -54,13 +54,13 @@ export default function BountiesModalEndCard(visible) {
     obj1[0] = ["rgba(0, 0, 0, 0.60)", "rgba(0, 0, 0, 1)"];
     obj1[1] = [0, 0.841];
     obj1[2] = tmp.backdropGradient;
-    items1[1] = callback(importDefault(4706), obj1);
+    items1[1] = callback(require("../../../../../_runtime/04706_LinearGradient.js"), obj1);
     const obj2 = { bounty: null, sourceQuestContent: null };
     obj2[0] = bounty;
     obj2[1] = sourceQuestContent;
-    items1[2] = callback(importDefault(14190), obj2);
+    items1[2] = callback(require("BountiesEndCardPressableCta.tsx"), obj2);
     obj[2] = items1;
-    visible = callback2(importDefault(4146).View, obj);
+    visible = callback2(require("../../../reanimated/ReanimatedRexport.tsx").View, obj);
   }
   return visible;
 };

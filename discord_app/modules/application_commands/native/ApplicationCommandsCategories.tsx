@@ -59,7 +59,7 @@ let closure_13 = importAllResult.memo((section) => {
     obj = { style: null, source: null };
     obj[0] = tmp.categoryImage;
     obj[1] = memo;
-    tmp6 = callback(importDefault(5236), obj);
+    tmp6 = callback(require("../../../components_native/common/FastImage.tsx"), obj);
   }
   obj = {
     onPress() {

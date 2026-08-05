@@ -148,7 +148,7 @@ function isActive() {
   return items.length > 0;
 }
 function scheduleHeartbeatTracking() {
-  let obj = importDefault(1208);
+  let obj = require("../../utils/SentryUtils.native.tsx");
   obj = { message: `Heartbeat Track State Parameters Changed. Foregrounded ${isForegrounded}, Connection State: ${closure_21}` };
   obj.addBreadcrumb(obj);
   const items = [];
@@ -170,7 +170,7 @@ function scheduleHeartbeatTracking() {
       obj = { message: null };
       const _HermesInternal = HermesInternal;
       obj[0] = "Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: " + num / 1000 + " seconds. Scheduling Heartbeat";
-      importDefault(1208).addBreadcrumb(obj);
+      require("../../utils/SentryUtils.native.tsx").addBreadcrumb(obj);
       const obj1 = { type: "timeout", id: null };
       const _setTimeout = setTimeout;
       obj1[1] = setTimeout(() => {
@@ -183,7 +183,7 @@ function scheduleHeartbeatTracking() {
         };
       }, num);
       _null = obj1;
-      const tmpResult = importDefault(1208);
+      const tmpResult = require("../../utils/SentryUtils.native.tsx");
     }
   } else if (null == _null) {
     // // eliminated: always false
@@ -224,7 +224,7 @@ function validateClientSession(version) {
   let tmp = null;
   if (null != version) {
     let tmp4 = version;
-    if (version.version !== require(6840) /* result */.CLIENT_SESSION_STORAGE_VERSION) {
+    if (version.version !== require("SessionUtils.tsx") /* result */.CLIENT_SESSION_STORAGE_VERSION) {
       const _HermesInternal = HermesInternal;
       tmp3.warn("Throwing away client session with invalid version: " + version.version + ", expected " + tmp2(6840).CLIENT_SESSION_STORAGE_VERSION);
       tmp4 = null;
@@ -322,7 +322,7 @@ function _forceDispatchSessionIdUpdate() {
 function handleAuthenticationChange() {
   const token = importDefaultResult.getToken();
   if (token !== token) {
-    const Storage = require(595) /* Storage */.Storage;
+    const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     Storage.remove(LAST_CLIENT_HEARTBEAT_SESSION);
     let closure_20 = { state: "loaded", session: null };
     if (null == _null) {
@@ -356,7 +356,7 @@ function handleWindowFocus(focused) {
   }
 }
 function handleLocationChange() {
-  const isActiveUserRouteResult = require(6834) /* isActiveUserRoute */.isActiveUserRoute();
+  const isActiveUserRouteResult = require("SessionRouteUtils.native.tsx") /* isActiveUserRoute */.isActiveUserRoute();
   if (isActiveUserRoute !== isActiveUserRouteResult) {
     isActiveUserRoute = isActiveUserRouteResult;
     scheduleHeartbeatTracking();
@@ -370,9 +370,9 @@ function handleAppStateUpdate(state) {
 }
 function handleFluxInitialized() {
   const state = importDefaultResult1.getState();
-  let closure_22 = require(6833) /* isForegrounded */.isForegrounded();
-  const obj = require(6833) /* isForegrounded */;
-  let closure_23 = require(6834) /* isActiveUserRoute */.isActiveUserRoute();
+  let closure_22 = require("SessionForegroundUtils.native.tsx") /* isForegrounded */.isForegrounded();
+  const obj = require("SessionForegroundUtils.native.tsx") /* isForegrounded */;
+  let closure_23 = require("SessionRouteUtils.native.tsx") /* isActiveUserRoute */.isActiveUserRoute();
   handleAuthenticationChange();
 }
 function getSession() {
@@ -543,18 +543,18 @@ const tmp3 = new require("checkIdleAFK")("SessionHeartbeatScheduler");
 let result = require("fetchFingerprint").fileFinishedImporting("modules/analytics_sessions/SessionHeartbeatScheduler.tsx");
 
 export const initSessionHeartbeatScheduler = function initSessionHeartbeatScheduler() {
-  let obj = importDefault(1208);
+  let obj = require("../../utils/SentryUtils.native.tsx");
   obj.addBreadcrumb({ message: "Initializing SessionHeartbeatScheduler" });
   importDefaultResult1.addChangeListener(handleRTCStateChange);
   importDefaultResult.addChangeListener(handleAuthenticationChange);
-  const subscription = importDefault(709).subscribe("WINDOW_FOCUS", handleWindowFocus);
-  let obj2 = importDefault(709);
+  const subscription = require("../../Dispatcher.tsx").subscribe("WINDOW_FOCUS", handleWindowFocus);
+  let obj2 = require("../../Dispatcher.tsx");
   const tmp = importDefault;
-  const subscription1 = importDefault(709).subscribe("APP_STATE_UPDATE", handleAppStateUpdate);
-  const obj3 = importDefault(709);
-  const subscription2 = importDefault(709).subscribe("CONNECTION_OPEN", forceDispatchSessionIdUpdate);
-  const obj4 = importDefault(709);
-  let result = require(6834) /* isActiveUserRoute */.subscribeToLocationChanges(handleLocationChange);
+  const subscription1 = require("../../Dispatcher.tsx").subscribe("APP_STATE_UPDATE", handleAppStateUpdate);
+  const obj3 = require("../../Dispatcher.tsx");
+  const subscription2 = require("../../Dispatcher.tsx").subscribe("CONNECTION_OPEN", forceDispatchSessionIdUpdate);
+  const obj4 = require("../../Dispatcher.tsx");
+  let result = require("SessionRouteUtils.native.tsx") /* isActiveUserRoute */.subscribeToLocationChanges(handleLocationChange);
   scheduleHeartbeatTracking();
   if (null == obj) {
     obj = { id: null, type: "interval" };
@@ -580,7 +580,7 @@ export const initSessionHeartbeatScheduler = function initSessionHeartbeatSchedu
 export { getSession };
 export const getActiveSessionUnsafe = function getActiveSessionUnsafe() {
   if ("uninitialized" === closure_20.state) {
-    const Storage = require(595) /* Storage */.Storage;
+    const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     const value = Storage.get(LAST_CLIENT_HEARTBEAT_SESSION);
     let tmp7 = null;
     if (null != value) {
@@ -602,7 +602,7 @@ export const getActiveSessionUnsafe = function getActiveSessionUnsafe() {
     if (!obj.isSessionExpired(session)) {
       tmp12 = session;
     }
-    obj = require(6840) /* result */;
+    obj = require("SessionUtils.tsx") /* result */;
   }
   return tmp12;
 };

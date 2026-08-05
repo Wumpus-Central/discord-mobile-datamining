@@ -89,7 +89,7 @@ export const classifyFileName = function classifyFileName(str) {
   if (str == null) {
     str = "";
   }
-  const found = importDefault(12).find(items, (reType) => {
+  const found = require("../../_runtime/00012_apply.js").find(items, (reType) => {
     if (null != reType.reType) {
       if (null != type) {
         reType = reType.reType;
@@ -113,7 +113,7 @@ export const classifyFileName = function classifyFileName(str) {
   return str2;
 };
 export const sizeString = function sizeString(createGuildRecordFromRust) {
-  return importDefault(4823).filesize(createGuildRecordFromRust);
+  return require("../../_runtime/04823_noConflict.js").filesize(createGuildRecordFromRust);
 };
 export const maxFileSize = function maxFileSize(guildId) {
   const currentUser = authStore.getCurrentUser();

@@ -917,12 +917,12 @@ prototype2["rebootWebworker"] = function rebootWebworker() {
     _worker.terminate();
     self._worker = null;
   }
-  self._worker = require(7235) /* UserSearchWorkerManager */;
+  self._worker = require("native/UserSearch.worker.tsx") /* UserSearchWorkerManager */;
 };
 prototype2["updateUsers"] = function updateUsers(arr) {
   const _worker = this._worker;
   if (null != _worker) {
-    const found = arr.filter(require(1351) /* isDiscordFrontendDevelopment */.isNotNullish);
+    const found = arr.filter(require("../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
     for (const item10007 of found) {
       let tmp2 = item10007;
       let id;
@@ -932,7 +932,7 @@ prototype2["updateUsers"] = function updateUsers(arr) {
       if (null == id) {
         let tmp20 = importDefault;
         let tmp21 = dependencyMap;
-        let obj3 = importDefault(1208);
+        let obj3 = require("../../utils/SentryUtils.native.tsx");
         let obj = { action: null, userFields: null };
         obj[0] = arg1;
         obj = { userIsNull: null, idIsNull: true, usernameIsNull: null, isBot: null, isFriend: null, isProvisional: null, globalNameIsNull: null, usersArrayLength: null };

@@ -14,7 +14,7 @@ function flattenComponent(map, accessory) {
   const _require = map;
   const result = map.set(accessory.id, accessory);
   const type = accessory.type;
-  if (_require(1906).ComponentType.ACTION_ROW === type) {
+  if (_require("../../flow/Server.tsx").ComponentType.ACTION_ROW === type) {
     const components = accessory.components;
     const item = components.forEach((id) => {
       const result = obj.set(id.id, id);
@@ -21008,7 +21008,7 @@ function flattenComponent(map, accessory) {
 function findChildComponent(type, componentId) {
   const _require = componentId;
   type = type.type;
-  if (_require(1906).ComponentType.ACTION_ROW === type) {
+  if (_require("../../flow/Server.tsx").ComponentType.ACTION_ROW === type) {
     const components = type.components;
     let found = components.find((id) => id.id === closure_0);
     if (found == null) {
@@ -21037,7 +21037,7 @@ function findChildComponent(type, componentId) {
 }
 function getComponentChildren(type) {
   type = type.type;
-  if (require(1906) /* PermissionOverwriteType */.ComponentType.ACTION_ROW === type) {
+  if (require("../../flow/Server.tsx") /* PermissionOverwriteType */.ComponentType.ACTION_ROW === type) {
     return type.components;
   } else if (tmp(1906).ComponentType.SECTION === type) {
     const items = [];
@@ -21105,7 +21105,7 @@ function transformComponent(accessory, items) {
   const type = accessory.type;
   let tmp = _require;
   let flag = true;
-  if (_require(1906).ComponentType.ACTION_ROW !== type) {
+  if (_require("../../flow/Server.tsx").ComponentType.ACTION_ROW !== type) {
     flag = true;
     if (tmp(1906).ComponentType.BUTTON !== type) {
       flag = true;
@@ -21211,8 +21211,8 @@ function transformComponent(accessory, items) {
             animated = false;
           }
           obj1[1] = animated;
-          emojiURL = importDefault(1416).getEmojiURL(obj1);
-          const obj47 = importDefault(1416);
+          emojiURL = require("../../utils/AvatarUtils.tsx").getEmojiURL(obj1);
+          const obj47 = require("../../utils/AvatarUtils.tsx");
         }
         obj[3] = emojiURL;
         tmp45 = obj;
@@ -21492,7 +21492,7 @@ function transformComponent(accessory, items) {
         obj20[7] = tmp12;
         let tmp13;
         if (null != checkpoint_data.top_emoji) {
-          obj7 = importDefault(11);
+          obj7 = require("../../utils/SnowflakeUtils.tsx");
           let emoji_id;
           if (obj7.isProbablyAValidSnowflake(checkpoint_data.top_emoji.emoji_id)) {
             emoji_id = checkpoint_data.top_emoji.emoji_id;
@@ -21570,7 +21570,7 @@ export const getLayoutComponentErrorText = function getLayoutComponentErrorText(
   }
   let fitPBS = dependencyMap;
   let componentId = null;
-  if (interactionType === require(1906) /* PermissionOverwriteType */.InteractionTypes.MESSAGE_COMPONENT) {
+  if (interactionType === require("../../flow/Server.tsx") /* PermissionOverwriteType */.InteractionTypes.MESSAGE_COMPONENT) {
     let state;
     if (interaction != null) {
       state = interaction.state;
@@ -21619,8 +21619,8 @@ export const getLayoutComponentErrorText = function getLayoutComponentErrorText(
 export const getSelectPlaceholder = function getSelectPlaceholder(placeholder) {
   placeholder = placeholder.placeholder;
   if (placeholder == null) {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    placeholder = intl.string(require(1236) /* getSystemLocale */.t.Otr6W2);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    placeholder = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Otr6W2);
   }
   return placeholder;
 };
@@ -21654,7 +21654,7 @@ export const getFirstInteractionComponentMedia = function getFirstInteractionCom
     let tmp3 = nextResult;
     let tmp4 = require;
     let tmp5 = dependencyMap;
-    if (nextResult.type === require(1906) /* PermissionOverwriteType */.ComponentType.MEDIA_GALLERY) {
+    if (nextResult.type === require("../../flow/Server.tsx") /* PermissionOverwriteType */.ComponentType.MEDIA_GALLERY) {
       let tmp12 = nextResult;
       let first = tmp3.items[0];
       let tmp14 = first;
@@ -21754,8 +21754,8 @@ export const makeComponentUploadId = function makeComponentUploadId(closure_2) {
     randomUUIDResult = randomUUID();
   }
   if (randomUUIDResult == null) {
-    randomUUIDResult = require(514) /* v1 */.v4();
-    const obj2 = require(514) /* v1 */;
+    randomUUIDResult = require("../../../_runtime/00514_v1.js") /* v1 */.v4();
+    const obj2 = require("../../../_runtime/00514_v1.js") /* v1 */;
   }
   obj[2] = randomUUIDResult;
   return JSON.stringify(obj);
@@ -21786,50 +21786,50 @@ export const deserializeComponentUploadId = function deserializeComponentUploadI
 export const getFileUploadComponentSubtitle = function getFileUploadComponentSubtitle(minValues, maxValues, types, formatSizeResult) {
   if (null != types) {
     if (minValues <= 1) {
-      const intl4 = require(1236) /* getSystemLocale */.intl;
+      const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
       let obj = { maxValues: null, types: null, maxSize: null };
       obj[0] = maxValues;
       obj[1] = types;
       obj[2] = formatSizeResult;
-      intl4.format(require(1236) /* getSystemLocale */.t.QLrHJG, obj);
+      intl4.format(require("../../intl/index.native.tsx") /* getSystemLocale */.t.QLrHJG, obj);
     }
     if (minValues === maxValues) {
-      const intl6 = require(1236) /* getSystemLocale */.intl;
+      const intl6 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
       obj = { minValues: null, types: null, maxSize: null };
       obj[0] = minValues;
       obj[1] = types;
       obj[2] = formatSizeResult;
-      let formatResult1 = intl6.format(require(1236) /* getSystemLocale */.t.Xp4xMV, obj);
+      let formatResult1 = intl6.format(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Xp4xMV, obj);
     } else {
-      const intl5 = require(1236) /* getSystemLocale */.intl;
+      const intl5 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
       const obj1 = { minValues: null, maxValues: null, types: null, maxSize: null };
       obj1[0] = minValues;
       obj1[1] = maxValues;
       obj1[2] = types;
       obj1[3] = formatSizeResult;
-      formatResult1 = intl5.format(require(1236) /* getSystemLocale */.t["05AyNA"], obj1);
+      formatResult1 = intl5.format(require("../../intl/index.native.tsx") /* getSystemLocale */.t["05AyNA"], obj1);
     }
   } else if (minValues > 1) {
     if (minValues === maxValues) {
-      const intl3 = require(1236) /* getSystemLocale */.intl;
+      const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
       const obj2 = { minValues: null, maxSize: null };
       obj2[0] = minValues;
       obj2[1] = formatSizeResult;
-      let formatResult2 = intl3.format(require(1236) /* getSystemLocale */.t.SAr31z, obj2);
+      let formatResult2 = intl3.format(require("../../intl/index.native.tsx") /* getSystemLocale */.t.SAr31z, obj2);
     } else {
-      const intl2 = require(1236) /* getSystemLocale */.intl;
+      const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
       const obj3 = { minValues: null, maxValues: null, maxSize: null };
       obj3[0] = minValues;
       obj3[1] = maxValues;
       obj3[2] = formatSizeResult;
-      formatResult2 = intl2.format(require(1236) /* getSystemLocale */.t["ZG+3Ck"], obj3);
+      formatResult2 = intl2.format(require("../../intl/index.native.tsx") /* getSystemLocale */.t["ZG+3Ck"], obj3);
     }
   } else {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { maxValues: null, maxSize: null };
     obj[0] = maxValues;
     obj[1] = formatSizeResult;
-    return intl.format(require(1236) /* getSystemLocale */.t.tyxwW1, obj);
+    return intl.format(require("../../intl/index.native.tsx") /* getSystemLocale */.t.tyxwW1, obj);
   }
 };
 export const transformComponents = function transformComponents(arr) {

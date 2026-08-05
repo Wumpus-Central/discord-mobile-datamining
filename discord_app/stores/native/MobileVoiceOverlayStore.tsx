@@ -19,10 +19,10 @@ prototype["initialize"] = function initialize(enabled) {
   }
 };
 prototype["getEnabled"] = function getEnabled() {
-  let isAndroidResult = require(500) /* set */.isAndroid();
+  let isAndroidResult = require("../../utils/PlatformUtils.tsx") /* set */.isAndroid();
   if (isAndroidResult) {
-    isAndroidResult = !require(1577) /* isMetaQuest */.isMetaQuest();
-    const tmpResult = require(1577) /* isMetaQuest */;
+    isAndroidResult = !require("../../modules/device/MetaQuestUtils.android.tsx") /* isMetaQuest */.isMetaQuest();
+    const tmpResult = require("../../modules/device/MetaQuestUtils.android.tsx") /* isMetaQuest */;
   }
   if (isAndroidResult) {
     isAndroidResult = c4;
@@ -33,7 +33,7 @@ MobileVoiceOverlayStore.displayName = "MobileVoiceOverlayStore";
 MobileVoiceOverlayStore.persistKey = "MobileVoiceOverlayStore";
 const mobileVoiceOverlayStore = new MobileVoiceOverlayStore(require("dispatcher"), {
   MOBILE_VOICE_OVERLAY_STATE_CHANGED: function handleMobileVoiceOverlayStateChanged(enabled) {
-    let obj = importDefault(698);
+    let obj = require("../../utils/AnalyticsUtils.tsx");
     obj = { enabled: enabled.enabled };
     obj.track(AnalyticEvents.MOBILE_OVERLAY_TOGGLED, obj);
     enabled = enabled.enabled;
@@ -43,10 +43,10 @@ const result = require("set").fileFinishedImporting("stores/native/MobileVoiceOv
 
 export default mobileVoiceOverlayStore;
 export const isMobileOverlaySupported = function isMobileOverlaySupported() {
-  let isAndroidResult = require(500) /* set */.isAndroid();
+  let isAndroidResult = require("../../utils/PlatformUtils.tsx") /* set */.isAndroid();
   if (isAndroidResult) {
-    isAndroidResult = !require(1577) /* isMetaQuest */.isMetaQuest();
-    const tmpResult = require(1577) /* isMetaQuest */;
+    isAndroidResult = !require("../../modules/device/MetaQuestUtils.android.tsx") /* isMetaQuest */.isMetaQuest();
+    const tmpResult = require("../../modules/device/MetaQuestUtils.android.tsx") /* isMetaQuest */;
   }
   return isAndroidResult;
 };

@@ -5,7 +5,7 @@ const result = require("enforcing").fileFinishedImporting("modules/app_database/
 
 export const getUserId = function getUserId() {
   if (obj.isAndroid()) {
-    let userId = importDefault(1925).getConstants().userId;
+    let userId = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeAppDatabaseModule.tsx").getConstants().userId;
     let tmp6 = null;
     if (null != userId) {
       tmp6 = userId;
@@ -18,12 +18,12 @@ export const getUserId = function getUserId() {
     }
     return userId;
   }
-  obj = require(500) /* set */;
+  obj = require("../../../utils/PlatformUtils.tsx") /* set */;
 };
 export const setUserId = function setUserId(id) {
   if (obj.isAndroid()) {
-    importDefault(1925).setUserId(id);
-    const obj2 = importDefault(1925);
+    require("../../../../discord_common/js/packages/rtn-codegen/js/NativeAppDatabaseModule.tsx").setUserId(id);
+    const obj2 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeAppDatabaseModule.tsx");
   } else {
     const DCDAppDatabase = NativeModules.DCDAppDatabase;
     DCDAppDatabase.setUserId(id);

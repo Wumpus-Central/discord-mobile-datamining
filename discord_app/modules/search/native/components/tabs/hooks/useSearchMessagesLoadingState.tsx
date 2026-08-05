@@ -14,10 +14,10 @@ export const useSearchMessagesLoadingState = function useSearchMessagesLoadingSt
   ({ searchContext: require, tab: dependencyMap } = arg0);
   let handleReaction;
   ({ placeholderHeight, numColumns } = arg0);
-  handleReaction = require(15603) /* useFullscreenPlaceholderCount */.useFullscreenPlaceholderCount({ placeholderHeight, numColumns });
-  let obj = require(15603) /* useFullscreenPlaceholderCount */;
+  handleReaction = require("../../../hooks/usePlaceholderStyles.tsx") /* useFullscreenPlaceholderCount */.useFullscreenPlaceholderCount({ placeholderHeight, numColumns });
+  let obj = require("../../../hooks/usePlaceholderStyles.tsx") /* useFullscreenPlaceholderCount */;
   const items = [prototype, handleReaction];
-  return require(589) /* initialize */.useStateFromStoresObject(items, () => {
+  return require("../../../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStoresObject(items, () => {
     let obj = outer1_0(outer1_1[5]);
     const searchTabFetchId = obj.getSearchTabFetchId(closure_0, closure_1, outer1_3.getSearchResultsQuery(closure_0));
     const isInitialFetchComplete = store.getIsInitialFetchComplete(searchTabFetchId);

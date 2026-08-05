@@ -28,8 +28,8 @@ function handleLoadThreadsSuccess(arg0) {
 function storeFirstMessage(channel_id, nextResult) {
   let messageRecord = null;
   if (null != nextResult) {
-    messageRecord = require(4504) /* createMinimalMessageRecord */.createMessageRecord(nextResult);
-    const obj = require(4504) /* createMinimalMessageRecord */;
+    messageRecord = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */.createMessageRecord(nextResult);
+    const obj = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */;
   }
   closure_5[channel_id] = { loaded: true, firstMessage: messageRecord };
 }
@@ -94,14 +94,14 @@ const forumPostMessagesStore = new ForumPostMessagesStore(require("dispatcher"),
     isPushNotification = isPushNotification.isPushNotification;
     let tmp = !isPushNotification;
     if (!isPushNotification) {
-      let obj = importDefault(11);
+      let obj = require("../../utils/SnowflakeUtils.tsx");
       const tmp4 = isPushNotification.message.id === obj.castChannelIdAsMessageId(isPushNotification.message.channel_id);
       if (tmp4) {
         const message = isPushNotification.message;
         let messageRecord = null;
         if (null != message) {
-          messageRecord = require(4504) /* createMinimalMessageRecord */.createMessageRecord(message);
-          const obj2 = require(4504) /* createMinimalMessageRecord */;
+          messageRecord = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */.createMessageRecord(message);
+          const obj2 = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */;
         }
         obj = { loaded: true, firstMessage: null };
         obj[1] = messageRecord;
@@ -115,18 +115,18 @@ const forumPostMessagesStore = new ForumPostMessagesStore(require("dispatcher"),
     if (message.message.id !== message.message.channel_id) {
       return false;
     } else {
-      const obj4 = importDefault(11);
+      const obj4 = require("../../utils/SnowflakeUtils.tsx");
       const tmp12 = dependencyMap[obj4.castMessageIdAsChannelId(obj4, message.message.id)];
       let tmp8 = null != tmp12;
       if (tmp8) {
         if (null != tmp12.firstMessage) {
           const obj = {};
-          const result = importDefault(11).castMessageIdAsChannelId(message.message.id);
+          const result = require("../../utils/SnowflakeUtils.tsx").castMessageIdAsChannelId(message.message.id);
           const merged = Object.assign(tmp12);
-          const tmp10Result = importDefault(11);
-          obj.firstMessage = require(4504) /* createMinimalMessageRecord */.updateMessageRecord(tmp12.firstMessage, message.message);
+          const tmp10Result = require("../../utils/SnowflakeUtils.tsx");
+          obj.firstMessage = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */.updateMessageRecord(tmp12.firstMessage, message.message);
           dependencyMap[result] = obj;
-          const obj3 = require(4504) /* createMinimalMessageRecord */;
+          const obj3 = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */;
         }
         tmp8 = tmp;
       }
@@ -139,7 +139,7 @@ const forumPostMessagesStore = new ForumPostMessagesStore(require("dispatcher"),
     } else {
       closure_5[id.channelId] = { loaded: true, firstMessage: null };
     }
-    obj = importDefault(11);
+    obj = require("../../utils/SnowflakeUtils.tsx");
   },
   THREAD_CREATE: function handleThreadCreate(channel) {
     let tmp = null == dependencyMap[channel.channel.id];
@@ -224,7 +224,7 @@ const forumPostMessagesStore = new ForumPostMessagesStore(require("dispatcher"),
       if (null != first_message) {
         let tmp = require;
         let tmp2 = dependencyMap;
-        let obj = require(4504) /* createMinimalMessageRecord */;
+        let obj = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */;
         messageRecord = obj.createMessageRecord(first_message);
       }
       let tmp4 = closure_5;
@@ -242,14 +242,14 @@ const forumPostMessagesStore = new ForumPostMessagesStore(require("dispatcher"),
     ({ channelId, messages } = arg0);
     let tmp2 = null != tmp;
     if (tmp2) {
-      let obj = importDefault(11);
+      let obj = require("../../utils/SnowflakeUtils.tsx");
       tmp2 = tmp.id === obj.castChannelIdAsMessageId(channelId);
     }
     if (tmp2) {
       obj = { loaded: true, firstMessage: null };
-      obj[1] = require(4504) /* createMinimalMessageRecord */.createMessageRecord(tmp);
+      obj[1] = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */.createMessageRecord(tmp);
       closure_5[channelId] = obj;
-      const obj3 = require(4504) /* createMinimalMessageRecord */;
+      const obj3 = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */;
     }
   }
 });

@@ -493,16 +493,16 @@ export const addDirectoryGuildEntry = function addDirectoryGuildEntry(c0, id, c3
   return applyArgumentsResult;
 };
 export const removeDirectoryGuildEntry = function removeDirectoryGuildEntry(channelId, guildId) {
-  let obj = importDefault(5094);
+  let obj = require("../../utils/TrackedHTTPUtils.tsx");
   obj = { url: Endpoints.DIRECTORY_CHANNEL_ENTRY(channelId, guildId), trackedActionData: null, rejectWithError: true };
   obj = { event: callback(503).NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE, properties: obj1 };
   obj[1] = obj;
   obj.delete(obj);
-  importDefault(709).dispatch({ type: "GUILD_DIRECTORY_ENTRY_DELETE", channelId, guildId });
+  require("../../Dispatcher.tsx").dispatch({ type: "GUILD_DIRECTORY_ENTRY_DELETE", channelId, guildId });
 };
 export const searchDirectoryEntries = importDefaultResult3Result;
 export const clearDirectorySearch = function clearDirectorySearch(id) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "GUILD_DIRECTORY_SEARCH_CLEAR", channelId: id };
   obj.dispatch(obj);
 };
@@ -517,7 +517,7 @@ export const updateDirectoryEntry = function updateDirectoryEntry(channelId, gui
   return applyArgumentsResult;
 };
 export const selectDirectoryCategory = function selectDirectoryCategory(id, value) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "GUILD_DIRECTORY_CATEGORY_SELECT", channelId: id, categoryId: value };
   obj.dispatch(obj);
 };

@@ -14,7 +14,7 @@ let result = require("reinjectEphemerals").fileFinishedImporting("modules/premiu
 export const fetchAndReconcileGiftIntentDismissals = function fetchAndReconcileGiftIntentDismissals(serverDismissalTimestampMs) {
   const _require = serverDismissalTimestampMs;
   const id2 = id.getId();
-  const HTTP = _require(530).HTTP;
+  const HTTP = _require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
   const value = HTTP.get({ url: constants2.GIFT_INTENT_DISMISSALS, oldFormErrors: true, rejectWithError: true });
   return value.then((body) => {
     if (outer1_4.getId() === callback) {
@@ -38,17 +38,17 @@ export const fetchAndReconcileGiftIntentDismissals = function fetchAndReconcileG
   });
 };
 export const logFriendsListGiftIntentsShown = function logFriendsListGiftIntentsShown() {
-  importDefault(709).dispatch({ type: "FRIENDS_LIST_GIFT_INTENTS_SHOWN" });
+  require("../../../Dispatcher.tsx").dispatch({ type: "FRIENDS_LIST_GIFT_INTENTS_SHOWN" });
 };
 export const logMessageGiftIntentShown = function logMessageGiftIntentShown(recipientUserId) {
   let FRIEND_ANNIVERSARY = arg1;
   if (arg1 === undefined) {
     FRIEND_ANNIVERSARY = GiftIntentType.FRIEND_ANNIVERSARY;
   }
-  let obj = importDefault(709);
+  let obj = require("../../../Dispatcher.tsx");
   obj = { type: "MESSAGE_GIFT_INTENT_SHOWN", recipientUserId };
   obj.dispatch(obj);
-  let obj2 = importDefault(698);
+  let obj2 = require("../../../utils/AnalyticsUtils.tsx");
   obj = { gift_intent_type: FRIEND_ANNIVERSARY, dismiss_type: "shown", affinity: null };
   const userAffinity = authStore.getUserAffinity(recipientUserId);
   let dmProbability;
@@ -57,12 +57,12 @@ export const logMessageGiftIntentShown = function logMessageGiftIntentShown(reci
   }
   obj[2] = dmProbability;
   obj2.track(constants.GIFT_INTENT_DISMISSED, obj);
-  let result = require(7247) /* apexExperiment */.isFriendshipAnniversaryBackendPersistenceEnabled("dismissGiftIntent");
+  let result = require("../experiments/FriendshipAnniversaryBackendPersistenceExperiment.tsx") /* apexExperiment */.isFriendshipAnniversaryBackendPersistenceEnabled("dismissGiftIntent");
   if (result) {
     result = FRIEND_ANNIVERSARY !== GiftIntentType.UNSPECIFIED;
   }
   if (result) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     const obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
     obj1[0] = constants2.GIFT_INTENTS_DISMISS;
     obj2 = { intent_type: null, target_id: null };
@@ -93,8 +93,8 @@ export const logGiftIntentMessageDismissed = function logGiftIntentMessageDismis
       dmProbability = userAffinity.dmProbability;
     }
     obj[2] = dmProbability;
-    importDefault(698).track(constants.GIFT_INTENT_DISMISSED, obj);
-    obj = require(7247) /* apexExperiment */;
+    require("../../../utils/AnalyticsUtils.tsx").track(constants.GIFT_INTENT_DISMISSED, obj);
+    obj = require("../experiments/FriendshipAnniversaryBackendPersistenceExperiment.tsx") /* apexExperiment */;
     let result = obj.isFriendshipAnniversaryBackendPersistenceEnabled("dismissGiftIntent");
     if (result) {
       result = giftIntentType !== GiftIntentType.UNSPECIFIED;
@@ -112,7 +112,7 @@ export const logGiftIntentMessageDismissed = function logGiftIntentMessageDismis
       });
       const postResult = HTTP.post(obj);
     }
-    const obj4 = importDefault(698);
+    const obj4 = require("../../../utils/AnalyticsUtils.tsx");
     tmp5 = require;
   }
 };
@@ -121,10 +121,10 @@ export const logGiftIntentFlowPurchasedGift = function logGiftIntentFlowPurchase
   if (arg1 === undefined) {
     FRIEND_ANNIVERSARY = GiftIntentType.FRIEND_ANNIVERSARY;
   }
-  let obj = importDefault(709);
+  let obj = require("../../../Dispatcher.tsx");
   obj = { type: "GIFT_INTENT_FLOW_PURCHASED_GIFT", recipientUserId };
   obj.dispatch(obj);
-  let obj2 = importDefault(698);
+  let obj2 = require("../../../utils/AnalyticsUtils.tsx");
   obj = { gift_intent_type: FRIEND_ANNIVERSARY, dismiss_type: "gift_sent", affinity: null };
   const userAffinity = authStore.getUserAffinity(recipientUserId);
   let dmProbability;
@@ -133,12 +133,12 @@ export const logGiftIntentFlowPurchasedGift = function logGiftIntentFlowPurchase
   }
   obj[2] = dmProbability;
   obj2.track(constants.GIFT_INTENT_DISMISSED, obj);
-  let result = require(7247) /* apexExperiment */.isFriendshipAnniversaryBackendPersistenceEnabled("dismissGiftIntent");
+  let result = require("../experiments/FriendshipAnniversaryBackendPersistenceExperiment.tsx") /* apexExperiment */.isFriendshipAnniversaryBackendPersistenceEnabled("dismissGiftIntent");
   if (result) {
     result = FRIEND_ANNIVERSARY !== GiftIntentType.UNSPECIFIED;
   }
   if (result) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     const obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
     obj1[0] = constants2.GIFT_INTENTS_DISMISS;
     obj2 = { intent_type: null, target_id: null };

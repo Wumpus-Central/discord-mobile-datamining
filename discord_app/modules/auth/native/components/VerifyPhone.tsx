@@ -41,7 +41,7 @@ export default function VerifyPhone(phone) {
   let tmp2 = callback(React.useState(null), 2);
   [tmp5, c6] = callback(React.useState(false), 2);
   callback2 = React.useRef(false);
-  context = React.useContext(_require(14975).TrackRegistrationContext);
+  context = React.useContext(_require("Auth.tsx").TrackRegistrationContext);
   const tmp4 = callback(React.useState(false), 2);
   onPhoneTokenReceived(14993)(callback2(sourceState));
   const items = [context];
@@ -211,7 +211,7 @@ export default function VerifyPhone(phone) {
   }, items3);
   let obj = { title, description, error: tmp3, onCodeEntered: callback, codeType: null, footer: null, disabled: null, loading: null, disableKeyboardAvoidingView: true };
   const tmp7 = onPhoneTokenReceived(14993);
-  obj[4] = _require(8358).CodeType.NUMERIC;
+  obj[4] = _require("../../../phone/native/CodeField.tsx").CodeType.NUMERIC;
   obj[5] = memo;
   obj[6] = tmp5;
   obj[7] = tmp[0];

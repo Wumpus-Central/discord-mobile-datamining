@@ -41,7 +41,7 @@ export default function getNavigationModalPresentation() {
   obj = { presentation, orientation: null };
   let tmp4;
   if (lockOrientation) {
-    const orientationLock = require(8817) /* handleOrientationChange */.getOrientationLock();
+    const orientationLock = require("../../../device/native/DeviceOrientation.tsx") /* handleOrientationChange */.getOrientationLock();
     let str2 = "landscape";
     let str4 = "landscape";
     if ("LANDSCAPE" !== orientationLock) {
@@ -54,7 +54,7 @@ export default function getNavigationModalPresentation() {
       str4 = str2;
     }
     tmp4 = str4;
-    const obj2 = require(8817) /* handleOrientationChange */;
+    const obj2 = require("../../../device/native/DeviceOrientation.tsx") /* handleOrientationChange */;
   }
   obj[1] = tmp4;
   return obj;

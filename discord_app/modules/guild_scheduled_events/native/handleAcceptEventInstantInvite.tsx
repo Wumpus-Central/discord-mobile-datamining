@@ -22,8 +22,8 @@ export default function handleAcceptEventInstantInvite(code) {
           obj[2] = function callback() {
             const result = guildScheduledEvent(outer1_2[4]).transitionToEventDetailsFromInvite(guildScheduledEvent);
           };
-          importDefault(7679).acceptInvite(obj);
-          const obj3 = importDefault(7679);
+          require("../../../actions/InstantInviteActionCreators.tsx").acceptInvite(obj);
+          const obj3 = require("../../../actions/InstantInviteActionCreators.tsx");
         }
       }
     }

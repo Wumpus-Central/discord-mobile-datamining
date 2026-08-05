@@ -75,7 +75,7 @@ prototype["computeSeenTimeDestructive"] = function computeSeenTimeDestructive(is
     }
     continue;
   }
-  importDefault(38)(items.length < 2, "there should only be a single left over data");
+  require("../../_runtime/metro/00038__.js")(items.length < 2, "there should only be a single left over data");
   this.seenIntervals = items;
   return Math.round(num);
 };

@@ -2,11 +2,11 @@
 const result = require("getSystemLocale").fileFinishedImporting("modules/unique_usernames/UniqueUsernamesUtils.tsx");
 
 export const formatUsernameLiveCheckValidation = function formatUsernameLiveCheckValidation(arg0) {
-  const match = require(4484) /* t */.match(arg0);
-  const str = require(4484) /* t */;
+  const match = require("../../../_runtime/04484_t.js") /* t */.match(arg0);
+  const str = require("../../../_runtime/04484_t.js") /* t */;
   let obj = { error: null };
-  const P = require(4484) /* t */.P;
-  obj[0] = P.not(require(4484) /* t */.P.nullish);
+  const P = require("../../../_runtime/04484_t.js") /* t */.P;
+  obj[0] = P.not(require("../../../_runtime/04484_t.js") /* t */.P.nullish);
   const withResult = match.with({ rateLimited: true }, () => {
     const obj = { type: callback(13909).NameValidationState.RATE_LIMIT, message: null };
     const intl = callback(1236).intl;
@@ -30,7 +30,7 @@ export const formatUsernameLiveCheckValidation = function formatUsernameLiveChec
     obj[1] = intl.string(callback(1236).t.PgfBSx);
     return obj;
   });
-  obj = { error: require(4484) /* t */.P.nullish };
+  obj = { error: require("../../../_runtime/04484_t.js") /* t */.P.nullish };
   const withResult3 = match.with({ rateLimited: true }, () => {
     const obj = { type: callback(13909).NameValidationState.RATE_LIMIT, message: null };
     const intl = callback(1236).intl;

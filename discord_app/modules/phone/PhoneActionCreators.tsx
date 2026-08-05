@@ -9,15 +9,15 @@ const result = require("PHONE_VERIFICATION_MODAL_KEY").fileFinishedImporting("mo
 
 export default {
   setCountryCode(countryCode) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "PHONE_SET_COUNTRY_CODE", countryCode };
     obj.dispatch(obj);
   },
   removePhone(password, reason) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: Endpoints.PHONE, body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { password, change_phone_reason: reason };
-    obj[3] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[3] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.del(obj);
   },
   resendCode(phone) {
@@ -30,52 +30,52 @@ export default {
     if (tmp2) {
       obj["X-Fingerprint"] = fingerprint;
     }
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: Endpoints.RESEND_PHONE, headers: obj, body: obj, rejectWithError: null };
     obj = { phone };
-    obj[3] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[3] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.post(obj);
   },
   beginAddPhone(combined, outer1_2) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: Endpoints.PHONE, body: obj, rejectWithError: null };
     obj = { phone: combined, change_phone_reason: outer1_2 };
-    obj[2] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.post(obj);
   },
   addPhone(closure_0, closure_02, reason) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: Endpoints.PHONE, body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { phone_token: closure_0, password: closure_02, change_phone_reason: reason };
-    obj[3] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[3] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.post(obj);
   },
   addPhoneWithoutPassword(closure_0) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: Endpoints.PHONE_VERIFY_NO_PASSWORD, body: obj, rejectWithError: null };
     obj = { code: closure_0 };
-    obj[2] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.post(obj);
   },
   beginReverifyPhone(combined, outer1_2) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: Endpoints.PHONE_REVERIFY, body: obj, rejectWithError: null };
     obj = { phone: combined, change_phone_reason: outer1_2 };
-    obj[2] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.post(obj);
   },
   reverifyPhone(closure_0, password, USER_ACTION_REQUIRED) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: Endpoints.PHONE_REVERIFY, body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { phone_token: closure_0, password, change_phone_reason: USER_ACTION_REQUIRED };
-    obj[3] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[3] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.post(obj);
   },
   validatePhoneForSupport(token) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: Endpoints.VERIFY_PHONE_FOR_TICKET, body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { token };
-    obj[3] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[3] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.post(obj);
   },
   verifyPhone(arg0, arg1) {

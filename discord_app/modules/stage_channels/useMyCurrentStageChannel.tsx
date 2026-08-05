@@ -7,7 +7,7 @@ const result = require("initialize").fileFinishedImporting("modules/stage_channe
 
 export default function useMyCurrentStageChannel() {
   const items = [handleConnectionOpen, ensureGuildLoaded];
-  return require(589) /* initialize */.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
     voiceChannelId = voiceChannelId.getVoiceChannelId();
     if (null != voiceChannelId) {
       channel = channel.getChannel(voiceChannelId);

@@ -18,13 +18,13 @@ const require = arg1;
 function VoiceSettingsActionSheet() {
   let obj = { scrollable: true, children: null };
   obj = { children: null };
-  obj[0] = callback(importDefault(10740), {});
-  obj[1] = callback(require(5340) /* BottomSheetModal */.BottomSheetScrollView, obj);
-  return callback(require(5338) /* Background */.BottomSheet, obj);
+  obj[0] = callback(require("../../../user_settings/voice/native/UserSettingsVoice.tsx"), {});
+  obj[1] = callback(require("../../../../../_runtime/05340_BottomSheetModal.js") /* BottomSheetModal */.BottomSheetScrollView, obj);
+  return callback(require("../../../../design/components/Sheet/native/BottomSheet.native.tsx") /* Background */.BottomSheet, obj);
 }
 function JoinMutedButton(channel) {
-  const tmp = importDefault(4221)();
-  return callback(require(10763) /* ChannelCallMicButton */.ChannelCallMicButton, { channel: channel.channel, disableTint: "light" === importDefault(4221)(), isSmallSize: false });
+  const tmp = require("../../../../hooks/useTheme.tsx")();
+  return callback(require("ChannelCallMicButton.tsx") /* ChannelCallMicButton */.ChannelCallMicButton, { channel: channel.channel, disableTint: "light" === require("../../../../hooks/useTheme.tsx")(), isSmallSize: false });
 }
 function JoinVoiceButton(channel) {
   channel = channel.channel;
@@ -128,7 +128,7 @@ createCacheKey = createCacheKey.createStyles(createCacheKey);
 let result = require("set").fileFinishedImporting("modules/video_calls/native/components/ChannelCallConnectingScreen.tsx");
 
 export const showVoiceSettingsActionSheet = function showVoiceSettingsActionSheet(guildId) {
-  let obj = importDefault(4253);
+  let obj = require("../../../action_sheet/native/ActionSheetActionCreators.tsx");
   obj = { guildId };
   obj.openLazy(() => Promise.resolve(closure_16), "voice settings", obj);
 };

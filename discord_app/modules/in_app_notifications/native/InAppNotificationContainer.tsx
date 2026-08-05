@@ -36,38 +36,38 @@ function NotificationWrapper(notification) {
   if (constants.MESSAGE === type) {
     let obj = { notification: null };
     obj[0] = notification;
-    return callback(importDefault(9702), obj);
+    return callback(require("MessageNotification.tsx"), obj);
   } else if (tmp.MESSAGE_FAILED_TO_SEND === type) {
     obj = { notification: null };
     obj[0] = notification;
-    return callback(importDefault(9776), obj);
+    return callback(require("MessageFailedToSendNotification.tsx"), obj);
   } else if (tmp.FORUM_THREAD_CREATED === type) {
     const obj1 = { notification: null };
     obj1[0] = notification;
-    return callback(importDefault(9779), obj1);
+    return callback(require("ForumThreadCreatedNotification.tsx"), obj1);
   } else if (tmp.BUG_REPORTER === type) {
     const obj2 = { notification: null };
     obj2[0] = notification;
-    return callback(require(9780) /* BugReporterNotification */.BugReporterNotification, obj2);
+    return callback(require("../../bug_reporter/native/BugReporterNotification.tsx") /* BugReporterNotification */.BugReporterNotification, obj2);
   } else if (tmp.ALERT === type) {
     const obj3 = { notification: null };
     obj3[0] = notification;
-    return callback(importDefault(9812), obj3);
+    return callback(require("AlertNotification.tsx"), obj3);
   } else if (tmp.REACTION === type) {
     const obj4 = { notification: null };
     obj4[0] = notification;
-    return callback(importDefault(9813), obj4);
+    return callback(require("ReactionNotification.tsx"), obj4);
   } else if (tmp.MESSAGE_REMINDER === type) {
     const obj5 = { notification: null };
     obj5[0] = notification;
-    return callback(importDefault(10118), obj5);
+    return callback(require("ReminderNotification.tsx"), obj5);
   } else {
     if (tmp.RESTRICTED_HOURS_WARNING !== type) {
       if (tmp.RESTRICTED_SCHEDULE_UPDATED !== type) {
         if (tmp.MESSAGE_REQUEST === type) {
           obj = { notification: null };
           obj[0] = notification;
-          return callback(importDefault(10122), obj);
+          return callback(require("MessageRequestNotification.tsx"), obj);
         } else {
           return null;
         }
@@ -75,7 +75,7 @@ function NotificationWrapper(notification) {
     }
     const obj6 = { notification: null };
     obj6[0] = notification;
-    return callback(importDefault(10119), obj6);
+    return callback(require("RestrictedHoursWarningNotification.tsx"), obj6);
   }
 }
 function DetachedNotificationContent(notification) {
@@ -84,7 +84,7 @@ function DetachedNotificationContent(notification) {
   if (notification.type === constants.MESSAGE) {
     const obj = { notification: null };
     obj[0] = notification;
-    tmp = callback(require(10123) /* MessageNotificationDetachedContent */.MessageNotificationDetachedContent, obj);
+    tmp = callback(require("MessageNotificationDetachedContent.tsx") /* MessageNotificationDetachedContent */.MessageNotificationDetachedContent, obj);
   }
   return tmp;
 }

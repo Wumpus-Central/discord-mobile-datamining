@@ -10,10 +10,10 @@ export const useUserProfileGradientColors = function useUserProfileGradientColor
   const dependencyMap = secondaryColor;
   const React = fallbackBackground;
   const items = [overlay];
-  const stateFromStores = _require(589).useStateFromStores(items, () => overlay.syncProfileThemeWithUserTheme);
-  let obj = _require(589);
-  let obj2 = _require(3997);
-  const profileThemeValues = _require(5632).useProfileThemeValues(obj2.useThemeContext().theme);
+  const stateFromStores = _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => overlay.syncProfileThemeWithUserTheme);
+  let obj = _require("../../../../../discord_common/js/packages/flux/index.tsx");
+  let obj2 = _require("../../../../../discord_common/js/packages/design/native.tsx");
+  const profileThemeValues = _require("../../useProfileThemeValues.native.tsx").useProfileThemeValues(obj2.useThemeContext().theme);
   if (stateFromStores) {
     let prop;
     if (!tmp3) {

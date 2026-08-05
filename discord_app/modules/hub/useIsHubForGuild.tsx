@@ -9,7 +9,7 @@ export default function useIsHubForGuild(arg0) {
   const _require = arg0;
   const items = [createGuildRecordFromRust];
   const items1 = [arg0];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null == closure_0) {
       return false;
     } else {

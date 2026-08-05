@@ -17,10 +17,10 @@ export default function useBaseAppContainerDimensions() {
 export const getBaseAppContainerDimensions = function getBaseAppContainerDimensions() {
   let height;
   let width;
-  let obj = require(1474) /* useWindowDimensions */;
+  let obj = require("../useWindowDimensions.native.tsx") /* useWindowDimensions */;
   const windowDimensions = obj.getWindowDimensions();
   ({ width, height } = windowDimensions);
-  const rect = require(1581) /* useSafeAreaInsets */.getSafeAreaInsets();
+  const rect = require("../../safe_area/useSafeAreaInsets.native.tsx") /* useSafeAreaInsets */.getSafeAreaInsets();
   obj = { width: width - rect.left - rect.right, height };
   return obj;
 };

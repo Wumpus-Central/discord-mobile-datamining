@@ -216,11 +216,11 @@ export default function UserSettingsText() {
   return callback(setting4, obj);
 };
 export const setStickerAutocomplete = function setStickerAutocomplete(enabled) {
-  let obj = importDefault(698);
+  let obj = require("../../../../utils/AnalyticsUtils.tsx");
   obj = { enabled, location: obj };
   obj = { section: constants2.SETTINGS_TEXT_AND_IMAGES };
   obj.track(constants.STICKERS_IN_AUTOCOMPLETE_TOGGLED, obj);
-  const IncludeStickersInAutocomplete = require(3958) /* explicitContentFromProto */.IncludeStickersInAutocomplete;
+  const IncludeStickersInAutocomplete = require("../../UserSettings.tsx") /* explicitContentFromProto */.IncludeStickersInAutocomplete;
   IncludeStickersInAutocomplete.updateSetting(enabled);
 };
 export const setLowQualityImageMode = function setLowQualityImageMode(lowQualityImageMode) {
@@ -229,9 +229,9 @@ export const setLowQualityImageMode = function setLowQualityImageMode(lowQuality
   let viewImageDescriptions;
   lowQualityImageMode = lowQualityImageMode.lowQualityImageMode;
   ({ videoUploadQuality, viewImageDescriptions, dataSavingMode } = lowQualityImageMode);
-  importDefault(698).track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "low_quality_image_mode" });
-  const obj = importDefault(698);
-  const result = importDefault(8620).updatedUnsyncedSettings({ lowQualityImageMode });
+  require("../../../../utils/AnalyticsUtils.tsx").track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "low_quality_image_mode" });
+  const obj = require("../../../../utils/AnalyticsUtils.tsx");
+  const result = require("../../../../actions/UserSettingsActionCreators.tsx").updatedUnsyncedSettings({ lowQualityImageMode });
 };
 export const setDataSavingMode = function setDataSavingMode(dataSavingMode) {
   let lowQualityImageMode;
@@ -239,9 +239,9 @@ export const setDataSavingMode = function setDataSavingMode(dataSavingMode) {
   let viewImageDescriptions;
   dataSavingMode = dataSavingMode.dataSavingMode;
   ({ videoUploadQuality, viewImageDescriptions, lowQualityImageMode } = dataSavingMode);
-  importDefault(698).track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "data_saving_mode" });
-  const obj = importDefault(698);
-  const result = importDefault(8620).updatedUnsyncedSettings({ dataSavingMode });
+  require("../../../../utils/AnalyticsUtils.tsx").track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "data_saving_mode" });
+  const obj = require("../../../../utils/AnalyticsUtils.tsx");
+  const result = require("../../../../actions/UserSettingsActionCreators.tsx").updatedUnsyncedSettings({ dataSavingMode });
 };
 export const setVideoUploadQuality = function setVideoUploadQuality(videoUploadQuality) {
   let dataSavingMode;
@@ -249,9 +249,9 @@ export const setVideoUploadQuality = function setVideoUploadQuality(videoUploadQ
   let viewImageDescriptions;
   videoUploadQuality = videoUploadQuality.videoUploadQuality;
   ({ viewImageDescriptions, lowQualityImageMode, dataSavingMode } = videoUploadQuality);
-  importDefault(698).track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "video_upload_quality" });
-  const obj = importDefault(698);
-  const result = importDefault(8620).updatedUnsyncedSettings({ videoUploadQuality });
+  require("../../../../utils/AnalyticsUtils.tsx").track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "video_upload_quality" });
+  const obj = require("../../../../utils/AnalyticsUtils.tsx");
+  const result = require("../../../../actions/UserSettingsActionCreators.tsx").updatedUnsyncedSettings({ videoUploadQuality });
 };
 export const setImageDescriptions = function setImageDescriptions(viewImageDescriptions) {
   let dataSavingMode;
@@ -259,7 +259,7 @@ export const setImageDescriptions = function setImageDescriptions(viewImageDescr
   let videoUploadQuality;
   viewImageDescriptions = viewImageDescriptions.viewImageDescriptions;
   ({ videoUploadQuality, lowQualityImageMode, dataSavingMode } = viewImageDescriptions);
-  importDefault(698).track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "image_descriptions" });
-  const ViewImageDescriptions = require(3958) /* explicitContentFromProto */.ViewImageDescriptions;
+  require("../../../../utils/AnalyticsUtils.tsx").track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "image_descriptions" });
+  const ViewImageDescriptions = require("../../UserSettings.tsx") /* explicitContentFromProto */.ViewImageDescriptions;
   ViewImageDescriptions.updateSetting(viewImageDescriptions);
 };

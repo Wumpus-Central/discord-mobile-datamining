@@ -13,7 +13,7 @@ function shouldRefreshAttachmentUrl(searchParams) {
   const parsed = parseInt(str, 16);
   let result;
   if (!isNaN(parsed)) {
-    result = parsed * importDefault(687).Millis.SECOND;
+    result = parsed * require("../../utils/Durations.tsx").Millis.SECOND;
   }
   let tmp5 = null == result;
   if (!tmp5) {
@@ -23,7 +23,7 @@ function shouldRefreshAttachmentUrl(searchParams) {
   return tmp5;
 }
 function isAttachmentExpired(url) {
-  const toURLSafeResult = importDefault(1467).toURLSafe(url.url);
+  const toURLSafeResult = require("../../utils/URLUtils.tsx").toURLSafe(url.url);
   let tmp4 = null != toURLSafeResult;
   if (tmp4) {
     const searchParams = toURLSafeResult.searchParams;
@@ -35,7 +35,7 @@ function isAttachmentExpired(url) {
     const _isNaN = isNaN;
     let result;
     if (!isNaN(parsed)) {
-      result = parsed * importDefault(687).Millis.SECOND;
+      result = parsed * require("../../utils/Durations.tsx").Millis.SECOND;
     }
     let tmp8 = null == result;
     if (!tmp8) {
@@ -50,7 +50,7 @@ function isEmbedMediaExpiredAttachment(image) {
   if (null == image) {
     return false;
   } else {
-    const toURLSafeResult = importDefault(1467).toURLSafe(image.url);
+    const toURLSafeResult = require("../../utils/URLUtils.tsx").toURLSafe(image.url);
     let tmp11 = null != toURLSafeResult;
     if (tmp11) {
       const require = toURLSafeResult;
@@ -71,7 +71,7 @@ function isEmbedMediaExpiredAttachment(image) {
         const _isNaN = isNaN;
         let result;
         if (!isNaN(parsed)) {
-          result = parsed * importDefault(687).Millis.SECOND;
+          result = parsed * require("../../utils/Durations.tsx").Millis.SECOND;
         }
         let tmp9 = null == result;
         if (!tmp9) {
@@ -260,7 +260,7 @@ function getSignedAttachmentExpiration(searchParams) {
   const parsed = parseInt(str, 16);
   let result;
   if (!isNaN(parsed)) {
-    result = parsed * importDefault(687).Millis.SECOND;
+    result = parsed * require("../../utils/Durations.tsx").Millis.SECOND;
   }
   return result;
 }
@@ -276,10 +276,10 @@ let result = set.fileFinishedImporting("modules/messages/SignedAttachmentLinkUti
 
 export { isAttachmentUrl };
 export const isExternalProxiedAttachmentUrl = function isExternalProxiedAttachmentUrl(toURLSafeResult) {
-  return require(4316) /* isImageProxyURL */.isImageProxyURL(toURLSafeResult);
+  return require("../image_proxy/ImageProxyUtils.tsx") /* isImageProxyURL */.isImageProxyURL(toURLSafeResult);
 };
 export const removeSignedUrlParameters = function removeSignedUrlParameters(toURLSafeResult) {
-  toURLSafeResult = importDefault(1467).toURLSafe(toURLSafeResult);
+  toURLSafeResult = require("../../utils/URLUtils.tsx").toURLSafe(toURLSafeResult);
   if (null == toURLSafeResult) {
     return toURLSafeResult;
   } else {
@@ -291,7 +291,7 @@ export const removeSignedUrlParameters = function removeSignedUrlParameters(toUR
     }
     return toURLSafeResult;
   }
-  const obj = importDefault(1467);
+  const obj = require("../../utils/URLUtils.tsx");
 };
 export { getSignedAttachmentExpiration };
 export const messageHasExpiredAttachmentUrl = function messageHasExpiredAttachmentUrl(attachments) {

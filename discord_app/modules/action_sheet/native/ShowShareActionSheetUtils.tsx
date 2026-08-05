@@ -6,7 +6,7 @@ const result = require("expandEventProperties").fileFinishedImporting("modules/a
 
 export const trackAppClickInNativeShareSheet = function trackAppClickInNativeShareSheet(app, _location) {
   let str = app;
-  let obj = importDefault(698);
+  let obj = require("../../../utils/AnalyticsUtils.tsx");
   if (app == null) {
     str = "";
   }
@@ -16,7 +16,7 @@ export const trackAppClickInNativeShareSheet = function trackAppClickInNativeSha
 export const getMediaShareParams = function getMediaShareParams(source) {
   let contentType;
   let videoURI;
-  let obj = require(8849) /* apexExperiment */;
+  let obj = require("../../media_viewer/native/MobileMediaViewerShareExperiment.tsx") /* apexExperiment */;
   if (obj.getMobileMediaViewerShareExperimentEnabled("shareMediaSource")) {
     if (true !== source.disableDownload) {
       if (null != source.shareURI) {
@@ -62,7 +62,7 @@ export const getMediaShareParams = function getMediaShareParams(source) {
           obj4[0] = source.shareURI;
           return obj4;
         }
-        obj11 = importDefault(1467);
+        obj11 = require("../../../utils/URLUtils.tsx");
       }
     }
   }
@@ -76,5 +76,5 @@ export const getMediaShareParams = function getMediaShareParams(source) {
   return { mediaFallbackUrl };
 };
 export const resolveShareFileExtension = function resolveShareFileExtension(closure_0, contentType) {
-  return require(5295) /* decideFileExtension */.decideFileExtension(closure_0, contentType, true);
+  return require("../../media/FileExtensionUtils.tsx") /* decideFileExtension */.decideFileExtension(closure_0, contentType, true);
 };

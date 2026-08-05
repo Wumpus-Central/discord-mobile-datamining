@@ -1,5 +1,5 @@
 // discord_app/modules/video_backgrounds/applyBackgroundOption.tsx
-import module_38 from "module_38";
+import 00038__ from "../../../_runtime/metro/00038__.js";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import handleSyncedStoresUpdate from "handleSyncedStoresUpdate";
 import VideoFilterType from "VideoFilterType";
@@ -34,7 +34,7 @@ function _getFilterBlob() {
   return applyArgumentsResult;
 }
 function applyBackgroundMediaFilterSettings(arg0, target, graph, image, blob) {
-  let obj = require(9085) /* _fetchVideoFilterAssets */;
+  let obj = require("VideoBackgroundActionCreators.tsx") /* _fetchVideoFilterAssets */;
   obj = { graph, target, image, blob };
   const result = obj.applyMediaFilterSettings({ [arg0]: obj });
 }
@@ -454,8 +454,8 @@ export const applyBackgroundOptionPreview = function applyBackgroundOptionPrevie
 export const applyInitialVideoBackgroundOption = function applyInitialVideoBackgroundOption() {
   currentUser = currentUser.getCurrentUser();
   if (null != currentUser) {
-    const lastUsedVideoBackgroundOption = require(9087) /* getLastUsedVideoBackgroundOption */.getLastUsedVideoBackgroundOption(currentUser);
-    let tmp6 = importDefault(9089)();
+    const lastUsedVideoBackgroundOption = require("LastUsedVideoBackgroundOption.tsx") /* getLastUsedVideoBackgroundOption */.getLastUsedVideoBackgroundOption(currentUser);
+    let tmp6 = require("isVideoBackgroundSupported.tsx")();
     if (tmp6) {
       tmp6 = !hasBeenApplied.hasBeenApplied;
     }
@@ -466,6 +466,6 @@ export const applyInitialVideoBackgroundOption = function applyInitialVideoBackg
       applyBackgroundOptionLive(lastUsedVideoBackgroundOption, { track: false }).catch(NOOP);
       const promise = applyBackgroundOptionLive(lastUsedVideoBackgroundOption, { track: false });
     }
-    const obj = require(9087) /* getLastUsedVideoBackgroundOption */;
+    const obj = require("LastUsedVideoBackgroundOption.tsx") /* getLastUsedVideoBackgroundOption */;
   }
 };

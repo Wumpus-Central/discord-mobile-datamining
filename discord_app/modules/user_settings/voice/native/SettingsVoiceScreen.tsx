@@ -16,7 +16,7 @@ let unpackModuleId;
 const require = arg1;
 function KrispLogo() {
   const tmp = callback3();
-  let obj = require(4131) /* AccessibilityAnnouncer */;
+  let obj = require("../../../../design/shared.tsx") /* AccessibilityAnnouncer */;
   if (obj.isThemeLight(tmp4)) {
     let tmp2Result = tmp2(10759);
   } else {
@@ -25,22 +25,22 @@ function KrispLogo() {
   obj = { style: tmp.krisp, children: null };
   obj = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
   const intl = tmp5(1236).intl;
-  obj[2] = intl.string(require(1236) /* getSystemLocale */.t.vFiCSx);
+  obj[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.vFiCSx);
   const items = [callback(closure_5, obj), ];
   const obj1 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
   const intl2 = tmp5(1236).intl;
-  obj1[1] = intl2.string(require(1236) /* getSystemLocale */.t.hvVgAZ);
-  obj1[2] = require(10758) /* handleKrispLinkPressed */.handleKrispLinkPressed;
+  obj1[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.hvVgAZ);
+  obj1[2] = require("KrispLogo.tsx") /* handleKrispLinkPressed */.handleKrispLinkPressed;
   const obj2 = { variant: "text-sm/medium", color: "text-link", children: null };
   const intl3 = tmp5(1236).intl;
-  obj2[2] = intl3.string(require(1236) /* getSystemLocale */.t.hvVgAZ);
-  obj1[3] = callback(require(4281) /* Text */.Text, obj2);
-  items[1] = callback(require(5368) /* Directions */.Pressable, obj1);
+  obj2[2] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.hvVgAZ);
+  obj1[3] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
+  items[1] = callback(require("../../../../../_runtime/05368_Directions.js") /* Directions */.Pressable, obj1);
   obj[1] = items;
   return callback2(closure_4, obj);
 }
 function SystemProcessingSubLabel() {
-  let obj = require(10755) /* getNoiseCancellationDeferredToSystem */;
+  let obj = require("../../../noise_cancellation/NoiseCancellationUtils.tsx") /* getNoiseCancellationDeferredToSystem */;
   let tmp3 = null;
   if (obj.useNoiseCancellationDeferredToSystem()) {
     obj = { variant: "text-sm/medium", children: null };
@@ -127,5 +127,5 @@ export default function SettingsVoiceScreen() {
     obj[0] = items1;
     return obj.createList(obj);
   }, []);
-  return callback(importDefault(13793), { node });
+  return callback(require("../../../settings/native/renderer/SettingLayout.tsx"), { node });
 };

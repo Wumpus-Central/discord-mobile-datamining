@@ -46,12 +46,12 @@ function canReactToMessageInternal(state, getGuildId, items) {
     canResult = state.type !== constants3.THREAD_STARTER_MESSAGE;
   }
   if (canResult) {
-    canResult = !require(1384) /* hasFlag */.hasFlag(state.flags, constants4.EPHEMERAL);
-    const obj5 = require(1384) /* hasFlag */;
+    canResult = !require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(state.flags, constants4.EPHEMERAL);
+    const obj5 = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
   }
   if (canResult) {
-    canResult = !require(3902) /* isCommunicationDisabled */.isMemberCommunicationDisabled(member);
-    const obj6 = require(3902) /* isCommunicationDisabled */;
+    canResult = !require("../guild_communication_disabled/CommunicationDisabledUtils.tsx") /* isCommunicationDisabled */.isMemberCommunicationDisabled(member);
+    const obj6 = require("../guild_communication_disabled/CommunicationDisabledUtils.tsx") /* isCommunicationDisabled */;
   }
   return canResult;
 }
@@ -66,7 +66,7 @@ export const useCanReactToMessage = function useCanReactToMessage(arg0, arg1) {
   const _require = arg0;
   const dependencyMap = arg1;
   let items = [mergeGuildAvatar, trackCommunicationDisabled, recomputeGuild, getUncachedChannelPermissions];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const items = [outer1_5, outer1_2, outer1_3, outer1_4];
     return outer1_10(closure_0, closure_1, items);
   });

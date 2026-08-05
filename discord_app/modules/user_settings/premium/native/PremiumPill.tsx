@@ -6,7 +6,7 @@ import createCacheKey from "createCacheKey";
 
 const require = arg1;
 let closure_6 = createCacheKey.createStyles((arg0) => {
-  const tmp3 = importDefault(712);
+  const tmp3 = require("../../../../../discord_common/js/packages/tokens/native.tsx");
   if (arg0) {
     let WHITE = tmp3.unsafe_rawColors.BLACK;
     let tmp5 = tmp;

@@ -192,7 +192,7 @@ prototype["handleSend"] = function handleSend(nonce) {
   let analyticsLocation;
   let channelId;
   ({ channelId, analyticsLocation } = nonce);
-  let tmp3 = importDefault(7215)();
+  let tmp3 = require("../modules/overlay/getOverlayMessageAnaylticsLocation.native.tsx")();
   if (tmp3 == null) {
     tmp3 = analyticsLocation;
   }
@@ -244,7 +244,7 @@ prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, a
   let analyticsLocation;
   let channelId;
   ({ channelId, analyticsLocation } = message);
-  let tmp3 = importDefault(7215)();
+  let tmp3 = require("../modules/overlay/getOverlayMessageAnaylticsLocation.native.tsx")();
   if (tmp3 == null) {
     tmp3 = analyticsLocation;
   }

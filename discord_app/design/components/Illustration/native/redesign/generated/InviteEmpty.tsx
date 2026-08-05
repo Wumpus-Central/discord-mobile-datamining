@@ -7,7 +7,7 @@ const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("design/components/Illustration/native/redesign/generated/InviteEmpty.tsx");
 
 export const getInviteEmptySource = function getInviteEmptySource(theme) {
-  let obj = require(7544) /* getIllustrationSource */;
+  let obj = require("../../index.tsx") /* getIllustrationSource */;
   obj = {
     dark() {
       return callback(9622);
@@ -22,7 +22,7 @@ export const getInviteEmptySource = function getInviteEmptySource(theme) {
   return obj.getIllustrationSource(theme, obj);
 };
 export const useInviteEmptySource = function useInviteEmptySource() {
-  let obj = require(4131) /* AccessibilityAnnouncer */;
+  let obj = require("../../../../../shared.tsx") /* AccessibilityAnnouncer */;
   obj = {
     dark() {
       return callback(9622);
@@ -34,10 +34,10 @@ export const useInviteEmptySource = function useInviteEmptySource() {
       return callback(9621);
     }
   };
-  return require(7544) /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
+  return require("../../index.tsx") /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const InviteEmpty = function InviteEmpty(arg0) {
-  let obj = require(4131) /* AccessibilityAnnouncer */;
+  let obj = require("../../../../../shared.tsx") /* AccessibilityAnnouncer */;
   obj = {
     dark() {
       return callback(9622);
@@ -50,7 +50,7 @@ export const InviteEmpty = function InviteEmpty(arg0) {
     }
   };
   obj = {};
-  const illustrationSource = require(7544) /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
+  const illustrationSource = require("../../index.tsx") /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;
   return <Image />;

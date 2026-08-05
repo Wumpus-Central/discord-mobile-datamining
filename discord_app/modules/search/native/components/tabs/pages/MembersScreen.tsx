@@ -270,7 +270,7 @@ let closure_19 = createCacheKey.createStyles({ container: { flex: 1, flexGrow: 1
 const memoResult = importAllResult.memo(function MembersScreen(searchContext) {
   searchContext = searchContext.searchContext;
   const tmp = callback();
-  const analyticsLocations = importDefault(5610)(importDefault(5630).SEARCH_MEMBERS).analyticsLocations;
+  const analyticsLocations = require("../../../../../app_analytics/useAnalyticsLocations.tsx")(require("../../../../../app_analytics/AnalyticsLocation.tsx").SEARCH_MEMBERS).analyticsLocations;
   const type = searchContext.type;
   if (constants.CHANNEL === type) {
     let obj = { value: null, children: null };
@@ -280,10 +280,10 @@ const memoResult = importAllResult.memo(function MembersScreen(searchContext) {
     const obj1 = { channelId: null, disableStickySections: true, listStyleOverride: null, onUserPress: null };
     obj1[0] = searchContext.channelId;
     obj1[2] = tmp.userList;
-    obj1[3] = require(1844) /* dismissGlobalKeyboard */.dismissGlobalKeyboard;
+    obj1[3] = require("../../../../../../utils/native/KeyboardManagerUtils.tsx") /* dismissGlobalKeyboard */.dismissGlobalKeyboard;
     obj[1] = jsx(tmp2(11486), { channelId: null, disableStickySections: true, listStyleOverride: null, onUserPress: null });
     obj[1] = <View style={null}>{null}</View>;
-    return jsx(require(5610) /* context */.AnalyticsLocationProvider, { style: null, children: null });
+    return jsx(require("../../../../../app_analytics/useAnalyticsLocations.tsx") /* context */.AnalyticsLocationProvider, { style: null, children: null });
   } else if (tmp5.THREAD === type) {
     const obj2 = { searchContext: null, channelId: null, guildId: null };
     obj2[0] = searchContext;
@@ -304,10 +304,10 @@ const memoResult = importAllResult.memo(function MembersScreen(searchContext) {
     obj3[0] = searchContext;
     obj3[1] = searchContext.guildId;
     obj[1] = <SearchableMembersScreen searchContext={null} guildId={null} />;
-    return jsx(require(5610) /* context */.AnalyticsLocationProvider, { value: null, children: null });
+    return jsx(require("../../../../../app_analytics/useAnalyticsLocations.tsx") /* context */.AnalyticsLocationProvider, { value: null, children: null });
   }
   tmp2 = importDefault;
-  const tmp4 = importDefault(5610);
+  const tmp4 = require("../../../../../app_analytics/useAnalyticsLocations.tsx");
 });
 let result = require("getMemberListId").fileFinishedImporting("modules/search/native/components/tabs/pages/MembersScreen.tsx");
 

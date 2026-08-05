@@ -32,8 +32,8 @@ prototype["hasPendingChanges"] = function hasPendingChanges() {
   if (tmp) {
     let tmp3 = null === c6;
     if (!tmp3) {
-      tmp3 = !importDefault(12).isEqual(c5, c6);
-      const obj = importDefault(12);
+      tmp3 = !require("../../../_runtime/00012_apply.js").isEqual(c5, c6);
+      const obj = require("../../../_runtime/00012_apply.js");
     }
     tmp = tmp3;
   }

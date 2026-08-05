@@ -3,24 +3,24 @@ import { DEFAULT_AUTO_ARCHIVE_DURATION as closure_3 } from "AbortCodes";
 
 function getAutoArchiveOptions() {
   let obj = { id: "1hour", label: null, value: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl.string(require(1236) /* getSystemLocale */.t.cs8A1c);
-  obj[2] = importDefault(687).Minutes.HOUR;
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.cs8A1c);
+  obj[2] = require("../../utils/Durations.tsx").Minutes.HOUR;
   const items = [obj, , , ];
   obj = { id: "24hours", label: null, value: null };
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.zFKbrF);
-  obj[2] = importDefault(687).Minutes.DAY;
+  const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.zFKbrF);
+  obj[2] = require("../../utils/Durations.tsx").Minutes.DAY;
   items[1] = obj;
   obj = { id: "3days", label: null, value: null };
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl3.string(require(1236) /* getSystemLocale */.t.TmPIZX);
-  obj[2] = 3 * importDefault(687).Minutes.DAY;
+  const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.TmPIZX);
+  obj[2] = 3 * require("../../utils/Durations.tsx").Minutes.DAY;
   items[2] = obj;
   const obj1 = { id: "1week", label: null, value: null };
-  const intl4 = require(1236) /* getSystemLocale */.intl;
-  obj1[1] = intl4.string(require(1236) /* getSystemLocale */.t["/7i2el"]);
-  obj1[2] = importDefault(687).Minutes.WEEK;
+  const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj1[1] = intl4.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["/7i2el"]);
+  obj1[2] = require("../../utils/Durations.tsx").Minutes.WEEK;
   items[3] = obj1;
   return items;
 }
@@ -39,9 +39,9 @@ export const getAutoArchiveDurationText = function getAutoArchiveDurationText(ar
     label = found.label;
   }
   if (label == null) {
-    const obj = importDefault(3867);
-    label = importDefault(3867).duration(arg0, "minutes").humanize();
-    const durationResult = importDefault(3867).duration(arg0, "minutes");
+    const obj = require("../../../_runtime/03867_t.js");
+    label = require("../../../_runtime/03867_t.js").duration(arg0, "minutes").humanize();
+    const durationResult = require("../../../_runtime/03867_t.js").duration(arg0, "minutes");
   }
   return label;
 };

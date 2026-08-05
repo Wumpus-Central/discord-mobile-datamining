@@ -16,7 +16,7 @@ function BenefitRow(description) {
   ({ emojiId, guildId, title } = description);
   const tmp = callback3();
   let obj = { style: tmp.container, children: null };
-  const items = [callback(importDefault(14376), { guildId, id: emojiId, size: 22, fontSize: 18 }), callback(require(1297) /* Button */.Spacer, { size: 16 }), ];
+  const items = [callback(require("../EmojiIcon.tsx"), { guildId, id: emojiId, size: 22, fontSize: 18 }), callback(require("../../../../../design/void/native.tsx") /* Button */.Spacer, { size: 16 }), ];
   obj = { style: tmp.textContainer, children: null };
   const items1 = [title, ];
   let tmp4Result = null;
@@ -24,7 +24,7 @@ function BenefitRow(description) {
     obj = { style: null, variant: "text-sm/normal", color: "interactive-text-default", children: null };
     obj[0] = tmp.description;
     obj[3] = description;
-    tmp4Result = callback(require(4281) /* Text */.Text, obj);
+    tmp4Result = callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   }
   items1[1] = tmp4Result;
   obj[1] = items1;
@@ -67,8 +67,8 @@ export const ChannelBenefitRow = function ChannelBenefitRow(benefit) {
   } else {
     str = "";
     if (null != benefit.emoji_name) {
-      str = importDefault(3926).convertSurrogateToName(benefit.emoji_name, false);
-      const tmp5Result = importDefault(3926);
+      str = require("../../../../emojis/UnicodeEmojis.tsx").convertSurrogateToName(benefit.emoji_name, false);
+      const tmp5Result = require("../../../../emojis/UnicodeEmojis.tsx");
     }
   }
   return callback(BenefitRow, { emojiId: str, guildId: benefit.guildId, title: tmp8, description: benefit.description });
@@ -80,11 +80,11 @@ export const IntangibleBenefitRow = function IntangibleBenefitRow(benefit) {
   } else {
     str = "";
     if (null != benefit.emoji_name) {
-      let obj = importDefault(3926);
+      let obj = require("../../../../emojis/UnicodeEmojis.tsx");
       str = obj.convertSurrogateToName(benefit.emoji_name, false);
     }
   }
-  obj = { emojiId: str, guildId: benefit.guildId, title: tmp(require(4281) /* Text */.Text, obj), description: benefit.description };
+  obj = { emojiId: str, guildId: benefit.guildId, title: tmp(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), description: benefit.description };
   obj = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: benefit.name };
   return closure_5(BenefitRow, obj);
 };

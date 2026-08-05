@@ -23,7 +23,7 @@ export default function EmojiIcon(size) {
   if (lineHeight === undefined) {
     lineHeight = num + 4;
   }
-  let obj = require(14377) /* useEmojiByIdOrName */;
+  let obj = require("../../useEmojiByIdOrName.tsx") /* useEmojiByIdOrName */;
   const emojiByIdOrName = obj.useEmojiByIdOrName(guildId, id);
   if (null == emojiByIdOrName) {
     let tmp4 = null;
@@ -33,9 +33,9 @@ export default function EmojiIcon(size) {
       obj[0] = num;
       obj[1] = num;
       obj[1] = obj;
-      obj[2] = importDefault(8610);
-      tmp4 = jsx(importDefault(5236), { width: null, height: null });
-      const tmp7 = importDefault(5236);
+      obj[2] = require("../../../../../_runtime/08610_registerAsset.js");
+      tmp4 = jsx(require("../../../../components_native/common/FastImage.tsx"), { width: null, height: null });
+      const tmp7 = require("../../../../components_native/common/FastImage.tsx");
     }
     let tmp8Result = tmp4;
   } else {
@@ -74,8 +74,8 @@ export default function EmojiIcon(size) {
       url = emojiByIdOrName.url;
     }
     obj1[4] = url;
-    tmp8Result = jsx(importDefault(5301), { style: null, fastImageStyle: null, textEmojiStyle: null, name: null, src: null });
-    const tmp10 = importDefault(5301);
+    tmp8Result = jsx(require("../../../emojis/native/Emoji.tsx"), { style: null, fastImageStyle: null, textEmojiStyle: null, name: null, src: null });
+    const tmp10 = require("../../../emojis/native/Emoji.tsx");
     const tmp8 = jsx;
     tmp9 = importDefault;
   }

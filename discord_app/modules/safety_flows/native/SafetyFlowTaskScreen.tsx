@@ -38,7 +38,7 @@ export default function SafetyFlowTaskScreen(action) {
   }
   const items = [tmp6, , ];
   let obj = { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp2.header, children: action.title };
-  items[1] = callback(require(4281) /* Text */.Text, obj);
+  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   let tmp7Result = null != subtitle;
   if (tmp7Result) {
     obj = { variant: "text-md/medium", color: null, style: null, children: null };
@@ -49,12 +49,12 @@ export default function SafetyFlowTaskScreen(action) {
   }
   obj = { children: null };
   items[2] = tmp7Result;
-  const items1 = [closure_4(require(4693) /* Stack */.Stack, { align: "center", justify: "center", spacing: 8, children: items }), children];
+  const items1 = [closure_4(require("../../../design/components/Stack/native/Stack.native.tsx") /* Stack */.Stack, { align: "center", justify: "center", spacing: 8, children: items }), children];
   obj[0] = items1;
-  children = [closure_4(require(7758) /* ModalContent */.ModalContent, obj), ];
+  children = [closure_4(require("../../../design/components/Modal/native/ModalContent.native.tsx") /* ModalContent */.ModalContent, obj), ];
   if (undefined === footer) {
     if (withLogout) {
-      withLogout = tmp7(importDefault(16830), {});
+      withLogout = tmp7(require("LogOutDisclaimer.tsx"), {});
     }
     const items3 = [withLogout, ];
     tmp7Result = null != action;
@@ -71,5 +71,5 @@ export default function SafetyFlowTaskScreen(action) {
     footer = tmp3(tmp4(11246).ModalFooter, obj2);
   }
   children[1] = footer;
-  return closure_4(require(7757) /* ModalScreen */.ModalScreen, { children });
+  return closure_4(require("../../../design/components/Modal/native/ModalScreen.native.tsx") /* ModalScreen */.ModalScreen, { children });
 };

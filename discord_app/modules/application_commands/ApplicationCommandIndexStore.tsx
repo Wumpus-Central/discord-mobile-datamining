@@ -1,7 +1,7 @@
 // discord_app/modules/application_commands/ApplicationCommandIndexStore.tsx
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
-import module_38 from "module_38";
+import 00038__ from "../../../_runtime/metro/00038__.js";
 import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange";
 import _getSystemLocale from "_getSystemLocale";
 import closure_9 from "fetchFingerprint";
@@ -368,8 +368,8 @@ function handleFetchSuccess(arg0, flag) {
     if (tmp32) {
       const items = [];
       HermesBuiltin.arraySpread(set, 0);
-      const membersById = importDefault(5200).requestMembersById(target.guildId, items);
-      const obj5 = importDefault(5200);
+      const membersById = require("../../actions/GuildActionCreators.tsx").requestMembersById(target.guildId, items);
+      const obj5 = require("../../actions/GuildActionCreators.tsx");
     }
     const application_commands = index.application_commands;
     const applicationCommands = id(6889).buildApplicationCommands(application_commands.map((description_default) => {
@@ -1151,14 +1151,14 @@ function queryIndexSection(descriptor, builtInCommands, arg2, arg3, arg4) {
     let tmp23 = require;
     let tmp24 = tmp18;
     let hasAccessResult = obj3.hasAccess(nextResult, permissionContext, obj);
-    if (hasAccessResult === require(9456) /* computeAllowedForUser */.HasAccessResult.ALLOWED) {
+    if (hasAccessResult === require("CommandPermissionUtils.tsx") /* computeAllowedForUser */.HasAccessResult.ALLOWED) {
       let tmp25 = nextResult;
       let arr = items.push(tmp16);
     }
     continue;
   }
   let arr2 = items;
-  if (scoreMethod !== require(8158) /* ScoreMethod */.ScoreMethod.NONE) {
+  if (scoreMethod !== require("ApplicationCommandQueryTypes.tsx") /* ScoreMethod */.ScoreMethod.NONE) {
     arr2 = items;
     if (null != query) {
       arr2 = items;
@@ -1206,7 +1206,7 @@ function queryIndexSection(descriptor, builtInCommands, arg2, arg3, arg4) {
     obj[0] = descriptor;
     obj[1] = arr2;
     let tmp36 = obj;
-    tmp39 = scoreMethod !== require(8158) /* ScoreMethod */.ScoreMethod.NONE && scoreMethod !== tmp27(8158).ScoreMethod.APPLICATION_ONLY;
+    tmp39 = scoreMethod !== require("ApplicationCommandQueryTypes.tsx") /* ScoreMethod */.ScoreMethod.NONE && scoreMethod !== tmp27(8158).ScoreMethod.APPLICATION_ONLY;
   } else {
     tmp36 = null;
   }
@@ -1290,7 +1290,7 @@ function toServerPermissions(permissions, id) {
   const items = [];
   if (null != permissions.user) {
     let obj = { type: null, id: null, permission: null };
-    obj[0] = require(6891) /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.USER;
+    obj[0] = require("ApplicationCommandTypes.tsx") /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.USER;
     obj[1] = id;
     obj[2] = permissions.user;
     items.push(obj);
@@ -1306,7 +1306,7 @@ function toServerPermissions(permissions, id) {
       let tmp12 = require;
       let tmp13 = dependencyMap;
       [tmp10, tmp11] = tmp9;
-      obj[0] = require(6891) /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.CHANNEL;
+      obj[0] = require("ApplicationCommandTypes.tsx") /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.CHANNEL;
       obj[1] = tmp10;
       obj[2] = tmp11;
       let arr = items.push(obj);
@@ -1324,7 +1324,7 @@ function toServerPermissions(permissions, id) {
       let tmp22 = require;
       let tmp23 = dependencyMap;
       [tmp20, tmp21] = tmp19;
-      obj[0] = require(6891) /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.ROLE;
+      obj[0] = require("ApplicationCommandTypes.tsx") /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.ROLE;
       obj[1] = tmp20;
       obj[2] = tmp21;
       let arr1 = items.push(obj);
@@ -1605,7 +1605,7 @@ prototype["query"] = function query(type, commandTypes, applicationId) {
     const userState = this.getUserState();
     const applicationState = this.getApplicationState(applicationId.applicationId);
     let applicationStates = this.getApplicationStates();
-    let obj1 = require(8155) /* computePermissions */;
+    let obj1 = require("CommandPermissionContext.tsx") /* computePermissions */;
     const permissionContext = obj1.buildPermissionContext(channel, commandTypes.commandTypes);
     let tmp11 = null == channel;
     let guild_id = channel;
@@ -1704,7 +1704,7 @@ prototype["query"] = function query(type, commandTypes, applicationId) {
         }
         flag3 = flag5;
       } else {
-        let obj2 = importDefault(698);
+        let obj2 = require("../../utils/AnalyticsUtils.tsx");
         obj = { miss: null, size: null };
         obj[0] = null == contextState.result;
         const _Object = Object;
@@ -1780,10 +1780,10 @@ prototype["queryInstallOnDemandApp"] = function queryInstallOnDemandApp(arg0, id
     }
     channel = arg0;
     obj = { commandTypes: null };
-    const items = [require(1906) /* PermissionOverwriteType */.ApplicationCommandType.CHAT];
+    const items = [require("../../flow/Server.tsx") /* PermissionOverwriteType */.ApplicationCommandType.CHAT];
     obj[0] = items;
     const obj1 = { placeholderCount: 5, scoreMethod: null, applicationId: null, allowFetch: true };
-    obj1[1] = require(8158) /* ScoreMethod */.ScoreMethod.COMMAND_ONLY;
+    obj1[1] = require("ApplicationCommandQueryTypes.tsx") /* ScoreMethod */.ScoreMethod.COMMAND_ONLY;
     obj1[2] = arg0;
     const query = this.query(obj, obj, obj1);
   }
@@ -2319,7 +2319,7 @@ export const useGuildIndexState = function useGuildIndexState(arg0, arg1) {
   const first = tmp[0];
   const dependencyMap = tmp[1];
   const items = [applicationCommandIndexStore];
-  stateFromStoresObject = _require(589).useStateFromStoresObject(items, () => {
+  stateFromStoresObject = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
     let tmp = outer1_37.indices[closure_0];
     if (tmp == null) {
       tmp = outer1_25;
@@ -2377,7 +2377,7 @@ export const useUserIndexState = function useUserIndexState(arg0, arg1) {
   const first = tmp[0];
   const dependencyMap = tmp[1];
   const items = [applicationCommandIndexStore];
-  stateFromStoresObject = _require(589).useStateFromStoresObject(items, () => authStore.getUserState());
+  stateFromStoresObject = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => authStore.getUserState());
   const items1 = [stateFromStoresObject, arg1, arg0, first];
   const effect = React.useEffect(() => {
     if (first2) {
@@ -2488,9 +2488,9 @@ export const appLauncherOnlyCompareNames = function appLauncherOnlyCompareNames(
 export const getSection = function getSection(type, applicationId) {
   if (applicationId === constants.BUILT_IN) {
     let obj = { descriptor: null, sectionCommands: null, isGuildInstalled: true, isUserInstalled: true };
-    obj[0] = require(8160) /* getOptionValue */.BUILT_IN_SECTIONS[tmp2.BUILT_IN];
-    const items = [require(1906) /* PermissionOverwriteType */.ApplicationCommandType.CHAT];
-    obj[1] = require(8160) /* getOptionValue */.getBuiltInCommands(items, true, false);
+    obj[0] = require("ApplicationCommandBuiltIns.tsx") /* getOptionValue */.BUILT_IN_SECTIONS[tmp2.BUILT_IN];
+    const items = [require("../../flow/Server.tsx") /* PermissionOverwriteType */.ApplicationCommandType.CHAT];
+    obj[1] = require("ApplicationCommandBuiltIns.tsx") /* getOptionValue */.getBuiltInCommands(items, true, false);
     return obj;
   } else {
     const contextState = applicationCommandIndexStore.getContextState(type);

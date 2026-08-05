@@ -29,25 +29,25 @@ export default function QuestHomeEmptyState(subtitle) {
   let title;
   ({ action, title } = subtitle);
   if (title === undefined) {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    title = intl.string(require(1236) /* getSystemLocale */.t.SdlRnK);
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    title = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.SdlRnK);
   }
   subtitle = subtitle.subtitle;
   if (subtitle === undefined) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    subtitle = intl2.string(require(1236) /* getSystemLocale */.t["R7mv+G"]);
+    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    subtitle = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["R7mv+G"]);
   }
   const tmp5 = createCacheKey();
-  let obj = require(3989) /* map */;
-  const token = obj.useToken(importDefault(712).colors.BACKGROUND_BASE_LOWER);
+  let obj = require("../../../design/tokens/native/useToken.tsx") /* map */;
+  const token = obj.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOWER);
   obj = { bottom: null, style: null, children: null };
-  let obj2 = require(500) /* set */;
+  let obj2 = require("../../../utils/PlatformUtils.tsx") /* set */;
   obj[0] = obj2.isAndroid();
   obj[1] = tmp5.container;
   obj = { style: tmp5.container, children: null };
   const obj1 = { style: tmp5.emptyStateContainer, children: null };
   obj2 = { style: tmp5.emptyStateContentContainer, children: null };
-  const items = [callback(require(4281) /* Text */.Text, { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp5.emptyStateContentTitle, children: title }), callback(require(4281) /* Text */.Text, { variant: "text-md/normal", color: "text-default", style: tmp5.emptyStateContentDescription, children: subtitle }), ];
+  const items = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp5.emptyStateContentTitle, children: title }), callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-md/normal", color: "text-default", style: tmp5.emptyStateContentDescription, children: subtitle }), ];
   let tmp9Result = null != action;
   if (tmp9Result) {
     const obj5 = { style: null, children: null };
@@ -59,7 +59,7 @@ export default function QuestHomeEmptyState(subtitle) {
   obj2[1] = items;
   const items1 = [closure_7(closure_3, obj2), ];
   let tmp11Result = null;
-  if (!importDefault(4139)().isChatLockedOpen) {
+  if (!require("../../chat/native/useChatLayout.tsx")().isChatLockedOpen) {
     const obj6 = { children: null };
     const obj7 = { style: null, source: null, resizeMode: "cover" };
     obj7[0] = tmp5.emptyImage;
@@ -78,5 +78,5 @@ export default function QuestHomeEmptyState(subtitle) {
   obj1[1] = items1;
   obj[1] = closure_7(closure_3, obj1);
   obj[2] = callback(closure_3, obj);
-  return callback(require(5272) /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  return callback(require("../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
 };

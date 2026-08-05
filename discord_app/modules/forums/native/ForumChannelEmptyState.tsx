@@ -19,11 +19,11 @@ const memoResult = require("noop").memo((topViewHeight) => {
   }
   const tagFilter = topViewHeight.tagFilter;
   const tmp = callback();
-  let obj = require(4131) /* AccessibilityAnnouncer */;
-  const rect = importDefault(1581)();
+  let obj = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */;
+  const rect = require("../../safe_area/useSafeAreaInsets.native.tsx")();
   obj = { style: items, children: null };
   items = [tmp.container, { marginBottom: rect.bottom + rect.top + num }];
-  let obj2 = require(4131) /* AccessibilityAnnouncer */;
+  let obj2 = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */;
   if (obj2.isThemeLight(obj.useThemeContext().theme)) {
     let tmp4Result = tmp4(12034);
   } else {
@@ -41,7 +41,7 @@ const memoResult = require("noop").memo((topViewHeight) => {
     formatToPlainStringResult = intl.string(tmp2(1236).t.PwTMG0);
   }
   obj1[4] = formatToPlainStringResult;
-  items1[1] = closure_5(require(4281) /* Text */.Text, obj1);
+  items1[1] = closure_5(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
   const obj3 = { style: tmp.subtext, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = tmp2(1236).intl;
   const formatToPlainString = intl2.formatToPlainString;
@@ -56,7 +56,7 @@ const memoResult = require("noop").memo((topViewHeight) => {
     formatToPlainStringResult1 = formatToPlainString(t.YtsXFD, obj5);
   }
   obj3[3] = formatToPlainStringResult1;
-  items1[2] = closure_5(require(4281) /* Text */.Text, obj3);
+  items1[2] = closure_5(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj3);
   obj[1] = items1;
   return closure_6(closure_3, obj);
 });

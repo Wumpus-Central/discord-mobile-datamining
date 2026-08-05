@@ -80,7 +80,7 @@ let closure_18 = importAllResult.memo((arg0) => {
   if (null != first) {
     let obj = { channel: null };
     obj[0] = first;
-    tmp4 = callback5(importDefault(10648), obj);
+    tmp4 = callback5(require("ChannelCallNavigator.tsx"), obj);
   }
   return tmp4;
 });

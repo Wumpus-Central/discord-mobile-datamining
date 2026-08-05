@@ -12,7 +12,7 @@ let c9;
 let metroImportAll;
 const require = arg1;
 function SuggestedFriendsSectionHeader(children) {
-  return callback(View, { style: createCacheKey().sectionHeader, children: callback(require(4281) /* Text */.Text, { color: "text-muted", variant: "text-sm/semibold", children: children.label }) });
+  return callback(View, { style: createCacheKey().sectionHeader, children: callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { color: "text-muted", variant: "text-sm/semibold", children: children.label }) });
 }
 function SuggestionRow(suggestion) {
   let end;

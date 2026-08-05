@@ -216,8 +216,8 @@ class DisconnectStreamButton {
 }
 function LeaveActivityButton(isSmallSize) {
   let obj = { accessibilityLabel: null, onPress: null, source: null, isSmallSize: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.k0Aph0);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.k0Aph0);
   obj[1] = function onPress() {
     currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();
     let obj = callback(table[30]);
@@ -233,15 +233,15 @@ function LeaveActivityButton(isSmallSize) {
     obj[1] = applicationId;
     obj.leaveActivity(obj);
   };
-  obj[2] = importDefault(10737);
+  obj[2] = require("../../../../../_runtime/10737_registerAsset.js");
   obj[3] = isSmallSize.isSmallSize;
   return callback(importAll(10577).PrimaryActionButton, obj);
 }
 function useActionBarSecondButton(channel) {
   channel = channel.channel;
-  let obj = require(9659) /* useIsConnectedToVoiceChannel */;
+  let obj = require("../../../voice_chat/VoiceChatHooks.tsx") /* useIsConnectedToVoiceChannel */;
   let isConnectedToVoiceChannel = obj.useIsConnectedToVoiceChannel(channel);
-  const tmp2 = importDefault(5800)();
+  const tmp2 = require("../../../game_console/hooks/useIsRemote.tsx")();
   let tmp4 = isConnectedToVoiceChannel;
   if (isConnectedToVoiceChannel) {
     tmp4 = !tmp2;
@@ -254,7 +254,7 @@ function useActionBarSecondButton(channel) {
     isActive = !tmp2;
   }
   if (isActive) {
-    isActive = importDefault(10719)(channel).isActive;
+    isActive = require("../useScreenshareUtils.tsx")(channel).isActive;
   }
   obj[obj2.SCREEN_SHARE_END] = isActive;
   if (isConnectedToVoiceChannel) {
@@ -343,10 +343,10 @@ export default function ChannelCallActionBar(arg0) {
   } else {
     END_REMOTE = tmp6[tmp7.END_ACTIVITY] ? tmp7.END_ACTIVITY : tmp7.END_CALL;
   }
-  const tmp4 = importDefault(5800)();
-  let obj = require(10580) /* useIsFiveButtonLayout */;
+  const tmp4 = require("../../../game_console/hooks/useIsRemote.tsx")();
+  let obj = require("../useIsFiveButtonLayout.tsx") /* useIsFiveButtonLayout */;
   const isFiveButtonLayout = obj.useIsFiveButtonLayout(channel.id);
-  obj = { value: importDefault(5610)(tmp2(5630).CHANNEL_CALL_ACTION_BAR).analyticsLocations, children: null };
+  obj = { value: require("../../../app_analytics/useAnalyticsLocations.tsx")(tmp2(5630).CHANNEL_CALL_ACTION_BAR).analyticsLocations, children: null };
   obj = { pointerEvents: "box-none", style: isFiveButtonLayout ? tmp.containerForFiveButtonLayout : tmp.container, children: null };
   if (shouldShowConnectingScreen) {
     const obj1 = { channel: null };
@@ -415,7 +415,7 @@ export default function ChannelCallActionBar(arg0) {
   }
   obj[2] = tmp13Result;
   obj[1] = closure_14(View, obj);
-  return closure_14(require(5610) /* context */.AnalyticsLocationProvider, obj);
+  return closure_14(require("../../../app_analytics/useAnalyticsLocations.tsx") /* context */.AnalyticsLocationProvider, obj);
 };
 export { VideoButton };
 export { ScreenshareButton };
@@ -425,9 +425,9 @@ export { DisconnectStreamButton };
 export const ActionBarSecondButton = obj2;
 export const useActionBarSecondButtons = function useActionBarSecondButtons(channel) {
   channel = channel.channel;
-  let obj = require(9659) /* useIsConnectedToVoiceChannel */;
+  let obj = require("../../../voice_chat/VoiceChatHooks.tsx") /* useIsConnectedToVoiceChannel */;
   let isConnectedToVoiceChannel = obj.useIsConnectedToVoiceChannel(channel);
-  const tmp2 = importDefault(5800)();
+  const tmp2 = require("../../../game_console/hooks/useIsRemote.tsx")();
   let tmp4 = isConnectedToVoiceChannel;
   if (isConnectedToVoiceChannel) {
     tmp4 = !tmp2;
@@ -440,7 +440,7 @@ export const useActionBarSecondButtons = function useActionBarSecondButtons(chan
     isActive = !tmp2;
   }
   if (isActive) {
-    isActive = importDefault(10719)(channel).isActive;
+    isActive = require("../useScreenshareUtils.tsx")(channel).isActive;
   }
   obj[obj2.SCREEN_SHARE_END] = isActive;
   if (isConnectedToVoiceChannel) {

@@ -7,7 +7,7 @@ import { AnalyticEvents } from "ME";
 const result = require("handleUpdate").fileFinishedImporting("modules/game_console/trackVoiceCallTransfer.tsx");
 
 export default function trackVoiceCallTransfer(arg0, arg1, sessionId) {
-  let obj = importDefault(698);
+  let obj = require("../../utils/AnalyticsUtils.tsx");
   let str = "discord_client";
   if (null != sessionId) {
     sessionById = sessionById.getSessionById(sessionId);

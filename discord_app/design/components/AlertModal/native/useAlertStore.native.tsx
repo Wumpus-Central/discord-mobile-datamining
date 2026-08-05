@@ -50,7 +50,7 @@ export const dismissAlert = function dismissAlert(c6) {
       }
       tmp2 = key === c6;
     }
-    _require(705).batchUpdates(() => {
+    _require("../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
       outer1_4.setState((alerts) => {
         alerts = alerts.alerts;
         return { alerts: alerts.filter((key) => key.key !== closure_0) };
@@ -63,7 +63,7 @@ export const dismissAlert = function dismissAlert(c6) {
     if (tmp2) {
       found(4626)();
     }
-    const obj = _require(705);
+    const obj = _require("../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx");
   }
 };
 export const openAlert = function openAlert(DeleteEventAlert, arg1, onCloseCallback, arg3) {
@@ -72,9 +72,9 @@ export const openAlert = function openAlert(DeleteEventAlert, arg1, onCloseCallb
   const dependencyMap = onCloseCallback;
   let _slicedToArray = arg3;
   if (0 === keys.getState().alerts.length) {
-    importDefault(4627)();
+    require("../../../../modules/a11y/native/markAccessibilityFocus.tsx")();
   }
-  _require(705).batchUpdates(() => {
+  _require("../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
     outer1_4.setState((alerts) => {
       alerts = [...alerts.alerts];
       const obj = { key: closure_0, node: closure_1, onDismiss: closure_2, dismissable: null };

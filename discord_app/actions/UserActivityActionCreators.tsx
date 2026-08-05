@@ -59,14 +59,14 @@ function _getMetadata() {
 const result = require("ME").fileFinishedImporting("actions/UserActivityActionCreators.tsx");
 
 export const sync = function sync(activity, userId) {
-  let obj = importDefault(709);
+  let obj = require("../Dispatcher.tsx");
   obj = { type: "ACTIVITY_SYNC", activity, userId };
   obj.dispatch(obj);
 };
 export const play = function play(closure_0, closure_1) {
   const _require = closure_0;
-  const spotifyMetadataFromActivity = _require(11062).getSpotifyMetadataFromActivity(closure_0, closure_1);
-  let obj = _require(11062);
+  const spotifyMetadataFromActivity = _require("../modules/spotify/SpotifyUtils.tsx").getSpotifyMetadataFromActivity(closure_0, closure_1);
+  let obj = _require("../modules/spotify/SpotifyUtils.tsx");
   spotifyMetadataFromActivity.then((metadata) => {
     let obj = callback(outer1_2[3]);
     obj = { type: "ACTIVITY_PLAY", activity: closure_0, userId: callback, metadata };

@@ -66,13 +66,13 @@ prototype["getRenderedAtTimestamp"] = function getRenderedAtTimestamp(closure_0)
 };
 prototype["hasUserHitDCCap"] = function hasUserHitDCCap(PASSWORDLESS_UPSELL, closure_1) {
   if (null != PASSWORDLESS_UPSELL) {
-    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = require(1363) /* set */.CONTENT_TYPES_WITH_BYPASS_FATIGUE;
+    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = require("DismissibleContentFatigueConfig.tsx") /* set */.CONTENT_TYPES_WITH_BYPASS_FATIGUE;
     return false;
   }
   if (null != PASSWORDLESS_UPSELL) {
     let result = null != closure_1;
     if (result) {
-      const obj = require(1359) /* isSingleUseDismissibleContent */;
+      const obj = require("DismissibleContentTypes.tsx") /* isSingleUseDismissibleContent */;
       result = obj.isGuildDismissibleContent(PASSWORDLESS_UPSELL);
     }
     if (result) {
@@ -135,10 +135,10 @@ obj = {
     ({ dismissibleContent, guildId } = arg0);
     const renderedAtTimestamps = obj.renderedAtTimestamps;
     const result = renderedAtTimestamps.set(dismissibleContent, new Date().getTime());
-    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = require(1363) /* set */.CONTENT_TYPES_WITH_BYPASS_FATIGUE;
+    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = require("DismissibleContentFatigueConfig.tsx") /* set */.CONTENT_TYPES_WITH_BYPASS_FATIGUE;
     if (!CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(dismissibleContent)) {
       if (!obj.dailyCapOverridden) {
-        let result1 = require(1359) /* isSingleUseDismissibleContent */.isGuildDismissibleContent(dismissibleContent);
+        let result1 = require("DismissibleContentTypes.tsx") /* isSingleUseDismissibleContent */.isGuildDismissibleContent(dismissibleContent);
         if (result1) {
           result1 = null != guildId;
         }
@@ -169,8 +169,8 @@ obj = {
               obj = { cap_type: "daily_cap", dismissible_content: null, shown_dcs: null };
               obj[1] = dismissibleContent;
               obj[2] = obj.numberOfDCsShownToday;
-              importDefault(698).track(AnalyticEvents.DCF_CAP_EXCEEDED, obj);
-              const obj6 = importDefault(698);
+              require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.DCF_CAP_EXCEEDED, obj);
+              const obj6 = require("../../utils/AnalyticsUtils.tsx");
             }
           } else {
             const seenForGuildId = obj.seenForGuildId;
@@ -180,7 +180,7 @@ obj = {
         } else {
           const dismissibleContentSeenDuringSession = obj.dismissibleContentSeenDuringSession;
         }
-        const tmp2Result = require(1359) /* isSingleUseDismissibleContent */;
+        const tmp2Result = require("DismissibleContentTypes.tsx") /* isSingleUseDismissibleContent */;
       }
     }
   },

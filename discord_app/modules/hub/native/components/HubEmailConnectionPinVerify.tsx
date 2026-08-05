@@ -13,8 +13,8 @@ let closure_6;
 let error;
 const require = arg1;
 function presentResendToast(content) {
-  let obj = importDefault(3986);
-  obj = { key: "HUB_EMAIL_RESET", content, icon: importDefault(9039) };
+  let obj = require("../../../toast/native/ToastActionCreators.tsx");
+  obj = { key: "HUB_EMAIL_RESET", content, icon: require("../../../../../_runtime/09039_registerAsset.js") };
   obj.open(obj);
 }
 ({ View: closure_6, Image: error } = get_ActivityIndicator);

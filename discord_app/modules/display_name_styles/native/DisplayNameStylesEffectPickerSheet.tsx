@@ -20,13 +20,13 @@ function EffectTile(arg0) {
   ({ effectId, selected, showNewDot } = arg0);
   ({ userId, onClick } = arg0);
   const tmp = createCacheKey();
-  const intl = require(1236) /* getSystemLocale */.intl;
-  let OpWJ3f = require(9391) /* DISPLAY_NAME_STYLES_EFFECT_NAMES */.DISPLAY_NAME_STYLES_EFFECT_NAMES[effectId];
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  let OpWJ3f = require("../hooks/useDisplayNameStylesEffectConfigs.tsx") /* DISPLAY_NAME_STYLES_EFFECT_NAMES */.DISPLAY_NAME_STYLES_EFFECT_NAMES[effectId];
   if (OpWJ3f == null) {
-    OpWJ3f = importDefault(2643).OpWJ3f;
+    OpWJ3f = require("../intl/DisplayNameStyles.messages.js").OpWJ3f;
   }
   const stringResult = intl.string(OpWJ3f);
-  const displayNameStylesEffectConfig = require(9391) /* DISPLAY_NAME_STYLES_EFFECT_NAMES */.useDisplayNameStylesEffectConfig(effectId);
+  const displayNameStylesEffectConfig = require("../hooks/useDisplayNameStylesEffectConfigs.tsx") /* DISPLAY_NAME_STYLES_EFFECT_NAMES */.useDisplayNameStylesEffectConfig(effectId);
   let hasItem = FLYWHEEL_EFFECTS.includes(effectId);
   let obj = { onPress: onClick, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, children: null };
   let combined = stringResult;
@@ -45,12 +45,12 @@ function EffectTile(arg0) {
   items[1] = selected;
   const obj1 = { userId, userName: stringResult, effectDisplayType: null, pendingDisplayNameStyles: null, style: null, variant: "text-md/semibold" };
   const tmp12 = closure_9;
-  const tmp2Result = require(9391) /* DISPLAY_NAME_STYLES_EFFECT_NAMES */;
+  const tmp2Result = require("../hooks/useDisplayNameStylesEffectConfigs.tsx") /* DISPLAY_NAME_STYLES_EFFECT_NAMES */;
   const tmp9 = closure_6;
-  obj1[2] = require(9389) /* DisplayNameStyleColorPreset */.EffectDisplayType.STATIC;
+  obj1[2] = require("../types.tsx") /* DisplayNameStyleColorPreset */.EffectDisplayType.STATIC;
   obj1[3] = displayNameStylesEffectConfig.previewStyles;
   obj1[4] = tmp.effectName;
-  const items1 = [closure_8(importDefault(9388), obj1), , ];
+  const items1 = [closure_8(require("UsernameWithEffects.tsx"), obj1), , ];
   if (showNewDot) {
     const obj2 = { style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
     obj2[0] = tmp.tileNewDot;

@@ -25,11 +25,11 @@ const prototype = HolidayEventsManager.prototype;
 prototype["updateSoundpack"] = function updateSoundpack() {
   const soundpack = store.getSoundpack();
   const lastSoundpackExperimentId = store.getLastSoundpackExperimentId();
-  const experiment = importDefault(16327).experiment;
+  const experiment = require("HolidayEventsConfig.tsx").experiment;
   if (experiment != null) {
     const name = experiment.definition.name;
   }
-  let isEligibleResult = importDefault(16330).isEligible();
+  let isEligibleResult = require("HolidayEventsUtils.tsx").isEligible();
   if (isEligibleResult) {
     if (isEligibleResult) {
       isEligibleResult = null != tmp3(16327).soundpack;
@@ -41,25 +41,25 @@ prototype["updateSoundpack"] = function updateSoundpack() {
       isEligibleResult = soundpack !== tmp3(16327).soundpack;
     }
     if (isEligibleResult) {
-      require(16331) /* setSoundpack */.setSoundpack(tmp3(16327).soundpack, name);
-      const obj3 = require(16331) /* setSoundpack */;
+      require("../soundpacks/SoundpackActions.tsx") /* setSoundpack */.setSoundpack(tmp3(16327).soundpack, name);
+      const obj3 = require("../soundpacks/SoundpackActions.tsx") /* setSoundpack */;
     }
   } else {
-    require(16331) /* setSoundpack */.setSoundpack(Soundpacks.CLASSIC, null);
-    const obj2 = require(16331) /* setSoundpack */;
+    require("../soundpacks/SoundpackActions.tsx") /* setSoundpack */.setSoundpack(Soundpacks.CLASSIC, null);
+    const obj2 = require("../soundpacks/SoundpackActions.tsx") /* setSoundpack */;
   }
 };
 prototype["updateRingtone"] = function updateRingtone() {
   if (obj.isEligible()) {
-    const tmpResult = importDefault(9697);
+    const tmpResult = require("../soundpacks/getSoundsForPack.tsx");
     if (null != tmpResultResult.call_ringing) {
-      require(16332) /* setIncomingRingtone */.setIncomingRingtone("call_ringing", `${tmp7.call_ringing}.mp3`);
-      const obj3 = require(16332) /* setIncomingRingtone */;
+      require("setIncomingRingtone.android.tsx") /* setIncomingRingtone */.setIncomingRingtone("call_ringing", `${tmp7.call_ringing}.mp3`);
+      const obj3 = require("setIncomingRingtone.android.tsx") /* setIncomingRingtone */;
     }
-    tmpResultResult = importDefault(9697)(store.getSoundpack());
+    tmpResultResult = require("../soundpacks/getSoundsForPack.tsx")(store.getSoundpack());
   } else {
-    require(16332) /* setIncomingRingtone */.setIncomingRingtone("call_ringing", "call_ringing.mp3");
-    const obj2 = require(16332) /* setIncomingRingtone */;
+    require("setIncomingRingtone.android.tsx") /* setIncomingRingtone */.setIncomingRingtone("call_ringing", "call_ringing.mp3");
+    const obj2 = require("setIncomingRingtone.android.tsx") /* setIncomingRingtone */;
   }
 };
 const holidayEventsManager = new HolidayEventsManager();

@@ -100,7 +100,7 @@ Object.defineProperty(prototype, "enableContentProtection", {
   set: undefined
 });
 prototype["isOverlayWidgetDisabled"] = function isOverlayWidgetDisabled(arg0) {
-  const obj = require(4126) /* apexExperiment */;
+  const obj = require("../modules/overlay/OverlayV3Experiment.tsx") /* apexExperiment */;
   let enabled = obj.getOverlayStreamerModeConfig("StreamerModeStore").enabled;
   if (enabled) {
     const self = this;
@@ -156,8 +156,8 @@ obj = {
       if (typeof value.value === "boolean") {
         obj = { enabled: null, automatic: false };
         obj[0] = value.value;
-        importDefault(698).track(AnalyticEvents.STREAMER_MODE_TOGGLE, obj);
-        const obj5 = importDefault(698);
+        require("../utils/AnalyticsUtils.tsx").track(AnalyticEvents.STREAMER_MODE_TOGGLE, obj);
+        const obj5 = require("../utils/AnalyticsUtils.tsx");
       }
       return true;
     }
@@ -180,12 +180,12 @@ obj = {
       str3 = "";
     }
     obj1[15] = str3;
-    importDefault(698).track(AnalyticEvents.UPDATE_STREAMER_MODE_SETTINGS, obj1);
+    require("../utils/AnalyticsUtils.tsx").track(AnalyticEvents.UPDATE_STREAMER_MODE_SETTINGS, obj1);
   },
   RUNNING_STREAMER_TOOLS_CHANGE: function handleRunningStreamerToolsChange(count) {
     if (obj.autoToggle) {
       obj.enabled = count.count > 0;
-      obj = importDefault(698);
+      obj = require("../utils/AnalyticsUtils.tsx");
       obj = { enabled: null, automatic: true };
       obj[0] = count.count > 0;
       obj.track(AnalyticEvents.STREAMER_MODE_TOGGLE, obj);

@@ -347,7 +347,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(require("dispatcher"), {
     }
     const items = [...value];
     const found = items.filter((id) => id.id !== closure_0);
-    const cloudUpload = new require(4816) /* set */.CloudUpload(file, channelId, undefined, allowOptimization);
+    const cloudUpload = new require("../lib/uploader/CloudUpload.tsx") /* set */.CloudUpload(file, channelId, undefined, allowOptimization);
     found.push(cloudUpload);
     let value1 = obj.get(channelId);
     if (value1 == null) {

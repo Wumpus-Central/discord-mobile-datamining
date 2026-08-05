@@ -10,8 +10,8 @@ function syncYYTextReplacementExperiment() {
     if (NSUserDefaultsBridge != null) {
       const setShouldEnableYYTextReplacement = NSUserDefaultsBridge.setShouldEnableYYTextReplacement;
       if (setShouldEnableYYTextReplacement != null) {
-        const result = setShouldEnableYYTextReplacement(require(16778) /* shouldEnableYYTextReplacement */.shouldEnableYYTextReplacement({ location: "NativeExperimentBridgeManager" }));
-        const tmpResult = require(16778) /* shouldEnableYYTextReplacement */;
+        const result = setShouldEnableYYTextReplacement(require("../../messages/YYTextReplacementExperiment.tsx") /* shouldEnableYYTextReplacement */.shouldEnableYYTextReplacement({ location: "NativeExperimentBridgeManager" }));
+        const tmpResult = require("../../messages/YYTextReplacementExperiment.tsx") /* shouldEnableYYTextReplacement */;
       }
     }
   }
@@ -35,7 +35,7 @@ function updateIOSExperiments() {
       const result1 = setShouldFixPushNotificationRawPayload(tmpResult.isIOSPushNotificationRawPayloadFixExperimentEnabled());
     }
   }
-  obj = require(500) /* set */;
+  obj = require("../../../utils/PlatformUtils.tsx") /* set */;
   if (obj4.getConfig({ location: "NativeExperimentBridgeManager" }).enabled) {
     const RNVVideo = tmp6.RNVVideo;
     if (RNVVideo != null) {
@@ -49,13 +49,13 @@ function updateIOSExperiments() {
 }
 function updateAndroidExperiments() {
   let obj = { "X-Super-Properties": null, "X-Fingerprint": null, "X-Installation-ID": null, "X-Discord-Locale": null };
-  obj[0] = importDefault(698).getSuperPropertiesBase64();
+  obj[0] = require("../../../utils/AnalyticsUtils.tsx").getSuperPropertiesBase64();
   obj[1] = store.getFingerprint();
   obj[2] = store.getInstallationForTracking();
   obj[3] = locale.locale;
-  const obj2 = importDefault(698);
+  const obj2 = require("../../../utils/AnalyticsUtils.tsx");
   const obj3 = store;
-  const config = importDefault(16780).getConfig({ location: "NativeExperimentBridgeManager" });
+  const config = require("../../cache/NotificationLoadMessagesExperiment.tsx").getConfig({ location: "NativeExperimentBridgeManager" });
   const NativeCacheModule = NativeModules.NativeCacheModule;
   if (NativeCacheModule != null) {
     const _JSON = JSON;
@@ -63,25 +63,25 @@ function updateAndroidExperiments() {
     obj[0] = obj;
     obj[1] = obj3.getId();
     obj[2] = tmp3;
-    obj[3] = require(530) /* sendRequest */.getAPIBaseURL();
+    obj[3] = require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.getAPIBaseURL();
     const _HermesInternal = HermesInternal;
     obj[4] = "?limit=" + tmp4;
     obj[5] = tmp5;
     obj[6] = tmp6;
     const result = NativeCacheModule.setItem("notificationNetworkRequest", JSON.stringify(obj));
-    const obj6 = require(530) /* sendRequest */;
+    const obj6 = require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */;
   }
 }
 let prototype = function NativeExperimentBridgeManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  let obj = require(500) /* set */;
+  let obj = require("../../../utils/PlatformUtils.tsx") /* set */;
   if (obj.isIOS()) {
     let tmp5 = updateIOSExperiments;
   } else {
-    tmp5 = require(500) /* set */.isAndroid() ? updateAndroidExperiments : (() => {
+    tmp5 = require("../../../utils/PlatformUtils.tsx") /* set */.isAndroid() ? updateAndroidExperiments : (() => {
 
     });
-    const tmp3Result = require(500) /* set */;
+    const tmp3Result = require("../../../utils/PlatformUtils.tsx") /* set */;
   }
   applyArgumentsResult.handleUpdate = tmp5;
   obj = { APP_STATE_UPDATE: syncYYTextReplacementExperiment, POST_CONNECTION_OPEN: applyArgumentsResult.handleUpdate };

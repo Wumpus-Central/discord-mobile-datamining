@@ -11,12 +11,12 @@ function getStripe() {
   if (null != closure_2) {
     let resolved = Promise.resolve(closure_2);
   } else {
-    const stripe = require(4611) /* _typeof */.loadStripe(constants.STRIPE.KEY);
+    const stripe = require("../../_runtime/metro/04611__typeof.js") /* _typeof */.loadStripe(constants.STRIPE.KEY);
     resolved = stripe.then((arg0) => {
       let closure_2 = arg0;
       return arg0;
     });
-    const obj = require(4611) /* _typeof */;
+    const obj = require("../../_runtime/metro/04611__typeof.js") /* _typeof */;
   }
   return resolved;
 }
@@ -407,7 +407,7 @@ export const getStripeElementLocale = function getStripeElementLocale(arg0) {
 };
 export const useStripeLocale = function useStripeLocale() {
   const items = [_getSystemLocale];
-  return require(589) /* initialize */.useStateFromStores(items, () => {
+  return require("../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
     locale = locale.locale;
     let tmp = table[locale];
     if (tmp == null) {

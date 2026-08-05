@@ -28,7 +28,7 @@ function PasswordStrength(passwordScore) {
     if (isPasswordFocused) {
       if (0 !== password.length) {
         if (null == passwordError) {
-          if (passwordScore <= require(15001) /* PasswordScore */.PasswordScore.WEAK) {
+          if (passwordScore <= require("utils/usePasswordScore.tsx") /* PasswordScore */.PasswordScore.WEAK) {
             const intl2 = tmp9(1236).intl;
             let str = intl2.string(tmp9(1236).t["w/8TuV"]);
             let strong = tmp.weak;
@@ -52,9 +52,9 @@ function PasswordStrength(passwordScore) {
           obj.style = items;
           obj.animated = true;
           const intl3 = tmp9(1236).intl;
-          const items1 = [intl3.string(require(1236) /* getSystemLocale */.t["5gbdUX"]), ": ", str];
+          const items1 = [intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["5gbdUX"]), ": ", str];
           obj.children = items1;
-          return callback2(require(4281) /* Text */.Text, obj);
+          return callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
         }
       }
     }

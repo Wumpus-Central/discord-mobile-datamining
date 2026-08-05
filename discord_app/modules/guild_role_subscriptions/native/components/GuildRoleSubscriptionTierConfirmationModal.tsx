@@ -31,7 +31,7 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
   const merged = Object.assign(onDone, Object.create(null));
   let importDefault;
   const tmp2 = createCacheKey();
-  const tmp5 = importDefault(13152)();
+  const tmp5 = require("FormStyles.tsx")();
   let obj = onDone(16701);
   const editStateContext = obj.useEditStateContext();
   ({ guildId, editStateId } = editStateContext);
@@ -153,5 +153,5 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
   }
   const items3 = [flag, callback3(onDone(16725).GuildRoleSubscriptionListingPreview, { guildId, listingId: editStateId })];
   obj.children = items3;
-  return closure_10(importDefault(16693), obj);
+  return closure_10(require("GuildRoleSubscriptionTierEditStep.tsx"), obj);
 };

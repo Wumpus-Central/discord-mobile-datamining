@@ -9,9 +9,9 @@ let closure_4 = createCacheKey.createStyles({ fullSizePreview: { flex: 1, alignI
 const result = require("jsxProd").fileFinishedImporting("modules/collectibles/native/AvatarDecorationProductPreview.tsx");
 
 export default function AvatarDecorationProductPreview(product) {
-  let obj = require(9266) /* useCurrentUser */;
+  let obj = require("../hooks/useCurrentUser.tsx") /* useCurrentUser */;
   const currentUser = obj.useCurrentUser();
-  let obj1 = require(9292) /* firstAvatarDecoration */;
+  let obj1 = require("../hooks/useShopProductItems.tsx") /* firstAvatarDecoration */;
   const firstAvatarDecoration = obj1.useShopProductItems(product.product).firstAvatarDecoration;
   let tmp5 = null;
   if (null != firstAvatarDecoration) {

@@ -82,7 +82,7 @@ Store["initialize"] = function initialize() {
 };
 Store["destroy"] = function destroy() {
   closure_4.length = 0;
-  importDefault(593).destroy();
+  require("Emitter.tsx").destroy();
 };
 Store["getAll"] = function getAll() {
   return closure_4;
@@ -113,8 +113,8 @@ prototype["initializeIfNeeded"] = function initializeIfNeeded() {
     const _Date2 = Date;
     const diff = Date.now() - timestamp;
     if (diff > 5) {
-      importDefault(10).mark("\u{1F9A5}", `${self.getName()}.initialize()`, diff);
-      const obj = importDefault(10);
+      require("../app-start-performance/AppStartPerformance.tsx").mark("\u{1F9A5}", `${self.getName()}.initialize()`, diff);
+      const obj = require("../app-start-performance/AppStartPerformance.tsx");
     }
   }
 };
@@ -186,7 +186,7 @@ prototype["waitFor"] = function waitFor() {
   _dispatcher.addDependencies(dispatchToken, mapped.filter((arg0) => null != arg0));
 };
 prototype["emitChange"] = function emitChange() {
-  importDefault(593).markChanged(this);
+  require("Emitter.tsx").markChanged(this);
 };
 prototype["getDispatchToken"] = function getDispatchToken() {
   return this._dispatchToken;

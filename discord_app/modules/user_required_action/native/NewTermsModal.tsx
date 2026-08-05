@@ -20,11 +20,11 @@ function handleTouch() {
   closure_7.dismiss();
 }
 function handleMoreActions() {
-  let obj = require(5643) /* showSimpleActionSheet */;
+  let obj = require("../../action_sheet/native/showSimpleActionSheet.tsx") /* showSimpleActionSheet */;
   obj = { key: "NewTermsModalMore", options: null, hasIcons: false };
   obj = { label: null, isDestructive: true, onPress: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t["2jxGer"]);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["2jxGer"]);
   obj[2] = function onPress() {
     return callback(table[11]).logout("new_terms_modal");
   };
@@ -54,7 +54,7 @@ let result = require("noop").fileFinishedImporting("modules/user_required_action
 
 export default function NewTermsModal() {
   const tmp = createCacheKey();
-  const rect = importDefault(1581)();
+  const rect = require("../../safe_area/useSafeAreaInsets.native.tsx")();
   const top = rect.top;
   const memo = React.useMemo(() => action.getAction(), []);
   const tmp5 = callback2(React.useState(false), 2);
@@ -123,7 +123,7 @@ export default function NewTermsModal() {
   obj[0] = memo(503).ImpressionTypes.VIEW;
   obj[1] = memo(503).ImpressionNames.USER_AGREEMENTS;
   obj[2] = { required_action: memo };
-  importDefault(9267)(obj, {}, []);
+  require("../../app_analytics/useTrackImpression.tsx")(obj, {}, []);
   let tmp10 = null;
   if (null != memo) {
     obj = { style: null, children: null };

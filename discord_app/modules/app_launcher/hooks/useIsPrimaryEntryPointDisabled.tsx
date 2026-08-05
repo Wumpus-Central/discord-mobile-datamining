@@ -69,7 +69,7 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
   let reason;
   if (activityAction !== channel(11356).ActivityAction.LEAVE) {
     const tmp10 = application instanceof createExecutable ? application.embeddedActivityConfig : application.embedded_activity_config;
-    importDefault(10522);
+    require("../../activities/utils/getPlatform.tsx");
     tmp2(500);
     if (null != tmp10) {
       const supported_platforms = tmp10.supported_platforms;

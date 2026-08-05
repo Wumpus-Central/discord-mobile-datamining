@@ -14,16 +14,16 @@ function isValueEqual(items, current) {
           if (items instanceof Set) {
             const _Set2 = Set;
             if (current instanceof Set) {
-              let areSetsEqualResult = require(1414) /* areSetsEqual */.areSetsEqual(items, current);
-              const obj2 = require(1414) /* areSetsEqual */;
+              let areSetsEqualResult = require("../../discord_common/js/shared/utils/SetUtils.tsx") /* areSetsEqual */.areSetsEqual(items, current);
+              const obj2 = require("../../discord_common/js/shared/utils/SetUtils.tsx") /* areSetsEqual */;
             }
           }
           const _Array = Array;
           if (Array.isArray(items)) {
             const _Array2 = Array;
             if (Array.isArray(current)) {
-              areSetsEqualResult = require(643) /* shallowEqual */.areArraysShallowEqual(items, current);
-              const obj = require(643) /* shallowEqual */;
+              areSetsEqualResult = require("../../discord_common/js/packages/shallow-equal/shallowEqual.tsx") /* shallowEqual */.areArraysShallowEqual(items, current);
+              const obj = require("../../discord_common/js/packages/shallow-equal/shallowEqual.tsx") /* shallowEqual */;
             }
           }
           areSetsEqualResult = typeof items === "object";
@@ -31,7 +31,7 @@ function isValueEqual(items, current) {
             areSetsEqualResult = typeof current === "object";
           }
           if (areSetsEqualResult) {
-            areSetsEqualResult = importDefault(643)(items, current);
+            areSetsEqualResult = require("../../discord_common/js/packages/shallow-equal/shallowEqual.tsx")(items, current);
           }
         } else {
           const _Date2 = Date;
@@ -125,7 +125,7 @@ export const tryReuseExistingInPlacePlainRecord = function tryReuseExistingInPla
   if (!tmp3) {
     tmp3 = tmp[TypeTag] === arg0;
   }
-  importDefault(38)(tmp3, "Existing record type does not match the expected type");
+  require("../../_runtime/metro/00038__.js")(tmp3, "Existing record type does not match the expected type");
   if (null == tmp) {
     arg2[TypeTag] = arg0;
     tmp = arg2;

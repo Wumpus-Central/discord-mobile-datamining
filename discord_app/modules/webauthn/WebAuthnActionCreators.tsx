@@ -311,7 +311,7 @@ export const fetchWebAuthnPasswordlessChallenge = function fetchWebAuthnPassword
   return applyArgumentsResult;
 };
 export const fetchWebAuthnCredentials = function fetchWebAuthnCredentials() {
-  const HTTP = require(530) /* sendRequest */.HTTP;
+  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
   const value = HTTP.get({ url: Endpoints.MFA_WEBAUTHN_CREDENTIALS, rejectWithError: true });
   value.then((body) => {
     if (null != body.body) {
@@ -375,8 +375,8 @@ export const finishRegisterWebAuthnCredential = function finishRegisterWebAuthnC
   return applyArgumentsResult;
 };
 export const triggerWebAuthnRegister = function triggerWebAuthnRegister() {
-  importDefault(709).dispatch({ type: "WEBAUTHN_TRIGGER_REGISTER" });
+  require("../../Dispatcher.tsx").dispatch({ type: "WEBAUTHN_TRIGGER_REGISTER" });
 };
 export const clearWebAuthnRegisterTrigger = function clearWebAuthnRegisterTrigger() {
-  importDefault(709).dispatch({ type: "WEBAUTHN_CLEAR_REGISTER_TRIGGER" });
+  require("../../Dispatcher.tsx").dispatch({ type: "WEBAUTHN_CLEAR_REGISTER_TRIGGER" });
 };

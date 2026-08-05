@@ -294,32 +294,32 @@ prototype["parseRangeHeader"] = function parseRangeHeader(str) {
   return tmp2;
 };
 prototype["retryOpts"] = function retryOpts() {
-  if (this.item.platform === require(4817) /* cancel */.UploadPlatform.REACT_NATIVE) {
+  if (this.item.platform === require("Upload.tsx") /* cancel */.UploadPlatform.REACT_NATIVE) {
     let obj = { timeout: null, backoff: null, retries: 12 };
-    obj[0] = importDefault(687).Millis.HOUR;
-    let tmp8 = importDefault(584);
-    const result = 0.5 * importDefault(687).Millis.SECOND;
-    tmp8 = new tmp8(result, 30 * importDefault(687).Millis.MINUTE);
+    obj[0] = require("../../utils/Durations.tsx").Millis.HOUR;
+    let tmp8 = require("../../../discord_common/js/packages/backoff/Backoff.tsx");
+    const result = 0.5 * require("../../utils/Durations.tsx").Millis.SECOND;
+    tmp8 = new tmp8(result, 30 * require("../../utils/Durations.tsx").Millis.MINUTE);
     obj[1] = tmp8;
   } else {
     obj = { timeout: null, retries: 12, backoff: null };
-    obj[0] = importDefault(687).Millis.HOUR;
-    const tmp5 = new importDefault(584)();
+    obj[0] = require("../../utils/Durations.tsx").Millis.HOUR;
+    const tmp5 = new require("../../../discord_common/js/packages/backoff/Backoff.tsx")();
     obj[2] = tmp5;
   }
   return obj;
 };
 prototype["createAttachmentUrlRetryOpts"] = function createAttachmentUrlRetryOpts() {
   const self = this;
-  if (this.item.platform === require(4817) /* cancel */.UploadPlatform.REACT_NATIVE) {
+  if (this.item.platform === require("Upload.tsx") /* cancel */.UploadPlatform.REACT_NATIVE) {
     let obj = { timeout: null, backoff: null, retries: 8 };
     obj = { response: null, deadline: null };
-    obj[0] = 30 * importDefault(687).Millis.SECOND;
-    obj[1] = 30 * importDefault(687).Millis.MINUTE;
+    obj[0] = 30 * require("../../utils/Durations.tsx").Millis.SECOND;
+    obj[1] = 30 * require("../../utils/Durations.tsx").Millis.MINUTE;
     obj[0] = obj;
-    let tmp4 = importDefault(584);
-    const result = 0.5 * importDefault(687).Millis.SECOND;
-    tmp4 = new tmp4(result, 60 * importDefault(687).Millis.SECOND);
+    let tmp4 = require("../../../discord_common/js/packages/backoff/Backoff.tsx");
+    const result = 0.5 * require("../../utils/Durations.tsx").Millis.SECOND;
+    tmp4 = new tmp4(result, 60 * require("../../utils/Durations.tsx").Millis.SECOND);
     obj[1] = tmp4;
     let retryOptsResult = obj;
   } else {
@@ -330,7 +330,7 @@ prototype["createAttachmentUrlRetryOpts"] = function createAttachmentUrlRetryOpt
 prototype["supportsResume"] = function supportsResume() {
   let _libdiscoreEnabled = this._libdiscoreEnabled;
   if (!_libdiscoreEnabled) {
-    _libdiscoreEnabled = this.item.platform !== require(4817) /* cancel */.UploadPlatform.REACT_NATIVE;
+    _libdiscoreEnabled = this.item.platform !== require("Upload.tsx") /* cancel */.UploadPlatform.REACT_NATIVE;
   }
   return _libdiscoreEnabled;
 };
@@ -1944,7 +1944,7 @@ CloudUpload["isResponseUrlStale"] = function isResponseUrlStale(responseUrlSetAt
     return true;
   } else {
     const _Date = Date;
-    const result = 12 * importDefault(687).Millis.HOUR;
+    const result = 12 * require("../../utils/Durations.tsx").Millis.HOUR;
     return Date.now() - responseUrlSetAt > result;
   }
 };
@@ -2065,7 +2065,7 @@ prototype["setUploadedFilename"] = function setUploadedFilename(upload_filename)
   this.uploadedFilename = upload_filename;
 };
 prototype["trackUploadStart"] = function trackUploadStart() {
-  let obj = importDefault(698);
+  let obj = require("../../utils/AnalyticsUtils.tsx");
   obj = { file_size: this.currentSize, mime_type: null, video_upload_quality: null, data_saving_mode: null, low_quality_image_mode: null, channel_id: null, connection_type: null, effective_connection_speed: null, service_provider: null };
   let str = this.mimeType;
   if (str == null) {
@@ -2086,7 +2086,7 @@ prototype["trackUploadFinished"] = function trackUploadFinished(COMPLETED) {
     const _performance = performance;
     num = performance.now() - self.startTime;
   }
-  let obj = importDefault(698);
+  let obj = require("../../utils/AnalyticsUtils.tsx");
   obj = { duration_ms: num, file_size: self.currentSize, pre_compression_file_size: self.preCompressionSize, final_state: COMPLETED, mime_type: null, num_upload_attempts: null, error_code: null, video_upload_quality: null, data_saving_mode: null, low_quality_image_mode: null, compress_time_ms: null, get_upload_url_time_ms: null, upload_time_ms: null, converted_mime_type: null, image_compression_quality: null, video_compression_quality: null, image_encoder_type: null, was_converted: null, was_compressed: null, source_media_width: null, source_media_height: null, source_media_format: null, uploaded_image_width: null, uploaded_image_height: null, source_video_bitrate: null, video_duration_ms: null, source_video_profile_name: null, source_video_profile_level: null, target_video_width: null, target_video_height: null, target_video_bitrate: null, target_video_codec: null, target_video_framerate: null, target_video_is_hdr: null, hevc_is_supported: null, progress_update_granularity: null, source_video_framerate: null, channel_id: null, hash_time_ms: null, psnr: null, ssim: null, origin: null, psnr_measurement_latency_ms: null, ssim_measurement_latency_ms: null, upload_resumption_count: null, upload_resumption_reason: null, upload_resumption_position: null, upload_resumption_check_time_ms: null, conversion_failure_reason: null, upload_http_client: null, connection_type: null, effective_connection_speed: null, service_provider: null };
   let str = self.mimeType;
   if (str == null) {

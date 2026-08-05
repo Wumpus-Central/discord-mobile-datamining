@@ -15,8 +15,8 @@ let closure_9 = {
     let onDataBindingChange;
     let playIfNeeded;
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
-    const booleanBinding = require(4014) /* BaseRive */.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = require(4014) /* BaseRive */;
+    const booleanBinding = require("../BaseRive.tsx") /* BaseRive */.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
+    const obj = require("../BaseRive.tsx") /* BaseRive */;
     const tmp = require;
     let fill;
     if (dataBinding != null) {
@@ -26,8 +26,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       fill1 = onDataBindingChange.fill;
     }
-    const colorBinding = require(4014) /* BaseRive */.useColorBinding("fill", instance, fill, fill1, playIfNeeded);
-    const obj2 = require(4014) /* BaseRive */;
+    const colorBinding = require("../BaseRive.tsx") /* BaseRive */.useColorBinding("fill", instance, fill, fill1, playIfNeeded);
+    const obj2 = require("../BaseRive.tsx") /* BaseRive */;
     let on;
     if (dataBinding != null) {
       on = dataBinding.on;
@@ -83,7 +83,7 @@ const forwardRefResult = importAllResult.forwardRef(function CameraRiveWithBound
   obj = { ref };
   const merged = Object.assign(fallback);
   obj[1] = <closure_10 ref={arg1} />;
-  return jsx(require(4065) /* getDerivedStateFromError */.RiveErrorBoundary, { ref });
+  return jsx(require("../RiveErrorBoundary.tsx") /* getDerivedStateFromError */.RiveErrorBoundary, { ref });
 });
 const result = require("jsxProd").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/CameraRive.tsx");
 

@@ -15,7 +15,7 @@ class MobileGiftIntentCardManager extends tmp3 {
 }
 const prototype = MobileGiftIntentCardManager.prototype;
 prototype["isChannelEligible"] = function isChannelEligible(channel) {
-  return channel.type === require(692) /* set */.ChannelTypes.DM;
+  return channel.type === require("../../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx") /* set */.ChannelTypes.DM;
 };
 prototype["maybeSendCard"] = function maybeSendCard(id, closure_0) {
   let self = this;
@@ -80,8 +80,8 @@ prototype["sendCardInSelectedChannelIfEligible"] = function sendCardInSelectedCh
 };
 prototype["maybeFetchUserAffinities"] = function maybeFetchUserAffinities() {
   if (obj.getConfig({ location: "MobileGiftIntentCardManager" }).enabled) {
-    const userAffinitiesV2 = require(9003) /* fetchUserAffinitiesV2 */.fetchUserAffinitiesV2();
-    const obj2 = require(9003) /* fetchUserAffinitiesV2 */;
+    const userAffinitiesV2 = require("../../../user_affinities/UserAffinitiesActionCreators.tsx") /* fetchUserAffinitiesV2 */.fetchUserAffinitiesV2();
+    const obj2 = require("../../../user_affinities/UserAffinitiesActionCreators.tsx") /* fetchUserAffinitiesV2 */;
   }
 };
 prototype["onChannelSelect"] = function onChannelSelect(channelId) {

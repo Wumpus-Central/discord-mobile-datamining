@@ -21,10 +21,10 @@ function SpendingLimitRow(teenId) {
     obj = { trailing: null };
     const intl2 = tmp2(1236).intl;
     obj = { variant: "text-sm/normal", color: "text-muted", children: null };
-    obj[2] = intl2.string(importDefault(2285).YEnpaj);
+    obj[2] = intl2.string(require("../FamilyCenter.messages.js").YEnpaj);
     obj[0] = callback(tmp2(4281).Text, obj);
     let tmp8 = obj;
-    const stringResult = intl2.string(importDefault(2285).YEnpaj);
+    const stringResult = intl2.string(require("../FamilyCenter.messages.js").YEnpaj);
   } else if ("on" === kind) {
     const obj1 = { trailing: null };
     const obj2 = { variant: "text-sm/normal", color: "text-muted", children: null };
@@ -49,29 +49,29 @@ function SpendingLimitRow(teenId) {
     const intl = tmp2(1236).intl;
     const obj8 = { variant: "text-sm/normal", style: null, children: null };
     obj8[1] = tmp.subLabelCritical;
-    obj8[2] = intl.string(importDefault(2285).Q2msVQ);
+    obj8[2] = intl.string(require("../FamilyCenter.messages.js").Q2msVQ);
     obj6[1] = callback(tmp2(4281).Text, obj8);
     tmp8 = obj6;
-    const stringResult1 = intl.string(importDefault(2285).Q2msVQ);
+    const stringResult1 = intl.string(require("../FamilyCenter.messages.js").Q2msVQ);
   } else if ("blocked" === kind) {
     const obj9 = { trailing: null, subLabel: null };
     const intl4 = tmp2(1236).intl;
     const obj10 = { variant: "text-sm/normal", color: "text-muted", children: null };
-    obj10[2] = intl4.string(importDefault(2285).kGFuGn);
+    obj10[2] = intl4.string(require("../FamilyCenter.messages.js").kGFuGn);
     obj9[0] = callback(tmp2(4281).Text, obj10);
     const intl5 = tmp2(1236).intl;
-    const stringResult2 = intl4.string(importDefault(2285).kGFuGn);
+    const stringResult2 = intl4.string(require("../FamilyCenter.messages.js").kGFuGn);
     const obj11 = { variant: "text-sm/normal", style: null, children: null };
     obj11[1] = tmp.subLabelCritical;
-    obj11[2] = intl5.string(importDefault(2285).FUu2b0);
+    obj11[2] = intl5.string(require("../FamilyCenter.messages.js").FUu2b0);
     obj9[1] = callback(tmp2(4281).Text, obj11);
     tmp8 = obj9;
-    const stringResult3 = intl5.string(importDefault(2285).FUu2b0);
+    const stringResult3 = intl5.string(require("../FamilyCenter.messages.js").FUu2b0);
   }
   ({ trailing, subLabel } = tmp8);
   const obj12 = { label: null, trailing: null, subLabel: null, onPress: null, arrow: null, disabled: null };
   const intl3 = tmp2(1236).intl;
-  obj12[0] = intl3.string(importDefault(2285).gMeekL);
+  obj12[0] = intl3.string(require("../FamilyCenter.messages.js").gMeekL);
   obj12[1] = trailing;
   obj12[2] = subLabel;
   let fn;
@@ -308,7 +308,7 @@ let obj5 = { color: require("Themes").colors.TEXT_FEEDBACK_CRITICAL };
 const result = require("items").fileFinishedImporting("modules/parent_tools/native/FamilyCenterSettingsControls.tsx");
 
 export default function FamilyCenterSettingsControls() {
-  let obj = require(7259) /* useUserIdsForLinkStatus */;
+  let obj = require("../hooks/useUserLinks.tsx") /* useUserIdsForLinkStatus */;
   if (0 === obj.useActiveLinkUserIds().length) {
     return null;
   } else {

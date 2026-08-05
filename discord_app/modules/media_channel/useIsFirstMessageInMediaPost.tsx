@@ -7,7 +7,7 @@ const result = require("DISCORD_EPOCH").fileFinishedImporting("modules/media_cha
 export const useIsFirstMessageInMediaPost = function useIsFirstMessageInMediaPost(arg0) {
   const _require = arg0;
   const items = [arg0];
-  return _require(647).useStateFromStores([], () => {
+  return _require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores([], () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
       const channel_id = tmp.channel_id;
@@ -56,7 +56,7 @@ export const isFirstMessageInMediaPost = function isFirstMessageInMediaPost(chan
       obj2 = store;
     }
     tmp = flag;
-    obj = importDefault(11);
+    obj = require("../../utils/SnowflakeUtils.tsx");
   }
   return tmp;
 };
@@ -77,5 +77,5 @@ export const isFirstMessageIdInMediaPost = function isFirstMessageIdInMediaPost(
     }
     return false;
   }
-  obj = importDefault(11);
+  obj = require("../../utils/SnowflakeUtils.tsx");
 };

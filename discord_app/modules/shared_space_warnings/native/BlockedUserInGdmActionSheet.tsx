@@ -26,7 +26,7 @@ function getUserCalloutRowText(arg0) {
   const items = [...calledOutUserIds];
   dependencyMap = items.map((arg0) => user.getUser(arg0));
   if (totalUsers >= 4) {
-    const intl4 = require(1236) /* getSystemLocale */.intl;
+    const intl4 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     let obj = { usernameHook1: null, usernameHook2: null, numberOfOtherUsers: null };
     obj[0] = function usernameHook1() {
       const obj = { variant: "text-md/semibold", children: null };
@@ -39,9 +39,9 @@ function getUserCalloutRowText(arg0) {
       return outer1_11(outer1_0(4281).Text, obj);
     };
     obj[2] = totalUsers - calledOutUserIds.length;
-    let formatResult = intl4.format(require(1236) /* getSystemLocale */.t.qfo6KR, obj);
+    let formatResult = intl4.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.qfo6KR, obj);
   } else if (3 === totalUsers) {
-    const intl3 = require(1236) /* getSystemLocale */.intl;
+    const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { usernameHook1: null, usernameHook2: null };
     obj[0] = function usernameHook1() {
       const obj = { variant: "text-md/semibold", children: null };
@@ -53,9 +53,9 @@ function getUserCalloutRowText(arg0) {
       obj[1] = outer1_1(4474).getName(closure_0, closure_1, 17);
       return outer1_11(outer1_0(4281).Text, obj);
     };
-    formatResult = intl3.format(require(1236) /* getSystemLocale */.t["67ZE+9"], obj);
+    formatResult = intl3.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["67ZE+9"], obj);
   } else if (2 === totalUsers) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj1 = { usernameHook1: null, usernameHook2: null };
     obj1[0] = function usernameHook1() {
       const obj = { variant: "text-md/semibold", children: null };
@@ -67,16 +67,16 @@ function getUserCalloutRowText(arg0) {
       obj[1] = outer1_1(4474).getName(closure_0, closure_1, 17);
       return outer1_11(outer1_0(4281).Text, obj);
     };
-    formatResult = intl2.format(require(1236) /* getSystemLocale */.t.veV4IN, obj1);
+    formatResult = intl2.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.veV4IN, obj1);
   } else {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { usernameHook: null };
     obj[0] = function usernameHook() {
       const obj = { variant: "text-md/semibold", children: null };
       obj[1] = outer1_1(4474).getName(closure_0, closure_1, 19);
       return outer1_11(outer1_0(4281).Text, obj);
     };
-    formatResult = intl.format(require(1236) /* getSystemLocale */.t["4WHCtq"], obj);
+    formatResult = intl.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["4WHCtq"], obj);
   }
   return formatResult;
 }
@@ -114,10 +114,10 @@ function BlockedUserInGDMDescription(arg0) {
   if (numOfBlockedUsers > 0) {
     if (tmp2) {
       let obj = { children: null };
-      const intl5 = require(1236) /* getSystemLocale */.intl;
-      const items = [intl5.string(require(1236) /* getSystemLocale */.t.xbRNI3), "\n", ];
-      const intl6 = require(1236) /* getSystemLocale */.intl;
-      items[2] = intl6.string(require(1236) /* getSystemLocale */.t["Bp2/ni"]);
+      const intl5 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const items = [intl5.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.xbRNI3), "\n", ];
+      const intl6 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      items[2] = intl6.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["Bp2/ni"]);
       obj[0] = items;
       let tmp3 = callback2(closure_12, obj);
     }
@@ -125,24 +125,24 @@ function BlockedUserInGDMDescription(arg0) {
   }
   if (numOfBlockedUsers > 0) {
     obj = { children: null };
-    const intl3 = require(1236) /* getSystemLocale */.intl;
+    const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj1 = { n: null };
     obj1[0] = numOfBlockedUsers;
-    const items1 = [intl3.format(require(1236) /* getSystemLocale */.t.iKtixW, obj1), "\n", ];
-    const intl4 = require(1236) /* getSystemLocale */.intl;
-    items1[2] = intl4.string(require(1236) /* getSystemLocale */.t.SN1hrl);
+    const items1 = [intl3.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.iKtixW, obj1), "\n", ];
+    const intl4 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    items1[2] = intl4.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.SN1hrl);
     obj[0] = items1;
     tmp3 = callback2(closure_12, obj);
   } else {
     tmp3 = null;
     if (tmp2) {
       obj = { children: null };
-      const intl = require(1236) /* getSystemLocale */.intl;
+      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
       const obj2 = { n: null };
       obj2[0] = numOfIgnoredUsers;
-      const items2 = [intl.format(require(1236) /* getSystemLocale */.t["6IRwua"], obj2), "\n", ];
-      const intl2 = require(1236) /* getSystemLocale */.intl;
-      items2[2] = intl2.string(require(1236) /* getSystemLocale */.t["6AKLRt"]);
+      const items2 = [intl.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["6IRwua"], obj2), "\n", ];
+      const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      items2[2] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["6AKLRt"]);
       obj[0] = items2;
       tmp3 = callback2(closure_12, obj);
     }

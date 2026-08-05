@@ -7,15 +7,15 @@ const result = require("experiment").fileFinishedImporting("modules/game_claim/u
 
 export const useCanShowGameClaimCoachmark = function useCanShowGameClaimCoachmark(id) {
   const _require = id;
-  let gameClaimCoachmarkEnabled = _require(15266).useGameClaimCoachmarkEnabled(id, "useCanShowGameClaimCoachmark");
-  const obj = _require(15266);
+  let gameClaimCoachmarkEnabled = _require("experiments/GameClaimCoachmarkExperiment.tsx").useGameClaimCoachmarkEnabled(id, "useCanShowGameClaimCoachmark");
+  const obj = _require("experiments/GameClaimCoachmarkExperiment.tsx");
   const tmp = _require;
   const items = [getUncachedChannelPermissions];
   const items1 = [id];
   if (gameClaimCoachmarkEnabled) {
     gameClaimCoachmarkEnabled = obj2.useStateFromStores(items, () => outer1_2.canWithPartialContext(outer1_3.ADMINISTRATOR, { guildId: closure_0 }), items1);
   }
-  obj2 = _require(589);
+  obj2 = _require("../../../discord_common/js/packages/flux/index.tsx");
   if (gameClaimCoachmarkEnabled) {
     gameClaimCoachmarkEnabled = tmpResult.useHasUnclaimedGames(id, gameClaimCoachmarkEnabled);
   }

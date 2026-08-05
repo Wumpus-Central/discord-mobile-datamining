@@ -7,6 +7,6 @@ const result = require("set").fileFinishedImporting("modules/quests/native/Video
 export default context;
 export const useVideoQuestModalContext = function useVideoQuestModalContext() {
   context = importAllResult.useContext(context);
-  importDefault(38)(null != context, "useVideoQuestModalContext must be used within a VideoQuestModalProvider");
+  require("../../../../../_runtime/metro/00038__.js")(null != context, "useVideoQuestModalContext must be used within a VideoQuestModalProvider");
   return context;
 };

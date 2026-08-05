@@ -28,7 +28,7 @@ export const getChannelsAllowedToUnlink = function getChannelsAllowedToUnlink(ar
 export const useChannelsAllowedToUnlink = function useChannelsAllowedToUnlink(id) {
   const _require = id;
   let items = [getUncachedChannelPermissions, comparator];
-  return _require(589).useStateFromStoresArray(items, () => {
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
     if (outer1_2 !== undefined) {
       if (tmp2 !== undefined) {
         let closure_0 = tmp2;

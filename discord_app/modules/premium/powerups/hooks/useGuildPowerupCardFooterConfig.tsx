@@ -12,8 +12,8 @@ const result = require("ME").fileFinishedImporting("modules/premium/powerups/hoo
 
 export default function useGuildPowerupCardFooterConfig(arg0, skuId) {
   const _require = arg0;
-  const tmp3 = importDefault(11772)(arg0, skuId);
-  let obj = _require(589);
+  const tmp3 = require("usePowerupActiveStatus.tsx")(arg0, skuId);
+  let obj = _require("../../../../../discord_common/js/packages/flux/index.tsx");
   const items = [createGuildRecordFromRust];
   const items1 = [arg0];
   const stateFromStores = obj.useStateFromStores(items, () => {
@@ -27,12 +27,12 @@ export default function useGuildPowerupCardFooterConfig(arg0, skuId) {
   }, items1);
   let tmp6 = tmp3.type !== constants.INACTIVE;
   if (!tmp6) {
-    tmp6 = skuId.skuId === _require(4176).GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
-    const tmp7 = skuId.skuId === _require(4176).GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
+    tmp6 = skuId.skuId === _require("../../../../../discord_common/js/shared/shared-constants/Powerups.tsx").GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
+    const tmp7 = skuId.skuId === _require("../../../../../discord_common/js/shared/shared-constants/Powerups.tsx").GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
   }
   let tmp8 = tmp6;
   if (!tmp6) {
-    tmp8 = !importDefault(11769)(arg0, skuId, "GuildPowerupCardFooterAdmin");
+    tmp8 = !require("useGuildPowerupRollbackEnabled.tsx")(arg0, skuId, "GuildPowerupCardFooterAdmin");
   }
   if (tmp8) {
     tmp8 = tmp3.type !== constants.TIER_OVERRIDE_ACTIVATED;

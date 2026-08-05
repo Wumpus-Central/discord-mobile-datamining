@@ -287,7 +287,7 @@ function _fetchSummaries() {
 }
 function setHighlightedSummary(channelId) {
   let tmp = arg1;
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "SET_HIGHLIGHTED_SUMMARY", channelId, summaryId: null };
   if (arg1 == null) {
     tmp = null;
@@ -300,7 +300,7 @@ function setSelectedSummary(c1, c4) {
   if (tmp2) {
     fetchSummary(c1, tmp);
   }
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "SET_SELECTED_SUMMARY", channelId: c1, summaryId: null };
   if (tmp == null) {
     tmp = null;
@@ -310,7 +310,7 @@ function setSelectedSummary(c1, c4) {
 }
 function updateVisibleMessages(arg0, arg1) {
   let tmp = arg0;
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   if (arg0 == null) {
     tmp = null;
   }
@@ -323,7 +323,7 @@ function updateVisibleMessages(arg0, arg1) {
   obj.dispatch(obj);
 }
 function setSummaryFeedback(summary, rating) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "SET_SUMMARY_FEEDBACK", summary, rating };
   obj.dispatch(obj);
 }
@@ -843,7 +843,7 @@ export { fetchSummary };
 export { fetchSummaries };
 export { setHighlightedSummary };
 export const toggleTopicsBar = function toggleTopicsBar() {
-  importDefault(709).dispatch({ type: "TOGGLE_TOPICS_BAR" });
+  require("../../Dispatcher.tsx").dispatch({ type: "TOGGLE_TOPICS_BAR" });
 };
 export { setSelectedSummary };
 export { updateVisibleMessages };

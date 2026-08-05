@@ -22,13 +22,13 @@ class GameRelationshipManager extends tmp2 {
 }
 const prototype = GameRelationshipManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const subscription = importDefault(709).subscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
+  const subscription = require("../../Dispatcher.tsx").subscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
 };
 prototype["_terminate"] = function _terminate() {
-  importDefault(709).unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
+  require("../../Dispatcher.tsx").unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
 };
 prototype["destroy"] = function destroy() {
-  importDefault(709).unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
+  require("../../Dispatcher.tsx").unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
 };
 const gameRelationshipManager = new GameRelationshipManager();
 const result = require("initialize").fileFinishedImporting("modules/game_relationships/GameRelationshipManager.tsx");

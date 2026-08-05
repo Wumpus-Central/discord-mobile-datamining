@@ -175,7 +175,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   }
   let tmp = callback2();
   const imperativeHandle = importAllResult.useImperativeHandle(ref, () => ({}));
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   [tmp7, c3] = first(undefined.useState(false), 2);
@@ -195,7 +195,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     obj[0] = items1;
     let tmp15 = null;
     if (!hideUnverifiedBanner) {
-      tmp15 = callback(importDefault(8325), {});
+      tmp15 = callback(require("UserSettingsAccountUnverifiedHeader.tsx"), {});
     }
     function handleSubmit() {
       const self = this;
@@ -232,7 +232,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
       fieldMessage = obj1.getFieldMessage("password");
     }
     obj3[9] = fieldMessage;
-    items3[2] = callback(importDefault(8276), obj3);
+    items3[2] = callback(require("../../../../design/void/Form/native/FreeFormInputGroup.tsx"), obj3);
     let tmp19Result = null;
     if (null != obj1) {
       tmp19Result = null;
@@ -259,7 +259,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     tmp13Result = tmp13(closure_7, obj);
     const tmp14 = closure_7;
     tmp20 = importDefault;
-    const tmp21 = importDefault(8276);
+    const tmp21 = require("../../../../design/void/Form/native/FreeFormInputGroup.tsx");
   }
   return tmp13Result;
 });
@@ -268,7 +268,7 @@ let result = require("noop").fileFinishedImporting("modules/user_settings/accoun
 
 export default forwardRefResult;
 export const UserSettingsConfirmPasswordWrapped = function UserSettingsConfirmPasswordWrapped() {
-  let obj = require(6787) /* useSettingNavigationRoute */;
+  let obj = require("../../core/native/useSettingNavigationRoute.tsx") /* useSettingNavigationRoute */;
   obj = {};
   const merged = Object.assign(obj.useSettingNavigationRoute().params);
   return callback(closure_13, obj);

@@ -7,7 +7,7 @@ const result = require("getValidOrderedFilterTokens").fileFinishedImporting("mod
 export const useValidOrderedFilterTokens = function useValidOrderedFilterTokens(searchContext) {
   const _require = searchContext;
   let items = [initialize];
-  return _require(589).useStateFromStoresArray(items, () => {
+  return _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
     const items = [outer1_2];
     return searchContext(outer1_1[2]).getValidOrderedFilterTokens(searchContext, items);
   });
@@ -16,8 +16,8 @@ export const useValidFilterTokens = function useValidFilterTokens(searchContext)
   const _require = searchContext;
   let items = [initialize];
   const items1 = [searchContext];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const items = [outer1_2];
     return searchContext(outer1_1[2]).getValidFilterTokens(searchContext, items);
-  }, items1, _require(1414).areSetsEqual);
+  }, items1, _require("../../../../../discord_common/js/shared/utils/SetUtils.tsx").areSetsEqual);
 };

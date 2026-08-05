@@ -9,5 +9,5 @@ const result = require("createCacheKey").fileFinishedImporting("design/void/Form
 
 export default function FormCheckbox(selected) {
   const tmp = callback();
-  return jsx(require(1297) /* Button */.Checkbox, { style: callback().checkbox, selected: selected.selected });
+  return jsx(require("../../native.tsx") /* Button */.Checkbox, { style: callback().checkbox, selected: selected.selected });
 };

@@ -39,14 +39,14 @@ class StageLurkingManager extends tmp2 {
 }
 const prototype = StageLurkingManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const subscription = importDefault(709).subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect);
-  const obj = importDefault(709);
-  const subscription1 = importDefault(709).subscribe("LOGOUT", this.handleLogout);
+  const subscription = require("../../Dispatcher.tsx").subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect);
+  const obj = require("../../Dispatcher.tsx");
+  const subscription1 = require("../../Dispatcher.tsx").subscribe("LOGOUT", this.handleLogout);
 };
 prototype["_terminate"] = function _terminate() {
-  importDefault(709).unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect);
-  const obj = importDefault(709);
-  importDefault(709).unsubscribe("LOGOUT", this.handleLogout);
+  require("../../Dispatcher.tsx").unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect);
+  const obj = require("../../Dispatcher.tsx");
+  require("../../Dispatcher.tsx").unsubscribe("LOGOUT", this.handleLogout);
 };
 const stageLurkingManager = new StageLurkingManager();
 let result = require("initialize").fileFinishedImporting("modules/stage_channels/StageLurkingManager.tsx");

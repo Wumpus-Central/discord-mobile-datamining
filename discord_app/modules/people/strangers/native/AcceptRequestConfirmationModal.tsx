@@ -39,5 +39,5 @@ export default function AcceptRequestConfirmationModal(onConfirm) {
   items[1] = callback(onConfirm(4281).Text, obj1);
   obj[1] = items;
   obj[4] = callback2(View, obj);
-  return callback(importDefault(4713), obj);
+  return callback(require("../../../../components_native/common/Alert.tsx"), obj);
 };

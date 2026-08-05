@@ -8,8 +8,8 @@ let result = require("generateAcceptInviteOptions").fileFinishedImporting("modul
 export const DEFAULT_EXPIRATION_DAYS = 7;
 export const DEFAULT_EXPIRATION_USES = 5;
 export const revokeAllFriendInvites = function revokeAllFriendInvites() {
-  let obj = importDefault(7679);
-  importDefault(7679).revokeFriendInvites().then(() => {
+  let obj = require("../../../actions/InstantInviteActionCreators.tsx");
+  require("../../../actions/InstantInviteActionCreators.tsx").revokeFriendInvites().then(() => {
     let obj = callback2(3986);
     obj = { key: "TOAST_FRIEND_INVITES_REVOKED", content: null, icon: null };
     const intl = callback(1236).intl;
@@ -26,12 +26,12 @@ export const acceptFriendInvite = function acceptFriendInvite(invite, arg1) {
       dMFromUserId = dMFromUserId.getDMFromUserId(invite.inviter.id);
     }
     if (null != dMFromUserId) {
-      importDefault(7679).transitionToInvite(invite, { forceTransition: true });
-      const obj3 = importDefault(7679);
-      importDefault(709).wait(() => callback(table[7])());
-      const obj4 = importDefault(709);
+      require("../../../actions/InstantInviteActionCreators.tsx").transitionToInvite(invite, { forceTransition: true });
+      const obj3 = require("../../../actions/InstantInviteActionCreators.tsx");
+      require("../../../Dispatcher.tsx").wait(() => callback(table[7])());
+      const obj4 = require("../../../Dispatcher.tsx");
     } else {
-      let obj = importDefault(7679);
+      let obj = require("../../../actions/InstantInviteActionCreators.tsx");
       obj = { inviteKey: null, context: null, callback: null };
       obj[0] = invite.code;
       obj[1] = arg1;

@@ -3,15 +3,15 @@ const result = require("set").fileFinishedImporting("modules/dice_roll/DiceRollU
 
 export const getBarText = function getBarText(flag, results) {
   if (flag) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    let str = intl2.string(require(1236) /* getSystemLocale */.t["x/FIRX"]);
+    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    let str = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["x/FIRX"]);
   } else {
     str = "";
     if (null != results) {
-      const intl = require(1236) /* getSystemLocale */.intl;
+      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
       const obj = { total: null };
       obj[0] = results.reduce((arg0, arg1) => arg0 + arg1, 0);
-      str = intl.formatToPlainString(require(1236) /* getSystemLocale */.t.xU4pF1, obj);
+      str = intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.xU4pF1, obj);
     }
   }
   return str;

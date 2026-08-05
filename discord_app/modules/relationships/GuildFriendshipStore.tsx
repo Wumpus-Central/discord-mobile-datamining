@@ -32,8 +32,8 @@ prototype["fetchFriendMembersIfNotFetched"] = function fetchFriendMembersIfNotFe
     const obj = { fetchState: null, foundMembers: 0, notFoundMembers: 0 };
     obj[0] = tmp4.FETCHING;
     dependencyMap[id1] = obj;
-    const membersById = importDefault(5200).requestMembersById(id1, items, false);
-    const obj2 = importDefault(5200);
+    const membersById = require("../../actions/GuildActionCreators.tsx").requestMembersById(id1, items, false);
+    const obj2 = require("../../actions/GuildActionCreators.tsx");
   }
 };
 const guildFriendshipStore = new GuildFriendshipStore(require("dispatcher"), {

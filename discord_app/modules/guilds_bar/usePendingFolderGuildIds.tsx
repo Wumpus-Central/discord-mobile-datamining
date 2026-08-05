@@ -7,7 +7,7 @@ const result = require("initialize").fileFinishedImporting("modules/guilds_bar/u
 
 export default function usePendingFolderGuildIds() {
   let items = [handleGatewayJoinRequestUpdate, createGuildRecordFromRust];
-  return require(589) /* initialize */.useStateFromStoresArray(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStoresArray(items, () => {
     let obj;
     let obj2;
     const items = [handleGatewayJoinRequestUpdate, createGuildRecordFromRust];

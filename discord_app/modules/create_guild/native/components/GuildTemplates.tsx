@@ -24,13 +24,13 @@ function GuildTemplatesHeader() {
   const tmp = createCacheKey();
   let obj = { style: tmp.headerContainer, children: null };
   obj = { style: tmp.headerTitle, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[4] = intl.string(require(1236) /* getSystemLocale */.t["5HZu07"]);
-  const items = [callback3(require(4281) /* Text */.Text, obj), ];
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[4] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["5HZu07"]);
+  const items = [callback3(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
   obj = { style: tmp.headerDescription, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[3] = intl2.string(require(1236) /* getSystemLocale */.t["/k/L/j"]);
-  items[1] = callback3(require(4281) /* Text */.Text, obj);
+  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[3] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["/k/L/j"]);
+  items[1] = callback3(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   obj[1] = items;
   return callback4(closure_5, obj);
 }

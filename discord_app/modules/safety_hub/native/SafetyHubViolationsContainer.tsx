@@ -1,6 +1,6 @@
 // discord_app/modules/safety_hub/native/SafetyHubViolationsContainer.tsx
 import _slicedToArray from "_slicedToArray";
-import module_4490 from "module_4490";
+import ModalActionCreators from "../../../actions/ModalActionCreators.tsx";
 import get_ActivityIndicator from "useIsNewClassification";
 import handleSafetyHubRequestAgeVerificationResetModalAction from "handleSafetyHubRequestAgeVerificationResetModalAction";
 import SafetyHubView from "SafetyHubView";
@@ -26,9 +26,9 @@ function SafetyHubViolationsHeader(count) {
   items = [tmp.header];
   obj = { style: items1, children: null };
   items1 = [tmp.iconBackground];
-  const colors = importDefault(712).colors;
+  const colors = require("../../../../discord_common/js/packages/tokens/native.tsx").colors;
   obj = { color: tmp8 ? colors.INTERACTIVE_TEXT_DEFAULT : colors.ICON_MUTED, size: "xs" };
-  obj[1] = closure_11(require(7772) /* WarningIcon */.WarningIcon, obj);
+  obj[1] = closure_11(require("../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx") /* WarningIcon */.WarningIcon, obj);
   const items2 = [closure_11(closure_6, obj), , ];
   const obj1 = { style: items3, children: null };
   items3 = [tmp.headerTextContainer];
@@ -44,7 +44,7 @@ function SafetyHubViolationsHeader(count) {
     obj3[0] = str.toString();
     formatToPlainStringResult = formatToPlainString(t.fZAHBT, obj3);
   }
-  const items4 = [closure_11(require(4281) /* Text */.Text, { variant: "heading-sm/semibold", children: formatToPlainStringResult }), ];
+  const items4 = [closure_11(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "heading-sm/semibold", children: formatToPlainStringResult }), ];
   const intl2 = tmp7(1236).intl;
   const string = intl2.string;
   const t2 = tmp7(1236).t;
@@ -53,7 +53,7 @@ function SafetyHubViolationsHeader(count) {
   } else {
     stringResult = string(t2.SzGV0g);
   }
-  items4[1] = closure_11(require(4281) /* Text */.Text, { variant: "text-xxs/normal", color: "text-muted", children: stringResult });
+  items4[1] = closure_11(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-xxs/normal", color: "text-muted", children: stringResult });
   obj1[1] = items4;
   items2[1] = closure_12(closure_6, obj1);
   if (opened) {
@@ -64,20 +64,20 @@ function SafetyHubViolationsHeader(count) {
   const items5 = [tmp.chevron];
   items2[2] = closure_11(ChevronSmallDownIcon, { size: "md", style: items5 });
   obj[2] = items2;
-  return closure_12(importDefault(8979), obj);
+  return closure_12(require("../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx"), obj);
 }
 function EmptyActiveState() {
   let obj = { style: null, children: null };
   const items = [createCacheKey().emptyState];
   obj[0] = items;
   obj = { variant: "heading-sm/extrabold", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl.string(require(1236) /* getSystemLocale */.t.reLFaV);
-  const items1 = [callback(require(4281) /* Text */.Text, obj), ];
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.reLFaV);
+  const items1 = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
   obj = { variant: "text-xs/normal", children: null };
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.ERdH1o);
-  items1[1] = callback(require(4281) /* Text */.Text, obj);
+  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ERdH1o);
+  items1[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   obj[1] = items1;
   return callback2(closure_6, obj);
 }
@@ -86,16 +86,16 @@ function EmptyExpiredState() {
   const items = [createCacheKey().emptyState];
   obj[0] = items;
   obj = { variant: "text-xs/normal", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl.string(require(1236) /* getSystemLocale */.t.RV3AXf);
-  obj[1] = callback(require(4281) /* Text */.Text, obj);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.RV3AXf);
+  obj[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   return callback(closure_6, obj);
 }
 function RelativeIncidentTime(timestamp) {
   let obj = { style: createCacheKey().incidentDate, children: null };
   obj = { variant: "text-xs/medium", children: null };
-  obj[1] = require(7727) /* parseMessageEmbedForProps */.getClassificationRelativeIncidentTime(timestamp.timestamp);
-  obj[1] = callback(require(4281) /* Text */.Text, obj);
+  obj[1] = require("../SafetyHubUtils.tsx") /* parseMessageEmbedForProps */.getClassificationRelativeIncidentTime(timestamp.timestamp);
+  obj[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   return callback(closure_6, obj);
 }
 function NewBadge() {
@@ -104,9 +104,9 @@ function NewBadge() {
   items = [, ];
   ({ incidentDate: arr[0], incidentDateNew: arr[1] } = tmp);
   obj = { variant: "text-xs/medium", color: "text-overlay-light", style: tmp.newText, children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[3] = intl.string(require(1236) /* getSystemLocale */.t.QKMRC4);
-  obj[1] = callback(require(4281) /* Text */.Text, obj);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[3] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.QKMRC4);
+  obj[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   return callback(closure_6, obj);
 }
 function ClassificationDetail(classification) {
@@ -380,9 +380,9 @@ const result = require("get ActivityIndicator").fileFinishedImporting("modules/s
 
 export default SafetyHubViolationsContainer;
 export const ConnectedSafetyHubViolationsContainer = function ConnectedSafetyHubViolationsContainer() {
-  let obj = require(11198) /* useSafetyHubClassifications */;
+  let obj = require("../hooks/useSafetyHubClassifications.tsx") /* useSafetyHubClassifications */;
   const activeSafetyHubClassifications = obj.useActiveSafetyHubClassifications();
-  let obj1 = require(11198) /* useSafetyHubClassifications */;
+  let obj1 = require("../hooks/useSafetyHubClassifications.tsx") /* useSafetyHubClassifications */;
   const expiredSafetyHubClassifications = obj1.useExpiredSafetyHubClassifications();
   if (0 !== activeSafetyHubClassifications.length) {
     obj = { style: null, children: null };

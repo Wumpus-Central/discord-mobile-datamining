@@ -12,24 +12,24 @@ const result = require("ME").fileFinishedImporting("actions/ChangeLogActionCreat
 
 export default {
   lockChangeLog(key) {
-    let obj = importDefault(709);
+    let obj = require("../Dispatcher.tsx");
     obj = { type: "CHANGE_LOG_LOCK", key };
     obj.dispatch(obj);
   },
   unlockChangeLog(key) {
-    let obj = importDefault(709);
+    let obj = require("../Dispatcher.tsx");
     obj = { type: "CHANGE_LOG_UNLOCK", key };
     obj.dispatch(obj);
   },
   markChangelogAsSeen(id, date) {
-    let obj = importDefault(709);
+    let obj = require("../Dispatcher.tsx");
     obj = { type: "CHANGE_LOG_MARK_SEEN", changelogId: id, changelogDate: date };
     obj.dispatch(obj);
-    const LastReceivedChangelogId = require(3958) /* explicitContentFromProto */.LastReceivedChangelogId;
+    const LastReceivedChangelogId = require("../modules/user_settings/UserSettings.tsx") /* explicitContentFromProto */.LastReceivedChangelogId;
     LastReceivedChangelogId.updateSetting(id);
   },
   setChangelogOverride(id) {
-    let obj = importDefault(709);
+    let obj = require("../Dispatcher.tsx");
     obj = { type: "CHANGE_LOG_SET_OVERRIDE", id };
     obj.dispatch(obj);
     if (null != id) {
@@ -38,13 +38,13 @@ export default {
     }
   },
   sendChangelogMessage(changelog_id) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: Endpoints.CHANGELOG_MESSAGES, body: obj, rejectWithError: true };
     obj = { changelog_id };
     HTTP.post(obj);
   },
   fetchChangelogConfig() {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     const obj = { url: null, rejectWithError: true };
     obj[0] = "https://cdn.discordapp.com/changelogs/config_" + ChangelogPlatforms.MOBILE + ".json?" + "x=" + Math.floor(new Date().getMinutes() / 5);
     return HTTP.get(obj);

@@ -229,7 +229,7 @@ function NewMessagesChatBar(channel) {
       };
       XSmallBoldIcon = XSmallBoldIcon(7890).XSmallBoldIcon;
       const obj3 = { size: "sm", color: null };
-      WHITE = importDefault(712).colors.WHITE;
+      WHITE = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE;
       obj3[1] = WHITE;
       obj2[4] = callback(XSmallBoldIcon, obj3);
       items1[1] = callback(handleScrollToNewMessages, obj2);
@@ -267,7 +267,7 @@ export default function ChatBanner(channel) {
   let oldestUnreadTimestamp;
   let unreadCount;
   channel = channel.channel;
-  let obj = importDefault(10319)();
+  let obj = require("../useAllowedChatOverlays.tsx")();
   let obj1 = channel(589);
   const items = [generateOldThreadCutoff];
   const items1 = [channel.id];

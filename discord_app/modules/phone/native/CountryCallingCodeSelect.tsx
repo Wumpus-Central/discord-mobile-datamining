@@ -11,10 +11,10 @@ let metroImportAll;
 const require = arg1;
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
 let closure_9 = createCacheKey.createStyles((arg0) => {
-  let obj = { backgroundColor: importDefault(712).colors.BACKGROUND_BASE_LOW, paddingHorizontal: null, paddingTop: null, paddingBottom: null, flex: 1 };
-  const space = importDefault(712).space;
+  let obj = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW, paddingHorizontal: null, paddingTop: null, paddingBottom: null, flex: 1 };
+  const space = require("../../../../discord_common/js/packages/tokens/native.tsx").space;
   obj[1] = arg0 ? space.PX_24 : space.PX_12;
-  obj[2] = importDefault(712).space.PX_16;
+  obj[2] = require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16;
   const space2 = tmp(712).space;
   obj = { container: obj, searchFieldContainer: null };
   obj[3] = arg0 ? space2.PX_24 : space2.PX_16;

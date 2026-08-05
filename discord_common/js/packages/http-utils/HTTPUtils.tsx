@@ -25,7 +25,7 @@ function sendRequest(arg0, signal) {
       arg4(obj);
     }
   } else {
-    const promise = importDefault(531)[arg0](signal.url);
+    const promise = require("../../../../_runtime/00531__createForOfIteratorHelper.js")[arg0](signal.url);
     if (null != signal.onRequestCreated) {
       signal.onRequestCreated(promise);
     }
@@ -306,7 +306,7 @@ function cleanupRequestEntry(url) {
         backoff = value.backoff;
       }
       if (backoff == null) {
-        backoff = new importDefault(584)(1000, 60000);
+        backoff = new require("../backoff/Backoff.tsx")(1000, 60000);
       }
       ({ headers, body } = arg1);
       let prop;

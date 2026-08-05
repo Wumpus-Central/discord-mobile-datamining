@@ -40,8 +40,8 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
   if (tmp8) {
     const _Date = Date;
     const timestamp1 = Date.now();
-    tmp8 = timestamp1 < importDefault(11).extractTimestamp(stateFromStores1.id) + closure_12;
-    const obj3 = importDefault(11);
+    tmp8 = timestamp1 < require("../../../../../utils/SnowflakeUtils.tsx").extractTimestamp(stateFromStores1.id) + closure_12;
+    const obj3 = require("../../../../../utils/SnowflakeUtils.tsx");
   }
   tmp2Result = tmp2(589);
   const items2 = [handleInviteData];

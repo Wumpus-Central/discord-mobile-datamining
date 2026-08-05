@@ -9,14 +9,14 @@ export const showTakeoverModal = function showTakeoverModal(arg0) {
   let warningId;
   let warningType;
   ({ warningId, warningType, senderId, channelId } = arg0);
-  let obj = require(10260) /* InappropriateConversationExperiment */;
+  let obj = require("../SelfModInappropriateConversationExperiment.tsx") /* InappropriateConversationExperiment */;
   if (obj.isEligibleForInappropriateConversationWarning({ location: "takeover-modal" })) {
     obj = { warningId: null, warningType: null, senderId: null, channelId: null };
     obj[0] = warningId;
     obj[1] = warningType;
     obj[2] = senderId;
     obj[3] = channelId;
-    importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(14938, dependencyMap.paths), obj, TAKEOVER_MODAL_KEY);
-    const obj2 = importDefault(4490);
+    require("../../../../actions/ModalActionCreators.tsx").pushLazy(require("../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(14938, dependencyMap.paths), obj, TAKEOVER_MODAL_KEY);
+    const obj2 = require("../../../../actions/ModalActionCreators.tsx");
   }
 };

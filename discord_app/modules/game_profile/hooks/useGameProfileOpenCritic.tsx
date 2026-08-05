@@ -2,7 +2,7 @@
 const result = require("metadata").fileFinishedImporting("modules/game_profile/hooks/useGameProfileOpenCritic.tsx");
 
 export const getOpenCriticTierText = function getOpenCriticTierText(tier) {
-  if (require(9239) /* OpenCriticTier */.OpenCriticTier.MIGHTY === tier) {
+  if (require("../../../../discord_common/js/shared/shared-constants/OpenCriticTier.tsx") /* OpenCriticTier */.OpenCriticTier.MIGHTY === tier) {
     const intl4 = tmp(1236).intl;
     return intl4.string(tmp(1236).t.aZej2g);
   } else if (tmp(9239).OpenCriticTier.STRONG === tier) {
@@ -17,19 +17,19 @@ export const getOpenCriticTierText = function getOpenCriticTierText(tier) {
   }
 };
 export const getOpenCriticTierImage = function getOpenCriticTierImage(tier) {
-  if (require(9239) /* OpenCriticTier */.OpenCriticTier.MIGHTY === tier) {
-    return importDefault(9240);
+  if (require("../../../../discord_common/js/shared/shared-constants/OpenCriticTier.tsx") /* OpenCriticTier */.OpenCriticTier.MIGHTY === tier) {
+    return require("../../../../discord_assets/assets/game-profile/opencritic-mighty.png.js");
   } else if (tmp(9239).OpenCriticTier.STRONG === tier) {
-    return importDefault(9241);
+    return require("../../../../discord_assets/assets/game-profile/opencritic-strong.png.js");
   } else if (tmp(9239).OpenCriticTier.FAIR === tier) {
-    return importDefault(9242);
+    return require("../../../../discord_assets/assets/game-profile/opencritic-fair.png.js");
   } else if (tmp(9239).OpenCriticTier.WEAK === tier) {
-    return importDefault(9243);
+    return require("../../../../discord_assets/assets/game-profile/opencritic-weak.png.js");
   }
 };
 export const getOpenCriticCircleRatingColor = function getOpenCriticCircleRatingColor(tier) {
   let foregroundColor = "#fc430a";
-  if (require(9239) /* OpenCriticTier */.OpenCriticTier.MIGHTY !== tier) {
+  if (require("../../../../discord_common/js/shared/shared-constants/OpenCriticTier.tsx") /* OpenCriticTier */.OpenCriticTier.MIGHTY !== tier) {
     foregroundColor = "#9e00b4";
     if (tmp(9239).OpenCriticTier.STRONG !== tier) {
       foregroundColor = "#4aa1ce";

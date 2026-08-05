@@ -36,13 +36,13 @@ const mediaPostSharePromptStore = new MediaPostSharePromptStore(require("dispatc
           if (null != channel) {
             if (null != channel.parent_id) {
               if (channelGated.isChannelGated(channel.guild_id, channel.parent_id)) {
-                set.add(importDefault(11).castMessageIdAsChannelId(isPushNotification.message.id));
-                const obj = importDefault(11);
+                set.add(require("../../utils/SnowflakeUtils.tsx").castMessageIdAsChannelId(isPushNotification.message.id));
+                const obj = require("../../utils/SnowflakeUtils.tsx");
               }
             }
           }
         }
-        obj2 = require(7861) /* useIsFirstMessageInMediaPost */;
+        obj2 = require("useIsFirstMessageInMediaPost.tsx") /* useIsFirstMessageInMediaPost */;
       }
     }
   },

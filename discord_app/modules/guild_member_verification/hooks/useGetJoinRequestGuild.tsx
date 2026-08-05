@@ -8,16 +8,16 @@ const result = require("initialize").fileFinishedImporting("modules/guild_member
 export default function useGetGuildJoinRequest(arg0) {
   const _require = arg0;
   const items = [handleGatewayJoinRequestUpdate];
-  const stateFromStores = _require(589).useStateFromStores(items, () => {
+  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let request = null;
     if (null != closure_0) {
       request = outer1_4.getRequest(tmp);
     }
     return request;
   });
-  let obj = _require(589);
+  let obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const items1 = [handleGatewayJoinRequestUpdate];
-  const stateFromStores1 = _require(589).useStateFromStores(items1, () => obj.hasFetchedRequestToJoinGuilds);
+  const stateFromStores1 = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => obj.hasFetchedRequestToJoinGuilds);
   const items2 = [stateFromStores1];
   const effect = React.useEffect(() => {
     if (!stateFromStores1) {

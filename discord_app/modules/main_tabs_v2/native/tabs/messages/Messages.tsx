@@ -13,7 +13,7 @@ let c3 = importAllResult;
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
 let closure_9 = createCacheKey.createStyles(() => {
   let obj = { container: null };
-  obj = { flex: 1, backgroundColor: importDefault(712).colors.PANEL_BG };
+  obj = { flex: 1, backgroundColor: require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.PANEL_BG };
   obj[0] = obj;
   return obj;
 });

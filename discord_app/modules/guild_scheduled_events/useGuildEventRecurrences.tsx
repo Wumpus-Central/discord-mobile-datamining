@@ -10,10 +10,10 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
   const _require = arg0;
   const importDefault = arg1;
   const dependencyMap = byWeekday;
-  let obj = _require(589);
+  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
   let items = [first];
   const stateFromStores = obj.useStateFromStores(items, () => first.getGuildScheduledEvent(closure_0));
-  const tmp4 = importDefault(8971)(byWeekday);
+  const tmp4 = require("../../hooks/usePrevValue.tsx")(byWeekday);
   let noop = tmp4;
   if (null != byWeekday) {
     if (null != stateFromStores) {

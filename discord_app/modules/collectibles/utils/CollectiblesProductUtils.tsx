@@ -141,7 +141,7 @@ export const isDynamicProduct = function isDynamicProduct(selectedProduct) {
   if (tmp) {
     let type1 = null;
     if (null != selectedProduct) {
-      if (selectedProduct.type === require(1901) /* CollectiblesItemType */.CollectiblesItemType.VARIANTS_GROUP) {
+      if (selectedProduct.type === require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.VARIANTS_GROUP) {
         type1 = null;
         if (null != selectedProduct.variants) {
           type1 = null;
@@ -158,7 +158,7 @@ export const isDynamicProduct = function isDynamicProduct(selectedProduct) {
         type1 = selectedProduct.type;
       }
     }
-    let someResult = type1 === require(1901) /* CollectiblesItemType */.CollectiblesItemType.PROFILE_EFFECT;
+    let someResult = type1 === require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.PROFILE_EFFECT;
     if (someResult) {
       const items = selectedProduct.items;
       someResult = items.some((effects) => {
@@ -224,7 +224,7 @@ export const getProductsWithOrbsPrice = function getProductsWithOrbsPrice(arr) {
   });
 };
 export const getIsVariantProduct = function getIsVariantProduct(product) {
-  let tmp = product.type === require(1901) /* CollectiblesItemType */.CollectiblesItemType.VARIANTS_GROUP;
+  let tmp = product.type === require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.VARIANTS_GROUP;
   if (tmp) {
     tmp = null != product.variants;
   }
@@ -234,7 +234,7 @@ export const getIsVariantProduct = function getIsVariantProduct(product) {
   return tmp;
 };
 export const getProductSkuIds = function getProductSkuIds(closure_0) {
-  let tmp = closure_0.type === require(1901) /* CollectiblesItemType */.CollectiblesItemType.VARIANTS_GROUP;
+  let tmp = closure_0.type === require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.VARIANTS_GROUP;
   if (tmp) {
     tmp = null != closure_0.variants;
   }
@@ -250,7 +250,7 @@ export const getProductSkuIds = function getProductSkuIds(closure_0) {
   return mapped;
 };
 export const getSelectedProduct = function getSelectedProduct(product, defaultVariantIndex) {
-  let tmp = product.type === require(1901) /* CollectiblesItemType */.CollectiblesItemType.VARIANTS_GROUP;
+  let tmp = product.type === require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.VARIANTS_GROUP;
   if (tmp) {
     tmp = null != product.variants;
   }
@@ -273,7 +273,7 @@ export const getSelectedProduct = function getSelectedProduct(product, defaultVa
 export const getProductType = function getProductType(product) {
   if (null == product) {
     return null;
-  } else if (product.type === require(1901) /* CollectiblesItemType */.CollectiblesItemType.VARIANTS_GROUP) {
+  } else if (product.type === require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.VARIANTS_GROUP) {
     if (null != product.variants) {
       if (0 !== product.variants.length) {
         const first = product.variants[0];

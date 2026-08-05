@@ -3,7 +3,7 @@ const result = require("set").fileFinishedImporting("modules/messages/native/han
 
 export const handleMessagesTapGameMention = function handleMessagesTapGameMention(gameId) {
   gameId = gameId.gameId;
-  let obj = importDefault(9194);
-  obj = { gameId, gameProfileModalChecks: { shouldOpenGameProfile: true, gameId }, source: require(9200) /* GameProfileEmbedAction */.GameProfileSources.GameMention };
+  let obj = require("../../../game_profile/GameProfileActionCreators.native.tsx");
+  obj = { gameId, gameProfileModalChecks: { shouldOpenGameProfile: true, gameId }, source: require("../../../game_profile/GameProfileAnalyticUtils.tsx") /* GameProfileEmbedAction */.GameProfileSources.GameMention };
   obj.openGameProfileModal(obj);
 };

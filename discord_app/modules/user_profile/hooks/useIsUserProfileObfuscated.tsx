@@ -7,7 +7,7 @@ const result = require("set").fileFinishedImporting("modules/user_profile/hooks/
 export default function useIsUserProfileObfuscated(flags) {
   const _require = flags;
   const items = [createUserWidgetFromServer];
-  const stateFromStores = _require(589).useStateFromStores(items, () => outer1_2.getUserProfile(id.id));
+  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_2.getUserProfile(id.id));
   let bio;
   if (stateFromStores != null) {
     bio = stateFromStores.bio;

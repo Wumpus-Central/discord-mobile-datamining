@@ -9,7 +9,7 @@ const result = require("_detectH265HardwareDecode").fileFinishedImporting("modul
 export default function useSelfHasVideo(arg0) {
   const _require = arg0;
   const items = [getParticipants, fetchFingerprint, _detectH265HardwareDecode];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const participant = outer1_2.getParticipant(callback, outer1_3.getId());
     return callback(outer1_1[4]).canRenderParticipantVideo(participant, outer1_4);
   });

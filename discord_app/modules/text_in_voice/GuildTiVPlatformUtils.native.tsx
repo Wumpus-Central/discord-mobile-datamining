@@ -3,11 +3,11 @@ const result = require("set").fileFinishedImporting("modules/text_in_voice/Guild
 
 export default {
   getTextInVoiceSendMessageChannelPermissionText(sendMessagesDisabled) {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.WQ6zpT);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.WQ6zpT);
   },
   getTextInVoiceReadMessageHistoryChannelPermissionText(prop) {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.cuMfH0);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.cuMfH0);
   }
 };

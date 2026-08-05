@@ -39,7 +39,7 @@ export const initialize = function initialize(arg0) {
 };
 export const setAllowSync = function setAllowSync(arg0) {
   const _require = arg0;
-  _require(705).batchUpdates(() => {
+  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
     outer1_7.setState((arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
@@ -51,7 +51,7 @@ export const setAllowSync = function setAllowSync(arg0) {
 };
 export const setAllowPhone = function setAllowPhone(arg0) {
   const _require = arg0;
-  _require(705).batchUpdates(() => {
+  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
     outer1_7.setState((arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
@@ -62,7 +62,7 @@ export const setAllowPhone = function setAllowPhone(arg0) {
 };
 export const setAllowEmail = function setAllowEmail(arg0) {
   const _require = arg0;
-  _require(705).batchUpdates(() => {
+  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
     outer1_7.setState((arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
@@ -74,7 +74,7 @@ export const setAllowEmail = function setAllowEmail(arg0) {
 export const setSuggestions = function setSuggestions(arg0, arg1) {
   const _require = arg0;
   const dependencyMap = arg1;
-  _require(705).batchUpdates(() => {
+  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
     outer1_7.setState((arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
@@ -86,7 +86,7 @@ export const setSuggestions = function setSuggestions(arg0, arg1) {
 };
 export const setPhone = function setPhone(arg0) {
   const _require = arg0;
-  _require(705).batchUpdates(() => {
+  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
     outer1_7.setState((arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
@@ -97,7 +97,7 @@ export const setPhone = function setPhone(arg0) {
 };
 export const setPhoneToken = function setPhoneToken(arg0) {
   const _require = arg0;
-  _require(705).batchUpdates(() => {
+  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
     outer1_7.setState((arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
@@ -124,7 +124,7 @@ export const setName = function setName(arg0) {
 };
 export const setPermissionState = function setPermissionState(arg0) {
   const _require = arg0;
-  _require(705).batchUpdates(() => {
+  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
     outer1_7.setState((arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
@@ -135,7 +135,7 @@ export const setPermissionState = function setPermissionState(arg0) {
 };
 export const setError = function setError(arg0) {
   const _require = arg0;
-  _require(705).batchUpdates(() => {
+  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
     outer1_7.setState((arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);

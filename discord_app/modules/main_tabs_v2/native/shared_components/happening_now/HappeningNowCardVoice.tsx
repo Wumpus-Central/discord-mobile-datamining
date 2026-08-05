@@ -16,22 +16,22 @@ function formatVoiceActivityTitle(stateFromStoresArray, guildId) {
   if (0 === stateFromStoresArray.length) {
     return "";
   } else if (1 === length) {
-    return importDefault(4474).getName(guildId, null, stateFromStoresArray[0]);
+    return require("../../../../../utils/NicknameUtils.tsx").getName(guildId, null, stateFromStoresArray[0]);
   } else if (2 === length) {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     let obj = { user1: null, user2: null };
-    obj[0] = importDefault(4474).getName(guildId, null, stateFromStoresArray[0]);
-    const obj2 = importDefault(4474);
-    obj[1] = importDefault(4474).getName(guildId, null, stateFromStoresArray[1]);
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t["4SM/RX"], obj);
+    obj[0] = require("../../../../../utils/NicknameUtils.tsx").getName(guildId, null, stateFromStoresArray[0]);
+    const obj2 = require("../../../../../utils/NicknameUtils.tsx");
+    obj[1] = require("../../../../../utils/NicknameUtils.tsx").getName(guildId, null, stateFromStoresArray[1]);
+    return intl.formatToPlainString(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["4SM/RX"], obj);
   } else {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { user1: null, user2: null, extras: null };
-    obj[0] = importDefault(4474).getName(guildId, null, stateFromStoresArray[0]);
-    const obj6 = importDefault(4474);
-    obj[1] = importDefault(4474).getName(guildId, null, stateFromStoresArray[1]);
+    obj[0] = require("../../../../../utils/NicknameUtils.tsx").getName(guildId, null, stateFromStoresArray[0]);
+    const obj6 = require("../../../../../utils/NicknameUtils.tsx");
+    obj[1] = require("../../../../../utils/NicknameUtils.tsx").getName(guildId, null, stateFromStoresArray[1]);
     obj[2] = stateFromStoresArray.length - 2;
-    return intl2.formatToPlainString(require(1236) /* getSystemLocale */.t.pjxkCI, obj);
+    return intl2.formatToPlainString(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.pjxkCI, obj);
   }
 }
 let c3 = importAllResult;
@@ -130,11 +130,11 @@ const result = require("recomputeAffinities").fileFinishedImporting("modules/mai
 export default memoResult;
 export const useVoiceChannelUsers = function useVoiceChannelUsers(channelId) {
   const _require = channelId;
-  const voiceUserAffinitySortType = _require(7983).useVoiceUserAffinitySortType("useVoiceChannelUsers");
-  const obj = _require(7983);
+  const voiceUserAffinitySortType = _require("../../../../user_affinities/VoiceUserAffinityExperiment.tsx").useVoiceUserAffinitySortType("useVoiceChannelUsers");
+  const obj = _require("../../../../user_affinities/VoiceUserAffinityExperiment.tsx");
   const items = [updateVoiceState, mergeGuildAvatar, recomputeAffinities];
   const items1 = [voiceUserAffinitySortType, channelId.channelId];
-  return _require(589).useStateFromStoresArray(items, () => {
+  return _require("../../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
     const voiceStatesForChannel = outer1_7.getVoiceStatesForChannel(voiceState.channelId);
     const mapped = voiceUserAffinitySortType(voiceState[19])(voiceStatesForChannel).map((userId) => user.getUser(userId.userId));
     const found = mapped.filter(voiceState(voiceState[20]).isNotNullish);

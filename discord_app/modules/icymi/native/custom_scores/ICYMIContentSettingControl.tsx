@@ -20,46 +20,46 @@ function ContentSettingsControl(initialValue) {
   const tmp = createCacheKey();
   [tmp3, c1] = callback(React.useState(initialValue.initialValue), 2);
   let obj = { label: null, id: "-1", icon: null, page: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.rdt65I);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.rdt65I);
   obj = { source: null, style: null };
-  obj[0] = importDefault(15449);
+  obj[0] = require("../../../../../_runtime/15449_registerAsset.js");
   const items = [tmp.icon, ];
   let iconSelected = null;
-  if (tmp3 === require(8834) /* generateHydrationId */.ICYMICustomScore.LESS) {
+  if (tmp3 === require("../../ICYMIUtils.tsx") /* generateHydrationId */.ICYMICustomScore.LESS) {
     iconSelected = tmp.iconSelected;
   }
   items[1] = iconSelected;
   obj[1] = items;
-  obj[2] = closure_8(require(1297) /* Button */.Icon, obj);
+  obj[2] = closure_8(require("../../../../design/void/native.tsx") /* Button */.Icon, obj);
   const items1 = [obj, , ];
   obj = { label: null, id: "0", icon: null, page: null };
   const intl2 = tmp4(1236).intl;
-  obj[0] = intl2.string(require(1236) /* getSystemLocale */.t.SnrG00);
+  obj[0] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.SnrG00);
   const obj1 = { source: null, style: null };
-  obj1[0] = importDefault(15450);
+  obj1[0] = require("../../../../../_runtime/15450_registerAsset.js");
   const items2 = [tmp.icon, ];
   let iconSelected1 = null;
-  if (tmp3 === require(8834) /* generateHydrationId */.ICYMICustomScore.DEFAULT) {
+  if (tmp3 === require("../../ICYMIUtils.tsx") /* generateHydrationId */.ICYMICustomScore.DEFAULT) {
     iconSelected1 = tmp.iconSelected;
   }
   items2[1] = iconSelected1;
   obj1[1] = items2;
-  obj[2] = closure_8(require(1297) /* Button */.Icon, obj1);
+  obj[2] = closure_8(require("../../../../design/void/native.tsx") /* Button */.Icon, obj1);
   items1[1] = obj;
   const obj2 = { label: null, id: "1", icon: null, page: null };
   const intl3 = tmp4(1236).intl;
-  obj2[0] = intl3.string(require(1236) /* getSystemLocale */.t.Rxe3jF);
+  obj2[0] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Rxe3jF);
   const obj3 = { source: null, style: null };
-  obj3[0] = importDefault(15451);
+  obj3[0] = require("../../../../../_runtime/15451_registerAsset.js");
   const items3 = [tmp.icon, ];
   let iconSelected2 = null;
-  if (tmp3 === require(8834) /* generateHydrationId */.ICYMICustomScore.MORE) {
+  if (tmp3 === require("../../ICYMIUtils.tsx") /* generateHydrationId */.ICYMICustomScore.MORE) {
     iconSelected2 = tmp.iconSelected;
   }
   items3[1] = iconSelected2;
   obj3[1] = items3;
-  obj2[2] = closure_8(require(1297) /* Button */.Icon, obj3);
+  obj2[2] = closure_8(require("../../../../design/void/native.tsx") /* Button */.Icon, obj3);
   items1[2] = obj2;
   const tmp2 = callback(React.useState(initialValue.initialValue), 2);
   const obj4 = {
@@ -78,7 +78,7 @@ function ContentSettingsControl(initialValue) {
     defaultIndex: null
   };
   let num = 0;
-  if (require(8834) /* generateHydrationId */.ICYMICustomScore.LESS !== tmp3) {
+  if (require("../../ICYMIUtils.tsx") /* generateHydrationId */.ICYMICustomScore.LESS !== tmp3) {
     num = 1;
     if (tmp4(8834).ICYMICustomScore.MORE === tmp3) {
       num = 2;
@@ -86,7 +86,7 @@ function ContentSettingsControl(initialValue) {
   }
   obj4[3] = num;
   let obj5 = null;
-  const segmentedControlState = require(8878) /* useSegmentedControlState */.useSegmentedControlState(obj4);
+  const segmentedControlState = require("../../../../design/components/SegmentedControl/native/SegmentedControlState.native.tsx") /* useSegmentedControlState */.useSegmentedControlState(obj4);
   if (disabled) {
     obj5 = { opacity: 0.7 };
   }
@@ -96,7 +96,7 @@ function ContentSettingsControl(initialValue) {
     str = "none";
   }
   obj6[1] = str;
-  obj6[2] = closure_8(require(9063) /* SegmentedControl */.SegmentedControl, { variant: "experimental_Large", state: segmentedControlState });
+  obj6[2] = closure_8(require("../../../../design/components/SegmentedControl/native/SegmentedControl.native.tsx") /* SegmentedControl */.SegmentedControl, { variant: "experimental_Large", state: segmentedControlState });
   return closure_8(View, obj6);
 }
 ({ jsx: metroImportAll, jsxs: c9 } = jsxProd);

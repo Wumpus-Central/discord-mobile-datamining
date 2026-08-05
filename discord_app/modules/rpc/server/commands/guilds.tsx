@@ -10,7 +10,7 @@ let obj = {};
 obj = {
   scope: require("set").OAuth2Scopes.RPC,
   validation(string) {
-    let obj = importDefault(10546)(string);
+    let obj = require("../../helpers/createRpcJoiSchemaObject.tsx")(string);
     obj = { guild_id: string.string(), timeout: null };
     const requiredResult = obj.required();
     const numberResult = string.number();

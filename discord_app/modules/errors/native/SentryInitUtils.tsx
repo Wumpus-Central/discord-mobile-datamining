@@ -169,8 +169,8 @@ function filterError(event_id, originalException) {
       tmp17 = 0 !== event_id.length;
     }
     if (tmp17) {
-      importDefault(1208).markCrashHandled(event_id);
-      const obj = importDefault(1208);
+      require("../../../utils/SentryUtils.native.tsx").markCrashHandled(event_id);
+      const obj = require("../../../utils/SentryUtils.native.tsx");
     }
   } else {
     let originalException2;
@@ -401,7 +401,7 @@ function trackCrash(event, hint, arg2) {
         tmp7 = 0 !== event_id.length;
       }
       if (tmp7) {
-        let obj1 = importDefault(1208);
+        let obj1 = require("../../../utils/SentryUtils.native.tsx");
         obj1.markCrashHandled(event_id);
       }
     }
@@ -439,8 +439,8 @@ function trackCrash(event, hint, arg2) {
     const _Date2 = Date;
     result = Date.now();
   }
-  const obj3 = require(1222) /* transitionTo */;
-  const track = importDefault(698).track;
+  const obj3 = require("../../routing/router_utils.tsx") /* transitionTo */;
+  const track = require("../../../utils/AnalyticsUtils.tsx").track;
   if (tmp4) {
     extra = event.extra;
     if (extra == null) {
@@ -559,7 +559,7 @@ function trackCrash(event, hint, arg2) {
     const tmp25Result = tmp25(1208);
   }
   const AppCrashedReasons = tmp11(13371).AppCrashedReasons;
-  const tmp19 = importDefault(698);
+  const tmp19 = require("../../../utils/AnalyticsUtils.tsx");
   const tmp41 = tmp4 ? AppCrashedReasons.UNHANDLED_NATIVE_ERROR : AppCrashedReasons.UNHANDLED_JS_ERROR;
   obj1 = { name: tmp11(6975).MetricEvents.APP_CRASHED, tags: null };
   const items = ["reason:" + tmp41, ];

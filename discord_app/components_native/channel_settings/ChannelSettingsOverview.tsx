@@ -602,11 +602,11 @@ prototype["componentDidMount"] = function componentDidMount() {
   const self = this;
   this.updateNavigation(undefined, this.state);
   if (tmp2) {
-    let obj = importDefault(15759);
+    let obj = require("../../actions/RegionActionCreators.tsx");
     const regions = obj.fetchRegions(self.props.guild.id);
   }
   obj = { settings_type: "channel", destination_pane: constants6.CHANNEL_SETTINGS };
-  importDefault(4479).trackWithMetadata(constants.SETTINGS_PANE_VIEWED, obj);
+  require("../../modules/app_analytics/AppAnalyticsUtils.tsx").trackWithMetadata(constants.SETTINGS_PANE_VIEWED, obj);
 };
 prototype["componentDidUpdate"] = function componentDidUpdate(arg0, arg1) {
   this.updateNavigation(arg0, arg1);
@@ -679,7 +679,7 @@ prototype["renderChannelInfo"] = function renderChannelInfo() {
     const GUILD_THREADS_ONLY = constants3.GUILD_THREADS_ONLY;
     hasItem = GUILD_THREADS_ONLY.has(channel.type);
   }
-  let obj = require(15761) /* getIsChannelNameSettingEditable */;
+  let obj = require("ChannelSettingsUtils.tsx") /* getIsChannelNameSettingEditable */;
   const isChannelNameSettingEditable = obj.getIsChannelNameSettingEditable({ canManageThread, canManageChannels, canSendMessages, isForumPost, isThread, isChannelOwner });
   if (channel.isForumPost()) {
     const intl4 = tmp3(1236).intl;
@@ -696,7 +696,7 @@ prototype["renderChannelInfo"] = function renderChannelInfo() {
   }
   obj = { ref: self.props.channelNameRef, label: stringResult, accessibilityLabel: stringResult, value: null, onChange: null, onBlur: null, isDisabled: null, maxLength: null, errorMessage: null, enableAndroidSanitizedInputWorkaround: true };
   const TextInput = tmp3(7713).TextInput;
-  obj[3] = require(4475) /* computeChannelName */.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+  obj[3] = require("../../modules/channel/useChannelName.tsx") /* computeChannelName */.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
   ({ handleChangeName: obj2[4], handleBlurName: obj2[5] } = self);
   obj[6] = !isChannelNameSettingEditable;
   obj[7] = closure_31;
@@ -719,13 +719,13 @@ prototype["renderChannelInfo"] = function renderChannelInfo() {
     obj1[0] = stringResult1;
     obj1[1] = stringResult1;
     isForumLikeChannelResult = channel.isForumLikeChannel();
-    obj1[2] = importDefault(3926).translateSurrogatesToInlineEmoji(channel.topic);
+    obj1[2] = require("../../modules/emojis/UnicodeEmojis.tsx").translateSurrogatesToInlineEmoji(channel.topic);
     obj1[3] = self.handleChangeTopic;
     obj1[4] = !canManageChannels;
     obj1[6] = channel.isForumLikeChannel() ? closure_40 : closure_39;
     obj1[7] = self.getError("topic");
     closure_43(tmp3(7786).TextArea, obj1);
-    const obj5 = importDefault(3926);
+    const obj5 = require("../../modules/emojis/UnicodeEmojis.tsx");
   }
 };
 prototype["renderNsfwConfig"] = function renderNsfwConfig() {
@@ -734,7 +734,7 @@ prototype["renderNsfwConfig"] = function renderNsfwConfig() {
   if (channel.type === constants2.GUILD_TEXT) {
     tmp7Result = null;
     if (tmp2) {
-      let obj = require(500) /* set */;
+      let obj = require("../../utils/PlatformUtils.tsx") /* set */;
       tmp7Result = null;
       if (!obj.isIOS()) {
         obj = { helperText: null, hasIcons: false, children: null };
@@ -766,16 +766,16 @@ prototype["renderThreadSpoiler"] = function renderThreadSpoiler() {
   let tmp = null;
   if (channel.isThread()) {
     let obj = { helperText: null, hasIcons: false, children: null };
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[0] = intl.string(require(1236) /* getSystemLocale */.t.ddWXHa);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[0] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.ddWXHa);
     obj = { label: null, value: null, onValueChange: null, disabled: null };
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    obj[0] = intl2.string(require(1236) /* getSystemLocale */.t.TvUHTb);
+    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[0] = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.TvUHTb);
     obj[1] = channel.isSpoilerChannel();
     obj[2] = this.handleThreadSpoilerChange;
     obj[3] = !props.canManageThread;
-    obj[2] = callback3(require(5650) /* TableSwitchRow */.TableSwitchRow, obj);
-    tmp = callback3(require(5649) /* TableRowGroupTitle */.TableRowGroup, obj, "thread-spoiler-section");
+    obj[2] = callback3(require("../../design/components/TableRow/native/TableSwitchRow.native.tsx") /* TableSwitchRow */.TableSwitchRow, obj);
+    tmp = callback3(require("../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj, "thread-spoiler-section");
   }
   return tmp;
 };
@@ -785,9 +785,9 @@ prototype["renderSlowmode"] = function renderSlowmode() {
   if (channel.type !== constants2.GUILD_TEXT) {
     return null;
   }
-  let obj = require(15760) /* getSecondsSliderLabel */;
-  const intl = require(1236) /* getSystemLocale */.intl;
-  const secondsSliderLabel = obj.getSecondsSliderLabel(channel.rateLimitPerUser, false, intl.string(require(1236) /* getSystemLocale */.t.zvDu4h));
+  let obj = require("../../utils/SecondsSliderUtils.tsx") /* getSecondsSliderLabel */;
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const secondsSliderLabel = obj.getSecondsSliderLabel(channel.rateLimitPerUser, false, intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.zvDu4h));
   if (channel.isForumLikeChannel()) {
     const intl3 = tmp5(1236).intl;
     let stringResult = intl3.string(tmp5(1236).t["a+1pdO"]);
@@ -808,19 +808,19 @@ prototype["renderSlowmode"] = function renderSlowmode() {
   const obj1 = { style: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap" }, children: null };
   const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", style: { flexShrink: 1 }, children: null };
   const intl4 = tmp5(1236).intl;
-  obj2[3] = intl4.string(require(1236) /* getSystemLocale */.t.piZgKF);
-  const items1 = [callback3(require(4281) /* Text */.Text, obj2), callback3(require(4281) /* Text */.Text, { variant: "text-md/medium", color: "text-muted", children: secondsSliderLabel })];
+  obj2[3] = intl4.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.piZgKF);
+  const items1 = [callback3(require("../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2), callback3(require("../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-md/medium", color: "text-muted", children: secondsSliderLabel })];
   obj1[1] = items1;
   const items2 = [callback4(View, obj1), ];
   const obj3 = { style: items3, value: self._cooldown, minimumValue: 0, maximumValue: length.length - 1, onValueChange: self.handleSlowmodeChange, accessibilityLabel: null, accessibilityValue: null };
   items3 = [callback5(this.context).slider, { marginStart: -4, marginTop: 8 }];
   const intl5 = tmp5(1236).intl;
-  obj3[5] = intl5.string(require(1236) /* getSystemLocale */.t.piZgKF);
+  obj3[5] = intl5.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.piZgKF);
   obj3[6] = { text: secondsSliderLabel };
-  items2[1] = callback3(require(13336) /* Slider */.Slider, obj3);
+  items2[1] = callback3(require("../../design/components/Slider/native/Slider.native.tsx") /* Slider */.Slider, obj3);
   obj[1] = items2;
-  obj[2] = callback4(require(5317) /* PressableCard */.Card, obj);
-  items.push(callback3(require(5649) /* TableRowGroupTitle */.TableRowGroup, obj, "slowmode-section"));
+  obj[2] = callback4(require("../../design/components/Card/native/Card.native.tsx") /* PressableCard */.Card, obj);
+  items.push(callback3(require("../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj, "slowmode-section"));
   return items;
 };
 prototype["renderAutoArchiveDuration"] = function renderAutoArchiveDuration() {
@@ -831,9 +831,9 @@ prototype["renderAutoArchiveDuration"] = function renderAutoArchiveDuration() {
   ({ canManageThread, isForumPost } = props);
   if (channel.isThread()) {
     if (canManageThread) {
-      const intl = require(1236) /* getSystemLocale */.intl;
+      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
       const string = intl.string;
-      const t = require(1236) /* getSystemLocale */.t;
+      const t = require("../../intl/index.native.tsx") /* getSystemLocale */.t;
       if (isForumPost) {
         let stringResult = string(t["3aJN9M"]);
         let tmp5 = tmp;
@@ -868,16 +868,16 @@ prototype["renderInvitable"] = function renderInvitable() {
     tmp3 = null;
     if (channel.type === constants2.PRIVATE_THREAD) {
       let obj = { description: null, hasIcons: false, children: null };
-      const intl = require(1236) /* getSystemLocale */.intl;
-      obj[0] = intl.string(require(1236) /* getSystemLocale */.t.cSyXJk);
+      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      obj[0] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.cSyXJk);
       obj = { disabled: null, label: null, value: null, onValueChange: null };
       obj[0] = !tmp2;
-      const intl2 = require(1236) /* getSystemLocale */.intl;
-      obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.s2rpNf);
+      const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      obj[1] = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.s2rpNf);
       obj[2] = channel.threadMetadata.invitable;
       obj[3] = tmp.handleInvitableChange;
-      obj[2] = callback3(require(5650) /* TableSwitchRow */.TableSwitchRow, obj);
-      tmp3 = callback3(require(5649) /* TableRowGroupTitle */.TableRowGroup, obj, "thread-invitable-section");
+      obj[2] = callback3(require("../../design/components/TableRow/native/TableSwitchRow.native.tsx") /* TableSwitchRow */.TableSwitchRow, obj);
+      tmp3 = callback3(require("../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj, "thread-invitable-section");
     }
   }
   return tmp3;
@@ -890,16 +890,16 @@ prototype["renderDefaultAutoArchiveDuration"] = function renderDefaultAutoArchiv
     tmp = null;
     if (props.canManageChannels) {
       const obj = { title: null, selected: null, channel: null, onSelectDuration: null, description: null };
-      const intl = require(1236) /* getSystemLocale */.intl;
-      obj[0] = intl.string(require(1236) /* getSystemLocale */.t.FGjMZS);
-      obj[1] = require(8167) /* getAutoArchiveOptions */.getAutoArchiveDuration(channel, null);
+      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      obj[0] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.FGjMZS);
+      obj[1] = require("../../modules/threads/ThreadAutoArchive.tsx") /* getAutoArchiveOptions */.getAutoArchiveDuration(channel, null);
       obj[2] = channel;
       obj[3] = this.handleDefaultAutoArchiveDurationChange;
-      const obj2 = require(8167) /* getAutoArchiveOptions */;
+      const obj2 = require("../../modules/threads/ThreadAutoArchive.tsx") /* getAutoArchiveOptions */;
       const tmp2 = closure_43;
-      const intl2 = require(1236) /* getSystemLocale */.intl;
+      const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
       const string = intl2.string;
-      let fyXclY = require(1236) /* getSystemLocale */.t;
+      let fyXclY = require("../../intl/index.native.tsx") /* getSystemLocale */.t;
       if (isForumLikeChannelResult) {
         fyXclY = fyXclY.fyXclY;
         let stringResult = string(fyXclY);
@@ -907,7 +907,7 @@ prototype["renderDefaultAutoArchiveDuration"] = function renderDefaultAutoArchiv
         stringResult = string(fyXclY.W3Noi9);
       }
       obj[4] = stringResult;
-      tmp2(require(15762) /* AutoArchiveDurationOptions */.AutoArchiveDurationOptions, obj);
+      tmp2(require("../../modules/threads/native/components/ThreadAutoArchiveBottomSheet.tsx") /* AutoArchiveDurationOptions */.AutoArchiveDurationOptions, obj);
       isForumLikeChannelResult = channel.isForumLikeChannel();
     }
   }
@@ -920,24 +920,24 @@ prototype["renderDefaultSortOrder"] = function renderDefaultSortOrder() {
     if (props.canManageChannels) {
       const defaultSortOrder = channel.getDefaultSortOrder();
       let obj = { title: null, description: null, value: null, onChange: null, hasIcons: false, children: null };
-      const intl = require(1236) /* getSystemLocale */.intl;
-      obj[0] = intl.string(require(1236) /* getSystemLocale */.t.gePre2);
-      const intl2 = require(1236) /* getSystemLocale */.intl;
-      obj[1] = intl2.string(require(1236) /* getSystemLocale */.t["165cVX"]);
+      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      obj[0] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.gePre2);
+      const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      obj[1] = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["165cVX"]);
       obj[2] = defaultSortOrder;
       obj[3] = this.handleDefaultSortOrderChange;
       obj = { label: null, value: null };
-      const intl3 = require(1236) /* getSystemLocale */.intl;
-      obj[0] = intl3.string(require(1236) /* getSystemLocale */.t.ElZtzj);
-      obj[1] = require(1381) /* set */.ThreadSortOrder.LATEST_ACTIVITY;
-      const items = [callback3(require(7794) /* TableRadioRow */.TableRadioRow, obj), ];
+      const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      obj[0] = intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.ElZtzj);
+      obj[1] = require("../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx") /* set */.ThreadSortOrder.LATEST_ACTIVITY;
+      const items = [callback3(require("../../design/components/TableRow/native/TableRadioRow.native.tsx") /* TableRadioRow */.TableRadioRow, obj), ];
       obj = { label: null, value: null };
-      const intl4 = require(1236) /* getSystemLocale */.intl;
-      obj[0] = intl4.string(require(1236) /* getSystemLocale */.t.w28f3F);
-      obj[1] = require(1381) /* set */.ThreadSortOrder.CREATION_DATE;
-      items[1] = callback3(require(7794) /* TableRadioRow */.TableRadioRow, obj);
+      const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      obj[0] = intl4.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.w28f3F);
+      obj[1] = require("../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx") /* set */.ThreadSortOrder.CREATION_DATE;
+      items[1] = callback3(require("../../design/components/TableRow/native/TableRadioRow.native.tsx") /* TableRadioRow */.TableRadioRow, obj);
       obj[5] = items;
-      return callback4(require(7795) /* context */.TableRadioGroup, obj);
+      return callback4(require("../../design/components/TableRow/native/TableRadioGroup.native.tsx") /* context */.TableRadioGroup, obj);
     }
   }
   return null;
@@ -949,24 +949,24 @@ prototype["renderDefaultTagSetting"] = function renderDefaultTagSetting() {
     if (props.canManageChannels) {
       const defaultTagSetting = channel.getDefaultTagSetting();
       let obj = { title: null, description: null, value: null, onChange: null, hasIcons: false, children: null };
-      const intl = require(1236) /* getSystemLocale */.intl;
-      obj[0] = intl.string(require(1236) /* getSystemLocale */.t.Paxaug);
-      const intl2 = require(1236) /* getSystemLocale */.intl;
-      obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.DqOl8J);
+      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      obj[0] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Paxaug);
+      const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      obj[1] = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.DqOl8J);
       obj[2] = defaultTagSetting;
       obj[3] = this.handleDefaultTagSettingChange;
       obj = { label: null, value: null };
-      const intl3 = require(1236) /* getSystemLocale */.intl;
-      obj[0] = intl3.string(require(1236) /* getSystemLocale */.t.rQ0ctQ);
-      obj[1] = require(1383) /* set */.ThreadSearchTagSetting.MATCH_SOME;
-      const items = [callback3(require(7794) /* TableRadioRow */.TableRadioRow, obj), ];
+      const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      obj[0] = intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.rQ0ctQ);
+      obj[1] = require("../../../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx") /* set */.ThreadSearchTagSetting.MATCH_SOME;
+      const items = [callback3(require("../../design/components/TableRow/native/TableRadioRow.native.tsx") /* TableRadioRow */.TableRadioRow, obj), ];
       obj = { label: null, value: null };
-      const intl4 = require(1236) /* getSystemLocale */.intl;
-      obj[0] = intl4.string(require(1236) /* getSystemLocale */.t.FCXUu0);
-      obj[1] = require(1383) /* set */.ThreadSearchTagSetting.MATCH_ALL;
-      items[1] = callback3(require(7794) /* TableRadioRow */.TableRadioRow, obj);
+      const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      obj[0] = intl4.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.FCXUu0);
+      obj[1] = require("../../../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx") /* set */.ThreadSearchTagSetting.MATCH_ALL;
+      items[1] = callback3(require("../../design/components/TableRow/native/TableRadioRow.native.tsx") /* TableRadioRow */.TableRadioRow, obj);
       obj[5] = items;
-      return callback4(require(7795) /* context */.TableRadioGroup, obj);
+      return callback4(require("../../design/components/TableRow/native/TableRadioGroup.native.tsx") /* context */.TableRadioGroup, obj);
     }
   }
   return null;
@@ -994,23 +994,23 @@ prototype["renderAnnouncement"] = function renderAnnouncement() {
             const items = [];
             let obj = { description: null, hasIcons: false, children: null };
             obj = { children: null };
-            const intl = require(1236) /* getSystemLocale */.intl;
+            const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
             obj = { documentationLink: null };
-            obj[0] = importDefault(1945).getArticleURL(constants5.ANNOUNCEMENT_CHANNELS);
-            const items1 = [intl.format(require(1236) /* getSystemLocale */.t.tI7KNX, obj), "\n\n", ];
-            const intl2 = require(1236) /* getSystemLocale */.intl;
-            items1[2] = intl2.string(require(1236) /* getSystemLocale */.t["2Ab4Id"]);
+            obj[0] = require("../../utils/HelpdeskUtils.tsx").getArticleURL(constants5.ANNOUNCEMENT_CHANNELS);
+            const items1 = [intl.format(require("../../intl/index.native.tsx") /* getSystemLocale */.t.tI7KNX, obj), "\n\n", ];
+            const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+            items1[2] = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["2Ab4Id"]);
             obj[0] = items1;
             obj[0] = callback4(closure_45, obj);
             const obj1 = { disabled: null, label: null, value: null, onValueChange: null };
             obj1[0] = !props.canManageChannels;
-            const intl3 = require(1236) /* getSystemLocale */.intl;
-            obj1[1] = intl3.string(require(1236) /* getSystemLocale */.t.Au2b7m);
+            const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+            obj1[1] = intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Au2b7m);
             obj1[2] = channel.type === constants2.GUILD_ANNOUNCEMENT;
             const handleAnnouncementChange = self.handleAnnouncementChange;
             obj1[3] = handleAnnouncementChange.bind(self, channel.type === constants2.GUILD_ANNOUNCEMENT);
-            obj[2] = callback3(require(5650) /* TableSwitchRow */.TableSwitchRow, obj1);
-            items.push(callback3(require(5649) /* TableRowGroupTitle */.TableRowGroup, obj, "announcement-section"));
+            obj[2] = callback3(require("../../design/components/TableRow/native/TableSwitchRow.native.tsx") /* TableSwitchRow */.TableSwitchRow, obj1);
+            items.push(callback3(require("../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj, "announcement-section"));
             return items;
           }
         }
@@ -1028,26 +1028,26 @@ prototype["renderBitrateSettings"] = function renderBitrateSettings() {
   if (this.showVoiceSettings()) {
     if (canManageChannels) {
       const items = [];
-      let obj = require(4467) /* allowChannelAccess */;
+      let obj = require("../../utils/ChannelUtils.tsx") /* allowChannelAccess */;
       const bitrateLimit = obj.getBitrateLimit(guild, channel);
       obj = { description: null, hasIcons: false, children: null };
-      const intl = require(1236) /* getSystemLocale */.intl;
+      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
       obj = { bitrate: null };
       obj[0] = closure_23 / 1000;
-      obj[0] = intl.format(require(1236) /* getSystemLocale */.t.SbQJk5, obj);
+      obj[0] = intl.format(require("../../intl/index.native.tsx") /* getSystemLocale */.t.SbQJk5, obj);
       const obj1 = { children: null };
       const obj2 = { style: null, children: null };
       obj2[0] = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap" };
       const obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", style: null, children: null };
       obj3[2] = { flexShrink: 1 };
-      const intl2 = require(1236) /* getSystemLocale */.intl;
-      obj3[3] = intl2.string(require(1236) /* getSystemLocale */.t.w2d0vU);
-      const items1 = [callback3(require(4281) /* Text */.Text, obj3), ];
+      const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      obj3[3] = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.w2d0vU);
+      const items1 = [callback3(require("../../design/components/Text/native/Text.tsx") /* Text */.Text, obj3), ];
       const obj4 = { variant: "text-md/medium", color: "text-muted", children: null };
       const _Math = Math;
       const _HermesInternal = HermesInternal;
       obj4[2] = "" + Math.round(channel.bitrate / 1000) + "kbps";
-      items1[1] = callback3(require(4281) /* Text */.Text, obj4);
+      items1[1] = callback3(require("../../design/components/Text/native/Text.tsx") /* Text */.Text, obj4);
       obj2[1] = items1;
       const items2 = [callback4(View, obj2), ];
       const obj5 = { style: null, value: null, minimumValue: null, maximumValue: null, onValueChange: null };
@@ -1057,10 +1057,10 @@ prototype["renderBitrateSettings"] = function renderBitrateSettings() {
       obj5[2] = closure_24;
       obj5[3] = bitrateLimit;
       obj5[4] = this.handleBitRateChange;
-      items2[1] = callback3(require(13336) /* Slider */.Slider, obj5);
+      items2[1] = callback3(require("../../design/components/Slider/native/Slider.native.tsx") /* Slider */.Slider, obj5);
       obj1[0] = items2;
-      obj[2] = callback4(require(5317) /* PressableCard */.Card, obj1);
-      items.push(callback3(require(5649) /* TableRowGroupTitle */.TableRowGroup, obj, "bitrate-section"));
+      obj[2] = callback4(require("../../design/components/Card/native/Card.native.tsx") /* PressableCard */.Card, obj1);
+      items.push(callback3(require("../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj, "bitrate-section"));
       return items;
     }
   }
@@ -1074,10 +1074,10 @@ prototype["renderVideoQualityModeSettings"] = function renderVideoQualityModeSet
     if (canManageChannels) {
       const items = [];
       let obj = { title: null, description: null, value: null, onChange: null, hasIcons: false, children: null };
-      const intl = require(1236) /* getSystemLocale */.intl;
-      obj[0] = intl.string(require(1236) /* getSystemLocale */.t.jhJEJs);
-      const intl2 = require(1236) /* getSystemLocale */.intl;
-      obj[1] = intl2.format(require(1236) /* getSystemLocale */.t.c5W7Ss, {});
+      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      obj[0] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.jhJEJs);
+      const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      obj[1] = intl2.format(require("../../intl/index.native.tsx") /* getSystemLocale */.t.c5W7Ss, {});
       let AUTO = channel.videoQualityMode;
       if (AUTO == null) {
         AUTO = constants7.AUTO;
@@ -1086,16 +1086,16 @@ prototype["renderVideoQualityModeSettings"] = function renderVideoQualityModeSet
       obj[3] = this.handleVideoQualityModeChange;
       obj = { label: null, value: null };
       const intl3 = tmp2(1236).intl;
-      obj[0] = intl3.string(require(1236) /* getSystemLocale */.t.jjKYpu);
+      obj[0] = intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.jjKYpu);
       obj[1] = constants7.AUTO;
-      const items1 = [callback3(require(7794) /* TableRadioRow */.TableRadioRow, obj), ];
+      const items1 = [callback3(require("../../design/components/TableRow/native/TableRadioRow.native.tsx") /* TableRadioRow */.TableRadioRow, obj), ];
       obj = { label: null, value: null };
       const intl4 = tmp2(1236).intl;
-      obj[0] = intl4.string(require(1236) /* getSystemLocale */.t["7jOoJE"]);
+      obj[0] = intl4.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["7jOoJE"]);
       obj[1] = constants7.FULL;
-      items1[1] = callback3(require(7794) /* TableRadioRow */.TableRadioRow, obj);
+      items1[1] = callback3(require("../../design/components/TableRow/native/TableRadioRow.native.tsx") /* TableRadioRow */.TableRadioRow, obj);
       obj[5] = items1;
-      items.push(closure_44(require(7795) /* context */.TableRadioGroup, obj, "video-quality-section"));
+      items.push(closure_44(require("../../design/components/TableRow/native/TableRadioGroup.native.tsx") /* context */.TableRadioGroup, obj, "video-quality-section"));
       return items;
     }
   }
@@ -1109,14 +1109,14 @@ prototype["renderUserLimitSettings"] = function renderUserLimitSettings() {
       const _Math = Math;
       const rounded = Math.round(channel.userLimit);
       if (0 === rounded) {
-        const intl2 = require(1236) /* getSystemLocale */.intl;
-        let stringResult = intl2.string(require(1236) /* getSystemLocale */.t.XX5ciX);
+        const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        let stringResult = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.XX5ciX);
         let tmp7 = require;
       } else {
-        const intl = require(1236) /* getSystemLocale */.intl;
+        const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
         let obj = { num: null };
         obj[0] = rounded;
-        stringResult = intl.formatToPlainString(require(1236) /* getSystemLocale */.t["3uHFUR"], obj);
+        stringResult = intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t["3uHFUR"], obj);
         tmp7 = require;
       }
       const tmp10 = channel.isGuildStageVoice() ? closure_33 : closure_32;
@@ -1220,7 +1220,7 @@ prototype["showVoiceSettings"] = function showVoiceSettings() {
   if (hasItem) {
     let enabled = channel.isGuildVocal();
     if (!enabled) {
-      const VoiceInThreadsExperiment = require(5798) /* useCanUnarchiveThread */.VoiceInThreadsExperiment;
+      const VoiceInThreadsExperiment = require("../../modules/threads/ThreadHooks.tsx") /* useCanUnarchiveThread */.VoiceInThreadsExperiment;
       const obj = { guildId: null, location: "9b50bd_1" };
       obj[0] = channel.guild_id;
       enabled = VoiceInThreadsExperiment.getCurrentConfig(obj).enabled;
@@ -1263,7 +1263,7 @@ prototype["renderSettingsSection"] = function renderSettingsSection(items) {
   if (items.length > 0) {
     const obj = { hasIcons: true, children: null };
     obj[1] = items;
-    tmp = callback3(require(5649) /* TableRowGroupTitle */.TableRowGroup, obj);
+    tmp = callback3(require("../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj);
   }
   return tmp;
 };
@@ -1702,14 +1702,14 @@ prototype["renderShowMediaDownloadOptions"] = function renderShowMediaDownloadOp
     let obj = { hasIcons: false, children: null };
     obj = { disabled: null, label: null, subLabel: null, value: null, onValueChange: null };
     obj[0] = !props.canManageChannels;
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[1] = intl.string(require(1236) /* getSystemLocale */.t.u8LZOt);
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    obj[2] = intl2.string(require(1236) /* getSystemLocale */.t.J4wCc7);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[1] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.u8LZOt);
+    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[2] = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.J4wCc7);
     obj[3] = !channel.hasFlag(constants8.HIDE_MEDIA_DOWNLOAD_OPTIONS);
     obj[4] = this.handleToggleShowMediaDownloadOptions;
-    obj[1] = callback3(require(5650) /* TableSwitchRow */.TableSwitchRow, obj);
-    tmp = callback3(require(5649) /* TableRowGroupTitle */.TableRowGroup, obj);
+    obj[1] = callback3(require("../../design/components/TableRow/native/TableSwitchRow.native.tsx") /* TableSwitchRow */.TableSwitchRow, obj);
+    tmp = callback3(require("../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj);
   }
   return tmp;
 };
@@ -1753,22 +1753,22 @@ prototype["renderCategory"] = function renderCategory() {
 prototype["renderThreadSettings"] = function renderThreadSettings() {
   let obj = { children: null };
   obj = { spacing: null, style: null, children: null };
-  obj[0] = importDefault(712).space.PX_24;
+  obj[0] = require("../../../discord_common/js/packages/tokens/native.tsx").space.PX_24;
   obj[1] = callback5(this.context).stackPadding;
   const items = [this.renderChannelInfo(), this.renderCommonSettingsSection(), this.renderThreadManagementActions(), this.renderThreadSpoiler(), this.renderSlowmode(), this.renderAutoArchiveDuration(), this.renderInvitable(), this.renderDeleteButton()];
   obj[2] = items;
-  obj[0] = callback4(require(4693) /* Stack */.Stack, obj);
-  return callback3(require(7777) /* Form */.Form, obj);
+  obj[0] = callback4(require("../../design/components/Stack/native/Stack.native.tsx") /* Stack */.Stack, obj);
+  return callback3(require("../../design/void/Form/native/index.tsx") /* Form */.Form, obj);
 };
 prototype["renderChannelSettings"] = function renderChannelSettings() {
   let obj = { children: null };
   obj = { spacing: null, style: null, children: null };
-  obj[0] = importDefault(712).space.PX_24;
+  obj[0] = require("../../../discord_common/js/packages/tokens/native.tsx").space.PX_24;
   obj[1] = callback5(this.context).stackPadding;
   const items = [this.renderChannelInfo(), this.renderForumTags(), this.renderCategory(), this.renderPermissions(), this.renderCommonSettingsSection(), this.renderDefaultForumLayout(), this.renderDefaultSortOrder(), this.renderDefaultTagSetting(), this.renderAnnouncement(), this.renderNsfwConfig(), this.renderSlowmode(), this.renderDefaultAutoArchiveDuration(), this.renderBitrateSettings(), this.renderVideoQualityModeSettings(), this.renderUserLimitSettings(), this.renderRegionOverride(), this.renderUncommonSettingsSection(), this.renderShowMediaDownloadOptions(), this.renderDeleteButton()];
   obj[2] = items;
-  obj[0] = callback4(require(4693) /* Stack */.Stack, obj);
-  return callback3(require(7777) /* Form */.Form, obj);
+  obj[0] = callback4(require("../../design/components/Stack/native/Stack.native.tsx") /* Stack */.Stack, obj);
+  return callback3(require("../../design/void/Form/native/index.tsx") /* Form */.Form, obj);
 };
 prototype["render"] = function render() {
   const self = this;

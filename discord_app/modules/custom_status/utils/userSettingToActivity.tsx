@@ -13,8 +13,8 @@ function _activityFromSetting(emojiName) {
     if (null != emojiName.emojiName) {
       tmp = null;
       if ("" !== emojiName.emojiName) {
-        const obj5 = importDefault(3926);
-        const byName = obj5.getByName(importDefault(3926).convertSurrogateToName(emojiName.emojiName, false));
+        const obj5 = require("../../emojis/UnicodeEmojis.tsx");
+        const byName = obj5.getByName(require("../../emojis/UnicodeEmojis.tsx").convertSurrogateToName(emojiName.emojiName, false));
         let tmp2 = null;
         if (null != byName) {
           obj = { id: null, name: null, animated: false };
@@ -22,7 +22,7 @@ function _activityFromSetting(emojiName) {
           tmp2 = obj;
         }
         tmp = tmp2;
-        const obj6 = importDefault(3926);
+        const obj6 = require("../../emojis/UnicodeEmojis.tsx");
       }
     }
   }

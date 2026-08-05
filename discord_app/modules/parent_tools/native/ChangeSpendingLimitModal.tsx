@@ -62,7 +62,7 @@ function ChangeSpendingLimitScreen(teenId) {
     return applyArgumentsResult;
   }
   let formatToPlainStringResult = createCacheKey();
-  let obj = _require(14058);
+  let obj = _require("../ChangeSpendingLimitFormState.tsx");
   const changeSpendingLimitFormState = obj.useChangeSpendingLimitFormState(teenId.teenId);
   ({ amountInput, isOverspending, canSave, isSubmitting, monthlySpend, save: c0 } = changeSpendingLimitFormState);
   let formatPriceResult = null;
@@ -79,13 +79,13 @@ function ChangeSpendingLimitScreen(teenId) {
   obj = { variant: "text-sm/normal", children: null };
   let intl = tmp2(1236).intl;
   obj[1] = intl.string(_handleSave(2285).IFguF2);
-  const items = [callback(_require(4281).Text, obj), ];
+  const items = [callback(_require("../../../design/components/Text/native/Text.tsx").Text, obj), ];
   let obj1 = { spacing: null, children: null };
   obj1[0] = _handleSave(712).space.PX_8;
   let obj2 = { variant: "text-sm/semibold", color: "text-subtle", children: null };
   let intl2 = tmp2(1236).intl;
   obj2[2] = intl2.string(_handleSave(2285)["1fHSu2"]);
-  const items1 = [callback(_require(4281).Text, obj2), , ];
+  const items1 = [callback(_require("../../../design/components/Text/native/Text.tsx").Text, obj2), , ];
   const obj3 = { accessibilityLabel: null, value: null, onChange: null, leadingText: null, placeholder: null, keyboardType: null, isClearable: true };
   const intl3 = tmp2(1236).intl;
   obj3[0] = intl3.string(_handleSave(2285)["1fHSu2"]);
@@ -103,7 +103,7 @@ function ChangeSpendingLimitScreen(teenId) {
     str = "decimal-pad";
   }
   obj3[5] = str;
-  const items2 = [callback(_require(7713).TextInput, obj3), ];
+  const items2 = [callback(_require("../../../design/components/TextInput/native/TextInput.native.tsx").TextInput, obj3), ];
   let tmp9Result = null;
   if (isOverspending) {
     const obj4 = { style: null, pointerEvents: "none" };

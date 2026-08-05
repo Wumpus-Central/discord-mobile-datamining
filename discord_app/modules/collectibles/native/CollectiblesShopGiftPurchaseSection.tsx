@@ -180,8 +180,8 @@ function CollectiblesShopGiftPurchaseSection(disabled) {
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let closure_16 = createCacheKey.createStyles((arg0) => {
   let obj = { container: null, disclaimer: null };
-  obj = { paddingBottom: importDefault(712).space.PX_12 + arg0, paddingTop: importDefault(712).space.PX_12, paddingHorizontal: importDefault(712).space.PX_16, gap: importDefault(712).space.PX_8, backgroundColor: importDefault(712).colors.BACKGROUND_BASE_LOW };
-  const merged = Object.assign(importDefault(712).shadows.SHADOW_TOP_HIGH);
+  obj = { paddingBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 + arg0, paddingTop: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, paddingHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW };
+  const merged = Object.assign(require("../../../../discord_common/js/packages/tokens/native.tsx").shadows.SHADOW_TOP_HIGH);
   obj[0] = obj;
   obj[1] = { includeFontPadding: true };
   return obj;
@@ -229,10 +229,10 @@ export default function WrappedCollectiblesShopGiftPurchaseSection(arg0) {
     }
   }, items);
   obj = { skuIDs: [], activeSubscription: null, children: null };
-  obj = { paymentGateway: GOOGLE, orderRequired: tmp6, skuIds: items1, isGift: true, activeSubscription: null, initialExternalGatewayFacet: importDefault(9359)(product), onOrderRetryCancellation: callback, children: null };
+  obj = { paymentGateway: GOOGLE, orderRequired: tmp6, skuIds: items1, isGift: true, activeSubscription: null, initialExternalGatewayFacet: require("hooks/useCollectiblesExternalGatewayFacet.android.tsx")(product), onOrderRetryCancellation: callback, children: null };
   items1 = [product.skuId];
-  const tmp8 = importDefault(9359)(product);
+  const tmp8 = require("hooks/useCollectiblesExternalGatewayFacet.android.tsx")(product);
   obj[7] = callback2(CollectiblesShopGiftPurchaseSection, { product, isPurchaseDisabled, giftOptions, baseAnalyticsFields, giftingOrigin });
-  obj[2] = callback2(importDefault(7334), obj, product.skuId);
+  obj[2] = callback2(require("../../checkout/native/stores/NativeCheckoutStoreProvider.tsx"), obj, product.skuId);
   return callback2(onGiftModalDismiss(9489).NativePaymentContextProvider, obj);
 };

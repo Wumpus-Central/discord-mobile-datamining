@@ -6,8 +6,8 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["pS+K2L"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["pS+K2L"]);
   },
   parent: require("MobileSetting").MobileSetting.VOICE,
   useTrailing: function useInputModeSettingTrailing() {
@@ -23,8 +23,8 @@ createToggle = {
   },
   onPress: require("handleInputModePress").handleInputModePress,
   useSearchTerms() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    const items = [intl.string(require(1236) /* getSystemLocale */.t.nuFtHH)];
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const items = [intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.nuFtHH)];
     return items;
   }
 };

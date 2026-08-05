@@ -10,7 +10,7 @@ export default {
   open(arg0, arg1, arg2, arg3) {
     const self = this;
     if (null != arg1) {
-      const obj2 = importDefault(4490);
+      const obj2 = require("../ModalActionCreators.tsx");
       const tmp = arg0;
       let obj = { channelType: null, guildId: null, categoryId: null, cloneChannelId: null, onChannelCreated: null };
       obj[0] = tmp;
@@ -36,6 +36,6 @@ export default {
     }
   },
   close() {
-    importDefault(4490).popWithKey(CREATE_CHANNEL_MODAL_KEY);
+    require("../ModalActionCreators.tsx").popWithKey(CREATE_CHANNEL_MODAL_KEY);
   }
 };

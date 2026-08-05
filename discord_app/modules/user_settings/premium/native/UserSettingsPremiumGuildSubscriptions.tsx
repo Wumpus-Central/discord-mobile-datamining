@@ -58,16 +58,16 @@ const prototype = UserSettingsPremiumGuildSubscriptions.prototype;
 prototype["componentDidMount"] = function componentDidMount() {
   const self = this;
   if (!this.props.hasFetchedSlots) {
-    const guildBoostSlots = require(4181) /* _fetchAppliedGuildBoostsForGuild */.fetchGuildBoostSlots();
-    const obj = require(4181) /* _fetchAppliedGuildBoostsForGuild */;
+    const guildBoostSlots = require("../../../../actions/BoostingActionCreators.tsx") /* _fetchAppliedGuildBoostsForGuild */.fetchGuildBoostSlots();
+    const obj = require("../../../../actions/BoostingActionCreators.tsx") /* _fetchAppliedGuildBoostsForGuild */;
   }
   if (tmp4) {
-    const premiumSubscriptionPlans = require(5786) /* fetchSubscriptionPlansForSKU */.fetchPremiumSubscriptionPlans();
-    const obj2 = require(5786) /* fetchSubscriptionPlansForSKU */;
+    const premiumSubscriptionPlans = require("../../../../actions/SubscriptionPlanActionCreators.tsx") /* fetchSubscriptionPlansForSKU */.fetchPremiumSubscriptionPlans();
+    const obj2 = require("../../../../actions/SubscriptionPlanActionCreators.tsx") /* fetchSubscriptionPlansForSKU */;
   }
   if (!self.props.isFetchingPaymentSources) {
-    const paymentSources = require(4604) /* _deletePaymentSource */.fetchPaymentSources();
-    const obj3 = require(4604) /* _deletePaymentSource */;
+    const paymentSources = require("../../../billing/actions/BillingActionCreators.tsx") /* _deletePaymentSource */.fetchPaymentSources();
+    const obj3 = require("../../../billing/actions/BillingActionCreators.tsx") /* _deletePaymentSource */;
   }
 };
 prototype["renderPremiumGuildSubscriptions"] = function renderPremiumGuildSubscriptions() {
@@ -82,16 +82,16 @@ prototype["renderPremiumGuildSubscriptions"] = function renderPremiumGuildSubscr
     const items = [, ];
     ({ blurb: arr[0], blurbNotLast: arr[1] } = tmp);
     obj[0] = items;
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[3] = intl.string(require(1236) /* getSystemLocale */.t.GwnFO5);
-    const items1 = [callback(require(4281) /* Text */.Text, obj), , ];
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[3] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.GwnFO5);
+    const items1 = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), , ];
     obj = { style: null, variant: "text-sm/medium", color: "interactive-text-default", children: null };
     obj[0] = tmp.blurb;
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj1 = { helpdeskArticle: null };
-    obj1[0] = importDefault(1945).getArticleURL(constants.GUILD_SUBSCRIPTIONS);
-    obj[3] = intl2.format(require(1236) /* getSystemLocale */.t.A4UTjH, obj1);
-    items1[1] = callback(require(4281) /* Text */.Text, obj);
+    obj1[0] = require("../../../../utils/HelpdeskUtils.tsx").getArticleURL(constants.GUILD_SUBSCRIPTIONS);
+    obj[3] = intl2.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.A4UTjH, obj1);
+    items1[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
     let tmp6Result = null != externalManagementMessage;
     if (tmp6Result) {
       const obj2 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
@@ -102,10 +102,10 @@ prototype["renderPremiumGuildSubscriptions"] = function renderPremiumGuildSubscr
     const obj3 = { children: null };
     items1[2] = tmp6Result;
     obj[1] = items1;
-    const items2 = [closure_15(closure_4, obj), callback(importDefault(12677), {})];
+    const items2 = [closure_15(closure_4, obj), callback(require("../../../premium/native/GuildBoostSlotsInventory.tsx"), {})];
     obj3[0] = items2;
     tmp3Result = tmp3(importAllResult.Fragment, obj3);
-    const obj5 = importDefault(1945);
+    const obj5 = require("../../../../utils/HelpdeskUtils.tsx");
     const tmp5 = closure_4;
     tmp7 = require;
     const tmp9 = importDefault;
@@ -124,10 +124,10 @@ prototype["render"] = function render() {
   const props = this.props;
   ({ fractionalState, isInReverseTrial } = props);
   ({ hasFetchedSubscriptionPlans, hasAvailableSlots, fpDurationText, premiumGroupRole } = props);
-  if (premiumGroupRole === require(1892) /* create */.PremiumSubscriptionGroupRole.MEMBER) {
+  if (premiumGroupRole === require("../../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx") /* create */.PremiumSubscriptionGroupRole.MEMBER) {
     let obj = { style: null };
     obj[0] = tmp.boostingUnavailablePill;
-    let tmp5 = callback(importDefault(12691), obj);
+    let tmp5 = callback(require("../../../premium/premium_group/native/BoostingUnavailablePill.tsx"), obj);
   } else {
     tmp5 = null;
     if (fractionalState !== FractionalPremiumStates.NONE) {
@@ -135,13 +135,13 @@ prototype["render"] = function render() {
       obj[0] = fpDurationText;
       obj[1] = isInReverseTrial;
       obj[2] = tmp.boostingUnavailablePill;
-      tmp5 = callback(importDefault(12693), obj);
+      tmp5 = callback(require("../../../premium/fractional/native/BoostingCountDownPill.tsx"), obj);
     }
   }
   obj = { style: tmp.scroller, children: null };
   const items = [tmp5, self.renderPremiumGuildSubscriptions(), ];
   const obj1 = { style: tmp.upsellSection, children: null };
-  const items1 = [callback(require(12695) /* getTopPatternSource */.TopPattern, { style: tmp.background }), ];
+  const items1 = [callback(require("../../../../design/components/Illustration/native/redesign/generated/TopPattern.tsx") /* getTopPatternSource */.TopPattern, { style: tmp.background }), ];
   let tmp13Result = null;
   if (hasFetchedSubscriptionPlans) {
     const obj3 = { onLearnMorePremium: null, fractionalState: null, isInReverseTrial: null, hasAvailableSlots: null };
@@ -149,7 +149,7 @@ prototype["render"] = function render() {
     obj3[1] = fractionalState;
     obj3[2] = isInReverseTrial;
     obj3[3] = hasAvailableSlots;
-    tmp13Result = callback(importDefault(12699), obj3);
+    tmp13Result = callback(require("../../../../components_native/premium/GuildBoostingUpsell.tsx"), obj3);
   }
   items1[1] = tmp13Result;
   obj1[1] = items1;
@@ -169,7 +169,7 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
   let dependencyMap;
   let closure_3;
   let closure_4;
-  let obj = _require(12597);
+  let obj = _require("../../../billing/hooks/useSubscriptionPlansLoaded.tsx");
   _require = obj.useSubscriptionPlansLoaded();
   flag = undefined;
   if (route != null) {
@@ -209,15 +209,15 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
   });
   const tmp4 = flag(12637);
   const items1 = [reset];
-  const stateFromStores = _require(589).useStateFromStores(items1, () => premiumTypeSubscription.getPremiumTypeSubscription());
-  const tmpResult1 = _require(589);
-  const navigation = _require(1480).useNavigation();
-  const tmpResult2 = _require(1480);
+  const stateFromStores = _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => premiumTypeSubscription.getPremiumTypeSubscription());
+  const tmpResult1 = _require("../../../../../discord_common/js/packages/flux/index.tsx");
+  const navigation = _require("../../../../design/components/Navigator/native/useNavigation.native.tsx").useNavigation();
+  const tmpResult2 = _require("../../../../design/components/Navigator/native/useNavigation.native.tsx");
   obj = { navigation, externalManagementMessage: null };
-  const externalManagementMessage = _require(6775).getExternalManagementMessage(stateFromStores, { shouldAllowExternalManagement: true });
+  const externalManagementMessage = _require("../../../premium/native/utils/PremiumManagementUtils.tsx").getExternalManagementMessage(stateFromStores, { shouldAllowExternalManagement: true });
   const tmp10 = UserSettingsPremiumGuildSubscriptions;
   const tmp9 = closure_14;
-  const tmpResult3 = _require(6775);
+  const tmpResult3 = _require("../../../premium/native/utils/PremiumManagementUtils.tsx");
   let tmp11 = null;
   if (tmpResult4.isMetaQuest()) {
     tmp11 = externalManagementMessage;

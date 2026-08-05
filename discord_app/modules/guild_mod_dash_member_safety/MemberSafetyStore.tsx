@@ -248,7 +248,7 @@ const memberSafetyStore = new MemberSafetyStore(require("dispatcher"), {
   CACHE_LOADED: function handleCacheLoaded(guildMembers) {
     let c0 = false;
     let c10 = true;
-    const entries = importDefault(11).entries(guildMembers.guildMembers);
+    const entries = require("../../utils/SnowflakeUtils.tsx").entries(guildMembers.guildMembers);
     const item = entries.forEach((arg0) => {
       let tmp;
       let tmp2;
@@ -466,7 +466,7 @@ const memberSafetyStore = new MemberSafetyStore(require("dispatcher"), {
     let guildId;
     let memberSupplementals;
     ({ guildId, memberSupplementals } = arg0);
-    const result = require(6869) /* hasMemberSupplemental */.syncMemberSupplemental(guildId, memberSupplementals);
+    const result = require("MemberSafetyStoreSupplemental.tsx") /* hasMemberSupplemental */.syncMemberSupplemental(guildId, memberSupplementals);
     if (result) {
       if (null == dependencyMap[guildId]) {
         const tmp8 = new closure_8(guildId);
@@ -501,9 +501,9 @@ const memberSafetyStore = new MemberSafetyStore(require("dispatcher"), {
       return memberIds;
     }, { memberIds: [], memberSupplementals: [] });
     let memberIds = reduced.memberIds;
-    let obj1 = require(6869) /* hasMemberSupplemental */;
+    let obj1 = require("MemberSafetyStoreSupplemental.tsx") /* hasMemberSupplemental */;
     let result = obj1.syncMemberSupplemental(guildId, reduced.memberSupplementals);
-    let obj2 = require(6870) /* createFetchKeys */;
+    let obj2 = require("MemberSafetySupplementalUtils.tsx") /* createFetchKeys */;
     const result1 = obj2.registerFetchedSupplementals(guildId, memberIds);
     let tmp14;
     let first;

@@ -8,7 +8,7 @@ const result = require("useBannerBots").fileFinishedImporting("modules/app_launc
 export default function BotsBanner(context) {
   let firstBotApplication;
   let secondBotApplication;
-  let obj = require(11365) /* useBannerBots */;
+  let obj = require("../hooks/useBannerBots.tsx") /* useBannerBots */;
   const bannerBots = obj.useBannerBots({ context: context.context });
   ({ firstBotApplication, secondBotApplication } = bannerBots);
   let tmp4Result = null;
@@ -22,8 +22,8 @@ export default function BotsBanner(context) {
       obj[0] = firstBotApplication.name;
       obj[1] = secondBotApplication.name;
       obj[1] = intl.formatToPlainString(tmp(1236).t["9SN0xw"], obj);
-      tmp4Result = jsx(importDefault(11360), { firstApplicationName: null, secondApplicationName: null });
-      const tmp5Result = importDefault(11360);
+      tmp4Result = jsx(require("BannerBase.tsx"), { firstApplicationName: null, secondApplicationName: null });
+      const tmp5Result = require("BannerBase.tsx");
     }
   }
   return tmp4Result;

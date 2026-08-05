@@ -48,7 +48,7 @@ class GuildsRequiringChannelSync {
 }
 const prototype = GuildsRequiringChannelSync.prototype;
 prototype["getAll"] = function getAll() {
-  const result = importDefault(1907).guildsRequiringChannelSync();
+  const result = require("../DatabaseDaos.tsx").guildsRequiringChannelSync();
   if (null == result) {
     let resolved = Promise.resolve([]);
   } else {
@@ -384,14 +384,14 @@ prototype["markGuildForResync"] = function markGuildForResync(id, database, Back
   obj = obj(514);
   const v4Result = obj.v4();
   obj = { guild_id: id, request_id: v4Result, trigger: BackgroundSync, change_type: ChannelVisibleParentHidden };
-  importDefault(698).track(constants.GUILD_CHANNEL_RESYNC_REQUESTED, obj);
-  const obj2 = importDefault(698);
-  const result = importDefault(1907).guildsRequiringChannelSyncTransaction(database);
+  require("../../../utils/AnalyticsUtils.tsx").track(constants.GUILD_CHANNEL_RESYNC_REQUESTED, obj);
+  const obj2 = require("../../../utils/AnalyticsUtils.tsx");
+  const result = require("../DatabaseDaos.tsx").guildsRequiringChannelSyncTransaction(database);
   obj = { id, requestId: v4Result };
   result.put(obj);
 };
 prototype["unmarkGuildForResync"] = function unmarkGuildForResync(id, database) {
-  const result = importDefault(1907).guildsRequiringChannelSyncTransaction(database);
+  const result = require("../DatabaseDaos.tsx").guildsRequiringChannelSyncTransaction(database);
   result.delete(id);
 };
 prototype["hasNewlyVisibleChannelWithHiddenParent"] = function hasNewlyVisibleChannelWithHiddenParent(id, channels, deleted_channel_ids) {

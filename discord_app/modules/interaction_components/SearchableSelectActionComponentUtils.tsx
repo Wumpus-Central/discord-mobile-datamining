@@ -19,14 +19,14 @@ export const queryMentionables = function queryMentionables(type, arg1, channelI
   if (null == channel) {
     return [];
   } else {
-    const tmp2 = type === _require(1906).ComponentType.USER_SELECT || type === _require(1906).ComponentType.MENTIONABLE_SELECT;
+    const tmp2 = type === _require("../../flow/Server.tsx").ComponentType.USER_SELECT || type === _require("../../flow/Server.tsx").ComponentType.MENTIONABLE_SELECT;
     let obj = channel(5126);
     obj = { query: null, channel: null, canMentionEveryone: false, canMentionHere: false, canMentionUsers: null, canMentionRoles: null, includeAllGuildUsers: true, includeNonMentionableRoles: true, checkRecentlyTalkedOnEmptyQuery: false, limit: 15 };
     obj[0] = arg1;
     obj[1] = channel;
     obj[4] = tmp2;
-    obj[5] = type === _require(1906).ComponentType.ROLE_SELECT || type === _require(1906).ComponentType.MENTIONABLE_SELECT;
-    const tmp3 = type === _require(1906).ComponentType.ROLE_SELECT || type === _require(1906).ComponentType.MENTIONABLE_SELECT;
+    obj[5] = type === _require("../../flow/Server.tsx").ComponentType.ROLE_SELECT || type === _require("../../flow/Server.tsx").ComponentType.MENTIONABLE_SELECT;
+    const tmp3 = type === _require("../../flow/Server.tsx").ComponentType.ROLE_SELECT || type === _require("../../flow/Server.tsx").ComponentType.MENTIONABLE_SELECT;
     ({ users, roles } = obj.queryMentionResults(obj));
     const items = [];
     let arraySpreadResult = HermesBuiltin.arraySpread(users.map((user) => {
@@ -51,7 +51,7 @@ export const queryChannels = function queryChannels(arg0, arg1, arg2) {
   if (null == channel) {
     let items = [];
   } else {
-    let obj = importDefault(5126);
+    let obj = require("../../utils/AutocompleteUtils.tsx");
     obj = { query: null, channel: null, channelTypes: null, limit: 15 };
     obj[0] = arg0;
     obj[1] = channel;

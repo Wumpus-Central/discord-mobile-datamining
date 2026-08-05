@@ -200,7 +200,7 @@ export const fetchApplicationCommandIndex = function fetchApplicationCommandInde
   return applyArgumentsResult;
 };
 export const requestApplicationCommandIndex = function requestApplicationCommandIndex(target) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "APPLICATION_COMMAND_INDEX_FETCH_REQUEST", target };
   obj.dispatch(obj);
 };

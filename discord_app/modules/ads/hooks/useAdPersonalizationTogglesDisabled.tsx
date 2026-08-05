@@ -6,5 +6,5 @@ const result = require("set").fileFinishedImporting("modules/ads/hooks/useAdPers
 
 export const useAdPersonalizationTogglesDisabled = function useAdPersonalizationTogglesDisabled() {
   const items = [reset];
-  return require(589) /* initialize */.useStateFromStores(items, () => togglesDisabled.isTogglesDisabled());
+  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => togglesDisabled.isTogglesDisabled());
 };

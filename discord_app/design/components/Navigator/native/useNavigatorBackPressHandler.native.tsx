@@ -11,7 +11,7 @@ export const useNavigatorBackPressHandler = function useNavigatorBackPressHandle
   const layoutEffect = React.useLayoutEffect(() => {
     closure_1.current = closure_0;
   });
-  const focusEffect = _require(1481).useFocusEffect(React.useCallback(() => {
+  const focusEffect = _require("../../../../../_runtime/01481_Link.js").useFocusEffect(React.useCallback(() => {
     if (!obj.isIOS()) {
       const callback = outer1_3.addEventListener("hardwareBackPress", () => ref.current());
       return () => closure_0.remove();

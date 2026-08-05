@@ -137,7 +137,7 @@ function computeAffectedGuilds(setting, ACTIVITY_STATUS_OFF) {
   }
 }
 function getProfileVisibilitySettingName(NumberResult) {
-  if (require(1306) /* create */.ProfileVisibility.FRIENDS_AND_ALL_GUILDS === NumberResult) {
+  if (require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.ProfileVisibility.FRIENDS_AND_ALL_GUILDS === NumberResult) {
     const intl3 = tmp(1236).intl;
     return intl3.string(tmp(1236).t.Boxc8R).toLowerCase();
   } else if (tmp(1306).ProfileVisibility.FRIENDS_AND_SMALL_GUILDS === NumberResult) {
@@ -162,7 +162,7 @@ const result = require("createGuildRecordFromRust").fileFinishedImporting("modul
 
 export const ChangeDirection = obj;
 export const getPermissiveness = function getPermissiveness(arg0) {
-  if (require(1306) /* create */.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF === arg0) {
+  if (require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF === arg0) {
     return 2;
   } else if (tmp(1306).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS === arg0) {
     return 1;
@@ -175,13 +175,13 @@ export const getPermissiveness = function getPermissiveness(arg0) {
 export const profileVisibilityToActivityRestriction = function profileVisibilityToActivityRestriction(arg0) {
   let ACTIVITY_STATUS_OFF = map.get(arg0);
   if (ACTIVITY_STATUS_OFF == null) {
-    ACTIVITY_STATUS_OFF = require(1306) /* create */.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF;
+    ACTIVITY_STATUS_OFF = require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF;
   }
   return ACTIVITY_STATUS_OFF;
 };
 export { computeAffectedGuilds };
 export const getActivityRestrictionSettingName = function getActivityRestrictionSettingName(NumberResult) {
-  if (require(1306) /* create */.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF === NumberResult) {
+  if (require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF === NumberResult) {
     const intl3 = tmp(1236).intl;
     return intl3.string(tmp(1236).t.FzgQna).toLowerCase();
   } else if (tmp(1306).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS === NumberResult) {
@@ -196,8 +196,8 @@ export const getActivityRestrictionSettingName = function getActivityRestriction
 };
 export { getProfileVisibilitySettingName };
 export const getProfileToActivityUpsellStrings = function getProfileToActivityUpsellStrings(arg0, settingName) {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  const t = require(1236) /* getSystemLocale */.t;
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const t = require("../../intl/index.native.tsx") /* getSystemLocale */.t;
   let obj = { title: intl.string(arg0 ? t.eYDA7D : t["9jYwjo"]), subtitle: null, confirmText: null, toastContent: null };
   const intl2 = tmp(1236).intl;
   const t2 = tmp(1236).t;
@@ -212,8 +212,8 @@ export const getProfileToActivityUpsellStrings = function getProfileToActivityUp
   return obj;
 };
 export const getUpsellStrings = function getUpsellStrings(arg0, settingName) {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  const t = require(1236) /* getSystemLocale */.t;
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const t = require("../../intl/index.native.tsx") /* getSystemLocale */.t;
   let obj = { title: intl.string(arg0 ? t.jRx1Aa : t.S0Y0bh), subtitle: null, confirmText: null, toastContent: null };
   const intl2 = tmp(1236).intl;
   const t2 = tmp(1236).t;
@@ -231,9 +231,9 @@ export const computeProfileToActivityUpsell = function computeProfileToActivityU
   let obj = map;
   let ACTIVITY_STATUS_OFF = map.get(NumberResult);
   if (ACTIVITY_STATUS_OFF == null) {
-    ACTIVITY_STATUS_OFF = require(1306) /* create */.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF;
+    ACTIVITY_STATUS_OFF = require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF;
   }
-  const DefaultGuildsActivityRestrictedV2 = require(3958) /* explicitContentFromProto */.DefaultGuildsActivityRestrictedV2;
+  const DefaultGuildsActivityRestrictedV2 = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.DefaultGuildsActivityRestrictedV2;
   setting = DefaultGuildsActivityRestrictedV2.getSetting();
   if (setting === ACTIVITY_STATUS_OFF) {
     return null;

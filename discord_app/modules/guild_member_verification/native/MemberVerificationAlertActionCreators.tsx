@@ -24,7 +24,7 @@ export const openMemberVerificationSuccessAlert = function openMemberVerificatio
       });
     }
   };
-  importDefault(4624).openLazy(obj);
+  require("../../../actions/native/AlertActionCreators.tsx").openLazy(obj);
 };
 export const openMemberVerificationPendingAlert = function openMemberVerificationPendingAlert(guildId) {
   let closure_0 = guildId;
@@ -51,7 +51,7 @@ export const openMemberVerificationPendingAlert = function openMemberVerificatio
       });
     }
   };
-  importDefault(4624).openLazy(obj);
+  require("../../../actions/native/AlertActionCreators.tsx").openLazy(obj);
 };
 export const openMemberVerificationCancelPendingAlert = function openMemberVerificationCancelPendingAlert(arg0) {
   let dependencyMap;
@@ -83,7 +83,7 @@ export const openMemberVerificationCancelPendingAlert = function openMemberVerif
       });
     }
   };
-  importDefault(4624).openLazy(obj);
+  require("../../../actions/native/AlertActionCreators.tsx").openLazy(obj);
 };
 export const openMemberVerificationRejectedAlert = function openMemberVerificationRejectedAlert(canWithdraw) {
   let onClose;
@@ -181,7 +181,7 @@ export const openMemberVerificationUpdateAlert = function openMemberVerification
       });
     }
   };
-  importDefault(4624).openLazy(obj);
+  require("../../../actions/native/AlertActionCreators.tsx").openLazy(obj);
 };
 export function closeMemberVerificationAlert(arg0) {
   let closure_0 = arg0;
@@ -217,5 +217,5 @@ export const openMemberVerificationIncompleteAlert = function openMemberVerifica
       });
     }
   };
-  importDefault(4624).openLazy(obj);
+  require("../../../actions/native/AlertActionCreators.tsx").openLazy(obj);
 };

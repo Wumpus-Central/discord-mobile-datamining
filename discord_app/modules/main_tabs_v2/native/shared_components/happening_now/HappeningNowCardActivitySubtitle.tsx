@@ -24,7 +24,7 @@ export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubti
     obj[0] = stateFromStores;
     tmp8 = tmp4(8955)(obj);
   }
-  obj[1] = jsx(voiceState(14431).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp8, children: importDefault(4475)(stateFromStores) });
+  obj[1] = jsx(voiceState(14431).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp8, children: require("../../../../channel/useChannelName.tsx")(stateFromStores) });
   return <View style={callback().cardDetails}>{null}</View>;
 };
 export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCardSubtitle(activity) {
@@ -40,7 +40,7 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
     }
     const obj = { lineClamp: 1, children: null };
     obj[1] = tmp3;
-    return jsx(require(14431) /* HAPPENING_NOW_CARD_MARGIN_RIGHT */.HappeningNowCardSubtitle, { lineClamp: 1, children: null });
+    return jsx(require("HappeningNowCard.tsx") /* HAPPENING_NOW_CARD_MARGIN_RIGHT */.HappeningNowCardSubtitle, { lineClamp: 1, children: null });
   }
   if (null != activity.stream) {
     if (null != activity) {
@@ -48,8 +48,8 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
         let name3 = activity.name;
       }
     }
-    const intl = require(1236) /* getSystemLocale */.intl;
-    name3 = intl.string(require(1236) /* getSystemLocale */.t.eXan7B);
+    const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    name3 = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.eXan7B);
   } else {
     let name;
     if (activity != null) {
@@ -57,7 +57,7 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
     }
     tmp3 = null;
     if (null != name) {
-      if (!importDefault(8112)(activity)) {
+      if (!require("../../../../activities/utils/isStreaming.tsx")(activity)) {
         if (tmp4(9573)(activity)) {
           if (null != activity.details) {
             if (null != activity.state) {

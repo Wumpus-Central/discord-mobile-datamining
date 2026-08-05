@@ -3,7 +3,7 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import { PersistedStore } from "initialize";
 
 function handleConnectionOpen() {
-  const obj = importDefault(11);
+  const obj = require("../utils/SnowflakeUtils.tsx");
   const keys = obj.keys(obj);
   const item = keys.forEach((arg0) => {
     if (null == channel.getChannel(arg0)) {

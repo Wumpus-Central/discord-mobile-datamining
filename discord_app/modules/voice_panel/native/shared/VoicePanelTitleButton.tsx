@@ -14,12 +14,12 @@ const require = arg1;
 function ChannelButtonIcons() {
   let obj = { style: callback3().channelButtons, children: null };
   obj = { size: "xs", accessibilityLabel: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl.string(require(1236) /* getSystemLocale */.t.VHXh8a);
-  const items = [callback(require(12122) /* ShieldLockIcon */.ShieldLockIcon, obj), ];
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.VHXh8a);
+  const items = [callback(require("../../../../design/components/Icon/native/redesign/generated/ShieldLockIcon.tsx") /* ShieldLockIcon */.ShieldLockIcon, obj), ];
   obj = { source: null };
-  obj[0] = importDefault(5324);
-  items[1] = callback(require(4696) /* CollapsingText */.BaseTextButton.Icon, obj);
+  obj[0] = require("../../../../../_runtime/05324_registerAsset.js");
+  items[1] = callback(require("../../../../design/components/Button/native/BaseTextButton.native.tsx") /* CollapsingText */.BaseTextButton.Icon, obj);
   obj[1] = items;
   return callback2(View, obj);
 }
@@ -28,7 +28,7 @@ function ChannelButton(channelId) {
   let obj = channelId(589);
   const items = [ensureGuildLoaded];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_7.getChannel(channelId));
-  let str = importDefault(4475)(stateFromStores);
+  let str = require("../../../channel/useChannelName.tsx")(stateFromStores);
   const isCallSecureFramesVerified = channelId(9112).useIsCallSecureFramesVerified({ channelId });
   obj = { accessibilityRole: "button", accessibilityHint: null, text: null, icon: null, iconOpticalOffsetMargin: null, iconPosition: "end", onPress: null, maxFontSizeMultiplier: 2 };
   const intl = channelId(1236).intl;
@@ -43,7 +43,7 @@ function ChannelButton(channelId) {
     tmp3Result = tmp3(5324);
   }
   obj[3] = tmp3Result;
-  obj[4] = -importDefault(712).space.PX_4;
+  obj[4] = -require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4;
   obj[6] = channelId.onPress;
   return closure_9(channelId(8585).HeaderButton, obj);
 }
@@ -53,19 +53,19 @@ function StreamButton(arg0) {
   let onPress;
   let participant;
   ({ participant, onPress } = arg0);
-  const context = importAllResult.useContext(importDefault(11557));
+  const context = importAllResult.useContext(require("../VoicePanelStateContext.tsx"));
   ({ guildId, channelId } = context);
-  let obj = importDefault(4474);
+  let obj = require("../../../../utils/NicknameUtils.tsx");
   const name = obj.useName(guildId, channelId, participant.user);
   obj = { accessibilityRole: "button", accessibilityHint: null, accessibilityLabel: null, text: null, icon: null, iconPosition: "start", onPress: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl.string(require(1236) /* getSystemLocale */.t["Y2b7+e"]);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl2.formatToPlainString(require(1236) /* getSystemLocale */.t.I0mOAs, { username: name });
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["Y2b7+e"]);
+  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl2.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.I0mOAs, { username: name });
   obj[3] = name;
-  obj[4] = importDefault(16052);
+  obj[4] = require("../../../../../_runtime/16052_registerAsset.js");
   obj[6] = onPress;
-  return callback(require(8585) /* TwinButtons */.HeaderButton, obj);
+  return callback(require("../../../../design/components/experimental/native.tsx") /* TwinButtons */.HeaderButton, obj);
 }
 function ActivityButton(participant) {
   participant = participant.participant;
@@ -73,7 +73,7 @@ function ActivityButton(participant) {
   const items = [addApplication];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getApplication(participant.applicationId));
   obj = { direction: "horizontal", spacing: null, children: null };
-  obj[1] = importDefault(712).space.PX_8;
+  obj[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8;
   obj = { accessibilityRole: "button", accessibilityHint: null, text: null, icon: null, iconPosition: "start", onPress: null, shrink: true };
   const intl = participant(1236).intl;
   obj[1] = intl.string(participant(1236).t["Y2b7+e"]);
@@ -85,9 +85,9 @@ function ActivityButton(participant) {
     str = "???";
   }
   obj[2] = str;
-  obj[3] = importDefault(7612);
+  obj[3] = require("../../../../../_runtime/07612_registerAsset.js");
   obj[5] = participant.onPress;
-  const items1 = [closure_9(participant(8585).HeaderButton, obj), closure_9(importDefault(15975), { applicationId: participant.applicationId })];
+  const items1 = [closure_9(participant(8585).HeaderButton, obj), closure_9(require("../../../frames/panel/native/QuestActivityButton.tsx"), { applicationId: participant.applicationId })];
   obj[2] = items1;
   return closure_10(participant(4693).Stack, obj);
 }
@@ -95,15 +95,15 @@ function UserButton(participant) {
   let channelId;
   let guildId;
   participant = participant.participant;
-  const context = importAllResult.useContext(importDefault(11557));
+  const context = importAllResult.useContext(require("../VoicePanelStateContext.tsx"));
   ({ guildId, channelId } = context);
-  let obj = importDefault(4474);
+  let obj = require("../../../../utils/NicknameUtils.tsx");
   const name = obj.useName(guildId, channelId, participant.user);
   const tmp = callback3();
-  const voicePanelHeaderUserStateIcons = require(16049) /* useVoicePanelHeaderUserStateIcons */.useVoicePanelHeaderUserStateIcons(participant, guildId, tmp.userIcons);
+  const voicePanelHeaderUserStateIcons = require("../header/VoicePanelHeaderUserState.tsx") /* useVoicePanelHeaderUserStateIcons */.useVoicePanelHeaderUserStateIcons(participant, guildId, tmp.userIcons);
   obj = { accessibilityRole: "button", accessibilityHint: null, icon: null, iconPosition: null, text: null, onPress: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl.string(require(1236) /* getSystemLocale */.t["Y2b7+e"]);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["Y2b7+e"]);
   obj[2] = voicePanelHeaderUserStateIcons;
   let str;
   if (null != voicePanelHeaderUserStateIcons) {
@@ -112,7 +112,7 @@ function UserButton(participant) {
   obj[3] = str;
   obj[4] = name;
   obj[5] = participant.onPress;
-  return closure_9(require(8585) /* TwinButtons */.HeaderButton, obj);
+  return closure_9(require("../../../../design/components/experimental/native.tsx") /* TwinButtons */.HeaderButton, obj);
 }
 function StageButton(channelId) {
   channelId = channelId.channelId;

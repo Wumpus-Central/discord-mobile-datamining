@@ -6,14 +6,14 @@ const result = require("AddFriendModalScene").fileFinishedImporting("components_
 
 export default {
   openAddFriendModalDeeplink() {
-    importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(13107, dependencyMap.paths));
+    require("../../actions/ModalActionCreators.tsx").pushLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(13107, dependencyMap.paths));
   },
   openAddFriendModal(arg0) {
     if (null != currentUser.getCurrentUser()) {
-      let obj = importDefault(4490);
+      let obj = require("../../actions/ModalActionCreators.tsx");
       obj = { sourceMetadata: null };
       obj[0] = arg0;
-      obj.pushLazy(require(1959) /* asyncRequireImpl */(13107, dependencyMap.paths), obj);
+      obj.pushLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(13107, dependencyMap.paths), obj);
     }
   }
 };

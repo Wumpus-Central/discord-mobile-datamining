@@ -194,13 +194,13 @@ prototype2["makeRequest"] = function makeRequest(rejectWithError) {
   const endpoint = this.getEndpoint();
   let value = null;
   if (null != endpoint) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     const obj = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
     obj[0] = endpoint;
-    obj[1] = importDefault(1464).stringify(this.query);
+    obj[1] = require("../../../_runtime/01464_parse.js").stringify(this.query);
     obj[3] = rejectWithError.rejectWithError;
     value = HTTP.get(obj);
-    const obj2 = importDefault(1464);
+    const obj2 = require("../../../_runtime/01464_parse.js");
   }
   return value;
 };
@@ -248,7 +248,7 @@ prototype3["makeRequest"] = function makeRequest(rejectWithError) {
   const endpoint = this.getEndpoint();
   let postResult = null;
   if (null != endpoint) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     const obj = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
     obj[0] = endpoint;
     obj[1] = this.payload;

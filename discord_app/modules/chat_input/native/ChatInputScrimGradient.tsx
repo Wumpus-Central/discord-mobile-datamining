@@ -17,13 +17,13 @@ export const ChatInputScrimGradient = function ChatInputScrimGradient(scrimBase)
     inline = false;
   }
   scrimBase = scrimBase.scrimBase;
-  let obj = require(4096) /* getGradientColorByPercentage */;
-  const gradientValue = obj.useGradientValue(require(4096) /* getGradientColorByPercentage */.GradientPercentage.END);
-  const token = require(3989) /* map */.useToken(importDefault(712).colors.BACKGROUND_BASE_LOWER);
-  const obj2 = require(3989) /* map */;
+  let obj = require("../../client_themes/native/ClientThemesUtils.tsx") /* getGradientColorByPercentage */;
+  const gradientValue = obj.useGradientValue(require("../../client_themes/native/ClientThemesUtils.tsx") /* getGradientColorByPercentage */.GradientPercentage.END);
+  const token = require("../../../design/tokens/native/useToken.tsx") /* map */.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOWER);
+  const obj2 = require("../../../design/tokens/native/useToken.tsx") /* map */;
   const tmp4 = importDefault;
   if (gradientHeight == null) {
-    gradientHeight = obj3.useToken(importDefault(712).modules.mobile.CHAT_INPUT_FLOATING_SCRIM_GRADIENT_HEIGHT);
+    gradientHeight = obj3.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_FLOATING_SCRIM_GRADIENT_HEIGHT);
   }
   if (scrimBase == null) {
     scrimBase = gradientValue;
@@ -54,6 +54,6 @@ export const ChatInputScrimGradient = function ChatInputScrimGradient(scrimBase)
 };
 export const useChatInputFloatingOverlayStyle = function useChatInputFloatingOverlayStyle() {
   const obj = { marginTop: null, overflow: "visible" };
-  obj[0] = -require(3989) /* map */.useToken(importDefault(712).modules.mobile.CHAT_INPUT_FLOATING_SCRIM_GRADIENT_HEIGHT) / 2;
+  obj[0] = -require("../../../design/tokens/native/useToken.tsx") /* map */.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_FLOATING_SCRIM_GRADIENT_HEIGHT) / 2;
   return obj;
 };

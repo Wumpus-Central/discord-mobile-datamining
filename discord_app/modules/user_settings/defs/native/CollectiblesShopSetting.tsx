@@ -3,8 +3,8 @@ import createToggle from "createToggle";
 
 obj = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.pWG4ze);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.pWG4ze);
   },
   parent: null,
   IconComponent: require("ShopIcon").ShopIcon,
@@ -24,7 +24,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.COLLECTIBLES_SHOP,
   getComponent() {
-    return require(14721) /* CollectiblesShopScreen */.default;
+    return require("../../shop/native/CollectiblesShopScreen.tsx") /* CollectiblesShopScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

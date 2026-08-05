@@ -6,8 +6,8 @@ const result = require("batchUpdates").fileFinishedImporting("lib/ZustandStore.t
 
 export const createZustandStore = function createZustandStore(arg0) {
   const _require = arg0;
-  let obj = _require(700);
-  const dependencyMap = obj.createWithEqualityFn(_require(4154).subscribeWithSelector((arg0, arg1, arg2) => {
+  let obj = _require("../../_runtime/00700_identity.js");
+  const dependencyMap = obj.createWithEqualityFn(_require("../../_runtime/04154_createJSONStorage.js").subscribeWithSelector((arg0, arg1, arg2) => {
     let callback = arg0;
     return callback((arg0) => {
       const callback = arg0;

@@ -5,8 +5,8 @@ const result = require("Header").fileFinishedImporting("modules/premium/native/o
 
 export default function openPremiumPlanSelectionActionSheet(arg0, arg1) {
   if (null == arg1) {
-    importDefault(4253).hideActionSheet();
-    const obj = importDefault(4253);
+    require("../../action_sheet/native/ActionSheetActionCreators.tsx").hideActionSheet();
+    const obj = require("../../action_sheet/native/ActionSheetActionCreators.tsx");
   }
-  importDefault(4253).openLazy(require(1959) /* asyncRequireImpl */(6796, dependencyMap.paths), closure_3, arg0, arg1);
+  require("../../action_sheet/native/ActionSheetActionCreators.tsx").openLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(6796, dependencyMap.paths), closure_3, arg0, arg1);
 };

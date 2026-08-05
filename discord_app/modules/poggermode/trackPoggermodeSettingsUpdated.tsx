@@ -38,7 +38,7 @@ const throttleResult = require("apply").throttle((arg0) => {
   let screenshakeEnabledLocations;
   let shakeIntensity;
   ({ enabled, combosEnabled, combosRequiredCount, screenshakeEnabled, shakeIntensity, screenshakeEnabledLocations, confettiEnabled, confettiSize, confettiCount, confettiEnabledLocations } = arg0);
-  let obj = importDefault(698);
+  let obj = require("../../utils/AnalyticsUtils.tsx");
   obj = { enabled, combos_enabled: combosEnabled, combos_required_count: combosRequiredCount, screenshake_enabled: screenshakeEnabled, shake_intensity: shakeIntensity, screenshake_enabled_locations: null, confetti_enabled: null, confetti_size: null, confetti_count: null, confetti_enabled_locations: null };
   importDefault = getScreenshakeLocationName;
   const entries = Object.entries(screenshakeEnabledLocations);

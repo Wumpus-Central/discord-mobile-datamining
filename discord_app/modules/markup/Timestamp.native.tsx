@@ -17,7 +17,7 @@ export default function Timestamp(node) {
   if (style == null) {
     style = node.style;
   }
-  const tmp2 = importDefault(9720)(node);
+  const tmp2 = require("useFormattedTimestamp.tsx")(node);
   const tmp3 = jsx;
   return tmp3(node(1297).LegacyText, {
     style,
@@ -26,6 +26,6 @@ export default function Timestamp(node) {
       obj = { key: "TIMESTAMP", content: node.full };
       obj.open(obj);
     },
-    children: importDefault(9720)(node)
+    children: require("useFormattedTimestamp.tsx")(node)
   });
 };

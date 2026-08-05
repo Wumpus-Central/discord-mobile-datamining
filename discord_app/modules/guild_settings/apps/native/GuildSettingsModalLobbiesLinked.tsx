@@ -60,9 +60,9 @@ export default function GuildSettingsModalLobbiesLinked(arg0) {
   let _require;
   let keys;
   ({ contentContainerStyle, guildId } = arg0);
-  let obj = _require(3989);
+  let obj = _require("../../../../design/tokens/native/useToken.tsx");
   const token = obj.useToken(keys(712).modules.mobile.TABLE_ROW_PADDING);
-  let obj1 = _require(16479);
+  let obj1 = _require("../../../lobbies/hooks/useChannelsAllowedToUnlink.tsx");
   const channelsAllowedToUnlink = obj1.useChannelsAllowedToUnlink(guildId);
   let obj2 = keys(12);
   const groupByResult = obj2.groupBy(channelsAllowedToUnlink, (linkedLobby) => {
@@ -84,8 +84,8 @@ export default function GuildSettingsModalLobbiesLinked(arg0) {
   obj2 = { style: { paddingHorizontal: token }, spacing: null, children: null };
   obj2[1] = keys(712).space.PX_24;
   obj2[2] = keys.map((applicationId) => outer1_6(outer1_9, { applicationId, channels: _undefined[applicationId], isOnlySection: 1 === keys.length }, applicationId));
-  obj[1] = callback(_require(4693).Stack, obj2);
-  const items1 = [callback(_require(7777).Form, obj), callback(_require(5596).NavScrim, {})];
+  obj[1] = callback(_require("../../../../design/components/Stack/native/Stack.native.tsx").Stack, obj2);
+  const items1 = [callback(_require("../../../../design/void/Form/native/index.tsx").Form, obj), callback(_require("../../../../design/components/Navigator/native/NavScrim.android.tsx").NavScrim, {})];
   obj[0] = items1;
   return callback2(closure_7, obj);
 };

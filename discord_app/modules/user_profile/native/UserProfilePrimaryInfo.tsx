@@ -476,7 +476,7 @@ function GuildTag(style) {
     showToastOnPress = false;
   }
   const tmp = createCacheKey();
-  let obj = require(8076) /* guildHasTag */;
+  let obj = require("../../guild_tag/GuildTagUtils.tsx") /* guildHasTag */;
   let primaryGuild;
   if (user != null) {
     primaryGuild = user.primaryGuild;
@@ -512,7 +512,7 @@ function GuildTag(style) {
       obj1[3] = obj2;
       obj1[4] = guildTagBadgeSize;
       obj1[5] = guildTagTextVariant;
-      obj[1] = callback(importDefault(9169), obj1);
+      obj[1] = callback(require("../../guild_tag/native/GuildTag.tsx"), obj1);
       tmp9 = callback(closure_5, obj);
     }
   }
@@ -560,9 +560,9 @@ export default function UserProfilePrimaryInfo(arg0) {
   ({ guildId, pronouns, style, badges, badgeContainerBackground, onPressDisplayName, displayNameAccessibilityHint, displayNameAccessibilityRole, onPressUserTag, userTagAccessibilityHint, onPressPronouns, pronounsAccessibilityHint, showChevron, pendingDisplayNameStyles } = arg0);
   const tmp = createCacheKey();
   let obj = { backgroundColor: badgeContainerBackground };
-  let obj1 = importDefault(4124);
+  let obj1 = require("../../../utils/UserUtils.tsx");
   const name = obj1.useName(user);
-  let obj2 = importDefault(4124);
+  let obj2 = require("../../../utils/UserUtils.tsx");
   obj = { style: items, children: null };
   items = [tmp.container, style];
   obj = { user, guildId, name: null, themeType: null, onPress: null, accessibilityHint: null, displayNameAccessibilityRole: null, showChevron: null, pendingDisplayNameStyles: null };

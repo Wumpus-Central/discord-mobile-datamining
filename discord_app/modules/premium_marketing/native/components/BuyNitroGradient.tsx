@@ -38,7 +38,7 @@ export default function BuyNitroGradient(selectedTier) {
   fn.__initData = closure_8;
   obj = { children: null };
   const animatedStyle = obj.useAnimatedStyle(fn);
-  const items = [callback(importDefault(4706), { style, colors: nitroColors, start, end }), ];
+  const items = [callback(require("../../../../../_runtime/04706_LinearGradient.js"), { style, colors: nitroColors, start, end }), ];
   const items1 = [style, animatedStyle];
   items[1] = callback(LinearGradient, { style: items1, colors: basicColors, start, end });
   obj[0] = items;

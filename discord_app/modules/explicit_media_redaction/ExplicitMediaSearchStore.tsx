@@ -33,7 +33,7 @@ const explicitMediaSearchStore = new ExplicitMediaSearchStore(require("dispatche
         const combined = "" + message.channel_id + ":" + message.id;
         let flag = null != tmp7;
         if (flag) {
-          let obj = require(4504) /* createMinimalMessageRecord */;
+          let obj = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */;
           obj = { attachments: null, embeds: null };
           ({ attachments: obj2[0], embeds: obj2[1] } = message);
           dependencyMap[combined] = obj.updateMessageRecord(tmp7, obj);
@@ -53,8 +53,8 @@ const explicitMediaSearchStore = new ExplicitMediaSearchStore(require("dispatche
   MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function handleScanTimeout(channelId) {
     const combined = "" + channelId.channelId + ":" + channelId.messageId;
     if (null != dependencyMap[combined]) {
-      dependencyMap[combined] = require(6968) /* redactionSettingToRenderedString */.handleExplicitMediaScanTimeoutForMessage(tmp2);
-      const obj = require(6968) /* redactionSettingToRenderedString */;
+      dependencyMap[combined] = require("ExplicitMediaRedactionUtils.tsx") /* redactionSettingToRenderedString */.handleExplicitMediaScanTimeoutForMessage(tmp2);
+      const obj = require("ExplicitMediaRedactionUtils.tsx") /* redactionSettingToRenderedString */;
     }
   }
 });

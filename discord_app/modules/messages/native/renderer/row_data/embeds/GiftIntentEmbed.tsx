@@ -21,25 +21,25 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
     if (null == user) {
       return null;
     } else {
-      const name = importDefault(4124).getName(user);
+      const name = require("../../../../../../utils/UserUtils.tsx").getName(user);
       if (GiftIntentType.FRIEND_ANNIVERSARY === giftIntentType) {
         let obj = { headerText: null, subHeaderParts: null };
-        const intl = require(1236) /* getSystemLocale */.intl;
-        obj[0] = intl.string(require(1236) /* getSystemLocale */.t.CeQIwZ);
+        const intl = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        obj[0] = intl.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.CeQIwZ);
         obj = { text: null };
-        const intl2 = require(1236) /* getSystemLocale */.intl;
+        const intl2 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
         obj = { numberOfYears: null };
         obj[0] = tmp12;
-        obj[0] = intl2.formatToPlainString(require(1236) /* getSystemLocale */.t.PpG27s, obj);
+        obj[0] = intl2.formatToPlainString(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.PpG27s, obj);
         const items = [obj];
         obj[1] = items;
         let tmp = obj;
       } else {
         tmp = null;
         if (tmp13.UNSPECIFIED !== giftIntentType) {
-          require(7992) /* _sendGiftMessage */.unhandledGiftIntent(giftIntentType);
+          require("../../../../../premium/PremiumGiftingUtils.tsx") /* _sendGiftMessage */.unhandledGiftIntent(giftIntentType);
           tmp = null;
-          const obj11 = require(7992) /* _sendGiftMessage */;
+          const obj11 = require("../../../../../premium/PremiumGiftingUtils.tsx") /* _sendGiftMessage */;
         }
       }
       if (null == tmp) {
@@ -62,18 +62,18 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
         obj1[6] = giftIntentType;
         ({ headerTextColor: obj4[7], subHeaderTextColor: obj4[8], backgroundColor: obj4[9], borderColor: obj4[10] } = createCacheKey(theme));
         const tmp6 = createCacheKey(theme);
-        obj1[11] = require(7865) /* frozen */.getAssetUriForEmbed(tmp8(4222));
-        const intl3 = require(1236) /* getSystemLocale */.intl;
-        obj1[12] = intl3.string(require(1236) /* getSystemLocale */.t.ilhtIa);
-        const obj5 = require(7865) /* frozen */;
-        obj1[13] = require(7865) /* frozen */.getAssetUriForEmbed(tmp8(7993));
-        const obj6 = require(7865) /* frozen */;
-        obj1[14] = require(7865) /* frozen */.getAssetUriForEmbed(tmp8(7994));
-        const intl4 = require(1236) /* getSystemLocale */.intl;
-        obj1[15] = intl4.string(require(1236) /* getSystemLocale */.t.I5gL2H);
+        obj1[11] = require("../../EmbedUtils.tsx") /* frozen */.getAssetUriForEmbed(tmp8(4222));
+        const intl3 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        obj1[12] = intl3.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.ilhtIa);
+        const obj5 = require("../../EmbedUtils.tsx") /* frozen */;
+        obj1[13] = require("../../EmbedUtils.tsx") /* frozen */.getAssetUriForEmbed(tmp8(7993));
+        const obj6 = require("../../EmbedUtils.tsx") /* frozen */;
+        obj1[14] = require("../../EmbedUtils.tsx") /* frozen */.getAssetUriForEmbed(tmp8(7994));
+        const intl4 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        obj1[15] = intl4.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.I5gL2H);
         return obj1;
       }
-      const obj10 = importDefault(4124);
+      const obj10 = require("../../../../../../utils/UserUtils.tsx");
     }
     obj8 = user;
   }

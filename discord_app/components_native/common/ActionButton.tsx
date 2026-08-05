@@ -11,12 +11,12 @@ export default function ActionButton(style) {
   if ("positive" === style.type) {
     str = "active";
   }
-  let obj = require(4700) /* styleProperties */;
+  let obj = require("../../design/components/Button/native/ButtonHooks.native.tsx") /* styleProperties */;
   obj = { style: style.styles, children: null };
   obj = { icon: null, onPress: null, accessibilityLabel: null, variant: null, size: "sm" };
   obj[0] = jsx(style.IconComponent, { color: obj.useButtonTextColorStyles(str).color, size: "sm" });
   ({ onPress: obj3[1], accessibilityLabel: obj3[2] } = style);
   obj[3] = str;
-  obj[1] = jsx(require(7672) /* IconButton */.IconButton, { icon: null, onPress: null, accessibilityLabel: null, variant: null, size: "sm" });
+  obj[1] = jsx(require("../../design/components/Button/native/IconButton.native.tsx") /* IconButton */.IconButton, { icon: null, onPress: null, accessibilityLabel: null, variant: null, size: "sm" });
   return <View icon={null} onPress={null} accessibilityLabel={null} variant={null} size="sm" />;
 };

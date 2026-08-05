@@ -13,9 +13,9 @@ function Scope(arg0) {
   let text;
   ({ text, error, isFake } = arg0);
   const tmp = callback2();
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   const string = intl.string;
-  const t = require(1236) /* getSystemLocale */.t;
+  const t = require("../../../intl/index.native.tsx") /* getSystemLocale */.t;
   if (isFake) {
     let stringResult = string(t.OX8EMU);
     let tmp6 = tmp2;
@@ -34,11 +34,11 @@ function Scope(arg0) {
   if (isFake) {
     obj = { style: null, color: null, size: "refresh_sm" };
     obj[0] = tmp.fakeScopeIcon;
-    obj[1] = importDefault(712).colors.TEXT_MUTED;
+    obj[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_MUTED;
     let tmp10Result = tmp10(tmp6(5905).CircleXIcon, obj);
   } else {
     const obj1 = { color: null, size: "refresh_sm" };
-    obj1[0] = importDefault(712).colors.TEXT_MUTED;
+    obj1[0] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_MUTED;
     tmp10Result = tmp10(tmp6(4246).CircleCheckIcon, obj1);
   }
   obj[3] = tmp10Result;

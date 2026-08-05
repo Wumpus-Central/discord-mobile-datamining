@@ -3,11 +3,11 @@ import createToggle from "createToggle";
 
 obj = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.BDUDau);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.BDUDau);
   },
   usePredicate() {
-    return require(10374) /* useQuests */.useIsPreviewerOnAnyQuest();
+    return require("../../../quests/hooks/QuestHooks.tsx") /* useQuests */.useIsPreviewerOnAnyQuest();
   },
   parent: null,
   IconComponent: require("QuestsIcon").QuestsIcon,
@@ -16,7 +16,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.QUEST_PREVIEW_TOOL_2,
   getComponent() {
-    return require(14312) /* SettingsQuestPreviewScreen */.default;
+    return require("../../quests/native/SettingsQuestPreviewScreen.tsx") /* SettingsQuestPreviewScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

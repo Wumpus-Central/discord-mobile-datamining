@@ -25,7 +25,7 @@ export const PromoSheet = function PromoSheet(arg0) {
   let title;
   ({ description, illustration, graphic, gradientColor } = arg0);
   ({ title, actions } = arg0);
-  const tmp3 = importDefault(1348)("PromoSheet");
+  const tmp3 = require("../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx")("PromoSheet");
   importDefault = tmp3;
   const tmp4 = createCacheKey();
   const items = [tmp3, gradientColor];

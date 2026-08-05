@@ -36,8 +36,8 @@ function createMinimalMessageRecord(timestamp) {
   } else {
     const embeds = timestamp.embeds;
     const mapped = embeds.map((footer) => message2(outer1_2[15]).sanitizeEmbed(message2.channel_id, message2.id, footer));
-    items = _require(4617).mergeEmbedsOnURL(mapped);
-    const obj2 = _require(4617);
+    items = _require("../../utils/EmbedUtils.tsx").mergeEmbedsOnURL(mapped);
+    const obj2 = _require("../../utils/EmbedUtils.tsx");
   }
   obj.embeds = items;
   const date = new Date(timestamp.timestamp);
@@ -45,12 +45,12 @@ function createMinimalMessageRecord(timestamp) {
   if (components == null) {
     components = [];
   }
-  obj.components = _require(4506).transformComponents(components);
+  obj.components = _require("../interaction_components/InteractionComponentUtils.tsx").transformComponents(components);
   const NON_PARSED = constants3.NON_PARSED;
   if (NON_PARSED.has(timestamp.type)) {
     let items1 = [];
   } else {
-    items1 = importDefault(4269)(timestamp.content);
+    items1 = require("../coded_links/findCodedLinks.tsx")(timestamp.content);
   }
   obj.codedLinks = items1;
   tmp = new tmp(obj);
@@ -95,7 +95,7 @@ function createMessageRecord(message, message) {
       user = new closure_7(message.author);
     }
   }
-  let obj2 = require(4513) /* useNullableMessageAuthor */;
+  let obj2 = require("useMessageAuthor.tsx") /* useNullableMessageAuthor */;
   obj = { channel_id: message.channel_id, author: user };
   const messageAuthor = obj2.getMessageAuthor(obj);
   if (message != null) {
@@ -124,7 +124,7 @@ function createMessageRecord(message, message) {
     }
     str = "";
     tmp17 = content;
-    obj5 = importDefault(11);
+    obj5 = require("../../utils/SnowflakeUtils.tsx");
   }
   let tmp20;
   if (message.type === constants2.PREMIUM_GROUP_INVITE) {
@@ -134,7 +134,7 @@ function createMessageRecord(message, message) {
     }
     str = "";
     tmp20 = content1;
-    obj6 = importDefault(11);
+    obj6 = require("../../utils/SnowflakeUtils.tsx");
   }
   obj = {};
   let tmp23 = closure_6;
@@ -173,7 +173,7 @@ function createMessageRecord(message, message) {
   obj.mentioned = tmp9Result.isMentioned(obj1);
   tmp9Result = tmp9(4519);
   const isGiftCodeEmbedResult = tmp9Result.isGiftCodeEmbed(message);
-  const findGiftCodes = require(4519) /* _resolveGiftCode */.findGiftCodes;
+  const findGiftCodes = require("../../utils/GiftCodeUtils.tsx") /* _resolveGiftCode */.findGiftCodes;
   if (isGiftCodeEmbedResult) {
     let url;
     if (message != null) {
@@ -194,13 +194,13 @@ function createMessageRecord(message, message) {
     if (null != call.ended_timestamp) {
       const _Date = Date;
       const date = new Date(call.ended_timestamp);
-      tmp39Result = importDefault(3867)(date);
-      const tmp39 = importDefault(3867);
+      tmp39Result = require("../../../_runtime/03867_t.js")(date);
+      const tmp39 = require("../../../_runtime/03867_t.js");
     }
     let durationResult = null;
     if (null != tmp39Result) {
-      durationResult = importDefault(3867).duration(tmp39Result.diff(tmp35));
-      const obj12 = importDefault(3867);
+      durationResult = require("../../../_runtime/03867_t.js").duration(tmp39Result.diff(tmp35));
+      const obj12 = require("../../../_runtime/03867_t.js");
     }
     obj2 = { participants: null, endedTimestamp: null, duration: null };
     obj2[0] = call.participants;
@@ -240,7 +240,7 @@ function createMessageRecord(message, message) {
     ({ interaction_metadata: obj7.interactionMetadata, role_subscription_data: obj7.roleSubscriptionData, purchase_notification: obj7.purchaseNotification } = message);
     let tmp50;
     if (null != message.poll) {
-      tmp50 = importDefault(4616)(message.poll);
+      tmp50 = require("../polls/transformMessagPoll.tsx")(message.poll);
     }
     obj.poll = tmp50;
     obj.sharedClientTheme = message.shared_client_theme;
@@ -335,12 +335,12 @@ export const updateMessageRecord = function updateMessageRecord(message, message
         if (null != call.ended_timestamp) {
           const _Date = Date;
           const date = new Date(call.ended_timestamp);
-          tmp = importDefault(3867)(date);
-          const tmp4 = importDefault(3867);
+          tmp = require("../../../_runtime/03867_t.js")(date);
+          const tmp4 = require("../../../_runtime/03867_t.js");
         }
         let durationResult = null;
         if (null != tmp) {
-          obj = importDefault(3867);
+          obj = require("../../../_runtime/03867_t.js");
           durationResult = obj.duration(tmp.diff(tmp46));
         }
         obj = { participants: null, endedTimestamp: null, duration: null };
@@ -388,8 +388,8 @@ export const updateMessageRecord = function updateMessageRecord(message, message
         }
         let result8 = result7;
         if (null != message2.components) {
-          result8 = result7.set("components", _require(4506).transformComponents(message2.components));
-          const obj14 = _require(4506);
+          result8 = result7.set("components", _require("../interaction_components/InteractionComponentUtils.tsx").transformComponents(message2.components));
+          const obj14 = _require("../interaction_components/InteractionComponentUtils.tsx");
         }
         let result9 = result8;
         if (null != message2.role_subscription_data) {
@@ -398,7 +398,7 @@ export const updateMessageRecord = function updateMessageRecord(message, message
         if (null == message2.reactions) {
           let result10 = result9;
           if (null != message2.poll) {
-            result10 = result9.set("poll", importDefault(4616)(message2.poll));
+            result10 = result9.set("poll", require("../polls/transformMessagPoll.tsx")(message2.poll));
           }
           let flag = false;
           let result11 = result10;
@@ -422,8 +422,8 @@ export const updateMessageRecord = function updateMessageRecord(message, message
             const obj1 = { message: null, userId: null };
             obj1[0] = result13;
             obj1[1] = store.getId();
-            result14 = result13.set("mentioned", importDefault(4518)(obj1));
-            const tmp43 = importDefault(4518);
+            result14 = result13.set("mentioned", require("isMessageMentioned.tsx")(obj1));
+            const tmp43 = require("isMessageMentioned.tsx");
           }
           return result14;
         } else {
@@ -487,15 +487,15 @@ export const updateMessageRecord = function updateMessageRecord(message, message
       } else {
         const embeds = message2.embeds;
         const mapped = embeds.map((footer) => message2(outer1_2[15]).sanitizeEmbed(message2.channel_id, message2.id, footer));
-        items3 = _require(4617).mergeEmbedsOnURL(mapped);
-        const obj9 = _require(4617);
+        items3 = _require("../../utils/EmbedUtils.tsx").mergeEmbedsOnURL(mapped);
+        const obj9 = _require("../../utils/EmbedUtils.tsx");
       }
       const result17 = result4.set("embeds", items3);
     }
   }
 };
 export const canEditMessageWithStickers = function canEditMessageWithStickers(content) {
-  let tmp = 0 === require(4619) /* getStickerExtensionFromFormatType */.getMessageStickers(content).length;
+  let tmp = 0 === require("../stickers/StickersUtils.tsx") /* getStickerExtensionFromFormatType */.getMessageStickers(content).length;
   if (!tmp) {
     tmp = "" !== content.content;
   }

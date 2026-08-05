@@ -22,10 +22,10 @@ const result = require("get ActivityIndicator").fileFinishedImporting("modules/s
 
 export default function ChannelSpoiler(channelId) {
   const _require = channelId;
-  let obj = _require(589);
+  let obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const items = [createGuildRecordFromRust];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_8.getGuild(channelId.guildId));
-  let obj1 = _require(589);
+  let obj1 = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const items1 = [ensureGuildLoaded];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => outer1_7.getChannel(channelId.channelId));
   const tmp4 = createCacheKey();
@@ -138,8 +138,8 @@ export default function ChannelSpoiler(channelId) {
   }
   const obj10 = { modalType: null, onAgree: null, onDisagree: null, title: null, subtitle: null, description: null, agreement: null, disagreement: null, guildId: null, channelId: null };
   const tmp20 = callback;
-  tmp7 = importDefault(4475)(stateFromStores1);
-  obj10[0] = _require(7722).NsfwSpaceWarningModalType.SPOILER_CHANNEL;
+  tmp7 = require("../../channel/useChannelName.tsx")(stateFromStores1);
+  obj10[0] = _require("../../age_assurance/AgeVerificationAnalyticsUtils.tsx").NsfwSpaceWarningModalType.SPOILER_CHANNEL;
   obj10[1] = function onAgree() {
     callback(isVocalResult[14]).spoilerAgree(channelId.channelId);
   };
@@ -147,16 +147,16 @@ export default function ChannelSpoiler(channelId) {
   obj10[3] = stringResult;
   obj10[4] = tmp23Result;
   const intl3 = tmp(1236).intl;
-  obj10[5] = intl3.string(_require(1236).t["08bm2Z"]);
+  obj10[5] = intl3.string(_require("../../../intl/index.native.tsx").t["08bm2Z"]);
   const intl4 = tmp(1236).intl;
-  obj10[6] = intl4.string(_require(1236).t.KmRwcW);
+  obj10[6] = intl4.string(_require("../../../intl/index.native.tsx").t.KmRwcW);
   const intl5 = tmp(1236).intl;
-  obj10[7] = intl5.string(_require(1236).t["/g10LC"]);
+  obj10[7] = intl5.string(_require("../../../intl/index.native.tsx").t["/g10LC"]);
   let id;
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
   obj10[8] = id;
   obj10[9] = channelId.channelId;
-  return tmp20(importDefault(10857), obj10);
+  return tmp20(require("../../../components_native/warnings/GatedContent.tsx"), obj10);
 };

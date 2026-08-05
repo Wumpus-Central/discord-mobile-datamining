@@ -2,7 +2,7 @@
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/instant_invite/native/components/openInstantInviteActionSheet.tsx");
 
 export default function openInstantInviteActionSheet(invite_channel_id) {
-  let obj = importDefault(4253);
+  let obj = require("../../../action_sheet/native/ActionSheetActionCreators.tsx");
   let id = invite_channel_id.vanityURLCode;
   if (id == null) {
     id = invite_channel_id.channel.id;
@@ -10,7 +10,7 @@ export default function openInstantInviteActionSheet(invite_channel_id) {
   const combined = "InstantInviteActionSheet-" + id;
   obj = {};
   const merged = Object.assign(invite_channel_id);
-  obj.impressionName = require(503) /* encodeProperties */.ImpressionNames.GUILD_INVITE;
+  obj.impressionName = require("../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionNames.GUILD_INVITE;
   obj.impressionProperties = { invite_channel_id: invite_channel_id.channel.id, invite_guild_id: invite_channel_id.channel.guild_id };
-  obj.openLazy(require(1959) /* asyncRequireImpl */(8996, dependencyMap.paths), combined, obj, invite_channel_id.stackingBehavior);
+  obj.openLazy(require("../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(8996, dependencyMap.paths), combined, obj, invite_channel_id.stackingBehavior);
 };

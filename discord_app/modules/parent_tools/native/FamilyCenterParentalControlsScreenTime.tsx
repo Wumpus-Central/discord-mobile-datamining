@@ -21,7 +21,7 @@ function ScheduleRuleRow(rule) {
   obj = { label: scheduleRuleDateRange, subLabel: rule(9670).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
   const intl = rule(1236).intl;
   const string = intl.string;
-  const tmp4 = importDefault(2285);
+  const tmp4 = require("../FamilyCenter.messages.js");
   if (rule.enabled) {
     let stringResult = string(tmp4["8vDHRq"]);
   } else {

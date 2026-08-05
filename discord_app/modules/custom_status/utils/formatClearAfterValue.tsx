@@ -6,13 +6,13 @@ let result = require("getSystemLocale").fileFinishedImporting("modules/custom_st
 export default function formatClearAfterValue(arg0) {
   if (ClearAfterValues.TODAY === arg0) {
     const _Date10 = Date;
-    const sum = Date.now() + importDefault(687).Millis.DAY;
+    const sum = Date.now() + require("../../../utils/Durations.tsx").Millis.DAY;
     const _Date11 = Date;
     const date = new Date();
     const _Date12 = Date;
     const date1 = new Date(sum);
-    const obj8 = require(3955) /* resetCache */;
-    const intl5 = require(1236) /* getSystemLocale */.intl;
+    const obj8 = require("../../../utils/DateUtils.tsx") /* resetCache */;
+    const intl5 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     if (isSameDayResult) {
       const data8 = intl5.data;
       let formatTimeResult = data8.formatTime(sum, { format: "short" });
@@ -25,14 +25,14 @@ export default function formatClearAfterValue(arg0) {
     return formatTimeResult;
   } else if (tmp.HOURS_4 === arg0) {
     const _Date7 = Date;
-    const result = 4 * importDefault(687).Millis.HOUR;
+    const result = 4 * require("../../../utils/Durations.tsx").Millis.HOUR;
     const sum1 = Date.now() + result;
     const _Date8 = Date;
     const date2 = new Date();
     const _Date9 = Date;
     const date3 = new Date(sum1);
-    const obj6 = require(3955) /* resetCache */;
-    const intl4 = require(1236) /* getSystemLocale */.intl;
+    const obj6 = require("../../../utils/DateUtils.tsx") /* resetCache */;
+    const intl4 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     if (isSameDayResult1) {
       const data6 = intl4.data;
       let formatTimeResult1 = data6.formatTime(sum1, { format: "short" });
@@ -45,13 +45,13 @@ export default function formatClearAfterValue(arg0) {
     return formatTimeResult1;
   } else if (tmp.HOURS_1 === arg0) {
     const _Date4 = Date;
-    const sum2 = Date.now() + importDefault(687).Millis.HOUR;
+    const sum2 = Date.now() + require("../../../utils/Durations.tsx").Millis.HOUR;
     const _Date5 = Date;
     const date4 = new Date();
     const _Date6 = Date;
     const date5 = new Date(sum2);
-    const obj4 = require(3955) /* resetCache */;
-    const intl3 = require(1236) /* getSystemLocale */.intl;
+    const obj4 = require("../../../utils/DateUtils.tsx") /* resetCache */;
+    const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     if (isSameDayResult2) {
       const data4 = intl3.data;
       let formatTimeResult2 = data4.formatTime(sum2, { format: "short" });
@@ -64,14 +64,14 @@ export default function formatClearAfterValue(arg0) {
     return formatTimeResult2;
   } else if (tmp.MINUTES_30 === arg0) {
     const _Date = Date;
-    const result1 = 30 * importDefault(687).Millis.MINUTE;
+    const result1 = 30 * require("../../../utils/Durations.tsx").Millis.MINUTE;
     const sum3 = Date.now() + result1;
-    obj1 = require(3955) /* resetCache */;
+    obj1 = require("../../../utils/DateUtils.tsx") /* resetCache */;
     const _Date2 = Date;
     const date6 = new Date();
     const _Date3 = Date;
     const date7 = new Date(sum3);
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     if (isSameDayResult3) {
       const data2 = intl2.data;
       let formatTimeResult3 = data2.formatTime(sum3, { format: "short" });
@@ -83,10 +83,10 @@ export default function formatClearAfterValue(arg0) {
     }
     return formatTimeResult3;
   } else if (tmp.DONT_CLEAR === arg0) {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.bRn8cq);
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.bRn8cq);
   } else {
-    obj = require(1351) /* isDiscordFrontendDevelopment */;
+    obj = require("../../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */;
     obj.assertNever(arg0);
   }
 };

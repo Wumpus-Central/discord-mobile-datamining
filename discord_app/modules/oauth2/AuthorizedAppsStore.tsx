@@ -115,7 +115,7 @@ obj = {
       const _Map = Map;
       const _Object3 = Object;
       const entries = Object.entries(isFullFetch.tokens);
-      const map = new Map(entries.filter(require(1351) /* isDiscordFrontendDevelopment */.isObjectEntryNotNullish));
+      const map = new Map(entries.filter(require("../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isObjectEntryNotNullish));
       recomputeFromAppTokens();
     } else {
       const _Object = Object;

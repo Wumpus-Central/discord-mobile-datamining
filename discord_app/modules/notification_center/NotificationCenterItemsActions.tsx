@@ -399,17 +399,17 @@ function _deleteNotificationCenterItem() {
 const result = require("ME").fileFinishedImporting("modules/notification_center/NotificationCenterItemsActions.tsx");
 
 export const setNotificationCenterActive = function setNotificationCenterActive(active) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "NOTIFICATION_CENTER_SET_ACTIVE", active };
   obj.dispatch(obj);
 };
 export const setNotificationCenterTabFocused = function setNotificationCenterTabFocused(focused) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "NOTIFICATION_CENTER_TAB_FOCUSED", focused };
   obj.dispatch(obj);
 };
 export const resetNotificationCenter = function resetNotificationCenter() {
-  importDefault(709).dispatch({ type: "RESET_NOTIFICATION_CENTER" });
+  require("../../Dispatcher.tsx").dispatch({ type: "RESET_NOTIFICATION_CENTER" });
 };
 export const fetchNotificationCenterItems = function fetchNotificationCenterItems(arg0, arg1) {
   const self = this;
@@ -426,30 +426,30 @@ export const markNotificationCenterItemAcked = function markNotificationCenterIt
     const items = [local_id.local_id];
     let obj = { type: "NOTIFICATION_CENTER_ITEMS_LOCAL_ACK", localIds: null };
     obj[1] = items;
-    importDefault(709).dispatch(obj);
-    const obj4 = importDefault(709);
+    require("../../Dispatcher.tsx").dispatch(obj);
+    const obj4 = require("../../Dispatcher.tsx");
   } else {
-    obj = require(7022) /* getRelativeTimestamp */;
+    obj = require("NotificationCenterUtils.tsx") /* getRelativeTimestamp */;
     if (obj.isMentionItem(local_id)) {
       obj = { type: "NOTIFICATION_CENTER_ITEMS_ACK", optimistic: true, ids: null };
       const items1 = [local_id.id];
       obj[2] = items1;
-      importDefault(709).dispatch(obj);
-      const obj2 = importDefault(709);
+      require("../../Dispatcher.tsx").dispatch(obj);
+      const obj2 = require("../../Dispatcher.tsx");
     } else {
       markNotificationCenterRemoteItemAcked(local_id.id);
     }
   }
 };
 export const markNotificationCenterLocalItemsAcked = function markNotificationCenterLocalItemsAcked(found) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "NOTIFICATION_CENTER_ITEMS_LOCAL_ACK", localIds: found };
   obj.dispatch(obj);
 };
 export { markNotificationCenterRemoteItemAcked };
 export const markNotificationCenterMentionAcked = function markNotificationCenterMentionAcked(arg0) {
   const items = [arg0];
-  importDefault(709).dispatch({ type: "NOTIFICATION_CENTER_ITEMS_ACK", optimistic: true, ids: items });
+  require("../../Dispatcher.tsx").dispatch({ type: "NOTIFICATION_CENTER_ITEMS_ACK", optimistic: true, ids: items });
 };
 export const bulkMarkNotificationCenterItemsAcked = function bulkMarkNotificationCenterItemsAcked(arr) {
   const self = this;

@@ -4,9 +4,9 @@ import { FriendsSections } from "ME";
 const result = require("getAvatarURL").fileFinishedImporting("utils/RelationshipUtils.tsx");
 
 export const showPendingNotification = function showPendingNotification(user) {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  let obj = importDefault(14596);
-  const stringResult = intl.string(require(1236) /* getSystemLocale */.t["t3+Af3"]);
+  const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+  let obj = require("../actions/NotificationActionCreators.tsx");
+  const stringResult = intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["t3+Af3"]);
   obj = {
     omitViewTracking: true,
     omitClickTracking: true,
@@ -16,13 +16,13 @@ export const showPendingNotification = function showPendingNotification(user) {
     },
     isUserAvatar: true
   };
-  obj.showNotification(importDefault(1416).getUserAvatarURL(user), user.username, stringResult, {}, obj);
+  obj.showNotification(require("AvatarUtils.tsx").getUserAvatarURL(user), user.username, stringResult, {}, obj);
 };
 export const showAcceptedNotification = function showAcceptedNotification(user) {
   const _require = user;
-  const intl = _require(1236).intl;
-  let obj = importDefault(14596);
-  const stringResult = intl.string(_require(1236).t.MYr3Ka);
+  const intl = _require("../intl/index.native.tsx").intl;
+  let obj = require("../actions/NotificationActionCreators.tsx");
+  const stringResult = intl.string(_require("../intl/index.native.tsx").t.MYr3Ka);
   obj = {
     omitViewTracking: true,
     omitClickTracking: true,
@@ -34,5 +34,5 @@ export const showAcceptedNotification = function showAcceptedNotification(user) 
     },
     isUserAvatar: true
   };
-  obj.showNotification(importDefault(1416).getUserAvatarURL(user), user.username, stringResult, {}, obj);
+  obj.showNotification(require("AvatarUtils.tsx").getUserAvatarURL(user), user.username, stringResult, {}, obj);
 };

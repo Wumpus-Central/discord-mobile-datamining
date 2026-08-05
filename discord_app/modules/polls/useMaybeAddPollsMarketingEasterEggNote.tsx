@@ -5,7 +5,7 @@ const require = arg1;
 const result = require("getSystemLocale").fileFinishedImporting("modules/polls/useMaybeAddPollsMarketingEasterEggNote.tsx");
 
 export default function useMaybeAddPollsMarketingEasterEggNote(arg0) {
-  require(589) /* initialize */;
+  require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   [][0] = _getSystemLocale;
   let formatToPlainStringResult = arg0;
   if (":pizza:" === arg0) {

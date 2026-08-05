@@ -34,7 +34,7 @@ function findCommandInSection(found, commandKey) {
       }
       let command;
       if (null != rootCommand) {
-        let obj = _require(6889);
+        let obj = _require("ApplicationCommandUtils.tsx");
         obj = { rootCommand: null, command: null, applicationId: null };
         obj[0] = rootCommand;
         obj[1] = rootCommand;
@@ -162,7 +162,7 @@ export const getCachedApplicationSection = function getCachedApplicationSection(
 export const getCachedResults = function getCachedResults(type, CHAT, query) {
   let obj = { commandTypes: items, text: query };
   items = [CHAT];
-  obj = { scoreMethod: require(8158) /* ScoreMethod */.ScoreMethod.COMMAND_OR_APPLICATION, allowFetch: false };
+  obj = { scoreMethod: require("ApplicationCommandQueryTypes.tsx") /* ScoreMethod */.ScoreMethod.COMMAND_OR_APPLICATION, allowFetch: false };
   query = authStore.query(type, obj, obj);
   obj = { commands: query.commands, sections: query.descriptors };
   return obj;
@@ -334,7 +334,7 @@ export const executeQuery = function executeQuery(type, commandTypes, placeholde
     obj[0] = tmp3;
     let tmp4 = require;
     let tmp5 = dependencyMap;
-    obj[1] = require(6891) /* ApplicationCommandSectionType */.ApplicationCommandInputType.PLACEHOLDER;
+    obj[1] = require("ApplicationCommandTypes.tsx") /* ApplicationCommandSectionType */.ApplicationCommandInputType.PLACEHOLDER;
     let _HermesInternal = HermesInternal;
     obj[2] = "placeholder-" + num3;
     let tmp6 = obj;
@@ -352,7 +352,7 @@ export const executeQuery = function executeQuery(type, commandTypes, placeholde
   if (loading) {
     tmp14 = descriptors;
     if (0 === descriptors.length) {
-      const items2 = [require(8160) /* getOptionValue */.BUILT_IN_SECTIONS[BuiltInSectionId.BUILT_IN]];
+      const items2 = [require("ApplicationCommandBuiltIns.tsx") /* getOptionValue */.BUILT_IN_SECTIONS[BuiltInSectionId.BUILT_IN]];
       tmp14 = items2;
     }
   }

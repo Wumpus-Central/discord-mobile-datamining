@@ -23,7 +23,7 @@ prototype["isScheduled"] = function isScheduled(arg0) {
 LocalPushNotificationStore.displayName = "LocalPushNotificationStore";
 const localPushNotificationStore = new LocalPushNotificationStore(require("dispatcher"), {
   CONNECTION_OPEN: function handleCheckScheduledNotifs() {
-    const scheduledLocalNotifications = importDefault(10668).getScheduledLocalNotifications((arr) => {
+    const scheduledLocalNotifications = require("../../../lib/pushnotification/PushNotification.tsx").getScheduledLocalNotifications((arr) => {
       const found = arr.filter((userInfo) => {
         let tmp = null != userInfo.userInfo;
         if (tmp) {
@@ -57,12 +57,12 @@ const localPushNotificationStore = new LocalPushNotificationStore(require("dispa
         if (guild.verificationLevel === VerificationLevels.MEDIUM) {
           const verificationLevel = guild.verificationLevel;
           if (tmp2.MEDIUM === verificationLevel) {
-            let obj = importDefault(3867)(check.accountDeadline);
+            let obj = require("../../../../_runtime/03867_t.js")(check.accountDeadline);
           } else if (tmp2.HIGH === verificationLevel) {
-            obj = importDefault(3867)(check.memberDeadline);
+            obj = require("../../../../_runtime/03867_t.js")(check.memberDeadline);
           }
           if (null != obj) {
-            if (!obj.isSameOrBefore(importDefault(3867)(), "minute")) {
+            if (!obj.isSameOrBefore(require("../../../../_runtime/03867_t.js")(), "minute")) {
               obj = { type: null, guildId: null };
               obj[0] = constants.GUILD_VERIFICATION;
               obj[1] = guild.id;
@@ -71,8 +71,8 @@ const localPushNotificationStore = new LocalPushNotificationStore(require("dispa
               obj[0] = obj;
               obj[1] = obj.format(closure_6);
               obj[2] = guild.name;
-              const intl = require(1236) /* getSystemLocale */.intl;
-              obj[3] = intl.string(require(1236) /* getSystemLocale */.t["hrDBa+"]);
+              const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+              obj[3] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["hrDBa+"]);
               const result = tmp15(10668).scheduleLocalNotification(obj);
               const tmp15Result = tmp15(10668);
             }
@@ -85,14 +85,14 @@ const localPushNotificationStore = new LocalPushNotificationStore(require("dispa
   GUILD_DELETE: function handleGuildDelete(guild) {
     const obj = { type: constants.GUILD_VERIFICATION, guildId: guild.guild.id };
     if (set.has(obj)) {
-      const result = importDefault(10668).cancelLocalNotifications(obj);
+      const result = require("../../../lib/pushnotification/PushNotification.tsx").cancelLocalNotifications(obj);
       set.delete(obj);
-      const obj3 = importDefault(10668);
+      const obj3 = require("../../../lib/pushnotification/PushNotification.tsx");
     }
   },
   LOGOUT: function handleCancelAll() {
     set.clear();
-    const result = importDefault(10668).cancelAllLocalNotifications();
+    const result = require("../../../lib/pushnotification/PushNotification.tsx").cancelAllLocalNotifications();
   }
 });
 let result = set.fileFinishedImporting("modules/local_push_notification/native/LocalPushNotificationStore.tsx");

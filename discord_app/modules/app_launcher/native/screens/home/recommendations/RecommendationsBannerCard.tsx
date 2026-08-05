@@ -64,7 +64,7 @@ export default function RecommendationsBannerCard(application) {
     }
     outer1_1(outer1_2[7])(id);
   }, items);
-  let obj2 = importDefault(1416);
+  let obj2 = require("../../../../../../utils/AvatarUtils.tsx");
   obj = { id: application.id, icon: application.icon, bot: application.bot, botIconFirst: true };
   const applicationIconSource = obj2.getApplicationIconSource(obj);
   if (isLandscape) {

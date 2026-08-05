@@ -26,32 +26,32 @@ let c5 = importAllResult;
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 let result = createCacheKey.experimental_createToken((theme) => {
   theme = theme.theme;
-  const obj = require(4100);
+  const obj = require("../../../../discord_common/js/packages/design/shared.tsx");
   const tmp = require;
-  const internal = importDefault(712).internal;
-  const colors = importDefault(712).colors;
-  const semanticColor = internal.resolveSemanticColor(theme, require(4100).isThemeDark(theme) ? colors.BACKGROUND_SURFACE_HIGH : colors.BLACK);
-  const isThemeDarkResult = require(4100).isThemeDark(theme);
+  const internal = require("../../../../discord_common/js/packages/tokens/native.tsx").internal;
+  const colors = require("../../../../discord_common/js/packages/tokens/native.tsx").colors;
+  const semanticColor = internal.resolveSemanticColor(theme, require("../../../../discord_common/js/packages/design/shared.tsx").isThemeDark(theme) ? colors.BACKGROUND_SURFACE_HIGH : colors.BLACK);
+  const isThemeDarkResult = require("../../../../discord_common/js/packages/design/shared.tsx").isThemeDark(theme);
   return tmp(4129).hexOpacityToRgba(semanticColor, 0);
 });
 let result1 = createCacheKey.experimental_createToken((theme) => {
   theme = theme.theme;
-  const isThemeDarkResult = require(4100).isThemeDark(theme);
-  const internal = importDefault(712).internal;
-  const colors = importDefault(712).colors;
+  const isThemeDarkResult = require("../../../../discord_common/js/packages/design/shared.tsx").isThemeDark(theme);
+  const internal = require("../../../../discord_common/js/packages/tokens/native.tsx").internal;
+  const colors = require("../../../../discord_common/js/packages/tokens/native.tsx").colors;
   const semanticColor = internal.resolveSemanticColor(theme, isThemeDarkResult ? colors.BACKGROUND_SURFACE_HIGH : colors.BLACK);
-  const obj = require(4100);
+  const obj = require("../../../../discord_common/js/packages/design/shared.tsx");
   const tmp = require;
   let num = 0.5;
   if (isThemeDarkResult) {
     num = 0.8;
   }
-  return require(4129) /* hexToRgba */.hexOpacityToRgba(semanticColor, num);
+  return require("../../../utils/ColorUtils.tsx") /* hexToRgba */.hexOpacityToRgba(semanticColor, num);
 });
 let result2 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4100);
-  const colors = importDefault(712).colors;
-  return require(4100).isThemeDark(theme.theme) ? colors.BACKGROUND_SURFACE_HIGH : colors.BLACK;
+  const obj = require("../../../../discord_common/js/packages/design/shared.tsx");
+  const colors = require("../../../../discord_common/js/packages/tokens/native.tsx").colors;
+  return require("../../../../discord_common/js/packages/design/shared.tsx").isThemeDark(theme.theme) ? colors.BACKGROUND_SURFACE_HIGH : colors.BLACK;
 });
 const PX_16 = require("Themes").space.PX_16;
 let obj = { container: null, heroContainer: null, heroImg: null, heroLinearGradientOverlay: null, previewBadge: null, rewardImgContainer: null, heroFooterContainer: null, heroFooterLeftContainer: null, detailsWrapper: null, detailsContainer: null, questName: null, bodyContainer: null, subtitleRow: null, orbWithAmountRow: null, detailsTextContainer: null, buttonContainers: null, equalWidthContainer: null };

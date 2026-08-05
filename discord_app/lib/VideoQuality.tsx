@@ -106,19 +106,19 @@ prototype["start"] = function start() {
   const timestampProducer = this.timestampProducer;
   this.streamStart = timestampProducer.now();
   const connection = this.connection;
-  connection.on(require(4381) /* BaseConnectionEvent */.BaseConnectionEvent.Stats, this.sampleStats);
+  connection.on(require("../../discord_common/js/packages/media-engine/index.tsx") /* BaseConnectionEvent */.BaseConnectionEvent.Stats, this.sampleStats);
 };
 prototype["setOutboundSsrc"] = function setOutboundSsrc(ssrc) {
   const self = this;
   if (null == this.outboundStats[ssrc]) {
-    const outboundStats = new require(7121) /* parseEncoder */.OutboundStats(self.timestampProducer);
+    const outboundStats = new require("VideoQualityStats.tsx") /* parseEncoder */.OutboundStats(self.timestampProducer);
     self.outboundStats[ssrc] = outboundStats;
   }
 };
 prototype["getOrCreateInboundStats"] = function getOrCreateInboundStats(userId) {
   const self = this;
   if (null == this.inboundStats[userId]) {
-    const inboundStats = new require(7121) /* parseEncoder */.InboundStats(self.timestampProducer);
+    const inboundStats = new require("VideoQualityStats.tsx") /* parseEncoder */.InboundStats(self.timestampProducer);
     self.inboundStats[userId] = inboundStats;
   }
   return self.inboundStats[userId];
@@ -128,11 +128,11 @@ prototype["updateCallUserIdsCount"] = function updateCallUserIdsCount(size) {
 };
 prototype["setInboundUser"] = function setInboundUser(userId, videoSsrc) {
   const orCreateInboundStats = this.getOrCreateInboundStats(userId);
-  orCreateInboundStats.setVideoStopped(0 === videoSsrc, require(7121) /* parseEncoder */.VideoStoppedReasons.SenderStopped);
+  orCreateInboundStats.setVideoStopped(0 === videoSsrc, require("VideoQualityStats.tsx") /* parseEncoder */.VideoStoppedReasons.SenderStopped);
 };
 prototype["setUserVideoDisabled"] = function setUserVideoDisabled(userId, arg1) {
   const orCreateInboundStats = this.getOrCreateInboundStats(userId);
-  orCreateInboundStats.setVideoStopped(arg1, require(7121) /* parseEncoder */.VideoStoppedReasons.ClientSideDisableVideo);
+  orCreateInboundStats.setVideoStopped(arg1, require("VideoQualityStats.tsx") /* parseEncoder */.VideoStoppedReasons.ClientSideDisableVideo);
   let tmp2 = !arg1;
   if (!arg1) {
     tmp2 = orCreateInboundStats.statsWindow.length > 0;
@@ -160,11 +160,11 @@ prototype["pause"] = function pause() {
   if (!this.paused.value) {
     self.pausedCount = self.pausedCount + 1;
   }
-  const item = importDefault(12).forEach(self.outboundStats, (arg0) => {
+  const item = require("../../_runtime/00012_apply.js").forEach(self.outboundStats, (arg0) => {
     arg0.statsWindow = [];
   });
-  const arr = importDefault(12);
-  const item1 = importDefault(12).forEach(self.inboundStats, (arg0) => {
+  const arr = require("../../_runtime/00012_apply.js");
+  const item1 = require("../../_runtime/00012_apply.js").forEach(self.inboundStats, (arg0) => {
     arg0.statsWindow = [];
   });
   self.updateSendState({ paused: true });
@@ -174,7 +174,7 @@ prototype["resume"] = function resume() {
 };
 prototype["stop"] = function stop() {
   const connection = this.connection;
-  connection.off(require(4381) /* BaseConnectionEvent */.BaseConnectionEvent.Stats, this.sampleStats);
+  connection.off(require("../../discord_common/js/packages/media-engine/index.tsx") /* BaseConnectionEvent */.BaseConnectionEvent.Stats, this.sampleStats);
   const timestampProducer = this.timestampProducer;
   this.streamEnd = timestampProducer.now();
   this.removeAllListeners();
@@ -266,7 +266,7 @@ prototype["getCodecUsageStats"] = function getCodecUsageStats(receiver, userId) 
       }
       let obj = { codec_asymmetric_session: null, codec_h264_decode_duration_sec: null, codec_h265_decode_duration_sec: null, codec_vp8_decode_duration_sec: null, codec_vp9_decode_duration_sec: null, codec_av1_decode_duration_sec: null, codec_unknown_decode_duration_sec: null };
       obj[0] = tmp;
-      let num = value.get(require(7121) /* parseEncoder */.CodecTypes.H264);
+      let num = value.get(require("VideoQualityStats.tsx") /* parseEncoder */.CodecTypes.H264);
       if (num == null) {
         num = 0;
       }
@@ -306,7 +306,7 @@ prototype["getCodecUsageStats"] = function getCodecUsageStats(receiver, userId) 
     map = encoderUsageStats.get(items.sort()[0]);
   }
   obj = { codec_asymmetric_session: tmp, codec_h264_encode_duration_sec: null, codec_h265_encode_duration_sec: null, codec_vp8_encode_duration_sec: null, codec_vp9_encode_duration_sec: null, codec_av1_encode_duration_sec: null, codec_unknown_encode_duration_sec: null };
-  let num8 = map.get(require(7121) /* parseEncoder */.CodecTypes.H264);
+  let num8 = map.get(require("VideoQualityStats.tsx") /* parseEncoder */.CodecTypes.H264);
   if (num8 == null) {
     num8 = 0;
   }
@@ -817,7 +817,7 @@ prototype["destroyUser"] = function destroyUser(arg0) {
   delete tmp2[tmp];
 };
 prototype["getInboundParticipants"] = function getInboundParticipants() {
-  return importDefault(11).keys(this.inboundStats);
+  return require("../utils/SnowflakeUtils.tsx").keys(this.inboundStats);
 };
 prototype["updateSendState"] = function updateSendState(paused) {
   const self = this;
@@ -829,12 +829,12 @@ prototype["updateSendState"] = function updateSendState(paused) {
   }
   self.videoStopped.value = self.paused.value || self.zeroReceivers.value;
   if ((self.paused.value || self.zeroReceivers.value) !== self.videoStopped.value) {
-    const item = importDefault(12).forEach(self.outboundStats, (arg0) => {
+    const item = require("../../_runtime/00012_apply.js").forEach(self.outboundStats, (arg0) => {
       const items = [];
       arg0.statsWindow = items;
       return items;
     });
-    const arr = importDefault(12);
+    const arr = require("../../_runtime/00012_apply.js");
   }
 };
 prototype["getStats"] = function getStats(aggregationDuration) {
@@ -1303,7 +1303,7 @@ prototype["getStats"] = function getStats(aggregationDuration) {
       num67 = 0;
     }
     const diff1 = num66 - num67;
-    if (aggregationDuration instanceof require(7121) /* parseEncoder */.OutboundStats) {
+    if (aggregationDuration instanceof require("VideoQualityStats.tsx") /* parseEncoder */.OutboundStats) {
       obj.sender_freeze_count = freezeCount;
       obj.sender_total_freezes_duration = totalFreezesDuration;
       obj.sender_total_frames_duration = totalFramesDuration;
@@ -1416,7 +1416,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
   obj = videoEntropy(500);
   tmp13 = self.cameraDuration.value && !self.cameraDuration.value;
   const tmp14 = importDefault;
-  let closure_7 = importDefault(12).max(streamParameters.map((quality) => quality.quality));
+  let closure_7 = require("../../_runtime/00012_apply.js").max(streamParameters.map((quality) => quality.quality));
   const outbound = transport.rtp.outbound;
   const first = outbound.filter((type) => {
     let tmp = "video" === type.type;

@@ -11,7 +11,7 @@ let metroImportAll;
 const require = arg1;
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
 let closure_9 = createCacheKey.createStyles((arg0) => {
-  const space = importDefault(712).space;
+  const space = require("../../../../../discord_common/js/packages/tokens/native.tsx").space;
   if (arg0) {
     let PX_16 = space.PX_8;
     let tmp4 = tmp;

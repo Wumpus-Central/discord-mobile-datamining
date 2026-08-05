@@ -5,8 +5,8 @@ const result = require("enforcing").fileFinishedImporting("modules/native_permis
 
 export default function openPrivacySettings() {
   if (obj.isAndroid()) {
-    importDefault(4836).openPrivacySettings();
-    const obj2 = importDefault(4836);
+    require("../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceSettingsModule.tsx").openPrivacySettings();
+    const obj2 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceSettingsModule.tsx");
   } else {
     const DeviceSettingsManager = NativeModules.DeviceSettingsManager;
     DeviceSettingsManager.openPrivacySettings();

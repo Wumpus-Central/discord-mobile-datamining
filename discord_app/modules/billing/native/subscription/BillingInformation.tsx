@@ -14,9 +14,9 @@ export const getBillingInformationStringNative = function getBillingInformationS
     flag = false;
   }
   let _require;
-  let obj = _require(3931);
+  let obj = _require("../../../../utils/PremiumUtils.tsx");
   let billingInformationString = obj.getBillingInformationString(subscription, first, tmp, flag, fractionalPremiumInfo);
-  let tmp5 = _require(501).isIOS() && subscription.isPurchasedViaApple;
+  let tmp5 = _require("../../../../../discord_common/js/shared/utils/PlatformUtils.tsx").isIOS() && subscription.isPurchasedViaApple;
   if (tmp5) {
     tmp5 = subscription.status === SubscriptionStatusTypes.ACTIVE;
   }

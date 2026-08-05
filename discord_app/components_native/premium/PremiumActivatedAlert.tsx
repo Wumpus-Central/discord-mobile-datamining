@@ -20,7 +20,7 @@ createCacheKey = { fontSize: 14, lineHeight: 16, textAlign: "center", marginTop:
 createCacheKey[5] = createCacheKey;
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 let closure_10 = createCacheKey.createStyles((arg0) => {
-  if (require(3931) /* getPremiumPlanItem */.Branding.TIER_0 === arg0) {
+  if (require("../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */.Branding.TIER_0 === arg0) {
     let obj = { headerImage: null };
     obj[0] = { marginLeft: -27, width: 88, top: 18 };
     return obj;
@@ -43,7 +43,7 @@ let closure_10 = createCacheKey.createStyles((arg0) => {
   }
 });
 let closure_11 = createCacheKey.createStyles((arg0) => {
-  if (require(3931) /* getPremiumPlanItem */.Branding.BUNDLE === arg0) {
+  if (require("../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */.Branding.BUNDLE === arg0) {
     let obj = { animation: null };
     obj[0] = { borderRadius: 6 };
     return obj;
@@ -83,10 +83,10 @@ export default function PremiumActivatedAlert(onClose) {
       }
     }
   }
-  const tmp6 = importDefault(4221)();
-  let obj = require(3931) /* getPremiumPlanItem */;
+  const tmp6 = require("../../hooks/useTheme.tsx")();
+  let obj = require("../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */;
   const premiumBranding = obj.getPremiumBranding(renewalMutations);
-  if (require(3931) /* getPremiumPlanItem */.Branding.TIER_0 === premiumBranding) {
+  if (require("../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */.Branding.TIER_0 === premiumBranding) {
     obj = { logo: null };
     obj[0] = { width: 82, height: 44 };
     let tmp9 = obj;
@@ -112,10 +112,10 @@ export default function PremiumActivatedAlert(onClose) {
   const obj3 = { onClose: onClose.onClose, confirmText: null, style: null, children: null };
   let tmp4Result = tmp4(4713);
   const intl = tmp7(1236).intl;
-  obj3[1] = intl.string(require(1236) /* getSystemLocale */.t.TkTvBz);
+  obj3[1] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.TkTvBz);
   obj3[2] = tmp.alert;
   const obj4 = { style: tmp.header, source: null, children: null };
-  if (require(3931) /* getPremiumPlanItem */.Branding.TIER_0 === premiumBranding) {
+  if (require("../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */.Branding.TIER_0 === premiumBranding) {
     tmp4Result = tmp4(7301);
   } else if (tmp7(3931).Branding.TIER_1 === premiumBranding) {
     tmp4Result = tmp4(7302);
@@ -127,7 +127,7 @@ export default function PremiumActivatedAlert(onClose) {
     tmp4Result = tmp4(7305);
   }
   obj4[1] = tmp4Result;
-  if (require(3931) /* getPremiumPlanItem */.Branding.TIER_0 === premiumBranding) {
+  if (require("../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */.Branding.TIER_0 === premiumBranding) {
     let tmp4Result1 = tmp4(7309);
   } else if (tmp7(3931).Branding.TIER_1 === premiumBranding) {
     tmp4Result1 = tmp4(7310);
@@ -143,14 +143,14 @@ export default function PremiumActivatedAlert(onClose) {
   }
   const items = [closure_7(closure_3, { source: tmp4Result1, style: tmp9.logo }), , ];
   let tmp16Result = null;
-  if (premiumBranding === require(3931) /* getPremiumPlanItem */.Branding.BUNDLE) {
+  if (premiumBranding === require("../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */.Branding.BUNDLE) {
     const obj6 = { source: null, style: null };
     obj6[0] = tmp4(7322);
     obj6[1] = tmp.logoPlusPremiumGuild;
     tmp16Result = tmp16(tmp17, obj6);
   }
   items[1] = tmp16Result;
-  if (require(3931) /* getPremiumPlanItem */.Branding.TIER_0 === premiumBranding) {
+  if (require("../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */.Branding.TIER_0 === premiumBranding) {
     let tmp4Result2 = tmp4(7251);
   } else if (tmp7(3931).Branding.TIER_1 === premiumBranding) {
     tmp4Result2 = tmp4(7252);
@@ -170,7 +170,7 @@ export default function PremiumActivatedAlert(onClose) {
   const tmp11 = callback2(premiumBranding);
   const tmp14 = closure_4;
   const tmp21 = closure_5;
-  if (require(3931) /* getPremiumPlanItem */.Branding.TIER_0 === premiumBranding) {
+  if (require("../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */.Branding.TIER_0 === premiumBranding) {
     let tmp7Result = tmp7(4131);
     if (tmp7Result.isThemeDark(tmp6)) {
       let tmp4Result4 = tmp4(7313);

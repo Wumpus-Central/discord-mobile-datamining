@@ -19,20 +19,20 @@ function LeftSlot(state) {
   let wrapperStyle;
   state = state.state;
   ({ cleanup, channel, onPress, slotWidth, wrapperStyle } = state);
-  let obj = { visible: state !== require(4629) /* wrapChildrenDefault */.TransitionStates.YEETED, initiallyVisible: state !== require(4629) /* wrapChildrenDefault */.TransitionStates.ENTERED, enterDelayMs: closure_6, onExitComplete: cleanup };
-  ({ animatedStyle, isInteractive } = importDefault(11530)(obj));
+  let obj = { visible: state !== require("../../../../design/components/TransitionGroup/TransitionGroup.tsx") /* wrapChildrenDefault */.TransitionStates.YEETED, initiallyVisible: state !== require("../../../../design/components/TransitionGroup/TransitionGroup.tsx") /* wrapChildrenDefault */.TransitionStates.ENTERED, enterDelayMs: closure_6, onExitComplete: cleanup };
+  ({ animatedStyle, isInteractive } = require("useChatInputFloatingBounce.tsx")(obj));
   obj = { style: items };
   items = [wrapperStyle, { width: slotWidth }, animatedStyle];
-  const tmp = importDefault(11530)(obj);
-  const merged = Object.assign(require(11529) /* FadeTransitionItem */.interactivityProps(isInteractive));
-  obj.children = callback2(importDefault(11528), { canStartThreads: false, channel, onPress, styleButton: "ct", shouldShowThread: "Instance" });
-  return callback2(importDefault(4146).View, obj);
+  const tmp = require("useChatInputFloatingBounce.tsx")(obj);
+  const merged = Object.assign(require("ChatInputActionButtonTransitionItem.tsx") /* FadeTransitionItem */.interactivityProps(isInteractive));
+  obj.children = callback2(require("ChatInputActionButtonGiftOrThread.tsx"), { canStartThreads: false, channel, onPress, styleButton: "ct", shouldShowThread: "Instance" });
+  return callback2(require("../../../reanimated/ReanimatedRexport.tsx").View, obj);
 }
 let c4 = importAllResult;
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
 let closure_9 = createCacheKey.createStyles(() => {
   let obj = { container: null, leftSlot: null };
-  obj = { flexDirection: "row", alignItems: "center", gap: importDefault(712).modules.mobile.CHAT_INPUT_ACTION_BUTTON_GAP };
+  obj = { flexDirection: "row", alignItems: "center", gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_ACTION_BUTTON_GAP };
   obj[0] = obj;
   obj[1] = { alignItems: "center", justifyContent: "center" };
   return obj;

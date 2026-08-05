@@ -18,7 +18,7 @@ export const createInGameMessageNuxSystemMessage = function createInGameMessageN
   if (null == application) {
     return null;
   } else {
-    let obj = require(7879) /* getMessageAuthorWithProcessedColor */;
+    let obj = require("useAuthorWithProcessedColor.tsx") /* getMessageAuthorWithProcessedColor */;
     const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
     obj = { username: null, usernameOnClick: null, gameName: null, urlOnClick: null };
     obj[0] = messageAuthorWithProcessedColor.nick;
@@ -33,10 +33,10 @@ export const createInGameMessageNuxSystemMessage = function createInGameMessageN
     obj1[2] = tmp3.linkColor;
     obj[3] = obj1;
     const obj2 = { content: null };
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj2[0] = intl.formatToParts(require(1236) /* getSystemLocale */.t["92erOB"], obj);
+    const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj2[0] = intl.formatToParts(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["92erOB"], obj);
     const merged = Object.assign(tmp(7882)(message));
     return obj2;
   }
-  tmp3 = importDefault(7872)(theme);
+  tmp3 = require("../resolveMessageContentColors.tsx")(theme);
 };

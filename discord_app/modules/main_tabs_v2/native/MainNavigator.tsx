@@ -17,49 +17,49 @@ let metroImportAll;
 let unpackModuleId;
 let require = arg1;
 function getAuthComponent() {
-  return require(14975) /* NavigatorWithCaptchaHook */.default;
+  return require("../../auth/native/components/Auth.tsx") /* NavigatorWithCaptchaHook */.default;
 }
 function getTabsComponent() {
-  return require(15033).default;
+  return require("MainTabs.tsx").default;
 }
 function getChannelComponent() {
   return View;
 }
 function WrappedAutoAnalytics() {
-  return callback2(require(15687) /* componentDidMount */.default, {});
+  return callback2(require("../../../components_native/AutoAnalytics.tsx") /* componentDidMount */.default, {});
 }
 function getMemberVerificationComponent() {
-  return require(15692) /* Loading */.default;
+  return require("../../guild_member_verification/native/components/MemberVerificationScreen.tsx") /* Loading */.default;
 }
 function getFriendsNavigatorComponent() {
-  return require(15695) /* RequestsSettingsModalButton */.default;
+  return require("friends/FriendsNavigator.tsx") /* RequestsSettingsModalButton */.default;
 }
 function getYouComponent() {
-  return require(15731).default;
+  return require("tabs/you/YouScreenContainer.tsx").default;
 }
 function getChannelDetailsComponent() {
-  return require(15754) /* ConnectedCreateThreadHeaderButton */.default;
+  return require("sidebar/details/ChannelDetailsNavigator.tsx") /* ConnectedCreateThreadHeaderButton */.default;
 }
 function getConversationsComponent() {
-  return require(8380) /* HeaderWithBorder */.default;
+  return require("../../conversations/components/native/ConversationNavigator.tsx") /* HeaderWithBorder */.default;
 }
 function getSearchComponent() {
-  return require(15808).default;
+  return require("../../search/native/components/navigator/SearchNavigator.tsx").default;
 }
 function getContextMenuCommandNavigatorComponent() {
-  return require(15811) /* ContextMenuCommandNavigator */.default;
+  return require("../../application_commands/native/ContextMenuCommandNavigator.tsx") /* ContextMenuCommandNavigator */.default;
 }
 function getModalComponent() {
-  return require(15815) /* Modal */.default;
+  return require("modal/ModalScreen.tsx") /* Modal */.default;
 }
 function getMessageRequestsComponent() {
-  return require(15817) /* MessageRequestsNavigator */.default;
+  return require("message_requests/MessageRequestsNavigator.tsx") /* MessageRequestsNavigator */.default;
 }
 function getSettingsComponent() {
-  return require(15846) /* Settings */.default;
+  return require("tabs/settings/Settings.tsx") /* Settings */.default;
 }
 function getAccountStanding() {
-  return require(15851) /* SuspendedUserSafetyHubPage */.default;
+  return require("../../safety_hub/native/SuspendedUserPage.tsx") /* SuspendedUserSafetyHubPage */.default;
 }
 let c4 = importAllResult;
 ({ AnalyticEvents: metroImportAll, DrawerSourceTypes: c9 } = ME);

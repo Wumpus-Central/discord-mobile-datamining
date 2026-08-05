@@ -6,7 +6,7 @@ import keys from "keys";
 const require = arg1;
 function setUseEntranceAnimationState(arg0) {
   const _require = arg0;
-  _require(705).batchUpdates(() => outer1_5.setState(closure_0));
+  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_5.setState(closure_0));
 }
 let obj = { duration: 300, easing: require("Button").STANDARD_EASING };
 obj = keys.create(() => ({ isComplete: false }));

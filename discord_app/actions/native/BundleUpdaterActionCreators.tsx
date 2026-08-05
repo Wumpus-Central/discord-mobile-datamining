@@ -7,16 +7,16 @@ const result = require("getSystemLocale").fileFinishedImporting("actions/native/
 export default {
   prepareUpdate(versionRequired) {
     if (versionRequired) {
-      let obj = importDefault(4623);
+      let obj = require("../AlertActionCreators.tsx");
       obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
-      const intl = require(1236) /* getSystemLocale */.intl;
-      obj[0] = intl.string(require(1236) /* getSystemLocale */.t.GQZdmI);
-      const intl2 = require(1236) /* getSystemLocale */.intl;
-      obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.Fizu9y);
-      const intl3 = require(1236) /* getSystemLocale */.intl;
-      obj[2] = intl3.string(require(1236) /* getSystemLocale */.t.UefCDS);
-      const intl4 = require(1236) /* getSystemLocale */.intl;
-      obj[3] = intl4.string(require(1236) /* getSystemLocale */.t["1SzcG6"]);
+      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      obj[0] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.GQZdmI);
+      const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      obj[1] = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Fizu9y);
+      const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      obj[2] = intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.UefCDS);
+      const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      obj[3] = intl4.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["1SzcG6"]);
       obj[4] = function onConfirm() {
         BundleUpdaterManager = BundleUpdaterManager.BundleUpdaterManager;
         return BundleUpdaterManager.reload();

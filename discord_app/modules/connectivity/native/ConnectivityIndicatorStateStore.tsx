@@ -272,17 +272,17 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items1, handleAuthStoreChanged);
   const items2 = [getState];
   this.syncWith(items2, handleAppStateUpdate);
-  importDefault(1454).addOfflineCallback(() => {
+  require("../../../utils/NetworkUtils.tsx").addOfflineCallback(() => {
     let c16 = true;
     callback();
   });
-  const obj = importDefault(1454);
-  importDefault(1454).addOnlineCallback(() => {
+  const obj = require("../../../utils/NetworkUtils.tsx");
+  require("../../../utils/NetworkUtils.tsx").addOnlineCallback(() => {
     let c16 = false;
     callback();
   });
-  const obj2 = importDefault(1454);
-  let closure_16 = !importDefault(1454).isOnline();
+  const obj2 = require("../../../utils/NetworkUtils.tsx");
+  let closure_16 = !require("../../../utils/NetworkUtils.tsx").isOnline();
   let closure_15 = fetchFingerprint.isAuthenticated();
   updateState();
 };

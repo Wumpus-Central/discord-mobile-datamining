@@ -67,9 +67,9 @@ prototype["initialize"] = function initialize(selectedGuildTimestampMillis) {
     lastSelectedGuildId = null;
   }
   const obj = { path: null };
-  const RouteParam = require(4120) /* RouteParam */.RouteParam;
+  const RouteParam = require("../modules/routing/RouteUtils.tsx") /* RouteParam */.RouteParam;
   obj[0] = closure_7.CHANNEL(RouteParam.guildId());
-  const matchPathResult = require(4107) /* matchPath */.matchPath(initialize.lastNonVoiceRoute, obj);
+  const matchPathResult = require("../modules/routing/matchPathCompat.tsx") /* matchPath */.matchPath(initialize.lastNonVoiceRoute, obj);
   let guildId;
   if (matchPathResult != null) {
     const params = matchPathResult.params;
@@ -194,15 +194,15 @@ const selectedGuildStore = new SelectedGuildStore(require("dispatcher"), {
         })(guildId);
         if (null == tmp3) {
           c8 = null;
-          require(1222) /* transitionTo */.replaceWith(closure_7.ME);
+          require("../modules/routing/router_utils.tsx") /* transitionTo */.replaceWith(closure_7.ME);
           flag = true;
-          const obj = require(1222) /* transitionTo */;
+          const obj = require("../modules/routing/router_utils.tsx") /* transitionTo */;
         }
       }
       c8 = tmp3;
-      require(1222) /* transitionTo */.replaceWith(closure_7.CHANNEL(tmp3));
+      require("../modules/routing/router_utils.tsx") /* transitionTo */.replaceWith(closure_7.CHANNEL(tmp3));
       flag = true;
-      const obj2 = require(1222) /* transitionTo */;
+      const obj2 = require("../modules/routing/router_utils.tsx") /* transitionTo */;
     }
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
@@ -266,15 +266,15 @@ const selectedGuildStore = new SelectedGuildStore(require("dispatcher"), {
         })(id);
         if (null == tmp8) {
           c8 = null;
-          require(1222) /* transitionTo */.replaceWith(closure_7.ME);
+          require("../modules/routing/router_utils.tsx") /* transitionTo */.replaceWith(closure_7.ME);
           flag = true;
-          const obj = require(1222) /* transitionTo */;
+          const obj = require("../modules/routing/router_utils.tsx") /* transitionTo */;
         }
       }
       c8 = tmp8;
-      require(1222) /* transitionTo */.replaceWith(closure_7.CHANNEL(tmp8));
+      require("../modules/routing/router_utils.tsx") /* transitionTo */.replaceWith(closure_7.CHANNEL(tmp8));
       flag = true;
-      const obj2 = require(1222) /* transitionTo */;
+      const obj2 = require("../modules/routing/router_utils.tsx") /* transitionTo */;
     }
   },
   LOGOUT: function handleLogout() {

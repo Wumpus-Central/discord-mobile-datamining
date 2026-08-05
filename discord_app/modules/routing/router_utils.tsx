@@ -62,7 +62,7 @@ const tmp3 = new require("ComponentDispatcher")("Routing/Utils");
 const result = require("_extends").fileFinishedImporting("modules/routing/router_utils.tsx");
 
 export const shouldNavigate = function shouldNavigate() {
-  const ComponentDispatch = require(1231) /* ComponentDispatcher */.ComponentDispatch;
+  const ComponentDispatch = require("../../utils/ComponentDispatchUtils.tsx") /* ComponentDispatcher */.ComponentDispatch;
   return !ComponentDispatch.hasSubscribers(constants2.MODAL_CLOSE);
 };
 export { transitionTo };
@@ -73,7 +73,7 @@ export const transitionToGuild = function transitionToGuild(guildId, channelId, 
 export const currentRouteHasBackNavigation = function currentRouteHasBackNavigation() {
   let hasItem = null != closure_3;
   if (hasItem) {
-    const ChannelBackNavigationSources = require(1234) /* set */.ChannelBackNavigationSources;
+    const ChannelBackNavigationSources = require("RoutingSources.tsx") /* set */.ChannelBackNavigationSources;
     hasItem = ChannelBackNavigationSources.has(closure_3);
   }
   return hasItem;
@@ -164,14 +164,14 @@ export function hasNavigated() {
   return false;
 }
 export const back = function back() {
-  const ComponentDispatch = require(1231) /* ComponentDispatcher */.ComponentDispatch;
+  const ComponentDispatch = require("../../utils/ComponentDispatchUtils.tsx") /* ComponentDispatcher */.ComponentDispatch;
   if (!hasSubscribersResult) {
     let c3 = null;
     _extends.goBack();
   }
 };
 export const forward = function forward() {
-  const ComponentDispatch = require(1231) /* ComponentDispatcher */.ComponentDispatch;
+  const ComponentDispatch = require("../../utils/ComponentDispatchUtils.tsx") /* ComponentDispatcher */.ComponentDispatch;
   if (!hasSubscribersResult) {
     let c3 = null;
     _extends.goForward();

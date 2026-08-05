@@ -9,7 +9,7 @@ let require = arg1;
 let c4 = importDefaultResult;
 initialize = {
   getQueryId(c0) {
-    return QueryIds.GAME_AUTOCOMPLETE(require(7229) /* GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH */.normalizeGameAutocompleteQuery(c0));
+    return QueryIds.GAME_AUTOCOMPLETE(require("GameAutocompleteUtils.tsx") /* GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH */.normalizeGameAutocompleteQuery(c0));
   },
   get(arg0) {
     let results = importDefaultResult.getResults(arg0);
@@ -19,7 +19,7 @@ initialize = {
     return results;
   },
   load(arg0) {
-    return require(7238) /* _fetchGameAutocomplete */.fetchGameAutocomplete(arg0);
+    return require("GameAutocompleteActionCreators.tsx") /* _fetchGameAutocomplete */.fetchGameAutocomplete(arg0);
   },
   getIsLoading(arg0) {
     return importDefaultResult.isFetching(arg0);
@@ -59,7 +59,7 @@ export const useDebouncedGameAutocomplete = function useDebouncedGameAutocomplet
   let tmp3;
   let tmp7;
   let tmp8;
-  let obj = require(7229) /* GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH */;
+  let obj = require("GameAutocompleteUtils.tsx") /* GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH */;
   const result = obj.normalizeGameAutocompleteQuery(c0);
   require = result;
   let dependencyMap;

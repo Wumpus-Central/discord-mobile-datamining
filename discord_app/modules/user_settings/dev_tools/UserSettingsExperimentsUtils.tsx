@@ -146,6 +146,6 @@ export const getBestMatches = function getBestMatches(arg0, str) {
       continue;
     }
     const found1 = items.filter((arg0) => undefined !== arg0);
-    return importDefault(4434)(found1.reverse());
+    return require("../../../../_runtime/04434_flatten.js")(found1.reverse());
   }
 };

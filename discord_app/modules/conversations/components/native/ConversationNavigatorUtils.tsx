@@ -2,12 +2,12 @@
 const result = require("set").fileFinishedImporting("modules/conversations/components/native/ConversationNavigatorUtils.tsx");
 
 export const closeConversationsAndJumpToMessage = function closeConversationsAndJumpToMessage(channelId, id) {
-  const rootNavigationRef = require(4137) /* getRootNavigationRef */.getRootNavigationRef();
+  const rootNavigationRef = require("../../../main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */.getRootNavigationRef();
   if (rootNavigationRef != null) {
     rootNavigationRef.goBack();
   }
-  const obj = require(4137) /* getRootNavigationRef */;
+  const obj = require("../../../main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */;
   const tmp = require;
-  require(4293) /* transitionToChannel */.transitionToMessage(channelId, id, { navigationReplace: true });
+  require("../../../routing/transitionToChannel.tsx") /* transitionToChannel */.transitionToMessage(channelId, id, { navigationReplace: true });
 };
 export const ConversationNavigatorScreens = { LIST: "conversation_list", FOCUS: "conversation_focus" };

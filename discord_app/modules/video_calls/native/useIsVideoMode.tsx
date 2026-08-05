@@ -10,7 +10,7 @@ const result = require("_detectH265HardwareDecode").fileFinishedImporting("modul
 
 export default function useIsVideoMode() {
   const items = [ensureGuildLoaded, handleConnectionOpen, _detectH265HardwareDecode, updateVoiceState, reset];
-  return require(589) /* initialize */.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
     channel = channel.getChannel(voiceChannelId.getVoiceChannelId());
     let tmp2 = null != channel;
     if (tmp2) {

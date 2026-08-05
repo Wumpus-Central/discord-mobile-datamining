@@ -12,7 +12,7 @@ let error;
 let require = arg1;
 function FormControlText(children) {
   const tmp = createCacheKey();
-  return callback2(require(4281) /* Text */.Text, { variant: "text-sm/medium", color: "text-default", style: createCacheKey().formControlText, children: children.text });
+  return callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-sm/medium", color: "text-default", style: createCacheKey().formControlText, children: children.text });
 }
 function FormControlSubtext(text) {
   text = text.text;
@@ -21,7 +21,7 @@ function FormControlSubtext(text) {
     const obj = { variant: "text-xs/medium", color: "text-muted", style: null, children: null };
     obj[2] = tmp.formControlText;
     obj[3] = text;
-    tmp2 = callback2(require(4281) /* Text */.Text, obj);
+    tmp2 = callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   }
   return tmp2;
 }
@@ -62,8 +62,8 @@ export const UserProfileEditFormButton = function UserProfileEditFormButton(load
   const tmp = createCacheKey();
   let obj = { label, labelTrailing, children: null };
   obj = { onPress, style: tmp.button, accessibilityRole: "button", accessibilityLabel: label, accessibilityValue, accessibilityHint: null, accessibilityState: null, disabled: null, children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[5] = intl.string(require(1236) /* getSystemLocale */.t["4lAcxv"]);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[5] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["4lAcxv"]);
   obj[6] = { disabled, busy: flag };
   obj[7] = disabled;
   const items = [leading, , , ];
@@ -88,12 +88,12 @@ export const UserProfileEditFormButton = function UserProfileEditFormButton(load
   items[2] = trailing;
   tmp2Result = !flag2;
   if (!flag2) {
-    tmp2Result = tmp2(require(5322) /* TableRowArrow */.TableRowArrow, {});
+    tmp2Result = tmp2(require("../../../design/components/TableRow/native/TableRowArrow.native.tsx") /* TableRowArrow */.TableRowArrow, {});
   }
   items[3] = tmp2Result;
   obj[8] = items;
-  obj[2] = closure_7(require(4812) /* PressableBase */.PressableHighlight, obj);
-  return closure_6(require(7714) /* Input */.Input, obj);
+  obj[2] = closure_7(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableHighlight, obj);
+  return closure_6(require("../../../design/components/Input/native/Input.native.tsx") /* Input */.Input, obj);
 };
 export const UserProfileEditFormSwitch = function UserProfileEditFormSwitch(arg0) {
   let accessibilityHint;
@@ -111,7 +111,7 @@ export const UserProfileEditFormSwitch = function UserProfileEditFormSwitch(arg0
     disabled = false;
   }
   let callback;
-  let obj = require(500) /* set */;
+  let obj = require("../../../utils/PlatformUtils.tsx") /* set */;
   const isAndroidResult = obj.isAndroid();
   const tmp5 = callback(React.useState(value), 2);
   callback = tmp5[1];
@@ -161,8 +161,8 @@ export const UserProfileEditFormSwitch = function UserProfileEditFormSwitch(arg0
   obj[5] = accessibilityHint;
   obj[6] = { disabled, checked: tmp5[0] };
   obj[7] = disabled;
-  const items1 = [closure_6(FormControlText, { text: subLabel }), closure_6(require(5651) /* FormSwitch */.FormSwitch, { "aria-hidden": true, value, onValueChange: handleOnPress, disabled })];
+  const items1 = [closure_6(FormControlText, { text: subLabel }), closure_6(require("../../../design/components/Forms/native/FormSwitch.native.tsx") /* FormSwitch */.FormSwitch, { "aria-hidden": true, value, onValueChange: handleOnPress, disabled })];
   obj[8] = items1;
   obj[1] = closure_7(PressableHighlight, obj);
-  return closure_6(require(7714) /* Input */.Input, obj);
+  return closure_6(require("../../../design/components/Input/native/Input.native.tsx") /* Input */.Input, obj);
 };

@@ -5,7 +5,7 @@ import createCacheKey from "createCacheKey";
 
 const require = arg1;
 let closure_5 = createCacheKey.createStyles((arg0) => {
-  const link = { color: importDefault(712).colors.TEXT_LINK, textDecorationLine: null };
+  const link = { color: require("../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_LINK, textDecorationLine: null };
   let str = "none";
   if (arg0) {
     str = "underline";

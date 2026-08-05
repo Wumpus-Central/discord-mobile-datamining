@@ -24,22 +24,22 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
     }
     const user1 = user.getUser(id);
     if (null == user1) {
-      let obj4 = require(8147) /* canViewInteractionInfo */;
+      let obj4 = require("../../../../../applications/ApplicationInteractionInfoUtils.tsx") /* canViewInteractionInfo */;
       const result = obj4.isPrimaryEntryPointCommandMessage(message);
-      let obj5 = require(4513) /* useNullableMessageAuthor */;
+      let obj5 = require("../../../../useMessageAuthor.tsx") /* useNullableMessageAuthor */;
       const userAuthor = obj5.getUserAuthor(message.interaction.user, channel);
       const colorString = userAuthor.colorString;
       const displayName = message.interaction.displayName;
-      const internal = importDefault(712).internal;
-      const semanticColor = internal.resolveSemanticColor(theme, importDefault(712).colors.MENTION_BACKGROUND);
-      let obj6 = require(6889) /* buildCommand */;
+      const internal = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").internal;
+      const semanticColor = internal.resolveSemanticColor(theme, require("../../../../../../../discord_common/js/packages/tokens/native.tsx").colors.MENTION_BACKGROUND);
+      let obj6 = require("../../../../../application_commands/ApplicationCommandUtils.tsx") /* buildCommand */;
       const initialInteractionMetadata = obj6.getInitialInteractionMetadata(message);
       let type;
       if (initialInteractionMetadata != null) {
         type = initialInteractionMetadata.type;
       }
       let tmp25 = null;
-      if (type === require(1906) /* PermissionOverwriteType */.InteractionTypes.APPLICATION_COMMAND) {
+      if (type === require("../../../../../../flow/Server.tsx") /* PermissionOverwriteType */.InteractionTypes.APPLICATION_COMMAND) {
         tmp25 = null;
         if (null != initialInteractionMetadata.target_user) {
           tmp25 = new createdAt(initialInteractionMetadata.target_user);
@@ -80,7 +80,7 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
         id1 = tmp25.id;
       }
       let processColorStringsResult = null;
-      const result2 = require(7880) /* processColorStrings */.isNativeMessageEligibleForEnhancedRoleColors(guildId, id1);
+      const result2 = require("../../../../../premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx") /* processColorStrings */.isNativeMessageEligibleForEnhancedRoleColors(guildId, id1);
       if (result1) {
         processColorStringsResult = tmp17(7880).processColorStrings(userAuthor.colorStrings);
         const tmp17Result2 = tmp17(7880);
@@ -92,8 +92,8 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
       }
       let obj = { username: null, usernameOnClick: null };
       const tmp15 = message.type === MessageTypes.CHAT_INPUT_COMMAND || message.type === tmp14.INTERACTION_PREMIUM_UPSELL;
-      const tmp17Result1 = require(7880) /* processColorStrings */;
-      obj[0] = require(4513) /* useNullableMessageAuthor */.getUserAuthor(message.interaction.user, channel).nick;
+      const tmp17Result1 = require("../../../../../premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx") /* processColorStrings */;
+      obj[0] = require("../../../../useMessageAuthor.tsx") /* useNullableMessageAuthor */.getUserAuthor(message.interaction.user, channel).nick;
       obj = { name: "usernameOnClick", action: "bindUserMenu", userId: null, messageChannelId: null, linkColor: null, roleColor: null, roleColors: null, shouldShowRoleDot: null };
       obj[2] = id;
       obj[3] = message.channel_id;
@@ -195,25 +195,25 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
         const tmp17Result7 = tmp17(4513);
         const tmp67 = colorString2;
       }
-      const tmp17Result4 = require(4513) /* useNullableMessageAuthor */;
+      const tmp17Result4 = require("../../../../useMessageAuthor.tsx") /* useNullableMessageAuthor */;
       const tmp50 = colorString;
     } else {
       if (channel == null) {
         channel = channel.getChannel(message.getChannelId());
       }
       let obj11 = dependencyMap;
-      obj2 = require(4513) /* useNullableMessageAuthor */;
+      obj2 = require("../../../../useMessageAuthor.tsx") /* useNullableMessageAuthor */;
       const guildMemberAvatar = obj2.getUserAuthor(user1, channel).guildMemberAvatar;
       let guildId1;
       if (channel != null) {
         guildId1 = channel.getGuildId();
       }
-      require(1419) /* ensureAvatarSource */;
+      require("../../../../../../utils/native/AvatarUtils.tsx") /* ensureAvatarSource */;
       if (null == guildMemberAvatar) {
         let avatarSource = user1.getAvatarSource(undefined);
         const uri = tmp11(avatarSource).uri;
       }
-      obj3 = importDefault(1416);
+      obj3 = require("../../../../../../utils/AvatarUtils.tsx");
       obj11 = { userId: null, avatar: null, guildId: null };
       obj11[0] = user1.id;
       obj11[1] = guildMemberAvatar;

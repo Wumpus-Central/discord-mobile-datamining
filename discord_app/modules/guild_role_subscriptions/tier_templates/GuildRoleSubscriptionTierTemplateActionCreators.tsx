@@ -88,7 +88,7 @@ function _getTemplates() {
 const result = require("dispatcher").fileFinishedImporting("modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplateActionCreators.tsx");
 
 export const stashTemplateChannels = function stashTemplateChannels(selectedTemplate, guildId) {
-  let obj = importDefault(709);
+  let obj = require("../../../Dispatcher.tsx");
   obj = { type: "GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS", selectedTemplate, guildId };
   obj.dispatch(obj);
 };

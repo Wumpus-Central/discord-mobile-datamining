@@ -70,7 +70,7 @@ const result = require("DISCORD_EPOCH").fileFinishedImporting("modules/main_tabs
 
 export const getAffinityProperties = function getAffinityProperties(data) {
   id = id.getId();
-  let obj = importDefault(11);
+  let obj = require("../../../../../utils/SnowflakeUtils.tsx");
   if (obj.extractTimestamp(id) % 25 === 0) {
     obj = {};
     obj = { destination_channel_ids: null, destination_channel_ids_index: null };

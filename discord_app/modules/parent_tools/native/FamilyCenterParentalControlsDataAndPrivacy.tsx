@@ -48,5 +48,5 @@ export default function FamilyCenterParentalControlsDataAndPrivacy() {
     obj = { sections: memo };
     return obj.createList(obj);
   }, items);
-  return jsx(importDefault(13793), { node });
+  return jsx(require("../../settings/native/renderer/SettingLayout.tsx"), { node });
 };

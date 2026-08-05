@@ -6,15 +6,15 @@ const result = require("isOnMetaHorizon").fileFinishedImporting("modules/user_pr
 export default function getActivityPlatformDisplayName(type) {
   type = type.type;
   if (PlatformTypes.XBOX === type) {
-    const intl3 = require(1236) /* getSystemLocale */.intl;
-    return intl3.string(require(1236) /* getSystemLocale */.t.Nfvo72);
+    const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Nfvo72);
   } else if (tmp.PLAYSTATION === type) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    return intl2.string(require(1236) /* getSystemLocale */.t.fFl4jo);
+    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.fFl4jo);
   } else if (tmp.META_QUEST_OR_HORIZON === type) {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const string = intl.string;
-    const t = require(1236) /* getSystemLocale */.t;
+    const t = require("../../../intl/index.native.tsx") /* getSystemLocale */.t;
     if (tmp5) {
       let stringResult = string(t.BrHQaq);
     } else {

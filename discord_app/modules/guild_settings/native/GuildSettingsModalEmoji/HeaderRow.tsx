@@ -312,7 +312,7 @@ export const ConnectedHeaderRow = function ConnectedHeaderRow(arg0) {
     HermesBuiltin.throwTypeError();
   } else {
     const merged = Object.assign(arg0, undefined);
-    let obj = require(589) /* initialize */;
+    let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
     const items = [initialize];
     obj = { isUploading: null };
     obj[0] = obj.useStateFromStores(items, () => uploadingEmoji.isUploadingEmoji());

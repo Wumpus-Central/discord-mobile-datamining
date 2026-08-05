@@ -2,7 +2,7 @@
 import "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
-import module_8696 from "module_8696";
+import VisualEffectViewThemed from "../../visual_effect_view/native/VisualEffectViewThemed.tsx";
 import importDefaultResult from "module_4146";
 
 let c4;
@@ -24,10 +24,10 @@ export default function UserProfileOverscrollBanner(arg0) {
   obj = { style: bannerImageAnimatedStyle, children: null };
   obj = {};
   const merged1 = Object.assign(merged);
-  const items1 = [callback(importDefault(8761), obj), ];
+  const items1 = [callback(require("UserProfileBanner.tsx"), obj), ];
   const tmp3 = callback;
-  const tmp4 = importDefault(8761);
-  let tmp3Result = require(500) /* set */.isIOS() && showBlur;
+  const tmp4 = require("UserProfileBanner.tsx");
+  let tmp3Result = require("../../../utils/PlatformUtils.tsx") /* set */.isIOS() && showBlur;
   if (tmp3Result) {
     const obj1 = { animatedProps: null, style: null };
     obj1[0] = blurAnimatedProps;
@@ -36,7 +36,7 @@ export default function UserProfileOverscrollBanner(arg0) {
   }
   items1[1] = tmp3Result;
   obj[1] = items1;
-  items[1] = closure_5(importDefault(4146).View, obj);
+  items[1] = closure_5(require("../../reanimated/ReanimatedRexport.tsx").View, obj);
   obj[1] = items;
-  return closure_5(importDefault(4146).View, obj);
+  return closure_5(require("../../reanimated/ReanimatedRexport.tsx").View, obj);
 };

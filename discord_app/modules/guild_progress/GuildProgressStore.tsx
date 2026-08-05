@@ -29,7 +29,7 @@ prototype["initialize"] = function initialize(arg0) {
   this.waitFor(fetchFingerprint, ensureGuildLoaded, createGuildRecordFromRust);
   let closure_6 = {};
   if (null != arg0) {
-    const keys = importDefault(11).keys(arg0);
+    const keys = require("../../utils/SnowflakeUtils.tsx").keys(arg0);
     const item = keys.forEach((arg0) => {
       let tmp2 = null != tmp;
       if (tmp2) {
@@ -42,7 +42,7 @@ prototype["initialize"] = function initialize(arg0) {
         closure_6[arg0] = set;
       }
     });
-    const obj = importDefault(11);
+    const obj = require("../../utils/SnowflakeUtils.tsx");
   }
 };
 prototype["getProgress"] = function getProgress(arg0) {

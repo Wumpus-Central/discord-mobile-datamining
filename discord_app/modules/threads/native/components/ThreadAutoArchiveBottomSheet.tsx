@@ -12,7 +12,7 @@ const memoResult = require("noop").memo((channel) => {
   channel = channel.channel;
   let _require;
   ({ title, description, selected, onSelectDuration } = channel);
-  let obj = _require(8167);
+  let obj = _require("../../ThreadAutoArchive.tsx");
   const autoArchiveOptions = obj.getAutoArchiveOptions();
   let hasFlagResult = null != channel && channel.isForumPost();
   if (hasFlagResult) {
@@ -21,10 +21,10 @@ const memoResult = require("noop").memo((channel) => {
   _require = hasFlagResult;
   obj = { value: selected, title, description, accessibilityLabel: null, onChange: null, hasIcons: false, children: null };
   const intl = tmp(1236).intl;
-  obj[3] = intl.string(_require(1236).t.H4mGfI);
+  obj[3] = intl.string(_require("../../../../intl/index.native.tsx").t.H4mGfI);
   obj[4] = onSelectDuration;
   obj[6] = autoArchiveOptions.map((value) => outer1_3(_undefined(outer1_1[6]).TableRadioRow, { value: value.value, disabled: _undefined, label: value.label }, value.value));
-  return jsx(_require(7795).TableRadioGroup, { value: selected, title, description, accessibilityLabel: null, onChange: null, hasIcons: false, children: null });
+  return jsx(_require("../../../../design/components/TableRow/native/TableRadioGroup.native.tsx").TableRadioGroup, { value: selected, title, description, accessibilityLabel: null, onChange: null, hasIcons: false, children: null });
 });
 const result = require("jsxProd").fileFinishedImporting("modules/threads/native/components/ThreadAutoArchiveBottomSheet.tsx");
 

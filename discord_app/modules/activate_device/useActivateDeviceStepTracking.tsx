@@ -7,7 +7,7 @@ let result = require("usePrevious").fileFinishedImporting("modules/activate_devi
 
 export const useActivateDeviceStepTracking = function useActivateDeviceStepTracking(first) {
   let closure_0 = first;
-  const tmp = importDefault(8775)(first);
+  const tmp = require("../../hooks/usePrevious.tsx")(first);
   importDefault = tmp;
   const items = [tmp, first];
   const effect = React.useEffect(() => {

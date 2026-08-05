@@ -13,8 +13,8 @@ export default function getTitleFromPickedStreamContent(windows) {
   } else {
     joined = null;
     if (windows.displays.length > 0) {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      joined = intl.string(require(1236) /* getSystemLocale */.t.R4wpLN);
+      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      joined = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.R4wpLN);
     }
   }
   return joined;

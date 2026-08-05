@@ -38,7 +38,7 @@ export default {
     const tmp10 = importDefault;
     const tokenizeQueryResult = obj.tokenizeQuery(searchQueryString);
     obj = { id: null, searchContext: null, searchQuery: null, searchTabs: null, getLimit: null, pagination: null, trackExactTotalHits: null };
-    const obj7 = importDefault(11632);
+    const obj7 = require("managers/SearchTabsFetchManager.tsx");
     obj[0] = searchContext(11624).getSearchContextId(searchContext);
     obj[1] = searchContext;
     obj[2] = obj;
@@ -193,18 +193,18 @@ export default {
     });
   },
   clearSearchRecentMessages() {
-    importDefault(709).dispatch({ type: "SEARCH_RECENT_MESSAGES_CLEAR" });
+    require("../../Dispatcher.tsx").dispatch({ type: "SEARCH_RECENT_MESSAGES_CLEAR" });
   },
   clearAllSearchMesssages() {
-    importDefault(709).dispatch({ type: "SEARCH_MESSAGES_CLEAR_ALL" });
+    require("../../Dispatcher.tsx").dispatch({ type: "SEARCH_MESSAGES_CLEAR_ALL" });
   },
   clearSearchMessages(id) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "SEARCH_MESSAGES_CLEAR", id };
     obj.dispatch(obj);
   },
   initializeAutocomplete(channelDetailsSearchContext) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "SEARCH_AUTOCOMPLETE_INITIALIZE", searchContext: channelDetailsSearchContext };
     obj.dispatch(obj);
   },
@@ -215,12 +215,12 @@ export default {
     let tokens;
     ({ queryString, searchContext, tokens, cursorScope } = arg0);
     if (queryString.trim().length > 0) {
-      const FrecencyUserSettingsActionCreators = require(1355) /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators;
+      const FrecencyUserSettingsActionCreators = require("../user_settings/UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators;
       const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
     }
-    importDefault(709).dispatch({ type: "SEARCH_AUTOCOMPLETE_QUERY_UPDATE", searchContext, tokens, cursorScope });
+    require("../../Dispatcher.tsx").dispatch({ type: "SEARCH_AUTOCOMPLETE_QUERY_UPDATE", searchContext, tokens, cursorScope });
   },
   markSearchTokensRefreshed() {
-    importDefault(709).dispatch({ type: "SEARCH_TOKENS_REFRESHED" });
+    require("../../Dispatcher.tsx").dispatch({ type: "SEARCH_TOKENS_REFRESHED" });
   }
 };

@@ -26,12 +26,12 @@ function DCDChatItem(message) {
     const merged1 = Object.assign(merged);
     let tmp3Result = callback(_default3, obj);
   } else {
-    const AUTOMOD_INCIDENT_ACTIONS = require(686) /* set */.MessageTypesSets.AUTOMOD_INCIDENT_ACTIONS;
+    const AUTOMOD_INCIDENT_ACTIONS = require("../../../discord_common/js/shared/shared-constants/MessageTypes.tsx") /* set */.MessageTypesSets.AUTOMOD_INCIDENT_ACTIONS;
     if (AUTOMOD_INCIDENT_ACTIONS.has(message.type)) {
       obj = {};
       const merged2 = Object.assign(merged);
       tmp3Result = callback(_default, obj);
-    } else if (importDefault(5799)(message)) {
+    } else if (require("../../modules/messages/isSystemMessage.tsx")(message)) {
       const obj1 = {};
       const merged3 = Object.assign(merged);
       tmp3Result = tmp3(_default2, obj1);

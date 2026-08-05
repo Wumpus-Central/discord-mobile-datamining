@@ -25,9 +25,9 @@ function WarningLabel(children) {
   const tmp = createCacheKey();
   let obj = { style: tmp.warningContainer, children: null };
   obj = { size: "xs", color: null, style: null };
-  obj[1] = importDefault(712).colors.TEXT_MUTED;
+  obj[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_MUTED;
   obj[2] = tmp.warningIcon;
-  const items = [callback(require(4241) /* CircleInformationIcon */.CircleInformationIcon, obj), callback(require(4281) /* Text */.Text, { color: "text-default", variant: "text-sm/medium", children: children.text })];
+  const items = [callback(require("../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx") /* CircleInformationIcon */.CircleInformationIcon, obj), callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { color: "text-default", variant: "text-sm/medium", children: children.text })];
   obj[1] = items;
   return callback2(closure_5, obj);
 }
@@ -48,9 +48,9 @@ function AuthorizedAppTwoWay(application) {
 }
 function ParentApp(application) {
   let obj = { text: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   obj = { applicationName: application.application.name };
-  obj[0] = intl.format(require(1236) /* getSystemLocale */.t.j4B7EW, obj);
+  obj[0] = intl.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.j4B7EW, obj);
   return callback(WarningLabel, obj);
 }
 ({ ScrollView: c4, View: c5 } = get_ActivityIndicator);
@@ -358,7 +358,7 @@ export default function UserSettingsAuthedApp(oauth2Token) {
 };
 export const handleDeleteApp = function handleDeleteApp(application) {
   application = application.application;
-  let obj = importDefault(5618);
+  let obj = require("../../../oauth2/AuthorizedAppsActionCreators.tsx");
   obj.delete(application.id);
   selfEmbeddedActivities = selfEmbeddedActivities.getSelfEmbeddedActivities();
   const value = selfEmbeddedActivities.get(application.id);
@@ -367,5 +367,5 @@ export const handleDeleteApp = function handleDeleteApp(application) {
     _location = value.location;
   }
   obj = { location: _location, applicationId: application.id };
-  importDefault(10538).leaveActivity(obj);
+  require("../../../activities/native/EmbeddedActivitiesNativeManager.tsx").leaveActivity(obj);
 };

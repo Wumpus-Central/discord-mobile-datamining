@@ -47,7 +47,7 @@ export const useGradientMidpoint = function useGradientMidpoint() {
 };
 export const useClientThemesOverride = function useClientThemesOverride(themedChatInput) {
   let tmp2;
-  if (importDefault(8203)()) {
+  if (require("useIsUsingClientTheme.tsx")()) {
     let none = themedChatInput;
     if (themedChatInput == null) {
       none = tmp.none;

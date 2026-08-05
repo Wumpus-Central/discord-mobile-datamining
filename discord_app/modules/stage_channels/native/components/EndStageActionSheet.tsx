@@ -57,5 +57,5 @@ export default function EndStageActionSheet(channel) {
   items[3] = callback(View, obj4);
   obj[1] = items;
   obj[0] = callback2(View, obj);
-  return callback(importDefault(7775), obj);
+  return callback(require("ScrollHandlingActionSheet.tsx"), obj);
 };

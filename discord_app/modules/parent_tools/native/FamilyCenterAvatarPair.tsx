@@ -22,7 +22,7 @@ export default function FamilyCenterAvatarPair(otherUser) {
   otherUser = otherUser.otherUser;
   ({ iconSrc, iconStyles } = otherUser);
   const tmp = createCacheKey();
-  let obj = require(647) /* defaultAreStatesEqual */;
+  let obj = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   let tmp5 = null;

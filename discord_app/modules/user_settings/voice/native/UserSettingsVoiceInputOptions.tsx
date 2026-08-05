@@ -11,22 +11,22 @@ let error;
 let metroImportAll;
 const require = arg1;
 function handleInputModePress() {
-  let obj = require(5643) /* showSimpleActionSheet */;
+  let obj = require("../../../action_sheet/native/showSimpleActionSheet.tsx") /* showSimpleActionSheet */;
   obj = { key: "InputMode", header: null, options: null, hasIcons: false };
   obj = { title: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t["pS+K2L"]);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["pS+K2L"]);
   obj[1] = obj;
   const obj1 = { label: null, onPress: null };
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj1[0] = intl2.string(require(1236) /* getSystemLocale */.t.Q8gkVL);
+  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj1[0] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Q8gkVL);
   obj1[1] = function onPress() {
     callback(9077).setMode(constants.PUSH_TO_TALK);
   };
   const items = [obj1, ];
   const obj2 = { label: null, onPress: null };
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj2[0] = intl3.string(require(1236) /* getSystemLocale */.t.cHCEOJ);
+  const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj2[0] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.cHCEOJ);
   obj2[1] = function onPress() {
     callback(9077).setMode(constants.VOICE_ACTIVITY);
   };
@@ -89,7 +89,7 @@ export default function UserSettingsVoiceInputOptions() {
       obj = { threshold };
       return obj.setMode(inputMode, obj);
     };
-    obj5[1] = tmp5(importDefault(10745), obj6);
+    obj5[1] = tmp5(require("../../../../components_native/common/VoiceSensitivity.tsx"), obj6);
     obj4[1] = tmp5(View, obj5);
     items2[1] = tmp5(tmp(5315).TableRow, obj4);
     obj2[0] = items2;

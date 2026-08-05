@@ -141,14 +141,14 @@ export const getSubscriptionGroupForSubscriptionPlan = function getSubscriptionG
 };
 export const fetchApplication = function fetchApplication(applicationId, signal) {
   const _require = applicationId;
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "APPLICATION_FETCH", applicationId };
   obj.dispatch(obj);
-  const HTTP = _require(530).HTTP;
+  const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
   obj = { url: Endpoints.APPLICATION_PUBLIC(applicationId), signal, rejectWithError: null };
-  obj[2] = _require(530).rejectWithMigratedError();
+  obj[2] = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
   const value = HTTP.get(obj);
-  const obj4 = _require(530);
+  const obj4 = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
   return value.then((application) => {
     let obj = callback(table[3]);
     obj = { type: "APPLICATION_FETCH_SUCCESS", application: application.body, isHydrated: true };

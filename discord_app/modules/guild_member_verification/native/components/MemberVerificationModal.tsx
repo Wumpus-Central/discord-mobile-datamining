@@ -1,5 +1,5 @@
 // discord_app/modules/guild_member_verification/native/components/MemberVerificationModal.tsx
-import module_5733 from "module_5733";
+import KeyboardAwareView from "../../../keyboard/native/KeyboardAwareView.tsx";
 import { View } from "openMemberVerificationSuccessAlert";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import get from "get";

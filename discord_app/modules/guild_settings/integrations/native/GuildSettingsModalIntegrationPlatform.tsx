@@ -113,7 +113,7 @@ IntegrationItem.prototype["render"] = function render() {
       let str = "twitch.tv/";
       combined = "twitch.tv/" + integration.name;
     }
-    let obj = importDefault(4966);
+    let obj = require("../../../../lib/Platforms.tsx");
     const value = obj.get(integration.type);
     if (null == value) {
       str = undefined;

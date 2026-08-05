@@ -133,10 +133,10 @@ export default stageMusicManager;
 export const useShowStageMusicMuteButton = function useShowStageMusicMuteButton(channelId) {
   const _require = channelId;
   const items = [handleConnectionOpen];
-  let stateFromStores = _require(589).useStateFromStores(items, () => outer1_4.getVoiceChannelId() === closure_0);
-  const obj = _require(589);
-  const stageParticipants = _require(5115).useStageParticipants(channelId, _require(5109).StageChannelParticipantNamedIndex.SPEAKER);
-  const obj2 = _require(5115);
+  let stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_4.getVoiceChannelId() === closure_0);
+  const obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const stageParticipants = _require("StageChannelParticipantStoreHooks.tsx").useStageParticipants(channelId, _require("StageChannelParticipants.tsx").StageChannelParticipantNamedIndex.SPEAKER);
+  const obj2 = _require("StageChannelParticipantStoreHooks.tsx");
   const tmp2 = null != stageParticipants.find((voiceState) => {
     voiceState = voiceState.voiceState;
     return !voiceState.isVoiceMuted();
@@ -152,7 +152,7 @@ export const useShowStageMusicMuteButton = function useShowStageMusicMuteButton(
 };
 export const shouldShowStageMusicMuteButton = function shouldShowStageMusicMuteButton(id) {
   let tmp = store2.getVoiceChannelId() === id;
-  mutableParticipants = mutableParticipants.getMutableParticipants(id, require(5109) /* sortKey */.StageChannelParticipantNamedIndex.SPEAKER);
+  mutableParticipants = mutableParticipants.getMutableParticipants(id, require("StageChannelParticipants.tsx") /* sortKey */.StageChannelParticipantNamedIndex.SPEAKER);
   if (tmp) {
     tmp = null == handleStageInstanceCreateOrUpdate.getStageInstanceByChannel(id);
   }

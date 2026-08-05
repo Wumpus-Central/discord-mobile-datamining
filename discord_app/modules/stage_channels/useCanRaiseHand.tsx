@@ -8,5 +8,5 @@ const result = require("initialize").fileFinishedImporting("modules/stage_channe
 export const useCanRaiseHand = function useCanRaiseHand(channel) {
   const _require = channel;
   const items = [getUncachedChannelPermissions];
-  return _require(589).useStateFromStores(items, () => outer1_2.can(outer1_3.REQUEST_TO_SPEAK, closure_0));
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_2.can(outer1_3.REQUEST_TO_SPEAK, closure_0));
 };

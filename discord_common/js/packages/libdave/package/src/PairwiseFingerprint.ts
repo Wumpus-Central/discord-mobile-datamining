@@ -1,6 +1,6 @@
 // discord_common/js/packages/libdave/package/src/PairwiseFingerprint.ts
 import asyncGeneratorStep from "asyncGeneratorStep";
-import module_36 from "module_36";
+import _arrayLikeToArray from "../../../../../../_runtime/00036__arrayLikeToArray.js";
 
 const require = arg1;
 function compareArrays(arg0, arg1) {

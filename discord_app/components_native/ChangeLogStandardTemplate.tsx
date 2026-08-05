@@ -36,7 +36,7 @@ function LHeading(children) {
     });
     combined = mapped.concat(tmp5);
   }
-  const items = [closure_10(_require(1297).LegacyText, { accessibilityRole: "header", style: combined, children: children.children }), ];
+  const items = [closure_10(_require("../design/void/native.tsx").LegacyText, { accessibilityRole: "header", style: combined, children: children.children }), ];
   _require = false;
   let combined1;
   if (null != children.className) {
@@ -157,9 +157,9 @@ const memoResult1 = importAllResult.memo((video) => {
     children: null
   };
   const items1 = [video.video, ];
-  let obj2 = importDefault(4275);
+  let obj2 = require("../modules/markup/MarkupUtils.tsx");
   id = changeLog.id;
-  let obj3 = importDefault(8003);
+  let obj3 = require("../utils/ChangeLogUtils.tsx");
   {
     obj = { components: null };
     const obj1 = { Link: null, ListItem: null, LHeading: null, Heading: null };
@@ -217,7 +217,7 @@ export const changelogRules = function changelogRules(changelogId, arg1) {
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = importDefault(8003);
+  let obj = require("../utils/ChangeLogUtils.tsx");
   if (flag) {
     obj = { components: null };
     obj = { Link: null, ListItem: null, LHeading: null, Heading: null };
@@ -252,7 +252,7 @@ export const changelogRules = function changelogRules(changelogId, arg1) {
   return messageRules;
 };
 export const getRenderChangelog = function getRenderChangelog(id) {
-  let obj = importDefault(4275);
+  let obj = require("../modules/markup/MarkupUtils.tsx");
   id = id.id;
   {
     obj = { components: null };

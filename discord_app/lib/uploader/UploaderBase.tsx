@@ -305,9 +305,9 @@ prototype["_recomputeProgressByFile"] = function _recomputeProgressByFile() {
 };
 prototype["_addAttachmentsToPayload"] = function _addAttachmentsToPayload(arg0, arg1, arg2) {
   const merged = Object.assign(arg0);
-  importDefault(12);
+  require("../../../_runtime/00012_apply.js");
   const items = [...arg2];
-  return importDefault(12).set({}, arg1, items);
+  return require("../../../_runtime/00012_apply.js").set({}, arg1, items);
 };
 prototype["clearProcessingMessageInterval"] = function clearProcessingMessageInterval() {
   const self = this;

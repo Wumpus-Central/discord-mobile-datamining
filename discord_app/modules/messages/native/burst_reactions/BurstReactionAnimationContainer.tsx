@@ -39,7 +39,7 @@ function BurstReactionAnimationContainerInner() {
       first(709).unsubscribe("BURST_REACTION_EFFECT_SEND", handleEffectReceived);
     };
   }, []);
-  let obj = _require(4146);
+  let obj = _require("../../../reanimated/ReanimatedRexport.tsx");
   let fn = function y() {
     if (null == first) {
       let obj = { opacity: 0 };
@@ -68,7 +68,7 @@ function BurstReactionAnimationContainerInner() {
     }
     return obj;
   };
-  obj = { animationData: first, showAnimation: first1, withTiming: _require(4286).withTiming, runOnJS: _require(4146).runOnJS, handleComponentFinish };
+  obj = { animationData: first, showAnimation: first1, withTiming: _require("../../../../design/animation/reanimated/timing/timing.tsx").withTiming, runOnJS: _require("../../../reanimated/ReanimatedRexport.tsx").runOnJS, handleComponentFinish };
   fn.__closure = obj;
   fn.__workletHash = 12044515783370;
   fn.__initData = closure_12;
@@ -76,7 +76,7 @@ function BurstReactionAnimationContainerInner() {
   let tmp8 = null;
   if (null != first) {
     obj = { contentTypes: null, children: null };
-    let items = [_require(1358).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS];
+    let items = [_require("../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS];
     obj[0] = items;
     obj[1] = function children(markAsDismissed) {
       markAsDismissed = markAsDismissed.markAsDismissed;
@@ -154,7 +154,7 @@ let result = require("get ActivityIndicator").fileFinishedImporting("modules/mes
 
 export default function BurstReactionAnimationContainer() {
   const obj = { theme: null, children: null };
-  obj[0] = importDefault(712).themes.DARKER;
+  obj[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").themes.DARKER;
   obj[1] = callback(BurstReactionAnimationContainerInner, {});
-  return callback(require(3997) /* ManaContext */.ThemeContextProvider, obj);
+  return callback(require("../../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */.ThemeContextProvider, obj);
 };

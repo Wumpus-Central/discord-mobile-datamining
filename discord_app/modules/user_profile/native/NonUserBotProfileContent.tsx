@@ -28,10 +28,10 @@ const memoResult = require("OpenableUserProfileAvatar").memo(function NonUserBot
   ({ user, channel, displayProfile } = scrollPosition);
   let trackUserProfileAction;
   let importDefault;
-  const tmp3 = importDefault(8757)();
+  const tmp3 = require("UserProfileSharedStyles.tsx")();
   let obj = trackUserProfileAction(8710);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
-  let obj1 = importDefault(4474);
+  let obj1 = require("../../../utils/NicknameUtils.tsx");
   let guild_id;
   if (channel != null) {
     guild_id = channel.guild_id;
@@ -43,12 +43,12 @@ const memoResult = require("OpenableUserProfileAvatar").memo(function NonUserBot
   const name = obj1.useName(guild_id, id, user);
   let tmpResult = tmp(4124);
   importDefault = tmpResult.useUserTag(user);
-  const tmp9 = importDefault(8747)(ACTION_SHEET_MAX_WIDTH);
-  const tmp8 = importDefault(8758)(displayProfile);
-  ({ bannerAnimatedStyle, bannerImageAnimatedStyle, contentAnimatedStyle, blurAnimatedProps, showBlur } = importDefault(8759)({ scrollPosition: scrollPosition.scrollPosition, bannerHeight: tmp9 }));
-  const tmp10 = importDefault(8759)({ scrollPosition: scrollPosition.scrollPosition, bannerHeight: tmp9 });
-  ({ theme, primaryColor, secondaryColor } = importDefault(8745)({ user, displayProfile }));
-  const tmp11 = importDefault(8745)({ user, displayProfile });
+  const tmp9 = require("../hooks/native/useUserProfileBannerHeight.tsx")(ACTION_SHEET_MAX_WIDTH);
+  const tmp8 = require("../hooks/useBadges.tsx")(displayProfile);
+  ({ bannerAnimatedStyle, bannerImageAnimatedStyle, contentAnimatedStyle, blurAnimatedProps, showBlur } = require("useUserProfileOverscrollStyles.tsx")({ scrollPosition: scrollPosition.scrollPosition, bannerHeight: tmp9 }));
+  const tmp10 = require("useUserProfileOverscrollStyles.tsx")({ scrollPosition: scrollPosition.scrollPosition, bannerHeight: tmp9 });
+  ({ theme, primaryColor, secondaryColor } = require("../hooks/useProfileTheme.tsx")({ user, displayProfile }));
+  const tmp11 = require("../hooks/useProfileTheme.tsx")({ user, displayProfile });
   const userProfileColors = trackUserProfileAction(8754).useUserProfileColors({ theme, primaryColor, secondaryColor });
   const containerBackground = userProfileColors.containerBackground;
   if (null == user) {

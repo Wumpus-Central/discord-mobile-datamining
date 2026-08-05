@@ -108,7 +108,7 @@ prototype["getCoverImageUrl"] = function getCoverImageUrl(arg0, size) {
   } else if (null == size) {
     return coverURL;
   } else {
-    let str = importDefault(1467).toURLSafe(coverURL);
+    let str = require("../../utils/URLUtils.tsx").toURLSafe(coverURL);
     str = coverURL;
     if (null != str) {
       const searchParams = str.searchParams;

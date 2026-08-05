@@ -95,22 +95,22 @@ class AccessibilityCallManager extends tmp4 {
 }
 const prototype = AccessibilityCallManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const subscription = importDefault(709).subscribe("CALL_CREATE", this.handleCallCreate);
-  const obj = importDefault(709);
-  const subscription1 = importDefault(709).subscribe("CALL_UPDATE", this.handleCallUpdate);
-  const obj2 = importDefault(709);
-  const subscription2 = importDefault(709).subscribe("CALL_DELETE", this.handleCallDelete);
-  const obj3 = importDefault(709);
-  const subscription3 = importDefault(709).subscribe("CONNECTION_OPEN", this.handleConnectionOpen);
+  const subscription = require("../../../Dispatcher.tsx").subscribe("CALL_CREATE", this.handleCallCreate);
+  const obj = require("../../../Dispatcher.tsx");
+  const subscription1 = require("../../../Dispatcher.tsx").subscribe("CALL_UPDATE", this.handleCallUpdate);
+  const obj2 = require("../../../Dispatcher.tsx");
+  const subscription2 = require("../../../Dispatcher.tsx").subscribe("CALL_DELETE", this.handleCallDelete);
+  const obj3 = require("../../../Dispatcher.tsx");
+  const subscription3 = require("../../../Dispatcher.tsx").subscribe("CONNECTION_OPEN", this.handleConnectionOpen);
 };
 prototype["_terminate"] = function _terminate() {
-  importDefault(709).unsubscribe("CALL_CREATE", this.handleCallCreate);
-  const obj = importDefault(709);
-  importDefault(709).unsubscribe("CALL_UPDATE", this.handleCallUpdate);
-  const obj2 = importDefault(709);
-  importDefault(709).unsubscribe("CALL_DELETE", this.handleCallDelete);
-  const obj3 = importDefault(709);
-  importDefault(709).unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen);
+  require("../../../Dispatcher.tsx").unsubscribe("CALL_CREATE", this.handleCallCreate);
+  const obj = require("../../../Dispatcher.tsx");
+  require("../../../Dispatcher.tsx").unsubscribe("CALL_UPDATE", this.handleCallUpdate);
+  const obj2 = require("../../../Dispatcher.tsx");
+  require("../../../Dispatcher.tsx").unsubscribe("CALL_DELETE", this.handleCallDelete);
+  const obj3 = require("../../../Dispatcher.tsx");
+  require("../../../Dispatcher.tsx").unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen);
   map.clear();
   set.clear();
 };

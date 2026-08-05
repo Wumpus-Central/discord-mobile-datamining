@@ -64,14 +64,14 @@ export default function useFavoritesGuildCategoryAddAction(id) {
       }
     }
   }), items);
-  let obj = _require(1865);
+  let obj = _require("../../FavoritesUtils.tsx");
   let tmp4 = null;
   if (obj.isFavoritesGuildId(id.getGuildId())) {
     tmp4 = null;
     if (id.type === ChannelTypes.GUILD_CATEGORY) {
       obj = { label: null, perform: null };
-      const intl = _require(1236).intl;
-      obj[0] = intl.string(importDefault(3031)["1QJmIL"]);
+      const intl = _require("../../../../intl/index.native.tsx").intl;
+      obj[0] = intl.string(require("../../intl/FavoritesGuild.messages.js")["1QJmIL"]);
       obj[1] = callback;
       tmp4 = obj;
     }

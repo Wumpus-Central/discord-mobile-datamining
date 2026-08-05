@@ -30,7 +30,7 @@ export const FEATURED_GUILDS_SEARCH_OPTIONS = { categoryId: -1 };
 export const CategoryId = obj;
 export const DISCOVERY_SIDEBAR_CATEGORIES = items1;
 export const getLanguageOptions = function getLanguageOptions() {
-  const languages = require(1236) /* getSystemLocale */.getLanguages();
+  const languages = require("../../intl/index.native.tsx") /* getSystemLocale */.getLanguages();
   const found = languages.filter((code) => !closure_2.includes(code.code));
   return found.map((code) => {
     let tmp = code;

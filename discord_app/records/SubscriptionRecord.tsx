@@ -174,9 +174,9 @@ Object.defineProperty(prototype, "planIdForCurrencies", {
       if (tmp5) {
         tmp5 = "" !== self.planIdFromItems;
       }
-      importDefault(38)(tmp5, "Premium subscription has no planId for currencies");
+      require("../../_runtime/metro/00038__.js")(tmp5, "Premium subscription has no planId for currencies");
       let planId = self.planIdFromItems;
-      const tmp3 = importDefault(38);
+      const tmp3 = require("../../_runtime/metro/00038__.js");
     } else {
       planId = self.planId;
     }
@@ -231,14 +231,14 @@ Object.defineProperty(prototype, "isOnPlatformMatchingExternalPaymentGateway", {
   get: function isOnPlatformMatchingExternalPaymentGateway() {
     let isPurchasedViaApple = this.isPurchasedViaApple;
     if (isPurchasedViaApple) {
-      isPurchasedViaApple = require(500) /* set */.isIOS();
-      const obj = require(500) /* set */;
+      isPurchasedViaApple = require("../utils/PlatformUtils.tsx") /* set */.isIOS();
+      const obj = require("../utils/PlatformUtils.tsx") /* set */;
     }
     if (!isPurchasedViaApple) {
       let isPurchasedViaGoogle = this.isPurchasedViaGoogle;
       if (isPurchasedViaGoogle) {
-        isPurchasedViaGoogle = require(3944) /* isPremiumGiftingSupported */.isGooglePlayBillingSupported();
-        const obj2 = require(3944) /* isPremiumGiftingSupported */;
+        isPurchasedViaGoogle = require("../modules/device/BillingPlatformUtils.tsx") /* isPremiumGiftingSupported */.isGooglePlayBillingSupported();
+        const obj2 = require("../modules/device/BillingPlatformUtils.tsx") /* isPremiumGiftingSupported */;
       }
       isPurchasedViaApple = isPurchasedViaGoogle;
     }

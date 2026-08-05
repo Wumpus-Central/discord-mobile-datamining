@@ -1,5 +1,5 @@
 // discord_app/lib/search/snowballStemmer.tsx
-import module_15668 from "module_15668";
+import 15668__ from "../../../_runtime/metro/15668__.js";
 
 let closure_0 = module_15668.newStemmer("english");
 const result = require("set").fileFinishedImporting("lib/search/snowballStemmer.tsx");

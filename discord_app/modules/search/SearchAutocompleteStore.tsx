@@ -17,7 +17,7 @@ function handleUserSearchResults(c165, results) {
   let mode;
   let query;
   let tokens;
-  let obj = require(11624) /* SearchTokenTypes */;
+  let obj = require("SearchUtils.tsx") /* SearchTokenTypes */;
   const searchContextId = obj.getSearchContextId(c165);
   let value = map1.get(searchContextId);
   value = map.get(searchContextId);
@@ -75,14 +75,14 @@ function handleUserSearchResults(c165, results) {
         ({ mode, tokens } = value);
         ({ query, cursorScope } = value);
         const tmp10 = getAutocompleteList(c165, mode, tokens);
-        const searchContextId1 = require(11624) /* SearchTokenTypes */.getSearchContextId(c165);
+        const searchContextId1 = require("SearchUtils.tsx") /* SearchTokenTypes */.getSearchContextId(c165);
         let value1 = obj2.get(searchContextId1);
         if (value1 == null) {
           obj = { results: null, context: null };
           obj[0] = [];
-          obj[1] = importDefault(7234).getUserSearchContext(handleUserSearchResults.bind(null, c165));
+          obj[1] = require("../autocompleter/UserSearchManager.tsx").getUserSearchContext(handleUserSearchResults.bind(null, c165));
           value1 = obj;
-          const obj6 = importDefault(7234);
+          const obj6 = require("../autocompleter/UserSearchManager.tsx");
         }
         const result = obj2.set(searchContextId1, value1);
         obj = { searchContext: null, query: null, mode: null, tokens: null, cursorScope: null, autocompletes: null };
@@ -94,7 +94,7 @@ function handleUserSearchResults(c165, results) {
         obj[5] = tmp10;
         const result1 = map.set(searchContextId, obj);
         searchAutocompleteStoreClass.emitChange();
-        const tmpResult = require(11624) /* SearchTokenTypes */;
+        const tmpResult = require("SearchUtils.tsx") /* SearchTokenTypes */;
       }
       tmp19 = constants;
     }
@@ -138,7 +138,7 @@ function getAutocompleteList(searchContext, autocompleteMode, tokens) {
             if (value == null) {
               obj = { results: null, context: null };
               obj[0] = [];
-              let obj2 = importDefault(7234);
+              let obj2 = require("../autocompleter/UserSearchManager.tsx");
               obj[1] = obj2.getUserSearchContext(handleUserSearchResults.bind(null, searchContext));
               value = obj;
             }
@@ -191,7 +191,7 @@ function getAutocompleteList(searchContext, autocompleteMode, tokens) {
           }
         }
       }
-      const tmp15 = importDefault(11625)[filter];
+      const tmp15 = require("tokens/SearchTokens.tsx")[filter];
       let getAutocompletions;
       if (tmp15 != null) {
         getAutocompletions = tmp15.getAutocompletions;
@@ -219,14 +219,14 @@ function getAutocompleteList(searchContext, autocompleteMode, tokens) {
   }
 }
 function handleChannelCreateOrDelete() {
-  require(11624) /* SearchTokenTypes */.clearTokenCache();
+  require("SearchUtils.tsx") /* SearchTokenTypes */.clearTokenCache();
 }
 function rebuildAutocompleteResults(c13) {
   let cursorScope;
   let mode;
   let query;
   let tokens;
-  let obj = require(11624) /* SearchTokenTypes */;
+  let obj = require("SearchUtils.tsx") /* SearchTokenTypes */;
   const searchContextId = obj.getSearchContextId(c13);
   let value = map.get(searchContextId);
   if (null == value) {
@@ -240,9 +240,9 @@ function rebuildAutocompleteResults(c13) {
     if (value == null) {
       obj = { results: null, context: null };
       obj[0] = [];
-      obj[1] = importDefault(7234).getUserSearchContext(handleUserSearchResults.bind(null, c13));
+      obj[1] = require("../autocompleter/UserSearchManager.tsx").getUserSearchContext(handleUserSearchResults.bind(null, c13));
       value = obj;
-      const obj4 = importDefault(7234);
+      const obj4 = require("../autocompleter/UserSearchManager.tsx");
     }
     const result = map1.set(searchContextId1, value);
     obj = { searchContext: null, query: null, mode: null, tokens: null, cursorScope: null, autocompletes: null };
@@ -275,7 +275,7 @@ prototype["initialize"] = function initialize() {
   this.waitFor(ensureGuildLoaded, trackCommunicationDisabled, createGuildRecordFromRust, handleConnectionOpen, initialize, mergeGuildAvatar);
 };
 prototype["getState"] = function getState(searchContext) {
-  let obj = require(11624) /* SearchTokenTypes */;
+  let obj = require("SearchUtils.tsx") /* SearchTokenTypes */;
   let value = map.get(obj.getSearchContextId(searchContext));
   if (value == null) {
     obj = { searchContext: null, query: "", mode: null, tokens: null, cursorScope: null, autocompletes: null };
@@ -296,9 +296,9 @@ SearchAutocompleteStoreClass.displayName = "SearchAutocompleteStore";
 const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(require("dispatcher"), {
   SEARCH_AUTOCOMPLETE_INITIALIZE: function handleSearchAutocompleteInitialize(searchContext) {
     searchContext = searchContext.searchContext;
-    if (!importDefault(4444)(searchContext, searchContext)) {
-      require(11624) /* SearchTokenTypes */.clearTokenCache();
-      const obj = require(11624) /* SearchTokenTypes */;
+    if (!require("../../../_runtime/04444_isEqual.js")(searchContext, searchContext)) {
+      require("SearchUtils.tsx") /* SearchTokenTypes */.clearTokenCache();
+      const obj = require("SearchUtils.tsx") /* SearchTokenTypes */;
     }
     rebuildAutocompleteResults(searchContext);
   },
@@ -307,15 +307,15 @@ const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(require("d
     let searchContext;
     let tokens;
     ({ searchContext, tokens, cursorScope } = arg0);
-    if (!importDefault(4444)(searchContext, searchContext)) {
-      let obj = require(11624) /* SearchTokenTypes */;
+    if (!require("../../../_runtime/04444_isEqual.js")(searchContext, searchContext)) {
+      let obj = require("SearchUtils.tsx") /* SearchTokenTypes */;
       obj.clearTokenCache();
     }
-    let obj1 = require(11624) /* SearchTokenTypes */;
+    let obj1 = require("SearchUtils.tsx") /* SearchTokenTypes */;
     const queryFromTokens = obj1.getQueryFromTokens(tokens);
-    let obj2 = require(11624) /* SearchTokenTypes */;
+    let obj2 = require("SearchUtils.tsx") /* SearchTokenTypes */;
     const autocompleteMode = obj2.getAutocompleteMode(cursorScope, tokens);
-    let obj3 = require(11624) /* SearchTokenTypes */;
+    let obj3 = require("SearchUtils.tsx") /* SearchTokenTypes */;
     const searchContextId = obj3.getSearchContextId(searchContext);
     let value = map.get(searchContextId);
     if (null != value) {

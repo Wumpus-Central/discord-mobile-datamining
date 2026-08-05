@@ -24,14 +24,14 @@ export default {
     return "https://creator-support.discord.com" + "/hc/" + _getSystemLocale.locale.toLowerCase() + "/articles/" + MEDIA_CHANNEL;
   },
   getTwitterURL() {
-    return importDefault(3897)(LocalizedLinks.TWITTER);
+    return require("../modules/links/getLocalizedLink.tsx")(LocalizedLinks.TWITTER);
   },
   getCommunityURL() {
     return combined + "/hc/" + _getSystemLocale.locale.toLowerCase();
   },
   getSubmitRequestURL(arg0) {
     const formatted = _getSystemLocale.locale.toLowerCase();
-    const sum = combined + "/hc/" + formatted + "/requests/new?platform=" + encodeURIComponent(require(500) /* set */.getPlatformName());
+    const sum = combined + "/hc/" + formatted + "/requests/new?platform=" + encodeURIComponent(require("PlatformUtils.tsx") /* set */.getPlatformName());
     let sum1 = sum;
     if (null != arg0) {
       const _encodeURIComponent = encodeURIComponent;

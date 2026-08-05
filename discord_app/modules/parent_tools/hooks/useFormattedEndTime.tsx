@@ -6,7 +6,7 @@ const result = require("initialize").fileFinishedImporting("modules/parent_tools
 
 export default function useFormattedEndTime() {
   const items = [mergeGuildAvatar];
-  return require(589) /* initialize */.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let nextEndTime;
     if (currentUser != null) {

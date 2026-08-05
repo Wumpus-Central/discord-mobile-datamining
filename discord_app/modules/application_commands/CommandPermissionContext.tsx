@@ -68,7 +68,7 @@ export const buildPermissionContext = function buildPermissionContext(channel, i
     }
   }
   if (null == obj) {
-    let viewNsfwCommandsOrDefault = require(8156) /* resolveNsfwTogglesWithDefaults */.getViewNsfwCommandsOrDefault();
+    let viewNsfwCommandsOrDefault = require("../user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx") /* resolveNsfwTogglesWithDefaults */.getViewNsfwCommandsOrDefault();
     id = id.getId();
     currentUser = currentUser.getCurrentUser();
     let flag;
@@ -92,7 +92,7 @@ export const buildPermissionContext = function buildPermissionContext(channel, i
       items = [];
     }
     let isThreadResult = channel instanceof tmp;
-    const obj2 = require(8156) /* resolveNsfwTogglesWithDefaults */;
+    const obj2 = require("../user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx") /* resolveNsfwTogglesWithDefaults */;
     if (isThreadResult) {
       isThreadResult = channel.isThread();
     }
@@ -220,17 +220,17 @@ export const computeCommandContextType = function computeCommandContextType(chan
         type = channel.type;
       }
       if (type !== constants.DM) {
-        const PRIVATE_CHANNEL = require(1906) /* PermissionOverwriteType */.InteractionContextType.PRIVATE_CHANNEL;
+        const PRIVATE_CHANNEL = require("../../flow/Server.tsx") /* PermissionOverwriteType */.InteractionContextType.PRIVATE_CHANNEL;
       } else {
         let recipientId;
         if (channel != null) {
           recipientId = channel.getRecipientId();
         }
       }
-      const BOT_DM = require(1906) /* PermissionOverwriteType */.InteractionContextType.BOT_DM;
+      const BOT_DM = require("../../flow/Server.tsx") /* PermissionOverwriteType */.InteractionContextType.BOT_DM;
     }
   }
-  return require(1906) /* PermissionOverwriteType */.InteractionContextType.GUILD;
+  return require("../../flow/Server.tsx") /* PermissionOverwriteType */.InteractionContextType.GUILD;
 };
 export const getContextGuildId = function getContextGuildId(context) {
   return context instanceof ChannelRecordBase ? context.guild_id : context.id;

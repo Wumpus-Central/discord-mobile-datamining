@@ -9,7 +9,7 @@ const result = set.fileFinishedImporting("modules/user_profile/utils/getActivity
 
 export default function getActivityPlatform(session_id) {
   const importDefault = session_id;
-  const tmp3 = importDefault(12202)(session_id.session_id);
+  const tmp3 = require("parseProviderRouteHeadlessSessionId.tsx")(session_id.session_id);
   if (null != tmp3) {
     return tmp3;
   } else if (tmp(9573)(session_id)) {

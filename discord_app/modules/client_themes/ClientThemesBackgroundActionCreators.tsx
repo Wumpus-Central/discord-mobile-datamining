@@ -2,18 +2,18 @@
 const result = require("set").fileFinishedImporting("modules/client_themes/ClientThemesBackgroundActionCreators.tsx");
 
 export const updateBackgroundGradientPreset = function updateBackgroundGradientPreset(id) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "UPDATE_BACKGROUND_GRADIENT_PRESET", presetId: id };
   obj.dispatch(obj);
 };
 export const updateMobilePendingThemeIndex = function updateMobilePendingThemeIndex(mobileThemesIndex) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "UPDATE_MOBILE_PENDING_THEME_INDEX", mobileThemesIndex };
   obj.dispatch(obj);
 };
 export const resetBackgroundGradientPreset = function resetBackgroundGradientPreset() {
-  importDefault(709).dispatch({ type: "UPDATE_BACKGROUND_GRADIENT_PRESET", presetId: null });
+  require("../../Dispatcher.tsx").dispatch({ type: "UPDATE_BACKGROUND_GRADIENT_PRESET", presetId: null });
 };
 export const resetPreviewClientTheme = function resetPreviewClientTheme() {
-  importDefault(709).dispatch({ type: "RESET_PREVIEW_CLIENT_THEME" });
+  require("../../Dispatcher.tsx").dispatch({ type: "RESET_PREVIEW_CLIENT_THEME" });
 };

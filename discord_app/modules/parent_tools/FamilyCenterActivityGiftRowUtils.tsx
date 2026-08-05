@@ -5,8 +5,8 @@ export const getGiftRowDisplayInfo = function getGiftRowDisplayInfo(giftInfo) {
   return { skuId: giftInfo.sku_id, subscriptionPlanId: giftInfo.subscription_plan_id, price: giftInfo.price, gifterUserId: giftInfo.gifter_user_id, claimed: giftInfo.claimed, offeredAt: giftInfo.offered_at, claimedAt: giftInfo.claimed_at };
 };
 export const formatGiftDate = function formatGiftDate(claimedAt) {
-  const dateTimeFormat = new Intl.DateTimeFormat(require(1236) /* getSystemLocale */.intl.currentLocale, { month: "short", day: "numeric" });
-  return dateTimeFormat.format(require(3510).parseISO(claimedAt));
+  const dateTimeFormat = new Intl.DateTimeFormat(require("../../intl/index.native.tsx") /* getSystemLocale */.intl.currentLocale, { month: "short", day: "numeric" });
+  return dateTimeFormat.format(require("../../../_runtime/metro/03510__.js").parseISO(claimedAt));
 };
 export const getGiftSubtext = function getGiftSubtext(claimed) {
   let claimedAt;
@@ -16,21 +16,21 @@ export const getGiftSubtext = function getGiftSubtext(claimed) {
   ({ price, gifterName, offeredAt, claimedAt } = claimed);
   let formatPriceResult = null;
   if (null != price) {
-    let obj = require(5764) /* formatSingleCurrencyPrice */;
+    let obj = require("../../utils/PriceUtils.tsx") /* formatSingleCurrencyPrice */;
     formatPriceResult = obj.formatPrice(price.amount, price.currency);
   }
   if (null != formatPriceResult) {
     if (null != gifterName) {
-      const intl = require(1236) /* getSystemLocale */.intl;
+      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
       obj = { price: null, username: null };
       obj[0] = formatPriceResult;
       obj[1] = gifterName;
-      let formatToPlainStringResult = intl.formatToPlainString(importDefault(2285)["o44n/1"], obj);
+      let formatToPlainStringResult = intl.formatToPlainString(require("FamilyCenter.messages.js")["o44n/1"], obj);
     }
     const items = [formatToPlainStringResult, ];
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const formatToPlainString = intl2.formatToPlainString;
-    const tmp11 = importDefault(2285);
+    const tmp11 = require("FamilyCenter.messages.js");
     if (claimed.claimed) {
       if (claimedAt == null) {
         claimedAt = offeredAt;

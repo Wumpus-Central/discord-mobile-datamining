@@ -14,9 +14,9 @@ export const PlayStationLinkLanding = function PlayStationLinkLanding(platformTy
   let obj = navigation(1480);
   navigation = obj.useNavigation();
   const tmp = callback();
-  const articleURL = importDefault(1945).getArticleURL(HelpdeskArticles.PS_CONNECTION);
+  const articleURL = require("../../../../../../utils/HelpdeskUtils.tsx").getArticleURL(HelpdeskArticles.PS_CONNECTION);
   let intl = navigation(1236).intl;
-  const obj2 = importDefault(1945);
+  const obj2 = require("../../../../../../utils/HelpdeskUtils.tsx");
   let items = [navigation];
   const memo = React.useMemo(() => {
     let obj = { label: null, subLabel: null, icon: null };

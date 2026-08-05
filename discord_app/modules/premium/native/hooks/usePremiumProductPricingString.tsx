@@ -6,12 +6,12 @@ const require = arg1;
 const result = require("getPremiumPlanItem").fileFinishedImporting("modules/premium/native/hooks/usePremiumProductPricingString.tsx");
 
 export default function usePremiumProductPricingString(closure_0, c3) {
-  const planIdForPremiumType = _require(3931).getPlanIdForPremiumType(closure_0, c3);
-  const obj = _require(3931);
-  _require = _require(5770).getProductIdForGift(planIdForPremiumType);
-  const obj2 = _require(5770);
+  const planIdForPremiumType = _require("../../../../utils/PremiumUtils.tsx").getPlanIdForPremiumType(closure_0, c3);
+  const obj = _require("../../../../utils/PremiumUtils.tsx");
+  _require = _require("../ProductIds.android.tsx").getProductIdForGift(planIdForPremiumType);
+  const obj2 = _require("../ProductIds.android.tsx");
   const items = [updateProduct];
-  const stateFromStores = _require(589).useStateFromStores(items, () => outer1_2.getProduct(closure_0));
+  const stateFromStores = _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_2.getProduct(closure_0));
   let priceString;
   if (stateFromStores != null) {
     priceString = stateFromStores.priceString;

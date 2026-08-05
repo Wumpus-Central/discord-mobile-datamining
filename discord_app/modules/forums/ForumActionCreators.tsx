@@ -144,12 +144,12 @@ let result = require("set").fileFinishedImporting("modules/forums/ForumActionCre
 
 export default {
   resort(id) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "RESORT_THREADS", channelId: id };
     obj.dispatch(obj);
   },
   createForumTag(name, channelId) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     let obj = { url: closure_5.FORUM_TAGS(channelId), body: null, rejectWithError: null };
     obj = { name: name.name, emoji_id: name.emojiId, emoji_name: null, moderated: null };
     let emojiName;
@@ -159,11 +159,11 @@ export default {
     obj[2] = emojiName;
     obj[3] = name.moderated;
     obj[1] = obj;
-    obj[2] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.post(obj);
   },
   updateForumTag(id, channelId) {
-    const HTTP = _require(530).HTTP;
+    const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     let obj = { url: closure_5.FORUM_TAG(channelId, id.id), body: null, rejectWithError: null };
     obj = { name: id.name, emoji_id: id.emojiId, emoji_name: null, moderated: null };
     let emojiName;
@@ -173,22 +173,22 @@ export default {
     obj[2] = emojiName;
     obj[3] = id.moderated;
     obj[1] = obj;
-    obj[2] = _require(530).rejectWithMigratedError();
+    obj[2] = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
     _require = HTTP.put(obj);
     const intl = tmp(1236).intl;
-    const tmpResult = _require(530);
+    const tmpResult = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
     const intl2 = tmp(1236).intl;
-    withErrorHandling(() => closure_0, intl.string(_require(1236).t.T8sBLJ), intl2.string(_require(1236).t.imcb5u));
+    withErrorHandling(() => closure_0, intl.string(_require("../../intl/index.native.tsx").t.T8sBLJ), intl2.string(_require("../../intl/index.native.tsx").t.imcb5u));
   },
   deleteForumTag(closure_0, id) {
-    const HTTP = _require(530).HTTP;
+    const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     const obj = { url: closure_5.FORUM_TAG(closure_0, id), rejectWithError: null };
-    obj[1] = _require(530).rejectWithMigratedError();
+    obj[1] = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
     _require = HTTP.del(obj);
-    const intl = _require(1236).intl;
-    const obj2 = _require(530);
-    const intl2 = _require(1236).intl;
-    withErrorHandling(() => closure_0, intl.string(_require(1236).t["0ZkNDU"]), intl2.string(_require(1236).t.imcb5u));
+    const intl = _require("../../intl/index.native.tsx").intl;
+    const obj2 = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
+    const intl2 = _require("../../intl/index.native.tsx").intl;
+    withErrorHandling(() => closure_0, intl.string(_require("../../intl/index.native.tsx").t["0ZkNDU"]), intl2.string(_require("../../intl/index.native.tsx").t.imcb5u));
   },
   updateForumPostTags(id, arg1) {
     let closure_0 = id;
@@ -208,24 +208,24 @@ export default {
     })();
   },
   hideAdminOnboarding(channelId, hide) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "ADMIN_ONBOARDING_GUIDE_HIDE", channelId, hide };
     obj.dispatch(obj);
   },
   markPostAsSeen(arg0, feedItemId, timestampMillis) {
-    const obj = require(8218) /* markAnalyticsFeedItemSeen */;
-    const result = obj.markAnalyticsFeedItemSeen(require(8219) /* prototype */.getForumPostSeenManagerId(arg0), feedItemId, timestampMillis);
+    const obj = require("../../utils/AnalyticsFeedItemSeenActionCreators.tsx") /* markAnalyticsFeedItemSeen */;
+    const result = obj.markAnalyticsFeedItemSeen(require("tracking/ForumChannelSeenManager.tsx") /* prototype */.getForumPostSeenManagerId(arg0), feedItemId, timestampMillis);
   },
   markPostAsUnseen(arg0, feedItemId, timestampMillis) {
-    const obj = require(8218) /* markAnalyticsFeedItemSeen */;
-    const result = obj.markAnalyticsFeedItemUnseen(require(8219) /* prototype */.getForumPostSeenManagerId(arg0), feedItemId, timestampMillis);
+    const obj = require("../../utils/AnalyticsFeedItemSeenActionCreators.tsx") /* markAnalyticsFeedItemSeen */;
+    const result = obj.markAnalyticsFeedItemUnseen(require("tracking/ForumChannelSeenManager.tsx") /* prototype */.getForumPostSeenManagerId(arg0), feedItemId, timestampMillis);
   },
   flushSeenItems(arg0, IMMEDIATE_WITH_COOLDOWN) {
     if (IMMEDIATE_WITH_COOLDOWN === undefined) {
-      IMMEDIATE_WITH_COOLDOWN = require(8220) /* maybeMarkSeen */.ForceFlushType.IMMEDIATE_WITH_COOLDOWN;
+      IMMEDIATE_WITH_COOLDOWN = require("../../utils/AnalyticsFeedItemSeenManager.tsx") /* maybeMarkSeen */.ForceFlushType.IMMEDIATE_WITH_COOLDOWN;
     }
-    const obj = require(8218) /* markAnalyticsFeedItemSeen */;
-    const result = obj.flushAnalyticsFeedItems(require(8219) /* prototype */.getForumPostSeenManagerId(arg0), IMMEDIATE_WITH_COOLDOWN);
+    const obj = require("../../utils/AnalyticsFeedItemSeenActionCreators.tsx") /* markAnalyticsFeedItemSeen */;
+    const result = obj.flushAnalyticsFeedItems(require("tracking/ForumChannelSeenManager.tsx") /* prototype */.getForumPostSeenManagerId(arg0), IMMEDIATE_WITH_COOLDOWN);
   },
   searchForumPosts(guild_id, id, outer1_5, c1, c2) {
     let closure_0 = guild_id;
@@ -271,12 +271,12 @@ export default {
     })();
   },
   updateForumSearchQuery(id, query) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "FORUM_SEARCH_QUERY_UPDATED", channelId: id, query };
     obj.dispatch(obj);
   },
   clearForumSearch(id) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "FORUM_SEARCH_CLEAR", channelId: id };
     obj.dispatch(obj);
   }

@@ -7,9 +7,9 @@ const result = require("dispatcher").fileFinishedImporting("modules/client_theme
 
 export const fetchUserCustomThemes = function fetchUserCustomThemes() {
   if (!fetching.isFetching()) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj.dispatch({ type: "SAVED_CUSTOM_THEMES_FETCH_START" });
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: null, oldFormErrors: true, rejectWithError: true };
     obj[0] = Endpoints.USERS_ME_CUSTOM_THEMES;
     const value = HTTP.get(obj);

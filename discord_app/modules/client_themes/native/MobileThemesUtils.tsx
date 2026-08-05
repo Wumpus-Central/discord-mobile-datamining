@@ -9,8 +9,8 @@ let error;
 let metroImportAll;
 const require = arg1;
 function getCustomThemesName() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  return intl.string(importDefault(2483).yl1iMm);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  return intl.string(require("../intl/ClientThemes.messages.js").yl1iMm);
 }
 ({ BACKGROUND_GRADIENT_PRESETS_MOBILE: closure_6, LEGACY_STANDARD_BACKGROUND_THEMES: error, REFRESH_STANDARD_BACKGROUND_THEMES: metroImportAll } = items1);
 const result = require("reset").fileFinishedImporting("modules/client_themes/native/MobileThemesUtils.tsx");
@@ -20,7 +20,7 @@ export const getCustomBackgroundGradient = function getCustomBackgroundGradient(
   let tmp2 = null;
   if (undefined !== customThemeDisplaySettings) {
     const obj = { type: null, getName: null, theme: null, customThemeSettings: null };
-    obj[0] = require(4099) /* ClientThemeType */.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT;
+    obj[0] = require("../ClientThemesTypes.tsx") /* ClientThemeType */.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT;
     obj[1] = getCustomThemesName;
     ({ baseTheme: obj[2], customTheme: obj[3] } = customThemeDisplaySettings);
     tmp2 = obj;
@@ -28,12 +28,12 @@ export const getCustomBackgroundGradient = function getCustomBackgroundGradient(
   return tmp2;
 };
 export const useCustomBackgroundGradient = function useCustomBackgroundGradient(base_theme) {
-  let obj = require(4220) /* useCustomThemeDisplaySettings */;
+  let obj = require("useCustomThemeDisplaySettings.tsx") /* useCustomThemeDisplaySettings */;
   const customThemeDisplaySettings = obj.useCustomThemeDisplaySettings(base_theme);
   let tmp4 = null;
   if (undefined !== customThemeDisplaySettings) {
     obj = { type: null, getName: null, theme: null, customThemeSettings: null };
-    obj[0] = require(4099) /* ClientThemeType */.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT;
+    obj[0] = require("../ClientThemesTypes.tsx") /* ClientThemeType */.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT;
     obj[1] = getCustomThemesName;
     ({ baseTheme: obj2[2], customTheme: obj2[3] } = customThemeDisplaySettings);
     tmp4 = obj;
@@ -43,7 +43,7 @@ export const useCustomBackgroundGradient = function useCustomBackgroundGradient(
 export const usePerModeCustomBackgroundGradient = function usePerModeCustomBackgroundGradient(arg0) {
   const _require = arg0;
   const items = [handleThemeChange];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null == mode) {
       return null;
     } else {
@@ -73,12 +73,12 @@ export const getAllMobileThemes = function getAllMobileThemes() {
   let tmp2 = null;
   if (undefined !== customThemeDisplaySettings) {
     const obj = { type: null, getName: null, theme: null, customThemeSettings: null };
-    obj[0] = require(4099) /* ClientThemeType */.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT;
+    obj[0] = require("../ClientThemesTypes.tsx") /* ClientThemeType */.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT;
     obj[1] = getCustomThemesName;
     ({ baseTheme: obj[2], customTheme: obj[3] } = customThemeDisplaySettings);
     tmp2 = obj;
   }
-  const tmp6 = require(1348) /* useIsMobileVisualRefreshExperimentEnabled */.isMobileVisualRefreshEnabled("MobileThemesUtils") ? closure_8 : closure_7;
+  const tmp6 = require("../../themes/experiments/MobileVisualRefreshExperiment.tsx") /* useIsMobileVisualRefreshExperimentEnabled */.isMobileVisualRefreshEnabled("MobileThemesUtils") ? closure_8 : closure_7;
   if (null != tmp2) {
     const items = [];
     let arraySpreadResult = HermesBuiltin.arraySpread(tmp6, 0);
@@ -92,7 +92,7 @@ export const getAllMobileThemes = function getAllMobileThemes() {
   return items1;
 };
 export const useAllMobileThemes = function useAllMobileThemes(mode) {
-  let obj = _require(589);
+  let obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const items = [validateSavedTheme];
   const stateFromStores = obj.useStateFromStores(items, () => savedCustomTheme.getSavedCustomTheme());
   let tmp4 = null;
@@ -138,7 +138,7 @@ export const useAllMobileThemes = function useAllMobileThemes(mode) {
       }
     });
   }
-  const tmp8 = importDefault(1348)("MobileThemesUtils") ? closure_8 : closure_7;
+  const tmp8 = require("../../themes/experiments/MobileVisualRefreshExperiment.tsx")("MobileThemesUtils") ? closure_8 : closure_7;
   if (null != stateFromStores1) {
     const items2 = [];
     let arraySpreadResult = HermesBuiltin.arraySpread(tmp8, 0);
@@ -153,7 +153,7 @@ export const useAllMobileThemes = function useAllMobileThemes(mode) {
 };
 export const useSavedCustomTheme = function useSavedCustomTheme() {
   const items = [validateSavedTheme];
-  const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => savedCustomTheme.getSavedCustomTheme());
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => savedCustomTheme.getSavedCustomTheme());
   let tmp2 = null;
   if (null != stateFromStores) {
     tmp2 = stateFromStores;

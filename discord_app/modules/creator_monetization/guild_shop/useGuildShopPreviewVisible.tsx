@@ -10,12 +10,12 @@ let result = require("UNSAFE_isDismissibleContentDismissed").fileFinishedImporti
 
 export const useGuildShopPreviewVisible = function useGuildShopPreviewVisible(features) {
   const _require = features;
-  const result = _require(4101).useIsDismissibleContentDismissed_UNSAFE(_require(1358).DismissibleContent.SERVER_SHOP_PHANTOM_PREVIEW);
-  const obj = _require(4101);
+  const result = _require("../../dismissible_content/DismissibleContentUnsafeUtils.tsx").useIsDismissibleContentDismissed_UNSAFE(_require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleContent.SERVER_SHOP_PHANTOM_PREVIEW);
+  const obj = _require("../../dismissible_content/DismissibleContentUnsafeUtils.tsx");
   const tmp = _require;
   const items = [getUncachedChannelPermissions];
   let flag;
-  const stateFromStores = _require(647).useStateFromStores(items, () => {
+  const stateFromStores = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
       canResult = outer1_2.can(outer1_3.ADMINISTRATOR, tmp);
@@ -29,7 +29,7 @@ export const useGuildShopPreviewVisible = function useGuildShopPreviewVisible(fe
   if (flag == null) {
     flag = false;
   }
-  const obj2 = _require(647);
+  const obj2 = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx");
   let id;
   if (features != null) {
     id = features.id;

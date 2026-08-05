@@ -2,12 +2,12 @@
 const result = require("map").fileFinishedImporting("modules/channel_list_v2/native/useChannelListWidth.tsx");
 
 export default function useChannelListWidth() {
-  const drawerWidth = require(10911) /* sum */.useDrawerWidth();
-  const obj = require(10911) /* sum */;
-  const token = require(3989) /* map */.useToken(importDefault(712).modules.mobile.CHANNEL_DRAWER_SPACING);
+  const drawerWidth = require("../../screen/native/drawer/useDrawerWidth.tsx") /* sum */.useDrawerWidth();
+  const obj = require("../../screen/native/drawer/useDrawerWidth.tsx") /* sum */;
+  const token = require("../../../design/tokens/native/useToken.tsx") /* map */.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHANNEL_DRAWER_SPACING);
   let num = 0;
-  const diff = drawerWidth - require(691) /* keys */.DM_WIDTH;
-  if (importDefault(4139)().isChatBesideChannelList) {
+  const diff = drawerWidth - require("../../../ConstantsIOS.tsx") /* keys */.DM_WIDTH;
+  if (require("../../chat/native/useChatLayout.tsx")().isChatBesideChannelList) {
     num = token;
   }
   return diff - num;

@@ -73,7 +73,7 @@ function ConnectedWebhookItem(arg0) {
   let require;
   ({ channelId: require, user: importDefault } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let id;
@@ -84,7 +84,7 @@ function ConnectedWebhookItem(arg0) {
   });
   const items1 = [ensureGuildLoaded];
   obj = {};
-  const stateFromStores1 = require(589) /* initialize */.useStateFromStores(items1, () => outer1_5.getChannel(closure_0));
+  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items1, () => outer1_5.getChannel(closure_0));
   const merged1 = Object.assign(merged);
   obj.user = stateFromStores;
   obj.channel = stateFromStores1;
@@ -214,17 +214,17 @@ class WebhooksOverview extends PureComponent {
 const prototype = WebhooksOverview.prototype;
 prototype["getHelpText"] = function getHelpText() {
   if (this.props.webhookType === constants2.CHANNEL_FOLLOWER) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     let obj = { helpdeskArticle: null };
-    obj[0] = importDefault(1945).getArticleURL(constants.CHANNEL_FOLLOWING);
-    let formatResult = intl2.format(require(1236) /* getSystemLocale */.t["5u+aV1"], obj);
-    const obj4 = importDefault(1945);
+    obj[0] = require("../../../utils/HelpdeskUtils.tsx").getArticleURL(constants.CHANNEL_FOLLOWING);
+    let formatResult = intl2.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["5u+aV1"], obj);
+    const obj4 = require("../../../utils/HelpdeskUtils.tsx");
   } else {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { articleURL: null };
-    obj[0] = importDefault(1945).getArticleURL(constants.WEBHOOKS_INTRODUCTION);
-    formatResult = intl.format(require(1236) /* getSystemLocale */.t["3hX7G+"], obj);
-    const obj2 = importDefault(1945);
+    obj[0] = require("../../../utils/HelpdeskUtils.tsx").getArticleURL(constants.WEBHOOKS_INTRODUCTION);
+    formatResult = intl.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["3hX7G+"], obj);
+    const obj2 = require("../../../utils/HelpdeskUtils.tsx");
   }
   return formatResult;
 };
@@ -293,11 +293,11 @@ prototype["render"] = function render() {
   let obj = { children: null };
   obj = { style: tmp.form, contentContainerStyle: this.props.contentContainerStyle, children: null };
   obj = { spacing: null, style: null, children: null };
-  obj[0] = importDefault(712).space.PX_24;
+  obj[0] = require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24;
   obj[1] = tmp.content;
   obj[2] = this.renderWebhooks();
-  obj[2] = callback(require(4693) /* Stack */.Stack, obj);
-  const items = [callback(require(7777) /* Form */.Form, obj), callback(require(5596) /* NavScrim */.NavScrim, {})];
+  obj[2] = callback(require("../../../design/components/Stack/native/Stack.native.tsx") /* Stack */.Stack, obj);
+  const items = [callback(require("../../../design/void/Form/native/index.tsx") /* Form */.Form, obj), callback(require("../../../design/components/Navigator/native/NavScrim.android.tsx") /* NavScrim */.NavScrim, {})];
   obj[0] = items;
   return callback2(closure_19, obj);
 };

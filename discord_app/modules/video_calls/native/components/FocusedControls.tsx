@@ -50,18 +50,18 @@ function FocusedControlsHeader(reveal) {
   return callback(derivedValue(4146).View, obj);
 }
 function FocusedControlsHeaderGradient() {
-  const width = importDefault(1474)().width;
+  const width = require("../../../screen/useWindowDimensions.native.tsx")().width;
   let obj = { style: items, children: null };
   items = [callback3().backgroundGradient, { width }];
   obj = { height: "100%", width, children: null };
   obj = { children: null };
   const obj1 = { id: "grad", y1: "0%", x1: "0", x2: "0", y2: "100%", children: null };
-  const items1 = [callback(require(8437) /* inlineStyles */.Stop, { offset: "0%", stopColor: "black", stopOpacity: ".8" }), callback(require(8437) /* inlineStyles */.Stop, { offset: "66%", stopColor: "black", stopOpacity: ".51" }), callback(require(8437) /* inlineStyles */.Stop, { offset: "100%", stopColor: "black", stopOpacity: "0" })];
+  const items1 = [callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Stop, { offset: "0%", stopColor: "black", stopOpacity: ".8" }), callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Stop, { offset: "66%", stopColor: "black", stopOpacity: ".51" }), callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Stop, { offset: "100%", stopColor: "black", stopOpacity: "0" })];
   obj1[5] = items1;
-  obj[0] = callback2(require(8437) /* inlineStyles */.LinearGradient, obj1);
-  const items2 = [callback(require(8437) /* inlineStyles */.Defs, obj), callback(require(8437) /* inlineStyles */.Rect, { height: "100%", width, fill: "url(#grad)" })];
+  obj[0] = callback2(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.LinearGradient, obj1);
+  const items2 = [callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Defs, obj), callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Rect, { height: "100%", width, fill: "url(#grad)" })];
   obj[2] = items2;
-  obj[1] = callback2(require(8437) /* inlineStyles */.Svg, obj);
+  obj[1] = callback2(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Svg, obj);
   return callback(closure_5, obj);
 }
 let c3 = importAllResult;
@@ -104,14 +104,14 @@ const memoResult = importAllResult.memo((disableGradient) => {
   let analyticsLocations;
   let callback;
   ({ omitPTT, bottomHeader, onDrawerClose, isTouchingLeftScreenEdge } = disableGradient);
-  let obj = require(10660) /* useGlobalStatusIndicatorState */;
+  let obj = require("../../../connectivity/native/useGlobalStatusIndicatorState.tsx") /* useGlobalStatusIndicatorState */;
   const globalStatusIndicatorState = obj.useGlobalStatusIndicatorState();
-  let obj1 = require(10665) /* nativeEventEmitter */;
+  let obj1 = require("../../../connectivity/native/components/GlobalStatusIndicator.tsx") /* nativeEventEmitter */;
   globalStatusIndicatorHeightSharedValue = obj1.useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState);
   const tmp6 = globalStatusIndicatorHeightSharedValue(10659)();
   dependencyMap = tmp6;
-  reveal = reveal.useContext(require(10558) /* useRevealProviderValue */.RevealContext).reveal;
-  const isScreenReaderEnabled = require(4681) /* SCREEN_READER_ENABLED_GETTER */.useIsScreenReaderEnabled();
+  reveal = reveal.useContext(require("RevealProvider.tsx") /* useRevealProviderValue */.RevealContext).reveal;
+  const isScreenReaderEnabled = require("../../../a11y/native/useIsScreenReaderEnabled.native.tsx") /* SCREEN_READER_ENABLED_GETTER */.useIsScreenReaderEnabled();
   if (!reveal) {
     reveal = forceReveal;
   }
@@ -147,7 +147,7 @@ const memoResult = importAllResult.memo((disableGradient) => {
   F.__workletHash = 15022275245977;
   F.__initData = closure_16;
   derivedValue1 = tmpResult.useDerivedValue(F);
-  const obj3 = require(4681) /* SCREEN_READER_ENABLED_GETTER */;
+  const obj3 = require("../../../a11y/native/useIsScreenReaderEnabled.native.tsx") /* SCREEN_READER_ENABLED_GETTER */;
   const fn = function y() {
     const obj = { top: null, opacity: null };
     obj[0] = outer1_0(_undefined[8]).withTiming(derivedValue.get(), outer1_10);
@@ -159,8 +159,8 @@ const memoResult = importAllResult.memo((disableGradient) => {
   fn.__closure = obj;
   fn.__workletHash = 8532538341439;
   fn.__initData = closure_17;
-  const animatedStyle = require(4146).useAnimatedStyle(fn);
-  const tmpResult1 = require(4146);
+  const animatedStyle = require("../../../reanimated/ReanimatedRexport.tsx").useAnimatedStyle(fn);
+  const tmpResult1 = require("../../../reanimated/ReanimatedRexport.tsx");
   analyticsLocations = globalStatusIndicatorHeightSharedValue(5610)(tmp5(5630).FOCUSED_VOICE_CONTROLS).analyticsLocations;
   callback = tmp5(10628)();
   if (containerStyle == null) {

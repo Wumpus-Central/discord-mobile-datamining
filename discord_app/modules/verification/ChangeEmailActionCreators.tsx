@@ -39,9 +39,9 @@ export const sendConfirmationCode = function sendConfirmationCode() {
   if (arg0 === undefined) {
     flag = false;
   }
-  let obj = importDefault(5094);
+  let obj = require("../../utils/TrackedHTTPUtils.tsx");
   obj = { url: Endpoints.USER_EMAIL, trackedActionData: null, rejectWithError: false };
-  obj = { event: require(503) /* encodeProperties */.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE, properties: { is_resend: flag } };
+  obj = { event: require("../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE, properties: { is_resend: flag } };
   obj[1] = obj;
   return obj.put(obj);
 };

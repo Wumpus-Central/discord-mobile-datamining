@@ -2,8 +2,8 @@
 const result = require("useAgeVerificationRunner").fileFinishedImporting("modules/user_settings/content_and_social/DefaultDMSettingsExperiment.tsx");
 
 export const shouldAgeVerifyForDMDefaultOff = function shouldAgeVerifyForDMDefaultOff() {
-  const obj = require(3964) /* isFeatureAgeGated */;
-  const isFeatureAgeGatedResult = require(3964) /* isFeatureAgeGated */.isFeatureAgeGated(require(5108) /* AgeGatedFeature */.AgeGatedFeature.DM_PRIVACY_SETTINGS);
-  const obj2 = require(4500) /* useAgeVerificationRunner */;
-  return require(4500) /* useAgeVerificationRunner */.shouldShowTiggerPawtect() && isFeatureAgeGatedResult;
+  const obj = require("../../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */;
+  const isFeatureAgeGatedResult = require("../../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.DM_PRIVACY_SETTINGS);
+  const obj2 = require("../../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */;
+  return require("../../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */.shouldShowTiggerPawtect() && isFeatureAgeGatedResult;
 };

@@ -16,11 +16,11 @@ let map1;
 let unpackModuleId;
 const require = arg1;
 function onStageConnectionError() {
-  let obj = importDefault(3986);
+  let obj = require("../../toast/native/ToastActionCreators.tsx");
   obj = { key: "STAGE_DISCOVERY_CONNECTION_ERROR_GENERIC", content: null, icon: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl.string(require(1236) /* getSystemLocale */.t.ah3RLk);
-  obj[2] = importDefault(8422);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ah3RLk);
+  obj[2] = require("../../../../_runtime/08422_registerAsset.js");
   obj.open(obj);
 }
 function waitForConnection() {
@@ -989,16 +989,16 @@ function _maybeAckNotificationCenter() {
 }
 function receiveNotification_(notif_type) {
   const _require = notif_type;
-  let obj = _require(10859);
+  let obj = _require("../../routing/native/RouteManagerUtils.tsx");
   const result = obj.initializeRouteManagerIfNeeded();
   if ("MESSAGE_CREATE" === notif_type.type) {
     const _HermesInternal2 = HermesInternal;
     tmp3.log("Notification clicked of type " + notif_type.type + " with guild:" + notif_type.guild_id + " channel:" + notif_type.channel_id + " message:" + notif_type.message_id);
     obj = { guildId: null, channelId: null, messageId: null, isPreload: true };
     ({ guild_id: obj10[0], channel_id: obj10[1], message_id: obj10[2] } = notif_type);
-    const messages = importDefault(9660).fetchMessages(obj);
+    const messages = require("../../messages/MessageManager.tsx").fetchMessages(obj);
     let flag = true;
-    const obj9 = importDefault(9660);
+    const obj9 = require("../../messages/MessageManager.tsx");
   } else {
     flag = false;
     if ("GENERIC_PUSH_NOTIFICATION_SENT" === notif_type.type) {
@@ -1006,7 +1006,7 @@ function receiveNotification_(notif_type) {
       if (null != notif_type.deeplink) {
         flag = false;
         if ("" !== notif_type.deeplink) {
-          const payload = importDefault(4266)(notif_type.deeplink).payload;
+          const payload = require("../../../utils/native/parseURL.tsx")(notif_type.deeplink).payload;
           if (payload.type === tmp(691).LinkingTypes.MESSAGE) {
             let tracking_type;
             if (notif_type != null) {
@@ -1070,8 +1070,8 @@ function receiveNotification_(notif_type) {
     const _HermesInternal = HermesInternal;
     tmp3.log("Notification clicked of type " + notif_type.type);
   }
-  importDefault(709).dispatch({ type: "PUSH_NOTIFICATION_CLICK" });
-  const obj11 = importDefault(709);
+  require("../../../Dispatcher.tsx").dispatch({ type: "PUSH_NOTIFICATION_CLICK" });
+  const obj11 = require("../../../Dispatcher.tsx");
   const obj3 = { notif_type: "tracking_type" in notif_type ? notif_type.tracking_type : notif_type.type, notif_user_id: null, message_id: null, message_type: null, has_message: null, guild_id: null, channel_id: null, channel_type: null, rel_type: null, notification_id: null, has_image_thumbnail: null, join_id: null, notif_instance_id: null, notif_type_id: null, mention_type: null };
   let user_id = null;
   if ("user_id" in notif_type) {
@@ -1136,7 +1136,7 @@ function receiveNotification_(notif_type) {
     mention_type = notif_type.mention_type;
   }
   obj3[14] = mention_type;
-  importDefault(698).track(constants.NOTIFICATION_CLICKED, obj3);
+  require("../../../utils/AnalyticsUtils.tsx").track(constants.NOTIFICATION_CLICKED, obj3);
   (function maybeAckNotificationCenter(notif_type) {
     const self = this;
     const apply = closure_33.apply;
@@ -1171,7 +1171,7 @@ export default function receiveNotification(getData) {
     const obj3 = data(6843);
     const tmp11 = importDefault;
     const _HermesInternal = HermesInternal;
-    importDefault(10).mark("\u2757", "Receive notification " + data.type);
+    require("../../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx").mark("\u2757", "Receive notification " + data.type);
     if (null != data.receiving_user_id) {
       if (null != id.getId()) {
         if (data.receiving_user_id !== obj.getId()) {

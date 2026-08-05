@@ -40,7 +40,7 @@ function HomeDrawerDMExpandedChildren(channel) {
     return tmp2;
   });
   const obj2 = channel(589);
-  const tmp3 = importDefault(14453)(channel, { unread: channel(15338).useBaseChannelUnreadBadgeState(channel, false).unread });
+  const tmp3 = require("../../main_tabs_v2/useMessagePreviews.tsx")(channel, { unread: channel(15338).useBaseChannelUnreadBadgeState(channel, false).unread });
   c4 = tmp3;
   const obj3 = channel(15338);
   const items2 = [updateUserGuildSettingsInternal];
@@ -114,7 +114,7 @@ let closure_12 = createCacheKey.createStyles({ title: { flexDirection: "row", al
 const result = require("createChannelRecord").fileFinishedImporting("modules/home_drawer/native/HomeDrawerDM.tsx");
 
 export default function HomeDrawerDMExpandedChildrenWrapper(channel) {
-  const MobileHomeDrawerExperiment = require(4142) /* MobileHomeDrawerExperiment */.MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = require("HomeDrawerExperiment.tsx") /* MobileHomeDrawerExperiment */.MobileHomeDrawerExperiment;
   let tmp2 = null;
   if (MobileHomeDrawerExperiment.useConfig({ location: "dm-expanded-children" }).enableHome) {
     tmp2 = null;

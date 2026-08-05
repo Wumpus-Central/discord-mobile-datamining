@@ -123,22 +123,22 @@ function PremiumFeatureUpsellPill(featureName) {
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let closure_14 = createCacheKey.createStyles((arg0) => {
   let obj = { container: null, containerShadow: null, nitroWheel: null, labelContainer: null, text: null, nitroWheelButton: null, nitroWheelDisabled: null, button: null, gradient: null };
-  obj = { flexDirection: "row", backgroundColor: importDefault(712).colors.BACKGROUND_SURFACE_HIGH, borderRadius: importDefault(712).radii.round, padding: importDefault(712).space.PX_12, justifyContent: "space-between" };
+  obj = { flexDirection: "row", backgroundColor: require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("../../../../../../discord_common/js/packages/tokens/native.tsx").radii.round, padding: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, justifyContent: "space-between" };
   obj[0] = obj;
   obj = {};
-  const merged = Object.assign(importDefault(712).shadows.SHADOW_HIGH);
-  const unsafe_rawColors = importDefault(712).unsafe_rawColors;
+  const merged = Object.assign(require("../../../../../../discord_common/js/packages/tokens/native.tsx").shadows.SHADOW_HIGH);
+  const unsafe_rawColors = require("../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors;
   obj.shadowColor = arg0 ? unsafe_rawColors.PREMIUM_TIER_0_BLUE_FOR_GRADIENTS_2 : unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS_2;
   obj.shadowOpacity = 0.6;
   obj[1] = obj;
-  obj[2] = { width: 20, height: 20, marginEnd: importDefault(712).space.PX_4 };
-  const obj1 = { width: 20, height: 20, marginEnd: importDefault(712).space.PX_4 };
-  obj[3] = { flexDirection: "row", flexShrink: 1, alignItems: "center", marginEnd: importDefault(712).space.PX_4 };
+  obj[2] = { width: 20, height: 20, marginEnd: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
+  const obj1 = { width: 20, height: 20, marginEnd: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
+  obj[3] = { flexDirection: "row", flexShrink: 1, alignItems: "center", marginEnd: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
   obj[4] = { flexShrink: 1, flexWrap: "wrap" };
   obj[5] = { marginStart: -2, width: 20, height: 20 };
   obj[6] = { opacity: 0.6 };
-  const obj2 = { flexDirection: "row", flexShrink: 1, alignItems: "center", marginEnd: importDefault(712).space.PX_4 };
-  obj[7] = { alignSelf: "center", borderRadius: importDefault(712).radii.round };
+  const obj2 = { flexDirection: "row", flexShrink: 1, alignItems: "center", marginEnd: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
+  obj[7] = { alignSelf: "center", borderRadius: require("../../../../../../discord_common/js/packages/tokens/native.tsx").radii.round };
   const merged1 = Object.assign(absoluteFillObject.absoluteFillObject);
   obj[8] = {};
   return obj;
@@ -155,7 +155,7 @@ function animationEnterExit(value, cleanUp) {
   fn.__closure = { cleanUp };
   fn.__workletHash = 7812030105128;
   fn.__initData = closure_16;
-  obj[0] = _require(4694).withSpring(value, _require(4698).springStandard, "respect-motion-settings", fn);
+  obj[0] = _require("../../../../../design/animation/reanimated/spring/spring.tsx").withSpring(value, _require("../../../../../design/animation/reanimated/spring/springPresets.tsx").springStandard, "respect-motion-settings", fn);
   return obj;
 }
 createCacheKey = { withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, springStandard: require("SUBTLE_SPRING").springStandard };

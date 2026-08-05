@@ -29,7 +29,7 @@ function Loading() {
     let tmp4 = dependencyMap;
     let obj = { row: null };
     obj[0] = num;
-    let arr = items.push(callback3(importDefault(8997), obj, num));
+    let arr = items.push(callback3(require("../../../main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx"), obj, num));
     num = num + 1;
   } while (num < 10);
   obj = { children: null };

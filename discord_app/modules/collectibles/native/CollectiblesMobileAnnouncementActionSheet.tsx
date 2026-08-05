@@ -57,7 +57,7 @@ function FeatureRow(arg0) {
   let obj = { style: tmp.featureRow, children: null };
   const items = [icon, ];
   obj = { variant: "text-sm/medium", color: "text-subtle", style: tmp.featureText, children: text };
-  items[1] = callback(require(4281) /* Text */.Text, obj);
+  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   obj[1] = items;
   return callback2(closure_5, obj);
 }
@@ -145,7 +145,7 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   obj = { style: tmp.container, children: null };
   const obj1 = { source: null, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
   const obj2 = { uri: null };
-  obj2[0] = importDefault(15892);
+  obj2[0] = require("../../../../discord_assets/assets/collectibles/frames/ea/announcement_key_1.png.js");
   obj1[0] = obj2;
   obj1[1] = tmp.framePreviewImage;
   const items3 = [callback(closure_4, obj1), , , ];

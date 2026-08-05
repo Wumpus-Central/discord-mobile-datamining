@@ -11,7 +11,7 @@ export const useConnectGuardianGate = function useConnectGuardianGate() {
   let linkCode;
   let require;
   let tmp3;
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [freshTeenActivityWithMap];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ linkCode: store.getLinkCode(), expiresAt: store.getLinkCodeExpiresAt() }));
   ({ linkCode, expiresAt } = stateFromStoresObject);
@@ -54,7 +54,7 @@ export const useConnectGuardianGate = function useConnectGuardianGate() {
       }
     });
   }, []);
-  importDefault(4711)(callback);
+  require("../../../hooks/useMountEffect.tsx")(callback);
   if (tmp3) {
     obj = { state: "error" };
   } else if (tmp4[0]) {

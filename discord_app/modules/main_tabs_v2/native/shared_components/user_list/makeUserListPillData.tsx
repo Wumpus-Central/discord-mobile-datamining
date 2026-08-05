@@ -7,9 +7,9 @@ const result = require("nameFromUser").fileFinishedImporting("modules/main_tabs_
 
 export default function makeUserListPillData(id) {
   let obj = { id: id.id, text: null, icon: null };
-  obj[1] = importDefault(4124).getName(id);
+  obj[1] = require("../../../../../utils/UserUtils.tsx").getName(id);
   obj = { user: id, guildId: "Array", size: 8 };
-  obj[2] = require(1297) /* Button */.AvatarSizes.XXSMALL;
-  obj[2] = jsx(require(1297) /* Button */.Avatar, { user: id, guildId: "Array", size: 8 });
+  obj[2] = require("../../../../../design/void/native.tsx") /* Button */.AvatarSizes.XXSMALL;
+  obj[2] = jsx(require("../../../../../design/void/native.tsx") /* Button */.Avatar, { user: id, guildId: "Array", size: 8 });
   return obj;
 };

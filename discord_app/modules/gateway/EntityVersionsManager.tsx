@@ -15,7 +15,7 @@ function handleDeletedEntityIds(guild_id) {
     name = guild.name;
   }
   tmp2.fileOnly("received deleted guild entities (id: " + guild_id.guild_id + ", name: " + name + ")");
-  const Emitter = importDefault(589).Emitter;
+  const Emitter = require("../../../discord_common/js/packages/flux/index.tsx").Emitter;
   Emitter.batched(() => {
     if (null != set3.channels) {
       const guild_id2 = tmp.guild_id;
@@ -93,7 +93,7 @@ function handleDeletedEntityIds(guild_id) {
   });
 }
 function handleConnectionOpen() {
-  const all = importDefault(7032).getAll();
+  const all = require("../app_database/modules/GuildsRequiringDeletedIdsSync.tsx").getAll();
   all.then((arr) => {
     const item = arr.forEach((arg0) => {
       let closure_0 = arg0;
@@ -200,10 +200,10 @@ class EntityVersionsManager extends tmp3 {
 }
 const prototype = EntityVersionsManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const subscription = importDefault(709).subscribe("CONNECTION_OPEN", handleConnectionOpen);
+  const subscription = require("../../Dispatcher.tsx").subscribe("CONNECTION_OPEN", handleConnectionOpen);
 };
 prototype["_terminate"] = function _terminate() {
-  importDefault(709).unsubscribe("CONNECTION_OPEN", handleConnectionOpen);
+  require("../../Dispatcher.tsx").unsubscribe("CONNECTION_OPEN", handleConnectionOpen);
 };
 const entityVersionsManager = new EntityVersionsManager();
 const tmp2 = new require("createGuildRoleRecordFromRust")("EntityVersionsManager");

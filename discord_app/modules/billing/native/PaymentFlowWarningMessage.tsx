@@ -20,10 +20,10 @@ export default function PaymentFlowWarningMessage(children) {
   const tmp = createCacheKey();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.icon, color: null, width: 16, height: 16 };
-  obj[1] = importDefault(712).unsafe_rawColors.YELLOW_300;
-  const items = [callback(require(1297) /* Button */.WarningCircle, obj), ];
+  obj[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.YELLOW_300;
+  const items = [callback(require("../../../design/void/native.tsx") /* Button */.WarningCircle, obj), ];
   obj = { variant: "text-sm/medium", style: tmp.text, children: children.message };
-  items[1] = callback(require(4281) /* Text */.Text, obj);
+  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 };

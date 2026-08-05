@@ -9,7 +9,7 @@ prototype["getUserAgnosticState"] = function getUserAgnosticState() {
   return { toggleStates: closure_2 };
 };
 prototype["initialize"] = function initialize(toggleStates) {
-  for (const key10008 in importDefault(8838)) {
+  for (const key10008 in require("LabFeatures.tsx")) {
     let tmp = key10008;
     let flag;
     let tmp2 = closure_2;

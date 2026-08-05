@@ -7,10 +7,10 @@ const result = require("initialize").fileFinishedImporting("modules/stage_channe
 
 export default function useIsInvitedToSpeak() {
   const items = [handleConnectionOpen];
-  const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => voiceChannelId.getVoiceChannelId());
-  const obj = require(589) /* initialize */;
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => voiceChannelId.getVoiceChannelId());
+  const obj = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items1 = [fetchFingerprint];
-  const stateFromStores1 = require(589) /* initialize */.useStateFromStores(items1, () => id.getId());
-  const obj2 = require(589) /* initialize */;
-  return importDefault(4469)(stateFromStores1, stateFromStores) === require(4469) /* useAudienceRequestToSpeakState */.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items1, () => id.getId());
+  const obj2 = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  return require("useAudienceRequestToSpeakState.tsx")(stateFromStores1, stateFromStores) === require("useAudienceRequestToSpeakState.tsx") /* useAudienceRequestToSpeakState */.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
 };

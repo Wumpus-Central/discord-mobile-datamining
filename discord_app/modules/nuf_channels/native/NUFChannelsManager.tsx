@@ -110,7 +110,7 @@ class NUFChannelsManager extends tmp2 {
 }
 const prototype = NUFChannelsManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const Storage = require(595) /* Storage */.Storage;
+  const Storage = require("../../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
   const value = Storage.get(c9);
   let isNewUserResult = !value;
   if (!value) {
@@ -127,7 +127,7 @@ prototype["_initialize"] = function _initialize() {
   }
 };
 prototype["_terminate"] = function _terminate() {
-  const rootNavigationRef = require(4137) /* getRootNavigationRef */.getRootNavigationRef();
+  const rootNavigationRef = require("../../main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */.getRootNavigationRef();
   if (rootNavigationRef != null) {
     const self = this;
     rootNavigationRef.removeListener("state", this.handleNavigationStateChanged);

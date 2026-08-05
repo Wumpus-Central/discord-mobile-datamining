@@ -3,8 +3,8 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/blocke
 
 export default {
   show(url) {
-    let obj = importDefault(4253);
+    let obj = require("../action_sheet/native/ActionSheetActionCreators.tsx");
     obj = { url };
-    obj.openLazy(require(1959) /* asyncRequireImpl */(12135, dependencyMap.paths), "blocked-domain", obj);
+    obj.openLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(12135, dependencyMap.paths), "blocked-domain", obj);
   }
 };

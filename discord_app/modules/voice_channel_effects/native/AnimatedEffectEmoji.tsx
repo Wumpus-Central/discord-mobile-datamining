@@ -16,13 +16,13 @@ function Emoji(url) {
     obj = { uri: null };
     obj[0] = url;
     obj[2] = obj;
-    let tmp5 = jsx(importDefault(5236), { uri: null });
+    let tmp5 = jsx(require("../../../components_native/common/FastImage.tsx"), { uri: null });
   } else {
     obj = { style: null, allowFontScaling: false, children: null };
     const items1 = [tmp.textEmoji];
     obj[0] = items1;
     obj[2] = url.surrogates;
-    tmp5 = jsx(require(1297) /* Button */.LegacyText, { style: null, allowFontScaling: false, children: null });
+    tmp5 = jsx(require("../../../design/void/native.tsx") /* Button */.LegacyText, { style: null, allowFontScaling: false, children: null });
   }
   return tmp5;
 }

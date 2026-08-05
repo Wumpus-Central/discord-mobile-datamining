@@ -19,7 +19,7 @@ export default function validateBuildOverride(targetBuildOverride, items1) {
       const keys = Object.keys(targetBuildOverride.targetBuildOverride);
       if (0 === obj12.intersection(keys, items1).length) {
         let obj = { valid: false, reason: null };
-        const intl5 = require(1236) /* getSystemLocale */.intl;
+        const intl5 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
         obj = { requestedTargets: null };
         const mapped = keys.map((arg0) => {
           let str = table[arg0];
@@ -29,7 +29,7 @@ export default function validateBuildOverride(targetBuildOverride, items1) {
           return str;
         });
         obj[0] = mapped.join(", ");
-        obj[1] = intl5.formatToPlainString(require(1236) /* getSystemLocale */.t.wySUzv, obj);
+        obj[1] = intl5.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.wySUzv, obj);
         return obj;
       } else {
         if (null != releaseChannel) {
@@ -44,10 +44,10 @@ export default function validateBuildOverride(targetBuildOverride, items1) {
               const str5 = releaseChannel.charAt(0);
             }
             const obj1 = { valid: false, reason: null };
-            const intl4 = require(1236) /* getSystemLocale */.intl;
+            const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
             const obj2 = { releaseChannel: null };
             obj2[0] = formatted;
-            obj1[1] = intl4.formatToPlainString(require(1236) /* getSystemLocale */.t.GOEF0C, obj2);
+            obj1[1] = intl4.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.GOEF0C, obj2);
             return obj1;
           }
         }
@@ -79,10 +79,10 @@ export default function validateBuildOverride(targetBuildOverride, items1) {
           }
           if (!flag) {
             obj = { valid: false, reason: null };
-            const intl = require(1236) /* getSystemLocale */.intl;
+            const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
             const obj3 = { releaseChannel: null };
             obj3[0] = allowedVersions.join(", ");
-            obj[1] = intl.formatToPlainString(require(1236) /* getSystemLocale */.t.GOEF0C, obj3);
+            obj[1] = intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.GOEF0C, obj3);
             return obj;
           }
         }
@@ -96,8 +96,8 @@ export default function validateBuildOverride(targetBuildOverride, items1) {
           const _Date2 = Date;
           if (time < Date.now()) {
             const obj4 = { valid: false, reason: null };
-            const intl3 = require(1236) /* getSystemLocale */.intl;
-            obj4[1] = intl3.string(require(1236) /* getSystemLocale */.t["8eRE6S"]);
+            const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+            obj4[1] = intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["8eRE6S"]);
             let obj5 = obj4;
           }
           return obj5;
@@ -105,17 +105,17 @@ export default function validateBuildOverride(targetBuildOverride, items1) {
         if (validForUserIds.length > 0) {
           if (!validForUserIds.includes(id.getId())) {
             obj5 = { valid: false, reason: null };
-            const intl2 = require(1236) /* getSystemLocale */.intl;
-            obj5[1] = intl2.string(require(1236) /* getSystemLocale */.t.qZgV0a);
+            const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+            obj5[1] = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.qZgV0a);
           }
         }
         obj5 = { valid: true };
       }
-      obj12 = importDefault(12);
+      obj12 = require("../../../_runtime/00012_apply.js");
     }
   }
   const obj6 = { valid: false, reason: null };
-  const intl6 = require(1236) /* getSystemLocale */.intl;
-  obj6[1] = intl6.string(require(1236) /* getSystemLocale */.t.d34xi4);
+  const intl6 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj6[1] = intl6.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.d34xi4);
   return obj6;
 };

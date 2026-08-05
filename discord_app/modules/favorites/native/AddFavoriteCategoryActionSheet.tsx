@@ -59,7 +59,7 @@ let obj1 = { gap: require("Themes").space.PX_16 };
 let result = require("date").fileFinishedImporting("modules/favorites/native/AddFavoriteCategoryActionSheet.tsx");
 
 export const openAddFavoriteCategoryActionSheet = function openAddFavoriteCategoryActionSheet() {
-  let obj = require(4253) /* ACTION_SHEET_HEIGHT_HALF */;
+  let obj = require("../../action_sheet/native/ActionSheetActionCreators.tsx") /* ACTION_SHEET_HEIGHT_HALF */;
   obj = { content: callback2(AddFavoriteCategoryActionSheet, {}), key: AddFavoriteCategoryActionSheet };
   obj.showActionSheet(obj);
 };

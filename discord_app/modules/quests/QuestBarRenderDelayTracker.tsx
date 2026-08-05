@@ -15,9 +15,9 @@ prototype["clearTimeoutTimer"] = function clearTimeoutTimer() {
 };
 prototype["sendMetric"] = function sendMetric(arg0, arg1, arg2) {
   if (Math.random() <= 0.1) {
-    let obj = importDefault(6970);
+    let obj = require("../monitoring/MonitoringAgent.tsx");
     obj = { name: null, tags: null };
-    obj[0] = require(6975) /* set */.MetricEvents.QUEST_BAR_RENDER_DELAY;
+    obj[0] = require("../../../discord_common/js/shared/shared-constants/MetricEvents.tsx") /* set */.MetricEvents.QUEST_BAR_RENDER_DELAY;
     const _HermesInternal = HermesInternal;
     const items = ["quest_id:" + arg0, ];
     const _HermesInternal2 = HermesInternal;
@@ -28,8 +28,8 @@ prototype["sendMetric"] = function sendMetric(arg0, arg1, arg2) {
     obj[0] = arg0;
     obj[1] = arg1;
     obj[2] = arg2;
-    importDefault(698).track(AnalyticEvents.QUEST_BAR_RENDER_DELAY, obj);
-    const obj3 = importDefault(698);
+    require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.QUEST_BAR_RENDER_DELAY, obj);
+    const obj3 = require("../../utils/AnalyticsUtils.tsx");
   }
 };
 prototype["startTracking"] = function startTracking(questId) {
@@ -63,7 +63,7 @@ prototype["stopTracking"] = function stopTracking(arg0) {
         const _Math2 = Math;
         self.sendMetric(arg0, flag, Math.min(rounded, c4));
       }
-      obj = importDefault(10384);
+      obj = require("../app_state/DiscordAppState.native.tsx");
     }
   }
 };

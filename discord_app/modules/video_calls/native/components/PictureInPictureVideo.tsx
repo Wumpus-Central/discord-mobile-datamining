@@ -343,18 +343,18 @@ const memoResult = importAllResult.memo((arg0) => {
   let width;
   ({ channel, pipParticipant, selfParticipant } = arg0);
   const tmp = callback4();
-  let obj = require(10574) /* useIsViewingActivity */;
+  let obj = require("../../../activities/native/useIsViewingActivity.tsx") /* useIsViewingActivity */;
   obj = { channelId: channel.id };
   const isViewingActivity = obj.useIsViewingActivity(obj);
-  let obj2 = require(10570) /* useShouldForcePipOrientation */;
+  let obj2 = require("useShouldForcePipOrientation.tsx") /* useShouldForcePipOrientation */;
   const shouldForcePipOrientation = obj2.useShouldForcePipOrientation({ channel });
   obj = { channelId: channel.id, forcedOrientation: shouldForcePipOrientation };
-  const tmp6 = importDefault(10573)(obj);
+  const tmp6 = require("usePipDimensions.tsx")(obj);
   const obj1 = { style: isViewingActivity ? tmp.backgroundPipFab : tmp.background, children: null };
   const items = [isViewingActivity ? tmp.pipFab : tmp.pip, , , ];
-  ({ width, height } = importDefault(1474)());
+  ({ width, height } = require("../../../screen/useWindowDimensions.native.tsx")());
   const tmp10 = closure_4;
-  const tmp7 = importDefault(1474)();
+  const tmp7 = require("../../../screen/useWindowDimensions.native.tsx")();
   let elevationShadow;
   if (tmp2Result.isAndroid()) {
     elevationShadow = tmp.elevationShadow;
@@ -384,7 +384,7 @@ const memoResult = importAllResult.memo((arg0) => {
     obj5[2] = selfParticipant;
     tmp8Result = tmp8(closure_20, obj5);
   }
-  tmp2Result = require(500) /* set */;
+  tmp2Result = require("../../../../utils/PlatformUtils.tsx") /* set */;
   obj2[1] = tmp8Result;
   obj1[1] = closure_16(tmp10, { activeOpacity: 0.7, children: closure_16(closure_5, obj2) });
   return closure_16(closure_5, obj1);

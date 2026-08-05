@@ -16,11 +16,11 @@ let c3 = importAllResult;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles(() => {
   let obj = { pressable: null, selectedBorder: null, rowSelected: null };
-  obj = { flex: 1, borderRadius: importDefault(15921)().container.borderRadius, marginBottom: 1 };
+  obj = { flex: 1, borderRadius: require("getLayoutStyles.tsx")().container.borderRadius, marginBottom: 1 };
   obj[0] = obj;
-  obj = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, borderWidth: 1, borderColor: importDefault(712).colors.BORDER_MUTED, borderRadius: importDefault(712).radii.md };
+  obj = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, borderWidth: 1, borderColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_MUTED, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.md };
   obj[1] = obj;
-  obj[2] = { borderRadius: importDefault(712).radii.md, backgroundColor: importDefault(712).colors.BACKGROUND_MOD_MUTED };
+  obj[2] = { borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.md, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_MUTED };
   return obj;
 });
 const memoResult = importAllResult.memo(function TextChannel(subtitle) {

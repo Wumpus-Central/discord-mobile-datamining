@@ -6,7 +6,7 @@ const result = require("getTieredTenureBadgeData").fileFinishedImporting("module
 export const useTenureBadgeRequirementString = function useTenureBadgeRequirementString() {
   let id;
   let tenureReqNumMonths;
-  let obj = require(9428) /* usePremiumSince */;
+  let obj = require("useTenureBadging.tsx") /* usePremiumSince */;
   const tieredTenureBadge = obj.useTieredTenureBadge();
   if (null == tieredTenureBadge) {
     return null;
@@ -55,14 +55,14 @@ export const getTenureBadgeRequirementString = function getTenureBadgeRequiremen
             }
           }
         }
-        const intl = require(1236) /* getSystemLocale */.intl;
+        const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
         let obj = { years: null };
         obj[0] = tenureReqNumMonths / 12;
-        return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.qOdyDe, obj);
+        return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.qOdyDe, obj);
       }
     }
   }
-  const intl2 = require(1236) /* getSystemLocale */.intl;
+  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   obj = { months: tenureReqNumMonths };
-  return intl2.formatToPlainString(require(1236) /* getSystemLocale */.t.erUSmA, obj);
+  return intl2.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.erUSmA, obj);
 };

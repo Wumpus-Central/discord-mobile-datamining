@@ -14,13 +14,13 @@ function Navbar(onClose) {
   let obj = { top: true, style: tmp.header, children: null };
   obj = { style: tmp.closeButtonContainer, children: null };
   obj = { accessibilityLabel: null, onPress: null, source: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.cpT0Cq);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.cpT0Cq);
   obj[1] = onClose.onClose;
-  obj[2] = importDefault(7837);
-  obj[1] = callback2(require(5917) /* HeaderActionButton */.HeaderActionButton, obj);
+  obj[2] = require("../../../../_runtime/07837_registerAsset.js");
+  obj[1] = callback2(require("../../../design/components/Navigator/native/HeaderActionButton.native.tsx") /* HeaderActionButton */.HeaderActionButton, obj);
   obj[2] = callback2(View, obj);
-  return callback2(require(5272) /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  return callback2(require("../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
 }
 function SubmitFeedbackScreen(onSubmit) {
   let importDefault;
@@ -30,17 +30,17 @@ function SubmitFeedbackScreen(onSubmit) {
   let feedbackOptions;
   const tmp = createCacheKey();
   dependencyMap = tmp;
-  let obj = require(6886) /* Feedback */;
+  let obj = require("../AutomodFeedback.tsx") /* Feedback */;
   feedbackOptions = obj.generateFeedbackOptions();
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.headerTitle, variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[3] = intl.string(require(1236) /* getSystemLocale */.t["7bdzNo"]);
-  const items = [callback2(require(4281) /* Text */.Text, obj), , , ];
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[3] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["7bdzNo"]);
+  const items = [callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), , , ];
   const obj1 = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj1[3] = intl2.string(require(1236) /* getSystemLocale */.t.Lbpk6m);
-  items[1] = callback2(require(4281) /* Text */.Text, obj1);
+  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj1[3] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Lbpk6m);
+  items[1] = callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
   items[2] = callback2(View, {
     style: tmp.formBody,
     children: feedbackOptions.map((children) => {
@@ -83,12 +83,12 @@ function SubmitFeedbackScreen(onSubmit) {
       return outer1_8(outer1_4.Fragment, { children }, value);
     })
   };
-  items1[1] = { paddingBottom: importDefault(1581)().bottom + 16 };
+  items1[1] = { paddingBottom: require("../../safe_area/useSafeAreaInsets.native.tsx")().bottom + 16 };
   const obj5 = { size: "md", text: null, onPress: null };
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj5[1] = intl3.string(require(1236) /* getSystemLocale */.t.Z6DZZ6);
+  const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj5[1] = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Z6DZZ6);
   obj5[2] = onSubmit.onSubmit;
-  obj3[1] = callback2(require(4695) /* Button */.Button, obj5);
+  obj3[1] = callback2(require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj5);
   items[3] = callback2(View, obj3);
   obj[1] = items;
   return callback3(View, obj);

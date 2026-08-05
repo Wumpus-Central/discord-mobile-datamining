@@ -22,7 +22,7 @@ function validateContentTypes(content, items, items2) {
         let tmp4 = nextResult;
         let tmp5 = require;
         let tmp6 = dependencyMap;
-        if (tmp3.type === require(4715) /* AST_KEY */.AST_KEY.INLINE_CODE) {
+        if (tmp3.type === require("MarkupTypes.tsx") /* AST_KEY */.AST_KEY.INLINE_CODE) {
           items2 = [];
           let tmp7 = items2;
           let tmp8 = items;
@@ -67,7 +67,7 @@ function getRawText(content) {
     let type = nextResult.type;
     let tmp3 = require;
     let tmp4 = dependencyMap;
-    if (require(4715) /* AST_KEY */.AST_KEY.TEXT !== type) {
+    if (require("MarkupTypes.tsx") /* AST_KEY */.AST_KEY.TEXT !== type) {
       if (tmp3(4715).AST_KEY.INLINE_CODE !== type) {
         if (tmp3(4715).AST_KEY.CUSTOM_EMOJI === type) {
           let tmp16 = str;
@@ -127,7 +127,7 @@ function getRawText(content) {
   return str;
 }
 function isSuspiciousUrl(url) {
-  let obj = require(4269) /* getPathsFromURL */;
+  let obj = require("../coded_links/findCodedLinks.tsx") /* getPathsFromURL */;
   if (obj.isSuspiciousCodedLink(url)) {
     return true;
   } else {
@@ -145,7 +145,7 @@ function isSuspiciousUrl(url) {
     if (value.whitespaceSanitized !== url) {
       return true;
     } else {
-      const toURLSafeResult = importDefault(1467).toURLSafe(url);
+      const toURLSafeResult = require("../../utils/URLUtils.tsx").toURLSafe(url);
       if (null == toURLSafeResult) {
         return true;
       } else {
@@ -166,7 +166,7 @@ function isSuspiciousUrl(url) {
         }
         return tmp7;
       }
-      const obj7 = importDefault(1467);
+      const obj7 = require("../../utils/URLUtils.tsx");
       tmp9 = importDefault;
     }
     obj2 = tmp2;
@@ -192,15 +192,15 @@ function punycodeLink(url) {
           const error1 = new Error("no hostname");
           throw error1;
         }
-        let obj = importDefault(4722);
+        let obj = require("../../../_runtime/04722_error.js");
         tmp9.hostname = obj.toASCII(tmp9.hostname.toLowerCase());
         tmp9.username = "";
         tmp9.password = "";
         obj = { target: null, displayTarget: null };
-        obj[0] = require(4721) /* safelyPartiallyDecodeURIComponent */.safelyMakeUrlHumanReadable(tmp9);
-        const obj2 = require(4721) /* safelyPartiallyDecodeURIComponent */;
+        obj[0] = require("UnicodeSanitizationUtils.tsx") /* safelyPartiallyDecodeURIComponent */.safelyMakeUrlHumanReadable(tmp9);
+        const obj2 = require("UnicodeSanitizationUtils.tsx") /* safelyPartiallyDecodeURIComponent */;
         const str6 = tmp9.hostname;
-        obj[1] = require(4721) /* safelyPartiallyDecodeURIComponent */.safelyMakeUrlHumanReadable(tmp9);
+        obj[1] = require("UnicodeSanitizationUtils.tsx") /* safelyPartiallyDecodeURIComponent */.safelyMakeUrlHumanReadable(tmp9);
         return obj;
       } else {
         const _Error = Error;
@@ -266,7 +266,7 @@ obj.match = function match(arr, allowLinks) {
         }
         return null;
       }
-      return importDefault(3984).defaultRules.link.match(arr, allowLinks, arg2);
+      return require("../../../_runtime/03984_t.js").defaultRules.link.match(arr, allowLinks, arg2);
     }
   } else {
     return null;
@@ -280,29 +280,29 @@ obj.parse = function parse(arg0, rules, allowEmojiLinks) {
   [tmp2, tmp3, tmp4, tmp5] = callback(arg0, 4);
   if (isSuspiciousUrl(tmp4)) {
     let obj = { type: null, content: null };
-    obj[0] = require(4715) /* AST_KEY */.AST_KEY.TEXT;
+    obj[0] = require("MarkupTypes.tsx") /* AST_KEY */.AST_KEY.TEXT;
     obj[1] = tmp2;
     return obj;
   } else {
     obj = tmp2;
     let value = tmp2.get(tmp4);
     if (null == value) {
-      let obj1 = require(4721) /* safelyPartiallyDecodeURIComponent */;
+      let obj1 = require("UnicodeSanitizationUtils.tsx") /* safelyPartiallyDecodeURIComponent */;
       const sanitizeWhitespaceResult = obj1.sanitizeWhitespace(tmp4);
       obj = { whitespaceSanitized: null, fullySanitized: null };
       obj[0] = sanitizeWhitespaceResult;
-      let obj3 = require(4721) /* safelyPartiallyDecodeURIComponent */;
+      let obj3 = require("UnicodeSanitizationUtils.tsx") /* safelyPartiallyDecodeURIComponent */;
       obj[1] = obj3.sanitizeUnicodeConfusables(sanitizeWhitespaceResult);
       const result = obj.set(tmp4, obj);
       value = obj;
     }
     value = obj.get(tmp3);
     if (null == value) {
-      let obj4 = require(4721) /* safelyPartiallyDecodeURIComponent */;
+      let obj4 = require("UnicodeSanitizationUtils.tsx") /* safelyPartiallyDecodeURIComponent */;
       const sanitizeWhitespaceResult1 = obj4.sanitizeWhitespace(tmp3);
       obj1 = { whitespaceSanitized: null, fullySanitized: null };
       obj1[0] = sanitizeWhitespaceResult1;
-      let obj6 = require(4721) /* safelyPartiallyDecodeURIComponent */;
+      let obj6 = require("UnicodeSanitizationUtils.tsx") /* safelyPartiallyDecodeURIComponent */;
       obj1[1] = obj6.sanitizeUnicodeConfusables(sanitizeWhitespaceResult1);
       const result1 = obj.set(tmp3, obj1);
       value = obj1;
@@ -313,20 +313,20 @@ obj.parse = function parse(arg0, rules, allowEmojiLinks) {
     }
     let value1 = obj.get(str);
     if (null == value1) {
-      let obj7 = require(4721) /* safelyPartiallyDecodeURIComponent */;
+      let obj7 = require("UnicodeSanitizationUtils.tsx") /* safelyPartiallyDecodeURIComponent */;
       const sanitizeWhitespaceResult2 = obj7.sanitizeWhitespace(str);
       const obj2 = { whitespaceSanitized: null, fullySanitized: null };
       obj2[0] = sanitizeWhitespaceResult2;
-      obj2[1] = require(4721) /* safelyPartiallyDecodeURIComponent */.sanitizeUnicodeConfusables(sanitizeWhitespaceResult2);
+      obj2[1] = require("UnicodeSanitizationUtils.tsx") /* safelyPartiallyDecodeURIComponent */.sanitizeUnicodeConfusables(sanitizeWhitespaceResult2);
       const result2 = obj.set(str, obj2);
       value1 = obj2;
-      const obj10 = require(4721) /* safelyPartiallyDecodeURIComponent */;
+      const obj10 = require("UnicodeSanitizationUtils.tsx") /* safelyPartiallyDecodeURIComponent */;
     }
     const trimmed = str3.trim();
     if (0 !== str2.trim().length) {
       if (0 !== trimmed.length) {
-        const tmp53 = punycodeLink(importDefault(3984).unescapeUrl(tmp4));
-        const obj20 = importDefault(3984);
+        const tmp53 = punycodeLink(require("../../../_runtime/03984_t.js").unescapeUrl(tmp4));
+        const obj20 = require("../../../_runtime/03984_t.js");
         if (null != tmp53) {
           if (!tmp23) {
             obj3 = {};
@@ -338,7 +338,7 @@ obj.parse = function parse(arg0, rules, allowEmojiLinks) {
             HermesBuiltin.arraySpread(items3, HermesBuiltin.arraySpread(tmp28, 0));
             items1 = [];
             HermesBuiltin.arraySpread(items5, HermesBuiltin.arraySpread(items4, 0));
-            items2 = [require(4715) /* AST_KEY */.AST_KEY.EMOJI];
+            items2 = [require("MarkupTypes.tsx") /* AST_KEY */.AST_KEY.EMOJI];
             const tmp43 = validateContentTypes(rules(str3, obj3), items, items2);
             if (null != tmp43) {
               if (null != validateContentTypes(rules(value1.fullySanitized, obj3), items1)) {
@@ -360,19 +360,19 @@ obj.parse = function parse(arg0, rules, allowEmojiLinks) {
               }
             }
             obj6 = { type: null, content: null };
-            obj6[0] = require(4715) /* AST_KEY */.AST_KEY.TEXT;
+            obj6[0] = require("MarkupTypes.tsx") /* AST_KEY */.AST_KEY.TEXT;
             obj6[1] = tmp2;
             return obj6;
           }
         }
         obj7 = { type: null, content: null };
-        obj7[0] = require(4715) /* AST_KEY */.AST_KEY.TEXT;
+        obj7[0] = require("MarkupTypes.tsx") /* AST_KEY */.AST_KEY.TEXT;
         obj7[1] = tmp2;
         return obj7;
       }
     }
     const obj8 = { type: null, content: null };
-    obj8[0] = require(4715) /* AST_KEY */.AST_KEY.TEXT;
+    obj8[0] = require("MarkupTypes.tsx") /* AST_KEY */.AST_KEY.TEXT;
     obj8[1] = tmp2;
     return obj8;
   }

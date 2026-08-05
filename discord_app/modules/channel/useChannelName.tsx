@@ -18,8 +18,8 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
     flag2 = false;
   }
   if (channel.isObfuscated()) {
-    const intl3 = _require(1236).intl;
-    return intl3.string(_require(1236).t["/YzI63"]);
+    const intl3 = _require("../../intl/index.native.tsx").intl;
+    return intl3.string(_require("../../intl/index.native.tsx").t["/YzI63"]);
   } else {
     const type = channel.type;
     if (constants.DM === type) {
@@ -33,15 +33,15 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
       } else {
         const recipients = channel.recipients;
         const mapped = recipients.map(closure_9.getUser);
-        const first = callback(mapped.filter(_require(1351).isNotNullish), 1)[0];
+        const first = callback(mapped.filter(_require("../../utils/GlobalUtils.tsx").isNotNullish), 1)[0];
         if (null == first) {
           return "???";
         } else {
           if (!first.isProvisional) {
             let str17 = closure_7.getNickname(first.id);
             if (str17 == null) {
-              str17 = importDefault(4124).getName(first);
-              const obj3 = importDefault(4124);
+              str17 = require("../../utils/UserUtils.tsx").getName(first);
+              const obj3 = require("../../utils/UserUtils.tsx");
             }
             if (str17 == null) {
               str17 = "???";
@@ -62,7 +62,7 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
         const recipients1 = channel.recipients;
         _require = closure_7;
         const mapped1 = recipients1.map(closure_9.getUser);
-        const found = mapped1.filter(_require(1351).isNotNullish);
+        const found = mapped1.filter(_require("../../utils/GlobalUtils.tsx").isNotNullish);
         const mapped2 = found.map((id) => {
           nickname = nickname.getNickname(id.id);
           if (nickname == null) {
@@ -76,9 +76,9 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
         } else {
           const intl2 = tmp25(1236).intl;
           const obj = { name: null };
-          obj[0] = importDefault(4124).getName(closure_9.getCurrentUser());
+          obj[0] = require("../../utils/UserUtils.tsx").getName(closure_9.getCurrentUser());
           joined = intl2.formatToPlainString(tmp25(1236).t["9Uk8PF"], obj);
-          const obj2 = importDefault(4124);
+          const obj2 = require("../../utils/UserUtils.tsx");
         }
       }
     } else {
@@ -88,8 +88,8 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
             if (tmp3.GUILD_MEDIA !== type) {
               if (tmp3.GUILD_CATEGORY === type) {
                 if (channel.id === closure_8) {
-                  const intl = _require(1236).intl;
-                  let stringResult = intl.string(_require(1236).t.GSfOoo);
+                  const intl = _require("../../intl/index.native.tsx").intl;
+                  let stringResult = intl.string(_require("../../intl/index.native.tsx").t.GSfOoo);
                 } else {
                   stringResult = str;
                   if (flag2) {
@@ -150,7 +150,7 @@ export default function useChannelName(arg0) {
     flag = false;
   }
   const items = [mergeGuildAvatar, getHash, upsertRelationship];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != closure_0) {
       tmp2 = outer1_9(tmp, outer1_6, outer1_5, flag);
@@ -161,7 +161,7 @@ export default function useChannelName(arg0) {
 export const computeDefaultGroupDmNameFromUserIds = function computeDefaultGroupDmNameFromUserIds(arr, getUser) {
   const _require = arg2;
   const mapped = arr.map(getUser.getUser);
-  const found = mapped.filter(_require(1351).isNotNullish);
+  const found = mapped.filter(_require("../../utils/GlobalUtils.tsx").isNotNullish);
   const mapped1 = found.map((id) => {
     nickname = nickname.getNickname(id.id);
     if (nickname == null) {
@@ -175,9 +175,9 @@ export const computeDefaultGroupDmNameFromUserIds = function computeDefaultGroup
   } else {
     const intl = tmp(1236).intl;
     const obj = { name: null };
-    obj[0] = importDefault(4124).getName(getUser.getCurrentUser());
+    obj[0] = require("../../utils/UserUtils.tsx").getName(getUser.getCurrentUser());
     joined = intl.formatToPlainString(tmp(1236).t["9Uk8PF"], obj);
-    const obj2 = importDefault(4124);
+    const obj2 = require("../../utils/UserUtils.tsx");
   }
   return joined;
 };
@@ -185,7 +185,7 @@ export const computeDefaultGroupDmName = function computeDefaultGroupDmName(reci
   recipients = recipients.recipients;
   const _require = arg2;
   const mapped = recipients.map(getUser.getUser);
-  const found = mapped.filter(_require(1351).isNotNullish);
+  const found = mapped.filter(_require("../../utils/GlobalUtils.tsx").isNotNullish);
   const mapped1 = found.map((id) => {
     nickname = nickname.getNickname(id.id);
     if (nickname == null) {
@@ -199,16 +199,16 @@ export const computeDefaultGroupDmName = function computeDefaultGroupDmName(reci
   } else {
     const intl = tmp(1236).intl;
     const obj = { name: null };
-    obj[0] = importDefault(4124).getName(getUser.getCurrentUser());
+    obj[0] = require("../../utils/UserUtils.tsx").getName(getUser.getCurrentUser());
     joined = intl.formatToPlainString(tmp(1236).t["9Uk8PF"], obj);
-    const obj2 = importDefault(4124);
+    const obj2 = require("../../utils/UserUtils.tsx");
   }
   return joined;
 };
 export const useComputedGroupDmName = function useComputedGroupDmName(arg0) {
   const _require = arg0;
   const items = [mergeGuildAvatar, upsertRelationship];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let obj = callback;
     let tmp = null;
     if (null != callback) {

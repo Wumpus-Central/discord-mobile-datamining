@@ -27,13 +27,13 @@ export default function _default(children) {
   let style;
   ({ premiumType, style } = children);
   const tmp = createCacheKey();
-  const tmp4 = importDefault(1348)("PremiumTierCard");
+  const tmp4 = require("../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx")("PremiumTierCard");
   let obj = { style: tmp.header, start: null, end: null, colors: null, children: null };
-  obj[1] = require(691) /* keys */.HorizontalGradient.START;
-  obj[2] = require(691) /* keys */.HorizontalGradient.END;
+  obj[1] = require("../../ConstantsIOS.tsx") /* keys */.HorizontalGradient.START;
+  obj[2] = require("../../ConstantsIOS.tsx") /* keys */.HorizontalGradient.END;
   obj[3] = getPremiumGradientColor(premiumType);
   obj = { accessible: true, accessibilityLabel: null, accessibilityRole: "header", style: null, source: null };
-  let obj2 = require(3931) /* getPremiumPlanItem */;
+  let obj2 = require("../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */;
   obj[1] = obj2.getPremiumTypeDisplayName(premiumType);
   if (PremiumTypes.TIER_0 === premiumType) {
     let textLogoTier2 = tmp.textLogoTier0;
@@ -52,7 +52,7 @@ export default function _default(children) {
   }
   obj[4] = tmp2Result;
   obj[4] = closure_7(closure_4, obj);
-  const items = [closure_7(importDefault(4706), obj), , ];
+  const items = [closure_7(require("../../../_runtime/04706_LinearGradient.js"), obj), , ];
   const items1 = [tmp.wumpusLogo, ];
   if (PremiumTypes.TIER_0 === premiumType) {
     let wumpusLogoTier2 = tmp.wumpusLogoTier0;
@@ -86,7 +86,7 @@ export default function _default(children) {
     obj2 = { variant: "surface-high", style: null, children: null };
     obj2[1] = style;
     obj2[2] = tmp5Result;
-    let tmp7Result = tmp7(require(5317) /* PressableCard */.Card, obj2);
+    let tmp7Result = tmp7(require("../../design/components/Card/native/Card.native.tsx") /* PressableCard */.Card, obj2);
   } else {
     const obj3 = { style: null, children: null };
     obj3[0] = style;

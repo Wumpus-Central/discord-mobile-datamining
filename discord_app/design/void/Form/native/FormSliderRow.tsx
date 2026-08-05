@@ -17,7 +17,7 @@ export default function FormSliderRow(arg0) {
   let trailing;
   ({ label, trailing } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  const context = React.useContext(require(5314) /* context */.RedesignCompatContext);
+  const context = React.useContext(require("../../../components/RedesignCompat/native/RedesignCompat.native.tsx") /* context */.RedesignCompatContext);
   const tmp5 = callback2();
   if (context) {
     let obj = { children: null };
@@ -31,22 +31,22 @@ export default function FormSliderRow(arg0) {
     const obj2 = {};
     const merged1 = Object.assign(merged);
     obj2.style = tmp5.slider;
-    items1[1] = callback(importDefault(7799), obj2);
+    items1[1] = callback(require("../../../../../_runtime/07799__getRequireWildcardCache.js"), obj2);
     obj[0] = items1;
     let tmp6Result = tmp6(tmp2(5317).Card, obj);
-    const tmp18 = importDefault(7799);
+    const tmp18 = require("../../../../../_runtime/07799__getRequireWildcardCache.js");
   } else {
     obj = { children: null };
     const obj3 = { label: null, trailing: null };
     obj3[0] = label;
     obj3[1] = trailing;
-    const items2 = [callback(importDefault(5308), obj3), ];
+    const items2 = [callback(require("FormRow.tsx"), obj3), ];
     const obj4 = {};
     const merged2 = Object.assign(merged);
-    items2[1] = callback(importDefault(7799), obj4);
+    items2[1] = callback(require("../../../../../_runtime/07799__getRequireWildcardCache.js"), obj4);
     obj[0] = items2;
     tmp6Result = tmp6(closure_7, obj);
-    const tmp10 = importDefault(7799);
+    const tmp10 = require("../../../../../_runtime/07799__getRequireWildcardCache.js");
   }
   return tmp6Result;
 };

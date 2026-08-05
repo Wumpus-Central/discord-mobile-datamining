@@ -8,7 +8,7 @@ const result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("module
 export const showChannelFollowingActionSheet = function showChannelFollowingActionSheet(id, guildId) {
   const _require = id;
   const importDefault = guildId;
-  let obj = importDefault(4253);
+  let obj = require("../../action_sheet/native/ActionSheetActionCreators.tsx");
   obj = {
     sourceChannelId: id,
     sourceGuildId: guildId,
@@ -106,5 +106,5 @@ export const showChannelFollowingActionSheet = function showChannelFollowingActi
       return callback(dependencyMap[2]).hideActionSheet();
     }
   };
-  obj.openLazy(_require(1959)(10215, dependencyMap.paths), "NewChannelFollower." + id, obj);
+  obj.openLazy(_require("../../../../_runtime/01959_asyncRequireImpl.js")(10215, dependencyMap.paths), "NewChannelFollower." + id, obj);
 };

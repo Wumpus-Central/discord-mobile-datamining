@@ -20,7 +20,7 @@ function ShopCardGridItem(index) {
   ({ product, cardWidth, preferVCPrice, unpublishedAt, disableBundleStaticBackground, muteBundleStaticBackground } = index);
   const memo = React.useMemo(() => ({ tilePosition: index }), items);
   const obj = { newValue: memo, children: null };
-  obj[1] = jsx(importDefault(9262), { unpublishedAt, product, cardWidth, preferVCPrice, disableBundleStaticBackground, muteBundleStaticBackground });
+  obj[1] = jsx(require("CollectiblesShopCardV2.tsx"), { unpublishedAt, product, cardWidth, preferVCPrice, disableBundleStaticBackground, muteBundleStaticBackground });
   return jsx(index(9265).CollectiblesAnalyticsProvider, { newValue: memo, children: null });
 }
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);

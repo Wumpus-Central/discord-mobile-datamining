@@ -5,7 +5,7 @@ export const getProductName = function getProductName(product) {
   if (null == product) {
     return "";
   } else {
-    const string = require(1236) /* getSystemLocale */.intl.string;
+    const string = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl.string;
     if ("baseVariantName" in product) {
       if (null != product.baseVariantName) {
         if (product.variantLabel !== tmp3) {
@@ -24,7 +24,7 @@ export const getPurchasedProductName = function getPurchasedProductName(baseVari
   if (null == baseVariantName) {
     return "";
   } else {
-    const string = require(1236) /* getSystemLocale */.intl.string;
+    const string = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl.string;
     if (null != baseVariantName.baseVariantName) {
       if (baseVariantName.variantLabel !== tmp3) {
         const intl = tmp(1236).intl;
@@ -39,9 +39,9 @@ export const getPurchasedProductName = function getPurchasedProductName(baseVari
 };
 export const getProductNameAndTypeLabel = function getProductNameAndTypeLabel(closure_0) {
   if (null == closure_0) {
-    let obj1 = require(6921) /* getProductOrbPrice */;
+    let obj1 = require("CollectiblesProductUtils.tsx") /* getProductOrbPrice */;
     const productType = obj1.getProductType(closure_0);
-    if (require(1901) /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION === productType) {
+    if (require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION === productType) {
       const intl5 = tmp3(1236).intl;
       let obj = { product: null };
       obj[0] = "";
@@ -67,7 +67,7 @@ export const getProductNameAndTypeLabel = function getProductNameAndTypeLabel(cl
   } else {
     let BZN5k2 = require;
     obj = dependencyMap;
-    const string = require(1236) /* getSystemLocale */.intl.string;
+    const string = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl.string;
     if ("baseVariantName" in closure_0) {
       const intl = BZN5k2(1236).intl;
       BZN5k2 = BZN5k2(1236).t.BZN5k2;

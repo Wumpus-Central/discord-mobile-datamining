@@ -43,7 +43,7 @@ function resolveAsset(id, questBarHeroVideo) {
 }
 function getMimetype(questBarHeroVideo) {
   const startsWithResult = questBarHeroVideo.startsWith("blob:");
-  const toURLSafeResult = importDefault(1467).toURLSafe(questBarHeroVideo);
+  const toURLSafeResult = require("../../../utils/URLUtils.tsx").toURLSafe(questBarHeroVideo);
   if (startsWithResult) {
     let value;
     if (!tmp3) {
@@ -76,7 +76,7 @@ function getMimetype(questBarHeroVideo) {
     }
     return "application/x-mpegURL";
   }
-  const obj = importDefault(1467);
+  const obj = require("../../../utils/URLUtils.tsx");
 }
 function getAssetUrlWithMediaProxyQueryParams(assetUrl, arg1) {
   let size = arg1;
@@ -86,7 +86,7 @@ function getAssetUrlWithMediaProxyQueryParams(assetUrl, arg1) {
   if (assetUrl.startsWith("blob:")) {
     return assetUrl;
   } else {
-    let str = importDefault(1467).toURLSafe(assetUrl);
+    let str = require("../../../utils/URLUtils.tsx").toURLSafe(assetUrl);
     str = assetUrl;
     if (null != str) {
       if (null != size.format) {
@@ -116,7 +116,7 @@ function convertVideoToFirstFrameImageWithMediaProxy(assetUrl, width) {
   if (assetUrl.startsWith("blob:")) {
     return assetUrl;
   } else {
-    let str = importDefault(1467).toURLSafe(assetUrl);
+    let str = require("../../../utils/URLUtils.tsx").toURLSafe(assetUrl);
     str = null;
     if (null != str) {
       const searchParams = str.searchParams;
@@ -194,9 +194,9 @@ export const getQuestAsset = function getQuestAsset(quest, VIDEO_PLAYER_TRANSCRI
     flag = false;
     flag2 = false;
   } else if (tmp.REWARD === VIDEO_PLAYER_TRANSCRIPT) {
-    let obj1 = require(10391) /* _getDefaultRewardName */;
+    let obj1 = require("../utils/QuestRewardUtils.tsx") /* _getDefaultRewardName */;
     const questPrimaryReward = obj1.getQuestPrimaryReward(quest);
-    if (questPrimaryReward.type === require(7085) /* QuestRewardTypes */.QuestRewardTypes.VIRTUAL_CURRENCY) {
+    if (questPrimaryReward.type === require("../../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx") /* QuestRewardTypes */.QuestRewardTypes.VIRTUAL_CURRENCY) {
       let tmp25;
       if (null != arg4) {
         tmp25 = obj8[arg4];
@@ -207,11 +207,11 @@ export const getQuestAsset = function getQuestAsset(quest, VIDEO_PLAYER_TRANSCRI
         obj1 = obj;
       } else if (flag) {
         obj = { url: null, mimetype: "video/mp4", isAnimated: true };
-        obj[0] = importDefault(10398);
+        obj[0] = require("../../../../discord_assets/assets/orbs/reward_tile_v3_mobile.mp4.js");
         obj1 = obj;
       } else {
         obj1 = { url: null, mimetype: "video/webm", isAnimated: true };
-        obj1[0] = importDefault(10399);
+        obj1[0] = require("../../../../discord_assets/assets/orbs/reward_tile_v3.webm.js");
       }
       return obj1;
     } else {
@@ -220,9 +220,9 @@ export const getQuestAsset = function getQuestAsset(quest, VIDEO_PLAYER_TRANSCRI
       flag2 = false;
     }
   } else if (tmp.REWARD_IMAGE === VIDEO_PLAYER_TRANSCRIPT) {
-    obj = require(10391) /* _getDefaultRewardName */;
+    obj = require("../utils/QuestRewardUtils.tsx") /* _getDefaultRewardName */;
     const questPrimaryReward1 = obj.getQuestPrimaryReward(quest);
-    if (questPrimaryReward1.type === require(7085) /* QuestRewardTypes */.QuestRewardTypes.VIRTUAL_CURRENCY) {
+    if (questPrimaryReward1.type === require("../../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx") /* QuestRewardTypes */.QuestRewardTypes.VIRTUAL_CURRENCY) {
       return null;
     } else {
       asset = questPrimaryReward1.asset;
@@ -301,7 +301,7 @@ export const getQuestAsset = function getQuestAsset(quest, VIDEO_PLAYER_TRANSCRI
       }
     }
     if ("taskConfigV2" in quest.config) {
-      const FirstPartyQuestTaskTypes = require(5135) /* set */.FirstPartyQuestTaskTypes;
+      const FirstPartyQuestTaskTypes = require("../../../../discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx") /* set */.FirstPartyQuestTaskTypes;
       const tmp5 = quest.config.taskConfigV2.tasks[flag ? FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE : FirstPartyQuestTaskTypes.WATCH_VIDEO];
       let tmp9;
       if (tmp5 != null) {
@@ -391,7 +391,7 @@ export const resolveAdCreativeCdnUrl = function resolveAdCreativeCdnUrl(hero_ima
 };
 export { getMimetype };
 export const getDevicePixelScaledDimensions = function getDevicePixelScaledDimensions(arg0, arg1) {
-  const tmp = importDefault(1849)();
+  const tmp = require("../../../utils/getDevicePixelRatio.native.tsx")();
   if (tmp < 3) {
     let obj = { width: null, height: null };
     obj[0] = arg0;
@@ -409,7 +409,7 @@ export const getScaledImageUrl = function getScaledImageUrl(arg0) {
   let height;
   let width;
   ({ assetUrl, width, height } = arg0);
-  const tmp = importDefault(1849)();
+  const tmp = require("../../../utils/getDevicePixelRatio.native.tsx")();
   return getAssetUrlWithMediaProxyQueryParams(assetUrl, { width: width * tmp, height: height * tmp, format: "webp" });
 };
 export { convertVideoToFirstFrameImageWithMediaProxy };
@@ -418,6 +418,6 @@ export const getScaledFirstFrameImageUrl = function getScaledFirstFrameImageUrl(
   let height;
   let width;
   ({ assetUrl, width, height } = arg0);
-  const tmp = importDefault(1849)();
+  const tmp = require("../../../utils/getDevicePixelRatio.native.tsx")();
   return convertVideoToFirstFrameImageWithMediaProxy(assetUrl, { width: width * tmp, height: height * tmp });
 };

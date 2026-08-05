@@ -40,9 +40,9 @@ function EditButton(disabled) {
   }
   let obj = { accessibilityRole: "button", accessibilityLabel, onPress, disabled: flag, style: createCacheKey().editButton, children: null };
   obj = { size: "xs", color: null };
-  obj[1] = importDefault(712).colors.WHITE;
-  obj[5] = callback(require(9591) /* PencilIcon */.PencilIcon, obj);
-  return callback(require(4812) /* PressableBase */.PressableOpacity, obj);
+  obj[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE;
+  obj[5] = callback(require("../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx") /* PencilIcon */.PencilIcon, obj);
+  return callback(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: { position: "relative" }, editButton: null, previewButton: null };
@@ -77,7 +77,7 @@ export default function UserProfileEditBannerButton(arg0) {
   }
   let obj = { style: createCacheKey().container, children: null };
   const tmp = createCacheKey();
-  const items = [callback(importDefault(8761), { user, displayProfile, pendingBanner, pendingAvatarSrc, pendingThemeColors, pendingAccentColor, bannerHeight: importDefault(8747)(), bannerSafeArea }), , ];
+  const items = [callback(require("UserProfileBanner.tsx"), { user, displayProfile, pendingBanner, pendingAvatarSrc, pendingThemeColors, pendingAccentColor, bannerHeight: require("../hooks/native/useUserProfileBannerHeight.tsx")(), bannerSafeArea }), , ];
   if (showProfilePreviewButton) {
     obj = { userId: null };
     obj[0] = user.id;

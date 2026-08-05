@@ -70,7 +70,7 @@ export default function SecureFramesCode(chunks) {
   ({ title, trailing, columns } = chunks);
   const tmp = createCacheKey();
   let obj = { style: tmp.codeHeader, children: null };
-  const items = [callback(require(4281) /* Text */.Text, { color: "mobile-text-heading-primary", variant: "heading-md/semibold", children: title }), trailing];
+  const items = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { color: "mobile-text-heading-primary", variant: "heading-md/semibold", children: title }), trailing];
   obj[1] = items;
   const items1 = [callback2(closure_4, obj), ];
   obj = { style: tmp.code, children: null };

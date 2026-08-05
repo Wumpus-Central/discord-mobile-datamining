@@ -561,10 +561,10 @@ prototype["onGuildSync"] = function onGuildSync(id, closure_0) {
 };
 prototype["delete"] = function delete(guild_id, database) {
   this.unsync(guild_id, database);
-  const result = importDefault(1907).basicChannelsTransaction(database);
+  const result = require("../DatabaseDaos.tsx").basicChannelsTransaction(database);
   result.delete(guild_id);
-  const obj = importDefault(1907);
-  const result1 = importDefault(1907).syncedBasicChannelsTransaction(database);
+  const obj = require("../DatabaseDaos.tsx");
+  const result1 = require("../DatabaseDaos.tsx").syncedBasicChannelsTransaction(database);
   result1.delete(guild_id);
 };
 prototype["unsync"] = function unsync(guild_id, closure_0) {
@@ -572,10 +572,10 @@ prototype["unsync"] = function unsync(guild_id, closure_0) {
   if (synced != null) {
     synced.delete(guild_id);
   }
-  const result = importDefault(1907).basicChannelsTransaction(closure_0);
+  const result = require("../DatabaseDaos.tsx").basicChannelsTransaction(closure_0);
   result.delete(guild_id);
-  const obj = importDefault(1907);
-  const result1 = importDefault(1907).syncedBasicChannelsTransaction(closure_0);
+  const obj = require("../DatabaseDaos.tsx");
+  const result1 = require("../DatabaseDaos.tsx").syncedBasicChannelsTransaction(closure_0);
   result1.put(guild_id, false);
   hasChannel.invalidate(guild_id);
 };
@@ -614,7 +614,7 @@ prototype["syncOne"] = function syncOne(closure_0, database) {
     if (synced2 != null) {
       synced2.add(closure_0);
     }
-    const result = importDefault(1907).basicChannelsTransaction(database);
+    const result = require("../DatabaseDaos.tsx").basicChannelsTransaction(database);
     const _Object = Object;
     const values = Object.values(store.getMutableGuildChannelsForGuild(closure_0));
     result.put(closure_0, values.map((id) => {
@@ -622,11 +622,11 @@ prototype["syncOne"] = function syncOne(closure_0, database) {
       obj[4] = callback(table[14]).asBasicFlag(getUncachedChannelPermissions.computePermissions(id));
       return obj;
     }));
-    let obj = importDefault(1907);
-    const result1 = importDefault(1907).syncedBasicChannelsTransaction(database);
+    let obj = require("../DatabaseDaos.tsx");
+    const result1 = require("../DatabaseDaos.tsx").syncedBasicChannelsTransaction(database);
     result1.put(closure_0, true);
     flag = true;
-    const obj3 = importDefault(1907);
+    const obj3 = require("../DatabaseDaos.tsx");
   }
   return flag;
 };

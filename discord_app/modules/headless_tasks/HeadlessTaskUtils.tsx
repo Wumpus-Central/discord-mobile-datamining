@@ -6,7 +6,7 @@ const result = require("set").fileFinishedImporting("modules/headless_tasks/Head
 export default {
   awaitStorage(arg0) {
     const _require = arg0;
-    const Storage = _require(595).Storage;
+    const Storage = _require("../../../discord_common/js/packages/storage/Storage.tsx").Storage;
     Storage.asyncGet(TOKEN_KEY, () => {
       callback();
     });

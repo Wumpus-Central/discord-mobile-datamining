@@ -12,7 +12,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.AUTHORIZED_APP,
   getComponent() {
-    return require(14090) /* AuthorizedAppScreen */.default;
+    return require("../../authorized_apps/native/AuthorizedAppScreen.tsx") /* AuthorizedAppScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

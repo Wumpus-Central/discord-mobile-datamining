@@ -7,20 +7,20 @@ const result = require("initialize").fileFinishedImporting("modules/self_mod/str
 
 export const useStrangerDangerWarning = function useStrangerDangerWarning(id) {
   const items = [mergeGuildAvatar];
-  const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj = require(589) /* initialize */;
+  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const tmp = require;
-  const isSpamMessageRequest = require(10255) /* useIsSpamMessageRequest */.useIsSpamMessageRequest(id);
-  const obj3 = require(10255) /* useIsSpamMessageRequest */;
-  const isMessageRequest = require(10256) /* useIsMessageRequest */.useIsMessageRequest(id);
-  const obj4 = require(10256) /* useIsMessageRequest */;
-  const channelSafetyWarning = require(10257) /* useChannelSafetyWarning */.useChannelSafetyWarning(id, SafetyWarningTypes.STRANGER_DANGER);
-  const obj5 = require(10257) /* useChannelSafetyWarning */;
-  const userIsTeen = require(7846) /* useUserIsTeen */.useUserIsTeen();
+  const isSpamMessageRequest = require("../../../message_request/hooks/useIsSpamMessageRequest.tsx") /* useIsSpamMessageRequest */.useIsSpamMessageRequest(id);
+  const obj3 = require("../../../message_request/hooks/useIsSpamMessageRequest.tsx") /* useIsSpamMessageRequest */;
+  const isMessageRequest = require("../../../message_request/hooks/useIsMessageRequest.tsx") /* useIsMessageRequest */.useIsMessageRequest(id);
+  const obj4 = require("../../../message_request/hooks/useIsMessageRequest.tsx") /* useIsMessageRequest */;
+  const channelSafetyWarning = require("../../hooks/useChannelSafetyWarning.tsx") /* useChannelSafetyWarning */.useChannelSafetyWarning(id, SafetyWarningTypes.STRANGER_DANGER);
+  const obj5 = require("../../hooks/useChannelSafetyWarning.tsx") /* useChannelSafetyWarning */;
+  const userIsTeen = require("../../hooks/useUserIsTeen.tsx") /* useUserIsTeen */.useUserIsTeen();
   if (stateFromStores != null) {
     const isStaffResult = stateFromStores.isStaff();
   }
-  const obj6 = require(7846) /* useUserIsTeen */;
+  const obj6 = require("../../hooks/useUserIsTeen.tsx") /* useUserIsTeen */;
   if (userIsTeen) {
     if (!isSpamMessageRequest) {
       if (!isMessageRequest) {

@@ -10,7 +10,7 @@ const result = require("updateVoiceState").fileFinishedImporting("modules/voice_
 export default function useIsConnectedToVoiceChannel(arg0) {
   const _require = arg0;
   const items = [createRTCConnection, updateVoiceState, fetchFingerprint];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const channelId = outer1_3.getChannelId();
     let tmp2 = closure_0;
     if (closure_0 == null) {

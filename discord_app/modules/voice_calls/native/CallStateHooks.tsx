@@ -33,7 +33,7 @@ export default function _default() {
   let dependencyMap;
   let stateFromStores;
   id = id.getId();
-  const obj = require(589) /* initialize */;
+  const obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [callConnect];
   const items1 = [tmp, id];
   const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
@@ -62,11 +62,11 @@ export default function _default() {
   const tmp3 = id(10662)();
   dependencyMap = tmp3;
   const items2 = [getRTCConnectionId];
-  stateFromStores = require(589) /* initialize */.useStateFromStores(items2, getRTCConnectionId.getRTCConnectionId, []);
-  const obj2 = require(589) /* initialize */;
+  stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items2, getRTCConnectionId.getRTCConnectionId, []);
+  const obj2 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items3 = [getRTCConnectionId];
   const items4 = [stateFromStores, tmp3, tmp];
-  const stateFromStores1 = require(589) /* initialize */.useStateFromStores(items3, () => {
+  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items3, () => {
     let channelId;
     if (_undefined != null) {
       channelId = _undefined.channelId;

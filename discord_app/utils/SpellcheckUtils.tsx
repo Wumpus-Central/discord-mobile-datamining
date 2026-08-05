@@ -483,9 +483,9 @@ if (set) {
 }
 let c4 = installResult;
 function isSupported() {
-  let isDesktopResult = require(500) /* set */.isDesktop();
+  let isDesktopResult = require("PlatformUtils.tsx") /* set */.isDesktop();
   if (isDesktopResult) {
-    const tmp4 = importDefault(3896);
+    const tmp4 = require("../lib/DiscordNative.tsx");
     let spellCheck;
     if (tmp4 != null) {
       spellCheck = tmp4.spellCheck;
@@ -568,13 +568,13 @@ export const setAppLocale = function setAppLocale() {
   return applyArgumentsResult;
 };
 export const addResultListener = function addResultListener(arg0) {
-  const tmp3 = importDefault(3896);
+  const tmp3 = require("../lib/DiscordNative.tsx");
   let spellCheck;
   if (tmp3 != null) {
     spellCheck = tmp3.spellCheck;
   }
   if (null != spellCheck) {
-    spellCheck = importDefault(3896).spellCheck;
+    spellCheck = require("../lib/DiscordNative.tsx").spellCheck;
     let fn2 = spellCheck.on("spellcheck-result", arg0);
     if (fn2 == null) {
       fn2 = () => {

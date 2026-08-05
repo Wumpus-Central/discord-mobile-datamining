@@ -116,11 +116,11 @@ RTCBandwidthMonitor["create"] = function create() {
   return obj.record;
 };
 RTCBandwidthMonitor.prototype["getTotalBytes"] = function getTotalBytes() {
-  return importDefault(12).sum(Object.values(this.bytes));
+  return require("../../_runtime/00012_apply.js").sum(Object.values(this.bytes));
 };
 const result = require("set").fileFinishedImporting("lib/RTCBandwidthMonitor.tsx");
 
 export default RTCBandwidthMonitor;
 export const getRTCTotalBytes = function getRTCTotalBytes() {
-  return importDefault(12).sum(arr.map((getTotalBytes) => getTotalBytes.getTotalBytes()));
+  return require("../../_runtime/00012_apply.js").sum(arr.map((getTotalBytes) => getTotalBytes.getTotalBytes()));
 };

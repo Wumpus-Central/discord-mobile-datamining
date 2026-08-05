@@ -21,7 +21,7 @@ class MobileGameCommunitiesManager extends tmp2 {
 }
 const prototype = MobileGameCommunitiesManager.prototype;
 prototype["_fetchGameCommunities"] = function _fetchGameCommunities(result) {
-  const gameIdsForDetectedGames = require(14838) /* DETECTABLE_GAME_TO_APPLICATION_ID_MAP */.getGameIdsForDetectedGames(result);
+  const gameIdsForDetectedGames = require("GameCommunityConfig.tsx") /* DETECTABLE_GAME_TO_APPLICATION_ID_MAP */.getGameIdsForDetectedGames(result);
   const timestamp = Date.now();
   const diff = timestamp - store.getLastFetchedAt();
   if (diff >= 86400000) {
@@ -32,7 +32,7 @@ prototype["_fetchGameCommunities"] = function _fetchGameCommunities(result) {
   }
 };
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
-  const GameCommunityUpsellMultiExperiment = require(12880) /* GAME_COMMUNITY_UPSELL_MULTI_EXPERIMENT */.GameCommunityUpsellMultiExperiment;
+  const GameCommunityUpsellMultiExperiment = require("GameCommunityUpsellExperiment.tsx") /* GAME_COMMUNITY_UPSELL_MULTI_EXPERIMENT */.GameCommunityUpsellMultiExperiment;
   if (GameCommunityUpsellMultiExperiment.getConfig({ location: "MobileGameCommunitiesManager" }).enabled) {
     if (0 === store.getLastFetchedAt()) {
       const _Object = Object;
@@ -45,7 +45,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
         return null != lastScannedAt;
       })) {
         const obj = {};
-        const ALL_DETECTABLE_APP_NAMES = require(12878) /* DetectableAppNames */.ALL_DETECTABLE_APP_NAMES;
+        const ALL_DETECTABLE_APP_NAMES = require("../../local_app_detection/LocalAppDetectionTypes.tsx") /* DetectableAppNames */.ALL_DETECTABLE_APP_NAMES;
         for (const item10021 of ALL_DETECTABLE_APP_NAMES) {
           let tmp6 = initialize;
           obj[item10021] = initialize.isAppInstalled(item10021);
@@ -58,7 +58,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
   }
 };
 prototype["handleLocalAppDetectionComplete"] = function handleLocalAppDetectionComplete(result) {
-  const GameCommunityUpsellMultiExperiment = require(12880) /* GAME_COMMUNITY_UPSELL_MULTI_EXPERIMENT */.GameCommunityUpsellMultiExperiment;
+  const GameCommunityUpsellMultiExperiment = require("GameCommunityUpsellExperiment.tsx") /* GAME_COMMUNITY_UPSELL_MULTI_EXPERIMENT */.GameCommunityUpsellMultiExperiment;
   if (GameCommunityUpsellMultiExperiment.getConfig({ location: "MobileGameCommunitiesManager" }).enabled) {
     const self = this;
     result = this._fetchGameCommunities(result.result);

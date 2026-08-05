@@ -21,7 +21,7 @@ const memoResult = importAllResult.memo((guildId) => {
   ({ users, max, renderIcon, noPadding, stageIcon } = guildId);
   const tmp = callback();
   let transparentBorder = null;
-  if (importDefault(8203)()) {
+  if (require("../../client_themes/native/useIsUsingClientTheme.tsx")()) {
     transparentBorder = tmp.transparentBorder;
   }
   let obj = guildId(8202);

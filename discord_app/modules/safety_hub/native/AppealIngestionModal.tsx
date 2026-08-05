@@ -37,7 +37,7 @@ export default function AppealIngestionModal(classificationId) {
   let _require;
   let flag;
   let flag2;
-  let obj = _require(11198);
+  let obj = _require("../hooks/useSafetyHubClassifications.tsx");
   const safetyHubClassification = obj.useSafetyHubClassification(classificationId.classificationId);
   ({ isDsaEligible: c0, classification } = safetyHubClassification);
   flag = undefined;
@@ -136,8 +136,8 @@ export default function AppealIngestionModal(classificationId) {
     headerTitleAlign: "center"
   };
   const intl = tmp(1236).intl;
-  obj[2] = intl.string(_require(1236).t["13/7kX"]);
-  return callback2(_require(5665).Navigator, obj);
+  obj[2] = intl.string(_require("../../../intl/index.native.tsx").t["13/7kX"]);
+  return callback2(_require("../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, obj);
 };
 export const AppealIngestionModalHeader = function AppealIngestionModalHeader(arg0) {
   let headerText;
@@ -153,7 +153,7 @@ export const AppealIngestionModalHeader = function AppealIngestionModalHeader(ar
     obj = { style: null, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
     obj[0] = tmp.header;
     obj[4] = headerText;
-    tmp4 = callback2(require(4281) /* Text */.Text, obj);
+    tmp4 = callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   }
   const items = [tmp4, ];
   let tmp8 = null;
@@ -163,7 +163,7 @@ export const AppealIngestionModalHeader = function AppealIngestionModalHeader(ar
       obj = { style: null, variant: "text-md/medium", color: "text-default", children: null };
       obj[0] = tmp.subheader;
       obj[3] = subHeaderText;
-      tmp8 = callback2(require(4281) /* Text */.Text, obj);
+      tmp8 = callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
     }
   }
   items[1] = tmp8;

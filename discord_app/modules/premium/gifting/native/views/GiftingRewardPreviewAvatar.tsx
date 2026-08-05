@@ -8,12 +8,12 @@ const require = arg1;
 const result = require("mergeGuildAvatar").fileFinishedImporting("modules/premium/gifting/native/views/GiftingRewardPreviewAvatar.tsx");
 
 export default function GiftingRewardPreviewAvatar(asset) {
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [maybeApplyNoTextColorForLightCustomTheme];
   let tmp5;
-  const stateFromStores1 = require(589) /* initialize */.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
+  const stateFromStores1 = require("../../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
   if (null != asset.asset) {
     obj = { asset: null };
     obj[0] = asset.asset;
@@ -23,5 +23,5 @@ export default function GiftingRewardPreviewAvatar(asset) {
   obj[2] = tmp5;
   obj[3] = !stateFromStores1;
   const merged = Object.assign(asset);
-  return jsx(require(1297) /* Button */.Avatar, { user: stateFromStores, guildId: "r", avatarDecoration: "ct", animate: null });
+  return jsx(require("../../../../../design/void/native.tsx") /* Button */.Avatar, { user: stateFromStores, guildId: "r", avatarDecoration: "ct", animate: null });
 };

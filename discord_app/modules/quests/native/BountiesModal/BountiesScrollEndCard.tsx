@@ -138,17 +138,17 @@ let closure_11 = createCacheKey.createStyles(() => {
   obj3.justifyContent = "center";
   obj3.alignItems = "center";
   obj[4] = obj3;
-  obj[5] = { alignItems: "center", gap: importDefault(712).space.PX_4 };
+  obj[5] = { alignItems: "center", gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
   const obj1 = {};
-  const obj4 = { alignItems: "center", gap: importDefault(712).space.PX_4 };
-  obj[6] = { margin: importDefault(712).space.PX_12 };
-  const obj5 = { margin: importDefault(712).space.PX_12 };
-  obj[7] = { position: "absolute", left: importDefault(712).space.PX_16, right: importDefault(712).space.PX_16, bottom: importDefault(712).space.PX_16 };
+  const obj4 = { alignItems: "center", gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
+  obj[6] = { margin: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 };
+  const obj5 = { margin: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 };
+  obj[7] = { position: "absolute", left: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, right: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, bottom: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
   return obj;
 });
 let fn = function t(value) {
   const obj = { opacity: null };
-  obj[0] = require(4286) /* CONFIG_NEVER_ANIMATE_TIMING */.withTiming(value, require(4289) /* timingNone */.timingStandard, "respect-motion-settings");
+  obj[0] = require("../../../../design/animation/reanimated/timing/timing.tsx") /* CONFIG_NEVER_ANIMATE_TIMING */.withTiming(value, require("../../../../design/animation/reanimated/timing/timingPresets.tsx") /* timingNone */.timingStandard, "respect-motion-settings");
   return obj;
 };
 createCacheKey = { withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, timingStandard: require("timingNone").timingStandard };
@@ -157,7 +157,7 @@ fn.__workletHash = 12127714049951;
 fn.__initData = { code: "function BountiesScrollEndCardTsx1(visible){const{withTiming,timingStandard}=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};}" };
 const fn2 = function n(value, fn2) {
   const obj = { opacity: null };
-  obj[0] = require(4286) /* CONFIG_NEVER_ANIMATE_TIMING */.withTiming(value, require(4289) /* timingNone */.timingStandard, "respect-motion-settings", fn2);
+  obj[0] = require("../../../../design/animation/reanimated/timing/timing.tsx") /* CONFIG_NEVER_ANIMATE_TIMING */.withTiming(value, require("../../../../design/animation/reanimated/timing/timingPresets.tsx") /* timingNone */.timingStandard, "respect-motion-settings", fn2);
   return obj;
 };
 createCacheKey = { withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, timingStandard: require("timingNone").timingStandard };
@@ -169,9 +169,9 @@ const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedI
 
 export default function BountiesScrollEndCard(visible) {
   visible = visible.visible;
-  let obj = require(14156) /* apexExperiment */;
+  let obj = require("../../experiments/BountiesModalTransitionsRefactorExperiment.tsx") /* apexExperiment */;
   const isBountiesModalTransitionsRefactorEnabled = obj.useIsBountiesModalTransitionsRefactorEnabled(QuestsExperimentLocations.VIDEO_MODAL_MOBILE);
-  let obj1 = require(589) /* initialize */;
+  let obj1 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj1.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const callback = React.useCallback((arg0, opacityStyle) => {
@@ -180,8 +180,8 @@ export default function BountiesScrollEndCard(visible) {
     obj.opacityStyle = opacityStyle;
     return callback(closure_15, obj);
   }, []);
-  obj = { visible, entranceTiming: require(4289) /* timingNone */.timingStandard, exitTiming: require(4289) /* timingNone */.timingStandard };
-  const visibilityTransition = require(14157) /* useVisibilityTransition */.useVisibilityTransition(obj);
+  obj = { visible, entranceTiming: require("../../../../design/animation/reanimated/timing/timingPresets.tsx") /* timingNone */.timingStandard, exitTiming: require("../../../../design/animation/reanimated/timing/timingPresets.tsx") /* timingNone */.timingStandard };
+  const visibilityTransition = require("useVisibilityTransition.tsx") /* useVisibilityTransition */.useVisibilityTransition(obj);
   let shouldRender = visibilityTransition.shouldRender;
   if (isBountiesModalTransitionsRefactorEnabled) {
     obj = { useReducedMotion: null, item: null, entering: null, exiting: null, renderItem: null };
@@ -194,9 +194,9 @@ export default function BountiesScrollEndCard(visible) {
     obj[2] = fn;
     obj[3] = fn2;
     obj[4] = callback;
-    shouldRender = callback(importDefault(8581), obj);
+    shouldRender = callback(require("../../../../design/components/AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx"), obj);
     const tmp12 = callback;
-    const tmp14 = importDefault(8581);
+    const tmp14 = require("../../../../design/components/AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx");
   } else if (shouldRender) {
     obj1 = {};
     let merged = Object.assign(visible);

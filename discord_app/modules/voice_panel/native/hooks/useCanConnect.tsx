@@ -12,7 +12,7 @@ export default function useCanConnect(arg0) {
   const _require = arg0;
   const items = [ensureGuildLoaded, getUncachedChannelPermissions, createGuildRecordFromRust, updateVoiceState];
   const items1 = [arg0];
-  return _require(589).useStateFromStoresObject(items, () => {
+  return _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
     const channel = outer1_2.getChannel(callback);
     let tmp = null != channel;
     if (tmp) {

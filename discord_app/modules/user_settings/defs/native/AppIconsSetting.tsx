@@ -8,15 +8,15 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.N4YDao);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.N4YDao);
   },
   parent: null,
   IconComponent: require("SettingsItemAppIcon"),
   useTrailing: function useAppIconSettingTrailing() {
     const obj = { dismissibleContent: null, newPremiumStyle: true };
-    obj[0] = require(1358) /* DismissibleContent */.DismissibleContent.CUSTOM_APP_ICONS_NEW_BADGE;
-    return jsx(importDefault(14603), { dismissibleContent: null, newPremiumStyle: true });
+    obj[0] = require("../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.CUSTOM_APP_ICONS_NEW_BADGE;
+    return jsx(require("../../../dismissible_content/native/DismissibleNewBadge.tsx"), { dismissibleContent: null, newPremiumStyle: true });
   },
   usePreNavigationAction: function useAppIconSettingPreNavigationAction() {
     const items = [first(1358).DismissibleContent.CUSTOM_APP_ICONS_NEW_BADGE];
@@ -32,14 +32,14 @@ createToggle = {
     }, items1);
   },
   usePredicate() {
-    return require(7582) /* fetchCurrentAppIcon */.isAppIconsSupported();
+    return require("../../../app_icons/native/AppIconUtils.tsx") /* fetchCurrentAppIcon */.isAppIconsSupported();
   },
   screen: createToggle
 };
 createToggle = {
   route: require("ME").UserSettingsSections.APP_ICONS,
   getComponent() {
-    return require(14606).default;
+    return require("../../app_icon/native/UserSettingsAppIcons.tsx").default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

@@ -1117,8 +1117,8 @@ prototype["getMentionGames"] = function getMentionGames() {
 };
 prototype["buildGameMentionNode"] = function buildGameMentionNode(game) {
   const styles = this.styles;
-  const obj = { type: require(11296) /* addRule */.ChatInputNodeType.GAME_HIGHLIGHT, style: styles.gameMention(), deleteNodeOnBackspace: true, editDisabled: true };
-  const merged = Object.assign(require(11295) /* findGameMentionTokens */.buildGameMentionResult(game));
+  const obj = { type: require("../../chat_input/native/ChatInputParser.tsx") /* addRule */.ChatInputNodeType.GAME_HIGHLIGHT, style: styles.gameMention(), deleteNodeOnBackspace: true, editDisabled: true };
+  const merged = Object.assign(require("../../chat_input/native/ChatInputCommandOptionParser.tsx") /* findGameMentionTokens */.buildGameMentionResult(game));
   return obj;
 };
 prototype["setPreferredOptionValue"] = function setPreferredOptionValue(id, name, displayText) {
@@ -1197,8 +1197,8 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
       tmp91 = null != self.activeCommand;
     }
     if (tmp91) {
-      importDefault(8168).clearAll(channel.id, DraftType.SlashCommand);
-      const obj7 = importDefault(8168);
+      require("../../../actions/UploadAttachmentActionCreators.tsx").clearAll(channel.id, DraftType.SlashCommand);
+      const obj7 = require("../../../actions/UploadAttachmentActionCreators.tsx");
     }
     let name;
     if (activeOption != null) {
@@ -1754,7 +1754,7 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
           continue;
         }
         if (items3.length > 0) {
-          obj4 = importDefault(8168);
+          obj4 = require("../../../actions/UploadAttachmentActionCreators.tsx");
           obj4.removeFiles(channel.id, items3, DraftType.SlashCommand);
         }
       }

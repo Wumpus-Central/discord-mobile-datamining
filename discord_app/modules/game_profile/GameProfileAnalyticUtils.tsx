@@ -40,7 +40,7 @@ export const getGuildIdAndVerifiedFromInvite = function getGuildIdAndVerifiedFro
   return obj;
 };
 export const generateViewId = function generateViewId() {
-  return require(514) /* v1 */.v4();
+  return require("../../../_runtime/00514_v1.js") /* v1 */.v4();
 };
 export const trackGameProfileOpen = function trackGameProfileOpen(viewId) {
   let authorId;
@@ -50,7 +50,7 @@ export const trackGameProfileOpen = function trackGameProfileOpen(viewId) {
   let source;
   viewId = viewId.viewId;
   ({ source, gameName, gameId, authorId, profileType } = viewId);
-  let obj = importDefault(698);
+  let obj = require("../../utils/AnalyticsUtils.tsx");
   obj = { view_id: viewId, source, game_name: gameName, application_id: gameId, author_id: authorId, request_id: store.getFeedRequestId(ContentInventoryFeedKey.GLOBAL_FEED), profile_type: profileType };
   obj.track(constants.GAME_PROFILE_OPEN, obj);
   return viewId;
@@ -65,7 +65,7 @@ export const trackGameProfileClose = function trackGameProfileClose(guildId) {
   let viewId;
   guildId = guildId.guildId;
   ({ viewId, gameName, gameId, playedFriendIds, playedFriendsData, similarGames, isVerified } = guildId);
-  let obj = importDefault(698);
+  let obj = require("../../utils/AnalyticsUtils.tsx");
   obj = { view_id: viewId, game_name: gameName, application_id: gameId, played_friend_ids: playedFriendIds, played_friends_data: playedFriendsData, similar_games: similarGames, request_id: store.getFeedRequestId(ContentInventoryFeedKey.GLOBAL_FEED), official_guild_id: null, guild_id: null };
   let tmp;
   if (isVerified) {
@@ -86,7 +86,7 @@ export const trackGameProfileAction = function trackGameProfileAction(guildId) {
   let viewId;
   guildId = guildId.guildId;
   ({ gameName, gameId, action, recipientUserId, similarGameId, viewId, isVerified, source } = guildId);
-  let obj = importDefault(698);
+  let obj = require("../../utils/AnalyticsUtils.tsx");
   obj = { game_name: gameName, application_id: gameId, action, recipient_user_id: recipientUserId, similar_game_id: similarGameId, view_id: viewId, official_guild_id: null, guild_id: null, source: null };
   let tmp;
   if (isVerified) {
@@ -102,7 +102,7 @@ export const trackGameProfileEmbedAction = function trackGameProfileEmbedAction(
   let gameId;
   let gameName;
   ({ gameName, gameId, action } = arg0);
-  importDefault(698).track(constants.GAME_PROFILE_EMBED_ACTION, { game_name: gameName, application_id: gameId, action });
+  require("../../utils/AnalyticsUtils.tsx").track(constants.GAME_PROFILE_EMBED_ACTION, { game_name: gameName, application_id: gameId, action });
 };
 export const trackGameProfileFeedback = function trackGameProfileFeedback(arg0) {
   let applicationId;
@@ -112,5 +112,5 @@ export const trackGameProfileFeedback = function trackGameProfileFeedback(arg0) 
   let suggestedGameName;
   let viewId;
   ({ viewId, applicationId, suggestedGameName, suggestedGameApplicationId, feedback, submitted } = arg0);
-  return importDefault(698).track(constants.GAME_PROFILE_FEEDBACK, { view_id, application_id, suggested_game_name, suggested_game_application_id, feedback, submitted });
+  return require("../../utils/AnalyticsUtils.tsx").track(constants.GAME_PROFILE_FEEDBACK, { view_id, application_id, suggested_game_name, suggested_game_application_id, feedback, submitted });
 };

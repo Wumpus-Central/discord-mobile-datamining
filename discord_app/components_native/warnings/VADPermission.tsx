@@ -15,12 +15,12 @@ class VADPermission extends Component {
 }
 VADPermission.prototype["render"] = function render() {
   const obj = { title: null, body: null, onConfirm: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.NYklhr);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.EJ26Oh);
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.NYklhr);
+  const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.EJ26Oh);
   obj[2] = this.close;
-  return jsx(importDefault(4713), { title: null, body: null, onConfirm: null });
+  return jsx(require("../common/Alert.tsx"), { title: null, body: null, onConfirm: null });
 };
 const result = require("dispatcher").fileFinishedImporting("components_native/warnings/VADPermission.tsx");
 

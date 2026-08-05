@@ -6,7 +6,7 @@ const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/
 
 export default function useUserIsConsideredAdult() {
   const items = [mergeGuildAvatar];
-  return require(589) /* initialize */.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let nsfwAllowed;
     if (currentUser != null) {

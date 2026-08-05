@@ -52,7 +52,7 @@ prototype["getState"] = function getState() {
 prototype["getTab"] = function getTab() {
   let ForYou = closure_6.tab;
   if (ForYou == null) {
-    ForYou = require(7021) /* NotificationCenterScenes */.NotificationCenterTabs.ForYou;
+    ForYou = require("NotificationCenterItemsTypes.tsx") /* NotificationCenterScenes */.NotificationCenterTabs.ForYou;
   }
   return ForYou;
 };
@@ -61,8 +61,8 @@ prototype["isLocalItemAcked"] = function isLocalItemAcked(addResult) {
   if (tmp) {
     let tmp3 = null != closure_6.localItemAcks[addResult.local_id];
     if (!tmp3) {
-      tmp3 = importDefault(11).age(addResult.id) > closure_5;
-      const obj = importDefault(11);
+      tmp3 = require("../../utils/SnowflakeUtils.tsx").age(addResult.id) > closure_5;
+      const obj = require("../../utils/SnowflakeUtils.tsx");
     }
     tmp = tmp3;
   }

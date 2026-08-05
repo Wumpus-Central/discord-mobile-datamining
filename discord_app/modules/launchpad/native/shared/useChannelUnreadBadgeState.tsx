@@ -12,7 +12,7 @@ export const useChannelUnreadBadgeState = function useChannelUnreadBadgeState(ch
   let unread;
   const _require = channel;
   const dependencyMap = flag;
-  let obj = _require(589);
+  let obj = _require("../../../../../discord_common/js/packages/flux/index.tsx");
   const items = [generateOldThreadCutoff];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     const obj = { ackMessageId: outer1_3.ackMessageId(user.id), unread: null, mentionCount: null, isMentionLowImportance: null };
@@ -29,13 +29,13 @@ export const useChannelUnreadBadgeState = function useChannelUnreadBadgeState(ch
   const items1 = [guildHasCommunity];
   const items2 = [, ];
   ({ guild_id: arr3[0], id: arr3[1] } = channel);
-  const stateFromStores = _require(589).useStateFromStores(items1, () => outer1_2.shouldIndicateNewChannel(user.guild_id, user.id), items2);
-  const obj2 = _require(589);
+  const stateFromStores = _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => outer1_2.shouldIndicateNewChannel(user.guild_id, user.id), items2);
+  const obj2 = _require("../../../../../discord_common/js/packages/flux/index.tsx");
   obj = { unread, resolvedUnreadSetting: null, newChannel: null, optInEnabled: null, mentionCount: null, isMentionLowImportance: null };
-  const optInEnabledForGuild = _require(6903).useOptInEnabledForGuild(channel.guild_id);
-  const obj3 = _require(6903);
+  const optInEnabledForGuild = _require("../../../opt_in_channels/isOptInEnabled.tsx").useOptInEnabledForGuild(channel.guild_id);
+  const obj3 = _require("../../../opt_in_channels/isOptInEnabled.tsx");
   const items3 = [updateUserGuildSettingsInternal];
-  obj[1] = _require(589).useStateFromStores(items3, () => outer1_4.resolveUnreadSetting(closure_0));
+  obj[1] = _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items3, () => outer1_4.resolveUnreadSetting(closure_0));
   obj[2] = stateFromStores;
   obj[3] = optInEnabledForGuild;
   obj[4] = mentionCount;
@@ -46,7 +46,7 @@ export const useBaseChannelUnreadBadgeState = function useBaseChannelUnreadBadge
   const _require = channel;
   const dependencyMap = muted;
   const items = [generateOldThreadCutoff];
-  return _require(589).useStateFromStoresObject(items, () => {
+  return _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
     const obj = { ackMessageId: outer1_3.ackMessageId(user.id), unread: null, mentionCount: null, isMentionLowImportance: null };
     let hasUnreadResult = !closure_1;
     if (!closure_1) {

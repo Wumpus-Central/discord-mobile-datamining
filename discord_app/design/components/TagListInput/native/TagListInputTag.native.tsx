@@ -13,7 +13,7 @@ let closure_6 = createCacheKey.createStyles(() => {
   if (arg0 === undefined) {
     flag = false;
   }
-  const colors = importDefault(712).colors;
+  const colors = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors;
   if (flag) {
     let BACKGROUND_SURFACE_HIGH = colors.BACKGROUND_MOD_SUBTLE;
     let tmp4 = tmp;
@@ -64,11 +64,11 @@ export const TagListInputTagComponent = function TagListInputTagComponent(end) {
   if (flag === undefined) {
     flag = false;
   }
-  const tmp2 = callback2(importDefault(1348)("TagListInputTag"));
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const tmp2 = callback2(require("../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx")("TagListInputTag"));
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   let obj = { text: tag.text };
-  const formatToPlainStringResult = intl.formatToPlainString(require(1236) /* getSystemLocale */.t["0Vb9FQ"], obj);
-  ({ onAccessibilityAction, accessibilityActions } = importDefault(8935)(() => callback("remove"), formatToPlainStringResult));
+  const formatToPlainStringResult = intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["0Vb9FQ"], obj);
+  ({ onAccessibilityAction, accessibilityActions } = require("../../../../modules/a11y/native/useAccessibilityPress.tsx")(() => callback("remove"), formatToPlainStringResult));
   const items = [tmp2.tagWrapper, , , ];
   let prop;
   if (selected) {
@@ -111,7 +111,7 @@ export const TagListInputTagComponent = function TagListInputTagComponent(end) {
   }
   obj1[3] = str;
   obj1[4] = tag.text;
-  items1[1] = callback(require(4281) /* Text */.Text, obj1);
+  items1[1] = callback(require("../../Text/native/Text.tsx") /* Text */.Text, obj1);
   obj[6] = items1;
-  return closure_5(require(4812) /* PressableBase */.PressableOpacity, obj);
+  return closure_5(require("../../../void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
 };

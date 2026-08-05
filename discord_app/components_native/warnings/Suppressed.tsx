@@ -15,21 +15,21 @@ class Suppressed extends Component {
   }
 }
 Suppressed.prototype["render"] = function render() {
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
   const string = intl.string;
-  const t = require(1236) /* getSystemLocale */.t;
+  const t = require("../../intl/index.native.tsx") /* getSystemLocale */.t;
   if (isAFKChannelResult) {
     let stringResult = string(t.KuYcnU);
     const intl3 = tmp2(1236).intl;
     let stringResult1 = intl3.string(tmp2(1236).t["RaFZ3+"]);
-    let tmp7 = importDefault(15863);
+    let tmp7 = require("../../../_runtime/15863_registerAsset.js");
     let tmp6 = importDefault;
   } else {
     stringResult = string(t.FJSZVM);
     const intl2 = tmp2(1236).intl;
     stringResult1 = intl2.string(tmp2(1236).t.etJjgW);
     tmp6 = importDefault;
-    tmp7 = importDefault(15864);
+    tmp7 = require("../../../_runtime/15864_registerAsset.js");
   }
   return jsx(tmp6(4713), { title: stringResult, body: stringResult1, iconSource: tmp7, onConfirm: this.close });
 };

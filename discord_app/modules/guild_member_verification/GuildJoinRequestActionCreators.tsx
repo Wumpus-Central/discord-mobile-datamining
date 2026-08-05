@@ -872,25 +872,25 @@ export default {
     return applyArgumentsResult;
   },
   setSelectedApplicationTab(guildId, applicationTab) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB", guildId, applicationTab };
     obj.dispatch(obj);
   },
   setSelectedSortOrder(guildId, sortOrder, applicationStatus) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "GUILD_JOIN_REQUESTS_SET_SORT_ORDER", guildId, sortOrder, applicationStatus };
     obj.dispatch(obj);
   },
   setSelectedGuildJoinRequest(guildId, request) {
     if (null != request) {
-      let obj = require(7244) /* trackMemberApplicationViewed */;
+      let obj = require("GuildJoinRequestAnalyticUtils.tsx") /* trackMemberApplicationViewed */;
       obj = { guildId: null, applicationStatus: null, applicationUserId: null };
       obj[0] = guildId;
       ({ applicationStatus: obj2[1], userId: obj2[2] } = request);
       const result = obj.trackMemberApplicationViewed(obj);
     }
     obj = { type: "GUILD_JOIN_REQUESTS_SET_SELECTED", guildId, request };
-    importDefault(709).dispatch(obj);
+    require("../../Dispatcher.tsx").dispatch(obj);
   },
   fetchJoinRequestForInterview(MAX_RESULTS_PER_PAGE) {
     const self = this;

@@ -58,7 +58,7 @@ TouchableHitBox.prototype["render"] = function render() {
     obj[2] = color;
     obj[3] = iconSize;
     obj[4] = tmp2;
-    tmp8Result = jsx(require(1297) /* Button */.Icon, { style: null, source: null, color: null, size: null, disableColor: null });
+    tmp8Result = jsx(require("../../native.tsx") /* Button */.Icon, { style: null, source: null, color: null, size: null, disableColor: null });
     const tmp4 = jsx;
   }
   if (loading) {
@@ -79,7 +79,7 @@ TouchableHitBox.prototype["render"] = function render() {
     items1[2] = obj1;
     obj[1] = items1;
     obj[2] = text;
-    tmp8Result = jsx(require(1297) /* Button */.LegacyText, { numberOfLines: 1, style: null, children: null });
+    tmp8Result = jsx(require("../../native.tsx") /* Button */.LegacyText, { numberOfLines: 1, style: null, children: null });
     const tmp8 = jsx;
   } else {
     if (null != IconComponent) {
@@ -111,7 +111,7 @@ TouchableHitBox.prototype["render"] = function render() {
   }
   obj3[7] = disabled;
   obj3[8] = tmp8Result;
-  return jsx(require(4812) /* PressableBase */.PressableOpacity, { accessibilityRole, accessibilityLabel, accessibilityState, onPress, onLongPress, activeOpacity, style: items3, disabled: null, children: null });
+  return jsx(require("../../Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, { accessibilityRole, accessibilityLabel, accessibilityState, onPress, onLongPress, activeOpacity, style: items3, disabled: null, children: null });
 };
 TouchableHitBox.contextType = require("ManaContext").ThemeContext;
 TouchableHitBox.defaultProps = {

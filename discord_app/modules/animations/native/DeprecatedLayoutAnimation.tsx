@@ -14,8 +14,8 @@ export const CONFIG_GUILD_FOLDER_SCALEXY = obj;
 export const DeprecatedLayoutAnimation = function DeprecatedLayoutAnimation(duration) {
   let useReducedMotion = maybeApplyNoTextColorForLightCustomTheme.useReducedMotion;
   if (!useReducedMotion) {
-    useReducedMotion = require(500) /* set */.isAndroid();
-    const obj = require(500) /* set */;
+    useReducedMotion = require("../../../utils/PlatformUtils.tsx") /* set */.isAndroid();
+    const obj = require("../../../utils/PlatformUtils.tsx") /* set */;
   }
   if (!useReducedMotion) {
     if (null != duration) {
@@ -31,7 +31,7 @@ export const DeprecatedLayoutAnimationKeyboard = function DeprecatedLayoutAnimat
     flag = false;
   }
   if (flag) {
-    let obj = require(500) /* set */;
+    let obj = require("../../../utils/PlatformUtils.tsx") /* set */;
     if (!obj.isAndroid()) {
       obj = { duration: null };
       obj[0] = keyboardDuration;
@@ -41,8 +41,8 @@ export const DeprecatedLayoutAnimationKeyboard = function DeprecatedLayoutAnimat
   obj = { duration: keyboardDuration, update: obj1 };
   let useReducedMotion = maybeApplyNoTextColorForLightCustomTheme.useReducedMotion;
   if (!useReducedMotion) {
-    useReducedMotion = require(500) /* set */.isAndroid();
-    const obj6 = require(500) /* set */;
+    useReducedMotion = require("../../../utils/PlatformUtils.tsx") /* set */.isAndroid();
+    const obj6 = require("../../../utils/PlatformUtils.tsx") /* set */;
   }
   if (!useReducedMotion) {
     LayoutAnimation.configureNext(obj);

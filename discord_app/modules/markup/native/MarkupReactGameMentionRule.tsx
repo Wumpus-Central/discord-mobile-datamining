@@ -51,7 +51,7 @@ export default function MarkupGameMention(arg0) {
       const obj1 = { uri: null };
       obj1[0] = icon;
       obj[1] = obj1;
-      tmp9Result = tmp9(importDefault(5236), obj);
+      tmp9Result = tmp9(require("../../../components_native/common/FastImage.tsx"), obj);
     }
     let str3 = "button";
     if (state.noStyleAndInteraction) {

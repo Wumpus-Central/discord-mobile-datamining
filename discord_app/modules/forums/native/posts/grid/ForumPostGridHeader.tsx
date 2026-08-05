@@ -25,15 +25,15 @@ export default function ForumPostGridHeader(arg0) {
   if (hasFlagResult) {
     obj = { containerStyle: null };
     obj[0] = tmp.pinIcon;
-    hasFlagResult = callback(importDefault(11306), obj);
+    hasFlagResult = callback(require("../ForumPostPinIcon.tsx"), obj);
   }
-  const items = [hasFlagResult, callback(require(11308) /* ForumPostUsername */.ForumPostAuthor, { thread, hasUnreads }), callback(importDefault(11317), { thread, hasUnreads, format: ForumTimestampFormats.POSTED_DURATION_AGO, textStyle: tmp.timestampText }), ];
+  const items = [hasFlagResult, callback(require("../ForumPostUsername.tsx") /* ForumPostUsername */.ForumPostAuthor, { thread, hasUnreads }), callback(require("../ForumPostTimestamp.tsx"), { thread, hasUnreads, format: ForumTimestampFormats.POSTED_DURATION_AGO, textStyle: tmp.timestampText }), ];
   if (isNew) {
     isNew = tmp8(tmp10(11318), {});
   }
   items[3] = isNew;
   obj[1] = items;
-  const items1 = [closure_7(View, obj), callback(importDefault(11319), { title: thread.name, hasUnreads })];
+  const items1 = [closure_7(View, obj), callback(require("../ForumPostTitle.tsx"), { title: thread.name, hasUnreads })];
   obj[1] = items1;
   return closure_7(View, obj);
 };

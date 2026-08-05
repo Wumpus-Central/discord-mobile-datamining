@@ -125,14 +125,14 @@ function AvatarDecorationSectionPreview(previewSkuId) {
   }, items);
   let obj = { style: createCacheKey().avatarDisplayContainer, accessibilityLabel: null, accessibilityRole: "image", accessible: true, children: null };
   if (null != memo) {
-    const intl2 = _require(1236).intl;
+    const intl2 = _require("../../../intl/index.native.tsx").intl;
     obj = { a11y_text: null };
     obj[0] = memo.label;
-    let formatToPlainStringResult = intl2.formatToPlainString(_require(1236).t.Do2lxE, obj);
+    let formatToPlainStringResult = intl2.formatToPlainString(_require("../../../intl/index.native.tsx").t.Do2lxE, obj);
     let tmp10 = _require;
   } else {
-    const intl = _require(1236).intl;
-    formatToPlainStringResult = intl.string(_require(1236).t["7hRBmC"]);
+    const intl = _require("../../../intl/index.native.tsx").intl;
+    formatToPlainStringResult = intl.string(_require("../../../intl/index.native.tsx").t["7hRBmC"]);
     tmp10 = _require;
   }
   obj[1] = formatToPlainStringResult;

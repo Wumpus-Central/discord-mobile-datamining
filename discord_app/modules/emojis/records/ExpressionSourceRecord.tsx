@@ -91,7 +91,7 @@ prototype["getIconURL"] = function getIconURL(size) {
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = importDefault(1416);
+  let obj = require("../../../utils/AvatarUtils.tsx");
   obj = { id: this.id, size, icon: this.icon, canAnimate: flag };
   return obj.getGuildIconURL(obj);
 };
@@ -136,7 +136,7 @@ ExpressionSourceGuildRecord["getGuildFromEmojiId"] = function getGuildFromEmojiI
 };
 ExpressionSourceGuildRecord["_mapCommon"] = function _mapCommon(id) {
   const obj = { id: id.id, name: id.name, icon: id.icon, description: id.description, features: null };
-  obj[4] = require(1414) /* areSetsEqual */.toSetInplace(id.features);
+  obj[4] = require("../../../../discord_common/js/shared/utils/SetUtils.tsx") /* areSetsEqual */.toSetInplace(id.features);
   return obj;
 };
 ExpressionSourceGuildRecord["createFromGuildRecord"] = function createFromGuildRecord(joinedEmojiSourceGuildRecord) {
@@ -202,7 +202,7 @@ ExpressionSourceGuildRecord["createFromGuildType"] = function createFromGuildTyp
     } else {
       fromGuildRecord = obj.createFromDiscoverableGuild(guild);
     }
-    obj2 = require(1411) /* fromGuildPropertiesWithAdditionalFields */;
+    obj2 = require("../../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */;
   }
 };
 let prototype2;

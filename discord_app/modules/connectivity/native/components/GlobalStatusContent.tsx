@@ -28,9 +28,9 @@ export default function ConnectivityGlobalStatusContent() {
   let remotePlatform;
   let rtcConnectionState;
   const tmp = createCacheKey();
-  const tmp4 = importDefault(10662)();
+  const tmp4 = require("../../../game_console/hooks/useVoiceStateForRemoteSession.tsx")();
   const require = tmp4;
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [createRTCConnection, createGuildRecordFromRust, ensureGuildLoaded, handleUpdate];
   const items1 = [tmp4];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
@@ -84,11 +84,11 @@ export default function ConnectivityGlobalStatusContent() {
   if (channel != null) {
     id = channel.id;
   }
-  let tmp2ResultResult = importDefault(10211)(id);
-  const tmp2Result = importDefault(10211);
+  let tmp2ResultResult = require("../../../stage_channels/useCanSpeakInChannel.tsx")(id);
+  const tmp2Result = require("../../../stage_channels/useCanSpeakInChannel.tsx");
   let tmp5Result = tmp5(4131);
   let tmp14 = tmp12;
-  const tmp11 = importDefault(10659)();
+  const tmp11 = require("../../../stage_channels/useIsInvitedToSpeak.tsx")();
   if (isGuildStageVoiceResult) {
     if (!tmp2ResultResult) {
       tmp2ResultResult = tmp11;

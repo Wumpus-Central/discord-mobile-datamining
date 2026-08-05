@@ -580,20 +580,20 @@ class ACTION_FILTER_ITEMS {
 }
 let obj = {
   [arg1(4360).TimeUnits.SECONDS]: (seconds) => {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.geSp4K, { seconds });
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.geSp4K, { seconds });
   },
   [arg1(4360).TimeUnits.MINUTES]: (minutes) => {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.iXLF9W, { minutes });
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.iXLF9W, { minutes });
   },
   [arg1(4360).TimeUnits.HOURS]: (hours) => {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.xCjYxK, { hours });
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.xCjYxK, { hours });
   },
   [arg1(4360).TimeUnits.DAYS]: (days) => {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t["k2UNz+"], { days });
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["k2UNz+"], { days });
   }
 };
 let tmp4 = new require("handleStageInstanceCreateOrUpdate")("AuditLogUtils");
@@ -1254,8 +1254,8 @@ export const getSimpleAuditLogTitleFromChange = function getSimpleAuditLogTitleF
     found1 = changes.find((key) => key.key === ROLES_REMOVE);
   }
   if (null != found1) {
-    const intl = _require(1236).intl;
-    let stringResult = intl.string(_require(1236).t.z3wbj8);
+    const intl = _require("../../../intl/index.native.tsx").intl;
+    let stringResult = intl.string(_require("../../../intl/index.native.tsx").t.z3wbj8);
   } else {
     stringResult = undefined;
     if (found != null) {
@@ -1302,10 +1302,10 @@ export const getSimpleAuditLogTitleContextFromChange = function getSimpleAuditLo
       }
       const date = new Date(newValue1);
       let time = date.getTime();
-      const diff = time - importDefault(11).extractTimestamp(changes.id);
+      const diff = time - require("../../../utils/SnowflakeUtils.tsx").extractTimestamp(changes.id);
       const _Math = Math;
       const rounded = Math.round(diff / 1000 / 60);
-      const obj2 = importDefault(11);
+      const obj2 = require("../../../utils/SnowflakeUtils.tsx");
       const tmp25 = ROLES_REMOVE;
       const timeAndUnit = ROLES_REMOVE(4360).getTimeAndUnit(rounded, items);
       if (null != timeAndUnit.unit) {
@@ -1425,7 +1425,7 @@ export const getChangeTitle = function getChangeTitle(log) {
   if (constants.GUILD_UPDATE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t.LjZO31;
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.LjZO31;
   } else if (found.CHANNEL_CREATE === action) {
     found = null;
     found = null;
@@ -1446,187 +1446,187 @@ export const getChangeTitle = function getChangeTitle(log) {
       if (constants6.GUILD_STAGE_VOICE === newValue3) {
         found = require;
         found = dependencyMap;
-        return require(1236) /* getSystemLocale */.t["OKp4+o"];
+        return require("../../../intl/index.native.tsx") /* getSystemLocale */.t["OKp4+o"];
       } else if (found.GUILD_VOICE === newValue3) {
         found = require;
         found = dependencyMap;
-        return require(1236) /* getSystemLocale */.t.NPOy4G;
+        return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.NPOy4G;
       } else if (found.GUILD_CATEGORY === newValue3) {
         found = require;
         found = dependencyMap;
-        return require(1236) /* getSystemLocale */.t.T3KIjz;
+        return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.T3KIjz;
       } else {
         found = require;
         found = dependencyMap;
-        return require(1236) /* getSystemLocale */.t.wrYNG2;
+        return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.wrYNG2;
       }
     }
   } else if (found.CHANNEL_UPDATE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t.nTYk6B;
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.nTYk6B;
   } else if (found.CHANNEL_DELETE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t.ynfvkm;
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ynfvkm;
   } else if (found.CHANNEL_OVERWRITE_CREATE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t.l5Cu1a;
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.l5Cu1a;
   } else if (found.CHANNEL_OVERWRITE_UPDATE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t.uhtbNU;
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.uhtbNU;
   } else if (found.CHANNEL_OVERWRITE_DELETE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t["HASt/3"];
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t["HASt/3"];
   } else if (found.MEMBER_KICK === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t.B5hDZX;
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.B5hDZX;
   } else if (found.MEMBER_PRUNE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t.qKOZTP;
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.qKOZTP;
   } else if (found.MEMBER_BAN_ADD === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t["XklUm/"];
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t["XklUm/"];
   } else if (found.MEMBER_BAN_REMOVE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t.o3Y6HD;
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.o3Y6HD;
   } else if (found.MEMBER_UPDATE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t.pznhLN;
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.pznhLN;
   } else if (found.MEMBER_ROLE_UPDATE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t.Vngfia;
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Vngfia;
   } else if (found.MEMBER_MOVE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t.Yt6NkU;
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Yt6NkU;
   } else if (found.MEMBER_DISCONNECT === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t.K4eCZw;
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.K4eCZw;
   } else if (found.BOT_ADD === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t.fWvX0G;
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.fWvX0G;
   } else if (found.ROLE_CREATE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t.UTLTx6;
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.UTLTx6;
   } else if (found.ROLE_UPDATE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t.NRbN18;
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.NRbN18;
   } else if (found.ROLE_DELETE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t["4s63tb"];
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t["4s63tb"];
   } else if (found.INVITE_CREATE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t.YHOXWy;
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.YHOXWy;
   } else if (found.INVITE_UPDATE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t.ja3kGS;
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ja3kGS;
   } else if (found.INVITE_DELETE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t["3n/iWk"];
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t["3n/iWk"];
   } else if (found.WEBHOOK_CREATE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t.MhYhil;
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.MhYhil;
   } else if (found.WEBHOOK_UPDATE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t["6GTlWB"];
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t["6GTlWB"];
   } else if (found.WEBHOOK_DELETE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t.in0VjZ;
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.in0VjZ;
   } else if (found.EMOJI_CREATE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t["7vekRO"];
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t["7vekRO"];
   } else if (found.EMOJI_UPDATE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t.IsCKfh;
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.IsCKfh;
   } else if (found.EMOJI_DELETE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t.JnUaVG;
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.JnUaVG;
   } else if (found.STICKER_CREATE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t.DRZifq;
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.DRZifq;
   } else if (found.STICKER_UPDATE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t.bhujGc;
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.bhujGc;
   } else if (found.STICKER_DELETE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t.rGEP9U;
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.rGEP9U;
   } else if (found.MESSAGE_DELETE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t["HPkD+M"];
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t["HPkD+M"];
   } else if (found.MESSAGE_BULK_DELETE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t["3RIvLE"];
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t["3RIvLE"];
   } else if (found.MESSAGE_PIN === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t.Yna7E7;
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Yna7E7;
   } else if (found.MESSAGE_UNPIN === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t.NCxXUW;
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.NCxXUW;
   } else if (found.INTEGRATION_CREATE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t.HYvCb3;
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.HYvCb3;
   } else if (found.INTEGRATION_UPDATE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t.ibCCOS;
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ibCCOS;
   } else if (found.INTEGRATION_DELETE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t["8zScWY"];
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t["8zScWY"];
   } else if (found.STAGE_INSTANCE_CREATE === action) {
     found = require;
     found = dependencyMap;
-    return require(1236) /* getSystemLocale */.t["n7x/DF"];
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t["n7x/DF"];
   } else if (found.STAGE_INSTANCE_UPDATE === action) {
-    return require(1236) /* getSystemLocale */.t["0hQYU4"];
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t["0hQYU4"];
   } else if (found.STAGE_INSTANCE_DELETE === action) {
     if (null != log.userId) {
     } else {
     }
     return _7ZIFm9;
   } else if (found.GUILD_SCHEDULED_EVENT_CREATE === action) {
-    return require(1236) /* getSystemLocale */.t.S7k52p;
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.S7k52p;
   } else if (found.GUILD_SCHEDULED_EVENT_UPDATE === action) {
-    return require(1236) /* getSystemLocale */.t.ebTK11;
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ebTK11;
   } else if (found.GUILD_SCHEDULED_EVENT_DELETE === action) {
-    return require(1236) /* getSystemLocale */.t["/ARPKQ"];
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t["/ARPKQ"];
   } else {
     if (found.GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE !== action) {
       if (found.GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE !== action) {
         if (found.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE === action) {
-          return require(1236) /* getSystemLocale */.t.zYb2da;
+          return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.zYb2da;
         } else if (found.THREAD_CREATE === action) {
           let found1 = null;
           if (null != log.changes) {
@@ -1640,21 +1640,21 @@ export const getChangeTitle = function getChangeTitle(log) {
           } else {
             const newValue2 = found1.newValue;
             if (constants6.PRIVATE_THREAD === newValue2) {
-              return require(1236) /* getSystemLocale */.t.Br0y5w;
+              return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Br0y5w;
             } else if (found.ANNOUNCEMENT_THREAD === newValue2) {
-              return require(1236) /* getSystemLocale */.t["6uaMmO"];
+              return require("../../../intl/index.native.tsx") /* getSystemLocale */.t["6uaMmO"];
             } else {
-              return require(1236) /* getSystemLocale */.t["2cxQ7G"];
+              return require("../../../intl/index.native.tsx") /* getSystemLocale */.t["2cxQ7G"];
             }
           }
         } else if (found.THREAD_UPDATE === action) {
-          return require(1236) /* getSystemLocale */.t.PSsy4t;
+          return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.PSsy4t;
         } else if (found.THREAD_DELETE === action) {
-          return require(1236) /* getSystemLocale */.t.s3Khn8;
+          return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.s3Khn8;
         } else if (found.APPLICATION_COMMAND_PERMISSION_UPDATE === action) {
-          return require(1236) /* getSystemLocale */.t.uzCqBm;
+          return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.uzCqBm;
         } else if (found.AUTO_MODERATION_BLOCK_MESSAGE === action) {
-          return require(1236) /* getSystemLocale */.t.NqWv2K;
+          return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.NqWv2K;
         } else if (found.AUTO_MODERATION_FLAG_TO_CHANNEL === action) {
           const options = log.options;
           let prop;
@@ -1662,39 +1662,39 @@ export const getChangeTitle = function getChangeTitle(log) {
             prop = options.auto_moderation_rule_trigger_type;
           }
           if (prop === str.toString()) {
-            let SD0PwJ = require(1236) /* getSystemLocale */.t.YQsjej;
+            let SD0PwJ = require("../../../intl/index.native.tsx") /* getSystemLocale */.t.YQsjej;
           } else {
-            SD0PwJ = require(1236) /* getSystemLocale */.t.SD0PwJ;
+            SD0PwJ = require("../../../intl/index.native.tsx") /* getSystemLocale */.t.SD0PwJ;
           }
           return SD0PwJ;
         } else if (found.AUTO_MODERATION_USER_COMMUNICATION_DISABLED === action) {
-          return require(1236) /* getSystemLocale */.t.Vk4TwX;
+          return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Vk4TwX;
         } else if (found.AUTO_MODERATION_QUARANTINE_USER === action) {
-          return require(1236) /* getSystemLocale */.t["/W5u5o"];
+          return require("../../../intl/index.native.tsx") /* getSystemLocale */.t["/W5u5o"];
         } else if (found.CREATOR_MONETIZATION_REQUEST_CREATED === action) {
-          return require(1236) /* getSystemLocale */.t.ONvWyr;
+          return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ONvWyr;
         } else if (found.CREATOR_MONETIZATION_TERMS_ACCEPTED === action) {
-          return require(1236) /* getSystemLocale */.t["ryGLk+"];
+          return require("../../../intl/index.native.tsx") /* getSystemLocale */.t["ryGLk+"];
         } else if (found.AUTO_MODERATION_RULE_CREATE === action) {
-          return require(1236) /* getSystemLocale */.t["NKljj+"];
+          return require("../../../intl/index.native.tsx") /* getSystemLocale */.t["NKljj+"];
         } else if (found.AUTO_MODERATION_RULE_UPDATE === action) {
-          return require(1236) /* getSystemLocale */.t["3wEA9u"];
+          return require("../../../intl/index.native.tsx") /* getSystemLocale */.t["3wEA9u"];
         } else if (found.AUTO_MODERATION_RULE_DELETE === action) {
-          return require(1236) /* getSystemLocale */.t.umua3n;
+          return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.umua3n;
         } else if (found.ONBOARDING_PROMPT_CREATE === action) {
-          return require(1236) /* getSystemLocale */.t["/8A1g2"];
+          return require("../../../intl/index.native.tsx") /* getSystemLocale */.t["/8A1g2"];
         } else if (found.ONBOARDING_PROMPT_UPDATE === action) {
-          return require(1236) /* getSystemLocale */.t.ArIrWI;
+          return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ArIrWI;
         } else if (found.ONBOARDING_PROMPT_DELETE === action) {
-          return require(1236) /* getSystemLocale */.t.IuBTao;
+          return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.IuBTao;
         } else if (found.ONBOARDING_CREATE === action) {
-          return require(1236) /* getSystemLocale */.t["wDaq3/"];
+          return require("../../../intl/index.native.tsx") /* getSystemLocale */.t["wDaq3/"];
         } else if (found.ONBOARDING_UPDATE === action) {
-          return require(1236) /* getSystemLocale */.t["yONu/l"];
+          return require("../../../intl/index.native.tsx") /* getSystemLocale */.t["yONu/l"];
         } else if (found.HOME_SETTINGS_CREATE === action) {
-          return require(1236) /* getSystemLocale */.t.dSdCjG;
+          return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.dSdCjG;
         } else if (found.HOME_SETTINGS_UPDATE === action) {
-          return require(1236) /* getSystemLocale */.t.XHE8qv;
+          return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.XHE8qv;
         } else if (found.GUILD_HOME_FEATURE_ITEM === action) {
           let found2 = null;
           if (null != log.changes) {
@@ -1702,12 +1702,12 @@ export const getChangeTitle = function getChangeTitle(log) {
             found2 = changes2.find((key) => key.key === constants.ENTITY_TYPE);
           }
           if (null == found2) {
-            return require(1236) /* getSystemLocale */.t["UZ+U3A"];
+            return require("../../../intl/index.native.tsx") /* getSystemLocale */.t["UZ+U3A"];
           } else {
             const newValue = found2.newValue;
             found = require;
             found = dependencyMap;
-            if (require(16494) /* set */.GuildFeedItemTypes.MESSAGE === newValue) {
+            if (require("../../../../discord_common/js/shared/shared-constants/GuildFeedItemTypes.tsx") /* set */.GuildFeedItemTypes.MESSAGE === newValue) {
               return found(1236).t["PyEa+J"];
             } else if (found(16494).GuildFeedItemTypes.FORUM_POST === newValue) {
               return found(1236).t.hCuAb1;
@@ -1716,57 +1716,57 @@ export const getChangeTitle = function getChangeTitle(log) {
             }
           }
         } else if (found.GUILD_HOME_REMOVE_ITEM === action) {
-          return require(1236) /* getSystemLocale */.t.kPReun;
+          return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.kPReun;
         } else if (found.SOUNDBOARD_SOUND_CREATE === action) {
-          return require(1236) /* getSystemLocale */.t["0PD83V"];
+          return require("../../../intl/index.native.tsx") /* getSystemLocale */.t["0PD83V"];
         } else if (found.SOUNDBOARD_SOUND_UPDATE === action) {
-          return require(1236) /* getSystemLocale */.t.CM8n1w;
+          return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.CM8n1w;
         } else if (found.SOUNDBOARD_SOUND_DELETE === action) {
-          return require(1236) /* getSystemLocale */.t["kVz4/0"];
+          return require("../../../intl/index.native.tsx") /* getSystemLocale */.t["kVz4/0"];
         } else if (found.VOICE_CHANNEL_STATUS_CREATE === action) {
-          return require(1236) /* getSystemLocale */.t.MWjnU7;
+          return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.MWjnU7;
         } else if (found.VOICE_CHANNEL_STATUS_DELETE === action) {
-          return require(1236) /* getSystemLocale */.t.aS8Krq;
+          return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.aS8Krq;
         } else if (found.GUILD_MEMBER_VERIFICATION_UPDATE === action) {
-          return require(1236) /* getSystemLocale */.t["NUKUb+"];
+          return require("../../../intl/index.native.tsx") /* getSystemLocale */.t["NUKUb+"];
         } else if (found.GUILD_PROFILE_UPDATE === action) {
-          return require(1236) /* getSystemLocale */.t.Ed6hF1;
+          return require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Ed6hF1;
         } else if (found.GUILD_MIGRATE_PIN_PERMISSION === action) {
-          return require(1236) /* getSystemLocale */.t["3Ne7MA"];
+          return require("../../../intl/index.native.tsx") /* getSystemLocale */.t["3Ne7MA"];
         } else if (found.GUILD_MIGRATE_BYPASS_SLOWMODE_PERMISSION === action) {
-          return require(1236) /* getSystemLocale */.t["naflH+"];
+          return require("../../../intl/index.native.tsx") /* getSystemLocale */.t["naflH+"];
         } else {
           return null;
         }
       }
     }
-    return require(1236) /* getSystemLocale */.t["8qCI36"];
+    return require("../../../intl/index.native.tsx") /* getSystemLocale */.t["8qCI36"];
   }
 };
 export const getStringForAddedChannelFlag = function getStringForAddedChannelFlag(arg0) {
   if (ChannelFlags.GUILD_FEED_REMOVED === arg0) {
-    const intl3 = require(1236) /* getSystemLocale */.intl;
-    return intl3.string(require(1236) /* getSystemLocale */.t["5G8ZD4"]);
+    const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["5G8ZD4"]);
   } else if (tmp.ACTIVE_CHANNELS_REMOVED === arg0) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    return intl2.string(require(1236) /* getSystemLocale */.t["4YLtzC"]);
+    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["4YLtzC"]);
   } else if (tmp.PINNED === arg0) {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["1QLRYb"]);
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["1QLRYb"]);
   } else {
     return null;
   }
 };
 export const getStringForRemovedChannelFlag = function getStringForRemovedChannelFlag(arg0) {
   if (ChannelFlags.GUILD_FEED_REMOVED === arg0) {
-    const intl3 = require(1236) /* getSystemLocale */.intl;
-    return intl3.string(require(1236) /* getSystemLocale */.t.S5kuWQ);
+    const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.S5kuWQ);
   } else if (tmp.ACTIVE_CHANNELS_REMOVED === arg0) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    return intl2.string(require(1236) /* getSystemLocale */.t["8qpgcz"]);
+    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["8qpgcz"]);
   } else if (tmp.PINNED === arg0) {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.CMweGA);
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.CMweGA);
   } else {
     return null;
   }
@@ -1776,179 +1776,179 @@ export const getStringForPermission = function getStringForPermission(arg0, log)
   if (constants7.CREATE_INSTANT_INVITE === arg0) {
     stringResult = require;
     stringResult = dependencyMap;
-    const intl52 = require(1236) /* getSystemLocale */.intl;
-    return intl52.string(require(1236) /* getSystemLocale */.t.zJrgTG);
+    const intl52 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl52.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.zJrgTG);
   } else if (stringResult.KICK_MEMBERS === arg0) {
     stringResult = require;
     stringResult = dependencyMap;
-    const intl51 = require(1236) /* getSystemLocale */.intl;
-    return intl51.string(require(1236) /* getSystemLocale */.t.pBNv6i);
+    const intl51 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl51.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.pBNv6i);
   } else if (stringResult.BAN_MEMBERS === arg0) {
     stringResult = require;
     stringResult = dependencyMap;
-    const intl50 = require(1236) /* getSystemLocale */.intl;
-    return intl50.string(require(1236) /* getSystemLocale */.t.oTBA7N);
+    const intl50 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl50.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.oTBA7N);
   } else if (stringResult.ADMINISTRATOR === arg0) {
     stringResult = require;
     stringResult = dependencyMap;
-    const intl49 = require(1236) /* getSystemLocale */.intl;
-    return intl49.string(require(1236) /* getSystemLocale */.t.PGvZqX);
+    const intl49 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl49.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.PGvZqX);
   } else {
     stringResult = log;
     if (stringResult.MANAGE_CHANNELS === arg0) {
       if (log.targetType !== AuditLogTargetTypes.CHANNEL) {
         if (log.targetType !== tmp97.CHANNEL_OVERWRITE) {
-          const intl47 = require(1236) /* getSystemLocale */.intl;
-          stringResult = intl47.string(require(1236) /* getSystemLocale */.t["9qLtWs"]);
+          const intl47 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+          stringResult = intl47.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["9qLtWs"]);
         }
         return stringResult;
       }
       stringResult = require;
       stringResult = dependencyMap;
-      const intl48 = require(1236) /* getSystemLocale */.intl;
-      stringResult = intl48.string(require(1236) /* getSystemLocale */.t.nAw15L);
+      const intl48 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      stringResult = intl48.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.nAw15L);
     } else if (stringResult.MANAGE_GUILD === arg0) {
-      const intl46 = require(1236) /* getSystemLocale */.intl;
-      return intl46.string(require(1236) /* getSystemLocale */.t.QZRcfO);
+      const intl46 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl46.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.QZRcfO);
     } else if (stringResult.VIEW_GUILD_ANALYTICS === arg0) {
-      const intl45 = require(1236) /* getSystemLocale */.intl;
-      return intl45.string(require(1236) /* getSystemLocale */.t["rQJBE/"]);
+      const intl45 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl45.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["rQJBE/"]);
     } else if (stringResult.VIEW_CREATOR_MONETIZATION_ANALYTICS === arg0) {
-      const intl44 = require(1236) /* getSystemLocale */.intl;
-      return intl44.string(require(1236) /* getSystemLocale */.t["0lTLTv"]);
+      const intl44 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl44.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["0lTLTv"]);
     } else if (stringResult.CHANGE_NICKNAME === arg0) {
-      const intl43 = require(1236) /* getSystemLocale */.intl;
-      return intl43.string(require(1236) /* getSystemLocale */.t.dilOF6);
+      const intl43 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl43.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.dilOF6);
     } else if (stringResult.MANAGE_NICKNAMES === arg0) {
-      const intl42 = require(1236) /* getSystemLocale */.intl;
-      return intl42.string(require(1236) /* getSystemLocale */.t["t+Ct5x"]);
+      const intl42 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl42.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["t+Ct5x"]);
     } else if (stringResult.MANAGE_ROLES === arg0) {
-      const intl41 = require(1236) /* getSystemLocale */.intl;
-      return intl41.string(require(1236) /* getSystemLocale */.t["C8d+oG"]);
+      const intl41 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl41.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["C8d+oG"]);
     } else if (stringResult.MANAGE_WEBHOOKS === arg0) {
-      const intl40 = require(1236) /* getSystemLocale */.intl;
-      return intl40.string(require(1236) /* getSystemLocale */.t["/ADKmM"]);
+      const intl40 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl40.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["/ADKmM"]);
     } else if (stringResult.CREATE_GUILD_EXPRESSIONS === arg0) {
-      const intl39 = require(1236) /* getSystemLocale */.intl;
-      return intl39.string(require(1236) /* getSystemLocale */.t.HarVuP);
+      const intl39 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl39.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.HarVuP);
     } else if (stringResult.MANAGE_GUILD_EXPRESSIONS === arg0) {
-      const intl38 = require(1236) /* getSystemLocale */.intl;
-      return intl38.string(require(1236) /* getSystemLocale */.t.bbuXIn);
+      const intl38 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl38.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.bbuXIn);
     } else if (stringResult.VIEW_AUDIT_LOG === arg0) {
-      const intl37 = require(1236) /* getSystemLocale */.intl;
-      return intl37.string(require(1236) /* getSystemLocale */.t.fZgLpA);
+      const intl37 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl37.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.fZgLpA);
     } else if (stringResult.VIEW_CHANNEL === arg0) {
       if (log.targetType !== AuditLogTargetTypes.CHANNEL) {
         if (log.targetType !== tmp71.CHANNEL_OVERWRITE) {
-          const intl35 = require(1236) /* getSystemLocale */.intl;
-          let stringResult1 = intl35.string(require(1236) /* getSystemLocale */.t.uV83yi);
+          const intl35 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+          let stringResult1 = intl35.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.uV83yi);
         }
         return stringResult1;
       }
-      const intl36 = require(1236) /* getSystemLocale */.intl;
-      stringResult1 = intl36.string(require(1236) /* getSystemLocale */.t["W/A4Qp"]);
+      const intl36 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      stringResult1 = intl36.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["W/A4Qp"]);
     } else if (stringResult.SEND_MESSAGES === arg0) {
-      const intl34 = require(1236) /* getSystemLocale */.intl;
-      return intl34.string(require(1236) /* getSystemLocale */.t.T32rkC);
+      const intl34 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl34.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.T32rkC);
     } else if (stringResult.SEND_TTS_MESSAGES === arg0) {
-      const intl33 = require(1236) /* getSystemLocale */.intl;
-      return intl33.string(require(1236) /* getSystemLocale */.t.Mg7bku);
+      const intl33 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl33.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Mg7bku);
     } else if (stringResult.USE_APPLICATION_COMMANDS === arg0) {
-      const intl32 = require(1236) /* getSystemLocale */.intl;
-      return intl32.string(require(1236) /* getSystemLocale */.t.shbR1a);
+      const intl32 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl32.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.shbR1a);
     } else if (stringResult.MANAGE_MESSAGES === arg0) {
-      const intl31 = require(1236) /* getSystemLocale */.intl;
-      return intl31.string(require(1236) /* getSystemLocale */.t["6lU9xM"]);
+      const intl31 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl31.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["6lU9xM"]);
     } else if (stringResult.EMBED_LINKS === arg0) {
-      const intl30 = require(1236) /* getSystemLocale */.intl;
-      return intl30.string(require(1236) /* getSystemLocale */.t["969dEL"]);
+      const intl30 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl30.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["969dEL"]);
     } else if (stringResult.ATTACH_FILES === arg0) {
-      const intl29 = require(1236) /* getSystemLocale */.intl;
-      return intl29.string(require(1236) /* getSystemLocale */.t["3AS4UM"]);
+      const intl29 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl29.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["3AS4UM"]);
     } else if (stringResult.READ_MESSAGE_HISTORY === arg0) {
-      const intl28 = require(1236) /* getSystemLocale */.intl;
-      return intl28.string(require(1236) /* getSystemLocale */.t.l9ufaR);
+      const intl28 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl28.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.l9ufaR);
     } else if (stringResult.MENTION_EVERYONE === arg0) {
-      const intl27 = require(1236) /* getSystemLocale */.intl;
-      return intl27.string(require(1236) /* getSystemLocale */.t.Y78KGC);
+      const intl27 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl27.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Y78KGC);
     } else if (stringResult.USE_EXTERNAL_EMOJIS === arg0) {
-      const intl26 = require(1236) /* getSystemLocale */.intl;
-      return intl26.string(require(1236) /* getSystemLocale */.t.BpBGZU);
+      const intl26 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl26.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.BpBGZU);
     } else if (stringResult.USE_EXTERNAL_STICKERS === arg0) {
-      const intl25 = require(1236) /* getSystemLocale */.intl;
-      return intl25.string(require(1236) /* getSystemLocale */.t["UeRs+b"]);
+      const intl25 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl25.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["UeRs+b"]);
     } else if (stringResult.ADD_REACTIONS === arg0) {
-      const intl24 = require(1236) /* getSystemLocale */.intl;
-      return intl24.string(require(1236) /* getSystemLocale */.t.yEoJAr);
+      const intl24 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl24.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.yEoJAr);
     } else if (stringResult.CONNECT === arg0) {
-      const intl23 = require(1236) /* getSystemLocale */.intl;
-      return intl23.string(require(1236) /* getSystemLocale */.t.S0W8Z5);
+      const intl23 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl23.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.S0W8Z5);
     } else if (stringResult.SPEAK === arg0) {
-      const intl22 = require(1236) /* getSystemLocale */.intl;
-      return intl22.string(require(1236) /* getSystemLocale */.t["8w1tIR"]);
+      const intl22 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl22.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["8w1tIR"]);
     } else if (stringResult.MUTE_MEMBERS === arg0) {
-      const intl21 = require(1236) /* getSystemLocale */.intl;
-      return intl21.string(require(1236) /* getSystemLocale */.t["8EI30/"]);
+      const intl21 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl21.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["8EI30/"]);
     } else if (stringResult.DEAFEN_MEMBERS === arg0) {
-      const intl20 = require(1236) /* getSystemLocale */.intl;
-      return intl20.string(require(1236) /* getSystemLocale */.t["9L47Fr"]);
+      const intl20 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl20.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["9L47Fr"]);
     } else if (stringResult.MOVE_MEMBERS === arg0) {
-      const intl19 = require(1236) /* getSystemLocale */.intl;
-      return intl19.string(require(1236) /* getSystemLocale */.t.YtjJPQ);
+      const intl19 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl19.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.YtjJPQ);
     } else if (stringResult.USE_VAD === arg0) {
-      const intl18 = require(1236) /* getSystemLocale */.intl;
-      return intl18.string(require(1236) /* getSystemLocale */.t["08zAV7"]);
+      const intl18 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl18.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["08zAV7"]);
     } else if (stringResult.PRIORITY_SPEAKER === arg0) {
-      const intl17 = require(1236) /* getSystemLocale */.intl;
-      return intl17.string(require(1236) /* getSystemLocale */.t.BVK71i);
+      const intl17 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl17.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.BVK71i);
     } else if (stringResult.STREAM === arg0) {
-      const intl16 = require(1236) /* getSystemLocale */.intl;
-      return intl16.string(require(1236) /* getSystemLocale */.t.FlNoSV);
+      const intl16 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl16.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.FlNoSV);
     } else if (stringResult.REQUEST_TO_SPEAK === arg0) {
-      const intl15 = require(1236) /* getSystemLocale */.intl;
-      return intl15.string(require(1236) /* getSystemLocale */.t["5kicT2"]);
+      const intl15 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl15.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["5kicT2"]);
     } else if (stringResult.USE_EMBEDDED_ACTIVITIES === arg0) {
-      const intl14 = require(1236) /* getSystemLocale */.intl;
-      return intl14.string(require(1236) /* getSystemLocale */.t.rLSGeh);
+      const intl14 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl14.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.rLSGeh);
     } else if (stringResult.CREATE_EVENTS === arg0) {
-      const intl13 = require(1236) /* getSystemLocale */.intl;
-      return intl13.string(require(1236) /* getSystemLocale */.t.qyjZua);
+      const intl13 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl13.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.qyjZua);
     } else if (stringResult.MANAGE_EVENTS === arg0) {
-      const intl12 = require(1236) /* getSystemLocale */.intl;
-      return intl12.string(require(1236) /* getSystemLocale */.t.HIgA5a);
+      const intl12 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl12.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.HIgA5a);
     } else if (stringResult.CREATE_PUBLIC_THREADS === arg0) {
-      const intl11 = require(1236) /* getSystemLocale */.intl;
-      return intl11.string(require(1236) /* getSystemLocale */.t["25rKnX"]);
+      const intl11 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl11.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["25rKnX"]);
     } else if (stringResult.CREATE_PRIVATE_THREADS === arg0) {
-      const intl10 = require(1236) /* getSystemLocale */.intl;
-      return intl10.string(require(1236) /* getSystemLocale */.t.QwbTSa);
+      const intl10 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl10.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.QwbTSa);
     } else if (stringResult.SEND_MESSAGES_IN_THREADS === arg0) {
-      const intl9 = require(1236) /* getSystemLocale */.intl;
-      return intl9.string(require(1236) /* getSystemLocale */.t.fTE74g);
+      const intl9 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl9.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.fTE74g);
     } else if (stringResult.MANAGE_THREADS === arg0) {
-      const intl8 = require(1236) /* getSystemLocale */.intl;
-      return intl8.string(require(1236) /* getSystemLocale */.t.kEqgr7);
+      const intl8 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl8.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.kEqgr7);
     } else if (stringResult.MODERATE_MEMBERS === arg0) {
-      const intl7 = require(1236) /* getSystemLocale */.intl;
-      return intl7.string(require(1236) /* getSystemLocale */.t["+RL6pz"]);
+      const intl7 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl7.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["+RL6pz"]);
     } else if (stringResult.SET_VOICE_CHANNEL_STATUS === arg0) {
-      const intl6 = require(1236) /* getSystemLocale */.intl;
-      return intl6.string(require(1236) /* getSystemLocale */.t.VBwkUf);
+      const intl6 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl6.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.VBwkUf);
     } else if (stringResult.SEND_POLLS === arg0) {
-      const intl5 = require(1236) /* getSystemLocale */.intl;
-      return intl5.string(require(1236) /* getSystemLocale */.t.UMQ7Ww);
+      const intl5 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl5.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.UMQ7Ww);
     } else if (stringResult.USE_EXTERNAL_APPS === arg0) {
-      const intl4 = require(1236) /* getSystemLocale */.intl;
-      return intl4.string(require(1236) /* getSystemLocale */.t.TtA5rK);
+      const intl4 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl4.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.TtA5rK);
     } else if (stringResult.PIN_MESSAGES === arg0) {
-      const intl3 = require(1236) /* getSystemLocale */.intl;
-      return intl3.string(require(1236) /* getSystemLocale */.t.Y5BI39);
+      const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Y5BI39);
     } else if (stringResult.BYPASS_SLOWMODE === arg0) {
-      const intl2 = require(1236) /* getSystemLocale */.intl;
-      return intl2.string(require(1236) /* getSystemLocale */.t.kqcjeV);
+      const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.kqcjeV);
     } else if (stringResult.MANAGE_OFFICIAL_MESSAGES === arg0) {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.string(require(1236) /* getSystemLocale */.t.Aj9ruN);
+      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Aj9ruN);
     } else {
       return null;
     }

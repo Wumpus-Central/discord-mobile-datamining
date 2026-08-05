@@ -21,16 +21,16 @@ export default function NotificationSettingsMockChannels(unreadSetting) {
   const tmp = createCacheKey();
   const require = tmp;
   let obj = { badged: true, unread: true, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, name: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[3] = intl.string(require(1236) /* getSystemLocale */.t.EjLobP);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[3] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.EjLobP);
   let items = [obj, , ];
   obj = { badged: false, unread: true, resolvedUnreadSetting: UnreadSetting.ONLY_MENTIONS, name: null };
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[3] = intl2.string(require(1236) /* getSystemLocale */.t.Wgpwpp);
+  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[3] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Wgpwpp);
   items[1] = obj;
   obj = { badged: false, unread: false, resolvedUnreadSetting: UnreadSetting.ONLY_MENTIONS, name: null };
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj[3] = intl3.string(require(1236) /* getSystemLocale */.t.g9VImh);
+  const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[3] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.g9VImh);
   items[2] = obj;
   if (unreadSetting.unreadSetting === UnreadSetting.ALL_MESSAGES) {
     items[1].resolvedUnreadSetting = UnreadSetting.ALL_MESSAGES;

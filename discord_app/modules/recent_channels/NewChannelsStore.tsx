@@ -88,7 +88,7 @@ function initializeNewChannels(guildId) {
   }
 }
 function pruneNewChannels() {
-  const keys = importDefault(11).keys(closure_16);
+  const keys = require("../../utils/SnowflakeUtils.tsx").keys(closure_16);
   const item = keys.forEach((arg0) => {
     let closure_0 = arg0;
     const items = [...closure_16[arg0]];
@@ -186,7 +186,7 @@ const newChannelsStore = new NewChannelsStore(require("dispatcher"), {
       if (!tmp6) {
         const _Date = Date;
         const timestamp = Date.now();
-        tmp6 = table[guildId] < timestamp - importDefault(687).Millis.HOUR;
+        tmp6 = table[guildId] < timestamp - require("../../utils/Durations.tsx").Millis.HOUR;
       }
       let flag = false;
       if (tmp6) {
@@ -210,12 +210,12 @@ const newChannelsStore = new NewChannelsStore(require("dispatcher"), {
           isOptInEnabledResult = null == generateOldThreadCutoff.ackMessageId(channelId);
         }
         if (isOptInEnabledResult) {
-          importDefault(709).wait(() => {
+          require("../../Dispatcher.tsx").wait(() => {
             let obj = baseChannelId(outer1_2[12]);
             obj = { object: outer1_12.ACK_RECENT_CHANNEL_NEW_CHANNEL_VIEWED, objectType: outer1_13.ACK_AUTOMATIC };
             return obj.ack(baseChannelId, obj, true, true, outer1_1(outer1_2[13]).atPreviousMillisecond(baseChannelId));
           });
-          const obj2 = importDefault(709);
+          const obj2 = require("../../Dispatcher.tsx");
         }
       }
       return flag;
@@ -246,12 +246,12 @@ const newChannelsStore = new NewChannelsStore(require("dispatcher"), {
         isOptInEnabledResult = null == generateOldThreadCutoff.ackMessageId(channelId);
       }
       if (isOptInEnabledResult) {
-        importDefault(709).wait(() => {
+        require("../../Dispatcher.tsx").wait(() => {
           let obj = baseChannelId(outer1_2[12]);
           obj = { object: outer1_12.ACK_RECENT_CHANNEL_NEW_CHANNEL_VIEWED, objectType: outer1_13.ACK_AUTOMATIC };
           return obj.ack(baseChannelId, obj, true, true, outer1_1(outer1_2[13]).atPreviousMillisecond(baseChannelId));
         });
-        const obj3 = importDefault(709);
+        const obj3 = require("../../Dispatcher.tsx");
       }
     }
     return false;
@@ -277,12 +277,12 @@ const newChannelsStore = new NewChannelsStore(require("dispatcher"), {
         isOptInEnabledResult = null == generateOldThreadCutoff.ackMessageId(baseChannelId);
       }
       if (isOptInEnabledResult) {
-        importDefault(709).wait(() => {
+        require("../../Dispatcher.tsx").wait(() => {
           let obj = baseChannelId(outer1_2[12]);
           obj = { object: outer1_12.ACK_RECENT_CHANNEL_NEW_CHANNEL_VIEWED, objectType: outer1_13.ACK_AUTOMATIC };
           return obj.ack(baseChannelId, obj, true, true, outer1_1(outer1_2[13]).atPreviousMillisecond(baseChannelId));
         });
-        const obj2 = importDefault(709);
+        const obj2 = require("../../Dispatcher.tsx");
       }
     }
     return false;

@@ -5,8 +5,8 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.cDgKte);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.cDgKte);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   onPress: function onAccountEnable2FASettingPress() {
@@ -17,20 +17,20 @@ createToggle = {
     }
     if (verified != null) {
       if (verified) {
-        let obj = importDefault(13931);
+        let obj = require("../../account/native/mfa_modal_flow/TwoFASetupModalActionCreators.tsx");
         obj.open();
       }
     }
     obj = { title: null, body: null };
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[0] = intl.string(require(1236) /* getSystemLocale */.t.v740sh);
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.uggF7o);
-    importDefault(4623).show(obj);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.v740sh);
+    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.uggF7o);
+    require("../../../../actions/AlertActionCreators.tsx").show(obj);
   },
   withArrow: true,
   usePredicate: function useHasAccountEnable2FASetting() {
-    return !require(13895) /* useIs2FAEnabled */.useIsTOTPEnabled();
+    return !require("../../account/native/SettingsAccountUtils.tsx") /* useIs2FAEnabled */.useIsTOTPEnabled();
   }
 };
 createToggle = createToggle.createPressable(createToggle);

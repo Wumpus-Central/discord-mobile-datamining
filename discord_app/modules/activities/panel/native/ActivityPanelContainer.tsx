@@ -7,7 +7,7 @@ import importAllResult from "noop";
 
 const require = arg1;
 const memoResult = require("noop").memo(function ActivityPanelContainer() {
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [participantFromServer, ensureGuildLoaded, handleConnectionOpen];
   let tmp2 = null;
   if (obj.useStateFromStores(items, () => {
@@ -44,9 +44,9 @@ const memoResult = require("noop").memo(function ActivityPanelContainer() {
     }
   }, [])) {
     obj = { children: null };
-    obj[0] = jsx(importDefault(15960), {});
-    tmp2 = jsx(importDefault(15951), { children: null });
-    const tmp5 = importDefault(15951);
+    obj[0] = jsx(require("ActivityPanelUI.tsx"), {});
+    tmp2 = jsx(require("ActivityPanelController.tsx"), { children: null });
+    const tmp5 = require("ActivityPanelController.tsx");
   }
   return tmp2;
 });

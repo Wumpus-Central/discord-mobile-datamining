@@ -23,11 +23,11 @@ export const EMPTY_COMMANDS_SECTION = frozen1;
 export const APPLICATION_USER_INSTALL_BETA_USER_LIMIT = 200;
 export const getValidationErrorText = function getValidationErrorText(option) {
   if (null != option.choices) {
-    const intl9 = require(1236) /* getSystemLocale */.intl;
-    return intl9.string(require(1236) /* getSystemLocale */.t.xi5aah);
+    const intl9 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl9.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.xi5aah);
   } else {
     const type = option.type;
-    if (require(1906) /* PermissionOverwriteType */.ApplicationCommandOptionType.BOOLEAN === type) {
+    if (require("../../flow/Server.tsx") /* PermissionOverwriteType */.ApplicationCommandOptionType.BOOLEAN === type) {
       const intl8 = tmp3(1236).intl;
       return intl8.string(tmp3(1236).t.ATIx6O);
     } else if (tmp3(1906).ApplicationCommandOptionType.CHANNEL === type) {

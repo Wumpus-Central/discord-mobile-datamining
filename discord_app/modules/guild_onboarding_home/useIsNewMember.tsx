@@ -9,7 +9,7 @@ const result = require("GuildMemberFlags").fileFinishedImporting("modules/guild_
 export default function useIsNewMember(arg0) {
   const _require = arg0;
   const items = [trackCommunicationDisabled, initialize];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let flag = true;
     if (!outer1_3.isFullServerPreview(callback)) {
       const selfMember = obj.getSelfMember(tmp);
@@ -53,16 +53,16 @@ export const getIsNewMember = function getIsNewMember(closure_0) {
         if (num == null) {
           num = 0;
         }
-        const hasFlagResult = require(1384) /* hasFlag */.hasFlag(num, GuildMemberFlags.COMPLETED_HOME_ACTIONS);
+        const hasFlagResult = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(num, GuildMemberFlags.COMPLETED_HOME_ACTIONS);
         let tmp8 = !hasFlagResult;
         if (!hasFlagResult) {
           const _Date = Date;
           const timestamp = Date.now();
           const diff = timestamp - selfMemberJoinedAt.getTime();
-          tmp8 = diff < importDefault(687).Millis.WEEK;
+          tmp8 = diff < require("../../utils/Durations.tsx").Millis.WEEK;
         }
         tmp3 = tmp8;
-        const obj3 = require(1384) /* hasFlag */;
+        const obj3 = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
       }
       flag = tmp3;
     }

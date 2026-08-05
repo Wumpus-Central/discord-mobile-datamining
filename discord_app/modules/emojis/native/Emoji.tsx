@@ -17,12 +17,12 @@ export default function Emoji(arg0) {
   let textEmojiStyle;
   ({ src, name } = arg0);
   ({ style, textEmojiStyle, fastImageStyle, forceTextEmoji, adjustsFontSizeToFit } = arg0);
-  let obj = require(500) /* set */;
+  let obj = require("../../../utils/PlatformUtils.tsx") /* set */;
   let uRL = src;
   if (obj.isAndroid()) {
     uRL = src;
     if (null == src) {
-      let obj1 = importDefault(3930);
+      let obj1 = require("../../../utils/EmojiUtils.tsx");
       uRL = obj1.getURL(name);
     }
   }
@@ -32,7 +32,7 @@ export default function Emoji(arg0) {
       if ("" !== uRL) {
         obj = { resizeMode: "contain", style: null, placeholder: null, source: null };
         obj[1] = fastImageStyle;
-        const tmp10 = importDefault(5236);
+        const tmp10 = require("../../../components_native/common/FastImage.tsx");
         if (tmpResult.isThemeDark(theme.theme)) {
           let tmp9Result = tmp9(5302);
         } else {

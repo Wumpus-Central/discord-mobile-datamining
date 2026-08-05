@@ -41,7 +41,7 @@ export const useHandleUseNow = function useHandleUseNow(onSuccess) {
   let obj = onSuccess(10047);
   handleUseNow = obj.useHandleUseNow({ product, onSuccess: callback, onError: callback1 });
   ({ handleUseNow, isApplying, canUseNow } = handleUseNow);
-  const tmp4 = importDefault(10050)({ analyticsLocations });
+  const tmp4 = require("../../profile_customization/useOpenProfileSettings.tsx")({ analyticsLocations });
   importDefault = tmp4;
   obj = {
     handleUseNow,

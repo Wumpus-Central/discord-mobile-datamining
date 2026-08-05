@@ -16,8 +16,8 @@ let closure_9 = {
     let playIfNeeded;
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     let prop60 = require;
-    const booleanBinding = require(4014) /* BaseRive */.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = require(4014) /* BaseRive */;
+    const booleanBinding = require("../BaseRive.tsx") /* BaseRive */.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
+    const obj = require("../BaseRive.tsx") /* BaseRive */;
     let twoFriends;
     if (dataBinding != null) {
       twoFriends = dataBinding.twoFriends;
@@ -26,8 +26,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       twoFriends1 = onDataBindingChange.twoFriends;
     }
-    const booleanBinding1 = require(4014) /* BaseRive */.useBooleanBinding("twoFriends", instance, twoFriends, twoFriends1, playIfNeeded);
-    const obj2 = require(4014) /* BaseRive */;
+    const booleanBinding1 = require("../BaseRive.tsx") /* BaseRive */.useBooleanBinding("twoFriends", instance, twoFriends, twoFriends1, playIfNeeded);
+    const obj2 = require("../BaseRive.tsx") /* BaseRive */;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -406,8 +406,8 @@ let closure_9 = {
     let playIfNeeded;
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     let prop60 = require;
-    const booleanBinding = require(4014) /* BaseRive */.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = require(4014) /* BaseRive */;
+    const booleanBinding = require("../BaseRive.tsx") /* BaseRive */.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
+    const obj = require("../BaseRive.tsx") /* BaseRive */;
     let twoFriends;
     if (dataBinding != null) {
       twoFriends = dataBinding.twoFriends;
@@ -416,8 +416,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       twoFriends1 = onDataBindingChange.twoFriends;
     }
-    const booleanBinding1 = require(4014) /* BaseRive */.useBooleanBinding("twoFriends", instance, twoFriends, twoFriends1, playIfNeeded);
-    const obj2 = require(4014) /* BaseRive */;
+    const booleanBinding1 = require("../BaseRive.tsx") /* BaseRive */.useBooleanBinding("twoFriends", instance, twoFriends, twoFriends1, playIfNeeded);
+    const obj2 = require("../BaseRive.tsx") /* BaseRive */;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -803,7 +803,7 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       ShadowVisibility1 = onDataBindingChange.ShadowVisibility;
     }
-    const numberBinding = require(4014) /* BaseRive */.useNumberBinding("ShadowVisibility", instance, ShadowVisibility, ShadowVisibility1, playIfNeeded);
+    const numberBinding = require("../BaseRive.tsx") /* BaseRive */.useNumberBinding("ShadowVisibility", instance, ShadowVisibility, ShadowVisibility1, playIfNeeded);
     let tmpResult = tmp(4014);
     let StrokeVisibility;
     if (dataBinding != null) {
@@ -824,7 +824,7 @@ let closure_9 = {
       UsernameVisibility1 = onDataBindingChange.UsernameVisibility;
     }
     const numberBinding2 = tmpResult.useNumberBinding("UsernameVisibility", instance, UsernameVisibility, UsernameVisibility1, playIfNeeded);
-    const obj = require(4014) /* BaseRive */;
+    const obj = require("../BaseRive.tsx") /* BaseRive */;
     let Stroke;
     if (dataBinding != null) {
       Stroke = dataBinding.Stroke;
@@ -833,8 +833,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       Stroke1 = onDataBindingChange.Stroke;
     }
-    const colorBinding = require(4014) /* BaseRive */.useColorBinding("Stroke", instance, Stroke, Stroke1, playIfNeeded);
-    const tmpResult1 = require(4014) /* BaseRive */;
+    const colorBinding = require("../BaseRive.tsx") /* BaseRive */.useColorBinding("Stroke", instance, Stroke, Stroke1, playIfNeeded);
+    const tmpResult1 = require("../BaseRive.tsx") /* BaseRive */;
     let Fill;
     if (dataBinding != null) {
       Fill = dataBinding.Fill;
@@ -843,8 +843,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       Fill1 = onDataBindingChange.Fill;
     }
-    const colorBinding1 = require(4014) /* BaseRive */.useColorBinding("Fill", instance, Fill, Fill1, playIfNeeded);
-    const tmpResult2 = require(4014) /* BaseRive */;
+    const colorBinding1 = require("../BaseRive.tsx") /* BaseRive */.useColorBinding("Fill", instance, Fill, Fill1, playIfNeeded);
+    const tmpResult2 = require("../BaseRive.tsx") /* BaseRive */;
     let Username;
     if (dataBinding != null) {
       Username = dataBinding.Username;
@@ -853,8 +853,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       Username1 = onDataBindingChange.Username;
     }
-    const stringBinding = require(4014) /* BaseRive */.useStringBinding("Username", instance, Username, Username1, playIfNeeded);
-    const tmpResult3 = require(4014) /* BaseRive */;
+    const stringBinding = require("../BaseRive.tsx") /* BaseRive */.useStringBinding("Username", instance, Username, Username1, playIfNeeded);
+    const tmpResult3 = require("../BaseRive.tsx") /* BaseRive */;
     let img;
     if (dataBinding != null) {
       img = dataBinding.img;
@@ -863,7 +863,7 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       img1 = onDataBindingChange.img;
     }
-    const imageBinding = require(4014) /* BaseRive */.useImageBinding("img", instance, img, img1, playIfNeeded);
+    const imageBinding = require("../BaseRive.tsx") /* BaseRive */.useImageBinding("img", instance, img, img1, playIfNeeded);
     return null;
   },
   Username: function UsernameBindings(arg0) {
@@ -880,7 +880,7 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       ShadowVisibility1 = onDataBindingChange.ShadowVisibility;
     }
-    const numberBinding = require(4014) /* BaseRive */.useNumberBinding("ShadowVisibility", instance, ShadowVisibility, ShadowVisibility1, playIfNeeded);
+    const numberBinding = require("../BaseRive.tsx") /* BaseRive */.useNumberBinding("ShadowVisibility", instance, ShadowVisibility, ShadowVisibility1, playIfNeeded);
     let tmpResult = tmp(4014);
     let StrokeVisibility;
     if (dataBinding != null) {
@@ -901,7 +901,7 @@ let closure_9 = {
       UsernameVisibility1 = onDataBindingChange.UsernameVisibility;
     }
     const numberBinding2 = tmpResult.useNumberBinding("UsernameVisibility", instance, UsernameVisibility, UsernameVisibility1, playIfNeeded);
-    const obj = require(4014) /* BaseRive */;
+    const obj = require("../BaseRive.tsx") /* BaseRive */;
     let Stroke;
     if (dataBinding != null) {
       Stroke = dataBinding.Stroke;
@@ -910,8 +910,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       Stroke1 = onDataBindingChange.Stroke;
     }
-    const colorBinding = require(4014) /* BaseRive */.useColorBinding("Stroke", instance, Stroke, Stroke1, playIfNeeded);
-    const tmpResult1 = require(4014) /* BaseRive */;
+    const colorBinding = require("../BaseRive.tsx") /* BaseRive */.useColorBinding("Stroke", instance, Stroke, Stroke1, playIfNeeded);
+    const tmpResult1 = require("../BaseRive.tsx") /* BaseRive */;
     let Fill;
     if (dataBinding != null) {
       Fill = dataBinding.Fill;
@@ -920,8 +920,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       Fill1 = onDataBindingChange.Fill;
     }
-    const colorBinding1 = require(4014) /* BaseRive */.useColorBinding("Fill", instance, Fill, Fill1, playIfNeeded);
-    const tmpResult2 = require(4014) /* BaseRive */;
+    const colorBinding1 = require("../BaseRive.tsx") /* BaseRive */.useColorBinding("Fill", instance, Fill, Fill1, playIfNeeded);
+    const tmpResult2 = require("../BaseRive.tsx") /* BaseRive */;
     let Username;
     if (dataBinding != null) {
       Username = dataBinding.Username;
@@ -930,8 +930,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       Username1 = onDataBindingChange.Username;
     }
-    const stringBinding = require(4014) /* BaseRive */.useStringBinding("Username", instance, Username, Username1, playIfNeeded);
-    const tmpResult3 = require(4014) /* BaseRive */;
+    const stringBinding = require("../BaseRive.tsx") /* BaseRive */.useStringBinding("Username", instance, Username, Username1, playIfNeeded);
+    const tmpResult3 = require("../BaseRive.tsx") /* BaseRive */;
     let img;
     if (dataBinding != null) {
       img = dataBinding.img;
@@ -940,7 +940,7 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       img1 = onDataBindingChange.img;
     }
-    const imageBinding = require(4014) /* BaseRive */.useImageBinding("img", instance, img, img1, playIfNeeded);
+    const imageBinding = require("../BaseRive.tsx") /* BaseRive */.useImageBinding("img", instance, img, img1, playIfNeeded);
     return null;
   },
   "Friends 01 Rotation": function Friends01RotationBindings(reducedMotionEnabled) {
@@ -950,8 +950,8 @@ let closure_9 = {
     let playIfNeeded;
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     let prop60 = require;
-    const booleanBinding = require(4014) /* BaseRive */.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = require(4014) /* BaseRive */;
+    const booleanBinding = require("../BaseRive.tsx") /* BaseRive */.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
+    const obj = require("../BaseRive.tsx") /* BaseRive */;
     let twoFriends;
     if (dataBinding != null) {
       twoFriends = dataBinding.twoFriends;
@@ -960,8 +960,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       twoFriends1 = onDataBindingChange.twoFriends;
     }
-    const booleanBinding1 = require(4014) /* BaseRive */.useBooleanBinding("twoFriends", instance, twoFriends, twoFriends1, playIfNeeded);
-    const obj2 = require(4014) /* BaseRive */;
+    const booleanBinding1 = require("../BaseRive.tsx") /* BaseRive */.useBooleanBinding("twoFriends", instance, twoFriends, twoFriends1, playIfNeeded);
+    const obj2 = require("../BaseRive.tsx") /* BaseRive */;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -1377,7 +1377,7 @@ const forwardRefResult = importAllResult.forwardRef(function CheckpointFriendsRi
   obj = { ref };
   const merged = Object.assign(fallback);
   obj[1] = <closure_10 ref={arg1} />;
-  return jsx(require(4065) /* getDerivedStateFromError */.RiveErrorBoundary, { ref });
+  return jsx(require("../RiveErrorBoundary.tsx") /* getDerivedStateFromError */.RiveErrorBoundary, { ref });
 });
 const result = require("jsxProd").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/CheckpointFriendsRive.tsx");
 

@@ -14,20 +14,20 @@ export default {
     }
     if (constants.CONNECTING === arg0) {
       let connectionStatus = constants2.CONNECTING;
-      const intl10 = require(1236) /* getSystemLocale */.intl;
-      let connectionStatusText = intl10.string(require(1236) /* getSystemLocale */.t.MzW9sN);
+      const intl10 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+      let connectionStatusText = intl10.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.MzW9sN);
     } else if (tmp.AUTHENTICATING === arg0) {
       connectionStatus = constants2.CONNECTING;
-      const intl9 = require(1236) /* getSystemLocale */.intl;
-      connectionStatusText = intl9.string(require(1236) /* getSystemLocale */.t.GxXwE2);
+      const intl9 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+      connectionStatusText = intl9.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.GxXwE2);
     } else if (tmp.AWAITING_ENDPOINT === arg0) {
       connectionStatus = constants2.CONNECTING;
-      const intl8 = require(1236) /* getSystemLocale */.intl;
-      connectionStatusText = intl8.string(require(1236) /* getSystemLocale */.t.uQle7a);
+      const intl8 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+      connectionStatusText = intl8.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.uQle7a);
     } else if (tmp.RTC_CONNECTED === arg0) {
-      const intl7 = require(1236) /* getSystemLocale */.intl;
+      const intl7 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
       const string = intl7.string;
-      const t = require(1236) /* getSystemLocale */.t;
+      const t = require("../intl/index.native.tsx") /* getSystemLocale */.t;
       if (flag) {
         let stringResult1 = string(t.HtVOdd);
       } else {
@@ -37,29 +37,29 @@ export default {
       connectionStatus = constants2.CONNECTED;
     } else if (tmp.RTC_CONNECTING === arg0) {
       connectionStatus = constants2.CONNECTING;
-      const intl6 = require(1236) /* getSystemLocale */.intl;
-      connectionStatusText = intl6.string(require(1236) /* getSystemLocale */.t.Gp51dl);
+      const intl6 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+      connectionStatusText = intl6.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.Gp51dl);
     } else if (tmp.ICE_CHECKING === arg0) {
       connectionStatus = constants2.CONNECTING;
-      const intl5 = require(1236) /* getSystemLocale */.intl;
-      connectionStatusText = intl5.string(require(1236) /* getSystemLocale */.t["rdCyA/"]);
+      const intl5 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+      connectionStatusText = intl5.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["rdCyA/"]);
     } else if (tmp.DTLS_CONNECTING === arg0) {
       connectionStatus = constants2.CONNECTING;
-      const intl4 = require(1236) /* getSystemLocale */.intl;
-      connectionStatusText = intl4.string(require(1236) /* getSystemLocale */.t.UvB3gV);
+      const intl4 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+      connectionStatusText = intl4.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.UvB3gV);
     } else if (tmp.NO_ROUTE === arg0) {
       connectionStatus = constants2.ERROR;
-      const intl3 = require(1236) /* getSystemLocale */.intl;
-      connectionStatusText = intl3.string(require(1236) /* getSystemLocale */.t.mGhOIi);
+      const intl3 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+      connectionStatusText = intl3.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.mGhOIi);
     } else if (tmp.RTC_DISCONNECTED === arg0) {
       connectionStatus = constants2.ERROR;
-      const intl2 = require(1236) /* getSystemLocale */.intl;
-      connectionStatusText = intl2.string(require(1236) /* getSystemLocale */.t.M7LDmE);
+      const intl2 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+      connectionStatusText = intl2.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.M7LDmE);
     } else {
       const DISCONNECTED = tmp.DISCONNECTED;
       connectionStatus = constants2.ERROR;
-      const intl = require(1236) /* getSystemLocale */.intl;
-      connectionStatusText = intl.string(require(1236) /* getSystemLocale */.t.NLKQbx);
+      const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+      connectionStatusText = intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.NLKQbx);
     }
     return { connectionStatus, connectionStatusText };
   },

@@ -135,12 +135,12 @@ function _sendGuildInvite() {
 const result = require("comparator").fileFinishedImporting("modules/instant_invite/native/GuildInviteUtils.tsx");
 
 export const showGuildInviteActionSheet = function showGuildInviteActionSheet(id, newestAnalyticsLocation) {
-  let obj = importDefault(698);
+  let obj = require("../../../utils/AnalyticsUtils.tsx");
   obj = { type: "Invite to Guilds", source: newestAnalyticsLocation };
   obj.track(constants.OPEN_POPOUT, obj);
-  const obj3 = importDefault(4253);
+  const obj3 = require("../../action_sheet/native/ActionSheetActionCreators.tsx");
   obj = { recipientId: id, source: newestAnalyticsLocation };
-  obj3.openLazy(require(1959) /* asyncRequireImpl */(12404, dependencyMap.paths), "invite-to-guilds-" + id, obj);
+  obj3.openLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(12404, dependencyMap.paths), "invite-to-guilds-" + id, obj);
 };
 export const useServerInviteRows = function useServerInviteRows(id, query) {
   const _require = id;

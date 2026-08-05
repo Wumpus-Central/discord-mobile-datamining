@@ -3,7 +3,7 @@ let c3 = "create-forum-post";
 let result = require("ForumComposerModal").fileFinishedImporting("modules/forums/native/composer/ForumComposerModalActionCreators.tsx");
 
 export const openCreateForumPostModal = function openCreateForumPostModal(guildId) {
-  let obj = require(7146) /* trackForumChannelSeenBatch */;
+  let obj = require("../../tracking/Tracking.tsx") /* trackForumChannelSeenBatch */;
   obj = { guildId: guildId.guildId, channelId: guildId.parentChannelId, location: guildId.analyticsLocationObject };
   const result = obj.trackMobileForumComposerOpened(obj);
   if (!tmp4) {
@@ -12,7 +12,7 @@ export const openCreateForumPostModal = function openCreateForumPostModal(guildI
     const result1 = tmp(7146).trackForumCreateNewPostStarted(obj);
     const tmpResult = tmp(7146);
   }
-  importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(9821, dependencyMap.paths), guildId, c3);
+  require("../../../../actions/ModalActionCreators.tsx").pushLazy(require("../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(9821, dependencyMap.paths), guildId, c3);
 };
 export const closeCreateForumPostModal = function closeCreateForumPostModal() {
   let flag = arg0;
@@ -20,8 +20,8 @@ export const closeCreateForumPostModal = function closeCreateForumPostModal() {
     flag = false;
   }
   if (!flag) {
-    const result = require(7146) /* trackForumChannelSeenBatch */.trackMobileForumComposerDismissed();
-    const obj = require(7146) /* trackForumChannelSeenBatch */;
+    const result = require("../../tracking/Tracking.tsx") /* trackForumChannelSeenBatch */.trackMobileForumComposerDismissed();
+    const obj = require("../../tracking/Tracking.tsx") /* trackForumChannelSeenBatch */;
   }
-  importDefault(4490).popWithKey(c3);
+  require("../../../../actions/ModalActionCreators.tsx").popWithKey(c3);
 };

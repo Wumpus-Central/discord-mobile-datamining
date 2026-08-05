@@ -8,7 +8,7 @@ const result = require("module_4624").fileFinishedImporting("modules/guild_role_
 export default {
   handleShowEmojiUpsellAlert(guildId) {
     guildId = guildId.guildId;
-    let obj = importDefault(4624);
+    let obj = require("../../../actions/native/AlertActionCreators.tsx");
     obj = {
       importer() {
         return guildId(outer1_2[4])(outer1_2[3], outer1_2.paths).then((arg0) => {

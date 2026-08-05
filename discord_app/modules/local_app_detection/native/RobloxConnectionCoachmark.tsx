@@ -17,23 +17,23 @@ let map1;
 let unpackModuleId;
 const require = arg1;
 function RobloxIcon(theme) {
-  let obj = require(3995) /* isThemeLight */;
+  let obj = require("../../../design/utils/shared/themes.tsx") /* isThemeLight */;
   const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const tmp = createCacheKey();
   let str = "white";
-  const value = importDefault(4966).get(constants.ROBLOX);
+  const value = require("../../../lib/Platforms.tsx").get(constants.ROBLOX);
   if (isThemeDarkResult) {
     str = "black";
   }
-  const obj2 = importDefault(4966);
+  const obj2 = require("../../../lib/Platforms.tsx");
   const icon = value.icon;
   obj = { style: items, children: null };
   items = [tmp.robloxIconContainer, { backgroundColor: str }];
-  const source = require(1416) /* getAvatarURL */.makeSource(isThemeDarkResult ? icon.darkPNG : icon.lightPNG);
+  const source = require("../../../utils/AvatarUtils.tsx") /* getAvatarURL */.makeSource(isThemeDarkResult ? icon.darkPNG : icon.lightPNG);
   obj = { size: null, source: null, disableColor: true };
-  obj[0] = require(1297) /* Button */.IconSizes.LARGE;
+  obj[0] = require("../../../design/void/native.tsx") /* Button */.IconSizes.LARGE;
   obj[1] = source;
-  obj[1] = callback(require(1297) /* Button */.Icon, obj);
+  obj[1] = callback(require("../../../design/void/native.tsx") /* Button */.Icon, obj);
   return callback(View, obj);
 }
 class UnionIcon {
@@ -64,16 +64,16 @@ class UnionIcon {
 }
 function UserIcon() {
   const tmp = createCacheKey();
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [mergeGuildAvatar];
   obj = { style: tmp.avatarContainer, children: null };
   obj = { style: tmp.avatarInnerBorder };
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [callback(View, obj), ];
   const obj1 = { size: null, user: null, guildId: "disabled" };
-  obj1[0] = require(1297) /* Button */.AvatarSizes.NORMAL;
+  obj1[0] = require("../../../design/void/native.tsx") /* Button */.AvatarSizes.NORMAL;
   obj1[1] = stateFromStores;
-  items1[1] = callback(require(1297) /* Button */.Avatar, obj1);
+  items1[1] = callback(require("../../../design/void/native.tsx") /* Button */.Avatar, obj1);
   obj[1] = items1;
   return callback2(View, obj);
 }
@@ -109,7 +109,7 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
   obj[3] = function onDismiss() {
     return markAsDismissed(outer1_12.DISMISS);
   };
-  const obj1 = { spacing: 24, style: { paddingBottom: importDefault(1581)().bottom }, children: null };
+  const obj1 = { spacing: 24, style: { paddingBottom: require("../../safe_area/useSafeAreaInsets.native.tsx")().bottom }, children: null };
   const obj2 = { justify: "center", align: "center", direction: "horizontal", children: null };
   const items = [callback(RobloxIcon, { theme }), callback(UnionIcon, { theme }), callback(UserIcon, {})];
   obj2[3] = items;
@@ -130,7 +130,7 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
   const intl3 = markAsDismissed(1236).intl;
   obj7[0] = intl3.string(markAsDismissed(1236).t.ItuabN);
   const obj8 = { size: "sm", color: null };
-  obj8[1] = importDefault(712).colors.WHITE;
+  obj8[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE;
   obj7[1] = callback(markAsDismissed(12143).WindowLaunchIcon, obj8);
   obj7[4] = function onPress() {
     let obj = outer1_1(outer1_2[13]);

@@ -10,10 +10,10 @@ function trackRoundtrip(apiResponseTimestamp) {
     if (null != apiResponseTimestamp.apiResponseTimestamp) {
       diff = apiResponseTimestamp.apiResponseTimestamp - apiResponseTimestamp.initialSendTimestamp;
     }
-    let obj = require(6830) /* receiveNetworkInfoformation */;
+    let obj = require("../network/NetStats.android.tsx") /* receiveNetworkInfoformation */;
     const signalStrength = obj.getSignalStrength();
     obj = {};
-    const merged = Object.assign(importDefault(7057)());
+    const merged = Object.assign(require("../device/getDeviceMetadata.native.tsx")());
     ({ endpoint: obj3.endpoint, wasSuccessful: obj3.was_successful } = apiResponseTimestamp);
     obj.api_latency_ms = diff;
     obj.mobile_network_type = type.getType();
@@ -25,11 +25,11 @@ function trackRoundtrip(apiResponseTimestamp) {
     }
     const merged1 = Object.assign(tmp10);
     ({ callerSource: obj3.caller_source, requestId: obj3.request_id, fetchedAt: obj3.fetched_at } = apiResponseTimestamp);
-    const obj2 = importDefault(698);
+    const obj2 = require("../../utils/AnalyticsUtils.tsx");
     const tmp2 = require;
-    obj.is_foregrounded = require(6833) /* isForegrounded */.isForegrounded();
+    obj.is_foregrounded = require("../analytics_sessions/SessionForegroundUtils.native.tsx") /* isForegrounded */.isForegrounded();
     obj2.track(AnalyticEvents.EARNED_DECISION_ROUNDTRIP, obj);
-    const tmp2Result = require(6833) /* isForegrounded */;
+    const tmp2Result = require("../analytics_sessions/SessionForegroundUtils.native.tsx") /* isForegrounded */;
   }
 }
 class EarnedDecisionRoundtripTracker {

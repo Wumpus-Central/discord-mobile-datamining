@@ -3,7 +3,7 @@ const result = require("set").fileFinishedImporting("modules/fastest_list/utils/
 
 export default function getFastestListVisibleItemsWithErrorChecking(arg0, sectionStart) {
   if (tmp) {
-    let obj = require(8341) /* logFastestListError */;
+    let obj = require("FastestListLogger.native.tsx") /* logFastestListError */;
     obj = { listId: null, sections: null, visibleItems: null };
     obj[0] = arg0;
     obj[1] = arg2;
@@ -15,8 +15,8 @@ export default function getFastestListVisibleItemsWithErrorChecking(arg0, sectio
     obj[0] = arg0;
     obj[1] = arg2;
     obj[2] = sectionStart;
-    require(8341) /* logFastestListError */.logFastestListError("Visible items `itemStart/End` is greater than the number of items in the first section", obj);
-    const obj3 = require(8341) /* logFastestListError */;
+    require("FastestListLogger.native.tsx") /* logFastestListError */.logFastestListError("Visible items `itemStart/End` is greater than the number of items in the first section", obj);
+    const obj3 = require("FastestListLogger.native.tsx") /* logFastestListError */;
   }
   return sectionStart;
 };

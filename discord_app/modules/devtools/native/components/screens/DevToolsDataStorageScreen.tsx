@@ -36,7 +36,7 @@ obj[0] = obj;
 createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, verticalAlign: "middle", flexDirection: "row", alignItems: "center", flex: 1 };
 obj[1] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(obj);
-let closure_10 = importAllResult.memo(() => jsx(require(5315) /* TableRowInner */.TableRow, {
+let closure_10 = importAllResult.memo(() => jsx(require("../../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, {
   label: "Disable Database",
   start: true,
   onPress() {
@@ -49,8 +49,8 @@ let closure_10 = importAllResult.memo(() => jsx(require(5315) /* TableRowInner *
   }
 }));
 let closure_11 = importAllResult.memo(() => {
-  let obj = require(589) /* initialize */;
-  const items = [importDefault(1923), fetchFingerprint];
+  let obj = require("../../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const items = [require("../../../../app_database/system/DatabaseManager.tsx"), fetchFingerprint];
   const stateFromStores = obj.useStateFromStores(items, () => callback(table[12]).database(id.getId()));
   let str = "No active database.";
   if (null != stateFromStores) {
@@ -63,9 +63,9 @@ let closure_11 = importAllResult.memo(() => {
     combined = "Handle: " + stateFromStores.handle;
   }
   obj[3] = combined;
-  return jsx(require(5315) /* TableRowInner */.TableRow, { label: str, start: true, end: true, subLabel: null });
+  return jsx(require("../../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, { label: str, start: true, end: true, subLabel: null });
 });
-let closure_12 = importAllResult.memo(() => jsx(require(5315) /* TableRowInner */.TableRow, {
+let closure_12 = importAllResult.memo(() => jsx(require("../../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, {
   label: "Disable + Remove Database",
   onPress() {
     const result = callback(1923).replaceDisableAllDatabases("via UserSettingsDatabaseControls");
@@ -74,7 +74,7 @@ let closure_12 = importAllResult.memo(() => jsx(require(5315) /* TableRowInner *
   }
 }));
 let closure_13 = importAllResult.memo(() => {
-  let obj = _require(1481);
+  let obj = _require("../../../../../../_runtime/01481_Link.js");
   _require = obj.useNavigation();
   obj = {
     label: "View Cache Stats",
@@ -83,7 +83,7 @@ let closure_13 = importAllResult.memo(() => {
       navigation.navigate("cacheStats");
     }
   };
-  return jsx(_require(5315).TableRow, {
+  return jsx(_require("../../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, {
     label: "View Cache Stats",
     end: true,
     onPress() {

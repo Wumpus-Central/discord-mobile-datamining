@@ -27,9 +27,9 @@ function ApplicationCommandOptionItem(arg0) {
     flag = false;
   }
   let obj = { accessibilityLabel: null, accessibilityRole: "button", disabled: null, style: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   obj = { optionName: option.displayName };
-  obj[0] = intl.formatToPlainString(require(1236) /* getSystemLocale */.t.evoEHc, obj);
+  obj[0] = intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.evoEHc, obj);
   obj[2] = flag;
   const items = [tmp2.applicationCommandOption, , ];
   let activeCommandOption = flag;
@@ -88,8 +88,8 @@ function ApplicationCommandOptionItem(arg0) {
   }
   obj = { style: items1, numberOfLines: 1, children: option.displayName };
   items1[3] = errorCommandOptionText;
-  obj.children = closure_8(require(1297) /* Button */.LegacyText, obj);
-  return closure_8(require(4812) /* PressableBase */.PressableOpacity, obj);
+  obj.children = closure_8(require("../../../design/void/native.tsx") /* Button */.LegacyText, obj);
+  return closure_8(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
 }
 ({ View: c5, ScrollView: closure_6, StyleSheet } = get_ActivityIndicator);
 ({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = jsxProd);

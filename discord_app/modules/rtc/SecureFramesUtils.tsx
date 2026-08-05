@@ -51,7 +51,7 @@ function _getCurrentUserSigningKey() {
 }
 function toBase64DataUri(arg0) {
   const uint8Array = new Uint8Array(arg0);
-  return "data:application/octet-stream;base64," + importDefault(206).fromByteArray(uint8Array);
+  return "data:application/octet-stream;base64," + require("../../../_runtime/00206_byteLength.js").fromByteArray(uint8Array);
 }
 function isPublicKeyMatch(closure_0, closure_1, outer1_2) {
   const self = this;
@@ -537,46 +537,46 @@ function getIsSecureFramesKeyInconsistent(userId, items) {
 let result = require("fetchFingerprint").fileFinishedImporting("modules/rtc/SecureFramesUtils.tsx");
 
 export const getSecureFramesHelpdeskArticle = function getSecureFramesHelpdeskArticle() {
-  return importDefault(1945).getArticleURL(constants3.END_TO_END_ENCRYPTION);
+  return require("../../utils/HelpdeskUtils.tsx").getArticleURL(constants3.END_TO_END_ENCRYPTION);
 };
 export const getSecureFramesPersistentCodesHelpdeskArticle = function getSecureFramesPersistentCodesHelpdeskArticle() {
-  return importDefault(1945).getArticleURL(constants3.END_TO_END_ENCRYPTION);
+  return require("../../utils/HelpdeskUtils.tsx").getArticleURL(constants3.END_TO_END_ENCRYPTION);
 };
 export const getSecureFramesVerifiedDevicesHelpdeskArticle = function getSecureFramesVerifiedDevicesHelpdeskArticle() {
-  return importDefault(1945).getArticleURL(constants3.END_TO_END_ENCRYPTION);
+  return require("../../utils/HelpdeskUtils.tsx").getArticleURL(constants3.END_TO_END_ENCRYPTION);
 };
 export const addVerification = function addVerification(userId, userKey, isOtherUserKeyPersistent, channelId, DEEP_LINK) {
-  let obj = importDefault(9134);
+  let obj = require("SecureFramesActionCreators.tsx");
   if (isOtherUserKeyPersistent) {
     const secureFramesVerifiedKey = obj.createSecureFramesVerifiedKey(userId, userKey);
   } else {
     const secureFramesTransientKey = obj.createSecureFramesTransientKey(userId, userKey);
   }
   obj = { channelId, userId, analyticsLocation: DEEP_LINK };
-  const result = require(9141) /* trackRTCPanelViewed */.trackE2EEUserVerified(obj);
+  const result = require("SecureFramesTracking.tsx") /* trackRTCPanelViewed */.trackE2EEUserVerified(obj);
 };
 export const deleteVerification = function deleteVerification(userId, arg1, isOtherUserKeyPersistent) {
   if (isOtherUserKeyPersistent) {
     const _Uint8Array = Uint8Array;
     const uint8Array = new Uint8Array(arg1);
-    const obj2 = require(9116) /* set */;
-    const serializeKeyResult = require(9116) /* set */.serializeKey(uint8Array);
-    const result = importDefault(9134).deleteSecureFramesVerifiedKey(userId, serializeKeyResult);
-    const obj3 = importDefault(9134);
+    const obj2 = require("../../../discord_common/js/packages/libdave/index.tsx") /* set */;
+    const serializeKeyResult = require("../../../discord_common/js/packages/libdave/index.tsx") /* set */.serializeKey(uint8Array);
+    const result = require("SecureFramesActionCreators.tsx").deleteSecureFramesVerifiedKey(userId, serializeKeyResult);
+    const obj3 = require("SecureFramesActionCreators.tsx");
   } else {
-    const result1 = importDefault(9134).deleteSecureFramesTransientKey(userId);
-    const obj = importDefault(9134);
+    const result1 = require("SecureFramesActionCreators.tsx").deleteSecureFramesTransientKey(userId);
+    const obj = require("SecureFramesActionCreators.tsx");
   }
 };
 export const deletePersistentVerification = function deletePersistentVerification(userId, verifiedKey) {
   const _require = userId;
   const importDefault = verifiedKey;
-  let obj = importDefault(9135);
+  let obj = require("SecureFramesPlatformUtils.native.tsx");
   obj = { title: null, subtitle: null, onConfirm: null };
-  const intl = _require(1236).intl;
-  obj[0] = intl.string(_require(1236).t.hdL152);
-  const intl2 = _require(1236).intl;
-  obj[1] = intl2.string(_require(1236).t["8VGYKg"]);
+  const intl = _require("../../intl/index.native.tsx").intl;
+  obj[0] = intl.string(_require("../../intl/index.native.tsx").t.hdL152);
+  const intl2 = _require("../../intl/index.native.tsx").intl;
+  obj[1] = intl2.string(_require("../../intl/index.native.tsx").t["8VGYKg"]);
   obj[2] = function onConfirm() {
     const result = verifiedKey(outer1_2[11]).deleteSecureFramesVerifiedKey(userId, verifiedKey);
     const obj = verifiedKey(outer1_2[11]);
@@ -587,130 +587,130 @@ export const deletePersistentVerification = function deletePersistentVerificatio
 export const deleteUserPersistentVerifications = function deleteUserPersistentVerifications(userId) {
   const _require = userId;
   const user = authStore.getUser(userId);
-  let obj = importDefault(4124);
+  let obj = require("../../utils/UserUtils.tsx");
   const name = obj.getName(user);
   obj = { title: null, subtitle: null, onConfirm: null };
-  const intl = _require(1236).intl;
-  obj[0] = intl.formatToPlainString(_require(1236).t.K6NGBy, { username: name });
-  const intl2 = _require(1236).intl;
-  obj[1] = intl2.string(_require(1236).t.F1BQK3);
+  const intl = _require("../../intl/index.native.tsx").intl;
+  obj[0] = intl.formatToPlainString(_require("../../intl/index.native.tsx").t.K6NGBy, { username: name });
+  const intl2 = _require("../../intl/index.native.tsx").intl;
+  obj[1] = intl2.string(_require("../../intl/index.native.tsx").t.F1BQK3);
   obj[2] = function onConfirm() {
     const result = outer1_1(outer1_2[11]).deleteSecureFramesUserVerifiedKeys(userId);
     const obj = outer1_1(outer1_2[11]);
     const result1 = userId(outer1_2[12]).trackE2EESettingsUserDelete();
   };
-  let result = importDefault(9135).openSecureFramesUpdateConfirmation(obj);
+  let result = require("SecureFramesPlatformUtils.native.tsx").openSecureFramesUpdateConfirmation(obj);
 };
 export const getSecureFramesUserVerifiedTimestamp = function getSecureFramesUserVerifiedTimestamp(timestamp) {
-  let obj = importDefault(3867)();
-  const diffResult = obj.diff(importDefault(3867)(timestamp), "s");
-  if (diffResult > 12 * importDefault(687).Seconds.DAYS_30) {
+  let obj = require("../../../_runtime/03867_t.js")();
+  const diffResult = obj.diff(require("../../../_runtime/03867_t.js")(timestamp), "s");
+  if (diffResult > 12 * require("../../utils/Durations.tsx").Seconds.DAYS_30) {
     const _Math6 = Math;
     const rounded = Math.round(diffResult / (12 * tmp(687).Seconds.DAYS_30));
-    const intl7 = require(1236) /* getSystemLocale */.intl;
+    const intl7 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { count: null };
     obj[0] = rounded;
-    return intl7.formatToPlainString(require(1236) /* getSystemLocale */.t.F1wqkD, obj);
+    return intl7.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.F1wqkD, obj);
   } else if (diffResult > tmp(687).Seconds.DAYS_30) {
     const _Math5 = Math;
     const rounded1 = Math.round(diffResult / tmp(687).Seconds.DAYS_30);
-    const intl6 = require(1236) /* getSystemLocale */.intl;
+    const intl6 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { count: null };
     obj[0] = rounded1;
-    return intl6.formatToPlainString(require(1236) /* getSystemLocale */.t["iT+b+2"], obj);
+    return intl6.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t["iT+b+2"], obj);
   } else if (diffResult > 7 * tmp(687).Seconds.DAY) {
     const _Math4 = Math;
     const rounded2 = Math.round(diffResult / (7 * tmp(687).Seconds.DAY));
-    const intl5 = require(1236) /* getSystemLocale */.intl;
+    const intl5 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj1 = { count: null };
     obj1[0] = rounded2;
-    return intl5.formatToPlainString(require(1236) /* getSystemLocale */.t.dLurKZ, obj1);
+    return intl5.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.dLurKZ, obj1);
   } else if (diffResult > tmp(687).Seconds.DAY) {
     const _Math3 = Math;
     const rounded3 = Math.round(diffResult / tmp(687).Seconds.DAY);
-    const intl4 = require(1236) /* getSystemLocale */.intl;
+    const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj2 = { count: null };
     obj2[0] = rounded3;
-    return intl4.formatToPlainString(require(1236) /* getSystemLocale */.t.LE8a2H, obj2);
+    return intl4.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.LE8a2H, obj2);
   } else if (diffResult > tmp(687).Seconds.HOUR) {
     const _Math2 = Math;
     const rounded4 = Math.round(diffResult / tmp(687).Seconds.HOUR);
-    const intl3 = require(1236) /* getSystemLocale */.intl;
+    const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj3 = { count: null };
     obj3[0] = rounded4;
-    return intl3.formatToPlainString(require(1236) /* getSystemLocale */.t.KULxVS, obj3);
+    return intl3.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.KULxVS, obj3);
   } else if (diffResult > tmp(687).Seconds.MINUTE) {
     const _Math = Math;
     const rounded5 = Math.round(diffResult / tmp(687).Seconds.MINUTE);
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj4 = { count: null };
     obj4[0] = rounded5;
-    return intl2.formatToPlainString(require(1236) /* getSystemLocale */.t.ws6rWq, obj4);
+    return intl2.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.ws6rWq, obj4);
   } else {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj5 = { count: null };
     obj5[0] = diffResult;
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t["/w0Qpw"], obj5);
+    return intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t["/w0Qpw"], obj5);
   }
-  const tmp3 = importDefault(3867)(timestamp);
+  const tmp3 = require("../../../_runtime/03867_t.js")(timestamp);
 };
 export const getUserVerificationDeeplink = function getUserVerificationDeeplink(arg0, arg1) {
   return "" + location.protocol + "//" + location.host + closure_14.FEATURE(constants2.DAVE_PROTOCOL_VERIFICATION) + "?userId=" + arg0 + "&fingerprint=" + encodeURIComponent(arg1);
 };
 export const getUserVerifyStateText = function getUserVerifyStateText(memo, name) {
   if (constants.OTHER_USER_DISCONNECTED === memo) {
-    const intl13 = require(1236) /* getSystemLocale */.intl;
-    const items = [intl13.string(require(1236) /* getSystemLocale */.t.ZBHDM9), ];
-    const intl14 = require(1236) /* getSystemLocale */.intl;
+    const intl13 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const items = [intl13.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.ZBHDM9), ];
+    const intl14 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     let obj = { username: null };
     obj[0] = name;
-    items[1] = intl14.format(require(1236) /* getSystemLocale */.t["+rIdOd"], obj);
+    items[1] = intl14.format(require("../../intl/index.native.tsx") /* getSystemLocale */.t["+rIdOd"], obj);
     return items;
   } else if (tmp.CURRENT_USER_DISCONNECTED === memo) {
-    const intl11 = require(1236) /* getSystemLocale */.intl;
-    const items1 = [intl11.string(require(1236) /* getSystemLocale */.t["5ICxE6"]), ];
-    const intl12 = require(1236) /* getSystemLocale */.intl;
-    items1[1] = intl12.string(require(1236) /* getSystemLocale */.t["v1eXp/"]);
+    const intl11 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const items1 = [intl11.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["5ICxE6"]), ];
+    const intl12 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    items1[1] = intl12.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["v1eXp/"]);
     return items1;
   } else if (tmp.UNABLE_TO_VERIFY === memo) {
-    const intl9 = require(1236) /* getSystemLocale */.intl;
-    const items2 = [intl9.string(require(1236) /* getSystemLocale */.t["+no/a7"]), ];
-    const intl10 = require(1236) /* getSystemLocale */.intl;
+    const intl9 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const items2 = [intl9.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["+no/a7"]), ];
+    const intl10 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { username: null };
     obj[0] = name;
-    items2[1] = intl10.format(require(1236) /* getSystemLocale */.t.Mft7iJ, obj);
+    items2[1] = intl10.format(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Mft7iJ, obj);
     return items2;
   } else if (tmp.FINGERPRINT_MISMATCH === memo) {
-    const intl7 = require(1236) /* getSystemLocale */.intl;
-    const items3 = [intl7.string(require(1236) /* getSystemLocale */.t.HTJ76H), ];
-    const intl8 = require(1236) /* getSystemLocale */.intl;
+    const intl7 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const items3 = [intl7.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.HTJ76H), ];
+    const intl8 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj1 = { username: null };
     obj1[0] = name;
-    items3[1] = intl8.format(require(1236) /* getSystemLocale */.t.tc6aAc, obj1);
+    items3[1] = intl8.format(require("../../intl/index.native.tsx") /* getSystemLocale */.t.tc6aAc, obj1);
     return items3;
   } else if (tmp.OTHER_USER_ALREADY_VERIFIED === memo) {
-    const intl5 = require(1236) /* getSystemLocale */.intl;
-    const items4 = [intl5.string(require(1236) /* getSystemLocale */.t["9lw+J+"]), ];
-    const intl6 = require(1236) /* getSystemLocale */.intl;
+    const intl5 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const items4 = [intl5.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["9lw+J+"]), ];
+    const intl6 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj2 = { username: null };
     obj2[0] = name;
-    items4[1] = intl6.format(require(1236) /* getSystemLocale */.t.TvBS1w, obj2);
+    items4[1] = intl6.format(require("../../intl/index.native.tsx") /* getSystemLocale */.t.TvBS1w, obj2);
     return items4;
   } else if (tmp.MATCH === memo) {
-    const intl3 = require(1236) /* getSystemLocale */.intl;
-    const items5 = [intl3.string(require(1236) /* getSystemLocale */.t["xyE+Dn"]), ];
-    const intl4 = require(1236) /* getSystemLocale */.intl;
+    const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const items5 = [intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["xyE+Dn"]), ];
+    const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj3 = { username: null };
     obj3[0] = name;
-    items5[1] = intl4.format(require(1236) /* getSystemLocale */.t.znsPl5, obj3);
+    items5[1] = intl4.format(require("../../intl/index.native.tsx") /* getSystemLocale */.t.znsPl5, obj3);
     return items5;
   } else if (tmp.OTHER_USER_INCONSISTENT_KEYS === memo) {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    const items6 = [intl.string(require(1236) /* getSystemLocale */.t.im1uUi), ];
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const items6 = [intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.im1uUi), ];
+    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { username: null };
     obj[0] = name;
-    items6[1] = intl2.format(require(1236) /* getSystemLocale */.t.WY6IKb, obj);
+    items6[1] = intl2.format(require("../../intl/index.native.tsx") /* getSystemLocale */.t.WY6IKb, obj);
     return items6;
   }
 };
@@ -721,31 +721,31 @@ export const getUserVerificationFooterText = function getUserVerificationFooterT
   ({ isCurrentUserKeyPersistent, isOtherUserKeyPersistent, otherUserNickname } = arg0);
   if (isCurrentUserKeyPersistent) {
     if (isOtherUserKeyPersistent) {
-      const intl2 = require(1236) /* getSystemLocale */.intl;
+      const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
       let obj = { helpArticle: null };
-      obj[0] = importDefault(1945).getArticleURL(constants3.END_TO_END_ENCRYPTION);
-      let formatResult = intl2.format(require(1236) /* getSystemLocale */.t["FJN+kh"], obj);
-      const obj8 = importDefault(1945);
+      obj[0] = require("../../utils/HelpdeskUtils.tsx").getArticleURL(constants3.END_TO_END_ENCRYPTION);
+      let formatResult = intl2.format(require("../../intl/index.native.tsx") /* getSystemLocale */.t["FJN+kh"], obj);
+      const obj8 = require("../../utils/HelpdeskUtils.tsx");
     }
     return formatResult;
   }
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
   const format = intl.format;
-  const t = require(1236) /* getSystemLocale */.t;
+  const t = require("../../intl/index.native.tsx") /* getSystemLocale */.t;
   if (isCurrentUserKeyPersistent) {
     obj = { username: null, helpArticle: null };
     obj[0] = otherUserNickname;
-    obj[1] = importDefault(1945).getArticleURL(constants3.END_TO_END_ENCRYPTION);
+    obj[1] = require("../../utils/HelpdeskUtils.tsx").getArticleURL(constants3.END_TO_END_ENCRYPTION);
     formatResult = format(t["p/9PGp"], obj);
-    const obj6 = importDefault(1945);
+    const obj6 = require("../../utils/HelpdeskUtils.tsx");
   } else if (isOtherUserKeyPersistent) {
     let obj1 = { helpArticle: null };
-    obj1[0] = importDefault(1945).getArticleURL(constants3.END_TO_END_ENCRYPTION);
+    obj1[0] = require("../../utils/HelpdeskUtils.tsx").getArticleURL(constants3.END_TO_END_ENCRYPTION);
     formatResult = format(t.qT5z87, obj1);
-    const obj4 = importDefault(1945);
+    const obj4 = require("../../utils/HelpdeskUtils.tsx");
   } else {
     obj = { helpArticle: null };
-    obj1 = importDefault(1945);
+    obj1 = require("../../utils/HelpdeskUtils.tsx");
     obj[0] = obj1.getArticleURL(constants3.END_TO_END_ENCRYPTION);
     formatResult = format(t["6JLy+i"], obj);
   }
@@ -778,15 +778,15 @@ export const showSecureFramesKeyInconsistentAlert = function showSecureFramesKey
   let nickname;
   let userId;
   ({ userId, channelId, nickname } = arg0);
-  let obj = require(9141) /* trackRTCPanelViewed */;
+  let obj = require("SecureFramesTracking.tsx") /* trackRTCPanelViewed */;
   obj = { userId, channelId, keyVersion: closure_12, reason: constants.OTHER_USER_INCONSISTENT_KEYS };
   const result = obj.trackE2EEUserVerificationFailed(obj);
   obj = { title: null, body: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.mznLyR);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.format(require(1236) /* getSystemLocale */.t.WY6IKb, { username: nickname });
-  importDefault(4623).show(obj);
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.mznLyR);
+  const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl2.format(require("../../intl/index.native.tsx") /* getSystemLocale */.t.WY6IKb, { username: nickname });
+  require("../../actions/AlertActionCreators.tsx").show(obj);
 };
 export const validateSecureFramesKeyConsistent = function validateSecureFramesKeyConsistent(guildId) {
   let channelId;
@@ -795,9 +795,9 @@ export const validateSecureFramesKeyConsistent = function validateSecureFramesKe
   const items = [createRTCConnection, closure_8];
   if (getIsSecureFramesKeyInconsistent(userId, items)) {
     const user = authStore.getUser(userId);
-    let obj = importDefault(4474);
+    let obj = require("../../utils/NicknameUtils.tsx");
     const name = obj.getName(guildId.guildId, channelId, user);
-    let obj1 = require(9141) /* trackRTCPanelViewed */;
+    let obj1 = require("SecureFramesTracking.tsx") /* trackRTCPanelViewed */;
     obj = { userId: null, channelId: null, keyVersion: null, reason: null };
     obj[0] = userId;
     obj[1] = channelId;
@@ -805,13 +805,13 @@ export const validateSecureFramesKeyConsistent = function validateSecureFramesKe
     obj[3] = constants.OTHER_USER_INCONSISTENT_KEYS;
     const result = obj1.trackE2EEUserVerificationFailed(obj);
     obj = { title: null, body: null };
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[0] = intl.string(require(1236) /* getSystemLocale */.t.mznLyR);
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[0] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.mznLyR);
+    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj1 = { username: null };
     obj1[0] = name;
-    obj[1] = intl2.format(require(1236) /* getSystemLocale */.t.WY6IKb, obj1);
-    importDefault(4623).show(obj);
+    obj[1] = intl2.format(require("../../intl/index.native.tsx") /* getSystemLocale */.t.WY6IKb, obj1);
+    require("../../actions/AlertActionCreators.tsx").show(obj);
     return false;
   } else {
     return true;

@@ -4,34 +4,34 @@ import createToggle from "createToggle";
 
 const pressable = createToggle.createPressable({
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.nAsWKy);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.nAsWKy);
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   onPress: function onContactSyncNamePress() {
-    importDefault(698).track(AnalyticEvents.OPEN_MODAL, { type: "Change Name", location: { page: "User Settings" } });
-    const obj = importDefault(698);
-    importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(13995, dependencyMap.paths), "Contact Sync Name Update Modal");
+    require("../../../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.OPEN_MODAL, { type: "Change Name", location: { page: "User Settings" } });
+    const obj = require("../../../../utils/AnalyticsUtils.tsx");
+    require("../../../../actions/ModalActionCreators.tsx").pushLazy(require("../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(13995, dependencyMap.paths), "Contact Sync Name Update Modal");
   },
   withArrow: true,
   usePredicate: function useHasContactSyncAccount() {
-    return null != require(11947) /* _uploadContacts */.useContactSyncAccount();
+    return null != require("../../../contact_sync/native/ContactSyncUtils.tsx") /* _uploadContacts */.useContactSyncAccount();
   }
 });
 let obj = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.nAsWKy);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.nAsWKy);
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   onPress: function onContactSyncNamePress() {
-    importDefault(698).track(AnalyticEvents.OPEN_MODAL, { type: "Change Name", location: { page: "User Settings" } });
-    const obj = importDefault(698);
-    importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(13995, dependencyMap.paths), "Contact Sync Name Update Modal");
+    require("../../../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.OPEN_MODAL, { type: "Change Name", location: { page: "User Settings" } });
+    const obj = require("../../../../utils/AnalyticsUtils.tsx");
+    require("../../../../actions/ModalActionCreators.tsx").pushLazy(require("../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(13995, dependencyMap.paths), "Contact Sync Name Update Modal");
   },
   withArrow: true,
   usePredicate: function useHasContactSyncAccount() {
-    return null != require(11947) /* _uploadContacts */.useContactSyncAccount();
+    return null != require("../../../contact_sync/native/ContactSyncUtils.tsx") /* _uploadContacts */.useContactSyncAccount();
   }
 };
 const result = require("expandEventProperties").fileFinishedImporting("modules/user_settings/defs/native/SyncContactsNameSetting.tsx");

@@ -38,7 +38,7 @@ function GuildLevelPowerupHeader(arg0) {
     items1[1] = progressStart;
     items1[2] = position === constants.END && tmp.progressEnd;
     obj[3] = items1;
-    const items2 = [closure_10(importDefault(4706), obj), , ];
+    const items2 = [closure_10(require("../../../../../_runtime/04706_LinearGradient.js"), obj), , ];
     obj = { style: null };
     const items3 = [, ];
     ({ boostContainer: arr6[0], boostContainerBackground: arr6[1] } = tmp);
@@ -52,10 +52,10 @@ function GuildLevelPowerupHeader(arg0) {
     const obj1 = { style: null, children: null };
     items4[1] = boostContainerActive;
     obj1[0] = items4;
-    const colors = importDefault(712).colors;
+    const colors = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors;
     const obj2 = { size: "xs", color: null };
     obj2[1] = active ? colors.WHITE : colors.TEXT_MUTED;
-    obj1[1] = closure_10(require(7616) /* BoostGemIcon */.BoostGemIcon, obj2);
+    obj1[1] = closure_10(require("../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx") /* BoostGemIcon */.BoostGemIcon, obj2);
     items2[2] = closure_10(View, obj1);
     obj[1] = items2;
     return closure_11(View, obj);
@@ -165,10 +165,10 @@ export default function GuildPowerupsLevelCard(arg0) {
   ({ guildId, powerup, nextPowerup, index, isScrollingRef } = arg0);
   let importDefault;
   const tmp = createCacheKey();
-  const tmp4 = importDefault(11772)(guildId, powerup);
+  const tmp4 = require("../hooks/usePowerupActiveStatus.tsx")(guildId, powerup);
   let obj = isScrollingRef(11792);
   const calculatePowerupCardStatus = obj.useCalculatePowerupCardStatus(powerup, tmp4, false);
-  const tmp8 = importDefault(11838)(guildId, powerup);
+  const tmp8 = require("hooks/useGuildPowerupOnShowMore.tsx")(guildId, powerup);
   importDefault = tmp8;
   if (0 === index) {
     let MIDDLE = constants.START;
@@ -187,7 +187,7 @@ export default function GuildPowerupsLevelCard(arg0) {
   obj = { position: MIDDLE, active: tmp13, nextActive: null };
   let tmp19;
   const tmp2 = importDefault;
-  const tmp5 = importDefault(11772)(guildId, nextPowerup);
+  const tmp5 = require("../hooks/usePowerupActiveStatus.tsx")(guildId, nextPowerup);
   if (null != nextPowerup) {
     tmp19 = tmp5.type !== constants2.INACTIVE;
   }
@@ -197,7 +197,7 @@ export default function GuildPowerupsLevelCard(arg0) {
   const items2 = [closure_10(isScrollingRef(4281).Text, { variant: "heading-lg/semibold", children: powerup.title }), closure_10(GuildPowerupLevelBody, { isActive: tmp4.type !== constants2.INACTIVE, index }), ];
   const obj2 = { variant: "heading-lg/semibold", children: powerup.title };
   const tmp18 = GuildLevelPowerupHeader;
-  const tmp2Result = importDefault(11839);
+  const tmp2Result = require("GuildPowerupsCard.tsx");
   items2[2] = closure_10(View, { style: tmp.footerContainer, children: closure_10(isScrollingRef(11797).GuildPowerupsCardFooter, obj4) });
   obj1[1] = items2;
   items1[1] = closure_11(View, obj1);

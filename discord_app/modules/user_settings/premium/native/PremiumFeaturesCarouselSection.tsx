@@ -42,9 +42,9 @@ function CarouselCard(arg0) {
   const tmp = callback4();
   let obj = { style, children: null };
   obj = { variant: "heading-md/extrabold", color: "text-overlay-light", style: tmp.cardTitle, children: title };
-  const items = [callback2(require(4281) /* Text */.Text, obj), ];
+  const items = [callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
   const items1 = [tmp.image, imageStyle];
-  items[1] = callback2(importDefault(5236), { source: imageSrc, style: items1, resizeMode: "contain" });
+  items[1] = callback2(require("../../../../components_native/common/FastImage.tsx"), { source: imageSrc, style: items1, resizeMode: "contain" });
   obj[1] = items;
   return callback3(PremiumFeaturesCardBackground, obj);
 }
@@ -143,7 +143,7 @@ function PremiumFeaturesCarousel(arg0) {
       };
       obj[8] = { parallaxScrollingScale: 1, parallaxScrollingOffset: 45 };
       obj[9] = tmp7;
-      let tmp19 = callback2(importDefault(9964), obj);
+      let tmp19 = callback2(require("../../../../../_runtime/09964_Pagination.js"), obj);
     }
     let items3 = [tmp19, ];
     let obj1 = { containerStyle: null, numberOfItems: null, currentIndex: null };

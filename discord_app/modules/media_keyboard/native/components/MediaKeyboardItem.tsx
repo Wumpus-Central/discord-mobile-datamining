@@ -27,9 +27,9 @@ function NewCaption(arg0) {
   let obj = { style: items, children: null };
   items = [tmp.labelContainer, style];
   obj = { source: null, style: null };
-  obj[0] = importDefault(9882);
+  obj[0] = require("../../../../../_runtime/09882_registerAsset.js");
   obj[1] = tmp.icon;
-  const items1 = [callback(require(1297) /* Button */.Icon, obj), callback(require(4281) /* Text */.Text, { style: textStyle, color: "text-overlay-light", variant: "text-xs/bold", children: label })];
+  const items1 = [callback(require("../../../../design/void/native.tsx") /* Button */.Icon, obj), callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: textStyle, color: "text-overlay-light", variant: "text-xs/bold", children: label })];
   obj[1] = items1;
   return callback2(closure_4, obj);
 }
@@ -430,15 +430,15 @@ const memoResult = importAllResult.memo((arg0) => {
   let closure_11;
   let obj;
   ({ handleCameraPress, handleAttachPress, handleViewAllPhotosPress } = arg0);
-  closure_11 = (importDefault(1474)().width - (24 + 4 * (numPerRow - 1))) / numPerRow;
+  closure_11 = (require("../../../screen/useWindowDimensions.native.tsx")().width - (24 + 4 * (numPerRow - 1))) / numPerRow;
   obj = { camera: null, allphotos: null, attach: null };
-  obj = { text: require(1236) /* getSystemLocale */.t.uje3P9, onPress: handleCameraPress, Icon: require(9941) /* CameraIcon */.CameraIcon };
+  obj = { text: require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.uje3P9, onPress: handleCameraPress, Icon: require("../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx") /* CameraIcon */.CameraIcon };
   obj[0] = obj;
-  obj = { text: require(1236) /* getSystemLocale */.t.Zmm6dN, onPress: handleViewAllPhotosPress, Icon: require(4796) /* ImageIcon */.ImageIcon };
+  obj = { text: require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Zmm6dN, onPress: handleViewAllPhotosPress, Icon: require("../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx") /* ImageIcon */.ImageIcon };
   obj[1] = obj;
   const tmp = obj();
-  obj[2] = { text: require(1236) /* getSystemLocale */.t["8Hvr3+"], onPress: handleAttachPress, Icon: require(9706) /* AttachmentIcon */.AttachmentIcon };
-  let obj1 = { text: require(1236) /* getSystemLocale */.t["8Hvr3+"], onPress: handleAttachPress, Icon: require(9706) /* AttachmentIcon */.AttachmentIcon };
+  obj[2] = { text: require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["8Hvr3+"], onPress: handleAttachPress, Icon: require("../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx") /* AttachmentIcon */.AttachmentIcon };
+  let obj1 = { text: require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["8Hvr3+"], onPress: handleAttachPress, Icon: require("../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx") /* AttachmentIcon */.AttachmentIcon };
   return callback(closure_4, {
     style: tmp.container,
     children: items.map((type) => {

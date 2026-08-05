@@ -10,28 +10,28 @@ let error;
 const require = arg1;
 function GIFIcon() {
   const obj = { size: null, source: null, disableColor: true, style: null };
-  obj[0] = require(1297) /* Button */.Icon.Sizes.CUSTOM;
-  obj[1] = importDefault(11310);
+  obj[0] = require("../../../../../design/void/native.tsx") /* Button */.Icon.Sizes.CUSTOM;
+  obj[1] = require("../../../../../../_runtime/11310_registerAsset.js");
   obj[3] = createCacheKey().gifIcon;
-  return callback(require(1297) /* Button */.Icon, obj);
+  return callback(require("../../../../../design/void/native.tsx") /* Button */.Icon, obj);
 }
 function PlayIcon() {
   const obj = { size: null, source: null, disableColor: true };
-  obj[0] = require(1297) /* Button */.Icon.Sizes.SMALL_20;
-  obj[1] = importDefault(11311);
-  return callback(require(1297) /* Button */.Icon, obj);
+  obj[0] = require("../../../../../design/void/native.tsx") /* Button */.Icon.Sizes.SMALL_20;
+  obj[1] = require("../../../../../../_runtime/11311_registerAsset.js");
+  return callback(require("../../../../../design/void/native.tsx") /* Button */.Icon, obj);
 }
 function ExtraMediaIcon(extraMediaCount) {
   const tmp = createCacheKey();
   let obj = { style: tmp.extraMediaCountContainer, children: null };
   obj = { source: null, color: null, size: null };
-  obj[0] = importDefault(10102);
+  obj[0] = require("../../../../../../_runtime/10102_registerAsset.js");
   obj[1] = tmp.icon.color;
-  obj[2] = require(1297) /* Button */.Icon.Sizes.REFRESH_SMALL_16;
-  const items = [callback(require(1297) /* Button */.Icon, obj), ];
+  obj[2] = require("../../../../../design/void/native.tsx") /* Button */.Icon.Sizes.REFRESH_SMALL_16;
+  const items = [callback(require("../../../../../design/void/native.tsx") /* Button */.Icon, obj), ];
   obj = { style: tmp.extraMediaCount, lineClamp: 1, variant: "text-xs/normal", color: "text-default", children: null };
   obj[4] = "+" + extraMediaCount.extraMediaCount;
-  items[1] = callback(require(4281) /* Text */.Text, obj);
+  items[1] = callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 }
@@ -42,7 +42,7 @@ function MediaGridColumn(arg0) {
   let c1;
   const tmp = createCacheKey();
   c1 = tmp;
-  const found = column.filter(require(1351) /* isDiscordFrontendDevelopment */.isNotNullish);
+  const found = column.filter(require("../../../../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
   return callback(View, {
     style: tmp.column,
     children: found.map((media) => {

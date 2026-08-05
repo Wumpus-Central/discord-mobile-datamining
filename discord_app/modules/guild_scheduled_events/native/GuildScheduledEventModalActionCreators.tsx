@@ -33,23 +33,23 @@ function openCreateOrEditGuildEventModal(guild, arg1) {
     }
   }
   if (null != recurrenceId) {
-    importDefault(38)(null != guildEvent, "recurrence editing requires a guild event");
+    require("../../../../_runtime/metro/00038__.js")(null != guildEvent, "recurrence editing requires a guild event");
     let obj = { guildEvent: null, recurrenceId: null, onCloseModal: null };
     obj[0] = guildEvent;
     obj[1] = recurrenceId;
     obj[2] = handleClose;
-    importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(8884, dependencyMap.paths), obj, closure_13);
-    const obj4 = importDefault(4490);
+    require("../../../actions/ModalActionCreators.tsx").pushLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(8884, dependencyMap.paths), obj, closure_13);
+    const obj4 = require("../../../actions/ModalActionCreators.tsx");
   } else {
-    obj = importDefault(4253);
+    obj = require("../../action_sheet/native/ActionSheetActionCreators.tsx");
     obj.hideAllActionSheets();
     obj = { guild: null, targetChannel: null, initialGuildEvent: null, onCloseModal: null };
     obj[0] = guild;
     obj[1] = tmp;
     obj[2] = guildEvent;
     obj[3] = handleClose;
-    importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(8905, dependencyMap.paths), obj, closure_13);
-    const obj2 = importDefault(4490);
+    require("../../../actions/ModalActionCreators.tsx").pushLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(8905, dependencyMap.paths), obj, closure_13);
+    const obj2 = require("../../../actions/ModalActionCreators.tsx");
   }
 }
 function _transitionToEventDetailsFromInvite() {
@@ -142,27 +142,27 @@ let result = require("ensureGuildLoaded").fileFinishedImporting("modules/guild_s
 
 export { openCreateOrEditGuildEventModal };
 export const openGuildEventListActionSheet = function openGuildEventListActionSheet(closure_0) {
-  let obj = importDefault(4253);
+  let obj = require("../../action_sheet/native/ActionSheetActionCreators.tsx");
   obj = { guild: closure_0 };
-  obj.openLazy(require(1959) /* asyncRequireImpl */(8958, dependencyMap.paths), closure_14, obj);
+  obj.openLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(8958, dependencyMap.paths), closure_14, obj);
 };
 export const closeGuildEventListActionSheet = function closeGuildEventListActionSheet() {
-  importDefault(4253).hideActionSheet(closure_14);
+  require("../../action_sheet/native/ActionSheetActionCreators.tsx").hideActionSheet(closure_14);
 };
 export const openStartGuildEventModal = function openStartGuildEventModal(event, nextRecurrenceIdInEvent, onCloseActionSheet) {
-  let obj = importDefault(4253);
+  let obj = require("../../action_sheet/native/ActionSheetActionCreators.tsx");
   obj.hideAllActionSheets();
   obj = { event, recurrenceId: nextRecurrenceIdInEvent, onCloseActionSheet };
-  importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(8974, dependencyMap.paths), obj, closure_15);
+  require("../../../actions/ModalActionCreators.tsx").pushLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(8974, dependencyMap.paths), obj, closure_15);
 };
 export const openDeleteGuildEventActionSheet = function openDeleteGuildEventActionSheet(eventId, guildId, recurrenceId) {
-  let obj = require(4625) /* useAlertStore */;
+  let obj = require("../../../design/components/AlertModal/native/useAlertStore.native.tsx") /* useAlertStore */;
   obj = { eventId, guildId, recurrenceId };
   obj.openAlert("DeleteEventAlert", jsx(React.lazy(() => callback(paths[14])(paths[19], paths.paths)), { eventId, guildId, recurrenceId }));
 };
 export const updateRsvp = function updateRsvp(arg0, arg1, arg2, arg3) {
   let closure_0 = arg3;
-  importDefault(8862).updateRsvp(arg0, arg1, arg2, arg3, (arg0) => {
+  require("../GuildScheduledEventsActionCreators.tsx").updateRsvp(arg0, arg1, arg2, arg3, (arg0) => {
     let tmp2 = tmp;
     if (null == arg0) {
       tmp2 = callback === outer1_12.INTERESTED;
@@ -194,7 +194,7 @@ export const handleGuildScheduledEventRsvp = function handleGuildScheduledEventR
   const _require = id;
   let closure_1 = guild_id;
   const dependencyMap = arg3;
-  let obj = _require(8868);
+  let obj = _require("../utils/GuildEventRsvpUtils.tsx");
   obj = {
     eventId: id,
     recurrenceId: c1,
@@ -244,7 +244,7 @@ export const openShareEvent = function openShareEvent(event, arg1) {
     channel = defaultChannel.getDefaultChannel(event.guild_id);
   }
   if (null != channel) {
-    const result = require(8880) /* canEveryoneRoleViewEvent */.isGuildEventInvitable(event);
+    const result = require("../useCanInviteForGuildEvent.tsx") /* canEveryoneRoleViewEvent */.isGuildEventInvitable(event);
     if (result) {
       const guild = store.getGuild(event.guild_id);
       let vanityURLCode;
@@ -279,13 +279,13 @@ export const openShareEvent = function openShareEvent(event, arg1) {
         const tmp7Result2 = tmp7(3985);
       }
     }
-    const obj3 = require(8880) /* canEveryoneRoleViewEvent */;
+    const obj3 = require("../useCanInviteForGuildEvent.tsx") /* canEveryoneRoleViewEvent */;
   } else {
-    obj = importDefault(3986);
+    obj = require("../../toast/native/ToastActionCreators.tsx");
     const obj1 = { key: "ERROR_OCCURRED_TRY_AGAIN", content: null, icon: null };
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj1[1] = intl.string(require(1236) /* getSystemLocale */.t.fEptJP);
-    obj1[2] = importDefault(8985);
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj1[1] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.fEptJP);
+    obj1[2] = require("../../../../_runtime/08985_registerAsset.js");
     obj.open(obj1);
   }
 };

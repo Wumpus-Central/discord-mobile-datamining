@@ -7,7 +7,7 @@ const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("design/components/Illustration/native/redesign/generated/EmptyServerSettingsAuditLog.tsx");
 
 export const getEmptyServerSettingsAuditLogSource = function getEmptyServerSettingsAuditLogSource(theme) {
-  let obj = require(7544) /* getIllustrationSource */;
+  let obj = require("../../index.tsx") /* getIllustrationSource */;
   obj = {
     dark() {
       return callback(16512);
@@ -22,7 +22,7 @@ export const getEmptyServerSettingsAuditLogSource = function getEmptyServerSetti
   return obj.getIllustrationSource(theme, obj);
 };
 export const useEmptyServerSettingsAuditLogSource = function useEmptyServerSettingsAuditLogSource() {
-  let obj = require(4131) /* AccessibilityAnnouncer */;
+  let obj = require("../../../../../shared.tsx") /* AccessibilityAnnouncer */;
   obj = {
     dark() {
       return callback(16512);
@@ -34,10 +34,10 @@ export const useEmptyServerSettingsAuditLogSource = function useEmptyServerSetti
       return callback(16514);
     }
   };
-  return require(7544) /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
+  return require("../../index.tsx") /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const EmptyServerSettingsAuditLog = function EmptyServerSettingsAuditLog(arg0) {
-  let obj = require(4131) /* AccessibilityAnnouncer */;
+  let obj = require("../../../../../shared.tsx") /* AccessibilityAnnouncer */;
   obj = {
     dark() {
       return callback(16512);
@@ -50,7 +50,7 @@ export const EmptyServerSettingsAuditLog = function EmptyServerSettingsAuditLog(
     }
   };
   obj = {};
-  const illustrationSource = require(7544) /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
+  const illustrationSource = require("../../index.tsx") /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;
   return <Image />;

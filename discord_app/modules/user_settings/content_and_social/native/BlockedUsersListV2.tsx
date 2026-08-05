@@ -11,13 +11,13 @@ const require = arg1;
 function BlockedUsersList(userIds) {
   userIds = userIds.userIds;
   const tmp = createCacheKey();
-  importDefault(5610);
+  require("../../../app_analytics/useAnalyticsLocations.tsx");
   if (0 === userIds.length) {
     let obj = { Illustration: null, body: null };
-    obj[0] = require(13952) /* getBlockedSource */.Blocked;
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[1] = intl.string(require(1236) /* getSystemLocale */.t.nnsFif);
-    let tmp7 = callback(require(1297) /* Button */.EmptyState, obj);
+    obj[0] = require("../../../../design/components/Illustration/native/redesign/generated/Blocked.tsx") /* getBlockedSource */.Blocked;
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.nnsFif);
+    let tmp7 = callback(require("../../../../design/void/native.tsx") /* Button */.EmptyState, obj);
   } else {
     obj = { value: null, children: null };
     obj[0] = tmp4;
@@ -26,19 +26,19 @@ function BlockedUsersList(userIds) {
     const obj1 = { children: null };
     const obj2 = { style: null, variant: "text-sm/semibold", color: "text-default", children: null };
     obj2[0] = tmp.sectionLabelStyle;
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj3 = { numberOfBlockedUsers: null };
     obj3[0] = userIds.length;
-    obj2[3] = intl2.formatToPlainString(require(1236) /* getSystemLocale */.t["c+JVEB"], obj3);
-    const items = [callback(require(4281) /* Text */.Text, obj2), ];
+    obj2[3] = intl2.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["c+JVEB"], obj3);
+    const items = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2), ];
     const obj4 = { hasIcons: true, children: null };
     obj4[1] = userIds.map((userId) => callback2(callback(table[14]), { userId }, userId));
-    const intl3 = require(1236) /* getSystemLocale */.intl;
-    items[1] = callback(require(5649) /* TableRowGroupTitle */.TableRowGroup, obj4, intl3.string(require(1236) /* getSystemLocale */.t.PFOUKW));
+    const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    items[1] = callback(require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj4, intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.PFOUKW));
     obj1[0] = items;
     obj[2] = callback2(ScrollView, obj1);
-    obj[1] = callback(require(5272) /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
-    tmp7 = callback(require(5610) /* context */.AnalyticsLocationProvider, obj);
+    obj[1] = callback(require("../../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+    tmp7 = callback(require("../../../app_analytics/useAnalyticsLocations.tsx") /* context */.AnalyticsLocationProvider, obj);
   }
   return tmp7;
 }
@@ -52,7 +52,7 @@ let obj1 = { marginTop: require("Themes").space.PX_12, marginBottom: require("Th
 const result = require("upsertRelationship").fileFinishedImporting("modules/user_settings/content_and_social/native/BlockedUsersListV2.tsx");
 
 export default function ConnectedBlockedUsersList() {
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [upsertRelationship];
   obj = { userIds: obj.useStateFromStoresArray(items, () => blockedIDs.getBlockedIDs()) };
   return callback(BlockedUsersList, obj);

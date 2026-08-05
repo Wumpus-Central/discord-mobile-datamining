@@ -118,12 +118,12 @@ export const createExperimentEmbed = function createExperimentEmbed(url, closure
   let colors;
   let experiments;
   let overridesInfo;
-  ({ colors, baseColors } = importDefault(7863)(closure_2));
+  ({ colors, baseColors } = require("../getEmbedThemeColors.tsx")(closure_2));
   let obj = experimentTreatmentFromEmbedURL(8013);
   const experimentFromEmbedURL = obj.getExperimentFromEmbedURL(url);
   let obj1 = experimentTreatmentFromEmbedURL(8013);
   experimentTreatmentFromEmbedURL = obj1.getExperimentTreatmentFromEmbedURL(url);
-  const tmp3 = importDefault(7863)(closure_2);
+  const tmp3 = require("../getEmbedThemeColors.tsx")(closure_2);
   const legacyExperiments = experimentTreatmentFromEmbedURL(10371).getLegacyExperiments();
   ({ experiments, overridesInfo } = legacyExperiments);
   const obj3 = experimentTreatmentFromEmbedURL(10371);

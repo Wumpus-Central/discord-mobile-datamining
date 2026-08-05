@@ -51,10 +51,10 @@ const result = require("get ActivityIndicator").fileFinishedImporting("component
 export default function PremiumBillingInfo(subscription) {
   subscription = subscription.subscription;
   const tmp = createCacheKey();
-  let obj = require(7553) /* createSubscriptionInvoicePreview */;
-  obj = { subscriptionId: subscription.id, renewal: true, applyEntitlements: true, analyticsLocations: importDefault(5610)(), analyticsLocation: importDefault(5630).PREMIUM_BILLING_INFO };
+  let obj = require("../../modules/premium/PremiumSubscriptionInvoice.tsx") /* createSubscriptionInvoicePreview */;
+  obj = { subscriptionId: subscription.id, renewal: true, applyEntitlements: true, analyticsLocations: require("../../modules/app_analytics/useAnalyticsLocations.tsx")(), analyticsLocation: require("../../modules/app_analytics/AnalyticsLocation.tsx").PREMIUM_BILLING_INFO };
   const first = callback(obj.useFetchSubscriptionInvoicePreview(obj), 1)[0];
-  require(7553) /* createSubscriptionInvoicePreview */;
+  require("../../modules/premium/PremiumSubscriptionInvoice.tsx") /* createSubscriptionInvoicePreview */;
   if (null == first) {
     return null;
   } else {

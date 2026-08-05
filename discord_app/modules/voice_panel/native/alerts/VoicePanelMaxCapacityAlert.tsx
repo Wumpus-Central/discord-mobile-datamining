@@ -24,7 +24,7 @@ export default function VoicePanelMaxCapacityAlert(channelId) {
   }, items1);
   const obj2 = channelId(4628);
   obj = { header: null, title: null, content: null, actions: null };
-  obj[0] = jsx(importDefault(16127), {});
+  obj[0] = jsx(require("VoicePanelLockedIcon.tsx"), {});
   const intl = channelId(1236).intl;
   obj[1] = intl.string(channelId(1236).t.hHbsQj);
   const intl2 = channelId(1236).intl;

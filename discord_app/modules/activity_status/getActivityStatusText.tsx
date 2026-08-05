@@ -60,7 +60,7 @@ export default function getActivityStatusText(name) {
   if (name != null) {
     status_display_type = name.status_display_type;
   }
-  if (status_display_type !== require(9571) /* StatusDisplayTypes */.StatusDisplayTypes.NAME) {
+  if (status_display_type !== require("../../../discord_common/js/shared/shared-constants/StatusDisplayTypes.tsx") /* StatusDisplayTypes */.StatusDisplayTypes.NAME) {
     let status_display_type1;
     if (name != null) {
       status_display_type1 = name.status_display_type;
@@ -81,7 +81,7 @@ export default function getActivityStatusText(name) {
   } else {
     tmp17 = tmp2;
   }
-  if (importDefault(7119)(name)) {
+  if (require("../activities/utils/isEmbeddedActivity.tsx")(name)) {
     const tmp28 = tmp21(9572)(tmp2);
     let obj = { text: null, tooltip: null };
     obj[0] = tmp28;

@@ -8,7 +8,7 @@ import num2 from "num2";
 
 let require = arg1;
 function getDefaultWants(arg0) {
-  let obj = require(12978) /* getBrowserInvertedWantsConfig */;
+  let obj = require("../modules/media_engine/BrowserInvertedWantsExperiment.tsx") /* getBrowserInvertedWantsConfig */;
   if (obj.getBrowserInvertedWantsConfig("RTCMediaSinkWantsManager.getDefaultWants").invertWants) {
     obj = {};
     const merged = Object.assign(obj);
@@ -513,7 +513,7 @@ prototype["shouldReceiveFromUser"] = function shouldReceiveFromUser(arg0) {
     }
     localVideoDisabled = userVideoDisabledResult;
   }
-  const WindowVisibilityVideoManager = require(10607) /* isIncomingVideoEnabled */.WindowVisibilityVideoManager;
+  const WindowVisibilityVideoManager = require("WindowVisibilityVideoManager.tsx") /* isIncomingVideoEnabled */.WindowVisibilityVideoManager;
   return WindowVisibilityVideoManager.isIncomingVideoEnabled() && !localVideoDisabled;
 };
 prototype["invertWants"] = function invertWants(arg0, wantsLevel) {
@@ -528,7 +528,7 @@ prototype["invertWants"] = function invertWants(arg0, wantsLevel) {
     if (closure_11) {
       let tmp7 = importDefault;
       let tmp8 = dependencyMap;
-      let obj = importDefault(12);
+      let obj = require("../../_runtime/00012_apply.js");
       let tmp9 = nextResult;
       let minByResult = obj.minBy(tmp3, (quality) => quality.quality);
       let tmp11 = tmp3;
@@ -575,28 +575,28 @@ prototype["setConnection"] = function setConnection(c3, arg1) {
   const self = this;
   const connection = this.connection;
   if (connection != null) {
-    connection.removeListener(require(4381) /* BaseConnectionEvent */.BaseConnectionEvent.LocalVideoDisabled, self.handleLocalVideoDisabled);
+    connection.removeListener(require("../../discord_common/js/packages/media-engine/index.tsx") /* BaseConnectionEvent */.BaseConnectionEvent.LocalVideoDisabled, self.handleLocalVideoDisabled);
   }
   const connection2 = self.connection;
   if (connection2 != null) {
-    connection2.removeListener(require(4381) /* BaseConnectionEvent */.BaseConnectionEvent.LocalMute, self.handleLocalMute);
+    connection2.removeListener(require("../../discord_common/js/packages/media-engine/index.tsx") /* BaseConnectionEvent */.BaseConnectionEvent.LocalMute, self.handleLocalMute);
   }
   const connection3 = self.connection;
   if (connection3 != null) {
-    connection3.removeListener(require(4381) /* BaseConnectionEvent */.BaseConnectionEvent.ActiveSinksChange, self.delayedUpdate);
+    connection3.removeListener(require("../../discord_common/js/packages/media-engine/index.tsx") /* BaseConnectionEvent */.BaseConnectionEvent.ActiveSinksChange, self.delayedUpdate);
   }
   self.connection = c3;
   const connection4 = self.connection;
   if (connection4 != null) {
-    connection4.addListener(require(4381) /* BaseConnectionEvent */.BaseConnectionEvent.LocalVideoDisabled, self.handleLocalVideoDisabled);
+    connection4.addListener(require("../../discord_common/js/packages/media-engine/index.tsx") /* BaseConnectionEvent */.BaseConnectionEvent.LocalVideoDisabled, self.handleLocalVideoDisabled);
   }
   const connection5 = self.connection;
   if (connection5 != null) {
-    connection5.addListener(require(4381) /* BaseConnectionEvent */.BaseConnectionEvent.LocalMute, self.handleLocalMute);
+    connection5.addListener(require("../../discord_common/js/packages/media-engine/index.tsx") /* BaseConnectionEvent */.BaseConnectionEvent.LocalMute, self.handleLocalMute);
   }
   const connection6 = self.connection;
   if (connection6 != null) {
-    connection6.addListener(require(4381) /* BaseConnectionEvent */.BaseConnectionEvent.ActiveSinksChange, self.delayedUpdate);
+    connection6.addListener(require("../../discord_common/js/packages/media-engine/index.tsx") /* BaseConnectionEvent */.BaseConnectionEvent.ActiveSinksChange, self.delayedUpdate);
   }
   if (flag) {
     self.update();
@@ -691,7 +691,7 @@ prototype["reset"] = function reset() {
   this.framesReceived = {};
   this.streamIds = {};
   this.streamPixelCounts = {};
-  let obj = require(12978) /* getBrowserInvertedWantsConfig */;
+  let obj = require("../modules/media_engine/BrowserInvertedWantsExperiment.tsx") /* getBrowserInvertedWantsConfig */;
   if (obj.getBrowserInvertedWantsConfig("RTCMediaSinkWantsManager.getDefaultWants").invertWants) {
     obj = {};
     const merged = Object.assign(obj);
@@ -701,7 +701,7 @@ prototype["reset"] = function reset() {
   }
   self.latestWants = obj;
   const WindowVisibilityVideoManager = tmp3(10607).WindowVisibilityVideoManager;
-  WindowVisibilityVideoManager.off(require(10607) /* isIncomingVideoEnabled */.WindowVisibilityEvent.IncomingVideoEnabledChanged, self.incomingVideoEnabledChanged);
+  WindowVisibilityVideoManager.off(require("WindowVisibilityVideoManager.tsx") /* isIncomingVideoEnabled */.WindowVisibilityEvent.IncomingVideoEnabledChanged, self.incomingVideoEnabledChanged);
 };
 prototype["setSelectedParticipant"] = function setSelectedParticipant(selectedParticipantId) {
   let self = this;

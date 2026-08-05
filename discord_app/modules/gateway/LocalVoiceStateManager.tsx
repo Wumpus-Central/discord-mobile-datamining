@@ -34,12 +34,12 @@ Object.defineProperty(prototype, "channelId", {
   set: undefined
 });
 prototype["computeVoiceFlags"] = function computeVoiceFlags() {
-  const ClipsAllowVoiceRecording = require(3958) /* explicitContentFromProto */.ClipsAllowVoiceRecording;
+  const ClipsAllowVoiceRecording = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.ClipsAllowVoiceRecording;
   const setting = ClipsAllowVoiceRecording.getSetting();
-  const obj = require(1384) /* hasFlag */;
+  const obj = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
   const tmp4 = constants3;
-  const setFlagResult = require(1384) /* hasFlag */.setFlag(0, constants3.ALLOW_VOICE_RECORDING, setting);
-  let isClipsEnabledResult = require(4342) /* isClipsEnabled */.isClipsEnabled();
+  const setFlagResult = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.setFlag(0, constants3.ALLOW_VOICE_RECORDING, setting);
+  let isClipsEnabledResult = require("../clips/isClipsEnabled.tsx") /* isClipsEnabled */.isClipsEnabled();
   if (isClipsEnabledResult) {
     currentUserActiveStream = currentUserActiveStream.getCurrentUserActiveStream();
     let state;

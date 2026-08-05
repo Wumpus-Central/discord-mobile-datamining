@@ -49,7 +49,7 @@ function updateParty(closure_6, id, activities, status) {
                 map.delete(tmp9);
               }
             }
-            obj3 = importDefault(12);
+            obj3 = require("../../_runtime/00012_apply.js");
           }
         }
       }
@@ -96,7 +96,7 @@ function updateParty(closure_6, id, activities, status) {
           flag3 = true;
         }
       }
-      obj9 = importDefault(12);
+      obj9 = require("../../_runtime/00012_apply.js");
     }
   }
   return flag3;
@@ -128,7 +128,7 @@ function handleRelationshipAddOrUpdate(relationship) {
   if (null == dependencyMap[relationship.id]) {
     return false;
   } else {
-    const values = importDefault(12).values(tmp);
+    const values = require("../../_runtime/00012_apply.js").values(tmp);
     for (const item10025 of values) {
       let tmp7 = map;
       let value = map.get(item10025);
@@ -296,7 +296,7 @@ const gamePartyStore = new GamePartyStore(require("dispatcher"), {
     if (null == dependencyMap[relationship.id]) {
       return false;
     } else {
-      const values = importDefault(12).values(tmp);
+      const values = require("../../_runtime/00012_apply.js").values(tmp);
       for (const item10017 of values) {
         let tmp7 = map;
         let value = map.get(item10017);

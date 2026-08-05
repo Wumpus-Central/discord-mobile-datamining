@@ -6,9 +6,9 @@ const result = require("module_38").fileFinishedImporting("modules/custom_status
 export default function getClearAfterDuration(arg0) {
   let DAY = arg0;
   if (arg0 === ClearAfterValues.TODAY) {
-    DAY = importDefault(687).Millis.DAY;
+    DAY = require("../../../utils/Durations.tsx").Millis.DAY;
   } else {
-    importDefault(38)(typeof DAY === "number", "Invalid custom status clear timeout");
+    require("../../../../_runtime/metro/00038__.js")(typeof DAY === "number", "Invalid custom status clear timeout");
   }
   return DAY;
 };

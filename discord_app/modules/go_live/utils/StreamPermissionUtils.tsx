@@ -31,7 +31,7 @@ function canStreamInChannel(channel, closure_2, set, arg3) {
     let tmp5 = !isGuildStageVoiceResult;
     if (!isGuildStageVoiceResult) {
       if (flag) {
-        flag = !importDefault(5101)(channel, set);
+        flag = !require("../../channel/canJoinVoiceChannel.tsx")(channel, set);
       }
       let tmp9 = !flag;
       if (!flag) {
@@ -55,15 +55,15 @@ function canWatchStream(basicChannel1, closure_17, closure_12, closure_14, updat
     let isInChannelResult = closure_17.isInChannel(basicChannel1.id);
     let isChannelFullResult = basicChannel1 instanceof ChannelRecordBase;
     if (isChannelFullResult) {
-      obj = require(4467) /* allowChannelAccess */;
+      obj = require("../../../utils/ChannelUtils.tsx") /* allowChannelAccess */;
       isChannelFullResult = obj.isChannelFull(basicChannel1, closure_17, closure_12);
     }
-    let tmp9 = importDefault(5101)(basicChannel1, closure_14);
+    let tmp9 = require("../../channel/canJoinVoiceChannel.tsx")(basicChannel1, closure_14);
     const tmp10 = null != updateVoiceState.getAwaitingRemoteSessionInfo() || null != updateVoiceState.getRemoteSessionId();
-    let result = require(4498) /* shouldShowAgeGateForVoiceChannel */.shouldAgeVerifyForAgeGate();
+    let result = require("../../age_gate/AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */.shouldAgeVerifyForAgeGate();
     if (result) {
-      result = require(4498) /* shouldShowAgeGateForVoiceChannel */.shouldShowAgeGateForChannelId(basicChannel1.id);
-      const tmp11Result = require(4498) /* shouldShowAgeGateForVoiceChannel */;
+      result = require("../../age_gate/AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */.shouldShowAgeGateForChannelId(basicChannel1.id);
+      const tmp11Result = require("../../age_gate/AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */;
     }
     if (tmp10) {
       let CHANNEL_FULL = obj.REMOTE_MODE;
@@ -106,48 +106,48 @@ let result = require("comparator").fileFinishedImporting("modules/go_live/utils/
 export { canStreamInChannel };
 export const getStreamCTAString = function getStreamCTAString(arg0) {
   if (obj.REMOTE_MODE === arg0) {
-    const intl5 = require(1236) /* getSystemLocale */.intl;
-    return intl5.string(require(1236) /* getSystemLocale */.t["1i3tSY"]);
+    const intl5 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl5.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["1i3tSY"]);
   } else if (tmp.CHANNEL_FULL === arg0) {
-    const intl4 = require(1236) /* getSystemLocale */.intl;
-    return intl4.string(require(1236) /* getSystemLocale */.t.elyVbv);
+    const intl4 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl4.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.elyVbv);
   } else if (tmp.NO_PERMISSION === arg0) {
-    const intl3 = require(1236) /* getSystemLocale */.intl;
-    return intl3.string(require(1236) /* getSystemLocale */.t.pgUTZC);
+    const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.pgUTZC);
   } else if (tmp.AGE_RESTRICTED === arg0) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    return intl2.string(require(1236) /* getSystemLocale */.t.b5FqhF);
+    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.b5FqhF);
   } else {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["7Xq/nV"]);
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["7Xq/nV"]);
   }
 };
 export const getStreamCTAAriaLabel = function getStreamCTAAriaLabel(arg0) {
   if (obj.REMOTE_MODE === arg0) {
-    const intl7 = require(1236) /* getSystemLocale */.intl;
-    const intl8 = require(1236) /* getSystemLocale */.intl;
+    const intl7 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl8 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const _HermesInternal4 = HermesInternal;
-    return "" + intl7.string(require(1236) /* getSystemLocale */.t["7Xq/nV"]) + ": " + intl8.string(require(1236) /* getSystemLocale */.t["1i3tSY"]);
+    return "" + intl7.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["7Xq/nV"]) + ": " + intl8.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["1i3tSY"]);
   } else if (tmp.CHANNEL_FULL === arg0) {
-    const intl5 = require(1236) /* getSystemLocale */.intl;
-    const intl6 = require(1236) /* getSystemLocale */.intl;
+    const intl5 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl6 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const _HermesInternal3 = HermesInternal;
-    return "" + intl5.string(require(1236) /* getSystemLocale */.t["7Xq/nV"]) + ": " + intl6.string(require(1236) /* getSystemLocale */.t.elyVbv);
+    return "" + intl5.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["7Xq/nV"]) + ": " + intl6.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.elyVbv);
   } else if (tmp.NO_PERMISSION === arg0) {
-    const intl3 = require(1236) /* getSystemLocale */.intl;
-    const intl4 = require(1236) /* getSystemLocale */.intl;
+    const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl4 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const _HermesInternal2 = HermesInternal;
-    return "" + intl3.string(require(1236) /* getSystemLocale */.t["7Xq/nV"]) + ": " + intl4.string(require(1236) /* getSystemLocale */.t.pgUTZC);
+    return "" + intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["7Xq/nV"]) + ": " + intl4.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.pgUTZC);
   } else if (tmp.AGE_RESTRICTED === arg0) {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const _HermesInternal = HermesInternal;
-    return "" + intl.string(require(1236) /* getSystemLocale */.t["7Xq/nV"]) + ": " + intl2.string(require(1236) /* getSystemLocale */.t.b5FqhF);
+    return "" + intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["7Xq/nV"]) + ": " + intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.b5FqhF);
   } else {
-    const intl9 = require(1236) /* getSystemLocale */.intl;
-    const intl10 = require(1236) /* getSystemLocale */.intl;
+    const intl9 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl10 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const _HermesInternal5 = HermesInternal;
-    return "" + intl9.string(require(1236) /* getSystemLocale */.t["7Xq/nV"]) + ": " + intl10.string(require(1236) /* getSystemLocale */.t["9C444m"]);
+    return "" + intl9.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["7Xq/nV"]) + ": " + intl10.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["9C444m"]);
   }
 };
 export const StreamUnavailableReasons = obj;
@@ -155,7 +155,7 @@ export { canWatchStream };
 export const useCanWatchStream = function useCanWatchStream(stateFromStores) {
   const _require = stateFromStores;
   const items = [updateVoiceState, createGuildRecordFromRust, getUncachedChannelPermissions, set];
-  return _require(589).useStateFromStoresArray(items, () => outer1_12(closure_0, outer1_8, outer1_6, outer1_7, outer1_3));
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => outer1_12(closure_0, outer1_8, outer1_6, outer1_7, outer1_3));
 };
 export const getStreamEligibleChannels = function getStreamEligibleChannels(arg0, closure_2, set) {
   const items = [];

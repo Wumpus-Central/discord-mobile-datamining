@@ -17,7 +17,7 @@ export default function PremiumGuildSubscribeModal(arg0) {
   ({ guildId: require, guildBoostSlots: importDefault, intent: dependencyMap, onResult: _slicedToArray } = arg0);
   let first;
   let handleThemeChange;
-  let tmp = importDefault(5598)(() => {
+  let tmp = require("../../../hooks/useInitialValue.tsx")(() => {
     const items = [];
     if (null != closure_0) {
       let arr1 = closure_1;
@@ -126,7 +126,7 @@ export default function PremiumGuildSubscribeModal(arg0) {
   first = tmp2[0];
   handleThemeChange = tmp2[1];
   let items = [first];
-  importDefault(4692)(first.useCallback(() => {
+  require("../../../modules/routing/native/useBackPressHandler.tsx")(first.useCallback(() => {
     let flag = first === outer1_6.GUILD_SELECT;
     if (flag) {
       outer1_0(outer1_2[8]).closeApplyBoostModal();
@@ -136,8 +136,8 @@ export default function PremiumGuildSubscribeModal(arg0) {
     return flag;
   }, items));
   let obj = { screens: tmp.screens, initialRouteStack: initialStack, headerBackTitle: null, onStateChange: null };
-  let intl = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl.string(require(1236) /* getSystemLocale */.t["13/7kX"]);
+  let intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["13/7kX"]);
   obj[3] = function onStateChange(arg0) {
     let tmp;
     if (arg0 != null) {
@@ -147,5 +147,5 @@ export default function PremiumGuildSubscribeModal(arg0) {
       callback(tmp.name);
     }
   };
-  return jsx(require(5665) /* NavigationStack */.Navigator, { screens: tmp.screens, initialRouteStack: initialStack, headerBackTitle: null, onStateChange: null });
+  return jsx(require("../../../design/components/Navigator/native/Navigator.native.tsx") /* NavigationStack */.Navigator, { screens: tmp.screens, initialRouteStack: initialStack, headerBackTitle: null, onStateChange: null });
 };

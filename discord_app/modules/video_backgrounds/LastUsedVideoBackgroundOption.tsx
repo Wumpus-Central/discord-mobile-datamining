@@ -12,8 +12,8 @@ export const getLastUsedVideoBackgroundOption = function getLastUsedVideoBackgro
   if (voiceAndVideo != null) {
     prop = voiceAndVideo.videoBackgroundFilterDesktop;
   }
-  const videoBackgroundOptionFromProto = require(9084) /* isAnimatedBackgroundOption */.getVideoBackgroundOptionFromProto(prop, currentUser.id);
-  const obj = require(9084) /* isAnimatedBackgroundOption */;
+  const videoBackgroundOptionFromProto = require("VideoBackgroundUtils.tsx") /* isAnimatedBackgroundOption */.getVideoBackgroundOptionFromProto(prop, currentUser.id);
+  const obj = require("VideoBackgroundUtils.tsx") /* isAnimatedBackgroundOption */;
   const tmp2 = require;
   if (!obj2.isCustomBackgroundOption(videoBackgroundOptionFromProto)) {
     if (typeof videoBackgroundOptionFromProto !== "number") {
@@ -25,7 +25,7 @@ export const getLastUsedVideoBackgroundOption = function getLastUsedVideoBackgro
     let tmp6 = tmp7;
   } else {
     tmp6 = null;
-    const obj3 = importDefault(3931);
+    const obj3 = require("../../utils/PremiumUtils.tsx");
   }
   return tmp6;
 };

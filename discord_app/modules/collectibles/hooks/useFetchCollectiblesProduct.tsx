@@ -11,7 +11,7 @@ const result = require("addSku").fileFinishedImporting("modules/collectibles/hoo
 export const useFetchCollectiblesProduct = function useFetchCollectiblesProduct(skuId, arg1) {
   const _require = skuId;
   const dependencyMap = arg1;
-  let obj = _require(647);
+  let obj = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx");
   let items = [addSku];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let value = null;

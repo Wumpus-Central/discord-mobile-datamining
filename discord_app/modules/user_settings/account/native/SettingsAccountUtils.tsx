@@ -7,7 +7,7 @@ const result = require("defaultAreStatesEqual").fileFinishedImporting("modules/u
 
 export const useIs2FAEnabled = function useIs2FAEnabled() {
   const items = [mergeGuildAvatar];
-  return require(647) /* defaultAreStatesEqual */.useStateFromStores(items, () => {
+  return require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;
     if (currentUser != null) {
@@ -21,11 +21,11 @@ export const useIs2FAEnabled = function useIs2FAEnabled() {
 };
 export const useIsTOTPEnabled = function useIsTOTPEnabled() {
   const items = [fetchFingerprint];
-  return require(647) /* defaultAreStatesEqual */.useStateFromStores(items, () => fetchFingerprint.hasTOTPEnabled());
+  return require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */.useStateFromStores(items, () => fetchFingerprint.hasTOTPEnabled());
 };
 export const useIsUserVerified = function useIsUserVerified() {
   const items = [mergeGuildAvatar];
-  return require(647) /* defaultAreStatesEqual */.useStateFromStores(items, () => {
+  return require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;
     if (currentUser != null) {

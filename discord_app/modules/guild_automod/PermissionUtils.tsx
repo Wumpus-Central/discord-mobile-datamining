@@ -34,7 +34,7 @@ export const useCanCurrentUserManageAutomod = function useCanCurrentUserManageAu
   const _require = arg0;
   const items = [createGuildRecordFromRust, getUncachedChannelPermissions];
   const items1 = [arg0];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (outer1_2 !== undefined) {
       if (obj2 !== undefined) {
         const guild = outer1_2.getGuild(tmp);
@@ -51,7 +51,7 @@ export const useIsUserProfileRuleEnabled = function useIsUserProfileRuleEnabled(
   const _require = arg0;
   const items = [createGuildRecordFromRust];
   const items1 = [arg0];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const guild = outer1_2.getGuild(closure_0);
     let flag;
     if (guild != null) {

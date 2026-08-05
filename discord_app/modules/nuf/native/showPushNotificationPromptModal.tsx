@@ -6,7 +6,7 @@ let result = require("module_4490").fileFinishedImporting("modules/nuf/native/sh
 
 export const showPushNotificationPromptModal = function showPushNotificationPromptModal(onComplete) {
   onComplete = onComplete.onComplete;
-  let obj = importDefault(4490);
+  let obj = require("../../../actions/ModalActionCreators.tsx");
   obj = {
     onComplete() {
       outer1_1(outer1_2[2]).popWithKey(outer1_4);

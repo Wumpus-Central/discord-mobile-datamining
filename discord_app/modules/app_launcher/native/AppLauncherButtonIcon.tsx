@@ -10,7 +10,7 @@ export const AppLauncherButtonIcon = function AppLauncherButtonIcon(style) {
   style = style.style;
   const merged = Object.assign(style, Object.create(null));
   let obj = { style: { overflow: "hidden" }, children: null };
-  if (tmp3 === require(1579) /* KeyboardTypes */.KeyboardTypes.APP_LAUNCHER) {
+  if (tmp3 === require("../../keyboard/native/KeyboardTypes.tsx") /* KeyboardTypes */.KeyboardTypes.APP_LAUNCHER) {
     obj = {};
     const merged1 = Object.assign(merged);
     const items = [style, ];

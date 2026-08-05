@@ -53,7 +53,7 @@ obj = {
     };
   }),
   radii: require("Radius").Radius,
-  modules: require("mapValues")(require("_private")._private.Modules, (arg0) => importDefault(719)(arg0, (arg0) => {
+  modules: require("mapValues")(require("_private")._private.Modules, (arg0) => require("../../../../_runtime/00719_mapValues.js")(arg0, (arg0) => {
     let closure_0 = arg0;
     return {
       resolve(arg0) {
@@ -177,19 +177,19 @@ obj = {
         num3 = 1;
       }
       if (num3 < 1) {
-        result = require(808) /* interpolate */.transformColorForReducedSaturation(result, category, num3);
-        const obj6 = require(808) /* interpolate */;
+        result = require("transforms.tsx") /* interpolate */.transformColorForReducedSaturation(result, category, num3);
+        const obj6 = require("transforms.tsx") /* interpolate */;
       }
       if (1 !== num2) {
-        const obj7 = require(808) /* interpolate */;
+        const obj7 = require("transforms.tsx") /* interpolate */;
         result = obj7.transformColorContrast(result, category, tmp, num2);
       }
       if (1 === opacity) {
         let hexResult = result;
       } else {
-        const obj8 = importDefault(689)(result);
-        hexResult = importDefault(689)(result).alpha(opacity).hex();
-        const alphaResult = importDefault(689)(result).alpha(opacity);
+        const obj8 = require("../../../../_runtime/00689_n.js")(result);
+        hexResult = require("../../../../_runtime/00689_n.js")(result).alpha(opacity).hex();
+        const alphaResult = require("../../../../_runtime/00689_n.js")(result).alpha(opacity);
       }
       return hexResult;
     }
@@ -246,7 +246,7 @@ obj = {
         } else if (semanticColorContextFromThemeContext != null) {
           tmp38 = semanticColorContextFromThemeContext.gradient.colors[tmp36.color];
         }
-        const tmp61Result = importDefault(689)(tmp38);
+        const tmp61Result = require("../../../../_runtime/00689_n.js")(tmp38);
         let result1 = tmp61Result;
         if ("saturation" in tmp36) {
           result1 = tmp61Result.set("hsl.s", tmp36.saturation);
@@ -261,15 +261,15 @@ obj = {
           num = tmp36.opacity;
         }
         opacity = num;
-        const tmp61 = importDefault(689);
+        const tmp61 = require("../../../../_runtime/00689_n.js");
       }
     }
   },
   adjustColorSaturation(result, saturation, generic) {
-    return require(808) /* interpolate */.transformColorForReducedSaturation(result, generic, saturation);
+    return require("transforms.tsx") /* interpolate */.transformColorForReducedSaturation(result, generic, saturation);
   },
   adjustColorContrast(result, contrast, category, theme) {
-    return require(808) /* interpolate */.transformColorContrast(result, category, theme, contrast);
+    return require("transforms.tsx") /* interpolate */.transformColorContrast(result, category, theme, contrast);
   }
 };
 let result = require("_private").fileFinishedImporting("../discord_common/js/packages/tokens/native.tsx");

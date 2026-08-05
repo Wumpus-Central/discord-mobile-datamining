@@ -19,7 +19,7 @@ const memoResult = require("module_11732").memo(function ChatInputGuardGuildMemb
     applicationStatus = currentUserGuildJoinRequest.applicationStatus;
   }
   if (guildId(4105).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
-    let tmp8 = importDefault(11730);
+    let tmp8 = require("../../../../../_runtime/11730_registerAsset.js");
     const intl3 = tmp2(1236).intl;
     let stringResult = intl3.string(tmp2(1236).t.lk30cY);
     let fn = function _() {
@@ -30,7 +30,7 @@ const memoResult = require("module_11732").memo(function ChatInputGuardGuildMemb
       const result = guildId(outer1_2[12]).openMemberVerificationRejectedAlert(obj);
     };
   } else if (tmp2(4105).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
-    tmp8 = importDefault(11731);
+    tmp8 = require("../../../../../_runtime/11731_registerAsset.js");
     const intl2 = tmp2(1236).intl;
     stringResult = intl2.string(tmp2(1236).t["5iLvSx"]);
     fn = function _() {
@@ -74,7 +74,7 @@ const memoResult = require("module_11732").memo(function ChatInputGuardGuildMemb
   const intl4 = tmp2(1236).intl;
   obj1[4] = intl4.string(guildId(1236).t["r8/DT+"]);
   obj1[5] = fn;
-  return jsx(importDefault(11721), { type: "simple-action", icon: tmp13Result, message: stringResult, actionIcon: tmp7, actionLabel: null, actionOnPress: null });
+  return jsx(require("ChatInputGuard.tsx"), { type: "simple-action", icon: tmp13Result, message: stringResult, actionIcon: tmp7, actionLabel: null, actionOnPress: null });
 });
 let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardGuildMemberVerification.tsx");
 

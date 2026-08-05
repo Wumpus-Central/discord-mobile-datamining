@@ -290,6 +290,6 @@ export default function BuyNitroPurchaseFlow(item) {
     obj2[10] = onPaymentDismiss;
     tmp8 = tmpResult.isIOS() && enabled;
     obj1[8] = <BuyNitroPurchaseRunner item={null} analyticsLocations={null} analyticsLoadId={null} hasEmittedPaymentFlowStartedRef={null} applicationId={null} expectedPriceString={null} onExit={null} onOrderPriceMismatch={null} onHostSheetClose={null} onPaymentSuccess={null} onPaymentDismiss={null} />;
-    return jsx(importDefault(7334), { paymentGateway: null, orderRequired: null, skuIds: null, defaultPlans: null, isGift: false, activeSubscription: null, initialSubscriptionFacet: null, onOrderRetryCancellation: null, children: null });
+    return jsx(require("../../../checkout/native/stores/NativeCheckoutStoreProvider.tsx"), { paymentGateway: null, orderRequired: null, skuIds: null, defaultPlans: null, isGift: false, activeSubscription: null, initialSubscriptionFacet: null, onOrderRetryCancellation: null, children: null });
   }
 };

@@ -16,13 +16,13 @@ function SettingsAgeGroupHeader() {
     obj.openUrl(callback(1945).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
   }, []);
   obj = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl.string(importDefault(2803).PY4MA0);
-  const items = [callback(require(4281) /* Text */.Text, obj), ];
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl.string(require("../../../age_assurance/AgeAssurance.messages.js").PY4MA0);
+  const items = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
   obj = { variant: "text-sm/normal", color: "text-default", children: null };
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl2.format(importDefault(2803)["1DN29p"], { handleOnHelpUrlHook: callback });
-  items[1] = callback(require(4281) /* Text */.Text, obj);
+  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl2.format(require("../../../age_assurance/AgeAssurance.messages.js")["1DN29p"], { handleOnHelpUrlHook: callback });
+  items[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 }
@@ -48,5 +48,5 @@ export default function SettingsAgeGroupScreen() {
     obj[1] = closure_10;
     return obj.createList(obj);
   }, []);
-  return callback(importDefault(13793), { node });
+  return callback(require("../../../settings/native/renderer/SettingLayout.tsx"), { node });
 };

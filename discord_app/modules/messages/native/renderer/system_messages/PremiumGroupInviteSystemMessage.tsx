@@ -13,16 +13,16 @@ export const createPremiumGroupInviteSystemMessage = function createPremiumGroup
   ({ message, theme } = message);
   channel = channel.getChannel(message.getChannelId());
   id = id.getId();
-  let obj = require(7964) /* createPremiumGroupInviteEmbed */;
+  let obj = require("../row_data/embeds/PremiumGroupInviteEmbed.tsx") /* createPremiumGroupInviteEmbed */;
   const premiumGroupInviteEmbed = obj.createPremiumGroupInviteEmbed(message, theme, id, channel);
   if (null == premiumGroupInviteEmbed) {
     return null;
   } else {
     obj = {};
-    const merged = Object.assign(importDefault(7882)(message));
+    const merged = Object.assign(require("createCommonMessage.tsx")(message));
     obj.premiumGroupInviteInfo = premiumGroupInviteEmbed;
     const tmp7 = createCacheKey(theme);
-    obj.iconUrl = tmp3(7865).getAssetUriForEmbed(importDefault(7626));
+    obj.iconUrl = tmp3(7865).getAssetUriForEmbed(require("../../../../../../_runtime/07626_registerAsset.js"));
     ({ iconTintColor: obj2.iconTintColor, iconDividerColor: obj2.iconDividerColor } = tmp7);
     return obj;
   }

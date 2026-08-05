@@ -29,7 +29,7 @@ function maybeCancelTimeout(message, UPDATE) {
       const combined = "" + message.channel_id + ":" + message.id;
       if (null != dependencyMap[combined]) {
         ({ timeout, setAt } = dependencyMap[combined]);
-        if (UPDATE === require(6968) /* redactionSettingToRenderedString */.TimeoutCancelSource.UPDATE) {
+        if (UPDATE === require("ExplicitMediaRedactionUtils.tsx") /* redactionSettingToRenderedString */.TimeoutCancelSource.UPDATE) {
           let attachments = message.attachments;
           if (attachments == null) {
             attachments = [];
@@ -427,7 +427,7 @@ function handleMessageUpdate(message) {
         }
         return tmp18;
       }
-      obj6 = require(5818) /* getEligibleHarmTypesConfigsForContext */;
+      obj6 = require("ObscuredMediaUtils.tsx") /* getEligibleHarmTypesConfigsForContext */;
     }
   }
   return false;
@@ -475,7 +475,7 @@ function handleMessageCreate(optimistic) {
           }
           return tmp3Result;
         }
-        obj2 = require(5818) /* getEligibleHarmTypesConfigsForContext */;
+        obj2 = require("ObscuredMediaUtils.tsx") /* getEligibleHarmTypesConfigsForContext */;
       }
     }
   }
@@ -516,9 +516,9 @@ function handleForumPostsLoad(threads) {
   if (tmp2) {
     let tmp4 = store5.getGuildId() === tmp;
     if (tmp4) {
-      const keys = importDefault(11).keys(threads);
+      const keys = require("../../utils/SnowflakeUtils.tsx").keys(threads);
       tmp4 = processMessagesFromAction(keys.map((arg0) => threads[arg0].first_message));
-      const obj = importDefault(11);
+      const obj = require("../../utils/SnowflakeUtils.tsx");
     }
     tmp2 = tmp4;
   }

@@ -56,8 +56,8 @@ prototype["messageRecord"] = function messageRecord(arg0) {
     tmp2 = value.message instanceof hasFlag;
   }
   if (!tmp2) {
-    value.message = require(4504) /* createMinimalMessageRecord */.createMessageRecord(value.message);
-    const obj = require(4504) /* createMinimalMessageRecord */;
+    value.message = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */.createMessageRecord(value.message);
+    const obj = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */;
   }
   let message;
   if (value != null) {
@@ -91,8 +91,8 @@ prototype["putNew"] = function putNew(channelId, first, c6) {
     }
     let tmp4 = null == id;
     if (!tmp4) {
-      tmp4 = importDefault(11).compare(first.id, id) > 0;
-      const obj = importDefault(11);
+      tmp4 = require("../../utils/SnowflakeUtils.tsx").compare(first.id, id) > 0;
+      const obj = require("../../utils/SnowflakeUtils.tsx");
     }
     tmp2 = tmp4;
   }
@@ -124,7 +124,7 @@ prototype["update"] = function update(id) {
         }
       }
       if (id === id.id) {
-        let obj = require(4504) /* createMinimalMessageRecord */;
+        let obj = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */;
         if (tmp3) {
           let updateMessageRecordResult = obj.updateMessageRecord(merged.message, id);
         } else {

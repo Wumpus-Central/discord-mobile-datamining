@@ -17,30 +17,30 @@ const require = arg1;
 function getDeviceMetadata() {
   if (null == obj) {
     obj = { device_model: null, device_brand: null, device_product: null, device_manufacturer: null, smallest_screen_width_dp: null, device_performance_class: null, soc_name: null, ram_size: null, max_cpu_freq: null };
-    obj[0] = require(4265) /* DCDDeviceManager */.getDeviceModel();
-    const obj2 = require(4265) /* DCDDeviceManager */;
-    obj[1] = require(4265) /* DCDDeviceManager */.getDeviceBrand();
-    const obj3 = require(4265) /* DCDDeviceManager */;
-    obj[2] = require(4265) /* DCDDeviceManager */.getDeviceProduct();
-    const obj4 = require(4265) /* DCDDeviceManager */;
-    obj[3] = require(4265) /* DCDDeviceManager */.getDeviceManufacturer();
-    const obj5 = require(4265) /* DCDDeviceManager */;
-    obj[4] = require(4265) /* DCDDeviceManager */.getSmallestScreenWidthDp();
-    obj[5] = importDefault(7051)();
-    const obj6 = require(4265) /* DCDDeviceManager */;
-    obj[6] = require(4265) /* DCDDeviceManager */.getSocName();
-    const obj7 = require(4265) /* DCDDeviceManager */;
-    obj[7] = require(4265) /* DCDDeviceManager */.getRamSize();
-    const obj8 = require(4265) /* DCDDeviceManager */;
-    obj[8] = require(4265) /* DCDDeviceManager */.getMaxCpuFreq();
-    const obj9 = require(4265) /* DCDDeviceManager */;
+    obj[0] = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */.getDeviceModel();
+    const obj2 = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */;
+    obj[1] = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */.getDeviceBrand();
+    const obj3 = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */;
+    obj[2] = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */.getDeviceProduct();
+    const obj4 = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */;
+    obj[3] = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */.getDeviceManufacturer();
+    const obj5 = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */;
+    obj[4] = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */.getSmallestScreenWidthDp();
+    obj[5] = require("../../device/getMediaPerformanceClass.android.tsx")();
+    const obj6 = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */;
+    obj[6] = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */.getSocName();
+    const obj7 = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */;
+    obj[7] = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */.getRamSize();
+    const obj8 = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */;
+    obj[8] = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */.getMaxCpuFreq();
+    const obj9 = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */;
   }
   return obj;
 }
 function getRedesignScreenName() {
   let name;
   let params;
-  const rootNavigationRef = require(4137) /* getRootNavigationRef */.getRootNavigationRef();
+  const rootNavigationRef = require("../../main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */.getRootNavigationRef();
   let currentRoute;
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
@@ -96,7 +96,7 @@ function getRedesignScreenName() {
     }
     tmpResult = tmp(4136);
   }
-  const obj = require(4137) /* getRootNavigationRef */;
+  const obj = require("../../main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */;
   tmp = require;
 }
 function sharedProperties(screen_name, has_cached_data) {
@@ -670,17 +670,17 @@ export function currentLoadId() {
   return v1;
 }
 export const trackAppOpened = function trackAppOpened(launcher) {
-  let obj = importDefault(10);
+  let obj = require("../../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx");
   obj.mark("\u{1F3C3}", "Track app_opened");
   obj = { openFrom: launcher };
-  importDefault(1208).addBreadcrumb({ category: "lifecycle", message: "App opened", data: obj });
-  const obj2 = importDefault(1208);
+  require("../../../utils/SentryUtils.native.tsx").addBreadcrumb({ category: "lifecycle", message: "App opened", data: obj });
+  const obj2 = require("../../../utils/SentryUtils.native.tsx");
   obj = {};
   const merged = Object.assign(getDeviceMetadata());
   obj.opened_from = launcher;
   obj.load_id = v1;
   obj.theme = theme.theme;
-  importDefault(698).track(AnalyticEvents.APP_OPENED, obj, { logEventProperties: true });
+  require("../../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.APP_OPENED, obj, { logEventProperties: true });
 };
 export const trackAppUIViewed = function trackAppUIViewed(ModalScreen, arg1, hasCacheResult) {
   let tmp = ModalScreen;
@@ -694,7 +694,7 @@ export const trackAppUIViewed = function trackAppUIViewed(ModalScreen, arg1, has
   if (hasCacheResult === undefined) {
     hasCacheResult = handleClearCaches.hasCache();
   }
-  const AppStartInfo = require(7052) /* AppStartInfo */.AppStartInfo;
+  const AppStartInfo = require("AppStartInfo.android.tsx") /* AppStartInfo */.AppStartInfo;
   if (!AppStartInfo.getAppUIViewed()) {
     (function trackAppUIViewedAsync(ModalScreen, arg1, hasCacheResult) {
       const self = this;
@@ -720,7 +720,7 @@ export const trackAppLaunchCompleted = function trackAppLaunchCompleted(arg0, ha
     hasCacheResult = handleClearCaches.hasCache();
   }
   if (!c18) {
-    importDefault(10).mark("\u{1F3C3}", "Track app_launch");
+    require("../../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx").mark("\u{1F3C3}", "Track app_launch");
     c18 = true;
     if (str == null) {
       str = "unknown";
@@ -735,6 +735,6 @@ export const trackAppLaunchCompleted = function trackAppLaunchCompleted(arg0, ha
       }
       return applyArgumentsResult;
     })(str, hasCacheResult);
-    const obj = importDefault(10);
+    const obj = require("../../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx");
   }
 };

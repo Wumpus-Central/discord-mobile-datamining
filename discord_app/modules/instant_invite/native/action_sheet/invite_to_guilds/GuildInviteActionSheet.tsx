@@ -10,13 +10,13 @@ let error;
 const require = arg1;
 function EmptyGuildList() {
   const obj = { containerStyle: createCacheKey().emptyStateContainer, title: null, body: null, darkSource: null, lightSource: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl.string(require(1236) /* getSystemLocale */.t["2bfiLk"]);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl2.string(require(1236) /* getSystemLocale */.t.V6nAfF);
-  obj[3] = importDefault(12405);
-  obj[4] = importDefault(12406);
-  return callback2(require(1297) /* Button */.ThemedEmptyState, obj);
+  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["2bfiLk"]);
+  const intl2 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl2.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.V6nAfF);
+  obj[3] = require("../../../../../../_runtime/12405_registerAsset.js");
+  obj[4] = require("../../../../../../_runtime/12406_registerAsset.js");
+  return callback2(require("../../../../../design/void/native.tsx") /* Button */.ThemedEmptyState, obj);
 }
 function GuildList(recipientId) {
   let arr;
@@ -107,9 +107,9 @@ export default function GuildInviteActionSheet(arg0) {
   const tmp2 = callback(React.useState(""), 2);
   _require = tmp2[1];
   let obj = { title: null };
-  const intl = _require(1236).intl;
-  obj[0] = intl.string(_require(1236).t.HvoZQD);
-  obj = { scrollable: true, startExpanded: true, header: callback2(_require(5337).BottomSheetTitleHeader, obj), contentStyles: tmp.content, children: null };
+  const intl = _require("../../../../../intl/index.native.tsx").intl;
+  obj[0] = intl.string(_require("../../../../../intl/index.native.tsx").t.HvoZQD);
+  obj = { scrollable: true, startExpanded: true, header: callback2(_require("../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx").BottomSheetTitleHeader, obj), contentStyles: tmp.content, children: null };
   obj = { style: tmp.searchbarWrapper, children: null };
   const obj1 = {
     onChange(arg0) {
@@ -117,17 +117,17 @@ export default function GuildInviteActionSheet(arg0) {
     },
     placeholder: null
   };
-  const intl2 = _require(1236).intl;
-  obj1[1] = intl2.string(_require(1236).t.uohsSv);
-  const items = [callback2(_require(5901).SearchField, obj1), ];
+  const intl2 = _require("../../../../../intl/index.native.tsx").intl;
+  obj1[1] = intl2.string(_require("../../../../../intl/index.native.tsx").t.uohsSv);
+  const items = [callback2(_require("../../../../../design/components/TextField/native/SearchField.native.tsx").SearchField, obj1), ];
   const obj2 = { variant: "text-xs/medium", color: "text-subtle", children: null };
-  const intl3 = _require(1236).intl;
+  const intl3 = _require("../../../../../intl/index.native.tsx").intl;
   const obj3 = { xDays: null };
-  obj3[0] = importDefault(8989).INVITE_OPTIONS_7_DAYS.label;
-  obj2[2] = intl3.format(_require(1236).t["4UyUHh"], obj3);
-  items[1] = callback2(_require(4281).Text, obj2);
+  obj3[0] = require("../../../../../utils/InstantInviteUtils.tsx").INVITE_OPTIONS_7_DAYS.label;
+  obj2[2] = intl3.format(_require("../../../../../intl/index.native.tsx").t["4UyUHh"], obj3);
+  items[1] = callback2(_require("../../../../../design/components/Text/native/Text.tsx").Text, obj2);
   obj[1] = items;
   const items1 = [callback3(View, obj), callback2(GuildList, { query: tmp2[0], recipientId, source })];
   obj[4] = items1;
-  return callback3(_require(5338).BottomSheet, obj);
+  return callback3(_require("../../../../../design/components/Sheet/native/BottomSheet.native.tsx").BottomSheet, obj);
 };

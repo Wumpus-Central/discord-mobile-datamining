@@ -5,5 +5,5 @@ const require = arg1;
 const result = require("set").fileFinishedImporting("hooks/analytics.tsx");
 
 export const useAnalyticsContext = function useAnalyticsContext() {
-  return React.useContext(require(698) /* expandEventProperties */.AnalyticsContext);
+  return React.useContext(require("../utils/AnalyticsUtils.tsx") /* expandEventProperties */.AnalyticsContext);
 };

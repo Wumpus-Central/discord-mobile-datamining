@@ -49,9 +49,9 @@ DefaultRouteStore.displayName = "DefaultRouteStore";
 DefaultRouteStore.persistKey = "DefaultRouteStore";
 const items = [
   () => {
-    const Storage = require(595) /* Storage */.Storage;
+    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     const lastViewedPath = Storage.get(LAST_VIEWED_PATH, null);
-    const Storage2 = require(595) /* Storage */.Storage;
+    const Storage2 = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     Storage2.remove(LAST_VIEWED_PATH);
     return { lastViewedPath };
   }

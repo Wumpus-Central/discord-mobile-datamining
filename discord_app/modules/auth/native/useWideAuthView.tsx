@@ -2,7 +2,7 @@
 const result = require("set").fileFinishedImporting("modules/auth/native/useWideAuthView.tsx");
 
 export default function useWideAuthView() {
-  const tmp = importDefault(7562)();
-  const obj = require(1577) /* isMetaQuest */;
-  return require(1577) /* isMetaQuest */.isMetaQuest() || tmp;
+  const tmp = require("../../screen/native/useIsWindowLarge.tsx")();
+  const obj = require("../../device/MetaQuestUtils.android.tsx") /* isMetaQuest */;
+  return require("../../device/MetaQuestUtils.android.tsx") /* isMetaQuest */.isMetaQuest() || tmp;
 };

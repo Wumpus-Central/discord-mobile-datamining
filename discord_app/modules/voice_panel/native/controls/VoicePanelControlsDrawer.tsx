@@ -14,7 +14,7 @@ let error;
 let metroImportAll;
 const require = arg1;
 function renderChat(shown) {
-  obj = { collapsable: false, style: absoluteFill.absoluteFill, children: callback(importDefault(11555), obj) };
+  obj = { collapsable: false, style: absoluteFill.absoluteFill, children: callback(require("VoicePanelChatView.tsx"), obj) };
   obj = { shown };
   return callback(closure_6, obj);
 }

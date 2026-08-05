@@ -26,7 +26,7 @@ function HorizontalAutocompleteOption(arg0) {
   ({ children, onPress } = arg0);
   let obj = sharedValue(4146);
   sharedValue = obj.useSharedValue(0);
-  importDefault(4711)(() => {
+  require("../../../../../hooks/useMountEffect.tsx")(() => {
     const result = sharedValue.set(sharedValue(outer1_2[14]).withTiming(1));
   });
   const tmp = createCacheKey();
@@ -39,7 +39,7 @@ function HorizontalAutocompleteOption(arg0) {
   obj = { onPress, children: null };
   const animatedStyle = sharedValue(4146).useAnimatedStyle(fn);
   const items = [tmp.horizontalAutocompleteOption, animatedStyle];
-  obj[1] = callback(importDefault(4146).View, { style: items, children });
+  obj[1] = callback(require("../../../../reanimated/ReanimatedRexport.tsx").View, { style: items, children });
   return callback(closure_3, obj);
 }
 ({ TouchableOpacity: c3, View: c4, StyleSheet } = get_ActivityIndicator);
@@ -67,28 +67,28 @@ let obj3 = {
     ({ user, nick } = arg0);
     ({ status, guildId, onPress } = arg0);
     const tmp = createCacheKey();
-    let obj = require(589) /* initialize */;
+    let obj = require("../../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
     const items = [maybeApplyNoTextColorForLightCustomTheme];
     obj = { onPress, children: null };
     const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
     obj = { status, statusStyle: tmp.status, user, size: null, guildId: null, animate: null };
-    obj[3] = require(1297) /* Button */.AvatarSizes.SMALL;
+    obj[3] = require("../../../../../design/void/native.tsx") /* Button */.AvatarSizes.SMALL;
     obj[4] = guildId;
     obj[5] = !stateFromStores;
-    const items1 = [callback(require(1297) /* Button */.Avatar, obj), ];
+    const items1 = [callback(require("../../../../../design/void/native.tsx") /* Button */.Avatar, obj), ];
     const obj1 = { style: { marginLeft: 8, height: 56, flex: 1, flexDirection: "column", justifyContent: "center" }, children: null };
     const obj2 = { style: items2, variant: "text-sm/semibold", children: null };
     items2 = [tmp.nickname];
     if (nick == null) {
-      nick = importDefault(4124).getName(user);
-      const obj6 = importDefault(4124);
+      nick = require("../../../../../utils/UserUtils.tsx").getName(user);
+      const obj6 = require("../../../../../utils/UserUtils.tsx");
     }
     obj2[2] = nick;
-    const items3 = [callback(require(4281) /* Text */.Text, obj2), ];
+    const items3 = [callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2), ];
     const obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
-    const items4 = ["@", importDefault(4124).getUserTag(user, { decoration: "never" })];
+    const items4 = ["@", require("../../../../../utils/UserUtils.tsx").getUserTag(user, { decoration: "never" })];
     obj3[2] = items4;
-    items3[1] = closure_12(require(4281) /* Text */.Text, obj3);
+    items3[1] = closure_12(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj3);
     obj1[1] = items3;
     items1[1] = closure_12(closure_4, obj1);
     obj[1] = items1;
@@ -101,7 +101,7 @@ let obj3 = {
     let require;
     ({ guildId: require, name, id: importDefault, colorString } = onPress);
     const tmp = createCacheKey();
-    let obj = require(589) /* initialize */;
+    let obj = require("../../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
     const items = [createGuildRoleRecordFromRust];
     const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getRole(closure_0, closure_1));
     let roleIconData = null;
@@ -124,10 +124,10 @@ let obj3 = {
       }
       obj1[1] = tmp13;
       obj1[2] = roleIconData.unicodeEmoji;
-      obj[1] = closure_11(importDefault(5636), obj1);
+      obj[1] = closure_11(require("../../../../roles/native/RoleIcon.tsx"), obj1);
       tmp9Result = tmp9(closure_4, obj);
       const tmp10 = closure_4;
-      const tmp12 = importDefault(5636);
+      const tmp12 = require("../../../../roles/native/RoleIcon.tsx");
     }
     const items1 = [tmp9Result, ];
     const items2 = [tmp.nickname, ];
@@ -138,7 +138,7 @@ let obj3 = {
       tmp15 = obj3;
     }
     items2[1] = tmp15;
-    items1[1] = closure_11(require(1297) /* Button */.LegacyText, { style: items2, children: "@" + name });
+    items1[1] = closure_11(require("../../../../../design/void/native.tsx") /* Button */.LegacyText, { style: items2, children: "@" + name });
     obj[1] = items1;
     return closure_12(HorizontalAutocompleteOption, obj);
   },
@@ -147,7 +147,7 @@ let obj3 = {
     channel(589);
     [][0] = channel;
     if (channel.type === constants.GUILD_CATEGORY) {
-      let channelIconWithGuild = importDefault(8038);
+      let channelIconWithGuild = require("../../../../../../_runtime/08038_registerAsset.js");
     } else {
       let tmp2Result = tmp2(4745);
       channelIconWithGuild = tmp2Result.getChannelIconWithGuild(channel, tmp5);
@@ -177,7 +177,7 @@ let obj3 = {
       obj = { uri: null };
       obj[0] = url;
       obj[1] = obj;
-      let tmp5 = callback(importDefault(5236), obj);
+      let tmp5 = callback(require("../../../../../components_native/common/FastImage.tsx"), obj);
       let tmp6 = callback;
     } else {
       obj = { style: null, allowFontScaling: false, children: null };
@@ -185,14 +185,14 @@ let obj3 = {
       ({ emoji: arr[0], emojiText: arr[1] } = tmp);
       obj[0] = items1;
       obj[2] = surrogates;
-      tmp5 = callback(require(1297) /* Button */.LegacyText, obj);
+      tmp5 = callback(require("../../../../../design/void/native.tsx") /* Button */.LegacyText, obj);
       tmp6 = callback;
     }
     const obj1 = { onPress, children: null };
     const items2 = [tmp6(closure_4, { children: tmp5 }), ];
     const obj2 = { style: tmp.emojiName, variant: "text-sm/semibold", children: null };
     obj2[2] = ":" + name + ":";
-    items2[1] = tmp6(require(4281) /* Text */.Text, obj2);
+    items2[1] = tmp6(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
     obj1[1] = items2;
     return callback2(HorizontalAutocompleteOption, obj1);
   }

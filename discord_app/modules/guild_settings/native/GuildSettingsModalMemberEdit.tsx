@@ -501,8 +501,8 @@ prototype["render"] = function render() {
     let obj = { style: null, children: null };
     obj[0] = tmp.rowLabel;
     obj = { variant: "text-sm/medium", children: null };
-    obj[1] = importDefault(4124).getUserTag(user);
-    const items = [callback3(require(4281) /* Text */.Text, obj), ];
+    obj[1] = require("../../../utils/UserUtils.tsx").getUserTag(user);
+    const items = [callback3(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
     let tmp18Result = null;
     if (user.bot) {
       obj = { verified: null };
@@ -648,7 +648,7 @@ prototype["render"] = function render() {
       }
       const tmp19Result = tmp19(3902);
     }
-    const obj28 = importDefault(4124);
+    const obj28 = require("../../../utils/UserUtils.tsx");
     tmp16 = closure_20;
   }
 };

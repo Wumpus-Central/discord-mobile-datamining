@@ -24,12 +24,12 @@ export default function UnreadSettingNoticeConnected(channel) {
   const tmp = createCacheKey();
   let obj = { style: tmp.content, children: null };
   obj = { id: channel.channel.id };
-  const items = [callback(importDefault(10314), obj), , ];
+  const items = [callback(require("../UnreadSettingNoticeImpressionTracking.tsx"), obj), , ];
   obj = { style: tmp.informations, children: null };
   const obj1 = { variant: "text-md/semibold", children: null };
-  const intl = _require(1236).intl;
-  obj1[1] = intl.string(_require(1236).t.i4xQ5o);
-  obj[1] = callback(_require(4281).Text, obj1);
+  const intl = _require("../../../../intl/index.native.tsx").intl;
+  obj1[1] = intl.string(_require("../../../../intl/index.native.tsx").t.i4xQ5o);
+  obj[1] = callback(_require("../../../../design/components/Text/native/Text.tsx").Text, obj1);
   items[1] = callback(View, obj);
   const obj2 = { style: tmp.actions, children: null };
   const obj3 = {
@@ -42,10 +42,10 @@ export default function UnreadSettingNoticeConnected(channel) {
     children: null
   };
   const obj4 = { variant: "text-xs/medium", color: "text-link", children: null };
-  const intl2 = _require(1236).intl;
-  obj4[2] = intl2.string(_require(1236).t.KyUKhT);
-  obj3[3] = callback(_require(4281).Text, obj4);
-  obj2[1] = callback(_require(4812).PressableOpacity, obj3);
+  const intl2 = _require("../../../../intl/index.native.tsx").intl;
+  obj4[2] = intl2.string(_require("../../../../intl/index.native.tsx").t.KyUKhT);
+  obj3[3] = callback(_require("../../../../design/components/Text/native/Text.tsx").Text, obj4);
+  obj2[1] = callback(_require("../../../../design/void/Pressables/native/Pressables.tsx").PressableOpacity, obj3);
   items[2] = callback(View, obj2);
   obj[1] = items;
   return callback2(View, obj);

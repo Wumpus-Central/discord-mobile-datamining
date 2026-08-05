@@ -30,7 +30,7 @@ function scheduleNextNotification() {
       let _Date = Date;
       const timestamp = Date.now();
       dueAt = found.saveData.dueAt;
-      const sum = timestamp + importDefault(687).Millis.WEEK;
+      const sum = timestamp + require("../../../utils/Durations.tsx").Millis.WEEK;
       if (dueAt.getTime() <= sum) {
         const dueAt2 = found.saveData.dueAt;
         const _Date2 = Date;

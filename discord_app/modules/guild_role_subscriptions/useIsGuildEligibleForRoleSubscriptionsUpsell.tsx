@@ -9,16 +9,16 @@ const result = require("mergeGuildAvatar").fileFinishedImporting("modules/guild_
 export default function useIsGuildEligibleForRoleSubscriptionsUpsell(arg0) {
   const _require = arg0;
   const items = [createGuildRecordFromRust];
-  const stateFromStores = _require(589).useStateFromStores(items, () => outer1_3.getGuild(closure_0));
-  _require(589);
+  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_3.getGuild(closure_0));
+  _require("../../../discord_common/js/packages/flux/index.tsx");
   [][0] = mergeGuildAvatar;
   let tmp6 = null != stateFromStores;
   if (tmp6) {
     tmp6 = isGuildOwner(stateFromStores, tmp5);
   }
-  const obj = _require(589);
+  const obj = _require("../../../discord_common/js/packages/flux/index.tsx");
   const tmp = _require;
-  const isUserInCreatorMonetizationEligibleCountry = _require(5790).useIsUserInCreatorMonetizationEligibleCountry();
+  const isUserInCreatorMonetizationEligibleCountry = _require("../creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx").useIsUserInCreatorMonetizationEligibleCountry();
   if (tmp6) {
     let flag;
     if (stateFromStores != null) {

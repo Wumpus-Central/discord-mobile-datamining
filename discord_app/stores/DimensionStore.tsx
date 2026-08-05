@@ -53,7 +53,7 @@ const dimensionStore = new DimensionStore(require("dispatcher"), {
           obj[2] = scrollHeight;
           obj[3] = offsetHeight;
           if (null != tmp4) {
-            if (importDefault(643)(tmp4, obj)) {
+            if (require("../../discord_common/js/packages/shallow-equal/shallowEqual.tsx")(tmp4, obj)) {
               return false;
             }
           }

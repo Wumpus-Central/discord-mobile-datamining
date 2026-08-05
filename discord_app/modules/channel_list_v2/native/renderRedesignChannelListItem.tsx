@@ -42,7 +42,7 @@ let obj3 = { marginHorizontal: 16, marginTop: require("Themes").space.PX_8 };
 let result = require("getActiveStageChannelIds").fileFinishedImporting("modules/channel_list_v2/native/renderRedesignChannelListItem.tsx");
 
 export const getFastListRecyclerKey = function getFastListRecyclerKey(guildChannels, arg1, arg2, arg3) {
-  if (arg1 === require(7818) /* renderDefaultEmpty */.FastListItemTypes.ITEM) {
+  if (arg1 === require("../../../lib/native/FastList.tsx") /* renderDefaultEmpty */.FastListItemTypes.ITEM) {
     if (null != arg3) {
       if (tmp(6896).SECTION_INDEX_CHANNEL_NOTICES === arg2) {
         const channelNoticeSection = guildChannels.getChannelNoticeSection();
@@ -72,14 +72,14 @@ export const getFastListRecyclerKey = function getFastListRecyclerKey(guildChann
 export const renderChannelListSectionHeader = function renderChannelListSectionHeader(guildChannels, section, recentlyActiveChannelsEnabled, arg3, categoryStyles, c8) {
   if (guildChannels.favoritesSectionNumber === section) {
     let obj = { name: null, withMarginTop: null, styles: null, isRefreshEnabled: null };
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    obj[0] = intl2.string(require(1236) /* getSystemLocale */.t.mlPMCy);
+    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[0] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.mlPMCy);
     obj[1] = arg3;
     obj[2] = categoryStyles;
     obj[3] = c8;
-    return require(15132) /* CategoryChannel */.renderCategoryItem(obj);
+    return require("items/index.tsx") /* CategoryChannel */.renderCategoryItem(obj);
   } else if (guildChannels.recentsSectionNumber === section) {
-    const tmp22 = require(15132) /* CategoryChannel */;
+    const tmp22 = require("items/index.tsx") /* CategoryChannel */;
     if (recentlyActiveChannelsEnabled) {
       obj = { guildId: null, withMarginTop: null };
       obj[0] = guildChannels.id;
@@ -115,15 +115,15 @@ export const renderChannelListSectionHeader = function renderChannelListSectionH
     }
     let tmp11 = null;
     if (flag2) {
-      tmp11 = callback4(importDefault(11579), {});
+      tmp11 = callback4(require("components/Divider.tsx"), {});
     }
     const items = [tmp11, ];
     let renderCategoryItemResult = null;
     if (flag) {
-      let obj3 = require(15132) /* CategoryChannel */;
+      let obj3 = require("items/index.tsx") /* CategoryChannel */;
       const obj2 = { name: null, styles: null, isRefreshEnabled: null };
-      const intl = require(1236) /* getSystemLocale */.intl;
-      obj2[0] = intl.string(require(1236) /* getSystemLocale */.t["V/u9Dy"]);
+      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      obj2[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["V/u9Dy"]);
       obj2[1] = categoryStyles;
       obj2[2] = c8;
       renderCategoryItemResult = obj3.renderCategoryItem(obj2);
@@ -133,7 +133,7 @@ export const renderChannelListSectionHeader = function renderChannelListSectionH
     obj3[0] = items;
     return closure_19(View, obj3);
   } else {
-    obj = require(15187) /* isFavoritesSection */;
+    obj = require("ChannelListUtils.tsx") /* isFavoritesSection */;
     if (obj.isNamedCategorySection(section)) {
       const namedCategoryFromSection = guildChannels.getNamedCategoryFromSection(section);
       let tmp5 = null;
@@ -172,7 +172,7 @@ export const getChannelListSectionHeaderSize = function getChannelListSectionHea
         }
         let num4 = 0;
         if (flag2) {
-          num4 = require(11579) /* Divider */.DIVIDER_HEIGHT;
+          num4 = require("components/Divider.tsx") /* Divider */.DIVIDER_HEIGHT;
         }
         let sum = num4;
         if (flag) {
@@ -200,9 +200,9 @@ export const renderChannelListSectionFooter = function renderChannelListSectionF
     let obj = { guildId: null, channels: null };
     obj[0] = guildChannels.id;
     obj[1] = result;
-    tmp = callback4(require(15132) /* CategoryChannel */.RedesignVoiceUserSummary, obj);
+    tmp = callback4(require("items/index.tsx") /* CategoryChannel */.RedesignVoiceUserSummary, obj);
   }
-  if (require(6896) /* computeSubtitle */.SECTION_INDEX_CHANNEL_NOTICES === section) {
+  if (require("../../guild_sidebar/ChannelListState.tsx") /* computeSubtitle */.SECTION_INDEX_CHANNEL_NOTICES === section) {
     return null;
   } else if (tmp5(6896).SECTION_INDEX_GUILD_ACTIONS === section) {
     let tmp19 = null;
@@ -219,7 +219,7 @@ export const renderChannelListSectionFooter = function renderChannelListSectionF
       }
       tmp19 = null;
       if (flag) {
-        tmp19 = callback4(importDefault(11579), {});
+        tmp19 = callback4(require("components/Divider.tsx"), {});
       }
     }
     return tmp19;
@@ -243,7 +243,7 @@ export const renderChannelListSectionFooter = function renderChannelListSectionF
             obj3[0] = guildChannels.id;
             obj3[1] = section;
             obj3[2] = ref;
-            obj2[1] = callback4(importDefault(15200), obj3);
+            obj2[1] = callback4(require("items/ShowAllVoiceChannelsButton.tsx"), obj3);
             items[1] = callback4(View, obj2);
             obj1[0] = items;
             return closure_19(View, obj1);
@@ -256,11 +256,11 @@ export const renderChannelListSectionFooter = function renderChannelListSectionF
         return tmp9;
       }
     }
-    return callback4(importDefault(11579), {});
+    return callback4(require("components/Divider.tsx"), {});
   }
 };
 export const getChannelListSectionHasFooterDivider = function getChannelListSectionHasFooterDivider(guildChannels, arg1, c8) {
-  if (require(6896) /* computeSubtitle */.SECTION_INDEX_CHANNEL_NOTICES === arg1) {
+  if (require("../../guild_sidebar/ChannelListState.tsx") /* computeSubtitle */.SECTION_INDEX_CHANNEL_NOTICES === arg1) {
     return false;
   } else if (tmp(6896).SECTION_INDEX_GUILD_ACTIONS === arg1) {
     let tmp3 = c8;
@@ -294,9 +294,9 @@ export const getChannelListSectionFooterSize = function getChannelListSectionFoo
   let showAllVoiceChannelsButtonLastShownChannelActive;
   let num = 0;
   if (null != result) {
-    num = require(15148) /* VOICE_USER_SUMMARY_HEIGHT */.VOICE_USER_SUMMARY_HEIGHT;
+    num = require("../../guild_sidebar/native/VoiceUserSummary.tsx") /* VOICE_USER_SUMMARY_HEIGHT */.VOICE_USER_SUMMARY_HEIGHT;
   }
-  if (require(6896) /* computeSubtitle */.SECTION_INDEX_CHANNEL_NOTICES === section) {
+  if (require("../../guild_sidebar/ChannelListState.tsx") /* computeSubtitle */.SECTION_INDEX_CHANNEL_NOTICES === section) {
     return 0;
   } else if (tmp3(6896).SECTION_INDEX_GUILD_ACTIONS === section) {
     let num4 = 0;
@@ -602,7 +602,7 @@ export const getChannelListItemSize = function getChannelListItemSize(arg0) {
   let voiceStates;
   ({ guildChannels, section, row, fontScale, voiceStates } = arg0);
   ({ liveChannelNoticeHeight, listViewportHeight, isRefreshEnabled } = arg0);
-  if (require(6896) /* computeSubtitle */.SECTION_INDEX_CHANNEL_NOTICES === section) {
+  if (require("../../guild_sidebar/ChannelListState.tsx") /* computeSubtitle */.SECTION_INDEX_CHANNEL_NOTICES === section) {
     const channelNoticeSection = guildChannels.getChannelNoticeSection();
     row = channelNoticeSection.getRow(row);
     let num6 = 0;
@@ -771,7 +771,7 @@ export const calculateVoiceSummary = function calculateVoiceSummary(arg0) {
   let voiceStates;
   ({ guildChannels, section } = arg0);
   ({ optInChannelsEnabled, voiceStates, selectedChannelId, selectedVoiceChannelId } = arg0);
-  let obj = require(15187) /* isFavoritesSection */;
+  let obj = require("ChannelListUtils.tsx") /* isFavoritesSection */;
   if (!obj.isVoiceChannelsSection(section, guildChannels)) {
     if (section < tmp(6896).SECTION_INDEX_FIRST_NAMED_CATEGORY) {
       return null;

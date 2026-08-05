@@ -9,13 +9,13 @@ export const FavoritesGuildHeaderActionButton = function FavoritesGuildHeaderAct
   let exitPreview;
   let isPreview;
   let label;
-  ({ isPreview, exitPreview, label } = importDefault(15158)());
+  ({ isPreview, exitPreview, label } = require("../hooks/useFavoritesGuildHeaderAction.tsx")());
   const obj = { variant: "secondary", size: "sm", icon: null, onPress: null, accessibilityLabel: null, maxFontSizeMultiplier: 1 };
   obj[2] = importDefault(isPreview ? 5271 : 11496);
   if (!isPreview) {
-    exitPreview = require(15159) /* handleAddToFavorites */.openFavoritesGuildAddActionSheet;
+    exitPreview = require("FavoritesGuildAddActionSheet.tsx") /* handleAddToFavorites */.openFavoritesGuildAddActionSheet;
   }
   obj[3] = exitPreview;
   obj[4] = label;
-  return jsx(require(7672) /* IconButton */.IconButton, { variant: "secondary", size: "sm", icon: null, onPress: null, accessibilityLabel: null, maxFontSizeMultiplier: 1 });
+  return jsx(require("../../../design/components/Button/native/IconButton.native.tsx") /* IconButton */.IconButton, { variant: "secondary", size: "sm", icon: null, onPress: null, accessibilityLabel: null, maxFontSizeMultiplier: 1 });
 };

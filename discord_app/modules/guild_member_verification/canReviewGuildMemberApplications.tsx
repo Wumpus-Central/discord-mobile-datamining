@@ -25,7 +25,7 @@ export const canReviewGuildMemberApplications = function canReviewGuildMemberApp
 export const useCanReviewGuildMemberApplications = function useCanReviewGuildMemberApplications(guildId) {
   const _require = guildId;
   const items = [createGuildRecordFromRust];
-  const stateFromStores = _require(589).useStateFromStores(items, () => outer1_2.getGuild(closure_0));
+  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_2.getGuild(closure_0));
   let hasItem = null != stateFromStores;
   if (hasItem) {
     const features = stateFromStores.features;
@@ -35,8 +35,8 @@ export const useCanReviewGuildMemberApplications = function useCanReviewGuildMem
     hasItem = getUncachedChannelPermissions.can(constants2.KICK_MEMBERS, stateFromStores);
   }
   if (hasItem) {
-    hasItem = _require(4772).guildHasVerificationGate(stateFromStores);
-    const tmpResult = _require(4772);
+    hasItem = _require("MemberVerificationUtils.tsx").guildHasVerificationGate(stateFromStores);
+    const tmpResult = _require("MemberVerificationUtils.tsx");
   }
   return hasItem;
 };

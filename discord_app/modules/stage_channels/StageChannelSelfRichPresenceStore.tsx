@@ -35,7 +35,7 @@ function handleUpdateActivity() {
             const features = guild.features;
             tmp2 = null;
             if (features.has(constants.DISCOVERABLE)) {
-              let obj2 = require(9574) /* unpackStageChannelParty */;
+              let obj2 = require("StageChannelRichPresenceUtils.tsx") /* unpackStageChannelParty */;
               const result = obj2.packStageChannelPartyId(channel, stageInstanceByChannel);
               let id;
               if (_null != null) {
@@ -110,7 +110,7 @@ function handleUpdateActivity() {
       }
     }
   }
-  const tmp30 = importDefault(659)(tmp2, _null);
+  const tmp30 = require("../../../_runtime/00659_isUndefinedOrNull.js")(tmp2, _null);
   let flag = !tmp30;
   if (!tmp30) {
     _null = tmp2;
@@ -164,9 +164,9 @@ const stageChannelSelfRichPresenceStore = new StageChannelSelfRichPresenceStore(
     voiceStates = voiceStates.voiceStates;
     let _require;
     if (null != c17) {
-      const result = _require(9574).unpackStageChannelParty(c17);
+      const result = _require("StageChannelRichPresenceUtils.tsx").unpackStageChannelParty(c17);
       _require = result;
-      const obj = _require(9574);
+      const obj = _require("StageChannelRichPresenceUtils.tsx");
       if (tmp5) {
         handleUpdateActivity();
       }

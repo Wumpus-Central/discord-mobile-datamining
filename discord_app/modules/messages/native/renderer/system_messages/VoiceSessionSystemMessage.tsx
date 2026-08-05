@@ -9,10 +9,10 @@ export const createVoiceSessionSystemMessage = function createVoiceSessionSystem
   ({ message, roleStyle } = message);
   let _require;
   _require = channel.getChannel(message.channel_id);
-  const tmp3 = importDefault(7897)(message);
-  let obj = _require(7879);
+  const tmp3 = require("../../../getHumanizedCallDuration.tsx")(message);
+  let obj = _require("useAuthorWithProcessedColor.tsx");
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  let obj1 = _require(7981);
+  let obj1 = _require("../../../VoiceSessionUtils.tsx");
   const sortedVoiceSessionParticipants = obj1.getSortedVoiceSessionParticipants(message);
   const mapped = sortedVoiceSessionParticipants.map((user) => {
     const obj = { user, messageAuthor: null };

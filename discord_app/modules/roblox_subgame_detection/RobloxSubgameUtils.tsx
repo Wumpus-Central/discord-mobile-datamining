@@ -1,5 +1,5 @@
 // discord_app/modules/roblox_subgame_detection/RobloxSubgameUtils.tsx
-import module_4457 from "module_4457";
+import RobloxSubgamePlatformUtils.native from "RobloxSubgamePlatformUtils.native.tsx";
 import { isDetectionEnabled } from "initialize";
 import ME from "ME";
 
@@ -79,8 +79,8 @@ export const hasRunningGameChanged = function hasRunningGameChanged(distributor,
         if (!tmp12) {
           let tmp13 = null != tmp6 && null != arg1;
           if (tmp13) {
-            tmp13 = !importDefault(12).isEqual(tmp6, arg1);
-            const obj2 = importDefault(12);
+            tmp13 = !require("../../../_runtime/00012_apply.js").isEqual(tmp6, arg1);
+            const obj2 = require("../../../_runtime/00012_apply.js");
           }
           tmp12 = tmp13;
         }
@@ -99,8 +99,8 @@ export const hasSubgameInfoChanged = function hasSubgameInfoChanged(arg0, arg1) 
     if (!tmp2) {
       let tmp3 = null != arg0 && null != arg1;
       if (tmp3) {
-        tmp3 = !importDefault(12).isEqual(arg0, arg1);
-        const obj = importDefault(12);
+        tmp3 = !require("../../../_runtime/00012_apply.js").isEqual(arg0, arg1);
+        const obj = require("../../../_runtime/00012_apply.js");
       }
       tmp2 = tmp3;
     }
@@ -135,10 +135,10 @@ export const updateRunningGameWithRobloxSubgameInfo = function updateRunningGame
   if (null == subgameInfo) {
     let tmp15 = gameMetadata.distributor === constants.ROBLOX;
     if (tmp15) {
-      tmp15 = gameMetadata.id !== require(4456) /* ROBLOX_PROTOCOL_URL */.ROBLOX_APPLICATION_ID;
+      tmp15 = gameMetadata.id !== require("RobloxSubgameTypes.tsx") /* ROBLOX_PROTOCOL_URL */.ROBLOX_APPLICATION_ID;
     }
     if (tmp15) {
-      obj.id = require(4456) /* ROBLOX_PROTOCOL_URL */.ROBLOX_APPLICATION_ID;
+      obj.id = require("RobloxSubgameTypes.tsx") /* ROBLOX_PROTOCOL_URL */.ROBLOX_APPLICATION_ID;
       obj.name = dependencyMap[tmp14.ROBLOX];
     }
     obj.gameMetadata = undefined;
@@ -157,7 +157,7 @@ export const updateRunningGameWithRobloxSubgameInfo = function updateRunningGame
         obj = { exePath: null, name: null, id: null, distributor: null };
         obj[0] = gameMetadata.exePath;
         obj[1] = dependencyMap[tmp22.ROBLOX];
-        obj[2] = require(4456) /* ROBLOX_PROTOCOL_URL */.ROBLOX_APPLICATION_ID;
+        obj[2] = require("RobloxSubgameTypes.tsx") /* ROBLOX_PROTOCOL_URL */.ROBLOX_APPLICATION_ID;
         obj[3] = tmp22.ROBLOX;
         if (tmp21(obj)) {
           ({ id: obj.id, name: obj.name, name: obj.gameName } = application);
@@ -187,7 +187,7 @@ export const updateRunningGameWithRobloxSubgameInfo = function updateRunningGame
       tmp21 = isDetectionEnabled;
     }
     tmp9 = require;
-    obj.id = require(4456) /* ROBLOX_PROTOCOL_URL */.ROBLOX_APPLICATION_ID;
+    obj.id = require("RobloxSubgameTypes.tsx") /* ROBLOX_PROTOCOL_URL */.ROBLOX_APPLICATION_ID;
     obj.name = dependencyMap[constants.ROBLOX];
     obj.start = str;
   }
@@ -244,7 +244,7 @@ export const maybeAddAdditionalGameMetadata = function maybeAddAdditionalGameMet
 export const isRobloxSubgame = function isRobloxSubgame(distributor) {
   let tmp = distributor.distributor === constants.ROBLOX;
   if (tmp) {
-    tmp = distributor.id !== require(4456) /* ROBLOX_PROTOCOL_URL */.ROBLOX_APPLICATION_ID;
+    tmp = distributor.id !== require("RobloxSubgameTypes.tsx") /* ROBLOX_PROTOCOL_URL */.ROBLOX_APPLICATION_ID;
   }
   return tmp;
 };
@@ -253,7 +253,7 @@ export const isRobloxSubgameApplication = function isRobloxSubgameApplication(ge
   return thirdPartySkus.some((distributor) => distributor.distributor === constants.ROBLOX);
 };
 export const isRobloxSubgameGame = function isRobloxSubgameGame(gameRecord) {
-  let someResult = gameRecord.id !== require(4456) /* ROBLOX_PROTOCOL_URL */.ROBLOX_GAME_ID;
+  let someResult = gameRecord.id !== require("RobloxSubgameTypes.tsx") /* ROBLOX_PROTOCOL_URL */.ROBLOX_GAME_ID;
   if (someResult) {
     const thirdPartySkus = gameRecord.thirdPartySkus;
     someResult = thirdPartySkus.some((distributor) => distributor.distributor === constants.ROBLOX);
@@ -274,7 +274,7 @@ export const maybeTransformRobloxSubgameToRoblox = function maybeTransformRoblox
   let tmp2 = distributor;
   if (distributor.distributor === constants.ROBLOX) {
     tmp2 = distributor;
-    if (distributor.id !== require(4456) /* ROBLOX_PROTOCOL_URL */.ROBLOX_APPLICATION_ID) {
+    if (distributor.id !== require("RobloxSubgameTypes.tsx") /* ROBLOX_PROTOCOL_URL */.ROBLOX_APPLICATION_ID) {
       const obj = {};
       const merged = Object.assign(distributor);
       obj.id = tmp3(4456).ROBLOX_APPLICATION_ID;

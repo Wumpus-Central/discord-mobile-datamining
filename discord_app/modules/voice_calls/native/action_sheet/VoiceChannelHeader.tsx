@@ -17,11 +17,11 @@ const require = arg1;
 function PrivateChannelSubtitle(channel) {
   channel = channel.channel;
   const tmp = createCacheKey();
-  const state = importDefault(12967)(channel.id).state;
+  const state = require("../CallStateHooks.tsx")(channel.id).state;
   let obj = { style: tmp.subtitleWrapper, children: null };
   obj = { useAllAloneText: false, channel, voiceState: state, style: tmp.subtitle };
-  const items = [callback(importDefault(12968), obj), , ];
-  let tmp6Result = state === require(12967) /* id */.CallStates.CONNECTED;
+  const items = [callback(require("../components/OngoingCallStatusLabel.tsx"), obj), , ];
+  let tmp6Result = state === require("../CallStateHooks.tsx") /* id */.CallStates.CONNECTED;
   if (tmp6Result) {
     obj = { style: null, variant: "text-xs/medium", color: "text-overlay-light", children: " - " };
     obj[0] = tmp.subtitle;
@@ -33,7 +33,7 @@ function PrivateChannelSubtitle(channel) {
     const obj1 = { channelId: null, style: null };
     obj1[0] = channel.id;
     obj1[1] = tmp.subtitle;
-    tmp6Result = tmp6(importDefault(12969), obj1);
+    tmp6Result = tmp6(require("../components/OngoingCallTimer.tsx"), obj1);
   }
   items[2] = tmp6Result;
   obj[1] = items;
@@ -147,10 +147,10 @@ class VoiceChannelHeader {
 }
 function AddMemberButton(onPress) {
   const obj = { onPress: onPress.onPress, iconSource: null, iconStyle: null, accessibilityLabel: null };
-  obj[1] = importDefault(9638);
+  obj[1] = require("../../../../../_runtime/09638_registerAsset.js");
   obj[2] = createCacheKey().icons;
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[3] = intl.string(require(1236) /* getSystemLocale */.t["6Qgrev"]);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[3] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["6Qgrev"]);
   return callback(IconButton, obj);
 }
 class IconButton {

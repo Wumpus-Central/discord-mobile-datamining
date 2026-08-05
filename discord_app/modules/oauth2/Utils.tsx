@@ -4,7 +4,7 @@ import { MarketingURLs } from "ME";
 let result = require("getSystemLocale").fileFinishedImporting("modules/oauth2/Utils.tsx");
 
 export const getApplicationDetailsText = function getApplicationDetailsText(application) {
-  let obj = require(10430) /* useIsSocialLayerParentApplication */;
+  let obj = require("../applications/useIsSocialLayerParentApplication.tsx") /* useIsSocialLayerParentApplication */;
   const isSocialLayerParentApplication = obj.getIsSocialLayerParentApplication(application);
   if (null != application.privacy_policy_url) {
     if (null != application.terms_of_service_url) {
@@ -42,8 +42,8 @@ export const getApplicationDetailsText = function getApplicationDetailsText(appl
 export const isContentClassificationRestricted = function isContentClassificationRestricted(content_classification, closure_32) {
   let result = null != content_classification;
   if (result) {
-    result = require(7004) /* isAgeRestrictedContentClassification */.isAgeRestrictedContentClassification(content_classification);
-    const obj = require(7004) /* isAgeRestrictedContentClassification */;
+    result = require("../content_classification/utils.tsx") /* isAgeRestrictedContentClassification */.isAgeRestrictedContentClassification(content_classification);
+    const obj = require("../content_classification/utils.tsx") /* isAgeRestrictedContentClassification */;
   }
   if (result) {
     result = false === closure_32;

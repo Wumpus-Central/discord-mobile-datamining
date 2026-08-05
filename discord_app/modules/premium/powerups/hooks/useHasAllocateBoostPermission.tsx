@@ -9,7 +9,7 @@ const result = require("sum").fileFinishedImporting("modules/premium/powerups/ho
 export default function useHasAllocateBoostPermission(arg0) {
   const _require = arg0;
   const items = [getUncachedChannelPermissions, createGuildRecordFromRust];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const guild = outer1_2.getGuild(closure_0);
     let canResult = null;
     if (null != guild) {

@@ -27,17 +27,17 @@ let closure_10 = importAllResult.memo((arg0) => {
   let channel;
   let openTab;
   ({ channel, openTab } = arg0);
-  const channelId = importAllResult.useContext(importDefault(11557)).channelId;
-  const tmp2 = importDefault(15981)(channelId);
-  let obj = require(10892) /* getEmbeddedActivityLaunchability */;
+  const channelId = importAllResult.useContext(require("../VoicePanelStateContext.tsx")).channelId;
+  const tmp2 = require("../hooks/useIsConnectedToVoiceChannel.tsx")(channelId);
+  let obj = require("../../../activities/utils/getEmbeddedActivityLaunchability.tsx") /* getEmbeddedActivityLaunchability */;
   const embeddedActivityLaunchability = obj.useEmbeddedActivityLaunchability(channelId);
-  const DeveloperMode = require(3958) /* explicitContentFromProto */.DeveloperMode;
+  const DeveloperMode = require("../../../user_settings/UserSettings.tsx") /* explicitContentFromProto */.DeveloperMode;
   const setting = DeveloperMode.useSetting();
-  let obj1 = importDefault(16045);
+  let obj1 = require("../../../go_live/MobileGoLiveEntrypointExperiment.tsx");
   const treatment = obj1.useConfig({ location: "VoicePanelVoiceControls" }).treatment;
-  let obj2 = importDefault(10743);
+  let obj2 = require("../../../media_engine/MobileAudioOutputExperiment.tsx");
   let nonContextualStreamOutputPresent = obj2.useConfig({ location: "VoicePanelVoiceControls" }).nonContextualStreamOutputPresent;
-  const tmp6 = importDefault(12965)(channel);
+  const tmp6 = require("../../../video_calls/native/useSelectedActiveStream.tsx")(channel);
   if (!tmp2) {
     const items = [tmp2, , , , , , ];
     obj = { channel: null, connected: null };

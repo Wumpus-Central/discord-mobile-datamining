@@ -42,7 +42,7 @@ function ActivityCardText(children) {
       const obj = {};
       const merged1 = Object.assign(merged);
       obj.children = trimmed;
-      tmp3 = callback(require(4281) /* Text */.Text, obj);
+      tmp3 = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
     }
   }
   return tmp3;

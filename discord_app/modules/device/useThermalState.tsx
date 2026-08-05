@@ -4,7 +4,7 @@ obj = { NONE: 0, [0]: "NONE", LIGHT: 1, [1]: "LIGHT", MODERATE: 2, [2]: "MODERAT
 const result = require("set").fileFinishedImporting("modules/device/useThermalState.tsx");
 
 export default function useThermalState() {
-  const obj = importDefault(10524);
+  const obj = require("ThermalUtils.native.tsx");
   const rawThermalState = obj.useRawThermalState();
   if (null == rawThermalState) {
     let UNHANDLED = obj.UNHANDLED;
@@ -38,7 +38,7 @@ export default function useThermalState() {
       }
       tmp11Result = tmp11(500);
     }
-    obj3 = require(500) /* set */;
+    obj3 = require("../../utils/PlatformUtils.tsx") /* set */;
     tmp11 = require;
   }
   return UNHANDLED;
@@ -46,7 +46,7 @@ export default function useThermalState() {
 export const ThermalStates = obj;
 export const AndroidThermalStates = obj;
 export const getThermalState = function getThermalState() {
-  const obj = importDefault(10524);
+  const obj = require("ThermalUtils.native.tsx");
   const rawThermalState = obj.getRawThermalState();
   if (null == rawThermalState) {
     let UNHANDLED = obj.UNHANDLED;
@@ -80,7 +80,7 @@ export const getThermalState = function getThermalState() {
       }
       tmp11Result = tmp11(500);
     }
-    obj3 = require(500) /* set */;
+    obj3 = require("../../utils/PlatformUtils.tsx") /* set */;
     tmp11 = require;
   }
   return UNHANDLED;

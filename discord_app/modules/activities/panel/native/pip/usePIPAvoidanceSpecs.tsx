@@ -5,7 +5,7 @@ const result = require("useScreenNameSharedValue").fileFinishedImporting("module
 
 export default function usePIPAvoidanceSpecs(safeArea) {
   const _require = safeArea;
-  let obj = _require(4146);
+  let obj = _require("../../../../reanimated/ReanimatedRexport.tsx");
   const sharedValue = obj.useSharedValue({ top: 0, bottom: 0 });
   const tmp2 = sharedValue(10124)();
   const dependencyMap = tmp2;
@@ -34,10 +34,10 @@ export default function usePIPAvoidanceSpecs(safeArea) {
       const tmp4 = sharedValue(tmp2[4])(screenName);
     }
   };
-  obj = { cheapWorkletShallowEqual: _require(8698).cheapWorkletShallowEqual, getPIPBottomOffsetForPIPMode: sharedValue(15854), getAdjustedBottomOffsets: sharedValue(15956), updateSharedValueIfChanged: sharedValue(10245), pipAvoidanceSpecs: sharedValue };
+  obj = { cheapWorkletShallowEqual: _require("../../../../reanimated/native/cheapWorkletShallowEqual.tsx").cheapWorkletShallowEqual, getPIPBottomOffsetForPIPMode: sharedValue(15854), getAdjustedBottomOffsets: sharedValue(15956), updateSharedValueIfChanged: sharedValue(10245), pipAvoidanceSpecs: sharedValue };
   fn2.__closure = obj;
   fn2.__workletHash = 643938425459;
   fn2.__initData = closure_4;
-  const animatedReaction = _require(4146).useAnimatedReaction(fn, fn2);
+  const animatedReaction = _require("../../../../reanimated/ReanimatedRexport.tsx").useAnimatedReaction(fn, fn2);
   return sharedValue;
 };

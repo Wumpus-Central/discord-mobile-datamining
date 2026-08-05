@@ -5,7 +5,7 @@ export default function useResolveGameForProfile(arg0) {
   let applicationId;
   let gameId;
   ({ applicationId, gameId } = arg0);
-  let obj = require(5616) /* useGetOrFetchApplications */;
+  let obj = require("../../applications/useGetOrFetchApplications.tsx") /* useGetOrFetchApplications */;
   let tmp3;
   if (null == gameId) {
     tmp3 = applicationId;
@@ -21,18 +21,18 @@ export default function useResolveGameForProfile(arg0) {
     gameId = tmp(4456).ROBLOX_GAME_ID;
   }
   obj[1] = gameId;
-  let tmp6Result = importDefault(9193)(obj);
+  let tmp6Result = require("../../games/hooks/useResolveGame.tsx")(obj);
   let isRobloxSubgameGameResult = null != tmp6Result.gameRecord;
   if (isRobloxSubgameGameResult) {
     tmpResult = tmp(4455);
     isRobloxSubgameGameResult = tmpResult.isRobloxSubgameGame(tmp6Result.gameRecord);
   }
-  const tmp6 = importDefault(9193);
+  const tmp6 = require("../../games/hooks/useResolveGame.tsx");
   let ROBLOX_GAME_ID;
   if (isRobloxSubgameGameResult) {
     ROBLOX_GAME_ID = tmp(4456).ROBLOX_GAME_ID;
   }
-  const game = require(7002) /* importDefaultResult1 */.useGame(ROBLOX_GAME_ID);
+  const game = require("../../games/hooks/useGame.tsx") /* importDefaultResult1 */.useGame(ROBLOX_GAME_ID);
   let data = game.data;
   if (isRobloxSubgameGameResult) {
     obj = { gameId: null, gameRecord: null, isLoading: null };

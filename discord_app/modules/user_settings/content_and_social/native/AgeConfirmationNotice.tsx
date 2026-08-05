@@ -31,11 +31,11 @@ export default function AgeConfirmationNotice() {
     const result = obj.showAgeVerificationGetStartedModal(obj);
     const result1 = sensitiveContentFilterHelpArticle(13898).trackSafetySettingsNoticeAnalytics(constants2.AGE_CONFIRMATION_NOTICE, constants.CONFIRM_AGE);
   }, []);
-  obj[0] = importDefault(712).space.PX_8;
+  obj[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8;
   obj[0] = obj;
   const obj1 = { messageType: null, borderRadius: null, button: null, children: null };
   obj1[0] = sensitiveContentFilterHelpArticle(1297).HelpMessageTypes.INFO;
-  obj1[1] = importDefault(712).radii.lg;
+  obj1[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg;
   let obj2 = { variant: "secondary", size: "sm", text: null, onPress: null };
   const intl = sensitiveContentFilterHelpArticle(1236).intl;
   obj2[2] = intl.string(sensitiveContentFilterHelpArticle(1236).t.FDSSia);

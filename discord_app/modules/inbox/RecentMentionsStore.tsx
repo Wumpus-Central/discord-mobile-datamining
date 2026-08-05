@@ -23,8 +23,8 @@ function findOrCreateMessageRecord(channel_id) {
   } else {
     let message = store2.getMessage(channel_id.channel_id, channel_id.id);
     if (null == message) {
-      message = require(4504) /* createMinimalMessageRecord */.createMessageRecord(channel_id);
-      const obj = require(4504) /* createMinimalMessageRecord */;
+      message = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */.createMessageRecord(channel_id);
+      const obj = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */;
     }
     return message;
   }
@@ -55,7 +55,7 @@ function hasMentionNotificationEnabled(channel_id) {
               obj[1] = currentUser.id;
               obj[2] = result1;
               obj[3] = result2;
-              tmp10 = importDefault(4518)(obj);
+              tmp10 = require("../messages/isMessageMentioned.tsx")(obj);
             }
             return tmp10;
           } else {
@@ -63,7 +63,7 @@ function hasMentionNotificationEnabled(channel_id) {
             return false;
           }
         }
-        obj2 = require(4498) /* shouldShowAgeGateForVoiceChannel */;
+        obj2 = require("../age_gate/AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */;
       }
     }
   }
@@ -74,7 +74,7 @@ function parseMessage(message, channelId) {
   if (channelId === undefined) {
     channel_id = null;
   }
-  if (importDefault(5799)(message)) {
+  if (require("../messages/isSystemMessage.tsx")(message)) {
     const SELF_MENTIONABLE_SYSTEM = constants2.SELF_MENTIONABLE_SYSTEM;
     if (!SELF_MENTIONABLE_SYSTEM.has(message.type)) {
       return null;
@@ -99,8 +99,8 @@ function parseMessage(message, channelId) {
           if (!(message instanceof hasFlag)) {
             message = store2.getMessage(message.channel_id, message.id);
             if (null == message) {
-              message = require(4504) /* createMinimalMessageRecord */.createMessageRecord(message);
-              const obj2 = require(4504) /* createMinimalMessageRecord */;
+              message = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */.createMessageRecord(message);
+              const obj2 = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */;
             }
             tmp12 = message;
           }
@@ -147,7 +147,7 @@ function deleteMessage(arg0) {
   } else {
     delete tmp[tmp2];
     const obj = { deletedMessages: null };
-    obj[0] = importDefault(12).filter(closure_18, (id) => id.id === id);
+    obj[0] = require("../../../_runtime/00012_apply.js").filter(closure_18, (id) => id.id === id);
     ({ addedMessages, deletedMessages } = obj);
     if (null != addedMessages) {
       const item = addedMessages.forEach((getChannelId) => {
@@ -167,9 +167,9 @@ function deleteMessage(arg0) {
         }
       });
     }
-    const arr2 = importDefault(12);
+    const arr2 = require("../../../_runtime/00012_apply.js");
     const tmp7 = importDefault;
-    closure_18 = importDefault(12).filter(closure_18, (id) => id.id !== id);
+    closure_18 = require("../../../_runtime/00012_apply.js").filter(closure_18, (id) => id.id !== id);
   }
 }
 function handleMessageDelete(id) {
@@ -179,7 +179,7 @@ function handleMessageDelete(id) {
   if (null != dependencyMap[id]) {
     delete tmp[tmp2];
     const obj = { deletedMessages: null };
-    obj[0] = importDefault(12).filter(closure_18, (id) => id.id === id);
+    obj[0] = require("../../../_runtime/00012_apply.js").filter(closure_18, (id) => id.id === id);
     ({ addedMessages, deletedMessages } = obj);
     if (null != addedMessages) {
       const item = addedMessages.forEach((getChannelId) => {
@@ -199,18 +199,18 @@ function handleMessageDelete(id) {
         }
       });
     }
-    const arr = importDefault(12);
+    const arr = require("../../../_runtime/00012_apply.js");
     const tmp4 = importDefault;
-    closure_18 = importDefault(12).filter(closure_18, (id) => id.id !== id);
-    const tmp4Result = importDefault(12);
+    closure_18 = require("../../../_runtime/00012_apply.js").filter(closure_18, (id) => id.id !== id);
+    const tmp4Result = require("../../../_runtime/00012_apply.js");
   }
   return false;
 }
 function handleSetRecentMentionsFilters(arg0) {
   const obj = {};
   const merged = Object.assign(closure_23);
-  const obj2 = importDefault(12);
-  closure_23 = obj2.defaults(importDefault(12).pick(arg0, ["guildFilter", "roleFilter", "everyoneFilter"]), closure_23);
+  const obj2 = require("../../../_runtime/00012_apply.js");
+  closure_23 = obj2.defaults(require("../../../_runtime/00012_apply.js").pick(arg0, ["guildFilter", "roleFilter", "everyoneFilter"]), closure_23);
   const Storage = items(595).Storage;
   const result = Storage.set(recentMentionFilterSettings, closure_23);
   let tmp4 = obj.guildFilter !== closure_23.guildFilter;
@@ -258,7 +258,7 @@ function handleRelationshipUpdate() {
   let addedMessages;
   let deletedMessages;
   const obj = { deletedMessages: null };
-  obj[0] = importDefault(12).filter(closure_18, (message) => upsertRelationship.isBlockedOrIgnoredForMessage(message));
+  obj[0] = require("../../../_runtime/00012_apply.js").filter(closure_18, (message) => upsertRelationship.isBlockedOrIgnoredForMessage(message));
   ({ addedMessages, deletedMessages } = obj);
   if (null != addedMessages) {
     const item = addedMessages.forEach((getChannelId) => {
@@ -435,7 +435,7 @@ obj = {
     let isAfter;
     let messages;
     ({ hasMoreAfter, messages, isAfter } = arg0);
-    let mapped = importDefault(12).map(messages, findOrCreateMessageRecord);
+    let mapped = require("../../../_runtime/00012_apply.js").map(messages, findOrCreateMessageRecord);
     ({ addedMessages, deletedMessages } = { addedMessages: mapped });
     if (null != addedMessages) {
       const item = addedMessages.forEach((getChannelId) => {
@@ -460,14 +460,14 @@ obj = {
     } else {
       let closure_20 = {};
     }
-    const arr = importDefault(12);
+    const arr = require("../../../_runtime/00012_apply.js");
     const tmp = importDefault;
-    const item2 = importDefault(12).forEach(mapped, (id) => {
+    const item2 = require("../../../_runtime/00012_apply.js").forEach(mapped, (id) => {
       closure_20[id.id] = true;
     });
     let c21 = false;
-    const tmpResult = importDefault(12);
-    let closure_25 = require(4360) /* sleep */.now();
+    const tmpResult = require("../../../_runtime/00012_apply.js");
+    let closure_25 = require("../../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */.now();
     let c24 = true;
   },
   LOAD_RECENT_MENTIONS_FAILURE: function handleLoadMentionsFailure() {
@@ -581,7 +581,7 @@ obj = {
     message = message.message;
     const currentUser = authStore.getCurrentUser();
     if (null != currentUser) {
-      let obj = require(4518) /* isMentioned */;
+      let obj = require("../messages/isMessageMentioned.tsx") /* isMentioned */;
       obj = { rawMessage: null, userId: null, suppressRoles: false, suppressEveryone: false };
       obj[0] = message;
       obj[1] = currentUser.id;
@@ -624,7 +624,7 @@ obj = {
     const id = message.message.id;
     if (null != id) {
       if (null != dependencyMap[id]) {
-        const findIndexResult = importDefault(12).findIndex(substr, (id) => id.id === id);
+        const findIndexResult = require("../../../_runtime/00012_apply.js").findIndex(substr, (id) => id.id === id);
         substr = substr.slice();
         if (null != substr[findIndexResult]) {
           substr[findIndexResult] = id(4504).updateMessageRecord(tmp7, message.message);
@@ -637,7 +637,7 @@ obj = {
   MESSAGE_DELETE: handleMessageDelete,
   RECENT_MENTION_DELETE: handleMessageDelete,
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(ids) {
-    const item = importDefault(12).forEach(ids.ids, deleteMessage);
+    const item = require("../../../_runtime/00012_apply.js").forEach(ids.ids, deleteMessage);
   },
   CHANNEL_DELETE: handleDeleteChannel,
   THREAD_DELETE: handleDeleteChannel,

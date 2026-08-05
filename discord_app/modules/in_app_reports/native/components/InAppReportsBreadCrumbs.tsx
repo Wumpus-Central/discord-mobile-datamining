@@ -53,12 +53,12 @@ export default function Breadcrumbs(element) {
       } else {
         obj = { style: null, children: null };
         obj[0] = tmp2.container;
-        let map = _require(4281).Text;
+        let map = _require("../../../../design/components/Text/native/Text.tsx").Text;
         obj = { style: null, accessibilityRole: "header", variant: "text-xs/bold", children: null };
         obj[0] = tmp2.title;
-        const REPORT_TO_MOD = _require(7833).ReportMenuTypeSets.REPORT_TO_MOD;
+        const REPORT_TO_MOD = _require("../../../../../discord_common/js/shared/shared-constants/ReportMenuType.tsx").ReportMenuTypeSets.REPORT_TO_MOD;
         const hasItem = REPORT_TO_MOD.has(element.menuName);
-        const intl = _require(1236).intl;
+        const intl = _require("../../../../intl/index.native.tsx").intl;
         const string = intl.string;
         if (hasItem) {
           let stringResult = string(_6mx_DP);

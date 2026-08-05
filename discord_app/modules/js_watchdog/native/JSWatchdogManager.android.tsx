@@ -284,9 +284,9 @@ prototype["stopWatchdog"] = function stopWatchdog() {
   this._timeoutId = null;
 };
 prototype["reportStall"] = function reportStall(c1, c0, is_previous, _analyticsReportsRemaining) {
-  let obj = importDefault(698);
+  let obj = require("../../../utils/AnalyticsUtils.tsx");
   obj = {};
-  const merged = Object.assign(require(6843) /* getDeviceMetadata */.getDeviceMetadata());
+  const merged = Object.assign(require("../../tti_analytics/native/TTIAnalyticsUtils.tsx") /* getDeviceMetadata */.getDeviceMetadata());
   obj.version = 1;
   obj.stall_time = c1.stallTime;
   obj.is_previous = is_previous;

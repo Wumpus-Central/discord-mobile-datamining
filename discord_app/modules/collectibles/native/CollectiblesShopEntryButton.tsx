@@ -33,7 +33,7 @@ function CoachmarkVariant(shopButtonRef) {
     navigateToShop();
   };
   obj[4] = tmp3;
-  const items = [callback2(importDefault(15742), obj), callback2(importDefault(15744), { marketing, shopButtonRef, navigateToShop, visible: tmp3, onDismiss: tmp[1] })];
+  const items = [callback2(require("../../main_tabs_v2/native/tabs/you/YouScreenNavIcon.tsx"), obj), callback2(require("MobileShopButtonCoachmark.tsx"), { marketing, shopButtonRef, navigateToShop, visible: tmp3, onDismiss: tmp[1] })];
   obj[0] = items;
   return callback3(closure_7, obj);
 }

@@ -50,17 +50,17 @@ function TabButton(selected) {
   obj[1] = items;
   obj[2] = accessibilityLabel;
   obj[4] = { selected };
-  const colors = importDefault(712).colors;
+  const colors = require("../../../../discord_common/js/packages/tokens/native.tsx").colors;
   obj[5] = icon(selected ? colors.INTERACTIVE_TEXT_ACTIVE : colors.INTERACTIVE_TEXT_DEFAULT);
-  return closure_27(require(4812) /* PressableBase */.PressableHighlight, obj);
+  return closure_27(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableHighlight, obj);
 }
 function TabHeader(children) {
   const tmp = callback3();
-  return callback2(require(4281) /* Text */.Text, { style: callback3().subheader, variant: "heading-md/extrabold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: children.text });
+  return callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: callback3().subheader, variant: "heading-md/extrabold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: children.text });
 }
 function createAndAppendChannel(arg0, has, arr) {
   if (!has.has(arg0)) {
-    const tmp3 = importDefault(7241)(arg0);
+    const tmp3 = require("../../autocompleter/createAutocompleterResultForChannelId.tsx")(arg0);
     if (null != tmp3) {
       arr.push(tmp3);
       has.add(arg0);

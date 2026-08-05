@@ -33,7 +33,7 @@ export const getGuildIconURL = function getGuildIconURL(id, size) {
   if (arg3 === undefined) {
     flag2 = false;
   }
-  let obj = importDefault(1416);
+  let obj = require("../utils/AvatarUtils.tsx");
   obj = { id: id.id, size, icon: id.icon, canAnimate: flag, lossless: flag2 };
   return obj.getGuildIconURL(obj);
 };
@@ -43,14 +43,14 @@ export const getGuildIconSource = function getGuildIconSource(arg0, arg1, flag) 
   if (flag === undefined) {
     flag = false;
   }
-  return importDefault(1416).getAnimatableSourceWithFallback(flag, (canAnimate) => {
+  return require("../utils/AvatarUtils.tsx").getAnimatableSourceWithFallback(flag, (canAnimate) => {
     let obj = callback(outer1_2[2]);
     obj = { id: closure_0.id, size: callback, icon: closure_0.icon, canAnimate };
     return obj.getGuildIconSource(obj);
   });
 };
 export const getGuildAcronym = function getGuildAcronym(guild) {
-  return require(1856) /* isNullOrEmpty */.getAcronym(guild.name);
+  return require("../utils/StringUtils.tsx") /* isNullOrEmpty */.getAcronym(guild.name);
 };
 export const isGuildOwner = function isGuildOwner(guild, currentUser) {
   let tmp = currentUser;
@@ -87,7 +87,7 @@ export const isGuildLurker = function isGuildLurker(guild) {
   return null == guild.joinedAt;
 };
 export const getGuildEveryoneRoleId = function getGuildEveryoneRoleId(closure_7) {
-  return importDefault(11).castGuildIdAsEveryoneGuildRoleId(closure_7.id);
+  return require("../utils/SnowflakeUtils.tsx").castGuildIdAsEveryoneGuildRoleId(closure_7.id);
 };
 export const updateJoinedAt = function updateJoinedAt(guild, joinedAt) {
   let date = joinedAt;
@@ -116,6 +116,6 @@ export const isGuildNSFW = function isGuildNSFW(guild) {
       }
       hasItem = has(DEFAULT);
     }
-    obj = require(1860) /* apexExperiment */;
+    obj = require("../modules/age_gate/ServerNSFWLevelExperiment.tsx") /* apexExperiment */;
   }
 };

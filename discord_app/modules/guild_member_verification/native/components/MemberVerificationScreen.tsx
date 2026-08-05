@@ -11,11 +11,11 @@ import makeAuthenticated from "makeAuthenticated";
 
 const require = arg1;
 function Loading() {
-  return <View style={createCacheKey().flexLoading}>{jsx(require(5732) /* ActivityIndicator */.ActivityIndicator, {})}</View>;
+  return <View style={createCacheKey().flexLoading}>{jsx(require("../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx") /* ActivityIndicator */.ActivityIndicator, {})}</View>;
 }
 function MemberVerificationRouteView(arg0) {
   const merged = Object.assign(arg0);
-  return jsx(importDefault(8225), {});
+  return jsx(require("MemberVerificationModal.tsx"), {});
 }
 function ExistingJoinRequestHandler(guildId) {
   guildId = guildId.guildId;
@@ -138,7 +138,7 @@ const authenticated = makeAuthenticated.makeAuthenticated(function MemberVerific
       const obj2 = navigation(outer1_3[16]);
     }
   }, items);
-  importDefault(1581)();
+  require("../../../safe_area/useSafeAreaInsets.native.tsx")();
   if (null == guildId) {
     let tmp10 = <Loading />;
   } else {
@@ -156,9 +156,9 @@ const authenticated = makeAuthenticated.makeAuthenticated(function MemberVerific
     obj1[0] = guildId;
     obj1[1] = callback;
     obj[1] = <MemberVerificationRouteView guildId={null} onClose={null} />;
-    obj[2] = jsx(importDefault(5733), { marginLeft: null, marginRight: null });
+    obj[2] = jsx(require("../../../keyboard/native/KeyboardAwareView.tsx"), { marginLeft: null, marginRight: null });
     tmp10 = <ExistingJoinRequestHandler marginLeft={null} marginRight={null} />;
-    const tmp3Result = importDefault(5733);
+    const tmp3Result = require("../../../keyboard/native/KeyboardAwareView.tsx");
   }
   return tmp10;
 });

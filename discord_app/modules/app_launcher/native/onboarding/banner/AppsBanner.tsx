@@ -10,11 +10,11 @@ const result = require("jsxProd").fileFinishedImporting("modules/app_launcher/na
 
 export default function AppsBaner() {
   const tmp = callback();
-  obj = { style: tmp.rocketIconContainer, children: jsx(importDefault(11363), obj) };
+  obj = { style: tmp.rocketIconContainer, children: jsx(require("../../images/OnboardingAppsRocket.tsx"), obj) };
   obj = { style: tmp.rocketIcon };
   obj = { image: <View style={tmp.rocketIcon} />, text: null };
   const tmp2 = <View image={<View style={tmp.rocketIcon} />} text={null} />;
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl.string(require(1236) /* getSystemLocale */.t.sjRwMJ);
-  return jsx(importDefault(11360), { image: <View style={tmp.rocketIcon} />, text: null });
+  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.sjRwMJ);
+  return jsx(require("BannerBase.tsx"), { image: <View style={tmp.rocketIcon} />, text: null });
 };

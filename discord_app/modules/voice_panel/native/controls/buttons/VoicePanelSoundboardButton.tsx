@@ -22,10 +22,10 @@ export default function SoundboardButton(arg0) {
   let wrapperSpecs;
   ({ props, wrapperSpecs } = arg0);
   const tmp3 = createCacheKey();
-  let obj = require(16123) /* useVoicePanelButtonStyles */;
+  let obj = require("VoicePanelStyles.tsx") /* useVoicePanelButtonStyles */;
   const voicePanelButtonStyles = obj.useVoicePanelButtonStyles(wrapperSpecs);
-  const tmp6 = importDefault(16138);
-  ({ disabled, handlePress, visible } = importDefault(16138)(React.useContext(importDefault(11557)).channelId, require(16138) /* useSoundboardConfig */.SoundboardButtonLocation.VOICE_PANEL_CONTROLS));
+  const tmp6 = require("../../hooks/useSoundboardConfig.tsx");
+  ({ disabled, handlePress, visible } = require("../../hooks/useSoundboardConfig.tsx")(React.useContext(require("../../VoicePanelStateContext.tsx")).channelId, require("../../hooks/useSoundboardConfig.tsx") /* useSoundboardConfig */.SoundboardButtonLocation.VOICE_PANEL_CONTROLS));
   if (disabled) {
     let color = tmp(712).colors.ICON_MUTED;
   } else {

@@ -68,8 +68,8 @@ function RedesignBottomSheetTitleHeaderComplex(subtitle) {
   ({ title, leading, trailing, onTitleTextLayout } = subtitle);
   const tmp = callback4();
   const tmp2 = callback6();
-  let obj = _require(3989);
-  const diff = importDefault(1474)().width - 2 * obj.useToken(importDefault(712).modules.mobile.SHEET_HEADER_PADDING_HORIZONTAL);
+  let obj = _require("../../../tokens/native/useToken.tsx");
+  const diff = require("../../../../modules/screen/useWindowDimensions.native.tsx")().width - 2 * obj.useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.SHEET_HEADER_PADDING_HORIZONTAL);
   [tmp5, c0] = callback(React.useState(undefined), 2);
   callback = React.useCallback((nativeEvent) => {
     const width = nativeEvent.nativeEvent.layout.width;
@@ -109,15 +109,15 @@ function RedesignBottomSheetTitleHeaderComplex(subtitle) {
 }
 function Title(arg0) {
   let str = "redesign/heading-18/bold";
-  if (importDefault(1348)("BottomSheetTitleHeader")) {
+  if (require("../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx")("BottomSheetTitleHeader")) {
     str = "redesign/heading-18/semibold";
   }
   const tmp = callback4();
   const merged = Object.assign(arg0);
-  return callback2(require(4281) /* Text */.Text, { variant: str, color: "mobile-text-heading-primary", accessibilityRole: "header", style: callback4().title });
+  return callback2(require("../../Text/native/Text.tsx") /* Text */.Text, { variant: str, color: "mobile-text-heading-primary", accessibilityRole: "header", style: callback4().title });
 }
 function Subtitle(children) {
-  const tmp3 = importDefault(1348)("BottomSheetTitleHeader");
+  const tmp3 = require("../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx")("BottomSheetTitleHeader");
   let str = "text-default";
   if (tmp3) {
     str = "text-muted";
@@ -127,12 +127,12 @@ function Subtitle(children) {
     str2 = "text-sm/medium";
   }
   const tmp = callback4();
-  return callback2(require(4281) /* Text */.Text, { variant: str2, color: str, lineClamp: 1, style: callback4().subtitle, children: children.children });
+  return callback2(require("../../Text/native/Text.tsx") /* Text */.Text, { variant: str2, color: str, lineClamp: 1, style: callback4().subtitle, children: children.children });
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles(() => {
   let obj = { container: null, titles: null, subtitle: null, title: null };
-  obj = { paddingHorizontal: importDefault(712).modules.mobile.SHEET_HEADER_PADDING_HORIZONTAL, flexDirection: "row", gap: 4, position: "relative" };
+  obj = { paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.SHEET_HEADER_PADDING_HORIZONTAL, flexDirection: "row", gap: 4, position: "relative" };
   obj[0] = obj;
   obj[1] = { flexGrow: 1, flexShrink: 1, gap: 2 };
   obj[2] = { textAlign: "center" };
@@ -142,9 +142,9 @@ let closure_8 = createCacheKey.createStyles(() => {
 let closure_10 = createCacheKey.createStyles(() => ({ container: { flexDirection: "column" }, accessories: { flexDirection: "row", justifyContent: "space-between" }, item: { flexShrink: 0 } }));
 let closure_12 = createCacheKey.createStyles(() => {
   let obj = { accessory: { position: "absolute", top: 0, bottom: 0, flexShrink: 0, flexDirection: "row", flexGrow: 1 }, leading: null, trailing: null };
-  obj = { left: importDefault(712).space.PX_16, justifyContent: "flex-start" };
+  obj = { left: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, justifyContent: "flex-start" };
   obj[1] = obj;
-  obj = { right: importDefault(712).space.PX_16, justifyContent: "flex-end" };
+  obj = { right: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, justifyContent: "flex-end" };
   obj[2] = obj;
   return obj;
 });
@@ -157,7 +157,7 @@ export const BottomSheetTitleHeader = function BottomSheetTitleHeader(arg0) {
   ({ leading, trailing } = arg0);
   const tmp2 = callback(React.useState(false), 2);
   let closure_0 = tmp2[1];
-  const tmp3 = importDefault(5239)("sheet");
+  const tmp3 = require("../../../../modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx")("sheet");
   if (null != leading) {
     if (tmp2[0]) {
       let obj = {};

@@ -35,7 +35,7 @@ function HeaderView(node) {
     obj[0] = node.headerRef;
     obj[1] = tmp.header;
     obj[5] = header;
-    tmp6 = callback2(require(4281) /* Text */.Text, obj);
+    tmp6 = callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   }
   const items = [tmp6, , ];
   let tmp9 = null;
@@ -45,7 +45,7 @@ function HeaderView(node) {
       obj = { style: null, variant: "text-md/medium", color: "text-default", children: null };
       obj[0] = tmp.subheader;
       obj[3] = tmp3(subheader);
-      tmp9 = callback2(require(4281) /* Text */.Text, obj);
+      tmp9 = callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
     }
   }
   items[1] = tmp9;
@@ -56,7 +56,7 @@ function HeaderView(node) {
       const obj1 = { style: null, variant: "text-xs/medium", color: "text-default", children: null };
       obj1[0] = tmp.description;
       obj1[3] = description;
-      tmp12 = callback2(require(4281) /* Text */.Text, obj1);
+      tmp12 = callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
     }
   }
   items[2] = tmp12;
@@ -71,19 +71,19 @@ function InfoView(node) {
     let obj = { style: null, children: null };
     const items = [tmp.infoBox, ];
     obj = { backgroundColor: null };
-    obj[0] = require(4129) /* hexToRgba */.hexWithOpacity(tmp.infoBox.backgroundColor, 0.1);
+    obj[0] = require("../../../../utils/ColorUtils.tsx") /* hexToRgba */.hexWithOpacity(tmp.infoBox.backgroundColor, 0.1);
     items[1] = obj;
     obj[0] = items;
     obj = { size: "md", color: null };
     obj[1] = tmp.infoBox.backgroundColor;
-    const items1 = [callback2(require(4241) /* CircleInformationIcon */.CircleInformationIcon, obj), ];
+    const items1 = [callback2(require("../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx") /* CircleInformationIcon */.CircleInformationIcon, obj), ];
     const obj1 = { style: null, variant: "text-sm/normal", color: "interactive-text-active", children: null };
     obj1[0] = tmp.infoBoxText;
     obj1[3] = tmp3(info);
-    items1[1] = callback2(require(4281) /* Text */.Text, obj1);
+    items1[1] = callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
     obj[1] = items1;
     tmp4 = callback3(closure_6, obj);
-    const obj3 = require(4129) /* hexToRgba */;
+    const obj3 = require("../../../../utils/ColorUtils.tsx") /* hexToRgba */;
   }
   return tmp4;
 }
@@ -115,7 +115,7 @@ function ChildItem(child) {
   }
   items1[1] = stateFromStores;
   obj1[1] = items1;
-  const items2 = [closure_17(closure_6, obj1), callback2(importDefault(7840), {})];
+  const items2 = [closure_17(closure_6, obj1), callback2(require("Arrow.tsx"), {})];
   obj[1] = items2;
   obj[3] = closure_17(closure_6, obj);
   return callback2(child(4812).PressableHighlight, obj);

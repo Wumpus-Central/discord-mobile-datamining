@@ -254,11 +254,11 @@ const result = require("get ActivityIndicator").fileFinishedImporting("modules/c
 export default function WrappedProfileEffect(skuId) {
   let useThumbnail;
   let thumbnailUrlOverride = skuId;
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  const tmp = importDefault(8744)(skuId.skuId);
-  useThumbnail = require(9298) /* sortEffectLayers */.usePotentiallyRandomizedProfileEffect(tmp);
+  const tmp = require("../useProfileEffect.tsx")(skuId.skuId);
+  useThumbnail = require("../utils.tsx") /* sortEffectLayers */.usePotentiallyRandomizedProfileEffect(tmp);
   if (null == useThumbnail) {
     return null;
   } else {

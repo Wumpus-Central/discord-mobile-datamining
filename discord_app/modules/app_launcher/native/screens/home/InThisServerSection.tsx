@@ -89,7 +89,7 @@ export default function InThisServerSection(arg0) {
     const substr = items.slice(0, 8);
     const mapped = substr.map((appItem) => outer1_5(outer1_8, { appItem, onAppSelected: closure_0 }, appItem.application.id));
     mapped1 = undefined;
-    const found = mapped.filter(require(1351) /* isDiscordFrontendDevelopment */.isNotNullish);
+    const found = mapped.filter(require("../../../../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
     if (dependencyMap != null) {
       const applications = dependencyMap.applications;
       mapped1 = applications.map((arg0) => arg0);
@@ -100,8 +100,8 @@ export default function InThisServerSection(arg0) {
     obj[0] = tmp.headerContainer;
     obj = { variant: "text-lg/bold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp11(1236).intl;
-    obj[2] = intl.string(require(1236) /* getSystemLocale */.t.oJyzCu);
-    const items1 = [callback(require(4281) /* Text */.Text, obj), ];
+    obj[2] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.oJyzCu);
+    const items1 = [callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
     let tmp5Result = null != dependencyMap;
     if (tmp5Result) {
       const obj1 = { style: null, onPress: null, accessibilityRole: "button", children: null };

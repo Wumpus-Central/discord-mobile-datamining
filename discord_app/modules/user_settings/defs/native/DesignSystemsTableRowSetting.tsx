@@ -11,7 +11,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_TABLE_ROW,
   getComponent() {
-    return require(14683) /* MyTableRow */.default;
+    return require("../../design_system/native/UserSettingsDesignSystemTableRow.tsx") /* MyTableRow */.default;
   }
 };
 const route = createToggle.createRoute(obj);

@@ -355,7 +355,7 @@ let result = require("noop").fileFinishedImporting("design/components/Coachmark/
 
 export { Coachmark };
 export const CoachmarkContainer = function CoachmarkContainer(experimental_withBlurBackground) {
-  let obj = require(3997) /* ManaContext */;
+  let obj = require("../../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */;
   let str = "dark";
   if (!experimental_withBlurBackground.experimental_withBlurBackground) {
     str = obj.useThemeContext().theme;
@@ -364,5 +364,5 @@ export const CoachmarkContainer = function CoachmarkContainer(experimental_withB
   obj = {};
   const merged = Object.assign(experimental_withBlurBackground);
   obj[1] = callback2(Coachmark, obj);
-  return callback2(require(3997) /* ManaContext */.ThemeContextProvider, obj);
+  return callback2(require("../../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */.ThemeContextProvider, obj);
 };

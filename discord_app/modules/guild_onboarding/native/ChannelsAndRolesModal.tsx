@@ -88,14 +88,14 @@ export default function ChannelsAndRolesModal(arg0) {
   let importDefault;
   let require;
   ({ guildId: require, defaultTab: importDefault } = arg0);
-  let obj = require(647) /* defaultAreStatesEqual */;
+  let obj = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */;
   const items = [createGuildRecordFromRust];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getGuild(closure_0));
-  const tmp2 = importDefault(5859)(stateFromStores);
+  const tmp2 = require("../useGuildOnboardingAvailable.tsx")(stateFromStores);
   const tmp3 = closure_8;
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   const string = intl.string;
-  const t = require(1236) /* getSystemLocale */.t;
+  const t = require("../../../intl/index.native.tsx") /* getSystemLocale */.t;
   if (tmp2) {
     let stringResult = string(t.h9mGOP);
   } else {
@@ -108,5 +108,5 @@ export default function ChannelsAndRolesModal(arg0) {
       return outer1_8(outer1_11, { guildId: closure_0, defaultTab: closure_1 });
     }
   };
-  return tmp3(importDefault(9596), obj);
+  return tmp3(require("../../main_tabs_v2/native/utils/ModalStackNavigator.tsx"), obj);
 };

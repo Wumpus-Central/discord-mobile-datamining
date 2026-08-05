@@ -30,7 +30,7 @@ function keyExtractor(type) {
   if (type != null) {
     type = type.type;
   }
-  if (type === require(11937) /* RowType */.RowType.ENTRY) {
+  if (type === require("../GuildDirectoryRowGenerator.tsx") /* RowType */.RowType.ENTRY) {
     let guildId = type.entry.guildId;
   } else {
     let type1;
@@ -48,22 +48,22 @@ function renderItem(item) {
   if (item != null) {
     type = item.type;
   }
-  if (require(11937) /* RowType */.RowType.HEADER === type) {
+  if (require("../GuildDirectoryRowGenerator.tsx") /* RowType */.RowType.HEADER === type) {
     let obj = { children: null };
     obj[0] = item.header;
     return callback(GuildDirectoryHeaderRowItem, obj);
   } else if (tmp2(11937).RowType.ENTRY === type) {
     obj = { entry: null };
     obj[0] = item.entry;
-    return callback(importDefault(11619), obj);
+    return callback(require("GuildDirectoryRow.tsx"), obj);
   } else {
-    return callback(importDefault(11620), {});
+    return callback(require("GuildDirectoryPlaceholderRow.tsx"), {});
   }
   tmp2 = require;
 }
 function GuildDirectoryHeaderRowItem(children) {
   const tmp = callback3();
-  return callback(require(4281) /* Text */.Text, { style: callback3().categorySectionText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: children.children });
+  return callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: callback3().categorySectionText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: children.children });
 }
 function GuildDirectoryHeader(guild) {
   guild = guild.guild;
@@ -72,26 +72,26 @@ function GuildDirectoryHeader(guild) {
   let obj = { style: tmp.headerWrapper, children: null };
   obj = { source: null, style: null };
   const hasItem = features.has(constants.HUB);
-  obj[0] = require(11938) /* registerAsset */;
+  obj[0] = require("../../../../../_runtime/11938_registerAsset.js") /* registerAsset */;
   obj[1] = tmp.backgroundImage;
   const items = [callback(closure_6, obj), ];
   obj = { style: tmp.textWrapper, children: null };
   const obj1 = { style: tmp.headerTitle, variant: "heading-xl/extrabold", color: "text-overlay-light", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj1[3] = intl.string(require(1236) /* getSystemLocale */.t.IT7qoC);
-  const items1 = [callback(require(4281) /* Text */.Text, obj1), , , ];
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj1[3] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.IT7qoC);
+  const items1 = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1), , , ];
   const obj2 = { style: items2, variant: "text-sm/medium", color: "text-overlay-light", children: null };
   items2 = [tmp.headerDescription];
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj2[3] = intl2.string(require(1236) /* getSystemLocale */.t["5PoYts"]);
-  items1[1] = callback(require(4281) /* Text */.Text, obj2);
+  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj2[3] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["5PoYts"]);
+  items1[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
   const obj3 = { variant: "primary-overlay", icon: null, text: null, onPress: null };
-  obj3[1] = callback(require(5915) /* MagnifyingGlassIcon */.MagnifyingGlassIcon, { size: "sm", color: "text-strong" });
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj3[2] = intl3.string(require(1236) /* getSystemLocale */.t.nL2wKD);
+  obj3[1] = callback(require("../../../../design/components/Icon/native/redesign/generated/MagnifyingGlassIcon.tsx") /* MagnifyingGlassIcon */.MagnifyingGlassIcon, { size: "sm", color: "text-strong" });
+  const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj3[2] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.nL2wKD);
   obj3[3] = guild.onPressSearch;
-  items1[2] = callback(require(4695) /* Button */.Button, obj3);
-  items1[3] = callback(require(11207) /* TTIFirstContentfulPaint */.TTIFirstContentfulPaint, { label: "hub_directory" });
+  items1[2] = callback(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj3);
+  items1[3] = callback(require("../../../tti_analytics/native/TTIFirstContentfulPaint.tsx") /* TTIFirstContentfulPaint */.TTIFirstContentfulPaint, { label: "hub_directory" });
   obj[1] = items1;
   items[1] = callback2(closure_5, obj);
   obj[1] = items;
@@ -100,7 +100,7 @@ function GuildDirectoryHeader(guild) {
   if (hasItem) {
     const obj4 = { guild: null, onDirectoryPage: true };
     obj4[0] = guild;
-    tmp5Result = callback(importDefault(11939), obj4);
+    tmp5Result = callback(require("../../../hub/native/components/progress_bar/HubProgressHeader.tsx"), obj4);
   }
   children[1] = tmp5Result;
   return callback2(closure_21, { children });
@@ -110,7 +110,7 @@ function GuildDirectoryFooter(hideFooter) {
   let require;
   ({ guild: require, channel } = hideFooter);
   const tmp = callback3();
-  let obj = require(11591) /* useCanManageGuildDirectoryEntry */;
+  let obj = require("../../useCanManageGuildDirectoryEntry.tsx") /* useCanManageGuildDirectoryEntry */;
   let tmp4 = null;
   if (obj.useCanCreateOrAddGuildInDirectory(channel)) {
     tmp4 = null;

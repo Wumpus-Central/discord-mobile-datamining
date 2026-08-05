@@ -33,7 +33,7 @@ export const isGuildEligibleForTierTemplates = function isGuildEligibleForTierTe
 export const useGuildEligibleForTierTemplates = function useGuildEligibleForTierTemplates(guildId) {
   const _require = guildId;
   const items = [createGuildRecordFromRust];
-  return _require(647).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
     const guild = outer1_2.getGuild(closure_0);
     let flag;
     if (guild != null) {

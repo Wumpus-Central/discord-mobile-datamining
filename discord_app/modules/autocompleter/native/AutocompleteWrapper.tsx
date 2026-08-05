@@ -33,10 +33,10 @@ let map1;
 let unpackModuleId;
 const require = arg1;
 function getStickersItemLayout(arg0, arg1) {
-  const obj = { length: require(11672) /* AutocompleteLabel */.AUTOCOMPLETE_STICKER_NODE_SIZE, offset: null, index: null };
-  const result = arg1 * (require(11672) /* AutocompleteLabel */.AUTOCOMPLETE_STICKER_NODE_SIZE + require(11672) /* AutocompleteLabel */.AUTOCOMPLETE_STICKER_NODE_MARGIN);
+  const obj = { length: require("Autocomplete.tsx") /* AutocompleteLabel */.AUTOCOMPLETE_STICKER_NODE_SIZE, offset: null, index: null };
+  const result = arg1 * (require("Autocomplete.tsx") /* AutocompleteLabel */.AUTOCOMPLETE_STICKER_NODE_SIZE + require("Autocomplete.tsx") /* AutocompleteLabel */.AUTOCOMPLETE_STICKER_NODE_MARGIN);
   const diff = arg1 - 1;
-  obj[1] = result + diff * require(11672) /* AutocompleteLabel */.AUTOCOMPLETE_STICKER_NODE_MARGIN;
+  obj[1] = result + diff * require("Autocomplete.tsx") /* AutocompleteLabel */.AUTOCOMPLETE_STICKER_NODE_MARGIN;
   obj[2] = arg1;
   return obj;
 }
@@ -50,24 +50,24 @@ let c27 = "text-sm/semibold";
 const hairlineWidth = StyleSheet.hairlineWidth;
 let closure_29 = createCacheKey.createStyles((borderRadius, borderWidth, borderTopWidth, marginHorizontal, marginBottom) => {
   let obj = { autocompletePositionRelative: { position: "relative" }, autocompleteWrapper: null, autocompleteWrapperAbsolute: null, autocompleteContainer: null, autocomplete: null, sectionDivider: null, sectionTitle: null, stickersAutocompleteList: null, newTag: null };
-  let obj1 = require(500) /* set */;
+  let obj1 = require("../../../utils/PlatformUtils.tsx") /* set */;
   let str = "absolute";
   if (obj1.isAndroid()) {
     str = "relative";
   }
   obj[1] = { position: str, marginHorizontal, marginBottom };
   obj[2] = { left: 0, right: 0, bottom: 0 };
-  obj = { backgroundColor: importDefault(712).colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, borderRadius, borderWidth, borderTopWidth, borderColor: importDefault(712).colors.MOBILE_FLOATING_ACCESSORY_BORDER, overflow: "hidden" };
+  obj = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, borderRadius, borderWidth, borderTopWidth, borderColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_FLOATING_ACCESSORY_BORDER, overflow: "hidden" };
   obj[3] = obj;
-  obj = { flexGrow: 0, flexShrink: 1, backgroundColor: importDefault(712).colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
+  obj = { flexGrow: 0, flexShrink: 1, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
   obj[4] = obj;
-  obj1 = { backgroundColor: importDefault(712).colors.MOBILE_FLOATING_ACCESSORY_BORDER, marginLeft: -16 };
+  obj1 = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_FLOATING_ACCESSORY_BORDER, marginLeft: -16 };
   obj[5] = obj1;
-  obj[6] = { backgroundColor: importDefault(712).colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, paddingLeft: 12, marginVertical: 12, justifyContent: "center" };
-  const obj2 = { backgroundColor: importDefault(712).colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, paddingLeft: 12, marginVertical: 12, justifyContent: "center" };
-  obj[7] = { paddingLeft: 12 - require(11672) /* AutocompleteLabel */.AUTOCOMPLETE_STICKER_NODE_MARGIN, marginBottom: 12, height: require(11672) /* AutocompleteLabel */.AUTOCOMPLETE_STICKER_NODE_SIZE, flexShrink: 0 };
-  const obj3 = { paddingLeft: 12 - require(11672) /* AutocompleteLabel */.AUTOCOMPLETE_STICKER_NODE_MARGIN, marginBottom: 12, height: require(11672) /* AutocompleteLabel */.AUTOCOMPLETE_STICKER_NODE_SIZE, flexShrink: 0 };
-  obj[8] = { backgroundColor: importDefault(712).colors.BADGE_BACKGROUND_BRAND };
+  obj[6] = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, paddingLeft: 12, marginVertical: 12, justifyContent: "center" };
+  const obj2 = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, paddingLeft: 12, marginVertical: 12, justifyContent: "center" };
+  obj[7] = { paddingLeft: 12 - require("Autocomplete.tsx") /* AutocompleteLabel */.AUTOCOMPLETE_STICKER_NODE_MARGIN, marginBottom: 12, height: require("Autocomplete.tsx") /* AutocompleteLabel */.AUTOCOMPLETE_STICKER_NODE_SIZE, flexShrink: 0 };
+  const obj3 = { paddingLeft: 12 - require("Autocomplete.tsx") /* AutocompleteLabel */.AUTOCOMPLETE_STICKER_NODE_MARGIN, marginBottom: 12, height: require("Autocomplete.tsx") /* AutocompleteLabel */.AUTOCOMPLETE_STICKER_NODE_SIZE, flexShrink: 0 };
+  obj[8] = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BADGE_BACKGROUND_BRAND };
   return obj;
 });
 let closure_31 = { resultCount: 0, stickerResults: [], nonStickerResults: [], hasStickerResults: false, hasNonStickerResults: false };

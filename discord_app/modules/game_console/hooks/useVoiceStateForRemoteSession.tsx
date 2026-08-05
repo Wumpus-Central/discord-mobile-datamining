@@ -8,7 +8,7 @@ const result = require("set").fileFinishedImporting("modules/game_console/hooks/
 
 export default function useVoiceStateForRemoteSession() {
   const items = [fetchFingerprint, updateVoiceState, set];
-  return require(589) /* initialize */.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
     id = id.getId();
     voiceStateForSession = voiceStateForSession.getVoiceStateForSession(id, remoteSessionId.getRemoteSessionId());
     return voiceStateForSession;

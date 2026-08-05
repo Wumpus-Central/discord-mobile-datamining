@@ -21,10 +21,10 @@ export default function NavigateForwardButton(arg0) {
   const tmp = createCacheKey();
   let obj = { style: tmp.container, onPress, children: null };
   obj = { style: tmp.text, variant: "text-md/semibold", color: "interactive-text-active", children: text };
-  const items = [callback(require(4281) /* Text */.Text, obj), ];
+  const items = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
   obj = { source: null };
-  obj[0] = importDefault(14358);
-  items[1] = callback(require(1297) /* Button */.Icon, obj);
+  obj[0] = require("../../../../../_runtime/14358_registerAsset.js");
+  items[1] = callback(require("../../../../design/void/native.tsx") /* Button */.Icon, obj);
   obj[2] = items;
-  return callback2(require(4812) /* PressableBase */.PressableHighlight, obj);
+  return callback2(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableHighlight, obj);
 };

@@ -16,13 +16,13 @@ let closure_5 = keys.create((arg0) => {
   let thermalState = dependencyMap;
   if (obj.isAndroid()) {
     if (tmpResult.getSystemVersionMajor() >= 29) {
-      thermalState = importDefault(10525).getThermalState();
+      thermalState = require("../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceThermalStateModule.tsx").getThermalState();
       let resolved = Promise.resolve(thermalState);
-      const obj3 = importDefault(10525);
+      const obj3 = require("../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceThermalStateModule.tsx");
     } else {
       resolved = Promise.resolve(undefined);
     }
-    tmpResult = _require(4265);
+    tmpResult = _require("../../utils/native/DeviceUtils.tsx");
   } else {
     const DCDDeviceThermalStateManager = NativeModules.DCDDeviceThermalStateManager;
     const thermalState1 = DCDDeviceThermalStateManager.getThermalState();

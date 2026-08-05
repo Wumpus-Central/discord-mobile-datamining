@@ -41,7 +41,7 @@ export default function PremiumGiftModal(analyticsLocations) {
   let callback;
   c4 = undefined;
   ({ planInterval, order } = analyticsLocations);
-  const tmp3 = importDefault(5598)(() => recipientUserId(_undefined2[21]).v4());
+  const tmp3 = require("../../../../hooks/useInitialValue.tsx")(() => recipientUserId(_undefined2[21]).v4());
   callback = tmp3;
   let obj = c4;
   let items = [tmp3, analyticsLocation, analyticsLocations];
@@ -177,7 +177,7 @@ export default function PremiumGiftModal(analyticsLocations) {
     const tmp11Result5 = recipientUserId(5238);
     if (tmp11Result6.isPremiumGiftingSupported()) {
       const obj7 = { value: null, children: null };
-      obj7[0] = importDefault(5610)(analyticsLocations).analyticsLocations;
+      obj7[0] = require("../../../app_analytics/useAnalyticsLocations.tsx")(analyticsLocations).analyticsLocations;
       const obj8 = { basePurchaseAnalytics: null, recipientUserId: null, onClose: null, setCurrentAnalyticsStep: null, premiumType: null, planInterval: null, initialOrder: null, children: null };
       obj8[0] = tmp4;
       obj8[1] = recipientUserId;

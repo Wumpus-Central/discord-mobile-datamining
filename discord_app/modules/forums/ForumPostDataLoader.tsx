@@ -250,10 +250,10 @@ prototype["delete"] = function delete(arg0) {
   delete tmp2[tmp];
 };
 prototype["hasNext"] = function hasNext() {
-  return !importDefault(12).isEmpty(this._set);
+  return !require("../../../_runtime/00012_apply.js").isEmpty(this._set);
 };
 prototype["next"] = function next() {
-  return importDefault(11).keys(this._set)[0];
+  return require("../../utils/SnowflakeUtils.tsx").keys(this._set)[0];
 };
 class RequestQueue {
   constructor() {
@@ -417,7 +417,7 @@ export const useFirstForumPostMessage = function useFirstForumPostMessage(stateF
 };
 export const useMostRecentForumMessage = function useMostRecentForumMessage(arg0, arg1) {
   const _require = arg1;
-  let obj = _require(589);
+  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
   const items = [closure_7];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => outer1_7.getMessageState(id.id));
   obj = { loaded: stateFromStoresObject.loaded, mostRecentMessage: stateFromStoresObject.message };

@@ -19,9 +19,9 @@ function fetchFingerprint(arg0) {
   if (arg0 === undefined) {
     flag = true;
   }
-  const Storage = require(595) /* Storage */.Storage;
+  const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
   let closure_21 = Storage.get(fingerprint);
-  const Storage2 = require(595) /* Storage */.Storage;
+  const Storage2 = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
   let value = Storage2.get(analytics_installation);
   if (null == value) {
     const Storage3 = tmp(595).Storage;
@@ -52,7 +52,7 @@ function fetchFingerprint(arg0) {
       if (flag) {
         if (!handoffAvailable.isHandoffAvailable()) {
           obj = {};
-          const superPropertiesBase64 = importDefault(698).getSuperPropertiesBase64();
+          const superPropertiesBase64 = require("../utils/AnalyticsUtils.tsx").getSuperPropertiesBase64();
           if (null != superPropertiesBase64) {
             obj["X-Super-Properties"] = superPropertiesBase64;
           }
@@ -67,7 +67,7 @@ function fetchFingerprint(arg0) {
           obj[0] = true;
           obj[1] = obj;
           const obj1 = { location: null };
-          const obj4 = importDefault(698);
+          const obj4 = require("../utils/AnalyticsUtils.tsx");
           obj1[0] = tmp(1222).getFingerprintLocation();
           obj[2] = obj1;
           const experiments = tmpResult.fetchExperiments(obj);
@@ -113,12 +113,12 @@ function fetchFingerprint(arg0) {
 }
 function handleLogout(isSwitchingAccount) {
   let obj = importAll(707);
-  const Storage = require(595) /* Storage */.Storage;
+  const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
   obj = { tokenManagerHasToken: null != obj.getToken(), storageHasToken: null != Storage.get(closure_12) };
   tmp4.verbose("handleLogout called.", obj);
   const tmp2 = null != obj.getToken();
   const obj3 = importAll(707);
-  const Storage2 = require(595) /* Storage */.Storage;
+  const Storage2 = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
   obj = { tokenManagerHasToken: null != importAll(707).getToken(), storageHasToken: null != Storage2.get(closure_12) };
   tmp4.verbose("removeAuthToken called.", obj);
   const tmp5 = null != importAll(707).getToken();
@@ -141,7 +141,7 @@ function handleLogout(isSwitchingAccount) {
     }
     fetchFingerprint();
   }
-  const PersistedStore = importDefault(589).PersistedStore;
+  const PersistedStore = require("../../discord_common/js/packages/flux/index.tsx").PersistedStore;
   const obj1 = { omit: ["InstallationManagerStore", "AgeGateStore", "NativePermissionsStore", "MultiAccountStore", "DraftStore", "OverlayStoreV2", "StreamerModeStore", "LoginRequiredActionStore", "LayoutStore", "OverlaySettingsStore", "ApexExperimentStore", "AccessibilityStore"], type: null };
   isSwitchingAccount = undefined;
   if (isSwitchingAccount != null) {
@@ -157,7 +157,7 @@ function handleLogout(isSwitchingAccount) {
   const result = Store.removeAllConditionalListeners();
   clearAll.clearAll();
   removeTokenResult = importAll(707).removeToken();
-  importDefault(1208).clearUser();
+  require("../utils/SentryUtils.native.tsx").clearUser();
   const Storage4 = tmp3(595).Storage;
   Storage4.remove(user_id_cache);
   let c17 = null;
@@ -214,9 +214,9 @@ class AuthenticationStore extends Store {
 }
 const prototype = AuthenticationStore.prototype;
 prototype["initialize"] = function initialize() {
-  const Storage = require(595) /* Storage */.Storage;
+  const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
   let closure_17 = Storage.get(user_id_cache);
-  const Storage2 = require(595) /* Storage */.Storage;
+  const Storage2 = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
   let value = Storage2.get(analytics_installation);
   if (null == value) {
     const Storage3 = tmp(595).Storage;
@@ -264,10 +264,10 @@ prototype["getStaticAuthSessionId"] = function getStaticAuthSessionId() {
   return c20;
 };
 prototype["getToken"] = function getToken() {
-  return require(1352) /* getToken */.getToken();
+  return require("../utils/AuthenticationUtils.tsx") /* getToken */.getToken();
 };
 prototype["isAuthenticated"] = function isAuthenticated() {
-  return require(1352) /* getToken */.isAuthenticated();
+  return require("../utils/AuthenticationUtils.tsx") /* getToken */.isAuthenticated();
 };
 prototype["getFingerprint"] = function getFingerprint() {
   return c21;
@@ -297,7 +297,7 @@ prototype["getLoginInstanceId"] = function getLoginInstanceId() {
   return closure_5;
 };
 prototype["hasTOTPEnabled"] = function hasTOTPEnabled() {
-  return closure_27.includes(require(1906) /* PermissionOverwriteType */.AuthenticatorType.TOTP);
+  return closure_27.includes(require("../flow/Server.tsx") /* PermissionOverwriteType */.AuthenticatorType.TOTP);
 };
 prototype["getCredentials"] = function getCredentials() {
   if (null == closure_4) {
@@ -337,14 +337,14 @@ const authenticationStore = new AuthenticationStore(require("dispatcher"), {
     ({ user, analyticsToken, auth, apexExperiments } = arg0);
     ({ sessionId, authSessionIdHash, staticAuthSessionId } = arg0);
     let obj = importAll(707);
-    const Storage = require(595) /* Storage */.Storage;
+    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     obj = { tokenManagerHasToken: null != obj.getToken(), storageHasToken: null != Storage.get(closure_12) };
     require.verbose("handleConnectionOpen called", obj);
     const tmp = importAll;
     const tmp3 = null != obj.getToken();
     ({ id, username, email } = user);
-    importDefault(1208).setUser(id, username, email, importDefault(11696)(user));
-    const obj3 = importDefault(1208);
+    require("../utils/SentryUtils.native.tsx").setUser(id, username, email, require("../modules/user/isStaffFromRawUser.tsx")(user));
+    const obj3 = require("../utils/SentryUtils.native.tsx");
     tmp(707).setAnalyticsToken(analyticsToken);
     id = user.id;
     if (undefined !== auth) {
@@ -386,13 +386,13 @@ const authenticationStore = new AuthenticationStore(require("dispatcher"), {
     let username;
     ({ user, analyticsToken } = arg0);
     ({ sessionId, token } = arg0);
-    let obj = importDefault(1208);
+    let obj = require("../utils/SentryUtils.native.tsx");
     ({ id, username, email } = user);
-    obj.setUser(id, username, email, importDefault(11696)(user));
+    obj.setUser(id, username, email, require("../modules/user/isStaffFromRawUser.tsx")(user));
     const id2 = user.id;
     const obj2 = importAll(707);
     const tmp = importDefault;
-    const Storage = require(595) /* Storage */.Storage;
+    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     obj = { tokenManagerHasToken: null != importAll(707).getToken(), storageHasToken: null != Storage.get(closure_12) };
     importAll.verbose("setAuthToken called.", obj);
     let tmp8 = null != id2;
@@ -421,25 +421,25 @@ const authenticationStore = new AuthenticationStore(require("dispatcher"), {
     code = code.code;
     const combined = "handleConnectionClosed called with code " + code + ".";
     let obj = importAll(707);
-    const Storage = require(595) /* Storage */.Storage;
+    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     obj = { tokenManagerHasToken: null != obj.getToken(), storageHasToken: null != Storage.get(closure_12) };
     require.verbose(combined, obj);
     if (4004 === code) {
       if (c26) {
         c26 = true;
         handleLogout();
-        importDefault(709).wait(() => {
+        require("../Dispatcher.tsx").wait(() => {
           callback(1222).transitionTo(constants.REGISTER);
         });
       } else {
         obj = { user_id: null };
         const Storage2 = tmp4(595).Storage;
         obj[0] = Storage2.get(user_id_cache);
-        importDefault(698).track(constants.APP_USER_DEAUTHENTICATED, obj);
+        require("../utils/AnalyticsUtils.tsx").track(constants.APP_USER_DEAUTHENTICATED, obj);
         handleLogout();
         const _setImmediate = setImmediate;
         setImmediate(() => callback(1222).transitionTo(constants.DEFAULT_LOGGED_OUT));
-        const obj3 = importDefault(698);
+        const obj3 = require("../utils/AnalyticsUtils.tsx");
       }
     }
   },
@@ -457,7 +457,7 @@ const authenticationStore = new AuthenticationStore(require("dispatcher"), {
   LOGIN_SUCCESS: function handleLoginSuccess(token) {
     const NONE = LoginStates.NONE;
     let obj = importAll(707);
-    const Storage = require(595) /* Storage */.Storage;
+    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     obj = { tokenManagerHasToken: null != obj.getToken(), storageHasToken: null != Storage.get(closure_12) };
     tmp4.verbose("setAuthToken called.", obj);
     const tmp = null != obj.getToken();
@@ -466,7 +466,7 @@ const authenticationStore = new AuthenticationStore(require("dispatcher"), {
     importAll(707).setToken(token.token, undefined);
     let closure_22 = c21;
     c21 = null;
-    const Storage2 = require(595) /* Storage */.Storage;
+    const Storage2 = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     Storage2.remove(fingerprint);
     let c28 = "";
     let c29 = false;
@@ -573,7 +573,7 @@ const authenticationStore = new AuthenticationStore(require("dispatcher"), {
         items.push({ type: "sms" });
       }
       let obj = importAll(707);
-      const Storage = require(595) /* Storage */.Storage;
+      const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
       obj = { tokenManagerHasToken: null, storageHasToken: null };
       obj[0] = null != obj.getToken();
       obj[1] = null != Storage.get(closure_12);
@@ -601,17 +601,17 @@ const authenticationStore = new AuthenticationStore(require("dispatcher"), {
       if (null != fingerprint) {
         let extractIdResult = null;
         if (null != fingerprint) {
-          extractIdResult = require(513) /* extractId */.extractId(fingerprint);
-          const obj6 = require(513) /* extractId */;
+          extractIdResult = require("../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx") /* extractId */.extractId(fingerprint);
+          const obj6 = require("../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx") /* extractId */;
         }
         let obj = { old_fingerprint: null, new_fingerprint: null };
         obj[0] = extractIdResult;
-        const obj5 = importDefault(698);
-        obj[1] = require(513) /* extractId */.extractId(fingerprint);
+        const obj5 = require("../utils/AnalyticsUtils.tsx");
+        obj[1] = require("../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx") /* extractId */.extractId(fingerprint);
         obj5.track(constants.USER_FINGERPRINT_CHANGED, obj);
-        const Storage = require(595) /* Storage */.Storage;
+        const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
         const result = Storage.set(fingerprint, fingerprint);
-        const obj8 = require(513) /* extractId */;
+        const obj8 = require("../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx") /* extractId */;
       } else {
         fetchFingerprint();
       }
@@ -621,13 +621,13 @@ const authenticationStore = new AuthenticationStore(require("dispatcher"), {
         tmp2 = fingerprint !== fingerprint;
       }
       if (tmp2) {
-        obj = importDefault(698);
+        obj = require("../utils/AnalyticsUtils.tsx");
         obj = { fingerprint: null, dropped_fingerprint: null };
-        obj[0] = require(513) /* extractId */.extractId(fingerprint);
-        const obj3 = require(513) /* extractId */;
-        obj[1] = require(513) /* extractId */.extractId(fingerprint);
+        obj[0] = require("../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx") /* extractId */.extractId(fingerprint);
+        const obj3 = require("../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx") /* extractId */;
+        obj[1] = require("../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx") /* extractId */.extractId(fingerprint);
         obj.track(constants.EXTERNAL_FINGERPRINT_DROPPED, obj);
-        const obj4 = require(513) /* extractId */;
+        const obj4 = require("../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx") /* extractId */;
       }
     }
   },
@@ -639,13 +639,13 @@ const authenticationStore = new AuthenticationStore(require("dispatcher"), {
       }
     }
     if (obj.canUseInstallationId()) {
-      const Storage = require(595) /* Storage */.Storage;
+      const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
       const result = Storage.set(analytics_installation, installation);
     }
   },
   REGISTER_SUCCESS: function handleRegisterSuccess(token) {
     let obj = importAll(707);
-    const Storage = require(595) /* Storage */.Storage;
+    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     obj = { tokenManagerHasToken: null != obj.getToken(), storageHasToken: null != Storage.get(closure_12) };
     tmp4.verbose("setAuthToken called.", obj);
     const tmp = null != obj.getToken();
@@ -654,7 +654,7 @@ const authenticationStore = new AuthenticationStore(require("dispatcher"), {
     importAll(707).setToken(token.token, undefined);
     let closure_22 = c21;
     c21 = null;
-    const Storage2 = require(595) /* Storage */.Storage;
+    const Storage2 = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     Storage2.remove(fingerprint);
   },
   FORGOT_PASSWORD_REQUEST: function handleForgotPasswordRequest() {
@@ -666,12 +666,12 @@ const authenticationStore = new AuthenticationStore(require("dispatcher"), {
   UPDATE_TOKEN: function handleUpdateToken(userId) {
     userId = userId.userId;
     let obj = importAll(707);
-    const Storage = require(595) /* Storage */.Storage;
+    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     obj = { tokenManagerHasToken: null != obj.getToken(), storageHasToken: null != Storage.get(closure_12) };
     require.verbose("handleUpdateToken called", obj);
     const tmp3 = null != obj.getToken();
     const obj3 = importAll(707);
-    const Storage2 = require(595) /* Storage */.Storage;
+    const Storage2 = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     obj = { tokenManagerHasToken: null != importAll(707).getToken(), storageHasToken: null != Storage2.get(closure_12) };
     require.verbose("setAuthToken called.", obj);
     let tmp8 = null != userId;
@@ -691,7 +691,7 @@ const authenticationStore = new AuthenticationStore(require("dispatcher"), {
   },
   EXPERIMENTS_FETCH(withGuildExperiments) {
     let obj = {};
-    const superPropertiesBase64 = importDefault(698).getSuperPropertiesBase64();
+    const superPropertiesBase64 = require("../utils/AnalyticsUtils.tsx").getSuperPropertiesBase64();
     if (null != superPropertiesBase64) {
       obj["X-Super-Properties"] = superPropertiesBase64;
     }
@@ -701,11 +701,11 @@ const authenticationStore = new AuthenticationStore(require("dispatcher"), {
     if (null != c23) {
       obj["X-Installation-ID"] = c23;
     }
-    const obj2 = importDefault(698);
+    const obj2 = require("../utils/AnalyticsUtils.tsx");
     obj = { withGuildExperiments: withGuildExperiments.withGuildExperiments, headers: obj, context: null };
     obj = { location: null };
-    let obj3 = require(13358) /* fetchExperiments */;
-    obj[0] = require(1222) /* transitionTo */.getFingerprintLocation();
+    let obj3 = require("../modules/experiments/fetchExperiments.tsx") /* fetchExperiments */;
+    obj[0] = require("../modules/routing/router_utils.tsx") /* transitionTo */.getFingerprintLocation();
     obj[2] = obj;
     const experiments = obj3.fetchExperiments(obj);
     let closure_33 = experiments.then((body) => {
@@ -747,13 +747,13 @@ const authenticationStore = new AuthenticationStore(require("dispatcher"), {
     if (undefined !== user.authenticator_types) {
       const authenticator_types = user.authenticator_types;
     }
-    const Storage = require(595) /* Storage */.Storage;
+    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     const result = Storage.set(user_id_cache, user.id);
   },
   AGE_GATE_LOGOUT_UNDERAGE_NEW_USER: function handleAgeGateUnderage() {
     let c26 = true;
     handleLogout();
-    importDefault(709).wait(() => {
+    require("../Dispatcher.tsx").wait(() => {
       callback(1222).transitionTo(constants.REGISTER);
     });
   },
@@ -770,13 +770,13 @@ const authenticationStore = new AuthenticationStore(require("dispatcher"), {
     let c30 = null;
     let c35 = false;
     let c5 = null;
-    if (error instanceof importDefault(4185)) {
+    if (error instanceof require("../errors/APIError.tsx")) {
       if (null != obj.getAuthenticationErrorsFromAPIError(error).date_of_birth) {
         let NONE = LoginStates.LOGIN_AGE_GATE;
       } else {
         NONE = LoginStates.NONE;
       }
-      obj = require(8286) /* getAuthenticationErrorsFromAPIError */;
+      obj = require("../modules/auth/getAuthenticationErrorsFromAPIError.tsx") /* getAuthenticationErrorsFromAPIError */;
     } else {
       NONE = LoginStates.NONE;
     }
@@ -800,14 +800,14 @@ let obj = {
     ({ user, analyticsToken, auth, apexExperiments } = arg0);
     ({ sessionId, authSessionIdHash, staticAuthSessionId } = arg0);
     let obj = importAll(707);
-    const Storage = require(595) /* Storage */.Storage;
+    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     obj = { tokenManagerHasToken: null != obj.getToken(), storageHasToken: null != Storage.get(closure_12) };
     require.verbose("handleConnectionOpen called", obj);
     const tmp = importAll;
     const tmp3 = null != obj.getToken();
     ({ id, username, email } = user);
-    importDefault(1208).setUser(id, username, email, importDefault(11696)(user));
-    const obj3 = importDefault(1208);
+    require("../utils/SentryUtils.native.tsx").setUser(id, username, email, require("../modules/user/isStaffFromRawUser.tsx")(user));
+    const obj3 = require("../utils/SentryUtils.native.tsx");
     tmp(707).setAnalyticsToken(analyticsToken);
     id = user.id;
     if (undefined !== auth) {
@@ -849,13 +849,13 @@ let obj = {
     let username;
     ({ user, analyticsToken } = arg0);
     ({ sessionId, token } = arg0);
-    let obj = importDefault(1208);
+    let obj = require("../utils/SentryUtils.native.tsx");
     ({ id, username, email } = user);
-    obj.setUser(id, username, email, importDefault(11696)(user));
+    obj.setUser(id, username, email, require("../modules/user/isStaffFromRawUser.tsx")(user));
     const id2 = user.id;
     const obj2 = importAll(707);
     const tmp = importDefault;
-    const Storage = require(595) /* Storage */.Storage;
+    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     obj = { tokenManagerHasToken: null != importAll(707).getToken(), storageHasToken: null != Storage.get(closure_12) };
     importAll.verbose("setAuthToken called.", obj);
     let tmp8 = null != id2;
@@ -884,25 +884,25 @@ let obj = {
     code = code.code;
     const combined = "handleConnectionClosed called with code " + code + ".";
     let obj = importAll(707);
-    const Storage = require(595) /* Storage */.Storage;
+    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     obj = { tokenManagerHasToken: null != obj.getToken(), storageHasToken: null != Storage.get(closure_12) };
     require.verbose(combined, obj);
     if (4004 === code) {
       if (c26) {
         c26 = true;
         handleLogout();
-        importDefault(709).wait(() => {
+        require("../Dispatcher.tsx").wait(() => {
           callback(1222).transitionTo(constants.REGISTER);
         });
       } else {
         obj = { user_id: null };
         const Storage2 = tmp4(595).Storage;
         obj[0] = Storage2.get(user_id_cache);
-        importDefault(698).track(constants.APP_USER_DEAUTHENTICATED, obj);
+        require("../utils/AnalyticsUtils.tsx").track(constants.APP_USER_DEAUTHENTICATED, obj);
         handleLogout();
         const _setImmediate = setImmediate;
         setImmediate(() => callback(1222).transitionTo(constants.DEFAULT_LOGGED_OUT));
-        const obj3 = importDefault(698);
+        const obj3 = require("../utils/AnalyticsUtils.tsx");
       }
     }
   },
@@ -920,7 +920,7 @@ let obj = {
   LOGIN_SUCCESS: function handleLoginSuccess(token) {
     const NONE = LoginStates.NONE;
     let obj = importAll(707);
-    const Storage = require(595) /* Storage */.Storage;
+    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     obj = { tokenManagerHasToken: null != obj.getToken(), storageHasToken: null != Storage.get(closure_12) };
     tmp4.verbose("setAuthToken called.", obj);
     const tmp = null != obj.getToken();
@@ -929,7 +929,7 @@ let obj = {
     importAll(707).setToken(token.token, undefined);
     let closure_22 = c21;
     c21 = null;
-    const Storage2 = require(595) /* Storage */.Storage;
+    const Storage2 = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     Storage2.remove(fingerprint);
     let c28 = "";
     let c29 = false;
@@ -1036,7 +1036,7 @@ let obj = {
         items.push({ type: "sms" });
       }
       let obj = importAll(707);
-      const Storage = require(595) /* Storage */.Storage;
+      const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
       obj = { tokenManagerHasToken: null, storageHasToken: null };
       obj[0] = null != obj.getToken();
       obj[1] = null != Storage.get(closure_12);
@@ -1064,17 +1064,17 @@ let obj = {
       if (null != fingerprint) {
         let extractIdResult = null;
         if (null != fingerprint) {
-          extractIdResult = require(513) /* extractId */.extractId(fingerprint);
-          const obj6 = require(513) /* extractId */;
+          extractIdResult = require("../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx") /* extractId */.extractId(fingerprint);
+          const obj6 = require("../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx") /* extractId */;
         }
         let obj = { old_fingerprint: null, new_fingerprint: null };
         obj[0] = extractIdResult;
-        const obj5 = importDefault(698);
-        obj[1] = require(513) /* extractId */.extractId(fingerprint);
+        const obj5 = require("../utils/AnalyticsUtils.tsx");
+        obj[1] = require("../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx") /* extractId */.extractId(fingerprint);
         obj5.track(constants.USER_FINGERPRINT_CHANGED, obj);
-        const Storage = require(595) /* Storage */.Storage;
+        const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
         const result = Storage.set(fingerprint, fingerprint);
-        const obj8 = require(513) /* extractId */;
+        const obj8 = require("../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx") /* extractId */;
       } else {
         fetchFingerprint();
       }
@@ -1084,13 +1084,13 @@ let obj = {
         tmp2 = fingerprint !== fingerprint;
       }
       if (tmp2) {
-        obj = importDefault(698);
+        obj = require("../utils/AnalyticsUtils.tsx");
         obj = { fingerprint: null, dropped_fingerprint: null };
-        obj[0] = require(513) /* extractId */.extractId(fingerprint);
-        const obj3 = require(513) /* extractId */;
-        obj[1] = require(513) /* extractId */.extractId(fingerprint);
+        obj[0] = require("../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx") /* extractId */.extractId(fingerprint);
+        const obj3 = require("../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx") /* extractId */;
+        obj[1] = require("../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx") /* extractId */.extractId(fingerprint);
         obj.track(constants.EXTERNAL_FINGERPRINT_DROPPED, obj);
-        const obj4 = require(513) /* extractId */;
+        const obj4 = require("../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx") /* extractId */;
       }
     }
   },
@@ -1102,13 +1102,13 @@ let obj = {
       }
     }
     if (obj.canUseInstallationId()) {
-      const Storage = require(595) /* Storage */.Storage;
+      const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
       const result = Storage.set(analytics_installation, installation);
     }
   },
   REGISTER_SUCCESS: function handleRegisterSuccess(token) {
     let obj = importAll(707);
-    const Storage = require(595) /* Storage */.Storage;
+    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     obj = { tokenManagerHasToken: null != obj.getToken(), storageHasToken: null != Storage.get(closure_12) };
     tmp4.verbose("setAuthToken called.", obj);
     const tmp = null != obj.getToken();
@@ -1117,7 +1117,7 @@ let obj = {
     importAll(707).setToken(token.token, undefined);
     let closure_22 = c21;
     c21 = null;
-    const Storage2 = require(595) /* Storage */.Storage;
+    const Storage2 = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     Storage2.remove(fingerprint);
   },
   FORGOT_PASSWORD_REQUEST: function handleForgotPasswordRequest() {
@@ -1129,12 +1129,12 @@ let obj = {
   UPDATE_TOKEN: function handleUpdateToken(userId) {
     userId = userId.userId;
     let obj = importAll(707);
-    const Storage = require(595) /* Storage */.Storage;
+    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     obj = { tokenManagerHasToken: null != obj.getToken(), storageHasToken: null != Storage.get(closure_12) };
     require.verbose("handleUpdateToken called", obj);
     const tmp3 = null != obj.getToken();
     const obj3 = importAll(707);
-    const Storage2 = require(595) /* Storage */.Storage;
+    const Storage2 = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     obj = { tokenManagerHasToken: null != importAll(707).getToken(), storageHasToken: null != Storage2.get(closure_12) };
     require.verbose("setAuthToken called.", obj);
     let tmp8 = null != userId;
@@ -1154,7 +1154,7 @@ let obj = {
   },
   EXPERIMENTS_FETCH(withGuildExperiments) {
     let obj = {};
-    const superPropertiesBase64 = importDefault(698).getSuperPropertiesBase64();
+    const superPropertiesBase64 = require("../utils/AnalyticsUtils.tsx").getSuperPropertiesBase64();
     if (null != superPropertiesBase64) {
       obj["X-Super-Properties"] = superPropertiesBase64;
     }
@@ -1164,11 +1164,11 @@ let obj = {
     if (null != c23) {
       obj["X-Installation-ID"] = c23;
     }
-    const obj2 = importDefault(698);
+    const obj2 = require("../utils/AnalyticsUtils.tsx");
     obj = { withGuildExperiments: withGuildExperiments.withGuildExperiments, headers: obj, context: null };
     obj = { location: null };
-    let obj3 = require(13358) /* fetchExperiments */;
-    obj[0] = require(1222) /* transitionTo */.getFingerprintLocation();
+    let obj3 = require("../modules/experiments/fetchExperiments.tsx") /* fetchExperiments */;
+    obj[0] = require("../modules/routing/router_utils.tsx") /* transitionTo */.getFingerprintLocation();
     obj[2] = obj;
     const experiments = obj3.fetchExperiments(obj);
     let closure_33 = experiments.then((body) => {
@@ -1210,13 +1210,13 @@ let obj = {
     if (undefined !== user.authenticator_types) {
       const authenticator_types = user.authenticator_types;
     }
-    const Storage = require(595) /* Storage */.Storage;
+    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     const result = Storage.set(user_id_cache, user.id);
   },
   AGE_GATE_LOGOUT_UNDERAGE_NEW_USER: function handleAgeGateUnderage() {
     let c26 = true;
     handleLogout();
-    importDefault(709).wait(() => {
+    require("../Dispatcher.tsx").wait(() => {
       callback(1222).transitionTo(constants.REGISTER);
     });
   },
@@ -1233,13 +1233,13 @@ let obj = {
     let c30 = null;
     let c35 = false;
     let c5 = null;
-    if (error instanceof importDefault(4185)) {
+    if (error instanceof require("../errors/APIError.tsx")) {
       if (null != obj.getAuthenticationErrorsFromAPIError(error).date_of_birth) {
         let NONE = LoginStates.LOGIN_AGE_GATE;
       } else {
         NONE = LoginStates.NONE;
       }
-      obj = require(8286) /* getAuthenticationErrorsFromAPIError */;
+      obj = require("../modules/auth/getAuthenticationErrorsFromAPIError.tsx") /* getAuthenticationErrorsFromAPIError */;
     } else {
       NONE = LoginStates.NONE;
     }

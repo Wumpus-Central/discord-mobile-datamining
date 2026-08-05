@@ -19,7 +19,7 @@ let closure_8 = require("noop").memo((perk) => {
   let selectedTier;
   perk = perk.perk;
   ({ selectedTier, selectedProductId, analyticsLocations, applicationId, onPaymentSuccess, onPaymentDismiss } = perk);
-  let obj = require(7570) /* PremiumTypes */;
+  let obj = require("../hooks/useBuyNitroPlanSelection.tsx") /* PremiumTypes */;
   const buyNitroPlanSelection = obj.useBuyNitroPlanSelection({ tier: selectedTier, productId: selectedProductId });
   const detail = perk.detail;
   let tmp6Result = null;
@@ -33,7 +33,7 @@ let closure_8 = require("noop").memo((perk) => {
     obj[1] = tmp.illustration;
     obj[2] = callback(Image, obj);
     const obj1 = { spacing: null, children: null };
-    obj1[0] = importDefault(712).space.PX_12;
+    obj1[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12;
     tmp6Result = null != buyNitroPlanSelection.selection.item;
     if (tmp6Result) {
       const obj2 = { planSelection: null, item: null, centered: true };
@@ -44,7 +44,7 @@ let closure_8 = require("noop").memo((perk) => {
     const items = [tmp6Result, ];
     const obj3 = { planSelection: null, location: null, sourceAnalyticsLocations: null, applicationId: null, onHostSheetClose: null, onPaymentSuccess: null, onPaymentDismiss: null };
     obj3[0] = buyNitroPlanSelection;
-    obj3[1] = importDefault(5630).PREMIUM_MARKETING_PERK_CARD;
+    obj3[1] = require("../../../app_analytics/AnalyticsLocation.tsx").PREMIUM_MARKETING_PERK_CARD;
     obj3[2] = analyticsLocations;
     obj3[3] = applicationId;
     obj3[4] = function onHostSheetClose() {
@@ -52,19 +52,19 @@ let closure_8 = require("noop").memo((perk) => {
     };
     obj3[5] = onPaymentSuccess;
     obj3[6] = onPaymentDismiss;
-    items[1] = callback(importDefault(7658), obj3);
+    items[1] = callback(require("purchase_button/BuyNitroPurchaseButton.tsx"), obj3);
     obj1[1] = items;
     obj[3] = closure_5(tmp2(4693).Stack, obj1);
     tmp6Result = tmp6(tmp2(7654).PromoSheet, obj);
     const tmp8 = closure_5;
-    const tmp9Result = importDefault(7658);
+    const tmp9Result = require("purchase_button/BuyNitroPurchaseButton.tsx");
   }
   return tmp6Result;
 });
 const result = require("jsxProd").fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroPerkDetails.tsx");
 
 export const openBuyNitroPerkDetails = function openBuyNitroPerkDetails(perk, arg1) {
-  let obj = require(4253) /* ACTION_SHEET_HEIGHT_HALF */;
+  let obj = require("../../../action_sheet/native/ActionSheetActionCreators.tsx") /* ACTION_SHEET_HEIGHT_HALF */;
   obj = { content: null, key: null };
   obj = { perk };
   const merged = Object.assign(arg1);

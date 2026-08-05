@@ -28,7 +28,7 @@ export const UserProfileAnalyticsProvider = (children) => {
     ref1.current = openedAt;
     ref.current = undefined;
   }
-  obj = { analyticsLocations: importDefault(5610)().analyticsLocations, value };
+  obj = { analyticsLocations: require("../app_analytics/useAnalyticsLocations.tsx")().analyticsLocations, value };
   closure_6 = obj.useRef(obj);
   const effect = obj.useEffect(() => {
     closure_6.current = obj;

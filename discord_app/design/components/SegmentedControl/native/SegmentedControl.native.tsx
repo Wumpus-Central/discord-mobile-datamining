@@ -15,10 +15,10 @@ let c8 = 0.04;
 let closure_9 = { mass: 0.3, damping: 13, stiffness: 100, restDisplacementThreshold: 0.001, overshootClamping: true };
 let closure_10 = createCacheKey.createStyles((borderRadius, paddingVertical) => {
   let obj = { scrollContentContainer: { flexGrow: 1 }, controlsContainer: null, indicatorContainer: null, indicator: null };
-  obj = { backgroundColor: importDefault(712).colors.MOBILE_SEGMENTED_CONTROL_BACKGROUND, borderRadius: borderRadius + paddingVertical, paddingVertical, display: "flex", flexDirection: "row", alignItems: "center" };
+  obj = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_SEGMENTED_CONTROL_BACKGROUND, borderRadius: borderRadius + paddingVertical, paddingVertical, display: "flex", flexDirection: "row", alignItems: "center" };
   obj[1] = obj;
   obj[2] = { position: "absolute", width: "100%", height: "100%", borderRadius, flexDirection: "row" };
-  obj = { flex: 1, backgroundColor: importDefault(712).colors.MOBILE_SEGMENTED_CONTROL_INDICATOR_BACKGROUND, borderRadius };
+  obj = { flex: 1, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_SEGMENTED_CONTROL_INDICATOR_BACKGROUND, borderRadius };
   obj[3] = obj;
   return obj;
 });

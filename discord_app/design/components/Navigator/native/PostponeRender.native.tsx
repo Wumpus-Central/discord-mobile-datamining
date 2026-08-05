@@ -30,7 +30,7 @@ export const PostponeRender = function PostponeRender(children) {
   first = tmp2[0];
   importDefault = tmp2[1];
   dependencyMap = React.useRef(undefined);
-  importDefault(4711)(() => {
+  require("../../../../hooks/useMountEffect.tsx")(() => {
     if (first) {
       table.current = first(table[7]).runAfterInteractions(() => {
         callback(false);
@@ -49,7 +49,7 @@ export const PostponeRender = function PostponeRender(children) {
   if (ignoreKeyboard) {
     let tmp4Result = closure_5;
   } else {
-    tmp4Result = importDefault(5733);
+    tmp4Result = require("../../../../modules/keyboard/native/KeyboardAwareView.tsx");
   }
   const style = [createCacheKey().view, viewStyle];
   return <tmp4Result style={style}>{children}</tmp4Result>;

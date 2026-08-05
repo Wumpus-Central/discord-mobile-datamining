@@ -13,14 +13,14 @@ const require = arg1;
 function TermsAndConditionsActionSheet(termsAndConditions) {
   let obj = { header: null, children: null };
   obj = { title: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.PdKWVT);
-  obj[0] = callback2(require(5337) /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.PdKWVT);
+  obj[0] = callback2(require("../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx") /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
   obj = { style: createCacheKey().termsAndConditionsText, variant: "text-sm/medium", children: null };
   const tmp = createCacheKey();
-  obj[2] = importDefault(4275).parse(termsAndConditions.termsAndConditions, false, { allowLinks: true });
-  obj[1] = callback2(require(4281) /* Text */.Text, obj);
-  return callback2(require(5338) /* Background */.BottomSheet, obj);
+  obj[2] = require("../../modules/markup/MarkupUtils.tsx").parse(termsAndConditions.termsAndConditions, false, { allowLinks: true });
+  obj[1] = callback2(require("../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  return callback2(require("../../design/components/Sheet/native/BottomSheet.native.tsx") /* Background */.BottomSheet, obj);
 }
 ({ View: c5, Image: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);

@@ -35,7 +35,7 @@ function HeroMedia(mediaItem) {
     obj[0] = obj1;
     obj[1] = mediaItem.videoThumbnailSrc;
     obj[4] = tmp.heroImage;
-    obj[1] = callback(require(8792) /* VideoComponent */.VideoComponent, obj);
+    obj[1] = callback(require("../../../components_native/common/Video.tsx") /* VideoComponent */.VideoComponent, obj);
     let tmp6 = callback(closure_7, obj);
   } else if (null != mediaItem.backgroundSrc) {
     const obj2 = { style: null, children: null };
@@ -45,13 +45,13 @@ function HeroMedia(mediaItem) {
     obj4[0] = mediaItem.backgroundSrc;
     obj3[0] = obj4;
     obj3[1] = absoluteFill.absoluteFill;
-    const items = [callback(importDefault(5236), obj3), ];
+    const items = [callback(require("../../../components_native/common/FastImage.tsx"), obj3), ];
     const obj5 = { source: null, style: null, resizeMode: "cover" };
     const obj6 = { uri: null };
     obj6[0] = mediaItem.src;
     obj5[0] = obj6;
     obj5[1] = tmp.heroImage;
-    items[1] = callback(importDefault(5236), obj5);
+    items[1] = callback(require("../../../components_native/common/FastImage.tsx"), obj5);
     obj2[1] = items;
     tmp6 = callback2(closure_7, obj2);
   } else {
@@ -62,20 +62,20 @@ function HeroMedia(mediaItem) {
     obj8[0] = mediaItem.src;
     obj7[0] = obj8;
     obj7[1] = tmp.heroImage;
-    obj[1] = callback(importDefault(5236), obj7);
+    obj[1] = callback(require("../../../components_native/common/FastImage.tsx"), obj7);
     tmp6 = callback(closure_7, obj);
   }
   return tmp6;
 }
 function InGameItemTag() {
   const obj = { variant: "text-sm/medium", color: "text-muted", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl.string(require(1236) /* getSystemLocale */.t.V91tvy);
-  return callback(require(4281) /* Text */.Text, obj);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.V91tvy);
+  return callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
 }
 function ProductPriceSection(sku) {
   const tmp = callback3();
-  let obj = require(10008) /* useFormattedSKUPrice */;
+  let obj = require("../../storefront/native/StorefrontNativeUtils.android.tsx") /* useFormattedSKUPrice */;
   obj = { sku: sku.sku, priceSetAssignmentPurchaseType: constants.DEFAULT };
   const userPrice = obj.useFormattedSKUPrice(obj).userPrice;
   let tmp4 = null;
@@ -87,7 +87,7 @@ function ProductPriceSection(sku) {
     obj1[0] = tmp.priceRow;
     const obj2 = { variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
     obj2[2] = userPrice;
-    obj1[1] = callback(require(4281) /* Text */.Text, obj2);
+    obj1[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
     items[1] = callback(closure_7, obj1);
     obj[1] = items;
     tmp4 = callback2(closure_7, obj);
@@ -176,7 +176,7 @@ function BundleThumbnailRow(trackPDPClick) {
 }
 function SKUNameAndDescriptionSection(sku) {
   sku = sku.sku;
-  let obj = require(1856) /* isNullOrEmpty */;
+  let obj = require("../../../utils/StringUtils.tsx") /* isNullOrEmpty */;
   let tmp5Result = null;
   if (!obj.isNullOrEmpty(sku.name)) {
     obj = { style: null, children: null };
@@ -206,7 +206,7 @@ function ItemDetailsSection(selectedItem) {
   const tmp = callback3();
   let assetURL = null;
   if (null != selectedItem.labelIconAssetId) {
-    let obj = require(4522) /* _httpGetWithCountryCodeQuery */;
+    let obj = require("../../../utils/StoreUtils.tsx") /* _httpGetWithCountryCodeQuery */;
     assetURL = obj.getAssetURL(selectedItem.applicationId, selectedItem.labelIconAssetId);
   }
   let trimmed;
@@ -221,7 +221,7 @@ function ItemDetailsSection(selectedItem) {
   if (selectedItem.description != null) {
     trimmed2 = str3.trim();
   }
-  let obj1 = require(1856) /* isNullOrEmpty */;
+  let obj1 = require("../../../utils/StringUtils.tsx") /* isNullOrEmpty */;
   if (obj1.isNullOrEmpty(trimmed)) {
     let tmp8Result = tmp8(1856);
     if (tmp8Result.isNullOrEmpty(trimmed1)) {
@@ -231,7 +231,7 @@ function ItemDetailsSection(selectedItem) {
     return tmp11Result;
   }
   obj = { style: tmp.section, children: null };
-  const isNullOrEmptyResult = require(1856) /* isNullOrEmpty */.isNullOrEmpty(trimmed);
+  const isNullOrEmptyResult = require("../../../utils/StringUtils.tsx") /* isNullOrEmpty */.isNullOrEmpty(trimmed);
   let tmp14 = !isNullOrEmptyResult;
   if (!isNullOrEmptyResult) {
     obj = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
@@ -239,8 +239,8 @@ function ItemDetailsSection(selectedItem) {
     tmp14 = callback(tmp8(4281).Heading, obj);
   }
   const items = [tmp14, , ];
-  const tmp8Result1 = require(1856) /* isNullOrEmpty */;
-  const isNullOrEmptyResult1 = require(1856) /* isNullOrEmpty */.isNullOrEmpty(trimmed1);
+  const tmp8Result1 = require("../../../utils/StringUtils.tsx") /* isNullOrEmpty */;
+  const isNullOrEmptyResult1 = require("../../../utils/StringUtils.tsx") /* isNullOrEmpty */.isNullOrEmpty(trimmed1);
   tmp11Result = !isNullOrEmptyResult1;
   if (!isNullOrEmptyResult1) {
     obj1 = { style: null, children: null };
@@ -252,7 +252,7 @@ function ItemDetailsSection(selectedItem) {
       obj3[0] = assetURL;
       obj2[0] = obj3;
       obj2[1] = tmp.labelIcon;
-      tmp18 = callback(importDefault(5236), obj2);
+      tmp18 = callback(require("../../../components_native/common/FastImage.tsx"), obj2);
     }
     const items1 = [tmp18, ];
     const obj4 = { variant: "text-sm/medium", color: "text-muted", children: null };
@@ -262,8 +262,8 @@ function ItemDetailsSection(selectedItem) {
     tmp11Result = tmp11(tmp12, obj1);
   }
   items[1] = tmp11Result;
-  const tmp8Result2 = require(1856) /* isNullOrEmpty */;
-  const isNullOrEmptyResult2 = require(1856) /* isNullOrEmpty */.isNullOrEmpty(trimmed2);
+  const tmp8Result2 = require("../../../utils/StringUtils.tsx") /* isNullOrEmpty */;
+  const isNullOrEmptyResult2 = require("../../../utils/StringUtils.tsx") /* isNullOrEmpty */.isNullOrEmpty(trimmed2);
   let tmp23 = !isNullOrEmptyResult2;
   if (!isNullOrEmptyResult2) {
     const obj5 = { variant: "text-md/medium", color: "text-default", children: null };
@@ -738,7 +738,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
   tmp27 = arr10.length > 1;
 }
 function SocialLayerStorefrontProductDetailsModalWithOrderCTX(skuId) {
-  let obj = require(500) /* set */;
+  let obj = require("../../../utils/PlatformUtils.tsx") /* set */;
   if (obj.isIOS()) {
     let GOOGLE = tmp3.APPLE_ADVANCED_COMMERCE;
     let tmp4 = tmp3;
@@ -755,11 +755,11 @@ function SocialLayerStorefrontProductDetailsModalWithOrderCTX(skuId) {
   obj[1] = enabled;
   const items = [skuId.skuId];
   obj[2] = items;
-  obj[5] = require(10004) /* SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY */.closeSocialLayerStorefrontProductDetailsModal;
+  obj[5] = require("SocialLayerStorefrontNativeActionCreators.tsx") /* SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY */.closeSocialLayerStorefrontProductDetailsModal;
   obj = {};
   const merged = Object.assign(skuId);
   obj[6] = closure_15(SocialLayerStorefrontProductDetailsModal, obj);
-  return closure_15(importDefault(7334), obj, skuId.skuId);
+  return closure_15(require("../../checkout/native/stores/NativeCheckoutStoreProvider.tsx"), obj, skuId.skuId);
 }
 ({ ScrollView: c5, StyleSheet: closure_6, View: error } = get_ActivityIndicator);
 ({ AnalyticEvents: closure_12, PaymentGateways: map1, PriceSetAssignmentPurchaseTypes: closure_14 } = ME);
@@ -820,5 +820,5 @@ export default function WrappedSocialLayerStorefrontProductDetailsModal(arg0) {
   obj = {};
   const merged = Object.assign(arg0);
   obj[2] = callback(SocialLayerStorefrontProductDetailsModalWithOrderCTX, obj);
-  return callback(require(9489) /* NativePaymentContextProvider */.NativePaymentContextProvider, obj);
+  return callback(require("../../payments/native/NativePaymentContext.tsx") /* NativePaymentContextProvider */.NativePaymentContextProvider, obj);
 };

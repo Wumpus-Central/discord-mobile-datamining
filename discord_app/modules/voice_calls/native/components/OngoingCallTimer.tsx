@@ -20,8 +20,8 @@ export default function OnGoingCallTimer(style) {
   }, items1);
   let timestamp = 0;
   if (null != stateFromStores) {
-    timestamp = importDefault(11).extractTimestamp(stateFromStores);
-    const obj2 = importDefault(11);
+    timestamp = require("../../../../utils/SnowflakeUtils.tsx").extractTimestamp(stateFromStores);
+    const obj2 = require("../../../../utils/SnowflakeUtils.tsx");
   }
-  return jsx(importDefault(12970), { style: style.style, timestamp });
+  return jsx(require("Timer.tsx"), { style: style.style, timestamp });
 };

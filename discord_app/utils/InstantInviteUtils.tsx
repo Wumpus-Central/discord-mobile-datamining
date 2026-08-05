@@ -134,7 +134,7 @@ obj = {
   },
   getMaxAgeOptions(arg0) {
     const _require = arg0;
-    const MAX_AGE_OPTIONS = _require(8990).MAX_AGE_OPTIONS;
+    const MAX_AGE_OPTIONS = _require("native/InstantInviteUtils.tsx").MAX_AGE_OPTIONS;
     return MAX_AGE_OPTIONS.filter((value) => {
       const hasItem = outer1_20.includes(value);
       let tmp2 = !hasItem;
@@ -374,7 +374,7 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
       let importDefault;
       ({ rows: c0, counts: c1 } = obj5);
       if (obj5.inviteTargetType === tmp40.EMBEDDED_APPLICATION) {
-        obj1 = importDefault(5126);
+        obj1 = require("AutocompleteUtils.tsx");
         const obj6 = { query: null, limit: 3, guildId: "View" };
         obj6[0] = tmp44;
         let item = obj1.queryChannels(obj6).forEach((item) => {
@@ -435,7 +435,7 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
     let dependencyMap;
     c3 = undefined;
     ({ omitUserIds: c0, shownUserIds: c1, rows: c2, counts: c3 } = obj8);
-    obj5 = importDefault(5126);
+    obj5 = require("AutocompleteUtils.tsx");
     const obj9 = { query: null, limit: 50 };
     obj9[0] = obj8.query;
     const item1 = obj5.queryDMUsers(obj9).forEach((record) => {
@@ -463,7 +463,7 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
     c0 = undefined;
     importDefault = undefined;
     ({ rows: c0, counts: c1, query: query2 } = obj4);
-    obj7 = importDefault(5126);
+    obj7 = require("AutocompleteUtils.tsx");
     let obj10 = { query: null, limit: 50, fuzzy: false };
     obj10[0] = query2;
     const queryDMUsersResult = obj5.queryDMUsers(obj9);
@@ -480,7 +480,7 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
     dependencyMap = undefined;
     c3 = undefined;
     ({ rows: c0, counts: c1, omitUserIds: c2, shownUserIds: c3, query: query3 } = obj11);
-    obj10 = importDefault(5126);
+    obj10 = require("AutocompleteUtils.tsx");
     const obj12 = { query: null, limit: 500, _fuzzy: false };
     obj12[0] = query3;
     const queryGroupDMsResult = obj7.queryGroupDMs(obj10);
@@ -610,7 +610,7 @@ export const maxAgeString = function maxAgeString(maxAge, maxUses) {
   const value = dependencyMap2[maxAge].value;
   const type = dependencyMap2[maxAge].type;
   if (minutes === type) {
-    const intl4 = require(1236) /* getSystemLocale */.intl;
+    const intl4 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
     if (tmp2) {
       let stringResult = intl4.string(tmp12(1236).t["/WbTXD"]);
     } else {
@@ -620,9 +620,9 @@ export const maxAgeString = function maxAgeString(maxAge, maxUses) {
     }
     return stringResult;
   } else if (hours === type) {
-    const intl3 = require(1236) /* getSystemLocale */.intl;
+    const intl3 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
     const formatToPlainString2 = intl3.formatToPlainString;
-    const t2 = require(1236) /* getSystemLocale */.t;
+    const t2 = require("../intl/index.native.tsx") /* getSystemLocale */.t;
     if (tmp2) {
       obj = { numHours: null };
       obj[0] = value;
@@ -635,9 +635,9 @@ export const maxAgeString = function maxAgeString(maxAge, maxUses) {
     }
     return formatToPlainString2Result;
   } else if (days === type) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
     const formatToPlainString = intl2.formatToPlainString;
-    const t = require(1236) /* getSystemLocale */.t;
+    const t = require("../intl/index.native.tsx") /* getSystemLocale */.t;
     if (tmp2) {
       const obj2 = { numDays: null };
       obj2[0] = value;
@@ -650,7 +650,7 @@ export const maxAgeString = function maxAgeString(maxAge, maxUses) {
     }
     return formatToPlainStringResult;
   } else if (never === type) {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
     if (tmp2) {
       let stringResult1 = intl.string(tmp3(1236).t.QrHBnC);
     } else {
@@ -665,36 +665,36 @@ export const maxAgeString = function maxAgeString(maxAge, maxUses) {
 };
 export const urgentShareMessageString = function urgentShareMessageString(arg0, arg1) {
   if (null == arg0) {
-    const intl5 = require(1236) /* getSystemLocale */.intl;
+    const intl5 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
     let obj = { link: null };
     obj[0] = arg1;
-    return intl5.formatToPlainString(require(1236) /* getSystemLocale */.t.RHbY6K, obj);
+    return intl5.formatToPlainString(require("../intl/index.native.tsx") /* getSystemLocale */.t.RHbY6K, obj);
   } else {
     const value = dependencyMap2[arg0].value;
     const type = dependencyMap2[arg0].type;
     if (minutes === type) {
-      const intl4 = require(1236) /* getSystemLocale */.intl;
+      const intl4 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
       obj = { numMinutes: null, link: null };
       obj[0] = value;
       obj[1] = arg1;
-      return intl4.formatToPlainString(require(1236) /* getSystemLocale */.t.N3VHkw, obj);
+      return intl4.formatToPlainString(require("../intl/index.native.tsx") /* getSystemLocale */.t.N3VHkw, obj);
     } else if (hours === type) {
-      const intl3 = require(1236) /* getSystemLocale */.intl;
+      const intl3 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
       const obj1 = { numHours: null, link: null };
       obj1[0] = value;
       obj1[1] = arg1;
-      return intl3.formatToPlainString(require(1236) /* getSystemLocale */.t["3d9BlG"], obj1);
+      return intl3.formatToPlainString(require("../intl/index.native.tsx") /* getSystemLocale */.t["3d9BlG"], obj1);
     } else if (days === type) {
-      const intl2 = require(1236) /* getSystemLocale */.intl;
+      const intl2 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
       const obj2 = { numDays: null, link: null };
       obj2[0] = value;
       obj2[1] = arg1;
-      return intl2.formatToPlainString(require(1236) /* getSystemLocale */.t.gLIlkb, obj2);
+      return intl2.formatToPlainString(require("../intl/index.native.tsx") /* getSystemLocale */.t.gLIlkb, obj2);
     } else {
-      const intl = require(1236) /* getSystemLocale */.intl;
+      const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
       obj = { link: null };
       obj[0] = arg1;
-      return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.RHbY6K, obj);
+      return intl.formatToPlainString(require("../intl/index.native.tsx") /* getSystemLocale */.t.RHbY6K, obj);
     }
   }
 };

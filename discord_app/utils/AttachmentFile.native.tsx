@@ -229,10 +229,10 @@ export const cancelGetAttachmentFile = function cancelGetAttachmentFile(found) {
 export const fileIsInAppDir = function fileIsInAppDir(uri) {
   const replaced = uri.replace(/^file:\/\//, "");
   try {
-    let startsWithResult = "" !== require(4826) /* openImagePickerUnhandled */.getAppDir();
+    let startsWithResult = "" !== require("native/UploadUtils.tsx") /* openImagePickerUnhandled */.getAppDir();
     if (startsWithResult) {
-      startsWithResult = replaced.startsWith(require(4826) /* openImagePickerUnhandled */.getAppDir());
-      const tmpResult = require(4826) /* openImagePickerUnhandled */;
+      startsWithResult = replaced.startsWith(require("native/UploadUtils.tsx") /* openImagePickerUnhandled */.getAppDir());
+      const tmpResult = require("native/UploadUtils.tsx") /* openImagePickerUnhandled */;
     }
     return startsWithResult;
   } catch (tmp4) {

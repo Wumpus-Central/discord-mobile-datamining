@@ -11,7 +11,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_MODAL,
   getComponent() {
-    return require(14709) /* DemoModal */.default;
+    return require("../../design_system/native/UserSettingsDesignSystemModal.tsx") /* DemoModal */.default;
   }
 };
 const route = createToggle.createRoute(obj);

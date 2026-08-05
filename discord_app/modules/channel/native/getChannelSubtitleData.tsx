@@ -10,8 +10,8 @@ export const getChannelSubtitleData = function getChannelSubtitleData(subtitle) 
       if ("event" !== type) {
         if ("go-live" === type) {
           let obj = { subtitle: null, type: null };
-          const intl = require(1236) /* getSystemLocale */.intl;
-          obj[0] = intl.string(require(1236) /* getSystemLocale */.t.Pa817q);
+          const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+          obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Pa817q);
           obj[1] = subtitle.type;
           return obj;
         } else if ("voice" === type) {

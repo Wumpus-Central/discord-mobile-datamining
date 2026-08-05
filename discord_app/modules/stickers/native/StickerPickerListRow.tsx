@@ -129,7 +129,7 @@ export default function StickerPickerListRow(stickers) {
           handleOnLongPressSticker(found);
         }
       };
-      return items(importDefault(9887), obj1);
+      return items(require("../../../../discord_common/js/packages/rtn-codegen/js/StickerPickerListRowNativeComponent.tsx"), obj1);
     } catch (tmp28) {
       const obj3 = { message: "Error in StickerPickerListRowNativeComponent", category: "sticker", data: null };
       obj4 = { itemLength: null, items: null };

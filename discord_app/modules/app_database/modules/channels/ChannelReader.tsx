@@ -9,8 +9,8 @@ const prototype = function ChannelReader() {
 }.prototype;
 prototype["getSync"] = function getSync(closure_1, closure_0) {
   const nowResult = performance.now();
-  const obj = importDefault(1907);
-  const manySyncUnsafe = importDefault(1907).channels(closure_1).getManySyncUnsafe(closure_0);
+  const obj = require("../../DatabaseDaos.tsx");
+  const manySyncUnsafe = require("../../DatabaseDaos.tsx").channels(closure_1).getManySyncUnsafe(closure_0);
   const diff = performance.now() - nowResult;
   tmp2.log("synchronously loaded in " + diff + "ms (guild: " + closure_0 + ", channels: " + manySyncUnsafe.length + ")");
   const items = [manySyncUnsafe, diff];

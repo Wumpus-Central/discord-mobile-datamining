@@ -125,10 +125,10 @@ export const useTooltipHelper = function useTooltipHelper(ref, targetRef, callba
   const _require = ref;
   const importDefault = targetRef;
   const dependencyMap = callback;
-  const tmp = importDefault(1474)();
+  const tmp = require("../../../../modules/screen/useWindowDimensions.native.tsx")();
   let _slicedToArray = tmp;
   let v1 = context.useRef(tmp);
-  context = context.useContext(_require(5599).LayerContext);
+  context = context.useContext(_require("../../Layers/native/LayerContext.native.tsx").LayerContext);
   let closure_6 = context.useRef(null);
   const items = [context, ref];
   const effect = context.useEffect(() => {

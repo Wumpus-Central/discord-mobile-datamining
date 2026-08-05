@@ -17,30 +17,30 @@ function handleInviteData(invite) {
       }
     }
     if (hasItem) {
-      importDefault(12575).onOpenHubInvite(invite.invite);
-      const obj5 = importDefault(12575);
+      require("../hub/HubUtils.native.tsx").onOpenHubInvite(invite.invite);
+      const obj5 = require("../hub/HubUtils.native.tsx");
     }
   }
   let new_member = invite.invite.new_member;
   if (new_member) {
-    let hasFlagResult = require(1384) /* hasFlag */.hasFlag(num, require(7695) /* set */.GuildInviteFlags.IS_GUEST_INVITE);
+    let hasFlagResult = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(num, require("../../../discord_common/js/shared/shared-constants/GuildInviteFlags.tsx") /* set */.GuildInviteFlags.IS_GUEST_INVITE);
     if (!hasFlagResult) {
       hasFlagResult = tmp3(1384).hasFlag(num, tmp3(7695).GuildInviteFlags.IS_APPLICATION_BYPASS);
       const tmp3Result = tmp3(1384);
     }
     new_member = !hasFlagResult;
-    const obj = require(1384) /* hasFlag */;
+    const obj = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
   }
   if (new_member) {
     new_member = null != guild;
   }
   if (new_member) {
-    new_member = require(12576) /* inviteGuildHasPendingMemberDisabledVerification */.inviteGuildHasPendingMemberDisabledVerification(guild);
-    const obj3 = require(12576) /* inviteGuildHasPendingMemberDisabledVerification */;
+    new_member = require("GuildVerificationUtils.tsx") /* inviteGuildHasPendingMemberDisabledVerification */.inviteGuildHasPendingMemberDisabledVerification(guild);
+    const obj3 = require("GuildVerificationUtils.tsx") /* inviteGuildHasPendingMemberDisabledVerification */;
   }
   if (new_member) {
-    const result = require(12576) /* inviteGuildHasPendingMemberDisabledVerification */.openVerificationModalOrTransitionToApplication(guild.id);
-    const obj4 = require(12576) /* inviteGuildHasPendingMemberDisabledVerification */;
+    const result = require("GuildVerificationUtils.tsx") /* inviteGuildHasPendingMemberDisabledVerification */.openVerificationModalOrTransitionToApplication(guild.id);
+    const obj4 = require("GuildVerificationUtils.tsx") /* inviteGuildHasPendingMemberDisabledVerification */;
   }
 }
 let prototype = function GuildVerificationManager() {

@@ -18,21 +18,21 @@ let result = require("get ActivityIndicator").fileFinishedImporting("modules/use
 export default function GuildProfileEmptyState() {
   const tmp = callback4();
   let obj = { contentContainerStyle: tmp.container, children: null };
-  obj = { style: tmp.image, children: callback2(importDefault(13863), obj) };
+  obj = { style: tmp.image, children: callback2(require("GuildProfileEmptyStateSvg.tsx"), obj) };
   obj = { style: tmp.image };
   const items = [callback2(closure_5, obj), , , , ];
   let obj1 = { style: tmp.header, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj1[3] = intl.string(require(1236) /* getSystemLocale */.t.Z1OZCV);
-  items[1] = callback2(require(4281) /* Text */.Text, obj1);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj1[3] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Z1OZCV);
+  items[1] = callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
   const obj2 = { style: tmp.header, variant: "text-sm/normal", color: "text-default", children: null };
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj2[3] = intl2.string(require(1236) /* getSystemLocale */.t.UEmBq7);
-  items[2] = callback2(require(4281) /* Text */.Text, obj2);
+  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj2[3] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.UEmBq7);
+  items[2] = callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
   const obj3 = { style: tmp.createButton, children: null };
   const obj4 = { text: null, onPress: null };
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj4[0] = intl3.string(require(1236) /* getSystemLocale */.t["6dIB4R"]);
+  const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj4[0] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["6dIB4R"]);
   obj4[1] = callback(function*() {
     if (v0 === 2) {
       v0 = 3;
@@ -85,11 +85,11 @@ export default function GuildProfileEmptyState() {
       }
     }
   });
-  obj3[1] = callback2(require(4695) /* Button */.Button, obj4);
+  obj3[1] = callback2(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj4);
   items[3] = callback2(closure_5, obj3);
   const obj5 = { text: null, variant: "secondary", onPress: null };
-  const intl4 = require(1236) /* getSystemLocale */.intl;
-  obj5[0] = intl4.string(require(1236) /* getSystemLocale */.t.yRjK4p);
+  const intl4 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj5[0] = intl4.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.yRjK4p);
   obj5[2] = callback(function*() {
     if (v0 === 2) {
       v0 = 3;
@@ -142,7 +142,7 @@ export default function GuildProfileEmptyState() {
       }
     }
   });
-  items[4] = callback2(require(4695) /* Button */.Button, obj5);
+  items[4] = callback2(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj5);
   obj[1] = items;
   return callback3(closure_4, obj);
 };

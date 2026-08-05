@@ -100,9 +100,9 @@ let closure_4 = [];
 const result = require("getSystemLocale").fileFinishedImporting("modules/app_icons/native/AppIconConstants.tsx");
 
 export const getDefaultIcon = function getDefaultIcon() {
-  const obj = { id: require(7584) /* FreemiumAppIconIds */.FreemiumAppIconIds.DEFAULT, iconSource: importDefault(7585), name: null, isPremium: false };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl.string(require(1236) /* getSystemLocale */.t.ANxkLy);
+  const obj = { id: require("../AppIconTypes.tsx") /* FreemiumAppIconIds */.FreemiumAppIconIds.DEFAULT, iconSource: require("../../../../_runtime/07585_registerAsset.js"), name: null, isPremium: false };
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ANxkLy);
   return obj;
 };
 export const isIconExpired = function isIconExpired(expiresAt) {
@@ -134,9 +134,9 @@ export const getLimitedAlternateIcons = function getLimitedAlternateIcons() {
   });
 };
 export const getIcons = function getIcons() {
-  const obj = { id: require(7584) /* FreemiumAppIconIds */.FreemiumAppIconIds.DEFAULT, iconSource: importDefault(7585), name: null, isPremium: false };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl.string(require(1236) /* getSystemLocale */.t.ANxkLy);
+  const obj = { id: require("../AppIconTypes.tsx") /* FreemiumAppIconIds */.FreemiumAppIconIds.DEFAULT, iconSource: require("../../../../_runtime/07585_registerAsset.js"), name: null, isPremium: false };
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ANxkLy);
   items = [
     obj,
     ...items.filter((expiresAt) => {
@@ -160,9 +160,9 @@ export const getIcons = function getIcons() {
 };
 export const getIconById = function getIconById(currentAppIcon) {
   const _require = currentAppIcon;
-  let obj = { id: _require(7584).FreemiumAppIconIds.DEFAULT, iconSource: importDefault(7585), name: null, isPremium: false };
-  const intl = _require(1236).intl;
-  obj[2] = intl.string(_require(1236).t.ANxkLy);
+  let obj = { id: _require("../AppIconTypes.tsx").FreemiumAppIconIds.DEFAULT, iconSource: require("../../../../_runtime/07585_registerAsset.js"), name: null, isPremium: false };
+  const intl = _require("../../../intl/index.native.tsx").intl;
+  obj[2] = intl.string(_require("../../../intl/index.native.tsx").t.ANxkLy);
   items = [
     obj,
     ...items.filter((expiresAt) => {
@@ -186,7 +186,7 @@ export const getIconById = function getIconById(currentAppIcon) {
   if (null == found) {
     obj = { id: null, iconSource: null, name: null, isPremium: false };
     obj[0] = tmp(7584).FreemiumAppIconIds.DEFAULT;
-    obj[1] = importDefault(7585);
+    obj[1] = require("../../../../_runtime/07585_registerAsset.js");
     const intl2 = tmp(1236).intl;
     obj[2] = intl2.string(tmp(1236).t.ANxkLy);
     found = obj;

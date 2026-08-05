@@ -14,7 +14,7 @@ class DiscordImagePng {
 const prototype = DiscordImagePng.prototype;
 DiscordImagePng["create"] = function create(originalBuffer) {
   try {
-    return new DiscordImagePng(importDefault(1904).decode(originalBuffer), originalBuffer);
+    return new DiscordImagePng(require("../../../../../_runtime/01904_decodeImage.js").decode(originalBuffer), originalBuffer);
   } catch (err) {
   }
 };
@@ -25,7 +25,7 @@ prototype["hasTransparency"] = function hasTransparency() {
       return false;
     }
   }
-  const uint8Array = new Uint8Array(importDefault(1904).toRGBA8(self.img)[0]);
+  const uint8Array = new Uint8Array(require("../../../../../_runtime/01904_decodeImage.js").toRGBA8(self.img)[0]);
   let num2 = 3;
   if (3 < uint8Array.length) {
     while (uint8Array[num2] >= 255) {

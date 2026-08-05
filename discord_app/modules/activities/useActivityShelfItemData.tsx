@@ -5,7 +5,7 @@ const result = require("set").fileFinishedImporting("modules/activities/useActiv
 
 export const useActivityShelfItemData = function useActivityShelfItemData(guild_id1, applicationId) {
   const importDefault = applicationId;
-  const tmp = importDefault(11338)({ guildId: guild_id1 });
+  const tmp = require("useActivityShelfItems.tsx")({ guildId: guild_id1 });
   const dependencyMap = tmp;
   const items = [tmp, applicationId];
   return React.useMemo(() => {

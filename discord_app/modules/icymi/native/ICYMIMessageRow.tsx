@@ -210,22 +210,22 @@ const PX_12 = require("Themes").space.PX_12;
 const PX_8 = require("Themes").space.PX_8;
 let closure_18 = createICYMIStyles.createICYMIStyles((paddingLeft) => {
   let obj = { pressable: null, messagePreview: null, replyPreview: null, replyInner: null, afterMessage: null, media: null, footer: null };
-  obj = { flex: 1, paddingLeft: paddingLeft.inset, gap: importDefault(712).space.PX_8 };
+  obj = { flex: 1, paddingLeft: paddingLeft.inset, gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
   obj[0] = obj;
-  let obj2 = require(500) /* set */;
+  let obj2 = require("../../../utils/PlatformUtils.tsx") /* set */;
   let num = 0;
   if (obj2.isAndroid()) {
     num = -2;
   }
   obj = { marginTop: num, borderRadius: tmp(712).radii.md, gap: 0 };
   obj[1] = obj;
-  obj[2] = { gap: importDefault(712).space.PX_8, marginHorizontal: paddingLeft.margin, padding: PX_12, overflow: "hidden", borderWidth: 1, borderColor: importDefault(712).colors.BORDER_SUBTLE, borderRadius: importDefault(712).radii.lg, maxHeight: 132 };
+  obj[2] = { gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, marginHorizontal: paddingLeft.margin, padding: PX_12, overflow: "hidden", borderWidth: 1, borderColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, maxHeight: 132 };
   obj2 = { flexDirection: "row", gap: PX_8, overflow: "hidden" };
   obj[3] = obj2;
   obj[4] = { paddingLeft: paddingLeft.inset, paddingBottom: paddingLeft.margin };
   obj[5] = { marginRight: paddingLeft.margin };
-  const obj1 = { gap: importDefault(712).space.PX_8, marginHorizontal: paddingLeft.margin, padding: PX_12, overflow: "hidden", borderWidth: 1, borderColor: importDefault(712).colors.BORDER_SUBTLE, borderRadius: importDefault(712).radii.lg, maxHeight: 132 };
-  obj[6] = { marginTop: importDefault(712).space.PX_8, marginBottom: paddingLeft.margin, gap: importDefault(712).space.PX_8, paddingHorizontal: paddingLeft.margin, marginLeft: paddingLeft.inset };
+  const obj1 = { gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, marginHorizontal: paddingLeft.margin, padding: PX_12, overflow: "hidden", borderWidth: 1, borderColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, maxHeight: 132 };
+  obj[6] = { marginTop: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, marginBottom: paddingLeft.margin, gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, paddingHorizontal: paddingLeft.margin, marginLeft: paddingLeft.inset };
   return obj;
 });
 let closure_21 = importAllResult.memo((message) => {

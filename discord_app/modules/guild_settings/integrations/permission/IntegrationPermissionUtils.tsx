@@ -25,17 +25,17 @@ const result = require("ApplicationCommandSectionType").fileFinishedImporting("m
 
 export const commandName = function commandName(arg0) {
   let text = arg1;
-  if (arg0 === require(1906) /* PermissionOverwriteType */.ApplicationCommandType.CHAT) {
+  if (arg0 === require("../../../../flow/Server.tsx") /* PermissionOverwriteType */.ApplicationCommandType.CHAT) {
     text = `/${arg1}`;
   }
   return text;
 };
 export const commandPermissionChannels = function commandPermissionChannels(arg0) {
-  const items = [require(6891) /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.CHANNEL];
+  const items = [require("../../../application_commands/ApplicationCommandTypes.tsx") /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.CHANNEL];
   return commandPermissions(arg0, items);
 };
 export const commandPermissionMembersRoles = function commandPermissionMembersRoles(arg0) {
-  const items = [require(6891) /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.ROLE, require(6891) /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.USER];
+  const items = [require("../../../application_commands/ApplicationCommandTypes.tsx") /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.ROLE, require("../../../application_commands/ApplicationCommandTypes.tsx") /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.USER];
   return commandPermissions(arg0, items);
 };
 export const toPermissionKey = function toPermissionKey(allChannelsSentinelResult, CHANNEL) {

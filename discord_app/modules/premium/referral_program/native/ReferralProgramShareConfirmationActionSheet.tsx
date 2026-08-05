@@ -10,7 +10,7 @@ let error;
 function SharedUser(user) {
   user = user.user;
   const tmp = callback3();
-  let obj = importDefault(4124);
+  let obj = require("../../../../utils/UserUtils.tsx");
   const name = obj.getName(user);
   const tmp6 = user.trialCreationResult === user(6825).CreateReferralStatus.FAIL;
   obj = { style: tmp.recipientRow, children: null };
@@ -47,7 +47,7 @@ function SharedUser(user) {
   const intl2 = tmp5(1236).intl;
   obj6[2] = intl2.string(user(1236).t["g33r/P"]);
   const obj7 = { size: "xs", color: null };
-  obj7[1] = importDefault(712).colors.CONTROL_SECONDARY_TEXT_DEFAULT;
+  obj7[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_SECONDARY_TEXT_DEFAULT;
   obj6[3] = closure_5(user(4781).ChatIcon, obj7);
   obj6[4] = function onPress() {
     let obj = outer1_1(outer1_2[12]);
@@ -83,17 +83,17 @@ export default function ReferralProgramShareConfirmationActionSheet(trialCreatio
   const tmp = callback3();
   let arr = Array.from(trialCreationResult.values());
   if (0 === arr.filter((arg0) => arg0 === trialCreationResult(table[6]).CreateReferralStatus.SUCCESS).length) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    let stringResult = intl2.string(require(1236) /* getSystemLocale */.t["7VBEue"]);
+    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    let stringResult = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["7VBEue"]);
     let tmp5 = require;
   } else {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    stringResult = intl.string(require(1236) /* getSystemLocale */.t.tKCltd);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    stringResult = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.tKCltd);
     tmp5 = require;
   }
   const intl3 = tmp5(1236).intl;
   let obj = { helpdeskArticle: null };
-  let obj1 = importDefault(1945);
+  let obj1 = require("../../../../utils/HelpdeskUtils.tsx");
   obj[0] = obj1.getArticleURL(HelpdeskArticles.REFERRAL_PROGRAM);
   obj = { startExpanded: true, contentStyles: tmp.content, header: null, children: null };
   obj[2] = callback(tmp5(5337).BottomSheetTitleHeader, { title: null });

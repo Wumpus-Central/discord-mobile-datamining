@@ -28,8 +28,8 @@ let obj = {
   },
   captureException(arg0, extra) {
     const _require = arg0;
-    const importAll = _require(13373).getUpdatedOptions(extra);
-    const obj = _require(13373);
+    const importAll = _require("ErrorCommonUtils.tsx").getUpdatedOptions(extra);
+    const obj = _require("ErrorCommonUtils.tsx");
     importAll(810).withScope((setTags) => {
       if (null != callback) {
         if (null != tmp.tags) {
@@ -45,7 +45,7 @@ let obj = {
   },
   captureCrash(error, extra) {
     const _require = error;
-    const updatedOptions = _require(13373).getUpdatedOptions(extra);
+    const updatedOptions = _require("ErrorCommonUtils.tsx").getUpdatedOptions(extra);
     let tags;
     if (updatedOptions != null) {
       tags = updatedOptions.tags;
@@ -57,7 +57,7 @@ let obj = {
       }
     }
     const dependencyMap = Object.assign({ crash: "true" }, {});
-    let obj = _require(13373);
+    let obj = _require("ErrorCommonUtils.tsx");
     updatedOptions(810).withScope((setExtras) => {
       if (tmp2) {
         setExtras.setExtras(tmp.extra);
@@ -87,8 +87,8 @@ let obj = {
   },
   captureMessage(arg0, extra) {
     const _require = arg0;
-    const updatedOptions = _require(13373).getUpdatedOptions(extra);
-    const obj = _require(13373);
+    const updatedOptions = _require("ErrorCommonUtils.tsx").getUpdatedOptions(extra);
+    const obj = _require("ErrorCommonUtils.tsx");
     importAll(810).withScope((setExtras) => {
       if (tmp2) {
         setExtras.setExtras(tmp.extra);

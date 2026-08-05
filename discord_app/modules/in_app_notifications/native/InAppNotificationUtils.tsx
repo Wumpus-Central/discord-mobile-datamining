@@ -121,7 +121,7 @@ const result = require("ME").fileFinishedImporting("modules/in_app_notifications
 export const isReactionMilestoneNotification = function isReactionMilestoneNotification(reactions, type) {
   if (null != type) {
     if (type !== constants2.GUILD_ANNOUNCEMENT) {
-      return REACTION_MILESTONE_COUNTS.has(require(12) /* apply */.sumBy(reactions, (count_details) => {
+      return REACTION_MILESTONE_COUNTS.has(require("../../../../_runtime/00012_apply.js") /* apply */.sumBy(reactions, (count_details) => {
         count_details = count_details.count_details;
         let num;
         if (count_details != null) {
@@ -144,7 +144,7 @@ export const isReactionMilestoneNotification = function isReactionMilestoneNotif
   return false;
 };
 export const generateInAppNotificationId = function generateInAppNotificationId() {
-  return require(514) /* v1 */.v4();
+  return require("../../../../_runtime/00514_v1.js") /* v1 */.v4();
 };
 export const getMessagePreviewTextVariant = function getMessagePreviewTextVariant() {
   let str = "text-md/medium";
@@ -161,16 +161,16 @@ export const getNotificationDuration = function getNotificationDuration(ALERT) {
           if (tmp.REACTION !== ALERT) {
             if (tmp.MESSAGE_REQUEST !== ALERT) {
               if (tmp.ALERT === ALERT) {
-                return 30 * importDefault(687).Millis.SECOND;
+                return 30 * require("../../../utils/Durations.tsx").Millis.SECOND;
               } else {
                 if (tmp.MESSAGE_REMINDER !== ALERT) {
                   if (tmp.RESTRICTED_HOURS_WARNING !== ALERT) {
                     if (tmp.RESTRICTED_SCHEDULE_UPDATED === ALERT) {
-                      return 7 * importDefault(687).Millis.SECOND;
+                      return 7 * require("../../../utils/Durations.tsx").Millis.SECOND;
                     }
                   }
                 }
-                return 10 * importDefault(687).Millis.SECOND;
+                return 10 * require("../../../utils/Durations.tsx").Millis.SECOND;
               }
             }
           }
@@ -178,7 +178,7 @@ export const getNotificationDuration = function getNotificationDuration(ALERT) {
       }
     }
   }
-  return 5 * importDefault(687).Millis.SECOND;
+  return 5 * require("../../../utils/Durations.tsx").Millis.SECOND;
 };
 export const useHasPreviewableMedia = function useHasPreviewableMedia(message) {
   let closure_0 = message;
@@ -234,7 +234,7 @@ export const trackInAppNotificationAccessoryClicked = function trackInAppNotific
   let guildId;
   let messageId;
   ({ guildId, channelId, messageId } = extractMetadataFromNotification(notification));
-  let obj = importDefault(4479);
+  let obj = require("../../app_analytics/AppAnalyticsUtils.tsx");
   obj = { type: notification.type, in_app_notification_id: notification.inAppNotificationId, notif_guild_id: guildId, notif_channel_id: channelId, message_id: messageId, accessory: REACTION_BUTTON };
   obj.trackWithMetadata(constants.IN_APP_NOTIFICATION_ACCESSORY_CLICKED, obj);
 };
@@ -246,5 +246,5 @@ export const trackDismissed = function trackDismissed(arg0) {
   let messageId;
   let type;
   ({ guildId, channelId, type, dismissReason, inAppNotificationId, messageId } = arg0);
-  importDefault(4479).trackWithMetadata(constants.IN_APP_NOTIFICATION_DISMISSED, { type, guild_id: guildId, channel_id: channelId, dismiss_reason: dismissReason, in_app_notification_id: inAppNotificationId, message_id: messageId });
+  require("../../app_analytics/AppAnalyticsUtils.tsx").trackWithMetadata(constants.IN_APP_NOTIFICATION_DISMISSED, { type, guild_id: guildId, channel_id: channelId, dismiss_reason: dismissReason, in_app_notification_id: inAppNotificationId, message_id: messageId });
 };

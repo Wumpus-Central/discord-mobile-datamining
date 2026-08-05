@@ -1,7 +1,7 @@
 // discord_app/modules/hub/native/components/HubEmailConnectionGuildSelect.tsx
 import closure_3 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
-import module_11999 from "module_11999";
+import HubActionCreators from "../../../../actions/HubActionCreators.tsx";
 import get_ActivityIndicator from "HeaderActionButton";
 import { HubEmailConnectionSteps } from "HubEmailConnectionSteps";
 import jsxProd from "HubEmailConnectionModal";
@@ -34,9 +34,9 @@ function HubEmailConnectionGuildSelectHeader() {
   const tmp = createCacheKey();
   let obj = { style: tmp.header, children: null };
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[4] = intl.string(require(1236) /* getSystemLocale */.t.mOMeiR);
-  obj[1] = callback(require(4281) /* Text */.Text, obj);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[4] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.mOMeiR);
+  obj[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   return callback(closure_6, obj);
 }
 function HubEmailConnectionGuildSelectFooter(onFooterButtonPressed) {
@@ -46,15 +46,15 @@ function HubEmailConnectionGuildSelectFooter(onFooterButtonPressed) {
   const tmp = createCacheKey();
   let obj = { style: null, children: null };
   const items = [tmp.footerSafeAreaContainer, ];
-  obj = { paddingBottom: importDefault(1581)().bottom };
+  obj = { paddingBottom: require("../../../safe_area/useSafeAreaInsets.native.tsx")().bottom };
   items[1] = obj;
   obj[0] = items;
   obj = { style: tmp.footerContainer, children: null };
   const obj1 = { variant: "secondary", loading, disabled: loading, grow: true, text: null, onPress: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj1[4] = intl.string(require(1236) /* getSystemLocale */.t.G3Zk7V);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj1[4] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.G3Zk7V);
   obj1[5] = onFooterButtonPressed.onFooterButtonPressed;
-  const items1 = [callback(require(4695) /* Button */.Button, obj1), ];
+  const items1 = [callback(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj1), ];
   let tmp3Result = null != errors;
   if (tmp3Result) {
     const obj2 = { style: null, children: null };
@@ -64,7 +64,7 @@ function HubEmailConnectionGuildSelectFooter(onFooterButtonPressed) {
       anyErrorMessage = errors.getAnyErrorMessage();
     }
     obj2[1] = anyErrorMessage;
-    tmp3Result = tmp3(require(1297) /* Button */.LegacyText, obj2);
+    tmp3Result = tmp3(require("../../../../design/void/native.tsx") /* Button */.LegacyText, obj2);
   }
   items1[1] = tmp3Result;
   obj[1] = items1;

@@ -20,11 +20,11 @@ export default function GuildPowerupPerksSection(arg0) {
   let obj = { children: null };
   obj = { title: null, description: null };
   const tmp = callback3();
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(importDefault(2317).TV3Vm8);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.string(importDefault(2317).STx9hp);
-  const items = [callback(importDefault(11823), obj), ];
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../GuildPowerups.messages.js").TV3Vm8);
+  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl2.string(require("../GuildPowerups.messages.js").STx9hp);
+  const items = [callback(require("GuildPowerupsSectionHeader.tsx"), obj), ];
   obj = {
     style: tmp.container,
     children: listings.map((type) => {

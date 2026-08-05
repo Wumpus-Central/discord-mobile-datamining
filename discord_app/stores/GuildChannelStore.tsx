@@ -89,7 +89,7 @@ function rebuildGuildChannels(guildId) {
       }
     }
   }
-  const item = importDefault(12).forEach(tmp7, (channel) => {
+  const item = require("../../_runtime/00012_apply.js").forEach(tmp7, (channel) => {
     channel = channel.channel;
     obj2.count = obj2.count + 1;
     let type = channel.type;

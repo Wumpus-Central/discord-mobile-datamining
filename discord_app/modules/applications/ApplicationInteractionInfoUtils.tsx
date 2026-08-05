@@ -10,14 +10,14 @@ export const isPrimaryEntryPointCommandMessage = function isPrimaryEntryPointCom
   if (interactionMetadata != null) {
     type = interactionMetadata.type;
   }
-  let tmp4 = type === require(1906) /* PermissionOverwriteType */.InteractionTypes.APPLICATION_COMMAND;
+  let tmp4 = type === require("../../flow/Server.tsx") /* PermissionOverwriteType */.InteractionTypes.APPLICATION_COMMAND;
   if (tmp4) {
     const interactionMetadata2 = interactionMetadata.interactionMetadata;
     let command_type;
     if (interactionMetadata2 != null) {
       command_type = interactionMetadata2.command_type;
     }
-    tmp4 = command_type === require(1906) /* PermissionOverwriteType */.ApplicationCommandType.PRIMARY_ENTRY_POINT;
+    tmp4 = command_type === require("../../flow/Server.tsx") /* PermissionOverwriteType */.ApplicationCommandType.PRIMARY_ENTRY_POINT;
   }
   return tmp4;
 };

@@ -45,7 +45,7 @@ function sortKey(type) {
             }
           }
           const _HermesInternal = HermesInternal;
-          return "" + str + importDefault(5112)(type.userNick, type.user);
+          return "" + str + require("getParticipantUserKey.tsx")(type.userNick, type.user);
         }
       }
     }
@@ -54,7 +54,7 @@ function sortKey(type) {
       str4 = "\u0002";
     }
     const _HermesInternal2 = HermesInternal;
-    return "" + str4 + importDefault(5112)(type.userNick, type.user) + "\u0003";
+    return "" + str4 + require("getParticipantUserKey.tsx")(type.userNick, type.user) + "\u0003";
   }
 }
 ({ isStreamParticipant: map1, ParticipantTypes: closure_14 } = ParticipantTypes);
@@ -305,10 +305,10 @@ prototype["_getEmbeddedActivities"] = function _getEmbeddedActivities() {
   if (null != selfEmbeddedActivityForChannel) {
     const items = [];
     items[HermesBuiltin.arraySpread(embeddedActivitiesForChannelIncludingHidden, 0)] = selfEmbeddedActivityForChannel;
-    uniqByResult = require(12) /* apply */.uniqBy(items, (compositeInstanceId) => compositeInstanceId.compositeInstanceId);
-    const obj = require(12) /* apply */;
+    uniqByResult = require("../../../_runtime/00012_apply.js") /* apply */.uniqBy(items, (compositeInstanceId) => compositeInstanceId.compositeInstanceId);
+    const obj = require("../../../_runtime/00012_apply.js") /* apply */;
   }
-  const ContentClassificationEmbeddedActivityFilterExperiment = require(10563) /* apexExperiment */.ContentClassificationEmbeddedActivityFilterExperiment;
+  const ContentClassificationEmbeddedActivityFilterExperiment = require("../activities/ContentClassificationEmbeddedActivityFilterExperiment.tsx") /* apexExperiment */.ContentClassificationEmbeddedActivityFilterExperiment;
   const currentUser = authStore2.getCurrentUser();
   let nsfwAllowed;
   if (currentUser != null) {
@@ -397,7 +397,7 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
       obj.id = user.id;
       obj.voiceState = voiceStateForChannel;
       obj.voicePlatform = voicePlatformForChannel;
-      let obj1 = require(10562) /* useIsSpeaking */;
+      let obj1 = require("../../hooks/useIsSpeaking.tsx") /* useIsSpeaking */;
       obj = { userId: null, checkIsMuted: true };
       obj[0] = userId;
       obj.speaking = obj1.getIsSpeaking(obj);
@@ -408,15 +408,15 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
       obj.lastSpoke = num;
       obj.soundsharing = soundSharing.isSoundSharing(userId);
       obj.ringing = flag;
-      obj.userNick = importDefault(4474).getName(guildId, self.channelId, user);
-      const obj4 = importDefault(4474);
+      obj.userNick = require("../../utils/NicknameUtils.tsx").getName(guildId, self.channelId, user);
+      const obj4 = require("../../utils/NicknameUtils.tsx");
       const tmp8 = require;
-      obj.userAvatarDecoration = require(8735) /* useAvatarDecoration */.getAvatarDecoration(user, guildId);
+      obj.userAvatarDecoration = require("../collectibles/avatar_decorations/useAvatarDecoration.tsx") /* useAvatarDecoration */.getAvatarDecoration(user, guildId);
       obj.localVideoDisabled = localVideoDisabled.isLocalVideoDisabled(user.id);
       const poppedOutParticipants = self.poppedOutParticipants;
       obj.isPoppedOut = poppedOutParticipants.has(user.id);
       items.push(obj);
-      const tmp8Result = require(8735) /* useAvatarDecoration */;
+      const tmp8Result = require("../collectibles/avatar_decorations/useAvatarDecoration.tsx") /* useAvatarDecoration */;
     }
     let streamForUser = authStore.getStreamForUser(userId, guildId);
     if (streamForUser == null) {
@@ -424,9 +424,9 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
     }
     if (null != streamForUser) {
       if (streamForUser.channelId === self.channelId) {
-        const encodeStreamKeyResult = require(4348) /* isStreamKey */.encodeStreamKey(streamForUser);
+        const encodeStreamKeyResult = require("../go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */.encodeStreamKey(streamForUser);
         const participant = self.getParticipant(encodeStreamKeyResult);
-        const obj12 = require(4348) /* isStreamKey */;
+        const obj12 = require("../go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */;
         let type;
         if (participant != null) {
           type = participant.type;
@@ -459,12 +459,12 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
         obj2.userVideo = flag2;
         obj2.user = user;
         const tmp15 = streamForUser.ownerId === store2.getId() && obj6.isSelfStreamHidden(self.channelId);
-        obj2.userNick = importDefault(4474).getName(guildId, self.channelId, user);
+        obj2.userNick = require("../../utils/NicknameUtils.tsx").getName(guildId, self.channelId, user);
         obj2.stream = streamForUser;
         const poppedOutParticipants2 = self.poppedOutParticipants;
         obj2.isPoppedOut = poppedOutParticipants2.has(encodeStreamKeyResult);
         items.push(obj2);
-        const obj10 = importDefault(4474);
+        const obj10 = require("../../utils/NicknameUtils.tsx");
       }
     }
     return items;

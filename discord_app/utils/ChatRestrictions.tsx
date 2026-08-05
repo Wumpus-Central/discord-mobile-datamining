@@ -8,7 +8,7 @@ const items = [
         if (null == getGuildId.getGuildId()) {
           return false;
         } else {
-          const extractEveryoneRoleResult = importDefault(9827).extractEveryoneRole(arg0, getGuildId);
+          const extractEveryoneRoleResult = require("MentionGuardUtils.tsx").extractEveryoneRole(arg0, getGuildId);
           if (null == extractEveryoneRoleResult) {
             return false;
           } else {
@@ -32,13 +32,13 @@ const items = [
               obj[1] = result.toLocaleString();
               obj[0] = intl.formatToPlainString(_2YaiQ1, obj);
               const intl2 = tmp6(1236).intl;
-              obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.mVyrtu);
+              obj[1] = intl2.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.mVyrtu);
               return obj;
             } else {
               return false;
             }
           }
-          const obj5 = importDefault(9827);
+          const obj5 = require("MentionGuardUtils.tsx");
         }
       } else {
         return false;
@@ -52,8 +52,8 @@ const items = [
       let isMatch = TOKEN_REGEX.test(arg0);
       if (isMatch) {
         const obj = { body: null };
-        const intl = require(1236) /* getSystemLocale */.intl;
-        obj[0] = intl.string(require(1236) /* getSystemLocale */.t.sTwS1a);
+        const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+        obj[0] = intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.sTwS1a);
         isMatch = obj;
       }
       return isMatch;

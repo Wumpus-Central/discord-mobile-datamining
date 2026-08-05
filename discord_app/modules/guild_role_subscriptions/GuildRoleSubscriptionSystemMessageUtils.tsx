@@ -38,7 +38,7 @@ function getRoleSubscriptionPurchaseSystemMessageContent(usernameOnClickHandler)
   if (flag == null) {
     flag = false;
   }
-  const t = require(1236) /* getSystemLocale */.t;
+  const t = require("../../intl/index.native.tsx") /* getSystemLocale */.t;
   if (!tmp2) {
     let obj = { content: null, formatParams: null };
     obj[0] = flag ? t.mPTTdv : t.mYjFFx;
@@ -73,10 +73,10 @@ export const pickRoleSubscriptionPurchaseSticker = function pickRoleSubscription
   }
   let num = 0;
   if (null != id) {
-    num = importDefault(11).extractTimestamp(id);
-    const obj = importDefault(11);
+    num = require("../../utils/SnowflakeUtils.tsx").extractTimestamp(id);
+    const obj = require("../../utils/SnowflakeUtils.tsx");
   }
-  const obj2 = importDefault(11);
+  const obj2 = require("../../utils/SnowflakeUtils.tsx");
   return length[(num + obj2.extractTimestamp(obj2, id)) % length.length];
 };
 export const getRoleSubscriptionPurchaseStickerCTA = function getRoleSubscriptionPurchaseStickerCTA(id, arg1) {
@@ -85,21 +85,21 @@ export const getRoleSubscriptionPurchaseStickerCTA = function getRoleSubscriptio
   } else {
     arr = callback();
   }
-  const obj = importDefault(11);
+  const obj = require("../../utils/SnowflakeUtils.tsx");
   return arr[obj.extractTimestamp(obj, id) % arr.length];
 };
 export const getRoleSubscriptionPurchaseSystemMessageFormattedContent = function getRoleSubscriptionPurchaseSystemMessageFormattedContent(username) {
   let content;
   let formatParams;
   ({ content, formatParams } = getRoleSubscriptionPurchaseSystemMessageContent({ username: username.username, usernameOnClickHandler: username.usernameOnClickHandler, roleSubscriptionOnClickHandler: username.roleSubscriptionOnClickHandler, guildId: username.guildId, roleSubscriptionData: username.roleSubscriptionData }));
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
   return intl.format(content, formatParams);
 };
 export const getRoleSubscriptionPurchaseSystemMessageAstFormattedContent = function getRoleSubscriptionPurchaseSystemMessageAstFormattedContent(username) {
   let content;
   let formatParams;
   ({ content, formatParams } = getRoleSubscriptionPurchaseSystemMessageContent({ username: username.username, usernameOnClickHandler: username.usernameOnClickHandler, roleSubscriptionOnClickHandler: username.roleSubscriptionOnClickHandler, guildId: username.guildId, roleSubscriptionData: username.roleSubscriptionData }));
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
   return intl.formatToParts(content, formatParams);
 };
 export const getRoleSubscriptionPurchaseSystemMessageContentMobile = function getRoleSubscriptionPurchaseSystemMessageContentMobile(usernameOnClickHandler) {
@@ -127,7 +127,7 @@ export const getRoleSubscriptionPurchaseSystemMessageContentMobile = function ge
   if (flag == null) {
     flag = false;
   }
-  const t = require(1236) /* getSystemLocale */.t;
+  const t = require("../../intl/index.native.tsx") /* getSystemLocale */.t;
   if (tmp2) {
     if (flag) {
       _N9bxq = t.OQ0OUy;
@@ -164,10 +164,10 @@ export const getRoleSubscriptionPurchaseSystemMessageContentMobile = function ge
   }
 };
 export const isEligibleForRoleSubscriptionPurchaseSystemMessageSettings = function isEligibleForRoleSubscriptionPurchaseSystemMessageSettings(guild) {
-  return require(5780) /* useIsCreatorMonetizationEnabledGuild */.isCreatorMonetizationEnabledGuild(guild);
+  return require("../creator_monetization_eligibility/useIsCreatorMonetizationEnabledGuild.tsx") /* useIsCreatorMonetizationEnabledGuild */.isCreatorMonetizationEnabledGuild(guild);
 };
 export const trackRoleSubscriptionPurchaseMessageTierClick = function trackRoleSubscriptionPurchaseMessageTierClick(guild_id) {
-  let obj = importDefault(4479);
+  let obj = require("../app_analytics/AppAnalyticsUtils.tsx");
   obj = { guild_id, user_id: null, channel_id: null, message_id: null, role_subscription_listing_id: null };
   const currentUser = authStore.getCurrentUser();
   let id;

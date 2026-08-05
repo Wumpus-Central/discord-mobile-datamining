@@ -12,7 +12,7 @@ export const getArtForPath = function getArtForPath(arg0) {
   if (null != arg0) {
     tmp = null;
     if (obj.test(arg0)) {
-      tmp = require(1353) /* registerAsset */;
+      tmp = require("../../_runtime/01353_registerAsset.js") /* registerAsset */;
     }
     obj = /^\/developers/;
   }

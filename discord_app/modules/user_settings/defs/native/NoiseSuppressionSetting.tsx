@@ -5,21 +5,21 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.t8Qhib);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.t8Qhib);
   },
   parent: require("MobileSetting").MobileSetting.VOICE,
   useValue: function useNoiseSuppressionSettingValue() {
     const items = [_detectH265HardwareDecode];
-    return require(589) /* initialize */.useStateFromStores(items, () => noiseSuppression.getNoiseSuppression());
+    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => noiseSuppression.getNoiseSuppression());
   },
   onValueChange: function onNoiseSuppressionSettingValueChange(arg0) {
-    const NoiseSuppressionOpt = require(10754) /* handleAutomaticGainControlChange */.NoiseSuppressionOpt;
-    const result = require(10754) /* handleAutomaticGainControlChange */.handleNoiseSuppressionChange(arg0 ? NoiseSuppressionOpt.STANDARD : NoiseSuppressionOpt.NONE);
+    const NoiseSuppressionOpt = require("../../voice/native/UserSettingsVoiceUtils.tsx") /* handleAutomaticGainControlChange */.NoiseSuppressionOpt;
+    const result = require("../../voice/native/UserSettingsVoiceUtils.tsx") /* handleAutomaticGainControlChange */.handleNoiseSuppressionChange(arg0 ? NoiseSuppressionOpt.STANDARD : NoiseSuppressionOpt.NONE);
   },
   usePredicate: function useHasNoiseSuppressionSetting() {
     const items = [_detectH265HardwareDecode];
-    return require(589) /* initialize */.useStateFromStores(items, () => !noiseCancellationSupported.isNoiseCancellationSupported());
+    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => !noiseCancellationSupported.isNoiseCancellationSupported());
   }
 };
 createToggle = createToggle.createToggle(createToggle);

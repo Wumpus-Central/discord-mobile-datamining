@@ -32,12 +32,12 @@ export const determineMediaEngine = function determineMediaEngine() {
 };
 export const initializeMediaEngine = function initializeMediaEngine(BaseConnectionEvent) {
   if (constants.NATIVE === BaseConnectionEvent) {
-    let _default = require(4382) /* destroy */.default;
+    let _default = require("native/index.tsx") /* destroy */.default;
   } else {
     if (tmp.WEBRTC !== BaseConnectionEvent) {
       const DUMMY = tmp.DUMMY;
     }
-    _default = require(4452) /* Video */.default;
+    _default = require("MediaEngineDummy.tsx") /* Video */.default;
   }
   _default = new _default();
   return _default;

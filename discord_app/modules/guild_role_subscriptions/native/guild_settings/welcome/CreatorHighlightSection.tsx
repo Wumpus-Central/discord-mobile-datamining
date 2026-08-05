@@ -19,17 +19,17 @@ function GuildServerSubscriberCount(arg0) {
   ({ horizontalContainer: arr[0], subscriberCountContainer: arr[1] } = tmp);
   items[2] = style;
   obj = { style: tmp.subscriberCount, variant: "text-sm/medium", color: "text-overlay-light", children: subscriberCount };
-  const items1 = [callback(require(4281) /* Text */.Text, obj), , ];
+  const items1 = [callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), , ];
   obj = { size: null, color: null, style: null, source: null };
-  obj[0] = require(1297) /* Button */.Icon.Sizes.SMALL;
-  obj[1] = importDefault(712).unsafe_rawColors.WHITE;
+  obj[0] = require("../../../../../design/void/native.tsx") /* Button */.Icon.Sizes.SMALL;
+  obj[1] = require("../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.WHITE;
   obj[2] = tmp.subscriberCountIcon;
-  obj[3] = importDefault(8610);
-  items1[1] = callback(require(1297) /* Button */.Icon, obj);
+  obj[3] = require("../../../../../../_runtime/08610_registerAsset.js");
+  items1[1] = callback(require("../../../../../design/void/native.tsx") /* Button */.Icon, obj);
   const obj1 = { variant: "text-sm/normal", color: "text-overlay-light", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj1[2] = intl.string(require(1236) /* getSystemLocale */.t["3NNXPW"]);
-  items1[2] = callback(require(4281) /* Text */.Text, obj1);
+  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj1[2] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["3NNXPW"]);
+  items1[2] = callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
   obj[1] = items1;
   return callback2(closure_4, obj);
 }
@@ -78,7 +78,7 @@ function CreatorGuildCard(highlightedCreatorGuild) {
     obj3[0] = tmp.cardHeaderContainer;
     const obj4 = { variant: "heading-md/extrabold", color: "mobile-text-heading-primary", lineClamp: 1, lineBreakMode: "tail", children: null };
     obj4[4] = guildName;
-    const items2 = [callback(_require(4281).Text, obj4), ];
+    const items2 = [callback(_require("../../../../../design/components/Text/native/Text.tsx").Text, obj4), ];
     let tmp9Result = null != subscriberCount;
     if (tmp9Result) {
       const obj5 = { subscriberCount: null, style: null };
@@ -94,7 +94,7 @@ function CreatorGuildCard(highlightedCreatorGuild) {
     const obj6 = { style: null, variant: "text-md/normal", color: "text-default", children: null };
     obj6[0] = tmp.ownerQuote;
     obj6[3] = quote;
-    items3[1] = callback(_require(4281).Text, obj6);
+    items3[1] = callback(_require("../../../../../design/components/Text/native/Text.tsx").Text, obj6);
     const obj7 = { style: null, variant: "text-sm/normal", color: "text-default", lineClamp: 1, lineBreakMode: "tail", children: null };
     obj7[0] = tmp.ownerUsername;
     const intl = tmp10(1236).intl;
@@ -105,8 +105,8 @@ function CreatorGuildCard(highlightedCreatorGuild) {
       quote_attribution_title = intl2.string(tmp10(1236).t.pclUFJ);
     }
     obj8[1] = quote_attribution_title;
-    obj7[5] = intl.format(_require(1236).t.m0b6Kj, obj8);
-    items3[2] = callback(_require(4281).Text, obj7);
+    obj7[5] = intl.format(_require("../../../../../intl/index.native.tsx").t.m0b6Kj, obj8);
+    items3[2] = callback(_require("../../../../../design/components/Text/native/Text.tsx").Text, obj7);
     let tmp7Result = null != emojisToShow;
     if (tmp7Result) {
       tmp7Result = emojisToShow.length > 0;
@@ -151,9 +151,9 @@ function CreatorGuildCard(highlightedCreatorGuild) {
     const obj14 = { pillStyle: null, text: null, onPress: null, shrink: true };
     obj14[0] = tmp.viewServerButton;
     const intl4 = tmp10(1236).intl;
-    obj14[1] = intl4.string(_require(1236).t.mQ2IGa);
+    obj14[1] = intl4.string(_require("../../../../../intl/index.native.tsx").t.mQ2IGa);
     obj14[2] = tmp5;
-    obj13[1] = callback(_require(4696).BaseTextButton, obj14);
+    obj13[1] = callback(_require("../../../../../design/components/Button/native/BaseTextButton.native.tsx").BaseTextButton, obj14);
     items3[4] = callback(closure_4, obj13);
     obj[1] = items3;
     return closure_7(closure_4, obj);

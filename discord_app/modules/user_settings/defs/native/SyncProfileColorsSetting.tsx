@@ -5,13 +5,13 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["sSY+mD"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["sSY+mD"]);
   },
   parent: require("MobileSetting").MobileSetting.ACCESSIBILITY,
   useValue: function useProfileColorsSettingValue() {
     const items = [maybeApplyNoTextColorForLightCustomTheme];
-    return require(589) /* initialize */.useStateFromStores(items, () => obj.syncProfileThemeWithUserTheme);
+    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => obj.syncProfileThemeWithUserTheme);
   },
   onValueChange: require("setFontSize").toggleSyncProfileThemeWithUserTheme
 };

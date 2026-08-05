@@ -26,12 +26,12 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
   let isRTCDisconnectedUIVisible;
   let callback;
   let callback1;
-  setShowFloatingCTA = setShowFloatingCTA.useContext(importDefault(11557)).setShowFloatingCTA;
+  setShowFloatingCTA = setShowFloatingCTA.useContext(require("../VoicePanelStateContext.tsx")).setShowFloatingCTA;
   let tmp6;
   if (arg0 === stateFromStores.USER) {
     tmp6 = id;
   }
-  muteDeafenIconState = _require(9101).useMuteDeafenIconState(tmp6, guildId);
+  muteDeafenIconState = _require("../utils/VoiceStateIconUtils.tsx").useMuteDeafenIconState(tmp6, guildId);
   let tmp4Result = tmp4(9101);
   let tmp8;
   if (arg0 === stateFromStores.USER) {
@@ -41,10 +41,10 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
   tmp4Result = tmp4(647);
   let items = [muteDeafenIconState];
   stateFromStores = tmp4Result.useStateFromStores(items, () => muteDeafenIconState.isConnected());
-  let obj2 = _require(9101);
+  let obj2 = _require("../utils/VoiceStateIconUtils.tsx");
   let items1 = [videoIconState];
   const items2 = [tmp, id];
-  stateFromStores1 = _require(647).useStateFromStores(items1, () => {
+  stateFromStores1 = _require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items1, () => {
     let voicePlatformForChannel = null;
     if (null != closure_2) {
       voicePlatformForChannel = null;
@@ -67,8 +67,8 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
   if (showTileVolumeIndicator) {
     showTileVolumeIndicator = arg0 === tmp5.STREAM;
   }
-  const tmp4Result1 = _require(647);
-  isRTCDisconnectedUIVisible = _require(15237).useIsRTCDisconnectedUIVisible(tmp, id);
+  const tmp4Result1 = _require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx");
+  isRTCDisconnectedUIVisible = _require("../../../voice_calls/RTCConnectionDesyncHooks.tsx").useIsRTCDisconnectedUIVisible(tmp, id);
   const items3 = [setShowFloatingCTA];
   callback = obj.useCallback(() => {
 

@@ -26,16 +26,16 @@ prototype["getWebhooksForGuild"] = function getWebhooksForGuild(arg0) {
   if (null == dependencyMap[arg0]) {
     tmp[arg0] = {};
   }
-  return importDefault(12).values(dependencyMap[arg0]);
+  return require("../../_runtime/00012_apply.js").values(dependencyMap[arg0]);
 };
 prototype["getWebhooksForChannel"] = function getWebhooksForChannel(arg0, arg1) {
   const importDefault = arg1;
   if (null == dependencyMap[arg0]) {
     tmp2[arg0] = {};
   }
-  const tmp = importDefault(12);
-  const values = importDefault(12)(dependencyMap[arg0]).values();
-  const tmpResult = importDefault(12)(dependencyMap[arg0]);
+  const tmp = require("../../_runtime/00012_apply.js");
+  const values = require("../../_runtime/00012_apply.js")(dependencyMap[arg0]).values();
+  const tmpResult = require("../../_runtime/00012_apply.js")(dependencyMap[arg0]);
   return values.filter((channel_id) => channel_id.channel_id === closure_0).value();
 };
 Object.defineProperty(prototype, "error", {

@@ -19,25 +19,25 @@ export const usePrivateChannelWaveEligible = function usePrivateChannelWaveEligi
     recipientId = isDM.getRecipientId();
   }
   const items = [upsertRelationship];
-  const stateFromStores = _require(589).useStateFromStores(items, () => {
+  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let isFriendResult = null != recipientId;
     if (isFriendResult) {
       isFriendResult = outer1_4.isFriend(tmp);
     }
     return isFriendResult;
   });
-  const obj = _require(589);
+  const obj = _require("../../../discord_common/js/packages/flux/index.tsx");
   const items1 = [upsertRelationship];
-  const stateFromStores1 = _require(589).useStateFromStores(items1, () => {
+  const stateFromStores1 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
     let isIgnoredResult = null != recipientId;
     if (isIgnoredResult) {
       isIgnoredResult = outer1_4.isIgnored(tmp);
     }
     return isIgnoredResult;
   });
-  const obj2 = _require(589);
+  const obj2 = _require("../../../discord_common/js/packages/flux/index.tsx");
   const items2 = [reinjectEphemerals];
-  const stateFromStores2 = _require(589).useStateFromStores(items2, () => {
+  const stateFromStores2 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
     const messages = outer1_3.getMessages(isDM.id);
     let tmp = 1 === messages.length;
     if (tmp) {
@@ -51,16 +51,16 @@ export const usePrivateChannelWaveEligible = function usePrivateChannelWaveEligi
     return tmp;
   });
   let hasFlagResult = isDM.hasFlag(ChannelFlags.HAS_ONLY_SYSTEM_MESSAGES);
-  const obj3 = _require(589);
+  const obj3 = _require("../../../discord_common/js/packages/flux/index.tsx");
   const items3 = [reinjectEphemerals];
-  const stateFromStores3 = _require(589).useStateFromStores(items3, () => outer1_3.hasCurrentUserSentWaveBlockingMessage(isDM.id));
-  const obj4 = _require(589);
+  const stateFromStores3 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items3, () => outer1_3.hasCurrentUserSentWaveBlockingMessage(isDM.id));
+  const obj4 = _require("../../../discord_common/js/packages/flux/index.tsx");
   const obj5 = recipientId(11);
   const extractTimestampResult = recipientId(11).extractTimestamp(isDM.id);
-  const obj6 = _require(3955);
+  const obj6 = _require("../../utils/DateUtils.tsx");
   const tmp9 = recipientId(3867)();
   const isWithinIntervalResult = obj6.isWithinInterval(recipientId(3867)(), recipientId(3867)(extractTimestampResult), 1814400000);
-  const strangerDangerWarning = _require(10254).useStrangerDangerWarning(isDM.id);
+  const strangerDangerWarning = _require("../self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx").useStrangerDangerWarning(isDM.id);
   if (tmp) {
     tmp = stateFromStores;
   }

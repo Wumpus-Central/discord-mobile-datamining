@@ -6,13 +6,13 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["jcSP+g"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["jcSP+g"]);
   },
   parent: null,
   IconComponent: require("GiftIcon").GiftIcon,
   usePredicate() {
-    return require(3944) /* isPremiumGiftingSupported */.isPremiumGiftingSupported();
+    return require("../../../device/BillingPlatformUtils.tsx") /* isPremiumGiftingSupported */.isPremiumGiftingSupported();
   },
   usePreNavigationAction: function useCanNavigateToPaymentSetting() {
     return React.useCallback(() => {
@@ -26,10 +26,10 @@ createToggle = {
     }, []);
   },
   useTrailing: function usePremiumGiftingSettingTrailing() {
-    let obj = require(12644) /* useEligibleActiveOutboundPromotions */;
+    let obj = require("../../../premium/promotions/PromotionsHooks.tsx") /* useEligibleActiveOutboundPromotions */;
     const unseenOutboundPromotions = obj.useUnseenOutboundPromotions();
     obj = { value: unseenOutboundPromotions.length };
-    return jsx(require(1297) /* Button */.Badge, { value: unseenOutboundPromotions.length });
+    return jsx(require("../../../../design/void/native.tsx") /* Button */.Badge, { value: unseenOutboundPromotions.length });
   },
   unsearchable: true,
   screen: createToggle
@@ -37,7 +37,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.PREMIUM_GIFTING,
   getComponent() {
-    return require(12730) /* GiftingSectionTitle */.default;
+    return require("../../premium/native/UserSettingsPremiumGifting.tsx") /* GiftingSectionTitle */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

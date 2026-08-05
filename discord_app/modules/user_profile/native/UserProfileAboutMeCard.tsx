@@ -28,11 +28,11 @@ function Heading(children) {
     tmp = closure_14;
   }
   ({ headingVariant, headingSpacing } = tmp);
-  let variant = require(3989) /* map */.useToken(importDefault(712).modules.mobile.USER_PROFILE_ABOUT_ME_HEADING_TEXT_STYLE);
+  let variant = require("../../../design/tokens/native/useToken.tsx") /* map */.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.USER_PROFILE_ABOUT_ME_HEADING_TEXT_STYLE);
   if (variant == null) {
     variant = headingVariant;
   }
-  return closure_11(require(4281) /* Text */.Text, { accessibilityRole: "header", variant, color: "user-profile-about-me-heading-text", style: { marginBottom }, children: children.children });
+  return closure_11(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { accessibilityRole: "header", variant, color: "user-profile-about-me-heading-text", style: { marginBottom }, children: children.children });
 }
 function TextWithIcon(themeType) {
   let accessibilityLabel;
@@ -49,7 +49,7 @@ function TextWithIcon(themeType) {
   }
   const obj = { style: items, accessible: true, accessibilityLabel, children: null };
   items = [callback3().textWithIcon, { columnGap: tmp2.columnGap }];
-  const items1 = [icon, callback(require(4281) /* Text */.Text, { variant: tmp2.textVariant, color: "text-default", children })];
+  const items1 = [icon, callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: tmp2.textVariant, color: "text-default", children })];
   obj[3] = items1;
   return callback2(View, obj);
 }
@@ -79,15 +79,15 @@ function Bio(arg0) {
       let obj = { children: null };
       obj = { themeType: null, children: null };
       obj[0] = themeType;
-      const intl = require(1236) /* getSystemLocale */.intl;
-      obj[1] = intl.string(require(1236) /* getSystemLocale */.t.ZzAR2Y);
+      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      obj[1] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ZzAR2Y);
       const items = [callback(Heading, obj), ];
       obj = { bio: null, userId: null, textVariant: null, lineClamp: null };
       obj[0] = previewBio;
       obj[1] = userId;
       obj[2] = tmp.textVariant;
       obj[3] = lineClamp;
-      items[1] = callback(importDefault(9449), obj);
+      items[1] = callback(require("../../profile_customization/native/BioText.tsx"), obj);
       obj[0] = items;
       tmp4 = callback2(View, obj);
     }
@@ -131,7 +131,7 @@ function MemberJoinDates(userId) {
     return member;
   });
   let obj3 = userId(5091);
-  let obj4 = importDefault(11);
+  let obj4 = require("../../../utils/SnowflakeUtils.tsx");
   const createdAtDate = obj3.getCreatedAtDate(obj4.extractTimestamp(userId), stateFromStores);
   let obj5 = userId(5091);
   let joinedAt;
@@ -162,7 +162,7 @@ function MemberJoinDates(userId) {
     obj5 = { guild: null, size: null };
     obj5[0] = stateFromStores1;
     obj5[1] = tmp4(5661).GuildIconSizes.XXSMALL;
-    obj4[1] = tmp15(importDefault(5661), obj5);
+    obj4[1] = tmp15(require("../../guild/native/GuildIcon.tsx"), obj5);
     const intl3 = tmp4(1236).intl;
     const obj6 = { guildName: null, date: null };
     obj6[0] = stateFromStores1.name;
@@ -172,7 +172,7 @@ function MemberJoinDates(userId) {
     items6[1] = tmp15(TextWithIcon, obj4);
     obj2[0] = items6;
     tmp13Result = tmp13(closure_13, obj2);
-    const tmp9Result = importDefault(5661);
+    const tmp9Result = require("../../guild/native/GuildIcon.tsx");
   }
   const obj7 = { children: null };
   items5[1] = tmp13Result;
@@ -190,7 +190,7 @@ function FriendsSinceDate(themeType) {
   if (tmp == null) {
     tmp = closure_14;
   }
-  let obj = require(9453) /* useFriendsSinceDate */;
+  let obj = require("../hooks/useFriendsSinceDate.tsx") /* useFriendsSinceDate */;
   const friendsSinceDate = obj.useFriendsSinceDate(themeType.userId);
   let tmp6 = null;
   if (null != friendsSinceDate) {
@@ -217,8 +217,8 @@ function PolicyLinks(arg0) {
   if (null != termsOfServiceUrl) {
     let obj = { themeType: null, children: null };
     obj[0] = themeType;
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[1] = intl.string(require(1236) /* getSystemLocale */.t.l6DP2n);
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[1] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.l6DP2n);
     const items = [callback(Heading, obj), ];
     obj = { style: null, children: null };
     obj[0] = tmp.policyLinks;
@@ -272,8 +272,8 @@ function PolicyLink(children) {
     },
     children: null
   };
-  obj[2] = callback(require(4281) /* Text */.Text, { variant: tmp.textVariant, color: "text-link", children: children.label });
-  return callback(require(1297) /* Button */.PressableOpacity, obj);
+  obj[2] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: tmp.textVariant, color: "text-link", children: children.label });
+  return callback(require("../../../design/void/native.tsx") /* Button */.PressableOpacity, obj);
 }
 function BotSlashCommands(channel) {
   let application;
@@ -396,5 +396,5 @@ export default function UserProfileAboutMeCard(arg0) {
   }
   items1[4] = tmp7Result;
   obj[1] = items1;
-  return tmp5(importDefault(5657), obj);
+  return tmp5(require("UserProfileCard.tsx"), obj);
 };

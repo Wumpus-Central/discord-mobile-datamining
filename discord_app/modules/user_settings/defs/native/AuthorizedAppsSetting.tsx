@@ -3,8 +3,8 @@ import createToggle from "createToggle";
 
 obj = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["f6kk+r"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["f6kk+r"]);
   },
   parent: null,
   IconComponent: require("KeyIcon").KeyIcon,
@@ -13,7 +13,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.AUTHORIZED_APPS,
   getComponent() {
-    return require(14088) /* UserSettingsAuthedApps */.default;
+    return require("../../authorized_apps/native/UserSettingsAuthedApps.tsx") /* UserSettingsAuthedApps */.default;
   }
 };
 const route = createToggle.createRoute(obj);

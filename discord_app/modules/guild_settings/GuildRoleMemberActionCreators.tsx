@@ -159,9 +159,9 @@ export const requestMembersForRole = function requestMembersForRole(closure_0, c
   }
   const result = tmp2.set(combined, true);
   const _require = closure_0;
-  const HTTP = _require(530).HTTP;
+  const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
   const obj = { url: Endpoints.GUILD_ROLE_MEMBER_IDS(closure_0, callback), rejectWithError: null };
-  obj[1] = _require(530).rejectWithMigratedError();
+  obj[1] = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
   const value = HTTP.get(obj);
   resolved = value.then((body) => {
     const membersById = outer1_1(outer1_2[6]).requestMembersById(closure_0, body.body, false);

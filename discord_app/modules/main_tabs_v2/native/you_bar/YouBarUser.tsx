@@ -28,11 +28,11 @@ const memoResult = importAllResult.memo(function YouBarUser(isQuestRendered) {
   let _require;
   let sharedValue;
   const tmp = callback2();
-  let obj = _require(589);
+  let obj = _require("../../../../../discord_common/js/packages/flux/index.tsx");
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   _require = tmp5;
-  let obj1 = _require(4146);
+  let obj1 = _require("../../../reanimated/ReanimatedRexport.tsx");
   sharedValue = obj1.useSharedValue(isQuestRendered ? closure_8 : closure_7);
   const items1 = [!isQuestRendered, sharedValue];
   const effect = importAllResult.useEffect(() => {
@@ -47,7 +47,7 @@ const memoResult = importAllResult.memo(function YouBarUser(isQuestRendered) {
   S.__closure = { nameMargin: sharedValue };
   S.__workletHash = 12063452832866;
   S.__initData = closure_12;
-  const animatedStyle = _require(4146).useAnimatedStyle(S);
+  const animatedStyle = _require("../../../reanimated/ReanimatedRexport.tsx").useAnimatedStyle(S);
   let obj3 = sharedValue(4124);
   const name = obj3.useName(stateFromStores);
   if (null != stateFromStores) {

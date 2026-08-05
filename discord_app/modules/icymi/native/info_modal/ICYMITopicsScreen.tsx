@@ -93,7 +93,7 @@ let result = require("noop").fileFinishedImporting("modules/icymi/native/info_mo
 
 export default function ICYMITopicsScreen() {
   const tmp = createCacheKey();
-  const bottom = importDefault(1581)().bottom;
+  const bottom = require("../../../safe_area/useSafeAreaInsets.native.tsx")().bottom;
   const tmp4 = callback(React.useState(new Set()), 2);
   const first = tmp4[0];
   importDefault = tmp4[1];

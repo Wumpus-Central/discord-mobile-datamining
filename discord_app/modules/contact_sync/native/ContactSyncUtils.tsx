@@ -77,7 +77,7 @@ export const ContactSyncPermissionDenied = error;
 export const ContactSyncFailedUserHasNoPhone = error1;
 export const ContactImageFetchFailed = error2;
 export const isContactSyncAvailable = function isContactSyncAvailable() {
-  let isIOSResult = require(501) /* PlatformTypes */.isIOS();
+  let isIOSResult = require("../../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */.isIOS();
   if (!isIOSResult) {
     const DCDContactSyncManager = NativeModules.DCDContactSyncManager;
     let flag;
@@ -92,7 +92,7 @@ export const isContactSyncAvailable = function isContactSyncAvailable() {
   return isIOSResult;
 };
 export const checkContactPermissions = function checkContactPermissions() {
-  let isIOSResult = require(501) /* PlatformTypes */.isIOS();
+  let isIOSResult = require("../../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */.isIOS();
   if (!isIOSResult) {
     const DCDContactSyncManager = NativeModules.DCDContactSyncManager;
     let flag;
@@ -123,24 +123,24 @@ export const uploadContacts = function uploadContacts(c3, arg1) {
   return applyArgumentsResult;
 };
 export const bulkAddFriends = function bulkAddFriends(user_ids, bulkAddToken) {
-  let obj = importDefault(5094);
+  let obj = require("../../../utils/TrackedHTTPUtils.tsx");
   obj = { url: closure_12.USER_BULK_RELATIONSHIPS, body: obj, trackedActionData: null, rejectWithError: false };
   obj = { user_ids, token: bulkAddToken };
-  obj[2] = { event: require(503) /* encodeProperties */.NetworkActionNames.USER_BULK_RELATIONSHIPS_UPDATE };
-  const obj1 = { event: require(503) /* encodeProperties */.NetworkActionNames.USER_BULK_RELATIONSHIPS_UPDATE };
+  obj[2] = { event: require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.NetworkActionNames.USER_BULK_RELATIONSHIPS_UPDATE };
+  const obj1 = { event: require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.NetworkActionNames.USER_BULK_RELATIONSHIPS_UPDATE };
   return obj.post(obj).then((body) => body.body);
 };
 export const adminDeleteContactSync = function adminDeleteContactSync() {
   callback2();
   callback3();
-  let obj = require(11948) /* _requestAndSyncContacts */;
+  let obj = require("ContactSyncManager.tsx") /* _requestAndSyncContacts */;
   const result = obj.removeLastUserContactsUpload();
-  const ContactSyncEnabled = require(3958) /* explicitContentFromProto */.ContactSyncEnabled;
+  const ContactSyncEnabled = require("../../user_settings/UserSettings.tsx") /* explicitContentFromProto */.ContactSyncEnabled;
   ContactSyncEnabled.updateSetting(false);
   obj = { url: closure_12.CONNECTION(constants2.CONTACTS, "@me"), oldFormErrors: true, trackedActionData: null, rejectWithError: false };
-  obj = { event: require(503) /* encodeProperties */.NetworkActionNames.USER_CONNECTIONS_UPDATE };
+  obj = { event: require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.NetworkActionNames.USER_CONNECTIONS_UPDATE };
   obj[2] = obj;
-  return importDefault(5094).delete(obj);
+  return require("../../../utils/TrackedHTTPUtils.tsx").delete(obj);
 };
 export const getImageForContactId = function getImageForContactId(closure_0, arg1) {
   let DCDContactSyncManager = NativeModules.DCDContactSyncManager;
@@ -199,27 +199,27 @@ export const getStoredContacts = function getStoredContacts() {
     const _JSON = JSON;
     return JSON.parse(tmp2);
   } catch (tmp4) {
-    importDefault(1208).captureException(tmp4);
-    const obj = importDefault(1208);
+    require("../../../utils/SentryUtils.native.tsx").captureException(tmp4);
+    const obj = require("../../../utils/SentryUtils.native.tsx");
   }
 };
 export const useContactSyncAccount = function useContactSyncAccount() {
   const items = [set];
-  return require(589) /* initialize */.useStateFromStores(items, () => localAccount.getLocalAccount(constants.CONTACTS));
+  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => localAccount.getLocalAccount(constants.CONTACTS));
 };
 export const useContactSyncEnabled = function useContactSyncEnabled() {
   const items = [set];
-  return require(589) /* initialize */.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
     localAccount = localAccount.getLocalAccount(constants.CONTACTS);
     return null != localAccount && localAccount.friendSync && localAccount.type === constants.CONTACTS;
   });
 };
 export const useContactSyncUserIsDiscoverable = function useContactSyncUserIsDiscoverable() {
-  const FriendDiscoverySettings = require(3958) /* explicitContentFromProto */.FriendDiscoverySettings;
+  const FriendDiscoverySettings = require("../../user_settings/UserSettings.tsx") /* explicitContentFromProto */.FriendDiscoverySettings;
   const setting = FriendDiscoverySettings.useSetting();
-  let obj = require(1384) /* hasFlag */;
+  let obj = require("../../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
   let hasFlagResult = obj.hasFlag(setting, constants3.FIND_BY_PHONE);
-  const hasFlagResult1 = require(1384) /* hasFlag */.hasFlag(setting, constants3.FIND_BY_EMAIL);
+  const hasFlagResult1 = require("../../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(setting, constants3.FIND_BY_EMAIL);
   obj = { phone: hasFlagResult, email: hasFlagResult1, any: null };
   if (!hasFlagResult) {
     hasFlagResult = hasFlagResult1;
@@ -235,12 +235,12 @@ export const isContactSyncEnabled = function isContactSyncEnabled(contactSyncAcc
   return tmp;
 };
 export const getOpenLearnMoreUrl = function getOpenLearnMoreUrl() {
-  return importDefault(1945).getArticleURL(constants4.CONTACT_SYNC);
+  return require("../../../utils/HelpdeskUtils.tsx").getArticleURL(constants4.CONTACT_SYNC);
 };
 export const handleOpenLearnMoreLink = function handleOpenLearnMoreLink() {
-  const obj = importDefault(3982);
-  obj.openURL(importDefault(1945).getArticleURL(constants4.CONTACT_SYNC));
+  const obj = require("../../../lib/native/Linking.tsx");
+  obj.openURL(require("../../../utils/HelpdeskUtils.tsx").getArticleURL(constants4.CONTACT_SYNC));
 };
 export const transitionToAddFriendsLandingPage = function transitionToAddFriendsLandingPage() {
-  importDefault(4490).popWithKey(closure_9);
+  require("../../../actions/ModalActionCreators.tsx").popWithKey(closure_9);
 };

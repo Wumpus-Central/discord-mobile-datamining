@@ -19,10 +19,10 @@ const result = require("jsxProd").fileFinishedImporting("modules/activities/nati
 
 export default function ActivitiesDebugOverlay() {
   const tmp = createCacheKey();
-  const tmp4 = importDefault(10554)();
+  const tmp4 = require("../../device/useThermalState.tsx")();
   let str = "text-overlay-light";
   let str2 = "";
-  if (require(10554) /* useThermalState */.ThermalStates.UNHANDLED !== tmp4) {
+  if (require("../../device/useThermalState.tsx") /* useThermalState */.ThermalStates.UNHANDLED !== tmp4) {
     str = "text-feedback-positive";
     str2 = "nominal";
     if (tmp5(10554).ThermalStates.NOMINAL !== tmp4) {
@@ -40,13 +40,13 @@ export default function ActivitiesDebugOverlay() {
       }
     }
   }
-  const rect = importDefault(1581)();
+  const rect = require("../../safe_area/useSafeAreaInsets.native.tsx")();
   let obj = { style: items, pointerEvents: "none", children: null };
   items = [tmp.container, ];
   obj = { paddingTop: rect.top + 16, paddingLeft: rect.left + 16 };
   items[1] = obj;
   obj = { style: tmp.row, children: null };
-  const items1 = [callback(require(4281) /* Text */.Text, { variant: "text-md/normal", color: "text-overlay-light", children: ["thermal state:", " "] }), callback2(require(4281) /* Text */.Text, { variant: "text-md/normal", color: str, children: str2 })];
+  const items1 = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-md/normal", color: "text-overlay-light", children: ["thermal state:", " "] }), callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-md/normal", color: str, children: str2 })];
   obj[1] = items1;
   obj[2] = callback(View, obj);
   return callback2(View, obj);

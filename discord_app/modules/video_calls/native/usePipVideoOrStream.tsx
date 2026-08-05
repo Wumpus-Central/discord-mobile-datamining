@@ -20,7 +20,7 @@ export default function usePipVideoOrStream(arg0) {
   const _require = arg0;
   const items = [getParticipants, updateSpeaker, reset];
   const items1 = [arg0];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null != c0) {
       let videoParticipants = outer1_4.getVideoParticipants(tmp);
     } else {

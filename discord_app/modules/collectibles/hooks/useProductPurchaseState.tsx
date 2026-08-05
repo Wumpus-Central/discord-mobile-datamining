@@ -9,12 +9,12 @@ function getProductPurchaseState(outer1_5, skuId) {
   if (items == null) {
     items = [];
   }
-  const tmp3Result = importDefault(9332)(items.map((skuId) => outer1_5.getPurchase(skuId.skuId)));
+  const tmp3Result = require("../../../../_runtime/09332_compact.js")(items.map((skuId) => outer1_5.getPurchase(skuId.skuId)));
   let type;
   if (skuId != null) {
     type = skuId.type;
   }
-  if (_require(1901).CollectiblesItemType.BUNDLE === type) {
+  if (_require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx").CollectiblesItemType.BUNDLE === type) {
     if (!tmp) {
       tmp = items.length > 0 && tmp3Result.length === items.length;
       const tmp7 = items.length > 0 && tmp3Result.length === items.length;
@@ -53,7 +53,7 @@ function getProductPurchaseState(outer1_5, skuId) {
     obj[0] = tmp;
     return obj;
   }
-  const tmp3 = importDefault(9332);
+  const tmp3 = require("../../../../_runtime/09332_compact.js");
   tmp5 = _require;
 }
 const result = require("CollectiblesItemType").fileFinishedImporting("modules/collectibles/hooks/useProductPurchaseState.tsx");
@@ -62,5 +62,5 @@ export { getProductPurchaseState };
 export const useProductPurchaseState = function useProductPurchaseState(product) {
   const _require = product;
   const items = [map];
-  return _require(589).useStateFromStoresObject(items, () => outer1_4(outer1_3, closure_0));
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => outer1_4(outer1_3, closure_0));
 };

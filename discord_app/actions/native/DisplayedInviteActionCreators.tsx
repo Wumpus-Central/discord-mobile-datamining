@@ -9,12 +9,12 @@ export const showInvite = function showInvite(code, username, arg2) {
     obj = {};
   }
   ({ deeplinkAttemptId, location: _location } = obj);
-  require(8992) /* getDisplayedInviteCode */;
+  require("../../stores/native/DisplayedInviteStore.tsx") /* getDisplayedInviteCode */;
   obj = { type: "DISPLAYED_INVITE_SHOW", code, username, deeplinkAttemptId };
-  importDefault(709).dispatch(obj);
-  const obj2 = importDefault(709);
-  const invite = importDefault(7679).resolveInvite(code, _location);
+  require("../../Dispatcher.tsx").dispatch(obj);
+  const obj2 = require("../../Dispatcher.tsx");
+  const invite = require("../InstantInviteActionCreators.tsx").resolveInvite(code, _location);
 };
 export const clearDisplayedInvite = function clearDisplayedInvite() {
-  importDefault(709).dispatch({ type: "DISPLAYED_INVITE_CLEAR" });
+  require("../../Dispatcher.tsx").dispatch({ type: "DISPLAYED_INVITE_CLEAR" });
 };

@@ -60,7 +60,7 @@ function shouldShowActivity(flags) {
   } else {
     const type = flags.type;
     if (constants2.LISTENING === type) {
-      if (importDefault(9573)(flags)) {
+      if (require("../modules/activities/utils/isListeningOnSpotify.tsx")(flags)) {
         let shouldShowActivityResult = upsertAccount.shouldShowActivity();
       } else {
         shouldShowActivityResult = null != flags.application_id;
@@ -97,7 +97,7 @@ function shouldShowActivity(flags) {
       return result1;
     }
   }
-  obj = require(1384) /* hasFlag */;
+  obj = require("../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
 }
 function handleUpdate() {
   let num = idleSince.getIdleSince();
@@ -113,7 +113,7 @@ function handleUpdate() {
     IDLE = INVISIBLE;
     ONLINE = INVISIBLE;
   } else {
-    const StatusSetting = require(3958) /* explicitContentFromProto */.StatusSetting;
+    const StatusSetting = require("../modules/user_settings/UserSettings.tsx") /* explicitContentFromProto */.StatusSetting;
     ONLINE = StatusSetting.getSetting();
     if (ONLINE === StatusTypes.UNKNOWN) {
       ONLINE = StatusTypes.ONLINE;
@@ -133,7 +133,7 @@ function handleUpdate() {
       let found = activities.filter(shouldShowActivity);
     }
     let flag = false;
-    if (!importDefault(659)(found, found)) {
+    if (!require("../../_runtime/00659_isUndefinedOrNull.js")(found, found)) {
       let closure_21 = filterPlayingActivities(found);
       flag = true;
     }
@@ -146,11 +146,11 @@ function handleUpdate() {
       const items = [];
       let arraySpreadResult = HermesBuiltin.arraySpread(found, 0);
       arraySpreadResult = HermesBuiltin.arraySpread(remoteActivities.filter((type) => type.type !== constants.CUSTOM_STATUS), arraySpreadResult);
-      const tmp12Result = importDefault(12);
-      const tmp12ResultResult = importDefault(12)(items.sort(sortActivity));
-      const valueResult = importDefault(12)(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name).value();
+      const tmp12Result = require("../../_runtime/00012_apply.js");
+      const tmp12ResultResult = require("../../_runtime/00012_apply.js")(items.sort(sortActivity));
+      const valueResult = require("../../_runtime/00012_apply.js")(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name).value();
       let closure_27 = filterPlayingActivities(valueResult);
-      const iter = importDefault(12)(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name);
+      const iter = require("../../_runtime/00012_apply.js")(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name);
     }
   }
   found = [];

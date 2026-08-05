@@ -34,11 +34,11 @@ function AddBenefitButton(disabled) {
   items[1] = disabled;
   obj = { source: null };
   const tmp2 = closure_13;
-  const tmp5 = importDefault(8979);
-  obj[0] = importDefault(16705);
-  const items1 = [callback(importDefault(5236), obj), ];
+  const tmp5 = require("../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx");
+  obj[0] = require("../../../../../_runtime/16705_registerAsset.js");
+  const items1 = [callback(require("../../../../components_native/common/FastImage.tsx"), obj), ];
   obj = { style: tmp.addBenefitLabel, variant: "text-md/medium", color: "mobile-text-heading-primary", children: label };
-  items1[1] = callback(require(4281) /* Text */.Text, obj);
+  items1[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   obj[5] = items1;
   return tmp2(tmp5, obj);
 }
@@ -57,10 +57,10 @@ function EmojiRowLabel(emoji) {
   obj = { style: createCacheKey().emojiImage, source: null };
   obj = { uri: null };
   const tmp = createCacheKey();
-  const tmp2 = importDefault(5236);
-  obj[0] = importDefault(1416).getEmojiURL({ id: emoji.id, animated: emoji.animated, size: 48 });
+  const tmp2 = require("../../../../components_native/common/FastImage.tsx");
+  obj[0] = require("../../../../utils/AvatarUtils.tsx").getEmojiURL({ id: emoji.id, animated: emoji.animated, size: 48 });
   obj[1] = obj;
-  const items = [callback(tmp2, obj), callback(importDefault(16706), { name: emoji.name })];
+  const items = [callback(tmp2, obj), callback(require("EmojiAlias.tsx"), { name: emoji.name })];
   obj[0] = items;
   return callback2(closure_14, obj);
 }
@@ -215,11 +215,11 @@ function Content(arg0) {
     tmp4 = tmp3;
   }
   dependencyMap = tmp4;
-  let obj = _require(16701);
+  let obj = _require("../../edit_state/EditStateContextProvider.tsx");
   const editStateContext = obj.useEditStateContext();
   editStateId = editStateContext.editStateId;
   guildId = editStateContext.guildId;
-  let obj1 = _require(14348);
+  let obj1 = _require("../../GuildRoleSubscriptionsHooks.tsx");
   const subscriptionListing = obj1.useSubscriptionListing(editStateId);
   role_id = undefined;
   if (subscriptionListing != null) {
@@ -251,8 +251,8 @@ function Content(arg0) {
   const first3 = tmp23[0];
   c13 = tmp25;
   const obj8 = importAll(14363);
-  roleSubscriptionSettingsDisabled = _require(16684).useRoleSubscriptionSettingsDisabled();
-  const tmp27 = importDefault(16710)(guildId);
+  roleSubscriptionSettingsDisabled = _require("../../RoleSubscriptionSettingsDisabledContext.tsx").useRoleSubscriptionSettingsDisabled();
+  const tmp27 = require("../../useRoleSubscriptionEmojis.tsx")(guildId);
   c16 = tmp27;
   let items = [first2, tmp27, true === onlyIntangible, first3 === AllChannelAccessOptions.ALL_CHANNELS_ACCESS, true === onlyChannels, tmp4, first, first1];
   let tmp29 = null;
@@ -391,7 +391,7 @@ function Content(arg0) {
   };
   let tmp32Result = null;
   if (true !== onlyIntangible) {
-    if (importDefault(16680)(guildId).isFullServerGating) {
+    if (require("../../useRoleSubscriptionFormat.tsx")(guildId).isFullServerGating) {
       obj1 = { style: null, channelAccessFormat: null, setChannelAccessFormat: null, disabled: null };
       obj1[0] = tmp.allChannelsSwitch;
       obj1[1] = first3;
@@ -492,25 +492,25 @@ let result = require("get ActivityIndicator").fileFinishedImporting("modules/gui
 export { GuildRoleSubscriptionTierBenefitsTab };
 export const GuildRoleSubscriptionTierChannelBenefitsModal = function GuildRoleSubscriptionTierChannelBenefitsModal(arg0) {
   const obj = { title: null, description: null, canProceedToNextStep: true, nextStep: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t["0eV/GY"]);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.iMSIWp);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["0eV/GY"]);
+  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.iMSIWp);
   obj[3] = constants.INTANGIBLE_BENEFITS;
   const merged = Object.assign(arg0);
   obj.scrollable = false;
   obj.children = callback(GuildRoleSubscriptionTierBenefitsTab, { onlyChannels: true });
-  return callback(importDefault(16693), obj);
+  return callback(require("GuildRoleSubscriptionTierEditStep.tsx"), obj);
 };
 export const GuildRoleSubscriptionTierIntangibleBenefitsModal = function GuildRoleSubscriptionTierIntangibleBenefitsModal(arg0) {
   const obj = { title: null, description: null, canProceedToNextStep: true, nextStep: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t["+h9nJG"]);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.oGS4tC);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["+h9nJG"]);
+  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.oGS4tC);
   obj[3] = constants.DESIGN;
   const merged = Object.assign(arg0);
   obj.scrollable = false;
   obj.children = callback(GuildRoleSubscriptionTierBenefitsTab, { onlyIntangible: true });
-  return callback(importDefault(16693), obj);
+  return callback(require("GuildRoleSubscriptionTierEditStep.tsx"), obj);
 };

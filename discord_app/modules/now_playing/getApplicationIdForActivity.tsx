@@ -7,7 +7,7 @@ import { XBOX_ACTIVITY_APPLICATION_ID as closure_5 } from "items3";
 const result = require("getIconURL").fileFinishedImporting("modules/now_playing/getApplicationIdForActivity.tsx");
 
 export default function getApplicationIdForActivity(party) {
-  if (importDefault(9573)(party)) {
+  if (require("../activities/utils/isListeningOnSpotify.tsx")(party)) {
     if (null != party.party) {
       if (null != party.party.id) {
         let id = SpotifyApplication.id;
@@ -15,7 +15,7 @@ export default function getApplicationIdForActivity(party) {
       return id;
     }
   }
-  if (importDefault(8112)(party)) {
+  if (require("../activities/utils/isStreaming.tsx")(party)) {
     if (null != party.url) {
       id = closure_3 + party.url;
     }
@@ -26,7 +26,7 @@ export default function getApplicationIdForActivity(party) {
     }
   }
   id = null;
-  if (importDefault(12187)(party)) {
+  if (require("../activities/utils/isOnXbox.tsx")(party)) {
     id = closure_4 + party.name;
   }
 };

@@ -72,30 +72,30 @@ export default function useVideoControls(arg0, portal) {
 };
 export const useVideoStateStore = keys;
 export const initVideoStateStore = function initVideoStateStore() {
-  require(705) /* batchUpdates */.batchUpdates(() => {
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => {
     state.setState({ controls: "ct", paused: "Array" });
   });
 };
 export const setMuted = function setMuted(arg0) {
   const _require = arg0;
-  _require(705).batchUpdates(() => {
+  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
     const useMediaPlayerMutedStore = callback(outer1_2[6]).useMediaPlayerMutedStore;
     useMediaPlayerMutedStore.setState({ isMuted: callback });
   });
 };
 export const toggleMuted = function toggleMuted() {
-  require(705) /* batchUpdates */.batchUpdates(() => {
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => {
     const useMediaPlayerMutedStore = callback(table[6]).useMediaPlayerMutedStore;
     useMediaPlayerMutedStore.setState((isMuted) => ({ isMuted: !isMuted.isMuted }));
   });
 };
 export const setVideoStateControls = function setVideoStateControls(videoControls) {
   const _require = videoControls;
-  _require(705).batchUpdates(() => outer1_7.setState({ controls: closure_0 }));
+  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_7.setState({ controls: closure_0 }));
 };
 export const setPausedState = function setPausedState(arg0) {
   const _require = arg0;
-  _require(705).batchUpdates(() => outer1_7.setState({ paused: closure_0 }));
+  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_7.setState({ paused: closure_0 }));
 };
 export const tryPauseCurrentVideo = function tryPauseCurrentVideo() {
   const controls = keys.getState().controls;

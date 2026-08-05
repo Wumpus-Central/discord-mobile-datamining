@@ -14,7 +14,7 @@ export default function getChatInputPositionStyle() {
     if (obj2.isIOS()) {
       tmp = obj;
     }
-    obj2 = require(500) /* set */;
+    obj2 = require("../../../utils/PlatformUtils.tsx") /* set */;
   }
   return tmp;
 };

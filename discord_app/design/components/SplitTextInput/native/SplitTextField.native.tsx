@@ -13,13 +13,13 @@ const forwardRefResult = require("noop").forwardRef((size, ref) => {
   let inputStyle;
   let state;
   let trailing;
-  let obj = require(5909) /* useInputStyles */;
+  let obj = require("../../Input/native/InputFieldContainer.native.tsx") /* useInputStyles */;
   obj = { size: size.size, isRound: size.isRound };
   const inputStyles = obj.useInputStyles(obj);
-  let obj2 = require(5903) /* useTextFieldState */;
+  let obj2 = require("../../TextField/native/useTextField.native.tsx") /* useTextFieldState */;
   const textField = obj2.useTextField(size, ref);
   ({ inputProps, innerRef, state } = textField);
-  let obj3 = require(5904) /* useInputClearButton */;
+  let obj3 = require("../../Input/native/useInputClearButton.native.tsx") /* useInputClearButton */;
   const inputClearButtonConfig = obj3.useInputClearButtonConfig(size, state);
   let tmp6;
   if (null != inputClearButtonConfig) {
@@ -58,7 +58,7 @@ const forwardRefResult = require("noop").forwardRef((size, ref) => {
   obj3.leading = tmp8;
   obj3.trailing = trailing;
   obj3.inputStyle = inputStyle;
-  return jsx(require(5911) /* BaseTextField */.BaseTextField, {});
+  return jsx(require("../../TextField/native/BaseTextField.native.tsx") /* BaseTextField */.BaseTextField, {});
 });
 const result = require("jsxProd").fileFinishedImporting("design/components/SplitTextInput/native/SplitTextField.native.tsx");
 

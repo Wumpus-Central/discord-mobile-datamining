@@ -11,15 +11,15 @@ function updateEnabledState() {
   }
   let result = true === isStaffResult;
   if (!result) {
-    result = require(13363) /* apexExperiment */.isZoomedExperimentEnabled();
-    const obj2 = require(13363) /* apexExperiment */;
+    result = require("../telemetry_ring/native/ZoomedInAnalyticsExperiment.tsx") /* apexExperiment */.isZoomedExperimentEnabled();
+    const obj2 = require("../telemetry_ring/native/ZoomedInAnalyticsExperiment.tsx") /* apexExperiment */;
   }
   if (result) {
     if (!c4) {
       try {
-        importDefault(13718).enableTouchLogging();
+        require("../../../discord_common/js/packages/rtn-codegen/js/NativeTouchEventAnalyticsModule.tsx").enableTouchLogging();
         c4 = true;
-        const obj3 = importDefault(13718);
+        const obj3 = require("../../../discord_common/js/packages/rtn-codegen/js/NativeTouchEventAnalyticsModule.tsx");
       } catch (err) {
         c4 = false;
       }
@@ -28,9 +28,9 @@ function updateEnabledState() {
   if (!result) {
     if (c4) {
       try {
-        importDefault(13718).disableTouchLogging();
+        require("../../../discord_common/js/packages/rtn-codegen/js/NativeTouchEventAnalyticsModule.tsx").disableTouchLogging();
         c4 = false;
-        const obj4 = importDefault(13718);
+        const obj4 = require("../../../discord_common/js/packages/rtn-codegen/js/NativeTouchEventAnalyticsModule.tsx");
       } catch (err) {
       }
     }
@@ -48,9 +48,9 @@ prototype["_terminate"] = function _terminate() {
   mergeGuildAvatar.removeChangeListener(updateEnabledState);
   if (c4) {
     try {
-      importDefault(13718).disableTouchLogging();
+      require("../../../discord_common/js/packages/rtn-codegen/js/NativeTouchEventAnalyticsModule.tsx").disableTouchLogging();
       c4 = false;
-      const obj = importDefault(13718);
+      const obj = require("../../../discord_common/js/packages/rtn-codegen/js/NativeTouchEventAnalyticsModule.tsx");
     } catch (err) {
     }
   }

@@ -29,7 +29,7 @@ export const useFormattedSKUPrice = function useFormattedSKUPrice(sku) {
   }, items);
   const items1 = [stateFromStores(5767)];
   const items2 = [tmp2];
-  stateFromStores = _require(589).useStateFromStores(items1, () => {
+  stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
     let product = null;
     if (null != c0) {
       product = stateFromStores(outer1_2[3]).getProduct(tmp);

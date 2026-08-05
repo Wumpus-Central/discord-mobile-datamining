@@ -4,8 +4,8 @@ import { V8APIError } from "sendRequest";
 let closure_2 = { ASSET_SIZE: "BINARY_TYPE_MAX_SIZE" };
 let closure_3 = { ASSET: "asset" };
 const prototype = function VideoFilterImageError(arg0, arg1) {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  tmp3 = new tmp3(arg0, arg1, intl.string(require(1236) /* getSystemLocale */.t.Mt8yDB), new.target, tmp3, tmp2, intl, require, new.target, tmp);
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  tmp3 = new tmp3(arg0, arg1, intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Mt8yDB), new.target, tmp3, tmp2, intl, require, new.target, tmp);
   // ThrowIfThisInitialized (0x7c)
   const fieldErrors = tmp3.getFieldErrors(constants2.ASSET);
   let tmp7 = null != fieldErrors;

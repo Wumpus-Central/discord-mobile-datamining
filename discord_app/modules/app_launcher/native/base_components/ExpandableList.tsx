@@ -44,7 +44,7 @@ export default function ExpandableList(items) {
   first = tmp2[0];
   closure_6 = tmp2[1];
   let obj7 = dependencyMap;
-  let tmp5 = importDefault(8775)(first);
+  let tmp5 = require("../../../../hooks/usePrevious.tsx")(first);
   if (tmp5 == null) {
     tmp5 = first;
   }
@@ -162,7 +162,7 @@ export default function ExpandableList(items) {
   }
   items6[1] = tmp16Result;
   obj[1] = items6;
-  const items7 = [c7(importDefault(4146).View, obj), ];
+  const items7 = [c7(require("../../../reanimated/ReanimatedRexport.tsx").View, obj), ];
   if (!showsExpandCTAOverride) {
     obj3 = { children: null };
     items7[1] = showsExpandCTAOverride;

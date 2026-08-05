@@ -27,8 +27,8 @@ const delayedCall = new require("start").DelayedCall(3000, function flush() {
     continue;
   }
   if (0 !== items.length) {
-    importDefault(10365).subscribeActivities(items);
-    const obj = importDefault(10365);
+    require("../../actions/ActivitiesActionCreators.tsx").subscribeActivities(items);
+    const obj = require("../../actions/ActivitiesActionCreators.tsx");
   }
 });
 class PresenceSubscriptionsStore extends Store {

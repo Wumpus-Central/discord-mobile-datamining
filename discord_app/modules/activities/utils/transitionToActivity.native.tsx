@@ -7,11 +7,11 @@ import { VoiceChatDrawerState } from "BOX_MODE_ACTIONSHEET_WIDTH";
 let result = require("ActivityPanelModes").fileFinishedImporting("modules/activities/utils/transitionToActivity.native.tsx");
 
 export default function transitionToActivity(arg0, _location) {
-  let obj = require(3903) /* getEmbeddedActivityLocationChannelId */;
+  let obj = require("embeddedActivityLocationUtils.tsx") /* getEmbeddedActivityLocationChannelId */;
   const embeddedActivityLocationChannelId = obj.getEmbeddedActivityLocationChannelId(_location);
   if (null != embeddedActivityLocationChannelId) {
     let tmpResult = tmp(4136);
-    const isModalOpenResult = tmpResult.isModalOpen(importDefault(10556));
+    const isModalOpenResult = tmpResult.isModalOpen(require("../../video_calls/native/components/ChannelCallModal.tsx"));
     let tmp4 = !isModalOpenResult;
     if (!isModalOpenResult) {
       tmp4 = tmp15(10320)(embeddedActivityLocationChannelId);

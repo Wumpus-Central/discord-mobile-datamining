@@ -23,13 +23,13 @@ function NotificationAvatar(arg0) {
   const tmp = callback3();
   let obj = { style: tmp.avatarContainer, children: null };
   obj = { user, guildId, size: null, cutout: null };
-  obj[2] = require(1297) /* Button */.AvatarSizes.NORMAL;
+  obj[2] = require("../../../design/void/native.tsx") /* Button */.AvatarSizes.NORMAL;
   obj[3] = obj;
-  const items = [callback(require(1297) /* Button */.Avatar, obj), ];
+  const items = [callback(require("../../../design/void/native.tsx") /* Button */.Avatar, obj), ];
   obj = { style: tmp.cutoutIconContainer, children: null };
   const obj1 = { size: "xs", color: null };
-  obj1[1] = importDefault(712).colors.ICON_SUBTLE;
-  obj[1] = callback(require(4249) /* ClockIcon */.ClockIcon, obj1);
+  obj1[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.ICON_SUBTLE;
+  obj[1] = callback(require("../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx") /* ClockIcon */.ClockIcon, obj1);
   items[1] = callback(View, obj);
   obj[1] = items;
   return callback2(View, obj);
@@ -57,7 +57,7 @@ function NotificationBody(channel) {
     obj[0] = channel;
     obj[1] = stateFromStores1;
     obj[2] = stateFromStores;
-    tmp10 = callback(importDefault(9770), obj);
+    tmp10 = callback(require("MessageNotificationHeader.tsx"), obj);
   }
   const items2 = [tmp10, ];
   if (!hasPreviewableMedia) {
@@ -76,7 +76,7 @@ function NotificationBody(channel) {
     return closure_11(closure_12, obj1);
   }
   obj2 = { message, lineClamp: num, showMessageAuthor: true, maxHeight: closure_7 };
-  tmp14 = callback(importDefault(9703), obj2);
+  tmp14 = callback(require("MessagePreviewText.tsx"), obj2);
 }
 let c3 = importAllResult;
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: error, NOTIFICATION_PREVIEW_LINE_CLAMP: metroImportAll, RIGHT_ACCESSORY_LEFT_MARGIN } = set);
@@ -85,14 +85,14 @@ let closure_13 = createCacheKey.createStyles({ cutoutIconContainer: { position: 
 let obj = { direction: require("Button").CutoutDirection.BOTTOM_RIGHT, radius: 10, inset: -2 };
 let closure_16 = importAllResult.memo((message) => {
   message = message.message;
-  let obj = require(9683) /* extractMetadataFromNotification */;
+  let obj = require("InAppNotificationUtils.tsx") /* extractMetadataFromNotification */;
   let tmp4 = null;
   if (obj.useHasPreviewableMedia(message)) {
     obj = { style: null, children: null };
     obj[0] = tmp.rightAccessoryContainer;
     obj = { message: null };
     obj[0] = message;
-    obj[1] = callback(require(9762) /* VideoBadge */.MediaPreviewRightAccessory, obj);
+    obj[1] = callback(require("MediaPreviewRightAccessory.tsx") /* VideoBadge */.MediaPreviewRightAccessory, obj);
     tmp4 = callback(View, obj);
   }
   return tmp4;
@@ -103,7 +103,7 @@ export default importAllResult.memo(function ReminderNotification(notification) 
   notification = notification.notification;
   const channel = notification.channel;
   const message = notification.savedMessage.message;
-  importDefault(38)(null != message, "Message in a notification should not be null.");
+  require("../../../../_runtime/metro/00038__.js")(null != message, "Message in a notification should not be null.");
   let obj = { user: notification.author, guildId: channel.guild_id };
   const items = [notification];
   const memo = importAllResult.useMemo(() => {

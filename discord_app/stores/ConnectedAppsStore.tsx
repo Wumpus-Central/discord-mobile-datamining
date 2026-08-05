@@ -20,7 +20,7 @@ prototype["isChildConnected"] = function isChildConnected(arg0) {
 };
 Object.defineProperty(prototype, "connections", {
   get: function connections() {
-    return importDefault(12).values(closure_2);
+    return require("../../_runtime/00012_apply.js").values(closure_2);
   },
   set: undefined
 });

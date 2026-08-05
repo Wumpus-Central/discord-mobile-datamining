@@ -779,12 +779,12 @@ export default {
     })();
   },
   setPendingConnection(teenId, linkCode) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "FAMILY_CENTER_PENDING_CONNECTION_SET", teenId, linkCode };
     obj.dispatch(obj);
   },
   clearPendingConnection() {
-    importDefault(709).dispatch({ type: "FAMILY_CENTER_PENDING_CONNECTION_CLEAR" });
+    require("../../Dispatcher.tsx").dispatch({ type: "FAMILY_CENTER_PENDING_CONNECTION_CLEAR" });
   },
   requestLink(userId, linkCode) {
     let closure_0 = userId;
@@ -1096,15 +1096,15 @@ export default {
     })();
   },
   selectTab(REQUESTS) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "FAMILY_CENTER_HANDLE_TAB_SELECT", tab: REQUESTS };
     obj.dispatch(obj);
   },
   fetchTeenSettingsAndConsents(id) {
     const _require = id;
-    const HTTP = _require(530).HTTP;
+    const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     let obj = { url: closure_7.FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS(id), rejectWithError: null };
-    obj[1] = _require(530).rejectWithMigratedError();
+    obj[1] = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
     const value = HTTP.get(obj);
     return value.then((body) => {
       let consents;
@@ -1200,11 +1200,11 @@ export default {
   },
   updateTeenConsents(selectedTeenId, items1, items2) {
     const _require = selectedTeenId;
-    const HTTP = _require(530).HTTP;
+    const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     obj = { url: closure_7.FAMILY_CENTER_TEEN_CONSENTS(selectedTeenId), body: obj, rejectWithError: null };
     obj = { grant: items1, revoke: items2 };
-    obj[2] = _require(530).rejectWithMigratedError();
-    const obj3 = _require(530);
+    obj[2] = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+    const obj3 = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
     return HTTP.patch(obj).then((body) => {
       let obj = outer1_1(outer1_2[5]);
       obj = { type: "FAMILY_CENTER_TEEN_CONSENTS_UPDATE_SUCCESS", userId: closure_0, consents: body.body };

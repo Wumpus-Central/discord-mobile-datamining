@@ -217,7 +217,7 @@ export const QuestBottomSheetProgressCardWatchTask = function QuestBottomSheetPr
     obj5[1] = { x: 1, y: 1 };
     obj5[2] = StyleSheet.absoluteFill;
     obj5[3] = ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 1)"];
-    items4[1] = tmp11(importDefault(4706), obj5);
+    items4[1] = tmp11(require("../../../../../_runtime/04706_LinearGradient.js"), obj5);
     obj2[1] = items4;
     tmp12Result = tmp12(closure_4, obj2);
     const tmp14 = closure_4;
@@ -235,28 +235,28 @@ export const QuestBottomSheetProgressCardWatchTask = function QuestBottomSheetPr
     const obj8 = { uri: null };
     obj8[0] = memo2.url;
     obj7[1] = obj8;
-    const items6 = [tmp11(importDefault(5236), obj7), ];
+    const items6 = [tmp11(require("../../../../components_native/common/FastImage.tsx"), obj7), ];
     const obj9 = { start: null, end: null, style: null, colors: null };
     obj9[0] = { x: 0.5, y: 0.5 };
     obj9[1] = { x: 1, y: 1 };
     obj9[2] = StyleSheet.absoluteFill;
     obj9[3] = ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 1)"];
-    items6[1] = tmp11(importDefault(4706), obj9);
+    items6[1] = tmp11(require("../../../../../_runtime/04706_LinearGradient.js"), obj9);
     obj6[1] = items6;
     tmp12Result = tmp12(closure_4, obj6);
   }
   items5[1] = tmp12Result;
   const obj10 = { style: tmp.playVideoIconWrapper, children: null };
-  const items7 = [closure_7(importDefault(14302), { blurTheme: "light" }), ];
+  const items7 = [closure_7(require("../QuestDock/QuestDockBlurredContentBackground.tsx"), { blurTheme: "light" }), ];
   const obj11 = { color: null };
-  obj11[0] = importDefault(712).colors.WHITE;
+  obj11[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE;
   items7[1] = closure_7(quest(8777).PlayIcon, obj11);
   obj10[1] = items7;
   items5[2] = closure_8(closure_4, obj10);
   const watchTaskPressHandler = obj1.useWatchTaskPressHandler(obj);
   const items8 = [, ];
   ({ content: arr9[0], contentWatchTask: arr9[1] } = tmp);
-  items5[3] = closure_7(closure_4, { style: items8, children: closure_7(importDefault(14273), obj13) });
+  items5[3] = closure_7(closure_4, { style: items8, children: closure_7(require("../QuestProgressIndicator.tsx"), obj13) });
   obj1[2] = items5;
   obj[3] = closure_8(quest(5317).Card, obj1);
   return closure_7(quest(4812).PressableOpacity, obj);
@@ -264,7 +264,7 @@ export const QuestBottomSheetProgressCardWatchTask = function QuestBottomSheetPr
 export const QuestBottomSheetProgressCardInGameTask = function QuestBottomSheetProgressCardInGameTask(quest) {
   quest = quest.quest;
   const tmp = createCacheKey();
-  let obj = require(10374) /* useQuests */;
+  let obj = require("../../hooks/QuestHooks.tsx") /* useQuests */;
   const thirdPartyTaskDetails = obj.useThirdPartyTaskDetails(quest);
   obj = { style: tmp.card, border: "subtle", children: null };
   obj = { style: tmp.content, children: null };
@@ -277,7 +277,7 @@ export const QuestBottomSheetProgressCardInGameTask = function QuestBottomSheetP
     num = 0;
   }
   obj1[2] = num;
-  obj[1] = closure_7(importDefault(14273), obj1);
+  obj[1] = closure_7(require("../QuestProgressIndicator.tsx"), obj1);
   obj[2] = closure_7(closure_4, obj);
-  return closure_7(require(5317) /* PressableCard */.Card, obj);
+  return closure_7(require("../../../../design/components/Card/native/Card.native.tsx") /* PressableCard */.Card, obj);
 };

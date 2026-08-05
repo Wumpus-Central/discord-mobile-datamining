@@ -9,7 +9,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/video_calls/nat
 export const CameraButton = function CameraButton() {
   let importDefault;
   let require;
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [_detectH265HardwareDecode];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ isVideoEnabled: store.isVideoEnabled(), videoDeviceId: store.getVideoDeviceId(), videoDevices: store.getVideoDevices() }));
   ({ videoDeviceId: require, videoDevices: importDefault } = stateFromStoresObject);
@@ -18,7 +18,7 @@ export const CameraButton = function CameraButton() {
     obj = { accessibilityLabel: null, source: null, onPress: null, disableBackground: true };
     const intl = tmp(1236).intl;
     obj[0] = intl.string(tmp(1236).t["t9eQ/g"]);
-    obj[1] = importDefault(10810);
+    obj[1] = require("../../../../../_runtime/10810_registerAsset.js");
     obj[2] = function onPress() {
       const keys = Object.keys(closure_1);
       const found = keys.find((arg0) => arg0 !== closure_0);
@@ -27,15 +27,15 @@ export const CameraButton = function CameraButton() {
         const obj = outer1_1(outer1_2[7]);
       }
     };
-    tmp4 = jsx(importDefault(10696), { accessibilityLabel: null, source: null, onPress: null, disableBackground: true });
-    const tmp7 = importDefault(10696);
+    tmp4 = jsx(require("ChannelCallNavigatorIcon.tsx"), { accessibilityLabel: null, source: null, onPress: null, disableBackground: true });
+    const tmp7 = require("ChannelCallNavigatorIcon.tsx");
   }
   return tmp4;
 };
 export const GridButton = function GridButton(channel) {
   channel = channel.channel;
   let tmp4 = null;
-  if (null != importDefault(9658)(channel)) {
+  if (null != require("../../useSelectedParticipant.tsx")(channel)) {
     tmp4 = null;
     if (!tmp3) {
       const obj = { accessibilityLabel: null, source: null, onPress: null, disableBackground: true };

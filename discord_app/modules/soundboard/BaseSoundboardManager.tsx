@@ -42,22 +42,22 @@ class BaseSoundboardManager extends tmp2 {
 }
 const prototype = BaseSoundboardManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const subscription = importDefault(709).subscribe("VOICE_CHANNEL_EFFECT_SEND", this._handleSoundboardSoundReceived);
-  const obj = importDefault(709);
-  const subscription1 = importDefault(709).subscribe("GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY", this._handleSoundboardSoundPlayLocally);
-  const obj2 = importDefault(709);
-  const subscription2 = importDefault(709).subscribe("VOICE_CHANNEL_SELECT", this._handleVoiceChannelSelect);
-  const obj3 = importDefault(709);
-  const subscription3 = importDefault(709).subscribe("AUDIO_TOGGLE_SELF_DEAF", this._handleToggleSelfDeafened);
+  const subscription = require("../../Dispatcher.tsx").subscribe("VOICE_CHANNEL_EFFECT_SEND", this._handleSoundboardSoundReceived);
+  const obj = require("../../Dispatcher.tsx");
+  const subscription1 = require("../../Dispatcher.tsx").subscribe("GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY", this._handleSoundboardSoundPlayLocally);
+  const obj2 = require("../../Dispatcher.tsx");
+  const subscription2 = require("../../Dispatcher.tsx").subscribe("VOICE_CHANNEL_SELECT", this._handleVoiceChannelSelect);
+  const obj3 = require("../../Dispatcher.tsx");
+  const subscription3 = require("../../Dispatcher.tsx").subscribe("AUDIO_TOGGLE_SELF_DEAF", this._handleToggleSelfDeafened);
 };
 prototype["_terminate"] = function _terminate() {
-  importDefault(709).unsubscribe("VOICE_CHANNEL_EFFECT_SEND", this._handleSoundboardSoundReceived);
-  const obj = importDefault(709);
-  importDefault(709).unsubscribe("GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY", this._handleSoundboardSoundPlayLocally);
-  const obj2 = importDefault(709);
-  importDefault(709).unsubscribe("VOICE_CHANNEL_SELECT", this._handleVoiceChannelSelect);
-  const obj3 = importDefault(709);
-  importDefault(709).unsubscribe("AUDIO_TOGGLE_SELF_DEAF", this._handleToggleSelfDeafened);
+  require("../../Dispatcher.tsx").unsubscribe("VOICE_CHANNEL_EFFECT_SEND", this._handleSoundboardSoundReceived);
+  const obj = require("../../Dispatcher.tsx");
+  require("../../Dispatcher.tsx").unsubscribe("GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY", this._handleSoundboardSoundPlayLocally);
+  const obj2 = require("../../Dispatcher.tsx");
+  require("../../Dispatcher.tsx").unsubscribe("VOICE_CHANNEL_SELECT", this._handleVoiceChannelSelect);
+  const obj3 = require("../../Dispatcher.tsx");
+  require("../../Dispatcher.tsx").unsubscribe("AUDIO_TOGGLE_SELF_DEAF", this._handleToggleSelfDeafened);
 };
 const result = require("initialize").fileFinishedImporting("modules/soundboard/BaseSoundboardManager.tsx");
 

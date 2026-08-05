@@ -14,7 +14,7 @@ const result = set.fileFinishedImporting("modules/suspicious_downloads/Suspiciou
 export const isSuspiciousDownload = function isSuspiciousDownload(localUri) {
   let hostname;
   let pathname;
-  const obj = importDefault(1467);
+  const obj = require("../../utils/URLUtils.tsx");
   let toURLSafeResult = obj.toURLSafe(localUri);
   if (toURLSafeResult == null) {
     toURLSafeResult = {};

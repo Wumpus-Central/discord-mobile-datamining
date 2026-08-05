@@ -23,11 +23,11 @@ export default function resolveInvite(inviteKey, arg1, inviteInstanceId) {
   const _require = inviteKey;
   const importDefault = arg1;
   const dependencyMap = inviteInstanceId;
-  let obj = _require(4271);
+  let obj = _require("InviteCodeUtils.tsx");
   const result = obj.parseExtraDataFromInviteKey(inviteKey);
   const baseCode = result.baseCode;
   ({ targetChannelId, targetMessageId, guildScheduledEventId } = result);
-  let obj1 = importDefault(698);
+  let obj1 = require("../../utils/AnalyticsUtils.tsx");
   obj = { invite_code: baseCode, invite_instance_id: null };
   inviteInstanceId = undefined;
   if (inviteInstanceId != null) {

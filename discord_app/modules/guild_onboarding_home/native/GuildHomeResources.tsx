@@ -173,7 +173,7 @@ const result = require("ensureGuildLoaded").fileFinishedImporting("modules/guild
 export default function GuildHomeResources(guildId) {
   guildId = guildId.guildId;
   const tmp = createCacheKey();
-  const arr = importDefault(15548)(guildId);
+  const arr = require("../useResourceChannels.tsx")(guildId);
   if (0 === arr.length) {
     let obj = { style: null, children: null };
     obj[0] = tmp.emptyStateContainer;
@@ -183,7 +183,7 @@ export default function GuildHomeResources(guildId) {
     const items = [callback(guildId(4281).Text, obj), , ];
     const obj1 = { style: null, source: null };
     obj1[0] = tmp.emptyStateImage;
-    obj1[1] = importDefault(15556);
+    obj1[1] = require("../../../../_runtime/15556_registerAsset.js");
     items[1] = callback(closure_5, obj1);
     const obj2 = { onPress: null, text: null };
     obj2[0] = function onPress() {

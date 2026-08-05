@@ -9,7 +9,7 @@ export default function GuildDirectoryMoreMenu(entry) {
   let canRemove;
   let isEntryAdmin;
   entry = entry.entry;
-  const tmp2 = importDefault(11591)(entry);
+  const tmp2 = require("../../useCanManageGuildDirectoryEntry.tsx")(entry);
   const items = [];
   ({ isEntryAdmin, canRemove } = tmp2);
   if (tmp2.canEdit) {

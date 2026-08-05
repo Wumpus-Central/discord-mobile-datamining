@@ -24,16 +24,16 @@ export const GuildEventTopic = function GuildEventTopic(arg0) {
   ({ topic, onChange } = arg0);
   let obj = { style: callback3().formGroupSmall, children: null };
   obj = { label: null, accessibilityLabel: null, placeholder: null, onChange: null, value: null, maxLength: null, autoFocus: true, isClearable: true };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t["0HbEQ6"]);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require(1236) /* getSystemLocale */.t["0HbEQ6"]);
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl3.string(require(1236) /* getSystemLocale */.t["6/yars"]);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["0HbEQ6"]);
+  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["0HbEQ6"]);
+  const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["6/yars"]);
   obj[3] = onChange;
   obj[4] = topic;
   obj[5] = closure_9;
-  obj[1] = callback(require(7713) /* TextInput */.TextInput, obj);
+  obj[1] = callback(require("../../../../design/components/TextInput/native/TextInput.native.tsx") /* TextInput */.TextInput, obj);
   return callback(View, obj);
 };
 export const GuildEventLocation = function GuildEventLocation(arg0) {
@@ -43,15 +43,15 @@ export const GuildEventLocation = function GuildEventLocation(arg0) {
   ({ location: _location, onChange, onFocus } = arg0);
   let obj = { style: callback3().formGroupLarge, children: null };
   obj = { label: null, placeholder: null, value: null, maxLength: null, onChange: null, onFocus: null, isClearable: true };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.yx785A);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.mkCMia);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.yx785A);
+  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.mkCMia);
   obj[2] = _location;
   obj[3] = closure_8;
   obj[4] = onChange;
   obj[5] = onFocus;
-  obj[1] = callback(require(7713) /* TextInput */.TextInput, obj);
+  obj[1] = callback(require("../../../../design/components/TextInput/native/TextInput.native.tsx") /* TextInput */.TextInput, obj);
   return callback(View, obj);
 };
 export const GuildEventRecurrence = function GuildEventRecurrence(startDate) {
@@ -118,26 +118,26 @@ export const GuildEventEntityTypeSelection = function GuildEventEntityTypeSelect
   let onChange;
   ({ guild, disabled } = arg0);
   ({ entityType, onChange } = arg0);
-  let obj = require(8892) /* useChannelsUserCanStartStageIn */;
+  let obj = require("../../useGuildsUserCanStartStageIn.tsx") /* useChannelsUserCanStartStageIn */;
   obj = { name: null, value: null, description: null, icon: null, IconComponent: null, disabled: null };
   const channelsUserCanStartStageIn = obj.useChannelsUserCanStartStageIn(guild);
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.BVZqJl);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.BVZqJl);
   obj[1] = constants.VOICE;
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl2.string(require(1236) /* getSystemLocale */.t["EV//4f"]);
-  obj[3] = importDefault(8893);
-  obj[4] = require(4810) /* VoiceNormalIcon */.VoiceNormalIcon;
+  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["EV//4f"]);
+  obj[3] = require("../../../../../_runtime/08893_registerAsset.js");
+  obj[4] = require("../../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx") /* VoiceNormalIcon */.VoiceNormalIcon;
   obj[5] = disabled;
   const items = [obj, ];
   obj = { name: null, value: null, description: null, icon: null, IconComponent: null, disabled: null };
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl3.string(require(1236) /* getSystemLocale */.t.w7ipbz);
+  const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.w7ipbz);
   obj[1] = constants.EXTERNAL;
-  const intl4 = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl4.string(require(1236) /* getSystemLocale */.t.DYxrHm);
-  obj[3] = importDefault(8894);
-  obj[4] = require(8895) /* LocationIcon */.LocationIcon;
+  const intl4 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl4.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.DYxrHm);
+  obj[3] = require("../../../../../_runtime/08894_registerAsset.js");
+  obj[4] = require("../../../../design/components/Icon/native/redesign/generated/LocationIcon.tsx") /* LocationIcon */.LocationIcon;
   obj[5] = disabled;
   items[1] = obj;
   const features = guild.features;
@@ -148,7 +148,7 @@ export const GuildEventEntityTypeSelection = function GuildEventEntityTypeSelect
     obj1[1] = constants.STAGE_INSTANCE;
     const intl6 = tmp(1236).intl;
     obj1[2] = intl6.string(tmp(1236).t.LgALpp);
-    obj1[3] = importDefault(7823);
+    obj1[3] = require("../../../../../_runtime/07823_registerAsset.js");
     obj1[4] = tmp(4806).StageIcon;
     obj1[5] = 0 === channelsUserCanStartStageIn.length || disabled;
     items.unshift(obj1);
@@ -166,7 +166,7 @@ export const GuildEventEntityTypeSelection = function GuildEventEntityTypeSelect
     obj[4] = disabled;
     return callback2(callback(table[24]).TableRadioRow, obj, name);
   });
-  return callback(require(7795) /* context */.TableRadioGroup, obj2);
+  return callback(require("../../../../design/components/TableRow/native/TableRadioGroup.native.tsx") /* context */.TableRadioGroup, obj2);
 };
 export const GuildEventDescription = function GuildEventDescription(onFocus) {
   let description;
@@ -240,7 +240,7 @@ export const GuildEventDatetime = function GuildEventDatetime(dateLabel) {
         }
       };
       obj[1] = "date" === time ? time : timeLabel;
-      const obj2 = importDefault(4253);
+      const obj2 = require("../../../action_sheet/native/ActionSheetActionCreators.tsx");
       const obj4 = date;
       const tmp2 = dependencyMap;
       const tmp5 = "date" === time ? time : timeLabel;
@@ -253,9 +253,9 @@ export const GuildEventDatetime = function GuildEventDatetime(dateLabel) {
       obj[3] = toDateResult;
       obj[4] = maximumDate.toDate();
       obj[6] = openLazyResult;
-      openLazyResult = obj2.openLazy(require(1959) /* asyncRequireImpl */(8897, dependencyMap.paths), "DatePicker", obj);
+      openLazyResult = obj2.openLazy(require("../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(8897, dependencyMap.paths), "DatePicker", obj);
       obj5 = outer1_3;
-      const tmp8 = require(1959) /* asyncRequireImpl */(8897, dependencyMap.paths);
+      const tmp8 = require("../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(8897, dependencyMap.paths);
     }
   };
   obj3[3] = disabled;
@@ -284,7 +284,7 @@ export const GuildEventDatetime = function GuildEventDatetime(dateLabel) {
         }
       };
       obj[1] = "date" === time ? time : timeLabel;
-      const obj2 = importDefault(4253);
+      const obj2 = require("../../../action_sheet/native/ActionSheetActionCreators.tsx");
       const obj4 = date;
       const tmp2 = dependencyMap;
       const tmp5 = "date" === time ? time : timeLabel;
@@ -297,9 +297,9 @@ export const GuildEventDatetime = function GuildEventDatetime(dateLabel) {
       obj[3] = toDateResult;
       obj[4] = maximumDate.toDate();
       obj[6] = openLazyResult;
-      openLazyResult = obj2.openLazy(require(1959) /* asyncRequireImpl */(8897, dependencyMap.paths), "DatePicker", obj);
+      openLazyResult = obj2.openLazy(require("../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(8897, dependencyMap.paths), "DatePicker", obj);
       obj5 = outer1_3;
-      const tmp8 = require(1959) /* asyncRequireImpl */(8897, dependencyMap.paths);
+      const tmp8 = require("../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(8897, dependencyMap.paths);
     }
   };
   obj6[3] = disabled;

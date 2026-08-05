@@ -19,7 +19,7 @@ export const useGuildChannelSearchContext = function useGuildChannelSearchContex
 };
 export const getChannelDetailsSearchContext = function getChannelDetailsSearchContext(id, guildId, isThreadResult) {
   if (isThreadResult) {
-    importDefault(38)(null != guildId, "[useChannelDetailsSearchContext] Thread must have a guild id");
+    require("../../../../../_runtime/metro/00038__.js")(null != guildId, "[useChannelDetailsSearchContext] Thread must have a guild id");
     let obj = { type: null, guildId: null, channelId: null };
     obj[0] = SearchTypes.THREAD;
     obj[1] = guildId;

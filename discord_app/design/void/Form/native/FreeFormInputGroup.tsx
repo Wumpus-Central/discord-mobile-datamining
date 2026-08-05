@@ -32,7 +32,7 @@ const forwardRefResult = importAllResult.forwardRef((accessibilityLabel, ref) =>
   const tmp2 = callback2();
   let isAndroidResult = enableAndroidSanitizedInputWorkaround;
   if (enableAndroidSanitizedInputWorkaround) {
-    let obj = require(500) /* set */;
+    let obj = require("../../../../utils/PlatformUtils.tsx") /* set */;
     isAndroidResult = obj.isAndroid();
   }
   if (!isAndroidResult) {
@@ -41,10 +41,10 @@ const forwardRefResult = importAllResult.forwardRef((accessibilityLabel, ref) =>
   if (!enableAndroidSanitizedInputWorkaround) {
     let str = keyboardType;
   } else {
-    let obj1 = require(500) /* set */;
+    let obj1 = require("../../../../utils/PlatformUtils.tsx") /* set */;
     str = "visible-password";
   }
-  const context = importAllResult.useContext(require(5314) /* context */.RedesignCompatContext);
+  const context = importAllResult.useContext(require("../../../components/RedesignCompat/native/RedesignCompat.native.tsx") /* context */.RedesignCompatContext);
   const id = importAllResult.useId();
   if (context) {
     ({ placeholder, onChangeText, clearButtonVisibility } = merged);
@@ -70,7 +70,7 @@ const forwardRefResult = importAllResult.forwardRef((accessibilityLabel, ref) =>
       obj1[0] = tmp2.label;
       obj1[1] = id;
       obj1[2] = label;
-      tmp14 = callback(importDefault(8277), obj1);
+      tmp14 = callback(require("FreeFormLabel.tsx"), obj1);
     }
     const items = [tmp14, , , ];
     const obj2 = {};
@@ -92,13 +92,13 @@ const forwardRefResult = importAllResult.forwardRef((accessibilityLabel, ref) =>
     obj2.keyboardType = str;
     const items1 = [tmp2.input, accessibilityLabel.textStyle];
     obj2.style = items1;
-    items[1] = callback(importDefault(8278), obj2);
+    items[1] = callback(require("FreeFormTextInput.tsx"), obj2);
     let tmp17Result = null;
     if (null != error) {
       const obj3 = { style: null, children: null };
       obj3[0] = tmp2.error;
       obj3[1] = error;
-      tmp17Result = tmp17(importDefault(8280), obj3);
+      tmp17Result = tmp17(require("FreeFormErrorLabel.tsx"), obj3);
     }
     items[2] = tmp17Result;
     tmp17Result = null;

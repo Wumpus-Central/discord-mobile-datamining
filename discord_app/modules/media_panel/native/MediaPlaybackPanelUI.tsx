@@ -2,7 +2,7 @@
 import _slicedToArray from "_slicedToArray";
 import MorphablePanelModes from "MorphablePanelModes";
 import { useContext } from "MorphablePanelModes";
-import module_10649 from "module_10649";
+import SafeAreaDisabledStore from "../../panels/morphable/native/SafeAreaDisabledStore.tsx";
 import MediaPlaybackPanelModes from "MediaPlaybackPanelModes";
 import { IS_IOS } from "MIN_PAN_GESTURE_MOVE";
 import { BORDER_RADIUS_PHYSICS } from "VoicePanelModes";

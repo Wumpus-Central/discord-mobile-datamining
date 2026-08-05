@@ -28,7 +28,7 @@ const memoResult = importAllResult.memo((action) => {
   action = action.action;
   const tmp = callback3();
   const value = ACTION_TO_TEXT.get(action.display_type);
-  importDefault(38)(null != value, "No text for action type");
+  require("../../../../_runtime/metro/00038__.js")(null != value, "No text for action type");
   let obj = action(647);
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getUser(action.entity_id));
@@ -86,7 +86,7 @@ const memoResult1 = importAllResult.memo((action) => {
   const items = [freshTeenActivityWithMap];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getGuild(action.entity_id));
   const value = ACTION_TO_TEXT.get(action.display_type);
-  importDefault(38)(null != value, "No text for action type");
+  require("../../../../_runtime/metro/00038__.js")(null != value, "No text for action type");
   if (undefined === stateFromStores) {
     return null;
   } else {
@@ -156,7 +156,7 @@ export default function FamilyCenterActivityRow(action) {
   let skuId;
   let subscriptionPlanId;
   action = action.action;
-  let obj = require(6961) /* getEmptyActivityFormatter */;
+  let obj = require("../FamilyCenterUtils.tsx") /* getEmptyActivityFormatter */;
   if (!obj.isUserAction(action)) {
     let tmpResult = tmp(6961);
     if (!tmpResult.isGuildAction(action)) {
@@ -175,7 +175,7 @@ export default function FamilyCenterActivityRow(action) {
     if (null != purchaseInfo) {
       obj = { skuId: null, subscriptionPlanId: null, total: null, currency: null };
       ({ sku_id: obj11[0], subscription_plan_id: obj11[1], total: obj11[2], currency: obj11[3] } = purchaseInfo);
-      tmp14 = callback(importDefault(14051), obj);
+      tmp14 = callback(require("FamilyCenterActivityPurchaseRow.tsx"), obj);
     }
     return tmp14;
   } else {
@@ -194,7 +194,7 @@ export default function FamilyCenterActivityRow(action) {
         obj[4] = claimed;
         obj[5] = offeredAt;
         obj[6] = claimedAt;
-        return callback(importDefault(14055), obj);
+        return callback(require("FamilyCenterActivityGiftRow.tsx"), obj);
       }
     } else {
       if (tmpResult5.isUserAction(action)) {
@@ -212,5 +212,5 @@ export default function FamilyCenterActivityRow(action) {
     }
     tmpResult3 = tmp(6961);
   }
-  tmpResult2 = require(6961) /* getEmptyActivityFormatter */;
+  tmpResult2 = require("../FamilyCenterUtils.tsx") /* getEmptyActivityFormatter */;
 };

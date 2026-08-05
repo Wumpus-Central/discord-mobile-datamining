@@ -12,7 +12,7 @@ const require = arg1;
 const result = require("getFpMessageInfo").fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx");
 
 export const redactionSettingToRenderedString = function redactionSettingToRenderedString(prop) {
-  if (require(1306) /* create */.ExplicitContentRedaction.SHOW === prop) {
+  if (require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.ExplicitContentRedaction.SHOW === prop) {
     return () => {
       const intl = callback(1236).intl;
       return intl.string(callback(1236).t["5k5OFp"]);
@@ -66,19 +66,19 @@ export const trackMediaRedactionAction = function trackMediaRedactionAction(arg0
       obj[1] = guild_id;
       obj[2] = channelId;
       obj[3] = messageId;
-      obj = require(5817) /* isCurrentUserTeen */;
+      obj = require("../self_mod/SelfModUtils.tsx") /* isCurrentUserTeen */;
       obj[4] = obj.isCurrentUserTeen();
       obj[5] = tmp2;
-      importDefault(698).track(AnalyticEvents.EXPLICIT_MEDIA_ACTION, obj);
-      const obj2 = importDefault(698);
+      require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.EXPLICIT_MEDIA_ACTION, obj);
+      const obj2 = require("../../utils/AnalyticsUtils.tsx");
     }
   }
 };
 export const TimeoutCancelSource = { UPDATE: "update", TIMEOUT: "timeout" };
 export const trackScanTiming = function trackScanTiming(setAt, UPDATE) {
   const bound = Math.min(Math.floor((Date.now() - setAt) / 1000), 3);
-  let obj = importDefault(6970);
-  obj = { name: require(6975) /* set */.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMING, tags: null };
+  let obj = require("../monitoring/MonitoringAgent.tsx");
+  obj = { name: require("../../../discord_common/js/shared/shared-constants/MetricEvents.tsx") /* set */.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMING, tags: null };
   const items = ["timingBucket:" + bound, "source:" + UPDATE, "metricVersion:1"];
   obj[1] = items;
   obj.increment(obj);
@@ -100,7 +100,7 @@ export const trackScanningTimedOut = function trackScanningTimedOut(arg0) {
       }
       if (0 !== num) {
         const channel = store.getChannel(channelId);
-        let obj = importDefault(698);
+        let obj = require("../../utils/AnalyticsUtils.tsx");
         obj = { channel_id: null, guild_id: null, message_id: null, embed_ids: null, user_is_underage: null, scan_timeout_duration: null, attachment_ids_v2: null };
         obj[0] = channelId;
         let guild_id;
@@ -110,18 +110,18 @@ export const trackScanningTimedOut = function trackScanningTimedOut(arg0) {
         obj[1] = guild_id;
         obj[2] = messageId;
         obj[3] = embedIds;
-        obj[4] = require(5817) /* isCurrentUserTeen */.isCurrentUserTeen();
-        obj[5] = require(6976) /* resetManager */.MESSAGE_SCAN_TIMEOUT;
+        obj[4] = require("../self_mod/SelfModUtils.tsx") /* isCurrentUserTeen */.isCurrentUserTeen();
+        obj[5] = require("ExplicitMediaManager.tsx") /* resetManager */.MESSAGE_SCAN_TIMEOUT;
         obj[6] = attachmentIds;
         obj.track(AnalyticEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, obj);
         let tmp3Result = tmp3(6970);
         obj = { name: null, tags: null };
-        obj[0] = require(6975) /* set */.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT;
+        obj[0] = require("../../../discord_common/js/shared/shared-constants/MetricEvents.tsx") /* set */.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT;
         obj[1] = ["metricVersion:1"];
         tmp3Result.increment(obj);
         tmp3Result = tmp3(6970);
         const obj1 = { name: null };
-        obj1[0] = require(6975) /* set */.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT_DISTRIBUTION;
+        obj1[0] = require("../../../discord_common/js/shared/shared-constants/MetricEvents.tsx") /* set */.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT_DISTRIBUTION;
         let num4;
         if (attachmentIds != null) {
           num4 = attachmentIds.length;
@@ -137,7 +137,7 @@ export const trackScanningTimedOut = function trackScanningTimedOut(arg0) {
           num5 = 0;
         }
         tmp3Result.distribution(obj1, num4 + num5);
-        const obj3 = require(5817) /* isCurrentUserTeen */;
+        const obj3 = require("../self_mod/SelfModUtils.tsx") /* isCurrentUserTeen */;
       } else {
         let num3;
         if (embedIds != null) {
@@ -168,15 +168,15 @@ export const trackExplicitMediaRedactableMessagedLoaded = function trackExplicit
     obj[3] = numOfAttachmentsPendingScan;
     obj[4] = tmp2;
     obj[5] = numOfEmbedsPendingScan;
-    importDefault(698).track(AnalyticEvents.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED, obj);
+    require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED, obj);
     const sum = numOfAttachmentsPendingScan + numOfEmbedsPendingScan;
     if (sum > 0) {
       obj = { name: null };
-      obj[0] = require(6975) /* set */.MetricEvents.EXPLICIT_MEDIA_PENDING_MESSAGE_LOADED_V2;
+      obj[0] = require("../../../discord_common/js/shared/shared-constants/MetricEvents.tsx") /* set */.MetricEvents.EXPLICIT_MEDIA_PENDING_MESSAGE_LOADED_V2;
       tmp10(6970).distribution(obj, sum);
       const tmp10Result = tmp10(6970);
     }
-    const obj3 = importDefault(698);
+    const obj3 = require("../../utils/AnalyticsUtils.tsx");
     tmp10 = importDefault;
   }
 };
@@ -200,7 +200,7 @@ export const trackRedactableMessageLoaded = function trackRedactableMessageLoade
   if (null != channelId) {
     if (null != messageId) {
       const channel = store.getChannel(channelId);
-      let obj = importDefault(698);
+      let obj = require("../../utils/AnalyticsUtils.tsx");
       obj = { message_id: null, channel_id: null, channel_type: null, guild_id: null, num_of_attachments: null, num_of_gore_attachments: null, num_of_explicit_attachments: null, num_of_self_harm_attachments: null, num_of_embeds: null, num_of_gore_embeds: null, num_of_explicit_embeds: null, num_of_self_harm_embeds: null, has_redactable_explicit: null, has_redactable_gore: null, has_redactable_self_harm: null };
       obj[0] = messageId;
       obj[1] = channelId;
@@ -233,7 +233,7 @@ export const trackExplicitMediaScanComplete = function trackExplicitMediaScanCom
   channelId = channelId.channelId;
   if (null != channelId) {
     const channel = store.getChannel(channelId);
-    let obj = importDefault(698);
+    let obj = require("../../utils/AnalyticsUtils.tsx");
     obj = { message_id: null, channel_id: null, channel_type: null, guild_id: null, num_of_attachments: null, num_of_explicit_attachments: null, num_of_embeds: null, num_of_explicit_embeds: null };
     obj[0] = tmp;
     obj[1] = channelId;
@@ -302,24 +302,24 @@ export const isObscuredMediaBelowConstraints = function isObscuredMediaBelowCons
   return tmp;
 };
 export const shouldAgeVerifyForExplicitMedia = function shouldAgeVerifyForExplicitMedia() {
-  let isFeatureAgeGatedResult = require(3964) /* isFeatureAgeGated */.isFeatureAgeGated(require(5108) /* AgeGatedFeature */.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING);
-  const obj = require(3964) /* isFeatureAgeGated */;
+  let isFeatureAgeGatedResult = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING);
+  const obj = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */;
   if (isFeatureAgeGatedResult) {
     isFeatureAgeGatedResult = obj2.shouldShowTiggerPawtect();
   }
   return isFeatureAgeGatedResult;
 };
 export const useShouldAgeVerifyForExplicitMedia = function useShouldAgeVerifyForExplicitMedia() {
-  let isFeatureAgeGated = require(3964) /* isFeatureAgeGated */.useIsFeatureAgeGated(require(5108) /* AgeGatedFeature */.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING);
-  const obj = require(3964) /* isFeatureAgeGated */;
+  let isFeatureAgeGated = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.useIsFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING);
+  const obj = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */;
   if (isFeatureAgeGated) {
     isFeatureAgeGated = obj2.useShouldShowTiggerPawtect();
   }
   return isFeatureAgeGated;
 };
 export const useShouldAgeVerifyForReason = function useShouldAgeVerifyForReason(obscureReason) {
-  let isFeatureAgeGated = require(3964) /* isFeatureAgeGated */.useIsFeatureAgeGated(require(5108) /* AgeGatedFeature */.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING);
-  const obj = require(3964) /* isFeatureAgeGated */;
+  let isFeatureAgeGated = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.useIsFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING);
+  const obj = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */;
   const tmp = require;
   if (isFeatureAgeGated) {
     isFeatureAgeGated = obj2.useShouldShowTiggerPawtect();
@@ -336,7 +336,7 @@ export const useShouldAgeVerifyForReason = function useShouldAgeVerifyForReason(
   return hasItem;
 };
 export const trackToggleMediaObscurityV2 = function trackToggleMediaObscurityV2(obscure) {
-  let obj = require(4500) /* useAgeVerificationRunner */;
+  let obj = require("../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */;
   if (obj.isVerifiedAdult()) {
     let str = "show";
     if (obscure.obscure) {
@@ -344,8 +344,8 @@ export const trackToggleMediaObscurityV2 = function trackToggleMediaObscurityV2(
     }
     obj = { toggle_direction: null };
     obj[0] = str;
-    importDefault(698).track(AnalyticEvents.EXPLICIT_MEDIA_OBSCURITY_TOGGLE_V2, obj);
-    const obj2 = importDefault(698);
+    require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.EXPLICIT_MEDIA_OBSCURITY_TOGGLE_V2, obj);
+    const obj2 = require("../../utils/AnalyticsUtils.tsx");
   }
 };
 export const hasMessageSnapshotsWithAttachmentsOrEmbeds = function hasMessageSnapshotsWithAttachmentsOrEmbeds(message) {

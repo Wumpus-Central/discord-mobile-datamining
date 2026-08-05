@@ -18,13 +18,13 @@ let unpackModuleId;
 const require = arg1;
 function JoinCallButton() {
   const obj = { size: "sm", color: null };
-  obj[1] = importDefault(712).unsafe_rawColors.GREEN_360;
-  return jsx(require(8209) /* PhoneCallIcon */.PhoneCallIcon, { size: "sm", color: null });
+  obj[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.GREEN_360;
+  return jsx(require("../../../../design/components/Icon/native/redesign/generated/PhoneCallIcon.tsx") /* PhoneCallIcon */.PhoneCallIcon, { size: "sm", color: null });
 }
 function EndCallButton() {
   const obj = { size: "sm", color: null };
-  obj[1] = importDefault(712).unsafe_rawColors.RED_400;
-  return jsx(require(8211) /* PhoneHangUpIcon */.PhoneHangUpIcon, { size: "sm", color: null });
+  obj[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.RED_400;
+  return jsx(require("../../../../design/components/Icon/native/redesign/generated/PhoneHangUpIcon.tsx") /* PhoneHangUpIcon */.PhoneHangUpIcon, { size: "sm", color: null });
 }
 function ChannelActionButtons(channel) {
   channel = channel.channel;
@@ -291,7 +291,7 @@ export default function ChannelActions(channelId) {
     const obj2 = { channelId: null, screenIndex: null };
     obj2[0] = channelId;
     obj2[1] = screenIndex;
-    tmp4Result = tmp4(importDefault(12447), obj2);
+    tmp4Result = tmp4(require("header/PrivateChannelButtons.tsx"), obj2);
   }
   obj[1] = tmp4Result;
   return <View style={containerStyle}>{null}</View>;

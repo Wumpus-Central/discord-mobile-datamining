@@ -395,9 +395,9 @@ export default importAllResult.forwardRef((stickerId, ref) => {
   let tmp12 = ref1(ref2.useState(undefined), 2);
   first1 = tmp12[0];
   callback = tmp12[1];
-  const insets = importDefault(5310)({ includeKeyboardHeight: true }).insets;
+  const insets = require("../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx")({ includeKeyboardHeight: true }).insets;
   const items = [{ ref: ref1, offset: { type: "toRef", ref: ref2 } }, { ref: ref2, offset: { type: "toBottom" } }];
-  const onFocus = importDefault(9380)({ insets, inputs: items, scrollViewRef: ref }).onFocus;
+  const onFocus = require("../../../../safe_area/useSafeAreaAvoidingInputs.native.tsx")({ insets, inputs: items, scrollViewRef: ref }).onFocus;
   stickerById = undefined;
   const tmp11 = ref1(ref2.useState(undefined), 2);
   if (null != stickerId) {
@@ -413,9 +413,9 @@ export default importAllResult.forwardRef((stickerId, ref) => {
     }
     return applyArgumentsResult;
   }
-  const tmp16Result = importDefault(5598)(stickerById);
+  const tmp16Result = require("../../../../../hooks/useInitialValue.tsx")(stickerById);
   c16 = tmp16Result;
-  const tmp20 = importDefault(5598)(() => {
+  const tmp20 = require("../../../../../hooks/useInitialValue.tsx")(() => {
     let tags = c16;
     if (null != c16) {
       let customEmojiById = null;

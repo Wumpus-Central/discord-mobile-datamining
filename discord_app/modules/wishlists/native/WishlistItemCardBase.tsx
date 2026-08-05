@@ -26,7 +26,7 @@ function SourceIcon(toastText) {
     children: null
   };
   obj = { color: null, size: "md" };
-  obj[0] = importDefault(712).colors.INTERACTIVE_ICON_DEFAULT;
+  obj[0] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_ICON_DEFAULT;
   obj[5] = callback(toastText(8689).HeartIcon, obj);
   return callback(closure_3, obj);
 }
@@ -71,12 +71,12 @@ export default function WishlistItemCardBase(username) {
   }
   const accessibilityHidden = username.accessibilityHidden;
   const tmp = createCacheKey();
-  let obj = require(3997) /* ManaContext */;
+  let obj = require("../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */;
   const themeContext = obj.useThemeContext();
   ({ primaryColor, theme, secondaryColor } = themeContext);
-  let obj1 = require(8754) /* useUserProfileColors */;
-  let obj2 = require(3989) /* map */;
-  let containerBackground = obj2.useToken(importDefault(712).colors.BG_SURFACE_RAISED);
+  let obj1 = require("../../user_profile/hooks/native/useUserProfileColors.tsx") /* useUserProfileColors */;
+  let obj2 = require("../../../design/tokens/native/useToken.tsx") /* map */;
+  let containerBackground = obj2.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BG_SURFACE_RAISED);
   if (null != primaryColor) {
     containerBackground = obj1.useUserProfileColors({ theme, primaryColor, secondaryColor }).containerBackground;
   }
@@ -90,7 +90,7 @@ export default function WishlistItemCardBase(username) {
   }
   items[2] = obj;
   const intl = tmp2(1236).intl;
-  const formatToPlainStringResult = intl.formatToPlainString(require(1236) /* getSystemLocale */.t.p3RmJF, { username: username.recipientName });
+  const formatToPlainStringResult = intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.p3RmJF, { username: username.recipientName });
   const items1 = [accessibilityLabel, , ];
   let stringResult = null;
   if (flag) {
@@ -108,9 +108,9 @@ export default function WishlistItemCardBase(username) {
   obj1 = { style: tmp.ownedOverlay, pointerEvents: "none", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   const joined = found.join(", ");
   obj2 = { color: null, size: "custom", style: null };
-  obj2[0] = importDefault(712).colors.WHITE;
+  obj2[0] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE;
   obj2[2] = { width: 40, height: 40 };
-  obj1[4] = callback(require(9151) /* CheckmarkLargeBoldIcon */.CheckmarkLargeBoldIcon, obj2);
+  obj1[4] = callback(require("../../../design/components/Icon/native/redesign/generated/CheckmarkLargeBoldIcon.tsx") /* CheckmarkLargeBoldIcon */.CheckmarkLargeBoldIcon, obj2);
   const items2 = [tmp.previewWrap, ];
   let ownedCard = flag;
   if (flag) {

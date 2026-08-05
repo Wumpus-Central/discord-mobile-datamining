@@ -10,10 +10,10 @@ let closure_6;
 const require = arg1;
 function SectionSeparator() {
   let obj = { children: null };
-  const items = [callback(require(1297) /* Button */.Spacer, { size: 24 }), , ];
+  const items = [callback(require("../../../../../design/void/native.tsx") /* Button */.Spacer, { size: 24 }), , ];
   obj = { style: createCacheKey().separator };
   items[1] = callback(View, obj);
-  items[2] = callback(require(1297) /* Button */.Spacer, { size: 24 });
+  items[2] = callback(require("../../../../../design/void/native.tsx") /* Button */.Spacer, { size: 24 });
   obj[0] = items;
   return callback2(closure_5, obj);
 }
@@ -21,7 +21,7 @@ function BenefitRow(description) {
   description = description.description;
   const tmp = createCacheKey();
   let obj = { style: tmp.benefitRowContainer, children: null };
-  obj = { children: callback(importDefault(15139), {}) };
+  obj = { children: callback(require("../../premium_channel/GuildRoleSubscriptionGatedChannelIcon.tsx"), {}) };
   const items = [callback(View, obj), ];
   obj = { style: tmp.benefitTextContainer, children: null };
   const items1 = [description.title, ];
@@ -30,7 +30,7 @@ function BenefitRow(description) {
     const obj1 = { style: null, variant: "text-sm/normal", color: "interactive-text-default", children: null };
     obj1[0] = tmp.benefitDescription;
     obj1[3] = description;
-    tmp4Result = callback(require(4281) /* Text */.Text, obj1);
+    tmp4Result = callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
   }
   items1[1] = tmp4Result;
   obj[1] = items1;
@@ -43,7 +43,7 @@ function BenefitSection(arg0) {
   let sectionTitle;
   const obj = { children: null };
   ({ sectionTitle, children } = arg0);
-  const items = [callback(require(14373) /* SectionTitle */.SectionTitle, { children: sectionTitle }), callback(require(1297) /* Button */.Spacer, { size: 14 }), children];
+  const items = [callback(require("../../components/listing_elements/GuildRoleSubscriptionCard.tsx") /* SectionTitle */.SectionTitle, { children: sectionTitle }), callback(require("../../../../../design/void/native.tsx") /* Button */.Spacer, { size: 14 }), children];
   obj[0] = items;
   return callback2(closure_5, obj);
 }
@@ -85,27 +85,27 @@ export default function GuildRoleSubscriptionTierTemplateFullCard(template) {
   let obj = { scrollable: true, startExpanded: true, children: null };
   obj = { style: tmp.container, children: null };
   obj = { template, handleSelectTemplateInPreview, subscriptionPlanTextStyle: tmp.subscriptionPlanTextStyle, descriptionTextStyle: tmp.descriptionPlanTextStyle, closeActionSheet: true };
-  let items = [callback(_require(16745).GuildRoleSubscriptionTierTemplateBasicInfo, obj), callback(View, { style: tmp.separator }), ];
+  let items = [callback(_require("GuildRoleSubscriptionTierTemplateBasicInfo.tsx").GuildRoleSubscriptionTierTemplateBasicInfo, obj), callback(View, { style: tmp.separator }), ];
   const obj2 = { scrollsToTop: false, style: tmp.content, contentContainerStyle: obj3, children: null };
   const obj4 = { variant: "text-sm/bold", color: "text-default", style: { textTransform: "uppercase" }, children: null };
-  const intl = _require(1236).intl;
-  obj4[3] = intl.string(_require(1236).t.CjC5XZ);
-  const items1 = [callback(_require(4281).Text, obj4), callback(_require(1297).Spacer, { size: 4 }), , , , , , , , , ];
+  const intl = _require("../../../../../intl/index.native.tsx").intl;
+  obj4[3] = intl.string(_require("../../../../../intl/index.native.tsx").t.CjC5XZ);
+  const items1 = [callback(_require("../../../../../design/components/Text/native/Text.tsx").Text, obj4), callback(_require("../../../../../design/void/native.tsx").Spacer, { size: 4 }), , , , , , , , , ];
   const obj5 = { variant: "text-sm/normal", color: "text-muted", children: null };
-  const intl2 = _require(1236).intl;
-  obj5[2] = intl2.string(_require(1236).t.bCb3c8);
-  items1[2] = callback(_require(4281).Text, obj5);
-  items1[3] = callback(_require(1297).Spacer, { size: 24 });
+  const intl2 = _require("../../../../../intl/index.native.tsx").intl;
+  obj5[2] = intl2.string(_require("../../../../../intl/index.native.tsx").t.bCb3c8);
+  items1[2] = callback(_require("../../../../../design/components/Text/native/Text.tsx").Text, obj5);
+  items1[3] = callback(_require("../../../../../design/void/native.tsx").Spacer, { size: 24 });
   const obj6 = { variant: "text-xs/bold", color: "text-default", style: { textTransform: "uppercase" }, children: null };
-  const intl3 = _require(1236).intl;
-  obj6[3] = intl3.string(_require(1236).t.ZKyfEo);
-  items1[4] = callback(_require(4281).Text, obj6);
-  items1[5] = callback(_require(1297).Spacer, { size: 8 });
-  items1[6] = callback(_require(16746).GuildRoleSubscriptionRolePreview, { roleColor: role_color, roleImage: image, roleName: name, guildId });
+  const intl3 = _require("../../../../../intl/index.native.tsx").intl;
+  obj6[3] = intl3.string(_require("../../../../../intl/index.native.tsx").t.ZKyfEo);
+  items1[4] = callback(_require("../../../../../design/components/Text/native/Text.tsx").Text, obj6);
+  items1[5] = callback(_require("../../../../../design/void/native.tsx").Spacer, { size: 8 });
+  items1[6] = callback(_require("GuildRoleSubscriptionTierTemplateRolePreview.tsx").GuildRoleSubscriptionRolePreview, { roleColor: role_color, roleImage: image, roleName: name, guildId });
   items1[7] = callback(SectionSeparator, {});
   const obj7 = { sectionTitle: null, children: null };
-  const intl4 = _require(1236).intl;
-  obj7[0] = intl4.string(_require(1236).t.Ofvpfs);
+  const intl4 = _require("../../../../../intl/index.native.tsx").intl;
+  obj7[0] = intl4.string(_require("../../../../../intl/index.native.tsx").t.Ofvpfs);
   const obj8 = { gap: 14, children: null };
   obj8[1] = channels.map((children) => {
     let obj = _undefined(outer1_2[16]);
@@ -115,23 +115,23 @@ export default function GuildRoleSubscriptionTierTemplateFullCard(template) {
     obj[1] = items;
     return outer1_4(outer1_9, { title: outer1_6(outer1_3, obj), description: children.description }, children.id);
   });
-  obj7[1] = callback(_require(8676).GappedList, obj8);
+  obj7[1] = callback(_require("../../components/LayoutUtils.tsx").GappedList, obj8);
   items1[8] = callback(BenefitSection, obj7);
   items1[9] = callback(SectionSeparator, {});
   const obj9 = { sectionTitle: null, children: null };
-  const intl5 = _require(1236).intl;
-  obj9[0] = intl5.string(_require(1236).t.w7KA8R);
+  const intl5 = _require("../../../../../intl/index.native.tsx").intl;
+  obj9[0] = intl5.string(_require("../../../../../intl/index.native.tsx").t.w7KA8R);
   const obj10 = { gap: 14, children: null };
   obj10[1] = additional_perks.map((children) => {
     let obj = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.name };
     obj = { title: callback(_undefined(table[7]).Text, obj) };
     return callback(closure_9, obj, arg1);
   });
-  obj9[1] = callback(_require(8676).GappedList, obj10);
+  obj9[1] = callback(_require("../../components/LayoutUtils.tsx").GappedList, obj10);
   items1[10] = callback(BenefitSection, obj9);
   obj2[3] = items1;
-  items[2] = callback2(_require(5340).BottomSheetScrollView, obj2);
+  items[2] = callback2(_require("../../../../../../_runtime/05340_BottomSheetModal.js").BottomSheetScrollView, obj2);
   obj[1] = items;
   obj[2] = callback2(View, obj);
-  return callback(_require(5338).BottomSheet, obj);
+  return callback(_require("../../../../../design/components/Sheet/native/BottomSheet.native.tsx").BottomSheet, obj);
 };

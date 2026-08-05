@@ -22,7 +22,7 @@ export const transformToRowGeneratedContentInventoryEntryComponent = function tr
   const contentInventoryEntry = component.component.contentInventoryEntry;
   const message = component.message;
   const content_type = contentInventoryEntry.content_type;
-  if (require(8044) /* ContentInventoryEntryType */.ContentInventoryEntryType.PLAYED_GAME !== content_type) {
+  if (require("../../../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx") /* ContentInventoryEntryType */.ContentInventoryEntryType.PLAYED_GAME !== content_type) {
     if (tmp(8044).ContentInventoryEntryType.TOP_GAME !== content_type) {
       if (tmp(8044).ContentInventoryEntryType.WATCHED_MEDIA === content_type) {
         let tmpResult = tmp(8051);
@@ -35,13 +35,13 @@ export const transformToRowGeneratedContentInventoryEntryComponent = function tr
           iconURL = application.getIconURL(tmp38.LARGE);
         }
         if (iconURL == null) {
-          iconURL = Image.resolveAssetSource(importDefault(7751)).uri;
+          iconURL = Image.resolveAssetSource(require("../../../../../_runtime/07751_registerAsset.js")).uri;
         }
         let tmp45 = assetImage;
         if (assetImage == null) {
           tmp45 = iconURL;
         }
-        if (tmp45 === Image.resolveAssetSource(importDefault(7751)).uri) {
+        if (tmp45 === Image.resolveAssetSource(require("../../../../../_runtime/07751_registerAsset.js")).uri) {
           let tmp47 = items;
         } else {
           tmpResult = tmp(8045);
@@ -115,7 +115,7 @@ export const transformToRowGeneratedContentInventoryEntryComponent = function tr
               const obj2 = { count: null };
               obj2[0] = count;
               const obj3 = { badgeUrl: null, text: null };
-              obj3[0] = Image.resolveAssetSource(importDefault(7648)).uri;
+              obj3[0] = Image.resolveAssetSource(require("../../../../../_runtime/07648_registerAsset.js")).uri;
               obj3[1] = intl.formatToPlainString(tmp(1236).t.HtifnG, obj2);
               items4.push(obj3);
               const obj4 = { imageUrl: null, title: null, subtitles: null, gradientColors: null, platformIconUrl: null };
@@ -123,7 +123,7 @@ export const transformToRowGeneratedContentInventoryEntryComponent = function tr
               obj4[1] = contentInventoryEntry.extra.artist.name;
               obj4[2] = items4;
               obj4[3] = items3;
-              obj4[4] = Image.resolveAssetSource(importDefault(8054)).uri;
+              obj4[4] = Image.resolveAssetSource(require("../../../../../_runtime/08054_registerAsset.js")).uri;
               tmp30 = obj4;
               const formatToPlainStringResult1 = intl.formatToPlainString(tmp(1236).t.HtifnG, obj2);
             }
@@ -160,7 +160,7 @@ export const transformToRowGeneratedContentInventoryEntryComponent = function tr
             const items6 = [obj6];
             obj5[2] = items6;
             obj5[3] = items5;
-            obj5[4] = Image.resolveAssetSource(importDefault(8054)).uri;
+            obj5[4] = Image.resolveAssetSource(require("../../../../../_runtime/08054_registerAsset.js")).uri;
             tmp25 = obj5;
             const tmpResult12 = tmp(4129);
           }
@@ -173,10 +173,10 @@ export const transformToRowGeneratedContentInventoryEntryComponent = function tr
         if (null != application1) {
           let uri = application1.getIconURL(ImageSizes.LARGE);
           if (uri == null) {
-            uri = Image.resolveAssetSource(importDefault(7751)).uri;
+            uri = Image.resolveAssetSource(require("../../../../../_runtime/07751_registerAsset.js")).uri;
           }
           obj = Image;
-          if (uri === Image.resolveAssetSource(importDefault(7751)).uri) {
+          if (uri === Image.resolveAssetSource(require("../../../../../_runtime/07751_registerAsset.js")).uri) {
             let tmp7 = items;
           } else {
             if (tmpResult13.hasFetchedColors(uri)) {
@@ -220,10 +220,10 @@ export const transformToRowGeneratedContentInventoryEntryComponent = function tr
     }
     user = user.getUser(contentInventoryEntry.author_id);
     if (null != user) {
-      const name1 = importDefault(4474).getName(undefined, undefined, user);
+      const name1 = require("../../../../utils/NicknameUtils.tsx").getName(undefined, undefined, user);
       const obj11 = { authorId: null, avatarUrl: null, userActionDescription: null, userClickable: null };
       obj11[0] = contentInventoryEntry.author_id;
-      const obj53 = importDefault(4474);
+      const obj53 = require("../../../../utils/NicknameUtils.tsx");
       const ensureAvatarSourceResult = tmp(1419).ensureAvatarSource(user.getAvatarSource(null, undefined, 80));
       uri = undefined;
       if (ensureAvatarSourceResult != null) {
@@ -251,9 +251,9 @@ export const transformToRowGeneratedContentInventoryEntryComponent = function tr
   if (null != application2) {
     let game_name = application2.getIconURL(ImageSizes.LARGE);
     if (game_name == tmp54) {
-      game_name = Image.resolveAssetSource(importDefault(7751)).uri;
+      game_name = Image.resolveAssetSource(require("../../../../../_runtime/07751_registerAsset.js")).uri;
     }
-    if (game_name === Image.resolveAssetSource(importDefault(7751)).uri) {
+    if (game_name === Image.resolveAssetSource(require("../../../../../_runtime/07751_registerAsset.js")).uri) {
       let tmp60 = items;
     } else {
       if (tmpResult20.hasFetchedColors(game_name)) {

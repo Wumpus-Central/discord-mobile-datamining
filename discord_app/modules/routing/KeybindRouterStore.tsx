@@ -8,7 +8,7 @@ function getMatchData(pathname) {
   let channelId;
   let guildId;
   let str = pathname;
-  let obj = require(4107) /* matchPath */;
+  let obj = require("matchPathCompat.tsx") /* matchPath */;
   let str2 = pathname;
   if (pathname == null) {
     str2 = "";

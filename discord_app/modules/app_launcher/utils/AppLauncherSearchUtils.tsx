@@ -135,9 +135,9 @@ function sortApplicationFreceny(id, id2) {
   return store.getScoreWithoutLoadingLatest(id2.id) - scoreWithoutLoadingLatest;
 }
 function sortApplicationAlpha(FAKE_BUILT_IN_APP, FAKE_BUILT_IN_APP) {
-  const sectionName = require(8149) /* getShelfBadgeTypeIfActive */.getSectionName(FAKE_BUILT_IN_APP);
-  const obj = require(8149) /* getShelfBadgeTypeIfActive */;
-  return callback(sectionName, require(8149) /* getShelfBadgeTypeIfActive */.getSectionName(FAKE_BUILT_IN_APP));
+  const sectionName = require("AppLauncherUtils.tsx") /* getShelfBadgeTypeIfActive */.getSectionName(FAKE_BUILT_IN_APP);
+  const obj = require("AppLauncherUtils.tsx") /* getShelfBadgeTypeIfActive */;
+  return callback(sectionName, require("AppLauncherUtils.tsx") /* getShelfBadgeTypeIfActive */.getSectionName(FAKE_BUILT_IN_APP));
 }
 function sortCommandsAlpha(displayName, displayName2) {
   return callback(displayName.displayName, displayName2.displayName);
@@ -222,8 +222,8 @@ export const filterApplicationAllowed = function filterApplicationAllowed(type) 
   if ("channel" === type.type) {
     channel = type.channel;
   }
-  const items = [_require(1906).ApplicationCommandType.CHAT, _require(1906).ApplicationCommandType.PRIMARY_ENTRY_POINT];
-  let closure_1 = _require(8155).buildPermissionContext(channel, items);
+  const items = [_require("../../../flow/Server.tsx").ApplicationCommandType.CHAT, _require("../../../flow/Server.tsx").ApplicationCommandType.PRIMARY_ENTRY_POINT];
+  let closure_1 = _require("../../application_commands/CommandPermissionContext.tsx").buildPermissionContext(channel, items);
   return (id) => {
     let closure_1;
     let closure_2;
@@ -396,8 +396,8 @@ export const filterCommandAllowed = function filterCommandAllowed(type) {
   if ("channel" === type.type) {
     channel = type.channel;
   }
-  const items = [_require(1906).ApplicationCommandType.CHAT];
-  let closure_1 = _require(8155).buildPermissionContext(channel, items);
+  const items = [_require("../../../flow/Server.tsx").ApplicationCommandType.CHAT];
+  let closure_1 = _require("../../application_commands/CommandPermissionContext.tsx").buildPermissionContext(channel, items);
   let closure_2 = {};
   return (applicationId) => {
     let applicationAllowedForChannel;

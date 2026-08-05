@@ -10,7 +10,7 @@ const result = require("hasConsented").fileFinishedImporting("modules/auth/nativ
 export default function useInitialRegistrationStep(arg0) {
   const _require = arg0;
   const items = [hasConsented];
-  const stateFromStores = _require(589).useStateFromStores(items, () => authenticationConsentRequired.getAuthenticationConsentRequired());
+  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => authenticationConsentRequired.getAuthenticationConsentRequired());
   const items1 = [stateFromStores, arg0];
   const effect = React.useEffect(() => {
     let tmp2 = callback === callback(outer1_2[4]).getRegistrationSteps()[1];

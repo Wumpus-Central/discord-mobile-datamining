@@ -44,7 +44,7 @@ function PollEmoji(emoji) {
     }
   });
   obj = { style: emoji.style, src: stateFromStores, name: emoji.name, textEmojiStyle: tmp.emojiText, fastImageStyle: tmp.emojiImage };
-  return callback(importDefault(5301), obj);
+  return callback(require("../../emojis/native/Emoji.tsx"), obj);
 }
 function PollVotesHeader(message) {
   message = message.message;
@@ -329,7 +329,7 @@ function NoResults() {
   const tmp = callback3();
   let obj = { style: tmp.noResultsContainer, children: null };
   obj = { style: tmp.noResultsImage, source: null };
-  const tmp4 = importDefault(4221)();
+  const tmp4 = require("../../../hooks/useTheme.tsx")();
   const tmp5 = closure_15;
   const tmp6 = closure_7;
   const tmp8 = closure_6;
@@ -342,12 +342,12 @@ function NoResults() {
   const items = [closure_14(tmp8, obj), , ];
   obj = { style: tmp.noResultsTitle, variant: "heading-md/bold", color: "mobile-text-heading-primary", children: null };
   const intl = tmp9(1236).intl;
-  obj[3] = intl.string(require(1236) /* getSystemLocale */.t.vhQK3o);
-  items[1] = closure_14(require(4281) /* Text */.Text, obj);
+  obj[3] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.vhQK3o);
+  items[1] = closure_14(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   const obj1 = { style: tmp.noResultsSubtitle, variant: "text-sm/semibold", color: "text-default", children: null };
   const intl2 = tmp9(1236).intl;
-  obj1[3] = intl2.string(require(1236) /* getSystemLocale */.t.bwytdh);
-  items[2] = closure_14(require(4281) /* Text */.Text, obj1);
+  obj1[3] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.bwytdh);
+  items[2] = closure_14(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
   obj[1] = items;
   return tmp5(tmp6, obj);
 }

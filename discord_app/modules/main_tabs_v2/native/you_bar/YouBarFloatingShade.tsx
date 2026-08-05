@@ -16,7 +16,7 @@ let closure_10 = createCacheKey.createStyles({ container: { position: "absolute"
 let closure_11 = { code: "function YouBarFloatingShadeTsx1(){const{gradientHeight,drawerWidth}=this.__closure;return{height:gradientHeight,opacity:1,width:drawerWidth};}" };
 const memoResult = require("noop").memo(function YouBarFloatingShade() {
   const tmp = callback3();
-  let obj = require(14245) /* useYouBarTotalHeight */;
+  let obj = require("hooks/useYouBarTotalHeight.tsx") /* useYouBarTotalHeight */;
   const youBarTotalHeight = obj.useYouBarTotalHeight();
   const sum = youBarTotalHeight + closure_5;
   require = sum;
@@ -34,11 +34,11 @@ const memoResult = require("noop").memo(function YouBarFloatingShade() {
   const animatedStyle = tmp2Result.useAnimatedStyle(fn);
   tmp2Result = tmp2(4096);
   const gradientValue = tmp2Result.useGradientValue(tmp2(4096).GradientPercentage.END);
-  const token = require(3989) /* map */.useToken(tmp6(712).colors.BACKGROUND_BASE_LOWER);
-  const tmp2Result1 = require(3989) /* map */;
+  const token = require("../../../../design/tokens/native/useToken.tsx") /* map */.useToken(tmp6(712).colors.BACKGROUND_BASE_LOWER);
+  const tmp2Result1 = require("../../../../design/tokens/native/useToken.tsx") /* map */;
   const items = [isSyncedModeThemesEnabled];
-  const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => gradientPreset.gradientPreset);
-  const tmp2Result2 = require(589) /* initialize */;
+  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => gradientPreset.gradientPreset);
+  const tmp2Result2 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   let token1 = null;
   if (null != stateFromStores) {
     token1 = tmp2Result3.useToken(tmp6(712).colors.MOBILE_FLOATINGBAR_BACKGROUND_SCRIM);
@@ -49,13 +49,13 @@ const memoResult = require("noop").memo(function YouBarFloatingShade() {
       token1 = gradientValue;
     }
   }
-  tmp2Result3 = require(3989) /* map */;
-  let str = require(688) /* int2hslRaw */.hex2rgb(token1, 1);
+  tmp2Result3 = require("../../../../design/tokens/native/useToken.tsx") /* map */;
+  let str = require("../../../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */.hex2rgb(token1, 1);
   if (str == null) {
     str = "transparent";
   }
-  const tmp2Result4 = require(688) /* int2hslRaw */;
-  let str2 = require(688) /* int2hslRaw */.hex2rgb(token1, 0);
+  const tmp2Result4 = require("../../../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */;
+  let str2 = require("../../../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */.hex2rgb(token1, 0);
   if (str2 == null) {
     str2 = "transparent";
   }

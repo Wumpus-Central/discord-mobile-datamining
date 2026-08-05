@@ -320,10 +320,10 @@ let result = require("ApplicationStreamPresets").fileFinishedImporting("modules/
 
 export default memoResult;
 export const showMobileGoLiveActionSheet = function showMobileGoLiveActionSheet(closure_1) {
-  let obj = importDefault(4253);
+  let obj = require("../../action_sheet/native/ActionSheetActionCreators.tsx");
   obj = { impressionName: null, impressionProperties: null };
-  obj[0] = require(503) /* encodeProperties */.ImpressionNames.MOBILE_GO_LIVE_ACTION_SHEET;
+  obj[0] = require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionNames.MOBILE_GO_LIVE_ACTION_SHEET;
   obj = { location_stack: closure_1 };
   obj[1] = obj;
-  obj.openLazy(require(1959) /* asyncRequireImpl */(10720, dependencyMap.paths), MobileGoLiveActionSheet, obj);
+  obj.openLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(10720, dependencyMap.paths), MobileGoLiveActionSheet, obj);
 };

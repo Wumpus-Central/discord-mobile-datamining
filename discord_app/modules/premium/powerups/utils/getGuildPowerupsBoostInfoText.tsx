@@ -5,17 +5,17 @@ const result = require("messagesProxy").fileFinishedImporting("modules/premium/p
 
 export const getGuildPowerupsBoostInfoText = function getGuildPowerupsBoostInfoText(count, type) {
   if (BoostInfoType.AVAILABLE === type) {
-    const intl3 = require(1236) /* getSystemLocale */.intl;
+    const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     let obj = { boostCount: null };
     obj[0] = count;
-    return intl3.formatToPlainString(importDefault(2317).BdRXZA, obj);
+    return intl3.formatToPlainString(require("../GuildPowerups.messages.js").BdRXZA, obj);
   } else if (tmp.SPENT === type) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { boostCount: null };
     obj[0] = count;
-    return intl2.formatToPlainString(importDefault(2317).xvgIVG, obj);
+    return intl2.formatToPlainString(require("../GuildPowerups.messages.js").xvgIVG, obj);
   } else if (tmp.TOTAL === type) {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(importDefault(2317)["/F7Z2y"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../GuildPowerups.messages.js")["/F7Z2y"]);
   }
 };

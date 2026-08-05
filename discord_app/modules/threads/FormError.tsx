@@ -4,8 +4,8 @@ const result = require("set").fileFinishedImporting("modules/threads/FormError.t
 
 export const FormSubmitErrorType = obj;
 export const makeEmptyTitleError = function makeEmptyTitleError() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  let stringResult = intl.string(require(1236) /* getSystemLocale */.t.uXA573);
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  let stringResult = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.uXA573);
   obj = { type: obj.EmptyContent, message: null };
   if (stringResult == null) {
     stringResult = null;
@@ -14,8 +14,8 @@ export const makeEmptyTitleError = function makeEmptyTitleError() {
   return obj;
 };
 export const makeEmptyMessageError = function makeEmptyMessageError() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  let stringResult = intl.string(require(1236) /* getSystemLocale */.t.kesTVT);
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  let stringResult = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.kesTVT);
   obj = { type: obj.EmptyContent, message: null };
   if (stringResult == null) {
     stringResult = null;
@@ -24,8 +24,8 @@ export const makeEmptyMessageError = function makeEmptyMessageError() {
   return obj;
 };
 export const makeApiNameRequiredError = function makeApiNameRequiredError() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  let stringResult = intl.string(require(1236) /* getSystemLocale */.t.uXA573);
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  let stringResult = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.uXA573);
   obj = { type: obj.ApiValidation, message: null };
   if (stringResult == null) {
     stringResult = null;
@@ -34,7 +34,7 @@ export const makeApiNameRequiredError = function makeApiNameRequiredError() {
   return obj;
 };
 export const makeAutomodViolationError = function makeAutomodViolationError(errorResponseBody, id) {
-  let obj = require(7245) /* getAutomodErrorMessageFromErrorResponse */;
+  let obj = require("../guild_automod/AutomodErrorUtils.tsx") /* getAutomodErrorMessageFromErrorResponse */;
   id = undefined;
   if (id != null) {
     id = id.id;

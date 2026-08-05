@@ -26,13 +26,13 @@ class WorkSchedulerTelemetry {
 }
 const prototype = WorkSchedulerTelemetry.prototype;
 prototype["reset"] = function reset() {
-  this._timeTracking = require(12) /* apply */.cloneDeep(closure_3);
-  const obj = require(12) /* apply */;
-  this._timingStats = require(12) /* apply */.cloneDeep(closure_4);
-  const obj2 = require(12) /* apply */;
-  this._measurements = require(12) /* apply */.cloneDeep(closure_5);
-  const obj3 = require(12) /* apply */;
-  this._eventCounts = require(12) /* apply */.cloneDeep(closure_6);
+  this._timeTracking = require("../../../_runtime/00012_apply.js") /* apply */.cloneDeep(closure_3);
+  const obj = require("../../../_runtime/00012_apply.js") /* apply */;
+  this._timingStats = require("../../../_runtime/00012_apply.js") /* apply */.cloneDeep(closure_4);
+  const obj2 = require("../../../_runtime/00012_apply.js") /* apply */;
+  this._measurements = require("../../../_runtime/00012_apply.js") /* apply */.cloneDeep(closure_5);
+  const obj3 = require("../../../_runtime/00012_apply.js") /* apply */;
+  this._eventCounts = require("../../../_runtime/00012_apply.js") /* apply */.cloneDeep(closure_6);
 };
 prototype["clearTime"] = function clearTime(arg0) {
   this._timeTracking[arg0] = null;

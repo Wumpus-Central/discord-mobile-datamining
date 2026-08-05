@@ -4,17 +4,17 @@ import { V8APIError } from "sendRequest";
 
 const prototype = function APIErrorWithDefaultMessage(arg0, arg1) {
   if (null != arg1) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
     let obj = { statusPageURL: null, details: null };
     obj[0] = Links.STATUS;
     const _HermesInternal = HermesInternal;
     obj[1] = "" + arg1;
-    intl2.formatToPlainString(require(1236) /* getSystemLocale */.t.aKRa0Q, obj);
+    intl2.formatToPlainString(require("../intl/index.native.tsx") /* getSystemLocale */.t.aKRa0Q, obj);
   } else {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { statusPageURL: null };
     obj[0] = Links.STATUS;
-    intl.formatToPlainString(require(1236) /* getSystemLocale */.t.aTVNes, obj);
+    intl.formatToPlainString(require("../intl/index.native.tsx") /* getSystemLocale */.t.aTVNes, obj);
   }
   tmp = new tmp();
   // ThrowIfThisInitialized (0x7c)

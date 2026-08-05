@@ -5,7 +5,7 @@ export const getWindowId = function getWindowId(defaultView) {
   return defaultView.__DISCORD_WINDOW_ID;
 };
 export const setupWindowId = function setupWindowId(arg0) {
-  const uniqueIdResult = require(12) /* apply */.uniqueId("window-");
+  const uniqueIdResult = require("../../../_runtime/00012_apply.js") /* apply */.uniqueId("window-");
   arg0.__DISCORD_WINDOW_ID = uniqueIdResult;
   return uniqueIdResult;
 };

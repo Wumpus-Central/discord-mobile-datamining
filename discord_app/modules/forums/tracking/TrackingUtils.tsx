@@ -51,9 +51,9 @@ function collectForumAnalyticsMetadata(sessionId) {
       obj[3] = mapped;
       obj[4] = channel.hasFlag(ChannelFlags.REQUIRE_TAG);
       obj[5] = getUncachedChannelPermissions.can(Permissions.SEND_MESSAGES, channel);
-      obj[6] = importDefault(7151).getFilterTagIdsAnalytics();
-      const obj3 = importDefault(7151);
-      obj[7] = importDefault(7151).getSortOrderAnalytics(channel.id);
+      obj[6] = require("ForumChannelAnalyticsManager.tsx").getFilterTagIdsAnalytics();
+      const obj3 = require("ForumChannelAnalyticsManager.tsx");
+      obj[7] = require("ForumChannelAnalyticsManager.tsx").getSortOrderAnalytics(channel.id);
       if (sessionId == null) {
         let tmp8Result = tmp8(7150);
         sessionId = tmp8Result.getForumChannelSessionId(channel.id);
@@ -62,12 +62,12 @@ function collectForumAnalyticsMetadata(sessionId) {
       tmp8Result = tmp8(7151);
       obj[9] = tmp8Result.getLayoutAnalytics(channel.id);
       obj[10] = channel.defaultSortOrder;
-      const obj4 = importDefault(7151);
-      obj[11] = importDefault(7151).getTagSettingAnalytics(channel.id);
+      const obj4 = require("ForumChannelAnalyticsManager.tsx");
+      obj[11] = require("ForumChannelAnalyticsManager.tsx").getTagSettingAnalytics(channel.id);
       obj[12] = channel.defaultForumLayout;
       obj[13] = channel.isModeratorReportChannel();
       tmp = obj;
-      const tmp8Result1 = importDefault(7151);
+      const tmp8Result1 = require("ForumChannelAnalyticsManager.tsx");
     }
   }
   return tmp;
@@ -75,10 +75,10 @@ function collectForumAnalyticsMetadata(sessionId) {
 const result = require("updateFromGuild").fileFinishedImporting("modules/forums/tracking/TrackingUtils.tsx");
 
 export const getForumChannelSessionId = function getForumChannelSessionId(arg0) {
-  return importDefault(7150).getForumChannelSessionId(arg0);
+  return require("ForumSessionAnalyticsManager.tsx").getForumChannelSessionId(arg0);
 };
 export const convertSortOrderToReadableString = function convertSortOrderToReadableString(sortOrder) {
-  if (require(1381) /* set */.ThreadSortOrder.CREATION_DATE === sortOrder) {
+  if (require("../../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx") /* set */.ThreadSortOrder.CREATION_DATE === sortOrder) {
     return constants.CREATION_DATE;
   } else if (tmp(1381).ThreadSortOrder.LATEST_ACTIVITY === sortOrder) {
     return constants.LATEST_ACTIVITY;
@@ -189,10 +189,10 @@ export const collectForumPostAnalyticsMetadata = function collectForumPostAnalyt
             num = 0;
           }
           obj.thread_auto_archive_duration_minutes = num;
-          obj.thread_approximate_creation_date = importDefault(11).extractTimestamp(channelId);
+          obj.thread_approximate_creation_date = require("../../../utils/SnowflakeUtils.tsx").extractTimestamp(channelId);
           obj.forum_post_id = channel.id;
-          const obj6 = importDefault(11);
-          obj.forum_post_first_message_id = importDefault(11).castChannelIdAsMessageId(channel.id);
+          const obj6 = require("../../../utils/SnowflakeUtils.tsx");
+          obj.forum_post_first_message_id = require("../../../utils/SnowflakeUtils.tsx").castChannelIdAsMessageId(channel.id);
           const message = store2.getMessage(channel.id);
           let firstMessage = null;
           if (message.loaded) {
@@ -274,7 +274,7 @@ export const collectForumPostAnalyticsMetadata = function collectForumPostAnalyt
             });
           }
           obj.forum_post_attachment_mimetypes = items1;
-          const obj7 = importDefault(11);
+          const obj7 = require("../../../utils/SnowflakeUtils.tsx");
         }
       }
       return tmp;

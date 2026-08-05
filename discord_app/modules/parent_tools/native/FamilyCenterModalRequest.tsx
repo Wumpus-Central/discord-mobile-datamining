@@ -343,7 +343,7 @@ function FamilyCenterPrereqLoading(arg0) {
   let require;
   ({ userId: require, linkCode: importDefault } = arg0);
   let dependencyMap;
-  let obj = require(1480) /* useNavigation */;
+  let obj = require("../../../design/components/Navigator/native/useNavigation.native.tsx") /* useNavigation */;
   dependencyMap = obj.useNavigation();
   const effect = React.useEffect(() => {
     function _runPrereq() {
@@ -438,9 +438,9 @@ function FamilyCenterPrereqLoading(arg0) {
   }, []);
   obj = { children: null };
   obj = { style: callback5().container, children: null };
-  obj[1] = callback(require(5732) /* ActivityIndicator */.ActivityIndicator, {});
+  obj[1] = callback(require("../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx") /* ActivityIndicator */.ActivityIndicator, {});
   obj[0] = callback(closure_6, obj);
-  return callback(require(7757) /* ModalScreen */.ModalScreen, obj);
+  return callback(require("../../../design/components/Modal/native/ModalScreen.native.tsx") /* ModalScreen */.ModalScreen, obj);
 }
 function FamilyCenterPrereqScreen(primaryButton) {
   let description;
@@ -451,14 +451,14 @@ function FamilyCenterPrereqScreen(primaryButton) {
   let obj = { children: null };
   obj = { style: tmp.content, children: null };
   obj = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, children: title };
-  const items = [callback(require(4281) /* Text */.Text, obj), callback(require(4281) /* Text */.Text, { variant: "text-sm/medium", color: "text-muted", style: tmp.description, children: description })];
+  const items = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-sm/medium", color: "text-muted", style: tmp.description, children: description })];
   obj[1] = items;
   const items1 = [callback2(closure_6, obj), ];
   const obj2 = { children: null };
-  obj2[0] = callback(require(4695) /* Button */.Button, { text: primaryButton.text, onPress: primaryButton.onPress });
-  items1[1] = callback(require(11246) /* ModalFooter */.ModalFooter, obj2);
+  obj2[0] = callback(require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, { text: primaryButton.text, onPress: primaryButton.onPress });
+  items1[1] = callback(require("../../../design/components/Modal/native/ModalFooter.native.tsx") /* ModalFooter */.ModalFooter, obj2);
   obj[0] = items1;
-  return callback2(require(7757) /* ModalScreen */.ModalScreen, obj);
+  return callback2(require("../../../design/components/Modal/native/ModalScreen.native.tsx") /* ModalScreen */.ModalScreen, obj);
 }
 function FamilyCenterConfirmAgeScreen(teenIdentity) {
   teenIdentity = teenIdentity.teenIdentity;
@@ -594,14 +594,14 @@ function FamilyCenterVerifyingScreen() {
 }
 function FamilyCenterPrereqInvalidCodeScreen() {
   let obj = { title: null, description: null, primaryButton: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(importDefault(2285).ewSb6o);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.string(importDefault(2285).jcUN2F);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../FamilyCenter.messages.js").ewSb6o);
+  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl2.string(require("../FamilyCenter.messages.js").jcUN2F);
   obj = { text: null, onPress: null };
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl3.string(require(1236) /* getSystemLocale */.t.WAI6xu);
-  obj[1] = importDefault(4490).pop;
+  const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.WAI6xu);
+  obj[1] = require("../../../actions/ModalActionCreators.tsx").pop;
   obj[2] = obj;
   return callback(FamilyCenterPrereqScreen, obj);
 }

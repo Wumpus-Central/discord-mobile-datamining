@@ -14,10 +14,10 @@ let unpackModuleId;
 const require = arg1;
 function NotificationsContainer() {
   let tmp4 = null;
-  if (importDefault(4139)().isChatBesideChannelList) {
+  if (require("../modules/chat/native/useChatLayout.tsx")().isChatBesideChannelList) {
     const obj = { style: null, children: null };
     obj[0] = tmp.container;
-    obj[1] = callback(importDefault(9665), {});
+    obj[1] = callback(require("common/Notifications.tsx"), {});
     tmp4 = callback(View, obj);
   }
   return tmp4;
@@ -35,7 +35,7 @@ export const ChannelContainer = function ChannelContainer(children) {
   let dependencyMap;
   let React;
   let c4;
-  let obj = require(589) /* initialize */;
+  let obj = require("../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [handleConnectionOpen, ensureGuildLoaded];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     const voiceChannelId = outer1_7.getVoiceChannelId();

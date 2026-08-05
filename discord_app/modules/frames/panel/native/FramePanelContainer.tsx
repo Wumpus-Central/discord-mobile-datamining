@@ -5,14 +5,14 @@ import importAllResult from "noop";
 
 const require = arg1;
 const memoResult = require("noop").memo(function FramePanelContainer() {
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [map];
   let tmp2 = null;
   if (obj.useStateFromStores(items, () => null != connectedFrame.getConnectedFrame())) {
     obj = { children: null };
-    obj[0] = jsx(importDefault(15986), {});
-    tmp2 = jsx(importDefault(15984), { children: null });
-    const tmp5 = importDefault(15984);
+    obj[0] = jsx(require("FramePanelUI.tsx"), {});
+    tmp2 = jsx(require("FramePanelController.tsx"), { children: null });
+    const tmp5 = require("FramePanelController.tsx");
   }
   return tmp2;
 });

@@ -341,7 +341,7 @@ export default {
     })();
   },
   openNativeGiftCodeModal(arg0) {
-    importDefault(10328).openNativeAppModal(arg0, constants.GIFT_CODE_BROWSER);
+    require("../modules/coded_links/web/CodedLinkActionCreators.tsx").openNativeAppModal(arg0, constants.GIFT_CODE_BROWSER);
   }
 };
 export { resolveGiftCode };

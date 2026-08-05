@@ -11,7 +11,7 @@ const prototype = GuildOnboardingStore.prototype;
 prototype["shouldShowOnboarding"] = function shouldShowOnboarding(c0) {
   let tmp = c0 !== ME;
   if (tmp) {
-    const obj = require(1865) /* getFavoritesAwareGuildName */;
+    const obj = require("../favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
     tmp = !obj.isFavoritesGuildId(c0);
   }
   if (tmp) {

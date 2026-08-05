@@ -117,5 +117,5 @@ export default function AppLauncherUserOption(option) {
   }
   obj[6] = tmp9Result;
   obj[7] = autoFocus;
-  return c6(importDefault(11476), obj);
+  return c6(require("../../base_components/AppLauncherSelectOptionFormRow.tsx"), obj);
 };

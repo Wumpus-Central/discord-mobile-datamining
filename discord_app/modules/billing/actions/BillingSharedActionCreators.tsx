@@ -332,8 +332,8 @@ export const dispatchConfirmationError = function dispatchConfirmationError(erro
     flag = true;
   }
   if (stringResult === undefined) {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    stringResult = intl.string(require(1236) /* getSystemLocale */.t.khEaRI);
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    stringResult = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.khEaRI);
   }
   let obj = arg3;
   if (arg3 === undefined) {
@@ -355,7 +355,7 @@ export const dispatchConfirmationError = function dispatchConfirmationError(erro
     }
     obj[4] = type;
     if ("card_error" === message.type) {
-      let obj3 = importDefault(698);
+      let obj3 = require("../../../utils/AnalyticsUtils.tsx");
       obj = {};
       const merged = Object.assign(obj);
       const _Error = Error;
@@ -364,7 +364,7 @@ export const dispatchConfirmationError = function dispatchConfirmationError(erro
       obj3.track(constants.PAYMENT_SOURCE_CREATION_FAILED, obj);
       flag = false;
     }
-    let billingError = new require(4184) /* V6OrEarlierAPIError */.BillingError(combined);
+    let billingError = new require("../../../errors/index.tsx") /* V6OrEarlierAPIError */.BillingError(combined);
     let flag2 = flag;
     let tmp12 = obj;
     let tmp15 = require;
@@ -374,7 +374,7 @@ export const dispatchConfirmationError = function dispatchConfirmationError(erro
       tmp6 = stringResult;
     }
     const obj1 = { failure_message: null, status_code: null };
-    const billingError1 = new require(4184) /* V6OrEarlierAPIError */.BillingError(tmp6);
+    const billingError1 = new require("../../../errors/index.tsx") /* V6OrEarlierAPIError */.BillingError(tmp6);
     ({ message: obj2[0], code: obj2[1] } = billingError1);
     tmp12 = obj1;
     billingError = billingError1;
@@ -387,7 +387,7 @@ export const dispatchConfirmationError = function dispatchConfirmationError(erro
       tmp15 = tmp4;
     }
   }
-  importDefault(709).dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_FAIL", error: billingError });
+  require("../../../Dispatcher.tsx").dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_FAIL", error: billingError });
   if (typeof message !== "string") {
     message = billingError.message;
   }

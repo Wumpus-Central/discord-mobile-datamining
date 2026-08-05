@@ -6,7 +6,7 @@ function withSpring(value, SUBTLE_SPRING, fn, fn2) {
   if (fn === undefined) {
     str = "respect-motion-settings";
   }
-  const accessibilityPreferencesSharedValue = require(4288) /* mutable */.accessibilityPreferencesSharedValue;
+  const accessibilityPreferencesSharedValue = require("../AccessibilityPreferencesSharedValue.native.tsx") /* mutable */.accessibilityPreferencesSharedValue;
   if ("animate-always" === str) {
     let tmp7 = SUBTLE_SPRING;
     if (tmp4) {
@@ -23,7 +23,7 @@ function withSpring(value, SUBTLE_SPRING, fn, fn2) {
   } else {
     tmp5 = CONFIG_NEVER_ANIMATE;
   }
-  return require(4146).withSpring(value, tmp5, fn2);
+  return require("../../../../modules/reanimated/ReanimatedRexport.tsx").withSpring(value, tmp5, fn2);
 }
 withSpring.__closure = { accessibilityPreferencesSharedValue: require("mutable").accessibilityPreferencesSharedValue, CONFIG_NEVER_ANIMATE, ReduceMotion: require("module_4146").ReduceMotion, REAwithSpring: require("module_4146").withSpring };
 withSpring.__workletHash = 14783154107972;

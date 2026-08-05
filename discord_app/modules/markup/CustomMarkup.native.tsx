@@ -4,27 +4,27 @@ function createRules(arg0) {
   if (arg1 === undefined) {
     obj = {};
   }
-  const tmp = importDefault(4276)(arg0, obj);
-  const items = [importDefault(4275).defaultRules, tmp, ];
+  const tmp = require("MarkupReactRules.native.tsx")(arg0, obj);
+  const items = [require("MarkupUtils.tsx").defaultRules, tmp, ];
   obj = {};
   obj = {};
-  const merged = Object.assign(importDefault(3984).defaultRules.link);
+  const merged = Object.assign(require("../../../_runtime/03984_t.js").defaultRules.link);
   obj.react = tmp[require(undefined, 4715) /* AST_KEY */.AST_KEY.LINK].react;
-  obj[require(4715) /* AST_KEY */.AST_KEY.LINK] = obj;
+  obj[require("MarkupTypes.tsx") /* AST_KEY */.AST_KEY.LINK] = obj;
   const obj1 = {};
-  const merged1 = Object.assign(importDefault(3984).defaultRules.url);
+  const merged1 = Object.assign(require("../../../_runtime/03984_t.js").defaultRules.url);
   obj1.react = tmp[require(undefined, 4715) /* AST_KEY */.AST_KEY.URL].react;
-  obj[require(4715) /* AST_KEY */.AST_KEY.URL] = obj1;
+  obj[require("MarkupTypes.tsx") /* AST_KEY */.AST_KEY.URL] = obj1;
   const obj2 = {};
-  const merged2 = Object.assign(importDefault(3984).defaultRules.autolink);
+  const merged2 = Object.assign(require("../../../_runtime/03984_t.js").defaultRules.autolink);
   obj2.react = tmp[require(undefined, 4715) /* AST_KEY */.AST_KEY.AUTOLINK].react;
-  obj[require(4715) /* AST_KEY */.AST_KEY.AUTOLINK] = obj2;
+  obj[require("MarkupTypes.tsx") /* AST_KEY */.AST_KEY.AUTOLINK] = obj2;
   const obj3 = {};
-  const merged3 = Object.assign(importDefault(3984).defaultRules.blockQuote);
+  const merged3 = Object.assign(require("../../../_runtime/03984_t.js").defaultRules.blockQuote);
   obj3.react = tmp[require(undefined, 4715) /* AST_KEY */.AST_KEY.BLOCK_QUOTE].react;
-  obj[require(4715) /* AST_KEY */.AST_KEY.BLOCK_QUOTE] = obj3;
+  obj[require("MarkupTypes.tsx") /* AST_KEY */.AST_KEY.BLOCK_QUOTE] = obj3;
   items[2] = obj;
-  return importDefault(4716)(items);
+  return require("combineMarkupRules.tsx")(items);
 }
 function createRulesWithoutLinks(arg0, arg1) {
   let obj = arg1;
@@ -40,23 +40,23 @@ function createRulesWithoutLinks(arg0, arg1) {
   return obj;
 }
 function createNotifCenterV2MessagePreviewRules(closure_28, closure_28, roleStyle) {
-  const tmp = importDefault(4276)(closure_28, closure_28, roleStyle);
-  const items = [importDefault(4275).notifCenterV2MessagePreviewRules, ];
+  const tmp = require("MarkupReactRules.native.tsx")(closure_28, closure_28, roleStyle);
+  const items = [require("MarkupUtils.tsx").notifCenterV2MessagePreviewRules, ];
   let obj = {};
   obj = {};
-  const merged = Object.assign(importDefault(4717).RULES[require(undefined, 4715) /* AST_KEY */.AST_KEY.MENTION]);
+  const merged = Object.assign(require("MarkupRules.tsx").RULES[require(undefined, 4715) /* AST_KEY */.AST_KEY.MENTION]);
   obj.react = tmp[require(undefined, 4715) /* AST_KEY */.AST_KEY.MENTION].react;
-  obj[require(4715) /* AST_KEY */.AST_KEY.MENTION] = obj;
+  obj[require("MarkupTypes.tsx") /* AST_KEY */.AST_KEY.MENTION] = obj;
   obj = {};
-  const merged1 = Object.assign(importDefault(4717).RULES[require(undefined, 4715) /* AST_KEY */.AST_KEY.CHANNEL_MENTION]);
+  const merged1 = Object.assign(require("MarkupRules.tsx").RULES[require(undefined, 4715) /* AST_KEY */.AST_KEY.CHANNEL_MENTION]);
   obj.react = tmp[require(undefined, 4715) /* AST_KEY */.AST_KEY.CHANNEL_MENTION].react;
-  obj[require(4715) /* AST_KEY */.AST_KEY.CHANNEL_MENTION] = obj;
+  obj[require("MarkupTypes.tsx") /* AST_KEY */.AST_KEY.CHANNEL_MENTION] = obj;
   const obj1 = {};
-  const merged2 = Object.assign(importDefault(4717).RULES[require(undefined, 4715) /* AST_KEY */.AST_KEY.ITALICS]);
+  const merged2 = Object.assign(require("MarkupRules.tsx").RULES[require(undefined, 4715) /* AST_KEY */.AST_KEY.ITALICS]);
   obj1.react = tmp[require(undefined, 4715) /* AST_KEY */.AST_KEY.ITALICS].react;
-  obj[require(4715) /* AST_KEY */.AST_KEY.ITALICS] = obj1;
+  obj[require("MarkupTypes.tsx") /* AST_KEY */.AST_KEY.ITALICS] = obj1;
   items[1] = obj;
-  return importDefault(4716)(items);
+  return require("combineMarkupRules.tsx")(items);
 }
 let items = [require("AST_KEY").AST_KEY.URL, require("AST_KEY").AST_KEY.AUTOLINK, require("AST_KEY").AST_KEY.LINK, "mailto", "tel"];
 const result = require("combineMarkupRules").fileFinishedImporting("modules/markup/CustomMarkup.native.tsx");
@@ -71,7 +71,7 @@ export const getParser = function getParser(arg0) {
   if (arg1 === undefined) {
     obj = {};
   }
-  return importDefault(4275).reactParserFor(createRules(obj, obj));
+  return require("MarkupUtils.tsx").reactParserFor(createRules(obj, obj));
 };
 export { createRulesWithoutLinks };
 export const getParserWithoutLinks = function getParserWithoutLinks(cacheKey) {
@@ -83,7 +83,7 @@ export const getParserWithoutLinks = function getParserWithoutLinks(cacheKey) {
   if (arg1 === undefined) {
     obj = {};
   }
-  return importDefault(4275).reactParserFor(createRulesWithoutLinks(obj, obj));
+  return require("MarkupUtils.tsx").reactParserFor(createRulesWithoutLinks(obj, obj));
 };
 export { createNotifCenterV2MessagePreviewRules };
 export const getNotifCenterV2MessagePreviewParser = function getNotifCenterV2MessagePreviewParser(arg0, closure_28, roleStyle) {
@@ -95,34 +95,34 @@ export const getNotifCenterV2MessagePreviewParser = function getNotifCenterV2Mes
   if (closure_28 === undefined) {
     obj = {};
   }
-  return importDefault(4275).reactParserFor(createNotifCenterV2MessagePreviewRules(obj, obj, roleStyle));
+  return require("MarkupUtils.tsx").reactParserFor(createNotifCenterV2MessagePreviewRules(obj, obj, roleStyle));
 };
 export const createWidgetMessageRules = function createWidgetMessageRules() {
-  const items = [importDefault(4275).lockscreenWidgetMessageRules, ];
+  const items = [require("MarkupUtils.tsx").lockscreenWidgetMessageRules, ];
   let obj = {};
   obj = {};
-  const merged = Object.assign(importDefault(4717).RULES[require(undefined, 4715) /* AST_KEY */.AST_KEY.MENTION]);
-  obj.react = require(4276) /* MarkupText */.plainMentionRenderer;
-  obj[require(4715) /* AST_KEY */.AST_KEY.MENTION] = obj;
+  const merged = Object.assign(require("MarkupRules.tsx").RULES[require(undefined, 4715) /* AST_KEY */.AST_KEY.MENTION]);
+  obj.react = require("MarkupReactRules.native.tsx") /* MarkupText */.plainMentionRenderer;
+  obj[require("MarkupTypes.tsx") /* AST_KEY */.AST_KEY.MENTION] = obj;
   obj = {};
-  const merged1 = Object.assign(importDefault(4717).RULES.spoiler);
-  obj.react = require(4276) /* MarkupText */.plainSpoilerRenderer;
-  obj[require(4715) /* AST_KEY */.AST_KEY.SPOILER] = obj;
+  const merged1 = Object.assign(require("MarkupRules.tsx").RULES.spoiler);
+  obj.react = require("MarkupReactRules.native.tsx") /* MarkupText */.plainSpoilerRenderer;
+  obj[require("MarkupTypes.tsx") /* AST_KEY */.AST_KEY.SPOILER] = obj;
   items[1] = obj;
-  return importDefault(4716)(items);
+  return require("combineMarkupRules.tsx")(items);
 };
 export const getWidgetMessageRules = function getWidgetMessageRules() {
-  let obj = importDefault(4275);
-  const items = [importDefault(4275).lockscreenWidgetMessageRules, ];
+  let obj = require("MarkupUtils.tsx");
+  const items = [require("MarkupUtils.tsx").lockscreenWidgetMessageRules, ];
   obj = {};
   obj = {};
-  const merged = Object.assign(importDefault(4717).RULES[require(undefined, 4715) /* AST_KEY */.AST_KEY.MENTION]);
-  obj.react = require(4276) /* MarkupText */.plainMentionRenderer;
-  obj[require(4715) /* AST_KEY */.AST_KEY.MENTION] = obj;
+  const merged = Object.assign(require("MarkupRules.tsx").RULES[require(undefined, 4715) /* AST_KEY */.AST_KEY.MENTION]);
+  obj.react = require("MarkupReactRules.native.tsx") /* MarkupText */.plainMentionRenderer;
+  obj[require("MarkupTypes.tsx") /* AST_KEY */.AST_KEY.MENTION] = obj;
   const obj1 = {};
-  const merged1 = Object.assign(importDefault(4717).RULES.spoiler);
-  obj1.react = require(4276) /* MarkupText */.plainSpoilerRenderer;
-  obj[require(4715) /* AST_KEY */.AST_KEY.SPOILER] = obj1;
+  const merged1 = Object.assign(require("MarkupRules.tsx").RULES.spoiler);
+  obj1.react = require("MarkupReactRules.native.tsx") /* MarkupText */.plainSpoilerRenderer;
+  obj[require("MarkupTypes.tsx") /* AST_KEY */.AST_KEY.SPOILER] = obj1;
   items[1] = obj;
-  return obj.reactParserFor(importDefault(4716)(items));
+  return obj.reactParserFor(require("combineMarkupRules.tsx")(items));
 };

@@ -1,6 +1,6 @@
 // discord_app/modules/application_commands/native/ContextMenuCommandRootScreen.tsx
 import _slicedToArray from "_slicedToArray";
-import module_8337 from "module_8337";
+import FastestList.android from "../../fastest_list/FastestList.android.tsx";
 import { View } from "ContextMenuCommandItem";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import TRUE_OPTION_NAME from "TRUE_OPTION_NAME";

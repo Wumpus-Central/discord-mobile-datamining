@@ -30,7 +30,7 @@ const require = arg1;
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let closure_19 = createCacheKey.createStyles((arg0) => {
   let obj = { container: null, password: null, button: null, errors: null, page: null };
-  obj = { marginTop: importDefault(712).space.PX_24 };
+  obj = { marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
   obj[0] = obj;
   obj[1] = { marginTop: 24 };
   let num = 50;
@@ -172,7 +172,7 @@ export default function RegisterAccountInformation() {
     }
     return applyArgumentsResult;
   }
-  const tmp3 = importDefault(8283)();
+  const tmp3 = require("../useWideAuthView.tsx")();
   const tmp4 = callback4(tmp3);
   let obj = React;
   context = React.useContext(context(14975).TrackRegistrationContext);
@@ -237,7 +237,7 @@ export default function RegisterAccountInformation() {
   let tmpResult = tmp(14993);
   const tmp9 = callback(React.useState(false), 2);
   tmpResult(context(14976).getPreviousRegistrationTransitionStep(AuthStates.REGISTER_ACCOUNT_INFORMATION));
-  importDefault(14992)(AuthStates.REGISTER_ACCOUNT_INFORMATION);
+  require("../useInitialRegistrationStep.tsx")(AuthStates.REGISTER_ACCOUNT_INFORMATION);
   const items3 = [context];
   const effect = obj.useEffect(() => {
     context({ step: outer1_14.ACCOUNT_INFORMATION, actionType: outer1_15.VIEWED });
@@ -264,7 +264,7 @@ export default function RegisterAccountInformation() {
   }
   obj5[5] = str;
   obj4.children = callback3(context(15004).RegisterPasswordInput, obj5);
-  items4[1] = callback3(importDefault(4146).View, obj4);
+  items4[1] = callback3(require("../../../reanimated/ReanimatedRexport.tsx").View, obj4);
   const obj6 = { style: tmp4.button };
   const merged2 = Object.assign(createCacheKey);
   if (!tmp8) {
@@ -288,7 +288,7 @@ export default function RegisterAccountInformation() {
   }
   items5[1] = tmp27Result;
   obj6.children = items5;
-  items4[2] = closure_18(importDefault(4146).View, obj6);
+  items4[2] = closure_18(require("../../../reanimated/ReanimatedRexport.tsx").View, obj6);
   obj2[2] = items4;
   obj1[1] = closure_18(obj, obj2);
   tmp27Result = tmp27(tmpResult, obj1);

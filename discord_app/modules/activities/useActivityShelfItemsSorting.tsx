@@ -6,7 +6,7 @@ const result = require("getPlatform").fileFinishedImporting("modules/activities/
 
 export default function useActivityShelfItemsSorting(arg0) {
   const _require = arg0;
-  const FrecencyUserSettingsActionCreators = _require(1355).FrecencyUserSettingsActionCreators;
+  const FrecencyUserSettingsActionCreators = _require("../user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
   const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   let items = [arg0];
   return React.useMemo(() => {

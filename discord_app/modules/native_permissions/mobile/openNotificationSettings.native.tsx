@@ -5,8 +5,8 @@ let result = require("enforcing").fileFinishedImporting("modules/native_permissi
 
 export default function openNotificationSettings() {
   if (obj.isAndroid()) {
-    const result = importDefault(4836).openNotificationSettings();
-    const obj2 = importDefault(4836);
+    const result = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceSettingsModule.tsx").openNotificationSettings();
+    const obj2 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceSettingsModule.tsx");
   } else {
     const DeviceSettingsManager = NativeModules.DeviceSettingsManager;
     const result1 = DeviceSettingsManager.openNotificationSettings();

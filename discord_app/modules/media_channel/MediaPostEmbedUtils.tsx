@@ -29,7 +29,7 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
     return null;
   } else {
     let has_media_attachment = !canAccess;
-    const thumbnailImage = require(4471) /* MAX_THUMBNAIL_COUNT */.getThumbnailImage(mediaPostEmbedData.thumbnail);
+    const thumbnailImage = require("MediaPostThumbnailUtils.tsx") /* MAX_THUMBNAIL_COUNT */.getThumbnailImage(mediaPostEmbedData.thumbnail);
     if (!canAccess) {
       has_media_attachment = mediaPostEmbedData.has_media_attachment;
     }
@@ -43,7 +43,7 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
     }
     let name;
     if (null != user) {
-      let obj = importDefault(4474);
+      let obj = require("../../utils/NicknameUtils.tsx");
       name = obj.getName(mediaPostEmbedData.guild_id, mediaPostEmbedData.channel_id, user);
     }
     let avatarURL;
@@ -57,8 +57,8 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
     if (!tmp6) {
       obj = { id: null, icon: null, size: 40, canAnimate: false };
       ({ guild_id: obj3[0], guild_icon: obj3[1] } = mediaPostEmbedData);
-      avatarURL = importDefault(1416).getGuildIconURL(obj);
-      const obj2 = importDefault(1416);
+      avatarURL = require("../../utils/AvatarUtils.tsx").getGuildIconURL(obj);
+      const obj2 = require("../../utils/AvatarUtils.tsx");
     }
     const thumbnail = mediaPostEmbedData.thumbnail;
     let flag = false;
@@ -80,7 +80,7 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
       num2 = 0;
     }
     let str = mediaPostEmbedData.title;
-    const obj7 = require(4471) /* MAX_THUMBNAIL_COUNT */;
+    const obj7 = require("MediaPostThumbnailUtils.tsx") /* MAX_THUMBNAIL_COUNT */;
     tmp6 = null != avatarURL && selectedGuildId === mediaPostEmbedData.guild_id;
     if (str == null) {
       str = "";
@@ -132,7 +132,7 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
 export const getMediaPostEmbedChannelId = function getMediaPostEmbedChannelId(url) {
   let tryParseChannelPathResult;
   if (null != url) {
-    const parseURLSafelyResult = require(4269) /* getPathsFromURL */.parseURLSafely(url);
+    const parseURLSafelyResult = require("../coded_links/findCodedLinks.tsx") /* getPathsFromURL */.parseURLSafely(url);
     if (null != parseURLSafelyResult) {
       let tmp2Result = tmp2(4269);
       const result = tmp2Result.remainingPathFromDiscordHostMatch(parseURLSafelyResult);
@@ -141,7 +141,7 @@ export const getMediaPostEmbedChannelId = function getMediaPostEmbedChannelId(ur
         tryParseChannelPathResult = tmp2Result.tryParseChannelPath(result);
       }
     }
-    const obj = require(4269) /* getPathsFromURL */;
+    const obj = require("../coded_links/findCodedLinks.tsx") /* getPathsFromURL */;
   }
   if (null != tryParseChannelPathResult) {
     let channelId = tryParseChannelPathResult.threadId;
@@ -155,7 +155,7 @@ export const getMediaPostEmbedChannelId = function getMediaPostEmbedChannelId(ur
 };
 export const getMediaPostEmbedChannelPath = function getMediaPostEmbedChannelPath(url) {
   if (null != url) {
-    const parseURLSafelyResult = require(4269) /* getPathsFromURL */.parseURLSafely(url);
+    const parseURLSafelyResult = require("../coded_links/findCodedLinks.tsx") /* getPathsFromURL */.parseURLSafely(url);
     if (null != parseURLSafelyResult) {
       let tmpResult = tmp(4269);
       const result = tmpResult.remainingPathFromDiscordHostMatch(parseURLSafelyResult);
@@ -164,7 +164,7 @@ export const getMediaPostEmbedChannelPath = function getMediaPostEmbedChannelPat
         return tmpResult.tryParseChannelPath(result);
       }
     }
-    const obj = require(4269) /* getPathsFromURL */;
+    const obj = require("../coded_links/findCodedLinks.tsx") /* getPathsFromURL */;
   }
 };
 export const canUseMediaPostEmbed = function canUseMediaPostEmbed(guildId, isMediaChannel) {

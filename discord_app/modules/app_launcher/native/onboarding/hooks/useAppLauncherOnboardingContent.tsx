@@ -13,7 +13,7 @@ export default function useAppLauncherOnboardingContent(channelId) {
   let obj = { channel: null };
   const items1 = [ensureGuildLoaded];
   obj[0] = channelId(589).useStateFromStores(items1, () => outer1_5.getChannel(channelId));
-  const tmp3 = importDefault(11342)({ channelId });
+  const tmp3 = require("useCanShowAppLauncherOnboarding.tsx")({ channelId });
   if (tmp3.canShowBotsBanner) {
     items.push(tmp(1358).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER);
   }

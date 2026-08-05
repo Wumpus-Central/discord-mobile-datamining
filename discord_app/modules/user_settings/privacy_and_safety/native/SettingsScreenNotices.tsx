@@ -40,10 +40,10 @@ const obj3 = {
 items[2] = {
   order: 200,
   predicate() {
-    let isFeatureAgeGatedResult = require(3964) /* isFeatureAgeGated */.isFeatureAgeGated(require(5108) /* AgeGatedFeature */.AgeGatedFeature.REACTIVE_CHECK);
+    let isFeatureAgeGatedResult = require("../../../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.REACTIVE_CHECK);
     if (isFeatureAgeGatedResult) {
-      isFeatureAgeGatedResult = !require(4500) /* useAgeVerificationRunner */.isAgeVerified();
-      const tmpResult = require(4500) /* useAgeVerificationRunner */;
+      isFeatureAgeGatedResult = !require("../../../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */.isAgeVerified();
+      const tmpResult = require("../../../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */;
     }
     return isFeatureAgeGatedResult;
   },
@@ -53,10 +53,10 @@ obj1[0] = items;
 const obj4 = {
   order: 200,
   predicate() {
-    let isFeatureAgeGatedResult = require(3964) /* isFeatureAgeGated */.isFeatureAgeGated(require(5108) /* AgeGatedFeature */.AgeGatedFeature.REACTIVE_CHECK);
+    let isFeatureAgeGatedResult = require("../../../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.REACTIVE_CHECK);
     if (isFeatureAgeGatedResult) {
-      isFeatureAgeGatedResult = !require(4500) /* useAgeVerificationRunner */.isAgeVerified();
-      const tmpResult = require(4500) /* useAgeVerificationRunner */;
+      isFeatureAgeGatedResult = !require("../../../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */.isAgeVerified();
+      const tmpResult = require("../../../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */;
     }
     return isFeatureAgeGatedResult;
   },
@@ -67,10 +67,10 @@ const obj5 = { order: 100, predicate: require("getEmptyActivityFormatter").isPar
 items1[1] = {
   order: 200,
   predicate() {
-    let isFeatureAgeGatedResult = require(3964) /* isFeatureAgeGated */.isFeatureAgeGated(require(5108) /* AgeGatedFeature */.AgeGatedFeature.REACTIVE_CHECK);
+    let isFeatureAgeGatedResult = require("../../../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.REACTIVE_CHECK);
     if (isFeatureAgeGatedResult) {
-      isFeatureAgeGatedResult = !require(4500) /* useAgeVerificationRunner */.isAgeVerified();
-      const tmpResult = require(4500) /* useAgeVerificationRunner */;
+      isFeatureAgeGatedResult = !require("../../../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */.isAgeVerified();
+      const tmpResult = require("../../../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */;
     }
     return isFeatureAgeGatedResult;
   },
@@ -80,10 +80,10 @@ obj1[1] = items1;
 const obj6 = {
   order: 200,
   predicate() {
-    let isFeatureAgeGatedResult = require(3964) /* isFeatureAgeGated */.isFeatureAgeGated(require(5108) /* AgeGatedFeature */.AgeGatedFeature.REACTIVE_CHECK);
+    let isFeatureAgeGatedResult = require("../../../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.REACTIVE_CHECK);
     if (isFeatureAgeGatedResult) {
-      isFeatureAgeGatedResult = !require(4500) /* useAgeVerificationRunner */.isAgeVerified();
-      const tmpResult = require(4500) /* useAgeVerificationRunner */;
+      isFeatureAgeGatedResult = !require("../../../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */.isAgeVerified();
+      const tmpResult = require("../../../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */;
     }
     return isFeatureAgeGatedResult;
   },

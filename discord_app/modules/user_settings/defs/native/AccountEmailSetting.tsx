@@ -5,13 +5,13 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["w/qqKK"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["w/qqKK"]);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   useTrailing: function useAccountEmailSettingTrailing() {
     const items = [mergeGuildAvatar];
-    return require(589) /* initialize */.useStateFromStores(items, () => {
+    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
       currentUser = currentUser.getCurrentUser();
       let email;
       if (currentUser != null) {
@@ -21,7 +21,7 @@ createToggle = {
     });
   },
   onPress: function onAccountEmailSettingPress() {
-    importDefault(8262).open(true);
+    require("../../../../actions/native/EmailVerificationModalActionCreators.tsx").open(true);
   },
   withArrow: true
 };

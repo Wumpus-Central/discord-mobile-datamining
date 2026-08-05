@@ -25,5 +25,5 @@ export const getIllustrationSource = function getIllustrationSource(theme, light
   return lightResult;
 };
 export const useIllustrationSource = function useIllustrationSource(arg0) {
-  return arg0(require(3997) /* ManaContext */.useThemeContext().theme);
+  return arg0(require("../../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */.useThemeContext().theme);
 };

@@ -87,5 +87,5 @@ export const initialize = function initialize(obj) {
     let tmp5 = populateMap(tmp3);
     continue;
   }
-  importDefault(709).addInterceptor(handleAction);
+  require("../../Dispatcher.tsx").addInterceptor(handleAction);
 };

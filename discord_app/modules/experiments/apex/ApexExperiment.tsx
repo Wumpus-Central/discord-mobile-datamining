@@ -10,18 +10,18 @@ function getUnitId(arg0, guildId) {
   } else if ("user" === arg0) {
     return store.getId();
   } else if ("installation" === arg0) {
-    let str2 = require(513) /* extractId */.maybeExtractId(store.getInstallationForTracking());
+    let str2 = require("../../../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx") /* extractId */.maybeExtractId(store.getInstallationForTracking());
     if (str2 == null) {
       str2 = "";
     }
     return str2;
   } else {
-    require(1351) /* isDiscordFrontendDevelopment */.assertNever(arg0);
+    require("../../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.assertNever(arg0);
   }
 }
 function useUnitId(arg0, guildId) {
   let items = [fetchFingerprint];
-  callback(require(589) /* initialize */.useStateFromStoresArray(items, () => {
+  callback(require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStoresArray(items, () => {
     const items = [store.getId(), store.getInstallationForTracking()];
     return items;
   }), 2);
@@ -40,12 +40,12 @@ function useUnitId(arg0, guildId) {
     tmpResult = tmp(1351);
     tmpResult.assertNever(arg0);
   }
-  const obj = require(589) /* initialize */;
+  const obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
 }
 const result = require("initialize").fileFinishedImporting("modules/experiments/apex/ApexExperiment.tsx");
 
 export default function createApexExperiment(arg0) {
-  return importDefault(1350)(arg0, initialize, getUnitId, useUnitId);
+  return require("../../../../discord_common/js/packages/apex/ApexExperiment.tsx")(arg0, initialize, getUnitId, useUnitId);
 };
 export const ApexExperiment = require("logger").ApexExperiment;
 export { getUnitId };

@@ -10,7 +10,7 @@ export const trackMemberApplicationViewed = function trackMemberApplicationViewe
   let applicationUserId;
   let guildId;
   ({ guildId, applicationUserId, applicationStatus } = arg0);
-  let obj = importDefault(698);
+  let obj = require("../../utils/AnalyticsUtils.tsx");
   obj = { guild_id: guildId, viewing_user_id: store.getId(), application_user_id: applicationUserId, application_status: applicationStatus };
   obj.track(AnalyticEvents.GUILD_MEMBER_APPLICATION_VIEWED, obj);
 };
@@ -19,7 +19,7 @@ export const trackMemberApplicationAction = function trackMemberApplicationActio
   let applicationUserId;
   let guildId;
   ({ guildId, actionType, applicationUserId } = arg0);
-  let obj = importDefault(698);
+  let obj = require("../../utils/AnalyticsUtils.tsx");
   obj = { guild_id: guildId, action_type: actionType, application_user_id: applicationUserId, viewing_user_id: store.getId() };
   obj.track(AnalyticEvents.GUILD_MEMBER_APPLICATION_ACTION, obj);
 };
@@ -36,10 +36,10 @@ export const trackMemberApplicationInterviewMessage = function trackMemberApplic
   if (member != null) {
     joinedAt = member.joinedAt;
   }
-  importDefault(698).track(AnalyticEvents.GUILD_MEMBER_APPLICATION_INTERVIEW_MESSAGE, { guild_id: guildId, channel_id: channelId, message_id: messageId, message_user_id: id, is_member: null != joinedAt, join_request_status: joinRequestStatus, join_request_user_id: joinRequestUserId });
+  require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.GUILD_MEMBER_APPLICATION_INTERVIEW_MESSAGE, { guild_id: guildId, channel_id: channelId, message_id: messageId, message_user_id: id, is_member: null != joinedAt, join_request_status: joinRequestStatus, join_request_user_id: joinRequestUserId });
 };
 export const trackMemberVerificationApplicationViewed = function trackMemberVerificationApplicationViewed(guild_id) {
-  let obj = importDefault(698);
+  let obj = require("../../utils/AnalyticsUtils.tsx");
   obj = { guild_id };
   obj.track(AnalyticEvents.MEMBER_VERIFICATION_APPLICATION_VIEWED, obj);
 };

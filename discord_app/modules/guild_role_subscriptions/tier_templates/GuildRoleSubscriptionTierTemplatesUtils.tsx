@@ -155,13 +155,13 @@ let result = require("ensureGuildLoaded").fileFinishedImporting("modules/guild_r
 export const useChannelWithTemplateFallback = function useChannelWithTemplateFallback(ref_id) {
   const _require = ref_id;
   const items = [ensureGuildLoaded];
-  const stateFromStores = _require(647).useStateFromStores(items, () => outer1_6.getChannel(closure_0));
-  let obj = _require(647);
+  const stateFromStores = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => outer1_6.getChannel(closure_0));
+  let obj = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx");
   const items1 = [closure_9];
-  let stateFromStores1 = _require(647).useStateFromStores(items1, () => outer1_9.getChannel(closure_0));
-  let obj3 = _require(647);
+  let stateFromStores1 = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items1, () => outer1_9.getChannel(closure_0));
+  let obj3 = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx");
   const items2 = [makeGroupListingIndexSubscriptionListingTag];
-  const stateFromStores2 = _require(647).useStateFromStores(items2, () => outer1_7.getBenefitChannel(closure_0));
+  const stateFromStores2 = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items2, () => outer1_7.getBenefitChannel(closure_0));
   const items3 = [stateFromStores, stateFromStores2];
   let tmp3 = useMemo(() => {
     let obj = stateFromStores;
@@ -196,7 +196,7 @@ export const useChannelWithTemplateFallback = function useChannelWithTemplateFal
 export const useSuggestedUnusedPrices = function useSuggestedUnusedPrices(guildId, priceTiers, price_tier) {
   const _require = guildId;
   const items = [makeGroupListingIndexSubscriptionListingTag];
-  const stateFromStores = _require(647).useStateFromStores(items, () => outer1_7.getSubscriptionListingsForGuild(closure_0));
+  const stateFromStores = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => outer1_7.getSubscriptionListingsForGuild(closure_0));
   const arr3 = useEditStateStore((arg0) => arg0.editStateIdsForGroup[closure_0]);
   let closure_1 = useEditStateStore((listings) => listings.listings);
   if (undefined !== price_tier) {
@@ -388,14 +388,14 @@ export const getTemplateTierCreationAnalyticsContext = function getTemplateTierC
   }
 };
 export const isEligibleForNewBadge = function isEligibleForNewBadge(features) {
-  let result = require(5789) /* computeGuildRoleSubscriptionSettingsVisibility */.canManageGuildRoleSubscriptions(features);
+  let result = require("../feature_gating/GuildRoleSubscriptionSettingUtils.tsx") /* computeGuildRoleSubscriptionSettingsVisibility */.canManageGuildRoleSubscriptions(features);
   if (result) {
     features = features.features;
     result = features.has(GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED);
   }
   if (result) {
-    result = require(13147) /* GuildFeatures */.isGuildEligibleForTierTemplates(features.id);
-    const tmpResult = require(13147) /* GuildFeatures */;
+    result = require("../GuildRoleSubscriptionsExperimentUtils.tsx") /* GuildFeatures */.isGuildEligibleForTierTemplates(features.id);
+    const tmpResult = require("../GuildRoleSubscriptionsExperimentUtils.tsx") /* GuildFeatures */;
   }
   return result;
 };

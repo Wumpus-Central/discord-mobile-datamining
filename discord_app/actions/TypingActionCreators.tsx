@@ -3,12 +3,12 @@ const result = require("set").fileFinishedImporting("actions/TypingActionCreator
 
 export default {
   startTyping(id) {
-    let obj = importDefault(709);
+    let obj = require("../Dispatcher.tsx");
     obj = { type: "TYPING_START_LOCAL", channelId: id };
     obj.dispatch(obj);
   },
   stopTyping(id) {
-    let obj = importDefault(709);
+    let obj = require("../Dispatcher.tsx");
     obj = { type: "TYPING_STOP_LOCAL", channelId: id };
     obj.dispatch(obj);
   }

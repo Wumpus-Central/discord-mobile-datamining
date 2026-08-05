@@ -43,9 +43,9 @@ export default function BenchmarkResultsList(results) {
     ];
     obj = { label: "Clear results", variant: "danger", arrow: true, onPress: null };
     obj[3] = tmp;
-    items[1] = callback(require(5315) /* TableRowInner */.TableRow, obj);
+    items[1] = callback(require("../../../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj);
     obj[2] = items;
-    tmp2 = callback2(require(5649) /* TableRowGroupTitle */.TableRowGroup, obj);
+    tmp2 = callback2(require("../../../../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj);
   }
   return tmp2;
 };

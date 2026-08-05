@@ -15,19 +15,19 @@ export const createAddRecipientSystemMessage = function createAddRecipientSystem
   if (hasItem) {
     hasItem = THREAD_CHANNEL_TYPES.has(channel.type);
   }
-  let obj = require(7879) /* getMessageAuthorWithProcessedColor */;
+  let obj = require("useAuthorWithProcessedColor.tsx") /* getMessageAuthorWithProcessedColor */;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  const userAuthorWithProcessedColor = require(7879) /* getMessageAuthorWithProcessedColor */.getUserAuthorWithProcessedColor(user, channel);
-  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: importDefault(7881)({ message, author: messageAuthorWithProcessedColor, roleStyle }), otherUsername: userAuthorWithProcessedColor.nick, otherUsernameOnClick: importDefault(7881)({ userId: first, message, author: userAuthorWithProcessedColor, roleStyle }) };
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const userAuthorWithProcessedColor = require("useAuthorWithProcessedColor.tsx") /* getMessageAuthorWithProcessedColor */.getUserAuthorWithProcessedColor(user, channel);
+  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: require("formatUsernameOnClick.tsx")({ message, author: messageAuthorWithProcessedColor, roleStyle }), otherUsername: userAuthorWithProcessedColor.nick, otherUsernameOnClick: require("formatUsernameOnClick.tsx")({ userId: first, message, author: userAuthorWithProcessedColor, roleStyle }) };
+  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   const formatToParts = intl.formatToParts;
-  const t = require(1236) /* getSystemLocale */.t;
+  const t = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t;
   if (hasItem) {
     let formatToPartsResult = formatToParts(t.Vej1Nw, obj);
   } else {
     formatToPartsResult = formatToParts(t["7/Xl0S"], obj);
   }
   obj = { content: formatToPartsResult };
-  const merged = Object.assign(importDefault(7882)(message));
+  const merged = Object.assign(require("createCommonMessage.tsx")(message));
   return obj;
 };

@@ -507,7 +507,7 @@ export const trackGuildRoomUserConnected = function trackGuildRoomUserConnected(
 export const trackGuildRoomUserDisconnected = function trackGuildRoomUserDisconnected(channelId) {
   let guildId;
   let userId;
-  let obj = importDefault(4479);
+  let obj = require("../app_analytics/AppAnalyticsUtils.tsx");
   ({ userId, guildId, channelId } = channelId);
   if (userId == null) {
     userId = id.getId();

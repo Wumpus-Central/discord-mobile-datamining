@@ -105,7 +105,7 @@ StreamPreview.prototype["render"] = function render() {
       obj1[1] = items1;
       const items2 = [callback2(closure_4, obj1), tmp4];
       obj[6] = items2;
-      return callback2(require(4812) /* PressableBase */.PressableOpacity, obj);
+      return callback2(require("../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
     }
   }
   let renderFallbackResult1;
@@ -118,9 +118,9 @@ StreamPreview.contextType = require("ManaContext").ThemeContext;
 StreamPreview.defaultProps = {
   renderFallback: function defaultRenderFallback(arg0, theme) {
     const obj = { theme, caption: null };
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
     const string = intl.string;
-    const t = require(1236) /* getSystemLocale */.t;
+    const t = require("../intl/index.native.tsx") /* getSystemLocale */.t;
     if (arg0) {
       let stringResult = string(t.NQ7H8V);
     } else {
@@ -140,8 +140,8 @@ export default function ConnectedStreamPreview(stream) {
   let ownerId;
   let previewUrl;
   ({ guildId, channelId, ownerId } = stream.stream);
-  ({ previewUrl, isLoading } = importDefault(10837)(guildId, channelId, ownerId));
-  let obj = require(589) /* initialize */;
+  ({ previewUrl, isLoading } = require("../modules/go_live/useFetchStreamPreview.tsx")(guildId, channelId, ownerId));
+  let obj = require("../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [handleThemeChange];
   obj = {};
   const stateFromStores = obj.useStateFromStores(items, () => theme.theme);

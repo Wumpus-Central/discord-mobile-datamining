@@ -15,7 +15,7 @@ const require = arg1;
 function useCanUnarchiveThread(channel) {
   let _require = channel;
   const items = [getUncachedChannelPermissions];
-  let stateFromStores = _require(589).useStateFromStores(items, () => {
+  let stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
       canResult = outer1_8.can(outer1_10.SEND_MESSAGES_IN_THREADS, tmp);
@@ -25,11 +25,11 @@ function useCanUnarchiveThread(channel) {
     }
     return canResult;
   });
-  const obj = _require(589);
+  const obj = _require("../../../discord_common/js/packages/flux/index.tsx");
   const items1 = [getUncachedChannelPermissions, ensureGuildLoaded];
   const items2 = [channel];
   _require = channel;
-  const stateFromStores1 = _require(589).useStateFromStores(items1, () => {
+  const stateFromStores1 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
     let channel = null;
     if (null != closure_0) {
       channel = outer1_7.getChannel(tmp.parent_id);
@@ -43,9 +43,9 @@ function useCanUnarchiveThread(channel) {
     }
     return canResult;
   }, items2);
-  const obj2 = _require(589);
+  const obj2 = _require("../../../discord_common/js/packages/flux/index.tsx");
   const items3 = [getUncachedChannelPermissions];
-  const stateFromStores2 = _require(589).useStateFromStores(items3, () => {
+  const stateFromStores2 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items3, () => {
     const items = [outer1_8];
     const first = outer1_4(items, 1)[0];
     let canResult = null != closure_0;
@@ -136,7 +136,7 @@ export const useCanStartPublicThread = function useCanStartPublicThread(type) {
         flag = false;
         if (!arg1.hasFlag(constants2.HAS_THREAD)) {
           flag = true;
-          if (importDefault(5799)(arg1)) {
+          if (require("../messages/isSystemMessage.tsx")(arg1)) {
             flag = false;
           }
         }
@@ -161,7 +161,7 @@ export const computeCanStartPublicThread = function computeCanStartPublicThread(
         flag = false;
         if (!message.hasFlag(constants2.HAS_THREAD)) {
           flag = true;
-          if (importDefault(5799)(message)) {
+          if (require("../messages/isSystemMessage.tsx")(message)) {
             flag = false;
           }
         }
@@ -172,7 +172,7 @@ export const computeCanStartPublicThread = function computeCanStartPublicThread(
 };
 export const useCanStartPrivateThread = function useCanStartPrivateThread(type) {
   const _require = type;
-  _require(589);
+  _require("../../../discord_common/js/packages/flux/index.tsx");
   [][0] = type;
   let tmp3 = type.type === constants3.GUILD_TEXT;
   if (tmp3) {
@@ -197,7 +197,7 @@ export const computeCanStartPrivateThread = function computeCanStartPrivateThrea
         flag = false;
         if (!hasFlag.hasFlag(constants2.HAS_THREAD)) {
           flag = true;
-          if (importDefault(5799)(hasFlag)) {
+          if (require("../messages/isSystemMessage.tsx")(hasFlag)) {
             flag = false;
           }
         }
@@ -226,7 +226,7 @@ export const useCanStartThread = function useCanStartThread(channel) {
     }
   }
   _require = channel;
-  _require(589);
+  _require("../../../discord_common/js/packages/flux/index.tsx");
   [][0] = channel;
   let tmp6 = channel.type === constants3.GUILD_TEXT;
   if (tmp6) {
@@ -248,11 +248,11 @@ export const useCanViewThreadForMessage = function useCanViewThreadForMessage(ha
   const _require = hasFlag;
   const items = [ensureGuildLoaded];
   const items1 = [hasFlag];
-  const stateFromStores = _require(589).useStateFromStores(items, () => outer1_7.getChannel(stateFromStores(outer1_3[11]).castMessageIdAsChannelId(hasFlag.id)), items1);
-  const obj = _require(589);
+  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_7.getChannel(stateFromStores(outer1_3[11]).castMessageIdAsChannelId(hasFlag.id)), items1);
+  const obj = _require("../../../discord_common/js/packages/flux/index.tsx");
   const items2 = [getUncachedChannelPermissions];
   const items3 = [stateFromStores];
-  const stateFromStores1 = _require(589).useStateFromStores(items2, () => outer1_8.can(outer1_10.VIEW_CHANNEL, stateFromStores), items3);
+  const stateFromStores1 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => outer1_8.can(outer1_10.VIEW_CHANNEL, stateFromStores), items3);
   let hasFlagResult = hasFlag.hasFlag(constants2.HAS_THREAD);
   if (hasFlagResult) {
     hasFlagResult = null != stateFromStores && stateFromStores1;
@@ -263,7 +263,7 @@ export const useCanViewThreadForMessage = function useCanViewThreadForMessage(ha
 export const useHasActiveThreads = function useHasActiveThreads(channel) {
   const _require = channel;
   const items = [rebuild, getUncachedChannelPermissions];
-  return _require(589).useStateFromStoresObject(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
     const activeJoinedThreadsForParent = outer1_9.getActiveJoinedThreadsForParent(activeJoinedRelevantThreadsForParent.guild_id, activeJoinedRelevantThreadsForParent.id);
     activeJoinedRelevantThreadsForParent = outer1_9.getActiveJoinedRelevantThreadsForParent(activeJoinedRelevantThreadsForParent.guild_id, activeJoinedRelevantThreadsForParent.id);
     const activeUnjoinedThreadsForParent = outer1_9.getActiveUnjoinedThreadsForParent(activeJoinedRelevantThreadsForParent.guild_id, activeJoinedRelevantThreadsForParent.id);
@@ -296,27 +296,27 @@ export const useHasActiveThreads = function useHasActiveThreads(channel) {
 export const useCanManageThread = function useCanManageThread(channel) {
   const _require = channel;
   const items = [ensureGuildLoaded];
-  const stateFromStores = _require(589).useStateFromStores(items, () => {
+  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let parent_id;
     if (parent_id != null) {
       parent_id = parent_id.parent_id;
     }
     return outer1_7.getChannel(parent_id);
   });
-  const obj = _require(589);
+  const obj = _require("../../../discord_common/js/packages/flux/index.tsx");
   const items1 = [getUncachedChannelPermissions];
   const items2 = [stateFromStores];
-  const stateFromStores1 = _require(589).useStateFromStores(items1, () => {
+  const stateFromStores1 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
     let canResult = null != stateFromStores;
     if (canResult) {
       canResult = outer1_8.can(outer1_10.MANAGE_THREADS, tmp);
     }
     return canResult;
   }, items2);
-  const obj2 = _require(589);
+  const obj2 = _require("../../../discord_common/js/packages/flux/index.tsx");
   const items3 = [fetchFingerprint];
   let tmp4 = null != channel;
-  const stateFromStores2 = _require(589).useStateFromStores(items3, () => id.getId());
+  const stateFromStores2 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items3, () => id.getId());
   if (tmp4) {
     tmp4 = null != stateFromStores;
   }
@@ -405,7 +405,7 @@ export const computeIsReadOnlyThread = function computeIsReadOnlyThread(messageC
 export const useIsThreadModerator = function useIsThreadModerator(channel) {
   const _require = channel;
   const items = [getUncachedChannelPermissions];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const items = [outer1_8];
     const first = outer1_4(items, 1)[0];
     let canResult = null != closure_0;
@@ -431,7 +431,7 @@ export const isThreadModerator = function isThreadModerator(arg0) {
 export const useCanRemoveThreadMember = function useCanRemoveThreadMember(channelId) {
   const _require = channelId;
   let items = [ensureGuildLoaded, getUncachedChannelPermissions, fetchFingerprint];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const channel = outer1_7.getChannel(closure_0);
     if (null == channel) {
       return false;
@@ -453,7 +453,7 @@ export const useCanRemoveThreadMember = function useCanRemoveThreadMember(channe
 export const useHasPermissionToJoinThreadVoice = function useHasPermissionToJoinThreadVoice(isThread) {
   const _require = isThread;
   const items = [getUncachedChannelPermissions];
-  let stateFromStores = _require(589).useStateFromStores(items, () => outer1_8.can(outer1_10.CONNECT, closure_0));
+  let stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_8.can(outer1_10.CONNECT, closure_0));
   let tmp3 = null != isThread;
   if (tmp3) {
     const isThreadResult = isThread.isThread();
@@ -484,9 +484,9 @@ export const useHasPermissionToJoinThreadVoice = function useHasPermissionToJoin
   return stateFromStores;
 };
 export const useCanJoinThreadVoice = function useCanJoinThreadVoice(channel) {
-  const tmp2 = importDefault(5800)();
+  const tmp2 = require("../game_console/hooks/useIsRemote.tsx")();
   const _require = channel;
-  let obj = _require(589);
+  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
   const items = [getUncachedChannelPermissions];
   let stateFromStores = obj.useStateFromStores(items, () => outer1_8.can(outer1_10.CONNECT, closure_0));
   let tmp6 = null != channel;
@@ -547,7 +547,7 @@ export const useCanJoinThreadVoice = function useCanJoinThreadVoice(channel) {
 export const useIsNonModInLockedThread = function useIsNonModInLockedThread(channel) {
   const _require = channel;
   let items = [getUncachedChannelPermissions];
-  const stateFromStores = _require(589).useStateFromStores(items, () => {
+  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const items = [outer1_8];
     const first = outer1_4(items, 1)[0];
     let canResult = null != closure_0;
@@ -556,7 +556,7 @@ export const useIsNonModInLockedThread = function useIsNonModInLockedThread(chan
     }
     return canResult;
   });
-  const obj = _require(589);
+  const obj = _require("../../../discord_common/js/packages/flux/index.tsx");
   return channel.isLockedThread() && !stateFromStores;
 };
 export const isNonModInLockedThread = function isNonModInLockedThread(isLockedThread) {

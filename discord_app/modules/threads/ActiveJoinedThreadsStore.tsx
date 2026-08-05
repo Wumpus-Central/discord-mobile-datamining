@@ -131,7 +131,7 @@ function rebuildGuild_(guildId) {
               let tmp49 = importDefault;
               let tmp50 = dependencyMap;
               let _Date = Date;
-              let tmp51 = importDefault(5193)(channel);
+              let tmp51 = require("getThreadAutoArchiveTimeOnce.tsx")(channel);
               dependencyMap7[channel.id] = setTimeout(() => {
                 channel = outer1_5.getChannel(channel.id);
                 if (null != channel) {
@@ -191,8 +191,8 @@ function recountParent(guild_id, id) {
               const _Date2 = Date;
               let timestamp = Date.now();
               if (null == guild.joinedAt) {
-                trackedAckMessageId = importDefault(11).fromTimestamp(timestamp);
-                const obj2 = importDefault(11);
+                trackedAckMessageId = require("../../utils/SnowflakeUtils.tsx").fromTimestamp(timestamp);
+                const obj2 = require("../../utils/SnowflakeUtils.tsx");
               } else {
                 const _Date = Date;
                 const joinedAt = guild.joinedAt;
@@ -222,7 +222,7 @@ function recountParent(guild_id, id) {
               } else {
                 let tmp12 = importDefault;
                 let tmp13 = dependencyMap;
-                let obj3 = importDefault(11);
+                let obj3 = require("../../utils/SnowflakeUtils.tsx");
                 let tmp14 = obj3.compare(key10034, trackedAckMessageId) > 0;
                 if (tmp14) {
                   let tmp15 = store2;
@@ -298,7 +298,7 @@ function updateThread(guild_id, parent_id, id) {
             const _setTimeout = setTimeout;
             clearTimeoutResult = importDefault;
             clearTimeoutResult = dependencyMap;
-            clearTimeoutResult = importDefault(5193)(_Date);
+            clearTimeoutResult = require("getThreadAutoArchiveTimeOnce.tsx")(_Date);
             _Date = Date;
             dependencyMap7[_Date.id] = setTimeout(() => {
               channel = outer1_5.getChannel(channel.id);
@@ -359,7 +359,7 @@ function updateThread(guild_id, parent_id, id) {
       obj[parent_id] = obj;
       tmp7[guild_id] = obj;
       delete tmp5[tmp4];
-      let obj2 = importDefault(12);
+      let obj2 = require("../../../_runtime/00012_apply.js");
       if (obj2.isEmpty(tmp7[guild_id][parent_id])) {
         delete tmp2[tmp];
       }
@@ -377,7 +377,7 @@ function updateThread(guild_id, parent_id, id) {
       obj1[parent_id] = obj2;
       tmp18[guild_id] = obj1;
       delete tmp5[tmp4];
-      let obj5 = importDefault(12);
+      let obj5 = require("../../../_runtime/00012_apply.js");
       if (obj5.isEmpty(tmp18[guild_id][parent_id])) {
         delete tmp2[tmp];
       }
@@ -395,7 +395,7 @@ function updateThread(guild_id, parent_id, id) {
       obj3[parent_id] = obj4;
       tmp29[guild_id] = obj3;
       delete tmp5[tmp4];
-      let obj8 = importDefault(12);
+      let obj8 = require("../../../_runtime/00012_apply.js");
       if (obj8.isEmpty(tmp29[guild_id][parent_id])) {
         delete tmp2[tmp];
       }
@@ -416,7 +416,7 @@ function updateThread(guild_id, parent_id, id) {
       if (obj12.isEmpty(tmp40[guild_id][parent_id])) {
         delete tmp2[tmp];
       }
-      obj12 = importDefault(12);
+      obj12 = require("../../../_runtime/00012_apply.js");
     }
     let tmp52 = null != guild_id && null != parent_id && null != id;
     if (tmp52) {
@@ -434,7 +434,7 @@ function updateThread(guild_id, parent_id, id) {
       if (obj15.isEmpty(tmp51[guild_id][parent_id])) {
         delete tmp2[tmp];
       }
-      obj15 = importDefault(12);
+      obj15 = require("../../../_runtime/00012_apply.js");
     }
     if (id in dependencyMap7) {
       const _clearTimeout = clearTimeout;
@@ -460,7 +460,7 @@ function anyThreadsNSFW(guild_id, parent_id) {
         let tmp10 = key10006;
         let tmp11 = require;
         let tmp12 = dependencyMap;
-        let obj = require(4498) /* shouldShowAgeGateForVoiceChannel */;
+        let obj = require("../age_gate/AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */;
         if (!obj.isChannelContentGated(tmp[key10006].channel)) {
           continue;
         } else {
@@ -478,7 +478,7 @@ function anyThreadsNSFW(guild_id, parent_id) {
         let tmp13 = key10015;
         let tmp14 = require;
         let tmp15 = dependencyMap;
-        let obj2 = require(4498) /* shouldShowAgeGateForVoiceChannel */;
+        let obj2 = require("../age_gate/AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */;
         if (!obj2.isChannelContentGated(tmp5[key10015])) {
           continue;
         } else {
@@ -552,8 +552,8 @@ function handleReadStateChannelAction(channelId) {
                 obj[1] = channel;
                 obj.dispatch(obj);
               }
-            }, importDefault(5193)(channel) - Date.now() + 1);
-            const tmp33 = importDefault(5193)(channel);
+            }, require("getThreadAutoArchiveTimeOnce.tsx")(channel) - Date.now() + 1);
+            const tmp33 = require("getThreadAutoArchiveTimeOnce.tsx")(channel);
           }
           ({ guild_id: guild_id2, parent_id: parent_id2 } = channel);
           let tmp35 = guild_id2 in closure_13;
@@ -686,7 +686,7 @@ function rebuildReadStates() {
               let tmp20 = importDefault;
               let tmp21 = dependencyMap;
               let _Date = Date;
-              let tmp22 = importDefault(5193)(channel);
+              let tmp22 = require("getThreadAutoArchiveTimeOnce.tsx")(channel);
               dependencyMap7[channel.id] = setTimeout(() => {
                 channel = outer1_5.getChannel(channel.id);
                 if (null != channel) {
@@ -802,8 +802,8 @@ function parseThreadState(channel) {
   let tmp6 = isActiveThreadResult;
   if (isActiveThreadResult) {
     const _Date = Date;
-    tmp6 = importDefault(5193)(channel) > Date.now();
-    const tmp9 = importDefault(5193)(channel);
+    tmp6 = require("getThreadAutoArchiveTimeOnce.tsx")(channel) > Date.now();
+    const tmp9 = require("getThreadAutoArchiveTimeOnce.tsx")(channel);
   }
   let tmp12 = isActiveThreadResult;
   const voiceChannelId = store3.getVoiceChannelId();
@@ -866,7 +866,7 @@ function updateIn(closure_12, _Date, _Date2, arg3) {
       if (obj3.isEmpty(closure_12[guild_id][parent_id])) {
         delete tmp[tmp2];
       }
-      obj3 = importDefault(12);
+      obj3 = require("../../../_runtime/00012_apply.js");
     } else {
       closure_12[guild_id][parent_id][id] = _Date2;
     }
@@ -1037,7 +1037,7 @@ prototype["getNewThreadCount"] = function getNewThreadCount(arg0, arg1) {
   return num;
 };
 prototype["getActiveThreadCount"] = function getActiveThreadCount(arg0, arg1) {
-  let obj = importDefault(12);
+  let obj = require("../../../_runtime/00012_apply.js");
   obj = undefined;
   if (dependencyMap[arg0] != null) {
     obj = tmp3[arg1];
@@ -1054,7 +1054,7 @@ prototype["getActiveThreadCount"] = function getActiveThreadCount(arg0, arg1) {
   if (obj == null) {
     obj = {};
   }
-  return sizeResult + importDefault(12).size(obj);
+  return sizeResult + require("../../../_runtime/00012_apply.js").size(obj);
 };
 ActiveJoinedThreadsStore.displayName = "ActiveJoinedThreadsStore";
 obj = {
@@ -1117,7 +1117,7 @@ obj = {
     while (iter !== undefined) {
       let tmp2 = require;
       let tmp3 = dependencyMap;
-      let obj = require(4498) /* shouldShowAgeGateForVoiceChannel */;
+      let obj = require("../age_gate/AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */;
       let tmp5 = anyThreadsNSFW;
       let result = obj.isChannelContentGated(nextResult);
       if (result !== anyThreadsNSFW(nextResult.guild_id, nextResult.parent_id)) {
@@ -1157,12 +1157,12 @@ obj = {
         tmp15 = channel.parent_id in dependencyMap5[channel.guild_id];
       }
       if (tmp15) {
-        const keys = importDefault(11).keys(dependencyMap5[channel.guild_id][channel.parent_id]);
+        const keys = require("../../utils/SnowflakeUtils.tsx").keys(dependencyMap5[channel.guild_id][channel.parent_id]);
         const item = keys.forEach(clearTimer);
         const parent_id3 = channel.parent_id;
         delete tmp2[tmp];
         flag2 = true;
-        const obj = importDefault(11);
+        const obj = require("../../utils/SnowflakeUtils.tsx");
       }
       let tmp25 = channel.guild_id in dependencyMap3;
       if (tmp25) {

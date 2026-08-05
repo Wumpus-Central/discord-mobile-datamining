@@ -223,7 +223,7 @@ let closure_10 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   if (arg3 === undefined) {
     flag = false;
   }
-  let obj = { padding: importDefault(712).modules.mobile.TABLE_ROW_PADDING, minHeight: importDefault(712).modules.mobile.TABLE_ROW_HEIGHT, flexDirection: "row", alignItems: "center", opacity: null, borderRadius: null };
+  let obj = { padding: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_PADDING, minHeight: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_HEIGHT, flexDirection: "row", alignItems: "center", opacity: null, borderRadius: null };
   let num = 1;
   if (arg0) {
     num = 0.5;

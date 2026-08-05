@@ -197,11 +197,11 @@ function getGiftCodeRedeemError(error, currentUser) {
 }
 ({ Endpoints: error, AnalyticEvents: metroImportAll, AbortCodes: c9, GiftCodeModalStates: c10, MessageEmbedTypes: unpackModuleId, MessageTypes: closure_12 } = ME);
 ({ PremiumTypes: map1, SubscriptionIntervalTypes: closure_14 } = GuildFeatures);
-let items = [require("set").escape(window.GLOBAL_ENV.GIFT_CODE_HOST), ...items1.map((arg0) => importDefault(4273).escape(arg0))];
+let items = [require("set").escape(window.GLOBAL_ENV.GIFT_CODE_HOST), ...items1.map((arg0) => require("RegexUtils.tsx").escape(arg0))];
 items1 = ["discordapp.com/gifts", "discord.com/gifts"];
 let regExp = new RegExp("(?: |^|https?://)(?:" + items.join("|") + ")/([a-z0-9-]+)", "gi");
 const items2 = ["discord.com/billing/promotions", "promos.discord.gg"];
-const items3 = [...items2.map((arg0) => importDefault(4273).escape(arg0))];
+const items3 = [...items2.map((arg0) => require("RegexUtils.tsx").escape(arg0))];
 const regExp1 = new RegExp("(?: |^|https?://)(?:" + items3.join("|") + ")(/|(/)?\\?code=)([a-z0-9-]+)", "gi");
 c0 = 4;
 let mapped = require("ME").fill(undefined).map(() => "[abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789]{" + c0 + "}");
@@ -363,9 +363,9 @@ export const resolveGiftCode = function resolveGiftCode() {
   return applyArgumentsResult;
 };
 export const trackGiftCodeCopy = function trackGiftCodeCopy(giftCode, sku) {
-  let obj = importDefault(698);
+  let obj = require("AnalyticsUtils.tsx");
   obj = {};
-  const merged = Object.assign(importDefault(4615)(sku, false, false));
+  const merged = Object.assign(require("../modules/game_store/getAnalyticsDataForSKU.tsx")(sku, false, false));
   const merged1 = Object.assign(giftCode.analyticsData);
   obj.track(constants.GIFT_CODE_COPIED, obj);
 };
@@ -797,7 +797,7 @@ export const trackStep = function trackStep(giftCode) {
   let step;
   giftCode = giftCode.giftCode;
   ({ step, customMessage, emojiName, soundId, productLine } = giftCode);
-  let obj = importDefault(698);
+  let obj = require("AnalyticsUtils.tsx");
   obj = { to_step: step, has_custom_message: null != giftCode.giftStyle, is_custom_message_edited: null, gift_style: null, gift_code: null, emoji_name: null, sound_id: null, product_line: null };
   let tmp2 = null != giftCode.giftStyle;
   if (tmp2) {

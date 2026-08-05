@@ -3,12 +3,12 @@ const result = require("set").fileFinishedImporting("modules/nuf/NUFActionCreato
 
 export const setNewUser = function setNewUser(ORGANIC_REGISTERED) {
   const importDefault = ORGANIC_REGISTERED;
-  importDefault(709).wait(() => {
+  require("../../Dispatcher.tsx").wait(() => {
     let obj = ORGANIC_REGISTERED(outer1_1[0]);
     obj = { type: "NUF_NEW_USER", newUserType: ORGANIC_REGISTERED };
     return obj.dispatch(obj);
   });
 };
 export const setNewUserFlowCompleted = function setNewUserFlowCompleted() {
-  importDefault(709).wait(() => callback(table[0]).dispatch({ type: "NUF_COMPLETE" }));
+  require("../../Dispatcher.tsx").wait(() => callback(table[0]).dispatch({ type: "NUF_COMPLETE" }));
 };

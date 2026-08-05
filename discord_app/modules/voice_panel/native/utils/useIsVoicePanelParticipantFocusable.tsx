@@ -61,6 +61,6 @@ export default function useIsVoicePanelParticipantFocusable(arg0, arg1, arg2) {
   const dependencyMap = arg1;
   let participantFromServer = arg2;
   const items = [getParticipants, _detectH265HardwareDecode, participantFromServer, reset];
-  return _require(589).useStateFromStores(items, () => outer1_9(closure_0, closure_1, participantFromServer, outer1_3, outer1_5, participantFromServer, outer1_4));
+  return _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_9(closure_0, closure_1, participantFromServer, outer1_3, outer1_5, participantFromServer, outer1_4));
 };
 export { isVoicePanelParticipantFocusable };

@@ -17,7 +17,7 @@ export default function UnifiedGiftModalRecipientSelectScreen(setRecipientUser) 
   let importDefault;
   let obj = setRecipientUser(1480);
   importDefault = obj.useNavigation();
-  obj = { style: createCacheKey().container, children: jsx(importDefault(9540), obj) };
+  obj = { style: createCacheKey().container, children: jsx(require("../../../main_tabs_v2/native/shared_components/user_list/SearchableUserList.tsx"), obj) };
   obj = {
     onSelectUser(user) {
       setRecipientUser(user);

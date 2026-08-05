@@ -18,7 +18,7 @@ class RowManager {
 }
 const prototype = RowManager.prototype;
 prototype["setOptions"] = function setOptions(arg0) {
-  const obj = importDefault(12);
+  const obj = require("../../../../../_runtime/00012_apply.js");
   this.options = obj.merge({}, obj, this.options, arg0);
 };
 prototype["generate"] = function generate(rowType) {
@@ -32,26 +32,26 @@ prototype["generate"] = function generate(rowType) {
     if (tmp2.IGNORED_GROUP !== rowType) {
       if (tmp2.SUSPENDED_USER_GROUP !== rowType) {
         if (tmp2.MESSAGE === rowType) {
-          return require(7856) /* generateMessageRowData */.generateMessageRowData(rowType, self.options, theme);
+          return require("MessageWithContent.tsx") /* generateMessageRowData */.generateMessageRowData(rowType, self.options, theme);
         } else {
           if (constants2.DAY !== rowType) {
             if (tmp12.UNREAD !== rowType) {
               if (tmp12.SUMMARY !== rowType) {
                 if (constants3.LOAD_BEFORE !== rowType) {
                   if (constants3.LOAD_AFTER !== rowType) {
-                    require(1351) /* isDiscordFrontendDevelopment */.assertNever(rowType);
+                    require("../../../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.assertNever(rowType);
                   }
                 }
-                return require(12545) /* generateLoadingRowData */.generateLoadingRowData(rowType, theme);
+                return require("rows/Loading.tsx") /* generateLoadingRowData */.generateLoadingRowData(rowType, theme);
               }
             }
           }
-          return require(12544) /* generateSeparatorRowData */.generateSeparatorRowData(rowType, theme);
+          return require("rows/Separator.tsx") /* generateSeparatorRowData */.generateSeparatorRowData(rowType, theme);
         }
       }
     }
   }
-  return require(7854) /* generateBlockedGroupRowData */.generateBlockedGroupRowData(rowType, theme, self);
+  return require("rows/BlockedGroup.tsx") /* generateBlockedGroupRowData */.generateBlockedGroupRowData(rowType, theme, self);
 };
 const result = require("UserOption").fileFinishedImporting("modules/messages/native/renderer/RowGenerator.tsx");
 

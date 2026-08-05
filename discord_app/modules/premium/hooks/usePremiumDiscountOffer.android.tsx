@@ -23,7 +23,7 @@ export const usePremiumDiscountOffer = function usePremiumDiscountOffer() {
     }
     tmp5 = tmp6;
   }
-  tmp4 = importDefault(7264)(closure_4);
+  tmp4 = require("useDiscountOffer.tsx")(closure_4);
   values = Object.values(tmp(5770).DiscountIdToProductOfferId[closure_5]);
   let tmp8 = null;
   if (0 !== values.length) {

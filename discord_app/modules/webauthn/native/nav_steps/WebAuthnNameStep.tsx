@@ -123,7 +123,7 @@ export default function WebAuthnNameStep(arg0) {
     return applyArgumentsResult;
   }
   let tmp = callback4();
-  let obj = require(1480) /* useNavigation */;
+  let obj = require("../../../../design/components/Navigator/native/useNavigation.native.tsx") /* useNavigation */;
   dependencyMap = obj.useNavigation();
   const tmp6 = callback(first.useState(false), 2);
   closure_3 = tmp6[1];
@@ -136,12 +136,12 @@ export default function WebAuthnNameStep(arg0) {
   obj = { children: null };
   obj = { showTopContainer: false, value: first, onChange: tmp5Result[1], style: tmp.margin, error: tmp8, title: null, placeholder: null, disabled: null, clearButtonVisibility: null, autoFocus: true, showBorder: true, required: true, large: true };
   let intl = tmp2(1236).intl;
-  obj[5] = intl.string(require(1236) /* getSystemLocale */.t["Jzd+z/"]);
+  obj[5] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["Jzd+z/"]);
   const intl2 = tmp2(1236).intl;
-  obj[6] = intl2.string(require(1236) /* getSystemLocale */.t["I/sJtJ"]);
+  obj[6] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["I/sJtJ"]);
   obj[7] = tmp6[0];
-  obj[8] = require(1297) /* Button */.ClearButtonVisibility.WITH_CONTENT;
-  const items = [callback2(require(7777) /* Form */.FormInput, obj), callback2(require(7777) /* Form */.FormDivider, {}), ];
+  obj[8] = require("../../../../design/void/native.tsx") /* Button */.ClearButtonVisibility.WITH_CONTENT;
+  const items = [callback2(require("../../../../design/void/Form/native/index.tsx") /* Form */.FormInput, obj), callback2(require("../../../../design/void/Form/native/index.tsx") /* Form */.FormDivider, {}), ];
   let obj1 = { style: tmp.margin, children: null };
   let obj2 = {
     onPress() {
@@ -159,10 +159,10 @@ export default function WebAuthnNameStep(arg0) {
     size: "lg"
   };
   const intl3 = tmp2(1236).intl;
-  obj2[1] = intl3.string(require(1236) /* getSystemLocale */.t["5dyZ1S"]);
+  obj2[1] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["5dyZ1S"]);
   obj2[2] = "" === first;
-  obj1[1] = callback2(require(4695) /* Button */.Button, obj2);
+  obj1[1] = callback2(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj2);
   items[2] = callback2(_onPress, obj1);
   obj[0] = items;
-  return callback3(require(7777) /* Form */.Form, obj);
+  return callback3(require("../../../../design/void/Form/native/index.tsx") /* Form */.Form, obj);
 };

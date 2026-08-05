@@ -94,10 +94,10 @@ export default {
     })();
   },
   prune(c0, days, include_roles) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: Endpoints.GUILD_PRUNE(c0), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { days, compute_prune_count: false, include_roles };
-    obj[3] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[3] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.post(obj);
   }
 };

@@ -30,26 +30,26 @@ export const formatDurationNarrow = function formatDurationNarrow(arg0) {
   const result1 = Math.floor(num / 1000) % 60;
   const items = [];
   if (rounded > 0) {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     let obj = { hours: null };
     obj[0] = rounded;
-    items.push(intl.formatToPlainString(require(1236) /* getSystemLocale */.t.rhY1Rs, obj));
+    items.push(intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.rhY1Rs, obj));
   }
   if (0 < result) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { minutes: null };
     obj[0] = result;
-    items.push(intl2.formatToPlainString(require(1236) /* getSystemLocale */.t["XIGt+W"], obj));
+    items.push(intl2.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["XIGt+W"], obj));
   }
   let tmp10 = result1 > 0;
   if (0 >= result1) {
     tmp10 = 0 === items.length;
   }
   if (tmp10) {
-    const intl3 = require(1236) /* getSystemLocale */.intl;
+    const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { seconds: null };
     obj[0] = result1;
-    items.push(intl3.formatToPlainString(require(1236) /* getSystemLocale */.t.pyvjRp, obj));
+    items.push(intl3.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.pyvjRp, obj));
   }
   return items.join(" ");
 };
@@ -67,7 +67,7 @@ export const FieldText = function FieldText(arg0) {
     let obj = { variant: null, widthChars: null };
     obj[0] = variant;
     obj[1] = skeletonWidthChars;
-    let tmp9Result = callback(require(12352) /* ImageSkeleton */.TextSkeleton, obj);
+    let tmp9Result = callback(require("UserProfileApplicationWidgetSkeletons.tsx") /* ImageSkeleton */.TextSkeleton, obj);
   } else {
     obj = { style: null, children: null };
     obj[0] = tmp.fieldTextRow;
@@ -75,7 +75,7 @@ export const FieldText = function FieldText(arg0) {
     obj1[0] = variant;
     obj1[1] = color;
     obj1[3] = field.text;
-    const items = [callback(require(4281) /* Text */.Text, obj1), ];
+    const items = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1), ];
     let tmp11Result = null != field.icon;
     if (tmp11Result) {
       obj = { source: null, style: null, resizeMode: "contain" };

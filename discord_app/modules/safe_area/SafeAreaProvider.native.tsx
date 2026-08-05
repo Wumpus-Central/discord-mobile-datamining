@@ -163,8 +163,8 @@ export const SafeAreaProvider = function SafeAreaProvider(arg0) {
   let style;
   ({ children, style } = arg0);
   const obj = { initialMetrics: null, children: null, style: null };
-  obj[0] = require(1583) /* EMPTY_SAFE_AREA_INSETS */.INITIAL_SAFE_AREA_METRICS;
+  obj[0] = require("SafeAreaConstants.native.tsx") /* EMPTY_SAFE_AREA_INSETS */.INITIAL_SAFE_AREA_METRICS;
   obj[1] = children;
   obj[2] = style;
-  return jsx(require(1584).SafeAreaProvider, { initialMetrics: null, children: null, style: null });
+  return jsx(require("../../../_runtime/metro/01584__.js").SafeAreaProvider, { initialMetrics: null, children: null, style: null });
 };

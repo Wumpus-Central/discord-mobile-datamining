@@ -7,12 +7,12 @@ let c3;
 let c4;
 const require = arg1;
 function HeaderWithBorder(arg0) {
-  let obj = require(3989) /* map */;
-  const token = obj.useToken(importDefault(712).colors.BORDER_SUBTLE);
+  let obj = require("../../../../design/tokens/native/useToken.tsx") /* map */;
+  const token = obj.useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE);
   obj = {};
   const merged = Object.assign(arg0);
-  const obj2 = require(8193) /* GenericHeaderTitle */;
-  obj.shouldHandleSafeArea = require(500) /* set */.isAndroid();
+  const obj2 = require("../../../main_tabs_v2/native/shared_components/HeaderShared.tsx") /* GenericHeaderTitle */;
+  obj.shouldHandleSafeArea = require("../../../../utils/PlatformUtils.tsx") /* set */.isAndroid();
   obj.style = { borderColor: token };
   return obj2.renderHeader(obj);
 }
@@ -89,7 +89,7 @@ export const openConversationNavigator = function openConversationNavigator(arg0
   let channelId;
   let guildId;
   ({ channelId, guildId } = arg0);
-  let obj = require(4137) /* getRootNavigationRef */;
+  let obj = require("../../../main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */;
   const rootNavigationRef = obj.getRootNavigationRef();
   if (tmp) {
     obj = { channelId: null, guildId: null };

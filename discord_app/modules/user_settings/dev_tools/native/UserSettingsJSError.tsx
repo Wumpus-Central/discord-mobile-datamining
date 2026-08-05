@@ -6,5 +6,5 @@ const require = arg1;
 const result = require("Text").fileFinishedImporting("modules/user_settings/dev_tools/native/UserSettingsJSError.tsx");
 
 export default function UserSettingsJSError() {
-  return jsx(require(4281) /* Text */.Text, { variant: "display-md", children: null.boo });
+  return jsx(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "display-md", children: null.boo });
 };

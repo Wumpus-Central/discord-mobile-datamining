@@ -8,8 +8,8 @@ export const useTrackNavigatorScreenImpression = function useTrackNavigatorScree
     impressionPropertiesResult = impressionProperties(params.params);
   }
   const obj = { type: null, name: null, properties: null };
-  obj[0] = require(503) /* encodeProperties */.ImpressionTypes.PAGE;
+  obj[0] = require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionTypes.PAGE;
   obj[1] = impressionProperties.impressionName;
   obj[2] = impressionPropertiesResult;
-  importDefault(9267)(obj);
+  require("../useTrackImpression.tsx")(obj);
 };

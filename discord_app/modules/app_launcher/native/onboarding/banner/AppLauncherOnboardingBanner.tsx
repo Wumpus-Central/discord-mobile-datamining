@@ -9,16 +9,16 @@ export default function AppLauncherOnboardingBanner(arg0) {
   let context;
   let visibleContent;
   ({ context, visibleContent } = arg0);
-  if (require(1358) /* DismissibleContent */.DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER === visibleContent) {
+  if (require("../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER === visibleContent) {
     let obj = { context: null };
     obj[0] = context;
-    return jsx(importDefault(11348), { context: null });
+    return jsx(require("ActivitiesBanner.tsx"), { context: null });
   } else if (tmp(1358).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER === visibleContent) {
-    return jsx(importDefault(11362), {});
+    return jsx(require("AppsBanner.tsx"), {});
   } else if (tmp(1358).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER === visibleContent) {
     obj = { context: null };
     obj[0] = context;
-    return jsx(importDefault(11364), { context: null });
+    return jsx(require("BotsBanner.tsx"), { context: null });
   } else {
     return null;
   }

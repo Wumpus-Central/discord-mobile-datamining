@@ -11,13 +11,13 @@ export default {
       flag = false;
     }
     if (flag) {
-      importDefault(698).track(AnalyticEvents.USER_ACCOUNT_EMAIL_CHANGE_ATTEMPTED);
-      const obj = importDefault(698);
+      require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.USER_ACCOUNT_EMAIL_CHANGE_ATTEMPTED);
+      const obj = require("../../utils/AnalyticsUtils.tsx");
     }
-    importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(8263, dependencyMap.paths), { isChangeEmail: flag }, EMAIL_VERIFICATION_MODAL_KEY);
+    require("../ModalActionCreators.tsx").pushLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(8263, dependencyMap.paths), { isChangeEmail: flag }, EMAIL_VERIFICATION_MODAL_KEY);
   },
   close() {
-    importDefault(709).wait(() => {
+    require("../../Dispatcher.tsx").wait(() => {
       callback(table[2]).popWithKey(closure_4);
     });
   }

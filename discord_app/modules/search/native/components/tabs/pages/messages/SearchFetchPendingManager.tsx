@@ -33,7 +33,7 @@ const result = require("useInitialValue").fileFinishedImporting("modules/search/
 
 export const useSearchFetchPendingManager = function useSearchFetchPendingManager(searchContext) {
   const importDefault = searchContext;
-  const tmp = importDefault(5598)(() => {
+  const tmp = require("../../../../../../../hooks/useInitialValue.tsx")(() => {
     if (typeof closure_3 !== "function") {
       HermesBuiltin.throwTypeError();
     }

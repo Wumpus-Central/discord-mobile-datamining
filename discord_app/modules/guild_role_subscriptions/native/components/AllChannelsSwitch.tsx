@@ -25,7 +25,7 @@ function Row(arg0) {
     disabled = false;
   }
   const tmp = createCacheKey();
-  let obj = require(4003) /* useCheckboxA11yNative */;
+  let obj = require("../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx") /* useCheckboxA11yNative */;
   const radioA11yNative = obj.useRadioA11yNative({ selected, disabled });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   obj = { style: tmp.row, accessibilityRole, accessibilityState, disabled: null, onPress: null, children: null };
@@ -36,19 +36,19 @@ function Row(arg0) {
   obj[3] = tmp7;
   obj[4] = onPress;
   obj = { size: null, source: null };
-  obj[0] = require(1297) /* Button */.Icon.Sizes.MEDIUM;
+  obj[0] = require("../../../../design/void/native.tsx") /* Button */.Icon.Sizes.MEDIUM;
   obj[1] = icon;
-  const items = [callback(require(1297) /* Button */.Icon, obj), , ];
+  const items = [callback(require("../../../../design/void/native.tsx") /* Button */.Icon, obj), , ];
   const items1 = [tmp.rowLabel, ];
   let rowLabelSelected = selected;
   if (selected) {
     rowLabelSelected = tmp.rowLabelSelected;
   }
   items1[1] = rowLabelSelected;
-  items[1] = callback(require(1297) /* Button */.LegacyText, { style: items1, numberOfLines: 1, ellipsizeMode: "tail", children: label });
-  items[2] = callback(require(1297) /* Button */.RadioIndicator, { style: tmp.rowIndicator, active: selected });
+  items[1] = callback(require("../../../../design/void/native.tsx") /* Button */.LegacyText, { style: items1, numberOfLines: 1, ellipsizeMode: "tail", children: label });
+  items[2] = callback(require("../../../../design/void/native.tsx") /* Button */.RadioIndicator, { style: tmp.rowIndicator, active: selected });
   obj[5] = items;
-  return closure_6(importDefault(8979), obj);
+  return closure_6(require("../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx"), obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: null, row: null, rowLabel: null, rowLabelSelected: null, rowIndicator: null, separator: null };
@@ -80,9 +80,9 @@ export default function AllChannelsSwitch(style) {
   const tmp = createCacheKey();
   let obj = { style: items, accessibilityRole: "radiogroup", accessibilityState: { disabled }, children: null };
   items = [tmp.container, style.style];
-  obj = { icon: importDefault(16722), label: null, selected: null, onPress: null, disabled: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl.string(require(1236) /* getSystemLocale */.t["vs2T+B"]);
+  obj = { icon: require("../../../../../_runtime/16722_registerAsset.js"), label: null, selected: null, onPress: null, disabled: null };
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["vs2T+B"]);
   obj[2] = channelAccessFormat === AllChannelAccessOptions.SOME_CHANNELS_ACCESS;
   obj[3] = function onPress() {
     return callback(outer1_4.SOME_CHANNELS_ACCESS);
@@ -91,9 +91,9 @@ export default function AllChannelsSwitch(style) {
   const items1 = [callback(Row, obj), , ];
   obj = { style: tmp.separator };
   items1[1] = callback(View, obj);
-  const obj1 = { icon: importDefault(16723), label: null, selected: null, onPress: null, disabled: null };
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj1[1] = intl2.string(require(1236) /* getSystemLocale */.t.l4Tr7X);
+  const obj1 = { icon: require("../../../../../_runtime/16723_registerAsset.js"), label: null, selected: null, onPress: null, disabled: null };
+  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj1[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.l4Tr7X);
   obj1[2] = channelAccessFormat === AllChannelAccessOptions.ALL_CHANNELS_ACCESS;
   obj1[3] = function onPress() {
     return callback(outer1_4.ALL_CHANNELS_ACCESS);

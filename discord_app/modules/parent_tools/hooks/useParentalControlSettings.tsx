@@ -8,9 +8,9 @@ const require = arg1;
 const result = require("getSettings").fileFinishedImporting("modules/parent_tools/hooks/useParentalControlSettings.tsx");
 
 export const useParentalControlledExplicitContentSettings = function useParentalControlledExplicitContentSettings() {
-  let obj = require(7261) /* useSelectedTeen */;
+  let obj = require("useSelectedTeen.tsx") /* useSelectedTeen */;
   const selectedTeen = obj.useSelectedTeen();
-  const ParentalControlledExplicitContent = require(13975) /* result */.ParentalControlledExplicitContent;
+  const ParentalControlledExplicitContent = require("../../user_settings/family_center/ParentalControlledUserSettings.tsx") /* result */.ParentalControlledExplicitContent;
   let id;
   if (selectedTeen != null) {
     id = selectedTeen.id;
@@ -53,9 +53,9 @@ export const useParentalControlledExplicitContentSettings = function useParental
 export const useParentalControlledGoreContentSettings = function useParentalControlledGoreContentSettings() {
   let goreContentFriendDm;
   let goreContentNonFriendDm;
-  let obj = require(7261) /* useSelectedTeen */;
+  let obj = require("useSelectedTeen.tsx") /* useSelectedTeen */;
   const selectedTeen = obj.useSelectedTeen();
-  const ParentalControlledGoreContent = require(13975) /* result */.ParentalControlledGoreContent;
+  const ParentalControlledGoreContent = require("../../user_settings/family_center/ParentalControlledUserSettings.tsx") /* result */.ParentalControlledGoreContent;
   let id;
   if (selectedTeen != null) {
     id = selectedTeen.id;
@@ -85,14 +85,14 @@ export const useParentalControlledGoreContentSettings = function useParentalCont
   }
 };
 export const useDefaultGuildsRestricted = function useDefaultGuildsRestricted() {
-  const selectedTeen = require(7261) /* useSelectedTeen */.useSelectedTeen();
-  const ParentalControlledDefaultGuildsRestricted = require(13975) /* result */.ParentalControlledDefaultGuildsRestricted;
+  const selectedTeen = require("useSelectedTeen.tsx") /* useSelectedTeen */.useSelectedTeen();
+  const ParentalControlledDefaultGuildsRestricted = require("../../user_settings/family_center/ParentalControlledUserSettings.tsx") /* result */.ParentalControlledDefaultGuildsRestricted;
   let id;
   if (selectedTeen != null) {
     id = selectedTeen.id;
   }
   const controlledSetting = ParentalControlledDefaultGuildsRestricted.useControlledSetting(id);
-  const ParentalControlledDefaultGuildsRestrictedV2 = require(13975) /* result */.ParentalControlledDefaultGuildsRestrictedV2;
+  const ParentalControlledDefaultGuildsRestrictedV2 = require("../../user_settings/family_center/ParentalControlledUserSettings.tsx") /* result */.ParentalControlledDefaultGuildsRestrictedV2;
   let id1;
   if (selectedTeen != null) {
     id1 = selectedTeen.id;
@@ -117,18 +117,18 @@ export const useAllowFriendsFromMutualGuildsOnlyForTeen = function useAllowFrien
   return memo.mutualGuilds && !memo.all;
 };
 export const useIsParentallyControlled = function useIsParentallyControlled() {
-  return require(7259) /* useUserIdsForLinkStatus */.useHasActiveParentLinks();
+  return require("useUserLinks.tsx") /* useUserIdsForLinkStatus */.useHasActiveParentLinks();
 };
 export const useParentalControlledConsent = function useParentalControlledConsent(PERSONALIZATION) {
   let _require = PERSONALIZATION;
-  let obj = _require(7261);
+  let obj = _require("useSelectedTeen.tsx");
   let selectedTeenId = obj.useSelectedTeenId();
   let items = [getSettings];
   _require = PERSONALIZATION;
   selectedTeenId = undefined;
-  const stateFromStores = _require(589).useStateFromStores(items, () => outer1_5.hasConsented(selectedTeenId, closure_0));
-  let obj2 = _require(589);
-  selectedTeenId = _require(7261).useSelectedTeenId();
+  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_5.hasConsented(selectedTeenId, closure_0));
+  let obj2 = _require("../../../../discord_common/js/packages/flux/index.tsx");
+  selectedTeenId = _require("useSelectedTeen.tsx").useSelectedTeenId();
   _require = undefined;
   _require = callback((arg0) => {
     let closure_0 = arg0;

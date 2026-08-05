@@ -3,9 +3,9 @@ const result = require("CollectiblesItemType").fileFinishedImporting("modules/co
 
 export default function useShouldShowPremiumProfileFrameCTA(location) {
   const _location = location.location;
-  let tmp2 = importDefault(12078)(_location) && !importDefault(9321)(_location);
+  let tmp2 = require("useShouldShowPremiumProfileFrameEA.tsx")(_location) && !require("useCanPurchaseFrames.tsx")(_location);
   if (tmp2) {
-    tmp2 = location.product.type === require(1901) /* CollectiblesItemType */.CollectiblesItemType.PROFILE_FRAME;
+    tmp2 = location.product.type === require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.PROFILE_FRAME;
   }
   return tmp2;
 };

@@ -39,16 +39,16 @@ export default function UserProfileYourFriendsCard(arg0) {
   const tmp2 = stateFromStoresArray(stateFromStoresArray1.useState([]), 2);
   first = tmp2[0];
   dependencyMap = tmp2[1];
-  let obj = _require(589);
+  let obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
   let items = [recomputeAffinities];
   stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
     userAffinities = userAffinities.getUserAffinities();
     return userAffinities.map((otherUserId) => otherUserId.otherUserId);
   });
   const items1 = [upsertRelationship];
-  stateFromStoresArray1 = _require(589).useStateFromStoresArray(items1, () => friendIDs.getFriendIDs());
-  const obj2 = _require(589);
-  gameRelationshipsByType = _require(12250).useGameRelationshipsByType(RelationshipTypes.FRIEND);
+  stateFromStoresArray1 = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items1, () => friendIDs.getFriendIDs());
+  const obj2 = _require("../../../../discord_common/js/packages/flux/index.tsx");
+  gameRelationshipsByType = _require("../../game_relationships/GameRelationshipStoreHooks.tsx").useGameRelationshipsByType(RelationshipTypes.FRIEND);
   const effect = stateFromStoresArray1.useEffect(() => {
     const userAffinitiesV2 = _undefined(9003).fetchUserAffinitiesV2();
   }, []);
@@ -104,15 +104,15 @@ export default function UserProfileYourFriendsCard(arg0) {
     return outer1_10(gameRelationshipsByType, obj);
   }, items3);
   obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, activeOpacity: 0.8, children: null };
-  const intl = _require(1236).intl;
-  obj[1] = intl.string(_require(1236).t.TdEu5X);
+  const intl = _require("../../../intl/index.native.tsx").intl;
+  obj[1] = intl.string(_require("../../../intl/index.native.tsx").t.TdEu5X);
   obj[2] = navigateToFriends;
   const items4 = [style, tmp.pressable];
   obj[3] = items4;
   obj = { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-default", style: tmp.label, children: null };
-  const intl2 = _require(1236).intl;
-  obj[4] = intl2.string(_require(1236).t.TdEu5X);
-  const items5 = [callback(_require(4281).Text, obj), memo, callback(_require(5660).ChevronSmallRightIcon, { size: "sm" })];
+  const intl2 = _require("../../../intl/index.native.tsx").intl;
+  obj[4] = intl2.string(_require("../../../intl/index.native.tsx").t.TdEu5X);
+  const items5 = [callback(_require("../../../design/components/Text/native/Text.tsx").Text, obj), memo, callback(_require("../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx").ChevronSmallRightIcon, { size: "sm" })];
   obj[5] = items5;
-  return callback2(_require(4812).PressableOpacity, obj);
+  return callback2(_require("../../../design/void/Pressables/native/Pressables.tsx").PressableOpacity, obj);
 };

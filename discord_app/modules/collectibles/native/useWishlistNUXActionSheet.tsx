@@ -8,14 +8,14 @@ const require = arg1;
 let result = require("fetchFingerprint").fileFinishedImporting("modules/collectibles/native/useWishlistNUXActionSheet.tsx");
 
 export default function useWishlistNUXActionSheet() {
-  let obj = _require(589);
+  let obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const items = [fetchFingerprint];
   _require = obj.useStateFromStores(items, () => id.getId());
   const items1 = [createUserWidgetFromServer];
-  const stateFromStores = _require(589).useStateFromStores(items1, () => outer1_4.getFirstWishlistId(closure_0));
-  let obj2 = _require(589);
+  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => outer1_4.getFirstWishlistId(closure_0));
+  let obj2 = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const items2 = [createUserWidgetFromServer];
-  let stateFromStores1 = _require(589).useStateFromStores(items2, () => {
+  let stateFromStores1 = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
     const userProfile = outer1_4.getUserProfile(closure_0);
     let tmp2 = null != userProfile;
     if (tmp2) {
@@ -26,7 +26,7 @@ export default function useWishlistNUXActionSheet() {
   if (stateFromStores1) {
     stateFromStores1 = null == stateFromStores;
   }
-  const obj3 = _require(589);
+  const obj3 = _require("../../../../discord_common/js/packages/flux/index.tsx");
   if (stateFromStores1) {
     stateFromStores1 = !tmpResult.useIsDismissibleContentDismissed_UNSAFE(tmp(1358).DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET);
   }
@@ -46,13 +46,13 @@ export default function useWishlistNUXActionSheet() {
 };
 export const useHasNeverWishlisted = function useHasNeverWishlisted() {
   const items = [fetchFingerprint];
-  _require = _require(589).useStateFromStores(items, () => id.getId());
-  const obj = _require(589);
+  _require = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => id.getId());
+  const obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const items1 = [createUserWidgetFromServer];
-  const stateFromStores = _require(589).useStateFromStores(items1, () => outer1_4.getFirstWishlistId(closure_0));
-  const obj2 = _require(589);
+  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => outer1_4.getFirstWishlistId(closure_0));
+  const obj2 = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const items2 = [createUserWidgetFromServer];
-  let stateFromStores1 = _require(589).useStateFromStores(items2, () => {
+  let stateFromStores1 = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
     const userProfile = outer1_4.getUserProfile(closure_0);
     let tmp2 = null != userProfile;
     if (tmp2) {

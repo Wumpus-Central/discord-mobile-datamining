@@ -2,7 +2,7 @@
 import { MessageAttachmentFlags } from "ME";
 
 function messageAttachmentToUnfurledMediaItem(flags) {
-  let obj = require(1384) /* hasFlag */;
+  let obj = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
   let num = flags.flags;
   if (num == null) {
     num = 0;
@@ -69,11 +69,11 @@ export const getUnfurledMediaItemType = function getUnfurledMediaItemType(conten
         if (null != obj3.toURLSafe(contentType.proxyUrl)) {
           str3 = "VIDEO";
         }
-        obj3 = importDefault(1467);
+        obj3 = require("../../utils/URLUtils.tsx");
       }
     }
     str = str3;
-    tmpResult = require(4472) /* urlMatchesFileExtension */;
+    tmpResult = require("../messages/MediaFormatTesters.tsx") /* urlMatchesFileExtension */;
   }
   return str;
 };
@@ -87,7 +87,7 @@ export const messageAttachmentToMediaItem = function messageAttachmentToMediaIte
       str2 = "VIDEO";
     }
     str = str2;
-    tmp2Result = require(4472) /* urlMatchesFileExtension */;
+    tmp2Result = require("../messages/MediaFormatTesters.tsx") /* urlMatchesFileExtension */;
   }
   obj.type = str;
   obj.alt = found2.description;
@@ -118,7 +118,7 @@ export const getMediaItemDisplayUrl = function getMediaItemDisplayUrl(type) {
   } else {
     if ("VIDEO" === type.type) {
       if (null != type.proxyUrl) {
-        let str = importDefault(1467).toURLSafe(type.proxyUrl);
+        let str = require("../../utils/URLUtils.tsx").toURLSafe(type.proxyUrl);
         str = null;
         if (null != str) {
           const searchParams = str.searchParams;

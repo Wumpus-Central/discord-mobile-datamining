@@ -51,8 +51,8 @@ export const parseBioReactWithCachedAST = function parseBioReactWithCachedAST(de
       value = tmp4;
     }
     obj = tmp4;
-    const obj2 = importDefault(3984);
-    return obj2.reactFor(importDefault(3984).ruleOutput(closure_2, "react"))(value);
+    const obj2 = require("../../../_runtime/03984_t.js");
+    return obj2.reactFor(require("../../../_runtime/03984_t.js").ruleOutput(closure_2, "react"))(value);
   }
 };
 export const parseBioReactWithoutScrolling = reactParserForResult1;

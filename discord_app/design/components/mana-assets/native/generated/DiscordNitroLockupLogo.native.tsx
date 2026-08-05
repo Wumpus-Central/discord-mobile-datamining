@@ -11,7 +11,7 @@ export const DiscordNitroLockupLogo = function DiscordNitroLockupLogo(color) {
   let ICON_STRONG = color.color;
   ({ accessible, accessibilityLabel, resizeMode } = color);
   if (ICON_STRONG === undefined) {
-    ICON_STRONG = importDefault(712).colors.ICON_STRONG;
+    ICON_STRONG = require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.ICON_STRONG;
   }
   let num = color.width;
   if (num === undefined) {
@@ -25,7 +25,7 @@ export const DiscordNitroLockupLogo = function DiscordNitroLockupLogo(color) {
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = require(3989) /* map */;
+  let obj = require("../../../../tokens/native/useToken.tsx") /* map */;
   const token = obj.useToken(ICON_STRONG);
   if (null != token) {
     obj = { tintColor: null };
@@ -40,7 +40,7 @@ export const DiscordNitroLockupLogo = function DiscordNitroLockupLogo(color) {
     tmp5 = null != ICON_STRONG && typeof ICON_STRONG === "string";
   }
   const obj1 = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj1[1] = { uri: importDefault(6132) };
+  obj1[1] = { uri: require("../../../../../../discord_assets/assets/mana/asset-library/generated/DiscordNitroLockupLogo-2x.png.js") };
   const items = [{ width: num * num3, height: num2 * num3 }, tmp6];
   obj1[2] = items;
   obj1[3] = accessible;

@@ -17,7 +17,7 @@ let c3 = importAllResult;
 let closure_8 = createCacheKey.createStyles({ container: { flex: 1, overflow: "hidden", paddingTop: CONTROLS_DRAWER_HEADER_SIZE }, gradientWrapper: { position: "absolute", top: CONTROLS_DRAWER_HEADER_SIZE, left: 0 }, titleBlur: { opacity: 0 } });
 let closure_9 = { code: "function VoicePanelChatViewTsx1(){const{windowDimensions}=this.__closure;return{width:windowDimensions.get().width,height:windowDimensions.get().height};}" };
 let closure_10 = importAllResult.memo(() => {
-  const windowDimensions = importAllResult.useContext(importDefault(11557)).windowDimensions;
+  const windowDimensions = importAllResult.useContext(require("../VoicePanelStateContext.tsx")).windowDimensions;
   let obj = windowDimensions(4146);
   const fn = function n() {
     return { width: windowDimensions.get().width, height: windowDimensions.get().height };
@@ -29,8 +29,8 @@ let closure_10 = importAllResult.memo(() => {
   obj = { style: items, children: null };
   items = [callback2().gradientWrapper, animatedStyle];
   const tmp = callback2();
-  obj[1] = callback(importDefault(4814), { absolute: true });
-  return callback(importDefault(7819), obj);
+  obj[1] = callback(require("../../../client_themes/native/ThemedGradient.tsx"), { absolute: true });
+  return callback(require("../../../core/native/ReanimatedNativeView.tsx"), obj);
 });
 const memoResult = importAllResult.memo(function VoicePanelDismissChatButton() {
   const callback = importAllResult.useCallback(() => {
@@ -39,19 +39,19 @@ const memoResult = importAllResult.memo(function VoicePanelDismissChatButton() {
   }, []);
   if (tmp3) {
     let obj = { accessibilityLabel: null, icon: null, onPress: null };
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    obj[0] = intl2.string(require(1236) /* getSystemLocale */.t["5MstTl"]);
+    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[0] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["5MstTl"]);
     obj[1] = tmp(4240);
     obj[2] = callback;
     let tmp5Result = tmp5(tmp(11553), obj);
     const tmpResult = tmp(11553);
   } else {
     obj = { accessibilityLabel: null, icon: null, onPress: null, variant: "primary-overlay" };
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[0] = intl.string(require(1236) /* getSystemLocale */.t["5MstTl"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["5MstTl"]);
     obj[1] = tmp(4240);
     obj[2] = callback;
-    tmp5Result = tmp5(require(7672) /* IconButton */.IconButton, obj);
+    tmp5Result = tmp5(require("../../../../design/components/Button/native/IconButton.native.tsx") /* IconButton */.IconButton, obj);
   }
   return tmp5Result;
 });

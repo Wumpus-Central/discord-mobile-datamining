@@ -14,7 +14,7 @@ export const AVErrorStreamSendHighPacketLossDefinition = {
     } else if (0 === obj.getViewerIds(currentUserActiveStream).length) {
       return null;
     } else {
-      rTCConnection = rTCConnection.getRTCConnection(require(4348) /* isStreamKey */.encodeStreamKey(currentUserActiveStream));
+      rTCConnection = rTCConnection.getRTCConnection(require("../../../go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */.encodeStreamKey(currentUserActiveStream));
       let mediaEngineConnectionId;
       if (rTCConnection != null) {
         mediaEngineConnectionId = rTCConnection.getMediaEngineConnectionId();
@@ -39,7 +39,7 @@ export const AVErrorStreamSendHighPacketLossDefinition = {
         }
         return tmp6;
       }
-      const obj5 = require(4348) /* isStreamKey */;
+      const obj5 = require("../../../go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */;
     }
   },
   makeErrorContextKey(streamKey) {

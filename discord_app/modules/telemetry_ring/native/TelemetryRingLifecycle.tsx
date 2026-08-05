@@ -27,10 +27,10 @@ prototype["_updateZoomedInExport"] = function _updateZoomedInExport() {
   const state = getState.getState();
   let shouldRunResult = state === AppStates.ACTIVE;
   if (shouldRunResult) {
-    shouldRunResult = importDefault(13362).shouldRun();
-    const obj = importDefault(13362);
+    shouldRunResult = require("channels/ZoomedInTelemetry.tsx").shouldRun();
+    const obj = require("channels/ZoomedInTelemetry.tsx");
   }
-  const result = importDefault(7055).setShouldCollectHermesInstrumentedStats(shouldRunResult);
+  const result = require("../../../utils/ProcessUtils.native.tsx").setShouldCollectHermesInstrumentedStats(shouldRunResult);
   if (state === AppStates.ACTIVE) {
     let tmp6Result = tmp6(13362);
     tmp6Result.start();
@@ -59,7 +59,7 @@ prototype["_initialize"] = function _initialize() {
 };
 prototype["_terminate"] = function _terminate() {
   const self = this;
-  importDefault(709).unsubscribe("LOGOUT", this._handleLogout);
+  require("../../../Dispatcher.tsx").unsubscribe("LOGOUT", this._handleLogout);
   getState.removeChangeListener(this._handleEligibilityChange);
   mergeGuildAvatar.removeChangeListener(this._handleEligibilityChange);
   if (null != this._experimentUnsubscribe) {

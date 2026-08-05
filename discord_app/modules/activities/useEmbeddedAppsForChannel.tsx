@@ -10,7 +10,7 @@ function useEmbeddedApps(arr, arg1) {
   const _require = arr;
   const importDefault = arg1;
   let mapped = arr.map((applicationId) => applicationId.applicationId);
-  const tmp2 = importDefault(5616)(mapped);
+  const tmp2 = require("../applications/useGetOrFetchApplications.tsx")(mapped);
   const dependencyMap = tmp2;
   const set = new Set([]);
   const iter = arr[Symbol.iterator]();
@@ -26,7 +26,7 @@ function useEmbeddedApps(arr, arg1) {
   }
   let items = [mergeGuildAvatar];
   const items1 = [set];
-  const stateFromStoresArray = _require(589).useStateFromStoresArray(items, () => {
+  const stateFromStoresArray = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
     const items = [];
     for (const item10006 of set) {
       let tmp = outer1_5;
@@ -78,7 +78,7 @@ let result = require("mergeGuildAvatar").fileFinishedImporting("modules/activiti
 export default function useEmbeddedAppsForChannel(arg0, arg1) {
   const _require = arg0;
   const items = [participantFromServer];
-  return useEmbeddedApps(_require(589).useStateFromStoresArray(items, () => {
+  return useEmbeddedApps(_require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
     if (null != closure_0) {
       if (null != tmp.id) {
         if ("" !== tmp.id) {
@@ -93,7 +93,7 @@ export default function useEmbeddedAppsForChannel(arg0, arg1) {
 export const useEmbeddedAppsByChannel = function useEmbeddedAppsByChannel(arg0) {
   const _require = arg0;
   let items = [participantFromServer];
-  const tmp = useEmbeddedApps(_require(589).useStateFromStores(items, () => {
+  const tmp = useEmbeddedApps(_require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null != closure_0) {
       let embeddedActivitiesForGuild = outer1_6.getEmbeddedActivitiesForGuild(tmp);
     } else {
@@ -125,7 +125,7 @@ export const useEmbeddedAppsWithPresence = function useEmbeddedAppsWithPresence(
   const _require = arg0;
   const items = [sortActivity];
   const items1 = [arg0];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const map = new Map();
     const item = map.forEach((embeddedActivity) => {
       let value;
@@ -156,5 +156,5 @@ export const useEmbeddedAppsWithPresence = function useEmbeddedAppsWithPresence(
       const result = map.set(id, obj);
     });
     return map;
-  }, items1, _require(589).statesWillNeverBeEqual);
+  }, items1, _require("../../../discord_common/js/packages/flux/index.tsx").statesWillNeverBeEqual);
 };

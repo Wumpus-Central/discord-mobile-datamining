@@ -34,11 +34,11 @@ export default function ForumPostListBody(arg0) {
   if (isNew) {
     const obj1 = { containerStyle: null };
     obj1[0] = tmp.newTagContainer;
-    isNew = callback(importDefault(11318), obj1);
+    isNew = callback(require("../ForumPostNewTag.tsx"), obj1);
   }
-  const items1 = [isNew, callback(require(11308) /* ForumPostUsername */.ForumPostAuthor, { thread, hasUnreads }), callback(importDefault(11317), { thread, hasUnreads, format: ForumTimestampFormats.POSTED_DURATION_AGO })];
+  const items1 = [isNew, callback(require("../ForumPostUsername.tsx") /* ForumPostUsername */.ForumPostAuthor, { thread, hasUnreads }), callback(require("../ForumPostTimestamp.tsx"), { thread, hasUnreads, format: ForumTimestampFormats.POSTED_DURATION_AGO })];
   obj[1] = items1;
-  const items2 = [closure_6(View, obj), callback(importDefault(11319), { title: thread.name, lineClamp: 2, ellipsizeMode: "tail", hasUnreads }), callback(importDefault(11327), { messageContent, message: firstMessage, isMessageDeleted: false, messageLoaded: firstMessageLoaded, hasUnreads, senderModifier })];
+  const items2 = [closure_6(View, obj), callback(require("../ForumPostTitle.tsx"), { title: thread.name, lineClamp: 2, ellipsizeMode: "tail", hasUnreads }), callback(require("../ForumPostMessageContent.tsx"), { messageContent, message: firstMessage, isMessageDeleted: false, messageLoaded: firstMessageLoaded, hasUnreads, senderModifier })];
   obj[1] = items2;
   const items3 = [closure_6(View, obj), ];
   let blocked;
@@ -60,7 +60,7 @@ export default function ForumPostListBody(arg0) {
       }
       obj4[4] = id;
       obj4[5] = tmp.thumbnailContainer;
-      tmp7Result = callback(require(11312) /* ForumPostMediaAndroid */.ForumPostMediaThumbnail, obj4);
+      tmp7Result = callback(require("../ForumPostMedia.tsx") /* ForumPostMediaAndroid */.ForumPostMediaThumbnail, obj4);
     }
   }
   items3[1] = tmp7Result;

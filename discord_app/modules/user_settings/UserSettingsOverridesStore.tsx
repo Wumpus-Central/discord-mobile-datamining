@@ -61,12 +61,12 @@ UserSettingsOverridesStore.displayName = "UserSettingsOverridesStore";
 UserSettingsOverridesStore.persistKey = "UserSettingsOverridesStore";
 let items = [
   () => {
-    const Storage = require(595) /* Storage */.Storage;
+    const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     let obj = Storage.get("UserSettingsStoreOverrides");
     if (obj == null) {
       obj = {};
     }
-    const Storage2 = require(595) /* Storage */.Storage;
+    const Storage2 = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     Storage2.remove("UserSettingsStoreOverrides");
     return obj;
   }

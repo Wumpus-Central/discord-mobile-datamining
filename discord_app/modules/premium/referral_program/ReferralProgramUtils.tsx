@@ -7,39 +7,39 @@ let result = require("set").fileFinishedImporting("modules/premium/referral_prog
 
 export const getReferralTrialOfferExpirationCopy = function getReferralTrialOfferExpirationCopy(arg0) {
   const diff = arg0 - Date.now();
-  const result = diff / importDefault(687).Millis.HOUR;
+  const result = diff / require("../../../utils/Durations.tsx").Millis.HOUR;
   if (result > 24) {
-    const intl3 = require(1236) /* getSystemLocale */.intl;
+    const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     let obj = { numDays: null };
     const _Math3 = Math;
     obj[0] = Math.floor(result / 24);
-    let formatToPlainStringResult = intl3.formatToPlainString(require(1236) /* getSystemLocale */.t["g9s+dA"], obj);
+    let formatToPlainStringResult = intl3.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["g9s+dA"], obj);
   } else if (result >= 1) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { numHours: null };
     const _Math2 = Math;
     obj[0] = Math.floor(result);
-    formatToPlainStringResult = intl2.formatToPlainString(require(1236) /* getSystemLocale */.t.k9v33y, obj);
+    formatToPlainStringResult = intl2.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.k9v33y, obj);
   } else {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { numMinutes: null };
     const _Math = Math;
     obj[0] = Math.floor(60 * result);
-    formatToPlainStringResult = intl.formatToPlainString(require(1236) /* getSystemLocale */.t["/d0GmT"], obj);
+    formatToPlainStringResult = intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["/d0GmT"], obj);
   }
   return formatToPlainStringResult;
 };
 export const useIsReferralProgramEntrypointBadgeAcknowledged = function useIsReferralProgramEntrypointBadgeAcknowledged() {
-  return require(4101) /* UNSAFE_isDismissibleContentDismissed */.useIsDismissibleContentDismissed_UNSAFE(require(1358) /* DismissibleContent */.DismissibleContent.REFERRAL_PROGRAM_ENTRYPOINT_NITRO_TAB_BADGE);
+  return require("../../dismissible_content/DismissibleContentUnsafeUtils.tsx") /* UNSAFE_isDismissibleContentDismissed */.useIsDismissibleContentDismissed_UNSAFE(require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.REFERRAL_PROGRAM_ENTRYPOINT_NITRO_TAB_BADGE);
 };
 export const markReferralProgramEntrypointBadgeAcknowledged = function markReferralProgramEntrypointBadgeAcknowledged() {
-  const result = require(4101) /* UNSAFE_isDismissibleContentDismissed */.UNSAFE_markDismissibleContentAsDismissed(require(1358) /* DismissibleContent */.DismissibleContent.REFERRAL_PROGRAM_ENTRYPOINT_NITRO_TAB_BADGE);
+  const result = require("../../dismissible_content/DismissibleContentUnsafeUtils.tsx") /* UNSAFE_isDismissibleContentDismissed */.UNSAFE_markDismissibleContentAsDismissed(require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.REFERRAL_PROGRAM_ENTRYPOINT_NITRO_TAB_BADGE);
 };
 export const isReferralProgramBadgeAcknowledged = function isReferralProgramBadgeAcknowledged() {
-  return require(4101) /* UNSAFE_isDismissibleContentDismissed */.UNSAFE_isDismissibleContentDismissed(require(1358) /* DismissibleContent */.DismissibleContent.REFERRAL_PROGRAM_NITRO_TAB_BADGE);
+  return require("../../dismissible_content/DismissibleContentUnsafeUtils.tsx") /* UNSAFE_isDismissibleContentDismissed */.UNSAFE_isDismissibleContentDismissed(require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.REFERRAL_PROGRAM_NITRO_TAB_BADGE);
 };
 export const markReferralProgramBadgeAcknowledged = function markReferralProgramBadgeAcknowledged() {
-  const result = require(4101) /* UNSAFE_isDismissibleContentDismissed */.UNSAFE_markDismissibleContentAsDismissed(require(1358) /* DismissibleContent */.DismissibleContent.REFERRAL_PROGRAM_NITRO_TAB_BADGE);
+  const result = require("../../dismissible_content/DismissibleContentUnsafeUtils.tsx") /* UNSAFE_isDismissibleContentDismissed */.UNSAFE_markDismissibleContentAsDismissed(require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.REFERRAL_PROGRAM_NITRO_TAB_BADGE);
 };
 export const useIsReferralProgramBadgeShowable = function useIsReferralProgramBadgeShowable(trialOffer) {
   trialOffer = trialOffer.trialOffer;
@@ -48,7 +48,7 @@ export const useIsReferralProgramBadgeShowable = function useIsReferralProgramBa
   } else {
     let tmp = undefined !== trialOffer.referrer_id;
     const _Date = Date;
-    const date = new Date(importDefault(11).extractTimestamp(trialOffer.id));
+    const date = new Date(require("../../../utils/SnowflakeUtils.tsx").extractTimestamp(trialOffer.id));
     const _Date2 = Date;
     const date1 = new Date();
     if (tmp) {
@@ -64,25 +64,25 @@ export const markReferralProgramPopoverSeen = function markReferralProgramPopove
   if (null != promotionId) {
     let obj = { dismissAction: null };
     obj[0] = ContentDismissActionType.INDIRECT_ACTION;
-    const result = require(1360) /* addVersionedDismissedContent */.markSnowflakeBoundDismissibleContentAsDismissed(require(1358) /* DismissibleContent */.DismissibleContent.REFERRAL_PROGRAM_POPOVER_V2, promotionId, obj);
-    const obj2 = require(1360) /* addVersionedDismissedContent */;
+    const result = require("../../dismissible_content/DismissibleContentUtils.tsx") /* addVersionedDismissedContent */.markSnowflakeBoundDismissibleContentAsDismissed(require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.REFERRAL_PROGRAM_POPOVER_V2, promotionId, obj);
+    const obj2 = require("../../dismissible_content/DismissibleContentUtils.tsx") /* addVersionedDismissedContent */;
   } else {
-    obj = require(4101) /* UNSAFE_isDismissibleContentDismissed */;
-    const result1 = obj.UNSAFE_markDismissibleContentAsDismissed(require(1358) /* DismissibleContent */.DismissibleContent.REFERRAL_PROGRAM_POPOVER);
+    obj = require("../../dismissible_content/DismissibleContentUnsafeUtils.tsx") /* UNSAFE_isDismissibleContentDismissed */;
+    const result1 = obj.UNSAFE_markDismissibleContentAsDismissed(require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.REFERRAL_PROGRAM_POPOVER);
   }
 };
 export const isReferralProgramPopoverSeen = function isReferralProgramPopoverSeen() {
-  return require(4101) /* UNSAFE_isDismissibleContentDismissed */.UNSAFE_isDismissibleContentDismissed(require(1358) /* DismissibleContent */.DismissibleContent.REFERRAL_PROGRAM_POPOVER);
+  return require("../../dismissible_content/DismissibleContentUnsafeUtils.tsx") /* UNSAFE_isDismissibleContentDismissed */.UNSAFE_isDismissibleContentDismissed(require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.REFERRAL_PROGRAM_POPOVER);
 };
 export const useIsReferralProgramPopoverShowable = function useIsReferralProgramPopoverShowable() {
-  let isEligibleSenderForReferralProgram = require(7972) /* useIsEligibleSenderForReferralProgram */.useIsEligibleSenderForReferralProgram(false);
-  const obj = require(7972) /* useIsEligibleSenderForReferralProgram */;
+  let isEligibleSenderForReferralProgram = require("hooks/useIsEligibleSenderForReferralProgram.tsx") /* useIsEligibleSenderForReferralProgram */.useIsEligibleSenderForReferralProgram(false);
+  const obj = require("hooks/useIsEligibleSenderForReferralProgram.tsx") /* useIsEligibleSenderForReferralProgram */;
   const items = [emitChanges];
-  const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => store.getReferralsRemaining());
-  const obj2 = require(589) /* initialize */;
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => store.getReferralsRemaining());
+  const obj2 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items1 = [emitChanges];
-  const stateFromStores1 = require(589) /* initialize */.useStateFromStores(items1, () => store.getReminderStateId());
-  const obj3 = require(589) /* initialize */;
+  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items1, () => store.getReminderStateId());
+  const obj3 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   if (obj4.useIsReferralReminderDCExperimentEnabled({ location: "ReferralProgramUtils" })) {
     let tmp8 = null != stateFromStores1;
     if (tmp8) {

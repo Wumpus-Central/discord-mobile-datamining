@@ -54,14 +54,14 @@ function MemberRow(arg0) {
   let userId;
   ({ disabled, checked } = arg0);
   ({ start, end, guildId, userId, onPress } = arg0);
-  let obj = require(4003) /* useCheckboxA11yNative */;
+  let obj = require("../../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx") /* useCheckboxA11yNative */;
   const checkboxA11yNative = obj.useCheckboxA11yNative({ checked, disabled });
   ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
   obj = { start, end, guildId, userId, onPress, disabled, trailing: null, accessibilityRole: null, accessibilityState: null };
-  obj[6] = callback2(require(7779) /* FormCheckbox */.FormCheckbox, { checked });
+  obj[6] = callback2(require("../../../../../design/components/Forms/native/FormCheckbox.native.tsx") /* FormCheckbox */.FormCheckbox, { checked });
   obj[7] = accessibilityRole;
   obj[8] = accessibilityState;
-  return callback2(importDefault(9614), obj);
+  return callback2(require("../../../native/DetailedGuildIdentityUserRow.tsx"), obj);
 }
 class AddMembersBody {
   constructor(arg0) {

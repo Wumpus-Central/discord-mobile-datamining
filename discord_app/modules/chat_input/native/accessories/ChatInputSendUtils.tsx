@@ -138,9 +138,9 @@ function chatInputValidateContentLength(arg0) {
       mentionGames = applicationCommandManager.getMentionGames();
     }
   }
-  let obj1 = importDefault(7062);
+  let obj1 = require("../../../messages/MessageParser.tsx");
   const parsed = obj1.parse(params.channel, text, undefined, mentionGames);
-  let obj2 = require(8164) /* useMessageMaxLength */;
+  let obj2 = require("../../../messages/useMessageMaxLength.tsx") /* useMessageMaxLength */;
   if (parsed.content.length <= obj2.getMaxMessageLength()) {
     return parsed;
   } else {
@@ -177,10 +177,10 @@ function chatInputValidateContentLength(arg0) {
 function showFileSizeExceededAlert(c8, outer1_2) {
   let sizeStringResult = dependencyMap;
   const currentUser = authStore.getCurrentUser();
-  let obj = importDefault(3931);
+  let obj = require("../../../../utils/PremiumUtils.tsx");
   if (obj.canUploadLargeFiles(currentUser)) {
     let obj6 = require;
-    const kestrelConfig = require(4863) /* KESTREL_GA_UPLOAD_LIMIT_MB */.getKestrelConfig({ location: "native.showFileSizeExceededAlert" });
+    const kestrelConfig = require("../../../media_uploads/experiments/KestrelExperiment.tsx") /* KESTREL_GA_UPLOAD_LIMIT_MB */.getKestrelConfig({ location: "native.showFileSizeExceededAlert" });
     let tmp2Result = tmp2(4623);
     if (kestrelConfig.enabled) {
       if (!kestrelConfig.isGA) {
@@ -199,7 +199,7 @@ function showFileSizeExceededAlert(c8, outer1_2) {
     }
     const intl2 = obj6(1236).intl;
     stringResult = intl2.string(obj6(1236).t["/tGlcj"]);
-    const obj7 = require(4863) /* KESTREL_GA_UPLOAD_LIMIT_MB */;
+    const obj7 = require("../../../media_uploads/experiments/KestrelExperiment.tsx") /* KESTREL_GA_UPLOAD_LIMIT_MB */;
   } else {
     tmp2Result = tmp2(8173);
     const obj1 = { initialUpsellKey: null, analyticsLocation: null, analyticsLocations: null, analyticsProperties: null, largestFileSize: null };
@@ -378,7 +378,7 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
       const tmp2 = chatInputValidateContentLength(obj);
       dependencyMap = tmp2;
       if (null != tmp2) {
-        const RESTRICTIONS = require(9826) /* items */.RESTRICTIONS;
+        const RESTRICTIONS = require("../../../../utils/ChatRestrictions.tsx") /* items */.RESTRICTIONS;
         const iter = RESTRICTIONS[Symbol.iterator]();
         while (iter !== undefined) {
           let checkResult = iter.next().check(text, channel, null != channel.getGuildId());
@@ -391,18 +391,18 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
             obj = { title: null, body: null, confirmText: null, onConfirm: null, cancelText: null };
             let tmp11 = require;
             let tmp12 = require;
-            let intl = require(1236) /* getSystemLocale */.intl;
-            obj[0] = intl.string(require(1236) /* getSystemLocale */.t.mY3Y38);
+            let intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+            obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.mY3Y38);
             obj[1] = checkResult.body;
-            let intl2 = require(1236) /* getSystemLocale */.intl;
-            obj[2] = intl2.string(require(1236) /* getSystemLocale */.t.KJnHq3);
+            let intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+            obj[2] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.KJnHq3);
             obj[3] = function onConfirm() {
               const obj = { text: closure_0, parsedMessage: c2, tts: "accessibilityRole", source: "Array", params: "isArray" };
               obj[4] = params;
               outer1_13(obj);
             };
-            let intl3 = require(1236) /* getSystemLocale */.intl;
-            obj[4] = intl3.string(require(1236) /* getSystemLocale */.t.fsBWmS);
+            let intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+            obj[4] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.fsBWmS);
             let showResult = obj1.show(obj);
             let tmp14 = iter;
             iter.return();
@@ -422,7 +422,7 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
             params(4253).openLazy(tmp19(1959)(11301, tmp20.paths), "add-media-to-original-forum-post", obj);
             const obj6 = params(4253);
           }
-          obj4 = require(8216) /* isMediaAttachment */;
+          obj4 = require("../../../forums/ForumPostMediaUtils.tsx") /* isMediaAttachment */;
           const tmp18 = require;
           tmp19 = require;
           tmp20 = dependencyMap;
@@ -438,7 +438,7 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
 };
 export const chatInputCreateThread = function chatInputCreateThread(text) {
   text = text.text;
-  let obj = require(8164) /* useMessageMaxLength */;
+  let obj = require("../../../messages/useMessageMaxLength.tsx") /* useMessageMaxLength */;
   if (text.length > obj.getMaxMessageLength()) {
     if (!obj2.canUseIncreasedMessageLength(authStore.getCurrentUser())) {
       obj = { initialUpsellKey: null, analyticsProperties: null };
@@ -448,7 +448,7 @@ export const chatInputCreateThread = function chatInputCreateThread(text) {
       obj[1] = obj;
       const result = tmp2(8173).handleShowUpsellAlert(obj);
     }
-    obj2 = importDefault(3931);
+    obj2 = require("../../../../utils/PremiumUtils.tsx");
     tmp2 = importDefault;
   }
   const result1 = text.threadCreationCallback(text);

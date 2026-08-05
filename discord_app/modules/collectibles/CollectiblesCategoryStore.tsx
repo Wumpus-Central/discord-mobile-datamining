@@ -313,7 +313,7 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(require("dispatc
     dependencyMap2[skuId] = { state: "error", startedAt, endedAt, error };
     let obj = dependencyMap[skuId];
     if (null == obj) {
-      const tmp10 = new importDefault(584)(closure_5, closure_6);
+      const tmp10 = new require("../../../discord_common/js/packages/backoff/Backoff.tsx")(closure_5, closure_6);
       dependencyMap[skuId] = tmp10;
       obj = tmp10;
     }

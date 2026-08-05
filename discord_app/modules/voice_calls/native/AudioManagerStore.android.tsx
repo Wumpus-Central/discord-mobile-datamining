@@ -15,7 +15,7 @@ class AudioManagerStore extends Store {
 const prototype = AudioManagerStore.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
-  const audioDevices = importDefault(9075).getAudioDevices();
+  const audioDevices = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioManagerModule.tsx").getAudioDevices();
   audioDevices.then((arg0) => {
     let outer1_6 = arg0;
     self.emitChange();
@@ -24,8 +24,8 @@ prototype["initialize"] = function initialize() {
       closure_0.emitChange();
     });
   });
-  const obj = importDefault(9075);
-  const activeAudioDevice = importDefault(9075).getActiveAudioDevice();
+  const obj = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioManagerModule.tsx");
+  const activeAudioDevice = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioManagerModule.tsx").getActiveAudioDevice();
   activeAudioDevice.then((arg0) => {
     let outer1_7 = arg0;
     self.emitChange();
@@ -34,8 +34,8 @@ prototype["initialize"] = function initialize() {
       closure_0.emitChange();
     });
   });
-  const obj2 = importDefault(9075);
-  importDefault(9075).setSCORetryCount(4);
+  const obj2 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioManagerModule.tsx");
+  require("../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioManagerModule.tsx").setSCORetryCount(4);
 };
 prototype["getAudioDevices"] = function getAudioDevices() {
   return closure_6;
@@ -55,10 +55,10 @@ const audioManagerStore = new AudioManagerStore(require("dispatcher"), {
       const state = context.state;
       if (RTCConnectionStates.CONNECTING === state) {
         let c9 = true;
-        const result = importDefault(9075).setCommunicationModeOn(true);
+        const result = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioManagerModule.tsx").setCommunicationModeOn(true);
         let tmp8 = enforcing !== enforcing;
         if (tmp8) {
-          tmp8 = enforcing.simpleDeviceType !== require(9075) /* enforcing */.AudioDeviceType.INVALID;
+          tmp8 = enforcing.simpleDeviceType !== require("../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioManagerModule.tsx") /* enforcing */.AudioDeviceType.INVALID;
         }
         if (tmp8) {
           let tmp4Result = tmp4(12);
@@ -74,11 +74,11 @@ const audioManagerStore = new AudioManagerStore(require("dispatcher"), {
             const tmp4Result1 = tmp4(9075);
           }
         }
-        const obj2 = importDefault(9075);
+        const obj2 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioManagerModule.tsx");
       } else if (tmp13.DISCONNECTED === state) {
         if (!context.willReconnect) {
           c9 = false;
-          obj = importDefault(9075);
+          obj = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioManagerModule.tsx");
           const result1 = obj.setCommunicationModeOn(false);
         }
       }
@@ -87,7 +87,7 @@ const audioManagerStore = new AudioManagerStore(require("dispatcher"), {
   NATIVE_AUDIO_SET_OUTPUT_DEVICE: function handleSetActiveAudioDevice(device) {
     device = device.device;
     if (c9) {
-      let obj = importDefault(12);
+      let obj = require("../../../../_runtime/00012_apply.js");
       if (obj.isString(device)) {
         let tmpResult = tmp(1208);
         obj = { extra: null };

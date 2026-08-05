@@ -1,20 +1,20 @@
 // discord_app/modules/guild_settings/GuildSettingsConstants.tsx
 const obj = {
   afk_channel_id() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.KuYcnU);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.KuYcnU);
   },
   public_updates_channel_id() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.vAyDGU);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.vAyDGU);
   },
   safety_alerts_channel_id() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.sMkYE8);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.sMkYE8);
   },
   system_channel_id() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.NASFnq);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.NASFnq);
   }
 };
 const result = require("set").fileFinishedImporting("modules/guild_settings/GuildSettingsConstants.tsx");

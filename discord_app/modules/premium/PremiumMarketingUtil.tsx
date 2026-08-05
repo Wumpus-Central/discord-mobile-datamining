@@ -7,13 +7,13 @@ let obj1;
 const result = require("pushLayer").fileFinishedImporting("modules/premium/PremiumMarketingUtil.tsx");
 
 export const navigateToPremiumHomePage = function navigateToPremiumHomePage() {
-  require(5925) /* openUserSettings */.openUserSettings({ screen: constants2.PREMIUM });
+  require("../user_settings/core/native/openUserSettings.tsx") /* openUserSettings */.openUserSettings({ screen: constants2.PREMIUM });
 };
 export const navigateToNitroHomePage = function navigateToNitroHomePage(arg0) {
   if (arg0 != null) {
     arg0();
   }
-  require(6955) /* pushLayer */.popLayer();
-  const obj = require(6955) /* pushLayer */;
-  require(1222) /* transitionTo */.transitionTo(constants.APPLICATION_STORE);
+  require("../../actions/LayerActionCreators.tsx") /* pushLayer */.popLayer();
+  const obj = require("../../actions/LayerActionCreators.tsx") /* pushLayer */;
+  require("../routing/router_utils.tsx") /* transitionTo */.transitionTo(constants.APPLICATION_STORE);
 };

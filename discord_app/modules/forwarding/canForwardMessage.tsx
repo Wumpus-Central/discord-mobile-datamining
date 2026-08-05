@@ -52,8 +52,8 @@ function canForwardMessage(state) {
       hasItem = null == state.activityInstance;
     }
     if (hasItem) {
-      hasItem = 0 === require(1384) /* hasFlag */.removeFlag(state.flags, closure_10);
-      const obj5 = require(1384) /* hasFlag */;
+      hasItem = 0 === require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.removeFlag(state.flags, closure_10);
+      const obj5 = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
     }
     if (hasItem) {
       const channel = obj3.getChannel(state.channel_id);
@@ -106,5 +106,5 @@ export { canForwardMessage };
 export const useCanForwardMessage = function useCanForwardMessage(message) {
   const _require = message;
   const items = [getUncachedChannelPermissions, isSubscriptionGated, ensureGuildLoaded, createGuildRecordFromRust];
-  return _require(589).useStateFromStores(items, () => outer1_11(closure_0, outer1_5, outer1_2, outer1_3, outer1_4));
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_11(closure_0, outer1_5, outer1_2, outer1_3, outer1_4));
 };

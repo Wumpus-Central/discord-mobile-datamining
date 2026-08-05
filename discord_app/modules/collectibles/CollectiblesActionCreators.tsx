@@ -24,11 +24,11 @@ function openCollectiblesShop(arg0) {
   openCollectiblesShopMobile(Object.assign(arg0, Object.create(null)));
 }
 function openCollectiblesShopMobile(screen) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "COLLECTIBLES_SHOP_OPEN" };
   const merged = Object.assign(screen);
   obj.dispatch(obj);
-  let obj2 = require(4137) /* getRootNavigationRef */;
+  let obj2 = require("../main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */;
   const rootNavigationRef = obj2.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
@@ -63,9 +63,9 @@ function openCollectiblesShopMobile(screen) {
   }
 }
 function closeCollectiblesShop() {
-  importDefault(709).dispatch({ type: "COLLECTIBLES_SHOP_CLOSE" });
-  const obj = importDefault(709);
-  require(6955) /* pushLayer */.popLayer();
+  require("../../Dispatcher.tsx").dispatch({ type: "COLLECTIBLES_SHOP_CLOSE" });
+  const obj = require("../../Dispatcher.tsx");
+  require("../../actions/LayerActionCreators.tsx") /* pushLayer */.popLayer();
 }
 function _fetchCollectiblesCategories() {
   const self = this;
@@ -1285,14 +1285,14 @@ export const isCollectiblesShopOpen = function isCollectiblesShopOpen() {
   return tmp2;
 };
 export const dispatchOpenCollectiblesShop = function dispatchOpenCollectiblesShop(arg0) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "COLLECTIBLES_SHOP_OPEN" };
   const merged = Object.assign(arg0);
   obj.dispatch(obj);
 };
 export { closeCollectiblesShop };
 export const productDetailsOpened = function productDetailsOpened(skuId) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "COLLECTIBLES_PRODUCT_DETAILS_OPEN", skuId };
   obj.dispatch(obj);
 };
@@ -1418,7 +1418,7 @@ export const maybeFetchCollectiblesProduct = function maybeFetchCollectiblesProd
 };
 export const seedCollectiblesProductFromStandaloneLoad = function seedCollectiblesProductFromStandaloneLoad(memo) {
   const timestamp = Date.now();
-  let obj = require(6922) /* getItemRecordsFromPurchases */;
+  let obj = require("CollectiblesUtils.tsx") /* getItemRecordsFromPurchases */;
   const items = [memo];
   const result = obj.extendVariantsProducts(items);
   const iter = result[Symbol.iterator]();
@@ -1429,7 +1429,7 @@ export const seedCollectiblesProductFromStandaloneLoad = function seedCollectibl
     if (null == product.getProduct(nextResult.skuId)) {
       let tmp6 = importDefault;
       let tmp7 = dependencyMap;
-      let obj2 = importDefault(709);
+      let obj2 = require("../../Dispatcher.tsx");
       obj = { type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS", skuId: null, product: null, endedAt: null };
       let tmp8 = nextResult;
       obj[1] = tmp4.skuId;
@@ -1482,17 +1482,17 @@ export const fetchCollectiblesShopHome = function fetchCollectiblesShopHome(clos
   return applyArgumentsResult;
 };
 export const setShopHomeConfigOverride = function setShopHomeConfigOverride(shopHomeConfigOverride) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "COLLECTIBLES_SET_SHOP_HOME_CONFIG_OVERRIDE", shopHomeConfigOverride };
   obj.dispatch(obj);
 };
 export const setShopLayoutUrlOverride = function setShopLayoutUrlOverride(shopLayoutUrlOverride) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "COLLECTIBLES_SET_SHOP_LAYOUT_URL_OVERRIDE", shopLayoutUrlOverride };
   obj.dispatch(obj);
 };
 export const setSkipNumCategories = function setSkipNumCategories(skipNumCategories) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "COLLECTIBLES_SKIP_NUM_CATEGORIES", skipNumCategories };
   obj.dispatch(obj);
 };

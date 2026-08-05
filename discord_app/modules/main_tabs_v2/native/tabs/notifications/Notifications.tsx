@@ -11,7 +11,7 @@ let error;
 let metroImportAll;
 const require = arg1;
 function goBack() {
-  const navigation = require(4137) /* getRootNavigationRef */.getRootNavigationRef();
+  const navigation = require("../../../RootNavigationRef.native.tsx") /* getRootNavigationRef */.getRootNavigationRef();
   if (null != navigation) {
     if (navigation.canGoBack()) {
       navigation.goBack();
@@ -132,10 +132,10 @@ let closure_12 = importAllResult.memo(function HeaderInner(nestedInLaunchPad) {
   nestedInLaunchPad = nestedInLaunchPad.nestedInLaunchPad;
   let _require;
   const tmp = callback3();
-  let obj = _require(8186);
+  let obj = _require("../../../../saved_messages/ForLaterExperiment.tsx");
   const isForLaterExperimentOn = obj.useIsForLaterExperimentOn("NativeNotifications");
   const ref = importAllResult.useRef(null);
-  const tmp8 = importDefault(15391)(ref);
+  const tmp8 = require("../../../../saved_messages/native/useForLaterCoachmark.tsx")(ref);
   _require = tmp8;
   const items = [tmp8];
   const callback = importAllResult.useCallback(() => _undefined(outer1_6.TAKE_ACTION), items);
@@ -187,7 +187,7 @@ let closure_12 = importAllResult.memo(function HeaderInner(nestedInLaunchPad) {
   }
   const obj7 = { children: null };
   obj[1] = tmp10Result;
-  const items4 = [closure_7(_require(5272).SafeAreaPaddingView, obj), ];
+  const items4 = [closure_7(_require("../../../../../components_native/common/SafeAreaView.tsx").SafeAreaPaddingView, obj), ];
   const items5 = [tmp.headerBorder];
   items4[1] = closure_7(View, { style: items5 });
   obj7[0] = items4;

@@ -153,7 +153,7 @@ export const fetchAuthSessions = function fetchAuthSessions() {
   return applyArgumentsResult;
 };
 export const clearAuthSessions = function clearAuthSessions() {
-  importDefault(709).dispatch({ type: "FETCH_AUTH_SESSIONS_SUCCESS", sessions: [] });
+  require("../../Dispatcher.tsx").dispatch({ type: "FETCH_AUTH_SESSIONS_SUCCESS", sessions: [] });
 };
 export const logOutSessions = function logOutSessions(id_hash) {
   const self = this;

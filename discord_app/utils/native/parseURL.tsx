@@ -18,7 +18,7 @@ function parseQuery(arg0) {
   try {
     const _Object = Object;
     const _Object2 = Object;
-    const entries = Object.entries(importDefault(1464).parse(arg0));
+    const entries = Object.entries(require("../../../_runtime/01464_parse.js").parse(arg0));
     return Object.fromEntries(entries.map((arg0) => {
       let tmp;
       let tmp2;
@@ -79,7 +79,7 @@ export default function parseURL(arg0) {
     flag = false;
   }
   let uRL = importDefault;
-  let obj = importDefault(3984);
+  let obj = require("../../../_runtime/03984_t.js");
   const sanitizeUrlResult = obj.sanitizeUrl(arg0);
   if (null == sanitizeUrlResult) {
     obj = { payload: null };
@@ -98,7 +98,7 @@ export default function parseURL(arg0) {
     let tmp87Result = tmp87(str);
     ({ fingerprint, attemptId, installationId, referrer_id, sort, filter } = tmp87Result);
     ({ username, custom_id, link_id } = tmp87Result);
-    let obj1 = require(4269) /* getPathsFromURL */;
+    let obj1 = require("../../modules/coded_links/findCodedLinks.tsx") /* getPathsFromURL */;
     const findCodedLinkResult = obj1.findCodedLink(sanitizeUrlResult);
     if (null != findCodedLinkResult) {
       const type = findCodedLinkResult.type;
@@ -220,7 +220,7 @@ export default function parseURL(arg0) {
         return obj11;
       }
     }
-    const findGiftCodesResult = require(4519) /* _resolveGiftCode */.findGiftCodes(sanitizeUrlResult);
+    const findGiftCodesResult = require("../GiftCodeUtils.tsx") /* _resolveGiftCode */.findGiftCodes(sanitizeUrlResult);
     if (findGiftCodesResult.length > 0) {
       const obj13 = { fingerprint: null, attemptId: null, installationId: null, payload: null };
       obj13[0] = fingerprint;

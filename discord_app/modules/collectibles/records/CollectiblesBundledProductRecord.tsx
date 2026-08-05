@@ -16,7 +16,7 @@ prototype["fromServer"] = function fromServer(arg0) {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(prototype.prototype);
-  obj.prices = importDefault(4326)(prices);
+  obj.prices = require("../../skus/utils/getPricesFromServer.tsx")(prices);
   obj.type = type;
   obj.premiumType = premium_type;
   obj.name = name;

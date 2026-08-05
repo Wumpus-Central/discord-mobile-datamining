@@ -66,20 +66,20 @@ export const EditCollectiblesListItemNone = function EditCollectiblesListItemNon
   let obj = { style: tmp.optionCell };
   const merged = Object.assign(asDefault);
   obj = { source: null, size: null };
-  obj[0] = importDefault(8098);
-  obj[1] = require(1297) /* Button */.IconSizes.LARGE;
-  const items = [callback(require(1297) /* Button */.Icon, obj), ];
+  obj[0] = require("../../../../_runtime/08098_registerAsset.js");
+  obj[1] = require("../../../design/void/native.tsx") /* Button */.IconSizes.LARGE;
+  const items = [callback(require("../../../design/void/native.tsx") /* Button */.Icon, obj), ];
   obj = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: tmp.optionCellText, children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   const string = intl.string;
-  const t = require(1236) /* getSystemLocale */.t;
+  const t = require("../../../intl/index.native.tsx") /* getSystemLocale */.t;
   if (asDefault.asDefault) {
     let stringResult = string(t.CHf9iJ);
   } else {
     stringResult = string(t.PoWNfe);
   }
   obj[3] = stringResult;
-  items[1] = callback(require(4281) /* Text */.Text, obj);
+  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   obj.children = items;
   return closure_8(EditCollectibleListItem, obj);
 };
@@ -123,16 +123,16 @@ export const EditCollectiblesListItemProduct = function EditCollectiblesListItem
   ({ isSelected, isTryItOut, children } = skuId);
   const merged = Object.assign(skuId, Object.create(null));
   const tmp2 = createCacheKey();
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = importDefault(3931);
+  let obj1 = require("../../../utils/PremiumUtils.tsx");
   const canUseCollectiblesResult = obj1.canUseCollectibles(stateFromStores);
-  ({ purchase, product } = importDefault(8088)(skuId));
-  const tmp7 = importDefault(8088)(skuId);
-  const isProductNewResult = require(6922) /* getItemRecordsFromPurchases */.isProductNew(skuId);
-  const obj3 = require(6922) /* getItemRecordsFromPurchases */;
-  let result = require(6922) /* getItemRecordsFromPurchases */.isPremiumCollectiblesProduct(product);
+  ({ purchase, product } = require("../hooks/useCollectiblesData.tsx")(skuId));
+  const tmp7 = require("../hooks/useCollectiblesData.tsx")(skuId);
+  const isProductNewResult = require("../CollectiblesUtils.tsx") /* getItemRecordsFromPurchases */.isProductNew(skuId);
+  const obj3 = require("../CollectiblesUtils.tsx") /* getItemRecordsFromPurchases */;
+  let result = require("../CollectiblesUtils.tsx") /* getItemRecordsFromPurchases */.isPremiumCollectiblesProduct(product);
   if (!result) {
     result = tmp3(6922).isPremiumCollectiblesPurchase(purchase);
     const tmp3Result = tmp3(6922);

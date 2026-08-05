@@ -28,18 +28,18 @@ let metroImportAll;
 const require = arg1;
 function handleConnectionStateUpdated(connectionState) {
   connectionState = connectionState.connectionState;
-  importDefault(709).dispatch({ type: "GPLAY_UPDATE_CONNECTION_STATE", connectionState });
+  require("../../../Dispatcher.tsx").dispatch({ type: "GPLAY_UPDATE_CONNECTION_STATE", connectionState });
   if (connectionState === constants.CONNECTED) {
-    const userCountry = require(7299) /* getPlanIdForProduct */.loadUserCountry();
+    const userCountry = require("../../../actions/native/GPlayActionCreators.tsx") /* getPlanIdForProduct */.loadUserCountry();
     userCountry.finally(() => callback(table[17]).loadSkus());
-    const obj2 = require(7299) /* getPlanIdForProduct */;
+    const obj2 = require("../../../actions/native/GPlayActionCreators.tsx") /* getPlanIdForProduct */;
   }
 }
 function handlePurchaseStateUpdated(arg0) {
   let billingResult;
   let isActivePurchase;
   ({ billingResult, isActivePurchase } = arg0);
-  importDefault(709).dispatch({ type: "GPLAY_UPDATE_PURCHASE_STATE", billingResult, isActivePurchase });
+  require("../../../Dispatcher.tsx").dispatch({ type: "GPLAY_UPDATE_PURCHASE_STATE", billingResult, isActivePurchase });
 }
 function handlePurchaseUpdated() {
   const self = this;
@@ -421,7 +421,7 @@ function _executePendingDowngrade() {
   return applyArgumentsResult;
 }
 function clearPendingDowngrade() {
-  importDefault(709).dispatch({ type: "GPLAY_UPDATE_PENDING_DOWNGRADE", pendingDowngrade: null });
+  require("../../../Dispatcher.tsx").dispatch({ type: "GPLAY_UPDATE_PENDING_DOWNGRADE", pendingDowngrade: null });
 }
 function fetchAndAlertActiveSubscription() {
   const self = this;
@@ -656,7 +656,7 @@ obj = {
     let closure_27 = nativeEventEmitter.addListener("billing-manager-purchase-state-updated", handlePurchaseStateUpdated);
     let closure_28 = nativeEventEmitter.addListener("billing-manager-purchase-updated", handlePurchaseUpdated);
     let closure_29 = nativeEventEmitter.addListener("billing-manager-downgrade-command", handleDowngradeCommand);
-    const subscription = importDefault(709).subscribe("APP_STATE_UPDATE", handleAppStateUpdated);
+    const subscription = require("../../../Dispatcher.tsx").subscribe("APP_STATE_UPDATE", handleAppStateUpdated);
   },
   terminate() {
     BillingManager.close();
@@ -672,7 +672,7 @@ obj = {
     if (c29 != null) {
       c29.remove();
     }
-    importDefault(709).unsubscribe("APP_STATE_UPDATE", handleAppStateUpdated);
+    require("../../../Dispatcher.tsx").unsubscribe("APP_STATE_UPDATE", handleAppStateUpdated);
   }
 };
 const tmp7 = new require("get ActivityIndicator")("GPlayManager.android");

@@ -9,11 +9,11 @@ obj[2] = obj;
 obj = {
   scrollToLocation(arg0, arg1, arg2, arg3, arg4) {
     const items = [arg1, arg2, arg3, arg4];
-    require(114) /* renderElement */.dispatchCommand(arg0, "scrollToLocation", items);
+    require("../../../../../_runtime/00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "scrollToLocation", items);
   },
   scrollToTop(arg0, arg1) {
     const items = [arg1];
-    require(114) /* renderElement */.dispatchCommand(arg0, "scrollToTop", items);
+    require("../../../../../_runtime/00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "scrollToTop", items);
   }
 };
 const value = setRuntimeConfigProvider.get("FastestList", () => obj);

@@ -9,13 +9,13 @@ import { AnalyticEvents } from "ME";
 const result = require("handleConnectionOpen").fileFinishedImporting("modules/content_inventory/ContentInventoryActionCreators.tsx");
 
 export const toggleMemberListContentFeedHidden = function toggleMemberListContentFeedHidden() {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj.dispatch({ type: "CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN" });
   obj = { channel_id: channelId.getChannelId(), guild_id: guildId.getGuildId(), hidden: hidden.hidden };
-  importDefault(698).track(AnalyticEvents.MEMBERLIST_CONTENT_FEED_HIDDEN, obj);
+  require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.MEMBERLIST_CONTENT_FEED_HIDDEN, obj);
 };
 export const onGameProfileOpen = function onGameProfileOpen() {
-  importDefault(709).dispatch({ type: "GAME_PROFILE_OPEN" });
+  require("../../Dispatcher.tsx").dispatch({ type: "GAME_PROFILE_OPEN" });
 };
 export const onTapContentInventoryEntryEmbed = function onTapContentInventoryEntryEmbed(authorId) {
   let message;
@@ -33,7 +33,7 @@ export const onTapContentInventoryEntryEmbed = function onTapContentInventoryEnt
       }
       showUserProfileResult[1] = id;
       showUserProfileResult[2] = message.id;
-      let items = importDefault(5630);
+      let items = require("../app_analytics/AnalyticsLocation.tsx");
       if (tmp2) {
         items = [];
         items[0] = items.AVATAR;
@@ -48,5 +48,5 @@ export const onTapContentInventoryEntryEmbed = function onTapContentInventoryEnt
   }
 };
 export const clearDeleteHistoryError = function clearDeleteHistoryError() {
-  importDefault(709).dispatch({ type: "CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR" });
+  require("../../Dispatcher.tsx").dispatch({ type: "CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR" });
 };

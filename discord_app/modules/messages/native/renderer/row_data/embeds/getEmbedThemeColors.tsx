@@ -13,39 +13,39 @@ import createCacheKey from "createCacheKey";
 
 const require = arg1;
 const result = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
-  const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_400;
+  const obj = require("../../../../../../design/shared.tsx") /* AccessibilityAnnouncer */;
+  const unsafe_rawColors = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors;
+  return require("../../../../../../design/shared.tsx") /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_400;
 });
 const result1 = createCacheKey.experimental_createToken((theme) => {
   if (obj.isThemeDark(theme.theme)) {
-    let PRIMARY_600 = importDefault(712).unsafe_rawColors.PRIMARY_600;
+    let PRIMARY_600 = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.PRIMARY_600;
   } else {
-    PRIMARY_600 = require(4129) /* hexToRgba */.hexWithOpacity(importDefault(712).unsafe_rawColors.PRIMARY_500, 0.3);
-    const tmpResult = require(4129) /* hexToRgba */;
+    PRIMARY_600 = require("../../../../../../utils/ColorUtils.tsx") /* hexToRgba */.hexWithOpacity(require("../../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.PRIMARY_500, 0.3);
+    const tmpResult = require("../../../../../../utils/ColorUtils.tsx") /* hexToRgba */;
   }
   return PRIMARY_600;
 });
 const result2 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
-  const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_400;
+  const obj = require("../../../../../../design/shared.tsx") /* AccessibilityAnnouncer */;
+  const unsafe_rawColors = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors;
+  return require("../../../../../../design/shared.tsx") /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_400;
 });
 const result3 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
-  const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_400;
+  const obj = require("../../../../../../design/shared.tsx") /* AccessibilityAnnouncer */;
+  const unsafe_rawColors = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors;
+  return require("../../../../../../design/shared.tsx") /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_400;
 });
 const result4 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
-  const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_100;
+  const obj = require("../../../../../../design/shared.tsx") /* AccessibilityAnnouncer */;
+  const unsafe_rawColors = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors;
+  return require("../../../../../../design/shared.tsx") /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_100;
 });
 const result5 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
-  const isThemeDarkResult = require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme);
-  const hexWithOpacity = require(4129) /* hexToRgba */.hexWithOpacity;
-  const unsafe_rawColors = importDefault(712).unsafe_rawColors;
+  const obj = require("../../../../../../design/shared.tsx") /* AccessibilityAnnouncer */;
+  const isThemeDarkResult = require("../../../../../../design/shared.tsx") /* AccessibilityAnnouncer */.isThemeDark(theme.theme);
+  const hexWithOpacity = require("../../../../../../utils/ColorUtils.tsx") /* hexToRgba */.hexWithOpacity;
+  const unsafe_rawColors = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors;
   if (isThemeDarkResult) {
     let hexWithOpacityResult = hexWithOpacity(unsafe_rawColors.WHITE, 0.06);
   } else {
@@ -54,23 +54,23 @@ const result5 = createCacheKey.experimental_createToken((theme) => {
   return hexWithOpacityResult;
 });
 const result6 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
-  const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_600 : unsafe_rawColors.PRIMARY_100;
+  const obj = require("../../../../../../design/shared.tsx") /* AccessibilityAnnouncer */;
+  const unsafe_rawColors = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors;
+  return require("../../../../../../design/shared.tsx") /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_600 : unsafe_rawColors.PRIMARY_100;
 });
 const result7 = createCacheKey.experimental_createToken((theme) => {
   let str = "#666b73";
   if (!obj.isThemeDark(theme.theme)) {
-    str = importDefault(712).unsafe_rawColors.PRIMARY_300;
+    str = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.PRIMARY_300;
   }
   return str;
 });
 const result8 = createCacheKey.experimental_createToken((theme) => {
   if (obj.isThemeDark(theme.theme)) {
-    let PRIMARY_600 = importDefault(712).unsafe_rawColors.PRIMARY_600;
+    let PRIMARY_600 = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.PRIMARY_600;
   } else {
-    PRIMARY_600 = require(4129) /* hexToRgba */.hexWithOpacity(importDefault(712).unsafe_rawColors.PRIMARY_200, 0.3);
-    const tmpResult = require(4129) /* hexToRgba */;
+    PRIMARY_600 = require("../../../../../../utils/ColorUtils.tsx") /* hexToRgba */.hexWithOpacity(require("../../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.PRIMARY_200, 0.3);
+    const tmpResult = require("../../../../../../utils/ColorUtils.tsx") /* hexToRgba */;
   }
   return PRIMARY_600;
 });

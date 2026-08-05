@@ -23,7 +23,7 @@ function listKey(channelId, sortOrder, tagFilter, tagSetting) {
   }
 }
 function getSortValue(id) {
-  if (arg1 === require(1381) /* set */.ThreadSortOrder.LATEST_ACTIVITY) {
+  if (arg1 === require("../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx") /* set */.ThreadSortOrder.LATEST_ACTIVITY) {
     id = generateOldThreadCutoff.lastMessageId(id.id);
   } else {
     id = id.id;
@@ -39,8 +39,8 @@ function resortListState(value) {
   let id = store.getChannel(value.threads[value.threads.length - 1]);
   if (null == id) {
     let c4 = null;
-    let tmp7 = importDefault(12);
-    const found = importDefault(12)(store.getAllThreadsForParent(value.channelId)).filter((isArchivedThread) => isArchivedThread.isArchivedThread());
+    let tmp7 = require("../../../_runtime/00012_apply.js");
+    const found = require("../../../_runtime/00012_apply.js")(store.getAllThreadsForParent(value.channelId)).filter((isArchivedThread) => isArchivedThread.isArchivedThread());
     const found1 = found.filter((appliedTags) => {
       if (0 !== size.size) {
         if (sortOrder(outer1_2[8]).ThreadSearchTagSetting.MATCH_SOME === closure_2) {
@@ -104,7 +104,7 @@ function resortListState(value) {
       return outer1_1(outer1_2[9]).compare(id, id2);
     });
     const mapped = sorted.map((id) => id.id);
-    const tmp7Result = importDefault(12)(store.getAllThreadsForParent(value.channelId));
+    const tmp7Result = require("../../../_runtime/00012_apply.js")(store.getAllThreadsForParent(value.channelId));
     value.threads = mapped.reverse().value();
   } else if (sortOrder === sortOrder(1381).ThreadSortOrder.LATEST_ACTIVITY) {
     id = id.id;
@@ -343,8 +343,8 @@ const archivedThreadsStore = new ArchivedThreadsStore(require("dispatcher"), {
           const _Array2 = Array;
           obj[4] = Array.from(tagFilter.tagFilter);
           obj[5] = tagFilter.sortOrder;
-          const result = require(7146) /* trackForumChannelSeenBatch */.trackForumMorePostsLoaded(obj);
-          const obj3 = require(7146) /* trackForumChannelSeenBatch */;
+          const result = require("../forums/tracking/Tracking.tsx") /* trackForumChannelSeenBatch */.trackForumMorePostsLoaded(obj);
+          const obj3 = require("../forums/tracking/Tracking.tsx") /* trackForumChannelSeenBatch */;
         }
         resortListState(value);
         value.hasMore = tagFilter.hasMore;

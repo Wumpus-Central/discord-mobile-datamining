@@ -7,9 +7,9 @@ let result = require("map").fileFinishedImporting("modules/collectibles/hooks/us
 
 export const useBadBundleFilter = function useBadBundleFilter() {
   const items = [mergeGuildAvatar];
-  const stateFromStores = require(647) /* defaultAreStatesEqual */.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj = require(647) /* defaultAreStatesEqual */;
-  const canUseShopDiscountsResult = importDefault(3931).canUseShopDiscounts(stateFromStores);
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */.useStateFromStores(items, () => currentUser.getCurrentUser());
+  let obj = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */;
+  const canUseShopDiscountsResult = require("../../../utils/PremiumUtils.tsx").canUseShopDiscounts(stateFromStores);
   require = canUseShopDiscountsResult;
   const items1 = [canUseShopDiscountsResult];
   return useCallback((arr) => {

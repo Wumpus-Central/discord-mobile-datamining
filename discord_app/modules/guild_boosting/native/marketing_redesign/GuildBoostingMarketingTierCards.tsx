@@ -85,8 +85,8 @@ obj = {
   isIncluded: true,
   IconComponent: require("ReactionIcon").ReactionIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.Tlz0x1, { numEmojiSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.emoji });
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Tlz0x1, { numEmojiSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.emoji });
   }
 };
 let items = [
@@ -95,8 +95,8 @@ let items = [
     isIncluded: true,
     IconComponent: require("StickerIcon").StickerIcon,
     getCopy() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.WgHNGI, { numStickerSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.stickers });
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.WgHNGI, { numStickerSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.stickers });
     }
   },
 ,
@@ -113,24 +113,24 @@ let obj1 = {
   isIncluded: true,
   IconComponent: require("StickerIcon").StickerIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.WgHNGI, { numStickerSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.stickers });
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.WgHNGI, { numStickerSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.stickers });
   }
 };
 items[2] = {
   isIncluded: true,
   IconComponent: require("ScreenArrowIcon").ScreenArrowIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.Jbg8oY, { resolution: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.screenShareQualityResolution });
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Jbg8oY, { resolution: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.screenShareQualityResolution });
   }
 };
 let obj2 = {
   isIncluded: true,
   IconComponent: require("ScreenArrowIcon").ScreenArrowIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.Jbg8oY, { resolution: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.screenShareQualityResolution });
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Jbg8oY, { resolution: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.screenShareQualityResolution });
   }
 };
 items[3] = {
@@ -138,12 +138,12 @@ items[3] = {
   isIncluded: true,
   IconComponent: require("VoiceNormalIcon").VoiceNormalIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     let obj = { bitrate: null };
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { bitrate: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.bitrate / 1000 };
-    obj[0] = intl2.formatToPlainString(require(1236) /* getSystemLocale */.t.w1gmLt, obj);
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.vBfZzD, obj);
+    obj[0] = intl2.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.w1gmLt, obj);
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.vBfZzD, obj);
   }
 };
 let obj3 = {
@@ -151,28 +151,28 @@ let obj3 = {
   isIncluded: true,
   IconComponent: require("VoiceNormalIcon").VoiceNormalIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     let obj = { bitrate: null };
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { bitrate: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.bitrate / 1000 };
-    obj[0] = intl2.formatToPlainString(require(1236) /* getSystemLocale */.t.w1gmLt, obj);
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.vBfZzD, obj);
+    obj[0] = intl2.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.w1gmLt, obj);
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.vBfZzD, obj);
   }
 };
 items[4] = {
   isIncluded: true,
   IconComponent: require("StageIcon").StageIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.Mrvzjg, { numStageSeats: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.stageVideoUsers });
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Mrvzjg, { numStageSeats: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.stageVideoUsers });
   }
 };
 let obj4 = {
   isIncluded: true,
   IconComponent: require("StageIcon").StageIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.Mrvzjg, { numStageSeats: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.stageVideoUsers });
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Mrvzjg, { numStageSeats: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.stageVideoUsers });
   }
 };
 items[5] = {
@@ -180,8 +180,8 @@ items[5] = {
   isIncluded: true,
   IconComponent: require("GifIcon").GifIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.PbAyub);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.PbAyub);
   }
 };
 let obj5 = {
@@ -189,88 +189,88 @@ let obj5 = {
   isIncluded: true,
   IconComponent: require("GifIcon").GifIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.PbAyub);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.PbAyub);
   }
 };
 items[6] = {
   isIncluded: true,
   IconComponent: require("ServerGridIcon").ServerGridIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.tzGY0q);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.tzGY0q);
   }
 };
 let obj6 = {
   isIncluded: true,
   IconComponent: require("ServerGridIcon").ServerGridIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.tzGY0q);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.tzGY0q);
   }
 };
 items[7] = {
   isIncluded: false,
   IconComponent: require("UploadIcon").UploadIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     let obj = { uploadSizeLimit: null };
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { size: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.fileSize / 1024 / 1024 };
-    obj[0] = intl2.formatToPlainString(require(1236) /* getSystemLocale */.t.pIn7Af, obj);
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.aFRl53, obj);
+    obj[0] = intl2.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.pIn7Af, obj);
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.aFRl53, obj);
   }
 };
 let obj7 = {
   isIncluded: false,
   IconComponent: require("UploadIcon").UploadIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     let obj = { uploadSizeLimit: null };
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { size: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.fileSize / 1024 / 1024 };
-    obj[0] = intl2.formatToPlainString(require(1236) /* getSystemLocale */.t.pIn7Af, obj);
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.aFRl53, obj);
+    obj[0] = intl2.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.pIn7Af, obj);
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.aFRl53, obj);
   }
 };
 items[8] = {
   isIncluded: false,
   IconComponent: require("ServerGridIcon").ServerGridIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["1a5rjl"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["1a5rjl"]);
   }
 };
 let obj8 = {
   isIncluded: false,
   IconComponent: require("ServerGridIcon").ServerGridIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["1a5rjl"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["1a5rjl"]);
   }
 };
 items[9] = {
   isIncluded: false,
   IconComponent: require("ReactionIcon").ReactionIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["6PV6Qc"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["6PV6Qc"]);
   }
 };
 let obj9 = {
   isIncluded: false,
   IconComponent: require("ReactionIcon").ReactionIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["6PV6Qc"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["6PV6Qc"]);
   }
 };
 items[10] = {
   isIncluded: false,
   IconComponent: require("LinkIcon").LinkIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.adNGjW);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.adNGjW);
   }
 };
 obj[1] = items;
@@ -280,8 +280,8 @@ const obj10 = {
   isIncluded: false,
   IconComponent: require("LinkIcon").LinkIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.adNGjW);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.adNGjW);
   }
 };
 let items2 = [
@@ -289,8 +289,8 @@ let items2 = [
     isIncluded: true,
     IconComponent: require("ReactionIcon").ReactionIcon,
     getCopy() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.Tlz0x1, { numEmojiSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.emoji });
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Tlz0x1, { numEmojiSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.emoji });
     }
   },
 ,
@@ -308,24 +308,24 @@ let obj12 = {
   isIncluded: true,
   IconComponent: require("ReactionIcon").ReactionIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.Tlz0x1, { numEmojiSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.emoji });
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Tlz0x1, { numEmojiSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.emoji });
   }
 };
 items2[1] = {
   isIncluded: true,
   IconComponent: require("StickerIcon").StickerIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.WgHNGI, { numStickerSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.stickers });
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.WgHNGI, { numStickerSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.stickers });
   }
 };
 let obj13 = {
   isIncluded: true,
   IconComponent: require("StickerIcon").StickerIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.WgHNGI, { numStickerSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.stickers });
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.WgHNGI, { numStickerSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.stickers });
   }
 };
 items2[2] = {
@@ -333,10 +333,10 @@ items2[2] = {
   isIncluded: true,
   IconComponent: require("ScreenArrowIcon").ScreenArrowIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj = { resolution: null };
-    obj[0] = require(12766) /* CONTROL_RESOLUTION */.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards");
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.Jbg8oY, obj);
+    obj[0] = require("../../../premium/powerups/experiments/ServerBoostStreamQualityMarketingExperiment.tsx") /* CONTROL_RESOLUTION */.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards");
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Jbg8oY, obj);
   }
 };
 let obj14 = {
@@ -344,82 +344,82 @@ let obj14 = {
   isIncluded: true,
   IconComponent: require("ScreenArrowIcon").ScreenArrowIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj = { resolution: null };
-    obj[0] = require(12766) /* CONTROL_RESOLUTION */.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards");
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.Jbg8oY, obj);
+    obj[0] = require("../../../premium/powerups/experiments/ServerBoostStreamQualityMarketingExperiment.tsx") /* CONTROL_RESOLUTION */.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards");
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Jbg8oY, obj);
   }
 };
 items2[3] = {
   isIncluded: true,
   IconComponent: require("VoiceNormalIcon").VoiceNormalIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     let obj = { bitrate: null };
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { bitrate: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.bitrate / 1000 };
-    obj[0] = intl2.formatToPlainString(require(1236) /* getSystemLocale */.t.w1gmLt, obj);
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.vBfZzD, obj);
+    obj[0] = intl2.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.w1gmLt, obj);
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.vBfZzD, obj);
   }
 };
 let obj15 = {
   isIncluded: true,
   IconComponent: require("VoiceNormalIcon").VoiceNormalIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     let obj = { bitrate: null };
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { bitrate: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.bitrate / 1000 };
-    obj[0] = intl2.formatToPlainString(require(1236) /* getSystemLocale */.t.w1gmLt, obj);
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.vBfZzD, obj);
+    obj[0] = intl2.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.w1gmLt, obj);
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.vBfZzD, obj);
   }
 };
 items2[4] = {
   isIncluded: true,
   IconComponent: require("StageIcon").StageIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.Mrvzjg, { numStageSeats: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.stageVideoUsers });
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Mrvzjg, { numStageSeats: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.stageVideoUsers });
   }
 };
 let obj16 = {
   isIncluded: true,
   IconComponent: require("StageIcon").StageIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.Mrvzjg, { numStageSeats: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.stageVideoUsers });
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Mrvzjg, { numStageSeats: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.stageVideoUsers });
   }
 };
 items2[5] = {
   isIncluded: true,
   IconComponent: require("GifIcon").GifIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.PbAyub);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.PbAyub);
   }
 };
 let obj17 = {
   isIncluded: true,
   IconComponent: require("GifIcon").GifIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.PbAyub);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.PbAyub);
   }
 };
 items2[6] = {
   isIncluded: true,
   IconComponent: require("ServerGridIcon").ServerGridIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.tzGY0q);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.tzGY0q);
   }
 };
 let obj18 = {
   isIncluded: true,
   IconComponent: require("ServerGridIcon").ServerGridIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.tzGY0q);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.tzGY0q);
   }
 };
 items2[7] = {
@@ -427,12 +427,12 @@ items2[7] = {
   isIncluded: true,
   IconComponent: require("UploadIcon").UploadIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     let obj = { uploadSizeLimit: null };
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { size: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.fileSize / 1024 / 1024 };
-    obj[0] = intl2.formatToPlainString(require(1236) /* getSystemLocale */.t.pIn7Af, obj);
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.aFRl53, obj);
+    obj[0] = intl2.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.pIn7Af, obj);
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.aFRl53, obj);
   }
 };
 let obj19 = {
@@ -440,12 +440,12 @@ let obj19 = {
   isIncluded: true,
   IconComponent: require("UploadIcon").UploadIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     let obj = { uploadSizeLimit: null };
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { size: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.fileSize / 1024 / 1024 };
-    obj[0] = intl2.formatToPlainString(require(1236) /* getSystemLocale */.t.pIn7Af, obj);
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.aFRl53, obj);
+    obj[0] = intl2.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.pIn7Af, obj);
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.aFRl53, obj);
   }
 };
 items2[8] = {
@@ -453,8 +453,8 @@ items2[8] = {
   isIncluded: true,
   IconComponent: require("ServerGridIcon").ServerGridIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["1a5rjl"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["1a5rjl"]);
   }
 };
 const obj20 = {
@@ -462,8 +462,8 @@ const obj20 = {
   isIncluded: true,
   IconComponent: require("ServerGridIcon").ServerGridIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["1a5rjl"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["1a5rjl"]);
   }
 };
 items2[9] = {
@@ -471,8 +471,8 @@ items2[9] = {
   isIncluded: true,
   IconComponent: require("ReactionIcon").ReactionIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["6PV6Qc"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["6PV6Qc"]);
   }
 };
 const obj21 = {
@@ -480,16 +480,16 @@ const obj21 = {
   isIncluded: true,
   IconComponent: require("ReactionIcon").ReactionIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["6PV6Qc"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["6PV6Qc"]);
   }
 };
 items2[10] = {
   isIncluded: false,
   IconComponent: require("LinkIcon").LinkIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.adNGjW);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.adNGjW);
   }
 };
 obj11[1] = items2;
@@ -499,8 +499,8 @@ const obj22 = {
   isIncluded: false,
   IconComponent: require("LinkIcon").LinkIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.adNGjW);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.adNGjW);
   }
 };
 let items3 = [
@@ -508,8 +508,8 @@ let items3 = [
     isIncluded: true,
     IconComponent: require("ReactionIcon").ReactionIcon,
     getCopy() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.Tlz0x1, { numEmojiSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.emoji });
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Tlz0x1, { numEmojiSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.emoji });
     }
   },
 ,
@@ -527,44 +527,44 @@ const obj24 = {
   isIncluded: true,
   IconComponent: require("ReactionIcon").ReactionIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.Tlz0x1, { numEmojiSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.emoji });
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Tlz0x1, { numEmojiSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.emoji });
   }
 };
 items3[1] = {
   isIncluded: true,
   IconComponent: require("StickerIcon").StickerIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.WgHNGI, { numStickerSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.stickers });
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.WgHNGI, { numStickerSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.stickers });
   }
 };
 const obj25 = {
   isIncluded: true,
   IconComponent: require("StickerIcon").StickerIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.WgHNGI, { numStickerSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.stickers });
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.WgHNGI, { numStickerSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.stickers });
   }
 };
 items3[2] = {
   isIncluded: true,
   IconComponent: require("ScreenArrowIcon").ScreenArrowIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj = { resolution: null };
-    obj[0] = require(12766) /* CONTROL_RESOLUTION */.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards");
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.Jbg8oY, obj);
+    obj[0] = require("../../../premium/powerups/experiments/ServerBoostStreamQualityMarketingExperiment.tsx") /* CONTROL_RESOLUTION */.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards");
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Jbg8oY, obj);
   }
 };
 const obj26 = {
   isIncluded: true,
   IconComponent: require("ScreenArrowIcon").ScreenArrowIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj = { resolution: null };
-    obj[0] = require(12766) /* CONTROL_RESOLUTION */.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards");
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.Jbg8oY, obj);
+    obj[0] = require("../../../premium/powerups/experiments/ServerBoostStreamQualityMarketingExperiment.tsx") /* CONTROL_RESOLUTION */.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards");
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Jbg8oY, obj);
   }
 };
 items3[3] = {
@@ -572,12 +572,12 @@ items3[3] = {
   isIncluded: true,
   IconComponent: require("VoiceNormalIcon").VoiceNormalIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     let obj = { bitrate: null };
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { bitrate: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.bitrate / 1000 };
-    obj[0] = intl2.formatToPlainString(require(1236) /* getSystemLocale */.t.w1gmLt, obj);
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.vBfZzD, obj);
+    obj[0] = intl2.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.w1gmLt, obj);
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.vBfZzD, obj);
   }
 };
 const obj27 = {
@@ -585,12 +585,12 @@ const obj27 = {
   isIncluded: true,
   IconComponent: require("VoiceNormalIcon").VoiceNormalIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     let obj = { bitrate: null };
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { bitrate: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.bitrate / 1000 };
-    obj[0] = intl2.formatToPlainString(require(1236) /* getSystemLocale */.t.w1gmLt, obj);
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.vBfZzD, obj);
+    obj[0] = intl2.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.w1gmLt, obj);
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.vBfZzD, obj);
   }
 };
 items3[4] = {
@@ -598,8 +598,8 @@ items3[4] = {
   isIncluded: true,
   IconComponent: require("StageIcon").StageIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.Mrvzjg, { numStageSeats: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.stageVideoUsers });
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Mrvzjg, { numStageSeats: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.stageVideoUsers });
   }
 };
 const obj28 = {
@@ -607,8 +607,8 @@ const obj28 = {
   isIncluded: true,
   IconComponent: require("StageIcon").StageIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.Mrvzjg, { numStageSeats: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.stageVideoUsers });
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Mrvzjg, { numStageSeats: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.stageVideoUsers });
   }
 };
 items3[5] = {
@@ -616,8 +616,8 @@ items3[5] = {
   isIncluded: true,
   IconComponent: require("GifIcon").GifIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.PbAyub);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.PbAyub);
   }
 };
 const obj29 = {
@@ -625,24 +625,24 @@ const obj29 = {
   isIncluded: true,
   IconComponent: require("GifIcon").GifIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.PbAyub);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.PbAyub);
   }
 };
 items3[6] = {
   isIncluded: true,
   IconComponent: require("ServerGridIcon").ServerGridIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.tzGY0q);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.tzGY0q);
   }
 };
 const obj30 = {
   isIncluded: true,
   IconComponent: require("ServerGridIcon").ServerGridIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.tzGY0q);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.tzGY0q);
   }
 };
 items3[7] = {
@@ -650,12 +650,12 @@ items3[7] = {
   isIncluded: true,
   IconComponent: require("UploadIcon").UploadIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     let obj = { uploadSizeLimit: null };
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { size: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.fileSize / 1024 / 1024 };
-    obj[0] = intl2.formatToPlainString(require(1236) /* getSystemLocale */.t.pIn7Af, obj);
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.aFRl53, obj);
+    obj[0] = intl2.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.pIn7Af, obj);
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.aFRl53, obj);
   }
 };
 const obj31 = {
@@ -663,44 +663,44 @@ const obj31 = {
   isIncluded: true,
   IconComponent: require("UploadIcon").UploadIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     let obj = { uploadSizeLimit: null };
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { size: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.fileSize / 1024 / 1024 };
-    obj[0] = intl2.formatToPlainString(require(1236) /* getSystemLocale */.t.pIn7Af, obj);
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.aFRl53, obj);
+    obj[0] = intl2.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.pIn7Af, obj);
+    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.aFRl53, obj);
   }
 };
 items3[8] = {
   isIncluded: true,
   IconComponent: require("ServerGridIcon").ServerGridIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["1a5rjl"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["1a5rjl"]);
   }
 };
 const obj32 = {
   isIncluded: true,
   IconComponent: require("ServerGridIcon").ServerGridIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["1a5rjl"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["1a5rjl"]);
   }
 };
 items3[9] = {
   isIncluded: true,
   IconComponent: require("ReactionIcon").ReactionIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["6PV6Qc"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["6PV6Qc"]);
   }
 };
 const obj33 = {
   isIncluded: true,
   IconComponent: require("ReactionIcon").ReactionIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["6PV6Qc"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["6PV6Qc"]);
   }
 };
 items3[10] = {
@@ -708,8 +708,8 @@ items3[10] = {
   isIncluded: true,
   IconComponent: require("LinkIcon").LinkIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.adNGjW);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.adNGjW);
   }
 };
 obj23[1] = items3;
@@ -720,8 +720,8 @@ const obj34 = {
   isIncluded: true,
   IconComponent: require("LinkIcon").LinkIcon,
   getCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.adNGjW);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.adNGjW);
   }
 };
 obj35[1] = { borderRadius: require("Themes").radii.lg, height: "100%" };
@@ -791,9 +791,9 @@ let closure_16 = importAllResult.forwardRef((onCardPress, ref) => {
   }, items);
   const sum = guild.premiumTier + 1;
   let obj = features(4131);
-  const tmp4 = importDefault(4221)();
-  const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  const tmp9 = obj.isThemeDark(importDefault(4221)()) ? unsafe_rawColors.WHITE : unsafe_rawColors.GUILD_BOOSTING_PINK;
+  const tmp4 = require("../../../../hooks/useTheme.tsx")();
+  const unsafe_rawColors = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors;
+  const tmp9 = obj.isThemeDark(require("../../../../hooks/useTheme.tsx")()) ? unsafe_rawColors.WHITE : unsafe_rawColors.GUILD_BOOSTING_PINK;
   const intl = tmp7(1236).intl;
   const string = intl.string;
   const t = tmp7(1236).t;
@@ -805,7 +805,7 @@ let closure_16 = importAllResult.forwardRef((onCardPress, ref) => {
   obj = { style: tmp.cardWrapper, ref, children: null };
   obj = { angle: 45, angleCenter: { x: 0.5, y: 0.5 }, colors: null, locations: null, style: null, useAngle: true, children: null };
   let tmp2Result = tmp2(4706);
-  const items1 = [importDefault(712).unsafe_rawColors.GUILD_BOOSTING_BLUE, importDefault(712).unsafe_rawColors.GUILD_BOOSTING_PURPLE];
+  const items1 = [require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.GUILD_BOOSTING_BLUE, require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.GUILD_BOOSTING_PURPLE];
   obj[2] = items1;
   obj[3] = [0, 1];
   obj[4] = tmp.card;
@@ -833,10 +833,10 @@ let closure_16 = importAllResult.forwardRef((onCardPress, ref) => {
   } else {
     ChevronLargeDownIcon = tmp7(12769).ChevronLargeDownIcon;
   }
-  const isThemeDarkResult = obj.isThemeDark(importDefault(4221)());
+  const isThemeDarkResult = obj.isThemeDark(require("../../../../hooks/useTheme.tsx")());
   const obj6 = { numSubscriptions: table[tier] };
   const obj8 = { features: memo, isVisible: !isExpanded };
-  items5[1] = callback2(ChevronLargeDownIcon, { color: importDefault(712).colors.WHITE, style: tmp.cardFooterIcon });
+  items5[1] = callback2(ChevronLargeDownIcon, { color: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE, style: tmp.cardFooterIcon });
   obj9[1] = items5;
   items3[2] = callback3(View, obj9);
   obj2[5] = items3;
@@ -989,5 +989,5 @@ export default function GuildBoostingMarketingTierCards(guild) {
     const tier = features.tier;
     return outer1_9(outer1_16, { features: features.features, guild: closure_0, isExpanded: closure_2, onCardPress: handleCardPress, tier }, tier);
   });
-  return closure_9(_require(11835).MarketingCardsScroller, obj);
+  return closure_9(_require("MarketingCardsScroller.tsx").MarketingCardsScroller, obj);
 };

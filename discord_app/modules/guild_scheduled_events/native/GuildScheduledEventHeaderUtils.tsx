@@ -20,7 +20,7 @@ export const getGuildScheduledEventHeaderProps = function getGuildScheduledEvent
   ({ startDateTimeString, diffMinutes, currentOrPastEvent, upcomingEvent } = eventTimeData.eventTimeData);
   ({ event, recurrenceId } = eventTimeData);
   ({ isStage, theme, isCanceled } = eventTimeData);
-  let obj = require(8864) /* getRRule */;
+  let obj = require("../utils/ScheduleUtils.tsx") /* getRRule */;
   if (null != recurrenceId) {
     let tmp5 = obj.getNextRecurrenceIdInEvent(event) === recurrenceId;
     if (tmp5) {
@@ -31,8 +31,8 @@ export const getGuildScheduledEventHeaderProps = function getGuildScheduledEvent
     tmp4 = callback2(event);
   }
   const tmp7 = callback(event);
-  const ICON_SUBTLE = importDefault(712).colors.ICON_SUBTLE;
-  let tmp8Result = importDefault(8965);
+  const ICON_SUBTLE = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.ICON_SUBTLE;
+  let tmp8Result = require("../../../../_runtime/08965_registerAsset.js");
   if (tmp4) {
     const intl4 = tmp(1236).intl;
     let stringResult = intl4.string(tmp(1236).t["X2K3/4"]);

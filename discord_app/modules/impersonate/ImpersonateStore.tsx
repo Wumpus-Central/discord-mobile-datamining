@@ -14,7 +14,7 @@ prototype["initialize"] = function initialize() {
   this.waitFor(createGuildRecordFromRust, createGuildRoleRecordFromRust);
 };
 prototype["hasViewingRoles"] = function hasViewingRoles() {
-  return !require(1941) /* areArraysShallowlyEqual */.isPlainObjectEmpty(closure_8);
+  return !require("../../utils/FunctionUtils.tsx") /* areArraysShallowlyEqual */.isPlainObjectEmpty(closure_8);
 };
 prototype["isViewingRoles"] = function isViewingRoles(guildId) {
   let tmp = null != guildId;
@@ -49,12 +49,12 @@ prototype["isFullServerPreview"] = function isFullServerPreview(closure_0) {
   if (dependencyMap[closure_0] != null) {
     type = tmp.type;
   }
-  return type === require(1940) /* ImpersonateType */.ImpersonateType.NEW_MEMBER;
+  return type === require("ImpersonateTypes.tsx") /* ImpersonateType */.ImpersonateType.NEW_MEMBER;
 };
 prototype["isOptInEnabled"] = function isOptInEnabled(arg0) {
   let optInEnabled = null != tmp;
   if (optInEnabled) {
-    optInEnabled = tmp.type === require(1940) /* ImpersonateType */.ImpersonateType.NEW_MEMBER;
+    optInEnabled = tmp.type === require("ImpersonateTypes.tsx") /* ImpersonateType */.ImpersonateType.NEW_MEMBER;
   }
   if (optInEnabled) {
     optInEnabled = tmp.optInEnabled;
@@ -64,7 +64,7 @@ prototype["isOptInEnabled"] = function isOptInEnabled(arg0) {
 prototype["isOnboardingEnabled"] = function isOnboardingEnabled(id) {
   let onboardingEnabled = null != tmp;
   if (onboardingEnabled) {
-    onboardingEnabled = tmp.type === require(1940) /* ImpersonateType */.ImpersonateType.NEW_MEMBER;
+    onboardingEnabled = tmp.type === require("ImpersonateTypes.tsx") /* ImpersonateType */.ImpersonateType.NEW_MEMBER;
   }
   if (onboardingEnabled) {
     onboardingEnabled = tmp.onboardingEnabled;
@@ -75,7 +75,7 @@ prototype["getViewingChannels"] = function getViewingChannels(id) {
   let optInChannels = null;
   if (null != dependencyMap[id]) {
     optInChannels = null;
-    if (tmp.type === require(1940) /* ImpersonateType */.ImpersonateType.NEW_MEMBER) {
+    if (tmp.type === require("ImpersonateTypes.tsx") /* ImpersonateType */.ImpersonateType.NEW_MEMBER) {
       optInChannels = tmp.optInChannels;
     }
   }
@@ -85,7 +85,7 @@ prototype["getOnboardingResponses"] = function getOnboardingResponses(arg0) {
   let onboardingResponses = null;
   if (null != dependencyMap[arg0]) {
     onboardingResponses = null;
-    if (tmp.type === require(1940) /* ImpersonateType */.ImpersonateType.NEW_MEMBER) {
+    if (tmp.type === require("ImpersonateTypes.tsx") /* ImpersonateType */.ImpersonateType.NEW_MEMBER) {
       onboardingResponses = tmp.onboardingResponses;
     }
   }
@@ -95,7 +95,7 @@ prototype["getMemberOptions"] = function getMemberOptions(guildId) {
   let memberOptions = null;
   if (null != dependencyMap[guildId]) {
     memberOptions = null;
-    if (tmp.type === require(1940) /* ImpersonateType */.ImpersonateType.NEW_MEMBER) {
+    if (tmp.type === require("ImpersonateTypes.tsx") /* ImpersonateType */.ImpersonateType.NEW_MEMBER) {
       memberOptions = tmp.memberOptions;
     }
   }
@@ -116,7 +116,7 @@ prototype["isViewingServerShop"] = function isViewingServerShop(id) {
     if (dependencyMap[id] != null) {
       type = tmp3.type;
     }
-    tmp = type === require(1940) /* ImpersonateType */.ImpersonateType.SERVER_SHOP;
+    tmp = type === require("ImpersonateTypes.tsx") /* ImpersonateType */.ImpersonateType.SERVER_SHOP;
   }
   return tmp;
 };
@@ -138,7 +138,7 @@ prototype["getBackNavigationSection"] = function getBackNavigationSection(arg0) 
     return GuildSettingsSections.ROLES;
   } else {
     const type = tmp6.type;
-    if (require(1940) /* ImpersonateType */.ImpersonateType.ROLES !== type) {
+    if (require("ImpersonateTypes.tsx") /* ImpersonateType */.ImpersonateType.ROLES !== type) {
       if (tmp7(1940).ImpersonateType.SERVER_SHOP !== type) {
         if (tmp7(1940).ImpersonateType.NEW_MEMBER === type) {
           return GuildSettingsSections.ONBOARDING;
@@ -156,7 +156,7 @@ const impersonateStore = new ImpersonateStore(require("dispatcher"), {
     let data;
     let guildId;
     ({ guildId, data } = arg0);
-    let obj = importDefault(11);
+    let obj = require("../../utils/SnowflakeUtils.tsx");
     const result = obj.castGuildIdAsEveryoneGuildRoleId(guildId);
     delete tmp2[tmp];
     obj = {};

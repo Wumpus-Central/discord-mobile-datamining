@@ -93,7 +93,7 @@ export default EmptyState;
 export const ThemedEmptyState = function ThemedEmptyState(darkSource) {
   let lightSource = darkSource.darkSource;
   const merged = Object.assign(darkSource, Object.create(null));
-  let obj = require(4131) /* AccessibilityAnnouncer */;
+  let obj = require("../../../shared.tsx") /* AccessibilityAnnouncer */;
   if (obj2.isThemeLight(obj.useThemeContext().theme)) {
     lightSource = darkSource.lightSource;
   }

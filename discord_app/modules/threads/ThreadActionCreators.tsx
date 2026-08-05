@@ -18,10 +18,10 @@ let map1;
 const require = arg1;
 function patchThread(id, body) {
   const _require = id;
-  const HTTP = _require(530).HTTP;
+  const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
   const obj = { url: closure_12.CHANNEL(id.id), body, rejectWithError: null };
-  obj[2] = _require(530).rejectWithMigratedError();
-  const obj2 = _require(530);
+  obj[2] = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+  const obj2 = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
   return HTTP.patch(obj).then((body) => {
     let obj = outer1_1(outer1_2[11]);
     obj = { type: "THREAD_UPDATE", channel: outer1_4(body.body) };
@@ -40,7 +40,7 @@ function patchThread(id, body) {
   });
 }
 function dispatchThreadMemberLocalUpdate(id, isJoining) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "THREAD_MEMBER_LOCAL_UPDATE", id: id.id, guildId: id.getGuildId(), userId: store.getId(), isJoining };
   obj.dispatch(obj);
 }
@@ -54,10 +54,10 @@ export default {
       obj.locked = true;
     }
     const _require = channel;
-    const HTTP = _require(530).HTTP;
+    const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     obj = { url: closure_12.CHANNEL(channel.id), body: obj, rejectWithError: null };
-    obj[2] = _require(530).rejectWithMigratedError();
-    const obj3 = _require(530);
+    obj[2] = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+    const obj3 = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
     return HTTP.patch(obj).then((body) => {
       let obj = outer1_1(outer1_2[11]);
       obj = { type: "THREAD_UPDATE", channel: outer1_4(body.body) };
@@ -469,10 +469,10 @@ export default {
   setInvitable(id, invitable) {
     let obj = { invitable };
     const _require = id;
-    const HTTP = _require(530).HTTP;
+    const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     obj = { url: closure_12.CHANNEL(id.id), body: obj, rejectWithError: null };
-    obj[2] = _require(530).rejectWithMigratedError();
-    const obj3 = _require(530);
+    obj[2] = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+    const obj3 = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
     return HTTP.patch(obj).then((body) => {
       let obj = outer1_1(outer1_2[11]);
       obj = { type: "THREAD_UPDATE", channel: outer1_4(body.body) };
@@ -731,30 +731,30 @@ export default {
   },
   leaveThread(channel, location) {
     if (channel.isForumPost()) {
-      let obj = importDefault(709);
+      let obj = require("../../Dispatcher.tsx");
       obj = { type: "THREAD_MEMBER_LOCAL_UPDATE", id: null, guildId: null, userId: null, isJoining: false };
       obj[1] = channel.id;
       obj[2] = channel.getGuildId();
       obj[3] = store.getId();
       obj.dispatch(obj);
     }
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: closure_12.THREAD_MEMBER(channel.id), query: obj1, rejectWithError: null };
-    obj[2] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.del(obj);
   },
   removeMember(id, outer1_1, location) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: closure_12.THREAD_MEMBER(id, outer1_1), query: obj, rejectWithError: null };
     obj = { location };
-    obj[2] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.del(obj);
   },
   setAutoArchiveDuration(id, auto_archive_duration) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: closure_12.CHANNEL(id.id), body: obj, rejectWithError: null };
     obj = { auto_archive_duration };
-    obj[2] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.patch(obj);
   },
   pin(thread) {
@@ -967,16 +967,16 @@ export default {
     })();
   },
   openThreadCreationForMobile(channel, id, Message) {
-    let obj = require(4479) /* collectGuildAnalyticsMetadata */;
+    let obj = require("../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */;
     obj = { location: Message, channel_id: channel.id, guild_id: channel.guild_id };
     obj.trackWithMetadata(constants.THREAD_CREATION_STARTED, obj);
     obj = { parentMessageId: id, isPrivate: false, location: Message };
-    importDefault(7156).changeThreadSettings(channel.id, obj);
+    require("../../actions/DraftActionCreators.tsx").changeThreadSettings(channel.id, obj);
     if (null == id) {
       const obj1 = { channelId: null, command: null, section: null };
       obj1[0] = channel.id;
-      require(7157) /* setActiveCommand */.setActiveCommand(obj1);
-      const tmpResult = require(7157) /* setActiveCommand */;
+      require("../application_commands/ApplicationCommandActionCreators.tsx") /* setActiveCommand */.setActiveCommand(obj1);
+      const tmpResult = require("../application_commands/ApplicationCommandActionCreators.tsx") /* setActiveCommand */;
     }
   },
   setNotificationSettings(channel, muteSettings) {
@@ -1126,7 +1126,7 @@ export default {
     const callback = c3;
     let MATCH_SOME = c4;
     if (c4 === undefined) {
-      MATCH_SOME = _require(1383).ThreadSearchTagSetting.MATCH_SOME;
+      MATCH_SOME = _require("../../../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx").ThreadSearchTagSetting.MATCH_SOME;
     }
     return callback(function*() {
       let threads = tmp3;
@@ -1167,9 +1167,9 @@ export default {
     if (isThread.isThread()) {
       if (!inProgress.isInProgress()) {
         let flag = arg1;
-        let obj = importDefault(709);
+        let obj = require("../../Dispatcher.tsx");
         obj.dispatch({ type: "SUMMARIZE_THREAD_START" });
-        const HTTP = _require(530).HTTP;
+        const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
         obj = { url: null, body: null, rejectWithError: null };
         obj[0] = closure_12.AI_SUMMARIZE_THREAD(isThread.id);
         if (arg1 == null) {
@@ -1178,9 +1178,9 @@ export default {
         obj = { ephemeral: null };
         obj[0] = flag;
         obj[1] = obj;
-        obj[2] = _require(530).rejectWithMigratedError();
+        obj[2] = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
         const tmp5 = _require;
-        const tmp5Result = _require(530);
+        const tmp5Result = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
         const postResult = HTTP.post(obj);
         return HTTP.post(obj).then(() => {
           let obj = outer1_1(outer1_2[11]);

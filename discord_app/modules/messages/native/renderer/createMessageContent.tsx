@@ -37,17 +37,17 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
     if (message.hasFlag(constants3.HAS_THREAD)) {
       if (null != channel1) {
         let string2Result = dependencyMap;
-        const channelName = require(4475) /* computeChannelName */.computeChannelName(channel1, mergeGuildAvatar, upsertRelationship);
-        const backgroundColor = importDefault(7863)(arg5).baseColors.backgroundColor;
-        const obj11 = require(4475) /* computeChannelName */;
+        const channelName = require("../../../channel/useChannelName.tsx") /* computeChannelName */.computeChannelName(channel1, mergeGuildAvatar, upsertRelationship);
+        const backgroundColor = require("row_data/embeds/getEmbedThemeColors.tsx")(arg5).baseColors.backgroundColor;
+        const obj11 = require("../../../channel/useChannelName.tsx") /* computeChannelName */;
         const tmp19 = importDefault;
-        const mostRecentMessage = store3.getMostRecentMessage(importDefault(11).castMessageIdAsChannelId(message.id));
-        const obj12 = importDefault(11);
-        const count = store3.getCount(importDefault(11).castMessageIdAsChannelId(message.id));
-        const obj13 = importDefault(11);
-        let intl5 = require(7864) /* _formatMessageCountLabel */.formatMobileMessageCountLabel(count, channel1.id);
-        const obj14 = require(7864) /* _formatMessageCountLabel */;
-        let string2 = require(7864) /* _formatMessageCountLabel */.formatMessageCountLabel(count, channel1.id);
+        const mostRecentMessage = store3.getMostRecentMessage(require("../../../../utils/SnowflakeUtils.tsx").castMessageIdAsChannelId(message.id));
+        const obj12 = require("../../../../utils/SnowflakeUtils.tsx");
+        const count = store3.getCount(require("../../../../utils/SnowflakeUtils.tsx").castMessageIdAsChannelId(message.id));
+        const obj13 = require("../../../../utils/SnowflakeUtils.tsx");
+        let intl5 = require("../../../threads/MessageCountUtils.tsx") /* _formatMessageCountLabel */.formatMobileMessageCountLabel(count, channel1.id);
+        const obj14 = require("../../../threads/MessageCountUtils.tsx") /* _formatMessageCountLabel */;
+        let string2 = require("../../../threads/MessageCountUtils.tsx") /* _formatMessageCountLabel */.formatMessageCountLabel(count, channel1.id);
         if (null != count) {
           if (count > 0) {
             let tmp15Result = tmp15(5853);
@@ -135,7 +135,7 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
         obj[1] = intl5;
         obj[2] = string2;
         const intl = tmp15(1236).intl;
-        obj[3] = intl.string(require(1236) /* getSystemLocale */.t.HYtNyE);
+        obj[3] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.HYtNyE);
         obj[5] = backgroundColor;
         return obj;
       }

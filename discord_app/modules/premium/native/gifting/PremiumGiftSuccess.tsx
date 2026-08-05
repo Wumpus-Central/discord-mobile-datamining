@@ -13,10 +13,10 @@ let require = arg1;
 ({ jsx: error, Fragment: metroImportAll, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles((arg0) => {
   let obj = { bodyContainer: null, actionContainer: null };
-  obj = { backgroundColor: importDefault(712).colors.BACKGROUND_BASE_LOW, paddingHorizontal: importDefault(712).space.PX_16, flex: 1, alignContent: "center", justifyContent: "center", flexGrow: 1 };
+  obj = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW, paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, flex: 1, alignContent: "center", justifyContent: "center", flexGrow: 1 };
   obj[0] = obj;
-  obj = { backgroundColor: importDefault(712).colors.BACKGROUND_BASE_LOW, paddingTop: importDefault(712).space.PX_16, paddingBottom: arg0 + importDefault(712).space.PX_16, paddingHorizontal: importDefault(712).space.PX_16, gap: importDefault(712).space.PX_8 };
-  const merged = Object.assign(importDefault(712).shadows.SHADOW_TOP_LOW);
+  obj = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW, paddingTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, paddingBottom: arg0 + require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
+  const merged = Object.assign(require("../../../../../discord_common/js/packages/tokens/native.tsx").shadows.SHADOW_TOP_LOW);
   obj[1] = obj;
   return obj;
 });

@@ -26,13 +26,13 @@ export default function SuspendedUserSafetyHubPage() {
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.header, children: null };
   const obj1 = { variant: "destructive", accessibilityLabel: null, onPress: null, icon: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj1[1] = intl.string(require(1236) /* getSystemLocale */.t.cpT0Cq);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj1[1] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.cpT0Cq);
   obj1[2] = function onPress() {
     callback(5736).closeSuspendedUser();
   };
-  obj1[3] = importDefault(7837);
-  const items = [callback(require(7672) /* IconButton */.IconButton, obj1), ];
+  obj1[3] = require("../../../../_runtime/07837_registerAsset.js");
+  const items = [callback(require("../../../design/components/Button/native/IconButton.native.tsx") /* IconButton */.IconButton, obj1), ];
   const obj2 = {
     style: tmp.text,
     onPress() {
@@ -42,17 +42,17 @@ export default function SuspendedUserSafetyHubPage() {
     color: "control-critical-primary-text-default",
     children: null
   };
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  const items1 = [intl2.string(require(1236) /* getSystemLocale */.t["MG+Bzb"]), " ", ];
+  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const items1 = [intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["MG+Bzb"]), " ", ];
   const obj3 = { style: tmp.link, variant: "text-xs/medium", color: "control-critical-primary-text-default", children: null };
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj3[3] = intl3.string(require(1236) /* getSystemLocale */.t["9JceHN"]);
-  items1[2] = callback(require(4281) /* Text */.Text, obj3);
+  const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj3[3] = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["9JceHN"]);
+  items1[2] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj3);
   obj2[4] = items1;
-  items[1] = callback2(require(4281) /* Text */.Text, obj2);
+  items[1] = callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
   obj[1] = items;
-  const items2 = [callback2(View, obj), callback(importDefault(13899), { visible: true })];
+  const items2 = [callback2(View, obj), callback(require("SafetyHubPage.tsx"), { visible: true })];
   obj[1] = items2;
   obj[3] = callback2(View, obj);
-  return callback(require(5272) /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  return callback(require("../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
 };

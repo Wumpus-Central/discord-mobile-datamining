@@ -13,7 +13,7 @@ const result = require("jsxProd").fileFinishedImporting("design/components/Navig
 
 export const SceneLoadingIndicator = function SceneLoadingIndicator() {
   const obj = { style: callback3().loadingContainer, children: null };
-  const items = [callback(require(5732) /* ActivityIndicator */.ActivityIndicator, {}), callback(require(5596) /* NavScrim */.NavScrim, {})];
+  const items = [callback(require("../../ActivityIndicator/native/ActivityIndicator.native.tsx") /* ActivityIndicator */.ActivityIndicator, {}), callback(require("NavScrim.android.tsx") /* NavScrim */.NavScrim, {})];
   obj[1] = items;
   return callback2(View, obj);
 };

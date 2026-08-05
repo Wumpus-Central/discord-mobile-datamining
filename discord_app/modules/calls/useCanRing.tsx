@@ -22,16 +22,16 @@ function useCanRingToGuildVoiceChannel(user, DisconnectedUserRow, stateFromStore
   }
   const importDefault = stateFromStores;
   const items = [getUncachedChannelPermissions];
-  stateFromStores = _require(589).useStateFromStores(items, () => {
+  stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let tmp2 = null != stateFromStores;
     if (tmp2) {
       tmp2 = stateFromStores(outer1_2[12])(tmp, outer1_8);
     }
     return tmp2;
   });
-  const obj = _require(589);
+  const obj = _require("../../../discord_common/js/packages/flux/index.tsx");
   const items1 = [trackCommunicationDisabled, recomputeGuild];
-  const stateFromStores1 = _require(589).useStateFromStores(items1, () => {
+  const stateFromStores1 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
     let guild_id;
     if (stateFromStores != null) {
       guild_id = stateFromStores.guild_id;
@@ -47,12 +47,12 @@ function useCanRingToGuildVoiceChannel(user, DisconnectedUserRow, stateFromStore
     }
   });
   let id;
-  const obj2 = _require(589);
+  const obj2 = _require("../../../discord_common/js/packages/flux/index.tsx");
   const tmp4 = importDefault;
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  const tmp5 = importDefault(4726);
+  const tmp5 = require("../guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx");
   let guild_id;
   if (stateFromStores != null) {
     guild_id = stateFromStores.guild_id;
@@ -146,7 +146,7 @@ export const canRingUsersInChannel = function canRingUsersInChannel(channel) {
     call = call.getCall(channel.id);
     return null != call && null != call.messageId && !call.isCallUnavailable(channel.id);
   } else if (tmp === tmp2) {
-    let obj = importDefault(9157);
+    let obj = require("../voice_calls/GuildVoiceRingingExperiment.tsx");
     obj = { guildId: null, location: "ring" };
     obj[0] = channel.guild_id;
     let enabled = obj.getCurrentConfig(obj).enabled;

@@ -7,7 +7,7 @@ let obj1;
 const result = require("set").fileFinishedImporting("modules/video_calls/native/useBottomVoiceControlsSheetWidth.tsx");
 
 export default function useBottomVoiceControlsSheetWidth() {
-  let width = importDefault(1474)().width;
+  let width = require("../../screen/useWindowDimensions.native.tsx")().width;
   if (width > closure_3) {
     width = closure_2;
   }

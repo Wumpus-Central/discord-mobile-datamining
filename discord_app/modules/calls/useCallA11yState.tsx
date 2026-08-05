@@ -8,7 +8,7 @@ const result = require("initialize").fileFinishedImporting("modules/calls/useCal
 export default function useCallA11yState(arg0) {
   const _require = arg0;
   const items = [callConnect, fetchFingerprint];
-  return _require(589).useStateFromStoresObject(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
     let obj = outer1_3;
     const call = outer1_3.getCall(closure_0);
     const id = outer1_2.getId();

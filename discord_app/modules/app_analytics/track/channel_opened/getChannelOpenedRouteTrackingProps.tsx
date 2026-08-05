@@ -5,15 +5,15 @@ const require = arg1;
 let result = require("transitionTo").fileFinishedImporting("modules/app_analytics/track/channel_opened/getChannelOpenedRouteTrackingProps.tsx");
 
 export const getChannelOpenedRouteTrackingProps = function getChannelOpenedRouteTrackingProps(selectedChannelId) {
-  let obj = require(7153) /* collectThreadMetadata */;
+  let obj = require("../../ThreadAnalyticsUtils.tsx") /* collectThreadMetadata */;
   const result = obj.collectThreadMetadata(channel.getChannel(selectedChannelId), true);
   let _location;
   if (result != null) {
     _location = result.location;
   }
   if (_location == null) {
-    _location = require(1222) /* transitionTo */.getLastRouteChangeSource();
-    const tmpResult = require(1222) /* transitionTo */;
+    _location = require("../../../routing/router_utils.tsx") /* transitionTo */.getLastRouteChangeSource();
+    const tmpResult = require("../../../routing/router_utils.tsx") /* transitionTo */;
   }
   obj = result;
   if (result == null) {

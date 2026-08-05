@@ -21,7 +21,7 @@ export const useFavoritesIntroPopoverDismissibleContent = function useFavoritesI
   if (arg0 === undefined) {
     flag = true;
   }
-  let obj = require(9632) /* useFavoritesGuildConfig */;
+  let obj = require("FavoritesGuildExperiment.tsx") /* useFavoritesGuildConfig */;
   const isFreemium = obj.useFavoritesGuildConfig({ location: "FavoritesDismissibleContent" }).isFreemium;
   let tmpResult = tmp(5931);
   if (tmp3) {
@@ -47,7 +47,7 @@ export const useFavoritesIntroPopoverDismissibleContent = function useFavoritesI
 export const useFavoritesMenuItemPopoverDismissibleContent = function useFavoritesMenuItemPopoverDismissibleContent(hasItem) {
   let tmp11;
   let tmp12;
-  let obj = require(9632) /* useFavoritesGuildConfig */;
+  let obj = require("FavoritesGuildExperiment.tsx") /* useFavoritesGuildConfig */;
   const isFreemium = obj.useFavoritesGuildConfig({ location: "FavoritesDismissibleContent" }).isFreemium;
   let tmpResult = tmp(5932);
   let first = callback(tmpResult.useDangerouslyPeekDismissibleContents(items1), 1)[0];
@@ -69,20 +69,20 @@ export const useFavoritesMenuItemPopoverDismissibleContent = function useFavorit
   }
 };
 export const useIsFavoritesMenuItemPopoverPending = function useIsFavoritesMenuItemPopoverPending() {
-  return callback(require(5932) /* canShowTimeRecurringContent */.useDangerouslyPeekDismissibleContents(items2), 1)[0] === require(1358) /* DismissibleContent */.DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
+  return callback(require("../dismissible_content/useGetDismissibleContent.tsx") /* canShowTimeRecurringContent */.useDangerouslyPeekDismissibleContents(items2), 1)[0] === require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
 };
 export const isFavoritesIntroPopoverShown = function isFavoritesIntroPopoverShown() {
-  return callback2(require(1358) /* DismissibleContent */.DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) && callback2(require(1358) /* DismissibleContent */.DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM);
+  return callback2(require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) && callback2(require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM);
 };
 export const useIsFavoritesIntroPopoverShown = function useIsFavoritesIntroPopoverShown() {
-  return callback3(require(1358) /* DismissibleContent */.DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) && callback3(require(1358) /* DismissibleContent */.DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM);
+  return callback3(require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) && callback3(require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM);
 };
 export const useFavoritesBetaTagDismissibleContent = function useFavoritesBetaTagDismissibleContent(arg0) {
   let require;
   let tmp10;
-  let obj = require(9632) /* useFavoritesGuildConfig */;
+  let obj = require("FavoritesGuildExperiment.tsx") /* useFavoritesGuildConfig */;
   const isFreemium = obj.useFavoritesGuildConfig({ location: "FavoritesDismissibleContent" }).isFreemium;
-  require(5931) /* useSelectedDismissibleContent */;
+  require("../dismissible_content/hooks/useSelectedDismissibleContent.tsx") /* useSelectedDismissibleContent */;
   if (tmp3) {
     if (arg0) {
       const items = [tmp(1358).DismissibleContent.FAVORITES_GUILD_NEW_BADGE];

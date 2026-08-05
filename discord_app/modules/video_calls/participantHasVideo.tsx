@@ -73,5 +73,5 @@ export { canRenderParticipantVideo };
 export const useCanRenderParticipantVideo = function useCanRenderParticipantVideo(stateFromStores) {
   const _require = stateFromStores;
   const items = [_detectH265HardwareDecode];
-  return _require(589).useStateFromStores(items, () => outer1_7(closure_0, outer1_3));
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_7(closure_0, outer1_3));
 };

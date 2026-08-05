@@ -13,16 +13,16 @@ export default function getGameMediaRefURL(arg0, type, size) {
         obj[0] = arg0;
         obj[1] = type.value;
         const merged = Object.assign(size);
-        let gameAssetURL = importDefault(1416).getGameAssetURL(obj);
+        let gameAssetURL = require("../../utils/AvatarUtils.tsx").getGameAssetURL(obj);
         if (gameAssetURL == null) {
           gameAssetURL = null;
         }
         tmp7 = gameAssetURL;
-        const obj4 = importDefault(1416);
+        const obj4 = require("../../utils/AvatarUtils.tsx");
       }
       return tmp7;
     } else if ("url" === type) {
-      obj = require(4316) /* isImageProxyURL */;
+      obj = require("../image_proxy/ImageProxyUtils.tsx") /* isImageProxyURL */;
       size = undefined;
       if (size != null) {
         size = size.size;

@@ -1,7 +1,7 @@
 // discord_app/modules/safe_area/useSafeAreaInsetsSharedValue.native.tsx
-import module_4146 from "module_4146";
+import ReanimatedRexport from "../reanimated/ReanimatedRexport.tsx";
 import useSafeAreaInsets from "useSafeAreaInsets";
-import module_4146 from "module_4146";
+import ReanimatedRexport from "../reanimated/ReanimatedRexport.tsx";
 import useSafeAreaInsets from "useSafeAreaInsets";
 
 let obj = { main: null, share: null };
@@ -13,7 +13,7 @@ const merged1 = Object.assign(useSafeAreaInsets.getSafeAreaInsets("share"));
 obj[1] = module_4146.makeMutable(obj);
 function _loop(iter) {
   let closure_0 = iter;
-  importDefault(10244)((arg0) => {
+  require("subscribeToSafeAreaInsets.native.tsx")((arg0) => {
     outer1_1(outer1_2[3])(outer1_3[closure_0], arg0);
   }, iter);
 }
@@ -40,6 +40,6 @@ const tmp5 = (() => {
 const result = require("subscribeToSafeAreaInsets").fileFinishedImporting("modules/safe_area/useSafeAreaInsetsSharedValue.native.tsx");
 
 export default function useSafeAreaInsetsSharedValue() {
-  const obj = require(1477) /* context */;
+  const obj = require("../window/native/AppEntryKeyContext.tsx") /* context */;
   return obj[obj.useAppEntryKey(obj)];
 };

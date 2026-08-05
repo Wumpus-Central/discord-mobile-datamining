@@ -15,7 +15,7 @@ function getURL(name) {
     let str = "asset:/emoji-" + convert.toCodePoint(name) + ".png";
   } else {
     str = "";
-    const obj = require(500) /* set */;
+    const obj = require("PlatformUtils.tsx") /* set */;
   }
   return str;
 }
@@ -140,7 +140,7 @@ obj[0] = require("set").makeMemoizer(getURL);
 obj[1] = function filterUnsupportedEmojis(emojis) {
   let found = emojis;
   if (!obj.isAndroid()) {
-    found = importDefault(12).filter(emojis, (unicodeVersion) => {
+    found = require("../../_runtime/00012_apply.js").filter(emojis, (unicodeVersion) => {
       unicodeVersion = unicodeVersion.unicodeVersion;
       const systemVersionMajor = callback(4265).getSystemVersionMajor();
       const obj = callback(4265);
@@ -259,7 +259,7 @@ obj[1] = function filterUnsupportedEmojis(emojis) {
       }
       return flag;
     });
-    const arr = importDefault(12);
+    const arr = require("../../_runtime/00012_apply.js");
   }
   return found;
 };
@@ -340,7 +340,7 @@ obj[4] = function triggerFullscreenAnimation(arg0) {
   let emoji;
   let messageId;
   ({ channelId, messageId, emoji } = arg0);
-  const result = require(7202) /* onDismiss */.openBurstReactionFirstSendActionSheet({ channelId, messageId, emoji });
+  const result = require("../components_native/reactions/BurstReactionFirstSendActionSheet.tsx") /* onDismiss */.openBurstReactionFirstSendActionSheet({ channelId, messageId, emoji });
 };
 let result = require("get ActivityIndicator").fileFinishedImporting("utils/EmojiUtilsPlatformed.native.tsx");
 

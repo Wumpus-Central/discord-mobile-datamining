@@ -3,7 +3,7 @@ import filterPlayingActivities from "filterPlayingActivities";
 import "initialize";
 
 function handleChange() {
-  let obj = importDefault(709);
+  let obj = require("../Dispatcher.tsx");
   obj = { type: "SELF_PRESENCE_STORE_UPDATE", status: store.getStatus(), activities: store.getActivities(true), hiddenActivities: store.getHiddenActivities() };
   obj.dispatch(obj);
 }

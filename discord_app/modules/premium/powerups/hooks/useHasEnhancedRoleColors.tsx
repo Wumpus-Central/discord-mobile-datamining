@@ -8,7 +8,7 @@ const result = require("initialize").fileFinishedImporting("modules/premium/powe
 export default function useHasEnhancedRoleColors(arg0) {
   const _require = arg0;
   const items = [createGuildRecordFromRust];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const guild = outer1_2.getGuild(closure_0);
     let hasItem = null != guild;
     if (hasItem) {
@@ -34,7 +34,7 @@ export const getHasEnhancedRoleColors = function getHasEnhancedRoleColors(guildI
 export const useHasEnhancedRoleColorsForRole = function useHasEnhancedRoleColorsForRole(guildId, role) {
   const _require = guildId;
   const items = [createGuildRecordFromRust];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const guild = outer1_2.getGuild(closure_0);
     let hasItem = null != guild;
     if (hasItem) {

@@ -12,7 +12,7 @@ function StageSparkleInner(style) {
   let icon;
   ({ IconComponent, icon } = style);
   if (icon === undefined) {
-    icon = importDefault(7711);
+    icon = require("../../../../../_runtime/07711_registerAsset.js");
   }
   const tmp3 = createCacheKey();
   let obj = { style: items, children: null };
@@ -20,14 +20,14 @@ function StageSparkleInner(style) {
   obj = { style: tmp3.iconContainer, children: null };
   if (null != IconComponent) {
     obj = { size: "lg", color: null };
-    obj[1] = importDefault(712).colors.MOBILE_TEXT_HEADING_PRIMARY;
+    obj[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_TEXT_HEADING_PRIMARY;
     let tmp6Result = tmp6(IconComponent, obj);
     let tmp10 = importDefault;
   } else {
     const obj1 = { source: null, style: null };
     obj1[0] = icon;
     obj1[1] = tmp3.iconStyle;
-    tmp6Result = tmp6(importDefault(5236), obj1);
+    tmp6Result = tmp6(require("../../../../components_native/common/FastImage.tsx"), obj1);
     tmp10 = importDefault;
   }
   obj[1] = tmp6Result;
@@ -57,7 +57,7 @@ export default function StageSparkle(theme) {
     obj = {};
     const merged1 = Object.assign(merged);
     obj[1] = callback(StageSparkleInner, obj);
-    let tmp7 = callback(require(3997) /* ManaContext */.ThemeContextProvider, obj);
+    let tmp7 = callback(require("../../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */.ThemeContextProvider, obj);
   } else {
     obj = {};
     const merged2 = Object.assign(merged);

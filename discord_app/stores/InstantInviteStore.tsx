@@ -83,9 +83,9 @@ const instantInviteStore = new InstantInviteStore(require("dispatcher"), {
   },
   FRIEND_INVITE_CREATE_SUCCESS: function handleFriendInviteCreateSuccess(invite) {
     closure_8[invite.invite.code] = createFromServer.createFromServer(invite.invite);
-    const tmp = importDefault(7684);
-    const tmp2 = importDefault(7686);
-    let tmpResult = tmp(tmp2(importDefault(7687)(Object.values(closure_8), "createdAt")));
+    const tmp = require("../../_runtime/07684_head.js");
+    const tmp2 = require("../../_runtime/07686_reverse.js");
+    let tmpResult = tmp(tmp2(require("../../_runtime/metro/07687__.js")(Object.values(closure_8), "createdAt")));
     if (tmpResult == null) {
       tmpResult = null;
     }
@@ -105,9 +105,9 @@ const instantInviteStore = new InstantInviteStore(require("dispatcher"), {
         }
       });
     }
-    const tmp2 = importDefault(7684);
-    const tmp3 = importDefault(7686);
-    let tmp2Result = tmp2(tmp3(importDefault(7687)(Object.values(closure_8), "createdAt")));
+    const tmp2 = require("../../_runtime/07684_head.js");
+    const tmp3 = require("../../_runtime/07686_reverse.js");
+    let tmp2Result = tmp2(tmp3(require("../../_runtime/metro/07687__.js")(Object.values(closure_8), "createdAt")));
     if (tmp2Result == null) {
       tmp2Result = null;
     }
@@ -157,9 +157,9 @@ const instantInviteStore = new InstantInviteStore(require("dispatcher"), {
     const item = invites.forEach((code) => {
       closure_8[code.code] = createFromServer.createFromServer(code);
     });
-    const tmp2 = importDefault(7684);
-    const tmp3 = importDefault(7686);
-    let tmp2Result = tmp2(tmp3(importDefault(7687)(Object.values(closure_8), "createdAt")));
+    const tmp2 = require("../../_runtime/07684_head.js");
+    const tmp3 = require("../../_runtime/07686_reverse.js");
+    let tmp2Result = tmp2(tmp3(require("../../_runtime/metro/07687__.js")(Object.values(closure_8), "createdAt")));
     if (tmp2Result == null) {
       tmp2Result = null;
     }

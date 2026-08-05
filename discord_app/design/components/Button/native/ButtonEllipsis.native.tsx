@@ -79,7 +79,7 @@ let closure_6 = createCacheKey.createStyles((arg0, arg1, arg2) => {
     num = 4;
     num2 = 6;
   }
-  const circle = { width: num2, height: num2, borderRadius: importDefault(712).radii.round, marginEnd: null, backgroundColor: null };
+  const circle = { width: num2, height: num2, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.round, marginEnd: null, backgroundColor: null };
   let num3 = 0;
   if (2 !== arg1) {
     num3 = num;
@@ -89,10 +89,10 @@ let closure_6 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   return { circle };
 });
 function withEllipsisAnimation(arg0, value) {
-  const obj = require(4146);
+  const obj = require("../../../../modules/reanimated/ReanimatedRexport.tsx");
   const result = 166.66666666666666 * arg0;
-  const obj2 = require(4146);
-  return obj.withDelay(result, obj2.withRepeat(require(4286) /* CONFIG_NEVER_ANIMATE_TIMING */.withTiming(value, obj, "animate-always"), -1, true));
+  const obj2 = require("../../../../modules/reanimated/ReanimatedRexport.tsx");
+  return obj.withDelay(result, obj2.withRepeat(require("../../../animation/reanimated/timing/timing.tsx") /* CONFIG_NEVER_ANIMATE_TIMING */.withTiming(value, obj, "animate-always"), -1, true));
 }
 obj = { ELLIPSIS_APPEAR_DURATION: 500, withDelay: require("module_4146").withDelay, withRepeat: require("module_4146").withRepeat, withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, ELLIPSIS_APPEAR_TIMING: obj };
 withEllipsisAnimation.__closure = obj;
@@ -112,5 +112,5 @@ export const Ellipsis = function Ellipsis(arg0) {
   const merged2 = Object.assign(arg0);
   items[2] = callback(EllipsisCircle, { offset: 2 });
   obj[1] = items;
-  return callback2(importDefault(4146).View, obj);
+  return callback2(require("../../../../modules/reanimated/ReanimatedRexport.tsx").View, obj);
 };

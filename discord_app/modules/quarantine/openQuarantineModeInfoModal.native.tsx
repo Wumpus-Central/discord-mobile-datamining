@@ -8,7 +8,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/quarantine/open
 
 export default function openQuarantineModeInfoModal() {
   Keyboard.dismiss();
-  let obj = require(4144) /* getBestActiveInput */;
+  let obj = require("../../utils/native/ChatInputUtils.tsx") /* getBestActiveInput */;
   const bestActiveInput = obj.getBestActiveInput();
   if (bestActiveInput != null) {
     bestActiveInput.blur();
@@ -24,5 +24,5 @@ export default function openQuarantineModeInfoModal() {
       });
     }
   };
-  importDefault(4624).openLazy(obj);
+  require("../../actions/native/AlertActionCreators.tsx").openLazy(obj);
 };

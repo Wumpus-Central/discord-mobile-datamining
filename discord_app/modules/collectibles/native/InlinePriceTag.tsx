@@ -33,7 +33,7 @@ function PriceTag(accessibilityLabel) {
   const obj = { children: null };
   const items = [icon, ];
   const items1 = [createCacheKey().priceTag, style];
-  items[1] = callback(require(4281) /* Text */.Text, { variant, style: items1, color: str, accessibilityLabel: accessibilityLabel.accessibilityLabel, children: priceFormatted });
+  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant, style: items1, color: str, accessibilityLabel: accessibilityLabel.accessibilityLabel, children: priceFormatted });
   obj[0] = items;
   return callback2(closure_10, obj);
 }
@@ -50,7 +50,7 @@ function OrbsPriceTag(arg0) {
   if (null == vcData.price) {
     return null;
   } else {
-    let result = product.type === require(1901) /* CollectiblesItemType */.CollectiblesItemType.BUNDLE;
+    let result = product.type === require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.BUNDLE;
     if (result) {
       let tmp16Result = tmp16(6921);
       result = tmp16Result.isOrbsExclusiveProduct(product);
@@ -128,13 +128,13 @@ function OrbsPriceTag(arg0) {
 function BundleDiscountV2(discountPercentage) {
   discountPercentage = discountPercentage.discountPercentage;
   let tmp4 = null;
-  if (discountPercentage >= require(6922) /* getItemRecordsFromPurchases */.DISCOUNT_DISPLAY_MINIMUM_THRESHOLD) {
+  if (discountPercentage >= require("../CollectiblesUtils.tsx") /* getItemRecordsFromPurchases */.DISCOUNT_DISPLAY_MINIMUM_THRESHOLD) {
     let obj = { style: null, children: null };
     obj[0] = tmp.discount;
     obj = { variant: "text-md/normal", color: "text-feedback-positive", children: null };
     const items = ["-", discountPercentage, "%"];
     obj[2] = items;
-    obj[1] = callback2(require(4281) /* Text */.Text, obj);
+    obj[1] = callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
     tmp4 = callback(closure_4, obj);
   }
   return tmp4;
@@ -150,13 +150,13 @@ createCacheKey[12] = { marginRight: 4 };
 createCacheKey[13] = { opacity: 0.5 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 let closure_15 = createCacheKey.createStyles(() => {
-  const discount = { backgroundColor: "rgba(46, 204, 113, 0.25)", flexDirection: "row", flexShrink: 1, borderRadius: importDefault(712).radii.xs - 1, paddingHorizontal: 6, marginLeft: 6, paddingTop: null, paddingBottom: null };
+  const discount = { backgroundColor: "rgba(46, 204, 113, 0.25)", flexDirection: "row", flexShrink: 1, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.xs - 1, paddingHorizontal: 6, marginLeft: 6, paddingTop: null, paddingBottom: null };
   let num;
   if (obj2.isAndroid()) {
     num = 0;
   }
   discount[6] = num;
-  obj2 = require(500) /* set */;
+  obj2 = require("../../../utils/PlatformUtils.tsx") /* set */;
   const tmp2 = require;
   let num2;
   if (tmp2Result.isAndroid()) {
@@ -175,23 +175,23 @@ export default function InlinePriceTag(arg0) {
   let dependencyMap;
   const tmp = createCacheKey();
   importDefault = tmp;
-  let obj = require(9266) /* useCurrentUser */;
+  let obj = require("../hooks/useCurrentUser.tsx") /* useCurrentUser */;
   const currentUser = obj.useCurrentUser();
-  let obj1 = require(6922) /* getItemRecordsFromPurchases */;
+  let obj1 = require("../CollectiblesUtils.tsx") /* getItemRecordsFromPurchases */;
   const shopDiscountSource = obj1.getShopDiscountSource(currentUser);
-  let obj2 = importDefault(3931);
+  let obj2 = require("../../../utils/PremiumUtils.tsx");
   const canUseShopDiscountsResult = obj2.canUseShopDiscounts(currentUser);
-  dependencyMap = importDefault(9485)(constants.SHOP_PRODUCT_DETAILS);
-  let obj3 = require(9486) /* useProductDisableState */;
+  dependencyMap = require("useOpenNitroSubscribeActionSheet.tsx")(constants.SHOP_PRODUCT_DETAILS);
+  let obj3 = require("../hooks/useProductDisableState.tsx") /* useProductDisableState */;
   const isDisabled = obj3.useProductDisableState(product.skuId).isDisabled;
-  let obj4 = require(9337) /* hasAtLeastOneGPlaySynced */;
+  let obj4 = require("CollectiblesUtils.tsx") /* hasAtLeastOneGPlaySynced */;
   const formattedPriceForCollectiblesProduct = obj4.getFormattedPriceForCollectiblesProduct(product, false, true);
-  let obj5 = require(9487) /* useVirtualCurrencyData */;
+  let obj5 = require("hooks/useVirtualCurrencyData.tsx") /* useVirtualCurrencyData */;
   const virtualCurrencyData = obj5.useVirtualCurrencyData(product, canUseShopDiscountsResult);
-  let obj6 = require(589) /* initialize */;
+  let obj6 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [updateProduct];
   const stateFromStores = obj6.useStateFromStores(items, () => fetchingGoogleSkus.isFetchingGoogleSkus());
-  let obj7 = require(9321) /* useCanPurchaseFrames */;
+  let obj7 = require("../hooks/useCanPurchaseFrames.tsx") /* useCanPurchaseFrames */;
   const isProfileFramesEarlyAccessPhase = obj7.useIsProfileFramesEarlyAccessPhase("InlinePriceTag");
   if (stateFromStores) {
     if (null == formattedPriceForCollectiblesProduct) {

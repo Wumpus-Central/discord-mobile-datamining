@@ -352,7 +352,7 @@ function handleViewImpression(minViewTimeSeconds) {
   let advertisingId = null;
   ({ impressionId, isQuestEnrollmentBlocked, questContentPosition, questContentRowIndex } = minViewTimeSeconds);
   if (null != adUser) {
-    let obj1 = require(500) /* set */;
+    let obj1 = require("../../../utils/PlatformUtils.tsx") /* set */;
     advertisingId = null;
     if (obj1.isIOS()) {
       advertisingId = adUser.advertisingId;
@@ -361,20 +361,20 @@ function handleViewImpression(minViewTimeSeconds) {
   obj[3] = advertisingId;
   let advertisingId1 = null;
   if (null != adUser) {
-    let obj2 = require(500) /* set */;
+    let obj2 = require("../../../utils/PlatformUtils.tsx") /* set */;
     advertisingId1 = null;
     if (obj2.isAndroid()) {
       advertisingId1 = adUser.advertisingId;
     }
   }
   obj[4] = advertisingId1;
-  const merged = Object.assign(importDefault(7057)());
-  const merged1 = Object.assign(require(9436) /* getBrandSafetyContext */.getBrandSafetyContext(surfaceId));
+  const merged = Object.assign(require("../../device/getDeviceMetadata.native.tsx")());
+  const merged1 = Object.assign(require("../../quests/lib/analytics/BrandSafetyContext.tsx") /* getBrandSafetyContext */.getBrandSafetyContext(surfaceId));
   obj.impression_id = impressionId;
   obj.is_quest_enrollment_blocked = isQuestEnrollmentBlocked;
-  const obj4 = require(9436) /* getBrandSafetyContext */;
-  const merged2 = Object.assign(require(7107) /* getQuestContentName */.getContentProperties(surfaceId, questContentPosition, questContentRowIndex));
-  if (minViewTimeSeconds.adCreativeType !== require(7108) /* AdCreativeType */.AdCreativeType.QUEST) {
+  const obj4 = require("../../quests/lib/analytics/BrandSafetyContext.tsx") /* getBrandSafetyContext */;
+  const merged2 = Object.assign(require("../../quests/lib/analytics/AnalyticsTypes.tsx") /* getQuestContentName */.getContentProperties(surfaceId, questContentPosition, questContentRowIndex));
+  if (minViewTimeSeconds.adCreativeType !== require("../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx") /* AdCreativeType */.AdCreativeType.QUEST) {
     let tmp9Result = tmp9(7097);
     obj = { event: null, adContentId: null, adCreativeType: null, trackGuildAndChannelMetadata: null, shouldExtendSession: null, sourceQuestContent: null, properties: null };
     obj[0] = AnalyticEvents.QUEST_CONTENT_VIEWED;
@@ -527,7 +527,7 @@ function _handleViewInternalSurfaceImpressionAction() {
   return applyArgumentsResult;
 }
 function reportCaptureAdUserActionError(arg0) {
-  const questLogger = require(7086) /* getQuestLogger */.getQuestLogger();
+  const questLogger = require("../../quests/lib/getQuestLogger.tsx") /* getQuestLogger */.getQuestLogger();
   questLogger.error("captureAdUserAction failed to report an ad user action", arg0);
 }
 const result = require("ME").fileFinishedImporting("modules/ads/analytics/captureAdUserAction.tsx");
@@ -535,7 +535,7 @@ const result = require("ME").fileFinishedImporting("modules/ads/analytics/captur
 export const captureAdUserAction = function captureAdUserAction(type) {
   try {
     type = type.type;
-    if (require(9439) /* AdUserActionType */.AdUserActionType.END_CONTENT_LOAD === type) {
+    if (require("captureAdUserActionTypes.tsx") /* AdUserActionType */.AdUserActionType.END_CONTENT_LOAD === type) {
       (function handleEndContentLoadAction(adCreativeType) {
         if (adCreativeType.adCreativeType === callback(table[3]).AdCreativeType.QUEST) {
           const adCreativeId = adCreativeType.adCreativeId;

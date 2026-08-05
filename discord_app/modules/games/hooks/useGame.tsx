@@ -13,7 +13,7 @@ initialize = {
       return null;
     } else {
       if (importDefaultResult1.hasNoData(gameId)) {
-        let NO_DATA = require(589) /* initialize */.NO_DATA;
+        let NO_DATA = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.NO_DATA;
       } else {
         NO_DATA = obj.getGame(gameId);
         if (NO_DATA == null) {

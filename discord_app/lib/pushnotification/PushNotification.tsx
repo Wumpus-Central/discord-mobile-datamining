@@ -66,8 +66,8 @@ export default {
         });
       });
     } else {
-      initialNotification = importDefault(10669).getInitialNotification();
-      const obj2 = importDefault(10669);
+      initialNotification = require("../../../_runtime/10669_RNCPushNotificationIOS.js").getInitialNotification();
+      const obj2 = require("../../../_runtime/10669_RNCPushNotificationIOS.js");
     }
     return initialNotification;
   },
@@ -98,30 +98,30 @@ export default {
   },
   clearPushNotificationLogs() {
     if (obj.isAndroid()) {
-      require(9788) /* enforcing */.default.clearLogs();
-      const _default = require(9788) /* enforcing */.default;
+      require("../../../discord_common/js/packages/rtn-codegen/js/NativePushNotificationMonitorModule.tsx") /* enforcing */.default.clearLogs();
+      const _default = require("../../../discord_common/js/packages/rtn-codegen/js/NativePushNotificationMonitorModule.tsx") /* enforcing */.default;
     }
   },
   setApplicationIconBadgeNumber(arg0) {
     if (!obj.isAndroid()) {
-      const result = importDefault(10669).setApplicationIconBadgeNumber(arg0);
-      const obj2 = importDefault(10669);
+      const result = require("../../../_runtime/10669_RNCPushNotificationIOS.js").setApplicationIconBadgeNumber(arg0);
+      const obj2 = require("../../../_runtime/10669_RNCPushNotificationIOS.js");
     }
   },
   clearAllNotifications() {
     if (obj.isAndroid()) {
       const result = PushNotificationAndroid.clearAllNotifications();
     } else {
-      const result1 = importDefault(10669).setApplicationIconBadgeNumber(0);
-      const obj2 = importDefault(10669);
+      const result1 = require("../../../_runtime/10669_RNCPushNotificationIOS.js").setApplicationIconBadgeNumber(0);
+      const obj2 = require("../../../_runtime/10669_RNCPushNotificationIOS.js");
     }
   },
   presentLocalNotification(arg0) {
     if (obj.isAndroid()) {
       const result = PushNotificationAndroid.presentLocalNotification(arg0);
     } else {
-      const result1 = importDefault(10669).presentLocalNotification(arg0);
-      const obj2 = importDefault(10669);
+      const result1 = require("../../../_runtime/10669_RNCPushNotificationIOS.js").presentLocalNotification(arg0);
+      const obj2 = require("../../../_runtime/10669_RNCPushNotificationIOS.js");
     }
   },
   getDeliveredNotifications() {
@@ -136,53 +136,53 @@ export default {
   },
   removeDeliveredNotifications(arg0) {
     if (!obj.isAndroid()) {
-      const result = importDefault(10669).removeDeliveredNotifications(arg0);
-      const obj2 = importDefault(10669);
+      const result = require("../../../_runtime/10669_RNCPushNotificationIOS.js").removeDeliveredNotifications(arg0);
+      const obj2 = require("../../../_runtime/10669_RNCPushNotificationIOS.js");
     }
   },
   scheduleLocalNotification(arg0) {
     if (!obj.isAndroid()) {
-      const result = importDefault(10669).scheduleLocalNotification(arg0);
-      const obj2 = importDefault(10669);
+      const result = require("../../../_runtime/10669_RNCPushNotificationIOS.js").scheduleLocalNotification(arg0);
+      const obj2 = require("../../../_runtime/10669_RNCPushNotificationIOS.js");
     }
   },
   getScheduledLocalNotifications(arg0) {
     if (!obj.isAndroid()) {
-      const scheduledLocalNotifications = importDefault(10669).getScheduledLocalNotifications(arg0);
-      const obj2 = importDefault(10669);
+      const scheduledLocalNotifications = require("../../../_runtime/10669_RNCPushNotificationIOS.js").getScheduledLocalNotifications(arg0);
+      const obj2 = require("../../../_runtime/10669_RNCPushNotificationIOS.js");
     }
   },
   cancelLocalNotifications(arg0) {
     if (!obj.isAndroid()) {
-      const result = importDefault(10669).cancelLocalNotifications(arg0);
-      const obj2 = importDefault(10669);
+      const result = require("../../../_runtime/10669_RNCPushNotificationIOS.js").cancelLocalNotifications(arg0);
+      const obj2 = require("../../../_runtime/10669_RNCPushNotificationIOS.js");
     }
   },
   cancelAllLocalNotifications() {
     if (!obj.isAndroid()) {
-      const result = importDefault(10669).cancelAllLocalNotifications();
-      const obj2 = importDefault(10669);
+      const result = require("../../../_runtime/10669_RNCPushNotificationIOS.js").cancelAllLocalNotifications();
+      const obj2 = require("../../../_runtime/10669_RNCPushNotificationIOS.js");
     }
   },
   checkPermissions(arg0) {
     if (obj.isAndroid()) {
       arg0({});
     } else {
-      importDefault(10669).checkPermissions(arg0);
-      const obj2 = importDefault(10669);
+      require("../../../_runtime/10669_RNCPushNotificationIOS.js").checkPermissions(arg0);
+      const obj2 = require("../../../_runtime/10669_RNCPushNotificationIOS.js");
     }
   },
   requestPermissions(arg0) {
     if (obj.isAndroid()) {
       let permissions = new Promise((arg0) => arg0({}));
     } else {
-      permissions = importDefault(10669).requestPermissions(arg0);
-      const obj2 = importDefault(10669);
+      permissions = require("../../../_runtime/10669_RNCPushNotificationIOS.js").requestPermissions(arg0);
+      const obj2 = require("../../../_runtime/10669_RNCPushNotificationIOS.js");
     }
     return permissions;
   },
   openNotificationSettings() {
-    importDefault(10670)();
+    require("../../modules/native_permissions/mobile/openNotificationSettings.native.tsx")();
   },
   addNotificationEventListener(localNotification, handleLocalNotification) {
     const _require = handleLocalNotification;
@@ -293,8 +293,8 @@ export default {
       }
       const result = PushNotificationAndroid.registerEventListener(localNotification);
     } else {
-      const listener = importDefault(10669).addEventListener(localNotification, handleLocalNotification);
-      const obj2 = importDefault(10669);
+      const listener = require("../../../_runtime/10669_RNCPushNotificationIOS.js").addEventListener(localNotification, handleLocalNotification);
+      const obj2 = require("../../../_runtime/10669_RNCPushNotificationIOS.js");
     }
   },
   addRegisterEventListener(handleToken) {
@@ -305,8 +305,8 @@ export default {
       });
       const result = PushNotificationAndroid.registerEventListener("register");
     } else {
-      const listener = importDefault(10669).addEventListener("register", handleToken);
-      const obj2 = importDefault(10669);
+      const listener = require("../../../_runtime/10669_RNCPushNotificationIOS.js").addEventListener("register", handleToken);
+      const obj2 = require("../../../_runtime/10669_RNCPushNotificationIOS.js");
     }
   },
   getSoundsEnabled() {

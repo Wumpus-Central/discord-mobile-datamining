@@ -12,9 +12,9 @@ export default function UserProfileWidgetReportButton(arg0) {
   let require;
   ({ userId: require, widget: importDefault } = arg0);
   let obj = { label: null, variant: "destructive", IconComponent: null, action: null };
-  let intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.D4GvHE);
-  obj[2] = require(8691) /* FlagIcon */.FlagIcon;
+  let intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.D4GvHE);
+  obj[2] = require("../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx") /* FlagIcon */.FlagIcon;
   obj[3] = function action() {
     return outer1_0(outer1_2[5]).showReportModalForWidget(closure_0, closure_1);
   };
@@ -34,7 +34,7 @@ export default function UserProfileWidgetReportButton(arg0) {
       return callback3(closure_3, obj);
     }
   };
-  return jsx(require(8408) /* ContextMenu */.ContextMenu, {
+  return jsx(require("../../../design/components/ContextMenu/native/ContextMenu.native.tsx") /* ContextMenu */.ContextMenu, {
     items,
     children(ref) {
       let obj = { ref: ref.ref };

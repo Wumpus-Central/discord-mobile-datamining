@@ -19,7 +19,7 @@ export default function getEmojiPickerDataRowItemNativeSection(isSectionNitroLoc
     items = Array.from(emojisDisabled);
   }
   const obj = { type: null, title: null, guildId: null, emojiCount: null, emojisDisabled: null, emojisHidden: null, isSectionNitroLocked: null, hasPremiumInlineRoadblockHeader: null, hasPremiumInlineRoadblockFooter: null };
-  obj[0] = require(8624) /* useEmojiPickerData */.EmojiPickerItemType.NATIVE_SECTION;
+  obj[0] = require("useEmojiPickerData.tsx") /* useEmojiPickerData */.EmojiPickerItemType.NATIVE_SECTION;
   obj[1] = label;
   obj[2] = guildId;
   obj[3] = emojiCount;

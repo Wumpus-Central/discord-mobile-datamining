@@ -20,9 +20,9 @@ const premiumPromoStore = new PremiumPromoStore(require("dispatcher"), {
     let tmp2 = friendIDs.getFriendIDs().length >= 10;
     if (tmp2) {
       const _Date = Date;
-      const obj = importDefault(11);
-      tmp2 = importDefault(11).extractTimestamp(id.getId()) < Date.now() - closure_4;
-      const extractTimestampResult = importDefault(11).extractTimestamp(id.getId());
+      const obj = require("../utils/SnowflakeUtils.tsx");
+      tmp2 = require("../utils/SnowflakeUtils.tsx").extractTimestamp(id.getId()) < Date.now() - closure_4;
+      const extractTimestampResult = require("../utils/SnowflakeUtils.tsx").extractTimestamp(id.getId());
     }
     let c5 = tmp2;
     return c5 !== tmp2;

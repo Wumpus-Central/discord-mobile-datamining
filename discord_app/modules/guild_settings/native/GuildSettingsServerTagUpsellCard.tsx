@@ -43,7 +43,7 @@ export default function GuildSettingsServerTagUpsellCard(guildId) {
     }
     return tmp2;
   }, items1);
-  const tmp6 = importDefault(11793)(stateFromStores, true);
+  const tmp6 = require("../../premium/powerups/hooks/useGetGuildPowerupBannerImage.tsx")(stateFromStores, true);
   const items2 = [guildId];
   const effect = React.useEffect(() => {
     if (outer1_5.shouldFetchCatalogForGuild(guildId)) {
@@ -54,9 +54,9 @@ export default function GuildSettingsServerTagUpsellCard(guildId) {
   obj = { style: tmp.card, children: null };
   obj = { style: tmp.backgroundLayer, colors: items3, locations: [0, 0.7], start: { x: 0.5, y: 0 }, end: { x: 0.5, y: 1 }, pointerEvents: "none" };
   items3 = ["rgba(41, 41, 45, 0)", c12];
-  const items4 = [callback(importDefault(4706), obj), callback(importDefault(4706), { style: tmp.backgroundLayer, colors: closure_10, start: closure_8, end: closure_9, pointerEvents: "none" }), callback(importDefault(4706), { style: tmp.backgroundLayer, colors: closure_11, start: closure_8, end: closure_9, pointerEvents: "none" }), ];
+  const items4 = [callback(require("../../../../_runtime/04706_LinearGradient.js"), obj), callback(require("../../../../_runtime/04706_LinearGradient.js"), { style: tmp.backgroundLayer, colors: closure_10, start: closure_8, end: closure_9, pointerEvents: "none" }), callback(require("../../../../_runtime/04706_LinearGradient.js"), { style: tmp.backgroundLayer, colors: closure_11, start: closure_8, end: closure_9, pointerEvents: "none" }), ];
   const obj3 = { spacing: null, children: null };
-  obj3[0] = importDefault(712).space.PX_16;
+  obj3[0] = require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16;
   const obj4 = { style: tmp.imageContainer, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   let tmp10Result = null != tmp6;
   if (tmp10Result) {
@@ -68,7 +68,7 @@ export default function GuildSettingsServerTagUpsellCard(guildId) {
   obj4[3] = tmp10Result;
   const items5 = [callback(closure_4, obj4), , ];
   const obj6 = { spacing: null, style: null, children: null };
-  obj6[0] = importDefault(712).space.PX_8;
+  obj6[0] = require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8;
   obj6[1] = tmp.textBlock;
   const obj7 = { variant: "heading-xl/semibold", color: "text-strong", style: tmp.centerText, children: null };
   const intl = tmp2(1236).intl;

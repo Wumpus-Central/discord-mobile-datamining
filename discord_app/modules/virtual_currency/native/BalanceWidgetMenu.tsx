@@ -20,17 +20,17 @@ function BalanceWidget(arg0) {
   let onPress;
   let style;
   ({ onPress, style, accessibilityLabel, accessibilityState, children } = arg0);
-  const tmp = callback3(importDefault(1348)("BalanceWidgetMenu"));
+  const tmp = callback3(require("../../themes/experiments/MobileVisualRefreshExperiment.tsx")("BalanceWidgetMenu"));
   let obj = { onPress, style: items, accessible: true, accessibilityRole: "button", accessibilityLabel, accessibilityState, activeOpacity: 0.8, children: null };
   items = [tmp.pressable, style];
   obj = { variant: "text-sm/semibold", color: "text-default", style: tmp.label, children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[3] = intl.string(require(1236) /* getSystemLocale */.t.gGtZpz);
-  const items1 = [callback(require(4281) /* Text */.Text, obj), ];
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[3] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.gGtZpz);
+  const items1 = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
   obj = { style: tmp.pill, children };
   items1[1] = callback(View, obj);
   obj[7] = items1;
-  return callback2(require(4812) /* PressableBase */.PressableOpacity, obj);
+  return callback2(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
 }
 class OrbsOnboardingMenuDismissibleContent {
   constructor(arg0) {
@@ -120,13 +120,13 @@ function BalanceWidgetMenu(style) {
     str2 = "";
   }
   obj[2] = intl.formatToPlainString(str(1236).t.zPaLL9, { balance: str2 });
-  obj[3] = closure_10(importDefault(10065), { balance: str, onPress: callback, accessible: false });
+  obj[3] = closure_10(require("BalanceWidgetPillButton.tsx"), { balance: str, onPress: callback, accessible: false });
   return closure_10(BalanceWidget, obj);
 }
 ({ ContentDismissActionType: error, DismissibleContentGroupName: metroImportAll } = ContentDismissActionType);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_15 = createCacheKey.createStyles((arg0) => {
-  const pressable = { flex: 1, flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: importDefault(712).space.PX_8 };
+  const pressable = { flex: 1, flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
   if (arg0) {
     let obj = { paddingHorizontal: null, paddingVertical: null };
     obj[0] = tmp(712).space.PX_8;
@@ -142,9 +142,9 @@ let closure_15 = createCacheKey.createStyles((arg0) => {
 let result = require("ME").fileFinishedImporting("modules/virtual_currency/native/BalanceWidgetMenu.tsx");
 
 export default function BalanceWidgetMenuWrapper(style) {
-  let obj = require(9340);
+  let obj = require("../hooks/index.tsx");
   const balance = obj.useFetchVirtualCurrencyBalance().balance;
-  require(4101) /* UNSAFE_isDismissibleContentDismissed */;
+  require("../../dismissible_content/DismissibleContentUnsafeUtils.tsx") /* UNSAFE_isDismissibleContentDismissed */;
   if (null == balance) {
     obj = { onPress: null, style: null, accessibilityLabel: null, accessibilityState: null, children: null };
     obj[0] = function onPress() {

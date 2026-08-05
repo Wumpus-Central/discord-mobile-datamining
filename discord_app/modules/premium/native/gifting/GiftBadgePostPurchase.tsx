@@ -21,7 +21,7 @@ function PostPurchaseFooter(onSendGift) {
     arr = arr.pop();
     onSendGift();
   }, items);
-  let obj = { style: callback6(importDefault(1581)().bottom).footer, children: null };
+  let obj = { style: callback6(require("../../../safe_area/useSafeAreaInsets.native.tsx")().bottom).footer, children: null };
   const callback1 = React.useCallback(() => {
     let arr = callback(4490);
     arr = arr.pop();
@@ -32,15 +32,15 @@ function PostPurchaseFooter(onSendGift) {
   }, []);
   obj = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
   obj = { size: "sm", color: null };
-  obj[1] = importDefault(712).colors.CONTROL_PRIMARY_TEXT_DEFAULT;
+  obj[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_PRIMARY_TEXT_DEFAULT;
   obj[2] = callback4(onSendGift(9493).GiftIcon, obj);
   const intl = onSendGift(1236).intl;
-  obj[3] = intl.string(importDefault(2381).g86YiI);
+  obj[3] = intl.string(require("../../gifting/GiftingBadge.messages.js").g86YiI);
   obj[4] = callback;
   const items1 = [callback4(onSendGift(4695).Button, obj), ];
   const obj1 = { grow: true, variant: "secondary", text: null, onPress: null };
   const intl2 = onSendGift(1236).intl;
-  obj1[2] = intl2.string(importDefault(2381)["sa/cfM"]);
+  obj1[2] = intl2.string(require("../../gifting/GiftingBadge.messages.js")["sa/cfM"]);
   obj1[3] = callback1;
   items1[1] = callback4(onSendGift(4695).Button, obj1);
   obj[1] = items1;
@@ -55,13 +55,13 @@ function InProgressScreen(arg0) {
   let progressBarTitle;
   let title;
   ({ progress, title, progressBarTitle, description, currentTier, nextTier, onSendGift } = arg0);
-  const tmp = callback6(importDefault(1581)().bottom);
+  const tmp = callback6(require("../../../safe_area/useSafeAreaInsets.native.tsx")().bottom);
   let obj = { style: tmp.screenContainer, children: null };
   obj = { style: tmp.content, children: null };
-  obj = { style: tmp.progressWrapper, children: callback4(importDefault(10076), { progress, currentTier, nextTier, iconSize: 48, title: progressBarTitle }) };
+  obj = { style: tmp.progressWrapper, children: callback4(require("../../gifting/native/views/GiftingBadgeProgress.tsx"), { progress, currentTier, nextTier, iconSize: 48, title: progressBarTitle }) };
   const items = [callback4(View, obj), ];
   const obj1 = { style: tmp.messageSection, children: null };
-  const items1 = [callback4(require(4281) /* Text */.Text, { variant: "heading-xxl/bold", style: tmp.centerText, children: title }), callback4(require(4281) /* Text */.Text, { variant: "text-md/medium", color: "text-subtle", style: tmp.centerText, children: description })];
+  const items1 = [callback4(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "heading-xxl/bold", style: tmp.centerText, children: title }), callback4(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-md/medium", color: "text-subtle", style: tmp.centerText, children: description })];
   obj1[1] = items1;
   items[1] = callback5(View, obj1);
   obj[1] = items;
@@ -78,7 +78,7 @@ function LevelUpScreen(arg0) {
   let simulatedProgress;
   ({ newTier, nextTier, giftsToNextTier } = arg0);
   ({ simulatedProgress, currentTier, onSendGift } = arg0);
-  const tmp3 = callback6(importDefault(1581)().bottom);
+  const tmp3 = callback6(require("../../../safe_area/useSafeAreaInsets.native.tsx")().bottom);
   const effect = React.useEffect(() => {
     const result = callback(4254).triggerHapticFeedback(callback2(4255).IMPACT_HEAVY);
   }, []);
@@ -94,16 +94,16 @@ function LevelUpScreen(arg0) {
   obj[1] = tmp7Result;
   const items = [closure_10(View, obj), ];
   const obj2 = { style: tmp3.levelUpBody, children: null };
-  const items1 = [closure_10(importDefault(10077), { progress: simulatedProgress, currentTier, newTier, style: tmp3.levelUpProgress }), ];
+  const items1 = [closure_10(require("../../gifting/native/views/GiftingBadgeLevelUpProgress.tsx"), { progress: simulatedProgress, currentTier, newTier, style: tmp3.levelUpProgress }), ];
   const obj4 = { style: tmp3.messageSection, children: null };
   const obj5 = { variant: "heading-xxl/bold", style: tmp3.centerText, children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   let str = newTier.name;
   if (str == null) {
     str = "";
   }
-  obj5[2] = intl.format(importDefault(2381).k8MmO8, { tierName: str });
-  const items2 = [closure_10(require(4281) /* Text */.Text, obj5), ];
+  obj5[2] = intl.format(require("../../gifting/GiftingBadge.messages.js").k8MmO8, { tierName: str });
+  const items2 = [closure_10(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj5), ];
   tmp7Result = null != nextTier && null != giftsToNextTier;
   if (tmp7Result) {
     tmp7Result = giftsToNextTier > 0;
@@ -136,19 +136,19 @@ function LevelUpScreen(arg0) {
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles((arg0) => {
   let obj = { screenContainer: { flex: 1 }, content: null, progressWrapper: null, messageSection: null, centerText: null, levelUpIconWrapper: null, levelUpBody: null, levelUpProgress: null, footer: null };
-  obj = { flex: 1, alignItems: "center", justifyContent: "center", padding: importDefault(712).space.PX_16 };
+  obj = { flex: 1, alignItems: "center", justifyContent: "center", padding: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
   obj[1] = obj;
-  obj = { padding: importDefault(712).space.PX_16, width: "100%", marginBottom: importDefault(712).space.PX_24 };
+  obj = { padding: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, width: "100%", marginBottom: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
   obj[2] = obj;
-  obj[3] = { gap: importDefault(712).space.PX_12, alignItems: "center", width: "100%", paddingHorizontal: importDefault(712).space.PX_16 };
+  obj[3] = { gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, alignItems: "center", width: "100%", paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
   obj[4] = { textAlign: "center" };
-  const obj1 = { gap: importDefault(712).space.PX_12, alignItems: "center", width: "100%", paddingHorizontal: importDefault(712).space.PX_16 };
-  obj[5] = { paddingVertical: 26, paddingHorizontal: 74, marginBottom: importDefault(712).space.PX_48 };
-  const obj2 = { paddingVertical: 26, paddingHorizontal: 74, marginBottom: importDefault(712).space.PX_48 };
-  obj[6] = { gap: importDefault(712).space.PX_12, alignItems: "center", width: "100%" };
+  const obj1 = { gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, alignItems: "center", width: "100%", paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
+  obj[5] = { paddingVertical: 26, paddingHorizontal: 74, marginBottom: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_48 };
+  const obj2 = { paddingVertical: 26, paddingHorizontal: 74, marginBottom: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_48 };
+  obj[6] = { gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, alignItems: "center", width: "100%" };
   obj[7] = { maxWidth: 260 };
-  const obj3 = { gap: importDefault(712).space.PX_12, alignItems: "center", width: "100%" };
-  obj[8] = { width: "100%", gap: importDefault(712).space.PX_12, paddingHorizontal: importDefault(712).space.PX_16, paddingBottom: importDefault(712).space.PX_16 + arg0 };
+  const obj3 = { gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, alignItems: "center", width: "100%" };
+  obj[8] = { width: "100%", gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, paddingBottom: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 + arg0 };
   return obj;
 });
 let result = require("map").fileFinishedImporting("modules/premium/native/gifting/GiftBadgePostPurchase.tsx");
@@ -162,7 +162,7 @@ export default function GiftBadgePostPurchase(arg0) {
     obj = { dismissAction: constants.INDIRECT_ACTION };
     const result = obj.UNSAFE_markDismissibleContentAsDismissed(callback(1358).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK, obj);
   }, []);
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [map];
   const stateFromStores = obj.useStateFromStores(items, () => {
     badgeById = badgeById.getBadgeById(callback(8708).BadgeId.GIFTING);
@@ -213,11 +213,11 @@ export default function GiftBadgePostPurchase(arg0) {
       obj = { title: null, description: null, progressBarTitle: null, progress: null, currentTier: null, nextTier: null, onSendGift: null };
       const obj1 = { nextTier: null };
       obj1[0] = str2;
-      obj[0] = intl2.formatToPlainString(importDefault(2381).KjdBPz, obj1);
+      obj[0] = intl2.formatToPlainString(require("../../gifting/GiftingBadge.messages.js").KjdBPz, obj1);
       const intl3 = tmp2(1236).intl;
-      obj[1] = intl3.string(importDefault(2381).oqDrEM);
+      obj[1] = intl3.string(require("../../gifting/GiftingBadge.messages.js").oqDrEM);
       const intl4 = tmp2(1236).intl;
-      obj[2] = intl4.string(importDefault(2381)["Ka5s+Q"]);
+      obj[2] = intl4.string(require("../../gifting/GiftingBadge.messages.js")["Ka5s+Q"]);
       obj[3] = sum;
       obj[4] = tmp26;
       obj[5] = tmp8;
@@ -228,9 +228,9 @@ export default function GiftBadgePostPurchase(arg0) {
     } else {
       obj2 = { title: null, description: null, progressBarTitle: null, progress: null, currentTier: null, nextTier: null, onSendGift: null };
       const intl5 = tmp2(1236).intl;
-      obj2[0] = intl5.string(importDefault(2381)["/rBQud"]);
+      obj2[0] = intl5.string(require("../../gifting/GiftingBadge.messages.js")["/rBQud"]);
       const intl6 = tmp2(1236).intl;
-      obj2[1] = intl6.string(importDefault(2381).DDQMlx);
+      obj2[1] = intl6.string(require("../../gifting/GiftingBadge.messages.js").DDQMlx);
       let name;
       if (tmp24 != null) {
         name = tmp24.name;

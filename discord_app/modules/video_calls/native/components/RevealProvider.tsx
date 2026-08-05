@@ -15,14 +15,14 @@ let require = arg1;
 function useRevealProviderValue(arg0, channel) {
   let tmp = arg0;
   const items = [setContent];
-  const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => null != key.getKey());
-  const obj = require(589) /* initialize */;
+  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => null != key.getKey());
+  const obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const tmp2 = require;
-  const tmp5 = importDefault(9657)(channel);
+  const tmp5 = require("../useIsPrivateAudioOnlyCall.tsx")(channel);
   const tmp6 = callback2();
   const items1 = [set];
-  const stateFromStores1 = require(589) /* initialize */.useStateFromStores(items1, () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
-  const obj2 = require(589) /* initialize */;
+  const stateFromStores1 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items1, () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
+  const obj2 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   if (!arg0) {
     tmp = stateFromStores;
   }
@@ -39,7 +39,7 @@ function useRevealProviderValue(arg0, channel) {
     tmp = stateFromStores1;
   }
   require = tmp;
-  const tmp8 = importDefault(10559)(channel.id);
+  const tmp8 = require("../../../activities/useIsActivityFocused.tsx")(channel.id);
   const tmp10 = tmp2(500).isIOS() && tmp8;
   importDefault = tmp10;
   const items2 = [tmp, tmp10];

@@ -6,5 +6,5 @@ const result = require("set").fileFinishedImporting("modules/message_request/hoo
 
 export const useMessageRequestsCount = function useMessageRequestsCount() {
   const items = [processChannel];
-  return require(589) /* initialize */.useStateFromStores(items, () => messageRequestsCount.getMessageRequestsCount());
+  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => messageRequestsCount.getMessageRequestsCount());
 };

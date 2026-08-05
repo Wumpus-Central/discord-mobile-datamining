@@ -38,16 +38,16 @@ export default function UserProfileUpsellCard(headerText) {
   _require = tmp;
   let obj = { borderWidth: 1, style: items, direction: null, colors: null, borderRadius: null, children: null };
   items = [tmp.outer, style];
-  obj[2] = _require(1297).GradientBorder.Direction.HORIZONTAL;
+  obj[2] = _require("../../../design/void/native.tsx").GradientBorder.Direction.HORIZONTAL;
   obj[3] = Gradients.PREMIUM_TIER_2;
-  obj[4] = importDefault(712).radii.lg;
+  obj[4] = require("../../../../discord_common/js/packages/tokens/native.tsx").radii.lg;
   obj = { bounces: false, style: tmp.scroll, contentContainerStyle: tmp.inner, children: null };
   let tmp6Result = null;
   if (null != headerText) {
     obj = { style: null, children: null };
     obj[0] = tmp.titleContainer;
     const obj1 = { color: null, size: "xs" };
-    obj1[0] = importDefault(712).colors.MOBILE_TEXT_HEADING_PRIMARY;
+    obj1[0] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_TEXT_HEADING_PRIMARY;
     const items1 = [tmp2(tmp3(7625).NitroWheelIcon, obj1), ];
     const obj2 = { variant: "heading-sm/bold", children: null };
     obj2[1] = headerText;
@@ -57,7 +57,7 @@ export default function UserProfileUpsellCard(headerText) {
   }
   const items2 = [tmp6Result, children, ];
   const obj3 = { style: tmp.upsellButton, onPress, text: ctaText, color: null, renderIcon: null, renderLinearGradient: null };
-  obj3[3] = _require(1297).ButtonColors.GREEN;
+  obj3[3] = _require("../../../design/void/native.tsx").ButtonColors.GREEN;
   obj3[4] = function renderIcon() {
     return callback(_undefined(table[8]).NitroWheelIcon, { color: "white", size: "xs" });
   };
@@ -73,8 +73,8 @@ export default function UserProfileUpsellCard(headerText) {
     };
   }
   obj3[5] = fn;
-  items2[2] = closure_6(_require(1297).ShinyButton, obj3);
+  items2[2] = closure_6(_require("../../../design/void/native.tsx").ShinyButton, obj3);
   obj[3] = items2;
   obj[5] = closure_7(closure_4, obj);
-  return closure_6(_require(1297).GradientBorder, obj);
+  return closure_6(_require("../../../design/void/native.tsx").GradientBorder, obj);
 };

@@ -417,7 +417,7 @@ const memoResult = importAllResult.memo(function VoicePanelAnimatedActivityCard(
   obj = {};
   const merged = Object.assign(arg0);
   obj[1] = callback(VoicePanelAnimatedActivityCardInner, obj);
-  return callback(require(3997) /* ManaContext */.ThemeContextProvider, obj);
+  return callback(require("../../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */.ThemeContextProvider, obj);
 });
 const result = require("participantFromServer").fileFinishedImporting("modules/voice_panel/native/card/VoicePanelAnimatedActivityCard.tsx");
 

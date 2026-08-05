@@ -47,34 +47,34 @@ export const getMediaEmptyStateComponentOrNull = function getMediaEmptyStateComp
       if (photosEmpty.photosEmpty) {
         if (photoPermissionStatus === tmp3.LIMITED) {
           let obj = { actionIcon: null, actionLabel: null, actionPress: null, imageSource: null, label: null };
-          obj[0] = callback(require(5920) /* SettingsIcon */.SettingsIcon, { color: "white", size: "sm" });
-          const intl3 = require(1236) /* getSystemLocale */.intl;
-          obj[1] = intl3.string(require(1236) /* getSystemLocale */.t.JuXTi6);
+          obj[0] = callback(require("../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx") /* SettingsIcon */.SettingsIcon, { color: "white", size: "sm" });
+          const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+          obj[1] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.JuXTi6);
           obj[2] = tmp2;
-          obj[3] = importDefault(9947);
-          const intl4 = require(1236) /* getSystemLocale */.intl;
-          obj[4] = intl4.string(require(1236) /* getSystemLocale */.t["5g7NcN"]);
+          obj[3] = require("../../../../../_runtime/09947_registerAsset.js");
+          const intl4 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+          obj[4] = intl4.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["5g7NcN"]);
           return callback(MediaKeyboardEmptyState, obj);
         } else if (showCameraButton) {
           obj = { actionIcon: null, actionLabel: null, actionPress: null, imageSource: null, label: null };
-          obj[0] = callback(require(9941) /* CameraIcon */.CameraIcon, { color: "white", size: "sm" });
-          const intl = require(1236) /* getSystemLocale */.intl;
-          obj[1] = intl.string(require(1236) /* getSystemLocale */.t.tpoWUd);
+          obj[0] = callback(require("../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx") /* CameraIcon */.CameraIcon, { color: "white", size: "sm" });
+          const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+          obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.tpoWUd);
           obj[2] = tmp;
-          obj[3] = importDefault(9948);
-          const intl2 = require(1236) /* getSystemLocale */.intl;
-          obj[4] = intl2.string(require(1236) /* getSystemLocale */.t.YOvRBZ);
+          obj[3] = require("../../../../../_runtime/09948_registerAsset.js");
+          const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+          obj[4] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.YOvRBZ);
           return callback(MediaKeyboardEmptyState, obj);
         }
       }
     }
   }
-  obj = { actionIcon: callback(require(5920) /* SettingsIcon */.SettingsIcon, { color: "white", size: "sm" }), actionLabel: null, actionPress: null, imageSource: null, label: null };
-  const intl5 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl5.string(require(1236) /* getSystemLocale */.t["457oeG"]);
+  obj = { actionIcon: callback(require("../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx") /* SettingsIcon */.SettingsIcon, { color: "white", size: "sm" }), actionLabel: null, actionPress: null, imageSource: null, label: null };
+  const intl5 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl5.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["457oeG"]);
   obj[2] = photosEmpty.onPressPrivacySettings;
-  obj[3] = importDefault(9947);
-  const intl6 = require(1236) /* getSystemLocale */.intl;
-  obj[4] = intl6.string(require(1236) /* getSystemLocale */.t["8p9jGu"]);
+  obj[3] = require("../../../../../_runtime/09947_registerAsset.js");
+  const intl6 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[4] = intl6.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["8p9jGu"]);
   return callback(MediaKeyboardEmptyState, obj);
 };

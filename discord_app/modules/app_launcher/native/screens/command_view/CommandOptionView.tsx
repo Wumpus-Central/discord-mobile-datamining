@@ -109,7 +109,7 @@ export default function CommandOptionView(option) {
     obj5[10] = command;
     obj5[11] = optionValues;
     obj5[12] = hasItem;
-    items2[1] = closure_5(importDefault(11463), obj5);
+    items2[1] = closure_5(require("../../options/AppLauncherCommandOption.tsx"), obj5);
     const obj6 = { style: null, variant: "text-xs/medium", color: "text-muted", children: null };
     obj6[0] = tmp.optionDescription;
     obj6[3] = option.displayDescription;
@@ -133,7 +133,7 @@ export default function CommandOptionView(option) {
     items2[3] = hasItem;
     obj3[2] = items2;
     obj2[5] = closure_6(View, obj3);
-    obj1[1] = closure_5(importDefault(4146).View, obj2);
+    obj1[1] = closure_5(require("../../../../reanimated/ReanimatedRexport.tsx").View, obj2);
     obj[1] = closure_5(tmp2(11462).AwaitAnimationContext, obj1);
     return closure_5(tmp2(4146).LayoutAnimationConfig, obj);
   } else {

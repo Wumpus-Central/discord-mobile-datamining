@@ -12,7 +12,7 @@ let error;
 let metroImportAll;
 const require = arg1;
 function getStatusSize(arg0) {
-  if (require(12215) /* StaticNativeCutoutAvatarImage */.AvatarSizes.XXSMALL !== arg0) {
+  if (require("../../CutoutableAvatarImage/native/CutoutableAvatarImage.tsx") /* StaticNativeCutoutAvatarImage */.AvatarSizes.XXSMALL !== arg0) {
     if (tmp(12215).AvatarSizes.XSMALL !== arg0) {
       if (tmp(12215).AvatarSizes.XSMALL_20 !== arg0) {
         if (tmp(12215).AvatarSizes.SMALL !== arg0) {
@@ -52,17 +52,17 @@ let c3 = importAllResult;
 ({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles((NORMAL) => {
   let obj = { status: { position: "absolute", right: -3, bottom: -3 }, speaking: null, stageSpeaking: null, voiceStatus: null, decoration: null, container: null };
-  obj = { position: "absolute", right: -2, bottom: -2, backgroundColor: "transparent", borderWidth: 4, borderColor: importDefault(712).colors.STATUS_SPEAKING };
+  obj = { position: "absolute", right: -2, bottom: -2, backgroundColor: "transparent", borderWidth: 4, borderColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.STATUS_SPEAKING };
   obj[1] = obj;
   obj[2] = { position: "absolute", right: -2, bottom: -2 };
-  obj = { width: 24, height: 24, justifyContent: "center", alignItems: "center", backgroundColor: importDefault(712).unsafe_rawColors.RED_400, borderRadius: importDefault(712).radii.md, right: 0, bottom: 0 };
+  obj = { width: 24, height: 24, justifyContent: "center", alignItems: "center", backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.RED_400, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.md, right: 0, bottom: 0 };
   obj[3] = obj;
   const obj1 = { position: "absolute", top: null, left: null };
-  const decorationSizeForAvatarSize = require(8069) /* getDecorationSizeForAvatarSize */.getDecorationSizeForAvatarSize(NORMAL);
-  obj1[1] = -(decorationSizeForAvatarSize - require(12215) /* StaticNativeCutoutAvatarImage */.styles[NORMAL].width) / 2;
-  const obj5 = require(8069) /* getDecorationSizeForAvatarSize */;
-  const decorationSizeForAvatarSize1 = require(8069) /* getDecorationSizeForAvatarSize */.getDecorationSizeForAvatarSize(NORMAL);
-  obj1[2] = -(decorationSizeForAvatarSize1 - require(12215) /* StaticNativeCutoutAvatarImage */.styles[NORMAL].width) / 2;
+  const decorationSizeForAvatarSize = require("../../../../modules/collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx") /* getDecorationSizeForAvatarSize */.getDecorationSizeForAvatarSize(NORMAL);
+  obj1[1] = -(decorationSizeForAvatarSize - require("../../CutoutableAvatarImage/native/CutoutableAvatarImage.tsx") /* StaticNativeCutoutAvatarImage */.styles[NORMAL].width) / 2;
+  const obj5 = require("../../../../modules/collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx") /* getDecorationSizeForAvatarSize */;
+  const decorationSizeForAvatarSize1 = require("../../../../modules/collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx") /* getDecorationSizeForAvatarSize */.getDecorationSizeForAvatarSize(NORMAL);
+  obj1[2] = -(decorationSizeForAvatarSize1 - require("../../CutoutableAvatarImage/native/CutoutableAvatarImage.tsx") /* StaticNativeCutoutAvatarImage */.styles[NORMAL].width) / 2;
   obj[4] = obj1;
   obj[5] = { position: "relative" };
   return obj;

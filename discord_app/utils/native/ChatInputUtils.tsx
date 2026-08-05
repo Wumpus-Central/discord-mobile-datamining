@@ -222,7 +222,7 @@ export const getBestActiveInputForChannelId = function getBestActiveInputForChan
 };
 export { getBestActiveInput };
 export const dismissKeyboard = function dismissKeyboard() {
-  let obj = require(1844) /* dismissGlobalKeyboard */;
+  let obj = require("KeyboardManagerUtils.tsx") /* dismissGlobalKeyboard */;
   const result = obj.dismissGlobalKeyboard();
   const obj2 = getBestActiveInput();
   if (null != obj2) {
@@ -230,11 +230,11 @@ export const dismissKeyboard = function dismissKeyboard() {
   }
   let tmpResult = tmp(4151);
   const keyboardType = tmpResult.getKeyboardType();
-  if (keyboardType !== require(1579) /* KeyboardTypes */.KeyboardTypes.SYSTEM) {
+  if (keyboardType !== require("../../modules/keyboard/native/KeyboardTypes.tsx") /* KeyboardTypes */.KeyboardTypes.SYSTEM) {
     tmpResult = tmp(1478);
     obj = { type: null };
     obj[0] = tmp(1579).KeyboardTypes.SYSTEM;
     tmpResult.setKeyboardType(obj);
   }
-  const result1 = require(4152) /* zustandStore */.closePortalKeyboardRequest();
+  const result1 = require("../../modules/keyboard/native/PortalKeyboardUIStore.native.tsx") /* zustandStore */.closePortalKeyboardRequest();
 };

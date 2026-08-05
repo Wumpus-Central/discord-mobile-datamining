@@ -1,5 +1,5 @@
 // discord_app/modules/self_mod/shared/native/SafetyToolsActionSheet.tsx
-import module_3982 from "module_3982";
+import Linking from "../../../../lib/native/Linking.tsx";
 import { View } from "SafetyToolsCrisisTextLineActionSheet";
 import upsertRelationship from "upsertRelationship";
 import LOCATION_CONTEXT_MOBILE from "LOCATION_CONTEXT_MOBILE";

@@ -293,8 +293,8 @@ class UserRecord extends tmp2 {
 const prototype = UserRecord.prototype;
 Object.defineProperty(prototype, "createdAt", {
   get: function createdAt() {
-    const obj = importDefault(11);
-    return new Date(importDefault(11).extractTimestamp(this.id));
+    const obj = require("../utils/SnowflakeUtils.tsx");
+    return new Date(require("../utils/SnowflakeUtils.tsx").extractTimestamp(this.id));
   },
   set: undefined
 });
@@ -310,7 +310,7 @@ prototype["getAvatarURL"] = function getAvatarURL(arg0, closure_2, flag, SUPPORT
     flag = false;
   }
   if (SUPPORTS_WEBP === undefined) {
-    SUPPORTS_WEBP = require(1416) /* getAvatarURL */.SUPPORTS_WEBP;
+    SUPPORTS_WEBP = require("../utils/AvatarUtils.tsx") /* getAvatarURL */.SUPPORTS_WEBP;
   }
   const self = this;
   let tmp3;
@@ -326,12 +326,12 @@ prototype["getAvatarURL"] = function getAvatarURL(arg0, closure_2, flag, SUPPORT
       obj[3] = flag;
       obj[4] = closure_2;
       obj[5] = SUPPORTS_WEBP;
-      let guildMemberAvatarURLSimple = importDefault(1416).getGuildMemberAvatarURLSimple(obj);
-      const obj2 = importDefault(1416);
+      let guildMemberAvatarURLSimple = require("../utils/AvatarUtils.tsx").getGuildMemberAvatarURLSimple(obj);
+      const obj2 = require("../utils/AvatarUtils.tsx");
     }
     return guildMemberAvatarURLSimple;
   }
-  obj = importDefault(1416);
+  obj = require("../utils/AvatarUtils.tsx");
   guildMemberAvatarURLSimple = obj.getUserAvatarURL(self, flag, closure_2, null, SUPPORTS_WEBP);
 };
 prototype["addGuildAvatarHash"] = function addGuildAvatarHash(guildId, avatar) {
@@ -401,10 +401,10 @@ Object.defineProperty(prototype, "tag", {
   set: undefined
 });
 prototype["hasPurchasedFlag"] = function hasPurchasedFlag(PREMIUM_TIER_2) {
-  return require(1384) /* hasFlag */.hasFlag(this.purchasedFlags, PREMIUM_TIER_2);
+  return require("../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(this.purchasedFlags, PREMIUM_TIER_2);
 };
 prototype["hasPremiumUsageFlag"] = function hasPremiumUsageFlag(arg0) {
-  return require(1384) /* hasFlag */.hasFlag(this.premiumUsageFlags, arg0);
+  return require("../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(this.premiumUsageFlags, arg0);
 };
 prototype["hasHadSKU"] = function hasHadSKU(arg0) {
   let hasPurchasedFlagResult = null != tmp;
@@ -445,7 +445,7 @@ prototype["hadPremiumSubscription"] = function hadPremiumSubscription() {
     tmp = null;
   }
   const self = this;
-  const isPremiumResult = require(1897) /* isPremiumAtLeast */.isPremium(this);
+  const isPremiumResult = require("../utils/PremiumTypeUtils.tsx") /* isPremiumAtLeast */.isPremium(this);
   let hasHadPremiumResult = !isPremiumResult;
   if (!isPremiumResult) {
     hasHadPremiumResult = self.hasHadPremium(tmp);
@@ -464,44 +464,44 @@ prototype["hasFreePremium"] = function hasFreePremium() {
   return isStaffResult;
 };
 prototype["isOnReverseTrial"] = function isOnReverseTrial() {
-  let isPremiumResult = require(1897) /* isPremiumAtLeast */.isPremium(this);
+  let isPremiumResult = require("../utils/PremiumTypeUtils.tsx") /* isPremiumAtLeast */.isPremium(this);
   if (isPremiumResult) {
     const premiumState = this.premiumState;
     let premiumSource;
     if (premiumState != null) {
       premiumSource = premiumState.premiumSource;
     }
-    isPremiumResult = premiumSource === require(1892) /* create */.PremiumSource.REVERSE_TRIAL;
+    isPremiumResult = premiumSource === require("../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx") /* create */.PremiumSource.REVERSE_TRIAL;
   }
   return isPremiumResult;
 };
 prototype["isPremiumWithPremiumGroup"] = function isPremiumWithPremiumGroup() {
-  let isPremiumResult = require(1897) /* isPremiumAtLeast */.isPremium(this, closure_9.TIER_2);
+  let isPremiumResult = require("../utils/PremiumTypeUtils.tsx") /* isPremiumAtLeast */.isPremium(this, closure_9.TIER_2);
   if (isPremiumResult) {
     const premiumState = this.premiumState;
     let premiumSource;
     if (premiumState != null) {
       premiumSource = premiumState.premiumSource;
     }
-    isPremiumResult = premiumSource === require(1892) /* create */.PremiumSource.SUBSCRIPTION_GROUP;
+    isPremiumResult = premiumSource === require("../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx") /* create */.PremiumSource.SUBSCRIPTION_GROUP;
   }
   return isPremiumResult;
 };
 prototype["hasPaidTier2Subscription"] = function hasPaidTier2Subscription() {
-  let isPremiumResult = require(1897) /* isPremiumAtLeast */.isPremium(this, closure_9.TIER_2);
+  let isPremiumResult = require("../utils/PremiumTypeUtils.tsx") /* isPremiumAtLeast */.isPremium(this, closure_9.TIER_2);
   if (isPremiumResult) {
     const premiumState = this.premiumState;
     let prop;
     if (premiumState != null) {
       prop = premiumState.premiumSubscriptionType;
     }
-    isPremiumResult = prop === require(1892) /* create */.PremiumSubscriptionType.TIER_2;
+    isPremiumResult = prop === require("../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx") /* create */.PremiumSubscriptionType.TIER_2;
   }
   return isPremiumResult;
 };
 prototype["isPremiumWithFractionalPremiumOnly"] = function isPremiumWithFractionalPremiumOnly() {
   const self = this;
-  let isPremiumResult = require(1897) /* isPremiumAtLeast */.isPremium(this, closure_9.TIER_2);
+  let isPremiumResult = require("../utils/PremiumTypeUtils.tsx") /* isPremiumAtLeast */.isPremium(this, closure_9.TIER_2);
   if (isPremiumResult) {
     const premiumState = self.premiumState;
     let prop;
@@ -531,7 +531,7 @@ prototype["isPremiumWithFractionalPremiumOnly"] = function isPremiumWithFraction
 };
 prototype["isFractionalPremiumWithNoStandardSub"] = function isFractionalPremiumWithNoStandardSub() {
   const self = this;
-  let isPremiumResult = require(1897) /* isPremiumAtLeast */.isPremium(this, closure_9.TIER_2);
+  let isPremiumResult = require("../utils/PremiumTypeUtils.tsx") /* isPremiumAtLeast */.isPremium(this, closure_9.TIER_2);
   if (isPremiumResult) {
     const premiumState = self.premiumState;
     let premiumSource;
@@ -546,14 +546,14 @@ prototype["isFractionalPremiumWithNoStandardSub"] = function isFractionalPremium
   return isPremiumResult;
 };
 prototype["isFractionalPremium"] = function isFractionalPremium() {
-  let isPremiumResult = require(1897) /* isPremiumAtLeast */.isPremium(this, closure_9.TIER_2);
+  let isPremiumResult = require("../utils/PremiumTypeUtils.tsx") /* isPremiumAtLeast */.isPremium(this, closure_9.TIER_2);
   if (isPremiumResult) {
     const premiumState = this.premiumState;
     let premiumSource;
     if (premiumState != null) {
       premiumSource = premiumState.premiumSource;
     }
-    isPremiumResult = premiumSource === require(1892) /* create */.PremiumSource.FRACTIONAL_NITRO;
+    isPremiumResult = premiumSource === require("../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx") /* create */.PremiumSource.FRACTIONAL_NITRO;
   }
   return isPremiumResult;
 };
@@ -604,14 +604,14 @@ prototype["hasUniqueUsername"] = function hasUniqueUsername() {
 prototype["isPremiumGroupMember"] = function isPremiumGroupMember() {
   let result = this.isPremiumWithPremiumGroup();
   if (result) {
-    result = this.premiumGroupRole === require(1892) /* create */.PremiumSubscriptionGroupRole.MEMBER;
+    result = this.premiumGroupRole === require("../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx") /* create */.PremiumSubscriptionGroupRole.MEMBER;
   }
   return result;
 };
 prototype["isPremiumGroupPrimary"] = function isPremiumGroupPrimary() {
   let result = this.isPremiumWithPremiumGroup();
   if (result) {
-    result = this.premiumGroupRole === require(1892) /* create */.PremiumSubscriptionGroupRole.PRIMARY;
+    result = this.premiumGroupRole === require("../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx") /* create */.PremiumSubscriptionGroupRole.PRIMARY;
   }
   return result;
 };
@@ -630,7 +630,7 @@ Object.defineProperty(prototype, "avatarDecoration", {
 Object.defineProperty(prototype, "avatarDecoration", {
   get: undefined,
   set: function avatarDecoration(avatar_decoration_data) {
-    this.avatarDecorationData = require(1852) /* parseAvatarDecorationData */.parseAvatarDecorationData(avatar_decoration_data);
+    this.avatarDecorationData = require("../modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx") /* parseAvatarDecorationData */.parseAvatarDecorationData(avatar_decoration_data);
   }
 });
 Object.defineProperty(prototype, "nameplate", {
@@ -640,7 +640,7 @@ Object.defineProperty(prototype, "nameplate", {
     if (collectibles != null) {
       nameplate = collectibles.nameplate;
     }
-    return require(1898) /* getNameplateData */.getNameplateData(nameplate);
+    return require("../modules/collectibles/nameplates/utils.tsx") /* getNameplateData */.getNameplateData(nameplate);
   },
   set: undefined
 });
@@ -652,7 +652,7 @@ Object.defineProperty(prototype, "premiumGroupRole", {
       prop = premiumState.premiumSubscriptionGroupRole;
     }
     if (prop == null) {
-      prop = require(1892) /* create */.PremiumSubscriptionGroupRole.UNSPECIFIED;
+      prop = require("../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx") /* create */.PremiumSubscriptionGroupRole.UNSPECIFIED;
     }
     return prop;
   },

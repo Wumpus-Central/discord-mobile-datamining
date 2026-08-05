@@ -16,7 +16,7 @@ let closure_12;
 let map1;
 const require = arg1;
 function sortChannelsByLastMessageId(id, id2) {
-  const obj = importDefault(11);
+  const obj = require("../../../../utils/SnowflakeUtils.tsx");
   return obj.compare(generateOldThreadCutoff.lastMessageId(id2.id), generateOldThreadCutoff.lastMessageId(id.id));
 }
 ({ AnalyticEvents: closure_12, Permissions: map1 } = ME);

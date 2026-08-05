@@ -16,9 +16,9 @@ export const getProtoThemeFromBaseTheme = function getProtoThemeFromBaseTheme(ar
     const _Error = Error;
     const _HermesInternal = HermesInternal;
     const error = new Error("No ProtoTheme found for base theme: " + arg0);
-    importDefault(1208).captureException(error);
-    let UNSET = _require(1306).Theme.UNSET;
-    const obj = importDefault(1208);
+    require("../../utils/SentryUtils.native.tsx").captureException(error);
+    let UNSET = _require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx").Theme.UNSET;
+    const obj = require("../../utils/SentryUtils.native.tsx");
   } else {
     const _parseInt = parseInt;
     UNSET = parseInt(found[0]);

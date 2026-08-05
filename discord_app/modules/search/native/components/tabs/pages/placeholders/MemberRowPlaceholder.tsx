@@ -8,5 +8,5 @@ const result = require("createCacheKey").fileFinishedImporting("modules/search/n
 
 export default function MemberRowPlaceholderItem() {
   const tmp = callback();
-  return jsx(importDefault(15630), { style: callback().container });
+  return jsx(require("FormRowPlaceholder.tsx"), { style: callback().container });
 };

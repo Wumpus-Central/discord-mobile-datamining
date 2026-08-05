@@ -28,10 +28,10 @@ export default function GuildProgressCircle(size) {
   items = [tmp.wrapper, style, obj];
   obj = { style: items1, size: num, strokeWidth: 4, percent: 100, color: null };
   items1 = [tmp.circle, obj];
-  obj[4] = require(11747) /* useIOSCompletionStates */.PROGRESS_BACKGROUND_COLOR;
-  const items2 = [callback(importDefault(11862), obj), ];
+  obj[4] = require("../GuildProgressUtils.tsx") /* useIOSCompletionStates */.PROGRESS_BACKGROUND_COLOR;
+  const items2 = [callback(require("../../../premium/native/components/ProgressCircle.tsx"), obj), ];
   const items3 = [tmp.circle, obj];
-  items2[1] = callback(importDefault(11862), { style: items3, size: num, strokeWidth: 4, color: tmp.progressCircle.color, percent });
+  items2[1] = callback(require("../../../premium/native/components/ProgressCircle.tsx"), { style: items3, size: num, strokeWidth: 4, color: tmp.progressCircle.color, percent });
   obj[1] = items2;
   return callback2(View, obj);
 };

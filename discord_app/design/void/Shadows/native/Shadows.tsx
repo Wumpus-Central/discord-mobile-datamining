@@ -10,7 +10,7 @@ export const generateBoxShadowStyle = (arg0) => {
   let xOffset;
   let yOffset;
   ({ xOffset, yOffset, shadowColorIos, shadowOpacity, shadowRadius, elevation, shadowColorAndroid } = arg0);
-  let obj = require(500) /* set */;
+  let obj = require("../../../../utils/PlatformUtils.tsx") /* set */;
   if (obj.isAndroid()) {
     obj = { elevation: null, shadowColor: null };
     obj[0] = elevation;

@@ -43,7 +43,7 @@ export default function Modal(route) {
   obj[0] = modal(503).ImpressionTypes.MODAL;
   obj[1] = impressionName;
   obj[2] = impressionProperties;
-  importDefault(9267)(obj);
+  require("../../../app_analytics/useTrackImpression.tsx")(obj);
   let callbacks = modal.callbacks;
   let onExited;
   if (callbacks != null) {
@@ -67,8 +67,8 @@ export default function Modal(route) {
     return currentResult;
   }, []);
   const layoutEffect = obj1.useLayoutEffect(() => modal(6843).trackAppUIViewed("ModalScreen"), []);
-  const tmp6 = importDefault(9267);
-  ({ left, right } = importDefault(1581)());
+  const tmp6 = require("../../../app_analytics/useTrackImpression.tsx");
+  ({ left, right } = require("../../../safe_area/useSafeAreaInsets.native.tsx")());
   let tmp7Result = tmp7(15816);
   const items = [absoluteFillObject.absoluteFillObject, ];
   let tmp16;

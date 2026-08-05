@@ -31,12 +31,12 @@ export const harvestDisabled = function harvestDisabled(created_at, stateFromSto
 export const useRequestHarvestStatus = function useRequestHarvestStatus() {
   let require;
   let tmp3;
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [harvestType];
-  const stateFromStores1 = require(589) /* initialize */.useStateFromStores(items1, () => harvestType.harvestType);
-  const obj3 = require(589) /* initialize */;
+  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items1, () => harvestType.harvestType);
+  const obj3 = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   [tmp3, require] = callback(React.useState(() => Date.now()), 2);
   let sum = tmp3;
   if (null != stateFromStores1) {

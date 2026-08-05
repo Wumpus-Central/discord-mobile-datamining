@@ -22,7 +22,7 @@ function setDifference(set, set2) {
   return set;
 }
 function makeErrorKey(item10044) {
-  const obj = require(16792) /* ErrorDefinitions */.ErrorDefinitions[item10044.type];
+  const obj = require("definitions/index.tsx") /* ErrorDefinitions */.ErrorDefinitions[item10044.type];
   let errorContextKey;
   if (obj != null) {
     errorContextKey = obj.makeErrorContextKey(item10044);
@@ -55,7 +55,7 @@ prototype["updateActiveErrors"] = function updateActiveErrors() {
   }
   allActiveStreams = allActiveStreams.getAllActiveStreams();
   const map = new Map();
-  const values = Object.values(require(16792) /* ErrorDefinitions */.ErrorDefinitions);
+  const values = Object.values(require("definitions/index.tsx") /* ErrorDefinitions */.ErrorDefinitions);
   const iter = values[Symbol.iterator]();
   while (iter !== undefined) {
     let obj = { voiceChannelId: null, voiceState: null, activeStreams: null };
@@ -88,7 +88,7 @@ prototype["updateActiveErrors"] = function updateActiveErrors() {
           if (null != value) {
             let tmp29 = require;
             let tmp30 = dependencyMap;
-            let obj5 = require(9091) /* mapped */;
+            let obj5 = require("AVError.tsx") /* mapped */;
             let tmp31 = value;
             let reportAVErrorResult = obj5.reportAVError(tmp28);
           }
@@ -115,8 +115,8 @@ prototype["updateActiveErrors"] = function updateActiveErrors() {
       }
       obj = { type: "ACTIVE_AV_ERRORS_CHANGED", activeErrors: null };
       obj[1] = map;
-      importDefault(709).dispatch(obj);
-      const obj6 = importDefault(709);
+      require("../../../Dispatcher.tsx").dispatch(obj);
+      const obj6 = require("../../../Dispatcher.tsx");
     }
   } else {
     const _Object = Object;
@@ -129,7 +129,7 @@ prototype["handleReportAVError"] = function handleReportAVError(arg0) {
   let context;
   let error;
   ({ error, context } = arg0);
-  const result = require(16812) /* getCurrentScreenshareCaptureMethod */.sendAVErrorAnalyticsEvent(error, context);
+  const result = require("AVErrorAnalytics.tsx") /* getCurrentScreenshareCaptureMethod */.sendAVErrorAnalyticsEvent(error, context);
 };
 const aVErrorManager = new AVErrorManager();
 let tmp2 = new require("updateVoiceState")("AVErrorManager");

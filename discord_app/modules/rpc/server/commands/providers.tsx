@@ -28,7 +28,7 @@ obj = { [RPCCommands.GET_PROVIDER_ACCESS_TOKEN]: obj };
 obj = {
   scope: { [RPC_SCOPE_CONFIG.ANY]: items1 },
   validation(string) {
-    let obj = importDefault(10546)(string);
+    let obj = require("../../helpers/createRpcJoiSchemaObject.tsx")(string);
     obj = { provider: null, connection_redirect: null };
     const requiredResult = obj.required();
     obj[0] = string.string().required();
@@ -43,9 +43,9 @@ obj = {
     let _require = provider;
     const connection_redirect = args.connection_redirect;
     let dependencyMap;
-    let obj = _require(10548);
+    let obj = _require("../../RPCHelpers.tsx");
     const result = obj.validatePostMessageTransport(socket.transport);
-    let obj1 = _require(10548);
+    let obj1 = _require("../../RPCHelpers.tsx");
     const validateApplicationResult = obj1.validateApplication(socket.application);
     const value = connection_redirect(4966).get(provider);
     dependencyMap = value;
@@ -210,7 +210,7 @@ items1 = [RPC_AUTHENTICATED_SCOPE];
 obj = {
   scope: { [RPC_SCOPE_CONFIG.ANY]: items2 },
   validation(string) {
-    let obj = importDefault(10546)(string);
+    let obj = require("../../helpers/createRpcJoiSchemaObject.tsx")(string);
     obj = { provider: null };
     const requiredResult = obj.required();
     obj[0] = string.string().required();

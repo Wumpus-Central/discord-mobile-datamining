@@ -13,7 +13,7 @@ const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles((arg0) => {
   let obj = { container: null, flex: null, content: null, subHeader: null };
-  obj = { backgroundColor: importDefault(712).colors.BACKGROUND_BASE_LOW, flex: 1 };
+  obj = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW, flex: 1 };
   obj[0] = obj;
   obj[1] = { flex: 1 };
   let num = 0;
@@ -57,9 +57,9 @@ export default function AuthFormView(arg0) {
   ({ children, headerText, subHeader, contentStyle } = arg0);
   let _require;
   ({ backgroundImageSource, backgroundImageCover } = arg0);
-  const tmp3 = importDefault(8283)();
+  const tmp3 = require("../useWideAuthView.tsx")();
   const tmp4 = callback2(tmp3);
-  _require = React.useContext(_require(8311).WideAuthScrollContext);
+  _require = React.useContext(_require("WideAuthScrollContext.tsx").WideAuthScrollContext);
   if (tmp3) {
     let obj = { contentInset: null, automaticallyAdjustContentInsets: false, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, scrollEventThrottle: 16, onScroll: null, style: null, contentContainerStyle: null, children: null };
     obj[0] = { top: 0 };

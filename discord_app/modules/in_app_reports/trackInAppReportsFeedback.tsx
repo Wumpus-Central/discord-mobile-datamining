@@ -16,5 +16,5 @@ export default function trackInAppReportsFeedback(dont_show_again) {
   if (rating === undefined) {
     rating = null;
   }
-  importDefault(698).track(AnalyticEvents.IAR_FEEDBACK_SUBMITTED, { reason: problem, report_type: reportType, report_id: reportId, rating, feedback, dont_show_again: dont_show_again.dontShowAgain });
+  require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.IAR_FEEDBACK_SUBMITTED, { reason: problem, report_type: reportType, report_id: reportId, rating, feedback, dont_show_again: dont_show_again.dontShowAgain });
 };

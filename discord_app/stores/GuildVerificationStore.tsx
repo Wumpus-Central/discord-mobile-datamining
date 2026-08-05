@@ -204,7 +204,7 @@ function recomputeGuild(guildId) {
             if (num == null) {
               num = 0;
             }
-            const obj2 = _require(1384);
+            const obj2 = _require("../../discord_common/js/shared/utils/FlagUtils.tsx");
           }
         }
       }
@@ -266,7 +266,7 @@ const guildVerificationStore = new GuildVerificationStore(require("dispatcher"),
     }
   },
   CONNECTION_CLOSED: function handleConnectionClosed() {
-    const keys = importDefault(11).keys(closure_14);
+    const keys = require("../utils/SnowflakeUtils.tsx").keys(closure_14);
     const item = keys.forEach(clearGuild);
   },
   CURRENT_USER_UPDATE: function handleCurrentUserUpdate() {

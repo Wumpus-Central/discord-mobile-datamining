@@ -6,7 +6,7 @@ export default function getChannelDetailsFromRoute(currentRoute) {
   if (arg1 === undefined) {
     flag = false;
   }
-  const coerceChannelRouteResult = require(4136) /* navigationToRootTabHelper */.coerceChannelRoute(currentRoute);
+  const coerceChannelRouteResult = require("../helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */.coerceChannelRoute(currentRoute);
   if (null != coerceChannelRouteResult) {
     const items = [coerceChannelRouteResult.params.guildId, coerceChannelRouteResult.params.channelId];
     return items;
@@ -34,6 +34,6 @@ export default function getChannelDetailsFromRoute(currentRoute) {
     const items3 = [undefined, undefined];
     return items3;
   }
-  const obj = require(4136) /* navigationToRootTabHelper */;
+  const obj = require("../helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */;
   tmp = require;
 };

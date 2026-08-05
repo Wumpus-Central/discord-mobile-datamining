@@ -8,5 +8,5 @@ export default function useStageChannelIsLive(arg0) {
   const _require = arg0;
   const items = [handleStageInstanceCreateOrUpdate];
   const items1 = [arg0];
-  return _require(589).useStateFromStores(items, () => outer1_2.isLive(closure_0), items1);
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_2.isLive(closure_0), items1);
 };

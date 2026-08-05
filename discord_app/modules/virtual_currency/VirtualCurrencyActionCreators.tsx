@@ -346,7 +346,7 @@ export const redeemVirtualCurrencyForSKU = function redeemVirtualCurrencyForSKU(
   return applyArgumentsResult;
 };
 export const setBalancePillOverlay = function setBalancePillOverlay(balancePillOverlay) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "VIRTUAL_CURRENCY_SET_BALANCE_PILL_OVERLAY", balancePillOverlay };
   return obj.dispatch(obj);
 };

@@ -21,9 +21,9 @@ export default function BurstReactionAnimation(arg0) {
     withFadeOut = true;
   }
   const merged = Object.assign(arg0, Object.create(null));
-  let obj = require(7163) /* _generateAnimationSource */;
+  let obj = require("BurstReactionEffectUtils.tsx") /* _generateAnimationSource */;
   const burstReactionAnimationSource = obj.useBurstReactionAnimationSource({ emoji, messageId, channelId, isFullscreen });
-  require(589) /* initialize */;
+  require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   [][0] = maybeApplyNoTextColorForLightCustomTheme;
   if (null == burstReactionAnimationSource) {
     return null;

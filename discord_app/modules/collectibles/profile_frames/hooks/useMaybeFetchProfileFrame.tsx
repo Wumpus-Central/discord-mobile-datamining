@@ -6,9 +6,9 @@ let result = require("apexExperiment").fileFinishedImporting("modules/collectibl
 
 export default function useMaybeFetchProfileFrame(arg0, location) {
   const _require = arg0;
-  let tmp = importDefault(8720)();
-  const isProfileFramesEnabled = _require(8730).useIsProfileFramesEnabled(location);
-  const tmp3 = importDefault(8731)(arg0);
+  let tmp = require("useFramePreviewOverrideFrame.native.tsx")();
+  const isProfileFramesEnabled = _require("../../experiments/CollectiblesProfileFramesExperiment.tsx").useIsProfileFramesEnabled(location);
+  const tmp3 = require("useProfileFrame.tsx")(arg0);
   importDefault = tmp4;
   const items = [null == tmp && isProfileFramesEnabled && null != arg0 && null == tmp3, arg0];
   const effect = React.useEffect(() => {

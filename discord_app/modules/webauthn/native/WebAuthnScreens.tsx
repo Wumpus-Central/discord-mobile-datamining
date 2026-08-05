@@ -14,15 +14,15 @@ export const getScreens = function getScreens(isModal) {
     }
   };
   obj = { title: null, render: null, headerLeft: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t["0N1s81"]);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["0N1s81"]);
   obj[1] = function render() {
     return callback2(callback(13882), {});
   };
   let headerCloseButton;
   if (isModal) {
     let tmp2Result = tmp2(5238);
-    headerCloseButton = tmp2Result.getHeaderCloseButton(importDefault(13877).closePasskeyUpsellModal);
+    headerCloseButton = tmp2Result.getHeaderCloseButton(require("PasskeyUpsellActionCreators.tsx").closePasskeyUpsellModal);
   }
   obj[2] = headerCloseButton;
   obj[WebAuthnScreens.INIT] = obj;
@@ -34,7 +34,7 @@ export const getScreens = function getScreens(isModal) {
     title: null
   };
   const intl2 = tmp2(1236).intl;
-  obj1[1] = intl2.string(require(1236) /* getSystemLocale */.t.UBBwwF);
+  obj1[1] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.UBBwwF);
   obj[WebAuthnScreens.EDIT] = obj1;
   const obj2 = {
     render() {
@@ -43,7 +43,7 @@ export const getScreens = function getScreens(isModal) {
     title: null
   };
   const intl3 = tmp2(1236).intl;
-  obj2[1] = intl3.string(require(1236) /* getSystemLocale */.t.vrOCCk);
+  obj2[1] = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.vrOCCk);
   obj[WebAuthnScreens.REGISTER] = obj2;
   const obj3 = {
     render(arg0) {
@@ -54,11 +54,11 @@ export const getScreens = function getScreens(isModal) {
     headerLeft: null
   };
   const intl4 = tmp2(1236).intl;
-  obj3[1] = intl4.string(require(1236) /* getSystemLocale */.t["cY/IOu"]);
+  obj3[1] = intl4.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["cY/IOu"]);
   let headerCloseButton1;
   if (isModal) {
     tmp2Result = tmp2(5238);
-    headerCloseButton1 = tmp2Result.getHeaderCloseButton(importDefault(13877).closePasskeyUpsellModal);
+    headerCloseButton1 = tmp2Result.getHeaderCloseButton(require("PasskeyUpsellActionCreators.tsx").closePasskeyUpsellModal);
   }
   obj3[2] = headerCloseButton1;
   obj[WebAuthnScreens.NAME] = obj3;
@@ -69,7 +69,7 @@ export const getScreens = function getScreens(isModal) {
     title: null
   };
   const intl5 = tmp2(1236).intl;
-  obj4[1] = intl5.string(require(1236) /* getSystemLocale */.t["7wPZln"]);
+  obj4[1] = intl5.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["7wPZln"]);
   obj[WebAuthnScreens.SUCCESS] = obj4;
   return obj;
 };

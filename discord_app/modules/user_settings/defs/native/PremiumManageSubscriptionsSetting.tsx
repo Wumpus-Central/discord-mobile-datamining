@@ -5,8 +5,8 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["z5YcJ+"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["z5YcJ+"]);
   },
   parent: null,
   IconComponent: require("SubscriptionIcon").SubscriptionIcon,
@@ -22,8 +22,8 @@ createToggle = {
     }, []);
   },
   usePredicate: function useShowManageSubscriptionsSetting() {
-    let hasPremiumSubscriptionToDisplay = require(3931) /* getPremiumPlanItem */.useHasPremiumSubscriptionToDisplay();
-    const obj = require(3931) /* getPremiumPlanItem */;
+    let hasPremiumSubscriptionToDisplay = require("../../../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */.useHasPremiumSubscriptionToDisplay();
+    const obj = require("../../../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */;
     if (hasPremiumSubscriptionToDisplay) {
       hasPremiumSubscriptionToDisplay = obj2.useMobileNitroManageSubscriptionsSettingsExperiment({ location: "useShowManageSubscriptionsSetting" });
     }
@@ -34,7 +34,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.PREMIUM_MANAGE_PLAN,
   getComponent() {
-    return require(14135) /* PremiumPlanSelectSettingScreen */.default;
+    return require("../../premium/native/PremiumManagePlanScreen.tsx") /* PremiumPlanSelectSettingScreen */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

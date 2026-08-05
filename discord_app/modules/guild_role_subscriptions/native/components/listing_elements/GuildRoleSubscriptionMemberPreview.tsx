@@ -26,16 +26,16 @@ export const GuildRoleSubscriptionMemberPreview = function GuildRoleSubscription
   let textStyle;
   content = content.content;
   if (content === undefined) {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    content = intl.string(require(1236) /* getSystemLocale */.t["6OSasb"]);
+    const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    content = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["6OSasb"]);
   }
   ({ guildId, role } = content);
   ({ style, textStyle } = content);
   const tmp3 = createCacheKey();
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  importDefault(4474);
+  require("../../../../../utils/NicknameUtils.tsx");
   if (null == role) {
     return null;
   } else {

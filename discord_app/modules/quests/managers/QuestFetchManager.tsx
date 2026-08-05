@@ -101,7 +101,7 @@ class QuestFetchManager extends tmp2 {
   }
 }
 QuestFetchManager.prototype["_fetch"] = function _fetch(arg0) {
-  let obj = require(10375) /* getIsEligibleForQuests */;
+  let obj = require("../lib/QuestsEligibility.tsx") /* getIsEligibleForQuests */;
   let isEligibleForQuests = obj.getIsEligibleForQuests();
   if (isEligibleForQuests) {
     isEligibleForQuests = !initializeState.isFetchingCurrentQuests;
@@ -116,7 +116,7 @@ QuestFetchManager.prototype["_fetch"] = function _fetch(arg0) {
     obj[3] = Date.now() - initializeState.lastFetchedCurrentQuests;
     obj[4] = initializeState.isFetchingCurrentQuests;
     obj[2] = obj;
-    importDefault(1208).addBreadcrumb(obj);
+    require("../../../utils/SentryUtils.native.tsx").addBreadcrumb(obj);
     let tmpResult = tmp(10376);
     const currentQuests = tmpResult.fetchCurrentQuests();
     tmpResult = tmp(500);
@@ -133,7 +133,7 @@ QuestFetchManager.prototype["_fetch"] = function _fetch(arg0) {
       const questToDeliver = tmp(10376).fetchQuestToDeliver(tmp(5131).AdPlacement.MOBILE_HOME_DOCK_AREA, arg0);
       const tmpResult1 = tmp(10376);
     }
-    const obj2 = importDefault(1208);
+    const obj2 = require("../../../utils/SentryUtils.native.tsx");
   }
 };
 const questFetchManager = new QuestFetchManager();

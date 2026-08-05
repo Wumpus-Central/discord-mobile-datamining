@@ -37,13 +37,13 @@ function ClearAllHistory(searchContext) {
 }
 function ViewAll(onJumpToMedia) {
   let obj = { onPress: onJumpToMedia.onJumpToMedia, accessibilityRole: "button", unstable_pressDelay: 130, accessibilityLabel: null, children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[3] = intl.string(require(1236) /* getSystemLocale */.t.Ofpgwh);
+  const intl = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[3] = intl.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.Ofpgwh);
   obj = { variant: "text-sm/semibold", color: "text-brand", children: null };
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl2.string(require(1236) /* getSystemLocale */.t.Ofpgwh);
-  obj[4] = jsx(require(4281) /* Text */.Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
-  return jsx(require(4812) /* PressableBase */.PressableHighlight, { variant: "text-sm/semibold", color: "text-brand", children: null });
+  const intl2 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl2.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.Ofpgwh);
+  obj[4] = jsx(require("../../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
+  return jsx(require("../../../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableHighlight, { variant: "text-sm/semibold", color: "text-brand", children: null });
 }
 let c5 = importAllResult;
 ({ EMPTY_SEARCH_QUERY_STRING: c10, MESSAGE_PLACEHOLDER_ITEM_SIZE: unpackModuleId, SearchListItemTypes: closure_12, SearchTabs: map1 } = MessageEmbedTypes);

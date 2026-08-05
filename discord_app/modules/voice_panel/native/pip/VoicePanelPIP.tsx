@@ -21,7 +21,7 @@ const require = arg1;
 function VoicePanelPIP() {
   const tmp = callback1();
   let obj = safeArea;
-  const context = safeArea.useContext(importDefault(11557));
+  const context = safeArea.useContext(require("../VoicePanelStateContext.tsx"));
   const setMode = context.setMode;
   let mode = setMode;
   let obj1 = mode(16036);
@@ -49,7 +49,7 @@ function VoicePanelPIP() {
   callback1 = undefined;
   const tmp7 = callback1();
   importDefault = tmp7;
-  const context1 = safeArea.useContext(importDefault(11557));
+  const context1 = safeArea.useContext(require("../VoicePanelStateContext.tsx"));
   const controlsSpecs = context1.controlsSpecs;
   first = controlsSpecs;
   const hideControls = context1.hideControls;
@@ -328,7 +328,7 @@ function VoicePanelPIP() {
     const obj = { runOnJS: mode(4146).runOnJS, handleSecondaryPIPTap: callback1 };
     return Gesture.Exclusive(maxDistanceResult.onStart(fn), callback());
   }, items6);
-  let pushToTalk = importDefault(8654)(context.controlsSpecs).pushToTalk;
+  let pushToTalk = require("../../../reanimated/native/useStateFromSharedValue.tsx")(context.controlsSpecs).pushToTalk;
   const tmp22 = stateFromStoresObject1(safeArea.useState(null != pIPState.mode), 2);
   first = tmp22[0];
   dependencyMap = tmp22[1];
@@ -458,13 +458,13 @@ let obj = { mass: 0.3, damping: 80, stiffness: 150 };
 function layoutTransition(originX) {
   let obj = { animations: null, initialValues: null };
   obj = { originX: null, originY: null, width: null, height: null };
-  obj[0] = require(4694) /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetOriginX, obj);
-  const obj3 = require(4694) /* CONFIG_NEVER_ANIMATE */;
-  obj[1] = require(4694) /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetOriginY, obj);
-  const obj4 = require(4694) /* CONFIG_NEVER_ANIMATE */;
-  obj[2] = require(4694) /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetWidth, obj);
-  const obj5 = require(4694) /* CONFIG_NEVER_ANIMATE */;
-  obj[3] = require(4694) /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetHeight, obj);
+  obj[0] = require("../../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetOriginX, obj);
+  const obj3 = require("../../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */;
+  obj[1] = require("../../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetOriginY, obj);
+  const obj4 = require("../../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */;
+  obj[2] = require("../../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetWidth, obj);
+  const obj5 = require("../../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */;
+  obj[3] = require("../../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetHeight, obj);
   obj[0] = obj;
   obj[1] = { originX: originX.currentOriginX, originY: originX.currentOriginY, width: originX.currentWidth, height: originX.currentHeight };
   return obj;
@@ -580,7 +580,7 @@ let closure_36 = importAllResult.memo((transitionState) => {
 const memoResult = importAllResult.memo(function VoicePanelPIPWrapper() {
   let mode;
   let showSecondaryPIP;
-  let obj = require(16036) /* context */;
+  let obj = require("VoicePanelPIPStateContext.tsx") /* context */;
   const pIPState = obj.usePIPState();
   ({ mode, showSecondaryPIP } = pIPState);
   if (null != mode) {
@@ -589,7 +589,7 @@ const memoResult = importAllResult.memo(function VoicePanelPIPWrapper() {
     const tmp3 = obj;
   }
   obj = { item: tmp3, renderItem: renderPIPWrapper };
-  return closure_15(require(4629) /* wrapChildrenDefault */.TransitionItem, obj);
+  return closure_15(require("../../../../design/components/TransitionGroup/TransitionGroup.tsx") /* wrapChildrenDefault */.TransitionItem, obj);
 });
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIP.tsx");
 

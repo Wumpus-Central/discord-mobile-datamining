@@ -21,19 +21,19 @@ export default function useGuildProfileCTA(id) {
   const dependencyMap = arg2;
   id = id.id;
   const features = id.features;
-  let obj = _require(589);
+  let obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const items = [features];
   const stateFromStores = obj.useStateFromStores(items, () => features.getId());
   const items1 = [stateFromStores1];
-  stateFromStores1 = _require(589).useStateFromStores(items1, () => stateFromStores1.getGuild(id));
-  let obj2 = _require(589);
+  stateFromStores1 = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => stateFromStores1.getGuild(id));
+  let obj2 = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const items2 = [stateFromStores3];
   const items3 = [stateFromStores];
-  const stateFromStores2 = _require(589).useStateFromStores(items2, () => stateFromStores3.getUser(stateFromStores), items3);
-  const obj3 = _require(589);
+  const stateFromStores2 = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => stateFromStores3.getUser(stateFromStores), items3);
+  const obj3 = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const items4 = [stateFromStores];
   const items5 = [id, stateFromStores];
-  stateFromStores3 = _require(589).useStateFromStores(items4, () => {
+  stateFromStores3 = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items4, () => {
     let member = null;
     if (null != id) {
       member = stateFromStores.getMember(tmp, stateFromStores);
@@ -44,10 +44,10 @@ export default function useGuildProfileCTA(id) {
     }
     return null != joinedAt;
   }, items5);
-  const obj4 = _require(589);
+  const obj4 = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const items6 = [stateFromStores2];
   const items7 = [id, arg2];
-  const stateFromStoresObject = _require(589).useStateFromStoresObject(items6, () => {
+  const stateFromStoresObject = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items6, () => {
     let inviteKeyForGuildId = dependencyMap;
     if (dependencyMap == null) {
       inviteKeyForGuildId = stateFromStores2.getInviteKeyForGuildId(id);
@@ -78,7 +78,7 @@ export default function useGuildProfileCTA(id) {
   const validInviteKey = stateFromStoresObject.validInviteKey;
   const isBypassInvite = stateFromStoresObject.isBypassInvite;
   const inviteRoles = stateFromStoresObject.inviteRoles;
-  let tmp6 = importDefault(11104)();
+  let tmp6 = require("../../guilds_bar/usePendingFolderGuildIds.tsx")();
   obj = tmp6;
   const items8 = [stateFromStores3, tmp6, id, features, validInviteKey, , , , , , , ];
   ({ visibility: arr9[5], tag: arr9[6] } = id);

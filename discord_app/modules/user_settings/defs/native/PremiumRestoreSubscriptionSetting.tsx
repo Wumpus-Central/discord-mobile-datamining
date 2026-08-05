@@ -6,13 +6,13 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.s9h22P);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.s9h22P);
   },
   parent: null,
   IconComponent: require("NitroWheelIcon").NitroWheelIcon,
   onPress: function handleNitroRestoreSettingPress() {
-    let obj = importDefault(6792);
+    let obj = require("../../../../actions/native/BillingActionCreators.tsx");
     const result = obj.restoreAndApplyPurchases(true);
     result.then((arg0) => {
       if (arg0.length > 0) {
@@ -50,16 +50,16 @@ createToggle = {
         });
       }
     };
-    importDefault(4624).openLazy(obj);
+    require("../../../../actions/native/AlertActionCreators.tsx").openLazy(obj);
   },
   withArrow: true,
   usePredicate: function useHasPremiumRestoreSubscriptionSetting() {
     const items = [mergeGuildAvatar];
-    const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
+    const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
     let tmp4 = null != stateFromStores && stateFromStores.verified;
     if (tmp4) {
-      tmp4 = !require(500) /* set */.isAndroid();
-      const tmpResult = require(500) /* set */;
+      tmp4 = !require("../../../../utils/PlatformUtils.tsx") /* set */.isAndroid();
+      const tmpResult = require("../../../../utils/PlatformUtils.tsx") /* set */;
     }
     return tmp4;
   }

@@ -23,7 +23,7 @@ export default function PressableNavigatorModalIcon(onPress) {
   } else {
     stringResult = string(t.cpT0Cq);
   }
-  obj = { isModal: true, children: tmp(require(8193) /* GenericHeaderTitle */.HeaderIconButton, obj) };
+  obj = { isModal: true, children: tmp(require("../HeaderShared.tsx") /* GenericHeaderTitle */.HeaderIconButton, obj) };
   obj[2] = stringResult;
-  return jsx(importDefault(8196), { isModal: true, children: tmp(require(8193) /* GenericHeaderTitle */.HeaderIconButton, obj) });
+  return jsx(require("PressableNavigatorButtonWrapper.tsx"), { isModal: true, children: tmp(require("../HeaderShared.tsx") /* GenericHeaderTitle */.HeaderIconButton, obj) });
 };

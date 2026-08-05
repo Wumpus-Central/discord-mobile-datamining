@@ -6,8 +6,8 @@ const require = arg1;
 const result = require("useSettingNavigationRoute").fileFinishedImporting("modules/user_settings/authorized_apps/native/AuthorizedAppPermissionsScreen.tsx");
 
 export default function AuthorizedAppPermissionsScreen() {
-  let obj = require(6787) /* useSettingNavigationRoute */;
+  let obj = require("../../core/native/useSettingNavigationRoute.tsx") /* useSettingNavigationRoute */;
   const settingNavigationRoute = obj.useSettingNavigationRoute();
   obj = { oauth2Token: settingNavigationRoute.params.oauth2Token };
-  return jsx(importDefault(14094), { oauth2Token: settingNavigationRoute.params.oauth2Token });
+  return jsx(require("UserSettingsAuthedAppPermissions.tsx"), { oauth2Token: settingNavigationRoute.params.oauth2Token });
 };

@@ -12,13 +12,13 @@ export default {
     let guildFilter;
     let roleFilter;
     ({ guildFilter, roleFilter, everyoneFilter } = arg0);
-    importDefault(709).dispatch({ type: "SET_RECENT_MENTIONS_FILTER", guildFilter, roleFilter, everyoneFilter });
+    require("../Dispatcher.tsx").dispatch({ type: "SET_RECENT_MENTIONS_FILTER", guildFilter, roleFilter, everyoneFilter });
   },
   clearMentions() {
-    importDefault(709).dispatch({ type: "CLEAR_MENTIONS" });
+    require("../Dispatcher.tsx").dispatch({ type: "CLEAR_MENTIONS" });
   },
   truncateMentions(size) {
-    let obj = importDefault(709);
+    let obj = require("../Dispatcher.tsx");
     obj = { type: "TRUNCATE_MENTIONS", size };
     obj.dispatch(obj);
   },
@@ -40,7 +40,7 @@ export default {
     if (flag2 === undefined) {
       flag2 = true;
     }
-    let obj = importDefault(709);
+    let obj = require("../Dispatcher.tsx");
     obj.dispatch({ type: "LOAD_RECENT_MENTIONS", guildId });
     const HTTP = before(530).HTTP;
     obj = { url: closure_3.MENTIONS, query: { before, limit, guild_id: guildId, roles: flag, everyone: flag2, feature: feature.feature }, retries: 2, oldFormErrors: true, rejectWithError: true };
@@ -55,13 +55,13 @@ export default {
     });
   },
   deleteRecentMention(id) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     let obj = { url: closure_3.MENTIONS_MESSAGE_ID(id), retries: 2, oldFormErrors: true, rejectWithError: true };
     HTTP.del(obj);
     obj = { type: "RECENT_MENTION_DELETE", id };
-    importDefault(709).dispatch(obj);
+    require("../Dispatcher.tsx").dispatch(obj);
   },
   setRecentMentionsStale() {
-    importDefault(709).dispatch({ type: "SET_RECENT_MENTIONS_STALE" });
+    require("../Dispatcher.tsx").dispatch({ type: "SET_RECENT_MENTIONS_STALE" });
   }
 };

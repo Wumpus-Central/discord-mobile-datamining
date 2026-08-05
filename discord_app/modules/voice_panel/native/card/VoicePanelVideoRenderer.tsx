@@ -7,7 +7,7 @@ import { VoicePanelControlsModes } from "VoicePanelControlsModes";
 import { VoicePanelPIPModes } from "VoicePanelPIPModes";
 import { SCALE_PHYSICS } from "MIN_PAN_GESTURE_MOVE";
 import jsxProd from "u";
-import module_10613 from "module_10613";
+import DCDVideoRenderer from "../../../video_calls/native/components/DCDVideoRenderer.tsx";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "module_4146";
 

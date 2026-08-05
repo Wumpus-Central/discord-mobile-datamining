@@ -131,13 +131,13 @@ let obj = {
     let dispatch = store2.getOnboardingPrompt(id);
     if (null != dispatch) {
       if (dispatch.singleSelect) {
-        let obj = importDefault(12);
-        let withoutResult = obj.without(importDefault(12).map(dispatch.options, "id"), id2);
-        const arr2 = importDefault(12);
+        let obj = require("../../../_runtime/00012_apply.js");
+        let withoutResult = obj.without(require("../../../_runtime/00012_apply.js").map(dispatch.options, "id"), id2);
+        const arr2 = require("../../../_runtime/00012_apply.js");
       } else {
         withoutResult = [];
       }
-      dispatch = importDefault(709).dispatch;
+      dispatch = require("../../Dispatcher.tsx").dispatch;
       obj = { type: "GUILD_ONBOARDING_SELECT_OPTION", guildId: null, promptId: null, optionId: null, selected: null, removedOptionIds: null };
       obj[1] = guildId;
       obj[2] = id;
@@ -145,7 +145,7 @@ let obj = {
       obj[4] = arg3;
       obj[5] = withoutResult;
       dispatch(obj);
-      const tmp7 = importDefault(709);
+      const tmp7 = require("../../Dispatcher.tsx");
     }
   },
   updateOnboardingResponses: null,
@@ -167,21 +167,21 @@ obj[2] = function updateRolesLocal(guildId, items2, differenceResult1) {
     roles = [];
   }
   if (initialize.isViewingRoles(guildId)) {
-    const obj5 = require(5216) /* updateImpersonating */;
-    const obj6 = importDefault(12);
-    const result = obj5.updateImpersonatedRoles(guildId, obj6.difference(importDefault(12).union(roles, items2), differenceResult1));
-    const obj7 = importDefault(12);
+    const obj5 = require("../impersonate/ImpersonateActionCreators.tsx") /* updateImpersonating */;
+    const obj6 = require("../../../_runtime/00012_apply.js");
+    const result = obj5.updateImpersonatedRoles(guildId, obj6.difference(require("../../../_runtime/00012_apply.js").union(roles, items2), differenceResult1));
+    const obj7 = require("../../../_runtime/00012_apply.js");
   } else {
     if (tmp2) {
-      let obj = importDefault(709);
+      let obj = require("../../Dispatcher.tsx");
       obj = { type: "GUILD_MEMBER_UPDATE_LOCAL", guildId: null, roles: null, addedRoleIds: null, removedRoleIds: null };
       obj[1] = guildId;
-      const obj3 = importDefault(12);
-      obj[2] = obj3.difference(importDefault(12).union(roles, items2), differenceResult1);
+      const obj3 = require("../../../_runtime/00012_apply.js");
+      obj[2] = obj3.difference(require("../../../_runtime/00012_apply.js").union(roles, items2), differenceResult1);
       obj[3] = items2;
       obj[4] = differenceResult1;
       obj.dispatch(obj);
-      const obj4 = importDefault(12);
+      const obj4 = require("../../../_runtime/00012_apply.js");
     }
     tmp2 = items2.length > 0 || differenceResult1.length > 0;
   }
@@ -225,7 +225,7 @@ obj[3] = function completeOnboarding(guildId, prompts) {
   const tmp12 = importDefault;
   const tmp2Result2 = items1(5217);
   obj = {};
-  const obj8 = importDefault(698);
+  const obj8 = require("../../utils/AnalyticsUtils.tsx");
   const merged = Object.assign(items1(4479).collectGuildAnalyticsMetadata(guildId));
   obj.step = prompts.length - 1;
   let num2 = 0;
@@ -294,12 +294,12 @@ obj[4] = function onboardExistingMember(id, set) {
   }
 };
 obj[5] = function finishOnboarding(guildId) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "GUILD_ONBOARDING_COMPLETE", guildId };
   obj.dispatch(obj);
 };
 obj[6] = function setUserOnboardingStep(guildId, step) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "GUILD_ONBOARDING_SET_STEP", guildId, step };
   obj.dispatch(obj);
 };

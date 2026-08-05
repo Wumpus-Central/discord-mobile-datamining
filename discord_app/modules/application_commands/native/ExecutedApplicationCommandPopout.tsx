@@ -235,7 +235,7 @@ function getCommandCopyText(item10118, arg1, id, name_localized) {
     let str = "";
     combined = "" + name_localized;
   }
-  if (item10118.type !== _require(1906).ApplicationCommandOptionType.SUB_COMMAND) {
+  if (item10118.type !== _require("../../../flow/Server.tsx").ApplicationCommandOptionType.SUB_COMMAND) {
     if (item10118.type !== tmp5(1906).ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
       let sum = null;
       if (null != item10118.value) {
@@ -244,8 +244,8 @@ function getCommandCopyText(item10118, arg1, id, name_localized) {
           const user = authStore.getUser(item10118.value.toString());
           sum = null;
           if (null != user) {
-            sum = closure_20 + importDefault(4124).getUserTag(user, { decoration: "never" });
-            const obj3 = importDefault(4124);
+            sum = closure_20 + require("../../../utils/UserUtils.tsx").getUserTag(user, { decoration: "never" });
+            const obj3 = require("../../../utils/UserUtils.tsx");
           }
           const str5 = item10118.value;
         } else if (tmp5(1906).ApplicationCommandOptionType.CHANNEL === type) {
@@ -280,8 +280,8 @@ function getCommandCopyText(item10118, arg1, id, name_localized) {
               const user1 = authStore.getUser(str);
               sum = null;
               if (null != user1) {
-                sum = closure_20 + importDefault(4124).getUserTag(user1, { decoration: "never" });
-                const obj = importDefault(4124);
+                sum = closure_20 + require("../../../utils/UserUtils.tsx").getUserTag(user1, { decoration: "never" });
+                const obj = require("../../../utils/UserUtils.tsx");
               }
             }
             const str6 = item10118.value;

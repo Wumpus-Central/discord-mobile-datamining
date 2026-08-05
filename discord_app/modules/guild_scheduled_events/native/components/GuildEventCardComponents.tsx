@@ -510,7 +510,7 @@ export const GuildEventShareAction = function GuildEventShareAction(event) {
   event = event.event;
   let importDefault;
   let dependencyMap;
-  const tmp3 = importDefault(8880)(event);
+  const tmp3 = require("../../useCanInviteForGuildEvent.tsx")(event);
   importDefault = tmp3;
   let obj = event(8882);
   obj = { guildId: event.guild_id, guildEventId: event.id };
@@ -564,7 +564,7 @@ export const useEventRsvpState = function useEventRsvpState(id) {
   const items = [closure_17];
   const items1 = [id.id, arg1];
   const items2 = [
-    _require(589).useStateFromStores(items, () => outer1_17.isInterestedInEventRecurrence(event.id, c1), items1),
+    _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_17.isInterestedInEventRecurrence(event.id, c1), items1),
     () => {
       const result = event(outer1_2[21]).handleGuildScheduledEventRsvp(event.id, c1, event.guild_id);
     }
@@ -602,7 +602,7 @@ export const GuildEventIndicateInterestAction = function GuildEventIndicateInter
   const intl2 = tmp(1236).intl;
   obj[5] = intl2.string(event(1236).t.DlcqlU);
   obj[6] = tmp3[1];
-  return callback4(importDefault(9059), obj);
+  return callback4(require("ThrottledButton.tsx"), obj);
 };
 export const PrimaryActionType = obj12;
 export { usePrimaryActionButtonType };
@@ -615,7 +615,7 @@ export const GuildEventCardImageHeader = function GuildEventCardImageHeader(even
   event = event.event;
   let _require;
   let tmp = styles();
-  let width = importDefault(1474)().width;
+  let width = require("../../../screen/useWindowDimensions.native.tsx")().width;
   [tmp5, c0] = callback(importAllResult.useState(0), 2);
   if (null == event.image) {
     return null;
@@ -623,7 +623,7 @@ export const GuildEventCardImageHeader = function GuildEventCardImageHeader(even
     if (tmp5 > 0) {
       width = tmp5;
     }
-    let obj = _require(1416);
+    let obj = _require("../../../../utils/AvatarUtils.tsx");
     obj = { style: null, onLayout: null, children: null };
     obj[0] = tmp.imageHeaderContainer;
     obj[1] = tmp6;
@@ -674,11 +674,11 @@ export const GuildEventCardHeader = function GuildEventCardHeader(event) {
   const tmp = styles();
   let id;
   let tmp2 = importDefault;
-  const tmp4 = importDefault(4221)();
+  const tmp4 = require("../../../../hooks/useTheme.tsx")();
   if (event != null) {
     id = event.id;
   }
-  let obj = importDefault(8869)(recurrenceId, id);
+  let obj = require("../../useEventException.tsx")(recurrenceId, id);
   if (obj == null) {
     obj = {};
   }
@@ -728,7 +728,7 @@ export const GuildEventCardHeader = function GuildEventCardHeader(event) {
     tmp15 = tmp16Result;
     tmp16 = callback4;
   }
-  const tmp5 = importDefault(8869);
+  const tmp5 = require("../../useEventException.tsx");
   const tmp7 = undefined !== is_canceled && is_canceled;
   const items1 = [mergeGuildAvatar];
   const items2 = [event];
@@ -915,7 +915,7 @@ export const GuildEventCardSimpleGuildInfo = function GuildEventCardSimpleGuildI
     obj[0] = stateFromStores;
     obj[1] = tmp2(5661).GuildIconSizes.XSMALL_20;
     obj[2] = tmp.guildIcon;
-    const items3 = [callback4(importDefault(5661), obj), ];
+    const items3 = [callback4(require("../../../guild/native/GuildIcon.tsx"), obj), ];
     const obj1 = { style: null, children: null };
     obj1[0] = tmp.guildInfo;
     const obj2 = { variant: "text-sm/semibold", style: null, children: null };
@@ -925,7 +925,7 @@ export const GuildEventCardSimpleGuildInfo = function GuildEventCardSimpleGuildI
     items3[1] = callback4(closure_6, obj1);
     obj[1] = items3;
     tmp5 = callback5(closure_6, obj);
-    const tmp10 = importDefault(5661);
+    const tmp10 = require("../../../guild/native/GuildIcon.tsx");
   }
   return tmp5;
 };

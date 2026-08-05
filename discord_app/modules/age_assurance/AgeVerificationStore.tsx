@@ -99,7 +99,7 @@ const ageVerificationStore = new AgeVerificationStore(require("dispatcher"), {
       combined = "AgeVerificationStore_" + id;
     }
     if (null != combined) {
-      const Storage = require(595) /* Storage */.Storage;
+      const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
       const value = Storage.get(combined);
       if (null != value) {
         if (typeof value === "object") {
@@ -151,7 +151,7 @@ const ageVerificationStore = new AgeVerificationStore(require("dispatcher"), {
       combined = "AgeVerificationStore_" + id;
     }
     if (null != combined) {
-      const Storage = require(595) /* Storage */.Storage;
+      const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
       const obj = { reactiveCheckStatus: null, reactiveCheckMissAt: null };
       obj[0] = status;
       obj[1] = timestamp;
@@ -172,7 +172,7 @@ const ageVerificationStore = new AgeVerificationStore(require("dispatcher"), {
       combined = "AgeVerificationStore_" + id;
     }
     if (null != combined) {
-      const Storage = require(595) /* Storage */.Storage;
+      const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
       const obj = { reactiveCheckStatus: null, reactiveCheckMissAt: null };
       obj[0] = suppress;
       obj[1] = c8;

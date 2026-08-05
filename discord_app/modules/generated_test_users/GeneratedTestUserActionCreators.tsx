@@ -80,8 +80,8 @@ export const loginAsGeneratedUser = function loginAsGeneratedUser(id, arg1) {
       obj = { login: null, password: null, isMultiAccount: true, source: "generated_test_user" };
       obj[0] = user.email;
       obj[1] = password;
-      const obj2 = importDefault(5736);
-      return importDefault(5736).login(obj).catch(() => {
+      const obj2 = require("../../actions/AuthenticationActionCreators.tsx");
+      return require("../../actions/AuthenticationActionCreators.tsx").login(obj).catch(() => {
         callback(table[6]).showFailedToast(constants.GENERIC_ERROR);
         return null;
       });
@@ -99,7 +99,7 @@ export const getGeneratedPoolById = function getGeneratedPoolById(closure_0, clo
   return applyArgumentsResult;
 };
 export const removeGeneratedPoolFromList = function removeGeneratedPoolFromList(poolId) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "GENERATED_POOL_REMOVE_FROM_LIST", poolId };
   obj.dispatch(obj);
 };

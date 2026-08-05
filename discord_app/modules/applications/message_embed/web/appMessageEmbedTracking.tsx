@@ -15,7 +15,7 @@ export const trackAppEmbedClick = function trackAppEmbedClick(arg0) {
   let messageId;
   let referrerId;
   ({ applicationId, linkType, area, referrerId, customId, isDeadEnd, messageId } = arg0);
-  importDefault(698).track(AnalyticEvents.APP_EMBED_CLICKED, { application_id: applicationId, link_type: linkType, area, referrer_id: referrerId, custom_id: customId, is_dead_end: isDeadEnd, message_id: messageId });
+  require("../../../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.APP_EMBED_CLICKED, { application_id: applicationId, link_type: linkType, area, referrer_id: referrerId, custom_id: customId, is_dead_end: isDeadEnd, message_id: messageId });
 };
 export const trackAppEmbedViewed = function trackAppEmbedViewed(arg0) {
   let appEmbedState;
@@ -27,13 +27,13 @@ export const trackAppEmbedViewed = function trackAppEmbedViewed(arg0) {
   let messageId;
   let referrerId;
   ({ appId, linkType, referrerId, customId, guildId, channelId, messageId, appEmbedState } = arg0);
-  importDefault(698).track(AnalyticEvents.APP_EMBED_VIEWED, { application_id: appId, link_type: linkType, referrer_id: referrerId, custom_id: customId, guild_id: guildId, channel_id: channelId, message_id: messageId, app_embed_state: appEmbedState });
+  require("../../../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.APP_EMBED_VIEWED, { application_id: appId, link_type: linkType, referrer_id: referrerId, custom_id: customId, guild_id: guildId, channel_id: channelId, message_id: messageId, app_embed_state: appEmbedState });
 };
 export const useTrackAppEmbedViewed = function useTrackAppEmbedViewed(id) {
-  _require = _require(7074).trackingConfigWithDefaults(id);
+  _require = _require("appMessageEmbedTrackingConfig.tsx").trackingConfigWithDefaults(id);
   let closure_1 = React.useRef(false);
-  let obj = _require(7074);
-  return _require(7075).useIsVisible((arg0) => {
+  let obj = _require("appMessageEmbedTrackingConfig.tsx");
+  return _require("../../../../../discord_common/js/shared/hooks/useIntersectionObserver.tsx").useIsVisible((arg0) => {
     let activityCustomId;
     let appEmbedState;
     let channelId;
@@ -70,7 +70,7 @@ export const useTrackAppEmbedViewed = function useTrackAppEmbedViewed(id) {
   }, undefined);
 };
 export const trackAppEmbedLinkSent = function trackAppEmbedLinkSent(applicationId, ACTIVITY_INVITE, closure_5, customId) {
-  let obj = importDefault(698);
+  let obj = require("../../../../utils/AnalyticsUtils.tsx");
   obj = { application_id: applicationId, link_type: ACTIVITY_INVITE, referrer_id: closure_5, custom_id: customId };
   obj.track(AnalyticEvents.APP_EMBED_LINK_SENT, obj);
 };

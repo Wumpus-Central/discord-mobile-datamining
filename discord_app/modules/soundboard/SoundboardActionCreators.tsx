@@ -55,7 +55,7 @@ function _fetchDefaultSoundsFromApi2() {
 }
 function _maybeFetchDefaultSounds() {
   if (handleSoundCreateOrUpdate.shouldFetchDefaultSounds()) {
-    importDefault(709).dispatch({ type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS" });
+    require("../../Dispatcher.tsx").dispatch({ type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS" });
     const SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS = "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS";
     const promise = new Promise((arg0) => {
       let closure_0 = arg0;
@@ -95,11 +95,11 @@ function _maybeFetchGuildSoundboardSounds() {
       }
       const subscription = outer1_1(outer1_2[7]).subscribe(closure_0, onSoundboardActionCompleted);
     });
-    importDefault(709).dispatch({ type: "GUILD_SOUNDBOARD_FETCH" });
-    const obj2 = importDefault(709);
+    require("../../Dispatcher.tsx").dispatch({ type: "GUILD_SOUNDBOARD_FETCH" });
+    const obj2 = require("../../Dispatcher.tsx");
     obj = { type: "REQUEST_SOUNDBOARD_SOUNDS", guildIds: null };
     obj[1] = guildIdsToFetchSoundsFor;
-    importDefault(709).dispatch(obj);
+    require("../../Dispatcher.tsx").dispatch(obj);
     return promise;
   }
 }
@@ -453,7 +453,7 @@ export const deleteSound = function deleteSound() {
 };
 export const addFavoriteSound = function addFavoriteSound(soundId) {
   const _require = soundId;
-  const FrecencyUserSettingsActionCreators = _require(1355).FrecencyUserSettingsActionCreators;
+  const FrecencyUserSettingsActionCreators = _require("../user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
   FrecencyUserSettingsActionCreators.updateAsync("favoriteSoundboardSounds", (soundIds) => {
     let obj = outer1_1(outer1_2[13]);
     if (obj.size(soundIds.soundIds) >= outer1_8) {
@@ -482,7 +482,7 @@ export const addFavoriteSound = function addFavoriteSound(soundId) {
 };
 export const removeFavoriteSound = function removeFavoriteSound(soundId) {
   const _require = soundId;
-  const FrecencyUserSettingsActionCreators = _require(1355).FrecencyUserSettingsActionCreators;
+  const FrecencyUserSettingsActionCreators = _require("../user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
   FrecencyUserSettingsActionCreators.updateAsync("favoriteSoundboardSounds", (soundIds) => {
     soundIds = soundIds.soundIds;
     soundIds.soundIds = soundIds.filter((arg0) => arg0 !== closure_0);
@@ -499,27 +499,27 @@ export const fetchSoundGuildData = function fetchSoundGuildData() {
   return applyArgumentsResult;
 };
 export const playSoundLocally = function playSoundLocally(channelId, sound, SOUNDBOARD) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY", sound, channelId, trigger: SOUNDBOARD };
   obj.dispatch(obj);
 };
 export const reportSoundStartedPlaying = function reportSoundStartedPlaying(soundId, userId) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "GUILD_SOUNDBOARD_SOUND_PLAY_START", soundId, userId };
   obj.dispatch(obj);
 };
 export const reportSoundFinishedPlaying = function reportSoundFinishedPlaying(c2, c3) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "GUILD_SOUNDBOARD_SOUND_PLAY_END", soundId: c2, userId: c3 };
   obj.dispatch(obj);
 };
 export const updateUserSoundboardVolume = function updateUserSoundboardVolume(volume, analyticsLocations) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "USER_SOUNDBOARD_SET_VOLUME", volume, location: analyticsLocations };
   obj.dispatch(obj);
 };
 export const muteCustomJoinSound = function muteCustomJoinSound(voiceChannelId) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "SOUNDBOARD_MUTE_JOIN_SOUND", channelId: voiceChannelId };
   obj.dispatch(obj);
 };

@@ -27,12 +27,12 @@ export const TableSwitchRow = function TableSwitchRow(value) {
   const variant = value.variant;
   const merged = Object.assign(value, Object.create(null));
   let callback;
-  let obj = require(500) /* set */;
+  let obj = require("../../../../utils/PlatformUtils.tsx") /* set */;
   const tmp2 = callback2();
-  let obj1 = require(3991) /* getNodeText */;
+  let obj1 = require("../../../utils/native.tsx") /* getNodeText */;
   const nodeText = obj1.getNodeText(label);
   const isAndroidResult = obj.isAndroid();
-  const nodeText1 = require(3991) /* getNodeText */.getNodeText(subLabel);
+  const nodeText1 = require("../../../utils/native.tsx") /* getNodeText */.getNodeText(subLabel);
   const tmp8 = callback(React.useState(value), 2);
   callback = tmp8[1];
   const items = [value];
@@ -96,6 +96,6 @@ export const TableSwitchRow = function TableSwitchRow(value) {
       }
     });
   };
-  obj.trailing = closure_5(require(5651) /* FormSwitch */.FormSwitch, { "aria-hidden": true, value, onValueChange: handleOnPress, disabled });
-  return closure_5(require(5315) /* TableRowInner */.TableRow, obj);
+  obj.trailing = closure_5(require("../../Forms/native/FormSwitch.native.tsx") /* FormSwitch */.FormSwitch, { "aria-hidden": true, value, onValueChange: handleOnPress, disabled });
+  return closure_5(require("TableRow.native.tsx") /* TableRowInner */.TableRow, obj);
 };

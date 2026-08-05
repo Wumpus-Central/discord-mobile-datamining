@@ -10,12 +10,12 @@ let obj = { NONE: "NONE", STANDARD: "STANDARD", KRISP: "KRISP" };
 let result = require("trackDeviceChanged").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceUtils.tsx");
 
 export const handleAutomaticGainControlChange = function handleAutomaticGainControlChange(arg0) {
-  let obj = importDefault(9077);
+  let obj = require("../../../../actions/AudioActionCreators.tsx");
   obj = { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO };
   const result = obj.setAutomaticGainControl(arg0, obj);
 };
 export const handleEchoCancellationChange = function handleEchoCancellationChange(arg0) {
-  let obj = importDefault(9077);
+  let obj = require("../../../../actions/AudioActionCreators.tsx");
   obj = { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO };
   obj.setEchoCancellation(arg0, obj);
 };
@@ -23,11 +23,11 @@ export const handleNoiseSuppressionChange = function handleNoiseSuppressionChang
   let KRISP;
   let STANDARD;
   ({ KRISP, STANDARD } = obj);
-  obj = importDefault(9077);
+  obj = require("../../../../actions/AudioActionCreators.tsx");
   obj = { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO };
   obj.setNoiseCancellation(arg0 === KRISP, obj);
   obj = { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO };
-  importDefault(9077).setNoiseSuppression(arg0 === STANDARD, obj);
+  require("../../../../actions/AudioActionCreators.tsx").setNoiseSuppression(arg0 === STANDARD, obj);
 };
 export const NoiseSuppressionOpt = obj;
 export const getSelectedNoiseSuppressionOption = function getSelectedNoiseSuppressionOption(_detectH265HardwareDecode) {
@@ -45,7 +45,7 @@ export const getSelectedNoiseSuppressionOption = function getSelectedNoiseSuppre
 };
 export const useSelectedNoiseSuppressionOption = function useSelectedNoiseSuppressionOption() {
   const items = [_detectH265HardwareDecode];
-  return require(589) /* initialize */.useStateFromStores(items, () => {
+  return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
     const noiseSuppression = store.getNoiseSuppression();
     const noiseCancellation = store.getNoiseCancellation();
     if (noiseCancellation) {

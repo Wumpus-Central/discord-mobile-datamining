@@ -15,20 +15,20 @@ const items = [, , , , , , ];
 let set = new Set(items);
 let closure_7 = createCacheKey.createStyles((height) => {
   let obj = { container: null };
-  obj = { height, paddingStart: importDefault(712).space.PX_8, overflow: "hidden" };
+  obj = { height, paddingStart: require("../../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, overflow: "hidden" };
   obj[0] = obj;
   return obj;
 });
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemHappeningNow.tsx");
 
 export default require("noop").memo(function MessagesItemHappeningNow(listRef) {
-  let obj = require(3989) /* map */;
+  let obj = require("../../../../../../design/tokens/native/useToken.tsx") /* map */;
   obj = { backgroundColor: null, children: null };
-  obj = { style: callback(closure_4 + obj.useToken(importDefault(712).modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM)).container, collapsable: false, children: null };
-  obj[2] = jsx(importDefault(15086), { cards: set, listRef: listRef.listRef });
-  obj[1] = <View style={callback(closure_4 + obj.useToken(importDefault(712).modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM)).container} collapsable={false}>{null}</View>;
-  return jsx(require(8104) /* useCutoutBackgroundColor */.CutoutBackgroundProvider, { style: callback(closure_4 + obj.useToken(importDefault(712).modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM)).container, collapsable: false, children: null });
+  obj = { style: callback(closure_4 + obj.useToken(require("../../../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM)).container, collapsable: false, children: null };
+  obj[2] = jsx(require("../../../shared_components/happening_now/HappeningNow.tsx"), { cards: set, listRef: listRef.listRef });
+  obj[1] = <View style={callback(closure_4 + obj.useToken(require("../../../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM)).container} collapsable={false}>{null}</View>;
+  return jsx(require("../../../../../../design/components/Icon/native/CutoutBackgroundContext.tsx") /* useCutoutBackgroundColor */.CutoutBackgroundProvider, { style: callback(closure_4 + obj.useToken(require("../../../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM)).container, collapsable: false, children: null });
 });
 export const getMessagesItemHappeningNowHeight = function getMessagesItemHappeningNowHeight(closure_0) {
-  return require(1348) /* useIsMobileVisualRefreshExperimentEnabled */.resolveRefreshToken(importDefault(712).modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM, closure_0) + closure_4;
+  return require("../../../../../themes/experiments/MobileVisualRefreshExperiment.tsx") /* useIsMobileVisualRefreshExperimentEnabled */.resolveRefreshToken(require("../../../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM, closure_0) + closure_4;
 };

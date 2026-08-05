@@ -6,6 +6,6 @@ const result = require("set").fileFinishedImporting("modules/guild_settings/role
 
 export const setRoleJustCreated = function setRoleJustCreated(arg0) {
   const _require = arg0;
-  _require(705).batchUpdates(() => outer1_2.setState({ roleJustCreated: closure_0 }));
+  _require("../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_2.setState({ roleJustCreated: closure_0 }));
 };
 export const useGuildSettingsRolesManagerState = obj;

@@ -8,7 +8,7 @@ let c5;
 let closure_6;
 const require = arg1;
 function handleCacheActionPress(key) {
-  let obj = importDefault(3986);
+  let obj = require("../../../toast/native/ToastActionCreators.tsx");
   obj = {
     key,
     icon() {
@@ -17,19 +17,19 @@ function handleCacheActionPress(key) {
     content: key
   };
   obj.open(obj);
-  importDefault(4253).hideActionSheet(CacheActionsActionSheet);
+  require("../../../action_sheet/native/ActionSheetActionCreators.tsx").hideActionSheet(CacheActionsActionSheet);
 }
 function CacheActionsActionSheet() {
   let obj = { header: null, children: null };
   obj = { title: null };
-  let intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.ZVZVwR);
-  obj[0] = callback2(require(5337) /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
+  let intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.ZVZVwR);
+  obj[0] = callback2(require("../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx") /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
   obj = { hasIcons: true, children: null };
   let obj1 = { icon: null, label: null, onPress: null };
-  obj1[0] = callback2(require(13789) /* FileUpIcon */.FileUpIcon, {});
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj1[1] = intl2.string(require(1236) /* getSystemLocale */.t["/GUaXh"]);
+  obj1[0] = callback2(require("../../../../design/components/Icon/native/redesign/generated/FileUpIcon.tsx") /* FileUpIcon */.FileUpIcon, {});
+  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj1[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["/GUaXh"]);
   obj1[2] = callback(function*() {
     if (dependencyMap === 2) {
       dependencyMap = 3;
@@ -85,11 +85,11 @@ function CacheActionsActionSheet() {
       }
     }
   });
-  const items = [callback2(require(5648) /* ActionSheetRowIcon */.ActionSheetRow, obj1), ];
+  const items = [callback2(require("../../../../design/components/Sheet/native/ActionSheetRow.native.tsx") /* ActionSheetRowIcon */.ActionSheetRow, obj1), ];
   let obj2 = { variant: "danger", icon: null, label: null, onPress: null };
-  obj2[1] = callback2(require(14651) /* FileWarningIcon */.FileWarningIcon, { color: "text-feedback-critical" });
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj2[2] = intl3.string(require(1236) /* getSystemLocale */.t.tgwiMO);
+  obj2[1] = callback2(require("../../../../design/components/Icon/native/redesign/generated/FileWarningIcon.tsx") /* FileWarningIcon */.FileWarningIcon, { color: "text-feedback-critical" });
+  const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj2[2] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.tgwiMO);
   obj2[3] = function onPress() {
     let obj = callback(14650);
     obj.clearCaches();
@@ -106,30 +106,30 @@ function CacheActionsActionSheet() {
     const obj2 = callback2(3986);
     callback2(4253).hideActionSheet(closure_7);
   };
-  items[1] = callback2(require(5648) /* ActionSheetRowIcon */.ActionSheetRow, obj2);
+  items[1] = callback2(require("../../../../design/components/Sheet/native/ActionSheetRow.native.tsx") /* ActionSheetRowIcon */.ActionSheetRow, obj2);
   obj[1] = items;
-  obj[1] = callback3(require(5648) /* ActionSheetRowIcon */.ActionSheetRow.Group, obj);
-  return callback2(require(5646) /* ActionSheet */.ActionSheet, obj);
+  obj[1] = callback3(require("../../../../design/components/Sheet/native/ActionSheetRow.native.tsx") /* ActionSheetRowIcon */.ActionSheetRow.Group, obj);
+  return callback2(require("../../../../design/components/Sheet/native/ActionSheet.native.tsx") /* ActionSheet */.ActionSheet, obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 CacheActionsActionSheet = "CacheActionsActionSheet";
 createToggle = {
   useTitle: function useCacheActionsTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.ZVZVwR);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.ZVZVwR);
   },
   parent: null,
   IconComponent: require("FileWarningIcon").FileWarningIcon,
   onPress: function handleCacheActionsPress() {
-    let obj = importDefault(4253);
+    let obj = require("../../../action_sheet/native/ActionSheetActionCreators.tsx");
     obj = { default: CacheActionsActionSheet };
     obj.openLazy(Promise.resolve(obj), CacheActionsActionSheet);
   },
   usePredicate: function useCacheActionsPredicate() {
     const items = [_handleConnectionOpen];
-    const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => connected.isConnected());
-    const DeveloperMode = require(3958) /* explicitContentFromProto */.DeveloperMode;
-    const obj = require(589) /* initialize */;
+    const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => connected.isConnected());
+    const DeveloperMode = require("../../UserSettings.tsx") /* explicitContentFromProto */.DeveloperMode;
+    const obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
     return DeveloperMode.useSetting() && stateFromStores;
   },
   withArrow: true

@@ -12,8 +12,8 @@ export default function guildHasOnboardingHome(id) {
     isFavoritesGuildIdResult = id.id === closure_3;
   }
   if (!isFavoritesGuildIdResult) {
-    isFavoritesGuildIdResult = require(1865) /* getFavoritesAwareGuildName */.isFavoritesGuildId(id.id);
-    const obj = require(1865) /* getFavoritesAwareGuildName */;
+    isFavoritesGuildIdResult = require("../favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */.isFavoritesGuildId(id.id);
+    const obj = require("../favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
   }
   if (!isFavoritesGuildIdResult) {
     const features = id.features;

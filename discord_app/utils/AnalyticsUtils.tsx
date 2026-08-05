@@ -29,18 +29,18 @@ function expandEventProperties(arg0) {
   let obj2 = obj;
   if (null == obj.location) {
     if (null == obj.source) {
-      tmp.client_performance_cpu = importDefault(7055).getCurrentCPUUsagePercent();
-      const obj6 = importDefault(7055);
-      tmp.client_performance_memory = importDefault(7055).getCurrentMemoryUsageKB();
-      const obj7 = importDefault(7055);
-      tmp.cpu_core_count = importDefault(7055).getCPUCoreCount();
+      tmp.client_performance_cpu = require("ProcessUtils.native.tsx").getCurrentCPUUsagePercent();
+      const obj6 = require("ProcessUtils.native.tsx");
+      tmp.client_performance_memory = require("ProcessUtils.native.tsx").getCurrentMemoryUsageKB();
+      const obj7 = require("ProcessUtils.native.tsx");
+      tmp.cpu_core_count = require("ProcessUtils.native.tsx").getCPUCoreCount();
       tmp.accessibility_features = getAccessibilityFeatures();
       tmp.rendered_locale = obj2(1236).intl.currentLocale;
       const _Math = Math;
       const _performance = performance;
       tmp.uptime_app = Math.floor((performance.now() - closure_18) / c15);
-      const obj8 = importDefault(7055);
-      const processUptime = importDefault(7055).getProcessUptime();
+      const obj8 = require("ProcessUtils.native.tsx");
+      const processUptime = require("ProcessUtils.native.tsx").getProcessUptime();
       if (null != processUptime) {
         const _Math2 = Math;
         tmp.uptime_process_renderer = Math.floor(processUptime);
@@ -116,9 +116,9 @@ if (isBlockedDomain.isLibdiscoreInitialized()) {
   launchSignature = obj2.generateLaunchSignature(obj3.getGlobalObject());
 }
 function addBreadcrumb(arg0) {
-  const IGNORE_ANALYTICS_BREADCRUMB_EVENTS = require(13372) /* IGNORE_ANALYTICS_BREADCRUMB_EVENTS */.IGNORE_ANALYTICS_BREADCRUMB_EVENTS;
+  const IGNORE_ANALYTICS_BREADCRUMB_EVENTS = require("../modules/errors/CommonSentryInitUtils.tsx") /* IGNORE_ANALYTICS_BREADCRUMB_EVENTS */.IGNORE_ANALYTICS_BREADCRUMB_EVENTS;
   if (!IGNORE_ANALYTICS_BREADCRUMB_EVENTS.includes(arg0)) {
-    let obj = importDefault(1208);
+    let obj = require("SentryUtils.native.tsx");
     obj = { category: "analytics", message: null };
     obj[1] = arg0;
     obj.addBreadcrumb(obj);
@@ -748,6 +748,6 @@ export const trackNetworkAction = function trackNetworkAction(event, arg1) {
   callback5(event, tmp2);
 };
 export const getNewAnalyticsLoadId = function getNewAnalyticsLoadId() {
-  return require(514) /* v1 */.v4();
+  return require("../../_runtime/00514_v1.js") /* v1 */.v4();
 };
 export const AnalyticsSchema = require("ME");

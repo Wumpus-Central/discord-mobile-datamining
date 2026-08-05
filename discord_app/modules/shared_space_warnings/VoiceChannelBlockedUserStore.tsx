@@ -44,8 +44,8 @@ function processUserInChannel(channelId, id) {
             delete tmp[tmp2];
           }
           if (flag3) {
-            const result = importDefault(12901).handleBlockedOrIgnoredUserVoiceChannelJoin(channelId, id);
-            const obj4 = importDefault(12901);
+            const result = require("SharedSpacesWarningManager.tsx").handleBlockedOrIgnoredUserVoiceChannelJoin(channelId, id);
+            const obj4 = require("SharedSpacesWarningManager.tsx");
           }
           return flag4;
         }

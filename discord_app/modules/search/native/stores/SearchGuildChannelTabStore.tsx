@@ -20,9 +20,9 @@ class GuildChannelSearchManager {
 const prototype = GuildChannelSearchManager.prototype;
 prototype["search"] = function search(query, guildId) {
   const self = this;
-  let obj = require(5126) /* NOOP */;
+  let obj = require("../../../../utils/AutocompleteUtils.tsx") /* NOOP */;
   const boosterMap = obj.getBoosterMap(AutocompleterResultTypes.TEXT_CHANNEL);
-  let obj1 = require(5126) /* NOOP */;
+  let obj1 = require("../../../../utils/AutocompleteUtils.tsx") /* NOOP */;
   obj = {
     query,
     guildId,
@@ -39,17 +39,17 @@ prototype["search"] = function search(query, guildId) {
   const merged = Object.assign(obj);
   obj.type = closure_4;
   obj.boosters = boosterMap;
-  const obj4 = importDefault(5126);
-  const queryChannelsResult = importDefault(5126).queryChannels(obj);
+  const obj4 = require("../../../../utils/AutocompleteUtils.tsx");
+  const queryChannelsResult = require("../../../../utils/AutocompleteUtils.tsx").queryChannels(obj);
   obj1 = {};
   const merged1 = Object.assign(obj);
   obj1.type = closure_3;
   obj1.boosters = boosterMap1;
-  const obj6 = importDefault(5126);
-  this.voiceChannels = importDefault(5126).queryChannels(obj1).map((channel) => ({ channel: channel.record }));
-  const queryChannelsResult1 = importDefault(5126).queryChannels(obj1);
-  const obj8 = require(12) /* apply */;
-  const mapped = require(12) /* apply */.chain(queryChannelsResult).map((channel) => {
+  const obj6 = require("../../../../utils/AutocompleteUtils.tsx");
+  this.voiceChannels = require("../../../../utils/AutocompleteUtils.tsx").queryChannels(obj1).map((channel) => ({ channel: channel.record }));
+  const queryChannelsResult1 = require("../../../../utils/AutocompleteUtils.tsx").queryChannels(obj1);
+  const obj8 = require("../../../../../_runtime/00012_apply.js") /* apply */;
+  const mapped = require("../../../../../_runtime/00012_apply.js") /* apply */.chain(queryChannelsResult).map((channel) => {
     const obj = { channel: channel.record, lastMessageId: null };
     let lastMessageId = generateOldThreadCutoff.lastMessageId(channel.record.id);
     if (lastMessageId == null) {
@@ -58,7 +58,7 @@ prototype["search"] = function search(query, guildId) {
     obj[1] = lastMessageId;
     return obj;
   });
-  const chainResult = require(12) /* apply */.chain(queryChannelsResult);
+  const chainResult = require("../../../../../_runtime/00012_apply.js") /* apply */.chain(queryChannelsResult);
   this.textChannels = mapped.sort((lastMessageId, lastMessageId2) => callback(table[5]).compare(lastMessageId2.lastMessageId, lastMessageId.lastMessageId)).value();
   if (query.length > 0) {
     self.count = self.textChannels.length + self.voiceChannels.length;

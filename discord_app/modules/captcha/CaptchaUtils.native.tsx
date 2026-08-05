@@ -25,10 +25,10 @@ export default {
         return callback2(table[3]).hideActionSheet(closure_4);
       }
     };
-    const obj2 = importDefault(4253);
+    const obj2 = require("../action_sheet/native/ActionSheetActionCreators.tsx");
     const merged = Object.assign(obj);
     const merged1 = Object.assign(options.options);
-    obj2.openLazy(_require(1959)(16224, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj);
+    obj2.openLazy(_require("../../../_runtime/01959_asyncRequireImpl.js")(16224, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj);
   },
   showCaptchaAsync(nextResult1) {
     let c1;
@@ -76,6 +76,6 @@ export default {
   },
   useIsCaptchaModalOpen() {
     const items = [setContent];
-    return require(589) /* initialize */.useStateFromStores(items, () => key.getKey() === closure_4);
+    return require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => key.getKey() === closure_4);
   }
 };

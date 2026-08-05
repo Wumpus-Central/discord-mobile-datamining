@@ -306,7 +306,7 @@ export default function getOnClick(url) {
   let c3;
   pathname = undefined;
   obj = undefined;
-  obj = _require(4269);
+  obj = _require("../modules/coded_links/findCodedLinks.tsx");
   const findCodedLinkResult = obj.findCodedLink(url);
   c3 = findCodedLinkResult;
   if (null != findCodedLinkResult) {
@@ -731,7 +731,7 @@ export default function getOnClick(url) {
       };
     }
   }
-  let toURLSafeResult = importDefault(1467).toURLSafe(url);
+  let toURLSafeResult = require("../utils/URLUtils.tsx").toURLSafe(url);
   if (toURLSafeResult == null) {
     toURLSafeResult = {};
   }

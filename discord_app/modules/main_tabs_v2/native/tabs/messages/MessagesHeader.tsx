@@ -156,8 +156,8 @@ let result = require("ME").fileFinishedImporting("modules/main_tabs_v2/native/ta
 export default memoResult;
 export const getMessagesHeaderHeight = function getMessagesHeaderHeight(fontScale, closure_2) {
   const bound = Math.min(fontScale, 1.75);
-  const refreshToken = require(1348) /* useIsMobileVisualRefreshExperimentEnabled */.resolveRefreshToken(importDefault(712).modules.mobile.MESSAGES_HEADER_PADDING_BOTTOM, closure_2);
-  const obj = require(1348) /* useIsMobileVisualRefreshExperimentEnabled */;
-  const sum = require(9370) /* map */.scaleTextLineHeight("redesign/heading-18/bold", bound) + PX_8;
-  return sum + require(4699) /* MINIMUM_HIT_AREA */.SMALL_BUTTON_HEIGHT + PX_16 + refreshToken;
+  const refreshToken = require("../../../../themes/experiments/MobileVisualRefreshExperiment.tsx") /* useIsMobileVisualRefreshExperimentEnabled */.resolveRefreshToken(require("../../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.MESSAGES_HEADER_PADDING_BOTTOM, closure_2);
+  const obj = require("../../../../themes/experiments/MobileVisualRefreshExperiment.tsx") /* useIsMobileVisualRefreshExperimentEnabled */;
+  const sum = require("../../../../screen/native/useScaledTextLineHeight.android.tsx") /* map */.scaleTextLineHeight("redesign/heading-18/bold", bound) + PX_8;
+  return sum + require("../../../../../design/components/Button/native/ButtonConstants.native.tsx") /* MINIMUM_HIT_AREA */.SMALL_BUTTON_HEIGHT + PX_16 + refreshToken;
 };

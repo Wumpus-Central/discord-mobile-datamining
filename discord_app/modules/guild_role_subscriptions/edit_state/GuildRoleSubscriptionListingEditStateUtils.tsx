@@ -31,7 +31,7 @@ function getRoleEmojis(arr) {
 }
 function clearEditState(NEW_LISTING_EDIT_STATE_ID) {
   const _require = NEW_LISTING_EDIT_STATE_ID;
-  _require(705).batchUpdates(() => {
+  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
     outer1_10.setState((listings) => {
       let obj = { listings: null };
       obj = {};
@@ -475,7 +475,7 @@ export const useName = function useName(arg0) {
     return str;
   };
   const items = [makeGroupListingIndexSubscriptionListingTag];
-  const stateFromStores = _require(589).useStateFromStores(items, () => outer1_8.getSubscriptionListing(closure_0));
+  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_8.getSubscriptionListing(closure_0));
   let memo = stateFromStores;
   const tmp2 = name(5598)(() => first);
   let dependencyMap = tmp2;
@@ -532,7 +532,7 @@ export const usePriceTier = function usePriceTier(editStateId) {
     return price;
   };
   const items = [makeGroupListingIndexSubscriptionListingTag];
-  const stateFromStores = _require(589).useStateFromStores(items, () => outer1_8.getSubscriptionListing(closure_0));
+  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_8.getSubscriptionListing(closure_0));
   let memo = stateFromStores;
   const tmp2 = priceTier(5598)(() => first);
   let dependencyMap = tmp2;
@@ -589,7 +589,7 @@ export const useDescription = function useDescription(arg0) {
     return str;
   };
   const items = [makeGroupListingIndexSubscriptionListingTag];
-  const stateFromStores = _require(589).useStateFromStores(items, () => outer1_8.getSubscriptionListing(closure_0));
+  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_8.getSubscriptionListing(closure_0));
   let memo = stateFromStores;
   const tmp2 = description(5598)(() => first);
   let dependencyMap = tmp2;
@@ -645,7 +645,7 @@ export const useImage = function useImage(editStateId, arg1) {
     }
   };
   const items = [makeGroupListingIndexSubscriptionListingTag];
-  const stateFromStores = _require(589).useStateFromStores(items, () => outer1_8.getSubscriptionListing(closure_0));
+  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_8.getSubscriptionListing(closure_0));
   let memo = stateFromStores;
   const tmp2 = image(5598)(() => first);
   let dependencyMap = tmp2;
@@ -699,7 +699,7 @@ export const useApplicationId = function useApplicationId(listingId) {
     return application_id;
   };
   const items = [makeGroupListingIndexSubscriptionListingTag];
-  const stateFromStores = _require(589).useStateFromStores(items, () => outer1_8.getSubscriptionListing(closure_0));
+  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_8.getSubscriptionListing(closure_0));
   const tmp2 = f93943(5598)(() => first);
   const dependencyMap = tmp2;
   const items1 = [stateFromStores, tmp2];
@@ -762,7 +762,7 @@ export const useRoleIcon = function useRoleIcon(arg0, arg1) {
 };
 export const useRole = function useRole(listingId, guildId) {
   let closure_0 = listingId;
-  const tmp = importDefault(14365)(guildId, listingId);
+  const tmp = require("../useSubscriptionRole.tsx")(guildId, listingId);
   importDefault = tmp;
   const tmp2 = callback3((arg0) => {
     let roleColor;
@@ -923,7 +923,7 @@ export const useChannelBenefits = function useChannelBenefits(listingId) {
     return found;
   };
   const items = [makeGroupListingIndexSubscriptionListingTag];
-  const stateFromStores = _require(589).useStateFromStores(items, () => outer1_8.getSubscriptionListing(closure_0));
+  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_8.getSubscriptionListing(closure_0));
   let memo = stateFromStores;
   const tmp2 = channelBenefits(5598)(() => first);
   let dependencyMap = tmp2;
@@ -979,7 +979,7 @@ export const useIntangibleBenefits = function useIntangibleBenefits(listingId) {
     return found;
   };
   const items = [makeGroupListingIndexSubscriptionListingTag];
-  const stateFromStores = _require(589).useStateFromStores(items, () => outer1_8.getSubscriptionListing(closure_0));
+  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_8.getSubscriptionListing(closure_0));
   let memo = stateFromStores;
   const tmp2 = intangibleBenefits(5598)(() => first);
   let dependencyMap = tmp2;
@@ -1029,7 +1029,7 @@ export const useTierEmojiIds = function useTierEmojiIds(listingId, guildId) {
   tierEmojiIds = tmp;
   const items = [getEmojiToGroupId];
   const items1 = [guildId];
-  const stateFromStoresArray = _require(589).useStateFromStoresArray(items, () => outer1_7.getGuildEmoji(closure_0), items1);
+  const stateFromStoresArray = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => outer1_7.getGuildEmoji(closure_0), items1);
   let memo = stateFromStoresArray;
   const items2 = [stateFromStoresArray, tmp];
   memo = React.useMemo(() => {
@@ -1090,9 +1090,9 @@ export const useTierEmojiIds = function useTierEmojiIds(listingId, guildId) {
   return items4;
 };
 export const useTrialInterval = function useTrialInterval(editStateId) {
-  const subscriptionTrial = _require(14348).useSubscriptionTrial(editStateId);
+  const subscriptionTrial = _require("../GuildRoleSubscriptionsHooks.tsx").useSubscriptionTrial(editStateId);
   let active_trial;
-  const obj = _require(14348);
+  const obj = _require("../GuildRoleSubscriptionsHooks.tsx");
   if (subscriptionTrial != null) {
     active_trial = subscriptionTrial.active_trial;
   }
@@ -1141,7 +1141,7 @@ export const useTrialInterval = function useTrialInterval(editStateId) {
   return items1;
 };
 export const useTrialLimit = function useTrialLimit(editStateId) {
-  const subscriptionTrial = _require(14348).useSubscriptionTrial(editStateId);
+  const subscriptionTrial = _require("../GuildRoleSubscriptionsHooks.tsx").useSubscriptionTrial(editStateId);
   let prop;
   if (subscriptionTrial != null) {
     prop = subscriptionTrial.max_num_active_trial_users;
@@ -1214,7 +1214,7 @@ export const useSubscriptionPlan = function useSubscriptionPlan(listingId) {
     return first;
   };
   const items = [makeGroupListingIndexSubscriptionListingTag];
-  const stateFromStores = _require(589).useStateFromStores(items, () => outer1_8.getSubscriptionListing(closure_0));
+  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_8.getSubscriptionListing(closure_0));
   let c2 = stateFromStores;
   let tmp2 = first(5598)(() => first);
   let dependencyMap = tmp2;
@@ -1613,7 +1613,7 @@ export const useEditStateIds = function useEditStateIds(groupListingId, guildId,
   let c2;
   let dependencyMap;
   let c4;
-  subscriptionListingsForGroup = _require(14348).useSubscriptionListingsForGroup(groupListingId, obj);
+  subscriptionListingsForGroup = _require("../GuildRoleSubscriptionsHooks.tsx").useSubscriptionListingsForGroup(groupListingId, obj);
   const tmp2 = callback3((arg0) => arg0.editStateIdsForGroup[closure_0]);
   c2 = tmp2;
   const tmp3 = callback3((setEditStateIdsForGroup) => setEditStateIdsForGroup.setEditStateIdsForGroup);

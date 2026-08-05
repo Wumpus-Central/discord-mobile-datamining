@@ -114,7 +114,7 @@ ApexExperiment = {
         tmpResult2 = tmp(500);
       }
       const result6 = promise.set("X-Discord-Locale", callback(1946).default.locale);
-      const tmp19 = importDefault(16219)();
+      const tmp19 = require("getTimeZone.native.tsx")();
       if (null != tmp19) {
         const result7 = promise.set("X-Discord-Timezone", tmp19);
       }

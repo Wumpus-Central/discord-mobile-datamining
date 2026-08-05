@@ -16,7 +16,7 @@ export const getBenefitKey = function getBenefitKey(id) {
 };
 export const formatPlanInterval = function formatPlanInterval(first2) {
   const interval = first2.interval;
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
   if (SubscriptionIntervalTypes.DAY === interval) {
     let cuSp8Q = tmp(1236).t["3rUmPQ"];
   } else if (tmp3.MONTH === interval) {
@@ -32,27 +32,27 @@ export const formatPlanIntervalDuration = function formatPlanIntervalDuration(in
   if (SubscriptionIntervalTypes.DAY === interval) {
     if (interval_count > 0) {
       if (interval_count % 7 === 0) {
-        const intl4 = require(1236) /* getSystemLocale */.intl;
+        const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
         let obj = { weeks: null };
         obj[0] = interval_count / 7;
-        let formatToPlainStringResult = intl4.formatToPlainString(require(1236) /* getSystemLocale */.t.iVZYyl, obj);
+        let formatToPlainStringResult = intl4.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.iVZYyl, obj);
       }
       return formatToPlainStringResult;
     }
-    const intl3 = require(1236) /* getSystemLocale */.intl;
+    const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { days: null };
     obj[0] = interval_count;
-    formatToPlainStringResult = intl3.formatToPlainString(require(1236) /* getSystemLocale */.t.jzH70Z, obj);
+    formatToPlainStringResult = intl3.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.jzH70Z, obj);
   } else if (tmp.MONTH === interval) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj1 = { months: null };
     obj1[0] = interval_count;
-    return intl2.formatToPlainString(require(1236) /* getSystemLocale */.t.erUSmA, obj1);
+    return intl2.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.erUSmA, obj1);
   } else if (tmp.YEAR === interval) {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { years: null };
     obj[0] = interval_count;
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.IfYQVC, obj);
+    return intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.IfYQVC, obj);
   }
 };
 export const isChannelBenefit = function isChannelBenefit(ref_type) {

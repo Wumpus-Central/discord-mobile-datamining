@@ -44,14 +44,14 @@ export default function getActivityJoinability(arg0) {
           obj[2] = channelId;
           obj[3] = tmp2;
           obj[4] = tmp;
-          const tmp45 = importDefault(10533);
-          obj[5] = require(10530) /* useIsActivitiesEnabledForCurrentPlatform */.getIsActivitiesEnabledForCurrentPlatform();
+          const tmp45 = require("getEmbeddedActivityJoinability.tsx");
+          obj[5] = require("../useIsActivitiesEnabledForCurrentPlatform.tsx") /* useIsActivitiesEnabledForCurrentPlatform */.getIsActivitiesEnabledForCurrentPlatform();
           obj[6] = ChannelStore;
           obj[7] = VoiceStateStore;
           obj[8] = tmp3;
           obj[9] = GuildStore;
-          const obj8 = require(10530) /* useIsActivitiesEnabledForCurrentPlatform */;
-          if (tmp45Result === require(10533) /* getEmbeddedActivityJoinability */.EmbeddedActivityJoinability.CAN_JOIN) {
+          const obj8 = require("../useIsActivitiesEnabledForCurrentPlatform.tsx") /* useIsActivitiesEnabledForCurrentPlatform */;
+          if (tmp45Result === require("getEmbeddedActivityJoinability.tsx") /* getEmbeddedActivityJoinability */.EmbeddedActivityJoinability.CAN_JOIN) {
             let CANNOT_JOIN2 = obj.CAN_JOIN;
           } else {
             CANNOT_JOIN2 = obj.CANNOT_JOIN;
@@ -61,23 +61,23 @@ export default function getActivityJoinability(arg0) {
       }
       if (isEmbedded) {
         if (null == channelId) {
-          if (!importDefault(5837)(activity, constants.CONTEXTLESS)) {
+          if (!require("hasFlag.tsx")(activity, constants.CONTEXTLESS)) {
             return obj.CANNOT_JOIN;
           }
         }
       }
       if (!isEmbedded) {
-        if (importDefault(12222)(activity)) {
-          const obj2 = require(500) /* set */;
+        if (require("isActivityJoinableOnCurrentPlatform.tsx")(activity)) {
+          const obj2 = require("../../../utils/PlatformUtils.tsx") /* set */;
         }
         return obj.CANNOT_JOIN;
       }
-      const partySize = require(11068) /* getPartySize */.getPartySize(activity);
-      const obj3 = require(11068) /* getPartySize */;
+      const partySize = require("getPartySize.tsx") /* getPartySize */.getPartySize(activity);
+      const obj3 = require("getPartySize.tsx") /* getPartySize */;
       const tmp27 = require;
       if (obj4.hasPartySize(partySize)) {
         if (!tmp27Result.isPartyFull(partySize)) {
-          if (importDefault(5837)(activity, constants.PARTY_PRIVACY_FRIENDS)) {
+          if (require("hasFlag.tsx")(activity, constants.PARTY_PRIVACY_FRIENDS)) {
             if (RelationshipStore.isFriend(user.id)) {
               return obj.CAN_JOIN;
             }
@@ -125,13 +125,13 @@ export default function getActivityJoinability(arg0) {
     if (activity != null) {
       application_id1 = activity.application_id;
     }
-    const tmp8Result = importDefault(11074)(tmp4, tmp5, application_id1);
+    const tmp8Result = require("getCurrentUserPresenceActivity.tsx")(tmp4, tmp5, application_id1);
     let isInParty = null != tmp8Result;
     if (isInParty) {
-      obj = require(11071) /* getIsInParty */;
+      obj = require("getIsInParty.tsx") /* getIsInParty */;
       isInParty = obj.getIsInParty(tmp8Result, activity);
     }
-    const tmp8 = importDefault(11074);
+    const tmp8 = require("getCurrentUserPresenceActivity.tsx");
   }
   return obj.JOINED;
 };

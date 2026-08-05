@@ -62,7 +62,7 @@ export const getRemoteJoinableActivityPlatform = function getRemoteJoinableActiv
         }
         return tmp4;
       }
-      obj5 = require(1384) /* hasFlag */;
+      obj5 = require("../../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
       tmp = constants;
     }
     return null;

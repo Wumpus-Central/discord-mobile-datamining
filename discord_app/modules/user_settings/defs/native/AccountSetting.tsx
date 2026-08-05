@@ -3,8 +3,8 @@ import createToggle from "createToggle";
 
 obj = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["ldCE/p"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["ldCE/p"]);
   },
   parent: null,
   IconComponent: require("UserCircleIcon").UserCircleIcon,
@@ -13,7 +13,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.ACCOUNT,
   getComponent() {
-    return require(13869) /* PasswordlessUpsell */.default;
+    return require("../../account/native/SettingsAccountScreen.tsx") /* PasswordlessUpsell */.default;
   }
 };
 const route = createToggle.createRoute(obj);

@@ -6,5 +6,5 @@ const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/
 
 export default function useUserAgeGroup() {
   const items = [freshTeenActivityWithMap];
-  return require(589) /* initialize */.useStateFromStores(items, () => ageGroup.getAgeGroup());
+  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => ageGroup.getAgeGroup());
 };

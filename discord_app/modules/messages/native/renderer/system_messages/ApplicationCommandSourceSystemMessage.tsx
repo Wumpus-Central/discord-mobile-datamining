@@ -6,7 +6,7 @@ const result = require("getApplicationCommand").fileFinishedImporting("modules/m
 
 export const createApplicationCommandSourceSystemMessage = function createApplicationCommandSourceSystemMessage(message) {
   message = message.message;
-  let obj = require(7927) /* getApplicationCommand */;
+  let obj = require("../../../ApplicationCommands.tsx") /* getApplicationCommand */;
   const applicationCommand = obj.getApplicationCommand(message.content);
   const application = message.application;
   if (application != null) {
@@ -22,7 +22,7 @@ export const createApplicationCommandSourceSystemMessage = function createApplic
       obj[0] = message;
       obj[1] = messageAuthorWithProcessedColor;
       obj[2] = message.roleStyle;
-      obj[1] = importDefault(7881)(obj);
+      obj[1] = require("formatUsernameOnClick.tsx")(obj);
       if (message.type === MessageTypes.CHAT_INPUT_COMMAND) {
         const _HermesInternal = HermesInternal;
         let name2 = "" + COMMAND_SENTINEL + applicationCommand.name;
@@ -33,7 +33,7 @@ export const createApplicationCommandSourceSystemMessage = function createApplic
       obj[2] = name2;
       obj[3] = name;
       obj1[0] = intl.formatToParts(tmp(1236).t["1Zm+zw"], obj);
-      const merged = Object.assign(importDefault(7882)(message));
+      const merged = Object.assign(require("createCommonMessage.tsx")(message));
       return obj1;
     }
   }

@@ -29,7 +29,7 @@ export default function authorizeConnection(overrideUrl) {
         if (handleModalClose5 != null) {
           tmp();
         }
-        importDefault(709).unsubscribe("MODAL_POP", handleModalClose5);
+        require("../../Dispatcher.tsx").unsubscribe("MODAL_POP", handleModalClose5);
       }
       handleModalClose5 = handleModalClose;
       const subscription = tmp23(709).subscribe("MODAL_POP", handleModalClose);
@@ -50,7 +50,7 @@ export default function authorizeConnection(overrideUrl) {
               if (handleModalClose5 != null) {
                 tmp();
               }
-              importDefault(709).unsubscribe("MODAL_POP", handleModalClose5);
+              require("../../Dispatcher.tsx").unsubscribe("MODAL_POP", handleModalClose5);
             };
             handleModalClose5 = handleModalClose4;
             const subscription1 = tmp15(709).subscribe("MODAL_POP", handleModalClose4);
@@ -70,7 +70,7 @@ export default function authorizeConnection(overrideUrl) {
               if (handleModalClose5 != null) {
                 tmp();
               }
-              importDefault(709).unsubscribe("MODAL_POP", handleModalClose5);
+              require("../../Dispatcher.tsx").unsubscribe("MODAL_POP", handleModalClose5);
             };
             handleModalClose5 = handleModalClose3;
             const subscription2 = tmp10(709).subscribe("MODAL_POP", handleModalClose3);
@@ -97,7 +97,7 @@ export default function authorizeConnection(overrideUrl) {
                 if (handleModalClose5 != null) {
                   tmp();
                 }
-                importDefault(709).unsubscribe("MODAL_POP", handleModalClose5);
+                require("../../Dispatcher.tsx").unsubscribe("MODAL_POP", handleModalClose5);
               };
               handleModalClose5 = handleModalClose2;
               const subscription3 = tmp28(709).subscribe("MODAL_POP", handleModalClose2);
@@ -143,7 +143,7 @@ export default function authorizeConnection(overrideUrl) {
         if (handleModalClose5 != null) {
           tmp();
         }
-        importDefault(709).unsubscribe("MODAL_POP", handleModalClose5);
+        require("../../Dispatcher.tsx").unsubscribe("MODAL_POP", handleModalClose5);
       };
       const subscription4 = tmp19(709).subscribe("MODAL_POP", handleModalClose5);
       const tmp19Result = tmp19(709);

@@ -8,12 +8,12 @@ let result = require("AgeRestrictionStatus").fileFinishedImporting("modules/cont
 export const ContentClassificationVisibility = obj;
 export const getContentClassificationVisibility = function getContentClassificationVisibility(contentClassification, channel, nsfwAllowed) {
   if (null != contentClassification) {
-    let obj = require(7005) /* contentClassificationToAgeRestrictionConclusion */;
+    let obj = require("../../../discord_common/js/shared/modules/content_classification/lib/ContentClassificationToAgeRestriction.tsx") /* contentClassificationToAgeRestrictionConclusion */;
     obj = { type: null, data: null };
-    obj[0] = require(7005) /* contentClassificationToAgeRestrictionConclusion */.ContentClassificationVariant.MINIMAL;
+    obj[0] = require("../../../discord_common/js/shared/modules/content_classification/lib/ContentClassificationToAgeRestriction.tsx") /* contentClassificationToAgeRestrictionConclusion */.ContentClassificationVariant.MINIMAL;
     obj[1] = contentClassification;
     const result = obj.contentClassificationToAgeRestriction(obj);
-    if (result === require(7007) /* AgeRestrictionStatus */.AgeRestrictionStatus.ADULT) {
+    if (result === require("../../../discord_common/js/shared/shared-constants/AgeRestrictionStatus.tsx") /* AgeRestrictionStatus */.AgeRestrictionStatus.ADULT) {
       if (true !== nsfwAllowed) {
         let DISPLAY = obj.BLOCK_UNDERAGE;
       } else {
@@ -30,7 +30,7 @@ export const getContentClassificationVisibility = function getContentClassificat
   DISPLAY = obj.DISPLAY;
 };
 export const useContentClassificationVisibility = function useContentClassificationVisibility(arg0, isPrivate) {
-  require(589) /* initialize */;
+  require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   [][0] = mergeGuildAvatar;
   if (null != arg0) {
     const obj = { type: null, data: null };

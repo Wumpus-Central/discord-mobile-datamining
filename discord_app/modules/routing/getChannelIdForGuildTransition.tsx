@@ -39,7 +39,7 @@ export const getChannelIdForGuildTransition = function getChannelIdForGuildTrans
     if (!obj.canSeeOnboardingHome(id)) {
       return id;
     }
-    obj = require(5753) /* useCanSeeOnboardingHome */;
+    obj = require("../guild_onboarding_home/OnboardingHomeUtils.tsx") /* useCanSeeOnboardingHome */;
   }
   if (channelId === StaticChannelRoute.GUILD_SPACE) {
     if (obj4.canUseGuildSpace(guild.getGuild(id), "getChannelIdForGuildTransition")) {
@@ -51,7 +51,7 @@ export const getChannelIdForGuildTransition = function getChannelIdForGuildTrans
       if (obj2.canSeeGameShop(id)) {
         return channelId;
       }
-      obj2 = require(5757) /* getPrice */;
+      obj2 = require("../slayer_storefront/SlayerStorefrontUtils.tsx") /* getPrice */;
     }
     channel = channel.getChannel(channelId);
     if (null == channel) {

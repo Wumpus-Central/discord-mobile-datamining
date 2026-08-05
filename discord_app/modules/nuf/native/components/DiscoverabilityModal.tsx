@@ -69,7 +69,7 @@ function DiscoverabilityNameScene() {
     name = "";
   }
   obj[2] = name;
-  obj[1] = jsx(importDefault(11964), { onNext: callback, loading: false, initialName: null });
+  obj[1] = jsx(require("../../../contact_sync/native/components/ContactSyncNameInput.tsx"), { onNext: callback, loading: false, initialName: null });
   return <tmp6 onNext={callback} loading={false} initialName={null} />;
 }
 class DiscoverabilityModal {

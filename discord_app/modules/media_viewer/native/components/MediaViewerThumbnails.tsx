@@ -18,9 +18,9 @@ function ObscuredView(source) {
   let tmp4;
   let tmp5;
   source = source.source;
-  let obj = require(12151) /* useMediaItemSpoilerState */;
+  let obj = require("../useMediaItemSpoilerState.tsx") /* useMediaItemSpoilerState */;
   [tmp4, tmp5] = callback(obj.useMediaItemSpoilerState(source.index), 2);
-  require(3989) /* map */;
+  require("../../../../design/tokens/native/useToken.tsx") /* map */;
   let tmp10Result = null;
   if (tmp4) {
     if (source.spoiler) {
@@ -39,7 +39,7 @@ function ObscuredView(source) {
       obj[2] = tmp8;
       obj[1] = closure_8(tmp7Result, obj);
       tmp10Result = tmp10(tmp7(4146).View, obj);
-      tmpResult = require(500) /* set */;
+      tmpResult = require("../../../../utils/PlatformUtils.tsx") /* set */;
     } else {
       tmp10Result = null;
     }

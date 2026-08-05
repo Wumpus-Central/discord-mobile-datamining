@@ -57,8 +57,8 @@ prototype["handleMessageCreate"] = function handleMessageCreate(channelId) {
       const _Date = Date;
       const time = date.getTime();
       if (Date.now() - time < 5000) {
-        importDefault(8217).resort(channel.parent_id);
-        const obj3 = importDefault(8217);
+        require("../forums/ForumActionCreators.tsx").resort(channel.parent_id);
+        const obj3 = require("../forums/ForumActionCreators.tsx");
       }
     }
   }

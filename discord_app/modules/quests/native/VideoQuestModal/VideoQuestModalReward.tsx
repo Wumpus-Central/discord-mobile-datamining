@@ -36,12 +36,12 @@ const memoResult = importAllResult.memo(function VideoQuestModalReward(withQuest
     const result = obj.openRewardDetailsBottomSheet(obj);
   }, items);
   obj = { justify: "center", align: "center", spacing: null, style: null, children: null };
-  obj[2] = importDefault(712).space.PX_24;
+  obj[2] = require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24;
   obj[3] = withQuestName.style;
   obj = { hasConfetti: true, quest, size: str, progress: questTaskDetails.percentComplete, onPress: callback, withAnimation: withRewardTileAnimation };
-  const items1 = [callback(importDefault(14273), obj), ];
+  const items1 = [callback(require("../QuestProgressIndicator.tsx"), obj), ];
   obj1 = { align: "center", spacing: null, onLayout: null, children: null };
-  obj1[1] = importDefault(712).space.PX_4;
+  obj1[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4;
   obj1[2] = onTextBlockLayout;
   if (tmp) {
     const obj2 = { variant: "heading-lg/semibold", color: "text-strong", style: null, children: null };

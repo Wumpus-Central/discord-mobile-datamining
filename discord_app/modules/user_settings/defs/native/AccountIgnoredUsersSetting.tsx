@@ -6,16 +6,16 @@ const require = arg1;
 createToggle = {
   IconComponent: require("EyeSlashIcon").EyeSlashIcon,
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["93ZDWE"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["93ZDWE"]);
   },
   useDescription: function useAccountIgnoredUsersSettingDescription() {
-    let obj = require(589) /* initialize */;
+    let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
     const items = [upsertRelationship];
     const stateFromStoresArray = obj.useStateFromStoresArray(items, () => ignoredIDs.getIgnoredIDs());
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { numberOfIgnoredUsers: stateFromStoresArray.length };
-    return intl.format(require(1236) /* getSystemLocale */.t.rXUeOl, obj);
+    return intl.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.rXUeOl, obj);
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   screen: createToggle
@@ -23,7 +23,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.IGNORED_USERS,
   getComponent() {
-    return require(13958) /* IgnoredUsersList */.default;
+    return require("../../content_and_social/native/IgnoredUsersList.tsx") /* IgnoredUsersList */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

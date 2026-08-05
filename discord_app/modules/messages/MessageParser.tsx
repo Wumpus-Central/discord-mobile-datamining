@@ -133,7 +133,7 @@ function rebuild(arr) {
 }
 function parseAndRebuild(content, arg1, arg2) {
   let closure_0 = arg1;
-  importDefault = importDefault(3926).translateInlineEmojiToSurrogates;
+  importDefault = require("../emojis/UnicodeEmojis.tsx").translateInlineEmojiToSurrogates;
   const dependencyMap = arg2;
   let c3 = "";
   let rebuild = [];
@@ -258,8 +258,8 @@ function createParserState(getGuildId, arr) {
   } else {
     mapped1 = [];
   }
-  const tmp11 = importDefault(12);
-  const tmp11Result = importDefault(12)(mapped1.reduce((arr, userId) => {
+  const tmp11 = require("../../../_runtime/00012_apply.js");
+  const tmp11Result = require("../../../_runtime/00012_apply.js")(mapped1.reduce((arr, userId) => {
     userId = userId.userId;
     user = user.getUser(userId);
     if (null != user) {
@@ -275,8 +275,8 @@ function createParserState(getGuildId, arr) {
   } else {
     sortedRoles = [];
   }
-  const tmp13 = importDefault(12);
-  const found = importDefault(12)(sortedRoles).filter((mentionable) => {
+  const tmp13 = require("../../../_runtime/00012_apply.js");
+  const found = require("../../../_runtime/00012_apply.js")(sortedRoles).filter((mentionable) => {
     mentionable = closure_1;
     if (!closure_1) {
       mentionable = mentionable.mentionable;
@@ -285,7 +285,7 @@ function createParserState(getGuildId, arr) {
   });
   const mapped2 = found.map((id) => ({ id: id.id, text: id.name }));
   let tmp9Result = tmp9(12);
-  const tmp13Result = importDefault(12)(sortedRoles);
+  const tmp13Result = require("../../../_runtime/00012_apply.js")(sortedRoles);
   const mapped3 = tmp9Result(textChannelNameDisambiguations.getTextChannelNameDisambiguations(guildId)).map((id) => ({ id: id.id, text: id.name }));
   if (null != guildId) {
     tmp9Result = tmp9(12);
@@ -351,8 +351,8 @@ function createParserState(getGuildId, arr) {
   } else {
     arr = [];
   }
-  const tmp9Result1 = importDefault(12);
-  obj[4] = importDefault(12)(arr).map((id) => ({ id: id.id, text: id.name }));
+  const tmp9Result1 = require("../../../_runtime/00012_apply.js");
+  obj[4] = require("../../../_runtime/00012_apply.js")(arr).map((id) => ({ id: id.id, text: id.name }));
   const combined = mapped3.concat(items);
   obj[5] = combined.concat(mapped4);
   obj[6] = disambiguatedEmojiContext;
@@ -848,7 +848,7 @@ obj[11] = {
         }
         obj = /\s$/;
       }
-      const EMOJI_SHORTCUT_RE = importDefault(3926).EMOJI_SHORTCUT_RE;
+      const EMOJI_SHORTCUT_RE = require("../emojis/UnicodeEmojis.tsx").EMOJI_SHORTCUT_RE;
       const match = EMOJI_SHORTCUT_RE.exec(arg0);
       let tmp9 = null;
       if (null != match) {
@@ -866,14 +866,14 @@ obj[11] = {
   },
   parse(arg0) {
     const obj = { type: "emoticon", content: null, isShortcut: true };
-    obj[1] = importDefault(3926).convertShortcutToName(arg0[1]);
+    obj[1] = require("../emojis/UnicodeEmojis.tsx").convertShortcutToName(arg0[1]);
     return obj;
   }
 };
 obj[12] = {
   order: require("parseLink").RULES.emoji.order,
   match(arg0) {
-    const EMOJI_NAME_RE = importDefault(3926).EMOJI_NAME_RE;
+    const EMOJI_NAME_RE = require("../emojis/UnicodeEmojis.tsx").EMOJI_NAME_RE;
     return EMOJI_NAME_RE.exec(arg0);
   },
   parse(arg0, arg1, customEmoji) {
@@ -950,9 +950,9 @@ obj4.match = function match(arg0, textExclusions) {
     return match;
   }
   match = null;
-  if (null != importDefault(4724).match) {
-    match = importDefault(4724).match(arg0, textExclusions, "");
-    const str = importDefault(4724);
+  if (null != require("../markup/MarkupTextRule.tsx").match) {
+    match = require("../markup/MarkupTextRule.tsx").match(arg0, textExclusions, "");
+    const str = require("../markup/MarkupTextRule.tsx");
   }
 };
 obj[14] = obj4;
@@ -978,7 +978,7 @@ const obj6 = { match: null, parse: null };
 const obj3 = {
   order: require("parseLink").RULES.emoji.order,
   match(arg0) {
-    const EMOJI_NAME_RE = importDefault(3926).EMOJI_NAME_RE;
+    const EMOJI_NAME_RE = require("../emojis/UnicodeEmojis.tsx").EMOJI_NAME_RE;
     return EMOJI_NAME_RE.exec(arg0);
   },
   parse(arg0, arg1, customEmoji) {
@@ -1031,7 +1031,7 @@ obj6[1] = function parse(arg0, arg1, channelId) {
     }
     obj = { identifiable: null };
     obj[0] = str;
-    const str2 = importDefault(4124).getUserTag(user, obj);
+    const str2 = require("../../utils/UserUtils.tsx").getUserTag(user, obj);
     if (isNotification) {
       let tmp13Result = tmp13(4474);
       let id;
@@ -1081,7 +1081,7 @@ obj6[1] = function parse(arg0, arg1, channelId) {
       obj2[0] = "@" + str2 + str4;
       return obj2;
     }
-    const obj10 = importDefault(4124);
+    const obj10 = require("../../utils/UserUtils.tsx");
   }
 };
 obj5[2] = obj6;
@@ -1162,7 +1162,7 @@ const obj13 = {};
 const merged1 = Object.assign(require("parseLink").RULES.timestamp);
 obj13.parse = function parse() {
   const items = [...arguments];
-  const timestamp = importDefault(4717).RULES.timestamp;
+  const timestamp = require("../markup/MarkupRules.tsx").RULES.timestamp;
   const items1 = [...items];
   const applyResult = timestamp.parse.apply(items1);
   if ("text" === applyResult.type) {

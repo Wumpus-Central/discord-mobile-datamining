@@ -19,7 +19,7 @@ prototype["initialize"] = function initialize(arg0) {
   obj = {};
   const merged = Object.assign(obj);
   obj.sortedScreenKeys = sortedScreenKeys;
-  importDefault(709).actionLogger.persist = init.isDeveloper;
+  require("../../Dispatcher.tsx").actionLogger.persist = init.isDeveloper;
 };
 prototype["getUserAgnosticState"] = function getUserAgnosticState() {
   return closure_3;

@@ -194,7 +194,7 @@ prototype["renderTopContainer"] = function renderTopContainer() {
     obj.style = items;
     const items1 = ["(", error, ")"];
     obj.children = items1;
-    tmp3 = callback3(require(1297) /* Button */.LegacyText, obj);
+    tmp3 = callback3(require("../../native.tsx") /* Button */.LegacyText, obj);
   }
   let tmp10 = null != title;
   if (tmp10) {
@@ -214,7 +214,7 @@ prototype["renderTopContainer"] = function renderTopContainer() {
     const items2 = [tmp.inputViewTitle];
     obj[2] = items2;
     obj[3] = title;
-    tmp12Result = callback2(require(4281) /* Text */.Text, obj);
+    tmp12Result = callback2(require("../../../components/Text/native/Text.tsx") /* Text */.Text, obj);
     const tmp12 = callback2;
   }
   let tmp15 = null != helpText;
@@ -225,7 +225,7 @@ prototype["renderTopContainer"] = function renderTopContainer() {
   if (tmp15) {
     obj = { variant: "text-xs/medium", children: null };
     obj[1] = helpText;
-    tmp16 = callback2(require(4281) /* Text */.Text, obj);
+    tmp16 = callback2(require("../../../components/Text/native/Text.tsx") /* Text */.Text, obj);
   }
   const obj1 = { style: tmp.topContainer, children: null };
   const items3 = [tmp12Result, tmp16, , ];
@@ -236,7 +236,7 @@ prototype["renderTopContainer"] = function renderTopContainer() {
   if (tmp22) {
     const obj2 = { style: null, children: "*" };
     obj2[0] = tmp.required;
-    tmp22 = callback2(require(1297) /* Button */.LegacyText, obj2);
+    tmp22 = callback2(require("../../native.tsx") /* Button */.LegacyText, obj2);
   }
   items3[2] = tmp22;
   items3[3] = tmp3;
@@ -256,12 +256,12 @@ prototype["renderBottomContainer"] = function renderBottomContainer() {
       obj[0] = tmp.bottomContainer;
       obj = { accessible: true, style: null, accessibilityLabel: null, children: null };
       obj[1] = tmp.charactersLength;
-      const intl = require(1236) /* getSystemLocale */.intl;
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
       obj = { remainingCharacters: null };
       obj[0] = maxLength - self.getText().length;
-      obj[2] = intl.formatToPlainString(require(1236) /* getSystemLocale */.t.fR1cof, obj);
+      obj[2] = intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.fR1cof, obj);
       obj[3] = maxLength - self.getText().length;
-      obj[1] = callback2(require(1297) /* Button */.LegacyText, obj);
+      obj[1] = callback2(require("../../native.tsx") /* Button */.LegacyText, obj);
       tmp2 = callback2(closure_5, obj);
     }
   }
@@ -279,11 +279,11 @@ prototype["renderTrailingButton"] = function renderTrailingButton() {
       obj[1] = tmp.clearButton;
       obj[2] = self.handleClear;
       if (clearButtonAccessibilityLabel == null) {
-        const intl = require(1236) /* getSystemLocale */.intl;
-        clearButtonAccessibilityLabel = intl.string(require(1236) /* getSystemLocale */.t.VkKicb);
+        const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        clearButtonAccessibilityLabel = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.VkKicb);
       }
       obj[5] = clearButtonAccessibilityLabel;
-      obj[6] = closure_9(require(5905) /* CircleXIcon */.CircleXIcon, { size: "sm" });
+      obj[6] = closure_9(require("../../../components/Icon/native/redesign/generated/CircleXIcon.tsx") /* CircleXIcon */.CircleXIcon, { size: "sm" });
       let tmp3Result = tmp3(closure_6, obj);
       const tmp4 = closure_6;
     } else {
@@ -357,19 +357,19 @@ prototype["renderTextView"] = function renderTextView() {
   if (placeholderTextColor != null) {
     let formatToPlainStringResult;
     if (null != maxLength) {
-      const intl = require(1236) /* getSystemLocale */.intl;
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
       const obj4 = { maxLength: null };
       obj4[0] = maxLength;
-      formatToPlainStringResult = intl.formatToPlainString(require(1236) /* getSystemLocale */.t["+DFxLc"], obj4);
+      formatToPlainStringResult = intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["+DFxLc"], obj4);
     }
     const items1 = [formatToPlainStringResult, accessibilityHint];
     const _Boolean = Boolean;
     const found = items1.filter(Boolean);
     const joined = found.join(",");
     if (inActionSheet) {
-      let TextInput = importDefault(11473);
+      let TextInput = require("../../../../modules/action_sheet/native/components/BottomSheetTextInput.tsx");
     } else {
-      TextInput = require(1297) /* Button */.TextInput;
+      TextInput = require("../../native.tsx") /* Button */.TextInput;
     }
     const obj5 = { accessibilityState: null, style: null, ref: null, onChangeText: null, onFocus: null, onBlur: null, onEndEditing: null, onSubmitEditing: null, value: null, clearButtonMode: "never", placeholder: null, placeholderTextColor: null, editable: null, maxLength: null, accessibilityHint: null };
     let obj6 = { disabled: null };
@@ -386,8 +386,8 @@ prototype["renderTextView"] = function renderTextView() {
     const merged = Object.assign(tmp2);
     return closure_9(TextInput, obj5);
   } else {
-    obj6 = require(4131) /* AccessibilityAnnouncer */;
-    const unsafe_rawColors = importDefault(712).unsafe_rawColors;
+    obj6 = require("../../../shared.tsx") /* AccessibilityAnnouncer */;
+    const unsafe_rawColors = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors;
     const isThemeDarkResult = obj6.isThemeDark(self.context.theme);
   }
 };
@@ -415,13 +415,13 @@ prototype["render"] = function render() {
   const items3 = [self.renderTextView(), self.renderTrailingButton()];
   obj[1] = items3;
   items1[1] = closure_10(closure_5, obj);
-  const obj4 = require(500) /* set */;
+  const obj4 = require("../../../../utils/PlatformUtils.tsx") /* set */;
   const tmp2 = closure_9;
   const tmp3 = closure_7;
   const tmp6 = require;
-  items1[2] = require(500) /* set */.isAndroid() && self.renderBorder();
+  items1[2] = require("../../../../utils/PlatformUtils.tsx") /* set */.isAndroid() && self.renderBorder();
   items1[3] = self.renderBottomContainer();
-  const tmp8 = require(500) /* set */.isAndroid() && self.renderBorder();
+  const tmp8 = require("../../../../utils/PlatformUtils.tsx") /* set */.isAndroid() && self.renderBorder();
   const isAndroidResult = tmp6(500).isAndroid();
   let renderBorderResult = !isAndroidResult;
   if (!isAndroidResult) {

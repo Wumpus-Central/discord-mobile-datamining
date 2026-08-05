@@ -128,5 +128,5 @@ export const writeCaches = function writeCaches(arg0) {
   return applyArgumentsResult;
 };
 export const clearCaches = function clearCaches() {
-  importDefault(709).dispatch({ type: "CLEAR_CACHES", reason: "Requested by user", preventWritingCachesAgainThisSession: true, resetSocket: true });
+  require("../../Dispatcher.tsx").dispatch({ type: "CLEAR_CACHES", reason: "Requested by user", preventWritingCachesAgainThisSession: true, resetSocket: true });
 };

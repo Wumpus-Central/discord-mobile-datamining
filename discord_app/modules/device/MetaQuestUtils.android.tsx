@@ -5,7 +5,7 @@ const isMetaQuestResult = require("enforcing").isMetaQuest();
 const result = require("set").fileFinishedImporting("modules/device/MetaQuestUtils.android.tsx");
 
 export const isMetaQuest = function isMetaQuest() {
-  return importDefault(670).isMetaQuest();
+  return require("../../../discord_common/js/packages/rtn-codegen/js/NativeMetaQuestModule.tsx").isMetaQuest();
 };
 export const isQuestRelease = function isQuestRelease() {
   const constants = importAll(1578).getConstants();

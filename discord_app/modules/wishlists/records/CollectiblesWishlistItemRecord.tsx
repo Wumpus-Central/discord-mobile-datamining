@@ -11,7 +11,7 @@ import { SKUProductLines } from "ME";
 const require = arg1;
 function createCollectiblesItemFromServerResponse(collectibles_item) {
   const type = collectibles_item.type;
-  if (require(1901) /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION === type) {
+  if (require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION === type) {
     return fromServer.fromServer(collectibles_item);
   } else if (tmp(1901).CollectiblesItemType.PROFILE_EFFECT === type) {
     return closure_5.fromServer(collectibles_item);

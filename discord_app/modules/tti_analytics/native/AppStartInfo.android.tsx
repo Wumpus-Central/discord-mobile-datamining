@@ -7,7 +7,7 @@ const result = require("enforcing").fileFinishedImporting("modules/tti_analytics
 
 export const AppStartInfo = {
   getAppUIViewed() {
-    const mainActivityCreationTime = importDefault(7053).getMainActivityCreationTime();
+    const mainActivityCreationTime = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIModule.tsx").getMainActivityCreationTime();
     let tmp2 = null != mainActivityCreationTime;
     if (tmp2) {
       let flag = table[mainActivityCreationTime];

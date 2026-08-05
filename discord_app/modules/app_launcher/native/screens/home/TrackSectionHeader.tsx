@@ -12,12 +12,12 @@ export default function TrackSectionHeader(viewed) {
   viewed = viewed.viewed;
   ({ sectionName, numItems, numVisibleItems, children } = viewed);
   let obj = { type: null, name: null, properties: null };
-  obj[0] = require(503) /* encodeProperties */.ImpressionTypes.VIEW;
-  obj[1] = require(503) /* encodeProperties */.ImpressionNames.APP_LAUNCHER_SECTION;
+  obj[0] = require("../../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionTypes.VIEW;
+  obj[1] = require("../../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionNames.APP_LAUNCHER_SECTION;
   obj = { section_name: sectionName, num_items: numItems, num_visible_items: numVisibleItems, source: handleDismissWithDismissed.entrypoint() };
   obj[2] = obj;
   obj = { disableTrack: !viewed };
   const items = [viewed];
-  importDefault(9267)(obj, obj, items);
+  require("../../../../app_analytics/useTrackImpression.tsx")(obj, obj, items);
   return children;
 };

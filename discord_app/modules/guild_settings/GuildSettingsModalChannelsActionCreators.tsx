@@ -3,17 +3,17 @@ const result = require("set").fileFinishedImporting("modules/guild_settings/Guil
 
 export default {
   terminate() {
-    importDefault(709).dispatch({ type: "GUILD_SETTINGS_MODAL_CHANNELS_TERMINATE" });
+    require("../../Dispatcher.tsx").dispatch({ type: "GUILD_SETTINGS_MODAL_CHANNELS_TERMINATE" });
   },
   startReordering() {
     const items = [...arguments];
-    importDefault(709).dispatch({ type: "GUILD_SETTINGS_MODAL_CHANNELS_START_REORDER", sortingType: items });
+    require("../../Dispatcher.tsx").dispatch({ type: "GUILD_SETTINGS_MODAL_CHANNELS_START_REORDER", sortingType: items });
   },
   stopReordering() {
-    importDefault(709).dispatch({ type: "GUILD_SETTINGS_MODAL_CHANNELS_STOP_REORDER" });
+    require("../../Dispatcher.tsx").dispatch({ type: "GUILD_SETTINGS_MODAL_CHANNELS_STOP_REORDER" });
   },
   localChannelUpdate(found) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "GUILD_SETTINGS_MODAL_LOCAL_SORT_CHANGE", updates: found };
     obj.dispatch(obj);
   }

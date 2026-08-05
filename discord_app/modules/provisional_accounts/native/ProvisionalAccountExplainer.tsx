@@ -10,9 +10,9 @@ const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles(() => {
   let obj = { chatContainer: null, header: null };
-  obj = { backgroundColor: importDefault(712).colors.BACKGROUND_MOD_MUTED, gap: importDefault(712).space.PX_8 };
+  obj = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_MUTED, gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
   obj[0] = obj;
-  obj = { flexDirection: "row", alignItems: "center", gap: importDefault(712).space.PX_4 };
+  obj = { flexDirection: "row", alignItems: "center", gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
   obj[1] = obj;
   return obj;
 });
@@ -56,5 +56,5 @@ export const UserProfileProvisionalAccountExplainerCard = function UserProfilePr
   obj[1] = intl.string(iconSize(1236).t.Iyka0U);
   obj[2] = callback(iconSize(7716).CircleErrorIcon, { size: "xs", color: "text-default" });
   obj[3] = callback(iconSize(4281).Text, { variant: "text-md/normal", color: "text-default", children: provisionalAccountExplanationText });
-  return callback(importDefault(5657), obj);
+  return callback(require("../../user_profile/native/UserProfileCard.tsx"), obj);
 };

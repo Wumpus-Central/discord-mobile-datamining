@@ -99,8 +99,8 @@ prototype["hasChanges"] = function hasChanges() {
   if (tmp) {
     let tmp4 = closure_5.draftEnabled !== closure_5.originalEnabled;
     if (!tmp4) {
-      tmp4 = !require(12) /* apply */.isEqual(closure_5.draft, closure_5.original);
-      const obj = require(12) /* apply */;
+      tmp4 = !require("../../../_runtime/00012_apply.js") /* apply */.isEqual(closure_5.draft, closure_5.original);
+      const obj = require("../../../_runtime/00012_apply.js") /* apply */;
     }
     tmp = tmp4;
   }
@@ -119,9 +119,9 @@ const guildThemePreviewStore = new GuildThemePreviewStore(require("dispatcher"),
     ({ guildId, draft, original, draftEnabled, originalEnabled, origin } = owner);
     timeout.stop();
     const obj = { guildId, draft: null, original: null, draftEnabled: null, originalEnabled: null, origin: null, owner: null, isSaving: false, isAwaitingGuildUpdate: false, saveError: null };
-    obj[1] = require(1861) /* cloneGuildThemeSettings */.cloneGuildThemeSettings(draft);
-    const obj2 = require(1861) /* cloneGuildThemeSettings */;
-    obj[2] = require(1861) /* cloneGuildThemeSettings */.cloneGuildThemeSettings(original);
+    obj[1] = require("guildThemeSerialization.tsx") /* cloneGuildThemeSettings */.cloneGuildThemeSettings(draft);
+    const obj2 = require("guildThemeSerialization.tsx") /* cloneGuildThemeSettings */;
+    obj[2] = require("guildThemeSerialization.tsx") /* cloneGuildThemeSettings */.cloneGuildThemeSettings(original);
     obj[3] = draftEnabled;
     obj[4] = originalEnabled;
     obj[5] = origin;
@@ -136,7 +136,7 @@ const guildThemePreviewStore = new GuildThemePreviewStore(require("dispatcher"),
     } else {
       obj = { presetId: null, customUserThemeSettings: "a" };
       obj[0] = tmp;
-      const isEqualResult = require(12) /* apply */.isEqual(obj.draft, obj);
+      const isEqualResult = require("../../../_runtime/00012_apply.js") /* apply */.isEqual(obj.draft, obj);
       let flag = !isEqualResult;
       if (isEqualResult) {
         flag = !obj.draftEnabled;
@@ -168,7 +168,7 @@ const guildThemePreviewStore = new GuildThemePreviewStore(require("dispatcher"),
       obj[2] = tmp;
       obj[3] = tmp2;
       obj[1] = obj;
-      const isEqualResult = require(12) /* apply */.isEqual(obj.draft, obj);
+      const isEqualResult = require("../../../_runtime/00012_apply.js") /* apply */.isEqual(obj.draft, obj);
       let flag = !isEqualResult;
       if (isEqualResult) {
         flag = !obj.draftEnabled;
@@ -229,9 +229,9 @@ const guildThemePreviewStore = new GuildThemePreviewStore(require("dispatcher"),
         }
         obj = {};
         const merged = Object.assign(obj);
-        obj.draft = require(1861) /* cloneGuildThemeSettings */.cloneGuildThemeSettings(themeSettings);
-        const obj2 = require(1861) /* cloneGuildThemeSettings */;
-        obj.original = require(1861) /* cloneGuildThemeSettings */.cloneGuildThemeSettings(themeSettings);
+        obj.draft = require("guildThemeSerialization.tsx") /* cloneGuildThemeSettings */.cloneGuildThemeSettings(themeSettings);
+        const obj2 = require("guildThemeSerialization.tsx") /* cloneGuildThemeSettings */;
+        obj.original = require("guildThemeSerialization.tsx") /* cloneGuildThemeSettings */.cloneGuildThemeSettings(themeSettings);
         obj.draftEnabled = flag;
         obj.originalEnabled = flag;
         obj.isSaving = false;
@@ -361,7 +361,7 @@ const guildThemePreviewStore = new GuildThemePreviewStore(require("dispatcher"),
     if (!tmp) {
       let tmp6 = undefined !== guild.theme;
       if (tmp6) {
-        const fromServerGuildThemeResult = require(1861) /* cloneGuildThemeSettings */.fromServerGuildTheme(guild.theme);
+        const fromServerGuildThemeResult = require("guildThemeSerialization.tsx") /* cloneGuildThemeSettings */.fromServerGuildTheme(guild.theme);
         let flag;
         if (fromServerGuildThemeResult != null) {
           flag = fromServerGuildThemeResult.enabled;
@@ -395,7 +395,7 @@ const guildThemePreviewStore = new GuildThemePreviewStore(require("dispatcher"),
           }
         }
         tmp6 = flag2;
-        const obj = require(1861) /* cloneGuildThemeSettings */;
+        const obj = require("guildThemeSerialization.tsx") /* cloneGuildThemeSettings */;
         tmp7 = require;
       }
       tmp5 = tmp6;

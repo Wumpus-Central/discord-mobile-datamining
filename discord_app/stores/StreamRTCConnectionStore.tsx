@@ -37,7 +37,7 @@ prototype["getRTCConnection"] = function getRTCConnection(arg0) {
   return dependencyMap3[arg0];
 };
 prototype["getQuality"] = function getQuality(arg0) {
-  if (importDefault(12973)(closure_6)) {
+  if (require("../modules/go_live/utils/canSpectate.tsx")(closure_6)) {
     if (null != arg0) {
       let quality;
       if (dependencyMap3[arg0] != null) {
@@ -175,7 +175,7 @@ if (importDefaultResult.isSupported()) {
   let obj = { CONNECTION_OPEN: null, CONNECTION_CLOSED: null, RTC_CONNECTION_STATE: null, RTC_CONNECTION_PING: null, RTC_CONNECTION_LOSS_RATE: null, RTC_CONNECTION_UPDATE_ID: null, RTC_CONNECTION_SECURE_FRAMES_UPDATE: null, RTC_CONNECTION_REMOTE_VIDEO_SINK_WANTS: null, STREAM_START: null, STREAM_STOP: null, STREAM_CREATE: null, STREAM_SERVER_UPDATE: null, STREAM_UPDATE: null, STREAM_DELETE: null, STREAM_LAYOUT_UPDATE: null, VIDEO_SIZE_UPDATE: null };
   obj[0] = function handleConnectionOpen(sessionId) {
     sessionId = sessionId.sessionId;
-    const item = importDefault(12).forEach(closure_18, (isOwner) => {
+    const item = require("../../_runtime/00012_apply.js").forEach(closure_18, (isOwner) => {
       let str = "receiver-disconnect";
       if (isOwner.isOwner) {
         str = "sender-disconnect";
@@ -187,7 +187,7 @@ if (importDefaultResult.isSupported()) {
   };
   obj[1] = function handleConnectionClosed() {
     let c3 = null;
-    const item = importDefault(12).forEach(closure_18, (isOwner) => {
+    const item = require("../../_runtime/00012_apply.js").forEach(closure_18, (isOwner) => {
       let str = "receiver-disconnect";
       if (isOwner.isOwner) {
         str = "sender-disconnect";
@@ -202,7 +202,7 @@ if (importDefaultResult.isSupported()) {
   obj[4] = handleRtcAction;
   obj[5] = function handleRtcConnectionUpdateId(arg0) {
     let closure_0 = arg0;
-    return importDefault(12).some(closure_18, (arg0) => arg0 === connection.connection);
+    return require("../../_runtime/00012_apply.js").some(closure_18, (arg0) => arg0 === connection.connection);
   };
   obj[6] = handleRtcAction;
   obj[7] = function handleRtcConnectionRemoteVideoSinkWants(guildId) {
@@ -217,8 +217,8 @@ if (importDefaultResult.isSupported()) {
     } else {
       GUILD = StreamTypes.GUILD;
     }
-    const encodeStreamKeyResult = require(4348) /* isStreamKey */.encodeStreamKey({ streamType: GUILD, guildId, channelId, ownerId: userId });
-    let tmp6 = context === require(4381) /* BaseConnectionEvent */.MediaEngineContextTypes.STREAM;
+    const encodeStreamKeyResult = require("../modules/go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */.encodeStreamKey({ streamType: GUILD, guildId, channelId, ownerId: userId });
+    let tmp6 = context === require("../../discord_common/js/packages/media-engine/index.tsx") /* BaseConnectionEvent */.MediaEngineContextTypes.STREAM;
     if (tmp6) {
       tmp6 = null != dependencyMap3[encodeStreamKeyResult];
     }
@@ -260,7 +260,7 @@ if (importDefaultResult.isSupported()) {
     obj = { streamType, guildId, channelId, ownerId: id.getId() };
     const encodeStreamKeyResult = obj.encodeStreamKey(obj);
     closure_11[encodeStreamKeyResult] = { appContext, analyticsLocations };
-    const item = importDefault(12).forEach(closure_18, (analyticsContext) => {
+    const item = require("../../_runtime/00012_apply.js").forEach(closure_18, (analyticsContext) => {
       analyticsContext = analyticsContext.analyticsContext;
       analyticsContext.setActionContext(appContext);
       const result = analyticsContext.setNativePickerStyleUsed(closure_1);
@@ -298,7 +298,7 @@ if (importDefaultResult.isSupported()) {
     appContext = appContext.appContext;
     const streamKey = appContext.streamKey;
     closure_11[streamKey] = { appContext, analyticsLocations: "a" };
-    const item = importDefault(12).forEach(closure_18, (analyticsContext) => {
+    const item = require("../../_runtime/00012_apply.js").forEach(closure_18, (analyticsContext) => {
       analyticsContext = analyticsContext.analyticsContext;
       analyticsContext.setActionContext(appContext);
       if (analyticsContext.isOwner) {
@@ -318,7 +318,7 @@ if (importDefaultResult.isSupported()) {
     ({ streamKey, rtcServerId, viewerIds } = arg0);
     let obj = dependencyMap3[streamKey];
     ({ rtcChannelId, region } = arg0);
-    let obj1 = require(4348) /* isStreamKey */;
+    let obj1 = require("../modules/go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */;
     let tmp7 = null == obj;
     if (tmp7) {
       tmp7 = null != rtcServerId;
@@ -397,7 +397,7 @@ if (importDefaultResult.isSupported()) {
       }
       obj[6] = analyticsLocations;
       const streamRTCAnalyticsContext = new tmp4(4373).StreamRTCAnalyticsContext(obj);
-      importDefault(38)(null != closure_3, "Creating RTCConnection without session.");
+      require("../../_runtime/metro/00038__.js")(null != closure_3, "Creating RTCConnection without session.");
       obj = { sessionId: null, streamKey: null, serverId: null, channelId: null, initialLayout: null, analyticsContext: null, parentMediaSessionId: null };
       obj[0] = closure_3;
       obj[1] = streamKey;
@@ -405,7 +405,7 @@ if (importDefaultResult.isSupported()) {
       obj[3] = rtcChannelId;
       obj[4] = PORTRAIT;
       obj[5] = streamRTCAnalyticsContext;
-      let tmp32 = importDefault(4373);
+      let tmp32 = require("../modules/go_live/StreamRTCConnection.tsx");
       obj[6] = mediaSessionId.getMediaSessionId();
       tmp32 = new tmp32(obj);
       tmp3[streamKey] = tmp32;
@@ -416,7 +416,7 @@ if (importDefaultResult.isSupported()) {
     decodeStreamKeyResult = obj1.decodeStreamKey(streamKey);
     tmp3 = dependencyMap3;
     obj1 = { type: "MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET", mediaEngineConnectionId: obj.getMediaEngineConnectionId() };
-    importDefault(709).dispatch(obj1);
+    require("../Dispatcher.tsx").dispatch(obj1);
   };
   obj[11] = function handleStreamServerUpdate(endpoint) {
     if (null == dependencyMap3[endpoint.streamKey]) {
@@ -444,7 +444,7 @@ if (importDefaultResult.isSupported()) {
     } else {
       obj = { type: "MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET", mediaEngineConnectionId: null };
       obj[1] = obj.getMediaEngineConnectionId();
-      importDefault(709).dispatch(obj);
+      require("../Dispatcher.tsx").dispatch(obj);
       obj.destroy("stream-end");
       delete tmp[tmp2];
     }
@@ -459,7 +459,7 @@ if (importDefaultResult.isSupported()) {
     let importDefault;
     let require;
     ({ streamId: require, dimensions: importDefault, zoom: dependencyMap } = arg0);
-    const item = importDefault(12).forEach(closure_18, (setVideoSize) => {
+    const item = require("../../_runtime/00012_apply.js").forEach(closure_18, (setVideoSize) => {
       if (setVideoSize != null) {
         setVideoSize.setVideoSize(closure_0, closure_1, closure_2);
       }

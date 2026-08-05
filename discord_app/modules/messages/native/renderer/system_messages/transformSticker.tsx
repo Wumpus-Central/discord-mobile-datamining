@@ -12,7 +12,7 @@ function transform(id, isPreview) {
   }
   obj.asset = str;
   obj = { isPreview: !isPreview };
-  let str2 = require(4619) /* getStickerExtensionFromFormatType */.getStickerAssetUrl(id, obj);
+  let str2 = require("../../../../stickers/StickersUtils.tsx") /* getStickerExtensionFromFormatType */.getStickerAssetUrl(id, obj);
   if (str2 == null) {
     str2 = "";
   }
@@ -29,7 +29,7 @@ function transform(id, isPreview) {
   }
   obj.accessibilityLabel = stringResult;
   const intl2 = tmp2(1236).intl;
-  obj.accessibilityHint = intl2.string(require(1236) /* getSystemLocale */.t.GCEruV);
+  obj.accessibilityHint = intl2.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.GCEruV);
   return obj;
 }
 let result = require("getStickerExtensionFromFormatType").fileFinishedImporting("modules/messages/native/renderer/system_messages/transformSticker.tsx");
@@ -54,7 +54,7 @@ export default function useTransformedSticker(sticker) {
   }, items);
 };
 export const transformSticker = function transformSticker(tmp5Result1) {
-  const AnimateStickers = require(3958) /* explicitContentFromProto */.AnimateStickers;
+  const AnimateStickers = require("../../../../user_settings/UserSettings.tsx") /* explicitContentFromProto */.AnimateStickers;
   const setting = AnimateStickers.getSetting();
-  return transform(tmp5Result1, setting === StickerAnimationSettings.ALWAYS_ANIMATE, require(7871) /* apexExperiment */.shouldSkipAccessibilityLabels());
+  return transform(tmp5Result1, setting === StickerAnimationSettings.ALWAYS_ANIMATE, require("../../../../a11y/native/AccessibilityLabelOptimizationExperiment.tsx") /* apexExperiment */.shouldSkipAccessibilityLabels());
 };

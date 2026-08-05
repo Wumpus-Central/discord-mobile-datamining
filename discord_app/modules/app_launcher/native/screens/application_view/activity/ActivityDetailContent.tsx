@@ -22,7 +22,7 @@ function Tag(arg0) {
   let obj = { style: tmp.tag, accessible: true, accessibilityLabel, children: null };
   const items = [icon, ];
   obj = { variant: "text-sm/normal", style: tmp.tagText, children: tagName };
-  items[1] = callback3(require(4281) /* Text */.Text, obj);
+  items[1] = callback3(require("../../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   obj[3] = items;
   return callback4(View, obj);
 }
@@ -209,7 +209,7 @@ export default function ActivityDetailContent(application) {
   const width = obj.useRequiredAppLauncherContext().width;
   let obj1 = application(10885);
   const getPrimaryAppCommand = obj1.useGetPrimaryAppCommand(context, application.id);
-  const analyticsLocations = importDefault(5610)(importDefault(5630).APP_DETAIL).analyticsLocations;
+  const analyticsLocations = require("../../../../../app_analytics/useAnalyticsLocations.tsx")(require("../../../../../app_analytics/AnalyticsLocation.tsx").APP_DETAIL).analyticsLocations;
   let obj2 = application(4815);
   const isScreenLandscape = obj2.useIsScreenLandscape();
   let detailsContainerLandscape = entrypoint !== application(9467).AppLauncherEntrypoint.VOICE && isScreenLandscape;
@@ -438,5 +438,5 @@ export default function ActivityDetailContent(application) {
     const error = new Error("ActivityDetailContent was passed the Built-in App, which is not supported.");
     throw error;
   }
-  const tmp6 = importDefault(5610);
+  const tmp6 = require("../../../../../app_analytics/useAnalyticsLocations.tsx");
 };

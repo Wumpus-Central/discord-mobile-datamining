@@ -41,7 +41,7 @@ const result = require("videoAssetFromServer").fileFinishedImporting("modules/qu
 
 export const questTaskConfigFromServer = function questTaskConfigFromServer(type) {
   type = type.type;
-  if (require(7090) /* QuestTaskConfigTypes */.QuestTaskConfigTypes.FIRST_PARTY === type) {
+  if (require("../../../../../discord_common/js/shared/shared-constants/QuestTaskConfigTypes.tsx") /* QuestTaskConfigTypes */.QuestTaskConfigTypes.FIRST_PARTY === type) {
     let obj = { type: null, tasks: null, joinOperator: null };
     obj[0] = tmp(7090).QuestTaskConfigTypes.FIRST_PARTY;
     obj[1] = _firstPartyTasksFromServer(type.tasks);
@@ -147,7 +147,7 @@ export const questTaskConfigV2FromServer = function questTaskConfigV2FromServer(
   } catch (err) {
     obj = { tasks: null, joinOperator: null };
     obj[0] = {};
-    obj[1] = require(7092) /* QuestTaskJoinOperator */.QuestTaskJoinOperator.OR;
+    obj[1] = require("../../../../../discord_common/js/shared/shared-constants/QuestTaskJoinOperator.tsx") /* QuestTaskJoinOperator */.QuestTaskJoinOperator.OR;
     return obj;
   }
 };

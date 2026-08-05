@@ -23,23 +23,23 @@ export default function VoicePanelDrawerToggleButton(arg0) {
   let wrapperSpecs;
   ({ props, openTab, wrapperSpecs } = arg0);
   const tmp = createCacheKey();
-  let obj = require(16123) /* useVoicePanelButtonStyles */;
+  let obj = require("VoicePanelStyles.tsx") /* useVoicePanelButtonStyles */;
   const voicePanelButtonStyles = obj.useVoicePanelButtonStyles(wrapperSpecs);
-  ({ isDrawerOpen, handlePress, accessibilityLabel } = importDefault(16110)(openTab));
+  ({ isDrawerOpen, handlePress, accessibilityLabel } = require("../useDrawerToggle.tsx")(openTab));
   obj = { onPress: handlePress, props, accessibilityLabel, children: null };
-  const tmp5 = importDefault(16110)(openTab);
+  const tmp5 = require("../useDrawerToggle.tsx")(openTab);
   const tmp6 = closure_4;
   const items = [tmp.circle, { backgroundColor: voicePanelButtonStyles.iconBg.backgroundColor }];
-  const items1 = [callback(importDefault(5663), { style: items }), ];
+  const items1 = [callback(require("../../../../core/native/NativeView.tsx"), { style: items }), ];
   obj = { style: tmp.iconContainer, children: null };
-  const tmp7 = importDefault(16124);
+  const tmp7 = require("VoicePanelAnimatedButtonWrapper.tsx");
   if (isDrawerOpen) {
     let ChevronSmallUpIcon = tmp2(9396).ChevronSmallDownIcon;
   } else {
     ChevronSmallUpIcon = tmp2(12751).ChevronSmallUpIcon;
   }
   obj[1] = callback(ChevronSmallUpIcon, { color: voicePanelButtonStyles.iconFill.color });
-  items1[1] = callback(importDefault(5663), obj);
+  items1[1] = callback(require("../../../../core/native/NativeView.tsx"), obj);
   obj[3] = items1;
   return tmp6(tmp7, obj);
 };

@@ -26,21 +26,21 @@ GuildInviteIcon.prototype["render"] = function render() {
   const props = this.props;
   ({ style, guild } = props);
   ({ size, textScale } = props);
-  let obj = require(11929) /* getClass */;
+  let obj = require("../../../utils/StylesheetUtils.tsx") /* getClass */;
   const getClassResult = obj.getClass(tmp, "icon", size);
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   obj = { guildName: guild.name };
-  const formatToPlainStringResult = intl.formatToPlainString(require(1236) /* getSystemLocale */.t.xm6W9D, obj);
+  const formatToPlainStringResult = intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.xm6W9D, obj);
   if (null != guild.icon) {
     obj = { id: null, icon: null, canAnimate: true, size: 128 };
     ({ id: obj7[0], icon: obj7[1] } = guild);
-    const guildIconSource = importDefault(1416).getGuildIconSource(obj);
+    const guildIconSource = require("../../../utils/AvatarUtils.tsx").getGuildIconSource(obj);
     const obj1 = { accessibilityRole: "image", accessibilityLabel: null, style: null, source: null };
     obj1[1] = formatToPlainStringResult;
     const items = [tmp.icon, getClassResult, style];
     obj1[2] = items;
     obj1[3] = guildIconSource;
-    return jsx(importDefault(5236), { accessibilityRole: "image", accessibilityLabel: null, style: null, source: null });
+    return jsx(require("../../../components_native/common/FastImage.tsx"), { accessibilityRole: "image", accessibilityLabel: null, style: null, source: null });
   } else {
     const acronym = tmp2(1856).getAcronym(guild.name);
     let num = table[acronym.length - 1];

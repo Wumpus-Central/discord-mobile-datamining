@@ -13,7 +13,7 @@ const result = require("createCacheKey").fileFinishedImporting("modules/display_
 export default function DisplayNameStylesColorSwatch(colors) {
   colors = colors.colors;
   const tmp = callback();
-  if (colors.effectId === require(1887) /* DisplayNameEffect */.DisplayNameEffect.GUMMY) {
+  if (colors.effectId === require("../../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx") /* DisplayNameEffect */.DisplayNameEffect.GUMMY) {
     if (colors.length > 0) {
       let obj = { style: null, children: null };
       const items = [, ];
@@ -21,7 +21,7 @@ export default function DisplayNameStylesColorSwatch(colors) {
       obj[0] = items;
       obj = { colors: null };
       obj[0] = colors;
-      obj[1] = jsx(importDefault(13831), { colors: null });
+      obj[1] = jsx(require("effects/GummyStripes.tsx"), { colors: null });
       return <View colors={null} />;
     }
   }
@@ -31,7 +31,7 @@ export default function DisplayNameStylesColorSwatch(colors) {
     obj1[1] = { x: 0, y: 0 };
     obj1[2] = { x: 1, y: 0 };
     obj1[3] = tmp.colorSwatch;
-    return jsx(importDefault(4706), { colors: null, start: null, end: null, style: null });
+    return jsx(require("../../../../_runtime/04706_LinearGradient.js"), { colors: null, start: null, end: null, style: null });
   } else {
     let str = "#000000";
     if (colors.length > 0) {

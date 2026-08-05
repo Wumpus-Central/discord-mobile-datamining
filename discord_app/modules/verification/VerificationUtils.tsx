@@ -47,23 +47,23 @@ export default {
   },
   getButtonTitle(arg0) {
     if (VerificationTypes.EMAIL === arg0) {
-      const intl5 = require(1236) /* getSystemLocale */.intl;
-      return intl5.string(require(1236) /* getSystemLocale */.t["1MPz27"]);
+      const intl5 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl5.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["1MPz27"]);
     } else if (tmp.PHONE === arg0) {
-      const intl4 = require(1236) /* getSystemLocale */.intl;
-      return intl4.string(require(1236) /* getSystemLocale */.t.mjJeco);
+      const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl4.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.mjJeco);
     } else if (tmp.REVERIFY_EMAIL === arg0) {
-      const intl3 = require(1236) /* getSystemLocale */.intl;
-      return intl3.string(require(1236) /* getSystemLocale */.t.nmdPFX);
+      const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.nmdPFX);
     } else if (tmp.REVERIFY_PHONE === arg0) {
-      const intl2 = require(1236) /* getSystemLocale */.intl;
-      return intl2.string(require(1236) /* getSystemLocale */.t.of2125);
+      const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.of2125);
     } else {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.string(require(1236) /* getSystemLocale */.t["oF6+Ww"]);
+      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["oF6+Ww"]);
     }
   },
   areVerificationTypesEqual(arg0, arg1) {
-    return importDefault(12).isEqual(arg0, arg1);
+    return require("../../../_runtime/00012_apply.js").isEqual(arg0, arg1);
   }
 };

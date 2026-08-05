@@ -17,7 +17,7 @@ let unpackModuleId;
 const require = arg1;
 function handleInviteDisabledPress() {
   const lazyResult = importAllResult.lazy(() => callback(paths[12])(paths[11], paths.paths));
-  require(4625) /* useAlertStore */.openAlert("invites-disabled", callback(lazyResult, {}));
+  require("../../../../design/components/AlertModal/native/useAlertStore.native.tsx") /* useAlertStore */.openAlert("invites-disabled", callback(lazyResult, {}));
 }
 function GuildSearchAndInvite(guildId) {
   let onPressIn;
@@ -126,7 +126,7 @@ let c3 = importAllResult;
 ({ GuildFeatures: c10, InstantInviteSources: unpackModuleId } = ME);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let closure_14 = createCacheKey.createStyles((arg0) => {
-  let obj = { paddingHorizontal: importDefault(712).space.PX_16, marginBottom: SEARCH_BAR_MARGIN_BOTTOM, flexDirection: "row", gap: null };
+  let obj = { paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, marginBottom: SEARCH_BAR_MARGIN_BOTTOM, flexDirection: "row", gap: null };
   let num = 10;
   if (arg0) {
     num = tmp(712).space.PX_12;
@@ -154,14 +154,14 @@ const memoResult = importAllResult.memo(function ConnectedGuildSearchAndInviteIn
     const channels = outer1_6.getChannels(guild.id);
     return guild(outer1_2[29]).shouldRenderInvite(channels, guild);
   }, items1);
-  const tmp2 = importDefault(8302)(() => {
+  const tmp2 = require("../../../../hooks/useStableCallback.tsx")(() => {
     const channelId = outer1_8.getChannelId(guild.id);
     const channels = outer1_6.getChannels(guild.id);
     const result = guild(outer1_2[30]).handleOpenInviteActionsheet(guild, channelId, channels, outer1_11.GUILD_HEADER);
   });
   const shouldShowInvitesDisabledNotif = guild(11657).useShouldShowInvitesDisabledNotif(guild);
   const obj2 = guild(11657);
-  const tmp5 = importDefault(11660)(guild);
+  const tmp5 = require("../../../guild_scheduled_events/native/hooks/useEventsButtonProps.tsx")(guild);
   obj = { guildId: guild.id, canInvite: stateFromStores, invitesDisabled: shouldShowInvitesDisabledNotif, onInvitePress: tmp2, onEventsPress: tmp5.handlePress, onEventsLongPress: tmp5.handleLongPress, hasUnreadEvents: tmp5.hasUnread, useEventsButton: null, useButtonComponent: null };
   if (flag2) {
     flag2 = tmp4;

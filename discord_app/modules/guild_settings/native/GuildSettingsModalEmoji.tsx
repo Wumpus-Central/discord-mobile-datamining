@@ -197,22 +197,22 @@ let closure_15 = require("getGuildTierFromGuild").memoize((arr, stateFromStores)
   const found = arr.filter((roles) => !stateFromStores(outer1_2[11]).isRoleSubscriptionEmoji(roles, stateFromStores.id));
   const mapped = found.map(computeEmojiItem);
   const reversed = mapped.reverse();
-  const maxEmojiSlots = _require(4177).getMaxEmojiSlots(stateFromStores);
-  const obj2 = _require(4177);
-  const obj3 = importDefault(12);
-  [arr2, arr3] = callback(importDefault(12).partition(reversed, (emoji) => !emoji.emoji.animated), 2);
-  const intl = _require(1236).intl;
-  const tmp3 = callback(importDefault(12).partition(reversed, (emoji) => !emoji.emoji.animated), 2);
+  const maxEmojiSlots = _require("../../../utils/GuildBoostingUtils.tsx").getMaxEmojiSlots(stateFromStores);
+  const obj2 = _require("../../../utils/GuildBoostingUtils.tsx");
+  const obj3 = require("../../../../_runtime/00012_apply.js");
+  [arr2, arr3] = callback(require("../../../../_runtime/00012_apply.js").partition(reversed, (emoji) => !emoji.emoji.animated), 2);
+  const intl = _require("../../../intl/index.native.tsx").intl;
+  const tmp3 = callback(require("../../../../_runtime/00012_apply.js").partition(reversed, (emoji) => !emoji.emoji.animated), 2);
   const bound = Math.max(maxEmojiSlots - arr2.length, 0);
-  const intl2 = _require(1236).intl;
-  const stringResult = intl.string(_require(1236).t.sMOuuS);
-  const formatted = "" + intl.string(_require(1236).t.sMOuuS) + " - " + intl2.formatToPlainString(_require(1236).t.sgL8sI, { count: bound }).toUpperCase();
-  const intl3 = _require(1236).intl;
-  const str = "" + intl.string(_require(1236).t.sMOuuS) + " - " + intl2.formatToPlainString(_require(1236).t.sgL8sI, { count: bound });
+  const intl2 = _require("../../../intl/index.native.tsx").intl;
+  const stringResult = intl.string(_require("../../../intl/index.native.tsx").t.sMOuuS);
+  const formatted = "" + intl.string(_require("../../../intl/index.native.tsx").t.sMOuuS) + " - " + intl2.formatToPlainString(_require("../../../intl/index.native.tsx").t.sgL8sI, { count: bound }).toUpperCase();
+  const intl3 = _require("../../../intl/index.native.tsx").intl;
+  const str = "" + intl.string(_require("../../../intl/index.native.tsx").t.sMOuuS) + " - " + intl2.formatToPlainString(_require("../../../intl/index.native.tsx").t.sgL8sI, { count: bound });
   const bound1 = Math.max(maxEmojiSlots - arr3.length, 0);
-  const intl4 = _require(1236).intl;
-  const stringResult1 = intl3.string(_require(1236).t.wWjQye);
-  const formatted1 = "" + intl3.string(_require(1236).t.wWjQye) + " - " + intl4.formatToPlainString(_require(1236).t.sgL8sI, { count: bound1 }).toUpperCase();
+  const intl4 = _require("../../../intl/index.native.tsx").intl;
+  const stringResult1 = intl3.string(_require("../../../intl/index.native.tsx").t.wWjQye);
+  const formatted1 = "" + intl3.string(_require("../../../intl/index.native.tsx").t.wWjQye) + " - " + intl4.formatToPlainString(_require("../../../intl/index.native.tsx").t.sgL8sI, { count: bound1 }).toUpperCase();
   if (arr2.length > 0) {
     const items = [{ type: "SECTION", key: formatted, section: formatted }];
     HermesBuiltin.arraySpread(arr2, 1);
@@ -283,8 +283,8 @@ export default function GuildSettingsModalEmoji(contentContainerStyle) {
 };
 export const computeSectionItem = function computeSectionItem(intl, length, arg2) {
   const bound = Math.max(arg2 - length, 0);
-  intl = require(1236) /* getSystemLocale */.intl;
-  const key = "" + intl + " - " + intl.formatToPlainString(require(1236) /* getSystemLocale */.t.sgL8sI, { count: bound }).toUpperCase();
+  intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const key = "" + intl + " - " + intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.sgL8sI, { count: bound }).toUpperCase();
   return { type: "SECTION", key, section: key };
 };
 export { computeEmojiItem };

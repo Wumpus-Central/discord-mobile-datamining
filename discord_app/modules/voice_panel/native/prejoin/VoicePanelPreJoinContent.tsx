@@ -275,7 +275,7 @@ function RoomMembersSection(title) {
     }
     return items;
   })();
-  return callback(require(9099) /* VoiceBadges */.VoicePanelFormSection, obj);
+  return callback(require("../shared/FormComponents.tsx") /* VoiceBadges */.VoicePanelFormSection, obj);
 }
 function RoomMembers(members) {
   let blockedMembers;
@@ -529,11 +529,11 @@ let closure_28 = importAllResult.memo((hasMembers) => {
     obj[0] = tmp.channelInfoWrapper;
     obj = { variant: "text-sm/medium", color: "text-default", style: null, children: null };
     obj[2] = tmp.subheading;
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[3] = intl.string(require(1236) /* getSystemLocale */.t.sS2J0G);
-    obj[1] = callback(require(4281) /* Text */.Text, obj);
-    tmp2 = callback(importDefault(5663), obj);
-    const tmp6 = importDefault(5663);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[3] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.sS2J0G);
+    obj[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+    tmp2 = callback(require("../../../core/native/NativeView.tsx"), obj);
+    const tmp6 = require("../../../core/native/NativeView.tsx");
   }
   return tmp2;
 });
@@ -547,14 +547,14 @@ let closure_32 = importAllResult.memo((blockedUserIds) => {
   let obj = { name: null, properties: null };
   const tmp = callback2();
   const tmp2 = importDefault;
-  obj[0] = require(503) /* encodeProperties */.ImpressionNames.VOICE_CHANNEL_BLOCKED_USER_WARNING;
+  obj[0] = require("../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionNames.VOICE_CHANNEL_BLOCKED_USER_WARNING;
   obj = { channel_id: channelId, blocked_user_ids: Array.from(blockedUserIds), warning_surface: constants2.PRE_JOIN_SHEET };
   obj[1] = obj;
-  importDefault(9267)(obj);
+  require("../../../app_analytics/useTrackImpression.tsx")(obj);
   const size = ignoredUserIds.size;
   const size2 = blockedUserIds.size;
-  const intl = require(1236) /* getSystemLocale */.intl;
-  const stringResult = intl.string(require(1236) /* getSystemLocale */.t.CjrALd);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const stringResult = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.CjrALd);
   if (size2 > 0) {
     if (size > 0) {
       const intl4 = tmp5(1236).intl;
@@ -627,7 +627,7 @@ let closure_35 = importAllResult.memo((channelId) => {
   }, items1)) {
     obj = { style: null };
     obj[0] = tmp.consolePreJoinPadding;
-    tmp3 = callback(importDefault(5663), obj);
+    tmp3 = callback(require("../../../core/native/NativeView.tsx"), obj);
   }
   return tmp3;
 });

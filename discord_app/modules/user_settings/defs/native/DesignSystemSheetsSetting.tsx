@@ -11,7 +11,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_SHEETS,
   getComponent() {
-    return require(14713) /* DemoActionSheet */.default;
+    return require("../../design_system/native/UserSettingsDesignSystemSheets.tsx") /* DemoActionSheet */.default;
   }
 };
 const route = createToggle.createRoute(obj);

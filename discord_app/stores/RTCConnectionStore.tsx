@@ -124,7 +124,7 @@ function createRTCConnection(arg0, arg1) {
         obj.dispatch(obj);
       });
     });
-    let tmp31 = importDefault(12998);
+    let tmp31 = require("../lib/VoiceStateAnalytics.tsx");
     tmp31 = new tmp31(store.getId(), arg1);
     let c17 = tmp31;
     let c15 = null;
@@ -153,7 +153,7 @@ function destroyRTCConnection(arg0) {
     obj[4] = c19;
     obj[5] = c17;
     obj[6] = redux.channelId;
-    obj = importDefault(709);
+    obj = require("../Dispatcher.tsx");
     obj = { type: "MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET", mediaEngineConnectionId: null };
     obj[1] = redux.getMediaEngineConnectionId();
     obj.dispatch(obj);
@@ -199,7 +199,7 @@ class RTCConnectionStore extends Store {
 const prototype = RTCConnectionStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(fetchFingerprint, set, getVoiceStatesForGuild);
-  const result = require(13001) /* trackVideoToggle */.setVideoToggleAnalyticsParams(this.getRTCConnectionId, this.getMediaSessionId);
+  const result = require("../modules/media_engine/trackVideoToggle.tsx") /* trackVideoToggle */.setVideoToggleAnalyticsParams(this.getRTCConnectionId, this.getMediaSessionId);
 };
 prototype["getRTCConnection"] = function getRTCConnection() {
   return closure_3;
@@ -422,16 +422,16 @@ const rTCConnectionStore = new RTCConnectionStore(require("dispatcher"), {
     if (state.state === constants.RTC_CONNECTED) {
       let c19 = true;
       if (null != closure_3) {
-        let closure_20 = require(4360) /* sleep */.now();
-        const obj = require(4360) /* sleep */;
+        let closure_20 = require("../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */.now();
+        const obj = require("../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */;
       }
     }
     return true;
   },
   RTC_CONNECTION_PING: function handleRtcConnectionPing() {
     if (null != closure_3) {
-      let closure_20 = require(4360) /* sleep */.now();
-      const obj = require(4360) /* sleep */;
+      let closure_20 = require("../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */.now();
+      const obj = require("../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */;
     }
     return true;
   },
@@ -595,7 +595,7 @@ const rTCConnectionStore = new RTCConnectionStore(require("dispatcher"), {
       obj = null;
     }
     if (null != channelId.channelId) {
-      timeout = new _require(4170).Timeout();
+      timeout = new _require("../../discord_common/js/packages/timers/Timers.tsx").Timeout();
       timeout.start(30000, () => {
         let obj = { joinVoiceId: channelId.joinVoiceId, channelId: channelId.channelId, guildId: channelId.guildId };
         outer1_12.warn("No VOICE_STATE_UPDATE received within 30000ms of VOICE_CHANNEL_SELECT", obj);
@@ -620,8 +620,8 @@ const rTCConnectionStore = new RTCConnectionStore(require("dispatcher"), {
         flag = false;
       }
       if (flag) {
-        flag = require(12999) /* useIsSpatialAudioAvailable */.isSpatialAudioAvailable("RTCConnectionStore");
-        const obj = require(12999) /* useIsSpatialAudioAvailable */;
+        flag = require("../modules/spatial_audio/useIsSpatialAudioAvailable.tsx") /* useIsSpatialAudioAvailable */.isSpatialAudioAvailable("RTCConnectionStore");
+        const obj = require("../modules/spatial_audio/useIsSpatialAudioAvailable.tsx") /* useIsSpatialAudioAvailable */;
       }
       if (closure_3 != null) {
         const result = closure_3.setSpatialAudioEnabled(flag);
@@ -720,16 +720,16 @@ let obj = {
     if (state.state === constants.RTC_CONNECTED) {
       let c19 = true;
       if (null != closure_3) {
-        let closure_20 = require(4360) /* sleep */.now();
-        const obj = require(4360) /* sleep */;
+        let closure_20 = require("../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */.now();
+        const obj = require("../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */;
       }
     }
     return true;
   },
   RTC_CONNECTION_PING: function handleRtcConnectionPing() {
     if (null != closure_3) {
-      let closure_20 = require(4360) /* sleep */.now();
-      const obj = require(4360) /* sleep */;
+      let closure_20 = require("../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */.now();
+      const obj = require("../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */;
     }
     return true;
   },
@@ -893,7 +893,7 @@ let obj = {
       obj = null;
     }
     if (null != channelId.channelId) {
-      timeout = new _require(4170).Timeout();
+      timeout = new _require("../../discord_common/js/packages/timers/Timers.tsx").Timeout();
       timeout.start(30000, () => {
         let obj = { joinVoiceId: channelId.joinVoiceId, channelId: channelId.channelId, guildId: channelId.guildId };
         outer1_12.warn("No VOICE_STATE_UPDATE received within 30000ms of VOICE_CHANNEL_SELECT", obj);
@@ -918,8 +918,8 @@ let obj = {
         flag = false;
       }
       if (flag) {
-        flag = require(12999) /* useIsSpatialAudioAvailable */.isSpatialAudioAvailable("RTCConnectionStore");
-        const obj = require(12999) /* useIsSpatialAudioAvailable */;
+        flag = require("../modules/spatial_audio/useIsSpatialAudioAvailable.tsx") /* useIsSpatialAudioAvailable */.isSpatialAudioAvailable("RTCConnectionStore");
+        const obj = require("../modules/spatial_audio/useIsSpatialAudioAvailable.tsx") /* useIsSpatialAudioAvailable */;
       }
       if (closure_3 != null) {
         const result = closure_3.setSpatialAudioEnabled(flag);

@@ -55,7 +55,7 @@ prototype["recordStart"] = function recordStart() {
   if (0 === this.start_) {
     self.recordStart_();
   }
-  importDefault(10).mark(self.emoji, "Start " + self.name);
+  require("../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx").mark(self.emoji, "Start " + self.name);
   loggerCallback();
 };
 prototype["recordStart_"] = function recordStart_() {
@@ -69,12 +69,12 @@ prototype["recordEnd"] = function recordEnd() {
     if (0 !== self.start_) {
       self.recordEnd_();
       const _HermesInternal = HermesInternal;
-      importDefault(10).mark(self.emoji, "Finish " + self.name, self.end_ - self.start_);
-      const obj2 = importDefault(10);
+      require("../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx").mark(self.emoji, "Finish " + self.name, self.end_ - self.start_);
+      const obj2 = require("../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx");
     }
     loggerCallback();
   }
-  importDefault(10).mark(self.emoji, "Finish " + self.name);
+  require("../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx").mark(self.emoji, "Finish " + self.name);
 };
 prototype["recordEnd_"] = function recordEnd_() {
   this.end_ = Date.now();
@@ -90,7 +90,7 @@ prototype["set"] = function set(start_) {
     self.endImportTime = callback2();
     const obj = importAll(2);
   }
-  importDefault(10).mark(self.emoji, self.name, arg1);
+  require("../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx").mark(self.emoji, self.name, arg1);
   loggerCallback();
 };
 prototype["serializeStart"] = function serializeStart(startTime) {
@@ -134,13 +134,13 @@ prototype["serializeEnd"] = function serializeEnd(startTime) {
 prototype["measure"] = function measure(arg0) {
   const self = this;
   if (this.start_ > 0) {
-    return importDefault(10).time(self.emoji, self.name, arg0);
+    return require("../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx").time(self.emoji, self.name, arg0);
   } else {
     self.recordStart_();
-    const obj = importDefault(10);
+    const obj = require("../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx");
     self.recordEnd_();
     loggerCallback();
-    return importDefault(10).time(self.emoji, self.name, arg0);
+    return require("../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx").time(self.emoji, self.name, arg0);
   }
 };
 prototype["measureAsync"] = function measureAsync(outer1_5) {
@@ -223,8 +223,8 @@ prototype2["record"] = function record(timestamp) {
       self.recordState_(timestamp);
       loggerCallback();
     } else {
-      importDefault(10).mark(self.emoji, self.name);
-      const obj = importDefault(10);
+      require("../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx").mark(self.emoji, self.name);
+      const obj = require("../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx");
     }
   }
   loggerCallback();
@@ -234,7 +234,7 @@ prototype2["recordState_"] = function recordState_(timestamp) {
   this.numImports = importAll(2).size();
   this.importTime = callback2();
   const obj = importAll(2);
-  importDefault(10).mark(this.emoji, this.name);
+  require("../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx").mark(this.emoji, this.name);
 };
 prototype2["hasData"] = function hasData() {
   return this.time_ > 0;
@@ -697,7 +697,7 @@ prototype5["recordRender"] = function recordRender(length, outer1_6) {
 prototype5["recordMessageRender"] = function recordMessageRender(channelId, mapped, hasFetched, hasMoreAfter) {
   let self = this;
   self = this;
-  const _default = require(11) /* DISCORD_EPOCH */.default;
+  const _default = require("../../utils/SnowflakeUtils.tsx") /* DISCORD_EPOCH */.default;
   const renderLatestMessages = this.renderLatestMessages;
   if (!renderLatestMessages.hasData()) {
     const renderMessages = self.renderMessages;
@@ -805,8 +805,8 @@ prototype5["serializeTTITracker"] = function serializeTTITracker(c3) {
   let loadIndex;
   const self = this;
   const startTime = this.getStartTime(c3);
-  const tmp2 = require(12) /* apply */;
-  const found = require(12) /* apply */(importDefault(10).logGroups[0].logs).filter((log) => {
+  const tmp2 = require("../../../_runtime/00012_apply.js") /* apply */;
+  const found = require("../../../_runtime/00012_apply.js") /* apply */(require("../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx").logGroups[0].logs).filter((log) => {
     log = log.log;
     return log.startsWith("Require ");
   });
@@ -817,7 +817,7 @@ prototype5["serializeTTITracker"] = function serializeTTITracker(c3) {
     }
     return num;
   });
-  const tmp2Result = require(12) /* apply */(importDefault(10).logGroups[0].logs);
+  const tmp2Result = require("../../../_runtime/00012_apply.js") /* apply */(require("../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx").logGroups[0].logs);
   const result = this.serializeAppStartupMetrics();
   const obj = {};
   const merged = Object.assign(this.extraProperties);

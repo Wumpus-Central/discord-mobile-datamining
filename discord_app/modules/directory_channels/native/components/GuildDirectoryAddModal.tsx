@@ -15,7 +15,7 @@ export default function GuildDirectoryAddModal(arg0) {
   let initialStack;
   let screens;
   const _require = arg0;
-  ({ screens, initialStack } = importDefault(5598)(() => {
+  ({ screens, initialStack } = require("../../../../hooks/useInitialValue.tsx")(() => {
     let obj = { name: outer1_3.CREATE_OR_ADD, params: null };
     obj = {};
     let merged = Object.assign(callback);
@@ -84,11 +84,11 @@ export default function GuildDirectoryAddModal(arg0) {
     return obj;
   }));
   let obj = { screens, initialRouteStack: initialStack, headerBackTitle: null };
-  const intl = _require(1236).intl;
-  obj[2] = intl.string(_require(1236).t["13/7kX"]);
-  return jsx(_require(5665).Navigator, { screens, initialRouteStack: initialStack, headerBackTitle: null });
+  const intl = _require("../../../../intl/index.native.tsx").intl;
+  obj[2] = intl.string(_require("../../../../intl/index.native.tsx").t["13/7kX"]);
+  return jsx(_require("../../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, { screens, initialRouteStack: initialStack, headerBackTitle: null });
 };
 export const GuildDirectoryAddModalScreen = function GuildDirectoryAddModalScreen(children) {
   const tmp = createCacheKey();
-  return jsx(require(5272) /* SafeAreaPaddingView */.SafeAreaPaddingView, { top: true, style: createCacheKey().safeArea, children: children.children });
+  return jsx(require("../../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, { top: true, style: createCacheKey().safeArea, children: children.children });
 };

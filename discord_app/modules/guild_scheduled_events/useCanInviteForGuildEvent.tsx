@@ -57,7 +57,7 @@ function isGuildEventInvitable(guildEvent) {
     }
     const guild = obj3.getGuild(guildEvent.guild_id);
     const stageInstanceByChannel = obj4.getStageInstanceByChannel(channel_id);
-    const obj5 = require(8881) /* canViewInviteModal */;
+    const obj5 = require("../instant_invite/canViewInviteModal.tsx") /* canViewInviteModal */;
     let canViewInviteModalResult = obj5.canViewInviteModal(getUncachedChannelPermissions, guild, defaultChannel, stageInstanceByChannel);
     if (canViewInviteModalResult) {
       let tmp17 = null != defaultChannel;
@@ -76,7 +76,7 @@ export default function useCanInviteForGuildEvent(arg0) {
   const _require = arg0;
   let items = [comparator, ensureGuildLoaded, createGuildRecordFromRust, handleStageInstanceCreateOrUpdate];
   const items1 = [arg0];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const items = [outer1_5, outer1_4, outer1_6, outer1_3];
     return outer1_12(closure_0, items);
   }, items1);

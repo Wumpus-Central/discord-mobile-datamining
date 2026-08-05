@@ -6,7 +6,7 @@ const require = arg1;
 function _findPlayingActivity(type) {
   let tmp = type.type === ActivityTypes.PLAYING;
   if (tmp) {
-    tmp = !importDefault(7119)(type);
+    tmp = !require("../../activities/utils/isEmbeddedActivity.tsx")(type);
   }
   return tmp;
 }
@@ -15,7 +15,7 @@ function streamApplicationEqualityCheck(arg0, arg1) {
   if (!tmp) {
     let tmp3 = null != arg0 && null != arg1;
     if (tmp3) {
-      tmp3 = importDefault(643)(arg0, arg1);
+      tmp3 = require("../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx")(arg0, arg1);
     }
     tmp = tmp3;
   }
@@ -54,7 +54,7 @@ export const useGetStreamApplication = function useGetStreamApplication(stream) 
   const _require = stream;
   const items = [sortActivity];
   const items1 = [stream];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let obj = outer1_3;
     let tmp2 = null;
     if (null != closure_0) {

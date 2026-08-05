@@ -32,11 +32,11 @@ export const useAuthSessions = function useAuthSessions() {
 export const formatDate = function formatDate(arg0) {
   const timestamp = Date.now();
   if ((timestamp - arg0.valueOf()) / 1000 / 60 / 60 < 1) {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    let stringResult = intl.string(require(1236) /* getSystemLocale */.t.TXCmfL);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    let stringResult = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.TXCmfL);
   } else {
-    stringResult = importDefault(3867)(arg0).fromNow();
-    const obj = importDefault(3867)(arg0);
+    stringResult = require("../../../_runtime/03867_t.js")(arg0).fromNow();
+    const obj = require("../../../_runtime/03867_t.js")(arg0);
   }
   return stringResult;
 };

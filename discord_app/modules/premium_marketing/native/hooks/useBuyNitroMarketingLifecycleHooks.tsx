@@ -21,7 +21,7 @@ export const useBuyNitroMarketingLifecycleHooks = function useBuyNitroMarketingL
   const dependencyMap = tmp;
   _require = initialLoadCompleted;
   promotionMarketingComponent = undefined;
-  promotionMarketingComponent = _require(7564).usePromotionMarketingComponent(_require(7568).MarketingComponentType.PREMIUM_TAB);
+  promotionMarketingComponent = _require("../../../premium/hooks/usePromotionMarketingComponent.tsx").usePromotionMarketingComponent(_require("../../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx").MarketingComponentType.PREMIUM_TAB);
   const items = [initialLoadCompleted, promotionMarketingComponent];
   const effect = React.useEffect(() => {
     let tmp = initialLoadCompleted;

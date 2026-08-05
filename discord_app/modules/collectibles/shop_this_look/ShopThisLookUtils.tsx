@@ -12,7 +12,7 @@ export const isShoppableCollectibleSku = function isShoppableCollectibleSku(stat
         sourceType = collectibles.sourceType;
       }
     }
-    tmp = sourceType === require(12417) /* CollectiblesSKUSourceType */.CollectiblesSKUSourceType.SHOP;
+    tmp = sourceType === require("../../../../discord_common/js/shared/shared-constants/CollectiblesSKUSourceType.tsx") /* CollectiblesSKUSourceType */.CollectiblesSKUSourceType.SHOP;
   }
   return tmp;
 };

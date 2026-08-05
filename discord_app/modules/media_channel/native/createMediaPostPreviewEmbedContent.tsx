@@ -18,7 +18,7 @@ export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
   if (arg3 === undefined) {
     flag = false;
   }
-  let obj = require(4470) /* getMediaPostEmbedCommonData */;
+  let obj = require("../MediaPostEmbedUtils.tsx") /* getMediaPostEmbedCommonData */;
   const mediaPostEmbedChannelId = obj.getMediaPostEmbedChannelId(url);
   if (null == mediaPostEmbedChannelId) {
     return null;
@@ -70,17 +70,17 @@ export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
                 obj1[2] = userAuthorWithProcessedColor;
                 obj1[3] = arg1;
                 obj1[4] = mediaPostEmbedCommonData.threadId;
-                obj[1] = importDefault(7881)(obj1);
+                obj[1] = require("../../messages/native/renderer/system_messages/formatUsernameOnClick.tsx")(obj1);
                 obj[2] = mediaPostEmbedCommonData.channelName;
                 let formatToPartsResult = intl6.formatToParts(tmp(1236).t.mCytFr, obj);
                 const tmpResult1 = tmp(7879);
               }
               if (false === mediaPostEmbedCommonData.canAccess) {
-                let tmp11 = callback(importDefault(712).unsafe_rawColors.TEAL_430);
+                let tmp11 = callback(require("../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.TEAL_430);
                 let tmp10 = importDefault;
               } else {
                 tmp10 = importDefault;
-                tmp11 = callback(importDefault(712).unsafe_rawColors.BRAND_500);
+                tmp11 = callback(require("../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.BRAND_500);
               }
               let isAnimatedImageUrlResult = null != mediaPostEmbedCommonData.coverImage;
               if (isAnimatedImageUrlResult) {

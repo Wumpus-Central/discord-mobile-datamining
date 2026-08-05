@@ -5,10 +5,10 @@ const require = arg1;
 const result = require("databaseName").fileFinishedImporting("modules/emoji_picker/native/components/useNativeAndroidEmojiPickerEnabled.tsx");
 
 export default function useNativeAndroidEmojiPickerEnabled() {
-  let isAndroidResult = require(500) /* set */.isAndroid();
+  let isAndroidResult = require("../../../../utils/PlatformUtils.tsx") /* set */.isAndroid();
   if (isAndroidResult) {
-    isAndroidResult = null != importDefault(1923).database(id.getId());
-    const obj2 = importDefault(1923);
+    isAndroidResult = null != require("../../../app_database/system/DatabaseManager.tsx").database(id.getId());
+    const obj2 = require("../../../app_database/system/DatabaseManager.tsx");
   }
   return isAndroidResult;
 };

@@ -135,8 +135,8 @@ function openContextMenu(stopPropagation, arg1, enableSpellCheck, arg3) {
     const obj3 = obj(5284);
     const obj1 = { type: "CONTEXT_MENU_OPEN", contextMenu: null };
     obj1[1] = obj;
-    importDefault(709).dispatch(obj1);
-    const obj6 = importDefault(709);
+    require("../Dispatcher.tsx").dispatch(obj1);
+    const obj6 = require("../Dispatcher.tsx");
   } else {
     const currentTarget = stopPropagation.currentTarget;
   }

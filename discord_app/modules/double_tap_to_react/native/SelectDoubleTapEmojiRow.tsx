@@ -95,13 +95,13 @@ let closure_13 = importAllResult.memo((emoji) => {
     }
     obj2[1] = animated;
     obj2[2] = closure_7;
-    let url = importDefault(1416).getEmojiURL(obj2);
-    const tmp8Result = importDefault(1416);
+    let url = require("../../../utils/AvatarUtils.tsx").getEmojiURL(obj2);
+    const tmp8Result = require("../../../utils/AvatarUtils.tsx");
   } else {
     url = emoji.url;
   }
   obj1[4] = url;
-  obj[1] = closure_9(importDefault(5301), obj1);
+  obj[1] = closure_9(require("../../emojis/native/Emoji.tsx"), obj1);
   obj[4] = closure_9(View, obj);
   return closure_9(emoji(4812).PressableOpacity, obj);
 });

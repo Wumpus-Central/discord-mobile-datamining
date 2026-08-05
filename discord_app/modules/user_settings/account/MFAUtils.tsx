@@ -22,7 +22,7 @@ export const getSMSBackupDisabledMessage = function getSMSBackupDisabledMessage(
   } else {
     if (!stateFromStores.hasAnyStaffLevel()) {
       if (stateFromStores.hasFlag(constants.PARTNER)) {
-        const intl2 = require(1236) /* getSystemLocale */.intl;
+        const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
         const string2 = intl2.string;
         if (flag) {
           let string2Result = string2(_9UucjT);
@@ -30,7 +30,7 @@ export const getSMSBackupDisabledMessage = function getSMSBackupDisabledMessage(
           string2Result = string2(_9UucjT.Sq6Q1u);
         }
       } else if (null == stateFromStores.email) {
-        const intl = require(1236) /* getSystemLocale */.intl;
+        const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
         const string = intl.string;
         if (flag) {
           let stringResult = string(_9VWpT9);
@@ -39,9 +39,9 @@ export const getSMSBackupDisabledMessage = function getSMSBackupDisabledMessage(
         }
       }
     }
-    const intl3 = require(1236) /* getSystemLocale */.intl;
+    const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const string3 = intl3.string;
-    let YJGvuD = require(1236) /* getSystemLocale */.t;
+    let YJGvuD = require("../../../intl/index.native.tsx") /* getSystemLocale */.t;
     if (flag) {
       YJGvuD = YJGvuD.YJGvuD;
       let string3Result = string3(YJGvuD);
@@ -52,14 +52,14 @@ export const getSMSBackupDisabledMessage = function getSMSBackupDisabledMessage(
 };
 export const useIsMFAEnabled = function useIsMFAEnabled() {
   const items = [mergeGuildAvatar];
-  return require(647) /* defaultAreStatesEqual */.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     return null != currentUser && currentUser.mfaEnabled;
   });
 };
 export const MFAAvailability = obj;
 export const useMFAAvailability = function useMFAAvailability() {
-  const obj = require(647) /* defaultAreStatesEqual */;
+  const obj = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
@@ -69,7 +69,7 @@ export const useMFAAvailability = function useMFAAvailability() {
     }
     return verified;
   });
-  if (require(8289) /* _crypto */.hasCrypto) {
+  if (require("../../../utils/MFAUtils.tsx") /* _crypto */.hasCrypto) {
     if (false === stateFromStores) {
       let AVAILABLE = obj.UNAVAILABLE_UNVERIFIED;
     } else {

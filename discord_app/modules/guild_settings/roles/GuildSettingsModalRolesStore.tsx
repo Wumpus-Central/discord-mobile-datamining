@@ -36,7 +36,7 @@ Object.defineProperty(prototype, "submitting", {
 prototype["getUpdates"] = function getUpdates() {
   if (null != c9) {
     if (null != _null2) {
-      let obj = importDefault(11697);
+      let obj = require("../../../utils/DragAndDropUtils.tsx");
       obj = { oldOrdering: null, newOrdering: null, idGetter: null, existingPositionGetter: null, ascending: false };
       obj[0] = store.getSortedRoles(_null2.id);
       obj[1] = store.getManyRoles(_null2.id, c9);
@@ -105,19 +105,19 @@ const guildSettingsModalRolesStore = new GuildSettingsModalRolesStore(require("d
     if (null == _null) {
       return false;
     } else {
-      const moveItemFromToResult = importDefault(11697).moveItemFromTo(_null, from, to);
+      const moveItemFromToResult = require("../../../utils/DragAndDropUtils.tsx").moveItemFromTo(_null, from, to);
       _null = moveItemFromToResult;
       if (moveItemFromToResult[from] !== _null[from]) {
-        const AccessibilityAnnouncer2 = require(4131) /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
-        const intl2 = require(1236) /* getSystemLocale */.intl;
+        const AccessibilityAnnouncer2 = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
+        const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
         const obj = { from: null, to: null };
         obj[0] = from + 1;
         obj[1] = to + 1;
-        AccessibilityAnnouncer2.announce(intl2.formatToPlainString(require(1236) /* getSystemLocale */.t["+tmElp"], obj));
+        AccessibilityAnnouncer2.announce(intl2.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["+tmElp"], obj));
       } else {
-        const AccessibilityAnnouncer = require(4131) /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
-        const intl = require(1236) /* getSystemLocale */.intl;
-        AccessibilityAnnouncer.announce(intl.string(require(1236) /* getSystemLocale */.t.WaxXjc));
+        const AccessibilityAnnouncer = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
+        const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        AccessibilityAnnouncer.announce(intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.WaxXjc));
       }
     }
   },

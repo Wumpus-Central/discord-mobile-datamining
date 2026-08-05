@@ -23,60 +23,60 @@ createCacheKey = createCacheKey.createStyles(createCacheKey);
 let items = [
   {
     getHeadingCopy() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.string(require(1236) /* getSystemLocale */.t.y4ft4D);
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.y4ft4D);
     },
     getBodyCopy() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.string(require(1236) /* getSystemLocale */.t.HTvLGu);
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.HTvLGu);
     },
     getGraphic(style) {
-      return callback(closure_3, { style, source: importDefault(12779) });
+      return callback(closure_3, { style, source: require("../../../../../_runtime/12779_registerAsset.js") });
     }
   },
   {
     getHeadingCopy() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.string(require(1236) /* getSystemLocale */.t.PbAyub);
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.PbAyub);
     },
     getBodyCopy() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.string(require(1236) /* getSystemLocale */.t.wOYbTv);
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.wOYbTv);
     },
     getGraphic(arg0) {
       const obj = { source: null, autoPlay: null, style: null };
-      obj[0] = require(12780);
+      obj[0] = require("../../../../../_runtime/metro/12780__.js");
       obj[1] = !useReducedMotion.useReducedMotion;
       obj[2] = arg0;
-      return callback(importDefault(5601), obj);
+      return callback(require("../../../../components_native/common/LottieAnimationView.tsx"), obj);
     }
   },
   {
     getHeadingCopy() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.string(require(1236) /* getSystemLocale */.t["/bX4Jn"]);
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["/bX4Jn"]);
     },
     getBodyCopy() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.string(require(1236) /* getSystemLocale */.t.yCjoUC);
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.yCjoUC);
     },
     getGraphic(style) {
-      return callback(closure_3, { style, source: importDefault(12781) });
+      return callback(closure_3, { style, source: require("../../../../../_runtime/12781_registerAsset.js") });
     }
   }
 ];
 const obj1 = { borderRadius: require("Themes").radii.xs, height: 128, marginBottom: 16, overflow: "hidden", width: 211 };
 const obj2 = {
   getHeadingCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.y4ft4D);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.y4ft4D);
   },
   getBodyCopy() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.HTvLGu);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.HTvLGu);
   },
   getGraphic(style) {
-    return callback(closure_3, { style, source: importDefault(12779) });
+    return callback(closure_3, { style, source: require("../../../../../_runtime/12779_registerAsset.js") });
   }
 };
 const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingTopPerksCards.tsx");
@@ -86,9 +86,9 @@ export default function GuildBoostingMarketingTopPerksCards() {
   const require = tmp;
   let obj = { style: tmp.wrapper, children: null };
   obj = { style: tmp.heading, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[3] = intl.string(require(1236) /* getSystemLocale */.t.aGdB3E);
-  let items = [callback(require(4281) /* Text */.Heading, obj), ];
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[3] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.aGdB3E);
+  let items = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Heading, obj), ];
   obj = { itemCount: items.length, cardWidth: 324, cardMarginRight: 16, contentContainerStyle: tmp.scrollerContent, children: null };
   obj[4] = items.map((getGraphic) => {
     const items = [tmp.card, ];
@@ -108,7 +108,7 @@ export default function GuildBoostingMarketingTopPerksCards() {
     obj[1] = items1;
     return outer1_7(outer1_4, obj, arg1);
   });
-  items[1] = callback(require(11835) /* items */.MarketingCardsScroller, obj);
+  items[1] = callback(require("MarketingCardsScroller.tsx") /* items */.MarketingCardsScroller, obj);
   obj[1] = items;
   return callback2(closure_4, obj);
 };

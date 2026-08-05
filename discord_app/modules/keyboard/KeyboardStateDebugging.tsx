@@ -2,7 +2,7 @@
 const require = arg1;
 let obj = {
   channelSafeAreaBottomLayoutHeightChanged(arg0) {
-    let obj = require(501) /* PlatformTypes */;
+    let obj = require("../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */;
     if (!obj.isIOS()) {
       obj = { layoutHeight: null };
       obj[0] = arg0;
@@ -10,7 +10,7 @@ let obj = {
     }
   },
   channelSafeAreaBottomLayoutHeightMismatch(arg0, arg1) {
-    let obj = require(501) /* PlatformTypes */;
+    let obj = require("../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */;
     if (!obj.isIOS()) {
       obj = { layoutHeight: null, reportedKeyboardHeight: null };
       obj[0] = arg0;
@@ -19,7 +19,7 @@ let obj = {
     }
   },
   keyboardControllerKeyboardWillShow(height) {
-    let obj = require(501) /* PlatformTypes */;
+    let obj = require("../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */;
     if (!obj.isIOS()) {
       obj = { height: null };
       obj[0] = height;
@@ -31,7 +31,7 @@ let obj = {
     if (arg1 === undefined) {
       flag = false;
     }
-    let obj = require(501) /* PlatformTypes */;
+    let obj = require("../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */;
     if (!obj.isIOS()) {
       obj = { height: null, rootProvider: null };
       obj[0] = height;
@@ -44,7 +44,7 @@ let obj = {
     if (arg2 === undefined) {
       flag = false;
     }
-    let obj = require(501) /* PlatformTypes */;
+    let obj = require("../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */;
     if (!obj.isIOS()) {
       const _HermesInternal = HermesInternal;
       obj = { height: null, rootProvider: null };
@@ -63,7 +63,7 @@ let obj = {
     if (arg0 === undefined) {
       flag = false;
     }
-    let obj = require(501) /* PlatformTypes */;
+    let obj = require("../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */;
     if (!obj.isIOS()) {
       obj = { rootProvider: null };
       obj[0] = flag;
@@ -71,7 +71,7 @@ let obj = {
     }
   },
   reactNativeKeyboardDidShow(height, KeyboardUIStore) {
-    let obj = require(501) /* PlatformTypes */;
+    let obj = require("../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */;
     if (!obj.isIOS()) {
       obj = { height: null, location: null };
       obj[0] = height;
@@ -80,7 +80,7 @@ let obj = {
     }
   },
   reactNativeKeyboardDidHide(KeyboardUIStore) {
-    let obj = require(501) /* PlatformTypes */;
+    let obj = require("../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */;
     if (!obj.isIOS()) {
       obj = { location: null };
       obj[0] = KeyboardUIStore;

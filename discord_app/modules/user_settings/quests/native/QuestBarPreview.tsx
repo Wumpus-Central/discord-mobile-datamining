@@ -28,10 +28,10 @@ export const QuestBarPreview = function QuestBarPreview(quest) {
       obj1[0] = closure_5;
       const obj2 = { quest: null, children: null };
       obj2[0] = quest;
-      obj2[1] = jsx(require(14324) /* QuestDockWithGestureAnimation */.QuestDockWithEntranceAnimation, {});
-      obj1[1] = jsx(require(14323) /* getDeliveredQuest */.QuestDockQuestProvider, { quest: null, children: null });
-      obj[0] = jsx(importDefault(14322).Provider, { value: null, children: null });
-      obj[1] = jsx(require(14244) /* QuestDockMode */.QuestDockExternalCoordinationContextProvider, { children: null });
+      obj2[1] = jsx(require("../../../quests/native/QuestDock/QuestDock.tsx") /* QuestDockWithGestureAnimation */.QuestDockWithEntranceAnimation, {});
+      obj1[1] = jsx(require("../../../quests/native/QuestDock/QuestDockCreativeContext.tsx") /* getDeliveredQuest */.QuestDockQuestProvider, { quest: null, children: null });
+      obj[0] = jsx(require("../../../quests/native/QuestDock/QuestDockVisibilityContext.tsx").Provider, { value: null, children: null });
+      obj[1] = jsx(require("../../../quests/native/QuestDock/QuestDockExternalCoordinationContext.tsx") /* QuestDockMode */.QuestDockExternalCoordinationContextProvider, { children: null });
       obj[1] = <View>{null}</View>;
       tmp2 = <View>{null}</View>;
     }

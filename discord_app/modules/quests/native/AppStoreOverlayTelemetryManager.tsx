@@ -18,7 +18,7 @@ class AppStoreOverlayTelemetryManager extends tmp2 {
 }
 AppStoreOverlayTelemetryManager.prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
   state = state.state;
-  const isAndroidResult = require(500) /* set */.isAndroid();
+  const isAndroidResult = require("../../../utils/PlatformUtils.tsx") /* set */.isAndroid();
   if (isAndroidResult) {
     return !isAndroidResult;
   } else {

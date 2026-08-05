@@ -144,7 +144,7 @@ export const useBuildGuildPowerupsSections = function useBuildGuildPowerupsSecti
   const _require = guildId;
   const dependencyMap = gameServerEnabled;
   const items = [calculateAppliedBoosts];
-  const stateFromStores = _require(589).useStateFromStores(items, () => outer1_4.getStateForGuild(closure_0));
+  const stateFromStores = _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_4.getStateForGuild(closure_0));
   let powerupCatalog;
   if (stateFromStores != null) {
     powerupCatalog = stateFromStores.powerupCatalog;

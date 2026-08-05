@@ -23,7 +23,7 @@ export const useIsTestModeForApplication = function useIsTestModeForApplication(
   const _require = id;
   const items = [reset, initialize];
   const items1 = [id];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
       let result = outer1_3.inTestModeForApplication(tmp);

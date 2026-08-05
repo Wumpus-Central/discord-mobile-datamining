@@ -14,7 +14,7 @@ export const canLaunchFrame = function canLaunchFrame(application) {
       }
       return hasApplicationFlagResult;
     }
-    obj = require(8149) /* getShelfBadgeTypeIfActive */;
+    obj = require("../../app_launcher/utils/AppLauncherUtils.tsx") /* getShelfBadgeTypeIfActive */;
   }
   return false;
 };

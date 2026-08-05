@@ -5,8 +5,8 @@ let result = require("enforcing").fileFinishedImporting("modules/themes/native/u
 
 export const updateVisualRefresh = function updateVisualRefresh(closure_0) {
   if (obj.isAndroid()) {
-    let result = importDefault(13619).setVisualRefreshEnabled(closure_0);
-    const obj2 = importDefault(13619);
+    let result = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeThemeModule.tsx").setVisualRefreshEnabled(closure_0);
+    const obj2 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeThemeModule.tsx");
   } else {
     const DCDTheme = NativeModules.DCDTheme;
     result = DCDTheme.setVisualRefreshEnabled(closure_0);

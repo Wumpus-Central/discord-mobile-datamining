@@ -11,20 +11,20 @@ export default function computeGuildsBarCutout(containerSize) {
   }
   let BADGE_SIZE = containerSize.width;
   if (BADGE_SIZE === undefined) {
-    BADGE_SIZE = require(1297) /* Button */.BADGE_SIZE;
+    BADGE_SIZE = require("../../../../design/void/native.tsx") /* Button */.BADGE_SIZE;
   }
   let BADGE_SIZE2 = containerSize.height;
   if (BADGE_SIZE2 === undefined) {
-    BADGE_SIZE2 = require(1297) /* Button */.BADGE_SIZE;
+    BADGE_SIZE2 = require("../../../../design/void/native.tsx") /* Button */.BADGE_SIZE;
   }
   let BADGE_PADDING = containerSize.padding;
   if (BADGE_PADDING === undefined) {
-    BADGE_PADDING = require(1297) /* Button */.BADGE_PADDING;
+    BADGE_PADDING = require("../../../../design/void/native.tsx") /* Button */.BADGE_PADDING;
   }
   const roundToNearestPixelResult = PixelRatio.roundToNearestPixel(BADGE_SIZE + 2 * BADGE_PADDING);
   const roundToNearestPixelResult1 = PixelRatio.roundToNearestPixel(BADGE_SIZE2 + 2 * BADGE_PADDING);
   const obj = { shape: null, x: 0, y: 0, width: null, height: null, cornerRadius: null };
-  obj[0] = require(8103) /* SolidCutout */.CutoutShape.RoundedRect;
+  obj[0] = require("../../../../design/components/Icon/native/ClipView.tsx") /* SolidCutout */.CutoutShape.RoundedRect;
   obj[3] = roundToNearestPixelResult;
   obj[4] = roundToNearestPixelResult1;
   obj[5] = PixelRatio.roundToNearestPixel(Math.min(roundToNearestPixelResult, roundToNearestPixelResult1) / 2);

@@ -17,7 +17,7 @@ export default function useCanSetVoiceChannelStatus(arg0) {
   const dependencyMap = arg2;
   const items = [getUncachedChannelPermissions];
   const items1 = [arg0, flag, arg2];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let closure_1 = outer1_3;
     return closure_1 ? outer1_5 : outer1_4.every((arg0) => {
       if (null == table) {

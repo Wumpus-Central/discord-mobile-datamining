@@ -29,13 +29,13 @@ function CountryCodeSelector(alpha2) {
     obj[1] = tmp.selectorPressable;
     obj[2] = { borderless: true };
     obj[4] = combined;
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[5] = intl.string(require(1236) /* getSystemLocale */.t.GwAW3k);
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[5] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.GwAW3k);
     const obj1 = { style: null, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
     obj1[0] = tmp.selectorText;
     obj1[3] = combined;
-    obj[6] = callback(require(4281) /* Text */.Text, obj1);
-    const items = [callback(require(4812) /* PressableBase */.PressableOpacity, obj), ];
+    obj[6] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+    const items = [callback(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj), ];
     const obj2 = { style: null };
     obj2[0] = tmp.separator;
     items[1] = callback(View, obj2);

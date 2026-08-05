@@ -52,7 +52,7 @@ export const LayerScope = function LayerScope(arg0) {
   let zIndex;
   ({ children, zIndex } = arg0);
   const obj = {
-    value: importDefault(5598)(() => {
+    value: require("../../../../hooks/useInitialValue.tsx")(() => {
       const layerContextManager = new callback(table[6]).LayerContextManager();
       return layerContextManager;
     }),
@@ -60,5 +60,5 @@ export const LayerScope = function LayerScope(arg0) {
   };
   const items = [children, callback2(Layer, { zIndex })];
   obj[1] = items;
-  return callback3(require(5599) /* add */.LayerContext.Provider, obj);
+  return callback3(require("LayerContext.native.tsx") /* add */.LayerContext.Provider, obj);
 };

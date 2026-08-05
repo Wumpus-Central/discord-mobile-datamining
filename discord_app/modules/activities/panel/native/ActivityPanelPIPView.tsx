@@ -2,7 +2,7 @@
 import importAllResult from "u";
 import { View } from "useWindowDimensions";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import module_10649 from "module_10649";
+import SafeAreaDisabledStore from "../../../panels/morphable/native/SafeAreaDisabledStore.tsx";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import participantFromServer from "participantFromServer";
 import { ActivityLayoutMode } from "items3";
@@ -279,7 +279,7 @@ const memoResult = importAllResult.memo((transitionState) => {
   let stateFromStores1;
   let memo;
   const items = [participantFromServer];
-  const stateFromStoresObject = _require(589).useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
     const connectedActivityLocation = store.getConnectedActivityLocation();
     const obj = { channelId: null, activity: null };
     obj[0] = _undefined(_undefined2[30]).getEmbeddedActivityLocationChannelId(connectedActivityLocation);
@@ -331,7 +331,7 @@ const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedI
 
 export default memoResult;
 export const useBaseActivityPanelPIPView = function useBaseActivityPanelPIPView() {
-  const tmp = importDefault(1581)();
+  const tmp = require("../../../safe_area/useSafeAreaInsets.native.tsx")();
   const require = tmp;
   const items = [tmp.right];
   return {

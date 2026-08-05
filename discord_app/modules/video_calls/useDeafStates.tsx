@@ -10,7 +10,7 @@ export default function useDeafStates(arg0) {
   const _require = arg0;
   const items = [updateVoiceState, _detectH265HardwareDecode, fetchFingerprint];
   const items1 = [arg0];
-  return _require(589).useStateFromStoresObject(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
     let obj = closure_0;
     if (outer1_4 !== undefined) {
       if (obj3 !== undefined) {

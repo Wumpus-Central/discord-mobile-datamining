@@ -5,19 +5,19 @@ const result = require("set").fileFinishedImporting("modules/activities/utils/ge
 
 export const getRemoteJoinFooterLabel = function getRemoteJoinFooterLabel(remoteJoinPlatform) {
   if (ActivityGamePlatforms.DESKTOP === remoteJoinPlatform) {
-    const intl5 = require(1236) /* getSystemLocale */.intl;
-    return intl5.string(require(1236) /* getSystemLocale */.t.aqN8U9);
+    const intl5 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl5.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.aqN8U9);
   } else if (tmp.IOS === remoteJoinPlatform) {
-    const intl4 = require(1236) /* getSystemLocale */.intl;
-    return intl4.string(require(1236) /* getSystemLocale */.t.CyQ5ia);
+    const intl4 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl4.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.CyQ5ia);
   } else if (tmp.ANDROID === remoteJoinPlatform) {
-    const intl3 = require(1236) /* getSystemLocale */.intl;
-    return intl3.string(require(1236) /* getSystemLocale */.t.fMs6uW);
+    const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.fMs6uW);
   } else if (tmp.XBOX === remoteJoinPlatform) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    return intl2.string(require(1236) /* getSystemLocale */.t.o0hjdt);
+    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.o0hjdt);
   } else {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["R/1GpG"]);
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["R/1GpG"]);
   }
 };

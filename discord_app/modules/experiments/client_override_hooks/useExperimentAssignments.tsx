@@ -10,7 +10,7 @@ export const useExperimentAssignment = function useExperimentAssignment(experime
   const _require = experiment;
   const dependencyMap = arg1;
   const items = [getHash, initialize];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (experiment.system === experiment(table[4]).ExperimentSystem.LEGACY) {
       const userExperimentDescriptor = outer1_3.getUserExperimentDescriptor(tmp.name);
       let bucket;
@@ -38,7 +38,7 @@ export const getExperimentServerAssignment = function getExperimentServerAssignm
   [obj, obj2] = callback(tmp, 2);
   if (null == name) {
     return null;
-  } else if (name.system === require(4207) /* trackExposureToExperiment */.ExperimentSystem.LEGACY) {
+  } else if (name.system === require("../ExperimentManager.tsx") /* trackExposureToExperiment */.ExperimentSystem.LEGACY) {
     name = name.name;
     let loadedUserExperiment = obj.getLoadedUserExperiment(name);
   } else {
@@ -49,7 +49,7 @@ export const useExperimentServerAssignment = function useExperimentServerAssignm
   const _require = experiment;
   const dependencyMap = arg1;
   let items = [getHash, initialize];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let obj;
     let obj2;
     let name = experiment;

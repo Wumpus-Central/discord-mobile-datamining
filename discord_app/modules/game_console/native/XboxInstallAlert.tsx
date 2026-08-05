@@ -18,14 +18,14 @@ export default function XboxInstallAlert(arg0) {
   const _require = createCacheKey();
   let obj = {};
   const merged = Object.assign(arg0);
-  const intl = _require(1236).intl;
-  obj.title = intl.string(_require(1236).t["12Kx2v"]);
-  const intl2 = _require(1236).intl;
-  obj.body = intl2.string(_require(1236).t.msZW3j);
-  const intl3 = _require(1236).intl;
-  obj.confirmText = intl3.string(_require(1236).t["n+VrqG"]);
-  const intl4 = _require(1236).intl;
-  obj.cancelText = intl4.string(_require(1236).t.kYaBOg);
+  const intl = _require("../../../intl/index.native.tsx").intl;
+  obj.title = intl.string(_require("../../../intl/index.native.tsx").t["12Kx2v"]);
+  const intl2 = _require("../../../intl/index.native.tsx").intl;
+  obj.body = intl2.string(_require("../../../intl/index.native.tsx").t.msZW3j);
+  const intl3 = _require("../../../intl/index.native.tsx").intl;
+  obj.confirmText = intl3.string(_require("../../../intl/index.native.tsx").t["n+VrqG"]);
+  const intl4 = _require("../../../intl/index.native.tsx").intl;
+  obj.cancelText = intl4.string(_require("../../../intl/index.native.tsx").t.kYaBOg);
   obj.fillCancelText = true;
   obj.renderConfirmRightIcon = function renderConfirmRightIcon() {
     const obj = { source: null, style: null };
@@ -43,5 +43,5 @@ export default function XboxInstallAlert(arg0) {
       openURL(closure_4);
     }
   };
-  return jsx(importDefault(4713), {});
+  return jsx(require("../../../components_native/common/Alert.tsx"), {});
 };

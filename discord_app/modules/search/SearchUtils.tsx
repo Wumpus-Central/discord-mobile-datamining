@@ -80,62 +80,62 @@ export const getSearchTabFetchId = function getSearchTabFetchId(closure_0, closu
   return "" + channelId + "-" + closure_1 + "-" + searchResultsQuery;
 };
 export const getChannelActiveAgoTimestamp = function getChannelActiveAgoTimestamp(arg0) {
-  let obj = importDefault(3867)();
-  const diffResult = obj.diff(importDefault(3867)(arg0), "s");
+  let obj = require("../../../_runtime/03867_t.js")();
+  const diffResult = obj.diff(require("../../../_runtime/03867_t.js")(arg0), "s");
   if (diffResult > c17) {
     const _Math5 = Math;
     const rounded = Math.round(diffResult / tmp3);
-    const intl7 = require(1236) /* getSystemLocale */.intl;
+    const intl7 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { count: null };
     obj[0] = rounded;
-    return intl7.formatToPlainString(require(1236) /* getSystemLocale */.t["7th+Mf"], obj);
+    return intl7.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t["7th+Mf"], obj);
   } else if (diffResult > c16) {
     const _Math4 = Math;
     const rounded1 = Math.round(diffResult / tmp21);
-    const intl6 = require(1236) /* getSystemLocale */.intl;
+    const intl6 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { count: null };
     obj[0] = rounded1;
-    return intl6.formatToPlainString(require(1236) /* getSystemLocale */.t.g2uHTD, obj);
+    return intl6.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.g2uHTD, obj);
   } else if (diffResult > 172800) {
     const _Math3 = Math;
     const rounded2 = Math.round(diffResult / 86400);
-    const intl5 = require(1236) /* getSystemLocale */.intl;
+    const intl5 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj1 = { count: null };
     obj1[0] = rounded2;
-    return intl5.formatToPlainString(require(1236) /* getSystemLocale */.t.HNgi95, obj1);
+    return intl5.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.HNgi95, obj1);
   } else if (diffResult > 86400) {
-    const intl4 = require(1236) /* getSystemLocale */.intl;
-    return intl4.string(require(1236) /* getSystemLocale */.t.uNkIhT);
+    const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl4.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.uNkIhT);
   } else if (diffResult > 3600) {
     const _Math2 = Math;
     const rounded3 = Math.round(diffResult / 3600);
-    const intl3 = require(1236) /* getSystemLocale */.intl;
+    const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj2 = { count: null };
     obj2[0] = rounded3;
-    return intl3.formatToPlainString(require(1236) /* getSystemLocale */.t.WJBWP1, obj2);
+    return intl3.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.WJBWP1, obj2);
   } else if (diffResult > 60) {
     const _Math = Math;
     const rounded4 = Math.round(diffResult / 60);
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj3 = { count: null };
     obj3[0] = rounded4;
-    return intl2.formatToPlainString(require(1236) /* getSystemLocale */.t.CbRfwg, obj3);
+    return intl2.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.CbRfwg, obj3);
   } else {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["5Ldpkc"]);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["5Ldpkc"]);
   }
 };
 export const getIndexingErrorText = function getIndexingErrorText(searchContext) {
   const type = searchContext.type;
   if (constants.CHANNEL === type) {
-    const intl3 = require(1236) /* getSystemLocale */.intl;
-    return intl3.string(require(1236) /* getSystemLocale */.t.Q0JJjv);
+    const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Q0JJjv);
   } else if (tmp.DMS === type) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    return intl2.string(require(1236) /* getSystemLocale */.t.Br0xJA);
+    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Br0xJA);
   } else {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.AXPbZr);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.AXPbZr);
   }
 };
 export const getGuildIdFromSearchContext = function getGuildIdFromSearchContext(searchContext) {
@@ -177,35 +177,35 @@ export const getChannelIdFromSearchContext = function getChannelIdFromSearchCont
 };
 export const getTabTitle = function getTabTitle(tab) {
   if (SearchTabs.RECENT === tab) {
-    const intl10 = require(1236) /* getSystemLocale */.intl;
-    return intl10.string(require(1236) /* getSystemLocale */.t.tWnHcL);
+    const intl10 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl10.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.tWnHcL);
   } else if (tmp.MESSAGES === tab) {
-    const intl9 = require(1236) /* getSystemLocale */.intl;
-    return intl9.string(require(1236) /* getSystemLocale */.t.dvZAkp);
+    const intl9 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl9.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.dvZAkp);
   } else if (tmp.PEOPLE === tab) {
-    const intl8 = require(1236) /* getSystemLocale */.intl;
-    return intl8.string(require(1236) /* getSystemLocale */.t["GFd/I5"]);
+    const intl8 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl8.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["GFd/I5"]);
   } else if (tmp.MEDIA === tab) {
-    const intl7 = require(1236) /* getSystemLocale */.intl;
-    return intl7.string(require(1236) /* getSystemLocale */.t["Aw9+/M"]);
+    const intl7 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl7.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["Aw9+/M"]);
   } else if (tmp.PINS === tab) {
-    const intl6 = require(1236) /* getSystemLocale */.intl;
-    return intl6.string(require(1236) /* getSystemLocale */.t["/MoGoB"]);
+    const intl6 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl6.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["/MoGoB"]);
   } else if (tmp.LINKS === tab) {
-    const intl5 = require(1236) /* getSystemLocale */.intl;
-    return intl5.string(require(1236) /* getSystemLocale */.t.DFSvTt);
+    const intl5 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl5.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.DFSvTt);
   } else if (tmp.FILES === tab) {
-    const intl4 = require(1236) /* getSystemLocale */.intl;
-    return intl4.string(require(1236) /* getSystemLocale */.t["WgVYR/"]);
+    const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl4.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["WgVYR/"]);
   } else if (tmp.GUILD_CHANNELS === tab) {
-    const intl3 = require(1236) /* getSystemLocale */.intl;
-    return intl3.string(require(1236) /* getSystemLocale */.t.OGiMXJ);
+    const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.OGiMXJ);
   } else if (tmp.MEMBERS === tab) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    return intl2.string(require(1236) /* getSystemLocale */.t["9Oq93m"]);
+    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["9Oq93m"]);
   } else if (tmp.THREADS === tab) {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.B2panI);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.B2panI);
   }
 };
 export const searchModeToSearchQueryParams = function searchModeToSearchQueryParams(searchMode) {
@@ -235,42 +235,42 @@ export const searchQueryParamsToSearchMode = function searchQueryParamsToSearchM
 };
 export const getSearchOptionAnswer = function getSearchOptionAnswer(arg0) {
   if (SearchTokenTypes.FILTER_FROM === arg0) {
-    const intl10 = require(1236) /* getSystemLocale */.intl;
-    return intl10.string(require(1236) /* getSystemLocale */.t.E466pL);
+    const intl10 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl10.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.E466pL);
   } else if (tmp.FILTER_MENTIONS === arg0) {
-    const intl9 = require(1236) /* getSystemLocale */.intl;
-    return intl9.string(require(1236) /* getSystemLocale */.t.BYvFWl);
+    const intl9 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl9.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.BYvFWl);
   } else if (tmp.FILTER_HAS === arg0) {
-    const intl8 = require(1236) /* getSystemLocale */.intl;
-    return intl8.string(require(1236) /* getSystemLocale */.t.bhSYbc);
+    const intl8 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl8.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.bhSYbc);
   } else {
     if (tmp.FILTER_BEFORE !== arg0) {
       if (tmp.FILTER_ON !== arg0) {
         if (tmp.FILTER_AFTER !== arg0) {
           if (tmp.FILTER_IN === arg0) {
-            const intl6 = require(1236) /* getSystemLocale */.intl;
-            return intl6.string(require(1236) /* getSystemLocale */.t["GpM+/7"]);
+            const intl6 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+            return intl6.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["GpM+/7"]);
           } else if (tmp.FILTER_LINK_FROM === arg0) {
-            const intl5 = require(1236) /* getSystemLocale */.intl;
-            return intl5.string(require(1236) /* getSystemLocale */.t.FdDTni);
+            const intl5 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+            return intl5.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.FdDTni);
           } else if (tmp.FILTER_FILE_TYPE === arg0) {
-            const intl4 = require(1236) /* getSystemLocale */.intl;
-            return intl4.string(require(1236) /* getSystemLocale */.t.FXcAFe);
+            const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+            return intl4.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.FXcAFe);
           } else if (tmp.FILTER_FILE_NAME === arg0) {
-            const intl3 = require(1236) /* getSystemLocale */.intl;
-            return intl3.string(require(1236) /* getSystemLocale */.t.uAbFDM);
+            const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+            return intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.uAbFDM);
           } else if (tmp.FILTER_PINNED === arg0) {
-            const intl2 = require(1236) /* getSystemLocale */.intl;
-            return intl2.string(require(1236) /* getSystemLocale */.t.UJxL3V);
+            const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+            return intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.UJxL3V);
           } else if (tmp.FILTER_AUTHOR_TYPE === arg0) {
-            const intl = require(1236) /* getSystemLocale */.intl;
-            return intl.string(require(1236) /* getSystemLocale */.t.qCQzBl);
+            const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+            return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.qCQzBl);
           }
         }
       }
     }
-    const intl7 = require(1236) /* getSystemLocale */.intl;
-    return intl7.string(require(1236) /* getSystemLocale */.t.Zbbc1E);
+    const intl7 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl7.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Zbbc1E);
   }
 };
 export const ShowDatePicker = obj;
@@ -472,7 +472,7 @@ export const getAutocompleteMode = function getAutocompleteMode(cursorScope, tok
   } else {
     if (obj9.isSearchFilterTokenType(currentToken.type)) {
       if (null != nextToken) {
-        if (nextToken.type !== importDefault(11630).NON_TOKEN_TYPE) {
+        if (nextToken.type !== require("../../lib/QueryTokenizer.tsx").NON_TOKEN_TYPE) {
           if (null != nextToken) {
             if (!regex.test(nextToken.type)) {
               const obj1 = { type: null, filter: null, token: null };
@@ -489,7 +489,7 @@ export const getAutocompleteMode = function getAutocompleteMode(cursorScope, tok
       obj2[2] = nextToken;
       return obj2;
     }
-    if (currentToken.type === importDefault(11630).NON_TOKEN_TYPE) {
+    if (currentToken.type === require("../../lib/QueryTokenizer.tsx").NON_TOKEN_TYPE) {
       if (null != previousToken) {
         if (tmp10Result.isSearchFilterTokenType(previousToken.type)) {
           const obj3 = { type: null, filter: null, token: null };
@@ -508,7 +508,7 @@ export const getAutocompleteMode = function getAutocompleteMode(cursorScope, tok
     obj4 = { type: null, filter: null, token: null };
     obj4[0] = constants2.FILTER_ALL;
     obj4[2] = tmp4;
-    obj9 = require(11625) /* getShortcuts */;
+    obj9 = require("tokens/SearchTokens.tsx") /* getShortcuts */;
     const tmp10 = require;
     tmp3 = importDefault;
   }
@@ -524,7 +524,7 @@ export const quoteChannelName = function quoteChannelName(channelName) {
 export const getFlattenedAutocompleteResults = function getFlattenedAutocompleteResults(arg0, arg1) {
   let closure_0 = arg1;
   const importDefault = [];
-  const item = importDefault(12)(arg0).forEach((results) => {
+  const item = require("../../../_runtime/00012_apply.js")(arg0).forEach((results) => {
     let closure_0 = results;
     if (null != results) {
       if (0 !== results.results.length) {
@@ -608,36 +608,36 @@ export const filterHasAnswer = function filterHasAnswer(type, type2) {
   return !tmp2;
 };
 export const refreshSearchTokens = function refreshSearchTokens() {
-  const result = require(11625) /* getShortcuts */.rebuildSearchTokenConfigs();
+  const result = require("tokens/SearchTokens.tsx") /* getShortcuts */.rebuildSearchTokenConfigs();
   tmp4.reset();
-  const obj = require(11625) /* getShortcuts */;
-  const tmp3 = importDefault(12);
-  importDefault(12)(importDefault(11625)).forOwn((arg0, type) => {
+  const obj = require("tokens/SearchTokens.tsx") /* getShortcuts */;
+  const tmp3 = require("../../../_runtime/00012_apply.js");
+  require("../../../_runtime/00012_apply.js")(require("tokens/SearchTokens.tsx")).forOwn((arg0, type) => {
     const merged = Object.assign(arg0);
     return closure_19.addRule({ type });
   });
   tmp5.reset();
-  const tmp3Result = importDefault(12)(importDefault(11625));
-  const crossDMSearchTokensConfig = require(11625) /* getShortcuts */.buildCrossDMSearchTokensConfig();
-  const obj3 = require(11625) /* getShortcuts */;
-  importDefault(12)(crossDMSearchTokensConfig).forOwn((arg0, type) => {
+  const tmp3Result = require("../../../_runtime/00012_apply.js")(require("tokens/SearchTokens.tsx"));
+  const crossDMSearchTokensConfig = require("tokens/SearchTokens.tsx") /* getShortcuts */.buildCrossDMSearchTokensConfig();
+  const obj3 = require("tokens/SearchTokens.tsx") /* getShortcuts */;
+  require("../../../_runtime/00012_apply.js")(crossDMSearchTokensConfig).forOwn((arg0, type) => {
     const merged = Object.assign(arg0);
     return closure_20.addRule({ type });
   });
-  const obj4 = importDefault(12)(crossDMSearchTokensConfig);
-  const result1 = importDefault(11631).markSearchTokensRefreshed();
+  const obj4 = require("../../../_runtime/00012_apply.js")(crossDMSearchTokensConfig);
+  const result1 = require("SearchActionCreators.tsx").markSearchTokensRefreshed();
 };
 export const getChannelDisplayName = function getChannelDisplayName(isDM) {
-  const channelName = require(4475) /* computeChannelName */.computeChannelName(isDM, mergeGuildAvatar, upsertRelationship);
+  const channelName = require("../channel/useChannelName.tsx") /* computeChannelName */.computeChannelName(isDM, mergeGuildAvatar, upsertRelationship);
   if (isDM.isDM()) {
     const user = mergeGuildAvatar.getUser(isDM.getRecipientId());
-    const userTag = importDefault(4124).getUserTag(user);
+    const userTag = require("../../utils/UserUtils.tsx").getUserTag(user);
     let flag = false;
     let str = userTag;
     if (null == userTag) {
       return null;
     }
-    const obj3 = importDefault(4124);
+    const obj3 = require("../../utils/UserUtils.tsx");
   } else {
     flag = false;
     str = channelName;
@@ -670,10 +670,10 @@ export const getChannelDisplayName = function getChannelDisplayName(isDM) {
 };
 export const getChannelPlaceholderName = function getChannelPlaceholderName(isGroupDM) {
   if (isGroupDM.isGroupDM()) {
-    return require(4475) /* computeChannelName */.computeChannelName(isGroupDM, authStore, upsertRelationship);
+    return require("../channel/useChannelName.tsx") /* computeChannelName */.computeChannelName(isGroupDM, authStore, upsertRelationship);
   } else if (isGroupDM.isDM()) {
     const user = authStore.getUser(isGroupDM.getRecipientId());
-    return importDefault(4124).getUserTag(user);
+    return require("../../utils/UserUtils.tsx").getUserTag(user);
   } else {
     const tmp2 = store.getTextChannelNameDisambiguations(isGroupDM.getGuildId())[isGroupDM.id];
     let name;
@@ -681,8 +681,8 @@ export const getChannelPlaceholderName = function getChannelPlaceholderName(isGr
       name = tmp2.name;
     }
     if (name == null) {
-      name = require(4475) /* computeChannelName */.computeChannelName(isGroupDM, authStore, upsertRelationship);
-      const obj = require(4475) /* computeChannelName */;
+      name = require("../channel/useChannelName.tsx") /* computeChannelName */.computeChannelName(isGroupDM, authStore, upsertRelationship);
+      const obj = require("../channel/useChannelName.tsx") /* computeChannelName */;
     }
     return name;
   }

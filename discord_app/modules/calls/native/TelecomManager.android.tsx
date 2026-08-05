@@ -283,7 +283,7 @@ prototype["_terminate"] = function _terminate() {
     for (const item10033 of registeredIncomingCallIds) {
       let tmp20 = importDefault;
       let tmp21 = dependencyMap;
-      let obj = importDefault(16446);
+      let obj = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTelecomModule.tsx");
       let endCallResult = obj.endCall(item10033);
       let catchPromise = endCallResult.catch((arg0) => {
         logger.warn("Failed to end telecom incoming call on terminate:", arg0);
@@ -347,7 +347,7 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId, channel
       self.cancelIncomingCall(self.currentCall.channelId);
     }
     tmp3 = null != self.currentCall && self.currentCall.channelId !== channelId && self.isPendingIncomingCall(self.currentCall);
-    channelName = _require(4475).computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+    channelName = _require("../../channel/useChannelName.tsx").computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
     let guildId = channel.getGuildId();
     if (guildId == null) {
       guildId = null;
@@ -360,7 +360,7 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId, channel
     self.currentCall = obj;
     obj.info("Reporting incoming call to Telecom:", channelId, "callerName:", channelName);
     self.startRingtone();
-    const obj2 = _require(4475);
+    const obj2 = _require("../../channel/useChannelName.tsx");
     let tmp19 = null;
     if (null != guildId) {
       obj = { guildId: null };
@@ -730,7 +730,7 @@ prototype["handleIncomingCallStoreChange"] = function handleIncomingCallStoreCha
           let deleteResult = registeredIncomingCallIds2.delete(tmp16);
           let tmp19 = importDefault;
           let tmp20 = dependencyMap;
-          let obj3 = importDefault(16446);
+          let obj3 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTelecomModule.tsx");
           let endCallResult = obj3.endCall(tmp16);
           let catchPromise = endCallResult.catch((arg0) => {
             logger.warn("Failed to end telecom call:", arg0);
@@ -913,7 +913,7 @@ prototype["setCallActive"] = function setCallActive(outer1_2, isSelfMuteResult) 
   if (channelId === outer1_2) {
     obj.info("Setting call active:", outer1_2);
     isSelfMuteResult = _detectH265HardwareDecode.isSelfMute();
-    obj = importDefault(16446);
+    obj = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTelecomModule.tsx");
     obj.setCallActive(outer1_2, isSelfMuteResult);
     self.lastMuteState = isSelfMuteResult;
     self.lastScreenShareActive = false;
@@ -938,15 +938,15 @@ prototype["setIncomingCallActive"] = function setIncomingCallActive(arg0, arg1) 
       tmp7 = isSelfMuteResult;
       if (isSelfMuteResult !== pendingMutePreference) {
         obj.info("Re-applying Telecom Bar ringing-state mute preference:", pendingMutePreference);
-        importDefault(9077).setSelfMute(MediaEngineContextTypes.DEFAULT, pendingMutePreference, false);
+        require("../../../actions/AudioActionCreators.tsx").setSelfMute(MediaEngineContextTypes.DEFAULT, pendingMutePreference, false);
         tmp7 = pendingMutePreference;
-        const obj2 = importDefault(9077);
+        const obj2 = require("../../../actions/AudioActionCreators.tsx");
       }
     }
-    const result = importDefault(16446).setIncomingCallActive(arg0, tmp7);
+    const result = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTelecomModule.tsx").setIncomingCallActive(arg0, tmp7);
     self.lastMuteState = tmp7;
     self.lastScreenShareActive = false;
-    const obj3 = importDefault(16446);
+    const obj3 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTelecomModule.tsx");
   } else {
     obj.warn("setIncomingCallActive called for unknown channel:", arg0);
   }
@@ -980,7 +980,7 @@ prototype["clearCall"] = function clearCall(channelId) {
 };
 prototype["startRingtone"] = function startRingtone() {
   const self = this;
-  let isMetaQuestResult = require(1577) /* isMetaQuest */.isMetaQuest();
+  let isMetaQuestResult = require("../../device/MetaQuestUtils.android.tsx") /* isMetaQuest */.isMetaQuest();
   if (isMetaQuestResult) {
     isMetaQuestResult = null == self.ringtone;
   }
@@ -990,10 +990,10 @@ prototype["startRingtone"] = function startRingtone() {
       disableSounds = soundDisabled.isSoundDisabled("call_ringing");
     }
     if (!disableSounds) {
-      self.ringtone = require(9694) /* createSoundForPack */.createSoundForPack("call_ringing", soundpack.getSoundpack());
+      self.ringtone = require("../../sound_playback/SoundUtils.tsx") /* createSoundForPack */.createSoundForPack("call_ringing", soundpack.getSoundpack());
       const ringtone = self.ringtone;
       ringtone.loop();
-      const tmpResult = require(9694) /* createSoundForPack */;
+      const tmpResult = require("../../sound_playback/SoundUtils.tsx") /* createSoundForPack */;
     }
   }
 };
@@ -1013,7 +1013,7 @@ prototype["handleMuteStoreChange"] = function handleMuteStoreChange() {
         if (self.lastMuteState !== isSelfMuteResult) {
           self.lastMuteState = isSelfMuteResult;
           obj.info("Syncing Discord -> Call Bar mute state:", isSelfMuteResult);
-          obj = importDefault(16446);
+          obj = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTelecomModule.tsx");
           obj.setMicMuted(self.currentCall.channelId, isSelfMuteResult);
         }
       }

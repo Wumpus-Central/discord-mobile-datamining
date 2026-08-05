@@ -4,12 +4,12 @@ const result = require("computeEntryState").fileFinishedImporting("modules/keybo
 export const getKeyboardDuration = function getKeyboardDuration() {
   let DEFAULT_APP_ENTRY_KEY = arg0;
   if (arg0 === undefined) {
-    DEFAULT_APP_ENTRY_KEY = require(1477) /* context */.DEFAULT_APP_ENTRY_KEY;
+    DEFAULT_APP_ENTRY_KEY = require("../../window/native/AppEntryKeyContext.tsx") /* context */.DEFAULT_APP_ENTRY_KEY;
   }
   let num = 300;
   if (!obj.isAndroid()) {
-    num = importDefault(1478).getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardDuration;
-    const obj2 = importDefault(1478);
+    num = require("KeyboardUIStore.native.tsx").getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardDuration;
+    const obj2 = require("KeyboardUIStore.native.tsx");
   }
   return num;
 };

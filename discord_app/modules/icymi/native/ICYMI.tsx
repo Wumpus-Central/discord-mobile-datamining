@@ -21,7 +21,7 @@ let closure_6;
 const require = arg1;
 function SettingsButton() {
   let obj = { accessibilityLabel: "button", variant: "tertiary", size: "sm", icon: null, onPress: null };
-  obj[3] = callback(require(14149) /* FiltersHorizontalIcon */.FiltersHorizontalIcon, { size: "sm" });
+  obj[3] = callback(require("../../../design/components/Icon/native/redesign/generated/FiltersHorizontalIcon.tsx") /* FiltersHorizontalIcon */.FiltersHorizontalIcon, { size: "sm" });
   obj[4] = function onPress() {
     callback2(paths[16]).itemInteracted("filters_button", "filters_button", "press_info_button");
     const obj = callback2(paths[16]);
@@ -29,11 +29,11 @@ function SettingsButton() {
     const obj2 = callback2(paths[16]);
     callback2(paths[17]).openLazy(callback(paths[19])(paths[18], paths.paths), "ICYMISettingsActionSheet", {});
   };
-  return callback(require(7672) /* IconButton */.IconButton, obj);
+  return callback(require("../../../design/components/Button/native/IconButton.native.tsx") /* IconButton */.IconButton, obj);
 }
 function InfoButton() {
   let obj = { accessibilityLabel: "button", variant: "tertiary", size: "sm", icon: null, onPress: null };
-  obj[3] = callback(require(4241) /* CircleInformationIcon */.CircleInformationIcon, { size: "sm" });
+  obj[3] = callback(require("../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx") /* CircleInformationIcon */.CircleInformationIcon, { size: "sm" });
   obj[4] = function onPress() {
     callback2(8835).itemInteracted("info_button", "info_button", "press_info_button");
     const obj = callback2(8835);
@@ -41,7 +41,7 @@ function InfoButton() {
     const obj2 = callback2(8835);
     callback(15454).pushICYMIInfoModal({ extendedOnboarding: true });
   };
-  return callback(require(7672) /* IconButton */.IconButton, obj);
+  return callback(require("../../../design/components/Button/native/IconButton.native.tsx") /* IconButton */.IconButton, obj);
 }
 function ICYMIHeaderTextWrapper() {
   const tmp = callback3();
@@ -63,7 +63,7 @@ function ICYMIHeaderTextWrapper() {
   });
 }
 function handleEndReached() {
-  require(8834) /* generateHydrationId */.hydrateNextPage();
+  require("../ICYMIUtils.tsx") /* generateHydrationId */.hydrateNextPage();
 }
 function ICYMI(inNestedNavigator) {
   let data;
@@ -316,50 +316,50 @@ let c4 = importAllResult;
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
 let closure_17 = createCacheKey.createStyles((paddingTop) => {
   let obj = { containerOuterTablet: null };
-  obj = { backgroundColor: importDefault(712).colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: importDefault(712).space.PX_8, overflow: "hidden", flex: 1, paddingTop };
+  obj = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, overflow: "hidden", flex: 1, paddingTop };
   obj[0] = obj;
   return obj;
 });
 let closure_18 = createICYMIStyles.createICYMIStyles((margin) => {
   let obj = { container: { flex: 1, flexShrink: 1, flexGrow: 1 }, containerInPanels: null, containerBackground: null, flashListWrapper: null, refreshing: null, header: null, headerLeft: null, headerClose: null, headerTitle: null, headerText: null, headerActions: null, notificationBadge: null, loading: null, headerBorder: null };
-  obj = { flex: 1, flexShrink: 1, flexGrow: 1, overflow: "hidden", borderTopLeftRadius: importDefault(712).radii.sm, borderTopRightRadius: importDefault(712).radii.sm };
+  obj = { flex: 1, flexShrink: 1, flexGrow: 1, overflow: "hidden", borderTopLeftRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.sm, borderTopRightRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.sm };
   obj[1] = obj;
-  obj = { backgroundColor: importDefault(712).colors.BACKGROUND_BASE_LOW };
+  obj = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW };
   obj[2] = obj;
-  obj[3] = { backgroundColor: importDefault(712).colors.BACKGROUND_BASE_LOW, minHeight: 2, flex: 1 };
-  const obj1 = { backgroundColor: importDefault(712).colors.BACKGROUND_BASE_LOW, minHeight: 2, flex: 1 };
-  obj[4] = { color: importDefault(712).colors.INTERACTIVE_TEXT_DEFAULT };
-  const obj2 = { color: importDefault(712).colors.INTERACTIVE_TEXT_DEFAULT };
-  obj[5] = { backgroundColor: importDefault(712).colors.BACKGROUND_BASE_LOW, position: "relative", overflow: "hidden", width: "100%" };
+  obj[3] = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW, minHeight: 2, flex: 1 };
+  const obj1 = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW, minHeight: 2, flex: 1 };
+  obj[4] = { color: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_TEXT_DEFAULT };
+  const obj2 = { color: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_TEXT_DEFAULT };
+  obj[5] = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW, position: "relative", overflow: "hidden", width: "100%" };
   obj[6] = { flexDirection: "row", alignItems: "center" };
-  const obj3 = { backgroundColor: importDefault(712).colors.BACKGROUND_BASE_LOW, position: "relative", overflow: "hidden", width: "100%" };
-  obj[7] = { marginRight: importDefault(712).space.PX_16, height: importDefault(712).space.PX_32, width: importDefault(712).space.PX_32, alignItems: "center", justifyContent: "center", borderRadius: importDefault(712).radii.lg };
+  const obj3 = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW, position: "relative", overflow: "hidden", width: "100%" };
+  obj[7] = { marginRight: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, height: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_32, width: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_32, alignItems: "center", justifyContent: "center", borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.lg };
   obj[8] = { height: 56, marginHorizontal: margin.margin, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
   obj[9] = { flexDirection: "row", alignItems: "center", gap: 4 };
-  const obj4 = { marginRight: importDefault(712).space.PX_16, height: importDefault(712).space.PX_32, width: importDefault(712).space.PX_32, alignItems: "center", justifyContent: "center", borderRadius: importDefault(712).radii.lg };
+  const obj4 = { marginRight: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, height: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_32, width: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_32, alignItems: "center", justifyContent: "center", borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.lg };
   const obj5 = { height: 56, marginHorizontal: margin.margin, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
-  obj[10] = { flexDirection: "row", alignItems: "center", gap: importDefault(712).space.PX_12 };
-  const obj6 = { flexDirection: "row", alignItems: "center", gap: importDefault(712).space.PX_12 };
-  obj[11] = { height: 18, width: 18, borderRadius: importDefault(712).radii.round };
-  const obj7 = { height: 18, width: 18, borderRadius: importDefault(712).radii.round };
-  obj[12] = { flex: 1, justifyContent: "center", paddingTop: importDefault(712).space.PX_96 };
-  const obj8 = { flex: 1, justifyContent: "center", paddingTop: importDefault(712).space.PX_96 };
-  obj[13] = { position: "absolute", bottom: 0, left: 0, right: 0, backgroundColor: importDefault(712).colors.BORDER_SUBTLE, height: 1 };
+  obj[10] = { flexDirection: "row", alignItems: "center", gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 };
+  const obj6 = { flexDirection: "row", alignItems: "center", gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 };
+  obj[11] = { height: 18, width: 18, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.round };
+  const obj7 = { height: 18, width: 18, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.round };
+  obj[12] = { flex: 1, justifyContent: "center", paddingTop: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_96 };
+  const obj8 = { flex: 1, justifyContent: "center", paddingTop: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_96 };
+  obj[13] = { position: "absolute", bottom: 0, left: 0, right: 0, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE, height: 1 };
   return obj;
 });
 let closure_22 = importAllResult.memo((inNestedNavigator) => {
   inNestedNavigator = inNestedNavigator.inNestedNavigator;
   const tmp = callback3();
   let obj = dependencyMap;
-  const tmp2 = importDefault(7562)();
+  const tmp2 = require("../../screen/native/useIsWindowLarge.tsx")();
   let LeftBackIconWithBadge = require;
   obj = { top: !tmp2, style: tmp.header, children: null };
   obj = { absolute: true, wide: true, tall: true, mix: true, mixAmount: null };
   const obj1 = { dark: null, light: null };
-  obj1[0] = require(4096) /* getGradientColorByPercentage */.OverlayOpacity.LEVEL_7;
-  obj1[1] = require(4096) /* getGradientColorByPercentage */.OverlayOpacity.LEVEL_8;
+  obj1[0] = require("../../client_themes/native/ClientThemesUtils.tsx") /* getGradientColorByPercentage */.OverlayOpacity.LEVEL_7;
+  obj1[1] = require("../../client_themes/native/ClientThemesUtils.tsx") /* getGradientColorByPercentage */.OverlayOpacity.LEVEL_8;
   obj[4] = obj1;
-  const items = [callback(importDefault(4814), obj), , ];
+  const items = [callback(require("../../client_themes/native/ThemedGradient.tsx"), obj), , ];
   const obj2 = { style: tmp.headerTitle, children: null };
   const obj3 = { style: tmp.headerLeft, children: null };
   if (!tmp2) {
@@ -378,7 +378,7 @@ let closure_22 = importAllResult.memo((inNestedNavigator) => {
       obj5[0] = tmp.headerBorder;
       items[2] = tmp4(tmp6, obj5);
       obj[2] = items;
-      return tmp3(require(5272) /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+      return tmp3(require("../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
     }
   }
   const obj6 = { style: tmp.headerClose, accessibilityLabel: null, onPress: null, children: null };
@@ -401,10 +401,10 @@ export const ICYMITab = function ICYMITab(route) {
   route = route.route;
   let _require;
   let importDefault;
-  let obj = _require(589);
+  let obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const items = [fetchFingerprint];
   const stateFromStores = obj.useStateFromStores(items, () => id.getId());
-  const tmp6 = importDefault(7562)();
+  const tmp6 = require("../../screen/native/useIsWindowLarge.tsx")();
   _require = tmp6;
   let inNestedNavigator;
   if (route != null) {
@@ -413,7 +413,7 @@ export const ICYMITab = function ICYMITab(route) {
       inNestedNavigator = params.inNestedNavigator;
     }
   }
-  const tmp8 = callback2(importDefault(1581)().top);
+  const tmp8 = callback2(require("../../safe_area/useSafeAreaInsets.native.tsx")().top);
   importDefault = tmp8;
   const items1 = [tmp6, tmp8.containerOuterTablet];
   const memo = importAllResult.useMemo(() => {
@@ -424,7 +424,7 @@ export const ICYMITab = function ICYMITab(route) {
     return containerOuterTablet;
   }, items1);
   const tmp11 = tmp6 ? closure_5 : importAllResult.Fragment;
-  const tmp3 = importDefault(4132)();
+  const tmp3 = require("../../client_themes/native/useColorThemeBackground.tsx")();
   const tmp9 = importAllResult;
   if (tmp6) {
     obj = { style: null };
@@ -436,12 +436,12 @@ export const ICYMITab = function ICYMITab(route) {
   const obj2 = { children: null };
   const obj3 = {};
   const merged = Object.assign(obj);
-  const items2 = [closure_14(importDefault(4814), { absolute: true }), ];
+  const items2 = [closure_14(require("../../client_themes/native/ThemedGradient.tsx"), { absolute: true }), ];
   const obj4 = { gradient: tmp3, children: null };
   obj4[1] = closure_14(ICYMI, { inNestedNavigator }, "" + stateFromStores);
-  items2[1] = closure_14(_require(3997).ThemeContextProvider, obj4);
+  items2[1] = closure_14(_require("../../../../discord_common/js/packages/design/native.tsx").ThemeContextProvider, obj4);
   obj3.children = items2;
   obj2[0] = closure_16(tmp11, obj3);
-  obj1[0] = closure_14(_require(15442).ICYMIContextProvider, obj2);
-  return closure_14(importDefault(15511), obj1);
+  obj1[0] = closure_14(_require("ICYMIContext.tsx").ICYMIContextProvider, obj2);
+  return closure_14(require("../../panels/morphable/native/AppFreezer.tsx"), obj1);
 };

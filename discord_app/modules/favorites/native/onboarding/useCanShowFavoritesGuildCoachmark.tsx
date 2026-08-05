@@ -7,13 +7,13 @@ const result = require("initialize").fileFinishedImporting("modules/favorites/na
 
 export default function useCanShowFavoritesGuildCoachmark() {
   const items = [handleConnectionOpen];
-  const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => null != voiceChannelId.getVoiceChannelId());
-  const obj = require(589) /* initialize */;
+  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => null != voiceChannelId.getVoiceChannelId());
+  const obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items1 = [setContent];
-  const stateFromStores1 = require(589) /* initialize */.useStateFromStores(items1, () => open.isOpen());
-  const obj2 = require(589) /* initialize */;
+  const stateFromStores1 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items1, () => open.isOpen());
+  const obj2 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   let tmp4 = !stateFromStores;
-  const isModalOpen = require(4136) /* navigationToRootTabHelper */.useIsModalOpen();
+  const isModalOpen = require("../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */.useIsModalOpen();
   if (!stateFromStores) {
     tmp4 = !stateFromStores1;
   }

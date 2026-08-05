@@ -9,111 +9,111 @@ const result = require("createRemoveRecipientSystemMessage").fileFinishedImporti
 export const createSystemMessageContent = function createSystemMessageContent(message) {
   const type = message.message.type;
   if (constants.RECIPIENT_ADD === type) {
-    return require(7878) /* createAddRecipientSystemMessage */.createAddRecipientSystemMessage(message);
+    return require("AddRecipientSystemMessage.tsx") /* createAddRecipientSystemMessage */.createAddRecipientSystemMessage(message);
   } else if (tmp.RECIPIENT_REMOVE === type) {
-    return require(7895) /* createRemoveRecipientSystemMessage */.createRemoveRecipientSystemMessage(message);
+    return require("RemoveRecipientSystemMessage.tsx") /* createRemoveRecipientSystemMessage */.createRemoveRecipientSystemMessage(message);
   } else if (tmp.CALL === type) {
-    return require(7896) /* createCallSystemMessage */.createCallSystemMessage(message);
+    return require("CallSystemMessage.tsx") /* createCallSystemMessage */.createCallSystemMessage(message);
   } else if (tmp.CHANNEL_NAME_CHANGE === type) {
-    return require(7899) /* createChangeChannelNameSystemMessage */.createChangeChannelNameSystemMessage(message);
+    return require("ChangeChannelNameSystemMessage.tsx") /* createChangeChannelNameSystemMessage */.createChangeChannelNameSystemMessage(message);
   } else if (tmp.CHANNEL_ICON_CHANGE === type) {
-    return require(7900) /* createChangeChannelIconSystemMessage */.createChangeChannelIconSystemMessage(message);
+    return require("ChangeChannelIconSystemMessage.tsx") /* createChangeChannelIconSystemMessage */.createChangeChannelIconSystemMessage(message);
   } else if (tmp.CHANNEL_PINNED_MESSAGE === type) {
-    return require(7901) /* createChannelPinnedMessageSystemMessage */.createChannelPinnedMessageSystemMessage(message);
+    return require("ChannelPinnedMessageSystemMessage.tsx") /* createChannelPinnedMessageSystemMessage */.createChannelPinnedMessageSystemMessage(message);
   } else if (tmp.USER_JOIN === type) {
-    return require(7902) /* createUserJoinSystemMessage */.createUserJoinSystemMessage(message);
+    return require("UserJoinSystemMessage.tsx") /* createUserJoinSystemMessage */.createUserJoinSystemMessage(message);
   } else if (tmp.GUILD_BOOST === type) {
-    return require(7920) /* createUserPremiumGuildSubscriptionSystemMessage */.createUserPremiumGuildSubscriptionSystemMessage(message);
+    return require("UserPremiumGuildSubscriptionSystemMessage.tsx") /* createUserPremiumGuildSubscriptionSystemMessage */.createUserPremiumGuildSubscriptionSystemMessage(message);
   } else if (tmp.GUILD_BOOST_TIER_1 === type) {
-    return require(7922) /* createUserPremiumGuildSubscriptionTierAchievedSystemMessage */.createUserPremiumGuildSubscriptionTierAchievedSystemMessage(message, closure_3.TIER_1);
+    return require("UserPremiumGuildSubscriptionTierAchievedSystemMessage.tsx") /* createUserPremiumGuildSubscriptionTierAchievedSystemMessage */.createUserPremiumGuildSubscriptionTierAchievedSystemMessage(message, closure_3.TIER_1);
   } else if (tmp.GUILD_BOOST_TIER_2 === type) {
-    return require(7922) /* createUserPremiumGuildSubscriptionTierAchievedSystemMessage */.createUserPremiumGuildSubscriptionTierAchievedSystemMessage(message, closure_3.TIER_2);
+    return require("UserPremiumGuildSubscriptionTierAchievedSystemMessage.tsx") /* createUserPremiumGuildSubscriptionTierAchievedSystemMessage */.createUserPremiumGuildSubscriptionTierAchievedSystemMessage(message, closure_3.TIER_2);
   } else if (tmp.GUILD_BOOST_TIER_3 === type) {
-    return require(7922) /* createUserPremiumGuildSubscriptionTierAchievedSystemMessage */.createUserPremiumGuildSubscriptionTierAchievedSystemMessage(message, closure_3.TIER_3);
+    return require("UserPremiumGuildSubscriptionTierAchievedSystemMessage.tsx") /* createUserPremiumGuildSubscriptionTierAchievedSystemMessage */.createUserPremiumGuildSubscriptionTierAchievedSystemMessage(message, closure_3.TIER_3);
   } else if (tmp.CHANNEL_FOLLOW_ADD === type) {
-    return require(7923) /* createChannelFollowAddSystemMessage */.createChannelFollowAddSystemMessage(message);
+    return require("ChannelFollowAddSystemMessage.tsx") /* createChannelFollowAddSystemMessage */.createChannelFollowAddSystemMessage(message);
   } else if (tmp.GUILD_STREAM === type) {
-    return require(7924) /* createGuildStreamSystemMessage */.createGuildStreamSystemMessage(message);
+    return require("GuildStreamSystemMessage.tsx") /* createGuildStreamSystemMessage */.createGuildStreamSystemMessage(message);
   } else if (tmp.GUILD_DISCOVERY_DISQUALIFIED === type) {
-    return require(7925) /* createGuildDiscoveryDisqualifiedSystemMessage */.createGuildDiscoveryDisqualifiedSystemMessage(message);
+    return require("GuildDiscoverySystemMessage.tsx") /* createGuildDiscoveryDisqualifiedSystemMessage */.createGuildDiscoveryDisqualifiedSystemMessage(message);
   } else if (tmp.GUILD_DISCOVERY_REQUALIFIED === type) {
-    return require(7925) /* createGuildDiscoveryDisqualifiedSystemMessage */.createGuildDiscoveryRequalifiedSystemMessage(message);
+    return require("GuildDiscoverySystemMessage.tsx") /* createGuildDiscoveryDisqualifiedSystemMessage */.createGuildDiscoveryRequalifiedSystemMessage(message);
   } else if (tmp.GUILD_DISCOVERY_GRACE_PERIOD_INITIAL_WARNING === type) {
-    return require(7925) /* createGuildDiscoveryDisqualifiedSystemMessage */.createGuildDiscoveryGracePeriodInitialWarningSystemMessage(message);
+    return require("GuildDiscoverySystemMessage.tsx") /* createGuildDiscoveryDisqualifiedSystemMessage */.createGuildDiscoveryGracePeriodInitialWarningSystemMessage(message);
   } else if (tmp.GUILD_DISCOVERY_GRACE_PERIOD_FINAL_WARNING === type) {
-    return require(7925) /* createGuildDiscoveryDisqualifiedSystemMessage */.createGuildDiscoveryGracePeriodFinalWarningSystemMessage(message);
+    return require("GuildDiscoverySystemMessage.tsx") /* createGuildDiscoveryDisqualifiedSystemMessage */.createGuildDiscoveryGracePeriodFinalWarningSystemMessage(message);
   } else {
     if (tmp.CHAT_INPUT_COMMAND !== type) {
       if (tmp.CONTEXT_MENU_COMMAND !== type) {
         if (tmp.GUILD_INVITE_REMINDER === type) {
           return null;
         } else if (tmp.THREAD_CREATED === type) {
-          return require(7928) /* createNewThreadSystemMessage */.createNewThreadSystemMessage(message);
+          return require("NewThreadSystemMessage.tsx") /* createNewThreadSystemMessage */.createNewThreadSystemMessage(message);
         } else if (tmp.THREAD_STARTER_MESSAGE === type) {
-          return require(7929) /* createThreadStarterSystemMessage */.createThreadStarterSystemMessage(message);
+          return require("ThreadStarterSystemMessage.tsx") /* createThreadStarterSystemMessage */.createThreadStarterSystemMessage(message);
         } else if (tmp.AUTO_MODERATION_ACTION === type) {
-          return require(7930) /* createAutoModerationActionSystemMessage */.createAutoModerationActionSystemMessage(message);
+          return require("AutoModerationActionSystemMessage.tsx") /* createAutoModerationActionSystemMessage */.createAutoModerationActionSystemMessage(message);
         } else if (tmp.ROLE_SUBSCRIPTION_PURCHASE === type) {
-          return require(7939) /* createRoleSubscriptionPurchaseSystemMessage */.createRoleSubscriptionPurchaseSystemMessage(message);
+          return require("RoleSubscriptionPurchaseSystemMessage.tsx") /* createRoleSubscriptionPurchaseSystemMessage */.createRoleSubscriptionPurchaseSystemMessage(message);
         } else if (tmp.PURCHASE_NOTIFICATION === type) {
-          return require(7940) /* createPurchaseNotificationSystemMessage */.createPurchaseNotificationSystemMessage(message);
+          return require("PurchaseNotificationSystemMessage.tsx") /* createPurchaseNotificationSystemMessage */.createPurchaseNotificationSystemMessage(message);
         } else if (tmp.STAGE_START === type) {
-          return require(7942) /* createStageStartSystemMessage */.createStageStartSystemMessage(message);
+          return require("StageStartSystemMessage.tsx") /* createStageStartSystemMessage */.createStageStartSystemMessage(message);
         } else if (tmp.STAGE_END === type) {
-          return require(7943) /* createStageEndSystemMessage */.createStageEndSystemMessage(message);
+          return require("StageEndSystemMessage.tsx") /* createStageEndSystemMessage */.createStageEndSystemMessage(message);
         } else if (tmp.STAGE_TOPIC === type) {
-          return require(7944) /* createStageTopicSystemMessage */.createStageTopicSystemMessage(message);
+          return require("StageTopicSystemMessage.tsx") /* createStageTopicSystemMessage */.createStageTopicSystemMessage(message);
         } else if (tmp.STAGE_SPEAKER === type) {
-          return require(7945) /* createStageSpeakerSystemMessage */.createStageSpeakerSystemMessage(message);
+          return require("StageSpeakerSystemMessage.tsx") /* createStageSpeakerSystemMessage */.createStageSpeakerSystemMessage(message);
         } else if (tmp.STAGE_RAISE_HAND === type) {
-          return require(7946) /* createStageRaiseHandSystemMessage */.createStageRaiseHandSystemMessage(message);
+          return require("StageRaiseHandSystemMessage.tsx") /* createStageRaiseHandSystemMessage */.createStageRaiseHandSystemMessage(message);
         } else if (tmp.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION === type) {
-          return require(7947) /* createApplicationSubscriptionPurchaseSystemMessage */.createApplicationSubscriptionPurchaseSystemMessage(message);
+          return require("ApplicationSubscriptionPurchaseSystemMessage.tsx") /* createApplicationSubscriptionPurchaseSystemMessage */.createApplicationSubscriptionPurchaseSystemMessage(message);
         } else {
           if (tmp.PRIVATE_CHANNEL_INTEGRATION_ADDED !== type) {
             if (tmp.PRIVATE_CHANNEL_INTEGRATION_REMOVED !== type) {
               if (tmp.GUILD_INCIDENT_ALERT_MODE_ENABLED === type) {
-                return require(7949) /* nativeStyleProperties */.createGuildAlertModeEnabledSystemMessage(message);
+                return require("GuildAlertModeSystemMessage.tsx") /* nativeStyleProperties */.createGuildAlertModeEnabledSystemMessage(message);
               } else if (tmp.GUILD_INCIDENT_ALERT_MODE_DISABLED === type) {
-                return require(7949) /* nativeStyleProperties */.createGuildAlertModeDisabledSystemMessage(message);
+                return require("GuildAlertModeSystemMessage.tsx") /* nativeStyleProperties */.createGuildAlertModeDisabledSystemMessage(message);
               } else if (tmp.GUILD_INCIDENT_REPORT_RAID === type) {
-                return require(7956) /* createGuildReportRaidSystemMessage */.createGuildReportRaidSystemMessage(message);
+                return require("GuildReportRaidSystemMessage.tsx") /* createGuildReportRaidSystemMessage */.createGuildReportRaidSystemMessage(message);
               } else if (tmp.GUILD_INCIDENT_REPORT_FALSE_ALARM === type) {
-                return require(7957) /* createGuildReportFalseAlarmSystemMessage */.createGuildReportFalseAlarmSystemMessage(message);
+                return require("GuildReportFalseAlarmSystemMessage.tsx") /* createGuildReportFalseAlarmSystemMessage */.createGuildReportFalseAlarmSystemMessage(message);
               } else if (tmp.POLL_RESULT === type) {
-                return require(7958) /* createPollResultSystemMessage */.createPollResultSystemMessage(message);
+                return require("PollResultSystemMessage.tsx") /* createPollResultSystemMessage */.createPollResultSystemMessage(message);
               } else if (tmp.CHANNEL_LINKED_TO_LOBBY === type) {
-                return require(7960) /* createChannelLinkedToLobbySystemMessage */.createChannelLinkedToLobbySystemMessage(message);
+                return require("ChannelLinkedToLobbySystemMessage.tsx") /* createChannelLinkedToLobbySystemMessage */.createChannelLinkedToLobbySystemMessage(message);
               } else if (tmp.IN_GAME_MESSAGE_NUX === type) {
-                return require(7961) /* createInGameMessageNuxSystemMessage */.createInGameMessageNuxSystemMessage(message);
+                return require("InGameMessageNuxSystemMessage.tsx") /* createInGameMessageNuxSystemMessage */.createInGameMessageNuxSystemMessage(message);
               } else {
                 if (tmp.GUILD_JOIN_REQUEST_ACCEPT_NOTIFICATION !== type) {
                   if (tmp.GUILD_JOIN_REQUEST_REJECT_NOTIFICATION !== type) {
                     if (tmp.GUILD_JOIN_REQUEST_WITHDRAWN_NOTIFICATION !== type) {
                       if (tmp.PREMIUM_GROUP_INVITE === type) {
-                        return require(7963) /* createPremiumGroupInviteSystemMessage */.createPremiumGroupInviteSystemMessage(message);
+                        return require("PremiumGroupInviteSystemMessage.tsx") /* createPremiumGroupInviteSystemMessage */.createPremiumGroupInviteSystemMessage(message);
                       } else if (tmp.PREMIUM_REFERRAL === type) {
-                        return require(7968) /* createReferralSystemMessage */.createReferralSystemMessage(message);
+                        return require("ReferralSystemMessage.tsx") /* createReferralSystemMessage */.createReferralSystemMessage(message);
                       } else if (tmp.VOICE_SESSION === type) {
-                        return require(7980) /* createVoiceSessionSystemMessage */.createVoiceSessionSystemMessage(message);
+                        return require("VoiceSessionSystemMessage.tsx") /* createVoiceSessionSystemMessage */.createVoiceSessionSystemMessage(message);
                       } else if (tmp.FRIEND_REQUEST_ACCEPTED === type) {
-                        return require(7984) /* createFriendRequestAcceptedSystemMessage */.createFriendRequestAcceptedSystemMessage(message);
+                        return require("FriendRequestAcceptedSystemMessage.tsx") /* createFriendRequestAcceptedSystemMessage */.createFriendRequestAcceptedSystemMessage(message);
                       } else if (tmp.GIFTING_PROMPT === type) {
-                        return require(7986) /* createGiftIntentSystemMessage */.createGiftIntentSystemMessage(message);
+                        return require("GiftIntentSystemMessage.tsx") /* createGiftIntentSystemMessage */.createGiftIntentSystemMessage(message);
                       } else {
                         return null;
                       }
                     }
                   }
                 }
-                return require(7962) /* createJoinRequestNotificationSystemMessage */.createJoinRequestNotificationSystemMessage(message);
+                return require("JoinRequestNotificationSystemMessage.tsx") /* createJoinRequestNotificationSystemMessage */.createJoinRequestNotificationSystemMessage(message);
               }
             }
           }
-          return require(7948) /* createPrivateChannelIntegrationSystemMessage */.createPrivateChannelIntegrationSystemMessage(message, message.message.type);
+          return require("PrivateChannelIntegrationSystemMessage.tsx") /* createPrivateChannelIntegrationSystemMessage */.createPrivateChannelIntegrationSystemMessage(message, message.message.type);
         }
       }
     }
-    return require(7926) /* createApplicationCommandSourceSystemMessage */.createApplicationCommandSourceSystemMessage(message);
+    return require("ApplicationCommandSourceSystemMessage.tsx") /* createApplicationCommandSourceSystemMessage */.createApplicationCommandSourceSystemMessage(message);
   }
 };

@@ -38,7 +38,7 @@ export default function VoiceActionSheet(channel) {
       callback(table[10]).terminate();
     };
   }, items1);
-  let obj1 = importDefault(12939);
+  let obj1 = require("../../../nuf_channels/native/NUFChannelsManager.tsx");
   if (obj1.requiresVoiceChannelsOnboard()) {
     obj = { children: null };
     obj = { channel: null };
@@ -72,5 +72,5 @@ export default function VoiceActionSheet(channel) {
     obj4[2] = callback2(closure_4, obj5);
     children = callback(tmp5(5646).ActionSheet, obj4);
   }
-  return tmp8(channel(5610).AnalyticsLocationProvider, { value: importDefault(5610)(importDefault(5630).VOICE_ACTION_SHEET).analyticsLocations, children });
+  return tmp8(channel(5610).AnalyticsLocationProvider, { value: require("../../../app_analytics/useAnalyticsLocations.tsx")(require("../../../app_analytics/AnalyticsLocation.tsx").VOICE_ACTION_SHEET).analyticsLocations, children });
 };

@@ -58,16 +58,16 @@ export const overrideBucket = function overrideBucket(system, closure_0, id) {
       tmp10 = id;
     }
     obj[2] = tmp10;
-    importDefault(709).dispatch(obj);
-    const obj5 = importDefault(709);
+    require("../../Dispatcher.tsx").dispatch(obj);
+    const obj5 = require("../../Dispatcher.tsx");
   } else if (tmp.APEX === system) {
     if (null == id) {
       obj = { type: "APEX_EXPERIMENT_OVERRIDE_DELETE", experimentName: null };
       obj[1] = closure_0;
-      importDefault(709).dispatch(obj);
-      const obj3 = importDefault(709);
+      require("../../Dispatcher.tsx").dispatch(obj);
+      const obj3 = require("../../Dispatcher.tsx");
     } else {
-      obj = importDefault(709);
+      obj = require("../../Dispatcher.tsx");
       const obj1 = { type: "APEX_EXPERIMENT_OVERRIDE_CREATE", experimentName: null, variantId: null };
       obj1[1] = closure_0;
       obj1[2] = id;

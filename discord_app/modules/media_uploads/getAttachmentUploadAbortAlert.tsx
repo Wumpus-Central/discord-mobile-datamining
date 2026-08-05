@@ -4,8 +4,8 @@ import { AbortCodes } from "ME";
 const result = require("items").fileFinishedImporting("modules/media_uploads/getAttachmentUploadAbortAlert.tsx");
 
 export const getAttachmentUploadAbortAlertContent = function getAttachmentUploadAbortAlertContent(code) {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  const stringResult = intl.string(require(1236) /* getSystemLocale */.t.B3vFdU);
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const stringResult = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.B3vFdU);
   if (AbortCodes.TOTAL_ATTACHMENT_SIZE_TOO_LARGE === code) {
     let obj = { title: null, body: null };
     obj[0] = stringResult;

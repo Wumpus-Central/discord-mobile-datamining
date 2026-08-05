@@ -32,6 +32,6 @@ export const CollectiblesProgressiveImage = function CollectiblesProgressiveImag
     obj[1] = Easing.inOut(sharedValue(outer1_2[3]).Easing.ease);
     const result = sharedValue.set(obj.withTiming(1, obj));
   };
-  obj[1] = jsx(importDefault(4146).Image, {});
+  obj[1] = jsx(require("../../reanimated/ReanimatedRexport.tsx").Image, {});
   return <closure_3 />;
 };

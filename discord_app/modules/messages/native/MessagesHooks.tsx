@@ -25,7 +25,7 @@ export const useMessageAuthorActivities = function useMessageAuthorActivities(ar
   }, items);
   const items1 = [sortActivity];
   const items2 = [memo];
-  return _require(589).useStateFromStoresObject(items1, () => memo(outer1_2[9]).mapValues(memo, (arg0, arg1) => primaryActivity.getPrimaryActivity(arg1)), items2);
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items1, () => memo(outer1_2[9]).mapValues(memo, (arg0, arg1) => primaryActivity.getPrimaryActivity(arg1)), items2);
 };
 export const useFetchMessageApplications = function useFetchMessageApplications(arg0) {
   let closure_0 = arg0;
@@ -56,7 +56,7 @@ export const useFetchVoiceChannelInviteStartTimes = function useFetchVoiceChanne
   const _require = stateFromStores4;
   const items = [createGuildRecordFromRust, handleConnectionOpen];
   const items1 = [stateFromStores4];
-  const stateFromStoresObject = _require(589).useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
     const obj = {};
     const values = stateFromStores4.values();
     const iter = values[Symbol.iterator]();

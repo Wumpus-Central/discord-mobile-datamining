@@ -2,10 +2,10 @@
 const require = arg1;
 function defaultRules(uri) {
   let obj = {};
-  const merged = Object.assign(_require(8004).baseRules);
+  const merged = Object.assign(_require("native/ChangeLogUtils.tsx").baseRules);
   obj = {};
   const merged1 = Object.assign(image);
-  if (typeof _require(8004).customRules.image === "function") {
+  if (typeof _require("native/ChangeLogUtils.tsx").customRules.image === "function") {
     const customRules = tmp(8004).customRules;
     image = customRules.image(uri);
   } else {
@@ -15,7 +15,7 @@ function defaultRules(uri) {
   obj.image = obj;
   obj = {};
   const merged3 = Object.assign(link);
-  if (typeof _require(8004).customRules.link === "function") {
+  if (typeof _require("native/ChangeLogUtils.tsx").customRules.link === "function") {
     const customRules2 = tmp(8004).customRules;
     link = customRules2.link(uri);
   } else {
@@ -24,7 +24,7 @@ function defaultRules(uri) {
   const merged4 = Object.assign(link);
   obj.link = obj;
   const merged5 = Object.assign(list);
-  if (typeof _require(8004).customRules.list === "function") {
+  if (typeof _require("native/ChangeLogUtils.tsx").customRules.list === "function") {
     const customRules3 = tmp(8004).customRules;
     list = customRules3.list(uri);
   } else {
@@ -33,7 +33,7 @@ function defaultRules(uri) {
   const merged6 = Object.assign(list);
   obj.list = {};
   obj.interpolation = {
-    order: importDefault(4724).order,
+    order: require("../modules/markup/MarkupTextRule.tsx").order,
     match(arg0) {
       return regex.exec(arg0);
     },
@@ -74,7 +74,7 @@ function defaultRules(uri) {
     obj[2] = outer1_1(outer1_2[0]).parseInline(arg1, formatted, inline);
     return obj;
   };
-  if (typeof _require(8004).customRules.lheading === "function") {
+  if (typeof _require("native/ChangeLogUtils.tsx").customRules.lheading === "function") {
     const customRules4 = tmp(8004).customRules;
     lheading = customRules4.lheading(uri);
   } else {
@@ -83,7 +83,7 @@ function defaultRules(uri) {
   const merged8 = Object.assign(lheading);
   obj.lheading = obj3;
   const merged9 = Object.assign(heading);
-  if (typeof _require(8004).customRules.heading === "function") {
+  if (typeof _require("native/ChangeLogUtils.tsx").customRules.heading === "function") {
     const customRules5 = tmp(8004).customRules;
     heading = customRules5.heading(uri);
   } else {
@@ -92,7 +92,7 @@ function defaultRules(uri) {
   const merged10 = Object.assign(heading);
   obj.heading = {};
   const merged11 = Object.assign(blockQuote);
-  if (typeof _require(8004).customRules.blockQuote === "function") {
+  if (typeof _require("native/ChangeLogUtils.tsx").customRules.blockQuote === "function") {
     const customRules6 = tmp(8004).customRules;
     blockQuote = customRules6.blockQuote(uri);
   } else {
@@ -101,7 +101,7 @@ function defaultRules(uri) {
   const merged12 = Object.assign(blockQuote);
   obj.blockQuote = {};
   const merged13 = Object.assign(paragraph);
-  if (typeof _require(8004).customRules.paragraph === "function") {
+  if (typeof _require("native/ChangeLogUtils.tsx").customRules.paragraph === "function") {
     const customRules7 = tmp(8004).customRules;
     paragraph = customRules7.paragraph(uri);
   } else {
@@ -153,7 +153,7 @@ export default {
       obj[2] = outer1_1(outer1_2[0]).parseInline(arg1, formatted, inline);
       return obj;
     };
-    if (typeof _require(8004).customRules.lheading === "function") {
+    if (typeof _require("native/ChangeLogUtils.tsx").customRules.lheading === "function") {
       const customRules = tmp3(8004).customRules;
       lheading = customRules.lheading(uri);
     } else {
@@ -170,17 +170,17 @@ export default {
     obj = {};
     const merged = Object.assign(defaultRules(uri));
     obj = {};
-    const merged1 = Object.assign(importDefault(3984).defaultRules.newline);
+    const merged1 = Object.assign(require("../../_runtime/03984_t.js").defaultRules.newline);
     obj.newline = obj;
-    obj.text = importDefault(4724);
-    obj.list = importDefault(4742);
-    obj.subtext = importDefault(4743);
+    obj.text = require("../modules/markup/MarkupTextRule.tsx");
+    obj.list = require("../modules/markup/MarkupListRule.tsx");
+    obj.subtext = require("../modules/markup/MarkupSubtextRule.tsx");
     const merged2 = Object.assign(obj);
     return obj;
   }
 };
 export const renderChangelogMessageMarkup = function renderChangelogMessageMarkup(content, uri) {
-  let obj = importDefault(4275);
+  let obj = require("../modules/markup/MarkupUtils.tsx");
   obj = {};
   const merged = Object.assign(defaultRules(uri));
   if (null != arg2) {

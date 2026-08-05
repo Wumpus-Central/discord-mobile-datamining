@@ -24,16 +24,16 @@ export default function TextInputField(field) {
   let str = field.response;
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.formHeader, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: field.label };
-  const items = [callback(require(4281) /* Text */.Text, obj), ];
+  const items = [callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
   obj = { maxLength: MAX_TEXT_RESPONSE_LENGTH, value: null, placeholder: null, onChange: null };
   if (str == null) {
     str = "";
   }
   obj[1] = str;
   const intl = tmp5(1236).intl;
-  obj[2] = intl.string(require(1236) /* getSystemLocale */.t["Sqn+Wh"]);
+  obj[2] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["Sqn+Wh"]);
   obj[3] = field.onChange;
-  items[1] = callback(require(7713) /* TextInput */.TextInput, obj);
+  items[1] = callback(require("../../../../../design/components/TextInput/native/TextInput.native.tsx") /* TextInput */.TextInput, obj);
   obj[1] = items;
   return closure_5(View, obj);
 };

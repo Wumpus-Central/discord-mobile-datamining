@@ -9,7 +9,7 @@ function transitionGroupGetItemKey(id) {
 }
 let closure_6 = [];
 function transitionGroupRenderItem(arg0, arg1, arg2, arg3) {
-  let isAndroidResult = arg2 === require(4629) /* wrapChildrenDefault */.TransitionStates.YEETED;
+  let isAndroidResult = arg2 === require("../../../design/components/TransitionGroup/TransitionGroup.tsx") /* wrapChildrenDefault */.TransitionStates.YEETED;
   if (isAndroidResult) {
     let tmpResult = tmp(4151);
     const keyboardType = tmpResult.getKeyboardType();
@@ -25,7 +25,7 @@ function transitionGroupRenderItem(arg0, arg1, arg2, arg3) {
     obj[0] = arg1;
     obj[1] = arg2;
     obj[2] = arg3;
-    tmp5 = jsx(importDefault(15706), { item: null, state: null, cleanUp: null }, arg0);
+    tmp5 = jsx(require("PortalKeyboardRendererComponent.tsx"), { item: null, state: null, cleanUp: null }, arg0);
   }
   return tmp5;
 }

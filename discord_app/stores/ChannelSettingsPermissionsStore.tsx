@@ -203,8 +203,8 @@ const channelSettingsPermissionsStore = new ChannelSettingsPermissionsStore(requ
         obj[id] = obj;
         set.add(id);
         const OPEN = FormStates.OPEN;
-        let closure_13 = !importDefault(12).isEqual(obj, c15);
-        const obj3 = importDefault(12);
+        let closure_13 = !require("../../_runtime/00012_apply.js").isEqual(obj, c15);
+        const obj3 = require("../../_runtime/00012_apply.js");
         let closure_4 = importAll(3918).areChannelsLocked(c16, c17);
       }
     }
@@ -262,7 +262,7 @@ const channelSettingsPermissionsStore = new ChannelSettingsPermissionsStore(requ
   },
   CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE: function handleSetAdvancedMode(advancedMode) {
     advancedMode = advancedMode.advancedMode;
-    const Storage = require(595) /* Storage */.Storage;
+    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
     const result = Storage.set(ADVANCED_MODE_ON_KEY, advancedMode);
   }
 });

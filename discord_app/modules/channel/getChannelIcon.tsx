@@ -15,14 +15,14 @@ export const getChannelIconURL = function getChannelIconURL(type) {
   if (ChannelTypes.DM === type) {
     const recipients = type.recipients;
     const mapped = recipients.map(mergeGuildAvatar.getUser);
-    const first = callback(mapped.filter(require(1351) /* isDiscordFrontendDevelopment */.isNotNullish), 1)[0];
+    const first = callback(mapped.filter(require("../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish), 1)[0];
     let avatarURL = null;
     if (null != first) {
       avatarURL = first.getAvatarURL(undefined, num, arg2);
     }
     return avatarURL;
   } else if (tmp.GROUP_DM === type) {
-    let obj = importDefault(1416);
+    let obj = require("../../utils/AvatarUtils.tsx");
     obj = { id: null, icon: null, applicationId: null, size: null };
     ({ id: obj2[0], icon: obj2[1] } = type);
     obj[2] = type.getApplicationId();
@@ -35,14 +35,14 @@ export const getChannelIconSource = function getChannelIconSource(type) {
   if (ChannelTypes.DM === type) {
     const recipients = type.recipients;
     const mapped = recipients.map(mergeGuildAvatar.getUser);
-    const first = callback(mapped.filter(require(1351) /* isDiscordFrontendDevelopment */.isNotNullish), 1)[0];
+    const first = callback(mapped.filter(require("../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish), 1)[0];
     let avatarSource = null;
     if (null != first) {
       avatarSource = first.getAvatarSource(undefined);
     }
     return avatarSource;
   } else if (tmp.GROUP_DM === type) {
-    let obj = importDefault(1416);
+    let obj = require("../../utils/AvatarUtils.tsx");
     obj = { id: null, icon: null, applicationId: null, size: 128 };
     ({ id: obj2[0], icon: obj2[1] } = type);
     obj[2] = type.getApplicationId();

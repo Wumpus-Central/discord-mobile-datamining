@@ -17,7 +17,7 @@ function computeCanEveryoneInGuildSeeRoleSubscriptions(c0) {
   if (null == guild) {
     return false;
   } else {
-    const result = require(5780) /* useIsCreatorMonetizationEnabledGuild */.isCreatorMonetizationEnabledGuild(guild);
+    const result = require("../creator_monetization_eligibility/useIsCreatorMonetizationEnabledGuild.tsx") /* useIsCreatorMonetizationEnabledGuild */.isCreatorMonetizationEnabledGuild(guild);
     const features = guild.features;
     let tmp9 = !result;
     if (result) {
@@ -35,22 +35,22 @@ let result = require("ME").fileFinishedImporting("modules/guild_role_subscriptio
 export const areRoleSubscriptionsVisibleInGuild = function areRoleSubscriptionsVisibleInGuild(c0, initialize) {
   let hasRoleSubscriptionsInGuild = computeCanEveryoneInGuildSeeRoleSubscriptions(c0);
   if (!hasRoleSubscriptionsInGuild) {
-    hasRoleSubscriptionsInGuild = require(5781) /* computeHasRoleSubscriptionsInGuild */.computeHasRoleSubscriptionsInGuild(c0, initialize);
-    const obj = require(5781) /* computeHasRoleSubscriptionsInGuild */;
+    hasRoleSubscriptionsInGuild = require("useHasRoleSubscriptionInGuild.tsx") /* computeHasRoleSubscriptionsInGuild */.computeHasRoleSubscriptionsInGuild(c0, initialize);
+    const obj = require("useHasRoleSubscriptionInGuild.tsx") /* computeHasRoleSubscriptionsInGuild */;
   }
   return hasRoleSubscriptionsInGuild;
 };
 export const useRoleSubscriptionsVisibleInGuild = function useRoleSubscriptionsVisibleInGuild(id1) {
   const _require = id1;
-  const tmp = importDefault(5781)(id1);
+  const tmp = require("useHasRoleSubscriptionInGuild.tsx")(id1);
   const items = [createGuildRecordFromRust, initialize];
   const items1 = [id1];
-  let stateFromStores = _require(589).useStateFromStores(items, () => {
+  let stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const items = [outer1_4, outer1_3];
     return outer1_6(closure_0, items);
   }, items1);
-  const obj = _require(589);
-  const shouldHideGuildPurchaseEntryPoints = _require(5782).useShouldHideGuildPurchaseEntryPoints(id1).shouldHideGuildPurchaseEntryPoints;
+  const obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const shouldHideGuildPurchaseEntryPoints = _require("../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx").useShouldHideGuildPurchaseEntryPoints(id1).shouldHideGuildPurchaseEntryPoints;
   let tmp3 = !shouldHideGuildPurchaseEntryPoints;
   if (!shouldHideGuildPurchaseEntryPoints) {
     if (!stateFromStores) {
@@ -62,16 +62,16 @@ export const useRoleSubscriptionsVisibleInGuild = function useRoleSubscriptionsV
 };
 export const useShowRoleSubscriptionsInChannelList = function useShowRoleSubscriptionsInChannelList(id) {
   const _require = id;
-  const tmp2 = importDefault(5781)(id);
+  const tmp2 = require("useHasRoleSubscriptionInGuild.tsx")(id);
   const tmp3 = _require;
   let items = [createGuildRecordFromRust, initialize];
   const items1 = [id];
-  let stateFromStores = _require(589).useStateFromStores(items, () => {
+  let stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const items = [outer1_4, outer1_3];
     return outer1_6(closure_0, items);
   }, items1);
-  const obj = _require(589);
-  const shouldHideGuildPurchaseEntryPoints = _require(5782).useShouldHideGuildPurchaseEntryPoints(id).shouldHideGuildPurchaseEntryPoints;
+  const obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const shouldHideGuildPurchaseEntryPoints = _require("../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx").useShouldHideGuildPurchaseEntryPoints(id).shouldHideGuildPurchaseEntryPoints;
   let tmp5 = !shouldHideGuildPurchaseEntryPoints;
   if (!shouldHideGuildPurchaseEntryPoints) {
     if (!stateFromStores) {
@@ -79,7 +79,7 @@ export const useShowRoleSubscriptionsInChannelList = function useShowRoleSubscri
     }
     tmp5 = stateFromStores;
   }
-  const obj2 = _require(5782);
+  const obj2 = _require("../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx");
   const guildEligibleForGuildProducts = tmp3(5787).useGuildEligibleForGuildProducts(id);
   if (tmp5) {
     let flag = !guildEligibleForGuildProducts;

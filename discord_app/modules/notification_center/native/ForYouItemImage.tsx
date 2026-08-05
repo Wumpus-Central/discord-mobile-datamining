@@ -28,7 +28,7 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   }
   obj = { container: obj, rowImage: { height: num, width: num, borderRadius: result }, guildFallbackImage: null };
   obj[3] = num2;
-  obj = { height: "auto", maxHeight: result, width: "auto", color: importDefault(712).colors.INTERACTIVE_TEXT_DEFAULT };
+  obj = { height: "auto", maxHeight: result, width: "auto", color: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_TEXT_DEFAULT };
   obj[2] = obj;
   return obj;
 });

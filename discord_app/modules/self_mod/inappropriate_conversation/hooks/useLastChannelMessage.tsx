@@ -7,7 +7,7 @@ const result = require("set").fileFinishedImporting("modules/self_mod/inappropri
 export const useLastChannelMessage = function useLastChannelMessage(channelId) {
   const _require = channelId;
   const items = [reinjectEphemerals];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let lastNonCurrentUserMessage = outer1_2.getLastNonCurrentUserMessage(closure_0);
     if (lastNonCurrentUserMessage == null) {
       lastNonCurrentUserMessage = outer1_2.getLastMessage(closure_0);

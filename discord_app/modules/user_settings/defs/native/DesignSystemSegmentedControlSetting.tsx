@@ -11,7 +11,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_SEGMENTED_CONTROL,
   getComponent() {
-    return require(14689) /* UserSettingsDesignSystemSegmentedControl */.default;
+    return require("../../design_system/native/UserSettingsDesignSystemSegmentedControl.tsx") /* UserSettingsDesignSystemSegmentedControl */.default;
   }
 };
 const route = createToggle.createRoute(obj);

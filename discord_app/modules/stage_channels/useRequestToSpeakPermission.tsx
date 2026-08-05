@@ -13,8 +13,8 @@ export const useRequestToSpeakPermission = function useRequestToSpeakPermission(
   const _require = id;
   const items = [ensureGuildLoaded];
   const items1 = [id];
-  const stateFromStores = _require(589).useStateFromStores(items, () => outer1_5.getChannel(closure_0), items1);
-  let obj = _require(589);
+  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_5.getChannel(closure_0), items1);
+  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
   const canEveryoneRoleResult = stateFromStores(3918).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
   const obj2 = stateFromStores(3918);
   [tmp4, tmp5] = callback(React.useState(canEveryoneRoleResult), 2);

@@ -20,16 +20,16 @@ let unpackModuleId;
 const require = arg1;
 function ClearInputButton(onPress) {
   let obj = { style: { borderRadius: 10, paddingLeft: 8 }, accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl.string(require(1236) /* getSystemLocale */.t.VkKicb);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.VkKicb);
   obj[3] = onPress.onPress;
   obj[4] = { top: 8, bottom: 8, right: 8 };
   obj = { source: null, style: null, size: null };
-  obj[0] = importDefault(8279);
+  obj[0] = require("../../../../_runtime/08279_registerAsset.js");
   obj[1] = createCacheKey().closeIcon;
-  obj[2] = require(1297) /* Button */.Icon.Sizes.SMALL;
-  obj[5] = callback(require(1297) /* Button */.Icon, obj);
-  return callback(require(4812) /* PressableBase */.PressableOpacity, obj);
+  obj[2] = require("../../../design/void/native.tsx") /* Button */.Icon.Sizes.SMALL;
+  obj[5] = callback(require("../../../design/void/native.tsx") /* Button */.Icon, obj);
+  return callback(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
 }
 function EditCustomStatusWithPreview(navigation) {
   navigation = navigation.navigation;

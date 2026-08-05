@@ -12,9 +12,9 @@ function ReferralProgramCoachmarkImg() {
   const tmp = callback2();
   let obj = { style: tmp.coachmarkImageContainer, children: null };
   obj = { source: null, style: null };
-  obj[0] = importDefault(15736);
+  obj[0] = require("../../../../../../_runtime/15736_registerAsset.js");
   obj[1] = tmp.coachmarkImage;
-  obj[1] = jsx(importDefault(5236), { source: null, style: null });
+  obj[1] = jsx(require("../../../../../components_native/common/FastImage.tsx"), { source: null, style: null });
   return <View source={null} style={null} />;
 }
 let closure_9 = createCacheKey.createStyles({ coachmarkImageContainer: { alignItems: "center", justifyContent: "center" }, coachmarkImage: { width: 200, height: 112 } });
@@ -24,13 +24,13 @@ export const useReferralProgramCoachmark = function useReferralProgramCoachmark(
   disabled = disabled.disabled;
   let _require;
   let c1;
-  let obj = _require(4101);
-  let result = obj.useIsDismissibleContentDismissed_UNSAFE(_require(1358).DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK);
+  let obj = _require("../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx");
+  let result = obj.useIsDismissibleContentDismissed_UNSAFE(_require("../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK);
   if (!result) {
     result = disabled;
   }
-  const isEligibleSenderForReferralProgram = _require(7972).useIsEligibleSenderForReferralProgram(result);
-  _require(5931);
+  const isEligibleSenderForReferralProgram = _require("../useIsEligibleSenderForReferralProgram.tsx").useIsEligibleSenderForReferralProgram(result);
+  _require("../../../../dismissible_content/hooks/useSelectedDismissibleContent.tsx");
   if (isEligibleSenderForReferralProgram) {
     if (!disabled) {
       let items = [tmp(1358).DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK];

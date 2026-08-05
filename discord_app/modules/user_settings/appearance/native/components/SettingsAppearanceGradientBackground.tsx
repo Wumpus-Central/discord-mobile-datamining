@@ -3,7 +3,7 @@ import importAllResult from "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import THEME_ITEM_WIDTH from "THEME_ITEM_WIDTH";
 import { jsx } from "jsxProd";
-import module_4146 from "module_4146";
+import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import importDefaultResult from "module_4146";
 
 const require = arg1;

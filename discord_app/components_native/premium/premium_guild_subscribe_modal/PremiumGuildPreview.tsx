@@ -19,43 +19,43 @@ function PremiumGuildTierPill(arg0) {
   let obj = { style: tmp.tierPill, children: null };
   obj = { style: tmp.tierPillImage, source: null };
   if (BoostedGuildTiers.NONE === tier) {
-    let tmp22 = importDefault(12788);
-    const tmp21 = importDefault(12787);
+    let tmp22 = require("../../../../_runtime/12788_registerAsset.js");
+    const tmp21 = require("../../../../_runtime/12787_registerAsset.js");
     if (obj5.isThemeDark(theme)) {
       tmp22 = tmp21;
     }
     let tmp7 = tmp22;
-    obj5 = require(4131) /* AccessibilityAnnouncer */;
+    obj5 = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */;
   } else if (tmp6.TIER_1 === tier) {
-    let tmp17 = importDefault(12790);
-    const tmp16 = importDefault(12789);
+    let tmp17 = require("../../../../_runtime/12790_registerAsset.js");
+    const tmp16 = require("../../../../_runtime/12789_registerAsset.js");
     if (obj4.isThemeDark(theme)) {
       tmp17 = tmp16;
     }
     tmp7 = tmp17;
-    obj4 = require(4131) /* AccessibilityAnnouncer */;
+    obj4 = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */;
   } else if (tmp6.TIER_2 === tier) {
-    let tmp12 = importDefault(12792);
-    const tmp11 = importDefault(12791);
+    let tmp12 = require("../../../../_runtime/12792_registerAsset.js");
+    const tmp11 = require("../../../../_runtime/12791_registerAsset.js");
     if (obj3.isThemeDark(theme)) {
       tmp12 = tmp11;
     }
     tmp7 = tmp12;
-    obj3 = require(4131) /* AccessibilityAnnouncer */;
+    obj3 = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */;
   } else if (tmp6.TIER_3 === tier) {
-    let tmp8 = importDefault(12794);
-    const tmp26 = importDefault(12793);
+    let tmp8 = require("../../../../_runtime/12794_registerAsset.js");
+    const tmp26 = require("../../../../_runtime/12793_registerAsset.js");
     if (obj8.isThemeDark(theme)) {
       tmp8 = tmp26;
     }
     tmp7 = tmp8;
-    obj8 = require(4131) /* AccessibilityAnnouncer */;
+    obj8 = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */;
   }
   obj[1] = tmp7;
   const items = [closure_7(closure_4, obj), ];
   obj = { style: tmp.tierPillText, children: null };
-  obj[1] = require(4177) /* getGuildTierFromGuild */.getTierName(tier);
-  items[1] = closure_7(require(1297) /* Button */.LegacyText, obj);
+  obj[1] = require("../../../utils/GuildBoostingUtils.tsx") /* getGuildTierFromGuild */.getTierName(tier);
+  items[1] = closure_7(require("../../../design/void/native.tsx") /* Button */.LegacyText, obj);
   obj[1] = items;
   return closure_8(closure_3, obj);
 }
@@ -78,16 +78,16 @@ const result = require("handleThemeChange").fileFinishedImporting("components_na
 export default function PremiumGuildPreview(guild) {
   guild = guild.guild;
   const tmp = createCacheKey();
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [handleThemeChange];
   obj = { style: items1, children: null };
   items1 = [tmp.guild, guild.style];
   const stateFromStores = obj.useStateFromStores(items, () => theme.theme);
   obj = { guild, size: null, selected: false };
-  obj[1] = require(5661) /* GuildIconSizes */.GuildIconSizes.LARGE;
-  const items2 = [callback(importDefault(5661), obj), ];
+  obj[1] = require("../../../modules/guild/native/GuildIcon.tsx") /* GuildIconSizes */.GuildIconSizes.LARGE;
+  const items2 = [callback(require("../../../modules/guild/native/GuildIcon.tsx"), obj), ];
   const obj1 = { style: tmp.guildInfo, children: null };
-  const items3 = [callback(require(1297) /* Button */.LegacyText, { style: tmp.guildName, children: guild.name }), callback(PremiumGuildTierPill, { tier: guild.premiumTier, theme: stateFromStores })];
+  const items3 = [callback(require("../../../design/void/native.tsx") /* Button */.LegacyText, { style: tmp.guildName, children: guild.name }), callback(PremiumGuildTierPill, { tier: guild.premiumTier, theme: stateFromStores })];
   obj1[1] = items3;
   items2[1] = callback2(closure_3, obj1);
   obj[1] = items2;

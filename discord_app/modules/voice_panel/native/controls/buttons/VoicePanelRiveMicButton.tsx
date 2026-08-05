@@ -24,6 +24,6 @@ export const VoicePanelRiveMicButton = function VoicePanelRiveMicButton(arg0) {
     MicrophoneIcon = tmp3(10766).MicrophoneIcon;
   }
   obj[2] = <MicrophoneIcon color={color} />;
-  obj[1] = jsx(require(3997) /* ManaContext */.MicrophoneRive, { fill: color, on: !muted });
+  obj[1] = jsx(require("../../../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */.MicrophoneRive, { fill: color, on: !muted });
   return <View fill={color} on={!muted} />;
 };

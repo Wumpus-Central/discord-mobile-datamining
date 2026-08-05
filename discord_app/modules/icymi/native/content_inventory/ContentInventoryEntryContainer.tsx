@@ -28,7 +28,7 @@ const iCYMIStyles = createICYMIStyles.createICYMIStyles((marginBottom) => {
   obj[2] = num3;
   obj[1] = obj;
   obj[2] = { marginBottom: marginBottom.margin };
-  obj = { display: "flex", flexDirection: "row", alignItems: "center", gap: importDefault(712).space.PX_12, marginBottom: marginBottom.margin };
+  obj = { display: "flex", flexDirection: "row", alignItems: "center", gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, marginBottom: marginBottom.margin };
   obj[3] = obj;
   obj[4] = { flex: 1 };
   let num4 = 1;
@@ -36,9 +36,9 @@ const iCYMIStyles = createICYMIStyles.createICYMIStyles((marginBottom) => {
     num4 = -1;
   }
   obj[5] = { display: "flex", flexDirection: "row", alignItems: "center", gap: 6, marginBottom: num4, marginTop: 2 };
-  obj4 = require(500) /* set */;
+  obj4 = require("../../../../utils/PlatformUtils.tsx") /* set */;
   const tmp = importDefault;
-  obj[6] = { flexDirection: "row", alignItems: "center", gap: importDefault(712).space.PX_8 };
+  obj[6] = { flexDirection: "row", alignItems: "center", gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
   return obj;
 });
 const result = require("mergeGuildAvatar").fileFinishedImporting("modules/icymi/native/content_inventory/ContentInventoryEntryContainer.tsx");

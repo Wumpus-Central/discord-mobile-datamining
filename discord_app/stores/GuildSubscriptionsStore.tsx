@@ -130,7 +130,7 @@ function handleChannelSelect(arg0) {
     }
     dependencyMap.subscribeToGuild(tmp4);
     flag = false;
-    obj = require(1865) /* getFavoritesAwareGuildName */;
+    obj = require("../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
   }
   return flag;
 }
@@ -204,7 +204,7 @@ let closure_20 = new require("_enqueue")((subscriptions) => {
     }
     continue;
   }
-  let obj = importDefault(709);
+  let obj = require("../Dispatcher.tsx");
   obj = { type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions };
   obj.dispatch(obj);
 });
@@ -350,7 +350,7 @@ const guildSubscriptionsStore = new GuildSubscriptionsStore(require("dispatcher"
         }
       }
       tmp3.subscribeToGuild(tmp2);
-      obj3 = require(1865) /* getFavoritesAwareGuildName */;
+      obj3 = require("../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
     }
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
@@ -396,8 +396,8 @@ const guildSubscriptionsStore = new GuildSubscriptionsStore(require("dispatcher"
         guildId = parent_id.getGuildId();
         let isFavoritesGuildIdResult = guildId !== guildId;
         if (isFavoritesGuildIdResult) {
-          isFavoritesGuildIdResult = require(1865) /* getFavoritesAwareGuildName */.isFavoritesGuildId(guildId);
-          const obj = require(1865) /* getFavoritesAwareGuildName */;
+          isFavoritesGuildIdResult = require("../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */.isFavoritesGuildId(guildId);
+          const obj = require("../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
         }
         if (isFavoritesGuildIdResult) {
           tmp3.subscribeToGuild(guildId);
@@ -614,7 +614,7 @@ let obj = {
         }
       }
       tmp3.subscribeToGuild(tmp2);
-      obj3 = require(1865) /* getFavoritesAwareGuildName */;
+      obj3 = require("../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
     }
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
@@ -660,8 +660,8 @@ let obj = {
         guildId = parent_id.getGuildId();
         let isFavoritesGuildIdResult = guildId !== guildId;
         if (isFavoritesGuildIdResult) {
-          isFavoritesGuildIdResult = require(1865) /* getFavoritesAwareGuildName */.isFavoritesGuildId(guildId);
-          const obj = require(1865) /* getFavoritesAwareGuildName */;
+          isFavoritesGuildIdResult = require("../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */.isFavoritesGuildId(guildId);
+          const obj = require("../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
         }
         if (isFavoritesGuildIdResult) {
           tmp3.subscribeToGuild(guildId);
@@ -785,7 +785,7 @@ let tmp3 = new require("_enqueue")((subscriptions) => {
     }
     continue;
   }
-  let obj = importDefault(709);
+  let obj = require("../Dispatcher.tsx");
   obj = { type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions };
   obj.dispatch(obj);
 });

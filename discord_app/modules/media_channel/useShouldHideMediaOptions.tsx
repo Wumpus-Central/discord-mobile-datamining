@@ -8,7 +8,7 @@ const result = require("defaultAreStatesEqual").fileFinishedImporting("modules/m
 export default function useShouldHideMediaOptions(arg0) {
   const _require = arg0;
   const items = [ensureGuildLoaded];
-  const stateFromStores = _require(647).useStateFromStores(items, () => {
+  const stateFromStores = _require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
     const channel = outer1_2.getChannel(closure_0);
     let parent_id;
     if (channel != null) {

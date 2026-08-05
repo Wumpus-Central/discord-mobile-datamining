@@ -1204,7 +1204,7 @@ function layoutTransitionFunction(originX, SUBTLE_SPRING) {
   if (arg2 === undefined) {
     flag = false;
   }
-  let obj = require(4694) /* CONFIG_NEVER_ANIMATE */;
+  let obj = require("../../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */;
   let str = "animate-always";
   let str2 = "animate-always";
   if (flag) {
@@ -1227,7 +1227,7 @@ function layoutTransitionFunction(originX, SUBTLE_SPRING) {
     str = "animate-never";
   }
   obj = { animations: null, initialValues: null };
-  obj[3] = require(4694) /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetHeight, SUBTLE_SPRING, str);
+  obj[3] = require("../../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetHeight, SUBTLE_SPRING, str);
   obj[0] = obj;
   obj[1] = { originX: originX.currentOriginX, originY: originX.currentOriginY, width: originX.currentWidth, height: originX.currentHeight };
   return obj;

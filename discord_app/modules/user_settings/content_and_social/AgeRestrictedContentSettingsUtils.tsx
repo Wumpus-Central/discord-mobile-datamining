@@ -24,13 +24,13 @@ export const resolveNsfwTogglesWithDefaults = function resolveNsfwTogglesWithDef
   return tmp3;
 };
 export const useViewNsfwCommandsOrDefault = function useViewNsfwCommandsOrDefault() {
-  const ViewNsfwCommands = require(3958) /* explicitContentFromProto */.ViewNsfwCommands;
+  const ViewNsfwCommands = require("../UserSettings.tsx") /* explicitContentFromProto */.ViewNsfwCommands;
   let flag = ViewNsfwCommands.useSetting();
-  const isAgeVerified = require(4500) /* useAgeVerificationRunner */.useIsAgeVerified();
-  const obj = require(4500) /* useAgeVerificationRunner */;
-  const nSFWAllowed = require(8157) /* useNSFWAllowed */.useNSFWAllowed();
-  const obj2 = require(8157) /* useNSFWAllowed */;
-  const tmp3 = require(3964) /* isFeatureAgeGated */.useIsFeatureAgeGated(require(5108) /* AgeGatedFeature */.AgeGatedFeature.COMMANDS_TOGGLE) && !isAgeVerified;
+  const isAgeVerified = require("../../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */.useIsAgeVerified();
+  const obj = require("../../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */;
+  const nSFWAllowed = require("useNSFWAllowed.tsx") /* useNSFWAllowed */.useNSFWAllowed();
+  const obj2 = require("useNSFWAllowed.tsx") /* useNSFWAllowed */;
+  const tmp3 = require("../../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.useIsFeatureAgeGated(require("../../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.COMMANDS_TOGGLE) && !isAgeVerified;
   let tmp4 = !tmp3;
   if (!tmp3) {
     let tmp5 = false !== nSFWAllowed;
@@ -45,13 +45,13 @@ export const useViewNsfwCommandsOrDefault = function useViewNsfwCommandsOrDefaul
   return tmp4;
 };
 export const useViewNsfwGuildsOrDefault = function useViewNsfwGuildsOrDefault() {
-  const ViewNsfwGuilds = require(3958) /* explicitContentFromProto */.ViewNsfwGuilds;
+  const ViewNsfwGuilds = require("../UserSettings.tsx") /* explicitContentFromProto */.ViewNsfwGuilds;
   let flag = ViewNsfwGuilds.useSetting();
-  const isAgeVerified = require(4500) /* useAgeVerificationRunner */.useIsAgeVerified();
-  const obj = require(4500) /* useAgeVerificationRunner */;
-  const nSFWAllowed = require(8157) /* useNSFWAllowed */.useNSFWAllowed();
-  const obj2 = require(8157) /* useNSFWAllowed */;
-  const tmp3 = require(3964) /* isFeatureAgeGated */.useIsFeatureAgeGated(require(5108) /* AgeGatedFeature */.AgeGatedFeature.COMMANDS_TOGGLE) && !isAgeVerified;
+  const isAgeVerified = require("../../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */.useIsAgeVerified();
+  const obj = require("../../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */;
+  const nSFWAllowed = require("useNSFWAllowed.tsx") /* useNSFWAllowed */.useNSFWAllowed();
+  const obj2 = require("useNSFWAllowed.tsx") /* useNSFWAllowed */;
+  const tmp3 = require("../../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.useIsFeatureAgeGated(require("../../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.COMMANDS_TOGGLE) && !isAgeVerified;
   let tmp4 = !tmp3;
   if (!tmp3) {
     let tmp5 = false !== nSFWAllowed;
@@ -66,12 +66,12 @@ export const useViewNsfwGuildsOrDefault = function useViewNsfwGuildsOrDefault() 
   return tmp4;
 };
 export const getViewNsfwCommandsOrDefault = function getViewNsfwCommandsOrDefault() {
-  const ViewNsfwCommands = require(3958) /* explicitContentFromProto */.ViewNsfwCommands;
+  const ViewNsfwCommands = require("../UserSettings.tsx") /* explicitContentFromProto */.ViewNsfwCommands;
   let flag = ViewNsfwCommands.getSetting();
-  const obj = require(4500) /* useAgeVerificationRunner */;
+  const obj = require("../../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */;
   const currentUser = authStore.getCurrentUser();
-  const isAgeVerifiedResult = require(4500) /* useAgeVerificationRunner */.isAgeVerified();
-  let isFeatureAgeGatedResult = require(3964) /* isFeatureAgeGated */.isFeatureAgeGated(require(5108) /* AgeGatedFeature */.AgeGatedFeature.COMMANDS_TOGGLE);
+  const isAgeVerifiedResult = require("../../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */.isAgeVerified();
+  let isFeatureAgeGatedResult = require("../../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.COMMANDS_TOGGLE);
   if (currentUser != null) {
     const nsfwAllowed = currentUser.nsfwAllowed;
   }
@@ -92,12 +92,12 @@ export const getViewNsfwCommandsOrDefault = function getViewNsfwCommandsOrDefaul
   return tmp4;
 };
 export const getViewNsfwGuildsOrDefault = function getViewNsfwGuildsOrDefault() {
-  const ViewNsfwGuilds = require(3958) /* explicitContentFromProto */.ViewNsfwGuilds;
+  const ViewNsfwGuilds = require("../UserSettings.tsx") /* explicitContentFromProto */.ViewNsfwGuilds;
   let flag = ViewNsfwGuilds.getSetting();
-  const obj = require(4500) /* useAgeVerificationRunner */;
+  const obj = require("../../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */;
   const currentUser = authStore.getCurrentUser();
-  const isAgeVerifiedResult = require(4500) /* useAgeVerificationRunner */.isAgeVerified();
-  let isFeatureAgeGatedResult = require(3964) /* isFeatureAgeGated */.isFeatureAgeGated(require(5108) /* AgeGatedFeature */.AgeGatedFeature.COMMANDS_TOGGLE);
+  const isAgeVerifiedResult = require("../../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */.isAgeVerified();
+  let isFeatureAgeGatedResult = require("../../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.COMMANDS_TOGGLE);
   if (currentUser != null) {
     const nsfwAllowed = currentUser.nsfwAllowed;
   }

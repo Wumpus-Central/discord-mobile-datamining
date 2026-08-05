@@ -1,5 +1,5 @@
 // discord_app/modules/mfa/native/MFAModal.tsx
-import module_4490 from "module_4490";
+import ModalActionCreators from "../../../actions/ModalActionCreators.tsx";
 import set from "set";
 import get_ActivityIndicator from "NavigationStack";
 import { jsx } from "jsxProd";
@@ -369,7 +369,7 @@ const result = require("get ActivityIndicator").fileFinishedImporting("modules/m
 
 export { MFAModal };
 export const openMFAModal = function openMFAModal(mfaChallenge, finish, cancel) {
-  let arr = importDefault(4490);
+  let arr = require("../../../actions/ModalActionCreators.tsx");
   arr = arr.push(MFAModal, { mfaChallenge, finish, cancel }, MFA_MODAL_KEY);
-  importDefault(4624).close();
+  require("../../../actions/native/AlertActionCreators.tsx").close();
 };

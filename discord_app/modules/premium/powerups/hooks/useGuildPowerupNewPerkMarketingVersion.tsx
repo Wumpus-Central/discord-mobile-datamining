@@ -17,11 +17,11 @@ const result = require("getUncachedChannelPermissions").fileFinishedImporting("m
 export default function useGuildPowerupNewPerkMarketingVersion(guildId) {
   const _require = guildId;
   const dependencyMap = arg1;
-  const gameServerEnabled = _require(4196).useGameServerEnabled(guildId, "useGuildPowerupNewPerkMarketingVersion");
-  let obj = _require(4196);
+  const gameServerEnabled = _require("../../../game_server/GameServerExperiment.tsx").useGameServerEnabled(guildId, "useGuildPowerupNewPerkMarketingVersion");
+  let obj = _require("../../../game_server/GameServerExperiment.tsx");
   let tmp = _require;
   const items = [stateFromStores];
-  stateFromStores = _require(589).useStateFromStores(items, () => {
+  stateFromStores = _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const guild = stateFromStores.getGuild(closure_0);
     let hasItem;
     if (guild != null) {
@@ -30,14 +30,14 @@ export default function useGuildPowerupNewPerkMarketingVersion(guildId) {
     }
     return hasItem;
   });
-  const obj2 = _require(589);
+  const obj2 = _require("../../../../../discord_common/js/packages/flux/index.tsx");
   const tmp4 = stateFromStores;
-  let serverThemeEnabled = _require(4215).useServerThemeEnabled(guildId, "useGuildPowerupNewPerkMarketingVersion");
-  const obj3 = _require(4215);
+  let serverThemeEnabled = _require("../experiments/ServerThemeExperiment.tsx").useServerThemeEnabled(guildId, "useGuildPowerupNewPerkMarketingVersion");
+  const obj3 = _require("../experiments/ServerThemeExperiment.tsx");
   if (serverThemeEnabled) {
     serverThemeEnabled = obj4.useServerThemeUserEnabled("useGuildPowerupNewPerkMarketingVersion");
   }
-  obj4 = _require(4214);
+  obj4 = _require("../experiments/ServerThemeUserExperiment.tsx");
   const items1 = [serverThemeEnabled, tmp4];
   const stateFromStores1 = tmp(589).useStateFromStores(items1, () => serverThemeEnabled.can(outer1_8.MANAGE_GUILD, stateFromStores.getGuild(closure_0)));
   const items2 = [arg1, gameServerEnabled, stateFromStores, serverThemeEnabled, guildId, stateFromStores1];

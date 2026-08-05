@@ -17,7 +17,7 @@ function getCodeToKeyLanguageCorrection(keyCode, key, arg2) {
       return key;
     }
   }
-  const BACKTICK_CODES = require(13072) /* normalizeKey */.BACKTICK_CODES;
+  const BACKTICK_CODES = require("KeyboardLayoutMapUtils.tsx") /* normalizeKey */.BACKTICK_CODES;
   if (BACKTICK_CODES.has(keyCode)) {
     let tmp2Result = tmp2(13072);
     const layoutMap = tmp2Result.getLayoutMap();
@@ -99,7 +99,7 @@ function keyToCode(toLocaleLowerCase) {
                 tmp27 = arg1 === KeyboardEnvs.BROWSER;
               }
               if (tmp27 === true) {
-                const tmp39 = importDefault(13071);
+                const tmp39 = require("../../../_runtime/13071_keyCode.js");
                 const replaced = toLocaleLowerCase.replace(/^(right|left) (shift|meta|ctrl|alt)$/, "$2").replace("meta", "command");
                 let str13 = "pause/break";
                 if ("pause" !== replaced) {
@@ -135,7 +135,7 @@ function keyToCode(toLocaleLowerCase) {
       if (null != tmp17) {
         return tmp17;
       } else {
-        const keyboardEventShapeFromKey = require(13072) /* normalizeKey */.getKeyboardEventShapeFromKey(toLocaleLowerCase);
+        const keyboardEventShapeFromKey = require("KeyboardLayoutMapUtils.tsx") /* normalizeKey */.getKeyboardEventShapeFromKey(toLocaleLowerCase);
         let keyCode = null;
         if (null != keyboardEventShapeFromKey) {
           keyCode = keyboardEventShapeFromKey.keyCode;
@@ -154,7 +154,7 @@ function keyToCode(toLocaleLowerCase) {
           MACOS2 = tmp8Result.isWindows() ? tmp10.WINDOWS : tmp10.BROWSER;
         }
       }
-      obj4 = require(500) /* set */;
+      obj4 = require("../PlatformUtils.tsx") /* set */;
     }
   } else {
     if (obj.isLinux()) {
@@ -168,7 +168,7 @@ function keyToCode(toLocaleLowerCase) {
         MACOS = tmpResult.isWindows() ? tmp3.WINDOWS : tmp3.BROWSER;
       }
     }
-    obj = require(500) /* set */;
+    obj = require("../PlatformUtils.tsx") /* set */;
   }
 }
 function getKeyConversionForBrowser(str) {
@@ -276,7 +276,7 @@ function codeToKey(items1) {
   if (null != tmp4) {
     return getCodeToKeyLanguageCorrection(tmp2, tmp4, tmp3);
   } else {
-    const keyboardEventShapeFromKeycode = require(13072) /* normalizeKey */.getKeyboardEventShapeFromKeycode(tmp2);
+    const keyboardEventShapeFromKeycode = require("KeyboardLayoutMapUtils.tsx") /* normalizeKey */.getKeyboardEventShapeFromKeycode(tmp2);
     let tmp8 = null;
     if (null != keyboardEventShapeFromKeycode) {
       tmp8 = getCodeToKeyLanguageCorrection(keyboardEventShapeFromKeycode.keyCode, keyboardEventShapeFromKeycode.key, tmp3);
@@ -292,7 +292,7 @@ const result = set.fileFinishedImporting("utils/web/KeyboardUtils.tsx");
 export const getRawCodeFromKey = function getRawCodeFromKey(arg0) {
   if (arg1 !== undefined) {
     if (arg1 === KeyboardEnvs.BROWSER) {
-      let tmp10 = importDefault(13071)(arg0);
+      let tmp10 = require("../../../_runtime/13071_keyCode.js")(arg0);
     } else {
       tmp10 = set[arg0];
     }
@@ -309,7 +309,7 @@ export const getRawCodeFromKey = function getRawCodeFromKey(arg0) {
         MACOS = tmpResult.isWindows() ? tmp3.WINDOWS : tmp3.BROWSER;
       }
     }
-    obj = require(500) /* set */;
+    obj = require("../PlatformUtils.tsx") /* set */;
   }
 };
 export { getCodeToKeyLanguageCorrection };
@@ -539,7 +539,7 @@ export const toString = function toString(arr) {
       obj4 = callback(500);
     }
   });
-  const found = mapped.filter(require(1351) /* isDiscordFrontendDevelopment */.isNotNullish);
+  const found = mapped.filter(require("../GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
   if (flag) {
     const appVersion = global.navigator.appVersion;
     let mapped1 = found;

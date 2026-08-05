@@ -8,7 +8,7 @@ const memoResult = require("noop").memo(function LeaveActivityButton(arg0) {
   let importDefault;
   let require;
   ({ frame: require, setMode: importDefault } = arg0);
-  return jsx(require(15980) /* BaseLeaveActivityButton */.BaseLeaveActivityButton, {
+  return jsx(require("../../../activities/panel/native/LeaveActivityButton.tsx") /* BaseLeaveActivityButton */.BaseLeaveActivityButton, {
     onPress() {
       callback(outer1_3.DISCONNECTED);
       const timerId = setTimeout(() => {

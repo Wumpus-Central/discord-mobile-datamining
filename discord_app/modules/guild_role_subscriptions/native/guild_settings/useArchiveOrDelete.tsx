@@ -135,18 +135,18 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId)
     return applyArgumentsResult;
   }
   let stringResult3 = dependencyMap;
-  let obj = _require(14348);
+  let obj = _require("../../GuildRoleSubscriptionsHooks.tsx");
   const subscriptionListing = obj.useSubscriptionListing(editStateId);
   const removeEditStateId = importAll(14363).useEditStateIds(groupListingId, guildId).removeEditStateId;
   let obj2 = importAll(14363);
-  const deleteSubscriptionListing = _require(14348).useDeleteSubscriptionListing();
+  const deleteSubscriptionListing = _require("../../GuildRoleSubscriptionsHooks.tsx").useDeleteSubscriptionListing();
   ({ error, deleteSubscriptionListing: closure_8, submitting } = deleteSubscriptionListing);
-  let obj3 = _require(14348);
-  const archiveSubscriptionListing = _require(14348).useArchiveSubscriptionListing();
+  let obj3 = _require("../../GuildRoleSubscriptionsHooks.tsx");
+  const archiveSubscriptionListing = _require("../../GuildRoleSubscriptionsHooks.tsx").useArchiveSubscriptionListing();
   let closure_9 = archiveSubscriptionListing.archiveSubscriptionListing;
   ({ submitting: submitting2, error: error2 } = archiveSubscriptionListing);
   let closure_10 = removeEditStateId(null);
-  let obj4 = _require(14348);
+  let obj4 = _require("../../GuildRoleSubscriptionsHooks.tsx");
   const first = callback(importAll(14363).useName(editStateId), 1)[0];
   let archived;
   if (subscriptionListing != null) {
@@ -205,9 +205,9 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId)
     }
   }
   const intl7 = tmp(1236).intl;
-  intl7.formatToPlainString(_require(1236).t.x2qwWL, { tierName: first });
+  intl7.formatToPlainString(_require("../../../../intl/index.native.tsx").t.x2qwWL, { tierName: first });
   const intl8 = tmp(1236).intl;
-  intl8.string(_require(1236).t.GMtG6p);
+  intl8.string(_require("../../../../intl/index.native.tsx").t.GMtG6p);
   let intl9 = tmp(1236).intl;
   let intl10 = intl9.string;
   let string = tmp(1236).t;

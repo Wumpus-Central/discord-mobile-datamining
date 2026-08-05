@@ -46,8 +46,8 @@ export const fetchGameServerCatalog = function fetchGameServerCatalog(closure_0)
     obj[2] = flag2;
     obj[3] = flag2;
     obj[1] = obj;
-    const obj2 = _require(4522);
-    obj[3] = _require(530).rejectWithMigratedError();
+    const obj2 = _require("../../utils/StoreUtils.tsx");
+    obj[3] = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
     let result = obj2.httpGetWithCountryCodeQuery(obj);
     return result.then((body) => {
       const products = body.body.products;
@@ -73,8 +73,8 @@ export const fetchGameServerGlobalCatalog = function fetchGameServerGlobalCatalo
   }
   obj = { url: closure_8.STOREFRONT_COLLECTION_WITH_PRODUCTS(GAME_SERVER_COLLECTION_ID), query: obj, oldFormErrors: true, rejectWithError: null, retries: 2 };
   obj = { locale: _getSystemLocale.locale, include_unpublished_products: flag, include_unpublished_collection: flag };
-  const obj2 = require(4522) /* _httpGetWithCountryCodeQuery */;
-  obj[3] = require(530) /* sendRequest */.rejectWithMigratedError();
+  const obj2 = require("../../utils/StoreUtils.tsx") /* _httpGetWithCountryCodeQuery */;
+  obj[3] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
   let result = obj2.httpGetWithCountryCodeQuery(obj);
   return result.then((body) => {
     const products = body.body.products;
@@ -106,7 +106,7 @@ export const fetchGameServerInstances = function fetchGameServerInstances(arg0) 
     }, 5000);
     let resolved = Promise.resolve();
   } else {
-    const HTTP = _require(530).HTTP;
+    const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     let obj = { url: null, rejectWithError: true, retries: 2, signal: null };
     obj[0] = closure_8.GAME_SERVERS(arg0);
     obj[3] = arg2;
@@ -131,7 +131,7 @@ export const fetchGameServerInstances = function fetchGameServerInstances(arg0) 
 export const fetchGameServerInstructions = function fetchGameServerInstructions(arg0, arg1) {
   const _require = arg0;
   let closure_1 = arg1;
-  let obj = _require(4522);
+  let obj = _require("../../utils/StoreUtils.tsx");
   obj = { url: closure_8.STOREFRONT_PRODUCT_BY_SKU_ID(arg1), query: obj, rejectWithError: true, retries: 3 };
   obj = { locale: _getSystemLocale.locale };
   const result = obj.httpGetWithCountryCodeQuery(obj);
@@ -162,7 +162,7 @@ export const fetchGameServerInstructions = function fetchGameServerInstructions(
 };
 export const acceptGameServerToS = function acceptGameServerToS(arg0, arg1) {
   if (arg0) {
-    let obj = importDefault(698);
+    let obj = require("../../utils/AnalyticsUtils.tsx");
     const currentUser = authStore.getCurrentUser();
     let id;
     if (currentUser != null) {
@@ -175,33 +175,33 @@ export const acceptGameServerToS = function acceptGameServerToS(arg0, arg1) {
   }
 };
 export const resetGameServerRegionState = function resetGameServerRegionState() {
-  importDefault(709).dispatch({ type: "GAME_SERVER_REGION_PING_STATE_RESET" });
+  require("../../Dispatcher.tsx").dispatch({ type: "GAME_SERVER_REGION_PING_STATE_RESET" });
 };
 export const updateGameServerRegionPingState = function updateGameServerRegionPingState(pingUrl, state) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "GAME_SERVER_REGION_PING_STATE_UPDATE", pingUrl, state };
   obj.dispatch(obj);
 };
 export const enableGameServerForGuild = function enableGameServerForGuild(arg0, arg1, game_server_name, game_server_region) {
-  const HTTP = require(530) /* sendRequest */.HTTP;
+  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
   obj = { url: closure_8.GUILD_POWERUP_TOGGLE(arg0, arg1), body: obj, rejectWithError: true, oldFormErrors: true };
   obj = { game_server_name, game_server_region };
   return HTTP.post(obj);
 };
 export const updateGameServerForGuild = function updateGameServerForGuild(arg0, arg1, sku_id, game_server_name) {
-  const HTTP = require(530) /* sendRequest */.HTTP;
+  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
   obj = { url: closure_8.GUILD_POWERUP_UPDATE(arg0, arg1), body: obj, rejectWithError: true, oldFormErrors: true };
   obj = { game_server_name, sku_id };
   return HTTP.patch(obj);
 };
 export const disableGameServerForGuild = function disableGameServerForGuild(arg0, arg1, entitlement_id) {
-  const HTTP = require(530) /* sendRequest */.HTTP;
+  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
   obj = { url: closure_8.GUILD_POWERUP_TOGGLE(arg0, arg1), query: obj, rejectWithError: true, oldFormErrors: true };
   obj = { entitlement_id };
   return HTTP.del(obj);
 };
 export const fetchGameServerRegions = function fetchGameServerRegions(arg0) {
-  const HTTP = require(530) /* sendRequest */.HTTP;
+  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
   const value = HTTP.get({ url: closure_8.GAME_SERVER_REGIONS(arg0), rejectWithError: true, oldFormErrors: true, retries: 3 });
   return value.then((body) => {
     let obj = callback(709);
@@ -216,7 +216,7 @@ export const fetchGameServerRegions = function fetchGameServerRegions(arg0) {
   });
 };
 export const fetchMyGameServerRegions = function fetchMyGameServerRegions() {
-  const HTTP = require(530) /* sendRequest */.HTTP;
+  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
   const value = HTTP.get({ url: closure_8.GAME_SERVER_MY_REGIONS, rejectWithError: true, oldFormErrors: true, retries: 3 });
   return value.then((body) => {
     let obj = callback(709);
@@ -232,7 +232,7 @@ export const fetchMyGameServerRegions = function fetchMyGameServerRegions() {
   });
 };
 export const fetchMyGameServers = function fetchMyGameServers() {
-  const HTTP = require(530) /* sendRequest */.HTTP;
+  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
   const value = HTTP.get({ url: closure_8.GAME_SERVERS_ME, rejectWithError: true, oldFormErrors: true, retries: 3 });
   return value.then((body) => {
     body = body.body;
@@ -250,11 +250,11 @@ export const optimisticallyMarkGameServerResizing = function optimisticallyMarkG
   const gameServers = store.getGameServers();
   const found = gameServers.find((subscription_id) => subscription_id.subscription_id === closure_0);
   if (null != found) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "togglebutton" };
     obj = {};
     const merged = Object.assign(found);
-    obj.status = _require(11758).GameServerStatus.STARTING;
+    obj.status = _require("../../../discord_common/js/shared/shared-constants/GameServerStatus.tsx").GameServerStatus.STARTING;
     obj[2] = obj;
     obj.dispatch(obj);
   }
@@ -266,14 +266,14 @@ export const updateMyGameServerName = function updateMyGameServerName(arg0, name
   if (null == found) {
     let resolved = Promise.resolve();
   } else {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "togglebutton" };
     obj = {};
     const merged = Object.assign(found);
     obj.name = name;
     obj[2] = obj;
     obj.dispatch(obj);
-    let HTTP = _require(530).HTTP;
+    let HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     const obj1 = { url: null, body: null, rejectWithError: true };
     obj1[0] = closure_8.GAME_SERVER_ME(found.id);
     const obj2 = { name: null };
@@ -333,7 +333,7 @@ export const updateMyGameServerName = function updateMyGameServerName(arg0, name
 };
 export const wakeGameServer = function wakeGameServer(arg0, arg1) {
   const _require = arg0;
-  const HTTP = _require(530).HTTP;
+  const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
   let obj = { url: closure_8.GAME_SERVER_WAKE(arg0, arg1), rejectWithError: true };
   return HTTP.post({ url: closure_8.GAME_SERVER_WAKE(arg0, arg1), rejectWithError: true }).then((body) => {
     let obj = outer1_1(outer1_2[5]);

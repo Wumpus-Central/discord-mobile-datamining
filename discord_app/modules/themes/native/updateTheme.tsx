@@ -5,8 +5,8 @@ const result = require("enforcing").fileFinishedImporting("modules/themes/native
 
 export const updateTheme = function updateTheme(arg0) {
   if (obj.isAndroid()) {
-    let updateThemeResult = importDefault(13619).updateTheme(arg0);
-    const obj2 = importDefault(13619);
+    let updateThemeResult = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeThemeModule.tsx").updateTheme(arg0);
+    const obj2 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeThemeModule.tsx");
   } else {
     const DCDTheme = NativeModules.DCDTheme;
     updateThemeResult = DCDTheme.updateTheme(arg0);

@@ -34,9 +34,9 @@ function handleUpdateVADPermission() {
   if (flag2) {
     const obj = { type: "SET_VAD_PERMISSION", hasPermission: null };
     obj[1] = flag;
-    importDefault(709).dispatch(obj);
+    require("../Dispatcher.tsx").dispatch(obj);
     flag2 = true;
-    const obj2 = importDefault(709);
+    const obj2 = require("../Dispatcher.tsx");
   }
   return flag2;
 }

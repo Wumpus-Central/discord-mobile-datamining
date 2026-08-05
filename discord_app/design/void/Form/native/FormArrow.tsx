@@ -24,22 +24,22 @@ export default function FormArrow(arg0) {
     obj[0] = tmp.wrapper;
     obj = { maxFontSizeMultiplier: 1.5, variant: "text-md/medium", color: "text-muted", children: null };
     obj[3] = label;
-    const items = [callback(require(4281) /* Text */.Text, obj), ];
+    const items = [callback(require("../../../components/Text/native/Text.tsx") /* Text */.Text, obj), ];
     const obj1 = { style: null, source: null, size: null };
     const items1 = [tmp.icon, style];
     obj1[0] = items1;
-    obj1[1] = importDefault(5324);
-    obj1[2] = require(1297) /* Button */.Icon.Sizes.MEDIUM;
-    items[1] = callback(require(1297) /* Button */.Icon, obj1);
+    obj1[1] = require("../../../../../_runtime/05324_registerAsset.js");
+    obj1[2] = require("../../native.tsx") /* Button */.Icon.Sizes.MEDIUM;
+    items[1] = callback(require("../../native.tsx") /* Button */.Icon, obj1);
     obj[1] = items;
     let tmp6 = callback2(View, obj);
   } else {
     obj = { style: null, source: null, size: null };
     const items2 = [tmp.icon, style];
     obj[0] = items2;
-    obj[1] = importDefault(5324);
-    obj[2] = require(1297) /* Button */.Icon.Sizes.MEDIUM;
-    tmp6 = callback(require(1297) /* Button */.Icon, obj);
+    obj[1] = require("../../../../../_runtime/05324_registerAsset.js");
+    obj[2] = require("../../native.tsx") /* Button */.Icon.Sizes.MEDIUM;
+    tmp6 = callback(require("../../native.tsx") /* Button */.Icon, obj);
   }
   return tmp6;
 };

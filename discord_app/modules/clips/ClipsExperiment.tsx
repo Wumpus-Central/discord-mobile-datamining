@@ -12,7 +12,7 @@ const result = require("GuildFeatures").fileFinishedImporting("modules/clips/Cli
 
 export const ClipsExperiment = apexExperiment;
 export const areClipsAvailable = function areClipsAvailable() {
-  if (importDefault(4344)(_detectH265HardwareDecode)) {
+  if (require("isClientClipsCapable.tsx")(_detectH265HardwareDecode)) {
     currentUser = currentUser.getCurrentUser();
     let premiumType;
     if (currentUser != null) {
@@ -29,9 +29,9 @@ export const areClipsAvailable = function areClipsAvailable() {
   tmp = importDefault;
 };
 export const useIsClipsAvailable = function useIsClipsAvailable() {
-  const tmp = importDefault(4344)(_detectH265HardwareDecode);
+  const tmp = require("isClientClipsCapable.tsx")(_detectH265HardwareDecode);
   const items = [mergeGuildAvatar];
-  const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => {
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let premiumType;
     if (currentUser != null) {
@@ -39,7 +39,7 @@ export const useIsClipsAvailable = function useIsClipsAvailable() {
     }
     return callback(table[6]).isPremiumAtLeast(premiumType, TIER_2.TIER_2);
   });
-  const obj = require(589) /* initialize */;
+  const obj = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   return (apexExperiment.getConfig({ location: "useEnableClips" }).enableClips || stateFromStores) && tmp;
 };
 export const isUserPremiumTypeForClipsEarlyAccess = function isUserPremiumTypeForClipsEarlyAccess(premiumType) {
@@ -47,7 +47,7 @@ export const isUserPremiumTypeForClipsEarlyAccess = function isUserPremiumTypeFo
   if (premiumType != null) {
     premiumType = premiumType.premiumType;
   }
-  return importDefault(3931).isPremiumAtLeast(premiumType, PremiumTypes.TIER_2);
+  return require("../../utils/PremiumUtils.tsx").isPremiumAtLeast(premiumType, PremiumTypes.TIER_2);
 };
 export function isScreenshotKeybindEnabled() {
   return false;

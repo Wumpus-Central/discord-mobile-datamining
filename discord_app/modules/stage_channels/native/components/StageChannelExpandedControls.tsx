@@ -26,7 +26,7 @@ const memoResult = require("noop").memo((channel) => {
   const items = [createGuildRecordFromRust];
   const items1 = [channel.guild_id];
   const stateFromStores = obj1.useStateFromStores(items, () => outer1_6.getGuild(channel.guild_id), items1);
-  const tmp4 = importDefault(10211)(channel.id);
+  const tmp4 = require("../../useCanSpeakInChannel.tsx")(channel.id);
   const items2 = [reset];
   const items3 = [channel.id];
   const stateFromStoresArray = channel(589).useStateFromStoresArray(items2, () => outer1_4.getAllApplicationStreamsForChannel(channel.id), items3);

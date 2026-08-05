@@ -12,7 +12,7 @@ function handleFetchEmbeddedActivityShelfSuccess(assets) {
     let tmp5 = importDefault;
     let tmp6 = dependencyMap;
     let tmp4 = closure_4;
-    let obj4 = importDefault(12);
+    let obj4 = require("../../../_runtime/00012_apply.js");
     let keyByResult = obj4.keyBy(assets[key10012], "name");
     if (keyByResult == null) {
       keyByResult = {};
@@ -72,7 +72,7 @@ obj = {
   APPLICATION_ASSETS_UPDATE: function handleUpdateApplicationAssets(assets) {
     assets = assets.assets;
     if (null != assets) {
-      let obj = importDefault(12);
+      let obj = require("../../../_runtime/00012_apply.js");
       let keyByResult = obj.keyBy(assets, "name");
       if (keyByResult == null) {
         keyByResult = {};

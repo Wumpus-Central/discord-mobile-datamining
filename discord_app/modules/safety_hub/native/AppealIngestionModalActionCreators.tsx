@@ -4,14 +4,14 @@ const result = require("AppealIngestionModal").fileFinishedImporting("modules/sa
 
 export default {
   open(classificationId) {
-    let obj = importDefault(709);
+    let obj = require("../../../Dispatcher.tsx");
     obj = { type: "SAFETY_HUB_APPEAL_OPEN", classificationId: classificationId.classificationId };
     obj.dispatch(obj);
-    importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(11213, dependencyMap.paths), classificationId, APPEAL_INGESTION_MODAL_KEY);
+    require("../../../actions/ModalActionCreators.tsx").pushLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(11213, dependencyMap.paths), classificationId, APPEAL_INGESTION_MODAL_KEY);
   },
   close() {
-    importDefault(4490).popWithKey(APPEAL_INGESTION_MODAL_KEY);
-    const obj = importDefault(4490);
-    importDefault(709).dispatch({ type: "SAFETY_HUB_APPEAL_CLOSE" });
+    require("../../../actions/ModalActionCreators.tsx").popWithKey(APPEAL_INGESTION_MODAL_KEY);
+    const obj = require("../../../actions/ModalActionCreators.tsx");
+    require("../../../Dispatcher.tsx").dispatch({ type: "SAFETY_HUB_APPEAL_CLOSE" });
   }
 };

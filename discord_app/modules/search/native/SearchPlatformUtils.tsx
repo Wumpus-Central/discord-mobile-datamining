@@ -40,13 +40,13 @@ function delayUntilNavigationComplete(arg0) {
 }
 function getUrlIcon(target) {
   if (null == target) {
-    return require(4229) /* LinkIcon */.LinkIcon;
+    return require("../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx") /* LinkIcon */.LinkIcon;
   } else {
     if (null == obj.safeParseWithQuery(target)) {
-      return require(4229) /* LinkIcon */.LinkIcon;
+      return require("../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx") /* LinkIcon */.LinkIcon;
     } else {
       if (tmp10Result.isDiscordUrl(target)) {
-        return require(9451) /* ClydeIcon */.ClydeIcon;
+        return require("../../../design/components/Icon/native/redesign/generated/ClydeIcon.tsx") /* ClydeIcon */.ClydeIcon;
       } else {
         let num = 0;
         if (0 < length.length) {
@@ -56,11 +56,11 @@ function getUrlIcon(target) {
           }
           return length[num].Icon;
         }
-        return require(4229) /* LinkIcon */.LinkIcon;
+        return require("../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx") /* LinkIcon */.LinkIcon;
       }
       tmp10Result = tmp10(1467);
     }
-    obj = importDefault(1467);
+    obj = require("../../../utils/URLUtils.tsx");
     tmp10 = importDefault;
   }
 }
@@ -71,23 +71,23 @@ function getGridItemBorderStyles(numItems) {
   const rounded = Math.ceil(numItems.numItems / numColumns);
   if (0 === itemIndex) {
     let obj = { borderTopLeftRadius: null };
-    obj[0] = importDefault(712).radii.lg;
+    obj[0] = require("../../../../discord_common/js/packages/tokens/native.tsx").radii.lg;
     let tmp4 = obj;
   } else if (itemIndex === numColumns - 1) {
     obj = { borderTopRightRadius: null };
-    obj[0] = importDefault(712).radii.lg;
+    obj[0] = require("../../../../discord_common/js/packages/tokens/native.tsx").radii.lg;
     tmp4 = obj;
   } else {
     if (itemIndex % numColumns == 0) {
       if (tmp2 === tmp3) {
         const obj1 = { borderBottomLeftRadius: null };
-        obj1[0] = importDefault(712).radii.lg;
+        obj1[0] = require("../../../../discord_common/js/packages/tokens/native.tsx").radii.lg;
         tmp4 = obj1;
       }
     }
     if (itemIndex === rounded * numColumns - 1) {
       obj = { borderBottomRightRadius: null };
-      obj[0] = importDefault(712).radii.lg;
+      obj[0] = require("../../../../discord_common/js/packages/tokens/native.tsx").radii.lg;
       tmp4 = obj;
     }
   }
@@ -155,7 +155,7 @@ function onInitialFetchMessagesSuccess(tabEntries) {
     }
     return tmp2;
   })) {
-    let obj = importDefault(11644);
+    let obj = require("tracking/Tracking.tsx");
     obj = { searchContext: null };
     obj[0] = tabEntries.searchContext;
     const result = obj.trackSearchEmptyMessageResult(obj);
@@ -163,7 +163,7 @@ function onInitialFetchMessagesSuccess(tabEntries) {
 }
 function onFetchMessagesStart(searchQueryString) {
   searchQueryString = searchQueryString.searchQueryString;
-  importDefault(11647).updateSearchQuery(searchQueryString.searchContext, (setSearchResultsQuery) => setSearchResultsQuery.setSearchResultsQuery(searchQueryString));
+  require("SearchPlatformActionCreators.tsx").updateSearchQuery(searchQueryString.searchContext, (setSearchResultsQuery) => setSearchResultsQuery.setSearchResultsQuery(searchQueryString));
 }
 function fetchInitialMessages(closure_0) {
   const _require = closure_0;
@@ -177,7 +177,7 @@ function fetchInitialMessages(closure_0) {
     }
     tmp4 = closure_5;
   } else {
-    let obj = _require(11624);
+    let obj = _require("../SearchUtils.tsx");
     const searchTabFetchId = obj.getSearchTabFetchId(closure_0, tmp3[0], queryString);
     let obj1 = store;
     if (!store.getIsFetching(searchTabFetchId)) {
@@ -205,21 +205,21 @@ function fetchInitialMessages(closure_0) {
       obj1[0] = cursor;
       obj[7] = obj1;
       const obj6 = queryString(11631);
-      obj[8] = _require(3958).SearchResultExactCountEnabled.getSetting();
+      obj[8] = _require("../../user_settings/UserSettings.tsx").SearchResultExactCountEnabled.getSetting();
       obj[9] = constants2.NEWEST;
       const tabMessages = obj6.fetchTabMessages(obj);
-      const SearchResultExactCountEnabled = _require(3958).SearchResultExactCountEnabled;
+      const SearchResultExactCountEnabled = _require("../../user_settings/UserSettings.tsx").SearchResultExactCountEnabled;
     }
   }
 }
 function syncAutocomplete(closure_0) {
   const queryString = store2.getQueryString(closure_0, true);
-  let obj = require(11624) /* SearchTokenTypes */;
+  let obj = require("../SearchUtils.tsx") /* SearchTokenTypes */;
   const tokenizeQueryResult = obj.tokenizeQuery(queryString);
-  const selectionScope = require(11624) /* SearchTokenTypes */.getSelectionScope(tokenizeQueryResult, queryString.length - 1, queryString.length - 1);
-  const obj2 = require(11624) /* SearchTokenTypes */;
+  const selectionScope = require("../SearchUtils.tsx") /* SearchTokenTypes */.getSelectionScope(tokenizeQueryResult, queryString.length - 1, queryString.length - 1);
+  const obj2 = require("../SearchUtils.tsx") /* SearchTokenTypes */;
   obj = { searchContext: closure_0, tokens: tokenizeQueryResult, cursorScope: selectionScope, queryString };
-  const result = importDefault(11631).updateAutocompleteQuery(obj);
+  const result = require("../SearchActionCreators.tsx").updateAutocompleteQuery(obj);
 }
 ({ CHANNEL_SEARCH_INITIAL_MESSAGE_TABS: c5, MAX_SEARCH_RESULTS_LIMIT: closure_6, MESSAGE_SEARCH_RESULT_TABS: error, SEARCH_INITIAL_MESSAGE_TABS: metroImportAll, SEARCH_TABS_TO_SEARCH_QUERY_LIMITS: c9, SearchFileTypes: c10, SearchLinkTypes: unpackModuleId, SearchMediaTypes: closure_12 } = MessageEmbedTypes);
 ({ PLATFORM_REGEX_ICON_PAIRS: map1, SEARCH_TEXT_INPUT_DEBOUNCE_TIME } = SEARCH_TEXT_INPUT_DEBOUNCE_TIME);
@@ -229,10 +229,10 @@ obj[8] = require("isDiscordProxiedAssetUrl").debounce(fetchInitialMessages, SEAR
 obj[9] = function fetchNextMessages(searchContext, tab, arg2) {
   const _require = searchContext;
   const queryString = store2.getQueryString(searchContext);
-  let obj = _require(11624);
+  let obj = _require("../SearchUtils.tsx");
   const searchTabFetchId = obj.getSearchTabFetchId(searchContext, tab, queryString);
   const bound = Math.min(dependencyMap[tab], closure_6);
-  const searchTabFetchId1 = _require(11624).getSearchTabFetchId(searchContext, tab, queryString);
+  const searchTabFetchId1 = _require("../SearchUtils.tsx").getSearchTabFetchId(searchContext, tab, queryString);
   if (!store.getIsInitialFetchComplete(searchTabFetchId1)) {
     const isFetching = obj3.getIsFetching(searchTabFetchId);
     let flag = false;
@@ -287,9 +287,9 @@ obj[9] = function fetchNextMessages(searchContext, tab, arg2) {
 obj[10] = syncAutocomplete;
 obj[11] = require("isDiscordProxiedAssetUrl").debounce(syncAutocomplete, SEARCH_TEXT_INPUT_DEBOUNCE_TIME);
 obj[12] = function navigateToSearchWithPrefetch(closure_8, closure_9) {
-  let obj = importDefault(11631);
+  let obj = require("../SearchActionCreators.tsx");
   const result = obj.initializeAutocomplete(closure_9);
-  const result1 = importDefault(11647).initializeSearchQuery(closure_9);
+  const result1 = require("SearchPlatformActionCreators.tsx").initializeSearchQuery(closure_9);
   fetchInitialMessages(closure_9);
   obj = { searchContext: closure_9 };
   closure_8.navigate("search", obj);

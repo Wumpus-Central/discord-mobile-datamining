@@ -434,7 +434,7 @@ export const useIsDismissibleContentDismissed_UNSAFE = function useIsDismissible
     obj = {};
   }
   const items = [handleConnectionClosedOrResumed, handleConnectionOpen];
-  return _require(589).useStateFromStores(items, () => outer1_6(closure_0, obj));
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_6(closure_0, obj));
 };
 export const UNSAFE_markDismissibleContentAsDismissed = function UNSAFE_markDismissibleContentAsDismissed(DONUT_MOBILE_NUX, arg1) {
   const self = this;
@@ -447,7 +447,7 @@ export const UNSAFE_markDismissibleContentAsDismissed = function UNSAFE_markDism
   return applyArgumentsResult;
 };
 export const UNSAFE_isSnowflakeBoundDismissibleContentDismissed = function UNSAFE_isSnowflakeBoundDismissibleContentDismissed(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, promotionId) {
-  let obj = require(4123) /* useNewUserDismissibleContent */;
+  let obj = require("NewUserDismissibleContentRegistry.tsx") /* useNewUserDismissibleContent */;
   if (obj.disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE)) {
     return { isDismissed: true, lastDismissedSnowflakeId: null };
   } else {
@@ -460,8 +460,8 @@ export const UNSAFE_isSnowflakeBoundDismissibleContentDismissed = function UNSAF
     }
     let tmp6 = null != prop;
     if (tmp6) {
-      tmp6 = 1 !== importDefault(11).compare(promotionId, prop);
-      const obj2 = importDefault(11);
+      tmp6 = 1 !== require("../../utils/SnowflakeUtils.tsx").compare(promotionId, prop);
+      const obj2 = require("../../utils/SnowflakeUtils.tsx");
     }
     obj = { isDismissed: null, lastDismissedSnowflakeId: null };
     obj[0] = tmp6;

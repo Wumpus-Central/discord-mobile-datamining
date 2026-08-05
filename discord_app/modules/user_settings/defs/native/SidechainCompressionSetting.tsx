@@ -6,8 +6,8 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["/jwMtn"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["/jwMtn"]);
   },
   parent: require("MobileSetting").MobileSetting.VOICE,
   usePredicate() {
@@ -15,14 +15,14 @@ createToggle = {
   },
   useValue: function useSidechainCompressionSettingValue() {
     const items = [_detectH265HardwareDecode];
-    return require(589) /* initialize */.useStateFromStores(items, () => sidechainCompression.getSidechainCompression());
+    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => sidechainCompression.getSidechainCompression());
   },
   onValueChange(arg0) {
-    return importDefault(9077).setSidechainCompression(arg0);
+    return require("../../../../actions/AudioActionCreators.tsx").setSidechainCompression(arg0);
   },
   useDescription() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.zlA23F);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.zlA23F);
   }
 };
 createToggle = createToggle.createToggle(createToggle);

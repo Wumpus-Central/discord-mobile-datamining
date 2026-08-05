@@ -526,10 +526,10 @@ export { ConnectedUserAccount };
 export { ConnectedApplicationUserRoleAccount };
 export const useAppplicationRoleConnectionItems = function useAppplicationRoleConnectionItems(arr) {
   const _require = arg1;
-  const theme = _require(3997).useThemeContext().theme;
-  const obj = _require(3997);
+  const theme = _require("../../../../discord_common/js/packages/design/native.tsx").useThemeContext().theme;
+  const obj = _require("../../../../discord_common/js/packages/design/native.tsx");
   const items = [_getSystemLocale];
-  const dependencyMap = _require(589).useStateFromStores(items, () => _getSystemLocale.locale);
+  const dependencyMap = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => _getSystemLocale.locale);
   return arr.map((applicationRoleConnection) => {
     obj = { children: outer1_14(outer1_19, obj) };
     obj = { applicationRoleConnection, theme: c1, locale: theme, style: id };

@@ -9,7 +9,7 @@ const result = require("participantFromServer").fileFinishedImporting("modules/a
 
 export const trackActivityThermalStateNoticeShown = function trackActivityThermalStateNoticeShown() {
   currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();
-  let obj = require(3903) /* getEmbeddedActivityLocationChannelId */;
+  let obj = require("utils/embeddedActivityLocationUtils.tsx") /* getEmbeddedActivityLocationChannelId */;
   let _location;
   if (currentEmbeddedActivity != null) {
     _location = currentEmbeddedActivity.location;
@@ -31,5 +31,5 @@ export const trackActivityThermalStateNoticeShown = function trackActivityTherma
   }
   obj[3] = guild_id;
   obj[4] = mediaSessionId.getMediaSessionId();
-  importDefault(698).track(AnalyticEvents.ACTIVITY_THERMAL_STATE_NOTICE_SHOWN, obj);
+  require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.ACTIVITY_THERMAL_STATE_NOTICE_SHOWN, obj);
 };

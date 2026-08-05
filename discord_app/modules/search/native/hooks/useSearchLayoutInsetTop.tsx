@@ -2,5 +2,5 @@
 const result = require("set").fileFinishedImporting("modules/search/native/hooks/useSearchLayoutInsetTop.tsx");
 
 export default function useSearchLayoutInsetTop() {
-  return importDefault(1581)().top + 8;
+  return require("../../../safe_area/useSafeAreaInsets.native.tsx")().top + 8;
 };

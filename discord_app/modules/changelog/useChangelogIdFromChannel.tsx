@@ -7,7 +7,7 @@ const result = require("set").fileFinishedImporting("modules/changelog/useChange
 export default function useChangelogIdFromChannel(arg0) {
   const _require = arg0;
   const items = [reinjectEphemerals];
-  const stateFromStores = _require(589).useStateFromStores(items, () => outer1_2.getLastMessage(closure_0));
+  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_2.getLastMessage(closure_0));
   let changelogId;
   if (stateFromStores != null) {
     changelogId = stateFromStores.changelogId;

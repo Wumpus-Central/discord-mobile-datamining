@@ -19,19 +19,19 @@ const result = require("jsxProd").fileFinishedImporting("modules/premium/native/
 
 export default function PremiumGiftDMSuccessBody() {
   const tmp = createCacheKey();
-  let obj = require(9529) /* NativeGiftContextProvider */;
+  let obj = require("../../../payments/native/NativeGiftContext.tsx") /* NativeGiftContextProvider */;
   obj = { children: null };
   obj = { children: null };
-  obj[0] = callback(importDefault(9503), { giftStyle: obj.useNativeGiftContext().giftStyle });
+  obj[0] = callback(require("PremiumGiftBackgroundAnimation.android.tsx"), { giftStyle: obj.useNativeGiftContext().giftStyle });
   const items = [callback(View, obj), , ];
   const obj1 = { style: tmp.title, variant: "heading-lg/bold", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj1[2] = intl.string(require(1236) /* getSystemLocale */.t.MqZXbv);
-  items[1] = callback(require(4281) /* Text */.Text, obj1);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj1[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.MqZXbv);
+  items[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
   const obj2 = { style: tmp.description, variant: "text-md/medium", children: null };
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj2[2] = intl2.string(require(1236) /* getSystemLocale */.t.Y1keV0);
-  items[2] = callback(require(4281) /* Text */.Text, obj2);
+  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj2[2] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Y1keV0);
+  items[2] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
   obj[0] = items;
   return callback2(closure_6, obj);
 };

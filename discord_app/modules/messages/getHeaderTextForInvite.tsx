@@ -10,9 +10,9 @@ export const getHeaderTextForInvite = function getHeaderTextForInvite(arg0) {
   let isVoiceChannel;
   ({ isOwnInvite, isGuest, isStage, isStream } = arg0);
   ({ isVoiceChannel, isHubGuild } = arg0);
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
   const string = intl.string;
-  let N85DCl = require(1236) /* getSystemLocale */.t;
+  let N85DCl = require("../../intl/index.native.tsx") /* getSystemLocale */.t;
   if (isVoiceChannel) {
     if (!isOwnInvite) {
       if (isStream) {

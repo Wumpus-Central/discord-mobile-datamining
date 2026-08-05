@@ -24,7 +24,7 @@ function trackImpression(type, arg1, arg2) {
     flag2 = false;
   }
   ({ name, type, properties } = type);
-  if (type.type === require(503) /* encodeProperties */.ImpressionTypes.MODAL) {
+  if (type.type === require("../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionTypes.MODAL) {
     if (null == type.name) {
       let obj = callback4();
     }
@@ -50,7 +50,7 @@ function trackImpression(type, arg1, arg2) {
   obj = { impression_type: type, location: callback3() };
   tmpResult = tmp(4479);
   const merged = Object.assign(tmpResult.collectGuildAnalyticsMetadata(guild_id));
-  const merged1 = Object.assign(require(4479) /* collectGuildAnalyticsMetadata */.collectChannelAnalyticsMetadata(channel.getChannel(channel_id)));
+  const merged1 = Object.assign(require("AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */.collectChannelAnalyticsMetadata(channel.getChannel(channel_id)));
   const merged2 = Object.assign(properties);
   const result = tmpResult.expandEventProperties(obj);
   if (flag) {

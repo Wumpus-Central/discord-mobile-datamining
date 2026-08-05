@@ -29,16 +29,16 @@ function useInputStyles(size) {
     flag3 = true;
   }
   if ("sm" === str) {
-    let INPUT_FIELD_RADIUS_LG = importDefault(712).modules.mobile.INPUT_FIELD_RADIUS_SM;
+    let INPUT_FIELD_RADIUS_LG = require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.INPUT_FIELD_RADIUS_SM;
   } else if ("md" === str) {
-    INPUT_FIELD_RADIUS_LG = importDefault(712).modules.mobile.INPUT_FIELD_RADIUS_MD;
+    INPUT_FIELD_RADIUS_LG = require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.INPUT_FIELD_RADIUS_MD;
   } else if ("lg" === str) {
-    INPUT_FIELD_RADIUS_LG = importDefault(712).modules.mobile.INPUT_FIELD_RADIUS_LG;
+    INPUT_FIELD_RADIUS_LG = require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.INPUT_FIELD_RADIUS_LG;
   }
-  let token = require(3989) /* map */.useToken(INPUT_FIELD_RADIUS_LG);
+  let token = require("../../../tokens/native/useToken.tsx") /* map */.useToken(INPUT_FIELD_RADIUS_LG);
   let tmpResult = tmp(3989);
   if (flag) {
-    token = tmpResult.useToken(importDefault(712).modules.mobile.INPUT_FIELD_ROUND_RADIUS);
+    token = tmpResult.useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.INPUT_FIELD_ROUND_RADIUS);
   }
   tmpResult = tmp(3989);
   if ("sm" === str) {
@@ -49,8 +49,8 @@ function useInputStyles(size) {
     INPUT_FIELD_TEXT_STYLE_LG = tmp7(712).modules.mobile.INPUT_FIELD_TEXT_STYLE_LG;
   }
   const token1 = tmpResult.useToken(INPUT_FIELD_TEXT_STYLE_LG);
-  const obj = require(3989) /* map */;
-  return callback3(str, flag2, flag3, token, token1, require(3989) /* map */.useToken(importDefault(712).modules.mobile.INPUT_FIELD_PADDING_VERTICAL_SM_IOS));
+  const obj = require("../../../tokens/native/useToken.tsx") /* map */;
+  return callback3(str, flag2, flag3, token, token1, require("../../../tokens/native/useToken.tsx") /* map */.useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.INPUT_FIELD_PADDING_VERTICAL_SM_IOS));
 }
 ({ Platform, StyleSheet: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
@@ -76,16 +76,16 @@ let closure_9 = createCacheKey.createStyles(() => {
   if (arg4 === undefined) {
     str2 = "text-md/medium";
   }
-  let obj = { sm: require(5910) /* InputHeights */.InputHeights.SM, md: require(5910) /* InputHeights */.InputHeights.MD, lg: require(5910) /* InputHeights */.InputHeights.LG };
-  obj = { sm: importDefault(712).space.PX_8, md: importDefault(712).space.PX_12, lg: importDefault(712).space.PX_16 };
-  obj = { sm: importDefault(712).space.PX_4, md: importDefault(712).space.PX_8, lg: importDefault(712).space.PX_8 };
+  let obj = { sm: require("InputTypes.native.tsx") /* InputHeights */.InputHeights.SM, md: require("InputTypes.native.tsx") /* InputHeights */.InputHeights.MD, lg: require("InputTypes.native.tsx") /* InputHeights */.InputHeights.LG };
+  obj = { sm: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, md: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, lg: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
+  obj = { sm: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, md: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, lg: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
   const obj1 = { sm: null, md: null, lg: null };
-  obj1[0] = { paddingHorizontal: importDefault(712).space.PX_8, paddingVertical: importDefault(712).space.PX_4 };
-  const obj2 = { paddingHorizontal: importDefault(712).space.PX_8, paddingVertical: importDefault(712).space.PX_4 };
+  obj1[0] = { paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, paddingVertical: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
+  const obj2 = { paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, paddingVertical: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
   const tmp = require;
-  obj1[1] = { paddingHorizontal: importDefault(712).space.PX_12, paddingVertical: importDefault(712).space.PX_8 };
-  const obj3 = { paddingHorizontal: importDefault(712).space.PX_12, paddingVertical: importDefault(712).space.PX_8 };
-  obj1[2] = { paddingHorizontal: importDefault(712).space.PX_16, paddingVertical: importDefault(712).space.PX_8 + 2 };
+  obj1[1] = { paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, paddingVertical: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
+  const obj3 = { paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, paddingVertical: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
+  obj1[2] = { paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, paddingVertical: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 + 2 };
   let num2 = 1;
   if (flag) {
     num2 = 0.5;
@@ -102,10 +102,10 @@ let closure_9 = createCacheKey.createStyles(() => {
   }
   const obj6 = { container: obj5, background: null, placeholderText: null, minHeight: null, radius: null, padding: null, text: null, leadingText: null, trailingText: null, leadingIcon: null, trailingIcon: null, splitBorder: null };
   obj5[3] = num3;
-  const obj4 = { paddingHorizontal: importDefault(712).space.PX_16, paddingVertical: importDefault(712).space.PX_8 + 2 };
-  obj6[1] = { backgroundColor: importDefault(712).colors.INPUT_BACKGROUND_DEFAULT, borderWidth: importDefault(712).modules.mobile.INPUT_FIELD_BORDER_WIDTH, borderColor: importDefault(712).colors.INPUT_BORDER_DEFAULT };
-  const obj7 = { backgroundColor: importDefault(712).colors.INPUT_BACKGROUND_DEFAULT, borderWidth: importDefault(712).modules.mobile.INPUT_FIELD_BORDER_WIDTH, borderColor: importDefault(712).colors.INPUT_BORDER_DEFAULT };
-  obj6[2] = { color: importDefault(712).colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
+  const obj4 = { paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, paddingVertical: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 + 2 };
+  obj6[1] = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.INPUT_BACKGROUND_DEFAULT, borderWidth: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.INPUT_FIELD_BORDER_WIDTH, borderColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.INPUT_BORDER_DEFAULT };
+  const obj7 = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.INPUT_BACKGROUND_DEFAULT, borderWidth: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.INPUT_FIELD_BORDER_WIDTH, borderColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.INPUT_BORDER_DEFAULT };
+  obj6[2] = { color: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
   obj6[3] = { minHeight: obj[str] };
   obj6[4] = { borderRadius: num };
   obj6[5] = obj1[str];
@@ -133,7 +133,7 @@ let closure_9 = createCacheKey.createStyles(() => {
   const obj12 = {};
   const merged3 = Object.assign(tmp6);
   obj12.borderRightWidth = 1;
-  obj12.borderRightColor = importDefault(712).colors.BORDER_STRONG;
+  obj12.borderRightColor = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_STRONG;
   obj6[11] = obj12;
   return obj6;
 });

@@ -16,5 +16,5 @@ export const useIsConnectedToVoiceChannel = function useIsConnectedToVoiceChanne
 export const useIsConnectedToVoiceChannelForId = function useIsConnectedToVoiceChannelForId(arg0) {
   const _require = arg0;
   const items = [updateVoiceState, fetchFingerprint];
-  return _require(589).useStateFromStores(items, () => outer1_3.isInChannel(id, outer1_2.getId()));
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_3.isInChannel(id, outer1_2.getId()));
 };

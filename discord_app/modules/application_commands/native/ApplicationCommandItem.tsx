@@ -14,9 +14,9 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   let obj = { applicationCommandItem: null, highlightedApplicationCommandItem: null, applicationCommandIcon: null, applicationCommandDescriptionWrapper: null, applicationCommandSectionName: null };
   obj = { flexDirection: "row", paddingVertical: 8, paddingHorizontal: 16, alignItems: "center", height: Math.max(arg0 * AUTOCOMPLETE_ROW_HEIGHT, AUTOCOMPLETE_ROW_HEIGHT) };
   obj[0] = obj;
-  obj = { backgroundColor: importDefault(712).colors.INTERACTIVE_BACKGROUND_HOVER };
+  obj = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_BACKGROUND_HOVER };
   obj[1] = obj;
-  obj[2] = { width: 32, height: 32, borderRadius: importDefault(712).radii.lg, marginRight: 16 };
+  obj[2] = { width: 32, height: 32, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, marginRight: 16 };
   obj[3] = { flexDirection: "column", flexShrink: 1, alignSelf: "flex-end" };
   obj[4] = { paddingLeft: 16, marginLeft: "auto" };
   return obj;

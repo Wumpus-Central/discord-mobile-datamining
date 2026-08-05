@@ -11,7 +11,7 @@ createToggle = {
   parent: null,
   IconComponent: require("RefreshIcon").RefreshIcon,
   useDescription: function useBuildOverrideActiveDescription() {
-    let obj = require(589) /* initialize */;
+    let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
     const items = [getCurrentBuildOverride];
     const stateFromStores = obj.useStateFromStores(items, () => {
       const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
@@ -28,16 +28,16 @@ createToggle = {
     if (null != stateFromStores) {
       obj = { label: "Build override: ", value: null };
       obj[1] = stateFromStores;
-      tmp4 = jsx(require(13749) /* DevToolsContentSortButtons */.DevToolsContentSubLabel, { label: "Build override: ", value: null });
+      tmp4 = jsx(require("../../../devtools/native/components/DevToolsContent.tsx") /* DevToolsContentSortButtons */.DevToolsContentSubLabel, { label: "Build override: ", value: null });
     }
     return tmp4;
   },
   usePredicate: function useHasBuildOverrideActive() {
-    const staffOrDeveloperSettingPredicate = require(13992) /* useStaffOrDeveloperSettingPredicate */.useStaffOrDeveloperSettingPredicate();
-    const obj = require(13992) /* useStaffOrDeveloperSettingPredicate */;
+    const staffOrDeveloperSettingPredicate = require("../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx") /* useStaffOrDeveloperSettingPredicate */.useStaffOrDeveloperSettingPredicate();
+    const obj = require("../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx") /* useStaffOrDeveloperSettingPredicate */;
     const items = [getCurrentBuildOverride];
-    const obj2 = require(589) /* initialize */;
-    return null != require(589) /* initialize */.useStateFromStores(items, () => {
+    const obj2 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+    return null != require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
       const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
       let id;
       if (overrides != null) {
@@ -50,7 +50,7 @@ createToggle = {
     }) && staffOrDeveloperSettingPredicate;
   },
   onPress: function handleBuildOverrideActivePress() {
-    require(13748) /* navigateToDevTools */.navigateToDevTools({ screenKey: "buildOverride" });
+    require("../../../devtools/native/components/DevToolsNavigator.tsx") /* navigateToDevTools */.navigateToDevTools({ screenKey: "buildOverride" });
   },
   withArrow: true
 };

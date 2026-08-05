@@ -16,10 +16,10 @@ export default function getTagProperties(arg0) {
   ({ channel, colors } = arg0);
   const author = message.author;
   const isVerifiedBotResult = author.isVerifiedBot();
-  let obj = require(7951) /* isPublicSystemMessage */;
+  let obj = require("../../../public_guilds/PublicGuildsUtils.tsx") /* isPublicSystemMessage */;
   if (!obj.isPublicSystemMessage(message)) {
     if (!isSystemDM) {
-      if (importDefault(7953)(message)) {
+      if (require("../../isCrosspost.tsx")(message)) {
         const intl2 = tmp2(1236).intl;
         let stringResult = intl2.string(tmp2(1236).t.PuJGuM);
         let SYSTEM_DM_TAG_SYSTEM_TYPE = MessageTagTypes.BOT_TAG_SERVER_TYPE;
@@ -81,7 +81,7 @@ export default function getTagProperties(arg0) {
           } else {
             stringResult3 = string(t.qwJHjo);
           }
-          tmp14 = importDefault(7953)(message);
+          tmp14 = require("../../isCrosspost.tsx")(message);
         }
       }
       const intl5 = tmp2(1236).intl;

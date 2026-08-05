@@ -2,19 +2,19 @@
 const result = require("set").fileFinishedImporting("modules/device/BillingPlatformUtils.tsx");
 
 export const isPremiumGiftingSupported = function isPremiumGiftingSupported() {
-  return !require(1577) /* isMetaQuest */.isMetaQuest();
+  return !require("MetaQuestUtils.android.tsx") /* isMetaQuest */.isMetaQuest();
 };
 export const isGooglePlayBillingSupported = function isGooglePlayBillingSupported() {
-  let isAndroidResult = require(500) /* set */.isAndroid();
+  let isAndroidResult = require("../../utils/PlatformUtils.tsx") /* set */.isAndroid();
   if (isAndroidResult) {
-    isAndroidResult = !require(1577) /* isMetaQuest */.isMetaQuest();
-    const tmpResult = require(1577) /* isMetaQuest */;
+    isAndroidResult = !require("MetaQuestUtils.android.tsx") /* isMetaQuest */.isMetaQuest();
+    const tmpResult = require("MetaQuestUtils.android.tsx") /* isMetaQuest */;
   }
   return isAndroidResult;
 };
 export const isCollectibleGiftingSupported = function isCollectibleGiftingSupported() {
-  return !require(1577) /* isMetaQuest */.isMetaQuest();
+  return !require("MetaQuestUtils.android.tsx") /* isMetaQuest */.isMetaQuest();
 };
 export const isSocialLayerStorefrontGiftingSupported = function isSocialLayerStorefrontGiftingSupported() {
-  return !require(1577) /* isMetaQuest */.isMetaQuest();
+  return !require("MetaQuestUtils.android.tsx") /* isMetaQuest */.isMetaQuest();
 };

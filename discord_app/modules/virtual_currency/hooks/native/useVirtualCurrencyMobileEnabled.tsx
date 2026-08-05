@@ -3,11 +3,11 @@ const result = require("set").fileFinishedImporting("modules/virtual_currency/ho
 
 export const isVirtualCurrencyEnabled = function isVirtualCurrencyEnabled() {
   const obj = { enabled: null };
-  obj[0] = !require(1577) /* isMetaQuest */.isMetaQuest();
+  obj[0] = !require("../../../device/MetaQuestUtils.android.tsx") /* isMetaQuest */.isMetaQuest();
   return obj;
 };
 export const useVirtualCurrencyMobileEnabled = function useVirtualCurrencyMobileEnabled() {
   const obj = { enabled: null };
-  obj[0] = !require(1577) /* isMetaQuest */.isMetaQuest();
+  obj[0] = !require("../../../device/MetaQuestUtils.android.tsx") /* isMetaQuest */.isMetaQuest();
   return obj;
 };

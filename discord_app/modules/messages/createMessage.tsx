@@ -43,7 +43,7 @@ export default function createMessage(tts) {
   const items = [];
   ({ flags, poll, sharedCustomTheme, changelogId, giftingPrompt, boostingPrompt, mediaMention, mentionGames } = tts);
   if (DEFAULT === constants2.REPLY) {
-    importDefault(38)(null != messageReference, "Replies must have a message reference");
+    require("../../../_runtime/metro/00038__.js")(null != messageReference, "Replies must have a message reference");
     if (null == allowedMentions) {
       messageByReference = messageByReference.getMessageByReference(messageReference);
       state = undefined;
@@ -66,10 +66,10 @@ export default function createMessage(tts) {
     ({ id: obj2[0], username: obj2[1], avatar: obj2[2], discriminator: obj2[3], bot: obj2[4], globalName: obj2[5], primaryGuild: obj2[6] } = author);
     tmp8 = obj;
   }
-  importDefault(38)(null != tmp8, "createMessage: author cannot be undefined");
+  require("../../../_runtime/metro/00038__.js")(null != tmp8, "createMessage: author cannot be undefined");
   if (nonce == null) {
-    nonce = require(7133) /* snowflakeSequence */.createNonce();
-    const obj3 = require(7133) /* snowflakeSequence */;
+    nonce = require("createNonce.tsx") /* snowflakeSequence */.createNonce();
+    const obj3 = require("createNonce.tsx") /* snowflakeSequence */;
   }
   obj = { id: nonce, type: DEFAULT, content, channel_id: channelId, author: tmp8, attachments: [], embeds: [], pinned: false, mentions: items, mention_channels: [], mention_roles: [], mention_everyone: false, mention_games: mentionGames, timestamp: null, state: null, tts: null, message_reference: null, message_snapshots: null, flags: null, nonce: null, poll: null, shared_client_theme: null, changelog_id: null, gifting_prompt: null, boosting_prompt: null, media_mention: null };
   obj[13] = new Date().toISOString();
@@ -102,7 +102,7 @@ export const createBotMessage = function createBotMessage(arg0) {
   ({ messageId, embeds } = arg0);
   ({ channelId, content, loggingName } = arg0);
   if (messageId == null) {
-    let obj = require(7133) /* snowflakeSequence */;
+    let obj = require("createNonce.tsx") /* snowflakeSequence */;
     messageId = obj.createNonce();
   }
   obj = { id: messageId, type: constants2.DEFAULT, flags: constants3.EPHEMERAL, content, channel_id: channelId, author: obj, attachments: [], embeds: null, pinned: false, mentions: null, mention_channels: null, mention_roles: null, mention_everyone: false, timestamp: null, state: null, tts: false, loggingName: null };

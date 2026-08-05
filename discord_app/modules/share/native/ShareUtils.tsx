@@ -57,8 +57,8 @@ function _sendShareMessage() {
 const result = require("MESSAGE_GROUP_SPACING").fileFinishedImporting("modules/share/native/ShareUtils.tsx");
 
 export const showInformationToast = function showInformationToast(intl3) {
-  let obj = importDefault(3986);
-  obj = { key: "INFORMATION_TOAST-" + intl3, content: intl3, icon: importDefault(8422) };
+  let obj = require("../../toast/native/ToastActionCreators.tsx");
+  obj = { key: "INFORMATION_TOAST-" + intl3, content: intl3, icon: require("../../../../_runtime/08422_registerAsset.js") };
   obj.open(obj);
 };
 export const sendShareMessage = function sendShareMessage(arg0) {

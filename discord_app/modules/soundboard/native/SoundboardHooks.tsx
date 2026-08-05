@@ -13,7 +13,7 @@ const require = arg1;
 const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/soundboard/native/SoundboardHooks.tsx");
 
 export const useSoundButtonStyleConfig = function useSoundButtonStyleConfig() {
-  return { buttonWidth: (Math.min(ACTION_SHEET_MAX_WIDTH, importDefault(1474)().width) - closure_8) / closure_7 };
+  return { buttonWidth: (Math.min(ACTION_SHEET_MAX_WIDTH, require("../../screen/useWindowDimensions.native.tsx")().width) - closure_8) / closure_7 };
 };
 export const useMaybeFetchSoundboardSounds = function useMaybeFetchSoundboardSounds(shouldFetch) {
   shouldFetch = shouldFetch.shouldFetch;

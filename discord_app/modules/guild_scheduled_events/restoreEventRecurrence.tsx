@@ -7,12 +7,12 @@ export default function restoreEventRecurrence(arg0, guild_id, id, c2) {
   ({ scheduled_start_time, scheduled_end_time } = arg0);
   if (null == scheduled_start_time) {
     if (null == scheduled_end_time) {
-      let result = importDefault(8862).deleteGuildEventException(guild_id, id, c2);
-      const obj3 = importDefault(8862);
+      let result = require("GuildScheduledEventsActionCreators.tsx").deleteGuildEventException(guild_id, id, c2);
+      const obj3 = require("GuildScheduledEventsActionCreators.tsx");
     }
     return result;
   }
-  let obj = importDefault(8862);
+  let obj = require("GuildScheduledEventsActionCreators.tsx");
   obj = { scheduled_start_time, scheduled_end_time, is_canceled: false };
   result = obj.updateGuildEventException(obj, guild_id, id, c2);
 };

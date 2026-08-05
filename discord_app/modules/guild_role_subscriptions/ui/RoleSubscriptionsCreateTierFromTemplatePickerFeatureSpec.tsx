@@ -11,17 +11,17 @@ const result = require("ME").fileFinishedImporting("modules/guild_role_subscript
 
 export default {
   title() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.aTFQKh);
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.aTFQKh);
   },
   description() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.oTbFQg);
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.oTbFQg);
   },
   canCreateGuild: false,
   useIsGuildSupported() {
     const items = [getHash, getUncachedChannelPermissions];
-    return require(589) /* initialize */.useStateFromStores(items, () => (features) => {
+    return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => (features) => {
       features = features.features;
       let hasItem = features.has(constants.ROLE_SUBSCRIPTIONS_ENABLED);
       if (hasItem) {

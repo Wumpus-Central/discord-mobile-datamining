@@ -11,11 +11,11 @@ export default function getSoundmojiASTFromString(soundId, guildId) {
   let messageId;
   let soundboardSounds;
   ({ channelId, messageId, soundboardSounds } = guildId);
-  let obj = require(4734) /* getSoundmojiRenderingExperiment */;
+  let obj = require("../SoundmojiRenderingExperiment.tsx") /* getSoundmojiRenderingExperiment */;
   let tmp5;
   if (obj.getSoundmojiRenderingExperiment({ location: "getSoundmojiASTFromString" })) {
     const soundById = store.getSoundById(tmp2);
-    const tmp9 = importDefault(4735)(soundById, guildId.guildId, channelId);
+    const tmp9 = require("isSoundValid.tsx")(soundById, guildId.guildId, channelId);
     if (null != messageId) {
       if (null != channelId) {
         const tmp16 = tmp8(4736)(channelId, messageId, tmp2, soundboardSounds);
@@ -47,7 +47,7 @@ export default function getSoundmojiASTFromString(soundId, guildId) {
   }
   if (null == tmp5) {
     obj = { type: "text", content: null };
-    obj[1] = importDefault(4738)(tmp, tmp2);
+    obj[1] = require("getSoundString.tsx")(tmp, tmp2);
     return obj;
   } else {
     let name;
@@ -96,7 +96,7 @@ export const soundmojiRawFormatRegex = /^<sound:(\d+):(\d+)>/;
 export const getSoundmojiFromMessage = function getSoundmojiFromMessage(guildId, channelId, messageId, soundId, arg4) {
   if (obj.getSoundmojiRenderingExperiment({ location: "getSoundmojiASTFromString" })) {
     const soundById = store.getSoundById(soundId);
-    const tmp9 = importDefault(4735)(soundById, guildId, channelId);
+    const tmp9 = require("isSoundValid.tsx")(soundById, guildId, channelId);
     if (null != messageId) {
       if (null != channelId) {
         const tmp16 = tmp8(4736)(channelId, messageId, soundId, arg4);

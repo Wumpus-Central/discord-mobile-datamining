@@ -9,13 +9,13 @@ const result = require("expandEventProperties").fileFinishedImporting("modules/g
 
 export default {
   openMemberVerificationModal(guildId, connect) {
-    let obj = importDefault(5278);
+    let obj = require("../MemberVerificationActionCreators.tsx");
     const verificationForm = obj.fetchVerificationForm(guildId);
     obj = { type: closure_3, guild_id: guildId };
-    importDefault(698).track(AnalyticEvents.OPEN_MODAL, obj);
-    const obj2 = importDefault(698);
+    require("../../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.OPEN_MODAL, obj);
+    const obj2 = require("../../../utils/AnalyticsUtils.tsx");
     obj = { guildId, onClose: connect };
-    importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(8225, dependencyMap.paths), obj, closure_4);
+    require("../../../actions/ModalActionCreators.tsx").pushLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(8225, dependencyMap.paths), obj, closure_4);
   },
   closeMemberVerificationModal() {
     let flag = arg0;
@@ -23,11 +23,11 @@ export default {
       flag = false;
     }
     if (!flag) {
-      let obj = importDefault(698);
+      let obj = require("../../../utils/AnalyticsUtils.tsx");
       obj = { type: null };
       obj[0] = closure_3;
       obj.track(AnalyticEvents.MODAL_DISMISSED, obj);
     }
-    importDefault(4490).popWithKey(closure_4);
+    require("../../../actions/ModalActionCreators.tsx").popWithKey(closure_4);
   }
 };

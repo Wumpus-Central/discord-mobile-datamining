@@ -29,7 +29,7 @@ export default function ContentInventoryEntryRow(content) {
             flag2 = false;
           }
           obj[2] = flag2;
-          return jsx(importDefault(15499), { content: null, renderForScreenshot: null, visible: null });
+          return jsx(require("content_inventory/CustomStatusEntryRow.tsx"), { content: null, renderForScreenshot: null, visible: null });
         } else {
           return null;
         }
@@ -38,6 +38,6 @@ export default function ContentInventoryEntryRow(content) {
     obj = { content: null, renderForScreenshot: null };
     obj[0] = content;
     obj[1] = flag;
-    return jsx(importDefault(15490), { content: null, renderForScreenshot: null });
+    return jsx(require("content_inventory/GamingLikeEntryRow.tsx"), { content: null, renderForScreenshot: null });
   }
 };

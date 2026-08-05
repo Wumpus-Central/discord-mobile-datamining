@@ -68,7 +68,7 @@ function handleChanged(type) {
       if (obj6.isEmpty(tmp11)) {
         delete tmp[tmp3];
       }
-      obj6 = importDefault(12);
+      obj6 = require("../../_runtime/00012_apply.js");
     }
   }
 }
@@ -202,39 +202,39 @@ prototype["getRecentlyEditedDrafts"] = function getRecentlyEditedDrafts(ChannelM
       dependencyMap[id] = obj;
       tmp3 = obj;
     }
-    const obj2 = importDefault(12)(tmp3);
-    const mapValuesResult = importDefault(12)(tmp3).mapValues((arg0) => {
+    const obj2 = require("../../_runtime/00012_apply.js")(tmp3);
+    const mapValuesResult = require("../../_runtime/00012_apply.js")(tmp3).mapValues((arg0) => {
       let tmp;
       if (arg0 != null) {
         tmp = arg0[closure_0];
       }
       return tmp;
     });
-    const pickByResult = importDefault(12)(tmp3).mapValues((arg0) => {
+    const pickByResult = require("../../_runtime/00012_apply.js")(tmp3).mapValues((arg0) => {
       let tmp;
       if (arg0 != null) {
         tmp = arg0[closure_0];
       }
       return tmp;
-    }).pickBy(_require(1351).isNotNullish);
-    const mapped = importDefault(12)(tmp3).mapValues((arg0) => {
+    }).pickBy(_require("../utils/GlobalUtils.tsx").isNotNullish);
+    const mapped = require("../../_runtime/00012_apply.js")(tmp3).mapValues((arg0) => {
       let tmp;
       if (arg0 != null) {
         tmp = arg0[closure_0];
       }
       return tmp;
-    }).pickBy(_require(1351).isNotNullish).toPairs().map((arg0) => {
+    }).pickBy(_require("../utils/GlobalUtils.tsx").isNotNullish).toPairs().map((arg0) => {
       let tmp;
       [tmp, ] = arg0;
       return { channelId, timestamp, draft };
     });
-    const toPairsResult = importDefault(12)(tmp3).mapValues((arg0) => {
+    const toPairsResult = require("../../_runtime/00012_apply.js")(tmp3).mapValues((arg0) => {
       let tmp;
       if (arg0 != null) {
         tmp = arg0[closure_0];
       }
       return tmp;
-    }).pickBy(_require(1351).isNotNullish).toPairs();
+    }).pickBy(_require("../utils/GlobalUtils.tsx").isNotNullish).toPairs();
     return mapped.sortBy((timestamp) => -timestamp.timestamp).value();
   }
 };
@@ -459,7 +459,7 @@ obj = {
               }
             }
           }
-          obj9 = importDefault(11);
+          obj9 = require("../utils/SnowflakeUtils.tsx");
         }
       }
     }
@@ -483,7 +483,7 @@ obj = {
         if (obj2.isEmpty(tmp9)) {
           delete tmp[tmp2];
         }
-        obj2 = importDefault(12);
+        obj2 = require("../../_runtime/00012_apply.js");
       }
     }
     return flag;

@@ -49,8 +49,8 @@ response.then((isConnected) => {
 obj = {
   addOnlineCallback(_handleNetworkOnline) {
     if (null == closure_7) {
-      closure_7 = importDefault(1456).addEventListener(notifyListeners);
-      const obj = importDefault(1456);
+      closure_7 = require("../../../_runtime/01456_configure.js").addEventListener(notifyListeners);
+      const obj = require("../../../_runtime/01456_configure.js");
     }
   },
   removeOnlineCallback(_handleNetworkOnline) {
@@ -76,8 +76,8 @@ obj = {
   addOfflineCallback(_handleNetworkOffline) {
     arr2.push(_handleNetworkOffline);
     if (null == closure_7) {
-      closure_7 = importDefault(1456).addEventListener(notifyListeners);
-      const obj = importDefault(1456);
+      closure_7 = require("../../../_runtime/01456_configure.js").addEventListener(notifyListeners);
+      const obj = require("../../../_runtime/01456_configure.js");
     }
   },
   removeOfflineCallback(_handleNetworkOffline) {
@@ -103,8 +103,8 @@ obj = {
   addChangeCallback(handleConnectionInfoChange) {
     arr3.push(handleConnectionInfoChange);
     if (null == closure_7) {
-      closure_7 = importDefault(1456).addEventListener(notifyListeners);
-      const obj = importDefault(1456);
+      closure_7 = require("../../../_runtime/01456_configure.js").addEventListener(notifyListeners);
+      const obj = require("../../../_runtime/01456_configure.js");
     }
   },
   removeChangeCallback(arg0) {
@@ -128,7 +128,7 @@ obj = {
     }
   },
   getNetworkInformation() {
-    const response = importDefault(1456).fetch();
+    const response = require("../../../_runtime/01456_configure.js").fetch();
     return response.then((arg0) => {
       let details;
       let type;

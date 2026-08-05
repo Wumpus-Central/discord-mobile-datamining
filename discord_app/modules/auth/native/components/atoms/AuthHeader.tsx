@@ -19,5 +19,5 @@ export default function AuthHeader(arg0) {
   ({ children, style } = arg0);
   style = [createCacheKey().header, ];
   style[1] = style;
-  return jsx(require(1297) /* Button */.LegacyText, { style, accessibilityRole: "header", children });
+  return jsx(require("../../../../../design/void/native.tsx") /* Button */.LegacyText, { style, accessibilityRole: "header", children });
 };

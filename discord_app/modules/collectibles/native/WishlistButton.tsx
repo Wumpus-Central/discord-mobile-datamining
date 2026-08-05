@@ -399,21 +399,21 @@ obj = { sm: require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT, md: require("MINIMU
 let closure_16 = { sm: "sm", md: "md" };
 let closure_17 = createCacheKey.createStyles((arg0) => {
   let obj = { button: null, light: null, lightPressed: null, dark: null, darkPressed: null, midnight: null, disabled: null, iconContainer: null, animationFill: null };
-  obj = { width: obj[arg0], height: obj[arg0], display: "flex", alignItems: "center", justifyContent: "center", borderRadius: importDefault(712).radii.round, borderWidth: 1, borderColor: importDefault(712).colors.CONTROL_SECONDARY_BORDER_DEFAULT };
+  obj = { width: obj[arg0], height: obj[arg0], display: "flex", alignItems: "center", justifyContent: "center", borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.round, borderWidth: 1, borderColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_SECONDARY_BORDER_DEFAULT };
   obj[0] = obj;
   obj = { backgroundColor: null };
-  let obj3 = require(3997) /* ManaContext */;
+  let obj3 = require("../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */;
   obj[0] = obj3.setColorOpacity("white", 0.72);
   obj[1] = obj;
   const obj1 = { backgroundColor: null };
-  obj1[0] = require(3997) /* ManaContext */.setColorOpacity("white", 0.62);
+  obj1[0] = require("../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */.setColorOpacity("white", 0.62);
   obj[2] = obj1;
-  const obj6 = require(3997) /* ManaContext */;
-  obj[3] = { backgroundColor: importDefault(712).colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
-  obj3 = { backgroundColor: importDefault(712).colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE };
+  const obj6 = require("../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */;
+  obj[3] = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
+  obj3 = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE };
   obj[4] = obj3;
-  const obj2 = { backgroundColor: importDefault(712).colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
-  obj[5] = { borderColor: importDefault(712).colors.BORDER_STRONG };
+  const obj2 = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
+  obj[5] = { borderColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_STRONG };
   obj[6] = { opacity: 0.5 };
   obj[7] = { position: "relative", alignItems: "center", justifyContent: "center" };
   obj[8] = { position: "absolute", inset: 0, alignItems: "center", justifyContent: "center" };
@@ -429,8 +429,8 @@ export default function CollectiblesWishlistButton(selectedProduct) {
   selectedProduct = selectedProduct.selectedProduct;
   let tmp = null;
   const merged = Object.assign(selectedProduct, Object.create(null));
-  let obj = require(9331) /* getProductPurchaseState */;
-  require(9268) /* getProductNameAndTypeFromSku */;
+  let obj = require("../hooks/useProductPurchaseState.tsx") /* getProductPurchaseState */;
+  require("../../wishlists/CollectiblesWishlistUtils.tsx") /* getProductNameAndTypeFromSku */;
   if (!obj.useProductPurchaseState(selectedProduct).isPurchased) {
     obj = { skuId: null, product: null, disabled: null, onTrackPress: null };
     obj[0] = selectedProduct.skuId;

@@ -30,7 +30,7 @@ export default function TouchableUploadAvatar(onSelectAvatar) {
   }
   const tmp = createCacheKey();
   if (!showPendingAvatar) {
-    let tmp3 = importDefault(13116);
+    let tmp3 = require("../../../../../_runtime/13116_registerAsset.js");
   } else {
     tmp3 = avatarSource;
   }
@@ -42,25 +42,25 @@ export default function TouchableUploadAvatar(onSelectAvatar) {
     obj[0] = tmp.avatarContainer;
     obj = { onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
     obj[0] = onSelectAvatar.onSelectAvatar;
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[2] = intl.string(require(1236) /* getSystemLocale */.t["70lEQe"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["70lEQe"]);
     obj = { style: null, children: null };
     obj[0] = tmp.avatarWrapper;
     const obj1 = { resizeMode: "contain", style: null, source: null };
     obj1[1] = defaultLogoStyle;
     obj1[2] = tmp3;
-    const items = [callback(importDefault(5236), obj1), ];
+    const items = [callback(require("../../../../components_native/common/FastImage.tsx"), obj1), ];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.uploadAvatarWrapper;
     const obj3 = { size: null, source: null, style: null };
-    obj3[0] = require(1297) /* Button */.Icon.Sizes.MEDIUM;
-    obj3[1] = importDefault(12036);
+    obj3[0] = require("../../../../design/void/native.tsx") /* Button */.Icon.Sizes.MEDIUM;
+    obj3[1] = require("../../../../../_runtime/12036_registerAsset.js");
     obj3[2] = tmp.uploadAvatarIcon;
-    obj2[1] = callback(require(1297) /* Button */.Icon, obj3);
+    obj2[1] = callback(require("../../../../design/void/native.tsx") /* Button */.Icon, obj3);
     items[1] = callback(View, obj2);
     obj[1] = items;
     obj[3] = callback2(View, obj);
-    obj[1] = callback(require(4812) /* PressableBase */.PressableOpacity, obj);
+    obj[1] = callback(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
     return callback(View, obj);
   }
   defaultLogoStyle = tmp.defaultLogoStyle;

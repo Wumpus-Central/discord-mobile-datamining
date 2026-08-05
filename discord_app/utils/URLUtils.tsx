@@ -7,10 +7,10 @@ function isDiscordProxiedAssetUrl(url, arg1, arg2) {
     if (null == url) {
       return false;
     } else {
-      url = importDefault(1467).toURLSafe(url);
+      url = require("URLUtils.tsx").toURLSafe(url);
       let tmp9 = null != url;
       if (tmp9) {
-        const result = require(1351) /* isDiscordFrontendDevelopment */.isDiscordBackendDevelopment();
+        const result = require("GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isDiscordBackendDevelopment();
         let tmp5 = !result;
         if (result) {
           let tmp6 = "localhost" !== url.hostname;
@@ -27,7 +27,7 @@ function isDiscordProxiedAssetUrl(url, arg1, arg2) {
           isMatch = regex3.test(url.hostname);
         }
         tmp9 = isMatch;
-        const obj = require(1351) /* isDiscordFrontendDevelopment */;
+        const obj = require("GlobalUtils.tsx") /* isDiscordFrontendDevelopment */;
       }
       return tmp9;
     }
@@ -104,7 +104,7 @@ export default {
       flag = false;
     }
     if (null != ctaLink) {
-      const toURLSafeResult = importDefault(1467).toURLSafe(ctaLink);
+      const toURLSafeResult = require("URLUtils.tsx").toURLSafe(ctaLink);
       let hostname;
       if (toURLSafeResult != null) {
         hostname = toURLSafeResult.hostname;
@@ -128,7 +128,7 @@ export default {
           return true;
         }
       }
-      const obj = importDefault(1467);
+      const obj = require("URLUtils.tsx");
     }
     return false;
   },
@@ -158,10 +158,10 @@ export default {
     if (null == shareURI) {
       return false;
     } else {
-      const toURLSafeResult = importDefault(1467).toURLSafe(shareURI);
+      const toURLSafeResult = require("URLUtils.tsx").toURLSafe(shareURI);
       let tmp9 = null != toURLSafeResult;
       if (tmp9) {
-        const result = require(1351) /* isDiscordFrontendDevelopment */.isDiscordBackendDevelopment();
+        const result = require("GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isDiscordBackendDevelopment();
         let tmp3 = !result;
         if (result) {
           let tmp4 = "localhost" !== toURLSafeResult.hostname;
@@ -180,7 +180,7 @@ export default {
           tmp5 = isMatch;
         }
         tmp9 = tmp5;
-        const obj = require(1351) /* isDiscordFrontendDevelopment */;
+        const obj = require("GlobalUtils.tsx") /* isDiscordFrontendDevelopment */;
       }
       return tmp9;
     }
@@ -190,7 +190,7 @@ export default {
     if (null == url) {
       return false;
     } else {
-      const toURLSafeResult = importDefault(1467).toURLSafe(url);
+      const toURLSafeResult = require("URLUtils.tsx").toURLSafe(url);
       let hasItem = null != toURLSafeResult;
       if (hasItem) {
         hasItem = set.has(toURLSafeResult.hostname);
@@ -201,10 +201,10 @@ export default {
   isDiscordAssetUrl(url) {
     let flag = false;
     if (null != url) {
-      const toURLSafeResult = importDefault(1467).toURLSafe(url);
+      const toURLSafeResult = require("URLUtils.tsx").toURLSafe(url);
       let tmp4 = null != toURLSafeResult;
       if (tmp4) {
-        const result = require(1351) /* isDiscordFrontendDevelopment */.isDiscordBackendDevelopment();
+        const result = require("GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isDiscordBackendDevelopment();
         let tmp7 = !result;
         if (result) {
           let tmp8 = "localhost" !== toURLSafeResult.hostname;
@@ -223,10 +223,10 @@ export default {
           tmp9 = isMatch;
         }
         tmp4 = tmp9;
-        const obj2 = require(1351) /* isDiscordFrontendDevelopment */;
+        const obj2 = require("GlobalUtils.tsx") /* isDiscordFrontendDevelopment */;
       }
       flag = tmp4;
-      const obj = importDefault(1467);
+      const obj = require("URLUtils.tsx");
     }
     let tmp13 = flag;
     if (!tmp13) {
@@ -234,13 +234,13 @@ export default {
       if (!tmp17) {
         let flag2 = false;
         if (null != url) {
-          const toURLSafeResult1 = importDefault(1467).toURLSafe(url);
+          const toURLSafeResult1 = require("URLUtils.tsx").toURLSafe(url);
           let hasItem = null != toURLSafeResult1;
           if (hasItem) {
             hasItem = set.has(toURLSafeResult1.hostname);
           }
           flag2 = hasItem;
-          const obj3 = importDefault(1467);
+          const obj3 = require("URLUtils.tsx");
         }
         tmp17 = flag2;
       }
@@ -251,7 +251,7 @@ export default {
   isDiscordUrlOrUri(url) {
     let flag = false;
     if (null != url) {
-      const toURLSafeResult = importDefault(1467).toURLSafe(url);
+      const toURLSafeResult = require("URLUtils.tsx").toURLSafe(url);
       let hostname;
       if (toURLSafeResult != null) {
         hostname = toURLSafeResult.hostname;
@@ -268,7 +268,7 @@ export default {
           flag = true;
         }
       }
-      const obj = importDefault(1467);
+      const obj = require("URLUtils.tsx");
     }
     if (!flag) {
       let tmp8 = null != url;
@@ -299,13 +299,13 @@ export default {
   formatPathWithQuery(pathname) {
     let obj = importAll(1469);
     obj = { pathname, query: null };
-    obj[1] = importDefault(12).pickBy(arg1);
+    obj[1] = require("../../_runtime/00012_apply.js").pickBy(arg1);
     return obj.format(obj);
   },
   formatSearch(arg0) {
     let obj = importAll(1469);
     obj = { query: null };
-    obj[0] = importDefault(12).pickBy(arg0);
+    obj[0] = require("../../_runtime/00012_apply.js").pickBy(arg0);
     return obj.format(obj);
   },
   safeParseWithQuery(target) {

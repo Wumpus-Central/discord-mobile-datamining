@@ -11,7 +11,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_TOAST,
   getComponent() {
-    return require(14697) /* UserSettingsDesignSystemToast */.default;
+    return require("../../design_system/native/UserSettingsDesignSystemToast.tsx") /* UserSettingsDesignSystemToast */.default;
   }
 };
 const route = createToggle.createRoute(obj);

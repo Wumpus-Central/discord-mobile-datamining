@@ -124,7 +124,7 @@ function defaultSortFn(id, id2, questHomeHero, get) {
     }
     return num15;
   } else {
-    const isQuestExpiredResult = require(7078) /* getQuestDeliveryDataForPlacement */.isQuestExpired(id);
+    const isQuestExpiredResult = require("../utils/QuestDataUtils.tsx") /* getQuestDeliveryDataForPlacement */.isQuestExpired(id);
     const userStatus12 = id.userStatus;
     let claimedAt;
     if (userStatus12 != null) {
@@ -145,7 +145,7 @@ function defaultSortFn(id, id2, questHomeHero, get) {
     if (userStatus5 != null) {
       enrolledAt1 = userStatus5.enrolledAt;
     }
-    const result = 30 * importDefault(687).Millis.MINUTE;
+    const result = 30 * require("../../../utils/Durations.tsx").Millis.MINUTE;
     const userStatus6 = id.userStatus;
     let completedAt2;
     if (userStatus6 != null) {
@@ -304,7 +304,7 @@ function defaultSortFn(id, id2, questHomeHero, get) {
       num5 = num10;
       const tmp50Result4 = tmp50(7103);
     }
-    const obj9 = require(7078) /* getQuestDeliveryDataForPlacement */;
+    const obj9 = require("../utils/QuestDataUtils.tsx") /* getQuestDeliveryDataForPlacement */;
     const tmp19 = null != completedAt2;
     const tmp30 = null != completedAt3;
   }
@@ -363,9 +363,9 @@ function expiringSoonSortFn(config, config2) {
 }
 function doesQuestPassTaskFilter(quest) {
   if (constants4.VIDEO === arg1) {
-    return require(7103) /* getApplicationIdsByTaskTypes */.hasWatchVideoTasks(quest);
+    return require("../utils/QuestTaskUtils.tsx") /* getApplicationIdsByTaskTypes */.hasWatchVideoTasks(quest);
   } else if (tmp.PLAY === arg1) {
-    let obj = require(7103) /* getApplicationIdsByTaskTypes */;
+    let obj = require("../utils/QuestTaskUtils.tsx") /* getApplicationIdsByTaskTypes */;
     obj = { quest: null };
     obj[0] = quest;
     let hasPlayOnDesktopTaskResult = obj.hasPlayOnDesktopTask(obj);
@@ -394,14 +394,14 @@ function doesQuestPassTaskFilter(quest) {
 }
 function doesQuestPassRewardFilter(config) {
   if (constants5.VIRTUAL_CURRENCY === arg1) {
-    return require(10391) /* _getDefaultRewardName */.hasVirtualCurrencyReward(config.config);
+    return require("../utils/QuestRewardUtils.tsx") /* _getDefaultRewardName */.hasVirtualCurrencyReward(config.config);
   } else if (tmp.COLLECTIBLE === arg1) {
-    return require(10391) /* _getDefaultRewardName */.hasCollectiblesQuestReward(config.config);
+    return require("../utils/QuestRewardUtils.tsx") /* _getDefaultRewardName */.hasCollectiblesQuestReward(config.config);
   } else if (tmp.IN_GAME === arg1) {
-    let hasInGameQuestRewardResult = require(10391) /* _getDefaultRewardName */.hasInGameQuestReward(config.config);
+    let hasInGameQuestRewardResult = require("../utils/QuestRewardUtils.tsx") /* _getDefaultRewardName */.hasInGameQuestReward(config.config);
     if (!hasInGameQuestRewardResult) {
-      hasInGameQuestRewardResult = require(10391) /* _getDefaultRewardName */.hasQuestRewardCode(config.config);
-      const tmp2Result = require(10391) /* _getDefaultRewardName */;
+      hasInGameQuestRewardResult = require("../utils/QuestRewardUtils.tsx") /* _getDefaultRewardName */.hasQuestRewardCode(config.config);
+      const tmp2Result = require("../utils/QuestRewardUtils.tsx") /* _getDefaultRewardName */;
     }
     return hasInGameQuestRewardResult;
   } else {
@@ -426,7 +426,7 @@ function sortQuests(arr) {
     if (0 !== filters.length) {
       let found = arr;
       if (0 !== filters.length) {
-        require = require(12) /* apply */.groupBy(filters, "group");
+        require = require("../../../../_runtime/00012_apply.js") /* apply */.groupBy(filters, "group");
         found = arr.filter((arg0) => {
           let closure_0 = arg0;
           const entries = Object.entries(closure_0);
@@ -443,7 +443,7 @@ function sortQuests(arr) {
             return 0 === arr.length || arr.some((arg0) => tmp2(closure_0, arg0.filter));
           });
         });
-        let obj2 = require(12) /* apply */;
+        let obj2 = require("../../../../_runtime/00012_apply.js") /* apply */;
       }
       obj = found;
     }
@@ -501,7 +501,7 @@ function sortQuests(arr) {
   });
 }
 function seededQuestSortKey(arg0, arg1) {
-  return importDefault(1217).v3("" + arg0 + ":" + arg1) >>> 0;
+  return require("../../../../_runtime/01217_MurmurHashV3.js").v3("" + arg0 + ":" + arg1) >>> 0;
 }
 function useAllQuests(quests, sortMethod) {
   let stateFromStores1 = quests;
@@ -592,24 +592,24 @@ function useAllQuests(quests, sortMethod) {
   }, items5);
 }
 function isQuestHiddenFromQuestHome(userStatus) {
-  let isQuestExpiredResult = require(7078) /* getQuestDeliveryDataForPlacement */.isQuestExpired(userStatus);
+  let isQuestExpiredResult = require("../utils/QuestDataUtils.tsx") /* getQuestDeliveryDataForPlacement */.isQuestExpired(userStatus);
   if (isQuestExpiredResult) {
-    isQuestExpiredResult = !require(7078) /* getQuestDeliveryDataForPlacement */.hasUnclaimedReward(userStatus.userStatus);
-    const tmpResult = require(7078) /* getQuestDeliveryDataForPlacement */;
+    isQuestExpiredResult = !require("../utils/QuestDataUtils.tsx") /* getQuestDeliveryDataForPlacement */.hasUnclaimedReward(userStatus.userStatus);
+    const tmpResult = require("../utils/QuestDataUtils.tsx") /* getQuestDeliveryDataForPlacement */;
   }
   return isQuestExpiredResult;
 }
 function useIsQuestProgressing(quest) {
   let _require = quest;
   const items = [initializeState];
-  let stateFromStores = _require(589).useStateFromStores(items, () => outer1_12.isProgressingOnDesktop(quest.id));
+  let stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_12.isProgressingOnDesktop(quest.id));
   _require = quest;
   const items1 = [quest];
   _require = quest;
   const memo = React.useMemo(() => quest(first[23]).isQuestProgressingOnConsole(quest), items1);
-  const obj = _require(589);
+  const obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const items2 = [initializeState];
-  const items3 = [quest, _require(589).useStateFromStores(items2, () => outer1_12.getOptimisticProgress(quest.id, quest(outer1_2[33]).FirstPartyQuestTaskTypes.WATCH_VIDEO))];
+  const items3 = [quest, _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => outer1_12.getOptimisticProgress(quest.id, quest(outer1_2[33]).FirstPartyQuestTaskTypes.WATCH_VIDEO))];
   const memo1 = React.useMemo(() => quest(outer1_2[34]).isVideoQuestProgressing(quest), items3);
   if (!stateFromStores) {
     stateFromStores = memo;
@@ -884,13 +884,13 @@ export const useFilteredQuests = function useFilteredQuests(ALL, supportedConsol
 export const useClaimedQuests = function useClaimedQuests() {
   const _require = React.useRef(false);
   const items = [initializeState];
-  let claimedQuests = _require(589).useStateFromStoresArray(items, () => {
+  let claimedQuests = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
     const claimedQuests = initializeState.claimedQuests;
     return Array.from(claimedQuests.values());
   });
-  let obj = _require(589);
+  let obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const items1 = [initializeState];
-  const isFetchingClaimedQuests = _require(589).useStateFromStores(items1, () => initializeState.isFetchingClaimedQuests);
+  const isFetchingClaimedQuests = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => initializeState.isFetchingClaimedQuests);
   const items2 = [isFetchingClaimedQuests];
   const effect = React.useEffect(() => {
     let current = isFetchingClaimedQuests;
@@ -907,23 +907,23 @@ export const useClaimedQuests = function useClaimedQuests() {
 };
 export const useExpiredQuestsMap = function useExpiredQuestsMap() {
   const items = [initializeState];
-  return require(589) /* initialize */.useStateFromStores(items, () => expiredQuestsMap.getExpiredQuestsMap());
+  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => expiredQuestsMap.getExpiredQuestsMap());
 };
 export const useShouldShowBonusOrbsUX = function useShouldShowBonusOrbsUX(quest, questOrbMultiplierEligibility) {
   const _require = quest;
   const items = [initializeState];
   const items1 = [quest];
-  const stateFromStores = _require(589).useStateFromStores(items, () => {
+  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let isQuestExpiredResult = null != closure_0;
     if (isQuestExpiredResult) {
       isQuestExpiredResult = outer1_12.isQuestExpired(tmp.id);
     }
     return isQuestExpiredResult;
   }, items1);
-  const obj = _require(589);
-  const result = _require(10391).hasVirtualCurrencyReward(quest.config);
-  const obj2 = _require(10391);
-  const result1 = _require(10391).hasPremiumOrbQuantity(quest.config);
+  const obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
+  const result = _require("../utils/QuestRewardUtils.tsx").hasVirtualCurrencyReward(quest.config);
+  const obj2 = _require("../utils/QuestRewardUtils.tsx");
+  const result1 = _require("../utils/QuestRewardUtils.tsx").hasPremiumOrbQuantity(quest.config);
   let tmp4 = !stateFromStores;
   if (!stateFromStores) {
     tmp4 = result;
@@ -932,7 +932,7 @@ export const useShouldShowBonusOrbsUX = function useShouldShowBonusOrbsUX(quest,
     tmp4 = result1;
   }
   if (tmp4) {
-    tmp4 = questOrbMultiplierEligibility !== _require(10394).QuestOrbMultiplierEligibilityType.INELIGIBLE;
+    tmp4 = questOrbMultiplierEligibility !== _require("../utils/QuestOrbMultiplierUtils.tsx").QuestOrbMultiplierEligibilityType.INELIGIBLE;
   }
   return tmp4;
 };
@@ -940,7 +940,7 @@ export const useQuestOrbRewardMultiplier = function useQuestOrbRewardMultiplier(
   const _require = questId;
   const items = [initializeState];
   const items1 = [questId];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const quest = outer1_12.getQuest(questId);
     let questOrbMultiplier = null;
     if (null != quest) {
@@ -954,7 +954,7 @@ export const useIsQuestExpired = function useIsQuestExpired(deliveredQuest) {
   const _require = deliveredQuest;
   const items = [initializeState];
   const items1 = [deliveredQuest];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let isQuestExpiredResult = null != closure_0;
     if (isQuestExpiredResult) {
       isQuestExpiredResult = outer1_12.isQuestExpired(tmp.id);
@@ -966,7 +966,7 @@ export const useIsQuestEligibleForMembersListPopout = function useIsQuestEligibl
   const _require = userStatus;
   let closure_1 = arg1;
   const items = [ensureGuildLoaded];
-  const stateFromStores = _require(589).useStateFromStores(items, () => {
+  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let channelId;
     if (channelId != null) {
       channelId = channelId.channelId;
@@ -977,13 +977,13 @@ export const useIsQuestEligibleForMembersListPopout = function useIsQuestEligibl
     }
     return channel;
   });
-  const obj = _require(589);
+  const obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const tmp = _require;
   const items1 = [initializeState];
-  const stateFromStores1 = _require(589).useStateFromStores(items1, () => null != obj.questEnrollmentBlockedUntil, []);
-  const obj2 = _require(589);
+  const stateFromStores1 = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => null != obj.questEnrollmentBlockedUntil, []);
+  const obj2 = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const items2 = [mergeGuildAvatar];
-  const stateFromStores2 = _require(589).useStateFromStores(items2, () => {
+  const stateFromStores2 = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
     currentUser = currentUser.getCurrentUser();
     let id;
     if (currentUser != null) {
@@ -991,7 +991,7 @@ export const useIsQuestEligibleForMembersListPopout = function useIsQuestEligibl
     }
     return id;
   });
-  const obj3 = _require(589);
+  const obj3 = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const items3 = [initializeState];
   const items4 = [userStatus];
   if (null != userStatus) {
@@ -1067,7 +1067,7 @@ export const useOnOpenGameClick = function useOnOpenGameClick(quest) {
 export const useIsQuestProgressingOnDesktop = function useIsQuestProgressingOnDesktop(arg0) {
   const _require = arg0;
   const items = [initializeState];
-  return _require(589).useStateFromStores(items, () => outer1_12.isProgressingOnDesktop(quest.id));
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_12.isProgressingOnDesktop(quest.id));
 };
 export const useIsQuestProgressingOnConsole = function useIsQuestProgressingOnConsole(arg0) {
   let closure_0 = arg0;
@@ -1077,7 +1077,7 @@ export const useIsQuestProgressingOnConsole = function useIsQuestProgressingOnCo
 export const useIsQuestProgressingVideoQuest = function useIsQuestProgressingVideoQuest(arg0) {
   const _require = arg0;
   const items = [initializeState];
-  const items1 = [arg0, _require(589).useStateFromStores(items, () => outer1_12.getOptimisticProgress(quest.id, quest(outer1_2[33]).FirstPartyQuestTaskTypes.WATCH_VIDEO))];
+  const items1 = [arg0, _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_12.getOptimisticProgress(quest.id, quest(outer1_2[33]).FirstPartyQuestTaskTypes.WATCH_VIDEO))];
   return React.useMemo(() => quest(outer1_2[34]).isVideoQuestProgressing(quest), items1);
 };
 export { useIsQuestProgressing };
@@ -1165,7 +1165,7 @@ export const useGetOrFetchApplicationForConsoleQuests = function useGetOrFetchAp
     }
     return Array.from(set);
   }, items);
-  return importDefault(5616)(memo);
+  return require("../../applications/useGetOrFetchApplications.tsx")(memo);
 };
 export const useQuestForMemberListSocialEntryPoint = function useQuestForMemberListSocialEntryPoint(arg0) {
   let memo1 = arg0;
@@ -1211,11 +1211,11 @@ export const useQuestForMemberListSocialEntryPoint = function useQuestForMemberL
   return tmp4;
 };
 export const useQuestCollectibles = function useQuestCollectibles(config) {
-  const hasQuestCollectibles = require(10391) /* _getDefaultRewardName */.hasCollectiblesQuestReward(config);
-  const obj = require(10391) /* _getDefaultRewardName */;
-  const defaultReward = require(10396) /* getContextualEntrypointHeading */.getDefaultReward(config);
-  const obj2 = require(10396) /* getContextualEntrypointHeading */;
-  const isFetching = require(10029) /* useFetchCollectiblesProduct */.useFetchCollectiblesProduct(defaultReward.skuId);
+  const hasQuestCollectibles = require("../utils/QuestRewardUtils.tsx") /* _getDefaultRewardName */.hasCollectiblesQuestReward(config);
+  const obj = require("../utils/QuestRewardUtils.tsx") /* _getDefaultRewardName */;
+  const defaultReward = require("../utils/QuestCopyUtils.tsx") /* getContextualEntrypointHeading */.getDefaultReward(config);
+  const obj2 = require("../utils/QuestCopyUtils.tsx") /* getContextualEntrypointHeading */;
+  const isFetching = require("../../collectibles/hooks/useFetchCollectiblesProduct.tsx") /* useFetchCollectiblesProduct */.useFetchCollectiblesProduct(defaultReward.skuId);
   const product = isFetching.product;
   let avatarDecoration;
   if (product != null) {
@@ -1427,9 +1427,9 @@ export const useQuestHowToHelpArticle = function useQuestHowToHelpArticle() {
     const found2 = found.filter((type) => type.type === constants.PLAYSTATION);
     return { xboxAccounts: found1, playstationAccounts: found2, xboxAndPlaystationAccounts: found1.concat(found2) };
   }, items1);
-  const articleURL = importDefault(1945).getArticleURL(constants6.QUEST_HOW_TO_PLAYSTATION);
-  const obj2 = importDefault(1945);
-  const articleURL1 = importDefault(1945).getArticleURL(constants6.QUEST_HOW_TO_XBOX);
+  const articleURL = require("../../../utils/HelpdeskUtils.tsx").getArticleURL(constants6.QUEST_HOW_TO_PLAYSTATION);
+  const obj2 = require("../../../utils/HelpdeskUtils.tsx");
+  const articleURL1 = require("../../../utils/HelpdeskUtils.tsx").getArticleURL(constants6.QUEST_HOW_TO_XBOX);
   const intl = accounts(1236).intl;
   const formatResult = intl.format(accounts(1236).t.beN4DG, { psHelpdeskArticle: articleURL, xboxHelpdeskArticle: articleURL1 });
   const intl2 = accounts(1236).intl;
@@ -1437,7 +1437,7 @@ export const useQuestHowToHelpArticle = function useQuestHowToHelpArticle() {
   if (memo.playstationAccounts.length > 0) {
     tmp8 = articleURL;
   }
-  const obj3 = importDefault(1945);
+  const obj3 = require("../../../utils/HelpdeskUtils.tsx");
   if (memo.xboxAccounts.length <= 0) {
     let tmp10 = formatResult;
     if (!tmp3) {
@@ -1533,7 +1533,7 @@ export const useQuestCompletionDetails = function useQuestCompletionDetails(ques
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = _require(589);
+  let obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const items = [_getSystemLocale];
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
   if (typeof useQuestTaskDetails !== "function") {
@@ -1607,12 +1607,12 @@ export const useQuestCompletionDetails = function useQuestCompletionDetails(ques
     obj[2] = combined;
     return obj;
   }
-  combined = _require(1851).formatPercent(stateFromStores, percentComplete, { roundingMode: "floor" });
+  combined = _require("../../../utils/NumberUtils.tsx").formatPercent(stateFromStores, percentComplete, { roundingMode: "floor" });
 };
 export const useSelectedTaskPlatform = function useSelectedTaskPlatform(arg0) {
   const _require = arg0;
   const items = [initializeState];
-  const items1 = [_require(589).useStateFromStores(items, () => outer1_12.selectedTaskPlatform(closure_0)), ];
+  const items1 = [_require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_12.selectedTaskPlatform(closure_0)), ];
   const items2 = [arg0];
   items1[1] = React.useCallback((platform) => quest(first[15]).selectTaskPlatform(quest, platform), items2);
   return items1;
@@ -1676,7 +1676,7 @@ export const useQuestWarningTips = function useQuestWarningTips(userStatus) {
   const items5 = [userStatus];
   userStatus = userStatus.userStatus;
   let enrolledAt;
-  const stateFromStores = _require(589).useStateFromStores(items4, () => {
+  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items4, () => {
     let isQuestExpiredResult = null != closure_0;
     if (isQuestExpiredResult) {
       isQuestExpiredResult = outer1_12.isQuestExpired(tmp.id);
@@ -1719,9 +1719,9 @@ export const useQuestWarningTips = function useQuestWarningTips(userStatus) {
     tmp8Result = tmp8(10405);
     tmp17 = !tmp8Result.isQuestSupportedOnWeb(userStatus);
   }
-  const obj2 = _require(589);
+  const obj2 = _require("../../../../discord_common/js/packages/flux/index.tsx");
   tmp14 = null != completedAt;
-  let isMacResult = _require(500).isMac();
+  let isMacResult = _require("../../../utils/PlatformUtils.tsx").isMac();
   if (isMacResult) {
     isMacResult = tmp4.taskType === tmp8(5135).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP;
   }
@@ -1741,7 +1741,7 @@ export const useQuestWarningTips = function useQuestWarningTips(userStatus) {
 };
 export const useQuest = function useQuest(arg0) {
   const items = [initializeState];
-  const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => quests.quests);
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => quests.quests);
   let value = stateFromStores.get(arg0);
   if (value == null) {
     value = null;
@@ -1836,20 +1836,20 @@ export const useCosponsoredLogotypeAsset = function useCosponsoredLogotypeAsset(
   }, items2);
 };
 export const useClaimedCollectibleRewardMessage = function useClaimedCollectibleRewardMessage(config) {
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = require(10391) /* _getDefaultRewardName */;
+  let obj1 = require("../utils/QuestRewardUtils.tsx") /* _getDefaultRewardName */;
   const defaultRewardName = obj1.getDefaultRewardName(config, stateFromStores);
-  let obj2 = require(10391) /* _getDefaultRewardName */;
+  let obj2 = require("../utils/QuestRewardUtils.tsx") /* _getDefaultRewardName */;
   const collectibleQuestRewardDuration = obj2.getCollectibleQuestRewardDuration(config);
-  let obj3 = require(10391) /* _getDefaultRewardName */;
+  let obj3 = require("../utils/QuestRewardUtils.tsx") /* _getDefaultRewardName */;
   const collectibleQuestRewardExtendableExpirationDate = obj3.getCollectibleQuestRewardExtendableExpirationDate(config);
-  let obj4 = require(10391) /* _getDefaultRewardName */;
+  let obj4 = require("../utils/QuestRewardUtils.tsx") /* _getDefaultRewardName */;
   const result = obj4.isCollectibleQuestRewardPermanentWithPremiumSubscription(config);
-  const result1 = require(10391) /* _getDefaultRewardName */.isCollectibleQuestRewardPremiumExtendable(config);
-  const obj6 = require(10391) /* _getDefaultRewardName */;
-  const isPremiumResult = require(3931) /* getPremiumPlanItem */.isPremium(stateFromStores, PremiumTypes.TIER_2);
+  const result1 = require("../utils/QuestRewardUtils.tsx") /* _getDefaultRewardName */.isCollectibleQuestRewardPremiumExtendable(config);
+  const obj6 = require("../utils/QuestRewardUtils.tsx") /* _getDefaultRewardName */;
+  const isPremiumResult = require("../../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */.isPremium(stateFromStores, PremiumTypes.TIER_2);
   if (null == collectibleQuestRewardDuration) {
     const intl2 = tmp(1236).intl;
     obj = { decorationName: null };
@@ -1894,15 +1894,15 @@ export const useClaimedCollectibleRewardMessage = function useClaimedCollectible
   }
 };
 export const useLaunchInGameActivityQuest = function useLaunchInGameActivityQuest(quest) {
-  let obj = require(7103) /* getApplicationIdsByTaskTypes */;
+  let obj = require("../utils/QuestTaskUtils.tsx") /* getApplicationIdsByTaskTypes */;
   obj = { launchInGameActivity: null };
   const activityApplicationId = obj.getActivityApplicationId(quest);
-  obj[0] = importDefault(10505)({ applicationId: activityApplicationId });
+  obj[0] = require("../../activities/utils/useRefocusOrLaunchActivity.tsx")({ applicationId: activityApplicationId });
   return obj;
 };
 export const useIsPreviewerOnAnyQuest = function useIsPreviewerOnAnyQuest() {
   const items = [initializeState];
-  const stateFromStoresArray = require(589) /* initialize */.useStateFromStoresArray(items, () => {
+  const stateFromStoresArray = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStoresArray(items, () => {
     quests = quests.quests;
     const items = [...quests.values()];
     return items;
@@ -1911,7 +1911,7 @@ export const useIsPreviewerOnAnyQuest = function useIsPreviewerOnAnyQuest() {
 };
 export const useShouldShowPreviewToolTab = function useShouldShowPreviewToolTab() {
   let items = [initializeState];
-  const stateFromStoresArray = require(589) /* initialize */.useStateFromStoresArray(items, () => {
+  const stateFromStoresArray = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStoresArray(items, () => {
     quests = quests.quests;
     const items = [...quests.values()];
     return items;
@@ -1925,8 +1925,8 @@ export const useShouldShowQuestsActivityPanelItem = function useShouldShowQuests
   }
   let isDismissedResult = null != userStatus;
   if (isDismissedResult) {
-    isDismissedResult = require(7078) /* getQuestDeliveryDataForPlacement */.isDismissed(userStatus.userStatus, require(5131) /* QuestsVisibleMessagesChangedSource */.QuestContent.ACTIVITY_PANEL);
-    const obj = require(7078) /* getQuestDeliveryDataForPlacement */;
+    isDismissedResult = require("../utils/QuestDataUtils.tsx") /* getQuestDeliveryDataForPlacement */.isDismissed(userStatus.userStatus, require("../QuestTypes.tsx") /* QuestsVisibleMessagesChangedSource */.QuestContent.ACTIVITY_PANEL);
+    const obj = require("../utils/QuestDataUtils.tsx") /* getQuestDeliveryDataForPlacement */;
   }
   let tmp5 = userStatus;
   if (userStatus == null) {
@@ -1936,7 +1936,7 @@ export const useShouldShowQuestsActivityPanelItem = function useShouldShowQuests
   const items = [initializeState];
   const items1 = [tmp5];
   let claimedAt;
-  const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => {
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
     let isQuestExpiredResult = null != closure_0;
     if (isQuestExpiredResult) {
       isQuestExpiredResult = outer1_12.isQuestExpired(tmp.id);
@@ -1949,12 +1949,12 @@ export const useShouldShowQuestsActivityPanelItem = function useShouldShowQuests
       claimedAt = userStatus.claimedAt;
     }
   }
-  const obj2 = require(589) /* initialize */;
+  const obj2 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const tmp11 = null != claimedAt;
   const tmp6 = require;
   const tmp8 = initializeState;
   const items2 = [tmp8];
-  const stateFromStores1 = require(589) /* initialize */.useStateFromStores(items2, () => null != obj.questEnrollmentBlockedUntil, []);
+  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items2, () => null != obj.questEnrollmentBlockedUntil, []);
   if (!isDismissedResult) {
     isDismissedResult = stateFromStores;
   }
@@ -2258,11 +2258,11 @@ export const useFetchQuestHomeBounties = function useFetchQuestHomeBounties(loca
 };
 export const useQuestHomeBounties = function useQuestHomeBounties() {
   const items = [closure_10];
-  return require(589) /* initialize */.useStateFromStoresObject(items, () => ({ questHomeBounties: closure_10.questHomeBounties, isFetching: closure_10.isFetchingQuestHomeBounties }));
+  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStoresObject(items, () => ({ questHomeBounties: closure_10.questHomeBounties, isFetching: closure_10.isFetchingQuestHomeBounties }));
 };
 export const useQuestBarImpressionSurvey = function useQuestBarImpressionSurvey(questCreative) {
   const _require = questCreative;
-  const DropsOptedOut = _require(3958).DropsOptedOut;
+  const DropsOptedOut = _require("../../user_settings/UserSettings.tsx").DropsOptedOut;
   const setting = DropsOptedOut.useSetting();
   const userStatus = questCreative.userStatus;
   let enrolledAt;

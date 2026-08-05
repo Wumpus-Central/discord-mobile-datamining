@@ -13,7 +13,7 @@ export const useCutoutBackgroundColor = function useCutoutBackgroundColor() {
 export const CutoutBackgroundProvider = function CutoutBackgroundProvider(children) {
   const backgroundColor = children.backgroundColor;
   const context = importAllResult.useContext(closure_5);
-  const internal = importDefault(712).internal;
+  const internal = require("../../../../../discord_common/js/packages/tokens/native.tsx").internal;
   if (internal.isSemanticColor(backgroundColor)) {
     const tmp5 = backgroundColor;
   }
@@ -28,11 +28,11 @@ export const CutoutBackgroundProvider = function CutoutBackgroundProvider(childr
     let value = token;
     if (1 !== obj2.alpha()) {
       if (null != context) {
-        value = require(8105) /* flattenColorOverOpaqueBackground */.flattenColorOverOpaqueBackground(token, context);
-        const tmp6Result = require(8105) /* flattenColorOverOpaqueBackground */;
+        value = require("../../../utils/shared/colors.tsx") /* flattenColorOverOpaqueBackground */.flattenColorOverOpaqueBackground(token, context);
+        const tmp6Result = require("../../../utils/shared/colors.tsx") /* flattenColorOverOpaqueBackground */;
       }
     }
-    obj2 = importDefault(689)(token);
+    obj2 = require("../../../../../_runtime/00689_n.js")(token);
   } else if (undefined === token) {
     value = context;
   }

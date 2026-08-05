@@ -301,7 +301,7 @@ prototype["getTotalDaysInDuration"] = function getTotalDaysInDuration(arg0) {
       rounded = null;
       if (total_countdown_duration_ms > 0) {
         const _Math = Math;
-        rounded = Math.ceil(total_countdown_duration_ms / importDefault(687).Millis.DAY);
+        rounded = Math.ceil(total_countdown_duration_ms / require("../../utils/Durations.tsx").Millis.DAY);
       }
     }
     return rounded;
@@ -323,8 +323,8 @@ prototype["isReady"] = function isReady() {
   if (!isFetchingResult) {
     let hasCachedValueResult = self.hasCachedValue();
     if (!hasCachedValueResult) {
-      hasCachedValueResult = !require(12893) /* canFetchNitroProgramReward */.canFetchAnyProgramReward("ProgramRewardsStore");
-      const obj = require(12893) /* canFetchNitroProgramReward */;
+      hasCachedValueResult = !require("ProgramRewardsUtils.tsx") /* canFetchNitroProgramReward */.canFetchAnyProgramReward("ProgramRewardsStore");
+      const obj = require("ProgramRewardsUtils.tsx") /* canFetchNitroProgramReward */;
     }
     if (!hasCachedValueResult) {
       hasCachedValueResult = self.isError();
@@ -334,7 +334,7 @@ prototype["isReady"] = function isReady() {
   return tmp2;
 };
 prototype["shouldFetch"] = function shouldFetch() {
-  let obj = require(12893) /* canFetchNitroProgramReward */;
+  let obj = require("ProgramRewardsUtils.tsx") /* canFetchNitroProgramReward */;
   if (obj.canFetchAnyProgramReward("ProgramRewardsStore.shouldFetch")) {
     if (networkTtlCache.shouldFetch()) {
       obj = { shouldFetch: true };

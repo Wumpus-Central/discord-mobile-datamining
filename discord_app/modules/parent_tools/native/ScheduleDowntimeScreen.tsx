@@ -19,13 +19,13 @@ function OverlappingSchedulesWarning(conflictingEntries) {
   let tmp = null;
   if (0 !== conflictingEntries.length) {
     let obj = { messageType: null, borderRadius: null, children: null };
-    obj[0] = require(1297) /* Button */.HelpMessageTypes.WARNING;
-    obj[1] = importDefault(712).radii.md;
+    obj[0] = require("../../../design/void/native.tsx") /* Button */.HelpMessageTypes.WARNING;
+    obj[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").radii.md;
     obj = { spacing: 8, children: null };
     obj = { variant: "text-sm/medium", children: null };
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[1] = intl.string(importDefault(2285)["26A0Df"]);
-    const items = [callback2(require(4281) /* Text */.Text, obj), ];
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[1] = intl.string(require("../FamilyCenter.messages.js")["26A0Df"]);
+    const items = [callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
     const obj1 = { spacing: 4, children: null };
     obj1[1] = conflictingEntries.map((dayLabel) => {
       dayLabel = dayLabel.dayLabel;
@@ -33,10 +33,10 @@ function OverlappingSchedulesWarning(conflictingEntries) {
       obj[1] = "" + dayLabel + "  " + dayLabel.timeRange;
       return callback2(callback(table[14]).Text, obj, dayLabel);
     });
-    items[1] = callback2(require(4693) /* Stack */.Stack, obj1);
+    items[1] = callback2(require("../../../design/components/Stack/native/Stack.native.tsx") /* Stack */.Stack, obj1);
     obj[1] = items;
-    obj[2] = callback3(require(4693) /* Stack */.Stack, obj);
-    tmp = callback2(require(1297) /* Button */.HelpMessage, obj);
+    obj[2] = callback3(require("../../../design/components/Stack/native/Stack.native.tsx") /* Stack */.Stack, obj);
+    tmp = callback2(require("../../../design/void/native.tsx") /* Button */.HelpMessage, obj);
   }
   return tmp;
 }

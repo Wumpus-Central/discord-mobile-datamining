@@ -170,7 +170,7 @@ export const parseV8BillingAddressSkemaErrorToBillingError = function parseV8Bil
         code = body.code;
       }
     }
-    if (code === require(530) /* sendRequest */.INVALID_FORM_BODY_ERROR_CODE) {
+    if (code === require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.INVALID_FORM_BODY_ERROR_CODE) {
       let errors;
       if (c8 != null) {
         const body2 = c8.body;
@@ -207,8 +207,8 @@ export const parseV8BillingAddressSkemaErrorToBillingError = function parseV8Bil
         errors1 = body4.errors;
       }
       if (null != errors1) {
-        c8.body = require(530) /* sendRequest */.convertSkemaError(c8.body.errors);
-        const obj = require(530) /* sendRequest */;
+        c8.body = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.convertSkemaError(c8.body.errors);
+        const obj = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */;
       }
     }
   }

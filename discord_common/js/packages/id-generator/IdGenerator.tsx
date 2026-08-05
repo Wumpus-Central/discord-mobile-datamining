@@ -10,9 +10,9 @@ class IdGenerator {
   }
 }
 IdGenerator.prototype["generate"] = function generate(arg0) {
-  const obj = importDefault(14)(arg0);
+  const obj = require("../../../../_runtime/00014_Integer.js")(arg0);
   this._sequenceNumber = +this._sequenceNumber + 1;
-  const str = new require(511) /* Buffer */.Buffer(24);
+  const str = new require("../../../../_runtime/00511_Buffer.js") /* Buffer */.Buffer(24);
   str.writeInt32LE(obj.mod(4294967296).toJSNumber() | 0, 0, true);
   const modResult = obj.mod(4294967296);
   const tmp2 = +this._sequenceNumber | 0;

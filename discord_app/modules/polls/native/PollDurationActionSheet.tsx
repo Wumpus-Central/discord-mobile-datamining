@@ -6,7 +6,7 @@ const require = arg1;
 function PollDurationRadioGroup(onChange) {
   onChange = onChange.onChange;
   let importDefault;
-  const tmp = importDefault(11497)();
+  const tmp = require("../usePollDurationOptions.tsx")();
   importDefault = tmp;
   const items = [tmp, onChange];
   const callback = React.useCallback((arg0) => {
@@ -40,5 +40,5 @@ export default function PollDurationActionSheet(arg0) {
   ({ selectedDuration, onChange } = arg0);
   const obj = { children: null };
   obj[0] = <PollDurationRadioGroup selectedDuration={selectedDuration} onChange={onChange} />;
-  return jsx(require(5646) /* ActionSheet */.ActionSheet, { children: null });
+  return jsx(require("../../../design/components/Sheet/native/ActionSheet.native.tsx") /* ActionSheet */.ActionSheet, { children: null });
 };

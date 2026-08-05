@@ -256,9 +256,9 @@ initialize = {
 };
 initialize = {
   backoff() {
-    let tmp = importDefault(584);
-    const result = 5 * importDefault(687).Millis.SECOND;
-    tmp = new tmp(result, 5 * importDefault(687).Millis.MINUTE);
+    let tmp = require("../../../discord_common/js/packages/backoff/Backoff.tsx");
+    const result = 5 * require("../../utils/Durations.tsx").Millis.SECOND;
+    tmp = new tmp(result, 5 * require("../../utils/Durations.tsx").Millis.MINUTE);
     return tmp;
   }
 };

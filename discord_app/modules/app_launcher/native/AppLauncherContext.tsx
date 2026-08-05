@@ -48,12 +48,12 @@ export const useRequiredAppLauncherContext = function useRequiredAppLauncherCont
 export const useAppLauncherContext = function useAppLauncherContext() {
   let _require = sharedValue.useRef(sharedValue1.DISMISSED);
   const dependencyMap = sharedValue.useRef(undefined);
-  let obj = _require(4146);
+  let obj = _require("../../reanimated/ReanimatedRexport.tsx");
   sharedValue = obj.useSharedValue(-1);
-  sharedValue1 = _require(4146).useSharedValue(0);
-  const TEXT = _require(9467).AppLauncherEntrypoint.TEXT;
-  const obj2 = _require(4146);
-  const defaultAppLauncherWidth = _require(9468).useDefaultAppLauncherWidth(TEXT);
+  sharedValue1 = _require("../../reanimated/ReanimatedRexport.tsx").useSharedValue(0);
+  const TEXT = _require("../AppLauncherTypes.tsx").AppLauncherEntrypoint.TEXT;
+  const obj2 = _require("../../reanimated/ReanimatedRexport.tsx");
+  const defaultAppLauncherWidth = _require("hooks/useDefaultAppLauncherWidth.tsx").useDefaultAppLauncherWidth(TEXT);
   _require = false;
   obj = {
     getApplicationCommandManager() {

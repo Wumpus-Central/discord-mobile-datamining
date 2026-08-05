@@ -36,9 +36,9 @@ export const Input = function Input(arg0) {
   ({ children, containerStyle } = arg0);
   if (typeof label === "string") {
     if (true === required) {
-      const intl = require(1236) /* getSystemLocale */.intl;
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
       const _HermesInternal = HermesInternal;
-      const combined = "" + label + " (" + intl.string(require(1236) /* getSystemLocale */.t.EkokLy) + ")";
+      const combined = "" + label + " (" + intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.EkokLy) + ")";
     }
   }
   let obj = { style: containerStyle, children: null };
@@ -53,7 +53,7 @@ export const Input = function Input(arg0) {
       obj = { variant: "text-xs/medium", color: "text-muted", style: null, children: null };
       obj[2] = tmp.description;
       obj[3] = description;
-      tmp15Result = tmp15(require(4281) /* Text */.Text, obj);
+      tmp15Result = tmp15(require("../../Text/native/Text.tsx") /* Text */.Text, obj);
     }
     items[2] = tmp15Result;
     tmp15Result = null;
@@ -61,7 +61,7 @@ export const Input = function Input(arg0) {
       const obj1 = { style: null, children: null };
       obj1[0] = tmp.error;
       obj1[1] = errorMessage;
-      tmp15Result = tmp15(require(7715) /* ErrorText */.ErrorText, obj1);
+      tmp15Result = tmp15(require("../../ErrorText/native/ErrorText.native.tsx") /* ErrorText */.ErrorText, obj1);
     }
     items[3] = tmp15Result;
     obj[1] = items;
@@ -72,7 +72,7 @@ export const Input = function Input(arg0) {
     const obj3 = { variant: "text-sm/semibold", color: "text-subtle", nativeID: null, children: null };
     obj3[2] = labelId;
     obj3[3] = label;
-    const items1 = [callback(require(4281) /* Text */.Text, obj3), labelTrailing];
+    const items1 = [callback(require("../../Text/native/Text.tsx") /* Text */.Text, obj3), labelTrailing];
     obj2[1] = items1;
     let tmp7Result = tmp7(tmp8, obj2);
   } else {
@@ -89,7 +89,7 @@ export const Input = function Input(arg0) {
     }
     items2[1] = tmp7Result;
     obj4[5] = items2;
-    tmp7Result = tmp7(require(4281) /* Text */.Text, obj4);
+    tmp7Result = tmp7(require("../../Text/native/Text.tsx") /* Text */.Text, obj4);
     tmp22 = require;
   }
 };

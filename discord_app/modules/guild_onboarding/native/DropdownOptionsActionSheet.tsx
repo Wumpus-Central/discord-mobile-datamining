@@ -111,10 +111,10 @@ export default function DropdownOptionsActionSheet(arg0) {
   let require;
   ({ guildId: require, promptId: importDefault, canBeNew: dependencyMap, onSelect: Button } = arg0);
   let closure_4;
-  let obj = require(647) /* defaultAreStatesEqual */;
+  let obj = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */;
   const items = [handleUpdate];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getOnboardingPrompt(closure_1));
-  let obj1 = require(647) /* defaultAreStatesEqual */;
+  let obj1 = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */;
   const items1 = [handleUpdate];
   closure_4 = obj1.useStateFromStoresArray(items1, () => outer1_6.getOnboardingResponsesForPrompt(closure_0, closure_1));
   if (null == stateFromStores) {
@@ -127,7 +127,7 @@ export default function DropdownOptionsActionSheet(arg0) {
     obj[1] = callback(tmp3(5337).BottomSheetTitleHeader, obj);
     obj1 = { contentContainerStyle: null, children: null };
     const obj2 = { paddingBottom: null };
-    obj2[0] = importDefault(1581)().bottom;
+    obj2[0] = require("../../safe_area/useSafeAreaInsets.native.tsx")().bottom;
     obj1[0] = obj2;
     const obj3 = { accessibilityRole: "radiogroup", accessibilityLabel: null, children: null };
     const intl2 = tmp3(1236).intl;

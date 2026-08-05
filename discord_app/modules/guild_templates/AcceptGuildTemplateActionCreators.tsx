@@ -11,7 +11,7 @@ export default {
     let closure_0 = code;
     const importDefault = first;
     const dependencyMap = first1;
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "GUILD_TEMPLATE_ACCEPT", code };
     obj.dispatch(obj);
     return new Promise((closure_0) => {

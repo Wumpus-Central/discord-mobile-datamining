@@ -61,7 +61,7 @@ let merged = Object.assign(require("noop").memo((fade) => {
     obj.manualPlayback = manualPlayback;
     obj.fade = tmp3;
     obj.usesSmallCache = tmp4;
-    return jsx(importDefault(5237), {});
+    return jsx(require("../../../discord_common/js/packages/rtn-codegen/js/FastImageNativeComponent.tsx"), {});
   }
   tmp = callback();
   tmp4 = undefined !== usesSmallCache && usesSmallCache;

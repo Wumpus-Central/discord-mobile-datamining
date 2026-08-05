@@ -11,7 +11,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_PILE,
   getComponent() {
-    return require(14711) /* SampleCard */.default;
+    return require("../../design_system/native/UserSettingsDesignSystemPile.tsx") /* SampleCard */.default;
   }
 };
 const route = createToggle.createRoute(obj);

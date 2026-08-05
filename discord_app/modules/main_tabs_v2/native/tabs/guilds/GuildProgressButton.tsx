@@ -41,9 +41,9 @@ export default function GuildProgressButton(guild) {
   return jsx(guild(7780).RowButton, { source: null });
 };
 export const getScaledGuildProgressButtonHeight = function getScaledGuildProgressButtonHeight(fontScale, isRefreshEnabled) {
-  const refreshToken = require(1348) /* useIsMobileVisualRefreshExperimentEnabled */.resolveRefreshToken(importDefault(712).modules.mobile.TABLE_ROW_PADDING, isRefreshEnabled);
-  const obj = require(1348) /* useIsMobileVisualRefreshExperimentEnabled */;
-  const sum = refreshToken + require(9370) /* map */.scaleTextLineHeight("text-md/semibold", fontScale);
-  const obj2 = require(9370) /* map */;
-  return sum + 2 * require(9370) /* map */.scaleTextLineHeight("text-xs/medium", fontScale) + refreshToken;
+  const refreshToken = require("../../../../themes/experiments/MobileVisualRefreshExperiment.tsx") /* useIsMobileVisualRefreshExperimentEnabled */.resolveRefreshToken(require("../../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_PADDING, isRefreshEnabled);
+  const obj = require("../../../../themes/experiments/MobileVisualRefreshExperiment.tsx") /* useIsMobileVisualRefreshExperimentEnabled */;
+  const sum = refreshToken + require("../../../../screen/native/useScaledTextLineHeight.android.tsx") /* map */.scaleTextLineHeight("text-md/semibold", fontScale);
+  const obj2 = require("../../../../screen/native/useScaledTextLineHeight.android.tsx") /* map */;
+  return sum + 2 * require("../../../../screen/native/useScaledTextLineHeight.android.tsx") /* map */.scaleTextLineHeight("text-xs/medium", fontScale) + refreshToken;
 };

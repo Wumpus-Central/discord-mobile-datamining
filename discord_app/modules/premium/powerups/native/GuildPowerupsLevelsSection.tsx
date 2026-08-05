@@ -43,9 +43,9 @@ export default function GuildPowerupsLevelsSection(arg0) {
     closure_4.current = current;
   }, []);
   obj = { title: null, description: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   obj[0] = intl.string(listings(2317)["TXY/b0"]);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
+  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   obj[1] = intl2.string(listings(2317).aJv4PB);
   const items1 = [callback(listings(11823), obj), ];
   obj = { cardMarginRight: PX_16, cardWidth: 250, contentContainerStyle: tmp.scrollerContent, itemCount: memo.length, onScrollingChange: callback, style: tmp.scroller, children: null };
@@ -54,7 +54,7 @@ export default function GuildPowerupsLevelsSection(arg0) {
     obj = { guildId: closure_0, powerup, nextPowerup: memo[index + 1], index, isScrollingRef: closure_4 };
     return outer1_5(closure_4, obj, powerup.skuId);
   });
-  items1[1] = callback(require(11835) /* items */.MarketingCardsScroller, obj);
+  items1[1] = callback(require("../../../guild_boosting/native/marketing_redesign/MarketingCardsScroller.tsx") /* items */.MarketingCardsScroller, obj);
   obj[0] = items1;
   return callback2(closure_6, obj);
 };

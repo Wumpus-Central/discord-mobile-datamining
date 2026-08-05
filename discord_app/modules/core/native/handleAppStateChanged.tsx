@@ -13,27 +13,27 @@ let result = require("ME").fileFinishedImporting("modules/core/native/handleAppS
 
 export default function handleAppStateChanged(state) {
   state = state.getState();
-  let obj = importDefault(10);
+  let obj = require("../../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx");
   obj.markAndLog(closure_7, "\u{1F3C3}", "AppState changing from " + state + " to " + state);
   obj = { type: "APP_STATE_UPDATE", state };
-  importDefault(709).dispatch(obj);
+  require("../../../Dispatcher.tsx").dispatch(obj);
   let isAuthenticatedResult = state === constants2.BACKGROUND && state === tmp6.ACTIVE;
   if (isAuthenticatedResult) {
     isAuthenticatedResult = authenticated.isAuthenticated();
   }
   if (isAuthenticatedResult) {
-    isAuthenticatedResult = require(4356) /* createRTCConnection */.default.isDisconnected();
-    const _default = require(4356) /* createRTCConnection */.default;
+    isAuthenticatedResult = require("../../../stores/RTCConnectionStore.tsx") /* createRTCConnection */.default.isDisconnected();
+    const _default = require("../../../stores/RTCConnectionStore.tsx") /* createRTCConnection */.default;
   }
   if (isAuthenticatedResult) {
     let tmp2Result = tmp2(16854);
     tmp2Result.deferUpdate();
   }
   if (state === constants2.ACTIVE) {
-    require(6843) /* getDeviceMetadata */.trackAppOpened("launcher");
-    const obj5 = require(6843) /* getDeviceMetadata */;
-    const result = require(4127) /* setSystemTheme */.setSystemThemeIfNeeded();
-    const obj6 = require(4127) /* setSystemTheme */;
+    require("../../tti_analytics/native/TTIAnalyticsUtils.tsx") /* getDeviceMetadata */.trackAppOpened("launcher");
+    const obj5 = require("../../tti_analytics/native/TTIAnalyticsUtils.tsx") /* getDeviceMetadata */;
+    const result = require("../../user_settings/ThemeActionCreators.tsx") /* setSystemTheme */.setSystemThemeIfNeeded();
+    const obj6 = require("../../user_settings/ThemeActionCreators.tsx") /* setSystemTheme */;
   }
   tmp2Result = tmp2(9);
   tmp2Result.appStateChanged(state);

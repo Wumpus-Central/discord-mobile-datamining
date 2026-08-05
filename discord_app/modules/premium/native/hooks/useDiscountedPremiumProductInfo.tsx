@@ -25,7 +25,7 @@ export const useDiscountedPremiumProductInfo = function useDiscountedPremiumProd
       return items3.find((basePlanId) => planIds.includes(basePlanId.basePlanId));
     }
   }, items);
-  let obj = _require(589);
+  let obj = _require("../../../../../discord_common/js/packages/flux/index.tsx");
   const items1 = [stateFromStores];
   const items2 = [memo];
   stateFromStores = obj.useStateFromStores(items1, () => {

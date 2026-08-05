@@ -10,13 +10,13 @@ let error;
 const require = arg1;
 function handleMessageSendFailedAutomod(messageData) {
   messageData = messageData.messageData;
-  let obj = require(7213) /* items */;
+  let obj = require("../../lib/MessageQueue.tsx") /* items */;
   const failedMessageId = obj.getFailedMessageId(messageData);
   obj = { id: failedMessageId, isBlockedEdit: null, messageData: null, errorMessage: null };
-  obj[1] = require(7213) /* items */.isMessageDataEdit(messageData);
+  obj[1] = require("../../lib/MessageQueue.tsx") /* items */.isMessageDataEdit(messageData);
   obj[2] = messageData;
-  const obj3 = require(7213) /* items */;
-  obj[3] = require(7245) /* getAutomodErrorMessageFromErrorResponse */.getAutomodErrorMessage(messageData, messageData.errorResponseBody);
+  const obj3 = require("../../lib/MessageQueue.tsx") /* items */;
+  obj[3] = require("AutomodErrorUtils.tsx") /* getAutomodErrorMessageFromErrorResponse */.getAutomodErrorMessage(messageData, messageData.errorResponseBody);
   closure_8[failedMessageId] = obj;
   closure_9 = closure_9 + 1;
   return true;
@@ -130,10 +130,10 @@ const guildAutomodMessageStore = new GuildAutomodMessageStore(require("dispatche
     } else if (message.type !== constants2.AUTO_MODERATION_ACTION) {
       return false;
     } else {
-      const messageRecord = require(4504) /* createMinimalMessageRecord */.createMessageRecord(message);
-      const obj = require(4504) /* createMinimalMessageRecord */;
+      const messageRecord = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */.createMessageRecord(message);
+      const obj = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */;
       const tmp = require;
-      let result = require(6876) /* getDecisionOutcomeFromMessage */.isAutomodMessageRecord(messageRecord);
+      let result = require("AutomodMessageUtils.tsx") /* getDecisionOutcomeFromMessage */.isAutomodMessageRecord(messageRecord);
       if (result) {
         let flag = tmp(6876).isAutomodNotification(messageRecord);
         if (flag) {

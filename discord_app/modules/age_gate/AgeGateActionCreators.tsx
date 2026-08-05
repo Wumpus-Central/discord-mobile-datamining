@@ -9,11 +9,11 @@ const result = require("trackAgeGateSubmitted").fileFinishedImporting("modules/a
 
 export const submitDateOfBirth = function submitDateOfBirth(c0, outer1_2) {
   const _require = outer1_2;
-  importDefault(14990)(c0, outer1_2);
-  let obj = importDefault(698);
+  require("../auth/experiment/trackAgeGateSubmitted.tsx")(c0, outer1_2);
+  let obj = require("../../utils/AnalyticsUtils.tsx");
   obj = { source: outer1_2, action: AgeGateAnalyticAction.AGE_GATE_SUBMITTED };
   obj.track(constants.AGE_GATE_ACTION, obj);
-  const HTTP = _require(530).HTTP;
+  const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
   obj = { url: constants2.ME, oldFormErrors: true, body: null, rejectWithError: false };
   obj[2] = { date_of_birth: c0.format("YYYY-MM-DD") };
   const obj1 = { date_of_birth: c0.format("YYYY-MM-DD") };
@@ -25,14 +25,14 @@ export const submitDateOfBirth = function submitDateOfBirth(c0, outer1_2) {
   });
 };
 export const preventUnderageRegistration = function preventUnderageRegistration(REGISTER) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj.dispatch({ type: "AGE_GATE_PREVENT_UNDERAGE_REGISTRATION" });
   obj = { source: REGISTER, action: AgeGateAnalyticAction.AGE_GATE_PREVENT_UNDERAGE_REGISTRATION };
-  importDefault(698).track(constants.AGE_GATE_ACTION, obj);
+  require("../../utils/AnalyticsUtils.tsx").track(constants.AGE_GATE_ACTION, obj);
 };
 export const logoutUnderageNewUser = function logoutUnderageNewUser(source) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj.dispatch({ type: "AGE_GATE_LOGOUT_UNDERAGE_NEW_USER" });
   obj = { source, action: AgeGateAnalyticAction.AGE_GATE_LOGOUT_UNDERAGE_NEW_USER };
-  importDefault(698).track(constants.AGE_GATE_ACTION, obj);
+  require("../../utils/AnalyticsUtils.tsx").track(constants.AGE_GATE_ACTION, obj);
 };

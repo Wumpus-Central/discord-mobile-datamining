@@ -25,7 +25,7 @@ export default function ProfileBanner(bannerHeight) {
   }
   const tmp = callback();
   let obj = { backgroundColor: null, height: null };
-  obj[0] = require(688) /* int2hslRaw */.int2hex(backgroundColor);
+  obj[0] = require("../../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */.int2hex(backgroundColor);
   obj[1] = bannerHeight + bannerSafeArea;
   obj = { style: items, children: null };
   items = [tmp.root, obj, style];
@@ -34,7 +34,7 @@ export default function ProfileBanner(bannerHeight) {
     obj = { style: null, source: null };
     obj[0] = tmp.image;
     obj[1] = bannerSource;
-    tmp3Result = tmp3(importDefault(5236), obj);
+    tmp3Result = tmp3(require("../../../components_native/common/FastImage.tsx"), obj);
   }
   obj[1] = tmp3Result;
   return <View style={items}>{null}</View>;

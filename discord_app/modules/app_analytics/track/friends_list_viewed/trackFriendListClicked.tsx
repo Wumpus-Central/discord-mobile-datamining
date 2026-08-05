@@ -7,8 +7,8 @@ export default function trackFriendsListClicked(arg0) {
   let source;
   let tab_opened;
   ({ tab_opened, source } = arg0);
-  let obj = importDefault(698);
+  let obj = require("../../../../utils/AnalyticsUtils.tsx");
   obj = { tab_opened, source };
-  const merged = Object.assign(importDefault(15699)());
+  const merged = Object.assign(require("getTrackFriendsListViewedData.native.tsx")());
   obj.track(AnalyticEvents.FRIENDS_LIST_CLICKED, obj);
 };

@@ -431,9 +431,9 @@ export const fetchReferralEligibleUsers = function fetchReferralEligibleUsers(cl
   return applyArgumentsResult;
 };
 export const fetchReferralsRemaining = function fetchReferralsRemaining() {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj.dispatch({ type: "BILLING_REFERRALS_REMAINING_FETCH_START" });
-  const HTTP = require(530) /* sendRequest */.HTTP;
+  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
   obj = { url: constants.GET_REFERRALS_REMAINING, oldFormErrors: true, rejectWithError: false };
   const value = HTTP.get(obj);
   return value.then((body) => {

@@ -11,14 +11,14 @@ function openGuildEventDetails(arg0) {
   let recurrenceId;
   ({ event, recurrenceId } = arg0);
   ({ eventId, onClose } = arg0);
-  let obj = importDefault(4253);
+  let obj = require("../action_sheet/native/ActionSheetActionCreators.tsx");
   obj = { eventId, event, onCloseActionSheet: onClose, recurrenceId: null };
   if (recurrenceId == null) {
-    recurrenceId = require(8864) /* getRRule */.getNextRecurrenceIdInEvent(event);
-    const tmp2Result = require(8864) /* getRRule */;
+    recurrenceId = require("utils/ScheduleUtils.tsx") /* getRRule */.getNextRecurrenceIdInEvent(event);
+    const tmp2Result = require("utils/ScheduleUtils.tsx") /* getRRule */;
   }
   obj[3] = recurrenceId;
-  obj.openLazy(require(1959) /* asyncRequireImpl */(8873, dependencyMap.paths), closure_5, obj, "stack");
+  obj.openLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(8873, dependencyMap.paths), closure_5, obj, "stack");
 }
 function _transitionToEventDetailsFromInvite() {
   const self = this;
@@ -113,7 +113,7 @@ export const transitionToEventDetailsFromInvite = function transitionToEventDeta
   return applyArgumentsResult;
 };
 export const openEndEventModal = function openEndEventModal(channel) {
-  let obj = importDefault(4253);
+  let obj = require("../action_sheet/native/ActionSheetActionCreators.tsx");
   obj = { channel };
-  obj.openLazy(require(1959) /* asyncRequireImpl */(9069, dependencyMap.paths), closure_4, obj);
+  obj.openLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(9069, dependencyMap.paths), closure_4, obj);
 };

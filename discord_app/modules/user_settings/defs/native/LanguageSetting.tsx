@@ -5,17 +5,17 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.IHMsPn);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.IHMsPn);
   },
   parent: null,
   IconComponent: require("LanguageIcon").LanguageIcon,
   useTrailing: function useLanguageSettingTrailing() {
     const items = [_getSystemLocale];
-    _require = _require(589).useStateFromStores(items, () => locale.locale);
-    const obj = _require(589);
+    _require = _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => locale.locale);
+    const obj = _require("../../../../../discord_common/js/packages/flux/index.tsx");
     const tmp = _require;
-    const availableLocales = _require(1236).getAvailableLocales();
+    const availableLocales = _require("../../../../intl/index.native.tsx").getAvailableLocales();
     const found = availableLocales.find((value) => value.value === closure_0);
     let stringResult = null;
     if (null != found) {
@@ -29,7 +29,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.LANGUAGE,
   getComponent() {
-    return require(14502) /* handleLanguageChange */.default;
+    return require("../../language_and_time/native/UserSettingsLocale.tsx") /* handleLanguageChange */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

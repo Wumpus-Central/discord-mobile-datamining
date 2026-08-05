@@ -160,9 +160,9 @@ export const switchAccount = function switchAccount(id, switchSynchronously, CHO
     obj.log("Switching accounts failed because there was no token");
     obj = { type: "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE", userId: null };
     obj[1] = id;
-    importDefault(709).dispatch(obj);
+    require("../../Dispatcher.tsx").dispatch(obj);
     let resolved = Promise.resolve();
-    const obj7 = importDefault(709);
+    const obj7 = require("../../Dispatcher.tsx");
   } else {
     let tmp4 = CHOOSE_ACCOUNT;
     const obj1 = { type: "MULTI_ACCOUNT_SWITCH_START", targetUserId: null, location: null };
@@ -171,34 +171,34 @@ export const switchAccount = function switchAccount(id, switchSynchronously, CHO
       tmp4 = null;
     }
     obj1[2] = tmp4;
-    importDefault(709).dispatch(obj1);
-    const obj4 = importDefault(709);
+    require("../../Dispatcher.tsx").dispatch(obj1);
+    const obj4 = require("../../Dispatcher.tsx");
     const tmp5 = importDefault;
-    resolved = importDefault(5736).switchAccountToken(token, switchSynchronously);
-    const tmp5Result = importDefault(5736);
+    resolved = require("../../actions/AuthenticationActionCreators.tsx").switchAccountToken(token, switchSynchronously);
+    const tmp5Result = require("../../actions/AuthenticationActionCreators.tsx");
   }
   return resolved;
 };
 export const moveAccount = function moveAccount(arg0, to) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "MULTI_ACCOUNT_MOVE_ACCOUNT", from: arg0, to };
   obj.dispatch(obj);
 };
 export const removeAccount = function removeAccount(userId) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "MULTI_ACCOUNT_REMOVE_ACCOUNT", userId };
   obj.dispatch(obj);
 };
 export const updatePushSyncToken = function updatePushSyncToken(id, token) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "MULTI_ACCOUNT_UPDATE_PUSH_SYNC_TOKEN", userId: id, pushSyncToken: token };
   obj.dispatch(obj);
 };
 export const invalidatePushSyncTokens = function invalidatePushSyncTokens(invalid_push_sync_tokens) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "MULTI_ACCOUNT_INVALIDATE_PUSH_SYNC_TOKENS", invalidPushSyncTokens: invalid_push_sync_tokens };
   obj.dispatch(obj);
 };
 export const reportAccountSwitchTimeout = function reportAccountSwitchTimeout() {
-  importDefault(709).dispatch({ type: "MULTI_ACCOUNT_SWITCH_TIMEOUT" });
+  require("../../Dispatcher.tsx").dispatch({ type: "MULTI_ACCOUNT_SWITCH_TIMEOUT" });
 };

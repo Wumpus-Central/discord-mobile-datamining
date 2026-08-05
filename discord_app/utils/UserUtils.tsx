@@ -59,7 +59,7 @@ function getName(username) {
 }
 function useName(username) {
   const items = [initialize];
-  let stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => obj.hidePersonalInformation);
+  let stateFromStores = require("../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => obj.hidePersonalInformation);
   if (null != username) {
     const obj2 = nameFromUser(username);
     if (stateFromStores) {
@@ -81,7 +81,7 @@ function useName(username) {
     }
     return combined;
   }
-  const obj = require(589) /* initialize */;
+  const obj = require("../../discord_common/js/packages/flux/index.tsx") /* initialize */;
 }
 function getGlobalName(user) {
   if (null != user) {
@@ -167,9 +167,9 @@ function humanizeStatus(DND, arg1) {
   const isMobile = obj.isMobile;
   const isVR = obj.isVR;
   if (constants.ONLINE === DND) {
-    const intl6 = require(1236) /* getSystemLocale */.intl;
+    const intl6 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
     const string = intl6.string;
-    const t = require(1236) /* getSystemLocale */.t;
+    const t = require("../intl/index.native.tsx") /* getSystemLocale */.t;
     if (tmp2) {
       let stringResult = string(t.SWnU0R);
     } else if (tmp) {
@@ -179,20 +179,20 @@ function humanizeStatus(DND, arg1) {
     }
     return stringResult;
   } else if (tmp3.OFFLINE === DND) {
-    const intl5 = require(1236) /* getSystemLocale */.intl;
-    return intl5.string(require(1236) /* getSystemLocale */.t.Vv0abJ);
+    const intl5 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl5.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.Vv0abJ);
   } else if (tmp3.IDLE === DND) {
-    const intl4 = require(1236) /* getSystemLocale */.intl;
-    return intl4.string(require(1236) /* getSystemLocale */.t.qWbtVU);
+    const intl4 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl4.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.qWbtVU);
   } else if (tmp3.DND === DND) {
-    const intl3 = require(1236) /* getSystemLocale */.intl;
-    return intl3.string(require(1236) /* getSystemLocale */.t.jaNpQH);
+    const intl3 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl3.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.jaNpQH);
   } else if (tmp3.INVISIBLE === DND) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    return intl2.string(require(1236) /* getSystemLocale */.t.bg24HO);
+    const intl2 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl2.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.bg24HO);
   } else if (tmp3.STREAMING === DND) {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.XKYej5);
+    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.XKYej5);
   } else {
     const UNKNOWN = tmp3.UNKNOWN;
     return null;
@@ -202,8 +202,8 @@ function humanizeStatus(DND, arg1) {
 }
 function presentUserTag(username, identifiable, arg2) {
   if (null == username) {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.sKdZ6U);
+    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.sKdZ6U);
   } else {
     username = username.username;
     let tmp = null != username;
@@ -262,12 +262,12 @@ function useUserTag(user) {
   const merged = Object.assign(closure_8);
   const merged1 = Object.assign(arg1);
   const items = [initialize];
-  return presentUserTag(user, {}, require(589) /* initialize */.useStateFromStores(items, () => obj.hidePersonalInformation));
+  return presentUserTag(user, {}, require("../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => obj.hidePersonalInformation));
 }
 function useDirectMessageRecipient(arg0) {
   const _require = arg0;
   const items = [mergeGuildAvatar];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null != closure_0) {
       let user = null;
       if (obj.isPrivate()) {

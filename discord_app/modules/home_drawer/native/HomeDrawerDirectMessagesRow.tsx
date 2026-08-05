@@ -12,7 +12,7 @@ let metroImportAll;
 const require = arg1;
 function HomeDrawerDMsRow() {
   const tmp = createCacheKey();
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [upsertRelationship, sortActivity];
   const stateFromStores = obj.useStateFromStores(items, () => {
     friendIDs = friendIDs.getFriendIDs();
@@ -37,10 +37,10 @@ function HomeDrawerDMsRow() {
   const obj3 = { title: null, subtitle: null };
   const obj4 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
   const intl2 = tmp2(1236).intl;
-  obj4[3] = intl2.string(require(1236) /* getSystemLocale */.t.YUU0RF);
-  obj3[0] = callback(require(4281) /* Text */.Text, obj4);
+  obj4[3] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.YUU0RF);
+  obj3[0] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj4);
   obj3[1] = tmp5;
-  return callback(require(15302) /* HomeDrawerSharedItem */.HomeDrawerSharedItem, obj3);
+  return callback(require("HomeDrawerShared.tsx") /* HomeDrawerSharedItem */.HomeDrawerSharedItem, obj3);
 }
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
 createCacheKey = { subtitle: { flexDirection: "row", alignItems: "center", gap: 4 }, onlineDot: null };
@@ -50,7 +50,7 @@ createCacheKey = createCacheKey.createStyles(createCacheKey);
 const result = require("sortActivity").fileFinishedImporting("modules/home_drawer/native/HomeDrawerDirectMessagesRow.tsx");
 
 export default function HomeDrawerDMsRowWrapper() {
-  const MobileHomeDrawerExperiment = require(4142) /* MobileHomeDrawerExperiment */.MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = require("HomeDrawerExperiment.tsx") /* MobileHomeDrawerExperiment */.MobileHomeDrawerExperiment;
   let tmp2 = null;
   if (MobileHomeDrawerExperiment.useConfig({ location: "dm-expanded-children" }).enableHome) {
     tmp2 = null;

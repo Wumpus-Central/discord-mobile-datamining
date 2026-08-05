@@ -55,7 +55,7 @@ const iCYMIUnreadStateStore = new ICYMIUnreadStateStore(require("dispatcher"), {
       let tmp2 = nextResult;
       let tmp3 = require;
       let tmp4 = dependencyMap;
-      if (nextResult.type === require(7224) /* MessageEmbedTypes */.ICYMIItemTypes.MESSAGE) {
+      if (nextResult.type === require("ICYMITypes.tsx") /* MessageEmbedTypes */.ICYMIItemTypes.MESSAGE) {
         let tmp11 = closure_3;
         let tmp12 = nextResult;
         let result = null != closure_3.readIdToTimestampMap[tmp2.id];

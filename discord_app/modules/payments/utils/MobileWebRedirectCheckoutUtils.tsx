@@ -10,7 +10,7 @@ const result = require("module_1208").fileFinishedImporting("modules/payments/ut
 
 export const MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG = "mobile_web_redirect_checkout";
 export const captureMobileWebRedirectCheckoutSentryError = function captureMobileWebRedirectCheckoutSentryError(error, source, tags) {
-  let obj = importDefault(1208);
+  let obj = require("../../../utils/SentryUtils.native.tsx");
   obj = { tags: null, extra: null };
   obj = { app_context: mobile_web_redirect_checkout, source };
   const merged = Object.assign(tags.tags);
@@ -19,20 +19,20 @@ export const captureMobileWebRedirectCheckoutSentryError = function captureMobil
   obj.captureException(error, obj);
 };
 export const isMobileWebRedirectCheckoutEnabled = function isMobileWebRedirectCheckoutEnabled() {
-  return require(1577) /* isMetaQuest */.isMetaQuest();
+  return require("../../device/MetaQuestUtils.android.tsx") /* isMetaQuest */.isMetaQuest();
 };
 export const getCustomCheckoutFlowForAnalytics = function getCustomCheckoutFlowForAnalytics() {
-  return require(1577) /* isMetaQuest */.isMetaQuest() ? CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT : CustomCheckoutFlow.MOBILE_WEB_REDIRECT_CHECKOUT;
+  return require("../../device/MetaQuestUtils.android.tsx") /* isMetaQuest */.isMetaQuest() ? CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT : CustomCheckoutFlow.MOBILE_WEB_REDIRECT_CHECKOUT;
 };
 export const useGetCustomCheckoutFlow = function useGetCustomCheckoutFlow() {
   let deep_link_type;
   let flow_type;
   let pathname;
   let search;
-  const _location = require(4108) /* _extends */.useLocation();
+  const _location = require("../../../../_runtime/metro/04108__extends.js") /* _extends */.useLocation();
   ({ pathname, search } = _location);
-  const obj = require(4108) /* _extends */;
-  const parsed = require(5140) /* keysSorter */.parse(search);
+  const obj = require("../../../../_runtime/metro/04108__extends.js") /* _extends */;
+  const parsed = require("../../../../_runtime/05140_keysSorter.js") /* keysSorter */.parse(search);
   ({ deep_link_type, flow_type } = parsed);
   if (!pathname.startsWith(constants.BILLING_MANAGE_SUBSCRIPTION)) {
     if (deep_link_type === constants2.MOBILE_WEB_REDIRECT_CHECKOUT) {
@@ -45,7 +45,7 @@ export const useGetCustomCheckoutFlow = function useGetCustomCheckoutFlow() {
 export const getCustomCheckoutFlow = function getCustomCheckoutFlow() {
   let deep_link_type;
   let flow_type;
-  const parsed = require(5140) /* keysSorter */.parse(window.location.search);
+  const parsed = require("../../../../_runtime/05140_keysSorter.js") /* keysSorter */.parse(window.location.search);
   ({ deep_link_type, flow_type } = parsed);
   if (!pathname.startsWith(constants.BILLING_MANAGE_SUBSCRIPTION)) {
     if (deep_link_type === constants2.MOBILE_WEB_REDIRECT_CHECKOUT) {

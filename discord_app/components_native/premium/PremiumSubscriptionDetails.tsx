@@ -668,8 +668,8 @@ export default function PremiumSubscriptionDetails(subscription) {
   subscription = subscription.subscription;
   ({ style, onClickManagePremiumGuild } = subscription);
   const tmp = callback5();
-  let obj = require(7553) /* createSubscriptionInvoicePreview */;
-  obj = { subscriptionId: subscription.id, renewal: true, analyticsLocations: importDefault(5610)().analyticsLocations, analyticsLocation: importDefault(5630).PREMIUM_SUBSCRIPTION_DETAILS };
+  let obj = require("../../modules/premium/PremiumSubscriptionInvoice.tsx") /* createSubscriptionInvoicePreview */;
+  obj = { subscriptionId: subscription.id, renewal: true, analyticsLocations: require("../../modules/app_analytics/useAnalyticsLocations.tsx")().analyticsLocations, analyticsLocation: require("../../modules/app_analytics/AnalyticsLocation.tsx").PREMIUM_SUBSCRIPTION_DETAILS };
   const first = callback(obj.useFetchSubscriptionInvoicePreview(obj), 1)[0];
   let tmp7Result = null;
   if (null != first) {
@@ -718,25 +718,25 @@ export default function PremiumSubscriptionDetails(subscription) {
 export const onCancelClick = function onCancelClick(subscription, analyticsLocations) {
   const _require = subscription;
   const importDefault = analyticsLocations;
-  let obj = _require(7295);
+  let obj = _require("../../modules/premium/native/PremiumAnalyticsUtils.tsx");
   const result = obj.trackPremiumSubscriptionCancellationStarted(subscription, analyticsLocations);
   if (obj2.isBoostOnlySubscription(subscription)) {
     let tmp4ResultResult = handleCancelSubscription(subscription, analyticsLocations);
   } else {
     obj = { subscription: null, mode: null, onContinue: null };
     obj[0] = subscription;
-    obj[1] = _require(7542).WhatYouLoseMode.CANCEL;
+    obj[1] = _require("../../modules/premium/native/PremiumPlanWhatYouLoseActionSheet.tsx").WhatYouLoseMode.CANCEL;
     obj[2] = function onContinue(arg0) {
       return outer1_26(closure_0, closure_1, arg0);
     };
-    tmp4ResultResult = importDefault(7541)(obj);
-    const tmp4Result = importDefault(7541);
+    tmp4ResultResult = require("../../modules/premium/native/openPremiumPlanWhatYouLoseActionSheet.tsx")(obj);
+    const tmp4Result = require("../../modules/premium/native/openPremiumPlanWhatYouLoseActionSheet.tsx");
   }
   return tmp4ResultResult;
 };
 export const handleManageSubscription = function handleManageSubscription(subscription, registerAsset, analyticsLocations) {
   if (subscription.status === constants3.ACCOUNT_HOLD) {
-    let obj = require(3931) /* getPremiumPlanItem */;
+    let obj = require("../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */;
     closure_8.openURL(obj.getExternalSubscriptionMethodUrl(subscription.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT"));
   } else {
     const hasActiveTrial = subscription.hasActiveTrial;
@@ -753,8 +753,8 @@ export const handleManageSubscription = function handleManageSubscription(subscr
       prop = tmp9(6780).excludeNitroOnlyPlansForActiveTrial;
     }
     obj[4] = prop;
-    const result = require(6782) /* launchPremiumPlanSelect */.launchPremiumPlanSelect(obj);
-    const obj2 = require(6782) /* launchPremiumPlanSelect */;
+    const result = require("../../modules/premium/native/launchPremiumPlanSelect.tsx") /* launchPremiumPlanSelect */.launchPremiumPlanSelect(obj);
+    const obj2 = require("../../modules/premium/native/launchPremiumPlanSelect.tsx") /* launchPremiumPlanSelect */;
     tmp9 = require;
   }
 };

@@ -45,7 +45,7 @@ function MaybeClearBuildOverride() {
   }
   let tmp = callback(importAllResult.useState(false), 2);
   const _require = tmp[1];
-  let obj = _require(589);
+  let obj = _require("../../discord_common/js/packages/flux/index.tsx");
   const items = [getCurrentBuildOverride];
   if (null == obj.useStateFromStores(items, () => {
     const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
@@ -98,9 +98,9 @@ prototype["triggerSoftCrash"] = function triggerSoftCrash(error, extra) {
   let obj = { error, info: extra };
   this.setState(obj);
   obj = { extra };
-  importDefault(1208).captureCrash(error, obj);
-  const obj2 = importDefault(1208);
-  importDefault(709).dispatch({ type: "CLEAR_CACHES", reason: "App Crashed" });
+  require("../utils/SentryUtils.native.tsx").captureCrash(error, obj);
+  const obj2 = require("../utils/SentryUtils.native.tsx");
+  require("../Dispatcher.tsx").dispatch({ type: "CLEAR_CACHES", reason: "App Crashed" });
 };
 prototype["handleReload"] = function handleReload() {
   BundleUpdaterManager = BundleUpdaterManager.BundleUpdaterManager;
@@ -131,11 +131,11 @@ prototype["render"] = function render() {
   const error = this.state.error;
   if (null !== error) {
     let obj = { Illustration: null, title: null, body: null, titleStyle: null, bodyStyle: null, children: null };
-    obj[0] = require(9004) /* getAppCrashSource */.AppCrash;
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[1] = intl.string(require(1236) /* getSystemLocale */.t.tx8CkI);
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    obj[2] = intl2.string(require(1236) /* getSystemLocale */.t.CvQlAH);
+    obj[0] = require("../design/components/Illustration/native/redesign/generated/AppCrash.tsx") /* getAppCrashSource */.AppCrash;
+    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[1] = intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.tx8CkI);
+    const intl2 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[2] = intl2.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.CvQlAH);
     ({ text: obj[3], text: obj[4] } = tmp);
     obj = { style: null, variant: "text-sm/medium", color: "text-muted", children: null };
     obj[0] = tmp.error;
@@ -154,20 +154,20 @@ prototype["render"] = function render() {
       str = "Unknown Error";
     }
     obj[3] = str;
-    const items = [closure_9(require(4281) /* Text */.Text, obj), , ];
+    const items = [closure_9(require("../design/components/Text/native/Text.tsx") /* Text */.Text, obj), , ];
     obj = { style: null, children: null };
     obj[0] = tmp.buttons;
     const items1 = [closure_9(MaybeClearBuildOverride, {}), ];
     const obj1 = { text: null, onPress: null };
     const intl3 = tmp3(1236).intl;
-    obj1[0] = intl3.string(require(1236) /* getSystemLocale */.t["4n8OJn"]);
+    obj1[0] = intl3.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["4n8OJn"]);
     obj1[1] = self.handleReload;
-    items1[1] = closure_9(require(4695) /* Button */.Button, obj1);
+    items1[1] = closure_9(require("../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj1);
     obj[1] = items1;
     items[1] = closure_10(closure_7, obj);
     items[2] = null;
     obj[5] = items;
-    let children = tmp2(require(1297) /* Button */.EmptyState, obj);
+    let children = tmp2(require("../design/void/native.tsx") /* Button */.EmptyState, obj);
   } else {
     children = self.props.children;
   }

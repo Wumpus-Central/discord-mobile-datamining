@@ -12,17 +12,17 @@ const obj2 = { id: "813951723822645278", format_type: require("StickerFormat").S
 const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionSystemMessageConstants.tsx");
 
 export const getJoinButtonLabels = function getJoinButtonLabels() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  const items = [intl.string(require(1236) /* getSystemLocale */.t.b6wEe6), ];
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  items[1] = intl2.string(require(1236) /* getSystemLocale */.t.i8o9hX);
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const items = [intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.b6wEe6), ];
+  const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  items[1] = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.i8o9hX);
   return items;
 };
 export const getRenewButtonLabels = function getRenewButtonLabels() {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  const items = [intl.string(require(1236) /* getSystemLocale */.t.vqnToc), ];
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  items[1] = intl2.string(require(1236) /* getSystemLocale */.t["9yh+dM"]);
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const items = [intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.vqnToc), ];
+  const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  items[1] = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["9yh+dM"]);
   return items;
 };
 export const STICKERS = items;

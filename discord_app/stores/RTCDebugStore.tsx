@@ -350,8 +350,8 @@ obj = {
             obj[4] = str;
             obj.dispatch(obj);
           });
-          importDefault(709).wait(() => callback(table[5]).open());
-          const obj3 = importDefault(709);
+          require("../Dispatcher.tsx").wait(() => callback(table[5]).open());
+          const obj3 = require("../Dispatcher.tsx");
         }
       }
     }

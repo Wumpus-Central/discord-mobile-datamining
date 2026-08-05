@@ -9,8 +9,8 @@ let result = require("useIsConnectedToVoiceChannel").fileFinishedImporting("modu
 export default function useSoundboardConfig(arg0, arg1) {
   const _require = arg0;
   const importDefault = arg1;
-  const tmp = importDefault(15981)(arg0);
-  let obj = _require(4101);
+  const tmp = require("useIsConnectedToVoiceChannel.tsx")(arg0);
+  let obj = _require("../../../dismissible_content/DismissibleContentUnsafeUtils.tsx");
   let tmp3 = tmp;
   if (tmp) {
     if (obj.VOICE_CONTROLS === arg1) {
@@ -33,7 +33,7 @@ export default function useSoundboardConfig(arg0, arg1) {
       }
     }, items),
     disabled: React.useMemo(() => !callback2(outer1_2[6])(outer1_4.getChannel(closure_0)), items1),
-    showIndicator: !obj.useIsDismissibleContentDismissed_UNSAFE(_require(1358).DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE)
+    showIndicator: !obj.useIsDismissibleContentDismissed_UNSAFE(_require("../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE)
   };
   items = [arg0, arg1];
   items1 = [arg0];

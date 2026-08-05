@@ -15,10 +15,10 @@ function isActivityInTextSupportedForChannel(channel) {
       if (channel != null) {
         type = channel.type;
       }
-      hasItem = type === require(692) /* set */.ChannelTypes.GUILD_CATEGORY;
+      hasItem = type === require("../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx") /* set */.ChannelTypes.GUILD_CATEGORY;
     }
     if (hasItem) {
-      const items = [require(692) /* set */.ChannelTypes.GUILD_TEXT, require(692) /* set */.ChannelTypes.GUILD_VOICE, require(692) /* set */.ChannelTypes.GROUP_DM, require(692) /* set */.ChannelTypes.DM];
+      const items = [require("../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx") /* set */.ChannelTypes.GUILD_TEXT, require("../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx") /* set */.ChannelTypes.GUILD_VOICE, require("../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx") /* set */.ChannelTypes.GROUP_DM, require("../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx") /* set */.ChannelTypes.DM];
       hasItem = items.includes(channel.type);
     }
     return hasItem;
@@ -49,7 +49,7 @@ export const isActivitiesInTextEnabled = function isActivitiesInTextEnabled(chan
 export const useIsActivitiesInTextEnabled = function useIsActivitiesInTextEnabled(id) {
   const _require = id;
   const items = [ensureGuildLoaded, getUncachedChannelPermissions];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const channel = outer1_2.getChannel(closure_0);
     let flag = false;
     if (null != channel) {
@@ -84,7 +84,7 @@ export const getIsAppLauncherEnabled = function getIsAppLauncherEnabled(channel)
 export const useIsAppLauncherEnabled = function useIsAppLauncherEnabled(id) {
   const _require = id;
   const items = [ensureGuildLoaded];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const channel = outer1_2.getChannel(closure_0);
     let tmp2 = null != channel;
     if (tmp2) {

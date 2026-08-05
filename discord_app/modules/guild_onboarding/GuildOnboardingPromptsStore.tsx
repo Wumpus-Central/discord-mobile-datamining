@@ -153,8 +153,8 @@ prototype["getOnboardingResponsesForPrompt"] = function getOnboardingResponsesFo
       const self = this;
       const options = found.options;
       const mapped = options.map((id) => id.id);
-      intersectionResult = importDefault(12).intersection(mapped, this.getOnboardingResponses(guildId));
-      const obj = importDefault(12);
+      intersectionResult = require("../../../_runtime/00012_apply.js").intersection(mapped, this.getOnboardingResponses(guildId));
+      const obj = require("../../../_runtime/00012_apply.js");
     }
     return intersectionResult;
   }
@@ -219,7 +219,7 @@ prototype["isLoading"] = function isLoading() {
 prototype["shouldFetchPrompts"] = function shouldFetchPrompts(arg0) {
   let HOUR = arg1;
   if (arg1 === undefined) {
-    HOUR = importDefault(687).Millis.HOUR;
+    HOUR = require("../../utils/Durations.tsx").Millis.HOUR;
   }
   if (c11) {
     return false;
@@ -461,15 +461,15 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(require("dis
           tmp4 = removedOptionIds.length > 0;
         }
         if (tmp4) {
-          let obj = importDefault(12);
+          let obj = require("../../../_runtime/00012_apply.js");
           obj.pullAll(dependencyMap[guildId].responses, removedOptionIds);
         }
         if (selected) {
           const responses = dependencyMap[guildId].responses;
           responses.push(optionId);
         } else {
-          importDefault(12).pull(dependencyMap[guildId].responses, optionId);
-          const obj2 = importDefault(12);
+          require("../../../_runtime/00012_apply.js").pull(dependencyMap[guildId].responses, optionId);
+          const obj2 = require("../../../_runtime/00012_apply.js");
         }
         if (null == dependencyMap2[guildId]) {
           tmp15[guildId] = {};

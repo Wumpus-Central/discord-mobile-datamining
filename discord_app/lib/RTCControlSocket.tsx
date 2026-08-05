@@ -307,7 +307,7 @@ prototype["sendBinary"] = function sendBinary(MLS_COMMIT_WELCOME, uint8Array) {
 };
 prototype["doResumeOrClose"] = function doResumeOrClose() {
   const self = this;
-  const obj = require(4360) /* sleep */;
+  const obj = require("../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */;
   const nowResult = obj.now();
   if (null !== this.serverId) {
     if (null !== self.channelId) {
@@ -360,7 +360,7 @@ prototype["handleHello"] = function handleHello(d) {
   this.serverVersion = num;
   if (this.serverVersion <= 3) {
     let num3 = 0.1;
-    if (require(500) /* set */.isPlatformEmbedded) {
+    if (require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded) {
       num3 = 0.25;
     }
     self.heartbeatInterval = d.heartbeat_interval * num3;
@@ -370,7 +370,7 @@ prototype["handleHello"] = function handleHello(d) {
   } else {
     self.heartbeatInterval = d.heartbeat_interval * self.heartbeatIntervalModifier;
     tmp4 = require;
-    if (!require(500) /* set */.isPlatformEmbedded) {
+    if (!require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded) {
       let num2 = self.heartbeatInterval;
       if (num2 == null) {
         num2 = NaN;
@@ -399,7 +399,7 @@ prototype["handleReady"] = function handleReady(experiments) {
   const self = this;
   const backoff = this.backoff;
   backoff.succeed();
-  const obj = require(4360) /* sleep */;
+  const obj = require("../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */;
   const logger = this.logger;
   logger.info("[READY] took " + obj.now() - this.connectionStartTime + " ms");
   if (this.serverVersion >= 6) {
@@ -562,9 +562,9 @@ prototype["handleHeartbeatAck"] = function handleHeartbeatAck(d) {
   if (this.serverVersion >= 8) {
     t = d.t;
   }
-  const obj = require(4360) /* sleep */;
+  const obj = require("../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */;
   self.emit(obj.Ping, obj.now() - t);
-  self.lastHeartbeatAckTime = require(4360) /* sleep */.now();
+  self.lastHeartbeatAckTime = require("../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */.now();
   self.heartbeatAck = true;
   if (null !== self.expeditedHeartbeatTimeout) {
     const _clearTimeout = clearTimeout;
@@ -586,7 +586,7 @@ prototype["handleHeartbeatTimeout"] = function handleHeartbeatTimeout() {
 prototype["startHeartbeater"] = function startHeartbeater() {
   let self = this;
   self = this;
-  importDefault(38)(null != this.heartbeatInterval, "RTCControlSocket: Heartbeat interval should never null here.");
+  require("../../_runtime/metro/00038__.js")(null != this.heartbeatInterval, "RTCControlSocket: Heartbeat interval should never null here.");
   const logger = this.logger;
   logger.info("Starting heartbeat with interval: " + this.heartbeatInterval);
   if (null !== this.heartbeater) {
@@ -614,14 +614,14 @@ prototype["sendHeartbeat"] = function sendHeartbeat() {
     const _HermesInternal = HermesInternal;
     logger2.info("Sending heartbeat with last received sequence number: " + num);
     let obj = { t: null, seq_ack: null };
-    obj[0] = require(4360) /* sleep */.now();
+    obj[0] = require("../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */.now();
     obj[1] = num;
     self.send(obj.HEARTBEAT, obj);
-    const obj3 = require(4360) /* sleep */;
+    const obj3 = require("../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */;
   } else {
     const logger = self.logger;
     logger.info("Sending heartbeat");
-    obj = require(4360) /* sleep */;
+    obj = require("../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */;
     self.send(obj.HEARTBEAT, obj.now());
   }
 };

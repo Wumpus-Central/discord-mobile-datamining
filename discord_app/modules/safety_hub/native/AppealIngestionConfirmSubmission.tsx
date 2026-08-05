@@ -16,10 +16,10 @@ const result = require("handleSafetyHubRequestAgeVerificationResetModalAction").
 export default function AppealIngestionConfirmSubmission(isDsaEligible) {
   isDsaEligible = isDsaEligible.isDsaEligible;
   const tmp = callback2();
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [handleSafetyHubRequestAgeVerificationResetModalAction];
   let stateFromStores = obj.useStateFromStores(items, () => store.getAppealClassificationId());
-  let obj1 = require(11198) /* useSafetyHubClassifications */;
+  let obj1 = require("../hooks/useSafetyHubClassifications.tsx") /* useSafetyHubClassifications */;
   if (stateFromStores == null) {
     stateFromStores = EMPTY_STRING_SNOWFLAKE_ID;
   }
@@ -40,14 +40,14 @@ export default function AppealIngestionConfirmSubmission(isDsaEligible) {
   }
   const intl = tmp2(1236).intl;
   const intl2 = tmp2(1236).intl;
-  const stringResult = intl.string(require(1236) /* getSystemLocale */.t["C5q+pW"]);
-  const items3 = [callback(require(11213) /* AppealIngestionModal */.AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: intl2.string(require(1236) /* getSystemLocale */.t["G2g/g5"]) }), ];
+  const stringResult = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["C5q+pW"]);
+  const items3 = [callback(require("AppealIngestionModal.tsx") /* AppealIngestionModal */.AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["G2g/g5"]) }), ];
   obj = { style: tmp.container, children: null };
   obj = { reasons: null };
-  const stringResult1 = intl2.string(require(1236) /* getSystemLocale */.t["G2g/g5"]);
+  const stringResult1 = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["G2g/g5"]);
   const tmp12 = View;
-  const tmp14 = importDefault(11222);
-  const items4 = [require(7727) /* parseMessageEmbedForProps */.getAppealSignalDisplayText(stateFromStores1), stateFromStores2];
+  const tmp14 = require("AppealIngestionBreadcrumbs.tsx");
+  const items4 = [require("../SafetyHubUtils.tsx") /* parseMessageEmbedForProps */.getAppealSignalDisplayText(stateFromStores1), stateFromStores2];
   obj[0] = items4.filter((arg0) => arg0.length > 0);
   const items5 = [callback(tmp14, obj), , , ];
   if (!isDsaEligible) {

@@ -10,7 +10,7 @@ const result = require("getSystemLocale").fileFinishedImporting("modules/unique_
 
 export default {
   resetSuggestions() {
-    return importDefault(709).dispatch({ type: "UNIQUE_USERNAME_SUGGESTIONS_RESET" });
+    return require("../../Dispatcher.tsx").dispatch({ type: "UNIQUE_USERNAME_SUGGESTIONS_RESET" });
   },
   fetchSuggestionsRegistration(arg0) {
     let closure_0 = arg0;

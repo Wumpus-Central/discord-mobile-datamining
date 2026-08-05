@@ -10,8 +10,8 @@ let closure_6 = createCacheKey.createStyles((arg0, arg1) => {
   let obj = { container: null };
   obj = {};
   const merged = Object.assign(closure_3.absoluteFillObject);
-  obj = { translateX: importDefault(10167)(-arg0) };
-  const items = [obj, { translateY: importDefault(10167)(-arg1) }];
+  obj = { translateX: require("../../voice_panel/native/utils/roundToNearestPixel.tsx")(-arg0) };
+  const items = [obj, { translateY: require("../../voice_panel/native/utils/roundToNearestPixel.tsx")(-arg1) }];
   obj.transform = items;
   obj[0] = obj;
   return obj;
@@ -23,10 +23,10 @@ export default function ScreenAlignedThemedGradient(arg0) {
   let offsetX;
   let offsetY;
   ({ offsetX, offsetY } = arg0);
-  let obj = require(8204) /* useActiveThemeType */;
+  let obj = require("../../client_themes/native/useActiveTheme.tsx") /* useActiveThemeType */;
   const isClientThemeOrCustomThemeActive = obj.useIsClientThemeOrCustomThemeActive();
-  obj = { pointerEvents: "none", style: callback(offsetX, offsetY).container, children: jsx(importDefault(4814), { absolute: true, tall: true, wide: true, mix: isClientThemeOrCustomThemeActive }) };
-  return <closure_4 pointerEvents="none" style={callback(offsetX, offsetY).container}>{jsx(importDefault(4814), { absolute: true, tall: true, wide: true, mix: isClientThemeOrCustomThemeActive })}</closure_4>;
+  obj = { pointerEvents: "none", style: callback(offsetX, offsetY).container, children: jsx(require("../../client_themes/native/ThemedGradient.tsx"), { absolute: true, tall: true, wide: true, mix: isClientThemeOrCustomThemeActive }) };
+  return <closure_4 pointerEvents="none" style={callback(offsetX, offsetY).container}>{jsx(require("../../client_themes/native/ThemedGradient.tsx"), { absolute: true, tall: true, wide: true, mix: isClientThemeOrCustomThemeActive })}</closure_4>;
 };
 export const ScreenAlignedThemedGradientSliding = function ScreenAlignedThemedGradientSliding(offsetX) {
   offsetX = offsetX.offsetX;

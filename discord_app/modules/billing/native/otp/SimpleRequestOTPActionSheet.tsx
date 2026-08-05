@@ -1,7 +1,7 @@
 // discord_app/modules/billing/native/otp/SimpleRequestOTPActionSheet.tsx
 import addSku from "addSku";
 import _slicedToArray from "_slicedToArray";
-import module_4624 from "module_4624";
+import AlertActionCreators from "../../../../actions/native/AlertActionCreators.tsx";
 import { View } from "useMobileCollectiblesPurchaseSKU";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import closure_8 from "addSku";
@@ -369,7 +369,7 @@ function SimpleRequestOTPActionSheet(giftMessage) {
   let selectedSkuId;
   ({ selectedSkuId, requestType, giftRecipientId } = giftMessage);
   let _require;
-  let obj = _require(514);
+  let obj = _require("../../../../../_runtime/00514_v1.js");
   const v4Result = obj.v4();
   _require = v4Result;
   [][0] = v4Result;
@@ -398,14 +398,14 @@ function SimpleRequestOTPActionSheet(giftMessage) {
     }
   }
   tmp8 = callback2;
-  const items = [callback2(_require(4281).Text, { variant: "text-lg/bold", color: "text-feedback-warning", children: "Gift purchasing is the only supported feature on Android in this version." }), ];
+  const items = [callback2(_require("../../../../design/components/Text/native/Text.tsx").Text, { variant: "text-lg/bold", color: "text-feedback-warning", children: "Gift purchasing is the only supported feature on Android in this version." }), ];
   let str = "none";
   if (null != requestType) {
     str = requestType;
   }
   const obj2 = { children: null };
   const items1 = ["Request type: ", str];
-  items[1] = closure_11(_require(4281).Text, { variant: "text-md/normal", color: "text-feedback-warning", children: items1 });
+  items[1] = closure_11(_require("../../../../design/components/Text/native/Text.tsx").Text, { variant: "text-md/normal", color: "text-feedback-warning", children: items1 });
   obj2[0] = items;
   tmp6Result = tmp6(View, obj2);
 }
@@ -418,5 +418,5 @@ export default function SimpleCreateOTPActionSheetWrapper(arg0) {
   obj = {};
   const merged = Object.assign(arg0);
   obj[2] = callback2(SimpleRequestOTPActionSheet, obj);
-  return callback2(require(9489) /* NativePaymentContextProvider */.NativePaymentContextProvider, obj);
+  return callback2(require("../../../payments/native/NativePaymentContext.tsx") /* NativePaymentContextProvider */.NativePaymentContextProvider, obj);
 };

@@ -26,21 +26,21 @@ export const GuildRoleSubscriptionRolePreview = function GuildRoleSubscriptionRo
   let textStyle;
   content = content.content;
   if (content === undefined) {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    content = intl.string(require(1236) /* getSystemLocale */.t["6OSasb"]);
+    const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    content = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["6OSasb"]);
   }
   const roleImage = content.roleImage;
   ({ style, textStyle, roleColor, roleName, guildId } = content);
   const tmp3 = createCacheKey();
-  let obj = require(647) /* defaultAreStatesEqual */;
+  let obj = require("../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = importDefault(4474);
+  let obj1 = require("../../../../../utils/NicknameUtils.tsx");
   obj = { style: items1, children: null };
   items1 = [tmp3.container, style];
   const name = obj1.useName(guildId, null, stateFromStores);
   obj = { style: tmp3.avatar, source: { uri: roleImage } };
-  const items2 = [callback(importDefault(5236), obj), ];
+  const items2 = [callback(require("../../../../../components_native/common/FastImage.tsx"), obj), ];
   obj1 = { style: tmp3.content, children: null };
   const obj2 = { style: tmp3.contextRow, children: null };
   const obj3 = { variant: "text-md/semibold", color: "interactive-text-active", style: null, children: null };
@@ -48,9 +48,9 @@ export const GuildRoleSubscriptionRolePreview = function GuildRoleSubscriptionRo
   obj4[0] = importAll(688).int2hex(roleColor);
   obj3[2] = obj4;
   obj3[3] = name;
-  const items3 = [callback(require(4281) /* Text */.Text, obj3), callback(require(1297) /* Button */.Spacer, { size: 4 }), callback(importDefault(5636), { name: roleName, source: { uri: roleImage }, size: 16 }), callback(require(1297) /* Button */.Spacer, { size: 8 }), callback(require(4281) /* Text */.Text, { variant: "text-xs/medium", color: "text-muted", children: "4:20 PM" })];
+  const items3 = [callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj3), callback(require("../../../../../design/void/native.tsx") /* Button */.Spacer, { size: 4 }), callback(require("../../../../roles/native/RoleIcon.tsx"), { name: roleName, source: { uri: roleImage }, size: 16 }), callback(require("../../../../../design/void/native.tsx") /* Button */.Spacer, { size: 8 }), callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-xs/medium", color: "text-muted", children: "4:20 PM" })];
   obj2[1] = items3;
-  const items4 = [callback2(View, obj2), callback(require(4281) /* Text */.Text, { variant: "text-md/normal", color: "text-default", style: textStyle, children: content })];
+  const items4 = [callback2(View, obj2), callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-md/normal", color: "text-default", style: textStyle, children: content })];
   obj1[1] = items4;
   items2[1] = callback2(View, obj1);
   obj[1] = items2;

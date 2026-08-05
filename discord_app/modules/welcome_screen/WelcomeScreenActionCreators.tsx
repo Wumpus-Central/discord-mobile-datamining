@@ -95,7 +95,7 @@ export const welcomeScreenViewed = function welcomeScreenViewed(closure_0) {
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "WELCOME_SCREEN_VIEW", guildId: closure_0, isLurking: flag };
   obj.dispatch(obj);
 };
@@ -110,13 +110,13 @@ export const fetchWelcomeScreen = function fetchWelcomeScreen(closure_0) {
   return applyArgumentsResult;
 };
 export const resetWelcomeScreen = function resetWelcomeScreen() {
-  importDefault(709).dispatch({ type: "WELCOME_SCREEN_SETTINGS_RESET" });
+  require("../../Dispatcher.tsx").dispatch({ type: "WELCOME_SCREEN_SETTINGS_RESET" });
 };
 export const clearWelcomeScreenSettings = function clearWelcomeScreenSettings() {
-  importDefault(709).dispatch({ type: "WELCOME_SCREEN_SETTINGS_CLEAR" });
+  require("../../Dispatcher.tsx").dispatch({ type: "WELCOME_SCREEN_SETTINGS_CLEAR" });
 };
 export const updateSettings = function updateSettings(settings) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "WELCOME_SCREEN_SETTINGS_UPDATE", settings };
   obj.dispatch(obj);
 };

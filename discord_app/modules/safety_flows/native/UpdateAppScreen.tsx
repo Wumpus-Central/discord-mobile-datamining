@@ -21,13 +21,13 @@ export default function UpdateAppScreen() {
   const tmp = callback3();
   let obj = { style: tmp.container, children: null };
   obj = { variant: "heading-lg/semibold", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl.string(importDefault(2547).yxqMCD);
-  const items = [callback(require(4281) /* Text */.Text, obj), , ];
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl.string(require("../SafetyFlows.messages.js").yxqMCD);
+  const items = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), , ];
   obj = { variant: "text-md/normal", color: "text-muted", children: null };
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl2.string(importDefault(2547).VBZJJg);
-  items[1] = callback(require(4281) /* Text */.Text, obj);
+  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl2.string(require("../SafetyFlows.messages.js").VBZJJg);
+  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   const obj1 = { style: tmp.buttonContainer, children: null };
   const obj2 = {
     onPress() {
@@ -38,9 +38,9 @@ export default function UpdateAppScreen() {
     variant: "primary",
     size: "md"
   };
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj2[1] = intl3.string(importDefault(2547).o4D6fm);
-  obj1[1] = callback(require(4695) /* Button */.Button, obj2);
+  const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj2[1] = intl3.string(require("../SafetyFlows.messages.js").o4D6fm);
+  obj1[1] = callback(require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj2);
   items[2] = callback(closure_4, obj1);
   obj[1] = items;
   return callback2(closure_4, obj);

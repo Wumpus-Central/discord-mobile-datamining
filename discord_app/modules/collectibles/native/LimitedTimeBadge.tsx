@@ -21,14 +21,14 @@ export default function LimitedTimeBadge(unpublishedAt) {
   let days;
   let hours;
   const tmp = createCacheKey();
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [handleThemeChange];
   const stateFromStores = obj.useStateFromStores(items, () => callback(table[9]).isThemeDark(theme.theme));
-  let obj1 = require(589) /* initialize */;
+  let obj1 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items1 = [_getSystemLocale];
   const items2 = ["en-US", "en-GB"];
   const hasItem = items2.includes(obj1.useStateFromStores(items1, () => locale.locale));
-  ({ days, hours } = importDefault(6812)(unpublishedAt.unpublishedAt, 1000, undefined, true));
+  ({ days, hours } = require("../../../hooks/useCountdown.tsx")(unpublishedAt.unpublishedAt, 1000, undefined, true));
   if (hasItem) {
     if (days > 1) {
       const intl6 = tmp2(1236).intl;

@@ -9,12 +9,12 @@ const result = require("createCacheKey").fileFinishedImporting("modules/auth/nat
 
 export default function RegistrationBailoutButton(onBail) {
   const obj = { shrink: true, text: null, size: null, look: null, color: null, style: null, onPress: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl.string(require(1236) /* getSystemLocale */.t.CZ7wvG);
-  obj[2] = require(1297) /* Button */.Button.Sizes.MEDIUM;
-  obj[3] = require(1297) /* Button */.ButtonLooks.LINK;
-  obj[4] = require(1297) /* Button */.ButtonColors.LINK;
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.CZ7wvG);
+  obj[2] = require("../../../../design/void/native.tsx") /* Button */.Button.Sizes.MEDIUM;
+  obj[3] = require("../../../../design/void/native.tsx") /* Button */.ButtonLooks.LINK;
+  obj[4] = require("../../../../design/void/native.tsx") /* Button */.ButtonColors.LINK;
   obj[5] = callback().bail;
   obj[6] = onBail.onBail;
-  return jsx(require(1297) /* Button */.Button, { shrink: true, text: null, size: null, look: null, color: null, style: null, onPress: null });
+  return jsx(require("../../../../design/void/native.tsx") /* Button */.Button, { shrink: true, text: null, size: null, look: null, color: null, style: null, onPress: null });
 };

@@ -12,11 +12,11 @@ let THEME_PREFERENCES_WEB_REFRESH;
 let closure_6;
 const require = arg1;
 function handleThemeChange() {
-  const tmp3 = importDefault(1345)(closure_12, THEME_PREFERENCES_MOBILE);
+  const tmp3 = require("../themes/resolveTheme.native.tsx")(closure_12, THEME_PREFERENCES_MOBILE);
   let flag = tmp3 !== closure_13;
   if (flag) {
     closure_13 = tmp3;
-    importDefault(1354)(closure_13);
+    require("../themes/updateBackgroundColor.native.tsx")(closure_13);
     flag = true;
   }
   return flag;
@@ -40,7 +40,7 @@ prototype["initialize"] = function initialize(theme) {
   if (null != theme) {
     const SET = obj.SET;
     theme = theme.theme;
-    importDefault(1354)(theme);
+    require("../themes/updateBackgroundColor.native.tsx")(theme);
     if (null != theme.preferences) {
       const preferences = theme.preferences;
     }
@@ -118,21 +118,21 @@ obj = {
         darkSidebar = appearance.darkSidebar;
       }
       if (!darkSidebar) {
-        const PreloadedUserSettingsActionCreators = require(1355) /* updateUserGuildSettings */.PreloadedUserSettingsActionCreators;
+        const PreloadedUserSettingsActionCreators = require("UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.PreloadedUserSettingsActionCreators;
         PreloadedUserSettingsActionCreators.updateAsync("appearance", (arg0) => {
           arg0.darkSidebar = true;
         }, UserSettingsDelay.INFREQUENT_USER_ACTION);
       }
-      importDefault(709).wait(() => {
+      require("../../Dispatcher.tsx").wait(() => {
         callback(table[11]).dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { darkSidebar: false } });
       });
-      const obj = importDefault(709);
+      const obj = require("../../Dispatcher.tsx");
     }
-    const tmp13 = importDefault(1345)(closure_12, THEME_PREFERENCES_MOBILE);
+    const tmp13 = require("../themes/resolveTheme.native.tsx")(closure_12, THEME_PREFERENCES_MOBILE);
     let flag = tmp13 !== closure_13;
     if (flag) {
       closure_13 = tmp13;
-      importDefault(1354)(closure_13);
+      require("../themes/updateBackgroundColor.native.tsx")(closure_13);
       flag = true;
     }
     return flag;
@@ -143,7 +143,7 @@ obj = {
     isSwitchingAccount = isSwitchingAccount.isSwitchingAccount;
     let tmp = !isSwitchingAccount;
     if (!isSwitchingAccount) {
-      const tmp6 = importDefault(1345)(closure_12, THEME_PREFERENCES_MOBILE);
+      const tmp6 = require("../themes/resolveTheme.native.tsx")(closure_12, THEME_PREFERENCES_MOBILE);
       let flag = tmp6 !== closure_13;
       if (flag) {
         closure_13 = tmp6;
@@ -157,11 +157,11 @@ obj = {
   },
   OVERLAY_INITIALIZE: handleThemeChange,
   SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: function handleSelectivelySyncedUserSettingsUpdate() {
-    const tmp3 = importDefault(1345)(closure_12, THEME_PREFERENCES_MOBILE);
+    const tmp3 = require("../themes/resolveTheme.native.tsx")(closure_12, THEME_PREFERENCES_MOBILE);
     let flag = tmp3 !== closure_13;
     if (flag) {
       closure_13 = tmp3;
-      importDefault(1354)(closure_13);
+      require("../themes/updateBackgroundColor.native.tsx")(closure_13);
       flag = true;
     }
     return flag;
@@ -171,11 +171,11 @@ obj = {
   RESET_PREVIEW_CLIENT_THEME: handleThemeChange,
   SYSTEM_THEME_CHANGE: function handleSystemThemeChange(systemTheme) {
     systemTheme = systemTheme.systemTheme;
-    const tmp3 = importDefault(1345)(systemTheme, THEME_PREFERENCES_MOBILE);
+    const tmp3 = require("../themes/resolveTheme.native.tsx")(systemTheme, THEME_PREFERENCES_MOBILE);
     let flag = tmp3 !== closure_13;
     if (flag) {
       closure_13 = tmp3;
-      importDefault(1354)(closure_13);
+      require("../themes/updateBackgroundColor.native.tsx")(closure_13);
       flag = true;
     }
     return flag;
@@ -184,11 +184,11 @@ obj = {
     const obj = {};
     const merged = Object.assign(obj);
     const merged1 = Object.assign(preferences.preferences);
-    const tmp5 = importDefault(1345)(closure_12, obj);
+    const tmp5 = require("../themes/resolveTheme.native.tsx")(closure_12, obj);
     let flag = tmp5 !== closure_13;
     if (flag) {
       closure_13 = tmp5;
-      importDefault(1354)(closure_13);
+      require("../themes/updateBackgroundColor.native.tsx")(closure_13);
       flag = true;
     }
     return flag;
@@ -220,31 +220,31 @@ obj = {
     return tmp;
   },
   SET_THEME_OVERRIDE: function handleSetThemeOverride(arg0) {
-    const tmp3 = importDefault(1345)(closure_12, THEME_PREFERENCES_MOBILE);
+    const tmp3 = require("../themes/resolveTheme.native.tsx")(closure_12, THEME_PREFERENCES_MOBILE);
     let flag = tmp3 !== closure_13;
     if (flag) {
       closure_13 = tmp3;
-      importDefault(1354)(closure_13);
+      require("../themes/updateBackgroundColor.native.tsx")(closure_13);
       flag = true;
     }
     return flag;
   },
   CLEAR_THEME_OVERRIDE: function handleClearThemeOverride() {
-    const tmp3 = importDefault(1345)(closure_12, THEME_PREFERENCES_MOBILE);
+    const tmp3 = require("../themes/resolveTheme.native.tsx")(closure_12, THEME_PREFERENCES_MOBILE);
     let flag = tmp3 !== closure_13;
     if (flag) {
       closure_13 = tmp3;
-      importDefault(1354)(closure_13);
+      require("../themes/updateBackgroundColor.native.tsx")(closure_13);
       flag = true;
     }
     return flag;
   },
   REFRESH_THEME: function handleRefresh() {
-    const tmp3 = importDefault(1345)(closure_12, THEME_PREFERENCES_MOBILE);
+    const tmp3 = require("../themes/resolveTheme.native.tsx")(closure_12, THEME_PREFERENCES_MOBILE);
     let flag = tmp3 !== closure_13;
     if (flag) {
       closure_13 = tmp3;
-      importDefault(1354)(closure_13);
+      require("../themes/updateBackgroundColor.native.tsx")(closure_13);
       flag = true;
     }
     return flag;

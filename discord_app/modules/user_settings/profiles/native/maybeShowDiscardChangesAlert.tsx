@@ -12,14 +12,14 @@ export default function maybeShowDiscardChangesAlert(onHasEdits) {
     }
     let obj = onConfirm(4624);
     obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null };
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[0] = intl.string(require(1236) /* getSystemLocale */.t.pvRCSu);
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.DRi46S);
-    const intl3 = require(1236) /* getSystemLocale */.intl;
-    obj[2] = intl3.string(require(1236) /* getSystemLocale */.t["6GQDFu"]);
-    const intl4 = require(1236) /* getSystemLocale */.intl;
-    obj[3] = intl4.string(require(1236) /* getSystemLocale */.t.DmDzZB);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.pvRCSu);
+    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.DRi46S);
+    const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[2] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["6GQDFu"]);
+    const intl4 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[3] = intl4.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.DmDzZB);
     obj[4] = function onConfirm() {
       callback();
       onConfirm();
@@ -37,16 +37,16 @@ export const showDiscardChangesAlert = function showDiscardChangesAlert(arg0) {
   let onCancel;
   let onConfirm;
   ({ onConfirm, onCancel } = arg0);
-  let obj = importDefault(4624);
+  let obj = require("../../../../actions/native/AlertActionCreators.tsx");
   obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.pvRCSu);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.DRi46S);
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl3.string(require(1236) /* getSystemLocale */.t["6GQDFu"]);
-  const intl4 = require(1236) /* getSystemLocale */.intl;
-  obj[3] = intl4.string(require(1236) /* getSystemLocale */.t.DmDzZB);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.pvRCSu);
+  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.DRi46S);
+  const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["6GQDFu"]);
+  const intl4 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[3] = intl4.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.DmDzZB);
   obj[4] = onConfirm;
   obj[5] = onCancel;
   return obj.show(obj);

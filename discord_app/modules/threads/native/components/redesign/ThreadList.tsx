@@ -11,7 +11,7 @@ const require = arg1;
 function ThreadListSection(title) {
   const obj = { style: callback().section, accessibilityRole: "header", variant: "text-xs/bold", color: "text-default", children: null };
   obj[4] = title.title.toUpperCase();
-  return jsx(require(4281) /* Text */.Text, { style: callback().section, accessibilityRole: "header", variant: "text-xs/bold", color: "text-default", children: null });
+  return jsx(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: callback().section, accessibilityRole: "header", variant: "text-xs/bold", color: "text-default", children: null });
 }
 function renderItem(item) {
   item = item.item;
@@ -23,7 +23,7 @@ function renderItem(item) {
   } else if ("thread" === type) {
     obj = { threadId: null, onPress: null, start: null, end: null };
     ({ threadId: obj[0], onPress: obj[1], start: obj[2], end: obj[3] } = item);
-    return jsx(importDefault(15659), { threadId: null, onPress: null, start: null, end: null });
+    return jsx(require("ThreadListTableRow.tsx"), { threadId: null, onPress: null, start: null, end: null });
   }
 }
 function keyExtractor(type) {

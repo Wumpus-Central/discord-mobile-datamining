@@ -44,27 +44,27 @@ class StreamPreviewTile {
 function ParticipantIcon(participant) {
   participant = participant.participant;
   if (participant.type === constants.STREAM) {
-    let tmp3 = importDefault(10838);
+    let tmp3 = require("../../../../../_runtime/10838_registerAsset.js");
   } else if (participant.type === tmp2.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp3 = importDefault(10839);
+      tmp3 = require("../../../../../_runtime/10839_registerAsset.js");
     } else if (tmp19.XBOX === voicePlatform) {
-      tmp3 = importDefault(10462);
+      tmp3 = require("../../../../../_runtime/10462_registerAsset.js");
     } else if (tmp19.PLAYSTATION === voicePlatform) {
-      tmp3 = importDefault(10840);
+      tmp3 = require("../../../../../_runtime/10840_registerAsset.js");
     } else if (tmp19.QUEST === voicePlatform) {
-      tmp3 = importDefault(10841);
+      tmp3 = require("../../../../../_runtime/10841_registerAsset.js");
     }
   }
   let tmp14 = null;
   if (null != tmp3) {
     const obj = { source: null, size: null, color: null, style: null };
     obj[0] = tmp3;
-    obj[1] = require(1297) /* Button */.Icon.Sizes.REFRESH_SMALL_16;
-    obj[2] = importDefault(712).unsafe_rawColors.WHITE;
+    obj[1] = require("../../../../design/void/native.tsx") /* Button */.Icon.Sizes.REFRESH_SMALL_16;
+    obj[2] = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.WHITE;
     obj[3] = tmp.titleIcon;
-    tmp14 = callback(require(1297) /* Button */.Icon, obj);
+    tmp14 = callback(require("../../../../design/void/native.tsx") /* Button */.Icon, obj);
   }
   return tmp14;
 }

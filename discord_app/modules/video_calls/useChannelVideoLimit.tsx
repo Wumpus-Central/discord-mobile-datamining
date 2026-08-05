@@ -10,7 +10,7 @@ export default function useChannelVideoLimit(arg0) {
   const _require = arg0;
   const items = [getVoiceStatesForGuild, createGuildRecordFromRust];
   const items1 = [arg0];
-  return _require(589).useStateFromStoresObject(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
     const result = outer1_3.countVoiceStatesForChannel(guildId.id);
     const guild = outer1_2.getGuild(guildId.getGuildId());
     if (null == guild) {

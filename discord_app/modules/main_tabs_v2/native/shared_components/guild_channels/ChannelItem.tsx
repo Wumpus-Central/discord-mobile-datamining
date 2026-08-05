@@ -22,7 +22,7 @@ function LaunchpadChannelIcon(channel) {
   obj = { style: callback2(layout).guildBadgeIcon, children: null };
   const stateFromStores = obj1.useStateFromStores(items, () => outer1_4.getGuild(channel.guild_id));
   obj = { guild: stateFromStores, size: layoutStyles.icon.guildBadgeIconSize };
-  obj[1] = callback(importDefault(5661), obj);
+  obj[1] = callback(require("../../../../guild/native/GuildIcon.tsx"), obj);
   const items1 = [callback(View, obj), ];
   obj1 = { channel, size: null, wrapperSize: null };
   const tmp = callback2(layout);
@@ -48,7 +48,7 @@ function LaunchpadChannelIcon(channel) {
 }
 ({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles((layout) => {
-  const guildBadgeIcon = { position: "absolute", zIndex: 1, bottom: -4, right: -4, borderColor: importDefault(712).colors.BACKGROUND_BASE_LOW, borderWidth: 2, borderRadius: null };
+  const guildBadgeIcon = { position: "absolute", zIndex: 1, bottom: -4, right: -4, borderColor: require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW, borderWidth: 2, borderRadius: null };
   let num = 6;
   if (obj2.isLayoutCozy(layout)) {
     num = 9;
@@ -64,12 +64,12 @@ export const getChannelAccessibilityProps = function getChannelAccessibilityProp
   let unread;
   let voiceStates;
   channel = channel.channel;
-  let obj = { accessible: true, accessibilityRole: "button", accessibilityLabel: importDefault(8955)({ channel, unread, mentionCount, voiceStates, embeddedActivitiesCount }) };
+  let obj = { accessible: true, accessibilityRole: "button", accessibilityLabel: require("../../../../channel/getChannelA11yLabel.tsx")({ channel, unread, mentionCount, voiceStates, embeddedActivitiesCount }) };
   ({ unread, mentionCount, voiceStates, embeddedActivitiesCount } = channel);
   if (channel.isGuildVoice()) {
     obj = { accessibilityHint: null };
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[0] = intl.string(require(1236) /* getSystemLocale */.t["9C444m"]);
+    const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[0] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["9C444m"]);
     const tmp2 = obj;
   }
   const merged = Object.assign(tmp2);
@@ -127,24 +127,24 @@ export const renderChannelItem = function renderChannelItem(unread) {
   if (null != latestMessageTimestamp) {
     relativeTimestamp = null;
     if (!flag3) {
-      let obj = require(7022) /* getRelativeTimestamp */;
+      let obj = require("../../../../notification_center/NotificationCenterUtils.tsx") /* getRelativeTimestamp */;
       relativeTimestamp = obj.getRelativeTimestamp(latestMessageTimestamp);
     }
   }
-  let obj1 = require(9711) /* getLayoutStyles */;
+  let obj1 = require("layouts/ChannelListLayout.tsx") /* getLayoutStyles */;
   const layoutStyles = obj1.getLayoutStyles(layout);
-  let obj2 = require(15430) /* renderChannelWrapper */;
+  let obj2 = require("ChannelWrapper.tsx") /* renderChannelWrapper */;
   const children = [unreadBadge, , , ];
   obj = { style: null, children: null };
-  obj = { position: "relative", borderRadius: importDefault(712).radii.round, justifyContent: "center", alignItems: "center", flexShrink: 0, flexGrow: 0 };
-  const merged = Object.assign(require(9711) /* getLayoutStyles */.makeSizeStyle(layoutStyles.icon.wrapper.size));
+  obj = { position: "relative", borderRadius: require("../../../../../../discord_common/js/packages/tokens/native.tsx").radii.round, justifyContent: "center", alignItems: "center", flexShrink: 0, flexGrow: 0 };
+  const merged = Object.assign(require("layouts/ChannelListLayout.tsx") /* getLayoutStyles */.makeSizeStyle(layoutStyles.icon.wrapper.size));
   const merged1 = Object.assign(layoutStyles.icon.margin);
   obj[0] = obj;
   if (channel.isGroupDM()) {
     obj1 = { channel: null, size: null };
     obj1[0] = channel;
     obj1[1] = layoutStyles.icon.avatarSize;
-    let tmp10Result = tmp10(importDefault(9582), obj1);
+    let tmp10Result = tmp10(require("../../../../group_dm/native/GroupDMAvatar.tsx"), obj1);
   } else {
     obj2 = { channel: null, layout: null };
     obj2[0] = channel;

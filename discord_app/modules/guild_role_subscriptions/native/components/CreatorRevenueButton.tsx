@@ -15,5 +15,5 @@ export const CreatorRevenueButton = function CreatorRevenueButton(arg0) {
   ({ disabled, text, onPress, style, loading } = arg0);
   style = [callback().container, ];
   style[1] = style;
-  return jsx(importDefault(8609), { style, loading, disabled, onPress, text });
+  return jsx(require("ShinyButton.tsx"), { style, loading, disabled, onPress, text });
 };

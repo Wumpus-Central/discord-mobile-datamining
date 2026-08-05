@@ -9,9 +9,9 @@ export default function getActivityReportOptions(arg0) {
     flag = false;
   }
   let obj = { value: ActivityFeedbackReasons.FAILED_LOAD, label: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
   const string = intl.string;
-  const t = require(1236) /* getSystemLocale */.t;
+  const t = require("../../intl/index.native.tsx") /* getSystemLocale */.t;
   if (arg0) {
     let stringResult = string(t.uaiF6B);
     let tmp6 = tmp2;

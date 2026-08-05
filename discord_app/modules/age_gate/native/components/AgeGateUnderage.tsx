@@ -16,7 +16,7 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
     num = 80;
   }
   let obj = { container: null, header: null, body: null, buttonWrapper: null };
-  obj = { alignItems: "center", justifyContent: "center", flex: 1, padding: 16, paddingTop: 0, paddingBottom: num, backgroundColor: importDefault(712).colors.BACKGROUND_BASE_LOW };
+  obj = { alignItems: "center", justifyContent: "center", flex: 1, padding: 16, paddingTop: 0, paddingBottom: num, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW };
   obj[0] = obj;
   obj[1] = { marginTop: 16 };
   obj[2] = { marginTop: 8, lineHeight: 20, textAlign: "center" };

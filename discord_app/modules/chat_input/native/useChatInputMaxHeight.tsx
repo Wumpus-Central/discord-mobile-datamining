@@ -6,16 +6,16 @@ import { CHAT_INPUT_PILL_CONTENT_SIZE as closure_6 } from "TextAreaCta";
 
 const require = arg1;
 function getChatInputMaxHeight() {
-  let systemKeyboardHeight = require(1847) /* useSystemKeyboardHeight */.getSystemKeyboardHeight();
-  const obj = require(1847) /* useSystemKeyboardHeight */;
+  let systemKeyboardHeight = require("../../keyboard/native/useSystemKeyboardHeight.native.tsx") /* useSystemKeyboardHeight */.getSystemKeyboardHeight();
+  const obj = require("../../keyboard/native/useSystemKeyboardHeight.native.tsx") /* useSystemKeyboardHeight */;
   const tmp = require;
-  const customKeyboardHeight = require(5313) /* useCustomKeyboardHeight */.getCustomKeyboardHeight();
-  const obj2 = require(5313) /* useCustomKeyboardHeight */;
-  const keyboardType = require(4151) /* useKeyboardType */.getKeyboardType();
-  if (keyboardType !== require(1579) /* KeyboardTypes */.KeyboardTypes.SYSTEM) {
+  const customKeyboardHeight = require("../../keyboard/native/useCustomKeyboardHeight.tsx") /* useCustomKeyboardHeight */.getCustomKeyboardHeight();
+  const obj2 = require("../../keyboard/native/useCustomKeyboardHeight.tsx") /* useCustomKeyboardHeight */;
+  const keyboardType = require("../../keyboard/native/useKeyboardType.tsx") /* useKeyboardType */.getKeyboardType();
+  if (keyboardType !== require("../../keyboard/native/KeyboardTypes.tsx") /* KeyboardTypes */.KeyboardTypes.SYSTEM) {
     systemKeyboardHeight = customKeyboardHeight;
   }
-  const obj3 = require(4151) /* useKeyboardType */;
+  const obj3 = require("../../keyboard/native/useKeyboardType.tsx") /* useKeyboardType */;
   return Math.min(200, Math.max(2 * closure_6, tmp(1474).getWindowDimensions({ ignoreKeyboard: true }).height - systemKeyboardHeight - 200));
 }
 const result = require("subscribeToKeyboardUIStore").fileFinishedImporting("modules/chat_input/native/useChatInputMaxHeight.tsx");
@@ -65,12 +65,12 @@ export function getChatInputMinHeight() {
 }
 export { getChatInputMaxHeight };
 export const getChatInputHeightAnimationTiming = function getChatInputHeightAnimationTiming(height) {
-  let obj = require(1847) /* useSystemKeyboardHeight */;
+  let obj = require("../../keyboard/native/useSystemKeyboardHeight.native.tsx") /* useSystemKeyboardHeight */;
   let systemKeyboardHeight = obj.getSystemKeyboardHeight();
-  const customKeyboardHeight = require(5313) /* useCustomKeyboardHeight */.getCustomKeyboardHeight();
-  const obj2 = require(5313) /* useCustomKeyboardHeight */;
-  const keyboardType = require(4151) /* useKeyboardType */.getKeyboardType();
-  if (keyboardType !== require(1579) /* KeyboardTypes */.KeyboardTypes.SYSTEM) {
+  const customKeyboardHeight = require("../../keyboard/native/useCustomKeyboardHeight.tsx") /* useCustomKeyboardHeight */.getCustomKeyboardHeight();
+  const obj2 = require("../../keyboard/native/useCustomKeyboardHeight.tsx") /* useCustomKeyboardHeight */;
+  const keyboardType = require("../../keyboard/native/useKeyboardType.tsx") /* useKeyboardType */.getKeyboardType();
+  if (keyboardType !== require("../../keyboard/native/KeyboardTypes.tsx") /* KeyboardTypes */.KeyboardTypes.SYSTEM) {
     systemKeyboardHeight = customKeyboardHeight;
   }
   let tmpResult = tmp(1474);

@@ -29,11 +29,11 @@ export const getAppGradientColors = function getAppGradientColors(id2) {
       tmp6(8045).maybeFetchColors(id2);
       return tmp;
     }
-    obj5 = require(8045) /* hasFetchedColors */;
+    obj5 = require("../../../../avatar/useAvatarColor.tsx") /* hasFetchedColors */;
   }
 };
 export const getAppIconSrc = function getAppIconSrc(id, icon, bot) {
-  let obj = importDefault(1416);
+  let obj = require("../../../../../utils/AvatarUtils.tsx");
   obj = { id, icon, bot, fallbackAvatar: false };
   let applicationIconURL = obj.getApplicationIconURL(obj);
   if (applicationIconURL == null) {

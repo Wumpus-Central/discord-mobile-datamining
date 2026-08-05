@@ -19,25 +19,25 @@ function EmptyDisplay(arg0) {
   const items = [callback3().emptyDisplayContainer, style];
   obj[0] = items;
   obj = { icon: null };
-  obj[0] = importDefault(9067);
-  const items1 = [callback(importDefault(7710), obj), children];
+  obj[0] = require("../../../../../../_runtime/09067_registerAsset.js");
+  const items1 = [callback(require("../../../../stage_channels/native/components/StageSparkle.tsx"), obj), children];
   obj[1] = items1;
   return callback2(View, obj);
 }
 function FetchErrorDisplay(style) {
   let obj = { style: style.style, children: null };
   obj = { style: callback3().emptyDisplayTitle, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[3] = intl.string(require(1236) /* getSystemLocale */.t.obChXk);
-  obj[1] = callback(require(4281) /* Text */.Text, obj);
+  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[3] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.obChXk);
+  obj[1] = callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   return callback(EmptyDisplay, obj);
 }
 function NoUsersDisplay(style) {
   let obj = { style: style.style, children: null };
   obj = { style: callback3().emptyDisplayTitle, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[3] = intl.string(require(1236) /* getSystemLocale */.t.hW0mBR);
-  obj[1] = callback(require(4281) /* Text */.Text, obj);
+  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[3] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.hW0mBR);
+  obj[1] = callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   return callback(EmptyDisplay, obj);
 }
 function RemainingUsersRow(remainingUsersGroup) {
@@ -45,13 +45,13 @@ function RemainingUsersRow(remainingUsersGroup) {
   let obj = { DEPRECATED_style: tmp.userListRow, leading: null, label: null };
   obj = { style: tmp.remainingUsersIconContainer, children: null };
   obj = { source: null, style: null };
-  obj[0] = importDefault(9067);
+  obj[0] = require("../../../../../../_runtime/09067_registerAsset.js");
   obj[1] = tmp.remainingUsersIcon;
-  obj[1] = callback(importDefault(5236), obj);
+  obj[1] = callback(require("../../../../../components_native/common/FastImage.tsx"), obj);
   obj[1] = callback(View, obj);
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl.formatToPlainString(require(1236) /* getSystemLocale */.t.BdQTfR, { userRemainCount: remainingUsersGroup.remainingUsersGroup.count });
-  return callback(require(7777) /* Form */.FormRow, obj, "userRemaining");
+  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl.formatToPlainString(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.BdQTfR, { userRemainCount: remainingUsersGroup.remainingUsersGroup.count });
+  return callback(require("../../../../../design/void/Form/native/index.tsx") /* Form */.FormRow, obj, "userRemaining");
 }
 function keyExtractor(count) {
   if (obj.isRemainingUsersGroup(count)) {

@@ -12,12 +12,12 @@ export default function openChannelCallModalForChannelId(arg0, arg1) {
       isGuildStageVoiceResult = channel.isGuildStageVoice();
     }
     if (isGuildStageVoiceResult) {
-      isGuildStageVoiceResult = false === require(7696) /* connectToStage */.connectToStage(channel);
-      const obj2 = require(7696) /* connectToStage */;
+      isGuildStageVoiceResult = false === require("../../modules/stage_channels/StageChannelModalActionCreators.tsx") /* connectToStage */.connectToStage(channel);
+      const obj2 = require("../../modules/stage_channels/StageChannelModalActionCreators.tsx") /* connectToStage */;
     }
     if (!isGuildStageVoiceResult) {
-      require(4494) /* openChannelCallModal */.openChannelCallModal(channel);
-      const obj3 = require(4494) /* openChannelCallModal */;
+      require("PrivateChannelCallUtils.tsx") /* openChannelCallModal */.openChannelCallModal(channel);
+      const obj3 = require("PrivateChannelCallUtils.tsx") /* openChannelCallModal */;
     }
   }
 };

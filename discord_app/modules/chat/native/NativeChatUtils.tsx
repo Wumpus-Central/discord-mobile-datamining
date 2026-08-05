@@ -28,7 +28,7 @@ obj = {
         const Commands = tmp5(10923).Commands;
         Commands.scrollTo(arg0, arg1, tmp, tmp2, TOP);
       }
-      obj2 = require(500) /* set */;
+      obj2 = require("../../../utils/PlatformUtils.tsx") /* set */;
       tmp5 = require;
     }
   },
@@ -44,7 +44,7 @@ obj = {
         const Commands = tmp2(10923).Commands;
         Commands.scrollToBottom(arg0, arg1);
       }
-      obj = require(500) /* set */;
+      obj = require("../../../utils/PlatformUtils.tsx") /* set */;
       tmp2 = require;
     }
   },
@@ -57,7 +57,7 @@ obj = {
           DCDChatManager.scrollToTop(tmp4, arg1);
         }
       }
-      obj = require(500) /* set */;
+      obj = require("../../../utils/PlatformUtils.tsx") /* set */;
     }
   },
   scrollToRelativeOffset(arg0, arg1, arg2) {
@@ -69,7 +69,7 @@ obj = {
           const result = DCDChatManager.scrollToRelativeOffset(tmp4, arg1, arg2);
         }
       }
-      obj = require(500) /* set */;
+      obj = require("../../../utils/PlatformUtils.tsx") /* set */;
     }
   },
   scrollIntoView(arg0, arg1, arg2) {
@@ -90,7 +90,7 @@ obj = {
         const Commands = tmp4(10923).Commands;
         Commands.scrollIntoView(arg0, arg1, tmp, tmp2);
       }
-      obj2 = require(500) /* set */;
+      obj2 = require("../../../utils/PlatformUtils.tsx") /* set */;
       tmp4 = require;
     }
   },
@@ -115,7 +115,7 @@ obj = {
           obj[2] = rows;
           obj[3] = forceReload;
           obj[2] = obj;
-          importDefault(1208).addBreadcrumb(obj);
+          require("../../../utils/SentryUtils.native.tsx").addBreadcrumb(obj);
           const Commands = tmp35(10923).Commands;
           const _JSON3 = JSON;
           const json = JSON.stringify(rows.rows);
@@ -138,7 +138,7 @@ obj = {
             flag6 = true;
           }
           Commands.updateRows(arg0, json, isLoadingAtTop2, str3, andIncrementChangesetIdForChat, flag4, flag5, flag6);
-          const obj4 = importDefault(1208);
+          const obj4 = require("../../../utils/SentryUtils.native.tsx");
         }
       }
       const tmp2 = callback(arg0);
@@ -146,7 +146,7 @@ obj = {
         if (tmp35Result1.isIOS()) {
           let DCDChatManager = closure_3.DCDChatManager;
         } else {
-          DCDChatManager = importDefault(10925);
+          DCDChatManager = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeChatModule.tsx");
         }
         const _JSON = JSON;
         const json1 = JSON.stringify(rows.rows);
@@ -173,7 +173,7 @@ obj = {
         DCDChatManager.updateRows(tmp2, json1, isLoadingAtTop, json2, andIncrementChangesetIdForChat1, flag, flag2, flag3);
         const tmp35Result2 = tmp35(10924);
       }
-      obj7 = require(500) /* set */;
+      obj7 = require("../../../utils/PlatformUtils.tsx") /* set */;
     }
   },
   clearRows(arg0) {
@@ -191,13 +191,13 @@ obj = {
         if (tmp7Result1.isIOS()) {
           let DCDChatManager = closure_3.DCDChatManager;
         } else {
-          DCDChatManager = importDefault(10925);
+          DCDChatManager = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeChatModule.tsx");
         }
         tmp7Result1 = tmp7(500);
         DCDChatManager.clearRows(tmp2, tmp7(10924).getAndIncrementChangesetIdForChat(arg0));
         const tmp7Result2 = tmp7(10924);
       }
-      obj5 = require(500) /* set */;
+      obj5 = require("../../../utils/PlatformUtils.tsx") /* set */;
     }
   },
   fadeIn(arg0) {
@@ -215,7 +215,7 @@ obj = {
         }
         tmpResult = tmp(4149);
       }
-      obj = require(500) /* set */;
+      obj = require("../../../utils/PlatformUtils.tsx") /* set */;
     }
   },
   focus(arg0, arg1) {

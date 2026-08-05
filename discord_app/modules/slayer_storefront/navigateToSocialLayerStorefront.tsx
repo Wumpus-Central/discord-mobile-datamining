@@ -140,7 +140,7 @@ export default function navigateToSocialLayerStorefront(arg0) {
   }
   let socialLayerStorefrontGuildId = guildId;
   if (guildId == null) {
-    let obj = require(5757) /* getPrice */;
+    let obj = require("SlayerStorefrontUtils.tsx") /* getPrice */;
     socialLayerStorefrontGuildId = obj.getSocialLayerStorefrontGuildId(applicationId);
   }
   if (null == applicationIdFromGuildId) {
@@ -152,8 +152,8 @@ export default function navigateToSocialLayerStorefront(arg0) {
     }
   }
   if (null != applicationIdFromGuildId) {
-    resolved = Promise.resolve(require(1222) /* transitionTo */.transitionTo(closure_7.COLLECTIBLES_SHOP_GAME_SHOP(applicationIdFromGuildId, pageIndex, skuId, slug)));
-    const obj3 = require(1222) /* transitionTo */;
+    resolved = Promise.resolve(require("../routing/router_utils.tsx") /* transitionTo */.transitionTo(closure_7.COLLECTIBLES_SHOP_GAME_SHOP(applicationIdFromGuildId, pageIndex, skuId, slug)));
+    const obj3 = require("../routing/router_utils.tsx") /* transitionTo */;
   } else {
     obj = { guildId: null, pageIndex: null, invite: null, skuId: null, slug: null };
     obj[0] = socialLayerStorefrontGuildId;
@@ -177,7 +177,7 @@ export const eagerNavigateToSocialLayerStorefront = function eagerNavigateToSoci
     guildId = id;
   }
   if (null != guildId) {
-    let obj = require(7678) /* _fetchSocialLayerStorefront */;
+    let obj = require("SocialLayerStorefrontActionCreators.tsx") /* _fetchSocialLayerStorefront */;
     obj = { eager: true, forceFetch: null };
     obj[1] = forceFetch.forceFetch;
     const socialLayerStorefront = obj.fetchSocialLayerStorefront(guildId, obj);
@@ -187,6 +187,6 @@ export const eagerNavigateToSocialLayerStorefrontForApplication = function eager
   let applicationId;
   let forceFetch;
   ({ applicationId, forceFetch } = arg0);
-  const socialLayerStorefrontForApplication = require(7678) /* _fetchSocialLayerStorefront */.fetchSocialLayerStorefrontForApplication(applicationId, { eager: true, forceFetch });
+  const socialLayerStorefrontForApplication = require("SocialLayerStorefrontActionCreators.tsx") /* _fetchSocialLayerStorefront */.fetchSocialLayerStorefrontForApplication(applicationId, { eager: true, forceFetch });
 };
 export { navigateToSocialLayerStorefrontWithGuildPreview };

@@ -13,7 +13,7 @@ export const GameUpdatePlatformIcon = function GameUpdatePlatformIcon(color) {
     size = "xs";
   }
   color = color.color;
-  if (require(8827) /* PlatformType */.PlatformType.DESKTOP === platform) {
+  if (require("../../../../discord_common/js/shared/shared-constants/PlatformType.tsx") /* PlatformType */.PlatformType.DESKTOP === platform) {
     let obj = { size: null, color: null };
     obj[0] = size;
     obj[1] = color;

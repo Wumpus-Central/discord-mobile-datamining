@@ -7,7 +7,7 @@ const result = require("defaultAreStatesEqual").fileFinishedImporting("modules/u
 export const useProfileThemeValues = function useProfileThemeValues(theme) {
   const _require = theme;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
-  const stateFromStores = _require(647).useStateFromStores(items, () => saturation.saturation);
+  const stateFromStores = _require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => saturation.saturation);
   const tmp2 = stateFromStores(1348)("useProfileThemeValues");
   const dependencyMap = tmp2;
   const items1 = [theme, stateFromStores, tmp2];

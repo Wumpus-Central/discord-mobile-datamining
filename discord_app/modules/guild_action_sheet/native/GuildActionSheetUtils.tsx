@@ -9,7 +9,7 @@ export const useGuildActionSheetPermissions = function useGuildActionSheetPermis
   const _require = guild;
   const items = [getUncachedChannelPermissions];
   const items1 = [guild];
-  return _require(589).useStateFromStoresObject(items, () => {
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
     if (null == closure_0) {
       let obj = { canAccessSettings: false, canEditNickname: false, canManageChannels: false };
     } else {

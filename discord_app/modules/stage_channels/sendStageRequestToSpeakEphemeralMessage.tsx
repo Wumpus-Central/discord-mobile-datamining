@@ -8,10 +8,10 @@ let obj1;
 const result = require("DISCORD_EPOCH").fileFinishedImporting("modules/stage_channels/sendStageRequestToSpeakEphemeralMessage.tsx");
 
 export const sendStageRequestToSpeakEphemeralMessage = function sendStageRequestToSpeakEphemeralMessage(channelId, user, requestToSpeakTimestamp) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "MESSAGE_CREATE", channelId, message: null, optimistic: false, sendMessageOptions: null, isPushNotification: false };
   obj = { id: null, type: null, flags: null, content: "", channel_id: null, author: null, attachments: null, embeds: null, pinned: false, mentions: null, mention_channels: null, mention_roles: null, mention_everyone: false, timestamp: null, state: null, tts: false };
-  obj[0] = importDefault(11).fromTimestamp(Date.parse(requestToSpeakTimestamp));
+  obj[0] = require("../../utils/SnowflakeUtils.tsx").fromTimestamp(Date.parse(requestToSpeakTimestamp));
   obj[1] = constants3.STAGE_RAISE_HAND;
   obj[2] = constants.EPHEMERAL;
   obj[4] = channelId;

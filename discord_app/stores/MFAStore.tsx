@@ -56,7 +56,7 @@ const mFAStore = new MFAStore(require("dispatcher"), {
     let codes;
     let key;
     ({ codes, key } = arg0);
-    let closure_4 = importDefault(12).sortBy(codes, "code");
+    let closure_4 = require("../../_runtime/00012_apply.js").sortBy(codes, "code");
   },
   MFA_SEND_VERIFICATION_KEY: function handleSendVerificationEmail(nonces) {
     nonces = nonces.nonces;

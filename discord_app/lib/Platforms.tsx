@@ -45,11 +45,11 @@ obj2[3] = { lightPNG: require("registerAsset"), darkPNG: require("registerAsset"
 const obj4 = {
   replacedBy: ApplicationIdentityConnections.BATTLENET,
   getMigrationExperimentEnabled(location) {
-    const battlenetSocialSDKMigrationExperiment = require(4312) /* useIsRiotSocialSDKMigrationEnabled */.battlenetSocialSDKMigrationExperiment;
+    const battlenetSocialSDKMigrationExperiment = require("../modules/application_account_linking/experiments/socialSDKMigration.tsx") /* useIsRiotSocialSDKMigrationEnabled */.battlenetSocialSDKMigrationExperiment;
     return battlenetSocialSDKMigrationExperiment.getConfig({ location }).enabled;
   },
   useMigrationExperimentEnabled(location) {
-    const battlenetSocialSDKMigrationExperiment = require(4312) /* useIsRiotSocialSDKMigrationEnabled */.battlenetSocialSDKMigrationExperiment;
+    const battlenetSocialSDKMigrationExperiment = require("../modules/application_account_linking/experiments/socialSDKMigration.tsx") /* useIsRiotSocialSDKMigrationEnabled */.battlenetSocialSDKMigrationExperiment;
     return battlenetSocialSDKMigrationExperiment.useConfig({ location }).enabled;
   },
   helpCenterLink: "https://discord.com/blog/link-world-of-warcraft-with-discord",
@@ -86,12 +86,12 @@ obj11[3] = { lightPNG: require("registerAsset"), darkPNG: require("registerAsset
 const obj13 = {
   replacedBy: ApplicationIdentityConnections.RIOT_GAMES,
   getMigrationExperimentEnabled(location) {
-    let obj = require(4312) /* useIsRiotSocialSDKMigrationEnabled */;
+    let obj = require("../modules/application_account_linking/experiments/socialSDKMigration.tsx") /* useIsRiotSocialSDKMigrationEnabled */;
     obj = { location };
     return obj.getIsRiotSocialSDKMigrationEnabled(obj);
   },
   useMigrationExperimentEnabled(location) {
-    let obj = require(4312) /* useIsRiotSocialSDKMigrationEnabled */;
+    let obj = require("../modules/application_account_linking/experiments/socialSDKMigration.tsx") /* useIsRiotSocialSDKMigrationEnabled */;
     obj = { location };
     return obj.useIsRiotSocialSDKMigrationEnabled(obj);
   },
@@ -190,12 +190,12 @@ obj38[2] = { lightPNG: require("registerAsset"), darkPNG: require("registerAsset
 const obj40 = {
   replacedBy: ApplicationIdentityConnections.RIOT_GAMES,
   getMigrationExperimentEnabled(location) {
-    let obj = require(4312) /* useIsRiotSocialSDKMigrationEnabled */;
+    let obj = require("../modules/application_account_linking/experiments/socialSDKMigration.tsx") /* useIsRiotSocialSDKMigrationEnabled */;
     obj = { location };
     return obj.getIsRiotSocialSDKMigrationEnabled(obj);
   },
   useMigrationExperimentEnabled(location) {
-    let obj = require(4312) /* useIsRiotSocialSDKMigrationEnabled */;
+    let obj = require("../modules/application_account_linking/experiments/socialSDKMigration.tsx") /* useIsRiotSocialSDKMigrationEnabled */;
     obj = { location };
     return obj.useIsRiotSocialSDKMigrationEnabled(obj);
   },
@@ -288,7 +288,7 @@ const obj61 = {
     return tmp;
   },
   getByUrl(url) {
-    const toURLSafeResult = importDefault(1467).toURLSafe(url);
+    const toURLSafeResult = require("../utils/URLUtils.tsx").toURLSafe(url);
     if (null != toURLSafeResult) {
       const hostname = toURLSafeResult.hostname;
       let substr = hostname;
@@ -297,7 +297,7 @@ const obj61 = {
       }
       return table2[substr];
     }
-    const obj = importDefault(1467);
+    const obj = require("../utils/URLUtils.tsx");
   },
   isSupported(key10009) {
     const call = hasOwnProperty.call;

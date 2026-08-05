@@ -1,6 +1,6 @@
 // discord_app/modules/auth/native/components/RegisterAgeGate.tsx
 import _slicedToArray from "_slicedToArray";
-import module_38 from "module_38";
+import 00038__ from "../../../../../_runtime/metro/00038__.js";
 import { View } from "useAuthFlowBackHandler";
 import hasConsented from "hasConsented";
 import useRegistrationUIStore from "useRegistrationUIStore";

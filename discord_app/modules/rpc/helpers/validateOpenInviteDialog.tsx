@@ -14,7 +14,7 @@ export const validateOpenInviteDialog = function validateOpenInviteDialog() {
     obj[0] = connectedFrame;
     return obj;
   } else {
-    const obj6 = importDefault(13642)();
+    const obj6 = require("getCurrentEmbeddedActivityChannel.tsx")();
     if (null == obj6) {
       obj = { errorCode: null };
       obj[0] = RPCErrors.INVALID_CHANNEL;
@@ -43,7 +43,7 @@ export const validateOpenInviteDialog = function validateOpenInviteDialog() {
           tmp2 = new tmp2(obj, "No invite permissions for " + obj6.id);
           throw tmp2;
         }
-        obj7 = require(8881) /* canViewInviteModal */;
+        obj7 = require("../../instant_invite/canViewInviteModal.tsx") /* canViewInviteModal */;
       }
     }
   }

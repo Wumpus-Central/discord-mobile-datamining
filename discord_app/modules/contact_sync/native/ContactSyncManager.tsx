@@ -183,6 +183,6 @@ let result = require("mergeGuildAvatar").fileFinishedImporting("modules/contact_
 export default prototype;
 export const LAST_USER_CONTACTS_REQUEST_TIMESTAMP_KEY = "LAST_USER_CONTACTS_REQUEST_TIMESTAMP_KEY";
 export const removeLastUserContactsUpload = function removeLastUserContactsUpload() {
-  const Storage = require(595) /* Storage */.Storage;
+  const Storage = require("../../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
   Storage.remove(LAST_USER_CONTACTS_REQUEST_TIMESTAMP_KEY);
 };

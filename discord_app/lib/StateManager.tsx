@@ -43,8 +43,8 @@ prototype["update"] = function update() {
   const merged1 = Object.assign(obj);
   const nextState = this.getNextState(obj);
   if (flag) {
-    self.dirty = !importDefault(659)(nextState, self.getInitialState());
-    const tmp14 = importDefault(659);
+    self.dirty = !require("../../_runtime/00659_isUndefinedOrNull.js")(nextState, self.getInitialState());
+    const tmp14 = require("../../_runtime/00659_isUndefinedOrNull.js");
   } else {
     const _Object = Object;
     const keys = Object.keys(nextState);
@@ -55,7 +55,7 @@ prototype["update"] = function update() {
         let tmp9 = importDefault;
         let tmp10 = dependencyMap;
         let tmp11 = item10021;
-        dirty = !importDefault(659)(self.state[tmp8], nextState[tmp8]);
+        dirty = !require("../../_runtime/00659_isUndefinedOrNull.js")(self.state[tmp8], nextState[tmp8]);
       }
       self.dirty = dirty;
       continue;

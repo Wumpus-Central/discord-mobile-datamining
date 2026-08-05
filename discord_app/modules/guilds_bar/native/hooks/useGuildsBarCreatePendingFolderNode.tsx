@@ -10,7 +10,7 @@ export default function useGuildsBarCreatePendingFolderNode() {
   let obj = stateFromStores(589);
   const items = [handleGatewayJoinRequestUpdate];
   stateFromStores = obj.useStateFromStores(items, () => obj.hasFetchedRequestToJoinGuilds);
-  const arr2 = importDefault(11104)();
+  const arr2 = require("../../usePendingFolderGuildIds.tsx")();
   const items1 = [set];
   const stateFromStores1 = stateFromStores(589).useStateFromStores(items1, () => folderExpanded.isFolderExpanded(stateFromStores(table[5]).SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER));
   const items2 = [stateFromStores];

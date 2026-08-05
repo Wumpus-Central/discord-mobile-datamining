@@ -91,8 +91,8 @@ export const updateStageInstance = function updateStageInstance(id, arg1, arg2) 
   return applyArgumentsResult;
 };
 export const endStageInstance = function endStageInstance(id) {
-  const HTTP = require(530) /* sendRequest */.HTTP;
+  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
   const obj = { url: Endpoints.STAGE_INSTANCE(id), rejectWithError: null };
-  obj[1] = require(530) /* sendRequest */.rejectWithMigratedError();
+  obj[1] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
   return HTTP.del(obj);
 };

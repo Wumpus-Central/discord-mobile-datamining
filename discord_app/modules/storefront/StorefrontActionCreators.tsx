@@ -520,7 +520,7 @@ export const fetchStorefrontPricesForSkuIds = function fetchStorefrontPricesForS
   return applyArgumentsResult;
 };
 export const setStorefrontPromotionIdOverride = function setStorefrontPromotionIdOverride(promotionIdOverride) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "STOREFRONT_PROMOTION_ID_OVERRIDE_SET", promotionIdOverride };
   obj.dispatch(obj);
 };

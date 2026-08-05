@@ -7,7 +7,7 @@ const result = require("initialize").fileFinishedImporting("modules/activities/p
 
 export const useIsActivityPanelFullscreen = function useIsActivityPanelFullscreen() {
   const items = [participantFromServer];
-  return require(589) /* initialize */.useStateFromStores(items, () => {
+  return require("../../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
     const embeddedActivityLocationChannelId = callback(table[3]).getEmbeddedActivityLocationChannelId(store.getConnectedActivityLocation());
     let tmp3 = store.getActivityPanelMode() === constants.PANEL;
     if (tmp3) {

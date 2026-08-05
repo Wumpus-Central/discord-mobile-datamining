@@ -34,7 +34,7 @@ export default function MediaPostThumbnailActionSheet(markAsDismissed) {
   };
   obj = { style: tmp.container, children: null };
   obj = { contentContainerStyle: items, children: null };
-  items = [tmp.contentContainer, { paddingBottom: importDefault(1581)().bottom }];
+  items = [tmp.contentContainer, { paddingBottom: require("../../safe_area/useSafeAreaInsets.native.tsx")().bottom }];
   const obj1 = { style: tmp.topContainer, children: null };
   const obj2 = { style: tmp.setAsThumbnailContainer, children: null };
   const obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };

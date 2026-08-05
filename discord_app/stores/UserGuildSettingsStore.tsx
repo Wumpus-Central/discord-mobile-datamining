@@ -31,8 +31,8 @@ function updateUserGuildSettingsInternal(id, channel_overrides) {
   }
   let keyByResult = channel_overrides1;
   if (channel_overrides1 instanceof Array) {
-    keyByResult = importDefault(12).keyBy(channel_overrides1, "channel_id");
-    const obj3 = importDefault(12);
+    keyByResult = require("../../_runtime/00012_apply.js").keyBy(channel_overrides1, "channel_id");
+    const obj3 = require("../../_runtime/00012_apply.js");
   }
   const guild = store2.getGuild(id);
   if (null != guild) {
@@ -46,7 +46,7 @@ function updateUserGuildSettingsInternal(id, channel_overrides) {
   let merged2 = Object.assign(channel_overrides);
   obj.channel_overrides = keyByResult;
   tmp5.clearTimer(id);
-  const item = importDefault(12).forEach(channel_overrides, (channel_id) => {
+  const item = require("../../_runtime/00012_apply.js").forEach(channel_overrides, (channel_id) => {
     closure_22.clearTimer(channel_id.channel_id);
   });
   let closure_0 = id;
@@ -113,7 +113,7 @@ function updateUserGuildSettingsInternal(id, channel_overrides) {
     valueResult = found.map((channel_id) => channel_id.channel_id).value();
     const iter = found.map((channel_id) => channel_id.channel_id);
   }
-  const arr = importDefault(12);
+  const arr = require("../../_runtime/00012_apply.js");
   obj5 = tmp5;
   const tmp18 = closure_24;
   tmp18[id] = new Set(valueResult);
@@ -256,10 +256,10 @@ prototype["initialize"] = function initialize(useNewNotifications) {
       if (prop == null) {
         prop = {};
       }
-      let closure_25 = importDefault(12).mapValues(prop, (items) => new Set(items));
-      const obj = importDefault(12);
+      let closure_25 = require("../../_runtime/00012_apply.js").mapValues(prop, (items) => new Set(items));
+      const obj = require("../../_runtime/00012_apply.js");
       const tmp2 = importDefault;
-      const item = importDefault(12).forEach(userGuildSettings, (channel_overrides) => {
+      const item = require("../../_runtime/00012_apply.js").forEach(userGuildSettings, (channel_overrides) => {
         let valueResult = null;
         if (null != channel_overrides.channel_overrides) {
           const found = callback(table[11])(channel_overrides.channel_overrides).filter((mute_config) => callback(table[10]).computeIsMuted(mute_config));
@@ -269,7 +269,7 @@ prototype["initialize"] = function initialize(useNewNotifications) {
         }
         closure_24[arg1] = new Set(valueResult);
       });
-      const tmp2Result = importDefault(12);
+      const tmp2Result = require("../../_runtime/00012_apply.js");
     }
   }
 };
@@ -332,7 +332,7 @@ prototype["isMobilePushEnabled"] = function isMobilePushEnabled(closure_2) {
 };
 prototype["isMuted"] = function isMuted(arg0) {
   if (dependencyMap[arg0] != null) {
-    const obj = require(3916) /* reset */;
+    const obj = require("../lib/MuteTimers.tsx") /* reset */;
     return obj.computeIsMuted(tmp);
   } else {
     let guild = store2.getGuild(arg0);
@@ -346,7 +346,7 @@ prototype["isMuted"] = function isMuted(arg0) {
 };
 prototype["isTemporarilyMuted"] = function isTemporarilyMuted(arg0) {
   if (dependencyMap[arg0] != null) {
-    const obj = require(3916) /* reset */;
+    const obj = require("../lib/MuteTimers.tsx") /* reset */;
     return obj.isTemporarilyMuted(tmp);
   } else {
     let guild = store2.getGuild(arg0);
@@ -679,7 +679,7 @@ prototype["getGuildFavorites"] = function getGuildFavorites(id) {
   } else {
     if (null == table[id]) {
       const self = this;
-      const found = importDefault(12).filter(this.getChannelOverrides(id), (flags) => {
+      const found = require("../../_runtime/00012_apply.js").filter(this.getChannelOverrides(id), (flags) => {
         let num = flags.flags;
         if (num == null) {
           num = 0;
@@ -696,7 +696,7 @@ prototype["getGuildFavorites"] = function getGuildFavorites(id) {
         return hasFlagResult;
       });
       tmp[id] = found.map((channel_id) => channel_id.channel_id);
-      const arr = importDefault(12);
+      const arr = require("../../_runtime/00012_apply.js");
     }
     return table[id];
   }
@@ -931,7 +931,7 @@ const userGuildSettingsStoreClass = new UserGuildSettingsStoreClass(require("dis
         }
         let tmp7 = importDefault;
         let tmp8 = dependencyMap;
-        let arr2 = importDefault(12);
+        let arr2 = require("../../_runtime/00012_apply.js");
         let item1 = arr2.forEach(tmp5.channel_overrides, (muted) => {
           let closure_0 = muted;
           if (true === muted.muted) {
@@ -1074,7 +1074,7 @@ const userGuildSettingsStoreClass = new UserGuildSettingsStoreClass(require("dis
         let tmp6 = key10009;
         let tmp7 = importDefault;
         let tmp8 = dependencyMap;
-        let obj = importDefault(12);
+        let obj = require("../../_runtime/00012_apply.js");
         if (!obj.isEqual(updates[key10009], tmp4[key10009])) {
           continue;
         } else {
@@ -1125,8 +1125,8 @@ export const convertChannelOverridesToMap = function convertChannelOverridesToMa
   }
   let keyByResult = obj;
   if (obj instanceof Array) {
-    keyByResult = importDefault(12).keyBy(obj, "channel_id");
-    const obj2 = importDefault(12);
+    keyByResult = require("../../_runtime/00012_apply.js").keyBy(obj, "channel_id");
+    const obj2 = require("../../_runtime/00012_apply.js");
   }
   return keyByResult;
 };

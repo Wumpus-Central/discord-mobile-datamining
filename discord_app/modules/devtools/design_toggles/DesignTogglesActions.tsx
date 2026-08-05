@@ -8,7 +8,7 @@ export const toggle = function toggle(toggle, flag) {
   if (typeof flag !== "boolean") {
     tmp = !store.get(toggle);
   }
-  let obj = importDefault(709);
+  let obj = require("../../../Dispatcher.tsx");
   obj = { type: "DEV_TOOLS_DESIGN_TOGGLE_SET", toggle, value: tmp };
   obj.dispatch(obj);
 };
@@ -22,7 +22,7 @@ export const clearAll = function clearAll() {
     }
     let tmp = importDefault;
     let tmp2 = dependencyMap;
-    let obj = importDefault(709);
+    let obj = require("../../../Dispatcher.tsx");
     obj = { type: "DEV_TOOLS_DESIGN_TOGGLE_SET", toggle: null, value: null };
     obj[1] = key10005;
     obj[2] = flag;

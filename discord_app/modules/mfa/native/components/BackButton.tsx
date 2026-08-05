@@ -14,5 +14,5 @@ export default function BackButton(props) {
   obj[2] = function onPress() {
 
   };
-  return jsx(importDefault(14890), { variant: "secondary", text: null, onPress: null });
+  return jsx(require("button.tsx"), { variant: "secondary", text: null, onPress: null });
 };

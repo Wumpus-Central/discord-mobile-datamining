@@ -17,7 +17,7 @@ export default function GuildActionSheetProgress(guild) {
   let dismissed;
   guild = guild.guild;
   const tmp = createCacheKey();
-  let obj = require(11747) /* useIOSCompletionStates */;
+  let obj = require("../../../guild_progress/native/GuildProgressUtils.tsx") /* useIOSCompletionStates */;
   const iOSCompletionStates = obj.useIOSCompletionStates(guild);
   ({ completed, dismissed } = iOSCompletionStates);
   let tmp5 = null;
@@ -31,8 +31,8 @@ export default function GuildActionSheetProgress(guild) {
         obj = { guild: null, titleStyle: null, longPressDisabled: true, resume: true };
         obj[0] = guild;
         obj[1] = tmp.title;
-        obj[1] = jsx(importDefault(13229), { guild: null, titleStyle: null, longPressDisabled: true, resume: true });
-        tmp5 = jsx(require(5317) /* PressableCard */.Card, { guild: null, titleStyle: null, longPressDisabled: true, resume: true });
+        obj[1] = jsx(require("../../../guild_progress/native/components/GuildProgressOverview.tsx"), { guild: null, titleStyle: null, longPressDisabled: true, resume: true });
+        tmp5 = jsx(require("../../../../design/components/Card/native/Card.native.tsx") /* PressableCard */.Card, { guild: null, titleStyle: null, longPressDisabled: true, resume: true });
       }
     }
   }

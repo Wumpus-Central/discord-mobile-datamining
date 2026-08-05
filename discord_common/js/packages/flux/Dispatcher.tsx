@@ -34,7 +34,7 @@ prototype["register"] = function register(name, obj, storeDidChange, band, token
     const _Number = Number;
     isIntegerResult = Number.isInteger(band);
   }
-  importDefault(38)(isIntegerResult, "band must be a non-negative integer.");
+  require("../../../../_runtime/metro/00038__.js")(isIntegerResult, "band must be a non-negative integer.");
   obj = {};
   for (const key10024 in arg1) {
     let tmp9 = key10024;
@@ -229,7 +229,7 @@ prototype2["dispatch"] = function dispatch(arg0) {
 prototype2["dispatchForStoreTest"] = function dispatchForStoreTest(type) {
   let actionHandler;
   let storeDidChange;
-  importDefault(38)(false, "dispatchForTest cannot be called in: production");
+  require("../../../../_runtime/metro/00038__.js")(false, "dispatchForTest cannot be called in: production");
   for (const item10019 of orderedActionHandlers) {
     ({ actionHandler, storeDidChange } = item10019);
     let tmp3 = item10019.name === arg1;
@@ -251,7 +251,7 @@ prototype2["flushWaitQueue"] = function flushWaitQueue() {
       self._processingWaitQueue = true;
       let tmp4 = importDefault;
       let tmp6 = dependencyMap;
-      importDefault(593).isDispatching = true;
+      require("Emitter.tsx").isDispatching = true;
       let num2 = 0;
       if (self._waitQueue.length > 0) {
         const sum = num2 + 1;
@@ -268,7 +268,7 @@ prototype2["flushWaitQueue"] = function flushWaitQueue() {
           tmp4 = importDefault;
           let tmp11 = dependencyMap;
           tmp6 = dependencyMap;
-          let obj = importDefault(593);
+          let obj = require("Emitter.tsx");
           let emitResult = obj.emit();
         }
         const serializeResult = importAll(594).serialize();
@@ -288,7 +288,7 @@ prototype2["flushWaitQueue"] = function flushWaitQueue() {
       tmp4(593).isDispatching = false;
     } catch (tmp25) {
       tmp2._processingWaitQueue = false;
-      importDefault(593).isDispatching = false;
+      require("Emitter.tsx").isDispatching = false;
       throw tmp25;
     }
   }
@@ -308,8 +308,8 @@ prototype2["_dispatchWithLogging"] = function _dispatchWithLogging(type) {
   const tmp2 = self(38);
   const tmp3 = null == this._currentDispatchActionType;
   const tmp8 = _require;
-  _require(655).mark(type.type);
-  const obj = _require(655);
+  _require("../../shared/utils/profiling.tsx").mark(type.type);
+  const obj = _require("../../shared/utils/profiling.tsx");
   importAll(594).add(type.type);
   const actionLogger = this.actionLogger;
   const logResult1 = actionLogger.log(type, (arg0) => {

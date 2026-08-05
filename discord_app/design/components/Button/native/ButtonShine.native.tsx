@@ -6,11 +6,11 @@ import { jsx } from "jsxProd";
 const require = arg1;
 function useShineEffectStyles(width, variant) {
   const _require = width;
-  let obj = _require(4700);
+  let obj = _require("ButtonHooks.native.tsx");
   const buttonTextColorStyles = obj.useButtonTextColorStyles(variant);
   const obj2 = enabled(689)(buttonTextColorStyles.color);
   const hexResult = enabled(689)(buttonTextColorStyles.color).alpha(0.1).hex();
-  enabled = React.useContext(_require(4131).AccessibilityPreferencesContext).reducedMotion.enabled;
+  enabled = React.useContext(_require("../../../shared.tsx").AccessibilityPreferencesContext).reducedMotion.enabled;
   const alphaResult = enabled(689)(buttonTextColorStyles.color).alpha(0.1);
   const fn = function o() {
     if (null == width) {
@@ -41,15 +41,15 @@ function useShineEffectStyles(width, variant) {
     }
     return tmp5;
   };
-  obj = { width, SHINE_OFFSCREEN_OFFSET: 120, useReducedMotion: enabled, SHINE_WIDTH: 56, withRepeat: _require(4146).withRepeat, withSequence: _require(4146).withSequence, withTiming: _require(4286).withTiming, withDelay: _require(4146).withDelay, SHINE_INITIAL_ANIMATION_DELAY: 750, SHINE_ANIMATION_DURATION: 2000 };
+  obj = { width, SHINE_OFFSCREEN_OFFSET: 120, useReducedMotion: enabled, SHINE_WIDTH: 56, withRepeat: _require("../../../../modules/reanimated/ReanimatedRexport.tsx").withRepeat, withSequence: _require("../../../../modules/reanimated/ReanimatedRexport.tsx").withSequence, withTiming: _require("../../../animation/reanimated/timing/timing.tsx").withTiming, withDelay: _require("../../../../modules/reanimated/ReanimatedRexport.tsx").withDelay, SHINE_INITIAL_ANIMATION_DELAY: 750, SHINE_ANIMATION_DURATION: 2000 };
   fn.__closure = obj;
   fn.__workletHash = 15814138938406;
   fn.__initData = closure_6;
   obj = { shineStyles: null, shineAnimatedStyle: null };
-  const animatedStyle = _require(4146).useAnimatedStyle(fn);
-  let obj4 = _require(4146);
+  const animatedStyle = _require("../../../../modules/reanimated/ReanimatedRexport.tsx").useAnimatedStyle(fn);
+  let obj4 = _require("../../../../modules/reanimated/ReanimatedRexport.tsx");
   let items = [{ rotate: "30deg" }];
-  obj[0] = _require(4285).createStyles({ shineContainer: { width: "100%", height: "200%", position: "absolute", overflow: "hidden" }, shine: { width: 56, height: "500%", transform: items, backgroundColor: hexResult, top: "-100%", alignItems: "center" }, shineInner: { width: 16, height: "100%", backgroundColor: hexResult } })();
+  obj[0] = _require("../../Styles/native/createStyles.tsx").createStyles({ shineContainer: { width: "100%", height: "200%", position: "absolute", overflow: "hidden" }, shine: { width: 56, height: "500%", transform: items, backgroundColor: hexResult, top: "-100%", alignItems: "center" }, shineInner: { width: 16, height: "100%", backgroundColor: hexResult } })();
   obj[1] = animatedStyle;
   return obj;
 }
@@ -73,7 +73,7 @@ export const ButtonShine = function ButtonShine(variant) {
   items = [shineStyles.shineContainer, tmp2.shineAnimatedStyle];
   obj = { style: shineStyles.shine, children: null };
   obj = { style: shineStyles.shineInner };
-  obj[1] = jsx(importDefault(4146).View, { style: shineStyles.shineInner });
-  obj[2] = jsx(importDefault(4146).View, { style: shineStyles.shineInner });
-  return jsx(importDefault(4146).View, { style: shineStyles.shineInner });
+  obj[1] = jsx(require("../../../../modules/reanimated/ReanimatedRexport.tsx").View, { style: shineStyles.shineInner });
+  obj[2] = jsx(require("../../../../modules/reanimated/ReanimatedRexport.tsx").View, { style: shineStyles.shineInner });
+  return jsx(require("../../../../modules/reanimated/ReanimatedRexport.tsx").View, { style: shineStyles.shineInner });
 };

@@ -25,7 +25,7 @@ const result1 = defineParentalControlledSetting.defineParentalControlledSetting(
   }
   return NON_FRIENDS;
 }, (value) => {
-  const UInt32Value = require(1337) /* defineProperty */.UInt32Value;
+  const UInt32Value = require("../../../../discord_common/js/packages/protos/google/protobuf/wrappers.tsx") /* defineProperty */.UInt32Value;
   return UInt32Value.create({ value });
 });
 obj = { comparator: null };
@@ -38,7 +38,7 @@ const result3 = defineParentalControlledSetting.defineParentalControlledSetting(
   }
   return value;
 }, (value) => {
-  const BoolValue = require(1337) /* defineProperty */.BoolValue;
+  const BoolValue = require("../../../../discord_common/js/packages/protos/google/protobuf/wrappers.tsx") /* defineProperty */.BoolValue;
   return BoolValue.create({ value });
 });
 const result4 = defineParentalControlledSetting.defineParentalControlledSetting("privacy", "defaultGuildsRestricted", (arg0) => {
@@ -55,7 +55,7 @@ const result5 = defineParentalControlledSetting.defineParentalControlledSetting(
   }
   return value;
 }, (value) => {
-  const BoolValue = require(1337) /* defineProperty */.BoolValue;
+  const BoolValue = require("../../../../discord_common/js/packages/protos/google/protobuf/wrappers.tsx") /* defineProperty */.BoolValue;
   return BoolValue.create({ value });
 });
 const result6 = defineParentalControlledSetting.defineParentalControlledSetting("privacy", "friendSourceFlags", (value) => {
@@ -68,7 +68,7 @@ const result6 = defineParentalControlledSetting.defineParentalControlledSetting(
   }
   return value;
 }, (value) => {
-  const UInt32Value = require(1337) /* defineProperty */.UInt32Value;
+  const UInt32Value = require("../../../../discord_common/js/packages/protos/google/protobuf/wrappers.tsx") /* defineProperty */.UInt32Value;
   return UInt32Value.create({ value });
 });
 const result7 = defineParentalControlledSetting.defineParentalControlledSetting("privacy", "dropsOptedOut", (value) => {
@@ -81,7 +81,7 @@ const result7 = defineParentalControlledSetting.defineParentalControlledSetting(
   }
   return flag;
 }, (value) => {
-  const BoolValue = require(1337) /* defineProperty */.BoolValue;
+  const BoolValue = require("../../../../discord_common/js/packages/protos/google/protobuf/wrappers.tsx") /* defineProperty */.BoolValue;
   return BoolValue.create({ value });
 });
 const result8 = defineParentalControlledSetting.defineParentalControlledSetting("privacy", "quests3PDataOptedOut", (value) => {
@@ -94,7 +94,7 @@ const result8 = defineParentalControlledSetting.defineParentalControlledSetting(
   }
   return flag;
 }, (value) => {
-  const BoolValue = require(1337) /* defineProperty */.BoolValue;
+  const BoolValue = require("../../../../discord_common/js/packages/protos/google/protobuf/wrappers.tsx") /* defineProperty */.BoolValue;
   return BoolValue.create({ value });
 });
 const result9 = defineParentalControlledSetting.defineParentalControlledSetting("safetySettings", "spendingLimitSettings", (oneTimePurchaseLimit) => {
@@ -115,13 +115,13 @@ const result9 = defineParentalControlledSetting.defineParentalControlledSetting(
   let amount;
   let currency;
   if (null == arg0) {
-    const SpendingLimitSettings2 = require(1306) /* create */.SpendingLimitSettings;
+    const SpendingLimitSettings2 = require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.SpendingLimitSettings;
     return SpendingLimitSettings2.create({});
   } else {
     ({ amount, currency } = arg0);
-    const SpendingLimitSettings = require(1306) /* create */.SpendingLimitSettings;
+    const SpendingLimitSettings = require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.SpendingLimitSettings;
     let obj = { oneTimePurchaseLimit: null };
-    const SpendingLimit = require(1306) /* create */.SpendingLimit;
+    const SpendingLimit = require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.SpendingLimit;
     obj = { amount: null, currency: null };
     const _String = String;
     obj[0] = String(amount);

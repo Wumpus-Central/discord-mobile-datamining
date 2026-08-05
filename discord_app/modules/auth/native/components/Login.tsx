@@ -31,16 +31,16 @@ class LinkButton {
   }
 }
 function handlePressPasswordManagerHint() {
-  let obj = importDefault(4624);
+  let obj = require("../../../../actions/native/AlertActionCreators.tsx");
   obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.lzsy7t);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require(1236) /* getSystemLocale */.t["TYqh/t"]);
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl3.string(require(1236) /* getSystemLocale */.t["9x0iKe"]);
-  const intl4 = require(1236) /* getSystemLocale */.intl;
-  obj[3] = intl4.string(require(1236) /* getSystemLocale */.t["ETE/oC"]);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.lzsy7t);
+  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["TYqh/t"]);
+  const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["9x0iKe"]);
+  const intl4 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[3] = intl4.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["ETE/oC"]);
   obj[4] = function onConfirm() {
     if (obj.isAndroid()) {
       const result = callback2(table[14]).openAccessibilitySettings();

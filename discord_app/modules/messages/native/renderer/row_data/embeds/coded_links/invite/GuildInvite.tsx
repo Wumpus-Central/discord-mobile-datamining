@@ -25,22 +25,22 @@ let closure_18;
 const result = require("reset").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/GuildInvite.tsx");
 
 export const createResolvingGuildInvite = function createResolvingGuildInvite(closure_2) {
-  const tmp = importDefault(7863)(closure_2);
+  const tmp = require("../../getEmbedThemeColors.tsx")(closure_2);
   const obj = { headerText: null, resolvingGradientEnd: null, resolvingGradientStart: null, type: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t["N/g9Z4"]).toUpperCase();
+  const intl = require("../../../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../../../../../../intl/index.native.tsx") /* getSystemLocale */.t["N/g9Z4"]).toUpperCase();
   ({ resolvingGradientEnd: obj[1], resolvingGradientStart: obj[2] } = tmp.colors);
   obj[3] = constants5.GUILD;
   const merged = Object.assign(tmp.baseColors);
   return obj;
 };
 export const createExpiredGuildInvite = function createExpiredGuildInvite(author, arg1, closure_2) {
-  const tmp3 = importDefault(7863)(closure_2);
+  const tmp3 = require("../../getEmbedThemeColors.tsx")(closure_2);
   let obj = {};
   const merged = Object.assign(tmp3.baseColors);
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   const string = intl.string;
-  const t = require(1236) /* getSystemLocale */.t;
+  const t = require("../../../../../../../../intl/index.native.tsx") /* getSystemLocale */.t;
   if (arg1) {
     let str = string(t.C89OLE);
     let tmp6 = tmp5;
@@ -50,7 +50,7 @@ export const createExpiredGuildInvite = function createExpiredGuildInvite(author
   }
   obj.headerText = str.toUpperCase();
   let tmp6Result = tmp6(7855);
-  obj.titleColor = tmp6Result.processColorOrThrow(importDefault(712).unsafe_rawColors.RED_400);
+  obj.titleColor = tmp6Result.processColorOrThrow(require("../../../../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.RED_400);
   if (arg1) {
     const intl4 = tmp6(1236).intl;
     let stringResult = intl4.string(tmp6(1236).t["F/OLvL"]);
@@ -86,9 +86,9 @@ export const createExpiredGuildInvite = function createExpiredGuildInvite(author
   return obj;
 };
 export const createDisabledGuildInvite = function createDisabledGuildInvite(invite, closure_2) {
-  const tmp3 = importDefault(7863)(closure_2);
+  const tmp3 = require("../../getEmbedThemeColors.tsx")(closure_2);
   if (null != invite.guild) {
-    let obj = require(1411) /* fromGuildPropertiesWithAdditionalFields */;
+    let obj = require("../../../../../../../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */;
     let fromInviteGuildResult = obj.fromInviteGuild(invite.guild);
   } else {
     let channel = invite.channel;
@@ -110,12 +110,12 @@ export const createDisabledGuildInvite = function createDisabledGuildInvite(invi
   obj = {};
   const merged = Object.assign(tmp3.baseColors);
   obj.extendedType = CodedLinkExtendedType.GUILD_INVITE_DISABLED;
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj.headerText = intl.string(require(1236) /* getSystemLocale */.t["Hyx2F/"]).toUpperCase();
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj.titleText = intl2.string(require(1236) /* getSystemLocale */.t.tQ4AnN);
-  const str = intl.string(require(1236) /* getSystemLocale */.t["Hyx2F/"]);
-  obj.titleColor = require(7855) /* processColorOrThrow */.processColorOrThrow(importDefault(712).unsafe_rawColors.RED_345);
+  const intl = require("../../../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj.headerText = intl.string(require("../../../../../../../../intl/index.native.tsx") /* getSystemLocale */.t["Hyx2F/"]).toUpperCase();
+  const intl2 = require("../../../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj.titleText = intl2.string(require("../../../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.tQ4AnN);
+  const str = intl.string(require("../../../../../../../../intl/index.native.tsx") /* getSystemLocale */.t["Hyx2F/"]);
+  obj.titleColor = require("../../../../RowGeneratorStyleSheet.tsx") /* processColorOrThrow */.processColorOrThrow(require("../../../../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.RED_345);
   let name;
   if (fromInviteGuildResult != null) {
     name = fromInviteGuildResult.name;
@@ -126,15 +126,15 @@ export const createDisabledGuildInvite = function createDisabledGuildInvite(invi
   }
   obj.guildName = name;
   const intl4 = tmp14(1236).intl;
-  obj.subtitle = intl4.string(require(1236) /* getSystemLocale */.t["x+XpjL"]);
+  obj.subtitle = intl4.string(require("../../../../../../../../intl/index.native.tsx") /* getSystemLocale */.t["x+XpjL"]);
   const intl5 = tmp14(1236).intl;
-  obj.helpCenterArticleLabel = intl5.string(require(1236) /* getSystemLocale */.t["4FlZqw"]);
-  const obj3 = require(7855) /* processColorOrThrow */;
-  obj.helpCenterArticleURL = importDefault(1945).getArticleURL(constants.INVITE_DISABLED);
+  obj.helpCenterArticleLabel = intl5.string(require("../../../../../../../../intl/index.native.tsx") /* getSystemLocale */.t["4FlZqw"]);
+  const obj3 = require("../../../../RowGeneratorStyleSheet.tsx") /* processColorOrThrow */;
+  obj.helpCenterArticleURL = require("../../../../../../../../utils/HelpdeskUtils.tsx").getArticleURL(constants.INVITE_DISABLED);
   obj.guildIcon = tmp11;
   const tmp16 = tmp11;
-  const tmpResult = importDefault(1945);
-  obj.thumbnailUrl = require(7865) /* frozen */.getAssetUriForEmbed(importDefault(11992));
+  const tmpResult = require("../../../../../../../../utils/HelpdeskUtils.tsx");
+  obj.thumbnailUrl = require("../../../../EmbedUtils.tsx") /* frozen */.getAssetUriForEmbed(require("../../../../../../../../../_runtime/11992_registerAsset.js"));
   let tmp17;
   if (null == tmp11) {
     let tmp18;
@@ -151,9 +151,9 @@ export const createDisabledGuildInvite = function createDisabledGuildInvite(invi
 export const createErroredGuildInvite = function createErroredGuildInvite(code, arg1, closure_2) {
   let baseColors;
   let colors;
-  ({ colors, baseColors } = importDefault(7863)(closure_2));
+  ({ colors, baseColors } = require("../../getEmbedThemeColors.tsx")(closure_2));
   inviteError = inviteError.getInviteError(code);
-  let obj = require(11991) /* getDescriptiveInviteError */;
+  let obj = require("../../../../../../../../utils/InviteErrorUtils.tsx") /* getDescriptiveInviteError */;
   code = undefined;
   if (inviteError != null) {
     code = inviteError.code;
@@ -171,7 +171,7 @@ export const createErroredGuildInvite = function createErroredGuildInvite(code, 
   }
   obj.headerText = str.toUpperCase();
   let tmp5Result = tmp5(7855);
-  obj.titleColor = tmp5Result.processColorOrThrow(importDefault(712).unsafe_rawColors.RED_400);
+  obj.titleColor = tmp5Result.processColorOrThrow(require("../../../../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.RED_400);
   let description;
   if (descriptiveInviteError != null) {
     description = descriptiveInviteError.description;
@@ -214,14 +214,14 @@ export const createGuildInvite = function createGuildInvite(invite, isOwnInvite,
   let baseColors;
   let colors;
   let target_user;
-  ({ colors, baseColors } = importDefault(7863)(closure_2));
+  ({ colors, baseColors } = require("../../getEmbedThemeColors.tsx")(closure_2));
   let guild = null;
   if (null != invite.guild) {
     guild = store.getGuild(invite.guild.id);
   }
   let tmpResult = tmp(10908);
   const items = [trackCommunicationDisabled];
-  const tmp3 = importDefault(7863)(closure_2);
+  const tmp3 = require("../../getEmbedThemeColors.tsx")(closure_2);
   const channel = tmp(10907)(invite).channel;
   const tmp7 = null != channel && channel.isGuildVocal();
   let flag;
@@ -238,11 +238,11 @@ export const createGuildInvite = function createGuildInvite(invite, isOwnInvite,
   }
   let flag2 = true;
   if (tmp8) {
-    let obj1 = require(1411) /* fromGuildPropertiesWithAdditionalFields */;
+    let obj1 = require("../../../../../../../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */;
     guild = obj1.fromInviteGuild(invite.guild);
     flag2 = false;
   }
-  let obj2 = require(12505) /* getHeaderTextForInvite */;
+  let obj2 = require("../../../../../../getHeaderTextForInvite.tsx") /* getHeaderTextForInvite */;
   let obj = { isVoiceChannel: tmp7, isOwnInvite, isHubGuild: null, isStream: null, isStage: null, isGuest: null };
   let flag3;
   if (guild != null) {
@@ -260,7 +260,7 @@ export const createGuildInvite = function createGuildInvite(invite, isOwnInvite,
   if (num == null) {
     num = 0;
   }
-  obj[5] = tmp10Result.hasFlag(num, require(7695) /* set */.GuildInviteFlags.IS_GUEST_INVITE);
+  obj[5] = tmp10Result.hasFlag(num, require("../../../../../../../../../discord_common/js/shared/shared-constants/GuildInviteFlags.tsx") /* set */.GuildInviteFlags.IS_GUEST_INVITE);
   const str = obj2.getHeaderTextForInvite(obj);
   if (guild != null) {
     let name = guild.name;

@@ -13,7 +13,7 @@ prototype["fromFileUri"] = function fromFileUri(uri) {
     num = 4096;
   }
   if (obj.isAndroid()) {
-    if (null == importDefault(1271)) {
+    if (null == require("../../../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx")) {
       const _Error = Error;
       const error = new Error("RTNFileManager doesn't exist?");
       let rejectResult = Promise.reject(error);

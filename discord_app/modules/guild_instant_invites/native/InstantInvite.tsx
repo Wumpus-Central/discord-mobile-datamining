@@ -59,7 +59,7 @@ const memoResult = importAllResult.memo((onInviteRevoked) => {
     const obj3 = { roleIds: null, guildId: null };
     obj3[0] = memo1;
     obj3[1] = id;
-    tmp9Result = tmp9(importDefault(9618), obj3);
+    tmp9Result = tmp9(require("../../instant_invite/native/InviteRolesDisplay.tsx"), obj3);
   }
   items3[2] = tmp9Result;
   const obj4 = { style: callback3().creatorWrapper, children: null };
@@ -78,13 +78,13 @@ const memoResult = importAllResult.memo((onInviteRevoked) => {
     const obj5 = { start: true, end: true, userId: null, guildId: null };
     obj5[2] = id2;
     obj5[3] = id;
-    tmp9Result = tmp9(importDefault(9614), obj5);
-    const tmp15 = importDefault(9614);
+    tmp9Result = tmp9(require("../../guild_settings/native/DetailedGuildIdentityUserRow.tsx"), obj5);
+    const tmp15 = require("../../guild_settings/native/DetailedGuildIdentityUserRow.tsx");
   }
   const obj6 = { children: null };
   const obj7 = { direction: "horizontal", align: "flex-end", children: null };
   obj4[1] = tmp9Result;
-  const items4 = [callback(View, obj4), callback(importDefault(9620), { uses, maxUses })];
+  const items4 = [callback(View, obj4), callback(require("InstantInviteUsesLabel.tsx"), { uses, maxUses })];
   obj7[2] = items4;
   items3[3] = callback2(invite(4693).Stack, obj7);
   obj6[0] = items3;

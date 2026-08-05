@@ -11,7 +11,7 @@ export default function useIsGuestOrLurker(arg0, arg1) {
   const dependencyMap = arg1;
   const items = [createGuildRecordFromRust, trackCommunicationDisabled];
   const items1 = [arg0, arg1];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const guild = outer1_3.getGuild(closure_0);
     let hasItem;
     if (guild != null) {

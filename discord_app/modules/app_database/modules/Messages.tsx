@@ -298,14 +298,14 @@ prototype2["resetInMemoryState"] = function resetInMemoryState() {
 
 };
 prototype2["insertStale"] = function insertStale(guildId, channel_id, item10009, database) {
-  const obj = importDefault(1907);
+  const obj = require("../DatabaseDaos.tsx");
   const result = _handleConnectionOpen.lastTimeConnectedChanged();
   const KvMessage = obj(6855).KvMessage;
   const messagesTransactionResult = obj.messagesTransaction(database);
   messagesTransactionResult.put(guildId, channel_id, KvMessage.fromMessage(guildId, channel_id, item10009, result), obj(1908).ConflictOptions.Skip);
 };
 prototype2["upsertOne"] = function upsertOne(guildId, channelId, message, database) {
-  const obj = importDefault(1907);
+  const obj = require("../DatabaseDaos.tsx");
   const messagesTransactionResult = obj.messagesTransaction(database);
   const result = _handleConnectionOpen.lastTimeConnectedChanged();
   const KvMessage = obj(6855).KvMessage;
@@ -313,7 +313,7 @@ prototype2["upsertOne"] = function upsertOne(guildId, channelId, message, databa
   messagesTransactionResult.trimChannel(guildId, channelId, handleSelectedChannelStoreChanged.saveLimit(channelId));
 };
 prototype2["upsertMany"] = function upsertMany(guild_id, channelId, messages, database) {
-  const obj = importDefault(1907);
+  const obj = require("../DatabaseDaos.tsx");
   const messagesTransactionResult = obj.messagesTransaction(database);
   const result = _handleConnectionOpen.lastTimeConnectedChanged();
   const iter = messages[Symbol.iterator]();
@@ -335,7 +335,7 @@ prototype2["upsertMany"] = function upsertMany(guild_id, channelId, messages, da
 prototype2["replaceChannel"] = function replaceChannel(arg0, channelId, arr, database) {
   let closure_0 = arg0;
   const importDefault = channelId;
-  const messagesTransactionResult = importDefault(1907).messagesTransaction(database);
+  const messagesTransactionResult = require("../DatabaseDaos.tsx").messagesTransaction(database);
   const dependencyMap = _handleConnectionOpen.lastTimeConnectedChanged();
   const saveLimitResult = handleSelectedChannelStoreChanged.saveLimit(channelId);
   let substr = arr;
@@ -425,16 +425,16 @@ prototype2["updateOne"] = function updateOne(guildId, channel_id, message, datab
   })();
 };
 prototype2["deleteOne"] = function deleteOne(arg0, arg1, arg2, database) {
-  const obj = importDefault(1907);
-  importDefault(1907).messagesTransaction(database).deleteMessage(arg0, arg1, arg2);
+  const obj = require("../DatabaseDaos.tsx");
+  require("../DatabaseDaos.tsx").messagesTransaction(database).deleteMessage(arg0, arg1, arg2);
 };
 prototype2["deleteChannel"] = function deleteChannel(arg0, arg1, database) {
-  const obj = importDefault(1907);
-  importDefault(1907).messagesTransaction(database).deleteChannel(arg0, arg1);
+  const obj = require("../DatabaseDaos.tsx");
+  require("../DatabaseDaos.tsx").messagesTransaction(database).deleteChannel(arg0, arg1);
 };
 prototype2["deleteGuild"] = function deleteGuild(arg0, database) {
-  const obj = importDefault(1907);
-  importDefault(1907).messagesTransaction(database).deleteGuild(arg0);
+  const obj = require("../DatabaseDaos.tsx");
+  require("../DatabaseDaos.tsx").messagesTransaction(database).deleteGuild(arg0);
 };
 let set = Object.create(Messages.prototype);
 set.actions = {

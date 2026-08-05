@@ -45,7 +45,7 @@ QRCode.prototype["render"] = function render() {
   const tmp6 = closure_9;
   const tmp7 = importDefault;
   const merged = Object.assign(tmp2);
-  const items1 = [callback2(importDefault(9021), obj1), ];
+  const items1 = [callback2(require("../../_runtime/09021_QRCode.js"), obj1), ];
   if (blur) {
     const obj2 = { style: null, blurTheme: "dark" };
     obj2[0] = closure_7.absoluteFill;
@@ -75,14 +75,14 @@ QRCodeWithOverlay.prototype["render"] = function render() {
   const items = [callback2(QRCode, obj), , ];
   obj = { style: items1, children: null };
   items1 = [tmp.qrCodeOverlay, closure_7.absoluteFill];
-  obj1 = { style: tmp[frozen[SIZE_40]], source: require(9035) /* registerAsset */ };
+  obj1 = { style: tmp[frozen[SIZE_40]], source: require("../../_runtime/09035_registerAsset.js") /* registerAsset */ };
   obj[1] = callback2(closure_6, obj1);
   items[1] = callback2(closure_5, obj);
   let tmp6Result = null;
   if (props.blur) {
     const obj2 = { style: null };
     obj2[0] = closure_7.absoluteFill;
-    tmp6Result = callback2(importDefault(8696), obj2);
+    tmp6Result = callback2(require("../modules/visual_effect_view/native/VisualEffectViewThemed.tsx"), obj2);
   }
   items[2] = tmp6Result;
   obj[1] = items;

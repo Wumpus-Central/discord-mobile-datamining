@@ -11,7 +11,7 @@ let error;
 let metroImportAll;
 const require = arg1;
 function emphasisHook(children) {
-  return callback2(require(4281) /* Text */.Text, { variant: "text-sm/medium", color: "text-default", children });
+  return callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-sm/medium", color: "text-default", children });
 }
 ({ jsx: error, jsxs: metroImportAll, Fragment: c9 } = jsxProd);
 createCacheKey = { container: null };
@@ -28,11 +28,11 @@ export default function ChangeSubscriptionCard(activeSubscription) {
   let obj = importAll(14363);
   const first = callback(obj.useName(activeListingId), 1)[0];
   let obj1 = importAll(14363);
-  let obj2 = importDefault(3867)(activeSubscription.currentPeriodEnd);
+  let obj2 = require("../../../../../_runtime/03867_t.js")(activeSubscription.currentPeriodEnd);
   const tmp = createCacheKey();
   obj = { style: items, children: null };
   items = [tmp.container, ];
-  obj = { paddingBottom: 16 + importDefault(1581)().bottom };
+  obj = { paddingBottom: 16 + require("../../../safe_area/useSafeAreaInsets.native.tsx")().bottom };
   items[1] = obj;
   obj1 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = activeSubscription(1236).intl;

@@ -7,7 +7,7 @@ const require = arg1;
 let c3 = importAllResult;
 let closure_5 = createCacheKey.createStyles(() => {
   let obj = { placeholder: null };
-  obj = { backgroundColor: importDefault(712).colors.BORDER_SUBTLE };
+  obj = { backgroundColor: require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE };
   obj[0] = obj;
   return obj;
 });

@@ -4,9 +4,9 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/direct
 
 export default {
   open(channel) {
-    importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(11585, dependencyMap.paths), { channel: channel.channel }, GUILD_DIRECTORY_SEARCH_MODAL_KEY);
+    require("../../../../actions/ModalActionCreators.tsx").pushLazy(require("../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(11585, dependencyMap.paths), { channel: channel.channel }, GUILD_DIRECTORY_SEARCH_MODAL_KEY);
   },
   close() {
-    importDefault(4490).popWithKey(GUILD_DIRECTORY_SEARCH_MODAL_KEY);
+    require("../../../../actions/ModalActionCreators.tsx").popWithKey(GUILD_DIRECTORY_SEARCH_MODAL_KEY);
   }
 };

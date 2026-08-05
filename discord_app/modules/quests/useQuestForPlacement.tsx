@@ -5,7 +5,7 @@ import initializeState from "initializeState";
 let c3;
 let c4;
 function maybeRefreshAd(fetchedAt, QUEST_HOME_BANNER_DESKTOP) {
-  let isEligibleForQuests = require(10375) /* getIsEligibleForQuests */.getIsEligibleForQuests();
+  let isEligibleForQuests = require("lib/QuestsEligibility.tsx") /* getIsEligibleForQuests */.getIsEligibleForQuests();
   if (isEligibleForQuests) {
     let tmp5 = null != fetchedAt;
     if (tmp5) {
@@ -35,7 +35,7 @@ function maybeRefreshAd(fetchedAt, QUEST_HOME_BANNER_DESKTOP) {
       tmp(10376).clearQuestAdDecision(QUEST_HOME_BANNER_DESKTOP, fetchedAt.ttlMillis);
       const tmpResult1 = tmp(10376);
     }
-    obj2 = importDefault(10384);
+    obj2 = require("../app_state/DiscordAppState.native.tsx");
     tmp9 = importDefault;
   }
 }

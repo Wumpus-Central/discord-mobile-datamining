@@ -25,7 +25,7 @@ function matchGroupDMRecipients(trimmed1, recipients) {
       let tmp19 = importDefault;
       let tmp20 = dependencyMap;
       let toLocaleLowerCaseResult = username.toLocaleLowerCase();
-      if (importDefault(5197)(trimmed1, toLocaleLowerCaseResult)) {
+      if (require("../../../../../../_runtime/05197_fuzzysearch.js")(trimmed1, toLocaleLowerCaseResult)) {
         let tmp16 = obj;
         obj.return();
         let num3 = 1;
@@ -73,12 +73,12 @@ function matchGroupDM(id, trimmed1) {
   if ("" === trimmed1) {
     return 0;
   } else {
-    const channelName = require(4475) /* computeChannelName */.computeChannelName(id, mergeGuildAvatar, upsertRelationship);
+    const channelName = require("../../../../channel/useChannelName.tsx") /* computeChannelName */.computeChannelName(id, mergeGuildAvatar, upsertRelationship);
     const toLocaleLowerCaseResult = channelName.toLocaleLowerCase();
     let num = 3;
     if (!toLocaleLowerCaseResult.startsWith(trimmed1)) {
       let num2 = 2;
-      if (!importDefault(5197)(trimmed1, toLocaleLowerCaseResult)) {
+      if (!require("../../../../../../_runtime/05197_fuzzysearch.js")(trimmed1, toLocaleLowerCaseResult)) {
         num2 = matchGroupDMRecipients(trimmed1, id);
       }
       num = num2;

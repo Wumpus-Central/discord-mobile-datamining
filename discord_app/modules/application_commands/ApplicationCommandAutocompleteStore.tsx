@@ -299,7 +299,7 @@ set = {
         if (activeOption != null) {
           type = activeOption.type;
         }
-        tmp29 = type === _require(1906).ApplicationCommandOptionType.INTEGER;
+        tmp29 = type === _require("../../flow/Server.tsx").ApplicationCommandOptionType.INTEGER;
       }
       _require = tmp29;
       let mapped;
@@ -336,7 +336,7 @@ set = {
       obj = { duration_ms: null, error: false, num_options: null };
       obj[0] = num;
       obj[2] = mapped.length;
-      _require(4479).trackWithMetadata(AnalyticEvents.APPLICATION_COMMAND_OPTION_STRING_AUTOCOMPLETE_PERFORMANCE, obj);
+      _require("../app_analytics/AppAnalyticsUtils.tsx").trackWithMetadata(AnalyticEvents.APPLICATION_COMMAND_OPTION_STRING_AUTOCOMPLETE_PERFORMANCE, obj);
       map2.delete(nonce);
       const optionNameToAutocompleteQueries3 = value.optionNameToAutocompleteQueries;
       const value2 = optionNameToAutocompleteQueries3.get(value.name);
@@ -373,7 +373,7 @@ set = {
         }
         let obj = { duration_ms: null, error: true };
         obj[0] = num;
-        require(4479) /* collectGuildAnalyticsMetadata */.trackWithMetadata(AnalyticEvents.APPLICATION_COMMAND_OPTION_STRING_AUTOCOMPLETE_PERFORMANCE, obj);
+        require("../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */.trackWithMetadata(AnalyticEvents.APPLICATION_COMMAND_OPTION_STRING_AUTOCOMPLETE_PERFORMANCE, obj);
         map2.delete(nonce);
         const channelId = value.channelId;
         if (!map1.has(channelId)) {

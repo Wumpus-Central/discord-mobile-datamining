@@ -316,7 +316,7 @@ function _getQuestsInstructionsToWinReward(arg0) {
                 if (features2.includes(tmp29.CLOUD_GAMING_PROVIDER_NVIDIA)) {
                   const obj8 = { activityName: null, providerName: "NVIDIA GeForce NOW", providerLink: null, streamingDurationRequirement: null, questReward: null };
                   obj8[0] = quest.config.messages.gameTitle;
-                  obj8[2] = importDefault(1945).getArticleURL(HelpdeskArticles.NVIDIA_GEFORCE_CLOUD_GAMING_QUEST);
+                  obj8[2] = require("../../../utils/HelpdeskUtils.tsx").getArticleURL(HelpdeskArticles.NVIDIA_GEFORCE_CLOUD_GAMING_QUEST);
                   obj8[3] = targetMinutes;
                   obj8[4] = defaultRewardNameWithArticle;
                   const intl4 = _1votF6(1236).intl;
@@ -325,7 +325,7 @@ function _getQuestsInstructionsToWinReward(arg0) {
                   } else {
                     formatToPlainStringResult6 = intl4.format(_0NNM3l, obj8);
                   }
-                  const obj21 = importDefault(1945);
+                  const obj21 = require("../../../utils/HelpdeskUtils.tsx");
                 }
               }
               const UuzHh8 = _1votF6(1236).t.UuzHh8;
@@ -457,17 +457,17 @@ function useQuestsInstructionsToWinReward(arg0) {
   let quest;
   let withoutMarkdown;
   ({ quest, gameProfileSource, withoutMarkdown } = arg0);
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const thirdPartyTaskDetails = require(10374) /* useQuests */.useThirdPartyTaskDetails(quest);
-  const obj2 = require(10374) /* useQuests */;
+  const thirdPartyTaskDetails = require("QuestHooks.tsx") /* useQuests */.useThirdPartyTaskDetails(quest);
+  const obj2 = require("QuestHooks.tsx") /* useQuests */;
   const tmp = undefined !== withoutMarkdown && withoutMarkdown;
   const tmp2 = require;
-  const inGameQuestConnectState = require(11089) /* useInGameQuestConnectState */.useInGameQuestConnectState(quest);
-  const obj3 = require(11089) /* useInGameQuestConnectState */;
-  const result = require(7103) /* getApplicationIdsByTaskTypes */.hasAchievementInGameTask(quest);
-  const obj5 = require(7103) /* getApplicationIdsByTaskTypes */;
+  const inGameQuestConnectState = require("../useInGameQuestConnectState.tsx") /* useInGameQuestConnectState */.useInGameQuestConnectState(quest);
+  const obj3 = require("../useInGameQuestConnectState.tsx") /* useInGameQuestConnectState */;
+  const result = require("../utils/QuestTaskUtils.tsx") /* getApplicationIdsByTaskTypes */.hasAchievementInGameTask(quest);
+  const obj5 = require("../utils/QuestTaskUtils.tsx") /* getApplicationIdsByTaskTypes */;
   if (result) {
     let inGameApplicationId = obj5.getInGameApplicationId(quest);
   } else {
@@ -477,12 +477,12 @@ function useQuestsInstructionsToWinReward(arg0) {
     }
   }
   obj = { applicationId: inGameApplicationId, location: constants.QUEST_INSTRUCTIONS, source: null };
-  const obj4 = require(7103) /* getApplicationIdsByTaskTypes */;
+  const obj4 = require("../utils/QuestTaskUtils.tsx") /* getApplicationIdsByTaskTypes */;
   if (gameProfileSource == null) {
     gameProfileSource = tmp2(9200).GameProfileSources.QuestHome;
   }
   obj[2] = gameProfileSource;
-  importDefault(9189)(obj);
+  require("../../game_profile/hooks/useOpenGameProfileModal.tsx")(obj);
   obj = {};
   const merged = Object.assign(arg0);
   obj.currentUser = stateFromStores;
@@ -497,16 +497,16 @@ let closure_15 = { PLAY: 0, [0]: "PLAY", STREAM: 1, [1]: "STREAM", WATCH_VIDEO: 
 let result = require("noop").fileFinishedImporting("modules/quests/hooks/QuestCopyHooks.tsx");
 
 export const useQuestInstructionTitle = function useQuestInstructionTitle(config, arg1, questContent, sourceQuestContent) {
-  let obj = require(10374) /* useQuests */;
+  let obj = require("QuestHooks.tsx") /* useQuests */;
   const targetMinutes = obj.useQuestTaskDetails(config).targetMinutes;
-  let obj1 = require(10374) /* useQuests */;
+  let obj1 = require("QuestHooks.tsx") /* useQuests */;
   const thirdPartyTaskDetails = obj1.useThirdPartyTaskDetails(config);
-  let obj2 = require(10374) /* useQuests */;
+  let obj2 = require("QuestHooks.tsx") /* useQuests */;
   obj = { quest: config, questContent, sourceQuestContent };
   const connectedConsoleLinkOnClick = obj2.useConnectedConsoleLinkOnClick(obj);
-  let obj4 = require(7101) /* isSponsoredPlayQuest */;
+  let obj4 = require("../utils/QuestUtils.tsx") /* isSponsoredPlayQuest */;
   const isSponsoredPlayQuestResult = obj4.isSponsoredPlayQuest(config);
-  let obj5 = require(7103) /* getApplicationIdsByTaskTypes */;
+  let obj5 = require("../utils/QuestTaskUtils.tsx") /* getApplicationIdsByTaskTypes */;
   if (obj5.isConsoleQuest(config)) {
     let tmpResult = tmp(7103);
     obj = { quest: null };
@@ -613,7 +613,7 @@ export const getQuestsInstructionsToWinReward = function getQuestsInstructionsTo
 export { useQuestsInstructionsToWinReward };
 export const useQuestDescription = function useQuestDescription(quest, sourceQuestContent, QUEST_HOME_MOBILE, QuestHome) {
   let obj = { quest, taskDetails: null, location: null, sourceQuestContent: null, popoutTargetElementRef: null, gameProfileSource: null };
-  obj[1] = require(10374) /* useQuests */.useQuestTaskDetails(quest);
+  obj[1] = require("QuestHooks.tsx") /* useQuests */.useQuestTaskDetails(quest);
   obj[2] = QUEST_HOME_MOBILE;
   obj[3] = sourceQuestContent;
   obj[4] = arg4;
@@ -624,7 +624,7 @@ export const useQuestDescription = function useQuestDescription(quest, sourceQue
   if (userStatus != null) {
     claimedAt = userStatus.claimedAt;
   }
-  require(10374) /* useQuests */;
+  require("QuestHooks.tsx") /* useQuests */;
   const userStatus2 = quest.userStatus;
   if (userStatus2 != null) {
     claimedAt = userStatus2.claimedAt;
@@ -649,13 +649,13 @@ export const useQuestBarSubtitle = function useQuestBarSubtitle(arg0) {
   let sourceQuestContent;
   ({ quest, hasAlreadyLinked, onClickGameTitle } = arg0);
   ({ isExpanded, sourceQuestContent, activeScreen, popoutTargetElementRef, onGameSheetOpened, onGameSheetClosed } = arg0);
-  let obj = require(10374) /* useQuests */;
+  let obj = require("QuestHooks.tsx") /* useQuests */;
   const questFormattedDate = obj.useQuestFormattedDate(quest.config.rewardsConfig.rewardsExpireAt);
-  let obj1 = require(10374) /* useQuests */;
+  let obj1 = require("QuestHooks.tsx") /* useQuests */;
   const questTaskDetails = obj1.useQuestTaskDetails(quest);
-  let obj2 = require(10374) /* useQuests */;
+  let obj2 = require("QuestHooks.tsx") /* useQuests */;
   const thirdPartyTaskDetails = obj2.useThirdPartyTaskDetails(quest);
-  let obj3 = require(589) /* initialize */;
+  let obj3 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [mergeGuildAvatar];
   const userStatus = quest.userStatus;
   let completedAt;
@@ -671,7 +671,7 @@ export const useQuestBarSubtitle = function useQuestBarSubtitle(arg0) {
   let tmpResult = tmp(10374);
   obj = { quest, location: constants.QUESTS_BAR, taskDetails: questTaskDetails, sourceQuestContent, popoutTargetElementRef, onGameSheetOpened, onGameSheetClosed, gameProfileSource: null };
   const isQuestProgressing = tmpResult.useIsQuestProgressing(quest);
-  obj[7] = require(9200) /* GameProfileEmbedAction */.GameProfileSources.QuestBar;
+  obj[7] = require("../../game_profile/GameProfileAnalyticUtils.tsx") /* GameProfileEmbedAction */.GameProfileSources.QuestBar;
   if (tmp8) {
     const intl9 = tmp(1236).intl;
     obj = { expirationDate: null };
@@ -754,13 +754,13 @@ export const useQuestBarSubtitle = function useQuestBarSubtitle(arg0) {
   tmp8 = null != completedAt;
 };
 export const useQuestBarTitle = function useQuestBarTitle(questCreative) {
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [_getSystemLocale];
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
-  const questTaskDetails = require(10374) /* useQuests */.useQuestTaskDetails(questCreative);
-  const obj2 = require(10374) /* useQuests */;
-  const obj3 = require(10374) /* useQuests */;
-  const thirdPartyTaskDetails = require(10374) /* useQuests */.useThirdPartyTaskDetails(questCreative);
+  const questTaskDetails = require("QuestHooks.tsx") /* useQuests */.useQuestTaskDetails(questCreative);
+  const obj2 = require("QuestHooks.tsx") /* useQuests */;
+  const obj3 = require("QuestHooks.tsx") /* useQuests */;
+  const thirdPartyTaskDetails = require("QuestHooks.tsx") /* useQuests */.useThirdPartyTaskDetails(questCreative);
   const userStatus = questCreative.userStatus;
   let completedAt;
   if (userStatus != null) {
@@ -818,7 +818,7 @@ export const useQuestBarTitle = function useQuestBarTitle(questCreative) {
     }
     return stringResult;
   }
-  const obj4 = require(10374) /* useQuests */;
+  const obj4 = require("QuestHooks.tsx") /* useQuests */;
 };
 export const usePrimaryCtaCopy = function usePrimaryCtaCopy(showPlayInstantlyLabel) {
   let application;
@@ -871,8 +871,8 @@ export const usePrimaryCtaCopy = function usePrimaryCtaCopy(showPlayInstantlyLab
             supported_platforms = embeddedActivityConfig2.supported_platforms;
           }
         }
-        tmp20Result = importDefault(10531)(supported_platforms);
-        const tmp20 = importDefault(10531);
+        tmp20Result = require("../../activities/utils/isActivitySupportedOnClientPlatform.tsx")(supported_platforms);
+        const tmp20 = require("../../activities/utils/isActivitySupportedOnClientPlatform.tsx");
       }
       hasItem = tmp20Result;
     }
@@ -913,8 +913,8 @@ export const usePrimaryCtaCopy = function usePrimaryCtaCopy(showPlayInstantlyLab
               supported_platforms1 = embeddedActivityConfig.supported_platforms;
             }
           }
-          tmp12Result = importDefault(10531)(supported_platforms1);
-          const tmp12 = importDefault(10531);
+          tmp12Result = require("../../activities/utils/isActivitySupportedOnClientPlatform.tsx")(supported_platforms1);
+          const tmp12 = require("../../activities/utils/isActivitySupportedOnClientPlatform.tsx");
         }
         hasItem1 = tmp12Result;
       }
@@ -936,9 +936,9 @@ export const usePremiumExtendableCopy = function usePremiumExtendableCopy(arg0) 
   if (!memo) {
     return null;
   } else {
-    const intl = _require(1236).intl;
+    const intl = _require("../../../intl/index.native.tsx").intl;
     const string = intl.string;
-    hh7Rb_ = _require(1236).t;
+    hh7Rb_ = _require("../../../intl/index.native.tsx").t;
     if (tmp2) {
       hh7Rb_ = hh7Rb_["hh7Rb/"];
       let stringResult = string(hh7Rb_);
@@ -951,7 +951,7 @@ export const getRewardCodeRedemptionInstructions = function getRewardCodeRedempt
   let quest;
   let rewardCode;
   ({ quest, rewardCode } = arg0);
-  let obj = require(10391) /* _getDefaultRewardName */;
+  let obj = require("../utils/QuestRewardUtils.tsx") /* _getDefaultRewardName */;
   let platform;
   const result = obj.isTieredRewardCodeQuest({ quest });
   if (rewardCode != null) {

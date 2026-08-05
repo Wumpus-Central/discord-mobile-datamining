@@ -58,7 +58,7 @@ export default function AppLauncherCommandOption(option) {
           obj[4] = autoFocusType === onPress.OPTIONAL_OPTION_ADDED;
           obj[5] = hasError;
           obj[6] = onPressAttachmentOption;
-          let tmp28Result = onDismiss(importDefault(11475), obj, name.name);
+          let tmp28Result = onDismiss(require("attachment/AppLauncherAttachmentOption.tsx"), obj, name.name);
           let tmp13 = onDismiss;
         } else if (tmp2(1906).ApplicationCommandOptionType.BOOLEAN === type) {
           obj = { style: null, option: null, initialValue: null, onPress: null, hasError: null };
@@ -76,9 +76,9 @@ export default function AppLauncherCommandOption(option) {
             callback3(name, items);
           };
           obj[4] = hasError;
-          tmp28Result = tmp35(importDefault(11477), obj, name.name);
+          tmp28Result = tmp35(require("boolean/AppLauncherBooleanOption.tsx"), obj, name.name);
           tmp13 = tmp35;
-          const tmp37 = importDefault(11477);
+          const tmp37 = require("boolean/AppLauncherBooleanOption.tsx");
         } else if (tmp2(1906).ApplicationCommandOptionType.MENTIONABLE === type) {
           const obj1 = { option: null, initialValue: null, onMentionablePress: null, onActionSheetDismiss: null, channel: null, autoFocus: null, hasError: null, onPress: null };
           obj1[0] = name;
@@ -125,9 +125,9 @@ export default function AppLauncherCommandOption(option) {
           obj1[5] = autoFocusType === onPress.OPTIONAL_OPTION_ADDED;
           obj1[6] = hasError;
           obj1[7] = onPress;
-          tmp28Result = tmp28(importDefault(11478), obj1);
+          tmp28Result = tmp28(require("mentionable/AppLauncherMentionableOption.tsx"), obj1);
           tmp13 = tmp28;
-          const tmp30 = importDefault(11478);
+          const tmp30 = require("mentionable/AppLauncherMentionableOption.tsx");
         } else if (tmp2(1906).ApplicationCommandOptionType.ROLE === type) {
           const obj2 = { style: null, option: null, initialValue: null, onRolePress: null, onActionSheetDismiss: null, channel: null, autoFocus: null, hasError: null, onPress: null };
           obj2[0] = tmp.option;
@@ -155,9 +155,9 @@ export default function AppLauncherCommandOption(option) {
           obj2[6] = autoFocusType === onPress.OPTIONAL_OPTION_ADDED;
           obj2[7] = hasError;
           obj2[8] = onPress;
-          tmp28Result = tmp21(importDefault(11483), obj2, name.name);
+          tmp28Result = tmp21(require("role/AppLauncherRoleOption.tsx"), obj2, name.name);
           tmp13 = tmp21;
-          const tmp23 = importDefault(11483);
+          const tmp23 = require("role/AppLauncherRoleOption.tsx");
         } else if (tmp2(1906).ApplicationCommandOptionType.USER === type) {
           const obj3 = { style: null, option: null, initialValue: null, onUserPress: null, onActionSheetDismiss: null, channel: null, autoFocus: null, hasError: null, onPress: null };
           obj3[0] = tmp.option;
@@ -189,9 +189,9 @@ export default function AppLauncherCommandOption(option) {
           obj3[6] = autoFocusType === onPress.OPTIONAL_OPTION_ADDED;
           obj3[7] = hasError;
           obj3[8] = onPress;
-          tmp28Result = tmp14(importDefault(11484), obj3, name.name);
+          tmp28Result = tmp14(require("user/AppLauncherUserOption.tsx"), obj3, name.name);
           tmp13 = tmp14;
-          const tmp16 = importDefault(11484);
+          const tmp16 = require("user/AppLauncherUserOption.tsx");
         } else if (tmp2(1906).ApplicationCommandOptionType.CHANNEL === type) {
           obj = { style: null, option: null, initialValue: null, onChannelPress: null, onActionSheetDismiss: null, channel: null, autoFocus: null, hasError: null, onPress: null };
           obj[0] = tmp.option;
@@ -220,9 +220,9 @@ export default function AppLauncherCommandOption(option) {
           obj[6] = autoFocusType === onPress.OPTIONAL_OPTION_ADDED;
           obj[7] = hasError;
           obj[8] = onPress;
-          tmp28Result = tmp5(importDefault(11487), obj, name.name);
+          tmp28Result = tmp5(require("channel/AppLauncherChannelOption.tsx"), obj, name.name);
           tmp13 = tmp5;
-          const tmp7 = importDefault(11487);
+          const tmp7 = require("channel/AppLauncherChannelOption.tsx");
         } else {
           return null;
         }
@@ -282,8 +282,8 @@ export default function AppLauncherCommandOption(option) {
     obj7[6] = tmp44;
     obj7[7] = hasError;
     name = name.name;
-    onDismiss(importDefault(11464), obj7, name);
-    const tmp57 = importDefault(11464);
+    onDismiss(require("choices/AppLauncherChoicesOption.tsx"), obj7, name);
+    const tmp57 = require("choices/AppLauncherChoicesOption.tsx");
   } else if (name.autocomplete) {
     const obj8 = { style: null, channel: null, option: null, activeCommand: null, optionValues: null, initialValue: null, autoFocus: null, onSelect: null, onOpenAutocompleteSheet: null, onDismissAutocompleteSheet: null, hasError: null };
     obj8[0] = tmp.option;

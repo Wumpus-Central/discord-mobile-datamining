@@ -28,7 +28,7 @@ export default function useCardGridLayout() {
     sidePadding = PROFILE_SIDE_PADDING;
   }
   if (containerWidth == null) {
-    containerWidth = importDefault(1474)().width;
+    containerWidth = require("../../../screen/useWindowDimensions.native.tsx")().width;
   }
   if (maxWidth == null) {
     maxWidth = Infinity;

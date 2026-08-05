@@ -30,7 +30,7 @@ export default function useGetOrFetchApplications(arg0) {
     }
   }, items);
   const items1 = [addApplication];
-  return _require(589).useStateFromStoresArray(items1, () => items1.map((arg0) => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items1, () => items1.map((arg0) => {
     let application;
     if (null != arg0) {
       application = application.getApplication(arg0);

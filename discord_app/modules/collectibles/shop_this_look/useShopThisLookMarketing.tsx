@@ -5,11 +5,11 @@ const require = arg1;
 const result = require("useSelectedDismissibleContent").fileFinishedImporting("modules/collectibles/shop_this_look/useShopThisLookMarketing.tsx");
 
 export const useShopThisLookMarketing = function useShopThisLookMarketing(id, guildId, isShopThisLookMobileEnabled) {
-  let obj = require(8734) /* useEquippedCollectibleSkuIds */;
-  require(5931) /* useSelectedDismissibleContent */;
+  let obj = require("../hooks/useMaybeFetchEquippedCollectibleProducts.tsx") /* useEquippedCollectibleSkuIds */;
+  require("../../dismissible_content/hooks/useSelectedDismissibleContent.tsx") /* useSelectedDismissibleContent */;
   if (isShopThisLookMobileEnabled) {
     if (tmp3) {
-      const items = [require(1358) /* DismissibleContent */.DismissibleContent.SHOP_THIS_LOOK_WEB_MARKETING];
+      const items = [require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.SHOP_THIS_LOOK_WEB_MARKETING];
     }
     const tmp8 = callback(tmp5([], undefined, true), 2);
     obj = { isVisible: null, markAsDismissed: null };

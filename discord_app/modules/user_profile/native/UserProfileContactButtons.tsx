@@ -22,16 +22,16 @@ function FlatFriendButton(label) {
     str = "secondary";
   }
   if ("primary" === str) {
-    let CONTROL_SECONDARY_TEXT_DEFAULT = importDefault(712).colors.WHITE;
+    let CONTROL_SECONDARY_TEXT_DEFAULT = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE;
   } else {
-    CONTROL_SECONDARY_TEXT_DEFAULT = importDefault(712).colors.CONTROL_SECONDARY_TEXT_DEFAULT;
+    CONTROL_SECONDARY_TEXT_DEFAULT = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_SECONDARY_TEXT_DEFAULT;
   }
   const obj = { text: label, icon: null, accessibilityLabel: null, variant: null, size: "md", grow: true };
   obj[1] = callback(icon, { color: CONTROL_SECONDARY_TEXT_DEFAULT, size: "xs" });
   obj[2] = label;
   obj[3] = str;
   const merged1 = Object.assign(merged);
-  return callback(require(4695) /* Button */.Button, obj);
+  return callback(require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj);
 }
 function FriendRequestButton(user) {
   let ButtonComponent;

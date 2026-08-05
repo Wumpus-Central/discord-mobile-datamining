@@ -13,7 +13,7 @@ export const getPromiseableActionHandlers = function getPromiseableActionHandler
   return { [closure_3.BLOCK_MESSAGE]: null, [closure_3.FLAG_TO_CHANNEL]: null, [closure_3.USER_COMMUNICATION_DISABLED]: null };
 };
 export const openSubmitFeedback = function openSubmitFeedback(messageId, content, decisionId, channel) {
-  let obj = importDefault(4490);
+  let obj = require("../../actions/ModalActionCreators.tsx");
   obj = {
     onCloseModal() {
       callback(table[3]).popWithKey(closure_4);
@@ -21,7 +21,7 @@ export const openSubmitFeedback = function openSubmitFeedback(messageId, content
     automodDecision: obj
   };
   obj = { messageId, messageContent: content, decisionId, channel };
-  obj.pushLazy(require(1959) /* asyncRequireImpl */(11178, dependencyMap.paths), obj, closure_4);
+  obj.pushLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(11178, dependencyMap.paths), obj, closure_4);
 };
 export function openRaidResolveModal() {
 
@@ -31,7 +31,7 @@ export function openConfirmRemoveMentionRaid(arg0) {
 }
 export const openAutomodProfileQuarantineAlert = function openAutomodProfileQuarantineAlert(guildId) {
   let closure_0 = guildId;
-  let obj = importDefault(4624);
+  let obj = require("../../actions/native/AlertActionCreators.tsx");
   obj = {
     importer() {
       return guildId(outer1_2[5])(outer1_2[7], outer1_2.paths).then((arg0) => {

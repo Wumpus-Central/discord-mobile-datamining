@@ -8,7 +8,7 @@ function readSnowflake(firstQueryStringValue) {
     if (obj.isProbablyAValidSnowflake(firstQueryStringValue)) {
       tmp = firstQueryStringValue;
     }
-    obj = importDefault(11);
+    obj = require("../../utils/SnowflakeUtils.tsx");
   }
   return tmp;
 }
@@ -28,7 +28,7 @@ function generateInviteKeyFromExtraData(closure_1) {
       obj[message] = targetMessageId;
     }
   }
-  const json = importDefault(1464).stringify(obj);
+  const json = require("../../../_runtime/01464_parse.js").stringify(obj);
   let combined = baseCode;
   if ("" !== json) {
     const _HermesInternal = HermesInternal;
@@ -51,13 +51,13 @@ export const generateInviteKeyFromUrlParams = function generateInviteKeyFromUrlP
       substr = search.substring(1);
     }
     try {
-      let obj = importDefault(1464);
+      let obj = require("../../../_runtime/01464_parse.js");
       const parsed = obj.parse(substr);
-      const firstQueryStringValue = require(4272) /* getFirstQueryStringValue */.getFirstQueryStringValue(parsed[event]);
-      const obj2 = require(4272) /* getFirstQueryStringValue */;
+      const firstQueryStringValue = require("../../utils/QueryStringUtils.tsx") /* getFirstQueryStringValue */.getFirstQueryStringValue(parsed[event]);
+      const obj2 = require("../../utils/QueryStringUtils.tsx") /* getFirstQueryStringValue */;
       const tmp10 = readSnowflake;
       const tmp6 = require;
-      const tmp12 = readSnowflake(require(4272) /* getFirstQueryStringValue */.getFirstQueryStringValue(parsed[channel]));
+      const tmp12 = readSnowflake(require("../../utils/QueryStringUtils.tsx") /* getFirstQueryStringValue */.getFirstQueryStringValue(parsed[channel]));
       obj = { baseCode: null, guildScheduledEventId: null, targetChannelId: null, targetMessageId: null };
       obj[0] = inviteHostRemainingPath;
       obj[1] = firstQueryStringValue;
@@ -84,12 +84,12 @@ export const parseExtraDataFromInviteKey = function parseExtraDataFromInviteKey(
     obj[0] = tmp2;
     return obj;
   } else {
-    const parsed = importDefault(1464).parse(tmp3);
-    const obj4 = importDefault(1464);
+    const parsed = require("../../../_runtime/01464_parse.js").parse(tmp3);
+    const obj4 = require("../../../_runtime/01464_parse.js");
     const tmp12 = require;
-    const firstQueryStringValue = require(4272) /* getFirstQueryStringValue */.getFirstQueryStringValue(parsed[event]);
-    const obj5 = require(4272) /* getFirstQueryStringValue */;
-    const firstQueryStringValue1 = require(4272) /* getFirstQueryStringValue */.getFirstQueryStringValue(parsed[channel]);
+    const firstQueryStringValue = require("../../utils/QueryStringUtils.tsx") /* getFirstQueryStringValue */.getFirstQueryStringValue(parsed[event]);
+    const obj5 = require("../../utils/QueryStringUtils.tsx") /* getFirstQueryStringValue */;
+    const firstQueryStringValue1 = require("../../utils/QueryStringUtils.tsx") /* getFirstQueryStringValue */.getFirstQueryStringValue(parsed[channel]);
     let tmp4;
     if (typeof firstQueryStringValue1 === "string") {
       let tmp9Result = tmp9(11);

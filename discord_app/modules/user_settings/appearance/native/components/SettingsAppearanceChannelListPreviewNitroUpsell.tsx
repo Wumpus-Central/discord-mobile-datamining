@@ -63,7 +63,7 @@ const View = get_ActivityIndicator.View;
 let closure_13 = ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 1)"];
 function animationEntering(value) {
   const obj = { opacity: null };
-  obj[0] = require(4694) /* CONFIG_NEVER_ANIMATE */.withSpring(value, require(4698) /* SUBTLE_SPRING */.springStandard);
+  obj[0] = require("../../../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */.withSpring(value, require("../../../../../design/animation/reanimated/spring/springPresets.tsx") /* SUBTLE_SPRING */.springStandard);
   return obj;
 }
 let obj = { withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, springStandard: require("SUBTLE_SPRING").springStandard };
@@ -82,7 +82,7 @@ function animationExiting(value, cleanUp) {
   fn.__closure = { cleanUp };
   fn.__workletHash = 15025873527064;
   fn.__initData = closure_15;
-  obj[0] = _require(4694).withSpring(value, _require(4698).springStandard, "respect-motion-settings", fn);
+  obj[0] = _require("../../../../../design/animation/reanimated/spring/spring.tsx").withSpring(value, _require("../../../../../design/animation/reanimated/spring/springPresets.tsx").springStandard, "respect-motion-settings", fn);
   return obj;
 }
 obj = { withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, springStandard: require("SUBTLE_SPRING").springStandard };
@@ -105,7 +105,7 @@ let closure_17 = createCacheKey.createStyles(obj1);
 let closure_18 = { code: "function SettingsAppearanceChannelListPreviewNitroUpsellTsx4(){const{theme,ThemeTypes,StyleSheet,withSpring,springStandard}=this.__closure;const opacity=theme.theme===ThemeTypes.LIGHT?0.5:1;return{...StyleSheet.absoluteFillObject,opacity:withSpring(opacity,springStandard)};}" };
 const obj3 = { height: require("Themes").space.PX_16, width: require("Themes").space.PX_16 };
 const memoResult = importAllResult.memo(function SettingsAppearanceChannelListPreviewNitroUpsell(visible) {
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const callback = importAllResult.useCallback((arg0, style) => {
@@ -128,7 +128,7 @@ const memoResult = importAllResult.memo(function SettingsAppearanceChannelListPr
   obj[2] = animationEntering;
   obj[3] = animationExiting;
   obj[4] = callback;
-  return closure_10(importDefault(8581), obj);
+  return closure_10(require("../../../../../design/components/AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx"), obj);
 });
 const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceChannelListPreviewNitroUpsell.tsx");
 

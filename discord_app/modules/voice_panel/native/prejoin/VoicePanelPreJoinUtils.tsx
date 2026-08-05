@@ -4,7 +4,7 @@ const result = require("set").fileFinishedImporting("modules/voice_panel/native/
 export const areVoicePanelPreJoinContentPropsEqual = function areVoicePanelPreJoinContentPropsEqual(streamingMembers) {
   if (null != streamingMembers) {
     if (null != arg1) {
-      if (importDefault(643)(streamingMembers, arg1, ["streamingMembers"])) {
+      if (require("../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx")(streamingMembers, arg1, ["streamingMembers"])) {
         let num = 0;
         streamingMembers = streamingMembers.streamingMembers;
         for (const item10013 of streamingMembers) {

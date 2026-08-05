@@ -132,13 +132,13 @@ export default function IconUploader(disabled) {
       obj[0] = iconStyle;
       obj[1] = fnResult;
       obj[2] = name;
-      obj[3] = require(5661) /* GuildIconSizes */.GuildIconSizes.XLARGE;
-      let tmp7 = callback(importDefault(5661), obj);
-      const tmp12 = importDefault(5661);
+      obj[3] = require("../../modules/guild/native/GuildIcon.tsx") /* GuildIconSizes */.GuildIconSizes.XLARGE;
+      let tmp7 = callback(require("../../modules/guild/native/GuildIcon.tsx"), obj);
+      const tmp12 = require("../../modules/guild/native/GuildIcon.tsx");
     }
     tmp8 = null == icon && null == name;
   } else {
-    let obj1 = require(1416) /* getAvatarURL */;
+    let obj1 = require("../../utils/AvatarUtils.tsx") /* getAvatarURL */;
     obj = { style: null, source: null };
     const items = [tmp.avatar, iconStyle];
     obj[0] = items;
@@ -150,7 +150,7 @@ export default function IconUploader(disabled) {
   if (!flag) {
     obj1 = { style: null, source: null };
     obj1[0] = tmp.uploadIcon;
-    obj1[1] = importDefault(9601);
+    obj1[1] = require("../../../_runtime/09601_registerAsset.js");
     tmp16 = callback(closure_6, obj1);
   }
   items1[1] = tmp16;
@@ -160,8 +160,8 @@ export default function IconUploader(disabled) {
     let obj2 = { style: null, children: null };
     obj2[0] = disabled.style;
     const obj3 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj3[1] = intl.string(require(1236) /* getSystemLocale */.t["MsUY/S"]);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj3[1] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["MsUY/S"]);
     obj3[2] = function handleChangeIcon() {
       const self = this;
       const apply = _handleChangeIcon.apply;
@@ -173,7 +173,7 @@ export default function IconUploader(disabled) {
       return applyArgumentsResult;
     };
     obj3[3] = tmp14Result;
-    obj2[1] = callback(require(4812) /* PressableBase */.PressableOpacity, obj3);
+    obj2[1] = callback(require("../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj3);
     tmp22 = callback(closure_5, obj2);
   }
   return tmp22;

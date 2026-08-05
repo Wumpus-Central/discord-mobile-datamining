@@ -6,10 +6,10 @@ import createToggle from "createToggle";
 const require = arg1;
 function useOfficialMessageStyleSettingValue() {
   const items = [maybeApplyNoTextColorForLightCustomTheme];
-  return require(589) /* initialize */.useStateFromStores(items, () => officialMessageStyle.officialMessageStyle);
+  return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => officialMessageStyle.officialMessageStyle);
 }
 function onOfficialMessageStyleSettingValueChange(officialMessageStyle) {
-  const result = require(13617) /* setFontSize */.setOfficialMessageStyle(officialMessageStyle);
+  const result = require("../../../a11y/AccessibilityActionCreators.tsx") /* setFontSize */.setOfficialMessageStyle(officialMessageStyle);
 }
 function useOfficialMessageStyleSettingOptions() {
   return React.useMemo(() => {
@@ -34,8 +34,8 @@ function useOfficialMessageStyleSettingOptions() {
 }
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.nC2XBl);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.nC2XBl);
   },
   parent: require("MobileSetting").MobileSetting.ACCESSIBILITY,
   useValue: useOfficialMessageStyleSettingValue,

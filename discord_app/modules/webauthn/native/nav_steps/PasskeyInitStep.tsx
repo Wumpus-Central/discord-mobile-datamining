@@ -29,7 +29,7 @@ function CredentialList(navigation) {
     obj = { style: null, children: null };
     obj[0] = tmp3.upsellContainer;
     obj = { source: null, style: null };
-    obj[0] = importDefault(13872);
+    obj[0] = require("../../../../../_runtime/13872_registerAsset.js");
     obj[1] = tmp3.keychainImage;
     const items1 = [callback2(closure_5, obj), ];
     let obj1 = { variant: "text-md/normal", style: null, children: null };

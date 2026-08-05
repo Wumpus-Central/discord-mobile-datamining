@@ -70,10 +70,10 @@ export const Content = function Content(arg0) {
     HermesBuiltin.arraySpread(first, 0);
     obj5[0] = items3;
     obj5[1] = guildId;
-    items2[2] = tmp7(importDefault(14375), obj5);
+    items2[2] = tmp7(require("GuildRoleSubscriptionEmojiGallery.tsx"), obj5);
     obj2[0] = items2;
     tmp4Result = tmp4(tmp6, obj2);
-    const tmp11 = importDefault(14375);
+    const tmp11 = require("GuildRoleSubscriptionEmojiGallery.tsx");
   }
   items1[1] = tmp4Result;
   tmp4Result = null;

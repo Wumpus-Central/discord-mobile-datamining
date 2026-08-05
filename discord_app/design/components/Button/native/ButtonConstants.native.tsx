@@ -37,13 +37,13 @@ export function getButtonDefaultTextVariant(size) {
   return str;
 }
 export const getButtonPadding = function getButtonPadding(FAB_BUTTON_SIZE, FAB_BUTTON_ICON_SIZE) {
-  return (FAB_BUTTON_SIZE - require(4697) /* IconSizes */.getIconSize(FAB_BUTTON_ICON_SIZE) - 2) / 2;
+  return (FAB_BUTTON_SIZE - require("../../../void/Icon/native/Icon.tsx") /* IconSizes */.getIconSize(FAB_BUTTON_ICON_SIZE) - 2) / 2;
 };
 export const getButtonBorderRadius = function getButtonBorderRadius(arg0) {
   if ("lg" === arg0) {
-    let BORDER_RADIUS = importDefault(712).modules.button.BORDER_RADIUS_LG;
+    let BORDER_RADIUS = require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.button.BORDER_RADIUS_LG;
   } else {
-    BORDER_RADIUS = importDefault(712).modules.button.BORDER_RADIUS;
+    BORDER_RADIUS = require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.button.BORDER_RADIUS;
   }
   return BORDER_RADIUS;
 };

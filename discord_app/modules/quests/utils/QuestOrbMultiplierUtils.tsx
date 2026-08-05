@@ -11,7 +11,7 @@ export const shouldReceiveQuestOrbMultiplier = function shouldReceiveQuestOrbMul
   return items.includes(questOrbMultiplierEligibilityForUser);
 };
 export const getQuestOrbMultiplierSource = function getQuestOrbMultiplierSource(perks) {
-  const obj = importDefault(3931);
+  const obj = require("../../../utils/PremiumUtils.tsx");
   if (obj.canUseMoreQuestOrbs(perks)) {
     if (tmpResult.canUseQuestOrbMultiplier(perks)) {
       return obj.NITRO;
@@ -20,7 +20,7 @@ export const getQuestOrbMultiplierSource = function getQuestOrbMultiplierSource(
       if (perks != null) {
         perks = perks.perks;
       }
-      const perkSource = require(1890) /* parseServerPerkConfigKind */.getPerkSource(perks, tmp4(1892).Perk.MORE_QUEST_ORBS);
+      const perkSource = require("../../premium/perks_state/PerksStateUtils.tsx") /* parseServerPerkConfigKind */.getPerkSource(perks, tmp4(1892).Perk.MORE_QUEST_ORBS);
       let hasItem;
       if (perkSource != null) {
         hasItem = perkSource.includes(tmp4(1892).PerkSource.SOURCE_NITRO);

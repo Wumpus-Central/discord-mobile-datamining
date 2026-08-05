@@ -42,7 +42,7 @@ function getActiveTabsRoute(coerceTabsRouteResult) {
         obj[2] = coerceTabsRouteResult.params.params;
         return obj;
       } else {
-        obj = require(4137) /* getRootNavigationRef */;
+        obj = require("../../RootNavigationRef.native.tsx") /* getRootNavigationRef */;
         const rootNavigationRef = obj.getRootNavigationRef();
         let isReadyResult;
         if (rootNavigationRef != null) {
@@ -56,7 +56,7 @@ function getActiveTabsRoute(coerceTabsRouteResult) {
   }
 }
 function resolveBackgroundScreen(index) {
-  let obj = require(4136) /* navigationToRootTabHelper */;
+  let obj = require("../../helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */;
   const coerceTabsRouteResult = obj.coerceTabsRoute(index.routes[0]);
   if (null == coerceTabsRouteResult) {
     return [];
@@ -65,7 +65,7 @@ function resolveBackgroundScreen(index) {
     if (null == tmp11) {
       return [];
     } else {
-      const coerceGuildsRouteResult = require(4136) /* navigationToRootTabHelper */.coerceGuildsRoute(tmp11);
+      const coerceGuildsRouteResult = require("../../helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */.coerceGuildsRoute(tmp11);
       if (null == coerceGuildsRouteResult) {
         return [];
       } else {
@@ -105,7 +105,7 @@ function resolveBackgroundScreen(index) {
           BACKGROUND_SAVED = obj.BACKGROUND_SAVED;
         }
       }
-      const tmpResult = require(4136) /* navigationToRootTabHelper */;
+      const tmpResult = require("../../helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */;
     }
   }
 }
@@ -155,7 +155,7 @@ export default function useChannelScreensFromNavigation(arg0) {
   let dependencyMap;
   let tmp3;
   let closure_0 = arg0;
-  const tmp = importDefault(4139)();
+  const tmp = require("../../../chat/native/useChatLayout.tsx")();
   importDefault = tmp;
   [tmp3, dependencyMap] = callback(React.useState(() => {
     const arr = outer1_13(store.getState(), closure_1);
@@ -240,7 +240,7 @@ export default function useChannelScreensFromNavigation(arg0) {
 export const ChannelScreenType = obj;
 export { getActiveTabsRoute };
 export const isActiveTabsGuilds = function isActiveTabsGuilds(state) {
-  const coerceTabsRouteResult = require(4136) /* navigationToRootTabHelper */.coerceTabsRoute(state.routes[0]);
+  const coerceTabsRouteResult = require("../../helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */.coerceTabsRoute(state.routes[0]);
   if (null == coerceTabsRouteResult) {
     return false;
   } else {
@@ -252,6 +252,6 @@ export const isActiveTabsGuilds = function isActiveTabsGuilds(state) {
     }
     return tmp6;
   }
-  const obj = require(4136) /* navigationToRootTabHelper */;
+  const obj = require("../../helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */;
   tmp = require;
 };

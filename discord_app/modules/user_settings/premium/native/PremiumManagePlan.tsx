@@ -38,7 +38,7 @@ let metroImportAll;
 const require = arg1;
 function ManagePlanHeader() {
   const tmp = callback5();
-  let obj = _require(1480);
+  let obj = _require("../../../../design/components/Navigator/native/useNavigation.native.tsx");
   _require = obj.useNavigation();
   obj = { style: tmp.headerContainer, children: null };
   obj = {
@@ -48,12 +48,12 @@ function ManagePlanHeader() {
     },
     children: null
   };
-  obj[2] = callback3(_require(5242).ArrowLargeLeftIcon, { size: "md" });
-  const items = [callback3(_require(4812).PressableOpacity, obj), , ];
+  obj[2] = callback3(_require("../../../../design/components/Icon/native/redesign/generated/ArrowLargeLeftIcon.tsx").ArrowLargeLeftIcon, { size: "md" });
+  const items = [callback3(_require("../../../../design/void/Pressables/native/Pressables.tsx").PressableOpacity, obj), , ];
   const obj1 = { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null };
-  const intl = _require(1236).intl;
-  obj1[2] = intl.string(_require(1236).t["1bX7Tx"]);
-  items[1] = callback3(_require(4281).Text, obj1);
+  const intl = _require("../../../../intl/index.native.tsx").intl;
+  obj1[2] = intl.string(_require("../../../../intl/index.native.tsx").t["1bX7Tx"]);
+  items[1] = callback3(_require("../../../../design/components/Text/native/Text.tsx").Text, obj1);
   items[2] = callback3(closure_8, { style: tmp.backButtonWrapper });
   obj[1] = items;
   return callback4(closure_8, obj);
@@ -478,7 +478,7 @@ function FractionalPremiumCredits(durationText) {
   let showPremiumFeaturesCard;
   let unactivatedHoursString;
   ({ fractionalPremiumInfo, showPremiumFeaturesCard, hasUnactivatedUnits, unactivatedHoursString, activationDate } = durationText);
-  const tmp3 = callback6(importDefault(1348)("FractionalPremiumCredits"));
+  const tmp3 = callback6(require("../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("FractionalPremiumCredits"));
   let obj = { style: tmp3.container, children: null };
   if (showPremiumFeaturesCard) {
     obj = { premiumType: null, forFractionalPremium: true, hideButton: true };
@@ -488,41 +488,41 @@ function FractionalPremiumCredits(durationText) {
   const items = [showPremiumFeaturesCard, ];
   obj = { style: tmp3.extraInfoContainer, children: null };
   const obj1 = { variant: "eyebrow", color: "text-default", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj1[2] = intl.string(require(1236) /* getSystemLocale */.t.Obre8v);
-  const items1 = [callback3(require(4281) /* Text */.Text, obj1), , ];
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj1[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Obre8v);
+  const items1 = [callback3(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1), , ];
   const obj2 = { variant: "text-md/semibold", color: "text-default", children: null };
-  const intl2 = require(1236) /* getSystemLocale */.intl;
+  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   const obj3 = { helpCenterLink: null };
   let tmpResult = tmp(1945);
   obj3[0] = tmpResult.getArticleURL(constants.FRACTIONAL_PREMIUM_ABOUT);
-  obj2[2] = intl2.format(require(1236) /* getSystemLocale */.t.AYGoBn, obj3);
-  items1[1] = callback3(require(4281) /* Text */.Text, obj2);
+  obj2[2] = intl2.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.AYGoBn, obj3);
+  items1[1] = callback3(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
   const obj4 = { style: tmp3.fpRowStart, start: true, end: false, variant: "primary", children: null };
   const obj5 = { style: tmp3.fpRowIcon, children: null };
   const obj6 = { style: null, start: null, end: null, colors: null, children: null };
   const obj7 = { padding: 6, borderRadius: null };
   tmpResult = tmp(4706);
-  obj7[1] = importDefault(712).radii.sm;
+  obj7[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.sm;
   obj6[0] = obj7;
   obj6[1] = { x: 0, y: 0 };
   obj6[2] = { x: 0, y: 1 };
-  const items2 = [importDefault(712).unsafe_rawColors.GUILD_BOOSTING_BLUE, importDefault(712).unsafe_rawColors.GUILD_BOOSTING_PURPLE];
+  const items2 = [require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.GUILD_BOOSTING_BLUE, require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.GUILD_BOOSTING_PURPLE];
   obj6[3] = items2;
   const obj8 = { children: null };
   const obj9 = { color: null, source: null, size: null };
-  obj9[0] = importDefault(712).unsafe_rawColors.WHITE;
-  obj9[1] = importDefault(7626);
-  obj9[2] = require(1297) /* Button */.IconSizes.LARGE;
-  obj8[0] = callback3(require(1297) /* Button */.Icon, obj9);
+  obj9[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.WHITE;
+  obj9[1] = require("../../../../../_runtime/07626_registerAsset.js");
+  obj9[2] = require("../../../../design/void/native.tsx") /* Button */.IconSizes.LARGE;
+  obj8[0] = callback3(require("../../../../design/void/native.tsx") /* Button */.Icon, obj9);
   obj6[4] = callback3(closure_8, obj8);
   obj5[1] = callback3(tmpResult, obj6);
   const items3 = [callback3(closure_8, obj5), ];
   const obj10 = { style: tmp3.fpRowContent, children: null };
   const obj11 = { variant: "text-sm/semibold", style: tmp3.fpUnitsTitle, children: null };
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj11[2] = intl3.string(require(1236) /* getSystemLocale */.t.DFMPWS);
-  const items4 = [callback3(require(4281) /* Text */.Text, obj11), ];
+  const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj11[2] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.DFMPWS);
+  const items4 = [callback3(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj11), ];
   if (hasUnactivatedUnits) {
     if (fractionalPremiumInfo.fractionalState === constants3.NONE) {
       const obj12 = { variant: "text-sm/medium", children: null };
@@ -533,7 +533,7 @@ function FractionalPremiumCredits(durationText) {
     obj10[1] = items4;
     items3[1] = tmp4(tmp5, obj10);
     obj4[4] = items3;
-    const items5 = [tmp4(require(5317) /* PressableCard */.Card, obj4), , ];
+    const items5 = [tmp4(require("../../../../design/components/Card/native/Card.native.tsx") /* PressableCard */.Card, obj4), , ];
     const obj13 = { style: null, children: null };
     obj13[0] = tmp3.dividerContainer;
     const obj14 = { style: null };
@@ -603,7 +603,7 @@ function FractionalPremiumCredits(durationText) {
   }
   const obj27 = { variant: "text-sm/medium", style: tmp3.fpUnitsStatusText, children: null };
   const intl4 = tmp9(1236).intl;
-  obj27[2] = intl4.string(require(1236) /* getSystemLocale */.t["B66Z+f"]);
+  obj27[2] = intl4.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["B66Z+f"]);
   tmp8Result = tmp8(tmp9(4281).Text, obj27);
 }
 ({ Image: closure_6, ImageBackground: error, View: metroImportAll, ScrollView: c9, ActivityIndicator: c10 } = get_ActivityIndicator);
@@ -632,7 +632,7 @@ let closure_33 = createCacheKey.createStyles(obj3);
 let closure_35 = createCacheKey.createStyles((arg0) => {
   const tmp = getTableDividerWidth(arg0);
   let obj = { container: { display: "flex", flexDirection: "column", gap: 12 }, errorHeader: null, headerBackground: null, logoContainer: null, wumpusImg: null, logoStyle: null, errorHeaderPrimaryButton: null, extraInfoContainer: null, extraInfoTextContainer: null, mutationWarningContainer: null, mutationText: null, fpTimeRemaining: null, fpTimeRemainingPill: null, fpUnactivatedHoursPill: null, fpTimeRemainingText: null, fpUnitsTitle: null, fpUnitsStatusText: null, fpRowStart: null, fpRowIcon: null, fpRowContent: null, fpRowEnd: null, dividerContainer: null, divider: null, pillAndCardContainer: null, pillPosition: null };
-  obj = { backgroundColor: importDefault(712).colors.BACKGROUND_SURFACE_HIGH, borderRadius: importDefault(712).radii.lg, overflow: "hidden" };
+  obj = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, overflow: "hidden" };
   obj[1] = obj;
   obj[2] = { padding: 16 };
   obj[3] = { flexDirection: "row", alignItems: "center", marginBottom: 12 };
@@ -640,29 +640,29 @@ let closure_35 = createCacheKey.createStyles((arg0) => {
   obj[5] = { height: 32, width: 78 };
   obj[6] = { marginBottom: 16, marginHorizontal: 16 };
   obj[7] = { paddingTop: 16, paddingHorizontal: 16, display: "flex", gap: 8 };
-  obj = { padding: 16, borderRadius: importDefault(712).radii.sm, backgroundColor: importDefault(712).colors.BACKGROUND_SURFACE_HIGH, display: "flex", gap: 18 };
+  obj = { padding: 16, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.sm, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SURFACE_HIGH, display: "flex", gap: 18 };
   obj[8] = obj;
-  obj[9] = { display: "flex", flexDirection: "row", alignItems: "flex-start", gap: 8, padding: 16, borderRadius: importDefault(712).radii.lg, backgroundColor: importDefault(712).colors.BACKGROUND_SURFACE_HIGH };
+  obj[9] = { display: "flex", flexDirection: "row", alignItems: "flex-start", gap: 8, padding: 16, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SURFACE_HIGH };
   obj[10] = { flex: 1 };
-  const obj1 = { display: "flex", flexDirection: "row", alignItems: "flex-start", gap: 8, padding: 16, borderRadius: importDefault(712).radii.lg, backgroundColor: importDefault(712).colors.BACKGROUND_SURFACE_HIGH };
-  obj[11] = { color: importDefault(712).colors.TEXT_BRAND };
-  const obj2 = { color: importDefault(712).colors.TEXT_BRAND };
-  obj[12] = { borderRadius: importDefault(712).radii.lg, backgroundColor: importDefault(712).colors.CONTROL_PRIMARY_BACKGROUND_ACTIVE, paddingVertical: 4, paddingHorizontal: 8 };
-  const obj3 = { borderRadius: importDefault(712).radii.lg, backgroundColor: importDefault(712).colors.CONTROL_PRIMARY_BACKGROUND_ACTIVE, paddingVertical: 4, paddingHorizontal: 8 };
-  obj[13] = { borderRadius: importDefault(712).radii.lg, backgroundColor: importDefault(712).colors.BACKGROUND_MOD_STRONG, paddingVertical: 4, paddingHorizontal: 8 };
-  const obj4 = { borderRadius: importDefault(712).radii.lg, backgroundColor: importDefault(712).colors.BACKGROUND_MOD_STRONG, paddingVertical: 4, paddingHorizontal: 8 };
-  obj[14] = { color: importDefault(712).colors.WHITE };
-  const obj5 = { color: importDefault(712).colors.WHITE };
-  obj[15] = { color: importDefault(712).colors.MOBILE_TEXT_HEADING_PRIMARY };
-  const obj6 = { color: importDefault(712).colors.MOBILE_TEXT_HEADING_PRIMARY };
-  obj[16] = { color: importDefault(712).colors.TEXT_BRAND, marginStart: 18, flexShrink: 1 };
-  const obj7 = { color: importDefault(712).colors.TEXT_BRAND, marginStart: 18, flexShrink: 1 };
-  obj[17] = { padding: importDefault(712).modules.mobile.TABLE_ROW_PADDING, minHeight: importDefault(712).modules.mobile.TABLE_ROW_HEIGHT, flexDirection: "row", alignItems: "center", backgroundColor: importDefault(712).colors.BACKGROUND_SURFACE_HIGH };
-  const obj8 = { padding: importDefault(712).modules.mobile.TABLE_ROW_PADDING, minHeight: importDefault(712).modules.mobile.TABLE_ROW_HEIGHT, flexDirection: "row", alignItems: "center", backgroundColor: importDefault(712).colors.BACKGROUND_SURFACE_HIGH };
-  obj[18] = { marginEnd: importDefault(712).modules.mobile.TABLE_ROW_PADDING };
+  const obj1 = { display: "flex", flexDirection: "row", alignItems: "flex-start", gap: 8, padding: 16, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SURFACE_HIGH };
+  obj[11] = { color: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_BRAND };
+  const obj2 = { color: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_BRAND };
+  obj[12] = { borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_PRIMARY_BACKGROUND_ACTIVE, paddingVertical: 4, paddingHorizontal: 8 };
+  const obj3 = { borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_PRIMARY_BACKGROUND_ACTIVE, paddingVertical: 4, paddingHorizontal: 8 };
+  obj[13] = { borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_STRONG, paddingVertical: 4, paddingHorizontal: 8 };
+  const obj4 = { borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_STRONG, paddingVertical: 4, paddingHorizontal: 8 };
+  obj[14] = { color: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE };
+  const obj5 = { color: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE };
+  obj[15] = { color: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_TEXT_HEADING_PRIMARY };
+  const obj6 = { color: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_TEXT_HEADING_PRIMARY };
+  obj[16] = { color: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_BRAND, marginStart: 18, flexShrink: 1 };
+  const obj7 = { color: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_BRAND, marginStart: 18, flexShrink: 1 };
+  obj[17] = { padding: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_PADDING, minHeight: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_HEIGHT, flexDirection: "row", alignItems: "center", backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SURFACE_HIGH };
+  const obj8 = { padding: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_PADDING, minHeight: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_HEIGHT, flexDirection: "row", alignItems: "center", backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SURFACE_HIGH };
+  obj[18] = { marginEnd: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_PADDING };
   obj[19] = { flexShrink: 1, flexGrow: 1, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
-  const obj9 = { marginEnd: importDefault(712).modules.mobile.TABLE_ROW_PADDING };
-  obj[20] = { backgroundColor: importDefault(712).colors.BACKGROUND_BASE_LOWEST };
+  const obj9 = { marginEnd: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_PADDING };
+  obj[20] = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOWEST };
   let prop;
   if (!arg0) {
     prop = tmp2(712).colors.TABLEROW_BACKGROUND_DEFAULT;
@@ -672,7 +672,7 @@ let closure_35 = createCacheKey.createStyles((arg0) => {
   if (arg0) {
     let DIVIDER_BACKGROUND = tmp2(712).colors.BORDER_SUBTLE;
   } else {
-    DIVIDER_BACKGROUND = require(5125) /* result */.DIVIDER_BACKGROUND;
+    DIVIDER_BACKGROUND = require("../../../../design/migrations/native/LegacyTokens.tsx") /* result */.DIVIDER_BACKGROUND;
   }
   obj11[1] = DIVIDER_BACKGROUND;
   obj[22] = obj11;
@@ -687,7 +687,7 @@ export default function PremiumManagePlan() {
   let tmp10;
   let tmp11;
   const tmp = createCacheKey();
-  const rect = importDefault(1581)();
+  const rect = require("../../../safe_area/useSafeAreaInsets.native.tsx")();
   const top = rect.top;
   let obj = navigation(7561);
   const youBarSettingsOutsideSafeAreaTop = obj.useYouBarSettingsOutsideSafeAreaTop();
@@ -710,8 +710,8 @@ export default function PremiumManagePlan() {
   let obj5 = navigation(589);
   const items3 = [closure_12];
   const stateFromStores1 = obj5.useStateFromStores(items3, () => currentUser.getCurrentUser());
-  const tmp12 = importDefault(6769)({ forceFetch: true });
-  importDefault(4711)(() => {
+  const tmp12 = require("../../../billing/hooks/useFractionalPremiumInfo.tsx")({ forceFetch: true });
+  require("../../../../hooks/useMountEffect.tsx")(() => {
     let isSubscriptionFetching = reset.hasFetchedSubscriptions();
     if (!isSubscriptionFetching) {
       isSubscriptionFetching = obj.isSubscriptionFetching;
@@ -731,7 +731,7 @@ export default function PremiumManagePlan() {
     const items = [reset.getPremiumTypeSubscription(), reset.hasFetchedSubscriptions()];
     return items;
   }), 2);
-  const tmp15 = importDefault(12637);
+  const tmp15 = require("../../../billing/hooks/useFPDurationLeft.tsx");
   let obj8 = navigation(3931);
   const unactivatedFractionalPremiumDurationString = obj8.getUnactivatedFractionalPremiumDurationString(tmp12);
   if (null !== tmp10) {
@@ -879,14 +879,14 @@ export default function PremiumManagePlan() {
   obj9[4] = flag;
   items9[5] = closure_29(tmp2Result, obj9);
   const obj10 = { style: tmp.featuresTable, variant: "nitro_home", titleOverride: null, isFractionalOnly: null, isPremiumGroup: null, premiumGroupRole: null };
-  tmp15Result = importDefault(12637)(tmp12.endsAt, navigation(12637).CountDownMessageTypes.SHORT_TIME);
+  tmp15Result = require("../../../billing/hooks/useFPDurationLeft.tsx")(tmp12.endsAt, navigation(12637).CountDownMessageTypes.SHORT_TIME);
   const tmp31 = closure_9;
   const intl = tmp4(1236).intl;
   obj10[2] = intl.string(navigation(1236).t.QXx2gs);
   obj10[3] = tmp12.fractionalState === constants3.FP_ONLY;
   obj10[4] = result;
   obj10[5] = premiumGroupRole;
-  items9[6] = closure_29(importDefault(12652), obj10);
+  items9[6] = closure_29(require("PremiumFeaturesTable.tsx"), obj10);
   obj1[1] = items9;
   items8[1] = closure_30(closure_8, obj1);
   obj[4] = items8;

@@ -26,7 +26,7 @@ export const getStatusExpiryParts = function getStatusExpiryParts(arg0) {
     tmp7 = date.getDate() === date3.getDate();
     const date4 = date.getDate();
   }
-  const data = require(1236) /* getSystemLocale */.intl.data;
+  const data = require("../../intl/index.native.tsx") /* getSystemLocale */.intl.data;
   const formatTimeResult = data.formatTime(date, { format: "short" });
   if (tmp2) {
     let obj = { kind: "today", dateString: null, timeString: null };

@@ -13,18 +13,18 @@ function formatMessagePreview(type, isBlocked) {
   let otherUserNick;
   if (isBlocked.isBlocked) {
     let obj = { type: "text", text: null };
-    const intl29 = require(1236) /* getSystemLocale */.intl;
-    obj[1] = intl29.string(require(1236) /* getSystemLocale */.t.XAkOo2);
+    const intl29 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[1] = intl29.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.XAkOo2);
     return obj;
   } else if (tmp) {
     obj = { type: "text", text: null };
-    const intl28 = require(1236) /* getSystemLocale */.intl;
-    obj[1] = intl28.string(require(1236) /* getSystemLocale */.t["G7p6v/"]);
+    const intl28 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[1] = intl28.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["G7p6v/"]);
     return obj;
   } else {
     type = type.type;
     const tmp4 = require;
-    if (require(686) /* set */.MessageTypes.DEFAULT !== type) {
+    if (require("../../../discord_common/js/shared/shared-constants/MessageTypes.tsx") /* set */.MessageTypes.DEFAULT !== type) {
       if (tmp4(686).MessageTypes.CHANGELOG !== type) {
         if (tmp4(686).MessageTypes.REPLY !== type) {
           if (tmp4(686).MessageTypes.CHAT_INPUT_COMMAND !== type) {
@@ -201,7 +201,7 @@ function formatMessagePreview(type, isBlocked) {
                   obj25[0] = text;
                   obj24[1] = intl2.formatToPlainString(tmp4(1236).t.ImizdM, obj25);
                   tmp10 = obj24;
-                } else if (importDefault(5827)(type)) {
+                } else if (require("../forwarding/isForwardMessage.tsx")(type)) {
                   obj = { type: "text", text: null };
                   const intl = tmp4(1236).intl;
                   obj[1] = intl.string(tmp4(1236).t["9ddYKt"]);
@@ -309,7 +309,7 @@ function formatMessagePreview(type, isBlocked) {
               } else if (type.type === tmp4(686).MessageTypes.USER_JOIN) {
                 let obj38 = { type: "text", text: null };
                 const intl18 = tmp4(1236).intl;
-                obj38 = importDefault(7903);
+                obj38 = require("../../utils/SystemMessageUtils.tsx");
                 const obj39 = { username: null, usernameHook: null };
                 obj39[0] = authorNick;
                 const systemMessageUserJoin = obj38.getSystemMessageUserJoin(type.id);
@@ -386,7 +386,7 @@ const result = require("mergeGuildAvatar").fileFinishedImporting("modules/messag
 
 export const isMessageContentPreviewable = function isMessageContentPreviewable(messageRecord) {
   const type = messageRecord.type;
-  if (require(686) /* set */.MessageTypes.DEFAULT !== type) {
+  if (require("../../../discord_common/js/shared/shared-constants/MessageTypes.tsx") /* set */.MessageTypes.DEFAULT !== type) {
     if (tmp(686).MessageTypes.CHANGELOG !== type) {
       if (tmp(686).MessageTypes.REPLY !== type) {
         if (tmp(686).MessageTypes.CHAT_INPUT_COMMAND !== type) {
@@ -407,17 +407,17 @@ export const useFormattedMessagePreview = function useFormattedMessagePreview(me
   let isBlocked;
   let isIgnored;
   const _require = message;
-  let obj = _require(589);
+  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
   const items = [upsertRelationship];
   const items1 = [message.author.id];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ isBlocked: outer1_4.isBlocked(message.author.id), isIgnored: outer1_4.isIgnored(message.author.id) }), items1);
   ({ isBlocked, isIgnored } = stateFromStoresObject);
-  const tmp4 = importDefault(7898)(channel.id, message.id);
+  const tmp4 = require("../calls/mobile/useIsCallActive.tsx")(channel.id, message.id);
   const items2 = [fetchFingerprint];
-  const stateFromStores = _require(589).useStateFromStores(items2, () => id.getId());
-  const nick = importDefault(4513)(message).nick;
+  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => id.getId());
+  const nick = require("../messages/useMessageAuthor.tsx")(message).nick;
   let stringResult = nick;
-  if (message.type !== _require(686).MessageTypes.USER_JOIN) {
+  if (message.type !== _require("../../../discord_common/js/shared/shared-constants/MessageTypes.tsx").MessageTypes.USER_JOIN) {
     stringResult = nick;
     if (message.author.id === stateFromStores) {
       const intl = tmp(1236).intl;

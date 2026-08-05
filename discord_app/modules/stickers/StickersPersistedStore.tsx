@@ -18,7 +18,7 @@ function handleUserSettingsProtoStoreChange() {
   if (null == stickers) {
     return false;
   } else {
-    obj = importDefault(12);
+    obj = require("../../../_runtime/00012_apply.js");
     tmp2.overwriteHistory(obj.mapValues(stickers, (recentUses) => {
       const obj = {};
       const merged = Object.assign(recentUses);

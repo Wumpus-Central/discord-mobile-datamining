@@ -91,7 +91,7 @@ const result = require("v1").fileFinishedImporting("modules/mobile_web_handoff/M
 
 export default {
   generateNonce() {
-    return require(514) /* v1 */.v4();
+    return require("../../../_runtime/00514_v1.js") /* v1 */.v4();
   },
   createHandoffToken(closure_0) {
     const self = this;

@@ -23,17 +23,17 @@ export default function AgeGateVerify(source) {
   let verifyTitle;
   source = source.source;
   const tmp = createCacheKey();
-  let obj = require(4498) /* shouldShowAgeGateForVoiceChannel */;
+  let obj = require("../../AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */;
   const ageGateVerifyContent = obj.useAgeGateVerifyContent(source);
   ({ verifyAgreementButtonText, verifyGateDescription, verifyTitle } = ageGateVerifyContent);
-  let obj1 = require(4500) /* useAgeVerificationRunner */;
+  let obj1 = require("../../../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */;
   const maybePerformReactiveCheckForSource = obj1.useMaybePerformReactiveCheckForSource(source);
   obj = { top: true, style: tmp.container, children: null };
-  const items = [callback(require(5936) /* AccountAgeTier10LargeBadge */.ShieldSpotIllustration, {}), , , ];
+  const items = [callback(require("../../../../design/assets/native.tsx") /* AccountAgeTier10LargeBadge */.ShieldSpotIllustration, {}), , , ];
   obj = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: verifyTitle };
-  items[1] = callback(require(4281) /* Text */.Text, obj);
+  items[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   obj1 = { style: tmp.body, variant: "text-md/medium", color: "interactive-text-default", children: verifyGateDescription };
-  items[2] = callback(require(4281) /* Text */.Text, obj1);
+  items[2] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
   let tmp7Result = null != verifyAgreementButtonText;
   if (tmp7Result) {
     const obj2 = { style: null, children: null };
@@ -45,10 +45,10 @@ export default function AgeGateVerify(source) {
       obj = { entryPoint: callback(7722).AgeVerificationModalEntryPoint.NSFW_AGE_GATE };
       const result = obj.showAgeVerificationGetStartedModal(obj);
     };
-    obj2[1] = tmp7(require(4695) /* Button */.Button, obj3);
+    obj2[1] = tmp7(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj3);
     tmp7Result = tmp7(View, obj2);
   }
   items[3] = tmp7Result;
   obj[2] = items;
-  return closure_5(require(5272) /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  return closure_5(require("../../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
 };

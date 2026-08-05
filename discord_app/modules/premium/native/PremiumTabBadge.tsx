@@ -13,8 +13,8 @@ let metroImportAll;
 const require = arg1;
 function ThemedTabBadge(children) {
   const tmp = createCacheKey();
-  let obj = require(4131) /* AccessibilityAnnouncer */;
-  const isThemeDarkResult = obj.isThemeDark(importDefault(4221)());
+  let obj = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */;
+  const isThemeDarkResult = obj.isThemeDark(require("../../../hooks/useTheme.tsx")());
   const items = [tmp.badge, ];
   obj = { style: items, children: null };
   items[1] = isThemeDarkResult ? tmp.badgeBackgroundDarkTheme : tmp.badgeBackgroundLightTheme;
@@ -23,7 +23,7 @@ function ThemedTabBadge(children) {
     str = "text-overlay-dark";
   }
   obj = { variant: "eyebrow", color: str, style: tmp.text, children: children.label };
-  obj[1] = closure_8(require(4281) /* Text */.Text, obj);
+  obj[1] = closure_8(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   return closure_8(View, obj);
 }
 function OfferBadge(componentId) {
@@ -34,17 +34,17 @@ function OfferBadge(componentId) {
   ({ acked, badgeCopy, ackedBadgeCopy } = componentId);
   const tmp = createCacheKey();
   let obj = { type: null, name: null, properties: null };
-  obj[0] = require(503) /* encodeProperties */.ImpressionTypes.VIEW;
-  obj[1] = require(503) /* encodeProperties */.ImpressionNames.PREMIUM_MARKETING_COMPONENT;
-  obj = { component_type: require(7568) /* MarketingComponentType */.MarketingComponentType.PREMIUM_TAB, component_id: componentId };
+  obj[0] = require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionTypes.VIEW;
+  obj[1] = require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionNames.PREMIUM_MARKETING_COMPONENT;
+  obj = { component_type: require("../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx") /* MarketingComponentType */.MarketingComponentType.PREMIUM_TAB, component_id: componentId };
   obj[2] = obj;
   obj = { disableTrack: null == componentId };
-  importDefault(9267)(obj, obj);
+  require("../../app_analytics/useTrackImpression.tsx")(obj, obj);
   if (acked) {
     const obj1 = { style: null, children: null };
     obj1[0] = tmp.acked;
     const obj2 = { source: null, size: null, color: null, style: null };
-    obj2[0] = importDefault(14132);
+    obj2[0] = require("../../../../_runtime/14132_registerAsset.js");
     obj2[1] = tmp5(1297).Icon.Sizes.EXTRA_SMALL;
     obj2[2] = tmp.icon.color;
     obj2[3] = tmp.icon;
@@ -88,14 +88,14 @@ export default function PremiumTabBadge() {
   let tmp14;
   let tmp18;
   let tmp = createCacheKey();
-  let obj = require(6820) /* usePremiumTrialOffer */;
+  let obj = require("../hooks/usePremiumTrialOffer.android.tsx") /* usePremiumTrialOffer */;
   const premiumTrialOffer = obj.usePremiumTrialOffer();
-  let obj1 = require(7263) /* usePremiumDiscountOffer */;
+  let obj1 = require("../hooks/usePremiumDiscountOffer.android.tsx") /* usePremiumDiscountOffer */;
   const premiumDiscountOffer = obj1.usePremiumDiscountOffer();
-  let obj3 = require(3931) /* getPremiumPlanItem */;
+  let obj3 = require("../../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */;
   const hasTier2Premium = obj3.useHasTier2Premium();
-  let obj4 = require(4101) /* UNSAFE_isDismissibleContentDismissed */;
-  const result = obj4.useIsDismissibleContentDismissed_UNSAFE(require(1358) /* DismissibleContent */.DismissibleContent.MOBILE_NITRO_HOME_SETTINGS_BADGE);
+  let obj4 = require("../../dismissible_content/DismissibleContentUnsafeUtils.tsx") /* UNSAFE_isDismissibleContentDismissed */;
+  const result = obj4.useIsDismissibleContentDismissed_UNSAFE(require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.MOBILE_NITRO_HOME_SETTINGS_BADGE);
   let tmp7 = !result;
   if (!result) {
     tmp7 = hasTier2Premium;
@@ -175,7 +175,7 @@ export default function PremiumTabBadge() {
         obj1[1] = Gradients.PREMIUM_TIER_2;
         obj1[2] = tmp2(691).HorizontalGradient.START;
         obj1[3] = tmp2(691).HorizontalGradient.END;
-        const tmp52 = importDefault(4706);
+        const tmp52 = require("../../../../_runtime/04706_LinearGradient.js");
         let text;
         if (tmp2Result6.isAndroid()) {
           text = tmp.text;
@@ -209,7 +209,7 @@ export default function PremiumTabBadge() {
           ({ premiumDiscountBadge: arr4[0], ackedBadge: arr4[1] } = tmp);
           obj4[0] = items3;
           const obj5 = { source: null, size: null, color: null, style: null };
-          obj5[0] = importDefault(14132);
+          obj5[0] = require("../../../../_runtime/14132_registerAsset.js");
           obj5[1] = tmp2(1297).Icon.Sizes.EXTRA_SMALL;
           obj5[2] = tmp.icon.color;
           obj5[3] = tmp.icon;
@@ -232,8 +232,8 @@ export default function PremiumTabBadge() {
           const intl4 = tmp2(1236).intl;
           obj8[3] = intl4.string(tmp2(1236).t["/DTtr6"]);
           obj7[4] = callback2(tmp2(4281).Text, obj8);
-          tmp41 = callback2(importDefault(4706), obj7);
-          const tmp40 = importDefault(4706);
+          tmp41 = callback2(require("../../../../_runtime/04706_LinearGradient.js"), obj7);
+          const tmp40 = require("../../../../_runtime/04706_LinearGradient.js");
         }
       } else {
         tmp47Result = null;
@@ -243,7 +243,7 @@ export default function PremiumTabBadge() {
           obj9[1] = Gradients.PREMIUM_TIER_2;
           obj9[2] = tmp2(691).HorizontalGradient.START;
           obj9[3] = tmp2(691).HorizontalGradient.END;
-          const tmp34 = importDefault(4706);
+          const tmp34 = require("../../../../_runtime/04706_LinearGradient.js");
           let text1;
           if (tmp2Result7.isAndroid()) {
             text1 = tmp.text;

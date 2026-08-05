@@ -12,14 +12,14 @@ function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
   if (participant != null) {
     type = participant.type;
   }
-  let obj = require(16048) /* areStableParticipantsEqual */;
+  let obj = require("../utils/useStableParticipant.tsx") /* areStableParticipantsEqual */;
   let id;
   if (obj.isStableParticipantWithUser(participant)) {
     id = participant.user.id;
   }
-  const tmp4 = importDefault(16050);
+  const tmp4 = require("../hooks/useVoicePanelCardUserStateIcons.tsx");
   const items = [];
-  const iter = importDefault(16050)(type, id, guildId)[Symbol.iterator]();
+  const iter = require("../hooks/useVoicePanelCardUserStateIcons.tsx")(type, id, guildId)[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp9 = nextResult;
@@ -27,7 +27,7 @@ function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
     let tmp11 = require;
     let tmp12 = dependencyMap;
     let tmp13 = dependencyMap;
-    if (nextResult.type === require(16050) /* useVoicePanelCardUserStateIcons */.VoicePanelCardUserStateIconType.USER_VIDEO_ICON) {
+    if (nextResult.type === require("../hooks/useVoicePanelCardUserStateIcons.tsx") /* useVoicePanelCardUserStateIcons */.VoicePanelCardUserStateIconType.USER_VIDEO_ICON) {
       let tmp29 = jsx;
       let tmp30 = jsx;
       let tmp31 = tmp10;
@@ -75,9 +75,9 @@ function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
     const items2 = [tmp.iconContainer, userIcons];
     obj3[0] = items2;
     obj3[1] = items;
-    return jsx(importDefault(5663), { style: null, children: null });
+    return jsx(require("../../../core/native/NativeView.tsx"), { style: null, children: null });
   }
-  const tmp4Result = importDefault(16050)(type, id, guildId);
+  const tmp4Result = require("../hooks/useVoicePanelCardUserStateIcons.tsx")(type, id, guildId);
 }
 let c3 = importAllResult;
 let closure_6 = require("module_4146").createAnimatedComponent(require("TwinButtons").BackgroundBlurView);

@@ -45,7 +45,7 @@ export default function MaskedBadge(backgroundColor) {
       obj[0] = size;
       obj[1] = backgroundColor;
       obj[2] = tmp.unreadBadge;
-      tmp7Result = jsx(importDefault(8199), { size: null, maskColor: null, style: null });
+      tmp7Result = jsx(require("Badge.tsx"), { size: null, maskColor: null, style: null });
     }
   }
   return tmp7Result;

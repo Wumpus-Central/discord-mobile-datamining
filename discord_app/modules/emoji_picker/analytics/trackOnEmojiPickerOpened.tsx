@@ -60,13 +60,13 @@ function trackOnEmojiPickerOpened(arg0) {
   if (channel != null) {
     guildId2 = channel.getGuildId();
   }
-  const topAndNewlyAddedEmojis = require(8567) /* useTopAndNewlyAddedEmojis */.getTopAndNewlyAddedEmojis({ guildId: guildId2, pickerIntention: intention });
+  const topAndNewlyAddedEmojis = require("../hooks/useTopAndNewlyAddedEmojis.tsx") /* useTopAndNewlyAddedEmojis */.getTopAndNewlyAddedEmojis({ guildId: guildId2, pickerIntention: intention });
   ({ topEmojis, newlyAddedEmojis } = topAndNewlyAddedEmojis);
-  const obj4 = require(8567) /* useTopAndNewlyAddedEmojis */;
+  const obj4 = require("../hooks/useTopAndNewlyAddedEmojis.tsx") /* useTopAndNewlyAddedEmojis */;
   const tmp6 = require;
-  const emojiHotrail = require(8568) /* useEmojiHotrail */.getEmojiHotrail({ topEmojis, newlyAddedEmojis, rowSize });
+  const emojiHotrail = require("../hooks/useEmojiHotrail.tsx") /* useEmojiHotrail */.getEmojiHotrail({ topEmojis, newlyAddedEmojis, rowSize });
   ({ visibleTopEmojis, visibleNewlyAddedEmojis } = emojiHotrail);
-  const tmp6Result = require(8568) /* useEmojiHotrail */;
+  const tmp6Result = require("../hooks/useEmojiHotrail.tsx") /* useEmojiHotrail */;
   if (intention === EmojiIntention.REACTION) {
     let EXPRESSION_PICKER_OPENED = AnalyticEvents.REACTION_PICKER_OPENED;
   } else {
@@ -117,7 +117,7 @@ function trackOnEmojiPickerOpened(arg0) {
     tmp16 = obj1;
   }
   const merged1 = Object.assign(tmp16);
-  importDefault(4479).trackWithMetadata(EXPRESSION_PICKER_OPENED, obj);
+  require("../../app_analytics/AppAnalyticsUtils.tsx").trackWithMetadata(EXPRESSION_PICKER_OPENED, obj);
 }
 const result = require("ensureGuildLoaded").fileFinishedImporting("modules/emoji_picker/analytics/trackOnEmojiPickerOpened.tsx");
 

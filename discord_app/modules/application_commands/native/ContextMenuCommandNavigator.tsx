@@ -22,9 +22,9 @@ export default function ContextMenuCommandNavigator() {
   const tmp = createNativeStackNavigator();
   const require = tmp;
   const layoutEffect = React.useLayoutEffect(() => tmp(6843).trackAppUIViewed(), []);
-  let obj = require(5665) /* NavigationStack */;
+  let obj = require("../../../design/components/Navigator/native/Navigator.native.tsx") /* NavigationStack */;
   const importDefault = obj.useAccessibilityNativeStackOptions();
-  const rect = importDefault(1581)();
+  const rect = require("../../safe_area/useSafeAreaInsets.native.tsx")();
   obj = { style: items, children: null };
   items = [tmp.container, { paddingLeft: rect.left, paddingRight: rect.right }];
   obj = {
@@ -57,8 +57,8 @@ export default function ContextMenuCommandNavigator() {
   const obj1 = { name: "root", options: null, getComponent: null };
   let obj2 = { title: null };
   ({ Navigator, Screen } = createNativeStackNavigator);
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj2[0] = intl.string(require(1236) /* getSystemLocale */.t.PHjkRE);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj2[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.PHjkRE);
   obj1[1] = obj2;
   obj1[2] = function getComponent() {
     return tmp(15812).default;

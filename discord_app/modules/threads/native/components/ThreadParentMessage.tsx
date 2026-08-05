@@ -15,7 +15,7 @@ export const ThreadChannelStarterMessage = function ThreadChannelStarterMessage(
   let importDefault;
   let require;
   ({ guildId: require, messageId: importDefault, channelId: dependencyMap } = arg0);
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [processMessage];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_3.getMessage(closure_2, closure_1));
   let state;
@@ -31,8 +31,8 @@ export const ThreadChannelStarterMessage = function ThreadChannelStarterMessage(
     obj = { rowGenerator: null, message: null };
     obj[0] = obj;
     obj[1] = stateFromStores.message;
-    obj[2] = jsx(importDefault(8399), { rowGenerator: null, message: null });
-    tmp5 = jsx(require(4812) /* PressableBase */.PressableOpacity, { rowGenerator: null, message: null });
+    obj[2] = jsx(require("../../../../components_native/chat/ChatItem.tsx"), { rowGenerator: null, message: null });
+    tmp5 = jsx(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, { rowGenerator: null, message: null });
   }
   return tmp5;
 };
@@ -40,7 +40,7 @@ export const ThreadCreationStarterMessage = function ThreadCreationStarterMessag
   let importDefault;
   let require;
   ({ messageId: require, channelId: importDefault } = arg0);
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [reinjectEphemerals];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getMessage(closure_1, closure_0));
   let tmp3 = null;
@@ -48,7 +48,7 @@ export const ThreadCreationStarterMessage = function ThreadCreationStarterMessag
     obj = { rowGenerator: null, message: null };
     obj[0] = obj;
     obj[1] = stateFromStores;
-    tmp3 = jsx(importDefault(8399), { rowGenerator: null, message: null });
+    tmp3 = jsx(require("../../../../components_native/chat/ChatItem.tsx"), { rowGenerator: null, message: null });
   }
   return tmp3;
 };

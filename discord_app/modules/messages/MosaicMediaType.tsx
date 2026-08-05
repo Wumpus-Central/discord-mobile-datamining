@@ -49,7 +49,7 @@ export const getMosaicMediaTypeForAttachment = function getMosaicMediaTypeForAtt
               str3 = str5;
             }
             let str = str3;
-            obj2 = require(4472) /* urlMatchesFileExtension */;
+            obj2 = require("MediaFormatTesters.tsx") /* urlMatchesFileExtension */;
           }
           return str;
         }
@@ -67,7 +67,7 @@ export const getMosaicMediaTypeForAttachment = function getMosaicMediaTypeForAtt
     if (obj.isPlaintextPreviewableFile(filename)) {
       str2 = "PLAINTEXT_PREVIEW";
     }
-    obj = require(10176) /* set */;
+    obj = require("PlaintextFilePreviewHelpers.tsx") /* set */;
   }
   str = str2;
 };
@@ -88,7 +88,7 @@ export const getMosaicMediaTypeForUnfurledMediaItem = function getMosaicMediaTyp
             }
             tmpResult = tmp(4472);
           }
-          obj = require(4472) /* urlMatchesFileExtension */;
+          obj = require("MediaFormatTesters.tsx") /* urlMatchesFileExtension */;
           tmp = require;
         }
       }

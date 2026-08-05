@@ -4,20 +4,20 @@ const result = require("BOOST_EXPIRING_DISPLAY_WINDOW_DAYS").fileFinishedImporti
 export default function getBoostRowMessageText(phase) {
   phase = phase.phase;
   if ("gave" === phase) {
-    const intl3 = require(1236) /* getSystemLocale */.intl;
-    return intl3.string(importDefault(2317).plwH8d);
+    const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl3.string(require("../GuildPowerups.messages.js").plwH8d);
   } else if ("expiring" === phase) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     let endsAt = phase.boost.endsAt;
     if (endsAt == null) {
       const _Date = Date;
-      endsAt = new Date(phase.sortKey + require(11852) /* BOOST_EXPIRING_DISPLAY_WINDOW_DAYS */.BOOST_EXPIRING_DISPLAY_WINDOW_MS);
+      endsAt = new Date(phase.sortKey + require("getBoostLifecyclePhase.tsx") /* BOOST_EXPIRING_DISPLAY_WINDOW_DAYS */.BOOST_EXPIRING_DISPLAY_WINDOW_MS);
     }
     const obj = { date: null };
     obj[0] = endsAt;
-    return intl2.formatToPlainString(importDefault(2317).vct4l8, obj);
+    return intl2.formatToPlainString(require("../GuildPowerups.messages.js").vct4l8, obj);
   } else if ("expired" === phase) {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(importDefault(2317).hSXjlI);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../GuildPowerups.messages.js").hSXjlI);
   }
 };

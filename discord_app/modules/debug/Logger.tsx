@@ -14,7 +14,7 @@ log.setLogFn((name) => {
   tmp5.report.apply(items);
   const obj = { name, timing: "\u03A3:" + toFixedResult + "s, \u0394:" + toFixedResult1 + "s" };
   const items1 = [name, arg1, arg2, ...substr];
-  require(4) /* log */.defaultLogFn.apply(items1);
+  require("../../../discord_common/js/packages/logger/Logger.tsx") /* log */.defaultLogFn.apply(items1);
 });
 let result = require("set").fileFinishedImporting("modules/debug/Logger.tsx");
 

@@ -394,12 +394,12 @@ export default {
     })();
   },
   fetchForStatusNotification(arg0) {
-    let obj = require(8834) /* generateHydrationId */;
+    let obj = require("ICYMIUtils.tsx") /* generateHydrationId */;
     if (obj.icymiEnabled("fetchInitialStatus")) {
       obj = { type: "LOAD_ICYMI_FROM_NOTIFICATION", customStatusItem: null };
       obj[1] = arg0;
-      importDefault(709).dispatch(obj);
-      const obj2 = importDefault(709);
+      require("../../Dispatcher.tsx").dispatch(obj);
+      const obj2 = require("../../Dispatcher.tsx");
     }
   },
   fetchHydrated(arg0, arg1, arg2) {
@@ -769,65 +769,65 @@ export default {
     })();
   },
   reloadICYMITab() {
-    importDefault(709).dispatch({ type: "RELOAD_ICYMI" });
+    require("../../Dispatcher.tsx").dispatch({ type: "RELOAD_ICYMI" });
   },
   loadHydratedAttempt(hydrationId) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "LOAD_ICYMI_HYDRATED_ATTEMPT", hydrationId };
     obj.dispatch(obj);
   },
   openICYMITab() {
-    importDefault(709).dispatch({ type: "ICYMI_TAB_OPENED" });
+    require("../../Dispatcher.tsx").dispatch({ type: "ICYMI_TAB_OPENED" });
   },
   closeICYMITab() {
-    importDefault(709).dispatch({ type: "ICYMI_TAB_CLOSED" });
+    require("../../Dispatcher.tsx").dispatch({ type: "ICYMI_TAB_CLOSED" });
   },
   startItemsDwell(items) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "ICYMI_ITEMS_DWELL_START", items };
     obj.dispatch(obj);
   },
   triggerItemsLongImpression(found) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "ICYMI_ITEMS_LONG_IMPRESSION", items: found };
     obj.dispatch(obj);
   },
   ackGravityItems(items, override) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "ICYMI_ACK_ITEMS", items, override };
     return obj.dispatch(obj);
   },
   gravityScrollEvent(timestamp) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "ICYMI_SCROLL_EVENT", timestamp };
     return obj.dispatch(obj);
   },
   setFilters(filters) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "SET_ICYMI_FILTERS", filters };
     return obj.dispatch(obj);
   },
   giveFeedback() {
-    return importDefault(709).dispatch({ type: "ICYMI_FEEDBACK_GIVEN" });
+    return require("../../Dispatcher.tsx").dispatch({ type: "ICYMI_FEEDBACK_GIVEN" });
   },
   clearReadStates() {
-    return importDefault(709).dispatch({ type: "CLEAR_ICYMI_READ_STATES" });
+    return require("../../Dispatcher.tsx").dispatch({ type: "CLEAR_ICYMI_READ_STATES" });
   },
   addedRecommendedGuild() {
-    return importDefault(709).dispatch({ type: "ICYMI_JOINED_RECOMMENDED_GUILD" });
+    return require("../../Dispatcher.tsx").dispatch({ type: "ICYMI_JOINED_RECOMMENDED_GUILD" });
   },
   setVideosMuted(muted) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "ICYMI_SET_VIDEOS_MUTED", muted };
     obj.dispatch(obj);
   },
   setTabFocused(isFocused) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "ICYMI_SET_FOCUSED_TAB", focused: isFocused };
     obj.dispatch(obj);
   },
   setCardHeight(itemId, height) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "ICYMI_SET_CARD_HEIGHT", itemId, height };
     obj.dispatch(obj);
   },
@@ -837,27 +837,27 @@ export default {
       const _Date = Date;
       timestamp = Date.now();
     }
-    importDefault(709).dispatch({ type: "ICYMI_TAKE_SURVEY", takenAt: timestamp });
+    require("../../Dispatcher.tsx").dispatch({ type: "ICYMI_TAKE_SURVEY", takenAt: timestamp });
   },
   itemInteracted(id, type, open_profile) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "ICYMI_ITEM_INTERACTED", itemId: id, itemType: type, actionType: open_profile };
     obj.dispatch(obj);
   },
   feedItemActioned(arg0) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "ICYMI_FEED_ITEM_ACTIONED" };
     const merged = Object.assign(arg0);
     obj.dispatch(obj);
   },
   feedFilterActioned(arg0) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "ICYMI_FEED_FILTER_ACTIONED" };
     const merged = Object.assign(arg0);
     obj.dispatch(obj);
   },
   feedPageActioned(arg0) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "ICYMI_FEED_PAGE_ACTIONED" };
     const merged = Object.assign(arg0);
     obj.dispatch(obj);

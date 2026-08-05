@@ -97,5 +97,5 @@ export const updateSortOrder = function updateSortOrder(closure_0, down) {
     items[index + 1] = items[index];
   }
   tmp2 = getSortedDevToolsScreens()[Symbol.iterator]();
-  const result = require(13753) /* updateDevToolsSettings */.updateDevToolsSettings({ sortedScreenKeys: items });
+  const result = require("../DevToolsActionCreators.tsx") /* updateDevToolsSettings */.updateDevToolsSettings({ sortedScreenKeys: items });
 };

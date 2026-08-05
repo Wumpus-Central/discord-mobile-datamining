@@ -6,9 +6,9 @@ const require = arg1;
 const result = require("matchPath").fileFinishedImporting("actions/DefaultRouteActionCreators.tsx");
 
 export const saveLastRoute = function saveLastRoute(pathname) {
-  let obj = require(4107) /* matchPath */;
+  let obj = require("../modules/routing/matchPathCompat.tsx") /* matchPath */;
   obj = { path: null };
-  const RouteParam = require(4120) /* RouteParam */.RouteParam;
+  const RouteParam = require("../modules/routing/RouteUtils.tsx") /* RouteParam */.RouteParam;
   obj[0] = Routes.CHANNEL(RouteParam.guildId());
   const matchPathResult = obj.matchPath(pathname, obj);
   let guildId;
@@ -25,14 +25,14 @@ export const saveLastRoute = function saveLastRoute(pathname) {
   if (tmp4) {
     obj = { type: "SAVE_LAST_ROUTE", path: null };
     obj[1] = pathname;
-    importDefault(709).dispatch(obj);
-    const obj3 = importDefault(709);
+    require("../Dispatcher.tsx").dispatch(obj);
+    const obj3 = require("../Dispatcher.tsx");
   }
 };
 export const saveLastNonVoiceRoute = function saveLastNonVoiceRoute(Routes) {
-  let obj = require(4107) /* matchPath */;
+  let obj = require("../modules/routing/matchPathCompat.tsx") /* matchPath */;
   obj = { path: null };
-  const RouteParam = require(4120) /* RouteParam */.RouteParam;
+  const RouteParam = require("../modules/routing/RouteUtils.tsx") /* RouteParam */.RouteParam;
   obj[0] = Routes.CHANNEL(RouteParam.guildId());
   const matchPathResult = obj.matchPath(Routes, obj);
   let guildId;
@@ -49,7 +49,7 @@ export const saveLastNonVoiceRoute = function saveLastNonVoiceRoute(Routes) {
   if (tmp4) {
     obj = { type: "SAVE_LAST_NON_VOICE_ROUTE", path: null };
     obj[1] = Routes;
-    importDefault(709).dispatch(obj);
-    const obj3 = importDefault(709);
+    require("../Dispatcher.tsx").dispatch(obj);
+    const obj3 = require("../Dispatcher.tsx");
   }
 };

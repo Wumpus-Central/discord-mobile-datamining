@@ -1,7 +1,7 @@
 // discord_app/modules/nuf/native/components/ChannelPrompt.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import _slicedToArray from "_slicedToArray";
-import module_8276 from "module_8276";
+import FreeFormInputGroup from "../../../../design/void/Form/native/FreeFormInputGroup.tsx";
 import get_ActivityIndicator from "getAvatarURL";
 import comparator from "comparator";
 import closure_9 from "createGuildRecordFromRust";

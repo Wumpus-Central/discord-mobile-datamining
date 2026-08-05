@@ -12,9 +12,9 @@ let metroImportAll;
 const require = arg1;
 function renderSuccessIcon() {
   const obj = { size: "sm", color: null, secondaryColor: null };
-  obj[1] = importDefault(712).colors.STATUS_POSITIVE;
-  obj[2] = importDefault(712).colors.WHITE;
-  return callback(require(4246) /* CircleCheckIcon */.CircleCheckIcon, obj);
+  obj[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.STATUS_POSITIVE;
+  obj[2] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE;
+  return callback(require("../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx") /* CircleCheckIcon */.CircleCheckIcon, obj);
 }
 function StoreGuildIcon(guildId) {
   guildId = guildId.guildId;
@@ -23,7 +23,7 @@ function StoreGuildIcon(guildId) {
   const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getGuild(guildId));
   obj = { guild: stateFromStores, size: null };
   obj[1] = guildId(5661).GuildIconSizes.XSMALL;
-  return callback(importDefault(5661), obj);
+  return callback(require("../../guild/native/GuildIcon.tsx"), obj);
 }
 function GuildCard(guildIds) {
   let direction;

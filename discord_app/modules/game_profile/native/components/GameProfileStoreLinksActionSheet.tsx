@@ -23,24 +23,24 @@ export default function GameProfileStoreLinksActionSheet(gameName) {
   ({ websiteButtons, trackAction: require } = gameName);
   let importDefault;
   const tmp = createCacheKey();
-  importDefault = importDefault(9197)(importDefault(3982).openURL);
+  importDefault = require("../../hooks/useOpenExternalUrlFromGameProfile.tsx")(require("../../../../lib/native/Linking.tsx").openURL);
   let obj = { children: null };
   obj = { contentContainerStyle: null, children: null };
   obj = { paddingBottom: null };
-  obj[0] = importDefault(1581)().bottom + importDefault(712).space.PX_16;
+  obj[0] = require("../../../safe_area/useSafeAreaInsets.native.tsx")().bottom + require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16;
   obj[0] = obj;
   const obj1 = { style: tmp.header, children: null };
   const obj2 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: tmp.headerText, children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj2[3] = intl.string(require(1236) /* getSystemLocale */.t["/4gj6r"]);
-  const items = [callback(require(4281) /* Text */.Text, obj2), ];
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj2[3] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["/4gj6r"]);
+  const items = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2), ];
   const obj3 = { variant: "text-md/medium", color: "text-subtle", style: tmp.headerText, children: null };
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj3[3] = intl2.format(require(1236) /* getSystemLocale */.t["0acM2Y"], { gameName: gameName.gameName });
-  items[1] = callback(require(4281) /* Text */.Text, obj3);
+  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj3[3] = intl2.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["0acM2Y"], { gameName: gameName.gameName });
+  items[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj3);
   obj1[1] = items;
   const items1 = [callback2(View, obj1), ];
-  const tmp2 = importDefault(9197);
+  const tmp2 = require("../../hooks/useOpenExternalUrlFromGameProfile.tsx");
   items1[1] = callback(View, {
     style: tmp.buttons,
     children: websiteButtons.map((url) => {
@@ -63,7 +63,7 @@ export default function GameProfileStoreLinksActionSheet(gameName) {
     })
   });
   obj[1] = items1;
-  obj[0] = callback2(require(5340) /* BottomSheetModal */.BottomSheetScrollView, obj);
-  return callback(require(5646) /* ActionSheet */.ActionSheet, obj);
+  obj[0] = callback2(require("../../../../../_runtime/05340_BottomSheetModal.js") /* BottomSheetModal */.BottomSheetScrollView, obj);
+  return callback(require("../../../../design/components/Sheet/native/ActionSheet.native.tsx") /* ActionSheet */.ActionSheet, obj);
 };
 export const ACTION_SHEET_KEY = "game-profile-store-links";

@@ -17,12 +17,12 @@ const require = arg1;
 function EmptyState() {
   const tmp = createCacheKey();
   let obj = { style: tmp.emptyWrapper, children: null };
-  obj = { style: tmp.emptyStateImage, source: importDefault(12009) };
+  obj = { style: tmp.emptyStateImage, source: require("../../../../../_runtime/12009_registerAsset.js") };
   const items = [callback2(closure_7, obj), ];
   obj = { style: tmp.emptyStateTitle, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[3] = intl.string(require(1236) /* getSystemLocale */.t["6HXiuE"]);
-  items[1] = callback2(require(4281) /* Text */.Text, obj);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[3] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["6HXiuE"]);
+  items[1] = callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   obj[1] = items;
   return callback3(closure_6, obj);
 }
@@ -58,7 +58,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
   let anyErrorMessage;
   const tmp = createCacheKey();
   dependencyMap = tmp;
-  let obj = require(1480) /* useNavigation */;
+  let obj = require("../../../../design/components/Navigator/native/useNavigation.native.tsx") /* useNavigation */;
   closure_3 = obj.useNavigation();
   const tmp4 = callback(React.useState(""), 2);
   callback = tmp4[0];
@@ -79,13 +79,13 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
   const tmp6 = callback(React.useState(false), 2);
   const tmp8 = importDefault;
   const intl = tmp2(1236).intl;
-  obj1[0] = intl.string(require(1236) /* getSystemLocale */.t.nL2wKD);
+  obj1[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.nL2wKD);
   obj1[1] = tmp4[1];
   obj1[2] = function onClose() {
 
   };
-  obj[1] = callback2(importDefault(5900), obj1);
-  const items = [callback2(require(5238) /* HeaderBackImage */.FauxHeader, obj), ];
+  obj[1] = callback2(require("../../../main_tabs_v2/native/shared_components/SearchBarNav.tsx"), obj1);
+  const items = [callback2(require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx") /* HeaderBackImage */.FauxHeader, obj), ];
   obj2 = {
     keyboardShouldPersistTaps: "always",
     data: found,
@@ -206,7 +206,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
     style: tmp.scrollContainer,
     contentContainerStyle: obj3
   };
-  const tmp8Result = importDefault(5900);
+  const tmp8Result = require("../../../main_tabs_v2/native/shared_components/SearchBarNav.tsx");
   items[1] = callback2(anyErrorMessage, obj2);
   obj[0] = items;
   return callback3(closure_12, obj);

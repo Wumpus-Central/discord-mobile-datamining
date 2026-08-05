@@ -28,7 +28,7 @@ let result = require("set").fileFinishedImporting("modules/guild_member_verifica
 
 export default initialMemberVerificationStore;
 export const setInitialVerification = function setInitialVerification(guildId, state) {
-  let obj = importDefault(709);
+  let obj = require("../../../Dispatcher.tsx");
   obj = { type: "SET_INITIAL_MEMBER_VERIFICATION", guildId, state };
   obj.dispatch(obj);
 };

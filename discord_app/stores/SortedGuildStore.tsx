@@ -128,7 +128,7 @@ function rebuildTree(arg0, arg1) {
     }
     insertUnsortedGuilds((arg0) => null == guildsTree.nodes[arg0], (item10030) => guildsTree.addNode(callback(table[10]).createGuildNode(item10030), guildsTree.root, false));
     guildsTree.version = tmp.version;
-    const tmp69 = importDefault(659)(tmp, guildsTree);
+    const tmp69 = require("../../_runtime/00659_isUndefinedOrNull.js")(tmp, guildsTree);
     if (tmp69) {
       guildsTree = tmp;
     } else {
@@ -195,7 +195,7 @@ function handleSettingsUpdate() {
   let guildFolders = store.getGuildFolders();
   let tmp6Result = null == guildFolders;
   if (!tmp6Result) {
-    tmp6Result = !importDefault(659)(guildFolders, guildFolders);
+    tmp6Result = !require("../../_runtime/00659_isUndefinedOrNull.js")(guildFolders, guildFolders);
   }
   if (tmp6Result) {
     if (guildFolders == null) {
@@ -227,7 +227,7 @@ function handleMoveById(sourceId) {
         tmp4 = node.type === areArraysShallowlyEqual(5124).GuildsNodeType.FOLDER;
       }
       const _HermesInternal = HermesInternal;
-      importDefault(38)(!tmp4, "[SORTED GUILDS] Can't combine a folder " + node.id + " with another guilds list item");
+      require("../../_runtime/metro/00038__.js")(!tmp4, "[SORTED GUILDS] Can't combine a folder " + node.id + " with another guilds list item");
       let tmp9 = combine;
       let tmp22Result = tmp22(38);
       if (combine) {
@@ -238,7 +238,7 @@ function handleMoveById(sourceId) {
       tmp22Result = tmp22(38);
       const tmp10 = !tmp9;
       const tmp13 = areArraysShallowlyEqual;
-      const tmp24 = importDefault(38);
+      const tmp24 = require("../../_runtime/metro/00038__.js");
       const tmp5 = !tmp4;
       const _HermesInternal3 = HermesInternal;
       tmp22Result(!(node.type === areArraysShallowlyEqual(5124).GuildsNodeType.FOLDER && null != node1.parentId), "[SORTED GUILDS] Can't move a folder " + node.id + " to inside of another folder " + node1.parentId);
@@ -407,7 +407,7 @@ function handleGuildFolderExpand(folderId) {
     if (node.type === areArraysShallowlyEqual(5124).GuildsNodeType.FOLDER) {
       if (node.expanded !== isFolderExpandedResult) {
         const cloneNodeResult = guildsTree.cloneNode(node);
-        importDefault(38)(cloneNodeResult.id === node.id, "[SORTED GUILDS] setNodeExpanded: Replacement folder node must have same id.");
+        require("../../_runtime/metro/00038__.js")(cloneNodeResult.id === node.id, "[SORTED GUILDS] setNodeExpanded: Replacement folder node must have same id.");
         cloneNodeResult.expanded = isFolderExpandedResult;
         guildsTree.replaceNode(node, cloneNodeResult);
       }
@@ -422,7 +422,7 @@ function handleFolderExpanded(expanded) {
     if (node.type === areArraysShallowlyEqual(5124).GuildsNodeType.FOLDER) {
       if (node.expanded !== expanded) {
         const cloneNodeResult = guildsTree.cloneNode(node);
-        importDefault(38)(cloneNodeResult.id === node.id, "[SORTED GUILDS] setNodeExpanded: Replacement folder node must have same id.");
+        require("../../_runtime/metro/00038__.js")(cloneNodeResult.id === node.id, "[SORTED GUILDS] setNodeExpanded: Replacement folder node must have same id.");
         cloneNodeResult.expanded = expanded;
         guildsTree.replaceNode(node, cloneNodeResult);
       }
@@ -452,7 +452,7 @@ function handleCollapseAll() {
 }
 function setNodeExpanded(id, arg1) {
   const cloneNodeResult = guildsTree.cloneNode(id);
-  importDefault(38)(cloneNodeResult.id === id.id, "[SORTED GUILDS] setNodeExpanded: Replacement folder node must have same id.");
+  require("../../_runtime/metro/00038__.js")(cloneNodeResult.id === id.id, "[SORTED GUILDS] setNodeExpanded: Replacement folder node must have same id.");
   cloneNodeResult.expanded = false;
   guildsTree.replaceNode(id, cloneNodeResult);
 }

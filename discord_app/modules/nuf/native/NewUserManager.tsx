@@ -69,7 +69,7 @@ const items = [
       }
     },
     transitionToStep() {
-      const result = require(11971) /* _startContactSyncForDiscoverability */.transitionToHubEmailConnectionModal(require(691) /* keys */.ModalAnimation.SLIDE_IN, true);
+      const result = require("NUFActionCreators.tsx") /* _startContactSyncForDiscoverability */.transitionToHubEmailConnectionModal(require("../../../ConstantsIOS.tsx") /* keys */.ModalAnimation.SLIDE_IN, true);
     }
   },
   {
@@ -78,7 +78,7 @@ const items = [
       return store2.getType() === NewUserTypes.ORGANIC_REGISTERED;
     },
     transitionToStep() {
-      return require(11971) /* _startContactSyncForDiscoverability */.transitionToNUFGuildTemplatesModal(require(691) /* keys */.ModalAnimation.SLIDE_IN);
+      return require("NUFActionCreators.tsx") /* _startContactSyncForDiscoverability */.transitionToNUFGuildTemplatesModal(require("../../../ConstantsIOS.tsx") /* keys */.ModalAnimation.SLIDE_IN);
     }
   },
 
@@ -94,7 +94,7 @@ items[5] = {
   key: obj.ACCEPT_INVITE,
   shouldShowStep: require("showInstantInviteActionSheet").hasDeferredInvite,
   transitionToStep() {
-    importDefault(709).dispatch({ type: "DEFERRED_INVITE_SHOW" });
+    require("../../../Dispatcher.tsx").dispatch({ type: "DEFERRED_INVITE_SHOW" });
   }
 };
 let prototype = function NewUserManager() {
@@ -289,7 +289,7 @@ let obj2 = {
   key: obj.ACCEPT_INVITE,
   shouldShowStep: require("showInstantInviteActionSheet").hasDeferredInvite,
   transitionToStep() {
-    importDefault(709).dispatch({ type: "DEFERRED_INVITE_SHOW" });
+    require("../../../Dispatcher.tsx").dispatch({ type: "DEFERRED_INVITE_SHOW" });
   }
 };
 let result = require("set").fileFinishedImporting("modules/nuf/native/NewUserManager.tsx");

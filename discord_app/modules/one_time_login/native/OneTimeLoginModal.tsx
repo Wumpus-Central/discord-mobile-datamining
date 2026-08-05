@@ -48,9 +48,9 @@ export default function OneTimeLoginModal(token) {
   let callback4;
   const tmp = createCacheKey();
   importDefault = tmp;
-  const tmp2 = importDefault(1581)();
+  const tmp2 = require("../../safe_area/useSafeAreaInsets.native.tsx")();
   dependencyMap = tmp2;
-  height = importDefault(1474)().height;
+  height = require("../../screen/useWindowDimensions.native.tsx")().height;
   const items = [tmp2.bottom, height];
   const items1 = [token];
   const memo = callback.useMemo(() => {
@@ -181,10 +181,10 @@ export default function OneTimeLoginModal(token) {
   obj = { dark: null };
   obj[0] = token(4096).OverlayOpacity.LEVEL_1;
   obj[6] = obj;
-  const items6 = [callback(importDefault(4814), obj), ];
+  const items6 = [callback(require("../../client_themes/native/ThemedGradient.tsx"), obj), ];
   let obj1 = { style: tmp.container, children: null };
   let obj2 = { style: tmp.centerContent, children: null };
-  const tmp11 = importDefault(4814);
+  const tmp11 = require("../../client_themes/native/ThemedGradient.tsx");
   const items7 = [callback(callback3, { source: token(13116), style: tmp.logo }), ];
   let obj4 = { style: tmp.loadingContainer, children: null };
   const items8 = [callback(callback2, {}), ];

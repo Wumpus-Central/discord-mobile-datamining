@@ -2,12 +2,12 @@
 const result = require("getSystemLocale").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupExpiringNotificationsConfig.tsx");
 
 export default function useGuildPowerupExpiringNotificationsConfig(arg0) {
-  let arr = importDefault(11829)(arg0);
-  const arr2 = importDefault(11830)(arg0);
+  let arr = require("useGetExpiringGuildPowerups.tsx")(arg0);
+  const arr2 = require("../../../game_server/hooks/useGameServerGetExpiringEntitlements.tsx")(arg0);
   if (arr.length > 0 || arr2.length > 0) {
     let stringResult;
     if (arr2.length > 0) {
-      const intl = require(1236) /* getSystemLocale */.intl;
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
       stringResult = intl.string(tmp(2707)["B3OfL/"]);
     }
     const items = [];
@@ -21,11 +21,11 @@ export default function useGuildPowerupExpiringNotificationsConfig(arg0) {
     arraySpreadResult = HermesBuiltin.arraySpread(items2, arraySpreadResult);
     const items3 = [];
     if (arr.some((skuId) => skuId.skuId === callback(table[4]).VANITY_URL_POWERUP_SKU_ID)) {
-      const intl2 = require(1236) /* getSystemLocale */.intl;
+      const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
       arr = items3.push(intl2.string(tmp(2317).Sfr0Jw));
     }
     if (arr2.length > 0) {
-      const intl3 = require(1236) /* getSystemLocale */.intl;
+      const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
       arr = items3.push(intl3.string(tmp(2707).wiungr));
     }
     let obj = { shouldShow: null, expiringPowerups: null, expiringPowerupNames: null, warnings: null };

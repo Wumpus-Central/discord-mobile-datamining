@@ -20,7 +20,7 @@ function handleGameServerInstanceCreated(arg0) {
     const merged1 = Object.assign(tmp3);
     const obj1 = {};
     const merged2 = Object.assign(tmp3.instances);
-    obj1[gameServer.id] = importDefault(4195)(gameServer);
+    obj1[gameServer.id] = require("utils/gameServerResponseToInstance.tsx")(gameServer);
     obj.instances = obj1;
     obj[guildId] = obj;
   }

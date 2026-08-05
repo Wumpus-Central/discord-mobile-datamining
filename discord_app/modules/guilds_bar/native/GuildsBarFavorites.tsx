@@ -13,7 +13,7 @@ let c3 = importAllResult;
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
 let closure_9 = {
   onPress() {
-    importDefault(15305)(FAVORITES);
+    require("utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx")(FAVORITES);
   }
 };
 let obj = { anchor: null };
@@ -25,26 +25,26 @@ const memoResult = importAllResult.memo(function GuildsBarFavorites() {
   let badge2;
   let cutouts;
   let unread;
-  const tmp3 = importDefault(1348)("GuildsBarFavorites");
-  let obj = require(15291) /* UnreadIndicator */;
-  let obj1 = require(9629) /* useFavoritesAccess */;
+  const tmp3 = require("../../themes/experiments/MobileVisualRefreshExperiment.tsx")("GuildsBarFavorites");
+  let obj = require("GuildsBarAnimatedItemWrapper.tsx") /* UnreadIndicator */;
+  let obj1 = require("../../favorites/FavoritesHooks.tsx") /* useFavoritesAccess */;
   const isFavoritesGuildSelected = obj1.useIsFavoritesGuildSelected();
-  let obj2 = require(589) /* initialize */;
+  let obj2 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [initializeFromUserSettings];
   const stateFromStores = obj2.useStateFromStores(items, () => favoriteChannels.getFavoriteChannels());
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles();
-  ({ badge, unread } = importDefault(15308)(stateFromStores));
-  const tmp8 = importDefault(15308)(stateFromStores);
-  ({ badge: badge2, cutouts } = importDefault(15293)({ mentionCount: badge }));
+  ({ badge, unread } = require("../../favorites/hooks/useFavoritesGuildUnreads.tsx")(stateFromStores));
+  const tmp8 = require("../../favorites/hooks/useFavoritesGuildUnreads.tsx")(stateFromStores);
+  ({ badge: badge2, cutouts } = require("hooks/useGuildsBarBottomRightBadge.tsx")({ mentionCount: badge }));
   const ref = importAllResult.useRef(null);
-  const tmp9 = importDefault(15293)({ mentionCount: badge });
+  const tmp9 = require("hooks/useGuildsBarBottomRightBadge.tsx")({ mentionCount: badge });
   const tmp11 = callback();
-  const tmp12 = importDefault(15234)();
-  const favoritesIntroPopoverDismissibleContent = require(9635) /* items1 */.useFavoritesIntroPopoverDismissibleContent(tmp12);
+  const tmp12 = require("../../favorites/native/onboarding/useCanShowFavoritesGuildCoachmark.tsx")();
+  const favoritesIntroPopoverDismissibleContent = require("../../favorites/FavoritesDismissibleContent.tsx") /* items1 */.useFavoritesIntroPopoverDismissibleContent(tmp12);
   const shouldShowPopover = favoritesIntroPopoverDismissibleContent.shouldShowPopover;
   obj = { selected: isFavoritesGuildSelected, circle: null, unread: null, styles: null, cutouts: null, overState: "Boolean", config: -102.506, label: -34.1, externalChildren: null, expandedChildren: null, children: null };
   let tmp18 = !tmp3;
-  const obj4 = require(9635) /* items1 */;
+  const obj4 = require("../../favorites/FavoritesDismissibleContent.tsx") /* items1 */;
   const tmp14 = closure_8;
   if (!tmp3) {
     tmp18 = !isFavoritesGuildSelected;
@@ -55,13 +55,13 @@ const memoResult = importAllResult.memo(function GuildsBarFavorites() {
   obj[4] = cutouts;
   obj[6] = closure_9;
   const intl = tmp4(1236).intl;
-  obj[7] = intl.string(require(1236) /* getSystemLocale */.t.wMWyci);
+  obj[7] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.wMWyci);
   obj[8] = badge2;
-  obj[9] = closure_7(require(15309) /* HomeDrawerFavoritesRowExpandedChildren */.HomeDrawerFavoritesRowExpandedChildren, {});
+  obj[9] = closure_7(require("../../home_drawer/native/HomeDrawerFavoritesRow.tsx") /* HomeDrawerFavoritesRowExpandedChildren */.HomeDrawerFavoritesRowExpandedChildren, {});
   const colors = tmp(712).colors;
   obj = { color: isFavoritesGuildSelected ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT };
-  obj[10] = closure_7(require(8666) /* StarIcon */.StarIcon, obj);
-  const children = [closure_7(importDefault(15291), obj), , ];
+  obj[10] = closure_7(require("../../../design/components/Icon/native/redesign/generated/StarIcon.tsx") /* StarIcon */.StarIcon, obj);
+  const children = [closure_7(require("GuildsBarAnimatedItemWrapper.tsx"), obj), , ];
   obj1 = { ref, style: tmp11.anchor, pointerEvents: "none", collapsable: false };
   children[1] = closure_7(View, obj1);
   let tmp16Result = shouldShowPopover;

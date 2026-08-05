@@ -166,18 +166,18 @@ export const useUnseenOutboundPromotions = function useUnseenOutboundPromotions(
 export const useBogoPromotion = function useBogoPromotion() {
   const obj = { promotion: null };
   const items = [createEmptyPromotionsByType];
-  obj[0] = require(589) /* initialize */.useStateFromStores(items, () => bogoPromotion.bogoPromotion);
+  obj[0] = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => bogoPromotion.bogoPromotion);
   return obj;
 };
 export const useIsInPromotion = function useIsInPromotion(arg0) {
   const _require = arg0;
   const items = [createEmptyPromotionsByType];
-  return _require(589).useStateFromStores(items, () => outer1_5.hasPromotion(closure_0));
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_5.hasPromotion(closure_0));
 };
 export const useHasActiveBogoPromotion = function useHasActiveBogoPromotion() {
   const effect = React.useEffect(() => {
     const result = callback(table[8]).maybeFetchActivePromotions();
   }, []);
   const items = [createEmptyPromotionsByType];
-  return require(589) /* initialize */.useStateFromStores(items, () => null != activeBogoRewardPromotion.getActiveBogoRewardPromotion());
+  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => null != activeBogoRewardPromotion.getActiveBogoRewardPromotion());
 };

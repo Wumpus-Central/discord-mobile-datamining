@@ -21,10 +21,10 @@ let closure_19;
 let map1;
 const require = arg1;
 function handleTapShowAltText(description) {
-  importDefault(10919)({ description: description.nativeEvent.description });
+  require("../../media_viewer/native/components/overlay/openMediaModalOverlayAltTextSheet.tsx")({ description: description.nativeEvent.description });
 }
 function handleMediaPlayFinishedAnalytics(nativeEvent) {
-  const result = require(8420) /* getVisibleMessages */.handleMediaPlayFinishedAnalytics(nativeEvent.nativeEvent);
+  const result = require("MessagesUtils.tsx") /* getVisibleMessages */.handleMediaPlayFinishedAnalytics(nativeEvent.nativeEvent);
 }
 function isLoadingAtTop(arg0, arg1) {
   if (arg1) {
@@ -305,7 +305,7 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
     first(outer1_2[17]).updateRows(ref5.current, { rows, isLoadingAtTop: tmp, scrollData, HACK_iOSForceAnimations, forceReload, isAnimated });
     ref1.current = hasMoreMessagesAfter;
   }, []);
-  let obj = _require(10367);
+  let obj = _require("MessagesHooks.tsx");
   let chatUpdatesQueue = obj.useChatUpdatesQueue(ref5, callback);
   let items = [, ];
   ({ canChat: arr[0], channel: arr[1] } = messages);
@@ -1342,13 +1342,13 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
         handleVisibleMessagesChange({ firstVisibleMessageRowIndex: nativeEvent.firstVisibleMessageIndex, lastVisibleMessageRowIndex: nativeEvent.lastVisibleMessageIndex, firstVisibleMessagePercentVisible: nativeEvent.firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible: nativeEvent.lastVisibleMessagePercentVisible, source: messages(outer1_2[41]).QuestsVisibleMessagesChangedSource.VISIBILITY_CHANGED });
       }
     }),
-    findMessageIndex(_require(11276).ChatTTITracker, { messages: messages.messages })
+    findMessageIndex(_require("../../chat/native/ChatTTITracker.tsx").ChatTTITracker, { messages: messages.messages })
   ];
   obj3[0] = items4;
   return callback(closure_18, obj3);
 });
 forwardRefResult.displayName = "Messages";
-const memoResult = importAllResult.memo(forwardRefResult, (interactionStates, interactionStates2) => importDefault(643)(interactionStates, interactionStates2, ["interactionStates"], { shouldWarnLargeObjects: false }) && importDefault(643)(interactionStates.interactionStates, interactionStates2.interactionStates));
+const memoResult = importAllResult.memo(forwardRefResult, (interactionStates, interactionStates2) => require("../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx")(interactionStates, interactionStates2, ["interactionStates"], { shouldWarnLargeObjects: false }) && require("../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx")(interactionStates.interactionStates, interactionStates2.interactionStates));
 let result = require("noop").fileFinishedImporting("modules/messages/native/MessagesRenderer.tsx");
 
 export default memoResult;

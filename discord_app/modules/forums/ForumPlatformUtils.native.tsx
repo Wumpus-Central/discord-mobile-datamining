@@ -3,7 +3,7 @@ const result = require("set").fileFinishedImporting("modules/forums/ForumPlatfor
 
 export default {
   getForumChannelPermissionText() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.LG9VAi);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.LG9VAi);
   }
 };

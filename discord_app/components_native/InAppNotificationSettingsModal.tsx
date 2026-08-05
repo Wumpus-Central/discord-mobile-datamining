@@ -66,18 +66,18 @@ prototype["renderGroupDMNotificationSettings"] = function renderGroupDMNotificat
   if (null == channel) {
     return null;
   } else {
-    let obj = require(4475) /* computeChannelName */;
+    let obj = require("../modules/channel/useChannelName.tsx") /* computeChannelName */;
     const channelName = obj.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
     obj = { children: null };
     obj = { label: null, value: null, onValueChange: null };
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj1 = { name: null };
     obj1[0] = channelName;
-    obj[0] = intl.format(require(1236) /* getSystemLocale */.t["u/rEuc"], obj1);
+    obj[0] = intl.format(require("../intl/index.native.tsx") /* getSystemLocale */.t["u/rEuc"], obj1);
     obj[1] = tmp2;
     obj[2] = tmp.handleGroupDMMute;
-    obj[0] = callback(require(7777) /* Form */.FormSwitchRow, obj);
-    return callback(require(7777) /* Form */.FormSection, obj);
+    obj[0] = callback(require("../design/void/Form/native/index.tsx") /* Form */.FormSwitchRow, obj);
+    return callback(require("../design/void/Form/native/index.tsx") /* Form */.FormSection, obj);
   }
 };
 prototype["renderTextChannelNotificationSettings"] = function renderTextChannelNotificationSettings() {
@@ -86,7 +86,7 @@ prototype["renderTextChannelNotificationSettings"] = function renderTextChannelN
   if (null != channel) {
     const obj = { channelId: null };
     obj[0] = channel.id;
-    tmp = callback(importDefault(9733), obj);
+    tmp = callback(require("channel_settings/ChannelSettingsNotifications.tsx"), obj);
   }
   return tmp;
 };
@@ -113,21 +113,21 @@ prototype["render"] = function render() {
   let obj = { children: null };
   const items = [this.renderChannelNotificationSettings(), , ];
   obj = { title: null, children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.clE4PU);
+  const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.clE4PU);
   obj = { label: null, onPress: null, trailing: null };
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl2.string(require(1236) /* getSystemLocale */.t.cHMaba);
+  const intl2 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl2.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.cHMaba);
   obj[1] = this.handleOpenUserSettings;
-  obj[2] = callback(require(7777) /* Form */.FormRow.Arrow, {});
-  obj[1] = callback(require(7777) /* Form */.FormRow, obj);
-  items[1] = callback(require(7777) /* Form */.FormSection, obj);
+  obj[2] = callback(require("../design/void/Form/native/index.tsx") /* Form */.FormRow.Arrow, {});
+  obj[1] = callback(require("../design/void/Form/native/index.tsx") /* Form */.FormRow, obj);
+  items[1] = callback(require("../design/void/Form/native/index.tsx") /* Form */.FormSection, obj);
   const obj1 = { children: null };
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj1[0] = intl3.string(require(1236) /* getSystemLocale */.t.avgbp1);
-  items[2] = callback(require(7777) /* Form */.FormHint, obj1);
+  const intl3 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj1[0] = intl3.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.avgbp1);
+  items[2] = callback(require("../design/void/Form/native/index.tsx") /* Form */.FormHint, obj1);
   obj[0] = items;
-  return callback2(require(7777) /* Form */.Form, obj);
+  return callback2(require("../design/void/Form/native/index.tsx") /* Form */.Form, obj);
 };
 const memoResult = importAllResult.memo((channelId) => {
   channelId = channelId.channelId;

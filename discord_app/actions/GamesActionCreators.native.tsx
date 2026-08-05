@@ -1,5 +1,5 @@
 // discord_app/actions/GamesActionCreators.native.tsx
-import module_3982 from "module_3982";
+import Linking from "../lib/native/Linking.tsx";
 import ME from "ME";
 import { ActivityIntent } from "items3";
 
@@ -30,7 +30,7 @@ function fetchJoinSecret(application) {
     tmp2 = obj;
   }
   id(709).dispatch({ type: "ACTIVITY_JOIN_LOADING", applicationId: id, remotePartyId });
-  const HTTP = _require(530).HTTP;
+  const HTTP = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
   obj = { url: closure_4.USER_ACTIVITY_JOIN(userId, sessionId, id), retries: 3, query: tmp2, oldFormErrors: true, rejectWithError: true };
   const value = HTTP.get(obj);
   return value.then((arg0) => f118791(arg0), () => {
@@ -277,6 +277,6 @@ export default {
   },
   joinWithSecret(str) {
     const combined = "" + str.replace(/\/+$/, "") + constants.GAME_INVITE_FRAGMENT + arg1;
-    importDefault(3982).openURL(combined, constants2.SAFARI);
+    require("../lib/native/Linking.tsx").openURL(combined, constants2.SAFARI);
   }
 };

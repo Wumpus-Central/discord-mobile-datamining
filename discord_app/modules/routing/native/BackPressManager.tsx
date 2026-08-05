@@ -2,10 +2,10 @@
 import "initialize";
 
 function handleBackPress() {
-  let obj = require(8409) /* updateContextMenuState */;
+  let obj = require("../../../design/components/ContextMenu/native/ContextMenuState.native.tsx") /* updateContextMenuState */;
   obj.hideContextMenu();
-  const keyboardType = require(4151) /* useKeyboardType */.getKeyboardType();
-  let flag = keyboardType !== require(1579) /* KeyboardTypes */.KeyboardTypes.SYSTEM;
+  const keyboardType = require("../../keyboard/native/useKeyboardType.tsx") /* useKeyboardType */.getKeyboardType();
+  let flag = keyboardType !== require("../../keyboard/native/KeyboardTypes.tsx") /* KeyboardTypes */.KeyboardTypes.SYSTEM;
   if (flag) {
     obj = { type: null };
     obj[0] = tmp(1579).KeyboardTypes.SYSTEM;

@@ -84,7 +84,7 @@ function getPalette(width) {
         num12 = num12 + arg2;
       } while (num12 < result);
     }
-    const obj3 = importDefault(1472)(items, arg1);
+    const obj3 = require("../../_runtime/01472_PQueue.js")(items, arg1);
     if (typeof obj3 === "boolean") {
       let paletteResult = items;
     } else {
@@ -375,7 +375,7 @@ export const makeCssUrlString = function makeCssUrlString(arg0) {
 };
 export { getPalette };
 export const getPaletteForAvatar = function getPaletteForAvatar(closure_0) {
-  return require(1473) /* getSrcWithWidthAndHeight */.default.getPaletteForAvatarMobile(closure_0);
+  return require("native/ImageUtils.tsx") /* getSrcWithWidthAndHeight */.default.getPaletteForAvatarMobile(closure_0);
 };
 export const readFileAsBase64 = function readFileAsBase64(arg0) {
   let closure_0 = arg0;
@@ -392,7 +392,7 @@ export const readFileAsBase64 = function readFileAsBase64(arg0) {
 };
 export const dataUriFileSize = function dataUriFileSize(str) {
   const parts = str.split(";base64,");
-  importDefault(38)(2 === parts.length, "Input data is not a valid image.");
+  require("../../_runtime/metro/00038__.js")(2 === parts.length, "Input data is not a valid image.");
   return atob(parts[1]).length;
 };
 export const dataUrlToFile = function dataUrlToFile() {

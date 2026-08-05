@@ -11,7 +11,7 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
   isChangeEmail = isChangeEmail.isChangeEmail;
   let _require = isChangeEmail;
   let navigation;
-  let obj = _require(1480);
+  let obj = _require("../../../../design/components/Navigator/native/useNavigation.native.tsx");
   navigation = obj.useNavigation();
   const items = [isChangeEmail, navigation];
   const callback = React.useCallback((arg0) => {
@@ -103,9 +103,9 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
       }
     }
   });
-  const intl = _require(1236).intl;
-  obj[3] = intl.string(_require(1236).t["2x/2Uo"]);
-  const intl2 = _require(1236).intl;
-  obj[4] = intl2.string(_require(1236).t.PDTjLN);
+  const intl = _require("../../../../intl/index.native.tsx").intl;
+  obj[3] = intl.string(_require("../../../../intl/index.native.tsx").t["2x/2Uo"]);
+  const intl2 = _require("../../../../intl/index.native.tsx").intl;
+  obj[4] = intl2.string(_require("../../../../intl/index.native.tsx").t.PDTjLN);
   return jsx(navigation(8275), { onFormSubmit: null, onSuccess: null, onResend: null, headerText: null, confirmButtonText: null });
 };

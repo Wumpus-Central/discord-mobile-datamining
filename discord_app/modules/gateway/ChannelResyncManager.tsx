@@ -477,7 +477,7 @@ function _getResyncGuilds() {
 }
 function scheduleIntegrityCheck(guild_id) {
   const _require = guild_id;
-  let obj = _require(12844);
+  let obj = _require("PrivateChannelHidingExperiment.tsx");
   if (obj.isChannelMetadataIntegrityCheckEnabled("scheduleIntegrityCheck")) {
     if (null != dependencyMap3[guild_id]) {
       let _clearTimeout = clearTimeout;
@@ -492,21 +492,21 @@ function scheduleIntegrityCheck(guild_id) {
     if (null != dependencyMap[guild_id]) {
       let requestId = tmp15.requestId;
     } else {
-      const v4Result = _require(514).v4();
+      const v4Result = _require("../../../_runtime/00514_v1.js").v4();
       obj = { guildId: null, requestId: null, source: "integrity_check", requestedUserId: null };
       obj[0] = guild_id;
       obj[1] = v4Result;
       obj[3] = id.getId();
       tmp14[guild_id] = obj;
       requestId = v4Result;
-      const tmp4Result = _require(514);
+      const tmp4Result = _require("../../../_runtime/00514_v1.js");
     }
     if (!tmp8) {
       obj = { guild_id: null, request_id: null };
       obj[0] = guild_id;
       obj[1] = requestId;
-      importDefault(698).track(AnalyticEvents.GUILD_CHANNEL_INTEGRITY_CHECK_REQUESTED, obj);
-      let obj4 = importDefault(698);
+      require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.GUILD_CHANNEL_INTEGRITY_CHECK_REQUESTED, obj);
+      let obj4 = require("../../utils/AnalyticsUtils.tsx");
     }
     const _Math = Math;
     const _Math2 = Math;

@@ -91,7 +91,7 @@ const memoResult = importAllResult.memo(function Ellipsis(style) {
   let require;
   ({ dotStyle: require, disableScale: importDefault } = style);
   let dependencyMap;
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   dependencyMap = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion) ? EllipsisDot : AnimatedEllipsisDot;
   obj = { style: items1, collapsable: false, children: items2.map((arg0, arg1, arg2) => outer1_6(closure_2, { delay: arg0 * outer1_7, sequenceStartDelay: outer1_8, sequenceEndDelay: outer1_8 + outer1_7 * (arg2.length - 1 - arg0), dotStyle: closure_0, disableScale: closure_1 }, arg0)) };

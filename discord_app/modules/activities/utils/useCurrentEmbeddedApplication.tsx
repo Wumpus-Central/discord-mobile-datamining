@@ -12,12 +12,12 @@ export default function useCurrentEmbeddedApplication() {
   if (flag === undefined) {
     flag = true;
   }
-  const tmp = importDefault(10628)();
+  const tmp = require("useCurrentEmbeddedActivity.tsx")();
   if (null == tmp) {
     let items = [];
   } else {
     items = [tmp.applicationId];
   }
-  const first = callback(importDefault(5616)(items, flag), 1)[0];
+  const first = callback(require("../../applications/useGetOrFetchApplications.tsx")(items, flag), 1)[0];
   return first;
 };

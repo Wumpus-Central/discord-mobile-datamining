@@ -188,5 +188,5 @@ export const fetchPremiumSubscriptionPlans = function fetchPremiumSubscriptionPl
   return Promise.all(found.map((arg0) => outer1_8(arg0, closure_0, closure_1, undefined, closure_2, _deletePaymentSource)));
 };
 export const resetSubscriptionPlanData = function resetSubscriptionPlanData() {
-  importDefault(709).dispatch({ type: "SUBSCRIPTION_PLANS_RESET" });
+  require("../Dispatcher.tsx").dispatch({ type: "SUBSCRIPTION_PLANS_RESET" });
 };

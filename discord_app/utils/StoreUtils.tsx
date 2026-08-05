@@ -198,10 +198,10 @@ export const getAssetURL = function getAssetURL(closure_7, mimeType, arg2, mp4) 
   }
   let sum = combined;
   if (null != arg2) {
-    const obj = require(1450) /* handleImageLoad */;
+    const obj = require("../modules/image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */;
     const _HermesInternal3 = HermesInternal;
-    sum = combined + "?size=" + obj.getBestMediaProxySize(arg2 * require(1450) /* handleImageLoad */.getDevicePixelRatio());
-    const obj2 = require(1450) /* handleImageLoad */;
+    sum = combined + "?size=" + obj.getBestMediaProxySize(arg2 * require("../modules/image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */.getDevicePixelRatio());
+    const obj2 = require("../modules/image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */;
   }
   return sum;
 };
@@ -216,7 +216,7 @@ export const httpGetWithCountryCodeQuery = function httpGetWithCountryCodeQuery(
   return applyArgumentsResult;
 };
 export const nativePlatformTypeToSKUOperatingSystem = function nativePlatformTypeToSKUOperatingSystem(platform) {
-  if (require(500) /* set */.PlatformTypes.WINDOWS === platform) {
+  if (require("PlatformUtils.tsx") /* set */.PlatformTypes.WINDOWS === platform) {
     return constants.WINDOWS;
   } else if (tmp(500).PlatformTypes.OSX === platform) {
     return constants.MACOS;
@@ -228,14 +228,14 @@ export const nativePlatformTypeToSKUOperatingSystem = function nativePlatformTyp
 };
 export const skuOperatingSystemToText = function skuOperatingSystemToText(arg0) {
   if (constants.WINDOWS === arg0) {
-    const intl3 = require(1236) /* getSystemLocale */.intl;
-    return intl3.string(require(1236) /* getSystemLocale */.t["0/xHFO"]);
+    const intl3 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl3.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["0/xHFO"]);
   } else if (tmp.MACOS === arg0) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    return intl2.string(require(1236) /* getSystemLocale */.t.E4u4n5);
+    const intl2 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl2.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.E4u4n5);
   } else if (tmp.LINUX === arg0) {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.tcawo3);
+    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.tcawo3);
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;

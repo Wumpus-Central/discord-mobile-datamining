@@ -9,7 +9,7 @@ import "initialize";
 
 const require = arg1;
 function handlePushedModal(key) {
-  let obj = require(4137) /* getRootNavigationRef */;
+  let obj = require("../../RootNavigationRef.native.tsx") /* getRootNavigationRef */;
   const rootNavigationRef = obj.getRootNavigationRef();
   if (null != rootNavigationRef) {
     obj = { name: "modal", key: null, params: null };
@@ -21,7 +21,7 @@ function handlePushedModal(key) {
   }
 }
 function handlePoppedModal() {
-  require(4136) /* navigationToRootTabHelper */.popModal();
+  require("../../helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */.popModal();
 }
 function pushFirstOpenModal(arg0, arg1) {
   const iter = arg0[Symbol.iterator]();
@@ -58,7 +58,7 @@ function pushFirstOpenModal(arg0, arg1) {
     key = key.key;
     obj[0] = key;
     let num = 0;
-    component = handlePushedModal(importDefault(4492)(component, obj, props));
+    component = handlePushedModal(require("../../../../utils/getDeprecatedModalData.tsx")(component, obj, props));
   }
 }
 function createPushModalHandler(closure_15, closure_152) {
@@ -80,18 +80,18 @@ let closure_15 = {
     if (action == null) {
       action = importDefaultResult.getAction();
     }
-    let result = importDefault(8270).isFullScreenVerification(action);
+    let result = require("../../../verification/VerificationUtils.tsx").isFullScreenVerification(action);
     if (result) {
       result = null != token.getToken();
     }
     if (result) {
-      result = !require(16460) /* isEligibleForSafetyFlowsExperiment */.isEligibleForSafetyFlowsExperiment({ location: "modal-manager-verification" });
-      const obj2 = require(16460) /* isEligibleForSafetyFlowsExperiment */;
+      result = !require("../../../safety_flows/SafetyFlowsExperiment.tsx") /* isEligibleForSafetyFlowsExperiment */.isEligibleForSafetyFlowsExperiment({ location: "modal-manager-verification" });
+      const obj2 = require("../../../safety_flows/SafetyFlowsExperiment.tsx") /* isEligibleForSafetyFlowsExperiment */;
     }
     return result;
   },
   getComponent() {
-    return require(16461) /* PhoneThenEmailInterstitial */.default;
+    return require("../../../verification/native/components/VerificationModal.tsx") /* PhoneThenEmailInterstitial */.default;
   }
 };
 const USER_REQUIRED_ACTION_UPDATE = "USER_REQUIRED_ACTION_UPDATE";
@@ -107,7 +107,7 @@ let closure_17 = {
     return action === UserRequiredActions.AGREEMENTS;
   },
   getComponent() {
-    return require(16469) /* handleTouch */.default;
+    return require("../../../user_required_action/native/NewTermsModal.tsx") /* handleTouch */.default;
   }
 };
 let prototype = function DeprecatedModalManager() {

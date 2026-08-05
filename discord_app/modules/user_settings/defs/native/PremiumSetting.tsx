@@ -8,11 +8,11 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle: function getPremiumSettingTitle() {
-    const mobileNitroManageSubscriptionsSettingsExperiment = require(12594) /* apexExperiment */.getMobileNitroManageSubscriptionsSettingsExperiment({ location: "PremiumSetting" });
-    const obj = require(12594) /* apexExperiment */;
+    const mobileNitroManageSubscriptionsSettingsExperiment = require("../../../premium/experiments/MobileNitroManageSubscriptionsSettingsExperiment.tsx") /* apexExperiment */.getMobileNitroManageSubscriptionsSettingsExperiment({ location: "PremiumSetting" });
+    const obj = require("../../../premium/experiments/MobileNitroManageSubscriptionsSettingsExperiment.tsx") /* apexExperiment */;
     currentUser = currentUser.getCurrentUser();
-    const result = require(3931) /* getPremiumPlanItem */.hasPremiumSubscriptionToDisplay(currentUser, premiumTypeSubscription.getPremiumTypeSubscription());
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const result = require("../../../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */.hasPremiumSubscriptionToDisplay(currentUser, premiumTypeSubscription.getPremiumTypeSubscription());
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const string = intl.string;
     if (result) {
       if (mobileNitroManageSubscriptionsSettingsExperiment) {
@@ -38,14 +38,14 @@ createToggle = {
     }, []);
   },
   useTrailing: function usePremiumSettingTrailing() {
-    return jsx(importDefault(14131), {});
+    return jsx(require("../../../premium/native/PremiumTabBadge.tsx"), {});
   },
   screen: createToggle
 };
 createToggle = {
   route: require("ME").UserSettingsSections.PREMIUM,
   getComponent() {
-    return require(14133) /* PremiumScreen */.default;
+    return require("../../premium/native/PremiumSettingScreen.tsx") /* PremiumScreen */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

@@ -39,24 +39,24 @@ export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
   if (objective != null) {
     image = objective.fields.image;
   }
-  const items = [require(12264) /* resolvedValuesFromUserApplicationIdentityProfile */.ResolvedValueType.MEDIA];
+  const items = [require("../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx") /* resolvedValuesFromUserApplicationIdentityProfile */.ResolvedValueType.MEDIA];
   const fieldValue = resolveFieldValue(image, items);
-  let obj = require(12264) /* resolvedValuesFromUserApplicationIdentityProfile */;
+  let obj = require("../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx") /* resolvedValuesFromUserApplicationIdentityProfile */;
   const singleStringOrSkeleton = obj.resolveSingleStringOrSkeleton(objective, "name", resolveFieldValue);
-  let obj1 = require(12264) /* resolvedValuesFromUserApplicationIdentityProfile */;
+  let obj1 = require("../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx") /* resolvedValuesFromUserApplicationIdentityProfile */;
   const singleStringOrSkeleton1 = obj1.resolveSingleStringOrSkeleton(objective, "description", resolveFieldValue);
   const progress = bottomConfig.components.progress;
   let current;
   if (progress != null) {
     current = progress.fields.current;
   }
-  const items1 = [require(12264) /* resolvedValuesFromUserApplicationIdentityProfile */.ResolvedValueType.NUMBER];
+  const items1 = [require("../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx") /* resolvedValuesFromUserApplicationIdentityProfile */.ResolvedValueType.NUMBER];
   let iter = resolveFieldValue(current, items1);
   let max;
   if (progress != null) {
     max = progress.fields.max;
   }
-  const items2 = [require(12264) /* resolvedValuesFromUserApplicationIdentityProfile */.ResolvedValueType.NUMBER];
+  const items2 = [require("../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx") /* resolvedValuesFromUserApplicationIdentityProfile */.ResolvedValueType.NUMBER];
   let iter2 = resolveFieldValue(max, items2);
   let tmp3Result = tmp3(12264);
   obj = { style: tmp.root, children: null };

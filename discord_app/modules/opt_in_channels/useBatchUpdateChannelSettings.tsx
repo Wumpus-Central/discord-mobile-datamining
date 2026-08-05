@@ -9,7 +9,7 @@ let result = require("updateUserGuildSettingsInternal").fileFinishedImporting("m
 
 export default function useBatchUpdateChannelSettings(arg0) {
   const _require = arg0;
-  let obj = _require(589);
+  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
   let items = [updateUserGuildSettingsInternal];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getPendingChannelUpdates(closure_0));
   let items1 = [arg0];

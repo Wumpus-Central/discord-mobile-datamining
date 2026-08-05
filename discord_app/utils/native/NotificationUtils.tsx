@@ -9,7 +9,7 @@ let result = require("set").fileFinishedImporting("utils/native/NotificationUtil
 
 export default {
   hasPermission() {
-    return importDefault(10668).requestPermissions((badge) => {
+    return require("../../lib/pushnotification/PushNotification.tsx").requestPermissions((badge) => {
       let _alert;
       let sound;
       ({ alert: _alert, sound } = badge);
@@ -24,11 +24,11 @@ export default {
   },
   requestPermission(arg0) {
     const _require = arg0;
-    let result = _require(11693).setPushPermissionState(PermissionStateType.REQUESTED);
-    let obj = _require(11693);
-    importDefault(698).track(AnalyticEvents.PERMISSIONS_REQUESTED, { type: "notification" });
-    const obj2 = importDefault(698);
-    const permissions = importDefault(10668).requestPermissions();
+    let result = _require("../../actions/native/PushNotificationActionCreators.tsx").setPushPermissionState(PermissionStateType.REQUESTED);
+    let obj = _require("../../actions/native/PushNotificationActionCreators.tsx");
+    require("../AnalyticsUtils.tsx").track(AnalyticEvents.PERMISSIONS_REQUESTED, { type: "notification" });
+    const obj2 = require("../AnalyticsUtils.tsx");
+    const permissions = require("../../lib/pushnotification/PushNotification.tsx").requestPermissions();
     permissions.then((sound) => {
       let _alert;
       let badge;
@@ -102,6 +102,6 @@ export default {
     if (arg1 === undefined) {
       num = 1;
     }
-    require(9694) /* createSoundForPack */.playSound(arg0, num, undefined, arg2);
+    require("../../modules/sound_playback/SoundUtils.tsx") /* createSoundForPack */.playSound(arg0, num, undefined, arg2);
   }
 };

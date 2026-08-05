@@ -25,11 +25,11 @@ export default function ChannelIndicator(arg0) {
   let unread;
   ({ unread, resolvedUnreadSetting, style } = arg0);
   const tmp = callback();
-  require(3989) /* map */;
+  require("../../../../design/tokens/native/useToken.tsx") /* map */;
   if (resolvedUnreadSetting === UnreadSetting.ALL_MESSAGES) {
-    let CHANNELS_DEFAULT = importDefault(712).colors.INTERACTIVE_TEXT_ACTIVE;
+    let CHANNELS_DEFAULT = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_TEXT_ACTIVE;
   } else {
-    CHANNELS_DEFAULT = importDefault(712).colors.CHANNELS_DEFAULT;
+    CHANNELS_DEFAULT = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CHANNELS_DEFAULT;
   }
   let tmp7 = null;
   if (unread) {

@@ -19,7 +19,7 @@ function EmojiIcon(arg0) {
   let require;
   ({ emojiId: require, emojiName } = arg0);
   const tmp = callback4();
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [getEmojiToGroupId];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let usableCustomEmojiById = null;
@@ -33,15 +33,15 @@ function EmojiIcon(arg0) {
   if (null != stateFromStores) {
     obj = { id: null, animated: null, size: 18 };
     ({ id: obj4[0], animated: obj4[1] } = stateFromStores);
-    emojiURL = importDefault(1416).getEmojiURL(obj);
-    const tmp5Result = importDefault(1416);
+    emojiURL = require("../../../utils/AvatarUtils.tsx").getEmojiURL(obj);
+    const tmp5Result = require("../../../utils/AvatarUtils.tsx");
   }
   obj[3] = emojiURL;
   if (emojiName == null) {
     emojiName = "";
   }
   obj[4] = emojiName;
-  return jsx(importDefault(5301), { style: tmp.emoji, textEmojiStyle: tmp.textEmoji, fastImageStyle: tmp.imageEmoji, src: null, name: null });
+  return jsx(require("../../emojis/native/Emoji.tsx"), { style: tmp.emoji, textEmojiStyle: tmp.textEmoji, fastImageStyle: tmp.imageEmoji, src: null, name: null });
 }
 ({ useForumChannelStore: closure_6, useForumChannelStoreApi: error } = set);
 ({ AnalyticsObjects: metroImportAll, AnalyticsPages: c9, AnalyticsSections: c10 } = ME);

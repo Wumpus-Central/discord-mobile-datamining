@@ -13,7 +13,7 @@ const result = require("trackCommunicationDisabled").fileFinishedImporting("modu
 export default function useIsHubRealNamePromptShowing(arg0) {
   const _require = arg0;
   const items = [createGuildRecordFromRust, initialize, mergeGuildAvatar, trackCommunicationDisabled];
-  const stateFromStores = _require(589).useStateFromStores(items, () => {
+  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const guild = outer1_6.getGuild(closure_0);
     let hasItem;
     if (guild != null) {

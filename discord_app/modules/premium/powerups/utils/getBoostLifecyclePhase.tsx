@@ -23,7 +23,7 @@ export const getBoostLifecycleInfo = function getBoostLifecycleInfo(ended, closu
 export const getBoostLifecycleTimestamp = function getBoostLifecycleTimestamp(id, boostLifecycleInfo) {
   const phase = boostLifecycleInfo.phase;
   if ("gave" === phase) {
-    return importDefault(11).extractTimestamp(id.id);
+    return require("../../../../utils/SnowflakeUtils.tsx").extractTimestamp(id.id);
   } else if ("expiring" === phase) {
     const endsAt2 = boostLifecycleInfo.endsAt;
     return endsAt2.getTime() - c2;
@@ -34,8 +34,8 @@ export const getBoostLifecycleTimestamp = function getBoostLifecycleTimestamp(id
       time = endsAt.getTime();
     }
     if (time == null) {
-      time = importDefault(11).extractTimestamp(id.id);
-      const obj = importDefault(11);
+      time = require("../../../../utils/SnowflakeUtils.tsx").extractTimestamp(id.id);
+      const obj = require("../../../../utils/SnowflakeUtils.tsx");
     }
     return time;
   }

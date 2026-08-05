@@ -37,8 +37,8 @@ export default function UserSettingsSensitiveContentFilters() {
     return obj.createList(obj);
   }, []);
   obj = { screen: null };
-  obj[0] = require(13965) /* items */.SettingsScreen.SENSITIVE_CONTENT_FILTERS;
-  let items = [callback(importDefault(13965), obj), callback(importDefault(13793), { node: memo })];
+  obj[0] = require("../../privacy_and_safety/native/SettingsScreenNotices.tsx") /* items */.SettingsScreen.SENSITIVE_CONTENT_FILTERS;
+  let items = [callback(require("../../privacy_and_safety/native/SettingsScreenNotices.tsx"), obj), callback(require("../../../settings/native/renderer/SettingLayout.tsx"), { node: memo })];
   obj[0] = items;
   return callback2(closure_6, obj);
 };

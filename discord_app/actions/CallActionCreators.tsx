@@ -24,7 +24,7 @@ export default {
     if (null != arg3) {
       if (!blocked.isBlocked(arg3)) {
         const _require = user.getUser(arg3);
-        const HTTP = _require(530).HTTP;
+        const HTTP = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
         let obj = { url: null, oldFormErrors: true, rejectWithError: true };
         obj[0] = self.CALL(id);
         const value = HTTP.get(obj);
@@ -65,7 +65,7 @@ export default {
         });
       }
     } else {
-      obj = importDefault(5096);
+      obj = require("SelectedChannelActionCreators.tsx");
       let voiceChannel = obj.selectVoiceChannel(id, c1);
       if (arg2) {
         self.ring(id);
@@ -78,7 +78,7 @@ export default {
   ring(channelId, items, gdm_invite) {
     channel = channel.getChannel(channelId);
     if (null != channel) {
-      let obj = require(9156) /* useCanRingToGuildVoiceChannel */;
+      let obj = require("../modules/calls/useCanRing.tsx") /* useCanRingToGuildVoiceChannel */;
       const CALLABLE = constants.CALLABLE;
       const result = obj.canRingUsersInChannel(channel);
       if (result) {
@@ -94,11 +94,11 @@ export default {
           let obj1 = { type: "GUILD_LOCAL_RING_START", ringing: null, guildId: null };
           obj1[1] = items;
           obj1[2] = channel.guild_id;
-          importDefault(709).dispatch(obj1);
-          const obj6 = importDefault(709);
+          require("../Dispatcher.tsx").dispatch(obj1);
+          const obj6 = require("../Dispatcher.tsx");
         }
       } else if (tmp7) {
-        obj1 = importDefault(709);
+        obj1 = require("../Dispatcher.tsx");
         const obj2 = { type: "CALL_ENQUEUE_RING", channelId: null, recipients: null };
         obj2[1] = channelId;
         obj2[2] = items;
@@ -108,7 +108,7 @@ export default {
     }
   },
   stopRinging(channelId, items) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: closure_6.CALL_STOP_RINGING(channelId), body: obj, oldFormErrors: true, rejectWithError: true };
     obj = { recipients: items };
     return HTTP.post(obj);

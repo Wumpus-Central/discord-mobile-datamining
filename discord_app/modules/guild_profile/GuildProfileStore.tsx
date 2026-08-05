@@ -41,7 +41,7 @@ function handleInviteResolveOrCreate(invite) {
   const profile = invite.invite.profile;
   if (null != profile) {
     const value = map.get(profile.id);
-    const guildProfileFromServer = require(5279) /* getEmoji */.buildGuildProfileFromServer(profile);
+    const guildProfileFromServer = require("GuildProfileBuilders.tsx") /* getEmoji */.buildGuildProfileFromServer(profile);
     if (null == value) {
       let obj = {};
       const merged = Object.assign(closure_7);
@@ -59,7 +59,7 @@ function handleInviteResolveOrCreate(invite) {
       obj.fetchStatus = obj.FETCHED;
       const result1 = obj3.set(profile.id, obj);
     }
-    const obj4 = require(5279) /* getEmoji */;
+    const obj4 = require("GuildProfileBuilders.tsx") /* getEmoji */;
   }
 }
 let obj = { NOT_FETCHED: "NOT_FETCHED", FETCHING: "FETCHING", FETCHED: "FETCHED" };
@@ -218,7 +218,7 @@ obj = {
     let obj = map1;
     let value = map1.get(guildId);
     if (null == value) {
-      const tmp5 = new importDefault(584)(5000, 300000);
+      const tmp5 = new require("../../../discord_common/js/packages/backoff/Backoff.tsx")(5000, 300000);
       const result = obj.set(guildId, tmp5);
       value = tmp5;
     }

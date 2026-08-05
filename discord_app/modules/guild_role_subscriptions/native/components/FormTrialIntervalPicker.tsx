@@ -41,7 +41,7 @@ export default function FormTrialIntervalPicker(disabled) {
     },
     disabled: disabled.disabled
   };
-  return jsx(importDefault(13150), {
+  return jsx(require("FormDropdown.tsx"), {
     label: stringResult,
     onPress() {
       let obj = outer1_1(outer1_2[5]);

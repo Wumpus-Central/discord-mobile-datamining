@@ -301,8 +301,8 @@ prototype["calculateNewState"] = function calculateNewState(userId, channel) {
     nick = member.nick;
   }
   if (nick == null) {
-    nick = importDefault(4124).getName(user);
-    const obj3 = importDefault(4124);
+    nick = require("../../utils/UserUtils.tsx").getName(user);
+    const obj3 = require("../../utils/UserUtils.tsx");
   }
   const items = [str, , ];
   let formatted;
@@ -536,7 +536,7 @@ const threadMemberListStore = new ThreadMemberListStore(require("dispatcher"), {
   GUILD_MEMBER_UPDATE: handleUserUpdate,
   GUILD_MEMBER_REMOVE: handleUserUpdate,
   PRESENCES_REPLACE: function handlePresenceReplace(presences) {
-    const mapped = importDefault(12)(presences.presences).map((user) => {
+    const mapped = require("../../../_runtime/00012_apply.js")(presences.presences).map((user) => {
       user = user.user;
       let id;
       if (user != null) {
@@ -544,8 +544,8 @@ const threadMemberListStore = new ThreadMemberListStore(require("dispatcher"), {
       }
       return id;
     });
-    const found = mapped.filter(require(1351) /* isDiscordFrontendDevelopment */.isNotNullish);
-    const arr = importDefault(12)(presences.presences);
+    const found = mapped.filter(require("../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
+    const arr = require("../../../_runtime/00012_apply.js")(presences.presences);
     let flag = false;
     let flag2 = false;
     const iter = found.uniq();

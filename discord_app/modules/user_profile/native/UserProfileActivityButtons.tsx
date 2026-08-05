@@ -97,9 +97,9 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
   let analyticsLocations;
   let set;
   let JOINED = dependencyMap;
-  analyticsLocations = importDefault(5610)().analyticsLocations;
+  analyticsLocations = require("../../app_analytics/useAnalyticsLocations.tsx")().analyticsLocations;
   set = { id: application.id, deeplink_uri: application.deepLinkUri };
-  let obj = require(647) /* defaultAreStatesEqual */;
+  let obj = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */;
   const items = [analyticsLocations, createGuildRecordFromRust, closure_7, upsertRelationship, handleConnectionOpen, updateVoiceState, getUncachedChannelPermissions, updateActivities, filterPlayingActivities, onAction];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_1(outer1_2[22])({ user: closure_0, currentUser: closure_1, activity: closure_2, application, channelId: null, isEmbedded: false, ChannelStore: analyticsLocations, GuildStore: outer1_8, GuildMemberCountStore: outer1_7, RelationshipStore: outer1_11, SelectedChannelStore: outer1_12, VoiceStateStore: outer1_14, PermissionStore: outer1_10, LocalActivityStore: outer1_9, SelfPresenceStore: outer1_13, EmbeddedActivitiesStore: onAction }));
   let tmp3 = null;
@@ -141,15 +141,15 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
     tmp4 = null;
     if (null != sync_id) {
       let obj = { text: null, icon: null, variant: "secondary", onPress: null };
-      const intl = require(1236) /* getSystemLocale */.intl;
+      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
       obj = { platform: null };
       obj[0] = activity.name;
-      obj[0] = intl.formatToPlainString(require(1236) /* getSystemLocale */.t.LEgD7t, obj);
+      obj[0] = intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.LEgD7t, obj);
       obj = { size: null, source: null, disableColor: true, style: null };
-      obj[0] = require(1297) /* Button */.Icon.Sizes.SMALL;
+      obj[0] = require("../../../design/void/native.tsx") /* Button */.Icon.Sizes.SMALL;
       obj[1] = sync_id(8054);
       obj[3] = tmp.icon;
-      obj[1] = jsx(require(1297) /* Button */.Icon, { size: null, source: null, disableColor: true, style: null });
+      obj[1] = jsx(require("../../../design/void/native.tsx") /* Button */.Icon, { size: null, source: null, disableColor: true, style: null });
       obj[3] = callback(function*() {
         if (c5 === 2) {
           c5 = 3;
@@ -226,7 +226,7 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
           }
         }
       });
-      tmp4 = jsx(require(4695) /* Button */.Button, { size: null, source: null, disableColor: true, style: null });
+      tmp4 = jsx(require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, { size: null, source: null, disableColor: true, style: null });
     }
   }
   return tmp4;
@@ -236,20 +236,20 @@ export const WatchActivityButton = function WatchActivityButton(arg0) {
   let require;
   ({ activity, onAction: require } = arg0);
   let importDefault;
-  const tmp2 = importDefault(12223)(activity);
+  const tmp2 = require("../../activities/utils/getStreamURL.tsx")(activity);
   importDefault = tmp2;
   let tmp3 = null;
-  if (importDefault(8112)(activity)) {
+  if (require("../../activities/utils/isStreaming.tsx")(activity)) {
     tmp3 = null;
     if (null != tmp2) {
       const obj = { text: null, variant: "secondary", onPress: null };
-      const intl = require(1236) /* getSystemLocale */.intl;
-      obj[0] = intl.string(require(1236) /* getSystemLocale */.t.I6JG46);
+      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.I6JG46);
       obj[2] = function onPress() {
         callback({ action: "PRESS_WATCH_BUTTON" });
         _undefined(outer1_2[34]).openURL(_undefined);
       };
-      tmp3 = jsx(require(4695) /* Button */.Button, { text: null, variant: "secondary", onPress: null });
+      tmp3 = jsx(require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, { text: null, variant: "secondary", onPress: null });
     }
   }
   return tmp3;

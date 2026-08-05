@@ -422,16 +422,16 @@ class MobileVoiceOverlayManager {
 const prototype = MobileVoiceOverlayManager.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
-  let obj = require(4149) /* isFabric */;
+  let obj = require("../../../utils/native/FabricUtils.tsx") /* isFabric */;
   if (!tmp2) {
     if (typeof NativeCallableInterface !== "function") {
       HermesBuiltin.throwTypeError();
     }
     obj = Object.create(NativeCallableInterface.prototype);
     obj.manager = self;
-    const result = importDefault(39).registerCallableModule("MobileVoiceOverlayManager", obj);
+    const result = require("../../../../_runtime/00039_MessageQueue.js").registerCallableModule("MobileVoiceOverlayManager", obj);
     self.isBatchedBridgeInitialized = true;
-    const obj2 = importDefault(39);
+    const obj2 = require("../../../../_runtime/00039_MessageQueue.js");
     const tmp4 = NativeCallableInterface;
   }
   if (getUserAgnosticState.getEnabled()) {

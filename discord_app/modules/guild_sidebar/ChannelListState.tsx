@@ -46,7 +46,7 @@ function computeSubtitle(type) {
     } else {
       if (arg2) {
         if (arg1) {
-          let obj1 = require(4468) /* hasStream */;
+          let obj1 = require("ChannelListUtils.tsx") /* hasStream */;
           if (obj1.hasStream(tmp19)) {
             return { type: "go-live" };
           }
@@ -69,7 +69,7 @@ function computeSubtitle(type) {
         }
         return name;
       });
-      const found = mapped.filter(require(1351) /* isDiscordFrontendDevelopment */.isNotNullish);
+      const found = mapped.filter(require("../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
       let tmp16 = null;
       if (found.length > 0) {
         obj1 = { type: "embedded-activities", name: null };
@@ -103,8 +103,8 @@ function computeThreadIds(record, activeJoinedUnreadThreadsForParent, selectedCh
   }
   if (set.has(record.type)) {
     const _Object = Object;
-    const obj2 = importDefault(12);
-    const mapped = importDefault(12).sortBy(Object.values(activeJoinedUnreadThreadsForParent), (joinTimestamp) => -joinTimestamp.joinTimestamp).map((channel) => channel.channel.id);
+    const obj2 = require("../../../_runtime/00012_apply.js");
+    const mapped = require("../../../_runtime/00012_apply.js").sortBy(Object.values(activeJoinedUnreadThreadsForParent), (joinTimestamp) => -joinTimestamp.joinTimestamp).map((channel) => channel.channel.id);
     if (tmp) {
       return mapped;
     } else if (tmp4) {
@@ -126,7 +126,7 @@ function computeThreadIds(record, activeJoinedUnreadThreadsForParent, selectedCh
         });
       }
     }
-    const sortByResult = importDefault(12).sortBy(Object.values(activeJoinedUnreadThreadsForParent), (joinTimestamp) => -joinTimestamp.joinTimestamp);
+    const sortByResult = require("../../../_runtime/00012_apply.js").sortBy(Object.values(activeJoinedUnreadThreadsForParent), (joinTimestamp) => -joinTimestamp.joinTimestamp);
   } else {
     return [];
   }
@@ -185,7 +185,7 @@ function shouldShowInRecents(guild, record, initializationData) {
           if (obj.some(store9.getVoiceStatesForChannel(record.id))) {
             return false;
           }
-          obj = importDefault(12);
+          obj = require("../../../_runtime/00012_apply.js");
         } else {
           return false;
         }
@@ -552,7 +552,7 @@ prototype["getRows"] = function getRows() {
   const self = this;
   if (null == this.rows) {
     const _Object = Object;
-    self.sortedNamedCategories = importDefault(12).sortBy(Object.values(self.categories), (record) => record.record.position);
+    self.sortedNamedCategories = require("../../../_runtime/00012_apply.js").sortBy(Object.values(self.categories), (record) => record.record.position);
     const items = [, , , , , ];
     ({ channelNoticeSection: arr[0], guildActionSection: arr[1], favoritesCategory: arr[2], recentsCategory: arr[3], noParentCategory: arr[4] } = self);
     items[HermesBuiltin.arraySpread(self.sortedNamedCategories, 5)] = self.voiceChannelsCategory;
@@ -579,7 +579,7 @@ prototype["getRows"] = function getRows() {
       }
       continue;
     }
-    const obj = importDefault(12);
+    const obj = require("../../../_runtime/00012_apply.js");
   }
   return self.rows;
 };
@@ -612,7 +612,7 @@ prototype["getNamedCategoryFromSection"] = function getNamedCategoryFromSection(
   if (tmp3) {
     tmp3 = diff < self.getSortedNamedCategories().length;
   }
-  importDefault(38)(tmp3, "invalid section index " + diff);
+  require("../../../_runtime/metro/00038__.js")(tmp3, "invalid section index " + diff);
   return self.getSortedNamedCategories()[diff];
 };
 prototype["getGuildActionSection"] = function getGuildActionSection() {
@@ -639,7 +639,7 @@ prototype["getChannelFromSectionRow"] = function getChannelFromSectionRow(arg0, 
 };
 prototype["isPlaceholderRow"] = function isPlaceholderRow(arg0, arg1) {
   const self = this;
-  importDefault(38)(arg0 > GUILD_ACTIONS, "Invalid section");
+  require("../../../_runtime/metro/00038__.js")(arg0 > GUILD_ACTIONS, "Invalid section");
   let tmp2 = arg0 !== this.recentsSectionNumber;
   if (tmp2) {
     tmp2 = self.getRows()[arg0][arg1] === c34;
@@ -736,7 +736,7 @@ prototype["getSectionRowsFromChannel"] = function getSectionRowsFromChannel(arg0
           }
           if (tmp7.type === constants.GUILD_CATEGORY) {
             const obj2 = { section: null };
-            obj2[0] = importDefault(12).findIndex(self.getSortedNamedCategories(), (id) => {
+            obj2[0] = require("../../../_runtime/00012_apply.js").findIndex(self.getSortedNamedCategories(), (id) => {
               id = undefined;
               if (channel2 != null) {
                 id = channel2.id;
@@ -828,7 +828,7 @@ prototype["nonPositionalChannelUpdate"] = function nonPositionalChannelUpdate(ar
   return flag;
 };
 prototype["getSlicedChannels"] = function getSlicedChannels(arg0, ignoreRecents) {
-  importDefault(38)(arg0.length > 0, "must have at least one channel in the slice");
+  require("../../../_runtime/metro/00038__.js")(arg0.length > 0, "must have at least one channel in the slice");
   let flag = true;
   let flag2 = false;
   const items = [];
@@ -955,9 +955,9 @@ prototype["updateSubtitles"] = function updateSubtitles(arg0) {
       }
     }
   } else {
-    const tmp3 = importDefault(12);
-    const mapped = importDefault(12)(self.getSortedCategories()).map((channels) => Object.values(channels.channels));
-    const tmp3Result = importDefault(12)(self.getSortedCategories());
+    const tmp3 = require("../../../_runtime/00012_apply.js");
+    const mapped = require("../../../_runtime/00012_apply.js")(self.getSortedCategories()).map((channels) => Object.values(channels.channels));
+    const tmp3Result = require("../../../_runtime/00012_apply.js")(self.getSortedCategories());
     valueResult = mapped.flatten().value();
     const iter = mapped.flatten();
   }
@@ -1076,14 +1076,14 @@ prototype2["getRows"] = function getRows() {
   return tmp;
 };
 prototype2["shouldShowEmptyCategory"] = function shouldShowEmptyCategory() {
-  return importDefault(12).some(this.channels, (renderLevel) => renderLevel.renderLevel >= obj.WouldShowIfUncollapsed);
+  return require("../../../_runtime/00012_apply.js").some(this.channels, (renderLevel) => renderLevel.renderLevel >= obj.WouldShowIfUncollapsed);
 };
 prototype2["getShownChannelIds"] = function getShownChannelIds() {
   const self = this;
   if (null == this.shownChannelIds) {
-    const values = importDefault(12)(self.channels).values();
+    const values = require("../../../_runtime/00012_apply.js")(self.channels).values();
     const found = values.filter((renderLevel) => renderLevel.renderLevel === Show.Show);
-    const obj = importDefault(12)(self.channels);
+    const obj = require("../../../_runtime/00012_apply.js")(self.channels);
     const sortByResult = found.sortBy((record) => {
       record = record.record;
       const position = record.position;
@@ -1118,8 +1118,8 @@ prototype2["getShownChannelIds"] = function getShownChannelIds() {
   return self.shownChannelIds;
 };
 prototype2["getShownChannelAndThreadIds"] = function getShownChannelAndThreadIds() {
-  const values = importDefault(12)(this.channels).values();
-  const obj = importDefault(12)(this.channels);
+  const values = require("../../../_runtime/00012_apply.js")(this.channels).values();
+  const obj = require("../../../_runtime/00012_apply.js")(this.channels);
   const iter = values.flatMap((threadIds) => threadIds.threadIds);
   const shownChannelIds = this.getShownChannelIds();
   return shownChannelIds.concat(values.flatMap((threadIds) => threadIds.threadIds).value());
@@ -1128,9 +1128,9 @@ prototype2["isEmpty"] = function isEmpty() {
   return 0 === this.getShownChannelIds().length;
 };
 prototype2["getChannelRecords"] = function getChannelRecords() {
-  const values = importDefault(12)(this.channels).values();
+  const values = require("../../../_runtime/00012_apply.js")(this.channels).values();
   const found = values.filter((renderLevel) => renderLevel.renderLevel > CannotShow.CannotShow);
-  const obj = importDefault(12)(this.channels);
+  const obj = require("../../../_runtime/00012_apply.js")(this.channels);
   return found.map((record) => record.record).value();
 };
 prototype2["getFirstVoiceChannel"] = function getFirstVoiceChannel(arg0) {
@@ -1167,8 +1167,8 @@ const prototype3 = function ChannelListCategoryNoParent(arg0, arg1, arg2) {
   tmp2 = new tmp2(arg0, new.target, tmp2, new.target, undefined, tmp);
   // ThrowIfThisInitialized (0x7c)
   importDefault = tmp2;
-  const mapped = importDefault(12)(arg1).map((arg0) => new tmp(tmp2, arg0, closure_0));
-  const arr = importDefault(12)(arg1);
+  const mapped = require("../../../_runtime/00012_apply.js")(arg1).map((arg0) => new tmp(tmp2, arg0, closure_0));
+  const arr = require("../../../_runtime/00012_apply.js")(arg1);
   tmp2.channels = mapped.keyBy((id) => id.id).value();
   return tmp2;
 }.prototype;
@@ -1386,7 +1386,7 @@ prototype5["getShownChannelIds"] = function getShownChannelIds() {
   } else {
     let closure_0 = self.isCollapsed ? tmp4.Show : tmp4.WouldShowIfUncollapsed;
     if (self.enabled) {
-      const found = importDefault(12)(self.channels).filter((renderLevel) => renderLevel.renderLevel >= closure_0);
+      const found = require("../../../_runtime/00012_apply.js")(self.channels).filter((renderLevel) => renderLevel.renderLevel >= closure_0);
       const mapped = found.map((arg0) => {
         const items = [, , ];
         ({ id: arr[0], lastMessageTimestamp: arr[1], renderLevel: arr[2] } = arg0);
@@ -1407,7 +1407,7 @@ prototype5["getShownChannelIds"] = function getShownChannelIds() {
         }
         return tmp3;
       });
-      const arr2 = importDefault(12)(self.channels);
+      const arr2 = require("../../../_runtime/00012_apply.js")(self.channels);
       const sortByResult = found1.sortBy((arg0) => {
         let tmp;
         let tmp2;
@@ -1583,9 +1583,9 @@ prototype6["getFirstVoiceChannel"] = function getFirstVoiceChannel() {
 prototype6["getShownChannelIds"] = function getShownChannelIds() {
   const self = this;
   if (null == this.shownChannelIds) {
-    const values = importDefault(12)(self.channels).values();
+    const values = require("../../../_runtime/00012_apply.js")(self.channels).values();
     const found = values.filter((renderLevel) => renderLevel.renderLevel === closure_35.Show || renderLevel.renderLevel === tmp.WouldShowIfUncollapsed);
-    const obj = importDefault(12)(self.channels);
+    const obj = require("../../../_runtime/00012_apply.js")(self.channels);
     const sortByResult = found.sortBy((record) => record.record.position);
     const valueResult = found.sortBy((record) => record.record.position).take(5).value();
     const iter = found.sortBy((record) => record.record.position).take(5);
@@ -1596,11 +1596,11 @@ prototype6["getShownChannelIds"] = function getShownChannelIds() {
     const items1 = [];
     const iter2 = found.filter((renderLevel) => renderLevel.renderLevel === closure_35.Show);
     HermesBuiltin.arraySpread(set, 0);
-    const tmp13 = importDefault(12);
-    const tmp13Result = importDefault(12)(items1);
-    const sortByResult1 = importDefault(12)(items1).sortBy((record) => record.record.position);
-    self.shownChannelIds = importDefault(12)(items1).sortBy((record) => record.record.position).map((id) => id.id).value();
-    const iter3 = importDefault(12)(items1).sortBy((record) => record.record.position).map((id) => id.id);
+    const tmp13 = require("../../../_runtime/00012_apply.js");
+    const tmp13Result = require("../../../_runtime/00012_apply.js")(items1);
+    const sortByResult1 = require("../../../_runtime/00012_apply.js")(items1).sortBy((record) => record.record.position);
+    self.shownChannelIds = require("../../../_runtime/00012_apply.js")(items1).sortBy((record) => record.record.position).map((id) => id.id).value();
+    const iter3 = require("../../../_runtime/00012_apply.js")(items1).sortBy((record) => record.record.position).map((id) => id.id);
   }
   return self.shownChannelIds;
 };
@@ -1640,8 +1640,8 @@ prototype7["getHiddenChannelIds"] = function getHiddenChannelIds() {
   const self = this;
   if (this.guild.optInEnabled) {
     if (null == self.hiddenChannelIds) {
-      const arr = importDefault(12)(self.channels);
-      const valueResult = importDefault(12)(self.channels).filter((renderLevel) => renderLevel.renderLevel === obj.WouldShowIfUncollapsed).value();
+      const arr = require("../../../_runtime/00012_apply.js")(self.channels);
+      const valueResult = require("../../../_runtime/00012_apply.js")(self.channels).filter((renderLevel) => renderLevel.renderLevel === obj.WouldShowIfUncollapsed).value();
       if (valueResult.every((record) => {
         record = record.record;
         return record.isCategory();
@@ -1651,7 +1651,7 @@ prototype7["getHiddenChannelIds"] = function getHiddenChannelIds() {
       } else {
         self.hiddenChannelIds = valueResult.map((id) => id.id);
       }
-      const iter = importDefault(12)(self.channels).filter((renderLevel) => renderLevel.renderLevel === obj.WouldShowIfUncollapsed);
+      const iter = require("../../../_runtime/00012_apply.js")(self.channels).filter((renderLevel) => renderLevel.renderLevel === obj.WouldShowIfUncollapsed);
     }
     return self.hiddenChannelIds;
   } else {
@@ -1680,7 +1680,7 @@ prototype7["getShownChannelIds"] = function getShownChannelIds() {
   self = this;
   if (this.guild.optInEnabled) {
     if (null == self.shownChannelIds) {
-      const found = importDefault(12)(self.channels).filter((renderLevel) => renderLevel.renderLevel === Show.Show);
+      const found = require("../../../_runtime/00012_apply.js")(self.channels).filter((renderLevel) => renderLevel.renderLevel === Show.Show);
       const items = [
         (record) => {
               if (record.record.type === outer1_30.GUILD_CATEGORY) {
@@ -1708,7 +1708,7 @@ prototype7["getShownChannelIds"] = function getShownChannelIds() {
               return num;
             }
       ];
-      const arr2 = importDefault(12)(self.channels);
+      const arr2 = require("../../../_runtime/00012_apply.js")(self.channels);
       const valueResult = found.orderBy(items, ["asc", "asc"]).value();
       self.shownChannelIds = [];
       for (let num = 0; num < valueResult.length; num = num + 1) {
@@ -1851,14 +1851,14 @@ prototype10["updateChannel"] = function updateChannel(record) {
   const state = self.computeState(arg1);
   let isEqualResult = state.renderLevel === self.renderLevel;
   if (isEqualResult) {
-    isEqualResult = importDefault(12).isEqual(state.threadIds, self.threadIds);
-    const obj = importDefault(12);
+    isEqualResult = require("../../../_runtime/00012_apply.js").isEqual(state.threadIds, self.threadIds);
+    const obj = require("../../../_runtime/00012_apply.js");
   }
   if (!isEqualResult) {
     ({ renderLevel: self.renderLevel, threadIds: self.threadIds } = state);
-    self.threadCount = importDefault(12).size(state.threadIds);
+    self.threadCount = require("../../../_runtime/00012_apply.js").size(state.threadIds);
     flag = true;
-    const obj2 = importDefault(12);
+    const obj2 = require("../../../_runtime/00012_apply.js");
   }
   if (tmp8) {
     flag = true;
@@ -1867,7 +1867,7 @@ prototype10["updateChannel"] = function updateChannel(record) {
 };
 prototype10["updateSubtitle"] = function updateSubtitle() {
   const subtitle = this.computeSubtitle();
-  const isEqualResult = importDefault(12).isEqual(this.subtitle, subtitle);
+  const isEqualResult = require("../../../_runtime/00012_apply.js").isEqual(this.subtitle, subtitle);
   let flag = !isEqualResult;
   if (!isEqualResult) {
     this.subtitle = subtitle;
@@ -1959,7 +1959,7 @@ ChannelListChannelImpl.prototype["computeState"] = function computeState(arg0) {
         }
         if (!tmp6) {
           if (!tmp7) {
-            obj4 = importDefault(12);
+            obj4 = require("../../../_runtime/00012_apply.js");
             if (obj4.isEmpty(tmp12)) {
               let obj5 = store6;
               if (store6.getMentionCount(self.id) <= 0) {
@@ -2151,8 +2151,8 @@ prototype11["getRenderLevel"] = function getRenderLevel(renderLevel) {
         const favoriteChannelIds = this.category.guild.favoriteChannelIds;
         if (!favoriteChannelIds.has(self.record.id)) {
           if (self.category.isCollapsed) {
-            importDefault(12).some(store9.getVoiceStatesForChannel(self.record.id)) ? tmp.Show : tmp.WouldShowIfUncollapsed;
-            const obj = importDefault(12);
+            require("../../../_runtime/00012_apply.js").some(store9.getVoiceStatesForChannel(self.record.id)) ? tmp.Show : tmp.WouldShowIfUncollapsed;
+            const obj = require("../../../_runtime/00012_apply.js");
           } else {
             let CannotShow = tmp.Show;
           }
@@ -2181,7 +2181,7 @@ prototype12["_areGuildActionRowsUpdated"] = function _areGuildActionRowsUpdated(
     const rows = guildActionSection.getRows();
     found = rows.filter((arg0) => !set.has(arg0));
   }
-  return !importDefault(12).isEqual(found, arr);
+  return !require("../../../_runtime/00012_apply.js").isEqual(found, arr);
 };
 prototype12["_areChannelNoticeRowsUpdated"] = function _areChannelNoticeRowsUpdated(id, rows) {
   rows = undefined;
@@ -2189,7 +2189,7 @@ prototype12["_areChannelNoticeRowsUpdated"] = function _areChannelNoticeRowsUpda
     const channelNoticeSection = obj2.getChannelNoticeSection();
     rows = channelNoticeSection.getRows();
   }
-  return !importDefault(12).isEqual(rows, rows);
+  return !require("../../../_runtime/00012_apply.js").isEqual(rows, rows);
 };
 prototype12["_areGuildVocalChannelsInRecentsInNeedOfAppearingInActiveNow"] = function _areGuildVocalChannelsInRecentsInNeedOfAppearingInActiveNow(id) {
   if (null == this.guilds[id]) {
@@ -2213,7 +2213,7 @@ prototype12["_areGuildVocalChannelsInRecentsInNeedOfAppearingInActiveNow"] = fun
           } else {
             let tmp = importDefault;
             let tmp2 = dependencyMap;
-            let obj2 = importDefault(12);
+            let obj2 = require("../../../_runtime/00012_apply.js");
             let tmp3 = store9;
             if (!obj2.some(store9.getVoiceStatesForChannel(tmp8.id))) {
               continue;

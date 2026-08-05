@@ -8,8 +8,8 @@ const require = arg1;
 const result = require("upsertRelationship").fileFinishedImporting("modules/main_tabs_v2/UserSearchUtils.tsx");
 
 export const cleanString = function cleanString(toLocaleLowerCase) {
-  const obj = require(1856) /* isNullOrEmpty */;
-  return require(1856) /* isNullOrEmpty */.stripDiacritics(toLocaleLowerCase.toLocaleLowerCase()).trim();
+  const obj = require("../../utils/StringUtils.tsx") /* isNullOrEmpty */;
+  return require("../../utils/StringUtils.tsx") /* isNullOrEmpty */.stripDiacritics(toLocaleLowerCase.toLocaleLowerCase()).trim();
 };
 export const getRelationshipType = function getRelationshipType(id) {
   const relationshipType = store.getRelationshipType(id);
@@ -31,7 +31,7 @@ export const getNames = function getNames(user) {
     names[nick] = names(1856).stripDiacritics(nick.toLocaleLowerCase()).trim().split(" ");
     let str2 = names(1856).stripDiacritics(nick.toLocaleLowerCase()).trim();
   }
-  const globalName = importDefault(4124).getGlobalName(user);
+  const globalName = require("../../utils/UserUtils.tsx").getGlobalName(user);
   if (tmp4) {
     const obj6 = names(1856);
     const str4 = names(1856).stripDiacritics(globalName.toLocaleLowerCase());
@@ -39,7 +39,7 @@ export const getNames = function getNames(user) {
     const str5 = names(1856).stripDiacritics(globalName.toLocaleLowerCase()).trim();
   }
   const username = user.username;
-  const obj4 = importDefault(4124);
+  const obj4 = require("../../utils/UserUtils.tsx");
   tmp4 = null != globalName && null == names[globalName];
   const obj7 = names(1856);
   const str7 = names(1856).stripDiacritics(username.toLocaleLowerCase());

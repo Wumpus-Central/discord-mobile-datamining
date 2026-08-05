@@ -219,6 +219,6 @@ export default {
     }
   },
   openUrl(arg0) {
-    importDefault(3982).openURL(arg0);
+    require("../../lib/native/Linking.tsx").openURL(arg0);
   }
 };

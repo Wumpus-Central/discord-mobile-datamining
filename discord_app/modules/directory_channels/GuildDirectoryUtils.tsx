@@ -53,25 +53,25 @@ export const guildDirectoryEntryFromServer = function guildDirectoryEntryFromSer
     return obj;
   } else {
     const type = entry.type;
-    importDefault(38)(false, "Directory entries must be connected to a guild!");
+    require("../../../_runtime/metro/00038__.js")(false, "Directory entries must be connected to a guild!");
   }
 };
 export const MAX_CATEGORY_SERVERS = 5;
 export const orderByTotalMemberCount = function orderByTotalMemberCount(found) {
   const items = [(approximateMemberCount) => approximateMemberCount.approximateMemberCount];
-  return importDefault(12).orderBy(found, items, ["desc"]);
+  return require("../../../_runtime/00012_apply.js").orderBy(found, items, ["desc"]);
 };
 export const orderByDateAdded = function orderByDateAdded(reactions) {
   const items = [(createdAt) => createdAt.createdAt];
-  return importDefault(12).orderBy(reactions, items, ["desc"]);
+  return require("../../../_runtime/00012_apply.js").orderBy(reactions, items, ["desc"]);
 };
 export const rankByDateAdded = function rankByDateAdded(arr) {
   const found = arr.filter((featurableInDirectory) => featurableInDirectory.featurableInDirectory);
   const items = [(createdAt) => createdAt.createdAt];
-  const obj = importDefault(12);
-  return importDefault(12).orderBy(found, items, ["desc"]).slice(0, 5);
+  const obj = require("../../../_runtime/00012_apply.js");
+  return require("../../../_runtime/00012_apply.js").orderBy(found, items, ["desc"]).slice(0, 5);
 };
 export const rankGuildEntries = function rankGuildEntries(arr) {
   const items = [(approximateMemberCount) => approximateMemberCount.approximateMemberCount];
-  return importDefault(12).orderBy(arr, items, ["desc"]);
+  return require("../../../_runtime/00012_apply.js").orderBy(arr, items, ["desc"]);
 };

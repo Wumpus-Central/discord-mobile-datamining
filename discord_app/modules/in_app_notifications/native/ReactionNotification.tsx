@@ -27,12 +27,12 @@ function ReactionNotificationBody(arg0) {
   let text;
   ({ secondaryText, messagePreview } = arg0);
   ({ text, hasMessageContent } = arg0);
-  let obj = require(9683) /* extractMetadataFromNotification */;
+  let obj = require("InAppNotificationUtils.tsx") /* extractMetadataFromNotification */;
   const messagePreviewTextVariant = obj.getMessagePreviewTextVariant();
   const tmp = createCacheKey();
-  ({ gradientColors, gradientStyles } = importDefault(9704)());
+  ({ gradientColors, gradientStyles } = require("hooks/useTruncatedGradientColors.tsx")());
   obj = { variant: messagePreviewTextVariant, color: "text-default", style: tmp.italic, children: text };
-  const children = [callback(require(4281) /* Text */.Text, obj), , ];
+  const children = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), , ];
   let tmp8Result = null;
   if (null != secondaryText) {
     obj = { variant: "redesign/message-preview/medium", color: "text-link", lineClamp: null, children: null };
@@ -293,9 +293,9 @@ function ReactorNotificationIcon(notification) {
     if (channel.isGroupDM()) {
       let obj = { channel: null, size: null };
       obj[0] = channel;
-      obj[1] = require(1297) /* Button */.AvatarSizes.NORMAL;
-      let tmp8Result = callback(importDefault(9582), obj);
-      const tmp15 = importDefault(9582);
+      obj[1] = require("../../../design/void/native.tsx") /* Button */.AvatarSizes.NORMAL;
+      let tmp8Result = callback(require("../../group_dm/native/GroupDMAvatar.tsx"), obj);
+      const tmp15 = require("../../group_dm/native/GroupDMAvatar.tsx");
     }
     return tmp8Result;
   }
@@ -307,17 +307,17 @@ function ReactorNotificationIcon(notification) {
       id = guild.id;
     }
     obj[1] = id;
-    obj[2] = require(1297) /* Button */.AvatarSizes.NORMAL;
-    tmp8Result = callback(require(1297) /* Button */.Avatar, obj);
+    obj[2] = require("../../../design/void/native.tsx") /* Button */.AvatarSizes.NORMAL;
+    tmp8Result = callback(require("../../../design/void/native.tsx") /* Button */.Avatar, obj);
     const tmp8 = callback;
     const tmp9 = require;
   } else {
     obj = { guild: null, size: null, style: null };
     obj[0] = guild;
-    obj[1] = require(5661) /* GuildIconSizes */.GuildIconSizes.NORMAL;
+    obj[1] = require("../../guild/native/GuildIcon.tsx") /* GuildIconSizes */.GuildIconSizes.NORMAL;
     obj[2] = tmp.guildIcon;
-    tmp8Result = callback(importDefault(5661), obj);
-    const tmp5 = importDefault(5661);
+    tmp8Result = callback(require("../../guild/native/GuildIcon.tsx"), obj);
+    const tmp5 = require("../../guild/native/GuildIcon.tsx");
   }
 }
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: closure_6, NOTIFICATION_PREVIEW_LINE_CLAMP: error } = set);

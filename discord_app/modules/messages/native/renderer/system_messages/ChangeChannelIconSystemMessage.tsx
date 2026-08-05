@@ -9,10 +9,10 @@ export const createChangeChannelIconSystemMessage = function createChangeChannel
   let theme;
   message = message.message;
   ({ theme, roleStyle } = message);
-  const tmp3 = importDefault(7872)(theme);
-  let obj = require(7879) /* getMessageAuthorWithProcessedColor */;
+  const tmp3 = require("../resolveMessageContentColors.tsx")(theme);
+  let obj = require("useAuthorWithProcessedColor.tsx") /* getMessageAuthorWithProcessedColor */;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  const tmp6 = importDefault(7881)({ message, author: messageAuthorWithProcessedColor, roleStyle });
+  const tmp6 = require("formatUsernameOnClick.tsx")({ message, author: messageAuthorWithProcessedColor, roleStyle });
   channel = channel.getChannel(message.channel_id);
   let flag;
   if (channel != null) {
@@ -24,7 +24,7 @@ export const createChangeChannelIconSystemMessage = function createChangeChannel
   if (flag == null) {
     flag = false;
   }
-  const tmp8 = importDefault(7882)(message);
+  const tmp8 = require("createCommonMessage.tsx")(message);
   const intl = tmp4(1236).intl;
   const formatToParts = intl.formatToParts;
   const t = tmp4(1236).t;

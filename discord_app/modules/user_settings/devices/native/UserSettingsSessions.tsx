@@ -144,14 +144,14 @@ function SessionInfo(session) {
             if ("horizon os" === trimmed) {
               let obj = { text: null, iconSource: null, IconComponent: null };
               obj[0] = os;
-              obj[1] = importDefault(10839);
+              obj[1] = require("../../../../../_runtime/10839_registerAsset.js");
               obj[2] = session(14101).VrHeadsetIcon;
               let tmp9 = session;
               let tmp10 = importDefault;
             } else {
               obj = { text: null, iconSource: null, IconComponent: null };
               obj[0] = os;
-              obj[1] = importDefault(14100);
+              obj[1] = require("../../../../../_runtime/14100_registerAsset.js");
               obj[2] = session(12092).ScreenIcon;
               tmp9 = session;
               tmp10 = importDefault;
@@ -160,7 +160,7 @@ function SessionInfo(session) {
         }
         obj = { text: null, iconSource: null, IconComponent: null };
         obj[0] = os;
-        obj[1] = importDefault(10839);
+        obj[1] = require("../../../../../_runtime/10839_registerAsset.js");
         obj[2] = session(8298).MobilePhoneIcon;
         tmp9 = session;
         tmp10 = importDefault;
@@ -249,29 +249,29 @@ function SessionInfo(session) {
   const obj16 = { text: null, iconSource: null, IconComponent: null };
   const intl = session(1236).intl;
   obj16[0] = intl.string(session(1236).t.cDHCNY);
-  obj16[1] = importDefault(14100);
+  obj16[1] = require("../../../../../_runtime/14100_registerAsset.js");
   obj16[2] = session(12092).ScreenIcon;
   tmp9 = session;
   tmp10 = importDefault;
   obj = obj16;
 }
 function UnknownLegacySessionsInfo() {
-  let obj = _require(1480);
+  let obj = _require("../../../../design/components/Navigator/native/useNavigation.native.tsx");
   _require = obj.useNavigation();
   obj = { icon: null, label: null, subLabel: null };
   obj = { variant: "translucent", source: null };
-  obj[1] = importDefault(11547);
-  obj[0] = callback2(_require(5315).TableRow.Icon, obj);
-  const intl = _require(1236).intl;
-  obj[1] = intl.string(_require(1236).t.iUa0sn);
-  const intl2 = _require(1236).intl;
-  obj[2] = intl2.format(_require(1236).t["044+8i"], {
+  obj[1] = require("../../../../../_runtime/11547_registerAsset.js");
+  obj[0] = callback2(_require("../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow.Icon, obj);
+  const intl = _require("../../../../intl/index.native.tsx").intl;
+  obj[1] = intl.string(_require("../../../../intl/index.native.tsx").t.iUa0sn);
+  const intl2 = _require("../../../../intl/index.native.tsx").intl;
+  obj[2] = intl2.format(_require("../../../../intl/index.native.tsx").t["044+8i"], {
     onClick() {
       outer1_1(outer1_2[24]).setSection(outer1_9.ACCOUNT);
       const obj = outer1_1(outer1_2[24]);
     }
   });
-  return callback2(_require(5315).TableRow, obj);
+  return callback2(_require("../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, obj);
 }
 ({ ActivityIndicator: c5, View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ UserSettingsSections: c9, Fonts } = ME);

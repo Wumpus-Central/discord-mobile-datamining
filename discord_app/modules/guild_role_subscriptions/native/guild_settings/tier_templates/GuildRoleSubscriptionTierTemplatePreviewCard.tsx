@@ -19,9 +19,9 @@ function ContentHeader(arg0) {
   const tmp = createCacheKey();
   let obj = { variant: "text-xs/bold", color: "text-muted", style: tmp.contentHeader, children: null };
   obj = { variant: "text-xs/bold", color: "text-default", style: tmp.contentHeader, children: count };
-  const items = [callback(require(4281) /* Text */.Text, obj), " ", title];
+  const items = [callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), " ", title];
   obj[3] = items;
-  return callback2(require(4281) /* Text */.Text, obj);
+  return callback2(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
 }
 function Separator() {
   return callback(closure_6, { style: createCacheKey().separator });
@@ -32,10 +32,10 @@ function BenefitShowCase(children) {
   if (typeof title === "string") {
     let obj = { variant: "text-md/semibold", color: "text-default", children: null };
     obj[2] = title;
-    tmp3 = callback(require(4281) /* Text */.Text, obj);
+    tmp3 = callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   }
   obj = { children: null };
-  const items = [tmp3, callback(require(1297) /* Button */.Spacer, { size: 2 }), callback(require(4281) /* Text */.Text, { variant: "text-sm/medium", color: "interactive-text-default", children: children.description })];
+  const items = [tmp3, callback(require("../../../../../design/void/native.tsx") /* Button */.Spacer, { size: 2 }), callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-sm/medium", color: "interactive-text-default", children: children.description })];
   obj[0] = items;
   return closure_10(closure_6, obj);
 }
@@ -44,9 +44,9 @@ function ChannelBenefitShowCase(channel) {
   let name;
   let type;
   ({ description, type, name } = channel.channel);
-  let obj = require(16747) /* getPrivateChannelIconComponent */;
+  let obj = require("GuildRoleSubscriptionTierTemplateUtils.tsx") /* getPrivateChannelIconComponent */;
   obj = { style: { flexDirection: "row", alignItems: "center" }, children: null };
-  const items = [callback(obj.getPrivateChannelIconComponent(type), { size: "xs" }), callback(require(1297) /* Button */.Spacer, { size: 4 }), callback(require(4281) /* Text */.Text, { variant: "text-md/semibold", color: "text-default", children: name })];
+  const items = [callback(obj.getPrivateChannelIconComponent(type), { size: "xs" }), callback(require("../../../../../design/void/native.tsx") /* Button */.Spacer, { size: 4 }), callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-md/semibold", color: "text-default", children: name })];
   obj[1] = items;
   obj = { title: callback2(closure_6, obj), description };
   return callback(BenefitShowCase, obj);
@@ -56,18 +56,18 @@ function ViewEntireTemplateFooter() {
   let obj = { style: tmp.viewEntireTemplateFooter, children: null };
   obj = { children: null };
   obj = { variant: "text-sm/semibold", color: "interactive-text-hover", style: { marginTop: -1 }, children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[3] = intl.string(require(1236) /* getSystemLocale */.t.kejaOD);
-  const items = [callback(require(4281) /* Text */.Text, obj), callback(require(1297) /* Button */.Spacer, { size: 3 }), callback(closure_6, { style: tmp.viewEntireTemplateFooterUnderline })];
+  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[3] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.kejaOD);
+  const items = [callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), callback(require("../../../../../design/void/native.tsx") /* Button */.Spacer, { size: 3 }), callback(closure_6, { style: tmp.viewEntireTemplateFooterUnderline })];
   obj[0] = items;
   const items1 = [callback2(closure_6, obj), ];
   const obj2 = { children: null };
   const obj3 = { size: null, source: null, style: null };
-  obj3[0] = require(1297) /* Button */.Icon.Sizes.REFRESH_SMALL_16;
-  obj3[1] = importDefault(5600);
+  obj3[0] = require("../../../../../design/void/native.tsx") /* Button */.Icon.Sizes.REFRESH_SMALL_16;
+  obj3[1] = require("../../../../../../_runtime/05600_registerAsset.js");
   const items2 = [{ rotate: "180deg" }];
   obj3[2] = { transform: items2 };
-  obj2[0] = callback(require(1297) /* Button */.Icon, obj3);
+  obj2[0] = callback(require("../../../../../design/void/native.tsx") /* Button */.Icon, obj3);
   items1[1] = callback(closure_6, obj2);
   obj[1] = items1;
   return callback2(closure_6, obj);

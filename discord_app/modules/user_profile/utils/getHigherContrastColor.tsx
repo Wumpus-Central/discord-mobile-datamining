@@ -11,21 +11,21 @@ export const getHigherContrastColor = function getHigherContrastColor(background
   [tmp2, tmp3] = callback(backgroundColor.colors, 2);
   let hex2intResult = backgroundColor;
   if (typeof backgroundColor === "string") {
-    hex2intResult = require(688) /* int2hslRaw */.hex2int(backgroundColor);
-    const obj3 = require(688) /* int2hslRaw */;
+    hex2intResult = require("../../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */.hex2int(backgroundColor);
+    const obj3 = require("../../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */;
   }
   let hex2intResult1 = tmp2;
   if (typeof tmp2 === "string") {
-    hex2intResult1 = require(688) /* int2hslRaw */.hex2int(tmp2);
-    const obj4 = require(688) /* int2hslRaw */;
+    hex2intResult1 = require("../../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */.hex2int(tmp2);
+    const obj4 = require("../../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */;
   }
   let hex2intResult2 = tmp3;
   if (typeof tmp3 === "string") {
-    hex2intResult2 = require(688) /* int2hslRaw */.hex2int(tmp3);
-    const obj5 = require(688) /* int2hslRaw */;
+    hex2intResult2 = require("../../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */.hex2int(tmp3);
+    const obj5 = require("../../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */;
   }
   const tmp = callback(backgroundColor.colors, 2);
-  const contrast = require(688) /* int2hslRaw */.getContrast(hex2intResult, hex2intResult1);
-  const obj = require(688) /* int2hslRaw */;
+  const contrast = require("../../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */.getContrast(hex2intResult, hex2intResult1);
+  const obj = require("../../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */;
   return tmp3;
 };

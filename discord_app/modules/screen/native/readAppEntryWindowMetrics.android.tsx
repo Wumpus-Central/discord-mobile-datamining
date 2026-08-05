@@ -2,7 +2,7 @@
 const result = require("set").fileFinishedImporting("modules/screen/native/readAppEntryWindowMetrics.android.tsx");
 
 export const readWindowSizeForAppEntry = function readWindowSizeForAppEntry(appEntryKey) {
-  const obj = importDefault(671);
+  const obj = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceModule.tsx");
   let windowSize;
   if (obj != null) {
     windowSize = obj.getWindowSize(appEntryKey);
@@ -10,7 +10,7 @@ export const readWindowSizeForAppEntry = function readWindowSizeForAppEntry(appE
   return windowSize;
 };
 export const readScreenSizeForAppEntry = function readScreenSizeForAppEntry(appEntryKey) {
-  const obj = importDefault(671);
+  const obj = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceModule.tsx");
   let screenSize;
   if (obj != null) {
     screenSize = obj.getScreenSize(appEntryKey);

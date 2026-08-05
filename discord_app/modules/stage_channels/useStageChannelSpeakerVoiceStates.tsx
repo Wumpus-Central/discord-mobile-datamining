@@ -18,7 +18,7 @@ export default function useStageChannelSpeakerVoiceStates(arg0) {
   const _require = arg0;
   let items = [getActiveStageChannelIds, ensureGuildLoaded, initializeFromUserSettings];
   const items1 = [arg0];
-  return callback(_require(589).useStateFromStores(items, () => {
+  return callback(_require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (obj.isFavoritesGuildId(callback)) {
       const keys = outer1_1(tmp2[7]).keys(outer1_4.getFavoriteChannels());
       const mapped = keys.map((arg0) => channel.getChannel(arg0));
@@ -38,6 +38,6 @@ export default function useStageChannelSpeakerVoiceStates(arg0) {
       found1.reduce((arg0, id) => arg0 + store.getParticipantsVersion(id.id), 0)
     ];
     return items;
-  }, items1, _require(5116).isVersionEqual), 1)[0];
+  }, items1, _require("../../utils/SecondaryIndexMapUtils.tsx").isVersionEqual), 1)[0];
 };
 export { transformParticipantToSortedVoiceState };

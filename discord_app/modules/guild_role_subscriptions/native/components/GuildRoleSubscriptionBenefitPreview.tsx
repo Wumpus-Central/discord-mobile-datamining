@@ -20,15 +20,15 @@ function BaseBenefitRow(isInteractive) {
   }
   const tmp = callback3();
   let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.emojiContainer, children: callback(importDefault(14376), { guildId, id: emoji }) };
+  obj = { style: tmp.emojiContainer, children: callback(require("EmojiIcon.tsx"), { guildId, id: emoji }) };
   const items = [callback(View, obj), , ];
   const items1 = [tmp.benefitColumn, contentStyle];
   items[1] = callback(View, { style: items1, children });
   let tmp4Result = true === flag;
   if (tmp4Result) {
     obj = { source: null };
-    obj[0] = importDefault(10711);
-    tmp4Result = callback(require(1297) /* Button */.Icon, obj);
+    obj[0] = require("../../../../../_runtime/10711_registerAsset.js");
+    tmp4Result = callback(require("../../../../design/void/native.tsx") /* Button */.Icon, obj);
   }
   items[2] = tmp4Result;
   obj[1] = items;
@@ -45,14 +45,14 @@ function DescriptiveBenefitRow(benefit) {
     const obj = { style: null, variant: "text-sm/medium", color: "interactive-text-default", children: null };
     obj[0] = tmp.benefitDescription;
     obj[3] = benefit.description;
-    tmp2 = callback(require(4281) /* Text */.Text, obj);
+    tmp2 = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   }
   let emoji = benefit.emoji_id;
   if (emoji == null) {
     let str = "";
     if (null != benefit.emoji_name) {
-      str = importDefault(3926).convertSurrogateToName(benefit.emoji_name, false);
-      const obj2 = importDefault(3926);
+      str = require("../../../emojis/UnicodeEmojis.tsx").convertSurrogateToName(benefit.emoji_name, false);
+      const obj2 = require("../../../emojis/UnicodeEmojis.tsx");
     }
     emoji = str;
   }
@@ -67,7 +67,7 @@ function ChannelBenefitRow(benefit) {
   benefit = benefit.benefit;
   ({ guildId, isInteractive } = benefit);
   const tmp = callback3();
-  let obj = require(14369) /* getUsedTemplateChannelsForGuild */;
+  let obj = require("../../tier_templates/GuildRoleSubscriptionTierTemplatesUtils.tsx") /* getUsedTemplateChannelsForGuild */;
   const channelWithTemplateFallback = obj.useChannelWithTemplateFallback(benefit.ref_id);
   let channelIcon = null;
   if (null != channelWithTemplateFallback) {
@@ -103,7 +103,7 @@ function ChannelBenefitRow(benefit) {
 }
 function IntangibleBenefitRow(benefit) {
   benefit = benefit.benefit;
-  obj = { benefit, guildId: benefit.guildId, isInteractive: benefit.isInteractive, children: callback(require(4281) /* Text */.Text, obj) };
+  obj = { benefit, guildId: benefit.guildId, isInteractive: benefit.isInteractive, children: callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj) };
   obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: benefit.name };
   return callback(DescriptiveBenefitRow, obj);
 }
@@ -115,10 +115,10 @@ function EmojiBenefitRow(benefit) {
   const tmp = callback3();
   let obj = { emoji: benefit.id, guildId, contentStyle: tmp.emojiRow, isInteractive, children: null };
   obj = { style: tmp.emojiColons, variant: "text-md/medium", color: "text-muted", children: ":" };
-  const items = [callback(require(4281) /* Text */.Text, obj), , ];
+  const items = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), , ];
   obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: benefit.name };
-  items[1] = callback(require(4281) /* Text */.Text, obj);
-  items[2] = callback(require(4281) /* Text */.Text, { style: tmp.emojiColons, variant: "text-md/medium", color: "text-muted", children: ":" });
+  items[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  items[2] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: tmp.emojiColons, variant: "text-md/medium", color: "text-muted", children: ":" });
   obj[4] = items;
   return callback2(BaseBenefitRow, obj);
 }

@@ -38,7 +38,7 @@ function parseThemedStyles(obj, enabledExperiments) {
       obj[0] = theme;
       let tmp18 = require;
       let tmp19 = dependencyMap;
-      let obj5 = require(500) /* set */;
+      let obj5 = require("../../../../utils/PlatformUtils.tsx") /* set */;
       obj[1] = obj5.isAndroid();
       enabledExperiments = arg1.enabledExperiments;
       if (enabledExperiments == null) {
@@ -55,10 +55,10 @@ function parseThemedStyles(obj, enabledExperiments) {
     } else {
       let tmp6 = importDefault;
       let tmp7 = dependencyMap;
-      let internal = importDefault(712).internal;
+      let internal = require("../../../../../discord_common/js/packages/tokens/native.tsx").internal;
       if (internal.isSemanticColor(obj2)) {
         let tmp16 = require;
-        let obj3 = require(3990) /* getSemanticColorContextFromThemeContext */;
+        let obj3 = require("../../../tokens/native/SemanticColorContext.native.tsx") /* getSemanticColorContextFromThemeContext */;
         let semanticColorContextFromThemeContext = obj3.getSemanticColorContextFromThemeContext(arg1);
         let internal4 = tmp6(712).internal;
         obj[key10022] = internal4.resolveSemanticColor(theme, obj2, semanticColorContextFromThemeContext);
@@ -215,7 +215,7 @@ export const createLegacyClassComponentStyles = function createLegacyClassCompon
   };
 };
 export const useLegacyClassComponentStyles = function useLegacyClassComponentStyles(createCacheKey) {
-  return createCacheKey(require(3997) /* ManaContext */.useThemeContext());
+  return createCacheKey(require("../../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */.useThemeContext());
 };
 export const createStyleProperties = function createStyleProperties(createCacheKey) {
   let closure_0 = createCacheKey;

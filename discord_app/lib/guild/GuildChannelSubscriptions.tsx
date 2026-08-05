@@ -22,7 +22,7 @@ prototype["get"] = function get(arg0) {
 prototype["_get"] = function _get(arg0) {
   let tmp = this._subscriptions[arg0];
   if (tmp == null) {
-    tmp = new importDefault(1386)({ max: 5 });
+    tmp = new require("../../../_runtime/01386_priv.js")({ max: 5 });
   }
   return tmp;
 };

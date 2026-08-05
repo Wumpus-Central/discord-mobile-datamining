@@ -22,17 +22,17 @@ let closure_21;
 let closure_22;
 const require = arg1;
 function showTooManyUserGuildsAlert(quantity) {
-  let obj = importDefault(4623);
+  let obj = require("AlertActionCreators.tsx");
   obj = { title: null, body: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.cTaRxF);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.cTaRxF);
+  const intl2 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
   obj = { quantity };
-  obj[1] = intl2.formatToPlainString(require(1236) /* getSystemLocale */.t["VSd+Aj"], obj);
+  obj[1] = intl2.formatToPlainString(require("../intl/index.native.tsx") /* getSystemLocale */.t["VSd+Aj"], obj);
   obj.show(obj);
 }
 function deleteGuild(id) {
-  let obj = importDefault(709);
+  let obj = require("../Dispatcher.tsx");
   obj = { id };
   obj.dispatch({ type: "GUILD_DELETE", guild: obj });
 }
@@ -572,35 +572,35 @@ export default {
   },
   deleteGuild,
   selectGuild(guildId) {
-    require(5845) /* stopLurkingAll */.stopLurking(guildId);
+    require("../modules/lurker_mode/LurkerActionCreators.tsx") /* stopLurkingAll */.stopLurking(guildId);
   },
   createGuild(guild) {
-    let obj = importDefault(709);
+    let obj = require("../Dispatcher.tsx");
     obj = { type: "GUILD_CREATE", guild };
     obj.dispatch(obj);
   },
   setServerMute(id, id2, mute) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: closure_16.GUILD_MEMBER(id, id2), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { mute };
-    obj[3] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[3] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.patch(obj);
   },
   setServerDeaf(id, id2, deaf) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: closure_16.GUILD_MEMBER(id, id2), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { deaf };
-    obj[3] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[3] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.patch(obj);
   },
   setChannel(guildId, outer1_1, channel_id) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: closure_16.GUILD_MEMBER(guildId, outer1_1), body: obj, oldFormErrors: true, rejectWithError: true };
     obj = { channel_id };
     HTTP.patch(obj);
   },
   setMemberFlags(id, id2, flags) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: closure_16.GUILD_MEMBER(id, id2), body: obj, oldFormErrors: true, rejectWithError: true };
     obj = { flags };
     HTTP.patch(obj);
@@ -608,11 +608,11 @@ export default {
   kickUser(id, id1, c0) {
     const _require = id;
     let closure_1 = id1;
-    const HTTP = _require(530).HTTP;
+    const HTTP = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     obj = { url: closure_16.GUILD_MEMBER(id, id1), query: obj, oldFormErrors: true, rejectWithError: null };
     obj = { reason: c0, moderator_report_id: arg3 };
-    obj[3] = _require(530).rejectWithMigratedError();
-    const obj3 = _require(530);
+    obj[3] = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+    const obj3 = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
     return HTTP.del(obj).then(() => {
       let obj = id1(outer1_3[14]);
       obj = { type: "GUILD_MEMBER_REMOVE_LOCAL", guildId: closure_0, userId: id1 };
@@ -627,9 +627,9 @@ export default {
     let reason;
     let userId;
     ({ guildId, userId, communicationDisabledUntilTimestamp, duration, reason, location: _location } = moderator_report_id);
-    let obj = importDefault(5094);
+    let obj = require("../utils/TrackedHTTPUtils.tsx");
     obj = { url: closure_16.GUILD_MEMBER(guildId, userId), reason, body: { communication_disabled_until: communicationDisabledUntilTimestamp, moderator_report_id: moderator_report_id.moderatorReportId }, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
-    obj = { event: require(503) /* encodeProperties */.NetworkActionNames.USER_COMMUNICATION_DISABLED_UPDATE, properties: null };
+    obj = { event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.NetworkActionNames.USER_COMMUNICATION_DISABLED_UPDATE, properties: null };
     const obj1 = { guild_id: guildId, target_user_id: userId, duration: null, reason: null, communication_disabled_until: null, location: null };
     let tmp3 = null;
     if (null != duration) {
@@ -649,20 +649,20 @@ export default {
     obj1[5] = tmp5;
     obj[1] = obj1;
     obj[4] = obj;
-    obj[5] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[5] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return obj.patch(obj);
   },
   banUser(id, id2, value, c1) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: closure_16.GUILD_BAN(id, id2), reason: c1, body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { delete_message_seconds: value, moderator_report_id: arg4 };
-    obj[4] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[4] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.put(obj);
   },
   unbanUser(id, id2) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     const obj = { url: closure_16.GUILD_BAN(id, id2), oldFormErrors: true, rejectWithError: null };
-    obj[2] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[2] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.del(obj);
   },
   banMultipleUsers(outer1_0, outer1_1, outer1_2, outer1_3, usePubSub) {
@@ -670,7 +670,7 @@ export default {
     if (usePubSub === undefined) {
       flag = false;
     }
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     let obj = closure_16;
     if (flag) {
       let BULK_GUILD_BAN_V2Result = obj.BULK_GUILD_BAN_V2(outer1_0);
@@ -679,7 +679,7 @@ export default {
     }
     obj = { url: BULK_GUILD_BAN_V2Result, body: obj, reason: outer1_3, oldFormErrors: true, rejectWithError: null };
     obj = { user_ids: outer1_1, delete_message_seconds: outer1_2 };
-    obj[4] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[4] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.post(obj);
   },
   startBulkBan(arg0, arg1, arg2, arg3) {
@@ -967,15 +967,15 @@ export default {
     })();
   },
   updateRolePermissions(c0, c1, permissions) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: closure_16.GUILD_ROLE(c0, c1), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { permissions };
-    obj[3] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[3] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.patch(obj);
   },
   deleteRole(id, id2) {
     const _require = id;
-    const HTTP = _require(530).HTTP;
+    const HTTP = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     const obj = { url: closure_16.GUILD_ROLE(id, id2), oldFormErrors: true, rejectWithError: true };
     HTTP.del({ url: closure_16.GUILD_ROLE(id, id2), oldFormErrors: true, rejectWithError: true }).then(() => {
       const result = outer1_1(outer1_3[30]).checkGuildTemplateDirty(closure_0);
@@ -1033,7 +1033,7 @@ export default {
       const items = [arg0];
       guildIds = items;
     }
-    return importDefault(709).dispatch({ type: "GUILD_MEMBERS_REQUEST", guildIds, query, limit, presences });
+    return require("../Dispatcher.tsx").dispatch({ type: "GUILD_MEMBERS_REQUEST", guildIds, query, limit, presences });
   },
   searchRecentMembers(guildId) {
     let continuationToken;
@@ -1044,14 +1044,14 @@ export default {
     }
     ({ query, continuationToken } = obj);
     obj = { type: "GUILD_SEARCH_RECENT_MEMBERS", guildId, query, continuationToken };
-    return importDefault(709).dispatch(obj);
+    return require("../Dispatcher.tsx").dispatch(obj);
   },
   requestMembersById(id1, items, arg2) {
     let flag = arg2;
     if (arg2 === undefined) {
       flag = true;
     }
-    let obj = importDefault(709);
+    let obj = require("../Dispatcher.tsx");
     let tmp = id1;
     if (!Array.isArray(id1)) {
       items = [id1];
@@ -1068,7 +1068,7 @@ export default {
     return obj.dispatch(obj);
   },
   move(fromIndex, toIndex, fromFolderIndex, toFolderIndex) {
-    let obj = importDefault(709);
+    let obj = require("../Dispatcher.tsx");
     obj = { type: "GUILD_MOVE", fromIndex, toIndex, fromFolderIndex, toFolderIndex };
     obj.dispatch(obj);
   },
@@ -1087,7 +1087,7 @@ export default {
       const error = new Error("GuildActionCreators.moveById: `sourceId` and `targetId` cannot be the same value: " + id);
       throw error;
     } else {
-      let obj = importDefault(709);
+      let obj = require("../Dispatcher.tsx");
       obj = { type: "GUILD_MOVE_BY_ID", sourceId: null, targetId: null, moveToBelow: null, combine: null };
       obj[1] = id;
       obj[2] = id2;
@@ -1097,23 +1097,23 @@ export default {
     }
   },
   createGuildFolderLocal(items, name) {
-    let obj = importDefault(698);
+    let obj = require("../utils/AnalyticsUtils.tsx");
     obj.track(constants.GUILD_FOLDER_CREATED);
     obj = { type: "GUILD_FOLDER_CREATE_LOCAL", sourceIds: items, name };
-    importDefault(709).dispatch(obj);
+    require("../Dispatcher.tsx").dispatch(obj);
   },
   editGuildFolderLocal(targetId, sourceIds, name) {
-    let obj = importDefault(709);
+    let obj = require("../Dispatcher.tsx");
     obj = { type: "GUILD_FOLDER_EDIT_LOCAL", targetId, sourceIds, name };
     obj.dispatch(obj);
   },
   deleteGuildFolderLocal(targetId) {
-    let obj = importDefault(709);
+    let obj = require("../Dispatcher.tsx");
     obj = { type: "GUILD_FOLDER_DELETE_LOCAL", targetId };
     obj.dispatch(obj);
   },
   toggleGuildFolderExpand(closure_0) {
-    let obj = importDefault(698);
+    let obj = require("../utils/AnalyticsUtils.tsx");
     let str = "expanded";
     if (isFolderExpandedResult) {
       str = "collapsed";
@@ -1122,23 +1122,23 @@ export default {
     isFolderExpandedResult = folderExpanded.isFolderExpanded(closure_0);
     const tmp2 = importDefault;
     obj = { type: "TOGGLE_GUILD_FOLDER_EXPAND", folderId: closure_0 };
-    importDefault(709).dispatch(obj);
+    require("../Dispatcher.tsx").dispatch(obj);
   },
   setGuildFolderExpanded(folderId, expanded) {
-    let obj = importDefault(709);
+    let obj = require("../Dispatcher.tsx");
     obj = { type: "SET_GUILD_FOLDER_EXPANDED", folderId, expanded };
     obj.dispatch(obj);
   },
   collapseAllFolders() {
-    importDefault(709).dispatch({ type: "GUILD_FOLDER_COLLAPSE" });
+    require("../Dispatcher.tsx").dispatch({ type: "GUILD_FOLDER_COLLAPSE" });
   },
   nsfwAgree(guildId) {
-    let obj = importDefault(709);
+    let obj = require("../Dispatcher.tsx");
     obj = { type: "GUILD_NSFW_AGREE", guildId };
     obj.dispatch(obj);
   },
   nsfwReturnToSafety(guildId) {
-    const tmp2 = importDefault(5851)(guildId);
+    const tmp2 = require("../modules/age_gate/getPreviousSafeRouteForNsfwReturn.native.tsx")(guildId);
     if (null == tmp2) {
       if (null != guildId) {
         const defaultChannel = store.getDefaultChannel(guildId);
@@ -1150,37 +1150,37 @@ export default {
               tmp11Result.transitionTo(closure_21.CHANNEL(guildId, defaultChannel.id));
             }
           }
-          obj3 = require(4498) /* shouldShowAgeGateForVoiceChannel */;
+          obj3 = require("../modules/age_gate/AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */;
         }
-        require(1222) /* transitionTo */.transitionTo(closure_21.FRIENDS, { navigationReplace: false, openChannel: true });
-        const obj6 = require(1222) /* transitionTo */;
+        require("../modules/routing/router_utils.tsx") /* transitionTo */.transitionTo(closure_21.FRIENDS, { navigationReplace: false, openChannel: true });
+        const obj6 = require("../modules/routing/router_utils.tsx") /* transitionTo */;
       } else {
-        require(1222) /* transitionTo */.transitionTo(closure_21.FRIENDS, { navigationReplace: false, openChannel: true });
-        const obj2 = require(1222) /* transitionTo */;
+        require("../modules/routing/router_utils.tsx") /* transitionTo */.transitionTo(closure_21.FRIENDS, { navigationReplace: false, openChannel: true });
+        const obj2 = require("../modules/routing/router_utils.tsx") /* transitionTo */;
       }
     } else {
-      require(1222) /* transitionTo */.transitionTo(closure_21.CHANNEL(tmp2.guildId, tmp2.channelId));
-      const obj = require(1222) /* transitionTo */;
+      require("../modules/routing/router_utils.tsx") /* transitionTo */.transitionTo(closure_21.CHANNEL(tmp2.guildId, tmp2.channelId));
+      const obj = require("../modules/routing/router_utils.tsx") /* transitionTo */;
     }
   },
   spoilerAgree(channelId) {
-    let obj = importDefault(709);
+    let obj = require("../Dispatcher.tsx");
     obj = { type: "CHANNEL_SPOILER_AGREE", channelId };
     obj.dispatch(obj);
   },
   clearSpoilerAgree(id) {
-    let obj = importDefault(709);
+    let obj = require("../Dispatcher.tsx");
     obj = { type: "CHANNEL_SPOILER_AGREE_CLEAR", channelId: id };
     obj.dispatch(obj);
   },
   escapeToDefaultChannel(guildId) {
     const defaultChannel = store.getDefaultChannel(guildId);
     if (null != defaultChannel) {
-      require(1222) /* transitionTo */.transitionTo(closure_21.CHANNEL(guildId, defaultChannel.id));
-      const obj2 = require(1222) /* transitionTo */;
+      require("../modules/routing/router_utils.tsx") /* transitionTo */.transitionTo(closure_21.CHANNEL(guildId, defaultChannel.id));
+      const obj2 = require("../modules/routing/router_utils.tsx") /* transitionTo */;
     } else {
-      require(1222) /* transitionTo */.transitionTo(closure_21.FRIENDS);
-      const obj = require(1222) /* transitionTo */;
+      require("../modules/routing/router_utils.tsx") /* transitionTo */.transitionTo(closure_21.FRIENDS);
+      const obj = require("../modules/routing/router_utils.tsx") /* transitionTo */;
     }
   },
   fetchApplications(arg0, arg1) {
@@ -1487,9 +1487,9 @@ export default {
   },
   fetchGuildRoleConnectionsEligibility(guildId, id) {
     const _require = id;
-    const HTTP = _require(530).HTTP;
+    const HTTP = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     let obj = { url: closure_16.GUILD_ROLE_CONNECTIONS_ELIGIBILITY(guildId, id), oldFormErrors: true, rejectWithError: null };
-    obj[2] = _require(530).rejectWithMigratedError();
+    obj[2] = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
     const value = HTTP.get(obj);
     return value.then((body) => {
       body = body.body;

@@ -8,7 +8,7 @@ const result = require("initialize").fileFinishedImporting("modules/video_calls/
 export const useIsStreamFocused = function useIsStreamFocused(id) {
   const _require = id;
   const items = [getParticipants];
-  const stateFromStores = _require(589).useStateFromStores(items, () => {
+  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let selectedParticipant = null;
     if (null != closure_0) {
       selectedParticipant = outer1_2.getSelectedParticipant(tmp);

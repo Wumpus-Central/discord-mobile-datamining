@@ -12,7 +12,7 @@ export const useCanSeeNUFChannelsForGuild = function useCanSeeNUFChannelsForGuil
   const _require = id;
   const items = [mergeGuildAvatar, createGuildRecordFromRust, trackCommunicationDisabled];
   const items1 = [id];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const currentUser = outer1_4.getCurrentUser();
     if (null != currentUser) {
       if (obj3.isNewUser(currentUser)) {

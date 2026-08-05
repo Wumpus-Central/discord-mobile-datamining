@@ -29,7 +29,7 @@ export default function BoostedGuildTierProgressCircle(arg0) {
   let theme;
   ({ guild, theme } = arg0);
   const tmp = createCacheKey();
-  importDefault(4192);
+  require("../powerups/hooks/useGuildPowerupsBoostCount.tsx");
   if (guild != null) {
     const id = guild.id;
   }
@@ -37,12 +37,12 @@ export default function BoostedGuildTierProgressCircle(arg0) {
     let obj = { style: null, children: null };
     obj[0] = tmp.guildTierBackground;
     obj = { source: null, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no" };
-    obj[0] = require(12684) /* getTier048PxSource */.getTier048PxSource(theme);
+    obj[0] = require("../../../design/components/Illustration/native/redesign/generated/Tier048Px.tsx") /* getTier048PxSource */.getTier048PxSource(theme);
     obj[1] = tmp.guildTierNoneIcon;
     obj[1] = callback(closure_4, obj);
     return callback(closure_3, obj);
   } else {
-    const nextGuildTierFromGuild = require(4177) /* getGuildTierFromGuild */.getNextGuildTierFromGuild(guild.id);
+    const nextGuildTierFromGuild = require("../../../utils/GuildBoostingUtils.tsx") /* getGuildTierFromGuild */.getNextGuildTierFromGuild(guild.id);
     let tmp7 = null;
     if (null != nextGuildTierFromGuild) {
       tmp7 = table[nextGuildTierFromGuild];
@@ -85,6 +85,6 @@ export default function BoostedGuildTierProgressCircle(arg0) {
     }
     tmp19Result = tmp19(12684);
     tier048PxSource = tmp19Result.getTier048PxSource(theme);
-    const obj10 = require(4177) /* getGuildTierFromGuild */;
+    const obj10 = require("../../../utils/GuildBoostingUtils.tsx") /* getGuildTierFromGuild */;
   }
 };

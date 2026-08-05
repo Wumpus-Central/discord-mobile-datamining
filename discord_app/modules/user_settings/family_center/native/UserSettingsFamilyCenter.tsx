@@ -22,7 +22,7 @@ const require = arg1;
 function FamilyCenterLoading() {
   const obj = { justify: "center", align: "center", style: createCacheKey().loadingContainer, children: null };
   obj[3] = callback2(closure_6, {});
-  return callback2(require(4693) /* Stack */.Stack, obj);
+  return callback2(require("../../../../design/components/Stack/native/Stack.native.tsx") /* Stack */.Stack, obj);
 }
 function FamilyCenter() {
   let openAgeGateModal;

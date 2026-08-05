@@ -3,10 +3,10 @@ import createToggle from "createToggle";
 
 function useWebBrowserSettingOptions() {
   let CHROME = dependencyMap;
-  let obj = require(4251) /* NativeModules */;
+  let obj = require("../../../links/native/BrowserManager.tsx") /* NativeModules */;
   const items = [];
   const browserManagerIsChromeInstalled = obj.useBrowserManagerIsChromeInstalled();
-  let obj1 = require(4251) /* NativeModules */;
+  let obj1 = require("../../../links/native/BrowserManager.tsx") /* NativeModules */;
   if (obj1.useBrowserManagerSupportsInAppBrowser()) {
     obj = { label: null, value: null };
     const intl = tmp(1236).intl;
@@ -44,29 +44,29 @@ function useWebBrowserSettingOptions() {
 }
 const radio = createToggle.createRadio({
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["C+DkPu"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["C+DkPu"]);
   },
   parent: require("MobileSetting").MobileSetting.WEB_BROWSER,
   useValue: function useWebBrowserSettingValue() {
-    return require(4251) /* NativeModules */.useBrowserManagerSelectedBrowser();
+    return require("../../../links/native/BrowserManager.tsx") /* NativeModules */.useBrowserManagerSelectedBrowser();
   },
   onValueChange: function onWebBrowserSettingValueChange(arg0) {
-    const result = require(4251) /* NativeModules */.browserManagerSelectBrowser(Number(arg0));
+    const result = require("../../../links/native/BrowserManager.tsx") /* NativeModules */.browserManagerSelectBrowser(Number(arg0));
   },
   useOptions: useWebBrowserSettingOptions
 });
 let obj = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["C+DkPu"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["C+DkPu"]);
   },
   parent: require("MobileSetting").MobileSetting.WEB_BROWSER,
   useValue: function useWebBrowserSettingValue() {
-    return require(4251) /* NativeModules */.useBrowserManagerSelectedBrowser();
+    return require("../../../links/native/BrowserManager.tsx") /* NativeModules */.useBrowserManagerSelectedBrowser();
   },
   onValueChange: function onWebBrowserSettingValueChange(arg0) {
-    const result = require(4251) /* NativeModules */.browserManagerSelectBrowser(Number(arg0));
+    const result = require("../../../links/native/BrowserManager.tsx") /* NativeModules */.browserManagerSelectBrowser(Number(arg0));
   },
   useOptions: useWebBrowserSettingOptions
 };

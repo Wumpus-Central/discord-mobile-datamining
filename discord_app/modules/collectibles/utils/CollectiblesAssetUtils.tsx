@@ -14,7 +14,7 @@ export const getCollectiblesItemAssetUrl = function getCollectiblesItemAssetUrl(
   } else {
     let _HermesInternal = globalThis;
     const _Boolean = Boolean;
-    const result = require(1351) /* isDiscordFrontendDevelopment */.isDiscordBackendDevelopment();
+    const result = require("../../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isDiscordBackendDevelopment();
     let str = Boolean(assetId);
     if (result) {
       let str9 = "";
@@ -33,6 +33,6 @@ export const getCollectiblesItemAssetUrl = function getCollectiblesItemAssetUrl(
       const _HermesInternal3 = HermesInternal;
       combined = "https://cdn.discordapp.com/" + tmp4 + "/" + skuId + "/" + str3 + assetFormat;
     }
-    const obj = require(1351) /* isDiscordFrontendDevelopment */;
+    const obj = require("../../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */;
   }
 };

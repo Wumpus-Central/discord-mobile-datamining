@@ -87,7 +87,7 @@ function getMatchValue(toLocaleLowerCaseResult1, nextResult, flag) {
       return 3;
     } else {
       if (flag) {
-        if (importDefault(5197)(queryLower, toLocaleLowerCaseResult1)) {
+        if (require("../../_runtime/05197_fuzzysearch.js")(queryLower, toLocaleLowerCaseResult1)) {
           return 1;
         }
       }
@@ -118,7 +118,7 @@ function queryMemberList(arg0) {
   const users = authStore2.getUsers();
   guildId = guildId.getGuildId();
   const toLocaleLowerCaseResult = query.toLocaleLowerCase();
-  let obj = require(1856) /* isNullOrEmpty */;
+  let obj = require("StringUtils.tsx") /* isNullOrEmpty */;
   const normalizeResult = obj.normalize(toLocaleLowerCaseResult);
   const items = [];
   const items1 = [];
@@ -148,7 +148,7 @@ function queryMemberList(arg0) {
       }
       let tmp12 = importDefault;
       let tmp13 = dependencyMap;
-      let obj3 = importDefault(4124);
+      let obj3 = require("UserUtils.tsx");
       let globalName = obj3.getGlobalName(tmp9);
       let tmp14 = tmp9;
       if (globalName != null) {
@@ -160,9 +160,9 @@ function queryMemberList(arg0) {
           let username = tmp9.username;
           let str3 = username.toLocaleLowerCase();
           let tmp16 = require;
-          let obj5 = require(1856) /* isNullOrEmpty */;
+          let obj5 = require("StringUtils.tsx") /* isNullOrEmpty */;
           let str4 = obj5.stripDiacritics(str3);
-          let obj6 = require(1856) /* isNullOrEmpty */;
+          let obj6 = require("StringUtils.tsx") /* isNullOrEmpty */;
           let str5 = obj6.normalize(str4);
           if (null == str) {
             let items2 = [null, null];
@@ -356,10 +356,10 @@ function queryMemberList(arg0) {
       let tmp4 = tmp13;
     } while (num2 < length);
   }
-  const sorted = items.sort(importDefault(5198));
+  const sorted = items.sort(require("../modules/autocompleter/sortByMatchScore.tsx"));
   let combined = items;
   if (items.length < limit) {
-    const sorted1 = items1.sort(importDefault(5198));
+    const sorted1 = items1.sort(require("../modules/autocompleter/sortByMatchScore.tsx"));
     const _Math = Math;
     combined = items.concat(items1.slice(0, Math.max(0, limit - items.length)));
   }
@@ -369,7 +369,7 @@ function queryMemberList(arg0) {
   return combined;
 }
 function getPriorityForStickerMetadataType(arg0) {
-  if (require(4951) /* StickerFormat */.StickerMetadataTypes.STICKER_NAME === arg0) {
+  if (require("../modules/stickers/StickersTypes.tsx") /* StickerFormat */.StickerMetadataTypes.STICKER_NAME === arg0) {
     return 11;
   } else if (tmp(4951).StickerMetadataTypes.CORRELATED_EMOJI === arg0) {
     return 6;
@@ -585,7 +585,7 @@ areArraysShallowlyEqual = {
     const obj = { query: limit.query, members: null, limit: null, filter: null };
     const friendIDs = store6.getFriendIDs();
     const mapped = friendIDs.map((arg0) => user.getUser(arg0));
-    obj[1] = mapped.filter(require(1351) /* isDiscordFrontendDevelopment */.isNotNullish);
+    obj[1] = mapped.filter(require("GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
     obj[2] = num;
     obj[3] = limit.filter;
     return queryMemberList(obj);
@@ -598,7 +598,7 @@ areArraysShallowlyEqual = {
     const obj = { query: limit.query, members: null, limit: null, filter: null };
     const dMUserIds = authStore.getDMUserIds();
     const mapped = dMUserIds.map((arg0) => user.getUser(arg0));
-    obj[1] = mapped.filter(require(1351) /* isDiscordFrontendDevelopment */.isNotNullish);
+    obj[1] = mapped.filter(require("GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
     obj[2] = num;
     obj[3] = limit.filter;
     return queryMemberList(obj);
@@ -667,9 +667,9 @@ areArraysShallowlyEqual = {
               if (null != id) {
                 if (null != channel2) {
                   const messages = store5.getMessages(id);
-                  const tmp16 = importDefault(12);
-                  const reversed = importDefault(12)(messages.toArray()).reverse();
-                  const tmp16Result = importDefault(12)(messages.toArray());
+                  const tmp16 = require("../../_runtime/00012_apply.js");
+                  const reversed = require("../../_runtime/00012_apply.js")(messages.toArray()).reverse();
+                  const tmp16Result = require("../../_runtime/00012_apply.js")(messages.toArray());
                   const mapped1 = reversed.uniqBy((author) => author.author.id).map((author) => user.getUser(author.author.id));
                   const found = mapped1.filter((isNonUserBot) => {
                     if (null == isNonUserBot) {
@@ -724,9 +724,9 @@ areArraysShallowlyEqual = {
           const found1 = members.filter(isValidGuildMember);
           tmp6 = found1;
           if (flag) {
-            const members1 = importDefault(5199).requestMembers(channel1.guild_id, query, limit);
+            const members1 = require("GuildUtils.tsx").requestMembers(channel1.guild_id, query, limit);
             tmp6 = found1;
-            const obj3 = importDefault(5199);
+            const obj3 = require("GuildUtils.tsx");
           }
         }
         obj = { query: null, members: null, limit: null, filter: null, allowSnowflake: null };
@@ -780,9 +780,9 @@ areArraysShallowlyEqual = {
           if (null != channelId) {
             if (null != channel) {
               const messages = store5.getMessages(channelId);
-              const tmp14 = importDefault(12);
-              const reversed = importDefault(12)(messages.toArray()).reverse();
-              const tmp14Result = importDefault(12)(messages.toArray());
+              const tmp14 = require("../../_runtime/00012_apply.js");
+              const reversed = require("../../_runtime/00012_apply.js")(messages.toArray()).reverse();
+              const tmp14Result = require("../../_runtime/00012_apply.js")(messages.toArray());
               const mapped = reversed.uniqBy((author) => author.author.id).map((author) => user.getUser(author.author.id));
               const found = mapped.filter((isNonUserBot) => {
                 if (null == isNonUserBot) {
@@ -839,7 +839,7 @@ areArraysShallowlyEqual = {
         flag = query.length > 0;
       }
       if (flag) {
-        let obj = importDefault(5199);
+        let obj = require("GuildUtils.tsx");
         const members1 = obj.requestMembers(guildId, query, limit);
       }
       obj = { query: null, members: null, limit: null, filter: null, allowSnowflake: null };
@@ -881,13 +881,13 @@ areArraysShallowlyEqual = {
       tmp = query.length > 0;
     }
     if (tmp) {
-      let obj = importDefault(5199);
+      let obj = require("GuildUtils.tsx");
       const members = obj.requestMembers(null, query, limit);
     }
     obj = { query, limit, request: flag, filter, boosters, users: null };
-    const tmp6 = importDefault(12);
-    const tmp6Result = importDefault(12)(authStore2.getUsers());
-    obj[5] = importDefault(12)(authStore2.getUsers()).values().value();
+    const tmp6 = require("../../_runtime/00012_apply.js");
+    const tmp6Result = require("../../_runtime/00012_apply.js")(authStore2.getUsers());
+    obj[5] = require("../../_runtime/00012_apply.js")(authStore2.getUsers()).values().value();
     return this.queryUsers(obj);
   },
   queryChannels(guildId) {
@@ -951,14 +951,14 @@ areArraysShallowlyEqual = {
       return tmp;
     })(type);
     if (null == guildId) {
-      const tmp6 = importDefault(12);
-      const values = importDefault(12)(authStore.loadAllGuildAndPrivateChannelsFromDisk()).values();
+      const tmp6 = require("../../_runtime/00012_apply.js");
+      const values = require("../../_runtime/00012_apply.js")(authStore.loadAllGuildAndPrivateChannelsFromDisk()).values();
       if (items) {
         let allActiveJoinedThreads = rebuild.computeAllActiveJoinedThreads();
       } else {
         allActiveJoinedThreads = [];
       }
-      const tmp6Result = importDefault(12)(authStore.loadAllGuildAndPrivateChannelsFromDisk());
+      const tmp6Result = require("../../_runtime/00012_apply.js")(authStore.loadAllGuildAndPrivateChannelsFromDisk());
       let valueResult = values.concat(allActiveJoinedThreads).value();
       items = [];
       const maxScore = store.getMaxScore();
@@ -966,8 +966,8 @@ areArraysShallowlyEqual = {
       includeAllThreads = 6;
       const iter = values.concat(allActiveJoinedThreads);
     }
-    const tmp10 = importDefault(12);
-    let mapped = importDefault(12)(channels.getChannels(guildId)[type]).map((channel) => channel.channel);
+    const tmp10 = require("../../_runtime/00012_apply.js");
+    let mapped = require("../../_runtime/00012_apply.js")(channels.getChannels(guildId)[type]).map((channel) => channel.channel);
     if (!items) {
       valueResult = tmp12([]).value();
       const iter2 = tmp12([]);
@@ -1004,10 +1004,10 @@ areArraysShallowlyEqual = {
       str = query.toLocaleLowerCase();
     }
     let obj = { exactQuery: null, containQuery: null, queryLower: null };
-    const regExp = new RegExp("^" + importDefault(4273).escape(str), "i");
+    const regExp = new RegExp("^" + require("RegexUtils.tsx").escape(str), "i");
     obj[0] = regExp;
-    const obj3 = importDefault(4273);
-    const regExp1 = new RegExp(importDefault(4273).escape(str), "i");
+    const obj3 = require("RegexUtils.tsx");
+    const regExp1 = new RegExp(require("RegexUtils.tsx").escape(str), "i");
     obj[1] = regExp1;
     obj[2] = str;
     const items = [];
@@ -1046,7 +1046,7 @@ areArraysShallowlyEqual = {
       }
       continue;
     }
-    const sorted = items.sort(importDefault(5198));
+    const sorted = items.sort(require("../modules/autocompleter/sortByMatchScore.tsx"));
     if (items.length > limit) {
       items.length = limit;
     }
@@ -1086,7 +1086,7 @@ areArraysShallowlyEqual = {
         const obj2 = _undefined2(outer1_3[34]);
       }
     });
-    const sorted = items.sort(importDefault(5198));
+    const sorted = items.sort(require("../modules/autocompleter/sortByMatchScore.tsx"));
     if (items.length > num) {
       items.length = num;
     }
@@ -1111,22 +1111,22 @@ areArraysShallowlyEqual = {
     if (boosters === undefined) {
       boosters = {};
     }
-    const obj2 = require(1856) /* isNullOrEmpty */;
-    const stripDiacriticsResult = obj2.stripDiacritics(require(1856) /* isNullOrEmpty */.normalize(query.toLocaleLowerCase()));
+    const obj2 = require("StringUtils.tsx") /* isNullOrEmpty */;
+    const stripDiacriticsResult = obj2.stripDiacritics(require("StringUtils.tsx") /* isNullOrEmpty */.normalize(query.toLocaleLowerCase()));
     let obj = { exactQuery: null, containQuery: null, queryLower: null };
-    const obj3 = require(1856) /* isNullOrEmpty */;
-    const regExp = new RegExp("^" + importDefault(4273).escape(stripDiacriticsResult), "i");
+    const obj3 = require("StringUtils.tsx") /* isNullOrEmpty */;
+    const regExp = new RegExp("^" + require("RegexUtils.tsx").escape(stripDiacriticsResult), "i");
     obj[0] = regExp;
-    const obj5 = importDefault(4273);
-    const regExp1 = new RegExp(importDefault(4273).escape(stripDiacriticsResult), "i");
+    const obj5 = require("RegexUtils.tsx");
+    const regExp1 = new RegExp(require("RegexUtils.tsx").escape(stripDiacriticsResult), "i");
     obj[1] = regExp1;
     obj[2] = stripDiacriticsResult;
-    const obj6 = importDefault(4273);
-    const tmp4 = importDefault(12);
-    const tmp4Result = importDefault(12)(authStore.getMutablePrivateChannels());
-    const iter = importDefault(12)(authStore.getMutablePrivateChannels()).values();
+    const obj6 = require("RegexUtils.tsx");
+    const tmp4 = require("../../_runtime/00012_apply.js");
+    const tmp4Result = require("../../_runtime/00012_apply.js")(authStore.getMutablePrivateChannels());
+    const iter = require("../../_runtime/00012_apply.js")(authStore.getMutablePrivateChannels()).values();
     const items = [];
-    const iter2 = importDefault(12)(authStore.getMutablePrivateChannels()).values().value()[Symbol.iterator]();
+    const iter2 = require("../../_runtime/00012_apply.js")(authStore.getMutablePrivateChannels()).values().value()[Symbol.iterator]();
     const nextResult = iter2.next();
     while (iter2 !== undefined) {
       let tmp6 = nextResult;
@@ -1135,14 +1135,14 @@ areArraysShallowlyEqual = {
         if (filter(tmp6)) {
           let tmp8 = require;
           let tmp9 = dependencyMap;
-          let obj9 = require(4475) /* computeChannelName */;
+          let obj9 = require("../modules/channel/useChannelName.tsx") /* computeChannelName */;
           let tmp10 = nextResult;
           let tmp11 = authStore2;
           let tmp12 = store6;
           let channelName = obj9.computeChannelName(tmp6, authStore2, store6);
           let toLocaleLowerCaseResult = channelName.toLocaleLowerCase();
-          let obj11 = require(1856) /* isNullOrEmpty */;
-          let obj12 = require(1856) /* isNullOrEmpty */;
+          let obj11 = require("StringUtils.tsx") /* isNullOrEmpty */;
+          let obj12 = require("StringUtils.tsx") /* isNullOrEmpty */;
           let stripDiacriticsResult1 = obj11.stripDiacritics(obj12.normalize(toLocaleLowerCaseResult));
           let tmp16 = getMatchValue;
           let tmp15 = stripDiacriticsResult1;
@@ -1162,7 +1162,7 @@ areArraysShallowlyEqual = {
               let tmp57 = importDefault;
               let tmp58 = dependencyMap;
               let tmp56 = username;
-              let obj17 = importDefault(4124);
+              let obj17 = require("UserUtils.tsx");
               let globalName = obj17.getGlobalName(tmp23);
               let tmp60 = store6;
               let tmp61 = item10107;
@@ -1192,8 +1192,8 @@ areArraysShallowlyEqual = {
           for (const item10133 of items1) {
             let tmp37 = require;
             let tmp38 = dependencyMap;
-            let obj13 = require(1856) /* isNullOrEmpty */;
-            let obj14 = require(1856) /* isNullOrEmpty */;
+            let obj13 = require("StringUtils.tsx") /* isNullOrEmpty */;
+            let obj14 = require("StringUtils.tsx") /* isNullOrEmpty */;
             let _Math = Math;
             let tmp39 = getMatchValue;
             let bound = Math.min(5, getMatchValue(obj13.stripDiacritics(obj14.normalize(item10133.toLocaleLowerCase())), obj, flag));
@@ -1216,7 +1216,7 @@ areArraysShallowlyEqual = {
             obj[2] = calculateScore(tmp17, boosters[tmp6.id]);
             let tmp48 = require;
             let tmp49 = dependencyMap;
-            let obj16 = require(4475) /* computeChannelName */;
+            let obj16 = require("../modules/channel/useChannelName.tsx") /* computeChannelName */;
             let tmp50 = authStore2;
             let tmp51 = store6;
             obj[3] = obj16.computeChannelName(tmp6, authStore2, store6);
@@ -1228,7 +1228,7 @@ areArraysShallowlyEqual = {
       }
       continue;
     }
-    const sorted = items.sort(importDefault(5198));
+    const sorted = items.sort(require("../modules/autocompleter/sortByMatchScore.tsx"));
     if (items.length > limit) {
       items.length = limit;
     }
@@ -1251,13 +1251,13 @@ areArraysShallowlyEqual = {
     }
     const toLocaleLowerCaseResult = query.toLocaleLowerCase();
     let obj = { exactQuery: null, containQuery: null, queryLower: null };
-    const regExp = new RegExp("^" + importDefault(4273).escape(toLocaleLowerCaseResult), "i");
+    const regExp = new RegExp("^" + require("RegexUtils.tsx").escape(toLocaleLowerCaseResult), "i");
     obj[0] = regExp;
-    const obj2 = importDefault(4273);
-    const regExp1 = new RegExp(importDefault(4273).escape(toLocaleLowerCaseResult), "i");
+    const obj2 = require("RegexUtils.tsx");
+    const regExp1 = new RegExp(require("RegexUtils.tsx").escape(toLocaleLowerCaseResult), "i");
     obj[1] = regExp1;
     obj[2] = toLocaleLowerCaseResult;
-    const obj3 = importDefault(4273);
+    const obj3 = require("RegexUtils.tsx");
     const items = [];
     const iter = LAUNCHABLE_APPLICATIONS()[Symbol.iterator]();
     while (iter !== undefined) {
@@ -1286,7 +1286,7 @@ areArraysShallowlyEqual = {
       }
       continue;
     }
-    const sorted = items.sort(importDefault(5198));
+    const sorted = items.sort(require("../modules/autocompleter/sortByMatchScore.tsx"));
     if (items.length > limit) {
       items.length = limit;
     }
@@ -1305,43 +1305,43 @@ areArraysShallowlyEqual = {
     }
     const toLocaleLowerCaseResult = query.toLocaleLowerCase();
     let obj = { exactQuery: null, containQuery: null, queryLower: null };
-    const regExp = new RegExp("^" + importDefault(4273).escape(toLocaleLowerCaseResult), "i");
+    const regExp = new RegExp("^" + require("RegexUtils.tsx").escape(toLocaleLowerCaseResult), "i");
     obj[0] = regExp;
-    const obj2 = importDefault(4273);
-    const regExp1 = new RegExp(importDefault(4273).escape(toLocaleLowerCaseResult), "i");
+    const obj2 = require("RegexUtils.tsx");
+    const regExp1 = new RegExp(require("RegexUtils.tsx").escape(toLocaleLowerCaseResult), "i");
     obj[1] = regExp1;
     obj[2] = toLocaleLowerCaseResult;
     obj = {};
-    const intl = require(1236) /* getSystemLocale */.intl;
-    const items = [intl.string(require(1236) /* getSystemLocale */.t.pWG4ze)];
+    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const items = [intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.pWG4ze)];
     obj[constants.SHOP] = items;
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    const items1 = [intl2.string(require(1236) /* getSystemLocale */.t.ElYQFS), , ];
-    const intl3 = require(1236) /* getSystemLocale */.intl;
-    items1[1] = intl3.string(require(1236) /* getSystemLocale */.t.pWG4ze);
-    const intl4 = require(1236) /* getSystemLocale */.intl;
-    items1[2] = intl4.string(require(1236) /* getSystemLocale */.t.EBYkzk);
+    const intl2 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const items1 = [intl2.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.ElYQFS), , ];
+    const intl3 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    items1[1] = intl3.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.pWG4ze);
+    const intl4 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    items1[2] = intl4.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.EBYkzk);
     obj[constants.SHOP_ORBS_TAB] = items1;
-    const intl5 = require(1236) /* getSystemLocale */.intl;
-    const items2 = [intl5.string(require(1236) /* getSystemLocale */.t.ElYQFS), , ];
-    const intl6 = require(1236) /* getSystemLocale */.intl;
-    items2[1] = intl6.string(require(1236) /* getSystemLocale */.t["v/R2aC"]);
-    const intl7 = require(1236) /* getSystemLocale */.intl;
-    items2[2] = intl7.string(require(1236) /* getSystemLocale */.t.qQR4tn);
+    const intl5 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const items2 = [intl5.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.ElYQFS), , ];
+    const intl6 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    items2[1] = intl6.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["v/R2aC"]);
+    const intl7 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    items2[2] = intl7.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.qQR4tn);
     obj[constants.QUEST_ORBS] = items2;
-    const intl8 = require(1236) /* getSystemLocale */.intl;
-    const items3 = [intl8.string(require(1236) /* getSystemLocale */.t.Ipxkog)];
+    const intl8 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const items3 = [intl8.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.Ipxkog)];
     obj[constants.NITRO_HOME] = items3;
-    const intl9 = require(1236) /* getSystemLocale */.intl;
-    const items4 = [intl9.string(require(1236) /* getSystemLocale */.t.JALI2K)];
+    const intl9 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const items4 = [intl9.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.JALI2K)];
     obj[constants.QUEST_HOME] = items4;
-    const intl10 = require(1236) /* getSystemLocale */.intl;
-    const items5 = [intl10.string(require(1236) /* getSystemLocale */.t.PHjkRE), ];
-    const intl11 = require(1236) /* getSystemLocale */.intl;
-    items5[1] = intl11.string(require(1236) /* getSystemLocale */.t.AKcFUj);
+    const intl10 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const items5 = [intl10.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.PHjkRE), ];
+    const intl11 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    items5[1] = intl11.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.AKcFUj);
     obj[constants.APPS_HOME] = items5;
-    const intl12 = require(1236) /* getSystemLocale */.intl;
-    const items6 = [intl12.string(require(1236) /* getSystemLocale */.t["3D5yo/"])];
+    const intl12 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const items6 = [intl12.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["3D5yo/"])];
     obj[constants.SETTINGS] = items6;
     const items7 = [];
     for (const key10167 in obj) {
@@ -1378,7 +1378,7 @@ areArraysShallowlyEqual = {
       }
       continue;
     }
-    const sorted = items7.sort(importDefault(5198));
+    const sorted = items7.sort(require("../modules/autocompleter/sortByMatchScore.tsx"));
     if (items7.length > limit) {
       items7.length = limit;
     }
@@ -1401,18 +1401,18 @@ areArraysShallowlyEqual = {
     }
     const toLocaleLowerCaseResult = query.toLocaleLowerCase();
     let obj = { exactQuery: null, containQuery: null, queryLower: null };
-    const regExp = new RegExp("^" + importDefault(4273).escape(toLocaleLowerCaseResult), "i");
+    const regExp = new RegExp("^" + require("RegexUtils.tsx").escape(toLocaleLowerCaseResult), "i");
     obj[0] = regExp;
-    const obj2 = importDefault(4273);
-    const regExp1 = new RegExp(importDefault(4273).escape(toLocaleLowerCaseResult), "i");
+    const obj2 = require("RegexUtils.tsx");
+    const regExp1 = new RegExp(require("RegexUtils.tsx").escape(toLocaleLowerCaseResult), "i");
     obj[1] = regExp1;
     obj[2] = toLocaleLowerCaseResult;
-    const obj3 = importDefault(4273);
-    const tmp4 = importDefault(12);
-    const tmp4Result = importDefault(12)(sKUs.getSKUs());
-    const iter = importDefault(12)(sKUs.getSKUs()).values();
+    const obj3 = require("RegexUtils.tsx");
+    const tmp4 = require("../../_runtime/00012_apply.js");
+    const tmp4Result = require("../../_runtime/00012_apply.js")(sKUs.getSKUs());
+    const iter = require("../../_runtime/00012_apply.js")(sKUs.getSKUs()).values();
     const items = [];
-    const iter2 = importDefault(12)(sKUs.getSKUs()).values().value()[Symbol.iterator]();
+    const iter2 = require("../../_runtime/00012_apply.js")(sKUs.getSKUs()).values().value()[Symbol.iterator]();
     const nextResult = iter2.next();
     while (iter2 !== undefined) {
       let tmp7 = nextResult;
@@ -1443,7 +1443,7 @@ areArraysShallowlyEqual = {
       }
       continue;
     }
-    const sorted = items.sort(importDefault(5198));
+    const sorted = items.sort(require("../modules/autocompleter/sortByMatchScore.tsx"));
     if (items.length > limit) {
       items.length = limit;
     }
@@ -1454,9 +1454,9 @@ areArraysShallowlyEqual = {
     if (null != channelId) {
       if (null != channel) {
         const messages = store5.getMessages(channelId);
-        const tmp6 = importDefault(12);
-        const reversed = importDefault(12)(messages.toArray()).reverse();
-        const tmp6Result = importDefault(12)(messages.toArray());
+        const tmp6 = require("../../_runtime/00012_apply.js");
+        const reversed = require("../../_runtime/00012_apply.js")(messages.toArray()).reverse();
+        const tmp6Result = require("../../_runtime/00012_apply.js")(messages.toArray());
         const mapped = reversed.uniqBy((author) => author.author.id).map((author) => user.getUser(author.author.id));
         const found = mapped.filter((isNonUserBot) => {
           if (null == isNonUserBot) {
@@ -1895,38 +1895,38 @@ areArraysShallowlyEqual = {
     ({ query, guild } = arg0);
     const toLocaleLowerCaseResult = query.toLocaleLowerCase();
     let obj = { exactQuery: null, containQuery: null, queryLower: null };
-    let obj1 = importDefault(4273);
+    let obj1 = require("RegexUtils.tsx");
     const regExp = new RegExp("^" + obj1.escape(toLocaleLowerCaseResult), "i");
     obj[0] = regExp;
-    let obj2 = importDefault(4273);
+    let obj2 = require("RegexUtils.tsx");
     const regExp1 = new RegExp(obj2.escape(toLocaleLowerCaseResult), "i");
     obj[1] = regExp1;
     obj[2] = toLocaleLowerCaseResult;
-    let canSeeOnboardingHomeResult = require(5753) /* useCanSeeOnboardingHome */.canSeeOnboardingHome(guild.id);
+    let canSeeOnboardingHomeResult = require("../modules/guild_onboarding_home/OnboardingHomeUtils.tsx") /* useCanSeeOnboardingHome */.canSeeOnboardingHome(guild.id);
     if (canSeeOnboardingHomeResult) {
       const features = guild.features;
       canSeeOnboardingHomeResult = !features.has(constants2.HUB);
     }
     const features2 = guild.features;
     const hasItem = features2.has(constants2.COMMUNITY);
-    const obj4 = require(5753) /* useCanSeeOnboardingHome */;
+    const obj4 = require("../modules/guild_onboarding_home/OnboardingHomeUtils.tsx") /* useCanSeeOnboardingHome */;
     const tmp8 = constants2;
-    let result = require(5859) /* useGuildOnboardingAvailable */.isGuildOnboardingAvailable(guild);
+    let result = require("../modules/guild_onboarding/useGuildOnboardingAvailable.tsx") /* useGuildOnboardingAvailable */.isGuildOnboardingAvailable(guild);
     if (result) {
       const features3 = guild.features;
       result = features3.has(tmp8.COMMUNITY);
     }
     obj = { id: StaticChannelId.SERVER_GUIDE, name: null };
     const intl = tmp5(1236).intl;
-    obj[1] = intl.string(require(1236) /* getSystemLocale */.t.VbpLyU);
+    obj[1] = intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.VbpLyU);
     const items = [obj, , ];
     obj = { id: StaticChannelId.CHANNEL_BROWSER, name: null };
     const intl2 = tmp5(1236).intl;
-    obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.et6wav);
+    obj[1] = intl2.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.et6wav);
     items[1] = obj;
     obj1 = { id: StaticChannelId.CUSTOMIZE_COMMUNITY, name: null };
     const intl3 = tmp5(1236).intl;
-    obj1[1] = intl3.string(require(1236) /* getSystemLocale */.t.h9mGOP);
+    obj1[1] = intl3.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.h9mGOP);
     items[2] = obj1;
     const items1 = [];
     const iter = items[Symbol.iterator]();
@@ -2032,7 +2032,7 @@ areArraysShallowlyEqual = {
         continue;
       }
       const found = items1.filter((record) => "null" !== record.record.id);
-      let sorted = found.sort(importDefault(5860));
+      let sorted = found.sort(require("../modules/channel_text_area/compareChannelsByScoreAndPosition.tsx"));
       let tmp8 = null != limit;
       if (tmp8) {
         tmp8 = sorted.length > limit;
@@ -2060,7 +2060,7 @@ areArraysShallowlyEqual = {
     if (maxCount === undefined) {
       maxCount = closure_42;
     }
-    const FrecencyUserSettingsActionCreators = require(1355) /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = require("../modules/user_settings/UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
     return { emojis: getEmojiToGroupId.searchWithoutFetchingLatest({ channel, query, count: maxCount, intention, matchComparator: matchComparator.matchComparator }) };
   },
@@ -2209,8 +2209,8 @@ areArraysShallowlyEqual = {
       let _loopResult = _loop();
       continue;
     }
-    let obj = importDefault(12)(items1);
-    let valueResult = importDefault(12)(items1).sortBy((score) => -1 * score.score).value();
+    let obj = require("../../_runtime/00012_apply.js")(items1);
+    let valueResult = require("../../_runtime/00012_apply.js")(items1).sortBy((score) => -1 * score.score).value();
     closure_5 = valueResult;
     if (0 === valueResult.length) {
       closure_5 = closure_49;
@@ -2227,10 +2227,10 @@ areArraysShallowlyEqual = {
       tmp3 = !obj.hasFetchedAllSounds();
     }
     if (tmp3) {
-      const result = _require(5862).maybeFetchSoundboardSounds();
-      const obj2 = _require(5862);
+      const result = _require("../modules/soundboard/SoundboardActionCreators.tsx").maybeFetchSoundboardSounds();
+      const obj2 = _require("../modules/soundboard/SoundboardActionCreators.tsx");
     }
-    const FrecencyUserSettingsActionCreators = _require(1355).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = _require("../modules/user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
     const sounds = obj.getSounds();
     const reduced = Array.from(sounds.values()).reduce((arg0, arr) => {
@@ -2251,7 +2251,7 @@ areArraysShallowlyEqual = {
       return arg0;
     }, []);
     let arr = Array.from(sounds.values());
-    return _require(5867).searchSounds(arg0, reduced, currentUser, channel);
+    return _require("../modules/soundboard/searchSounds.tsx").searchSounds(arg0, reduced, currentUser, channel);
   },
   matchSentinel(arg0, arg1, storeThread) {
     const isMatch = tmp7.test(arg1);

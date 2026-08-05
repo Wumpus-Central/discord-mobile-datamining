@@ -7,7 +7,7 @@ import { Store } from "initialize";
 
 const require = arg1;
 function showReviewRequestModal() {
-  const rootNavigationRef = require(4137) /* getRootNavigationRef */.getRootNavigationRef();
+  const rootNavigationRef = require("../../main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */.getRootNavigationRef();
   let tmp3 = null != rootNavigationRef && rootNavigationRef.isReady();
   if (tmp3) {
     let tmpResult = tmp(4136);
@@ -19,18 +19,18 @@ function showReviewRequestModal() {
   if (tmp3) {
     if (!keyboardIsOpen) {
       if (!tmp5) {
-        importDefault(698).track(AnalyticEvents.REVIEW_REQUEST_SHOW_ATTEMPTED);
+        require("../../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.REVIEW_REQUEST_SHOW_ATTEMPTED);
         closure_9.revision = 1;
         const Storage = tmp(595).Storage;
         const result = Storage.set(RequestReviewStore, closure_9);
-        importDefault(12866)();
+        require("requestReviewModal.tsx")();
         let c10 = false;
-        const obj5 = importDefault(698);
+        const obj5 = require("../../../utils/AnalyticsUtils.tsx");
       }
     }
   }
-  const obj = require(4137) /* getRootNavigationRef */;
-  importDefault(698).track(AnalyticEvents.REVIEW_REQUEST_DEFERRED, { is_keyboard_open: keyboardIsOpen, is_in_voice: tmp5, is_viewing_chat: tmp3 });
+  const obj = require("../../main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */;
+  require("../../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.REVIEW_REQUEST_DEFERRED, { is_keyboard_open: keyboardIsOpen, is_in_voice: tmp5, is_viewing_chat: tmp3 });
   if (-1 !== timeout) {
     const _clearTimeout = clearTimeout;
     clearTimeout(timeout);
@@ -68,7 +68,7 @@ let c11 = -1;
 class RequestReviewStore extends Store {
 }
 RequestReviewStore.prototype["initialize"] = function initialize() {
-  const Storage = require(595) /* Storage */.Storage;
+  const Storage = require("../../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
   let obj = Storage.get(RequestReviewStore);
   if (obj == null) {
     obj = { revision: 0 };
@@ -79,8 +79,8 @@ RequestReviewStore.displayName = "RequestReviewStore";
 const requestReviewStore = new RequestReviewStore(require("dispatcher"), {
   CONNECTION_OPEN: function handleConnectionOpen(guilds) {
     guilds = guilds.guilds;
-    let obj = require(12868) /* getFirstInstallTimeMillis */;
-    obj = { from: "authed", unit: require(4360) /* sleep */.TimeUnits.DAYS };
+    let obj = require("../../install/native/InstallTime.tsx") /* getFirstInstallTimeMillis */;
+    obj = { from: "authed", unit: require("../../../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */.TimeUnits.DAYS };
     let tmp3 = obj.getFirstInstallTimeElapsed(obj) >= 10;
     const someResult = guilds.some((member_count) => member_count.member_count >= 5);
     if (revision.revision < 1) {
@@ -88,8 +88,8 @@ const requestReviewStore = new RequestReviewStore(require("dispatcher"), {
       obj[1] = tmp3;
       obj[2] = someResult;
       obj[3] = tmp5;
-      importDefault(698).track(AnalyticEvents.REVIEW_REQUEST_ELIGIBILITY_CHECKED, obj);
-      const obj3 = importDefault(698);
+      require("../../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.REVIEW_REQUEST_ELIGIBILITY_CHECKED, obj);
+      const obj3 = require("../../../utils/AnalyticsUtils.tsx");
     }
     if (tmp3) {
       tmp3 = tmp5;
@@ -130,7 +130,7 @@ const requestReviewStore = new RequestReviewStore(require("dispatcher"), {
       clearTimeout(timeout);
       timeout = -1;
     }
-    const RequestReviewNoTTIExperiment = require(12865) /* apexExperiment */.RequestReviewNoTTIExperiment;
+    const RequestReviewNoTTIExperiment = require("RequestReviewNoTTIExperiment.tsx") /* apexExperiment */.RequestReviewNoTTIExperiment;
     let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
     let tmp6 = c10;
     if (c10) {
@@ -145,7 +145,7 @@ const requestReviewStore = new RequestReviewStore(require("dispatcher"), {
     }
     if (tmp6) {
       const _setTimeout = setTimeout;
-      timeout = setTimeout(showReviewRequestModal, require(4360) /* sleep */.MS_PER_MINUTE);
+      timeout = setTimeout(showReviewRequestModal, require("../../../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */.MS_PER_MINUTE);
     }
   },
   CONNECTION_CLOSED: handleConnectionClosedOrInterrupted,
@@ -157,7 +157,7 @@ const requestReviewStore = new RequestReviewStore(require("dispatcher"), {
       clearTimeout(timeout);
       timeout = -1;
     }
-    const RequestReviewNoTTIExperiment = require(12865) /* apexExperiment */.RequestReviewNoTTIExperiment;
+    const RequestReviewNoTTIExperiment = require("RequestReviewNoTTIExperiment.tsx") /* apexExperiment */.RequestReviewNoTTIExperiment;
     let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
     let tmp6 = c10;
     if (c10) {
@@ -172,11 +172,11 @@ const requestReviewStore = new RequestReviewStore(require("dispatcher"), {
     }
     if (tmp6) {
       const _setTimeout = setTimeout;
-      timeout = setTimeout(showReviewRequestModal, require(4360) /* sleep */.MS_PER_MINUTE);
+      timeout = setTimeout(showReviewRequestModal, require("../../../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */.MS_PER_MINUTE);
     }
   },
   APP_STATE_UPDATE: function handleAppStateUpdate(state) {
-    if (state.state === require(691) /* keys */.AppStates.ACTIVE) {
+    if (state.state === require("../../../ConstantsIOS.tsx") /* keys */.AppStates.ACTIVE) {
       if (-1 !== timeout) {
         const _clearTimeout = clearTimeout;
         clearTimeout(timeout);

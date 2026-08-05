@@ -74,7 +74,7 @@ function maybeGetPerkPurchaseablePopoutDCF(closure_1) {
       }
       return [];
     }
-  }).filter(_require(1351).isNotNullish);
+  }).filter(_require("../../../../utils/GlobalUtils.tsx").isNotNullish);
   if (0 !== found.length) {
     if (1 === found.length) {
       let tmp4Result = tmp4(11767);
@@ -108,18 +108,18 @@ function useGuildPowerupsNotificationIndicator(arg0, arg1, lastBoostCount) {
   const _require = arg0;
   const importDefault = arg1;
   const dependencyMap = lastBoostCount;
-  const available = importDefault(4192)(arg0).available;
-  const tmp2 = importDefault(11770)(arg0, "useGuildPowerupsNotificationIndicator");
+  const available = require("useGuildPowerupsBoostCount.tsx")(arg0).available;
+  const tmp2 = require("useGuildPowerupRollbackNotificationConfig.tsx")(arg0, "useGuildPowerupsNotificationIndicator");
   let dismissibleContent = null;
   if (null != tmp2) {
     dismissibleContent = tmp2.dismissibleContent;
   }
-  const tmp5 = null != tmp2 && !_require(1360).useIsSingleUseGuildDismissibleContentDismissed(dismissibleContent, arg0);
+  const tmp5 = null != tmp2 && !_require("../../../dismissible_content/DismissibleContentUtils.tsx").useIsSingleUseGuildDismissibleContentDismissed(dismissibleContent, arg0);
   const React = tmp5;
-  let obj = _require(1360);
+  let obj = _require("../../../dismissible_content/DismissibleContentUtils.tsx");
   const tmp3 = _require;
   let items = [stateFromStores];
-  stateFromStores = _require(647).useStateFromStores(items, () => stateFromStores.getStateForGuild(closure_0));
+  stateFromStores = _require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => stateFromStores.getStateForGuild(closure_0));
   const items1 = [available, , , , , ];
   lastBoostCount = undefined;
   if (lastBoostCount != null) {
@@ -205,14 +205,14 @@ function useGuildPowerupsNotificationIndicator(arg0, arg1, lastBoostCount) {
 function useGuildPowerupsChannelListPopout(c0) {
   const _require = c0;
   const importDefault = arg1;
-  let tmp4 = callback(_require(11774).usePerksCoachmarkDCF(null != arg1), 2);
+  let tmp4 = callback(_require("GuildPowerupsNotificationsDCF.native.tsx").usePerksCoachmarkDCF(null != arg1), 2);
   const dependencyMap = tmp5;
-  const tmp6 = tmp4[0] === _require(1358).DismissibleContent.GUILD_POWERUP_PERKS_COACHMARK;
+  const tmp6 = tmp4[0] === _require("../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleContent.GUILD_POWERUP_PERKS_COACHMARK;
   callback = tmp6;
-  const available = importDefault(4192)(c0).available;
-  let obj = _require(11774);
+  const available = require("useGuildPowerupsBoostCount.tsx")(c0).available;
+  let obj = _require("GuildPowerupsNotificationsDCF.native.tsx");
   const items = [stateFromStores1];
-  const stateFromStores = _require(647).useStateFromStores(items, () => {
+  const stateFromStores = _require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
     const guild = stateFromStores1.getGuild(closure_0);
     let flag;
     if (guild != null) {
@@ -224,16 +224,16 @@ function useGuildPowerupsChannelListPopout(c0) {
     }
     return flag;
   });
-  let obj2 = _require(647);
+  let obj2 = _require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx");
   const items1 = [stateFromStores];
-  stateFromStores1 = _require(647).useStateFromStores(items1, () => stateFromStores.getLowestGameCostForGuild(closure_0));
-  let obj3 = _require(647);
-  let serverThemeEnabled = _require(4215).useServerThemeEnabled(c0, "useGuildPowerupsChannelListPopout");
-  let obj4 = _require(4215);
+  stateFromStores1 = _require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items1, () => stateFromStores.getLowestGameCostForGuild(closure_0));
+  let obj3 = _require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx");
+  let serverThemeEnabled = _require("../experiments/ServerThemeExperiment.tsx").useServerThemeEnabled(c0, "useGuildPowerupsChannelListPopout");
+  let obj4 = _require("../experiments/ServerThemeExperiment.tsx");
   if (serverThemeEnabled) {
     serverThemeEnabled = obj5.useServerThemeUserEnabled("useGuildPowerupsChannelListPopout");
   }
-  let tmp11 = importDefault(11776)(c0, arg1);
+  let tmp11 = require("useGuildPowerupNewPerkMarketingVersion.tsx")(c0, arg1);
   let calculateAppliedBoosts = tmp11;
   let tmpResult = tmp(11774);
   let tmp12 = null != arg1;
@@ -242,11 +242,11 @@ function useGuildPowerupsChannelListPopout(c0) {
   }
   let tmp3Result = tmp3(tmpResult.useNewPerkAvailableCoachmarkDCF(tmp12, tmp11), 2);
   let closure_9 = tmp14;
-  const tmp15 = tmp3Result[0] === _require(1358).DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK;
+  const tmp15 = tmp3Result[0] === _require("../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK;
   let closure_10 = tmp15;
-  let tmp16 = importDefault(11777)(c0);
+  let tmp16 = require("useBoostToUnlockFeaturedPowerup.tsx")(c0);
   let closure_11 = tmp16;
-  obj5 = _require(4214);
+  obj5 = _require("../experiments/ServerThemeUserExperiment.tsx");
   tmpResult = tmp(11774);
   let tmp18 = null != arg1;
   if (tmp18) {
@@ -263,11 +263,11 @@ function useGuildPowerupsChannelListPopout(c0) {
   }
   tmp3Result = tmp3(tmpResult.useBoostToUnlockCoachmarkDCF(tmp18, c0), 2);
   let closure_12 = tmp20;
-  let tmp21 = tmp3Result[0] === _require(1358).DismissibleContent.BOOST_TO_UNLOCK_COACHMARK;
+  let tmp21 = tmp3Result[0] === _require("../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleContent.BOOST_TO_UNLOCK_COACHMARK;
   let closure_13 = tmp21;
-  const tmp22 = importDefault(11779)(c0);
+  const tmp22 = require("useFeaturedExpiringPowerup.tsx")(c0);
   let closure_14 = tmp22;
-  tmp17 = importDefault(11778)();
+  tmp17 = require("useCanPurchaseBoosts.tsx")();
   let tmp23 = null != arg1;
   if (tmp23) {
     tmp23 = !tmp6;
@@ -281,15 +281,15 @@ function useGuildPowerupsChannelListPopout(c0) {
   if (tmp23) {
     tmp23 = null != tmp22;
   }
-  const tmp3Result1 = callback(_require(11774).useExpiringPowerupCoachmarkDCF(tmp23, c0), 2);
+  const tmp3Result1 = callback(_require("GuildPowerupsNotificationsDCF.native.tsx").useExpiringPowerupCoachmarkDCF(tmp23, c0), 2);
   let closure_15 = tmp25;
-  let tmp26 = tmp3Result1[0] === _require(1358).DismissibleContent.EXPIRING_POWERUP_COACHMARK;
+  let tmp26 = tmp3Result1[0] === _require("../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleContent.EXPIRING_POWERUP_COACHMARK;
   let closure_16 = tmp26;
-  const tmpResult1 = _require(11774);
-  const gameServerEnabled = _require(4196).getGameServerEnabled(c0, "useGuildPowerupsChannelListPopout");
-  const tmpResult2 = _require(4196);
-  const isNewGamesCoachmarkEnabled = _require(11781).useIsNewGamesCoachmarkEnabled("useGuildPowerupsChannelListPopout");
-  const tmpResult3 = _require(11781);
+  const tmpResult1 = _require("GuildPowerupsNotificationsDCF.native.tsx");
+  const gameServerEnabled = _require("../../../game_server/GameServerExperiment.tsx").getGameServerEnabled(c0, "useGuildPowerupsChannelListPopout");
+  const tmpResult2 = _require("../../../game_server/GameServerExperiment.tsx");
+  const isNewGamesCoachmarkEnabled = _require("../../../game_server/experiments/NewGamesCoachmarkExperiment.tsx").useIsNewGamesCoachmarkEnabled("useGuildPowerupsChannelListPopout");
+  const tmpResult3 = _require("../../../game_server/experiments/NewGamesCoachmarkExperiment.tsx");
   let tmp29 = null != arg1;
   if (tmp29) {
     tmp29 = gameServerEnabled;
@@ -297,13 +297,13 @@ function useGuildPowerupsChannelListPopout(c0) {
   if (tmp29) {
     tmp29 = isNewGamesCoachmarkEnabled;
   }
-  const tmp3Result2 = callback(_require(11774).useNewGamesCoachmarkDC(tmp29), 2);
+  const tmp3Result2 = callback(_require("GuildPowerupsNotificationsDCF.native.tsx").useNewGamesCoachmarkDC(tmp29), 2);
   let closure_17 = tmp31;
-  const tmp32 = tmp3Result2[0] === _require(1358).DismissibleContent.GAME_SERVER_NEW_GAMES_COACHMARK;
+  const tmp32 = tmp3Result2[0] === _require("../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleContent.GAME_SERVER_NEW_GAMES_COACHMARK;
   const ContentDismissActionType = tmp32;
-  const tmpResult4 = _require(11774);
-  const isGameServerPricingEnabled = _require(11782).useIsGameServerPricingEnabled(c0, "useGuildPowerupsChannelListPopout");
-  const tmpResult5 = _require(11782);
+  const tmpResult4 = _require("GuildPowerupsNotificationsDCF.native.tsx");
+  const isGameServerPricingEnabled = _require("../../../game_server/experiments/GameServerPricingExperiment.tsx").useIsGameServerPricingEnabled(c0, "useGuildPowerupsChannelListPopout");
+  const tmpResult5 = _require("../../../game_server/experiments/GameServerPricingExperiment.tsx");
   let tmp34 = null != arg1;
   if (tmp34) {
     tmp34 = !stateFromStores;
@@ -314,9 +314,9 @@ function useGuildPowerupsChannelListPopout(c0) {
   if (tmp34) {
     tmp34 = isGameServerPricingEnabled;
   }
-  const tmp3Result3 = callback(_require(11774).useGameServerPricingCoachmarkDCF(tmp34), 2);
+  const tmp3Result3 = callback(_require("GuildPowerupsNotificationsDCF.native.tsx").useGameServerPricingCoachmarkDCF(tmp34), 2);
   const maybeGetPerkPurchaseablePopoutDCF = tmp36;
-  const tmp37 = tmp3Result3[0] === _require(1358).DismissibleContent.GAME_SERVER_PRICING_CHANGE_COACHMARK;
+  const tmp37 = tmp3Result3[0] === _require("../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleContent.GAME_SERVER_PRICING_CHANGE_COACHMARK;
   const useGuildPowerupsNotificationIndicator = tmp37;
   const items2 = [c0, arg1, tmp6, tmp15, tmp32, tmp37, tmp21, tmp26, available, stateFromStores, stateFromStores1, serverThemeEnabled];
   const memo = available.useMemo(() => {
@@ -406,8 +406,8 @@ function useGuildPowerupsChannelListPopout(c0) {
       }
     }
   }, items2);
-  const tmpResult6 = _require(11774);
-  const tmp3Result4 = callback(_require(11774).useGuildPowerupNotificationDCF(null != memo), 2);
+  const tmpResult6 = _require("GuildPowerupsNotificationsDCF.native.tsx");
+  const tmp3Result4 = callback(_require("GuildPowerupsNotificationsDCF.native.tsx").useGuildPowerupNotificationDCF(null != memo), 2);
   const first = tmp3Result4[0];
   let closure_23 = tmp41;
   const items3 = [arg1, tmp6, tmp4[1], memo, first, tmp3Result4[1], tmp15, tmp3Result[1], tmp11, tmp21, tmp16, tmp3Result[1], tmp26, tmp22, tmp3Result1[1], tmp32, tmp3Result2[1], tmp37, tmp3Result3[1]];
@@ -490,13 +490,13 @@ export default function useGuildPowerupsNotifications(arg0) {
   let indicator;
   let showUnread;
   const _require = arg0;
-  let obj = _require(647);
+  let obj = _require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx");
   const items = [getState];
   const items1 = [arg0];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_7.getNotificationStateForGuild(closure_0), items1);
   const items2 = [calculateAppliedBoosts];
-  const stateFromStores1 = _require(647).useStateFromStores(items2, () => outer1_8.getStateForGuild(closure_0));
-  const obj2 = _require(647);
+  const stateFromStores1 = _require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items2, () => outer1_8.getStateForGuild(closure_0));
+  const obj2 = _require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx");
   const tmp3 = useGuildPowerupsNotificationIndicator;
   const tmp4 = stateFromStores1;
   ({ indicator, showUnread } = useGuildPowerupsNotificationIndicator(arg0, stateFromStores1, stateFromStores));
@@ -512,7 +512,7 @@ export default function useGuildPowerupsNotifications(arg0) {
 export const maybeGetLevelUnlockedPopoutDCF = function maybeGetLevelUnlockedPopoutDCF(closure_1) {
   const _require = closure_1;
   closure_1 = arg1;
-  const ReverseOrderedTiers = _require(4177).ReverseOrderedTiers;
+  const ReverseOrderedTiers = _require("../../../../utils/GuildBoostingUtils.tsx").ReverseOrderedTiers;
   const found = ReverseOrderedTiers.find((arg0) => {
     let tmp2;
     if (null != outer1_9[arg0]) {
@@ -549,7 +549,7 @@ export const maybeGetLevelUnlockedPopoutDCF = function maybeGetLevelUnlockedPopo
 export { maybeGetPerkPurchaseablePopoutDCF };
 export const maybeGetGameServerHostingGuildEligiblePopoutDCF = function maybeGetGameServerHostingGuildEligiblePopoutDCF(c0) {
   const _require = c0;
-  let obj = _require(4196);
+  let obj = _require("../../../game_server/GameServerExperiment.tsx");
   if (obj.getGameServerEnabled(c0, "maybeGetGameServerHostingGuildEligiblePopoutDCF")) {
     if (!arg1) {
       if (null != arg3) {
@@ -574,18 +574,18 @@ export const useAutoDismissGuildPowerupsNotifications = function useAutoDismissG
   let indicator;
   let showUnread;
   let _require = guildId;
-  let obj = _require(647);
+  let obj = _require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx");
   let items = [calculateAppliedBoosts];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_8.getStateForGuild(closure_0));
   _require = guildId;
   const items1 = [getState];
   const items2 = [guildId];
-  const stateFromStores1 = _require(647).useStateFromStores(items1, () => outer1_7.getNotificationStateForGuild(closure_0), items2);
-  const obj2 = _require(647);
+  const stateFromStores1 = _require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items1, () => outer1_7.getNotificationStateForGuild(closure_0), items2);
+  const obj2 = _require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx");
   const tmp = _require;
   const items3 = [calculateAppliedBoosts];
-  const stateFromStores2 = _require(647).useStateFromStores(items3, () => outer1_8.getStateForGuild(closure_0));
-  const obj3 = _require(647);
+  const stateFromStores2 = _require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items3, () => outer1_8.getStateForGuild(closure_0));
+  const obj3 = _require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx");
   const tmp6 = useGuildPowerupsNotificationIndicator;
   const tmp7 = stateFromStores2;
   ({ indicator, showUnread } = useGuildPowerupsNotificationIndicator(guildId, stateFromStores2, stateFromStores1));

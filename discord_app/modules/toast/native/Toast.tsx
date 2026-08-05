@@ -14,7 +14,7 @@ function ToastIcon(recolorLegacyIcon) {
   let icon;
   let iconColor;
   ({ icon, IconComponent, iconColor } = recolorLegacyIcon);
-  let obj = require(3989) /* map */;
+  let obj = require("../../../design/tokens/native/useToken.tsx") /* map */;
   if (iconColor == null) {
     iconColor = "mobile-text-heading-primary";
   }
@@ -39,7 +39,7 @@ function ToastIcon(recolorLegacyIcon) {
       const obj3 = { resizeMode: "contain", source: null };
       obj3[1] = icon;
       const merged = Object.assign(obj);
-      tmp8 = callback2(require(1297) /* Button */.Icon, obj3);
+      tmp8 = callback2(require("../../../design/void/native.tsx") /* Button */.Icon, obj3);
     }
   }
   return tmp8;
@@ -57,7 +57,7 @@ function ToastContent(content) {
     obj[0] = content.onTextLayout;
     obj[1] = tmp.contentContainer;
     obj[5] = content;
-    tmp4 = callback2(require(4281) /* Text */.Text, obj);
+    tmp4 = callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   }
   return tmp4;
 }

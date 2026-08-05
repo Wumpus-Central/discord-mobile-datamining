@@ -253,8 +253,8 @@ export default function ProgressBarMarker(arg0) {
     return tmp13(tmp14, obj);
   }
   tmp5Result = tmp5(4131);
-  const tmp4 = importDefault(4221)();
-  const isThemeDarkResult = tmp5Result.isThemeDark(importDefault(4221)());
+  const tmp4 = require("../../../../hooks/useTheme.tsx")();
+  const isThemeDarkResult = tmp5Result.isThemeDark(require("../../../../hooks/useTheme.tsx")());
   const hexWithOpacity = sharedValue(4129).hexWithOpacity;
   const unsafe_rawColors = tmp2(712).unsafe_rawColors;
   if (isThemeDarkResult) {

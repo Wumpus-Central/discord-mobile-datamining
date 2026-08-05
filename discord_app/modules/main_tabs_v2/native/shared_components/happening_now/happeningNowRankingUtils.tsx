@@ -97,5 +97,5 @@ export const sortHappeningNowCards = function sortHappeningNowCards(result) {
       return flag;
     }
   ];
-  return require(12) /* apply */.orderBy(result, items, ["asc", "asc"]);
+  return require("../../../../../../_runtime/00012_apply.js") /* apply */.orderBy(result, items, ["asc", "asc"]);
 };

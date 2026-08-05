@@ -13,7 +13,7 @@ export const findRemoteAuthFingerprint = function findRemoteAuthFingerprint(host
         }
         return tmp6;
       }
-      obj = importDefault(1467);
+      obj = require("../../utils/URLUtils.tsx");
     }
   }
   return null;

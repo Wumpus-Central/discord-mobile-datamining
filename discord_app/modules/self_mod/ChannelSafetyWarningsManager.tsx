@@ -37,7 +37,7 @@ function handleChannelSelect(channelId) {
     } else {
       return false;
     }
-    obj6 = require(10260) /* InappropriateConversationExperiment */;
+    obj6 = require("inappropriate_conversation/SelfModInappropriateConversationExperiment.tsx") /* InappropriateConversationExperiment */;
   }
 }
 function handleChannelUpdates(channels) {

@@ -10,7 +10,7 @@ let error;
 let metroImportAll;
 const require = arg1;
 function closeActionSheet() {
-  importDefault(4253).hideActionSheet();
+  require("../../action_sheet/native/ActionSheetActionCreators.tsx").hideActionSheet();
 }
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
 createCacheKey = { container: null, ratingsHeader: null, reasonsList: null };

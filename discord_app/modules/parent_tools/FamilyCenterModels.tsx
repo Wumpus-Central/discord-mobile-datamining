@@ -68,7 +68,7 @@ prototype["isActiveAt"] = function isActiveAt(closure_0, c1) {
             }
           }
           if (sum > sum1) {
-            if (closure_0 === require(1892) /* create */.DayOfWeek.MONDAY) {
+            if (closure_0 === require("../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx") /* create */.DayOfWeek.MONDAY) {
               let SUNDAY = tmp6(1892).DayOfWeek.SUNDAY;
             } else {
               SUNDAY = closure_0 - 1;

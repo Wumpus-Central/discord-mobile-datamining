@@ -42,8 +42,8 @@ const forwardRefResult = importAllResult.forwardRef((errorMessage, ref) => {
     tmp10 = id;
   }
   obj.accessibilityLabelledBy = tmp10;
-  obj.children = jsx(require(5902) /* TextField */.TextField, { ref });
-  return jsx(require(7714) /* Input */.Input, { ref });
+  obj.children = jsx(require("../../TextField/native/TextField.native.tsx") /* TextField */.TextField, { ref });
+  return jsx(require("../../Input/native/Input.native.tsx") /* Input */.Input, { ref });
 });
 const result = require("Input").fileFinishedImporting("design/components/TextInput/native/TextInput.native.tsx");
 

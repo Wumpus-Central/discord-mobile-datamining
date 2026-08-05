@@ -18,15 +18,15 @@ export default function TermsField(field) {
   ({ onChange, rulesChannelId } = field);
   let flag = field.response;
   let obj = { style: callback2().container, children: null };
-  const items = [callback(importDefault(5275), { rules: field.values, rulesChannelId }), ];
+  const items = [callback(require("TermsFieldList.tsx"), { rules: field.values, rulesChannelId }), ];
   if (flag == null) {
     flag = false;
   }
   obj = { start: true, end: true, checked: flag, label: null, onPress: null };
   const intl = tmp5(1236).intl;
-  obj[3] = intl.string(require(1236) /* getSystemLocale */.t["2EXfGJ"]);
+  obj[3] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["2EXfGJ"]);
   obj[4] = onChange;
-  items[1] = callback(require(8259) /* TableCheckboxRow */.TableCheckboxRow, obj);
+  items[1] = callback(require("../../../../../design/components/TableRow/native/TableCheckboxRow.native.tsx") /* TableCheckboxRow */.TableCheckboxRow, obj);
   obj[1] = items;
   return closure_5(View, obj);
 };

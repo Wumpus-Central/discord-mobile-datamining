@@ -11,11 +11,11 @@ let result = require("CodedLinkExtendedType").fileFinishedImporting("modules/mes
 export const createGuildProfileInvite = function createGuildProfileInvite(invite, closure_2) {
   let tmp11;
   let tmp12;
-  const tmp3 = importDefault(7863)(closure_2);
+  const tmp3 = require("../../getEmbedThemeColors.tsx")(closure_2);
   let obj = id(5279);
   const guildProfileFromInvite = obj.buildGuildProfileFromInvite(invite);
   let obj1 = id(4131);
-  const unsafe_rawColors = importDefault(712).unsafe_rawColors;
+  const unsafe_rawColors = require("../../../../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors;
   let fromGuildProfileResult = null;
   const isThemeDarkResult = obj1.isThemeDark(closure_2);
   if (null != guildProfileFromInvite) {

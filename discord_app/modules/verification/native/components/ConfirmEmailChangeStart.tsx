@@ -21,9 +21,9 @@ const result = require("noop").fileFinishedImporting("modules/verification/nativ
 export default function ConfirmEmailChangeStart() {
   const tmp = callback4();
   const require = tmp;
-  let obj = require(1480) /* useNavigation */;
+  let obj = require("../../../../design/components/Navigator/native/useNavigation.native.tsx") /* useNavigation */;
   const navigation = obj.useNavigation();
-  let obj1 = require(589) /* initialize */;
+  let obj1 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj1.useStateFromStores(items, () => currentUser.getCurrentUser());
   const tmp6 = callback(React.useState(false), 2);

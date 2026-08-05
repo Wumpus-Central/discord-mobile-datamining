@@ -34,11 +34,11 @@ export default function NewTag(color) {
   }
   let sm = color.borderRadius;
   if (sm === undefined) {
-    sm = importDefault(712).radii.sm;
+    sm = require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.sm;
   }
   let colors = color.colors;
   if (colors === undefined) {
-    const items = [importDefault(712).unsafe_rawColors.PREMIUM_TIER_2_PURPLE, importDefault(712).unsafe_rawColors.PREMIUM_TIER_2_PINK];
+    const items = [require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.PREMIUM_TIER_2_PURPLE, require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.PREMIUM_TIER_2_PINK];
     colors = items;
   }
   const merged = Object.assign(color, Object.create(null));
@@ -47,7 +47,7 @@ export default function NewTag(color) {
     let obj = { style: null, start: null, end: null, colors: null, children: null };
     obj = { borderRadius: null, marginLeft: null };
     obj[0] = sm;
-    obj[1] = importDefault(712).space.PX_4;
+    obj[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4;
     obj[0] = obj;
     ({ START: obj3[1], END: obj3[2] } = HorizontalGradient);
     obj[3] = colors;
@@ -60,12 +60,12 @@ export default function NewTag(color) {
     const merged1 = Object.assign(merged);
     const items2 = [tmp6.tagText, textStyle];
     obj2.style = items2;
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    obj2.children = intl2.string(require(1236) /* getSystemLocale */.t.y2b7CA);
-    obj1[1] = tmp7(require(4281) /* Text */.Text, obj2);
+    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj2.children = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.y2b7CA);
+    obj1[1] = tmp7(require("../../../components/Text/native/Text.tsx") /* Text */.Text, obj2);
     obj[4] = tmp7(closure_3, obj1);
-    let tmp7Result = tmp7(importDefault(4706), obj);
-    const tmp17 = importDefault(4706);
+    let tmp7Result = tmp7(require("../../../../../_runtime/04706_LinearGradient.js"), obj);
+    const tmp17 = require("../../../../../_runtime/04706_LinearGradient.js");
   } else {
     obj = { style: null, children: null };
     const items3 = [tmp6.tagContainer, containerStyle];
@@ -76,9 +76,9 @@ export default function NewTag(color) {
     const merged2 = Object.assign(merged);
     const items4 = [tmp6.tagText, textStyle];
     obj3.style = items4;
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj3.children = intl.string(require(1236) /* getSystemLocale */.t.y2b7CA);
-    obj[1] = tmp7(require(4281) /* Text */.Text, obj3);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj3.children = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.y2b7CA);
+    obj[1] = tmp7(require("../../../components/Text/native/Text.tsx") /* Text */.Text, obj3);
     tmp7Result = tmp7(closure_3, obj);
   }
   return tmp7Result;

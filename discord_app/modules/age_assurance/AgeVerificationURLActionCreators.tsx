@@ -440,12 +440,12 @@ function _getAgeVerificationMethods() {
   return applyArgumentsResult;
 }
 function fetchAgeVerificationMethods() {
-  const HTTP = require(530) /* sendRequest */.HTTP;
+  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
   return HTTP.get({ url: Endpoints.AGE_VERIFICATION_METHODS, rejectWithError: true });
 }
 function fetchAgeVerificationMethodsSuspendedUser() {
   suspendedUserToken = suspendedUserToken.getSuspendedUserToken();
-  const HTTP = require(530) /* sendRequest */.HTTP;
+  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
   return HTTP.post({ url: Endpoints.SAFETY_HUB_GET_SUSPENDED_AGE_VERIFICATION_METHODS, rejectWithError: true, body: { token: suspendedUserToken } });
 }
 const result = require("set").fileFinishedImporting("modules/age_assurance/AgeVerificationURLActionCreators.tsx");

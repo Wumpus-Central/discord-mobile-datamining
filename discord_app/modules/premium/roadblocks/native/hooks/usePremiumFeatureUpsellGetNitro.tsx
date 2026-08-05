@@ -16,7 +16,7 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, arg2, arg3) 
   const dependencyMap = arg3;
   const loading = callback(analyticsLocations.useState(false), 2);
   callback = loading[1];
-  analyticsLocations = importDefault(5610)().analyticsLocations;
+  analyticsLocations = require("../../../../app_analytics/useAnalyticsLocations.tsx")().analyticsLocations;
   let reset = analyticsLocations.useRef(0);
   let items = [arg2, analyticsLocations, arg1, arg0, arg3];
   const onPress = analyticsLocations.useCallback(() => {

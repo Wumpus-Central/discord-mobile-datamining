@@ -26,10 +26,10 @@ export default function UserProfileSection(title) {
   ({ headerIcon, trailingIcon, showContainer, children, style } = title);
   const merged = Object.assign(title, Object.create(null));
   const tmp2 = createCacheKey();
-  let obj = require(3997) /* ManaContext */;
+  let obj = require("../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */;
   const themeContext = obj.useThemeContext();
   ({ theme, primaryColor } = themeContext);
-  let obj1 = require(5632) /* useProfileThemeValues */;
+  let obj1 = require("../useProfileThemeValues.native.tsx") /* useProfileThemeValues */;
   const profileThemeValues = obj1.useProfileThemeValues(theme);
   obj = {};
   const merged1 = Object.assign(tmp2.contentContainer);

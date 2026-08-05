@@ -82,13 +82,13 @@ function generateAcceptInviteOptions(target_type) {
   if (num == null) {
     num = 0;
   }
-  obj.isGuestInvite = require(1384) /* hasFlag */.hasFlag(num, require(7695) /* set */.GuildInviteFlags.IS_GUEST_INVITE);
-  const obj2 = require(1384) /* hasFlag */;
+  obj.isGuestInvite = require("../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(num, require("../../discord_common/js/shared/shared-constants/GuildInviteFlags.tsx") /* set */.GuildInviteFlags.IS_GUEST_INVITE);
+  const obj2 = require("../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
   let num2 = target_type.flags;
   if (num2 == null) {
     num2 = 0;
   }
-  obj.isApplicationBypassInvite = require(1384) /* hasFlag */.hasFlag(num2, require(7695) /* set */.GuildInviteFlags.IS_APPLICATION_BYPASS);
+  obj.isApplicationBypassInvite = require("../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(num2, require("../../discord_common/js/shared/shared-constants/GuildInviteFlags.tsx") /* set */.GuildInviteFlags.IS_APPLICATION_BYPASS);
   const inviter = target_type.inviter;
   let id3;
   if (inviter != null) {
@@ -523,7 +523,7 @@ function _transitionToGuildFromEventInvite() {
 }
 function trackInviteServerClicked(id5, action, items2) {
   let tmp = items2;
-  let obj = importDefault(698);
+  let obj = require("../utils/AnalyticsUtils.tsx");
   obj = { guild_id: id5, action, location_stack: null };
   if (items2 == null) {
     tmp = null;
@@ -543,7 +543,7 @@ export default {
     let closure_0 = arg0;
     const importDefault = arg1;
     let closure_2 = arg2;
-    let obj = importDefault(709);
+    let obj = require("../Dispatcher.tsx");
     if (obj.isDispatching()) {
       const resolved = Promise.resolve();
       let nextPromise = resolved.then(() => {
@@ -958,18 +958,18 @@ export default {
   },
   createFriendInvite(trackedActionData, location) {
     let obj = trackedActionData;
-    importDefault(709).dispatch({ type: "FRIEND_INVITE_CREATE_REQUEST" });
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    require("../Dispatcher.tsx").dispatch({ type: "FRIEND_INVITE_CREATE_REQUEST" });
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: closure_24.FRIEND_INVITES, body: null, context: null, rejectWithError: null };
     if (trackedActionData == null) {
       obj = {};
     }
     obj[1] = obj;
     obj[2] = { location };
-    const obj2 = importDefault(709);
+    const obj2 = require("../Dispatcher.tsx");
     const tmp3 = require;
-    obj[3] = require(530) /* sendRequest */.rejectWithMigratedError();
-    const tmp3Result = require(530) /* sendRequest */;
+    obj[3] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+    const tmp3Result = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */;
     return HTTP.post(obj).then((body) => {
       body = body.body;
       callback(709).dispatch({ type: "FRIEND_INVITE_CREATE_SUCCESS", invite: body });
@@ -982,21 +982,21 @@ export default {
     });
   },
   revokeFriendInvites() {
-    let obj = importDefault(709);
+    let obj = require("../Dispatcher.tsx");
     obj.dispatch({ type: "FRIEND_INVITE_REVOKE_REQUEST" });
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: closure_24.FRIEND_INVITES, context: obj, rejectWithError: null };
     obj = { location: location };
-    obj[2] = require(530) /* sendRequest */.rejectWithMigratedError();
-    const obj4 = require(530) /* sendRequest */;
+    obj[2] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+    const obj4 = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */;
     return HTTP.del(obj).then((invites) => {
       callback(table[39]).dispatch({ type: "FRIEND_INVITE_REVOKE_SUCCESS", invites: invites.body });
     });
   },
   revokeFriendInvite(arg0) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     const obj = { url: closure_24.INVITE(arg0), rejectWithError: null };
-    obj[1] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[1] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.del(obj);
   },
   fetchFriendMembers(arg0) {
@@ -1053,7 +1053,7 @@ export default {
     })();
   },
   clearInviteFromStore(channelId) {
-    let obj = importDefault(709);
+    let obj = require("../Dispatcher.tsx");
     obj = { type: "INSTANT_INVITE_CLEAR", channelId };
     obj.dispatch(obj);
   },
@@ -2379,10 +2379,10 @@ export default {
     }
   },
   openNativeAppModal(inviteKey) {
-    let obj = require(4271) /* readSnowflake */;
+    let obj = require("../modules/instant_invite/InviteCodeUtils.tsx") /* readSnowflake */;
     const result = obj.parseExtraDataFromInviteKey(inviteKey);
     obj = { installationId: store.getInstallationForTracking(), targetChannelId: result.targetChannelId, targetMessageId: result.targetMessageId, guildScheduledEventId: result.guildScheduledEventId };
-    importDefault(10328).openNativeAppModal(result.baseCode, constants.INVITE_BROWSER, obj);
+    require("../modules/coded_links/web/CodedLinkActionCreators.tsx").openNativeAppModal(result.baseCode, constants.INVITE_BROWSER, obj);
   },
   transitionToInviteOnboarding(baseCode, closure_1) {
     let obj = closure_1;
@@ -2391,7 +2391,7 @@ export default {
     }
     let transitionTo = obj.transitionTo;
     if (undefined === transitionTo) {
-      transitionTo = require(1222) /* transitionTo */.transitionTo;
+      transitionTo = require("../modules/routing/router_utils.tsx") /* transitionTo */.transitionTo;
     }
     obj = { baseCode: baseCode.code, targetChannelId: null, targetMessageId: null, guildScheduledEventId: null };
     const target_channel_id = baseCode.target_channel_id;
@@ -2404,19 +2404,19 @@ export default {
       id = guild_scheduled_event.id;
     }
     obj[3] = id;
-    const inviteKeyFromExtraData = require(4271) /* readSnowflake */.generateInviteKeyFromExtraData(obj);
+    const inviteKeyFromExtraData = require("../modules/instant_invite/InviteCodeUtils.tsx") /* readSnowflake */.generateInviteKeyFromExtraData(obj);
     obj = { search: null };
     const result = closure_26.APP_WITH_INVITE_AND_GUILD_ONBOARDING(baseCode.code);
-    const obj2 = require(4271) /* readSnowflake */;
+    const obj2 = require("../modules/instant_invite/InviteCodeUtils.tsx") /* readSnowflake */;
     const tmp3 = require;
-    obj[0] = require(4271) /* readSnowflake */.getInviteKeySearchSuffix(inviteKeyFromExtraData);
+    obj[0] = require("../modules/instant_invite/InviteCodeUtils.tsx") /* readSnowflake */.getInviteKeySearchSuffix(inviteKeyFromExtraData);
     transitionTo(result, obj);
   },
   openApp(code, arg1, fingerprint, username) {
     const _require = code;
     let result = null;
     if (null != code) {
-      let obj = _require(4271);
+      let obj = _require("../modules/instant_invite/InviteCodeUtils.tsx");
       result = obj.parseExtraDataFromInviteKey(code);
     }
     let baseCode;
@@ -2431,10 +2431,10 @@ export default {
     if (result != null) {
       targetChannelId = result.targetChannelId;
     }
-    let obj1 = importDefault(709);
+    let obj1 = require("../Dispatcher.tsx");
     obj = { type: "INVITE_APP_OPENING", code };
     obj1.dispatch(obj);
-    if (null != importDefault(4603).ua) {
+    if (null != require("../../_runtime/04603_format.js").ua) {
       const formatted = tmp7(4603).ua.toLowerCase();
       if (formatted.indexOf("googlebot") > -1) {
         let tmp7Result = tmp7(709);
@@ -2455,7 +2455,7 @@ export default {
         family1 = os2.family;
       }
       if ("iOS" !== family1) {
-        if (!_require(4521).isTablet) {
+        if (!_require("../../discord_common/js/shared/lib/PlatformUtils.tsx").isTablet) {
           let tmp13 = arg1;
           if (arg1 == null) {
             tmp13 = targetChannelId;
@@ -2486,13 +2486,13 @@ export default {
       }
     }
     if (null != baseCode) {
-      let inviteDynamicLinkTemplate = _require(12577).getInviteDynamicLinkTemplate(baseCode);
+      let inviteDynamicLinkTemplate = _require("../../discord_common/js/packages/dynamic-links/DynamicLinkTemplates.tsx").getInviteDynamicLinkTemplate(baseCode);
       let tmp20 = _require;
-      const obj5 = _require(12577);
+      const obj5 = _require("../../discord_common/js/packages/dynamic-links/DynamicLinkTemplates.tsx");
     } else {
-      inviteDynamicLinkTemplate = _require(12577).getDefaultDynamicLinkTemplate();
+      inviteDynamicLinkTemplate = _require("../../discord_common/js/packages/dynamic-links/DynamicLinkTemplates.tsx").getDefaultDynamicLinkTemplate();
       tmp20 = _require;
-      const obj4 = _require(12577);
+      const obj4 = _require("../../discord_common/js/packages/dynamic-links/DynamicLinkTemplates.tsx");
     }
     let tmp20Result = tmp20(12578);
     const attemptId = tmp20Result.generateAttemptId();
@@ -2509,23 +2509,23 @@ export default {
     obj1[6] = targetChannelId;
     obj1[7] = targetMessageId;
     obj1[8] = "https://discord.com/api/download/mobile?invite_code=" + baseCode;
-    combined = importDefault(12578)(inviteDynamicLinkTemplate, obj1);
-    const tmp7Result1 = importDefault(12578);
+    combined = require("../../discord_common/js/packages/dynamic-links/generateDynamicLink.tsx")(inviteDynamicLinkTemplate, obj1);
+    const tmp7Result1 = require("../../discord_common/js/packages/dynamic-links/generateDynamicLink.tsx");
     const obj2 = { fingerprint: null, attempt_id: null, source: null, invite_code: null };
     tmp20Result = tmp20(513);
     obj2[0] = tmp20Result.maybeExtractId(fingerprint);
     obj2[1] = attemptId;
     obj2[2] = invite;
     obj2[3] = baseCode;
-    importDefault(698).track(constants3.DEEP_LINK_CLICKED, obj2);
+    require("../utils/AnalyticsUtils.tsx").track(constants3.DEEP_LINK_CLICKED, obj2);
   },
   setReceivedInstallationIdForInviteCode(c15, installationId) {
-    let obj = importDefault(709);
+    let obj = require("../Dispatcher.tsx");
     obj = { type: "INSTANT_INVITE_RECEIVED_INSTALLATION_ID_SET", inviteCode: c15, receivedInstallationId: installationId };
     obj.dispatch(obj);
   },
   clearReceivedInstallationIdForInviteCode(c8) {
-    let obj = importDefault(709);
+    let obj = require("../Dispatcher.tsx");
     obj = { type: "INSTANT_INVITE_RECEIVED_INSTALLATION_ID_CLEAR", inviteCode: c8 };
     obj.dispatch(obj);
   },
@@ -2550,7 +2550,7 @@ export const trackInviteEmbedActioned = function trackInviteEmbedActioned(action
   let number_of_users_in_channel;
   let stream_key;
   ({ invite, inviter_id, invite_message_id, invite_instance_id, application_id, stream_key, number_of_users_in_channel } = action);
-  let obj = importDefault(698);
+  let obj = require("../utils/AnalyticsUtils.tsx");
   obj = { action: action.action, invite_code: invite.code, invite_type: null, inviter_id: null, invite_message_id: null, invite_instance_id: null, application_id: null, stream_key: null, number_of_users_in_channel: null, location_stack: null };
   let str = invite.type;
   str = undefined;

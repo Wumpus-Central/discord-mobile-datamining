@@ -40,10 +40,10 @@ export default function ExternalLinksElement(elements) {
         if (!someResult) {
           obj = { style: null, variant: "heading-deprecated-12/extrabold", color: "text-default", accessibilityRole: "header", children: null };
           obj[0] = tmp.headerText;
-          const intl = require(1236) /* getSystemLocale */.intl;
-          obj[4] = intl.string(require(1236) /* getSystemLocale */.t.hvVgAZ).toUpperCase();
-          tmp5 = callback(require(4281) /* Text */.Text, obj);
-          const str = intl.string(require(1236) /* getSystemLocale */.t.hvVgAZ);
+          const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+          obj[4] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.hvVgAZ).toUpperCase();
+          tmp5 = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+          const str = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.hvVgAZ);
         }
         const items = [tmp5, elements.map((data) => callback(closure_7, { data: data.data }, "external-link-" + arg1))];
         obj[1] = items;

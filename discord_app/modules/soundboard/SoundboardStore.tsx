@@ -5,7 +5,7 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME";
 import { AnalyticEvents } from "ME";
 import { UserSettingsTypes } from "MAX_FAVORITES";
-import module_2026 from "module_2026";
+import registerAsset from "../../../_runtime/02026_registerAsset.js";
 import { Store } from "initialize";
 import set from "mergeGuildAvatar";
 
@@ -106,7 +106,7 @@ obj = {
       }
       return num2;
     }
-    obj = importDefault(3867)();
+    obj = require("../../../_runtime/03867_t.js")();
   },
   lookupKey(arg0) {
     return arg0;
@@ -121,12 +121,12 @@ let c20 = false;
 let c21 = false;
 let tmp7 = new require("DEFAULT_FRECENCY")(obj);
 let closure_22 = require("DISCORD_EPOCH").debounce((volume) => {
-  let obj = importDefault(698);
+  let obj = require("../../utils/AnalyticsUtils.tsx");
   obj = { volume: null, location_stack: null };
-  obj[0] = Math.round(require(4732) /* perceptualToAmplitude */.amplitudeToPerceptual(volume));
+  obj[0] = Math.round(require("../../utils/PerceptualVolumeUtils.tsx") /* perceptualToAmplitude */.amplitudeToPerceptual(volume));
   obj[1] = arg1;
   obj.track(AnalyticEvents.UPDATE_SOUNDBOARD_SETTINGS, obj);
-  const SoundboardSettings = require(3958) /* explicitContentFromProto */.SoundboardSettings;
+  const SoundboardSettings = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.SoundboardSettings;
   obj = { volume };
   SoundboardSettings.updateSetting(obj);
 }, 1000);
@@ -136,7 +136,7 @@ const prototype = SoundboardStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(settings, mergeGuildAvatar);
   syncLocalSoundboardMutesFromUserSettings(settings.settings);
-  const SoundboardSettings = require(3958) /* explicitContentFromProto */.SoundboardSettings;
+  const SoundboardSettings = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.SoundboardSettings;
   const setting = SoundboardSettings.getSetting();
   let volume;
   if (setting != null) {
@@ -372,7 +372,7 @@ obj = {
         if (playedSounds == null) {
           playedSounds = {};
         }
-        tmp7.overwriteHistory(importDefault(12).mapValues(playedSounds, (recentUses) => {
+        tmp7.overwriteHistory(require("../../../_runtime/00012_apply.js").mapValues(playedSounds, (recentUses) => {
           const obj = {};
           const merged = Object.assign(recentUses);
           recentUses = recentUses.recentUses;
@@ -380,11 +380,11 @@ obj = {
           obj.recentUses = mapped.filter((arg0) => arg0 > 0);
           return obj;
         }), closure_19);
-        let obj = importDefault(12);
+        let obj = require("../../../_runtime/00012_apply.js");
       }
     } else if (tmp2.PRELOADED_USER_SETTINGS === type) {
       syncLocalSoundboardMutesFromUserSettings(proto);
-      const SoundboardSettings = require(3958) /* explicitContentFromProto */.SoundboardSettings;
+      const SoundboardSettings = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.SoundboardSettings;
       const setting = SoundboardSettings.getSetting();
       let volume;
       if (setting != null) {
@@ -420,7 +420,7 @@ obj = {
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(soundboardStoreState) {
     soundboardStoreState = soundboardStoreState.soundboardStoreState;
-    const map = new Map(importDefault(11).entries(soundboardStoreState.soundboardSounds));
+    const map = new Map(require("../../utils/SnowflakeUtils.tsx").entries(soundboardStoreState.soundboardSounds));
     const set = new Set(soundboardStoreState.favoritedSoundIds);
     const set1 = new Set(soundboardStoreState.localSoundboardMutes);
   }

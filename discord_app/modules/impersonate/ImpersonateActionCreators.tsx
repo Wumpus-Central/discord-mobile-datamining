@@ -17,14 +17,14 @@ const require = arg1;
 function updateImpersonating(closure_0, type) {
   data = data.getData(closure_0);
   if (tmp2) {
-    let obj = importDefault(698);
+    let obj = require("../../utils/AnalyticsUtils.tsx");
     obj = { num_roles: null };
     const _Object = Object;
     obj[0] = Object.keys(data.roles).length;
-    const merged = Object.assign(require(4479) /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(closure_0));
-    obj.is_viewing_as_member = data.type === require(1940) /* ImpersonateType */.ImpersonateType.NEW_MEMBER;
+    const merged = Object.assign(require("../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(closure_0));
+    obj.is_viewing_as_member = data.type === require("ImpersonateTypes.tsx") /* ImpersonateType */.ImpersonateType.NEW_MEMBER;
     obj.track(constants2.VIEW_AS_ROLES_SELECTED, obj);
-    const obj3 = require(4479) /* collectGuildAnalyticsMetadata */;
+    const obj3 = require("../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */;
     const tmp7 = require;
     obj = { type: "IMPERSONATE_UPDATE", guildId: null, data: null };
     obj[1] = closure_0;
@@ -32,7 +32,7 @@ function updateImpersonating(closure_0, type) {
     const merged1 = Object.assign(data);
     const merged2 = Object.assign(type);
     obj[2] = obj1;
-    importDefault(709).dispatch(obj);
+    require("../../Dispatcher.tsx").dispatch(obj);
     const channelId = store2.getChannelId(closure_0);
     if (null == channelId) {
       if (!getUncachedChannelPermissions.can(constants.VIEW_CHANNEL, tmp21)) {
@@ -43,22 +43,22 @@ function updateImpersonating(closure_0, type) {
         }
       }
     }
-    const obj4 = importDefault(709);
+    const obj4 = require("../../Dispatcher.tsx");
   }
 }
 ({ Permissions: unpackModuleId, Routes: closure_12, AnalyticEvents: map1 } = ME);
 let result = require("trackCommunicationDisabled").fileFinishedImporting("modules/impersonate/ImpersonateActionCreators.tsx");
 
 export const startImpersonating = function startImpersonating(guildId, data) {
-  let obj = importDefault(698);
+  let obj = require("../../utils/AnalyticsUtils.tsx");
   obj = { num_roles: Object.keys(data.roles).length };
-  const merged = Object.assign(require(4479) /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(guildId));
-  obj.is_viewing_as_member = data.type === require(1940) /* ImpersonateType */.ImpersonateType.NEW_MEMBER;
+  const merged = Object.assign(require("../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(guildId));
+  obj.is_viewing_as_member = data.type === require("ImpersonateTypes.tsx") /* ImpersonateType */.ImpersonateType.NEW_MEMBER;
   obj.track(constants2.VIEW_AS_ROLES_SELECTED, obj);
-  const obj3 = require(4479) /* collectGuildAnalyticsMetadata */;
+  const obj3 = require("../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */;
   const tmp2 = require;
   obj = { type: "IMPERSONATE_UPDATE", guildId, data };
-  importDefault(709).dispatch(obj);
+  require("../../Dispatcher.tsx").dispatch(obj);
   const channelId = store2.getChannelId(guildId);
   if (null == channelId) {
     if (!getUncachedChannelPermissions.can(constants.VIEW_CHANNEL, tmp7)) {
@@ -72,7 +72,7 @@ export const startImpersonating = function startImpersonating(guildId, data) {
 };
 export { updateImpersonating };
 export const stopImpersonating = function stopImpersonating(guildId) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "IMPERSONATE_STOP", guildId };
   obj.dispatch(obj);
 };
@@ -123,10 +123,10 @@ export const updateImpersonatedRoles = function updateImpersonatedRoles(guildId,
     obj[item10013.id] = item10013;
     continue;
   }
-  obj = { type: require(1940) /* ImpersonateType */.ImpersonateType.NEW_MEMBER, roles: obj };
+  obj = { type: require("ImpersonateTypes.tsx") /* ImpersonateType */.ImpersonateType.NEW_MEMBER, roles: obj };
   updateImpersonating(guildId, obj);
 };
 export const updateImpersonatedData = function updateImpersonatedData(closure_0, arg1) {
   const merged = Object.assign(arg1);
-  updateImpersonating(closure_0, { type: require(1940) /* ImpersonateType */.ImpersonateType.NEW_MEMBER });
+  updateImpersonating(closure_0, { type: require("ImpersonateTypes.tsx") /* ImpersonateType */.ImpersonateType.NEW_MEMBER });
 };

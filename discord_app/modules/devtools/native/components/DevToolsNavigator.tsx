@@ -12,7 +12,7 @@ createNativeStackNavigator = createNativeStackNavigator.createNativeStackNavigat
 let closure_7 = require("noop").memo((screenKey) => {
   let str = screenKey.screenKey;
   let _require;
-  let obj = _require(5665);
+  let obj = _require("../../../../design/components/Navigator/native/Navigator.native.tsx");
   _require = obj.useAccessibilityNativeStackOptions();
   if (str == null) {
     str = "home";
@@ -37,7 +37,7 @@ let closure_7 = require("noop").memo((screenKey) => {
   };
   obj = {
     name: "home",
-    component: importDefault(13749),
+    component: require("DevToolsContent.tsx"),
     options() {
       return {
         headerTitle() {
@@ -80,7 +80,7 @@ export const navigateToDevTools = function navigateToDevTools(arg0) {
   if (arg0 === undefined) {
     obj = {};
   }
-  importDefault(4253).hideActionSheet();
-  const obj2 = importDefault(4253);
-  importDefault(4490).pushLazy(() => Promise.resolve(closure_7), { screenKey: obj.screenKey }, "DevToolsNavigator");
+  require("../../../action_sheet/native/ActionSheetActionCreators.tsx").hideActionSheet();
+  const obj2 = require("../../../action_sheet/native/ActionSheetActionCreators.tsx");
+  require("../../../../actions/ModalActionCreators.tsx").pushLazy(() => Promise.resolve(closure_7), { screenKey: obj.screenKey }, "DevToolsNavigator");
 };

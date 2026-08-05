@@ -23,10 +23,10 @@ prototype["create"] = function create(arr) {
   let obj = { metadata: {}, platformName: "", platformUsername: "", version: "0" };
   const _Object = Object;
   obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, require(1307).MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, require("../../../../../../../_runtime/metro/01307__.js").MESSAGE_TYPE, obj);
   if (undefined !== arr) {
-    const result = require(1307).reflectionMergePartial(this, obj, arr);
-    const tmpResult = require(1307);
+    const result = require("../../../../../../../_runtime/metro/01307__.js").reflectionMergePartial(this, obj, arr);
+    const tmpResult = require("../../../../../../../_runtime/metro/01307__.js");
   }
   return obj;
 };
@@ -75,7 +75,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
             if (true === onRead) {
               let tmp8 = require;
               let tmp9 = dependencyMap;
-              onRead = require(1307).UnknownFieldHandler.onRead;
+              onRead = require("../../../../../../../_runtime/metro/01307__.js").UnknownFieldHandler.onRead;
             }
             let tmp10 = obj;
             let tmp11 = tmp5;
@@ -133,31 +133,31 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(metadata, tag, w
   while (iter !== undefined) {
     let tmp3 = require;
     let tmp4 = dependencyMap;
-    let tagResult = tag.tag(1, require(1307).WireType.LengthDelimited);
+    let tagResult = tag.tag(1, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
     let forkResult = tagResult.fork();
-    let tagResult1 = forkResult.tag(1, require(1307).WireType.LengthDelimited);
+    let tagResult1 = forkResult.tag(1, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
     let stringResult = tagResult1.string(nextResult);
-    let tagResult2 = stringResult.tag(2, require(1307).WireType.LengthDelimited);
+    let tagResult2 = stringResult.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
     let stringResult1 = tagResult2.string(metadata.metadata[nextResult]);
     let joined = stringResult1.join();
     continue;
   }
   if ("" !== metadata.platformName) {
-    tag.tag(2, require(1307).WireType.LengthDelimited).string(metadata.platformName);
-    const tagResult3 = tag.tag(2, require(1307).WireType.LengthDelimited);
+    tag.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).string(metadata.platformName);
+    const tagResult3 = tag.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
   }
   if ("" !== metadata.platformUsername) {
-    tag.tag(3, require(1307).WireType.LengthDelimited).string(metadata.platformUsername);
-    const tagResult4 = tag.tag(3, require(1307).WireType.LengthDelimited);
+    tag.tag(3, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).string(metadata.platformUsername);
+    const tagResult4 = tag.tag(3, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
   }
   if ("0" !== metadata.version) {
-    tag.tag(4, require(1307).WireType.Bit64).fixed64(metadata.version);
-    const tagResult5 = tag.tag(4, require(1307).WireType.Bit64);
+    tag.tag(4, require("../../../../../../../_runtime/metro/01307__.js").WireType.Bit64).fixed64(metadata.version);
+    const tagResult5 = tag.tag(4, require("../../../../../../../_runtime/metro/01307__.js").WireType.Bit64);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = require(1307).UnknownFieldHandler.onWrite;
+      onWrite = require("../../../../../../../_runtime/metro/01307__.js").UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, metadata, tag);
@@ -198,10 +198,10 @@ prototype2["create"] = function create(arr) {
   let obj = { disclosureType: 0 };
   const _Object = Object;
   obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, require(1307).MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, require("../../../../../../../_runtime/metro/01307__.js").MESSAGE_TYPE, obj);
   if (undefined !== arr) {
-    const result = require(1307).reflectionMergePartial(this, obj, arr);
-    const tmpResult = require(1307);
+    const result = require("../../../../../../../_runtime/metro/01307__.js").reflectionMergePartial(this, obj, arr);
+    const tmpResult = require("../../../../../../../_runtime/metro/01307__.js");
   }
   return obj;
 };
@@ -224,7 +224,7 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       } else if (2 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let Timestamp = require(1336) /* now */.Timestamp;
+        let Timestamp = require("../../../google/protobuf/timestamp.tsx") /* now */.Timestamp;
         let tmp24 = Timestamp;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -251,7 +251,7 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
             if (true === onRead) {
               let tmp8 = require;
               let tmp9 = dependencyMap;
-              onRead = require(1307).UnknownFieldHandler.onRead;
+              onRead = require("../../../../../../../_runtime/metro/01307__.js").UnknownFieldHandler.onRead;
             }
             let tmp10 = obj;
             let tmp11 = tmp5;
@@ -267,19 +267,19 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
 };
 prototype2["internalBinaryWrite"] = function internalBinaryWrite(disclosureType, tag, writeUnknownFields) {
   if (0 !== disclosureType.disclosureType) {
-    tag.tag(1, require(1307).WireType.Varint).int32(disclosureType.disclosureType);
-    const tagResult = tag.tag(1, require(1307).WireType.Varint);
+    tag.tag(1, require("../../../../../../../_runtime/metro/01307__.js").WireType.Varint).int32(disclosureType.disclosureType);
+    const tagResult = tag.tag(1, require("../../../../../../../_runtime/metro/01307__.js").WireType.Varint);
   }
   if (disclosureType.ackedAt) {
-    const Timestamp = require(1336) /* now */.Timestamp;
-    const tagResult1 = tag.tag(2, require(1307).WireType.LengthDelimited);
-    const joined = Timestamp.internalBinaryWrite(disclosureType.ackedAt, tag.tag(2, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = Timestamp.internalBinaryWrite(disclosureType.ackedAt, tag.tag(2, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields);
+    const Timestamp = require("../../../google/protobuf/timestamp.tsx") /* now */.Timestamp;
+    const tagResult1 = tag.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    const joined = Timestamp.internalBinaryWrite(disclosureType.ackedAt, tag.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult = Timestamp.internalBinaryWrite(disclosureType.ackedAt, tag.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = require(1307).UnknownFieldHandler.onWrite;
+      onWrite = require("../../../../../../../_runtime/metro/01307__.js").UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, disclosureType, tag);
@@ -332,10 +332,10 @@ prototype3["create"] = function create(arr) {
   let obj = { ackedDisclosures: [] };
   const _Object = Object;
   obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, require(1307).MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, require("../../../../../../../_runtime/metro/01307__.js").MESSAGE_TYPE, obj);
   if (undefined !== arr) {
-    const result = require(1307).reflectionMergePartial(this, obj, arr);
-    const tmpResult = require(1307);
+    const result = require("../../../../../../../_runtime/metro/01307__.js").reflectionMergePartial(this, obj, arr);
+    const tmpResult = require("../../../../../../../_runtime/metro/01307__.js");
   }
   return obj;
 };
@@ -379,7 +379,7 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
             if (true === onRead) {
               let tmp8 = require;
               let tmp9 = dependencyMap;
-              onRead = require(1307).UnknownFieldHandler.onRead;
+              onRead = require("../../../../../../../_runtime/metro/01307__.js").UnknownFieldHandler.onRead;
             }
             let tmp10 = obj;
             let tmp11 = tmp5;
@@ -401,7 +401,7 @@ prototype3["internalBinaryWrite"] = function internalBinaryWrite(ackedDisclosure
       let tmp = tmp2;
       tmp2 = require;
       let tmp3 = dependencyMap;
-      let tagResult = tag.tag(1, require(1307).WireType.LengthDelimited);
+      let tagResult = tag.tag(1, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
       let internalBinaryWriteResult = tmp2.internalBinaryWrite(ackedDisclosures.ackedDisclosures[num], tagResult.fork(), writeUnknownFields);
       let joined = internalBinaryWriteResult.join();
       num = num + 1;
@@ -411,7 +411,7 @@ prototype3["internalBinaryWrite"] = function internalBinaryWrite(ackedDisclosure
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = require(1307).UnknownFieldHandler.onWrite;
+      onWrite = require("../../../../../../../_runtime/metro/01307__.js").UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, ackedDisclosures, tag);

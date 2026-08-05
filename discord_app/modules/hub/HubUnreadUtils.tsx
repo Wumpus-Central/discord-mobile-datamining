@@ -9,7 +9,7 @@ export const useHubUnreadCount = function useHubUnreadCount(arg0) {
   const _require = arg0;
   const items = [isFetching, generateOldThreadCutoff];
   const items1 = [arg0];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null == callback) {
       return 0;
     } else {

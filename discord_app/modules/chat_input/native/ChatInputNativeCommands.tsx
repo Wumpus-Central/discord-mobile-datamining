@@ -16,7 +16,7 @@ export default {
         const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
         DCDChatInputLegacyManager.backspace(callback(arg0));
       }
-      obj = require(11291) /* useShouldUseFabricChatInput */;
+      obj = require("useShouldUseFabricChatInput.tsx") /* useShouldUseFabricChatInput */;
       tmp = require;
     }
   },
@@ -29,7 +29,7 @@ export default {
         const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
         DCDChatInputLegacyManager.blur(callback(arg0));
       }
-      obj = require(11291) /* useShouldUseFabricChatInput */;
+      obj = require("useShouldUseFabricChatInput.tsx") /* useShouldUseFabricChatInput */;
       tmp = require;
     }
   },
@@ -42,7 +42,7 @@ export default {
         const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
         DCDChatInputLegacyManager.closeCustomKeyboard(callback(arg0));
       }
-      obj = require(11291) /* useShouldUseFabricChatInput */;
+      obj = require("useShouldUseFabricChatInput.tsx") /* useShouldUseFabricChatInput */;
       tmp = require;
     }
   },
@@ -56,7 +56,7 @@ export default {
         const error = new Error("flushText is not supported/needed on iOS");
         throw error;
       }
-      obj = require(11291) /* useShouldUseFabricChatInput */;
+      obj = require("useShouldUseFabricChatInput.tsx") /* useShouldUseFabricChatInput */;
       tmp = require;
     }
   },
@@ -101,7 +101,7 @@ export default {
         const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
         DCDChatInputLegacyManager.focus(callback(arg0));
       }
-      obj = require(11291) /* useShouldUseFabricChatInput */;
+      obj = require("useShouldUseFabricChatInput.tsx") /* useShouldUseFabricChatInput */;
       tmp = require;
     }
   },
@@ -115,7 +115,7 @@ export default {
         const error = new Error("openCustomKeyboard is not supported/needed on iOS");
         throw error;
       }
-      obj = require(11291) /* useShouldUseFabricChatInput */;
+      obj = require("useShouldUseFabricChatInput.tsx") /* useShouldUseFabricChatInput */;
       tmp = require;
     }
   },
@@ -128,7 +128,7 @@ export default {
         const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
         DCDChatInputLegacyManager.openSystemKeyboard(callback(arg0));
       }
-      obj = require(11291) /* useShouldUseFabricChatInput */;
+      obj = require("useShouldUseFabricChatInput.tsx") /* useShouldUseFabricChatInput */;
       tmp = require;
     }
   },
@@ -141,7 +141,7 @@ export default {
         const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
         DCDChatInputLegacyManager.setText(callback(arg0), arg1);
       }
-      obj = require(11291) /* useShouldUseFabricChatInput */;
+      obj = require("useShouldUseFabricChatInput.tsx") /* useShouldUseFabricChatInput */;
       tmp2 = require;
     }
   },
@@ -154,7 +154,7 @@ export default {
         const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
         DCDChatInputLegacyManager.setSelectedRange(callback(arg0), arg1, arg2);
       }
-      obj = require(11291) /* useShouldUseFabricChatInput */;
+      obj = require("useShouldUseFabricChatInput.tsx") /* useShouldUseFabricChatInput */;
       tmp3 = require;
     }
   },
@@ -169,7 +169,7 @@ export default {
         const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
         DCDChatInputLegacyManager.updateTextBlocks(callback(arg0), arg1, tmp6);
       }
-      obj = require(11291) /* useShouldUseFabricChatInput */;
+      obj = require("useShouldUseFabricChatInput.tsx") /* useShouldUseFabricChatInput */;
       tmp9 = require;
     }
   },
@@ -196,7 +196,7 @@ export default {
         const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
         DCDChatInputLegacyManager.replaceRange(callback(arg0), _location, length, text, nodes, flag, editId);
       }
-      obj = require(11291) /* useShouldUseFabricChatInput */;
+      obj = require("useShouldUseFabricChatInput.tsx") /* useShouldUseFabricChatInput */;
       tmp20 = require;
     }
   }

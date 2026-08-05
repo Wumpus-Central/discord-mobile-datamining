@@ -45,31 +45,31 @@ let obj12 = { marginTop: require("Themes").space.PX_12 };
 obj10[2] = { marginTop: require("Themes").space.PX_8 };
 let closure_17 = createCacheKey.createStyles(() => {
   let obj = { promotional: null, card: null, logo: null, promotionalLogo: null, promotionalLogoSingleLine: null, promotionalLogoSmallCompact: null, pricing: null, featureTitle: null, features: null, button: null, promotionalButton: null, featureIcon: null, featureText: null, wumpusNoPrice: null, promotionalCardImage: null, promotionalBackground: null };
-  obj = { overflow: "hidden", borderRadius: importDefault(712).radii.sm };
+  obj = { overflow: "hidden", borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.sm };
   obj[0] = obj;
-  obj = { justifyContent: "flex-start", borderRadius: importDefault(712).radii.sm, backgroundColor: importDefault(712).colors.BG_SURFACE_RAISED };
-  const merged = Object.assign(importDefault(712).shadows.SHADOW_LOW);
+  obj = { justifyContent: "flex-start", borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.sm, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BG_SURFACE_RAISED };
+  const merged = Object.assign(require("../../../../../discord_common/js/packages/tokens/native.tsx").shadows.SHADOW_LOW);
   obj[1] = obj;
-  obj[2] = { marginTop: importDefault(712).space.PX_40, marginStart: importDefault(712).space.PX_24 };
-  const obj1 = { marginTop: importDefault(712).space.PX_40, marginStart: importDefault(712).space.PX_24 };
-  obj[3] = { marginTop: importDefault(712).space.PX_24 };
-  const obj2 = { marginTop: importDefault(712).space.PX_24 };
-  obj[4] = { marginTop: importDefault(712).space.PX_32 };
+  obj[2] = { marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_40, marginStart: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
+  const obj1 = { marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_40, marginStart: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
+  obj[3] = { marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
+  const obj2 = { marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
+  obj[4] = { marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_32 };
   obj[5] = { marginTop: 18 };
-  const obj3 = { marginTop: importDefault(712).space.PX_32 };
-  obj[6] = { maxWidth: 140, marginStart: importDefault(712).space.PX_24 };
-  const obj4 = { maxWidth: 140, marginStart: importDefault(712).space.PX_24 };
-  obj[7] = { marginStart: importDefault(712).space.PX_24 };
-  const obj5 = { marginStart: importDefault(712).space.PX_24 };
-  obj[8] = { marginTop: importDefault(712).space.PX_8, marginHorizontal: importDefault(712).space.PX_24 };
-  const obj6 = { marginTop: importDefault(712).space.PX_8, marginHorizontal: importDefault(712).space.PX_24 };
-  obj[9] = { marginHorizontal: importDefault(712).space.PX_24, marginBottom: importDefault(712).space.PX_24 };
-  const obj7 = { marginHorizontal: importDefault(712).space.PX_24, marginBottom: importDefault(712).space.PX_24 };
-  obj[10] = { marginTop: importDefault(712).space.PX_12 };
+  const obj3 = { marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_32 };
+  obj[6] = { maxWidth: 140, marginStart: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
+  const obj4 = { maxWidth: 140, marginStart: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
+  obj[7] = { marginStart: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
+  const obj5 = { marginStart: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
+  obj[8] = { marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, marginHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
+  const obj6 = { marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, marginHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
+  obj[9] = { marginHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24, marginBottom: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
+  const obj7 = { marginHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24, marginBottom: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
+  obj[10] = { marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 };
   obj[11] = { width: 24, height: 24 };
   const obj9 = {};
-  const obj8 = { marginTop: importDefault(712).space.PX_12 };
-  const merged1 = Object.assign(importDefault(5204)(Fonts.PRIMARY_NORMAL, importDefault(712).colors.WHITE, 16));
+  const obj8 = { marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 };
+  const merged1 = Object.assign(require("../../../rebrand/native/TextStyles.tsx")(Fonts.PRIMARY_NORMAL, require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE, 16));
   obj9.marginStart = -8;
   obj[12] = obj9;
   obj[13] = { height: 75, right: 8 };
@@ -97,7 +97,7 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
   }
   const merged = Object.assign(variant, Object.create(null));
   let _require;
-  let obj = _require(589);
+  let obj = _require("../../../../../discord_common/js/packages/flux/index.tsx");
   const items = [createEmptyPromotionsByType];
   const stateFromStores = obj.useStateFromStores(items, () => {
     marketingComponentByType = marketingComponentByType.getMarketingComponentByType(_undefined(table[11]).MarketingComponentType.GIFT_PLAN_SELECTION_CARD_BANNER);
@@ -110,7 +110,7 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
     }
     return prop;
   });
-  let obj1 = _require(9958);
+  let obj1 = _require("../../promotions/MarketingComponentHooks.tsx");
   let cardAsset;
   if (stateFromStores != null) {
     cardAsset = stateFromStores.cardAsset;
@@ -120,19 +120,19 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
   if (stateFromStores != null) {
     backgroundAsset = stateFromStores.backgroundAsset;
   }
-  const themeAndReducedMotionAwareAssetUrl1 = _require(9958).useThemeAndReducedMotionAwareAssetUrl(backgroundAsset);
+  const themeAndReducedMotionAwareAssetUrl1 = _require("../../promotions/MarketingComponentHooks.tsx").useThemeAndReducedMotionAwareAssetUrl(backgroundAsset);
   let tmp9 = null != claimableRewards;
   if (tmp9) {
     tmp9 = 1 === claimableRewards.length;
   }
   const tmp10 = callback3(tmp9);
-  const tmp2Result = _require(9958);
-  let stringResult1 = importDefault(9959)(premiumType, constants.MONTH);
-  const tmp12 = importDefault(8435)(premiumType);
-  let obj3 = importDefault(9531);
+  const tmp2Result = _require("../../promotions/MarketingComponentHooks.tsx");
+  let stringResult1 = require("../hooks/usePremiumProductPricingString.tsx")(premiumType, constants.MONTH);
+  const tmp12 = require("../../../user_settings/premium/native/utils/usePremiumFeatures.tsx")(premiumType);
+  let obj3 = require("../../gifting/experiments/NitroGiftPriceCopyExperiment.tsx");
   const config = obj3.useConfig({ location: "PremiumGiftFeaturesCard" });
   ({ showGiftPrice, useNewCopy } = config);
-  let promotionalButton = importDefault(9960)(premiumType) && null != claimableRewards;
+  let promotionalButton = require("../../gifting/native/hooks/useShouldShowGiftingPromotionDeco.tsx")(premiumType) && null != claimableRewards;
   if (promotionalButton) {
     promotionalButton = claimableRewards.length > 0;
   }
@@ -140,7 +140,7 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
   if (promotionalButton) {
     tmp16 = null != themeAndReducedMotionAwareAssetUrl;
   }
-  const tmp14 = importDefault(9959)(premiumType, constants.YEAR);
+  const tmp14 = require("../hooks/usePremiumProductPricingString.tsx")(premiumType, constants.YEAR);
   [tmp18, c0] = callback(importAllResult.useState(0), 2);
   const items1 = [tmp10.card, style, ];
   let promotional = promotionalButton;

@@ -13,7 +13,7 @@ let items = [{ hueShift: -18, saturation: 0.54, lightness: 0.72 }, { hueShift: -
 let result = require("DisplayNameEffect").fileFinishedImporting("modules/display_name_styles/DisplayNameStylesUtils.tsx");
 
 export const getEffectColorCount = function getEffectColorCount(effectId) {
-  if (require(1887) /* DisplayNameEffect */.DisplayNameEffect.GRADIENT === effectId) {
+  if (require("../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx") /* DisplayNameEffect */.DisplayNameEffect.GRADIENT === effectId) {
     return 2;
   } else if (tmp(1887).DisplayNameEffect.GUMMY === effectId) {
     return 4;
@@ -24,7 +24,7 @@ export const getEffectColorCount = function getEffectColorCount(effectId) {
   }
 };
 export const generateColorVariants = function generateColorVariants(first) {
-  let obj = importDefault(689)(first);
+  let obj = require("../../../_runtime/00689_n.js")(first);
   const alphaResult = obj.alpha(1);
   const value = alphaResult.get("hsl.l");
   const bound = Math.min(1, 1.2 * alphaResult.get("hsl.s"));
@@ -50,9 +50,9 @@ export const wrapHue = function wrapHue(h) {
 };
 export const GUMMY_STRIPES = items;
 export const buildGummyColors = function buildGummyColors(outer1_11) {
-  const tmp = importDefault(689);
-  let obj = _require(688);
-  const tmp3 = callback(tmp(_require(688).int2hex(outer1_11)).hsl(), 3);
+  const tmp = require("../../../_runtime/00689_n.js");
+  let obj = _require("../../../discord_common/js/shared/utils/ColorUtils.tsx");
+  const tmp3 = callback(tmp(_require("../../../discord_common/js/shared/utils/ColorUtils.tsx").int2hex(outer1_11)).hsl(), 3);
   const first = tmp3[0];
   let num = 0;
   if (!Number.isNaN(first)) {
@@ -72,13 +72,13 @@ export const buildGummyColors = function buildGummyColors(outer1_11) {
 export const rebuildGummySourceColor = function rebuildGummySourceColor(selectedColors) {
   const first = selectedColors[0];
   if (null == first) {
-    const obj3 = importDefault(689);
-    return importDefault(689).hsl(0, closure_5, closure_4).num();
+    const obj3 = require("../../../_runtime/00689_n.js");
+    return require("../../../_runtime/00689_n.js").hsl(0, closure_5, closure_4).num();
   } else {
     const tmp10 = importDefault;
-    const tmp12 = importDefault(689);
-    const obj5 = require(688) /* int2hslRaw */;
-    const tmp15 = callback(tmp12(require(688) /* int2hslRaw */.int2hex(first)).hsl(), 3);
+    const tmp12 = require("../../../_runtime/00689_n.js");
+    const obj5 = require("../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */;
+    const tmp15 = callback(tmp12(require("../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */.int2hex(first)).hsl(), 3);
     const first1 = tmp15[0];
     const _Number = Number;
     let num = 0;
@@ -87,15 +87,15 @@ export const rebuildGummySourceColor = function rebuildGummySourceColor(selected
     }
     const items = [num, tmp15[1], tmp15[2]];
     const result = (callback(items, 1)[0] - items[0].hueShift) % 360;
-    const tmp12Result = tmp12(require(688) /* int2hslRaw */.int2hex(first));
+    const tmp12Result = tmp12(require("../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */.int2hex(first));
     const tmp14 = callback;
     const tmp10Result = tmp10(689);
     return tmp10(689).hsl((result + 360) % 360, closure_5, closure_4).num();
   }
 };
 export const hueToGummyColor = function hueToGummyColor(sharedValue) {
-  const obj = importDefault(689);
-  return importDefault(689).hsl(sharedValue, closure_5, closure_4).num();
+  const obj = require("../../../_runtime/00689_n.js");
+  return require("../../../_runtime/00689_n.js").hsl(sharedValue, closure_5, closure_4).num();
 };
 export const parseServerDisplayNameStyles = function parseServerDisplayNameStyles(display_name_styles) {
   let tmp = null;
@@ -118,12 +118,12 @@ export const applyFlywheelViewingFallback = function applyFlywheelViewingFallbac
   if (!isDisplayNameStylesFlywheelViewersEnabled) {
     if (null != fontId) {
       if (closure_7.includes(fontId.fontId)) {
-        fontId = require(1888) /* DisplayNameFont */.DisplayNameFont.DEFAULT;
+        fontId = require("../../../discord_common/js/shared/shared-constants/DisplayNameFont.tsx") /* DisplayNameFont */.DisplayNameFont.DEFAULT;
       } else {
         fontId = fontId.fontId;
       }
       if (closure_6.includes(fontId.effectId)) {
-        let effectId = require(1887) /* DisplayNameEffect */.DisplayNameEffect.SOLID;
+        let effectId = require("../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx") /* DisplayNameEffect */.DisplayNameEffect.SOLID;
       } else {
         effectId = fontId.effectId;
       }

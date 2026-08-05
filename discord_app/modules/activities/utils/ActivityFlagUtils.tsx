@@ -40,9 +40,9 @@ export const computeActivityFlags = function computeActivityFlags(activity, flag
     tmp6 = tmp4 | constants.CONTEXTLESS;
   }
   if (flag2) {
-    const AllowActivityPartyPrivacyFriends2 = require(3958) /* explicitContentFromProto */.AllowActivityPartyPrivacyFriends;
+    const AllowActivityPartyPrivacyFriends2 = require("../../user_settings/UserSettings.tsx") /* explicitContentFromProto */.AllowActivityPartyPrivacyFriends;
     const setting = AllowActivityPartyPrivacyFriends2.getSetting();
-    const AllowActivityPartyPrivacyVoiceChannel2 = require(3958) /* explicitContentFromProto */.AllowActivityPartyPrivacyVoiceChannel;
+    const AllowActivityPartyPrivacyVoiceChannel2 = require("../../user_settings/UserSettings.tsx") /* explicitContentFromProto */.AllowActivityPartyPrivacyVoiceChannel;
     const PARTY_PRIVACY_FRIENDS2 = constants.PARTY_PRIVACY_FRIENDS;
     const setting1 = AllowActivityPartyPrivacyVoiceChannel2.getSetting();
     if (setting) {
@@ -60,15 +60,15 @@ export const computeActivityFlags = function computeActivityFlags(activity, flag
   } else {
     let value = PRIVATE === constants2.PUBLIC;
     if (!value) {
-      const Storage = require(595) /* Storage */.Storage;
+      const Storage = require("../../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
       value = Storage.get("ACTIVITIES_FORCE_PUBLIC");
     }
     if (!value) {
       return tmp6;
     } else {
-      const AllowActivityPartyPrivacyFriends = require(3958) /* explicitContentFromProto */.AllowActivityPartyPrivacyFriends;
+      const AllowActivityPartyPrivacyFriends = require("../../user_settings/UserSettings.tsx") /* explicitContentFromProto */.AllowActivityPartyPrivacyFriends;
       const setting2 = AllowActivityPartyPrivacyFriends.getSetting();
-      const AllowActivityPartyPrivacyVoiceChannel = require(3958) /* explicitContentFromProto */.AllowActivityPartyPrivacyVoiceChannel;
+      const AllowActivityPartyPrivacyVoiceChannel = require("../../user_settings/UserSettings.tsx") /* explicitContentFromProto */.AllowActivityPartyPrivacyVoiceChannel;
       const PARTY_PRIVACY_FRIENDS = constants.PARTY_PRIVACY_FRIENDS;
       const setting3 = AllowActivityPartyPrivacyVoiceChannel.getSetting();
       if (setting2) {
@@ -95,9 +95,9 @@ export const isContextlessEmbeddedActivity = function isContextlessEmbeddedActiv
   if (num == null) {
     num = 0;
   }
-  let hasFlagResult = require(1384) /* hasFlag */.hasFlag(num, constants.CONTEXTLESS);
+  let hasFlagResult = require("../../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(num, constants.CONTEXTLESS);
   if (hasFlagResult) {
-    hasFlagResult = importDefault(7119)(remoteApplicationActivity);
+    hasFlagResult = require("isEmbeddedActivity.tsx")(remoteApplicationActivity);
   }
   return hasFlagResult;
 };

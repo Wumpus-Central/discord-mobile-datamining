@@ -7,8 +7,8 @@ const result = require("set").fileFinishedImporting("modules/collectibles/hooks/
 
 export const useFetchCollectiblesProductCategory = function useFetchCollectiblesProductCategory(skuId) {
   const _require = skuId;
-  importDefault(8091)();
-  let obj = _require(647);
+  require("useMaybeFetchCollectiblesCategories.tsx")();
+  let obj = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx");
   let items = [updateCategoriesAndProducts];
   const tmp2 = callback(obj.useStateFromStoresArray(items, () => {
     const items = [outer1_4.isFetchingCategories, outer1_4.getCategoryForProduct(closure_0)];

@@ -32,12 +32,12 @@ export const hasWebAuthn = tmp6;
 export const generateTotpSecret = function generateTotpSecret() {
   const uint8Array = new Uint8Array(20);
   const randomValues = _crypto.getRandomValues(uint8Array);
-  const obj = importDefault(8290);
-  const str = importDefault(8290).encode(randomValues);
-  const str2 = importDefault(8290).encode(randomValues).toString("utf8");
-  const str3 = importDefault(8290).encode(randomValues).toString("utf8").replace(/=/g, "");
-  const str4 = importDefault(8290).encode(randomValues).toString("utf8").replace(/=/g, "").toLowerCase();
-  return importDefault(8290).encode(randomValues).toString("utf8").replace(/=/g, "").toLowerCase().replace(/(\w{4})/g, "$1 ").trim();
+  const obj = require("../../_runtime/08290_encode.js");
+  const str = require("../../_runtime/08290_encode.js").encode(randomValues);
+  const str2 = require("../../_runtime/08290_encode.js").encode(randomValues).toString("utf8");
+  const str3 = require("../../_runtime/08290_encode.js").encode(randomValues).toString("utf8").replace(/=/g, "");
+  const str4 = require("../../_runtime/08290_encode.js").encode(randomValues).toString("utf8").replace(/=/g, "").toLowerCase();
+  return require("../../_runtime/08290_encode.js").encode(randomValues).toString("utf8").replace(/=/g, "").toLowerCase().replace(/(\w{4})/g, "$1 ").trim();
 };
 export { encodeTotpSecret };
 export const encodeTotpSecretAsUrl = function encodeTotpSecretAsUrl(arg0, str) {
@@ -51,7 +51,7 @@ export const encodeTotpSecretAsUrl = function encodeTotpSecretAsUrl(arg0, str) {
   return "otpauth://totp/" + encodeURIResult + ":" + encodeURIResult1 + "?secret=" + formatted + "&issuer=" + encodeURIComponent(str);
 };
 export const captureWebAuthnException = function captureWebAuthnException(closure_1, tags) {
-  let obj = importDefault(1208);
+  let obj = require("SentryUtils.native.tsx");
   obj = {};
   const merged = Object.assign(tags);
   tags = undefined;

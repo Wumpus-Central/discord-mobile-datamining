@@ -9,8 +9,8 @@ const require = arg1;
 ({ NOOP_NULL: c4, UserSettingsSections } = ME);
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.xZEzbu);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.xZEzbu);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   usePredicate: require("useIs2FAEnabled").useIs2FAEnabled,
@@ -72,7 +72,7 @@ createToggle = {
 createToggle = {
   route: UserSettingsSections.ACCOUNT_CONFIRM_VIEW_BACKUP_CODES,
   getComponent() {
-    return require(13893) /* CodeRow */.default;
+    return require("../../account/native/UserSettingsAccountBackupCodes.tsx") /* CodeRow */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

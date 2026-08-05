@@ -28,10 +28,10 @@ export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
   ({ isPremium, isRoleSubscriptionEmoji, onOpenPremiumSettings } = sourceType);
   if (sourceType.sourceType === EmojiSourceDataTypes.APPLICATION) {
     if (null != expressionSourceApplication) {
-      const intl8 = require(1236) /* getSystemLocale */.intl;
+      const intl8 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
       let obj = { appName: null };
       obj[0] = expressionSourceApplication.name;
-      let formatToPlainStringResult = intl8.formatToPlainString(require(1236) /* getSystemLocale */.t.uERlTd, obj);
+      let formatToPlainStringResult = intl8.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.uERlTd, obj);
       let tmp6 = require;
     }
     ({ isPremium: isPremium2, hasJoinedEmojiSourceGuild: hasJoinedEmojiSourceGuild2, isDiscoverable: isDiscoverable2 } = sourceType);
@@ -85,9 +85,9 @@ export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
   }
   if (isPremium) {
     if (!hasJoinedEmojiSourceGuild) {
-      const intl4 = require(1236) /* getSystemLocale */.intl;
+      const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
       const string2 = intl4.string;
-      const t = require(1236) /* getSystemLocale */.t;
+      const t = require("../../intl/index.native.tsx") /* getSystemLocale */.t;
       if (isDiscoverable) {
         let string2Result = string2(t.xE9WGt);
         let tmp26 = tmp24;
@@ -99,9 +99,9 @@ export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
       }
     }
     if (!isRoleSubscriptionEmoji) {
-      const intl5 = require(1236) /* getSystemLocale */.intl;
+      const intl5 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
       const string3 = intl5.string;
-      const t2 = require(1236) /* getSystemLocale */.t;
+      const t2 = require("../../intl/index.native.tsx") /* getSystemLocale */.t;
       if (emojiComesFromCurrentGuild) {
         let string3Result = string3(t2.hU4kIe);
         let tmp31 = tmp29;
@@ -113,9 +113,9 @@ export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
       }
     }
     if (!shouldHideRoleSubscriptionCTA) {
-      const intl6 = require(1236) /* getSystemLocale */.intl;
+      const intl6 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
       const string4 = intl6.string;
-      let vLklfF2 = require(1236) /* getSystemLocale */.t;
+      let vLklfF2 = require("../../intl/index.native.tsx") /* getSystemLocale */.t;
       if (isUnusableRoleSubscriptionEmoji) {
         if (userIsRoleSubscriber) {
           vLklfF2 = vLklfF2.vLklfF;
@@ -133,15 +133,15 @@ export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
         let tmp37 = tmp33;
       }
     }
-    const intl7 = require(1236) /* getSystemLocale */.intl;
-    string4Result1 = intl7.string(require(1236) /* getSystemLocale */.t.xFb68j);
+    const intl7 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    string4Result1 = intl7.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.xFb68j);
     tmp36 = dependencyMap;
     tmp37 = require;
   } else if (hasJoinedEmojiSourceGuild) {
     if (!shouldHideRoleSubscriptionCTA) {
-      const intl2 = require(1236) /* getSystemLocale */.intl;
+      const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
       const string = intl2.string;
-      let vLklfF = require(1236) /* getSystemLocale */.t;
+      let vLklfF = require("../../intl/index.native.tsx") /* getSystemLocale */.t;
       if (isUnusableRoleSubscriptionEmoji) {
         if (userIsRoleSubscriber) {
           vLklfF = vLklfF.vLklfF;
@@ -163,12 +163,12 @@ export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
         tmp11 = tmp7;
       }
     }
-    const intl3 = require(1236) /* getSystemLocale */.intl;
-    stringResult1 = intl3.string(require(1236) /* getSystemLocale */.t.xFb68j);
+    const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    stringResult1 = intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.xFb68j);
     tmp10 = dependencyMap;
     tmp11 = require;
   } else {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     if (isDiscoverable) {
       formatToPlainStringResult = intl.string(tmp2(1236).t.FJ6Z01);
       tmp6 = tmp2;

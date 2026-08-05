@@ -11,7 +11,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_FORM_PRIMITIVES,
   getComponent() {
-    return require(14715) /* Radio */.default;
+    return require("../../design_system/native/UserSettingsDesignSystemFormPrimitives.tsx") /* Radio */.default;
   }
 };
 const route = createToggle.createRoute(obj);

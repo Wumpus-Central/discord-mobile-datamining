@@ -24,9 +24,9 @@ class ActiveTimestamp {
 }
 function ContentTimestamp(entry) {
   entry = entry.entry;
-  let obj = require(8048) /* calculateTimestampDurations */;
+  let obj = require("../../../content_inventory/utils.tsx") /* calculateTimestampDurations */;
   const tmp = createCacheKey();
-  require(589) /* initialize */;
+  require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   [][0] = _getSystemLocale;
   if (isEntryActiveResult) {
     obj = { entry: null };
@@ -51,7 +51,7 @@ function BaseBadge(arg0) {
   obj = { style: tmp.icon, color: iconColor };
   const items = [callback(Icon, obj), ];
   obj = { variant: "text-sm/medium", style: tmp.text, children: text };
-  items[1] = callback(require(4281) /* Text */.Text, obj);
+  items[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 }
@@ -68,8 +68,8 @@ export { ActiveTimestamp };
 export const GameTimestampBadge = function GameTimestampBadge(entry) {
   entry = entry.entry;
   const tmp = createCacheKey();
-  let obj = require(8048) /* calculateTimestampDurations */;
-  const colors = importDefault(712).colors;
+  let obj = require("../../../content_inventory/utils.tsx") /* calculateTimestampDurations */;
+  const colors = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors;
   obj = { style: tmp.badgeContainer, children: null };
   const isEntryActiveResult = obj.isEntryActive(entry);
   const tmp2 = require;
@@ -80,10 +80,10 @@ export const GameTimestampBadge = function GameTimestampBadge(entry) {
 };
 export const MarathonBadge = function MarathonBadge(entry) {
   entry = entry.entry;
-  let obj = require(8048) /* calculateTimestampDurations */;
+  let obj = require("../../../content_inventory/utils.tsx") /* calculateTimestampDurations */;
   if (obj.isEntryMarathon(entry)) {
     let tmpResult = tmp(8048);
-    const colors = importDefault(712).colors;
+    const colors = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors;
     const isEntryActiveResult = tmpResult.isEntryActive(entry);
     tmpResult = tmp(8048);
     const text = tmpResult.getMarathonDescription(entry).text;
@@ -101,20 +101,20 @@ export const MarathonBadge = function MarathonBadge(entry) {
   }
 };
 export const NewGameBadge = function NewGameBadge(entry) {
-  let obj = require(8048) /* calculateTimestampDurations */;
+  let obj = require("../../../content_inventory/utils.tsx") /* calculateTimestampDurations */;
   let tmp3 = null;
   if (obj.isEntryNew(entry.entry)) {
     obj = { Icon: null, text: null, iconColor: null };
     obj[0] = tmp(12196).NewUserIcon;
     const intl = tmp(1236).intl;
     obj[1] = intl.string(tmp(1236).t.keY6mW);
-    obj[2] = importDefault(712).colors.STATUS_POSITIVE;
+    obj[2] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.STATUS_POSITIVE;
     tmp3 = callback(BaseBadge, obj);
   }
   return tmp3;
 };
 export const StreakBadge = function StreakBadge(entry) {
-  let obj = require(8048) /* calculateTimestampDurations */;
+  let obj = require("../../../content_inventory/utils.tsx") /* calculateTimestampDurations */;
   const streakCount = obj.getStreakCount(entry.entry);
   let tmp4 = null;
   if (null != streakCount) {
@@ -126,14 +126,14 @@ export const StreakBadge = function StreakBadge(entry) {
       obj = { days: null };
       obj[0] = streakCount;
       obj[1] = intl.formatToPlainString(tmp(1236).t["Klie/P"], obj);
-      obj[2] = importDefault(712).colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY;
+      obj[2] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY;
       tmp4 = callback(BaseBadge, obj);
     }
   }
   return tmp4;
 };
 export const TrendingBadge = function TrendingBadge(entry) {
-  let obj = require(8048) /* calculateTimestampDurations */;
+  let obj = require("../../../content_inventory/utils.tsx") /* calculateTimestampDurations */;
   const trendingType = obj.getTrendingType(entry.entry);
   let tmp4 = null;
   if (null != trendingType) {
@@ -143,27 +143,27 @@ export const TrendingBadge = function TrendingBadge(entry) {
       obj[0] = tmp(12113).FireIcon;
       const intl = tmp(1236).intl;
       obj[1] = intl.string(tmp(1236).t.TsWCdW);
-      obj[2] = importDefault(712).colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY;
+      obj[2] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY;
       tmp4 = callback(BaseBadge, obj);
     }
   }
   return tmp4;
 };
 export const ResurrectedBadge = function ResurrectedBadge(entry) {
-  let obj = require(8048) /* calculateTimestampDurations */;
+  let obj = require("../../../content_inventory/utils.tsx") /* calculateTimestampDurations */;
   let tmp3 = null;
   if (null != obj.getResurrectedEntryLastPlayTime(entry.entry)) {
     obj = { Icon: null, text: null, iconColor: null };
     obj[0] = tmp(9777).RetryIcon;
     const intl = tmp(1236).intl;
     obj[1] = intl.string(tmp(1236).t.adnLsB);
-    obj[2] = importDefault(712).colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY;
+    obj[2] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY;
     tmp3 = callback(BaseBadge, obj);
   }
   return tmp3;
 };
 export const TopGameBadge = function TopGameBadge(entry) {
-  let obj = require(8048) /* calculateTimestampDurations */;
+  let obj = require("../../../content_inventory/utils.tsx") /* calculateTimestampDurations */;
   const entryDuration = obj.getEntryDuration(entry.entry);
   if (null == entryDuration) {
     return null;
@@ -176,11 +176,11 @@ export const TopGameBadge = function TopGameBadge(entry) {
     const intl2 = tmp(1236).intl;
     const obj1 = { hours: null };
     const _Math = Math;
-    obj1[0] = Math.round(entryDuration / importDefault(687).Seconds.HOUR);
+    obj1[0] = Math.round(entryDuration / require("../../../../utils/Durations.tsx").Seconds.HOUR);
     items[2] = intl2.format(tmp(1236).t.SDRHgr, obj1);
     obj[0] = items;
     obj[1] = callback2(closure_8, obj);
-    obj[2] = importDefault(712).colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY;
+    obj[2] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY;
     return callback(BaseBadge, obj);
   }
 };
@@ -188,8 +188,8 @@ export const CustomStatusTimestampBadge = function CustomStatusTimestampBadge(en
   const tmp = createCacheKey();
   let obj = { style: tmp.badgeContainer, children: null };
   obj = { style: tmp.icon, color: null };
-  obj[1] = importDefault(712).colors.INTERACTIVE_TEXT_DEFAULT;
-  const items = [callback(require(10983) /* TimerIcon */.TimerIcon, obj), callback(ContentTimestamp, { entry: entry.entry })];
+  obj[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_TEXT_DEFAULT;
+  const items = [callback(require("../../../../design/components/Icon/native/redesign/generated/TimerIcon.tsx") /* TimerIcon */.TimerIcon, obj), callback(ContentTimestamp, { entry: entry.entry })];
   obj[1] = items;
   return callback2(View, obj);
 };

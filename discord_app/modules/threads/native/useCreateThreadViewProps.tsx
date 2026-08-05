@@ -5,9 +5,9 @@ let require = arg1;
 const result = require("defaultAreStatesEqual").fileFinishedImporting("modules/threads/native/useCreateThreadViewProps.tsx");
 
 export default function useCreateThreadViewProps(arg0) {
-  const tmp = importDefault(9822)(arg0);
+  const tmp = require("../useGetThreadDraftSettings.tsx")(arg0);
   const require = tmp;
-  let obj = require(647) /* defaultAreStatesEqual */;
+  let obj = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */;
   const items = [ensureGuildLoaded];
   const items1 = [tmp];
   const stateFromStores = obj.useStateFromStores(items, () => {

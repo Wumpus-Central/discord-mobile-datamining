@@ -22,7 +22,7 @@ export default function usePanelOpenState(arg0, arg1, arg2, connected) {
     const state = first.getState();
     return state.closeChannel(closure_0);
   }
-  let obj = _require(4146);
+  let obj = _require("../../../reanimated/ReanimatedRexport.tsx");
   const fn = function f() {
     return { connected: connected.get() };
   };
@@ -46,7 +46,7 @@ export default function usePanelOpenState(arg0, arg1, arg2, connected) {
       return;
     }
   }
-  obj = { runOnJS: _require(4146).runOnJS, doCloseChannel };
+  obj = { runOnJS: _require("../../../reanimated/ReanimatedRexport.tsx").runOnJS, doCloseChannel };
   O.__closure = obj;
   O.__workletHash = 9166012598595;
   O.__initData = closure_10;

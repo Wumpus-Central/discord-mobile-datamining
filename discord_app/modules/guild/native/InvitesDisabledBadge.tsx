@@ -17,9 +17,9 @@ const memoResult = require("noop").memo(function InvitesDisabledBadge(style) {
   items = [tmp.pauseRing, style.style];
   obj = { style: tmp.pauseBackground, children: null };
   obj = { style: tmp.pause, themedColor: null, source: null };
-  obj[1] = importDefault(712).colors.INTERACTIVE_TEXT_ACTIVE;
-  obj[2] = importDefault(11992);
-  obj[1] = jsx(require(1297) /* Button */.ThemedIcon, { style: tmp.pause, themedColor: null, source: null });
+  obj[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_TEXT_ACTIVE;
+  obj[2] = require("../../../../_runtime/11992_registerAsset.js");
+  obj[1] = jsx(require("../../../design/void/native.tsx") /* Button */.ThemedIcon, { style: tmp.pause, themedColor: null, source: null });
   obj[1] = <View style={tmp.pause} themedColor={null} source={null} />;
   return <View style={tmp.pause} themedColor={null} source={null} />;
 });

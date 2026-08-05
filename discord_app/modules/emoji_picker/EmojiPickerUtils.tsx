@@ -32,11 +32,11 @@ let result = set.fileFinishedImporting("modules/emoji_picker/EmojiPickerUtils.ts
 
 export const initializeSearch = function initializeSearch(location) {
   const intention = location.intention;
-  const obj = require(514) /* v1 */;
-  const replaced = require(514) /* v1 */.v4().replace(closure_21, "");
-  const EmojiPickerStore = require(8564) /* withEqualityFn */.EmojiPickerStore;
+  const obj = require("../../../_runtime/00514_v1.js") /* v1 */;
+  const replaced = require("../../../_runtime/00514_v1.js") /* v1 */.v4().replace(closure_21, "");
+  const EmojiPickerStore = require("../expression_picker/ExpressionPickerGridStores.tsx") /* withEqualityFn */.EmojiPickerStore;
   EmojiPickerStore.setAnalyticsId(replaced);
-  const str = require(514) /* v1 */.v4();
+  const str = require("../../../_runtime/00514_v1.js") /* v1 */.v4();
   if (constants8.REACTION === intention) {
     let EMOJI = constants7.EMOJI_REACTION;
   } else if (tmp3.AUTO_SUGGESTION === intention) {
@@ -44,7 +44,7 @@ export const initializeSearch = function initializeSearch(location) {
   } else {
     EMOJI = constants7.EMOJI;
   }
-  importDefault(4479).trackWithMetadata(constants4.SEARCH_OPENED, { search_type: EMOJI, load_id: replaced, location: location.location });
+  require("../app_analytics/AppAnalyticsUtils.tsx").trackWithMetadata(constants4.SEARCH_OPENED, { search_type: EMOJI, load_id: replaced, location: location.location });
 };
 export const useEmojiCategories = function useEmojiCategories(CHAT, channel, guildId) {
   let newlyAddedEmojis;
@@ -73,7 +73,7 @@ export const useEmojiCategories = function useEmojiCategories(CHAT, channel, gui
   let stateFromStores1;
   let c11;
   let soundmojiEmojiPickerSectionExperiment;
-  const result = _require(8565).maybeFetchTopEmojisByGuild(tmp);
+  const result = _require("../emojis/top_emojis/TopEmojisUtils.tsx").maybeFetchTopEmojisByGuild(tmp);
   let tmp5 = callback(CHAT);
   c4 = tmp5;
   _require = tmp;
@@ -81,9 +81,9 @@ export const useEmojiCategories = function useEmojiCategories(CHAT, channel, gui
     const FrecencyUserSettingsActionCreators = CHAT(tmp[25]).FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   }, []);
-  let obj = _require(8565);
+  let obj = _require("../emojis/top_emojis/TopEmojisUtils.tsx");
   let items = [c4];
-  stateFromStoresArray = _require(589).useStateFromStoresArray(items, () => {
+  stateFromStoresArray = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
     const disambiguatedEmojiContext = _undefined.getDisambiguatedEmojiContext(closure_0);
     return disambiguatedEmojiContext.getFrequentlyUsedEmojisWithoutFetchingLatest();
   });
@@ -92,9 +92,9 @@ export const useEmojiCategories = function useEmojiCategories(CHAT, channel, gui
     const FrecencyUserSettingsActionCreators = CHAT(tmp[25]).FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   }, []);
-  let obj2 = _require(589);
+  let obj2 = _require("../../../discord_common/js/packages/flux/index.tsx");
   let items1 = [c4];
-  stateFromStoresArray1 = _require(589).useStateFromStoresArray(items1, () => {
+  stateFromStoresArray1 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items1, () => {
     const disambiguatedEmojiContext = _undefined.getDisambiguatedEmojiContext(closure_0);
     return disambiguatedEmojiContext.getFrequentlyUsedReactionEmojisWithoutFetchingLatest();
   });
@@ -103,19 +103,19 @@ export const useEmojiCategories = function useEmojiCategories(CHAT, channel, gui
     const FrecencyUserSettingsActionCreators = CHAT(tmp[25]).FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   }, []);
-  let obj3 = _require(589);
+  let obj3 = _require("../../../discord_common/js/packages/flux/index.tsx");
   const items2 = [c4];
-  stateFromStoresArray2 = _require(589).useStateFromStoresArray(items2, () => _undefined.getDisambiguatedEmojiContext(closure_0).favoriteEmojisWithoutFetchingLatest);
-  let obj4 = _require(589);
-  ({ topEmojis, newlyAddedEmojis } = importDefault(8567)(tmp, CHAT));
-  allEmojis = importDefault(8568)({ topEmojis, newlyAddedEmojis }).allEmojis;
-  let tmp12 = importDefault(8567)(tmp, CHAT);
+  stateFromStoresArray2 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items2, () => _undefined.getDisambiguatedEmojiContext(closure_0).favoriteEmojisWithoutFetchingLatest);
+  let obj4 = _require("../../../discord_common/js/packages/flux/index.tsx");
+  ({ topEmojis, newlyAddedEmojis } = require("hooks/useTopAndNewlyAddedEmojis.tsx")(tmp, CHAT));
+  allEmojis = require("hooks/useEmojiHotrail.tsx")({ topEmojis, newlyAddedEmojis }).allEmojis;
+  let tmp12 = require("hooks/useTopAndNewlyAddedEmojis.tsx")(tmp, CHAT);
   const items3 = [c4];
   const items4 = [tmp];
-  stateFromStores = _require(589).useStateFromStores(items3, () => _undefined.getDisambiguatedEmojiContext(closure_2), items4);
-  let obj5 = _require(589);
+  stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items3, () => _undefined.getDisambiguatedEmojiContext(closure_2), items4);
+  let obj5 = _require("../../../discord_common/js/packages/flux/index.tsx");
   const items5 = [stateFromStoresArray];
-  stateFromStores1 = _require(589).useStateFromStores(items5, () => {
+  stateFromStores1 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items5, () => {
     const guild = stateFromStoresArray.getGuild(closure_2);
     let name;
     if (guild != null) {
@@ -123,14 +123,14 @@ export const useEmojiCategories = function useEmojiCategories(CHAT, channel, gui
     }
     return name;
   });
-  const obj6 = _require(589);
+  const obj6 = _require("../../../discord_common/js/packages/flux/index.tsx");
   const items6 = [stateFromStoresArray2];
-  const stateFromStores2 = _require(589).useStateFromStores(items6, () => stateFromStoresArray2.getCurrentUser());
-  const obj7 = _require(589);
-  const isPremiumResult = _require(1897).isPremium(stateFromStores2);
+  const stateFromStores2 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items6, () => stateFromStoresArray2.getCurrentUser());
+  const obj7 = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const isPremiumResult = _require("../../utils/PremiumTypeUtils.tsx").isPremium(stateFromStores2);
   c11 = isPremiumResult;
-  const obj8 = _require(1897);
-  soundmojiEmojiPickerSectionExperiment = _require(8569).useSoundmojiEmojiPickerSectionExperiment({ location: "useEmojiCategories" });
+  const obj8 = _require("../../utils/PremiumTypeUtils.tsx");
+  soundmojiEmojiPickerSectionExperiment = _require("../premium/sounds/soundmoji/SoundmojiSendingExperiment.tsx").useSoundmojiEmojiPickerSectionExperiment({ location: "useEmojiCategories" });
   const items7 = [stateFromStores, channel, tmp, CHAT, isPremiumResult, allEmojis, stateFromStores1, stateFromStoresArray1, stateFromStoresArray, stateFromStoresArray2, tmp5, soundmojiEmojiPickerSectionExperiment, flag];
   return flag.useMemo(() => {
     function getEmojiUnavailableReasons(categoryEmojis) {
@@ -324,7 +324,7 @@ export const useEmojiCategories = function useEmojiCategories(CHAT, channel, gui
   }, items7);
 };
 export const getUnicodeEmojiCategories = function getUnicodeEmojiCategories() {
-  const categories = importDefault(3926).getCategories();
+  const categories = require("../emojis/UnicodeEmojis.tsx").getCategories();
   return categories.map((id) => ({ type: constants.UNICODE, id, name: id, isNitroLocked: false }));
 };
 export const trackPremiumSettingsPaneOpened = function trackPremiumSettingsPaneOpened(getGuildId) {
@@ -332,7 +332,7 @@ export const trackPremiumSettingsPaneOpened = function trackPremiumSettingsPaneO
   if (getGuildId != null) {
     guildId = getGuildId.getGuildId();
   }
-  let obj = importDefault(698);
+  let obj = require("../../utils/AnalyticsUtils.tsx");
   obj = { location_page: null != guildId ? tmp3.GUILD_CHANNEL : tmp3.DM_CHANNEL, location_section: null };
   if (null != getGuildId) {
     let CUSTOM_STATUS_MODAL = constants5.EMOJI_PICKER_POPOUT;
@@ -343,7 +343,7 @@ export const trackPremiumSettingsPaneOpened = function trackPremiumSettingsPaneO
   obj.track(constants4.PREMIUM_PROMOTION_OPENED, obj);
 };
 export const trackEmojiSearchStart = function trackEmojiSearchStart(location) {
-  let obj = importDefault(4479);
+  let obj = require("../app_analytics/AppAnalyticsUtils.tsx");
   if (constants8.REACTION === arg1) {
     let EMOJI = constants7.EMOJI_REACTION;
   } else if (tmp2.AUTO_SUGGESTION === arg1) {
@@ -352,7 +352,7 @@ export const trackEmojiSearchStart = function trackEmojiSearchStart(location) {
     EMOJI = constants7.EMOJI;
   }
   obj = { search_type: EMOJI, location };
-  const EmojiPickerStore = require(8564) /* withEqualityFn */.EmojiPickerStore;
+  const EmojiPickerStore = require("../expression_picker/ExpressionPickerGridStores.tsx") /* withEqualityFn */.EmojiPickerStore;
   const analyticsId = EmojiPickerStore.getAnalyticsId();
   if (null != analyticsId) {
     if ("" !== analyticsId) {
@@ -374,7 +374,7 @@ export const trackEmojiSearchResultsViewed = function trackEmojiSearchResultsVie
   let totalResults;
   ({ intention, loadId } = arg0);
   ({ totalResults, numEmojiLocked, location: _location, searchQuery } = arg0);
-  let obj = importDefault(4479);
+  let obj = require("../app_analytics/AppAnalyticsUtils.tsx");
   if (constants8.REACTION === intention) {
     let EMOJI = constants7.EMOJI_REACTION;
   } else if (tmp.AUTO_SUGGESTION === intention) {
@@ -416,14 +416,14 @@ export const trackEmojiSearchSelect = function trackEmojiSearchSelect(arg0) {
   } else {
     EMOJI = constants7.EMOJI;
   }
-  let obj = importDefault(4479);
+  let obj = require("../app_analytics/AppAnalyticsUtils.tsx");
   obj = { search_type: EMOJI, location: _location, expression_guild_id: emoji.guildId, emoji_id: emoji.id, emoji_name: name, is_custom: null != emoji.id, is_animated: emoji.animated, is_locked: isLocked, query: searchQuery, index_num: index };
   let loadId;
   if (emojiSuggestions != null) {
     loadId = emojiSuggestions.loadId;
   }
   if (loadId == null) {
-    const EmojiPickerStore = require(8564) /* withEqualityFn */.EmojiPickerStore;
+    const EmojiPickerStore = require("../expression_picker/ExpressionPickerGridStores.tsx") /* withEqualityFn */.EmojiPickerStore;
     loadId = EmojiPickerStore.getAnalyticsId();
   }
   if (null != loadId) {
@@ -462,7 +462,7 @@ export const trackEmojiSearchEmpty = function trackEmojiSearchEmpty(arg0) {
   let searchQuery;
   ({ intention, loadId } = arg0);
   ({ location: _location, searchQuery } = arg0);
-  let obj = importDefault(4479);
+  let obj = require("../app_analytics/AppAnalyticsUtils.tsx");
   if (constants8.REACTION === intention) {
     let EMOJI = constants7.EMOJI_REACTION;
   } else if (tmp.AUTO_SUGGESTION === intention) {
@@ -489,7 +489,7 @@ export const trackEmojiFocus = function trackEmojiFocus(arg0) {
   let subCategory;
   ({ emoji, subCategory } = arg0);
   ({ position, newlyAddedHighlight } = arg0);
-  let obj = importDefault(4479);
+  let obj = require("../app_analytics/AppAnalyticsUtils.tsx");
   let str;
   if (subCategory != null) {
     str = subCategory.toString();
@@ -521,7 +521,7 @@ export const trackEmojiSelect = function trackEmojiSelect(arg0) {
     if (name == null) {
       name = emoji.name;
     }
-    let obj = importDefault(4479);
+    let obj = require("../app_analytics/AppAnalyticsUtils.tsx");
     if (null != lockedReason) {
       let EXPRESSION_PICKER_EXPRESSION_SELECTED = constants4.EXPRESSION_PICKER_LOCKED_EXPRESSION_SELECTED;
     } else {
@@ -562,13 +562,13 @@ export const trackEmojiFavorited = function trackEmojiFavorited(emoji) {
   if (name == null) {
     name = emoji.name;
   }
-  let obj = importDefault(4479);
+  let obj = require("../app_analytics/AppAnalyticsUtils.tsx");
   obj = { location: emoji.location, expression_type: ExpressionPickerViewType.EMOJI, expression_id: emoji.id, expression_name: name, expression_guild_id: emoji.guildId, is_custom: null != emoji.id, is_animated: emoji.animated };
   obj.trackWithMetadata(constants4.EXPRESSION_FAVORITED, obj);
 };
 export const throttledTrackEmojiAutoSuggestDisplayed = apply.throttle((emojiSuggestions) => {
   emojiSuggestions = emojiSuggestions.emojiSuggestions;
-  let obj = importDefault(4479);
+  let obj = require("../app_analytics/AppAnalyticsUtils.tsx");
   obj = { suggestion_type: constants6.EMOJI, suggestion_quantity: emojiSuggestions.results.length, custom_quantity: results.filter((emoji) => null != emoji.emoji.id).length, load_id: emojiSuggestions.loadId, location: emojiSuggestions.analyticsLocation };
   results = emojiSuggestions.results;
   obj.trackWithMetadata(constants4.AUTO_SUGGEST_DISPLAYED, obj);
@@ -587,46 +587,46 @@ export const getAriaIdForEmojiCategory = function getAriaIdForEmojiCategory(type
 };
 export const getStringForEmojiCategory = function getStringForEmojiCategory(PREMIUM_UPSELL) {
   if (constants.TOP_GUILD_EMOJI === PREMIUM_UPSELL) {
-    const intl13 = require(1236) /* getSystemLocale */.intl;
+    const intl13 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj = { guildName: null };
     obj[0] = arg1;
-    return intl13.formatToPlainString(require(1236) /* getSystemLocale */.t.W6Wi1X, obj);
+    return intl13.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.W6Wi1X, obj);
   } else if (tmp.RECENT === PREMIUM_UPSELL) {
-    const intl12 = require(1236) /* getSystemLocale */.intl;
-    return intl12.string(require(1236) /* getSystemLocale */.t["5TvaSm"]);
+    const intl12 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl12.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["5TvaSm"]);
   } else if (tmp.FAVORITES === PREMIUM_UPSELL) {
-    const intl11 = require(1236) /* getSystemLocale */.intl;
-    return intl11.string(require(1236) /* getSystemLocale */.t.y3LQCG);
+    const intl11 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl11.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.y3LQCG);
   } else if (tmp.ACTIVITY === PREMIUM_UPSELL) {
-    const intl10 = require(1236) /* getSystemLocale */.intl;
-    return intl10.string(require(1236) /* getSystemLocale */.t.O783tR);
+    const intl10 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl10.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.O783tR);
   } else if (tmp.FLAGS === PREMIUM_UPSELL) {
-    const intl9 = require(1236) /* getSystemLocale */.intl;
-    return intl9.string(require(1236) /* getSystemLocale */.t.vvaizu);
+    const intl9 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl9.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.vvaizu);
   } else if (tmp.FOOD === PREMIUM_UPSELL) {
-    const intl8 = require(1236) /* getSystemLocale */.intl;
-    return intl8.string(require(1236) /* getSystemLocale */.t.ldm9aY);
+    const intl8 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl8.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.ldm9aY);
   } else if (tmp.NATURE === PREMIUM_UPSELL) {
-    const intl7 = require(1236) /* getSystemLocale */.intl;
-    return intl7.string(require(1236) /* getSystemLocale */.t.egIBDH);
+    const intl7 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl7.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.egIBDH);
   } else if (tmp.OBJECTS === PREMIUM_UPSELL) {
-    const intl6 = require(1236) /* getSystemLocale */.intl;
-    return intl6.string(require(1236) /* getSystemLocale */.t.gWm7Mk);
+    const intl6 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl6.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.gWm7Mk);
   } else if (tmp.PEOPLE === PREMIUM_UPSELL) {
-    const intl5 = require(1236) /* getSystemLocale */.intl;
-    return intl5.string(require(1236) /* getSystemLocale */.t.GX594D);
+    const intl5 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl5.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.GX594D);
   } else if (tmp.SYMBOLS === PREMIUM_UPSELL) {
-    const intl4 = require(1236) /* getSystemLocale */.intl;
-    return intl4.string(require(1236) /* getSystemLocale */.t.QXMYAb);
+    const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl4.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.QXMYAb);
   } else if (tmp.TRAVEL === PREMIUM_UPSELL) {
-    const intl3 = require(1236) /* getSystemLocale */.intl;
-    return intl3.string(require(1236) /* getSystemLocale */.t.w33hIP);
+    const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.w33hIP);
   } else if (tmp.PREMIUM_UPSELL === PREMIUM_UPSELL) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    return intl2.string(require(1236) /* getSystemLocale */.t.pAF6xE);
+    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.pAF6xE);
   } else if (tmp.SOUNDMOJI === PREMIUM_UPSELL) {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.f0Ezmv);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.f0Ezmv);
   } else {
     let tmp3 = arg1;
     if (arg1 == null) {
@@ -648,7 +648,7 @@ export const useEmojiSearchResults = function useEmojiSearchResults(arg0, arg1, 
   let getEmojiToGroupId = tmp2;
   const items = [getEmojiToGroupId];
   const items1 = [arg0, arg1, arg2, tmp2, arg3];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const replaced = lib.replace(/^:/, "").replace(/:$/, "");
     let result = null;
     if ("" !== replaced) {
@@ -661,7 +661,7 @@ export const useEmojiSearchResults = function useEmojiSearchResults(arg0, arg1, 
       result = tmp2.searchWithoutFetchingLatest(obj);
     }
     return result;
-  }, items1, _require(589).statesWillNeverBeEqual);
+  }, items1, _require("../../../discord_common/js/packages/flux/index.tsx").statesWillNeverBeEqual);
 };
 export const useFrequentlyUsedEmojis = function useFrequentlyUsedEmojis(arg0) {
   const _require = arg0;
@@ -670,7 +670,7 @@ export const useFrequentlyUsedEmojis = function useFrequentlyUsedEmojis(arg0) {
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   }, []);
   const items = [getEmojiToGroupId];
-  return _require(589).useStateFromStoresArray(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
     const disambiguatedEmojiContext = _undefined.getDisambiguatedEmojiContext(closure_0);
     return disambiguatedEmojiContext.getFrequentlyUsedEmojisWithoutFetchingLatest();
   });
@@ -682,7 +682,7 @@ export const useFrequentlyUsedReactionEmojis = function useFrequentlyUsedReactio
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   }, []);
   const items = [getEmojiToGroupId];
-  return _require(589).useStateFromStoresArray(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
     const disambiguatedEmojiContext = _undefined.getDisambiguatedEmojiContext(closure_0);
     return disambiguatedEmojiContext.getFrequentlyUsedReactionEmojisWithoutFetchingLatest();
   });
@@ -694,7 +694,7 @@ export const useFavoriteEmojis = function useFavoriteEmojis(arg0) {
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   }, []);
   const items = [getEmojiToGroupId];
-  return _require(589).useStateFromStoresArray(items, () => _undefined.getDisambiguatedEmojiContext(closure_0).favoriteEmojisWithoutFetchingLatest);
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => _undefined.getDisambiguatedEmojiContext(closure_0).favoriteEmojisWithoutFetchingLatest);
 };
 export const useIsFavoriteEmoji = function useIsFavoriteEmoji(guildId, customEmojiFromJoinedGuild) {
   const _require = guildId;
@@ -704,7 +704,7 @@ export const useIsFavoriteEmoji = function useIsFavoriteEmoji(guildId, customEmo
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   }, []);
   const items = [getEmojiToGroupId];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let result = null != closure_1;
     if (result) {
       const disambiguatedEmojiContext = outer1_4.getDisambiguatedEmojiContext(closure_0);
@@ -720,7 +720,7 @@ export const useEmojiInPriorityOrder = function useEmojiInPriorityOrder(arg0) {
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   }, []);
   const items = [getEmojiToGroupId];
-  return _require(589).useStateFromStoresArray(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
     const disambiguatedEmojiContext = outer1_4.getDisambiguatedEmojiContext(closure_0);
     return disambiguatedEmojiContext.getEmojiInPriorityOrderWithoutFetchingLatest();
   });
@@ -750,9 +750,9 @@ export const getEmojiSubCategory = function getEmojiSubCategory(arr, arr2) {
 };
 export const getSearchPlaceholder = function getSearchPlaceholder(arg0, arg1) {
   if (arg0 === constants8.REACTION) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const string = intl2.string;
-    h7ES_n = require(1236) /* getSystemLocale */.t;
+    h7ES_n = require("../../intl/index.native.tsx") /* getSystemLocale */.t;
     if (arg1) {
       h7ES_n = h7ES_n["h7ES+n"];
       let stringResult = string(h7ES_n);
@@ -760,7 +760,7 @@ export const getSearchPlaceholder = function getSearchPlaceholder(arg0, arg1) {
       stringResult = string(h7ES_n["6any2A"]);
     }
   } else {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.KgK5qg);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.KgK5qg);
   }
 };

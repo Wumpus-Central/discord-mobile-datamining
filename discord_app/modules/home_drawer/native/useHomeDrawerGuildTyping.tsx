@@ -8,8 +8,8 @@ const require = arg1;
 function areHomeDrawerGuildTypingStatesEqual(typingChannelId, typingChannelId2) {
   let result = typingChannelId.typingChannelId === typingChannelId2.typingChannelId && typingChannelId.typingChannelName === typingChannelId2.typingChannelName;
   if (result) {
-    result = require(643) /* shallowEqual */.areArraysShallowEqual(typingChannelId.typingUserIds, typingChannelId2.typingUserIds);
-    const obj = require(643) /* shallowEqual */;
+    result = require("../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx") /* shallowEqual */.areArraysShallowEqual(typingChannelId.typingUserIds, typingChannelId2.typingUserIds);
+    const obj = require("../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx") /* shallowEqual */;
   }
   return result;
 }

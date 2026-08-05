@@ -28,14 +28,14 @@ let closure_6 = createCacheKey.createStyles((arg0) => {
   let obj = { actionIconButtonPressable: { minWidth: 32, minHeight: 32, borderRadius: 20, marginEnd: 12, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "row", paddingRight: 12, paddingLeft: 12 }, withoutMargin: { marginEnd: 0 }, filled: null, outlined: null, roundButton: null, actionIcon: null, actionText: null, unreadBadgeLeft: null, unreadBadgeRight: null, unreadBadgeMask: null, countStyle: null };
   let prop;
   if (!arg0) {
-    prop = importDefault(712).colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND;
+    prop = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND;
   }
   obj[2] = { backgroundColor: prop };
-  obj = { backgroundColor: importDefault(712).colors.BACKGROUND_BASE_LOW, borderWidth: 1, borderColor: importDefault(712).colors.INPUT_BACKGROUND_DEFAULT };
-  const merged = Object.assign(importDefault(712).shadows.SHADOW_LOW);
+  obj = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW, borderWidth: 1, borderColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.INPUT_BACKGROUND_DEFAULT };
+  const merged = Object.assign(require("../../../../../discord_common/js/packages/tokens/native.tsx").shadows.SHADOW_LOW);
   obj[3] = obj;
   obj[4] = { maxWidth: 32, maxHeight: 32 };
-  const colors = importDefault(712).colors;
+  const colors = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors;
   obj[5] = { tintColor: arg0 ? colors.ICON_SUBTLE : colors.INTERACTIVE_TEXT_DEFAULT };
   let num = 0;
   if (obj3.isAndroid()) {
@@ -46,8 +46,8 @@ let closure_6 = createCacheKey.createStyles((arg0) => {
   obj[8] = { position: "absolute", right: -2, top: -1 };
   obj = { color: tmp4(712).colors.BACKGROUND_BASE_LOW };
   obj[9] = obj;
-  obj3 = require(500) /* set */;
-  obj[10] = { position: "relative", marginLeft: importDefault(712).space.PX_8 };
+  obj3 = require("../../../../utils/PlatformUtils.tsx") /* set */;
+  obj[10] = { position: "relative", marginLeft: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
   return obj;
 });
 let closure_7 = importAllResult.memo((color) => {
@@ -103,9 +103,9 @@ export default function IconActionButton(variant) {
     num = 0;
   }
   ({ noMargin, hitSlop, disabled, onPress, onLongPress } = variant);
-  const tmp2 = importDefault(1348)("IconActionButton");
+  const tmp2 = require("../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("IconActionButton");
   const tmp3 = callback2(tmp2);
-  require(4701) /* getFontScale */;
+  require("../../../screen/native/useFontScale.tsx") /* getFontScale */;
   let tmp11Result = null != buttonText;
   if (tmp11Result) {
     tmp11Result = tmp6 <= 1.2;
@@ -147,7 +147,7 @@ export default function IconActionButton(variant) {
   }
   items1[3] = badge;
   obj[7] = items1;
-  return closure_5(require(4812) /* PressableBase */.PressableOpacity, obj);
+  return closure_5(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
 };
 export const ICON_ACTION_BUTTON_SIZE = 32;
 export { ButtonBadge };

@@ -10,10 +10,10 @@ export const handleCodedLinkExperimentEmbedTap = function handleCodedLinkExperim
   if (null != experimentTreatmentFromEmbedURL) {
     const _Number = Number;
     if (!Number.isNaN(experimentTreatmentFromEmbedURL)) {
-      let obj = _require(10371);
+      let obj = _require("../client_override_hooks/useLegacyExperiments.tsx");
       const legacyExperiments = obj.getLegacyExperiments();
       ({ experiments, overridesInfo } = legacyExperiments);
-      const apexExperiments = _require(10372).getApexExperiments();
+      const apexExperiments = _require("../client_override_hooks/useApexExperiments.tsx").getApexExperiments();
       let tmp5 = experiments[experimentFromEmbedURL];
       if (tmp5 == null) {
         tmp5 = apexExperiments.experiments[experimentFromEmbedURL];
@@ -40,9 +40,9 @@ export const handleCodedLinkExperimentEmbedTap = function handleCodedLinkExperim
           const tmpResult1 = tmp(4207);
         }
       }
-      const obj2 = _require(10372);
+      const obj2 = _require("../client_override_hooks/useApexExperiments.tsx");
     }
   }
   obj = { id: experimentFromEmbedURL };
-  importDefault(4253).openLazy(_require(1959)(11118, dependencyMap.paths), "ExperimentOverrideSheet", obj);
+  require("../../action_sheet/native/ActionSheetActionCreators.tsx").openLazy(_require("../../../../_runtime/01959_asyncRequireImpl.js")(11118, dependencyMap.paths), "ExperimentOverrideSheet", obj);
 };

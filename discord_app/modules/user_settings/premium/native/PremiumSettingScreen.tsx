@@ -6,15 +6,15 @@ const require = arg1;
 const result = require("useSettingNavigationRoute").fileFinishedImporting("modules/user_settings/premium/native/PremiumSettingScreen.tsx");
 
 export default function PremiumScreen() {
-  let obj = require(6787) /* useSettingNavigationRoute */;
+  let obj = require("../../core/native/useSettingNavigationRoute.tsx") /* useSettingNavigationRoute */;
   const settingNavigationRoute = obj.useSettingNavigationRoute();
-  const stackNavigation = require(1480) /* useNavigation */.useStackNavigation();
+  const stackNavigation = require("../../../../design/components/Navigator/native/useNavigation.native.tsx") /* useNavigation */.useStackNavigation();
   let close;
   if (!stackNavigation.canGoBack()) {
-    close = importDefault(7514).close;
+    close = require("../../../../actions/UserSettingsModalActionCreators.tsx").close;
   }
   obj = { onClose: close };
-  const obj2 = require(1480) /* useNavigation */;
+  const obj2 = require("../../../../design/components/Navigator/native/useNavigation.native.tsx") /* useNavigation */;
   const merged = Object.assign(settingNavigationRoute.params);
-  return jsx(importDefault(6784), { onClose: close });
+  return jsx(require("UserSettingsPremium.tsx"), { onClose: close });
 };

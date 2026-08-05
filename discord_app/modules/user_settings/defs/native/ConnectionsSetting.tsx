@@ -3,8 +3,8 @@ import createToggle from "createToggle";
 
 obj = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["3fe7U5"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["3fe7U5"]);
   },
   parent: null,
   IconComponent: require("PuzzlePieceIcon").PuzzlePieceIcon,
@@ -13,7 +13,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.CONNECTIONS,
   getComponent() {
-    return require(14106) /* onPress */.default;
+    return require("../../connections/native/ConnectionsSettingScreen.tsx") /* onPress */.default;
   }
 };
 const route = createToggle.createRoute(obj);

@@ -65,15 +65,15 @@ export const getEffectUrl = function getEffectUrl(emoji) {
     }
     obj[1] = animated;
     obj[2] = tmp;
-    return importDefault(1416).getEmojiURL(obj);
+    return require("../../utils/AvatarUtils.tsx").getEmojiURL(obj);
   } else {
-    obj = importDefault(3926);
+    obj = require("../emojis/UnicodeEmojis.tsx");
     const result = obj.convertSurrogateToName(emoji.name, false);
-    const byName = importDefault(3926).getByName(result);
+    const byName = require("../emojis/UnicodeEmojis.tsx").getByName(result);
     let str = "";
     if (null != byName) {
-      str = importDefault(3930).getURL(byName.surrogates);
-      const tmp2Result = importDefault(3930);
+      str = require("../../utils/EmojiUtils.tsx").getURL(byName.surrogates);
+      const tmp2Result = require("../../utils/EmojiUtils.tsx");
     }
     return str;
   }
@@ -84,7 +84,7 @@ export const getEffectAnnouncement = function getEffectAnnouncement(closure_7) {
   } else {
     let emojiName = "userId";
     let yZYxzF = dependencyMap;
-    const mapped = importDefault(12)(closure_7).map((arg0) => {
+    const mapped = require("../../../_runtime/00012_apply.js")(closure_7).map((arg0) => {
       let tmp = arg0[emojiName];
       if (tmp == null) {
         tmp = null;
@@ -92,11 +92,11 @@ export const getEffectAnnouncement = function getEffectAnnouncement(closure_7) {
       return tmp;
     });
     const found = mapped.filter((arg0) => null != arg0);
-    const arr = importDefault(12)(closure_7);
+    const arr = require("../../../_runtime/00012_apply.js")(closure_7);
     let obj = found.uniq().value();
     emojiName = "emojiName";
     const iter = found.uniq();
-    const mapped1 = importDefault(12)(closure_7).map((arg0) => {
+    const mapped1 = require("../../../_runtime/00012_apply.js")(closure_7).map((arg0) => {
       let tmp = arg0[emojiName];
       if (tmp == null) {
         tmp = null;
@@ -104,7 +104,7 @@ export const getEffectAnnouncement = function getEffectAnnouncement(closure_7) {
       return tmp;
     });
     const found1 = mapped1.filter((arg0) => null != arg0);
-    const arr3 = importDefault(12)(closure_7);
+    const arr3 = require("../../../_runtime/00012_apply.js")(closure_7);
     const valueResult = found1.uniq().value();
     if (valueResult.length < 2) {
       let str2;

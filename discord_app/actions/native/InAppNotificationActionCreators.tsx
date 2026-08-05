@@ -3,12 +3,12 @@ const result = require("set").fileFinishedImporting("actions/native/InAppNotific
 
 export default {
   enqueueNotification(buildResult) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "ENQUEUE_IN_APP_NOTIFICATION", notification: buildResult };
     obj.dispatch(obj);
   },
   clearNotification() {
-    importDefault(709).wait(() => {
+    require("../../Dispatcher.tsx").wait(() => {
       callback(table[0]).dispatch({ type: "CLEAR_IN_APP_NOTIFICATION" });
     });
   }

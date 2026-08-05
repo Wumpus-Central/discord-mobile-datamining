@@ -57,15 +57,15 @@ prototype["renderIcon"] = function renderIcon() {
     const obj2 = { style: null, variant: "text-xs/bold", color: "text-default", children: null };
     obj2[0] = tmp.emptyGuildIconText;
     const intl = tmp10(1236).intl;
-    obj6 = require(4131) /* AccessibilityAnnouncer */;
+    obj6 = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */;
     const tmp6 = closure_7;
     const tmp7 = closure_3;
     const tmp9 = closure_4;
-    obj2[3] = intl.string(require(1236) /* getSystemLocale */.t["3UB9ad"]).toUpperCase();
-    items2[1] = callback(require(4281) /* Text */.Text, obj2);
+    obj2[3] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["3UB9ad"]).toUpperCase();
+    items2[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
     obj1[1] = items2;
     tmp6Result = tmp6(tmp7, obj1);
-    const str = intl.string(require(1236) /* getSystemLocale */.t["3UB9ad"]);
+    const str = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["3UB9ad"]);
   }
   return tmp6Result;
 };
@@ -88,14 +88,14 @@ prototype["renderUpload"] = function renderUpload() {
     obj3[0] = iconBackgroundColor;
     items1[1] = obj3;
     obj2[0] = items1;
-    obj2[1] = importDefault(11112);
+    obj2[1] = require("../../../../_runtime/11112_registerAsset.js");
     obj1[1] = tmp2(closure_4, obj2);
     obj[1] = tmp2(tmp3, obj1);
   } else {
     obj = { style: null, children: null };
     obj[0] = tmp.emptyIconWrapper;
     const obj4 = { source: null };
-    obj4[0] = importDefault(11113);
+    obj4[0] = require("../../../../_runtime/11113_registerAsset.js");
     obj[1] = tmp2(closure_4, obj4);
   }
   return closure_6(closure_3, obj);
@@ -121,7 +121,7 @@ prototype["render"] = function render() {
   const items1 = [closure_6(closure_3, obj), self.renderUpload()];
   obj[1] = items1;
   obj[3] = callback2(closure_3, obj);
-  return closure_6(require(4812) /* PressableBase */.PressableOpacity, obj);
+  return closure_6(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
 };
 GuildIconUploader.contextType = require("ManaContext").ThemeContext;
 let obj3 = { borderWidth: 2, borderStyle: "dashed", justifyContent: "center", alignItems: "center", borderColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };

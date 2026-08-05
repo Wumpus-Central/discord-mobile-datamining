@@ -18,7 +18,7 @@ prototype["filterStaffContent"] = function filterStaffContent() {
 prototype["getDoubleTapBehavior"] = function getDoubleTapBehavior() {
   let DEFAULT = closure_2.doubleTapBehavior;
   if (DEFAULT == null) {
-    DEFAULT = require(7224) /* MessageEmbedTypes */.GravityICYMIDoubleTapBehavior.DEFAULT;
+    DEFAULT = require("ICYMITypes.tsx") /* MessageEmbedTypes */.GravityICYMIDoubleTapBehavior.DEFAULT;
   }
   return DEFAULT;
 };

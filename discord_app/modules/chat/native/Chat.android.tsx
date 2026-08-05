@@ -8,7 +8,7 @@ let c5;
 let closure_6;
 const require = arg1;
 function DCDChatList() {
-  let obj = require(1348) /* useIsMobileVisualRefreshExperimentEnabled */;
+  let obj = require("../../themes/experiments/MobileVisualRefreshExperiment.tsx") /* useIsMobileVisualRefreshExperimentEnabled */;
   const memo = importAllResult.useMemo(() => {
     const Gesture = callback(table[5]).Gesture;
     const NativeResult = Gesture.Native();
@@ -17,15 +17,15 @@ function DCDChatList() {
   obj = { gesture: memo, children: null };
   obj = { style: callback3().chatList, floatingChatInputEnabled: obj.useMobileVisualRefreshConfig({ location: "DCDChatList" }).chatInputFloating, children: null };
   const tmp = callback3();
-  obj[2] = callback(require(11207) /* TTIFirstContentfulPaint */.TTIFirstContentfulPaint, { label: "chat_list_android" });
-  obj[1] = callback(importDefault(11206), obj);
-  return callback(require(5368) /* Directions */.GestureDetector, obj);
+  obj[2] = callback(require("../../tti_analytics/native/TTIFirstContentfulPaint.tsx") /* TTIFirstContentfulPaint */.TTIFirstContentfulPaint, { label: "chat_list_android" });
+  obj[1] = callback(require("../../../../discord_common/js/packages/rtn-codegen/js/ChatListNativeComponent.tsx"), obj);
+  return callback(require("../../../../_runtime/05368_Directions.js") /* Directions */.GestureDetector, obj);
 }
 let c3 = importAllResult;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ chatList: { flex: 1 } });
 const forwardRefResult = importAllResult.forwardRef((children, ref) => {
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => roleStyle.roleStyle);
   obj = {};
@@ -34,7 +34,7 @@ const forwardRefResult = importAllResult.forwardRef((children, ref) => {
   obj.ref = ref;
   const items1 = [callback(DCDChatList, {}), children.children];
   obj.children = items1;
-  return callback2(importDefault(10923), obj);
+  return callback2(require("../../../../discord_common/js/packages/rtn-codegen/js/ChatNativeComponent.tsx"), obj);
 });
 const result = require("jsxProd").fileFinishedImporting("modules/chat/native/Chat.android.tsx");
 

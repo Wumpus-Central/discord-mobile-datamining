@@ -17,14 +17,14 @@ let c3 = importAllResult;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles((arg0) => {
   let obj = { maskWrapper: null, maskStroke: null, actionButtonPressable: null, actionButtonIcon: null };
-  obj = { position: "absolute", minWidth: require(1297) /* Button */.BADGE_SIZE, height: require(1297) /* Button */.BADGE_SIZE, top: 10, left: 8, flexShrink: 0, flexGrow: 1, zIndex: 100 };
+  obj = { position: "absolute", minWidth: require("../../../../../design/void/native.tsx") /* Button */.BADGE_SIZE, height: require("../../../../../design/void/native.tsx") /* Button */.BADGE_SIZE, top: 10, left: 8, flexShrink: 0, flexGrow: 1, zIndex: 100 };
   obj[0] = obj;
-  obj = { backgroundColor: importDefault(712).colors.PANEL_BG };
+  obj = { backgroundColor: require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.PANEL_BG };
   obj[1] = obj;
   const obj1 = { padding: 8, zIndex: 100, width: 40, height: null, borderRadius: 20 };
   obj1[3] = 40;
   obj[2] = obj1;
-  const colors = importDefault(712).colors;
+  const colors = require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors;
   obj[3] = { tintColor: arg0 ? colors.ICON_SUBTLE : colors.INTERACTIVE_TEXT_DEFAULT };
   return obj;
 });

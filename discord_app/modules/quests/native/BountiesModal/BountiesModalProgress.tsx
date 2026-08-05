@@ -16,13 +16,13 @@ let closure_9 = createCacheKey.createStyles(() => {
   let obj = { progressContainer: { height: 4 }, progressTrack: null, progressBar: null, progressBarGlowLayer: null };
   obj = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
-  obj.borderRadius = importDefault(712).radii.round;
-  obj.backgroundColor = importDefault(712).colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT;
+  obj.borderRadius = require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.round;
+  obj.backgroundColor = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT;
   obj.opacity = 0.54;
   obj[1] = obj;
-  obj = { position: "absolute", height: "100%", left: 0, bottom: 0, borderRadius: importDefault(712).radii.round, backgroundColor: importDefault(712).unsafe_rawColors.GREEN_300, shadowOffset: { width: 0, height: 0 }, shadowRadius: 8, shadowOpacity: 1, elevation: 4, shadowColor: "#30C773" };
+  obj = { position: "absolute", height: "100%", left: 0, bottom: 0, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.round, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.GREEN_300, shadowOffset: { width: 0, height: 0 }, shadowRadius: 8, shadowOpacity: 1, elevation: 4, shadowColor: "#30C773" };
   obj[2] = obj;
-  obj[3] = { position: "absolute", height: "100%", left: 0, bottom: 0, borderRadius: importDefault(712).radii.round, backgroundColor: importDefault(712).unsafe_rawColors.GREEN_300, shadowOffset: { width: 0, height: 0 }, shadowRadius: 12, shadowOpacity: 1, elevation: 8, shadowColor: importDefault(712).unsafe_rawColors.GREEN_300 };
+  obj[3] = { position: "absolute", height: "100%", left: 0, bottom: 0, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.round, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.GREEN_300, shadowOffset: { width: 0, height: 0 }, shadowRadius: 12, shadowOpacity: 1, elevation: 8, shadowColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.GREEN_300 };
   return obj;
 });
 let closure_10 = { code: "function BountiesModalProgressTsx1(){const{withTiming,visible,timingFast}=this.__closure;return{opacity:withTiming(visible?1:0,timingFast)};}" };

@@ -33,7 +33,7 @@ prototype["getSubscribedThreadIds"] = function getSubscribedThreadIds() {
 prototype["_get"] = function _get(arg0) {
   let tmp = this._subscriptions[arg0];
   if (tmp == null) {
-    tmp = new importDefault(1386)({ max: 3, updateAgeOnGet: true });
+    tmp = new require("../../../_runtime/01386_priv.js")({ max: 3, updateAgeOnGet: true });
   }
   return tmp;
 };

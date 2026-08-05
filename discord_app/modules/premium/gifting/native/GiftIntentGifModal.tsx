@@ -1,7 +1,7 @@
 // discord_app/modules/premium/gifting/native/GiftIntentGifModal.tsx
 import _slicedToArray from "_slicedToArray";
 import ME from "ME";
-import module_9848 from "module_9848";
+import GIFPicker from "../../../gif_picker/native/GIFPicker.tsx";
 import { View } from "getSystemLocale";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { AnalyticEvents } from "ME";

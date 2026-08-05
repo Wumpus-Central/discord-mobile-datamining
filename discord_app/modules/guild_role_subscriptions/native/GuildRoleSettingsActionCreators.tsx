@@ -7,9 +7,9 @@ const result = require("module_8943").fileFinishedImporting("modules/guild_role_
 export const pushTierEditScene = function pushTierEditScene(arr, arg1) {
   usePriceTiers.resetImperatively();
   arr.push(GuildSettingsSections.ROLE_SUBSCRIPTIONS_TIER_EDIT, arg1);
-  importDefault(8943).setSection(GuildSettingsSections.ROLE_SUBSCRIPTIONS_TIER_EDIT);
+  require("../../guild_settings/GuildSettingsActionCreators.tsx").setSection(GuildSettingsSections.ROLE_SUBSCRIPTIONS_TIER_EDIT);
 };
 export const pushTierTemplateSelectionScene = function pushTierTemplateSelectionScene(arr, arg1) {
   arr.push(GuildSettingsSections.ROLE_SUBSCRIPTIONS_TIER_TEMPLATE_SELECTION, arg1);
-  importDefault(8943).setSection(GuildSettingsSections.ROLE_SUBSCRIPTIONS_TIER_TEMPLATE_SELECTION);
+  require("../../guild_settings/GuildSettingsActionCreators.tsx").setSection(GuildSettingsSections.ROLE_SUBSCRIPTIONS_TIER_TEMPLATE_SELECTION);
 };

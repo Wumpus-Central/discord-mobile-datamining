@@ -2,7 +2,7 @@
 const result = require("BadgeCategory").fileFinishedImporting("modules/guild_badge/GuildBadgeConstants.tsx");
 
 export const getBadgeTooltip = function getBadgeTooltip(arg0, arg1) {
-  if (arg1 === require(9178) /* GuildVisibility */.GuildVisibility.PUBLIC) {
+  if (arg1 === require("GuildTraits.tsx") /* GuildVisibility */.GuildVisibility.PUBLIC) {
     const intl3 = tmp(1236).intl;
     let stringResult = intl3.string(tmp(1236).t.op2cJ6);
   } else if (arg1 === tmp(9178).GuildVisibility.APPLY_TO_JOIN) {
@@ -12,7 +12,7 @@ export const getBadgeTooltip = function getBadgeTooltip(arg0, arg1) {
     const intl = tmp(1236).intl;
     stringResult = intl.string(tmp(1236).t.TME4LJ);
   }
-  if (require(9179) /* BadgeCategory */.BadgeCategory.STAFF === arg0) {
+  if (require("BadgeCategory.tsx") /* BadgeCategory */.BadgeCategory.STAFF === arg0) {
     let obj = { tooltipTitle: null, tooltipSubtitle: null, tooltipDescription: null };
     const intl14 = tmp(1236).intl;
     obj[0] = intl14.string(tmp(1236).t.lMrv96);

@@ -43,8 +43,8 @@ function openLoadingIndicatorDebugBody() {
         };
       });
     };
-    importDefault(4624).openLazy(obj);
-    const obj2 = importDefault(4624);
+    require("../../../actions/native/AlertActionCreators.tsx").openLazy(obj);
+    const obj2 = require("../../../actions/native/AlertActionCreators.tsx");
   }
 }
 let c4 = importAllResult;
@@ -57,7 +57,7 @@ let closure_18 = importAllResult.memo(() => {
   let connected;
   let messagesCached;
   let messagesReady;
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [reinjectEphemerals, _handleConnectionOpen, handleConnectionOpen];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     channelId = channelId.getChannelId();
@@ -88,7 +88,7 @@ let closure_18 = importAllResult.memo(() => {
     str4 = "true";
   }
   obj[2] = str4;
-  items1[3] = closure_13(require(4281) /* Text */.Text, obj);
+  items1[3] = closure_13(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   let tmp4Result = null;
   if (messagesCached !== false) {
     obj = { variant: "text-md/normal", color: "text-muted", children: null };
@@ -109,7 +109,7 @@ let closure_18 = importAllResult.memo(() => {
     str7 = "true";
   }
   obj1[2] = str7;
-  items4[3] = closure_13(require(4281) /* Text */.Text, obj1);
+  items4[3] = closure_13(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
   tmp4Result = null;
   if (messagesReady !== true) {
     const obj2 = { variant: "text-md/normal", color: "text-muted", children: null };
@@ -131,7 +131,7 @@ let closure_18 = importAllResult.memo(() => {
     str11 = "true";
   }
   obj3[2] = str11;
-  items6[3] = closure_13(require(4281) /* Text */.Text, obj3);
+  items6[3] = closure_13(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj3);
   let tmp4Result1 = null;
   if (connected !== true) {
     const obj4 = { variant: "text-md/normal", color: "text-muted", children: null };
@@ -157,12 +157,12 @@ let closure_18 = importAllResult.memo(() => {
     str3 = "true";
   }
   obj5[2] = str3;
-  items8[3] = closure_13(require(4281) /* Text */.Text, obj5);
+  items8[3] = closure_13(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj5);
   const obj6 = { variant: "text-md/normal", color: "text-default", children: null };
   items8[4] = null;
   items3[6] = closure_14(closure_15, { children: items8 });
   obj6[2] = items3;
-  return closure_14(require(4281) /* Text */.Text, obj6);
+  return closure_14(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj6);
 });
 let closure_19 = { code: "function ChatLoadingIndicatorTsx1(){const{useReducedMotion,withRepeat,withSequence,withTiming,Easing}=this.__closure;if(useReducedMotion){return{transform:[]};}return{transform:[{scale:withRepeat(withSequence(withTiming(1,{duration:0}),withTiming(0.5,{duration:1500,easing:Easing.bezier(0.4,0,0.2,1)}),withTiming(1,{duration:1500,easing:Easing.bezier(0.4,0,0.2,1)})),-1)}]};}" };
 const result = require("get ActivityIndicator").fileFinishedImporting("modules/chat/native/ChatLoadingIndicator.tsx");
@@ -268,7 +268,7 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
   obj = { style: tmp.container, children: null };
   const animatedStyle = obj2.useAnimatedStyle(fn);
   const items2 = [tmp.pulse, animatedStyle];
-  const items3 = [callback2(importDefault(4146).View, { style: items2 }), ];
+  const items3 = [callback2(require("../../reanimated/ReanimatedRexport.tsx").View, { style: items2 }), ];
   obj1 = { variant: "text-xs/medium", color: "text-muted", children: null };
   const intl = stateFromStores(1236).intl;
   obj1[2] = intl.string(stateFromStores(1236).t.JwIJMV);

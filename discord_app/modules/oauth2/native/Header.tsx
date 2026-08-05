@@ -27,7 +27,7 @@ export default function Header(accountScopes) {
   let user;
   ({ user, application, bot } = accountScopes);
   const tmp = createCacheKey();
-  let obj = importDefault(1416);
+  let obj = require("../../../utils/AvatarUtils.tsx");
   obj = { id: application.id, icon: application.icon };
   let userAvatarSource;
   const applicationIconSource = obj.getApplicationIconSource(obj);
@@ -38,19 +38,19 @@ export default function Header(accountScopes) {
   obj = { style: tmp.header, children: null };
   const obj1 = { style: tmp.headerIcons, children: null };
   const obj2 = { source: applicationIconSource, size: null };
-  obj2[1] = require(1297) /* Button */.AvatarSizes.XLARGE;
-  const items = [callback(require(1297) /* Button */.Avatar, obj2), , ];
+  obj2[1] = require("../../../design/void/native.tsx") /* Button */.AvatarSizes.XLARGE;
+  const items = [callback(require("../../../design/void/native.tsx") /* Button */.Avatar, obj2), , ];
   const obj3 = { style: tmp.ellipseGroup, children: null };
   const items1 = [callback(View, { style: tmp.ellipse }), callback(View, { style: tmp.ellipse }), callback(View, { style: tmp.ellipse })];
   obj3[1] = items1;
   items[1] = callback2(View, obj3);
   const obj7 = { source: userAvatarSource, size: null };
-  obj7[1] = require(1297) /* Button */.AvatarSizes.XLARGE;
-  items[2] = callback(require(1297) /* Button */.Avatar, obj7);
+  obj7[1] = require("../../../design/void/native.tsx") /* Button */.AvatarSizes.XLARGE;
+  items[2] = callback(require("../../../design/void/native.tsx") /* Button */.Avatar, obj7);
   obj1[1] = items;
   const items2 = [callback2(View, obj1), , ];
   const obj8 = { style: tmp.applicationNameWrapper, children: null };
-  const items3 = [callback(require(4281) /* Text */.Text, { variant: "text-lg/bold", color: "mobile-text-heading-primary", children: application.name }), ];
+  const items3 = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-lg/bold", color: "mobile-text-heading-primary", children: application.name }), ];
   let tmp8Result = null;
   if (null != bot) {
     const obj10 = { style: null, verified: null };
@@ -74,7 +74,7 @@ export default function Header(accountScopes) {
     const intl = tmp9(1236).intl;
     stringResult = intl.string(tmp9(1236).t["X+Fdpo"]);
   }
-  items2[2] = callback(require(4281) /* Text */.Text, { variant: "heading-md/normal", color: "text-default", children: stringResult });
+  items2[2] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "heading-md/normal", color: "text-default", children: stringResult });
   obj[1] = items2;
   return callback2(View, obj);
 };

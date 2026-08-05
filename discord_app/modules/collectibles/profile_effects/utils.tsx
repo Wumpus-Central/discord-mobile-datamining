@@ -27,7 +27,7 @@ export const usePotentiallyRandomizedProfileEffect = function usePotentiallyRand
   let tmp6 = arg0;
   [tmp4, tmp5] = callback(React.useState(arg0), 2);
   if (null != arg0) {
-    const cloneDeepResult = _require(12).cloneDeep(arg0);
+    const cloneDeepResult = _require("../../../../_runtime/00012_apply.js").cloneDeep(arg0);
     const effects = cloneDeepResult.effects;
     let _Math = Math;
     const _Math2 = Math;
@@ -64,7 +64,7 @@ export const usePotentiallyRandomizedProfileEffect = function usePotentiallyRand
       return randomizedSources;
     });
     tmp6 = cloneDeepResult;
-    const obj2 = _require(12);
+    const obj2 = _require("../../../../_runtime/00012_apply.js");
   }
   const tmp2 = callback;
   const tmp3 = callback(React.useState(arg0), 2);

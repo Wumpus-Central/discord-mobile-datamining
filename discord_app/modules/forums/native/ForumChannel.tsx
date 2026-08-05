@@ -34,14 +34,14 @@ function forumKeyExtractor(arg0, arg1) {
 }
 function ArchivedSection() {
   const tmp = createCacheKey();
-  let obj = require(8202) /* useGradientBottom */;
+  let obj = require("../../client_themes/native/ClientThemesOverrides.tsx") /* useGradientBottom */;
   obj = { style: null, children: null };
   const items = [tmp.section, obj.useClientThemesOverride()];
   obj[0] = items;
   obj = { style: tmp.divider, variant: "text-xs/bold", color: "text-muted", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[3] = intl.string(require(1236) /* getSystemLocale */.t["3+LO1w"]);
-  obj[1] = callback(require(4281) /* Text */.Text, obj);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[3] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["3+LO1w"]);
+  obj[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   return callback(View, obj);
 }
 function SearchSection(numPosts) {
@@ -60,25 +60,25 @@ function SearchSection(numPosts) {
     stringResult = intl.formatToPlainString(tmp4(1236).t["tBz/8b"], obj);
   }
   obj[3] = stringResult;
-  obj[1] = closure_15(require(4281) /* Text */.Text, obj);
+  obj[1] = closure_15(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   return closure_15(View, obj);
 }
 function ArchivedMissingReadHistoryPermission(channelName) {
   const tmp = createCacheKey();
   let obj = { style: tmp.missingPermissionContainer, children: null };
   obj = { style: tmp.missingPermissionText, variant: "text-xs/normal", color: "text-muted", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[3] = intl.format(require(1236) /* getSystemLocale */.t.TycmzM, { channelName: channelName.channelName });
-  obj[1] = callback(require(4281) /* Text */.Text, obj);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[3] = intl.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.TycmzM, { channelName: channelName.channelName });
+  obj[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   return callback(View, obj);
 }
 function SearchMissingReadHistoryPermission(channelName) {
   const tmp = createCacheKey();
   let obj = { style: tmp.section, children: null };
   obj = { style: tmp.missingPermissionText, variant: "text-xs/normal", color: "text-muted", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[3] = intl.format(require(1236) /* getSystemLocale */.t.OWZJdS, { channelName: channelName.channelName });
-  obj[1] = callback(require(4281) /* Text */.Text, obj);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[3] = intl.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.OWZJdS, { channelName: channelName.channelName });
+  obj[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   return callback(View, obj);
 }
 function SortAndViewOptions(channel) {
@@ -101,7 +101,7 @@ function SortAndViewOptions(channel) {
   const isMediaChannelResult = channel.isMediaChannel();
   let tmp5Result = dependencyMap;
   let ArrowsUpDownIcon = id;
-  if (importDefault(1348)("SortAndViewOptions")) {
+  if (require("../../themes/experiments/MobileVisualRefreshExperiment.tsx")("SortAndViewOptions")) {
     const intl3 = ArrowsUpDownIcon(1236).intl;
     const string3 = intl3.string;
     let t = ArrowsUpDownIcon(1236).t;
@@ -163,7 +163,7 @@ function TagFilter(channel) {
   }
   const tmp = createCacheKey();
   const tagFilter = useForumChannelStore(channel.id).tagFilter;
-  if (importDefault(1348)("TagFilter")) {
+  if (require("../../themes/experiments/MobileVisualRefreshExperiment.tsx")("TagFilter")) {
     let obj = { variant: "secondary", text: null, onPress: null, size: "sm", icon: null };
     const intl3 = tmp4(1236).intl;
     obj[1] = intl3.string(tmp4(1236).t["112vVE"]);
@@ -472,11 +472,11 @@ function ForumChannelContent(channel) {
   const tmp8Result1 = channel(joined[16]);
 }
 function onCreatePostWithoutPermission() {
-  let obj = importDefault(3986);
+  let obj = require("../../toast/native/ToastActionCreators.tsx");
   obj = { key: "FORUM_NO_POST_PERMISSION_HELP", content: null, icon: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl.string(require(1236) /* getSystemLocale */.t.iyzwnD);
-  obj[2] = importDefault(7556);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.iyzwnD);
+  obj[2] = require("../../../../_runtime/07556_registerAsset.js");
   obj.open(obj);
 }
 ({ AnalyticsObjects: unpackModuleId, AnalyticsPages: closure_12, AnalyticsSections: map1 } = ME);

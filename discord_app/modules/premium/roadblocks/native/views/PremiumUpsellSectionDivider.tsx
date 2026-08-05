@@ -27,7 +27,7 @@ let closure_8 = createCacheKey.createStyles((arg0) => {
   obj = { justifyContent: "center", alignItems: "center" };
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
   obj[1] = obj;
-  obj[2] = { width: 28, height: 28, justifyContent: "center", borderRadius: importDefault(712).radii.round };
+  obj[2] = { width: 28, height: 28, justifyContent: "center", borderRadius: require("../../../../../../discord_common/js/packages/tokens/native.tsx").radii.round };
   obj[3] = { width: 16, height: 16, alignSelf: "center" };
   obj[4] = { height: 1 };
   let num3;
@@ -52,13 +52,13 @@ export default function PremiumUpsellSectionDivider(arg0) {
   ({ useTier0UpsellContent, position } = arg0);
   let lock = callback2(position);
   let obj = { style: lock.container, children: null };
-  obj = { style: lock.gradient, children: callback(require(8628) /* PremiumUpsellGradientBackground */.PremiumUpsellGradientBackground, { useTier0UpsellContent }) };
+  obj = { style: lock.gradient, children: callback(require("PremiumUpsellGradientBackground.tsx") /* PremiumUpsellGradientBackground */.PremiumUpsellGradientBackground, { useTier0UpsellContent }) };
   let LockIcon = require;
   let WHITE = dependencyMap;
   const items = [callback(closure_4, obj), , ];
   obj = { style: lock.divider, start: null, end: null, colors: null };
-  obj[1] = require(691) /* keys */.HorizontalGradient.START;
-  obj[2] = require(691) /* keys */.HorizontalGradient.END;
+  obj[1] = require("../../../../../ConstantsIOS.tsx") /* keys */.HorizontalGradient.START;
+  obj[2] = require("../../../../../ConstantsIOS.tsx") /* keys */.HorizontalGradient.END;
   if (true === useTier0UpsellContent) {
     let PREMIUM_TIER_2_TRI_COLOR = Gradients.PREMIUM_TIER_0;
     let tmp6 = Gradients;
@@ -67,7 +67,7 @@ export default function PremiumUpsellSectionDivider(arg0) {
     PREMIUM_TIER_2_TRI_COLOR = Gradients.PREMIUM_TIER_2_TRI_COLOR;
   }
   obj[3] = PREMIUM_TIER_2_TRI_COLOR;
-  items[1] = callback(importDefault(4706), obj);
+  items[1] = callback(require("../../../../../../_runtime/04706_LinearGradient.js"), obj);
   if (position !== createCacheKey.START) {
     items[2] = tmp8;
     obj[1] = items;

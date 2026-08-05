@@ -49,7 +49,7 @@ export default function MarketingPageBannerTile(bannerFields) {
     }
   }
   obj[1] = value;
-  obj[2] = importDefault(5610)().analyticsLocations;
+  obj[2] = require("../../../app_analytics/useAnalyticsLocations.tsx")().analyticsLocations;
   obj[3] = analyticsPage;
   obj[4] = onPaymentSuccess;
   obj[5] = onPaymentDismiss;
@@ -57,7 +57,7 @@ export default function MarketingPageBannerTile(bannerFields) {
   const buttonActionHandler = obj.getButtonActionHandler(obj);
   obj[0] = helpArticleLinkProps(503).ImpressionTypes.VIEW;
   obj[1] = helpArticleLinkProps(503).ImpressionNames.PREMIUM_MARKETING_COMPONENT;
-  const tmp2Result = importDefault(9267);
+  const tmp2Result = require("../../../app_analytics/useTrackImpression.tsx");
   obj[2] = { component_type: helpArticleLinkProps(7568).MarketingComponentType.MARKETING_PAGE_BANNER, component_id: componentId };
   tmp2Result(obj);
   let tmp4Result = tmp4(12582);

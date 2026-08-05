@@ -93,7 +93,7 @@ const aVErrorStore = new AVErrorStore(require("dispatcher"), {
           continue;
         }
       }
-      obj = require(1414) /* areSetsEqual */;
+      obj = require("../../../../discord_common/js/shared/utils/SetUtils.tsx") /* areSetsEqual */;
     } else {
       return false;
     }

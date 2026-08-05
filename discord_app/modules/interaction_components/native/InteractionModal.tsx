@@ -11,7 +11,7 @@ let closure_6;
 let error;
 const require = arg1;
 function onClose() {
-  return importDefault(4490).popWithKey(interaction_modal);
+  return require("../../../actions/ModalActionCreators.tsx").popWithKey(interaction_modal);
 }
 class InteractionModal {
   constructor(arg0) {
@@ -121,6 +121,6 @@ const result = require("getModalState").fileFinishedImporting("modules/interacti
 
 export default InteractionModal;
 export const openInteractionModal = function openInteractionModal(closure_0) {
-  let arr = importDefault(4490);
+  let arr = require("../../../actions/ModalActionCreators.tsx");
   arr = arr.push(InteractionModal, closure_0, interaction_modal);
 };

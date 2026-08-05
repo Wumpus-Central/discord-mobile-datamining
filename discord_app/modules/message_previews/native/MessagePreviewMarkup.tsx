@@ -13,10 +13,10 @@ function getOrParseMessagePreviewMarkupAST(arg0) {
   if (null != value) {
     return value;
   } else {
-    const items = [importDefault(4717).RULES, importDefault(9709)(layout, color, fontScale, maxFontSizeMultiplier)];
-    const tmp11 = importDefault(4716);
-    const tmp11Result = importDefault(4716)(items);
-    const obj3 = importDefault(4275);
+    const items = [require("../../markup/MarkupRules.tsx").RULES, require("../../markup/native/MarkupMessagePreviewReactRules.tsx")(layout, color, fontScale, maxFontSizeMultiplier)];
+    const tmp11 = require("../../markup/combineMarkupRules.tsx");
+    const tmp11Result = require("../../markup/combineMarkupRules.tsx")(items);
+    const obj3 = require("../../markup/MarkupUtils.tsx");
     let startsWithResult = content.startsWith("```");
     let tmp3;
     if (!startsWithResult) {
@@ -27,7 +27,7 @@ function getOrParseMessagePreviewMarkupAST(arg0) {
     if (startsWithResult) {
       tmp3 = content;
     }
-    const astParserForResultResult = importDefault(4275).astParserFor(tmp11Result)(tmp3, true, initialParserState, postProcessor);
+    const astParserForResultResult = require("../../markup/MarkupUtils.tsx").astParserFor(tmp11Result)(tmp3, true, initialParserState, postProcessor);
     const result = obj.set(content, astParserForResultResult);
     return astParserForResultResult;
   }
@@ -44,21 +44,21 @@ export const renderASTToReact = function renderASTToReact(layout) {
   let maxFontSizeMultiplier;
   let tree;
   ({ tree, initialParserState, color, fontScale, maxFontSizeMultiplier } = layout);
-  const items = [importDefault(4717).RULES, importDefault(9709)(layout.layout, color, fontScale, maxFontSizeMultiplier)];
-  const tmp = importDefault(4716);
-  const tmpResult = importDefault(4716)(items);
-  const obj = importDefault(3984);
-  return obj.reactFor(importDefault(3984).ruleOutput(tmpResult, "react"))(tree, initialParserState);
+  const items = [require("../../markup/MarkupRules.tsx").RULES, require("../../markup/native/MarkupMessagePreviewReactRules.tsx")(layout.layout, color, fontScale, maxFontSizeMultiplier)];
+  const tmp = require("../../markup/combineMarkupRules.tsx");
+  const tmpResult = require("../../markup/combineMarkupRules.tsx")(items);
+  const obj = require("../../../../_runtime/03984_t.js");
+  return obj.reactFor(require("../../../../_runtime/03984_t.js").ruleOutput(tmpResult, "react"))(tree, initialParserState);
 };
 export const getMessagePreviewASTParser = function getMessagePreviewASTParser(layout) {
   let color;
   let fontScale;
   let maxFontSizeMultiplier;
   ({ color, fontScale, maxFontSizeMultiplier } = layout);
-  const items = [importDefault(4717).RULES, importDefault(9709)(layout.layout, color, fontScale, maxFontSizeMultiplier)];
-  const tmp = importDefault(4716);
-  const tmpResult = importDefault(4716)(items);
-  return importDefault(4275).astParserFor(tmpResult);
+  const items = [require("../../markup/MarkupRules.tsx").RULES, require("../../markup/native/MarkupMessagePreviewReactRules.tsx")(layout.layout, color, fontScale, maxFontSizeMultiplier)];
+  const tmp = require("../../markup/combineMarkupRules.tsx");
+  const tmpResult = require("../../markup/combineMarkupRules.tsx")(items);
+  return require("../../markup/MarkupUtils.tsx").astParserFor(tmpResult);
 };
 export const renderMessagePreviewMarkup = function renderMessagePreviewMarkup(fontScale) {
   let channelId;
@@ -72,7 +72,7 @@ export const renderMessagePreviewMarkup = function renderMessagePreviewMarkup(fo
   ({ content, muted, layout } = fontScale);
   ({ guildId, channelId } = fontScale);
   if (layout === undefined) {
-    layout = require(3963) /* ChannelListLayoutTypes */.ChannelListLayoutTypes.COMPACT;
+    layout = require("../../main_tabs_v2/ChannelListLayoutTypes.tsx") /* ChannelListLayoutTypes */.ChannelListLayoutTypes.COMPACT;
   }
   ({ color, disableAnimatedEmoji, postProcessor } = fontScale);
   if (disableAnimatedEmoji === undefined) {
@@ -108,11 +108,11 @@ export const renderMessagePreviewMarkup = function renderMessagePreviewMarkup(fo
     obj[5] = maxFontSizeMultiplier;
     obj[6] = postProcessor;
     const tmp4 = getOrParseMessagePreviewMarkupAST(obj);
-    const items = [importDefault(4717).RULES, importDefault(9709)(layout, color, num, maxFontSizeMultiplier)];
-    const tmp7 = importDefault(4716);
-    const tmp7Result = importDefault(4716)(items);
-    const obj2 = importDefault(3984);
-    return obj2.reactFor(importDefault(3984).ruleOutput(tmp7Result, "react"))(tmp4, obj);
+    const items = [require("../../markup/MarkupRules.tsx").RULES, require("../../markup/native/MarkupMessagePreviewReactRules.tsx")(layout, color, num, maxFontSizeMultiplier)];
+    const tmp7 = require("../../markup/combineMarkupRules.tsx");
+    const tmp7Result = require("../../markup/combineMarkupRules.tsx")(items);
+    const obj2 = require("../../../../_runtime/03984_t.js");
+    return obj2.reactFor(require("../../../../_runtime/03984_t.js").ruleOutput(tmp7Result, "react"))(tmp4, obj);
   }
 };
 export const messagePreviewASTCache = tmp2;

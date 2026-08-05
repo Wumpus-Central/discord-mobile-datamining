@@ -42,8 +42,8 @@ function sortRoles(guildId, id) {
   if (num2 !== num) {
     let diff = num2 - num;
   } else {
-    diff = require(1939) /* compareGuildRoles */.compareGuildRoles(guildId, id);
-    const obj = require(1939) /* compareGuildRoles */;
+    diff = require("../../utils/GuildRoleUtils.tsx") /* compareGuildRoles */.compareGuildRoles(guildId, id);
+    const obj = require("../../utils/GuildRoleUtils.tsx") /* compareGuildRoles */;
   }
   return diff;
 }
@@ -52,11 +52,11 @@ function getMemberRowData(id, id2) {
   const obj = { rowType: tmp3, name: null, username: null, id: null, avatarURL: null, bot: null, verifiedBot: null, disabled: null, key: null };
   nick = nick.getNick(id2.id, id.id);
   if (nick == null) {
-    nick = importDefault(4124).getName(id);
-    const obj2 = importDefault(4124);
+    nick = require("../../utils/UserUtils.tsx").getName(id);
+    const obj2 = require("../../utils/UserUtils.tsx");
   }
   obj[1] = nick;
-  obj[2] = importDefault(4124).getUserTag(id);
+  obj[2] = require("../../utils/UserUtils.tsx").getUserTag(id);
   obj[3] = id.id;
   obj[4] = id.getAvatarURL(id2.id, 24);
   obj[5] = id.bot;
@@ -85,14 +85,14 @@ export { sortRoles };
 export const getNoRolesRow = function getNoRolesRow() {
   let stringResult = arg0;
   if (arg0 === undefined) {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    stringResult = intl.string(require(1236) /* getSystemLocale */.t["gnsna/"]);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    stringResult = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["gnsna/"]);
   }
   const items = [{ rowType: RowType.EMPTY_STATE, colorString: closure_13, name: stringResult, disabled: true, id: "EMPTY_STATE" }];
   return items;
 };
 export const isEveryoneRoleId = function isEveryoneRoleId(channelId, id) {
-  return importDefault(11).castGuildIdAsEveryoneGuildRoleId(channelId) === id;
+  return require("../../utils/SnowflakeUtils.tsx").castGuildIdAsEveryoneGuildRoleId(channelId) === id;
 };
 export const getRolesRows = function getRolesRows(guild, stateFromStores, channel, permission, filterByQuery) {
   let closure_0 = channel;
@@ -309,8 +309,8 @@ export const getExistingRolesRows = function getExistingRolesRows(guild, sortedG
   const sorted = found.sort(sortRoles);
   let mapped = sorted.map((arg0) => callback2(arg0));
   if (0 === mapped.length) {
-    const intl2 = _require(1236).intl;
-    let stringResult = intl2.string(_require(1236).t.nZfHsf);
+    const intl2 = _require("../../intl/index.native.tsx").intl;
+    let stringResult = intl2.string(_require("../../intl/index.native.tsx").t.nZfHsf);
     if (stringResult === undefined) {
       const intl = tmp4(1236).intl;
       stringResult = intl.string(tmp4(1236).t["gnsna/"]);
@@ -376,8 +376,8 @@ export const getExistingRolesRowWithPermissionDisabled = function getExistingRol
   const sorted = found.sort(sortRoles);
   let mapped = sorted.map((arg0) => outer1_14(arg0, outer1_6(arg0, closure_0)));
   if (0 === mapped.length) {
-    const intl2 = _require(1236).intl;
-    let stringResult = intl2.string(_require(1236).t.nZfHsf);
+    const intl2 = _require("../../intl/index.native.tsx").intl;
+    let stringResult = intl2.string(_require("../../intl/index.native.tsx").t.nZfHsf);
     if (stringResult === undefined) {
       const intl = tmp4(1236).intl;
       stringResult = intl.string(tmp4(1236).t["gnsna/"]);
@@ -402,7 +402,7 @@ export const getMembersRows = function getMembersRows(stateFromStoresArray, chan
     };
   }
   const mapped = stateFromStoresArray.map(currentUser.getUser);
-  const found = mapped.filter(_require(1351).isNotNullish);
+  const found = mapped.filter(_require("../../utils/GlobalUtils.tsx").isNotNullish);
   const found1 = found.filter((id) => {
     const tmp2 = outer1_5(guild, id);
     let tmp3 = !tmp2;
@@ -445,7 +445,7 @@ export const getExistingMembers = function getExistingMembers(memberIds, channel
   let closure_2 = accessPermissions;
   const dependencyMap = arg4;
   const mapped = memberIds.map(currentUser.getUser);
-  const found = mapped.filter(_require(1351).isNotNullish);
+  const found = mapped.filter(_require("../../utils/GlobalUtils.tsx").isNotNullish);
   return found.filter((id) => {
     id = id.id;
     const currentUser = outer1_9.getCurrentUser();
@@ -484,7 +484,7 @@ export const getExistingMembersRows = function getExistingMembersRows(memberIds,
   let closure_2 = accessPermissions;
   const dependencyMap = arg4;
   const mapped = memberIds.map(currentUser.getUser);
-  const found = mapped.filter(_require(1351).isNotNullish);
+  const found = mapped.filter(_require("../../utils/GlobalUtils.tsx").isNotNullish);
   const found1 = found.filter((id) => {
     id = id.id;
     const currentUser = outer1_9.getCurrentUser();
@@ -520,44 +520,44 @@ export const getExistingMembersRows = function getExistingMembersRows(memberIds,
 };
 export const getRowTypeLabel = function getRowTypeLabel(rowType) {
   if (RowType.ROLE === rowType) {
-    const intl6 = require(1236) /* getSystemLocale */.intl;
-    return intl6.string(require(1236) /* getSystemLocale */.t.ZxoFOG);
+    const intl6 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl6.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.ZxoFOG);
   } else if (tmp.OWNER === rowType) {
-    const intl5 = require(1236) /* getSystemLocale */.intl;
-    return intl5.string(require(1236) /* getSystemLocale */.t.NWhYJg);
+    const intl5 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl5.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.NWhYJg);
   } else if (tmp.ADMINISTRATOR === rowType) {
-    const intl4 = require(1236) /* getSystemLocale */.intl;
-    return intl4.string(require(1236) /* getSystemLocale */.t["dwlcc+"]);
+    const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl4.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["dwlcc+"]);
   } else if (tmp.MEMBER === rowType) {
     let stringResult = null;
     if (arg1) {
-      const intl3 = require(1236) /* getSystemLocale */.intl;
-      stringResult = intl3.string(require(1236) /* getSystemLocale */.t.UAJxZi);
+      const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      stringResult = intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.UAJxZi);
     }
     return stringResult;
   } else if (tmp.USER === rowType) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    return intl2.string(require(1236) /* getSystemLocale */.t.KD6OJJ);
+    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.KD6OJJ);
   } else if (tmp.GUILD === rowType) {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["5qyruI"]);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["5qyruI"]);
   } else if (tmp.EMPTY_STATE === rowType) {
     return null;
   }
 };
 export const getRemoveTooltipHint = function getRemoveTooltipHint(arg0) {
   if (RowType.ROLE === arg0) {
-    const intl4 = require(1236) /* getSystemLocale */.intl;
-    return intl4.string(require(1236) /* getSystemLocale */.t["Gzc/a8"]);
+    const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl4.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["Gzc/a8"]);
   } else if (tmp.OWNER === arg0) {
-    const intl3 = require(1236) /* getSystemLocale */.intl;
-    return intl3.string(require(1236) /* getSystemLocale */.t.icuNBM);
+    const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.icuNBM);
   } else if (tmp.ADMINISTRATOR === arg0) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    return intl2.string(require(1236) /* getSystemLocale */.t.eTmN5a);
+    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.eTmN5a);
   } else if (tmp.MEMBER === arg0) {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["Gzc/a8"]);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["Gzc/a8"]);
   } else {
     const EMPTY_STATE = tmp.EMPTY_STATE;
     return null;
@@ -598,7 +598,7 @@ export const toggleChannelEveryonePermission = function toggleChannelEveryonePer
     const tmp5Result = tmp5(506);
   }
   const obj4 = importAll(506);
-  require(8920) /* _updatePermission */.updatePermission(guild_id, obj.id, obj.allow, obj.deny);
+  require("../../actions/ChannelSettingsPermissionsActionCreators.tsx") /* _updatePermission */.updatePermission(guild_id, obj.id, obj.allow, obj.deny);
 };
 export const grantUserChannelAccess = function grantUserChannelAccess(outer1_0, accessPermissions) {
   let allow;
@@ -608,16 +608,16 @@ export const grantUserChannelAccess = function grantUserChannelAccess(outer1_0, 
     if (null == outer1_0.permissionOverwrites[currentUser.id]) {
       let obj = { id: null, type: null, allow: null, deny: null };
       obj[0] = currentUser.id;
-      obj[1] = require(1906) /* PermissionOverwriteType */.PermissionOverwriteType.MEMBER;
+      obj[1] = require("../../flow/Server.tsx") /* PermissionOverwriteType */.PermissionOverwriteType.MEMBER;
       obj[2] = importAll(506).add(importAll(3918).NONE, accessPermissions);
       obj[3] = importAll(3918).NONE;
       const obj4 = importAll(506);
       const items = [obj];
-      return require(8920) /* _updatePermission */.savePermissionUpdates(outer1_0.id, items, true);
+      return require("../../actions/ChannelSettingsPermissionsActionCreators.tsx") /* _updatePermission */.savePermissionUpdates(outer1_0.id, items, true);
     } else {
       ({ allow, deny } = tmp4);
       obj = importAll(506);
-      const obj2 = require(8920) /* _updatePermission */;
+      const obj2 = require("../../actions/ChannelSettingsPermissionsActionCreators.tsx") /* _updatePermission */;
       return obj2.updatePermission(outer1_0, tmp4.id, obj.add(allow, accessPermissions), deny);
     }
   }
@@ -679,18 +679,18 @@ export const getPrivateChannelHintText = function getPrivateChannelHintText(firs
   if (constants2.GUILD_TEXT !== first1) {
     if (tmp.GUILD_ANNOUNCEMENT !== first1) {
       if (tmp.GUILD_VOICE === first1) {
-        const intl2 = require(1236) /* getSystemLocale */.intl;
-        return intl2.format(require(1236) /* getSystemLocale */.t.iZAMty, {});
+        const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        return intl2.format(require("../../intl/index.native.tsx") /* getSystemLocale */.t.iZAMty, {});
       } else if (tmp.GUILD_CATEGORY === first1) {
-        const intl = require(1236) /* getSystemLocale */.intl;
-        return intl.format(require(1236) /* getSystemLocale */.t.PhnARV, {});
+        const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        return intl.format(require("../../intl/index.native.tsx") /* getSystemLocale */.t.PhnARV, {});
       } else {
         return null;
       }
     }
   }
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  return intl3.format(require(1236) /* getSystemLocale */.t.ZDtA0T, {});
+  const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  return intl3.format(require("../../intl/index.native.tsx") /* getSystemLocale */.t.ZDtA0T, {});
 };
 export const extractPermissionOverwrites = function extractPermissionOverwrites(arg0, arg1) {
   let closure_0 = arg1;

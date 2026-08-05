@@ -9,7 +9,7 @@ import createCacheKey from "createCacheKey";
 const require = arg1;
 function CoachmarkImg() {
   const obj = { source: null, style: null };
-  obj[0] = importDefault(12476);
+  obj[0] = require("../../../../_runtime/12476_registerAsset.js");
   obj[1] = callback2().imageContainer;
   return <Image source={null} style={null} />;
 }

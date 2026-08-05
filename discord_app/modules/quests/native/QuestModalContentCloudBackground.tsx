@@ -65,8 +65,8 @@ export default function QuestModalContentCloudBackground(align) {
     str2 = resizeMode;
   }
   const tmp = callback("bottom" === str);
-  let obj = require(3995) /* isThemeLight */;
-  let obj1 = require(4221) /* useTheme */;
+  let obj = require("../../../design/utils/shared/themes.tsx") /* isThemeLight */;
+  let obj1 = require("../../../hooks/useTheme.tsx") /* useTheme */;
   const isThemeDarkResult = obj.isThemeDark(obj1.useTheme());
   obj = { style: items, children: null };
   items = [tmp.wrapper, style];
@@ -74,7 +74,7 @@ export default function QuestModalContentCloudBackground(align) {
     obj = { colors: null, style: null };
     obj[0] = "top" === str ? items : closure_9;
     obj[1] = tmp.gradient;
-    tmp6(importDefault(4706), obj);
+    tmp6(require("../../../../_runtime/04706_LinearGradient.js"), obj);
   } else {
     obj1 = { style: null };
     obj1[0] = tmp.solidBackground;
@@ -84,7 +84,7 @@ export default function QuestModalContentCloudBackground(align) {
     obj2[0] = items2;
     obj2[1] = importDefault(isThemeDarkResult ? 14270 : 14271);
     obj2[2] = str2;
-    items1[1] = tmp6(importDefault(5236), obj2);
+    items1[1] = tmp6(require("../../../components_native/common/FastImage.tsx"), obj2);
     obj[1] = items1;
     return tmp4(tmp5, obj);
   }

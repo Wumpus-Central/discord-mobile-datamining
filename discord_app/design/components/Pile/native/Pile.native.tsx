@@ -21,8 +21,8 @@ export const Pile = function Pile(aria_label) {
   let Children = React.Children;
   const tmp = callback();
   const tmp2 = React;
-  length = Children.toArray(children).filter(require(1351) /* isDiscordFrontendDevelopment */.isNotNullish).length;
-  let obj = require(12) /* apply */;
+  length = Children.toArray(children).filter(require("../../../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish).length;
+  let obj = require("../../../../../_runtime/00012_apply.js") /* apply */;
   if (obj.isArray(size)) {
     if (size.length !== length) {
       const _Error = Error;

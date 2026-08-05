@@ -38,8 +38,8 @@ function DevToolsContentSortButtons(arg0) {
   }
   items[1] = start;
   obj[2] = items;
-  obj[5] = closure_10(require(14202) /* ArrowSmallUpIcon */.ArrowSmallUpIcon, {});
-  const items1 = [closure_10(require(4812) /* PressableBase */.PressableOpacity, obj), ];
+  obj[5] = closure_10(require("../../../../design/components/Icon/native/redesign/generated/ArrowSmallUpIcon.tsx") /* ArrowSmallUpIcon */.ArrowSmallUpIcon, {});
+  const items1 = [closure_10(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj), ];
   obj = {
     onPress() {
       const result = outer1_0(outer1_2[14]).triggerHapticFeedback(outer1_0(outer1_2[14]).HapticFeedbackTypes.IMPACT_MEDIUM);
@@ -58,8 +58,8 @@ function DevToolsContentSortButtons(arg0) {
   }
   items2[1] = end;
   obj[2] = items2;
-  obj[5] = closure_10(require(14953) /* ArrowSmallDownIcon */.ArrowSmallDownIcon, {});
-  items1[1] = closure_10(require(4812) /* PressableBase */.PressableOpacity, obj);
+  obj[5] = closure_10(require("../../../../design/components/Icon/native/redesign/generated/ArrowSmallDownIcon.tsx") /* ArrowSmallDownIcon */.ArrowSmallDownIcon, {});
+  items1[1] = closure_10(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
   obj[1] = items1;
   return closure_11(closure_5, obj);
 }
@@ -79,9 +79,9 @@ const memoResult = importAllResult.memo((arg0) => {
   let value;
   ({ label, value } = arg0);
   const obj = { variant: "text-xs/medium", color: "text-subtle", children: null };
-  const items = [label, callback2(require(4281) /* Text */.Text, { variant: "text-xs/semibold", children: value })];
+  const items = [label, callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-xs/semibold", children: value })];
   obj[2] = items;
-  return callback3(require(4281) /* Text */.Text, obj);
+  return callback3(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
 });
 const obj2 = { backgroundColor: require("Themes").colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, width: require("Themes").space.PX_32, height: require("Themes").space.PX_32, borderRadius: require("Themes").radii.round, justifyContent: "center", alignItems: "center" };
 const memoResult1 = importAllResult.memo(function DevToolsContent(arg0) {
@@ -95,13 +95,13 @@ const memoResult1 = importAllResult.memo(function DevToolsContent(arg0) {
   let callback;
   let arr5;
   ({ title, embedded } = arg0);
-  let obj = _require(1480);
+  let obj = _require("../../../../design/components/Navigator/native/useNavigation.native.tsx");
   _require = obj.useNavigation();
   _require = undefined;
   importDefault = undefined;
   const tmp = callback4();
   const tmp3 = importDefault;
-  let obj1 = _require(589);
+  let obj1 = _require("../../../../../discord_common/js/packages/flux/index.tsx");
   const items = [getCurrentBuildOverride];
   _require = obj1.useStateFromStores(items, () => {
     const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
@@ -114,14 +114,14 @@ const memoResult1 = importAllResult.memo(function DevToolsContent(arg0) {
     }
     return id;
   });
-  let tmp4 = importDefault(1581)();
+  let tmp4 = require("../../../safe_area/useSafeAreaInsets.native.tsx")();
   const items1 = [getHash];
-  const stateFromStores = _require(589).useStateFromStores(items1, () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length);
-  const obj3 = _require(589);
+  const stateFromStores = _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length);
+  const obj3 = _require("../../../../../discord_common/js/packages/flux/index.tsx");
   const items2 = [initialize];
-  importDefault = stateFromStores + _require(589).useStateFromStores(items2, () => Object.keys(clientOverrides.getClientOverrides()).length);
-  const obj4 = _require(589);
-  importDefault = importDefault(13750)().map((arg0) => {
+  importDefault = stateFromStores + _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => Object.keys(clientOverrides.getClientOverrides()).length);
+  const obj4 = _require("../../../../../discord_common/js/packages/flux/index.tsx");
+  importDefault = require("../useSortedDevToolsScreens.tsx")().map((arg0) => {
     let tmp;
     [tmp] = arg0;
     if ("buildOverride" === tmp) {
@@ -142,9 +142,9 @@ const memoResult1 = importAllResult.memo(function DevToolsContent(arg0) {
       return tmp2;
     }
   });
-  const arr4 = importDefault(13750)();
+  const arr4 = require("../useSortedDevToolsScreens.tsx")();
   [c2, c3] = callback(arr5.useState(false), 2);
-  arr5 = importDefault(13750)();
+  arr5 = require("../useSortedDevToolsScreens.tsx")();
   obj = { title, hasIcons: true, children: null };
   obj[2] = arr5.map((arg0, arg1) => {
     let tmp;
@@ -192,7 +192,7 @@ const memoResult1 = importAllResult.memo(function DevToolsContent(arg0) {
     };
     return outer1_10(callback(_undefined[20]).TableRow, obj, tmp);
   });
-  const tmp8 = callback2(_require(5649).TableRowGroup, obj);
+  const tmp8 = callback2(_require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx").TableRowGroup, obj);
   let tmp7Result = tmp8;
   if (!embedded) {
     obj = { style: null, contentContainerStyle: null, children: null };

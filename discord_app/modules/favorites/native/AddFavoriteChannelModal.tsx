@@ -126,7 +126,7 @@ function AddFavoriteChannelModal(parentId) {
   return callback3(View, obj);
 }
 function closeAddFavoriteChannelModal() {
-  importDefault(4490).popWithKey(c12);
+  require("../../../actions/ModalActionCreators.tsx").popWithKey(c12);
 }
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { container: null };
@@ -141,6 +141,6 @@ export const openAddFavoriteChannelModal = function openAddFavoriteChannelModal(
   let parentId;
   let source;
   ({ parentId, source } = arg0);
-  importDefault(10152)(Promise.resolve({ default: AddFavoriteChannelModal }), { parentId, source }, c12);
+  require("../../share/native/showSearchableDestinationListModal.tsx")(Promise.resolve({ default: AddFavoriteChannelModal }), { parentId, source }, c12);
 };
 export { closeAddFavoriteChannelModal };

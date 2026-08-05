@@ -12,12 +12,12 @@ function BadgedIcon(arg0) {
   let showRedDot;
   let type;
   ({ type, showRedDot } = arg0);
-  let obj = require(3989) /* map */;
-  const token = obj.useToken(importDefault(712).colors.INTERACTIVE_TEXT_DEFAULT, importDefault(4221)());
+  let obj = require("../../../design/tokens/native/useToken.tsx") /* map */;
+  const token = obj.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_TEXT_DEFAULT, require("../../../hooks/useTheme.tsx")());
   const tmp6 = callback2();
-  let obj1 = require(4700) /* styleProperties */;
+  let obj1 = require("../../../design/components/Button/native/ButtonHooks.native.tsx") /* styleProperties */;
   const iconSizeStyles = obj1.useIconSizeStyles("sm", true, 2);
-  if (type === require(8192) /* SavedMessageSortTypes */.SavedMessageSortTypes.REMINDER) {
+  if (type === require("../SavedMessagesTypes.tsx") /* SavedMessageSortTypes */.SavedMessageSortTypes.REMINDER) {
     let BookmarkIcon = tmp4(4249).ClockIcon;
   } else {
     BookmarkIcon = tmp4(10191).BookmarkIcon;
@@ -33,13 +33,13 @@ function BadgedIcon(arg0) {
     const obj2 = { size: "sm", color: null };
     obj2[1] = token;
     obj1[1] = tmp8(BookmarkIcon, obj2);
-    const items2 = [tmp8(importDefault(8103), obj1), ];
+    const items2 = [tmp8(require("../../../design/components/Icon/native/ClipView.tsx"), obj1), ];
     const obj3 = { style: null };
     obj3[0] = tmp6.dot;
     items2[1] = tmp8(tmp9, obj3);
     obj[1] = items2;
     let tmp8Result = callback(tmp9, obj);
-    const tmpResult = importDefault(8103);
+    const tmpResult = require("../../../design/components/Icon/native/ClipView.tsx");
   } else {
     const obj4 = { size: "sm", color: null };
     obj4[1] = token;

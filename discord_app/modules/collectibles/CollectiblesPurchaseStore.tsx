@@ -76,7 +76,7 @@ const collectiblesPurchaseStore = new CollectiblesPurchaseStore(require("dispatc
           return items;
         }));
       }
-      obj = require(12) /* apply */;
+      obj = require("../../../_runtime/00012_apply.js") /* apply */;
     }
     let c8 = true;
     let c4 = false;
@@ -105,7 +105,7 @@ const collectiblesPurchaseStore = new CollectiblesPurchaseStore(require("dispatc
             return items;
           }));
         }
-        obj = require(12) /* apply */;
+        obj = require("../../../_runtime/00012_apply.js") /* apply */;
       }
       let c5;
       let c7;

@@ -40,11 +40,11 @@ class MultiAccountManager extends tmp2 {
 }
 const prototype = MultiAccountManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const subscription = importDefault(709).subscribe("CONNECTION_OPEN", this.handleConnectionOpen);
+  const subscription = require("../../Dispatcher.tsx").subscribe("CONNECTION_OPEN", this.handleConnectionOpen);
   this.handleConnectionOpen();
 };
 prototype["_terminate"] = function _terminate() {
-  importDefault(709).unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen);
+  require("../../Dispatcher.tsx").unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen);
 };
 prototype["handleLogout"] = function handleLogout(isSwitchingAccount) {
   if (isSwitchingAccount.isSwitchingAccount) {
@@ -53,7 +53,7 @@ prototype["handleLogout"] = function handleLogout(isSwitchingAccount) {
   }
 };
 prototype["handleMultiAccountSwitchStart"] = function handleMultiAccountSwitchStart(targetUserId) {
-  const result = require(12807) /* noop */.setAccountSwitchUserId(targetUserId.targetUserId);
+  const result = require("../gateway/GatewaySocket.tsx") /* noop */.setAccountSwitchUserId(targetUserId.targetUserId);
 };
 let result = require("initialize").fileFinishedImporting("modules/multi_account/MultiAccountManager.tsx");
 

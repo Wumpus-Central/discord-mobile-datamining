@@ -59,8 +59,8 @@ function initializeFromUserSettings() {
   }
   let tmp7 = value;
   if (value == null) {
-    tmp7 = !require(12) /* apply */.isEmpty(obj);
-    const obj2 = require(12) /* apply */;
+    tmp7 = !require("../../../_runtime/00012_apply.js") /* apply */.isEmpty(obj);
+    const obj2 = require("../../../_runtime/00012_apply.js") /* apply */;
   }
   let flag2 = flag !== flag;
   if (!flag2) {
@@ -70,8 +70,8 @@ function initializeFromUserSettings() {
     flag2 = c10 !== tmp11;
   }
   if (!flag2) {
-    flag2 = !require(12) /* apply */.isEqual(obj, obj);
-    const obj3 = require(12) /* apply */;
+    flag2 = !require("../../../_runtime/00012_apply.js") /* apply */.isEqual(obj, obj);
+    const obj3 = require("../../../_runtime/00012_apply.js") /* apply */;
   }
   if (flag2) {
     c9 = tmp7;
@@ -132,7 +132,7 @@ prototype["getCategoryRecord"] = function getCategoryRecord(id) {
   let tmp = null;
   if (id in dependencyMap) {
     tmp = null;
-    if (dependencyMap[id].type === require(1306) /* create */.FavoriteChannelType.CATEGORY) {
+    if (dependencyMap[id].type === require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.FavoriteChannelType.CATEGORY) {
       const obj = { id: null, name: null, type: null, position: null, guild_id: null };
       ({ id: obj[0], nickname } = dependencyMap[id]);
       if (nickname == null) {
@@ -160,7 +160,7 @@ prototype["getFavoritesCount"] = function getFavoritesCount() {
   return Object.keys(this.getFavoriteChannels()).length;
 };
 prototype["hasStoredFavorites"] = function hasStoredFavorites() {
-  return !require(12) /* apply */.isEmpty(this.getFavoriteChannels());
+  return !require("../../../_runtime/00012_apply.js") /* apply */.isEmpty(this.getFavoriteChannels());
 };
 FavoriteStore.displayName = "FavoriteStore";
 const favoriteStore = new FavoriteStore(require("dispatcher"), {});

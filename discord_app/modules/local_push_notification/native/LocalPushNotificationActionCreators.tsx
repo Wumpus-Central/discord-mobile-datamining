@@ -47,6 +47,6 @@ export const receiveLocalNotification = function receiveLocalNotification(getDat
     } else {
       dispatch();
     }
-    obj = importDefault(709);
+    obj = require("../../../Dispatcher.tsx");
   }
 };

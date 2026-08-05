@@ -1,5 +1,5 @@
 // discord_app/modules/gateway/native/fast_connect.tsx
-import module_16 from "module_16";
+import checkEnv from "../../../utils/checkEnv.tsx";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { VERSION_TO_FORCE_RESYNCING_ALL_DATA as closure_6 } from "HELLO_KEY";
 
@@ -7,7 +7,7 @@ let AppState;
 let c4;
 function createFastConnectSocket() {
   if (null != window.WebSocket) {
-    let obj = _require(500);
+    let obj = _require("../../../utils/PlatformUtils.tsx");
     if (obj.isAndroid()) {
       let supportsZstd = obj(12825).getConstants().supportsZstd;
       const obj2 = obj(12825);
@@ -112,7 +112,7 @@ export function getLastFastConnectIdentifyUserId() {
 }
 export const identifyWebSocket = function identifyWebSocket() {
   if (null != window._ws) {
-    const beginFastConnect = importDefault(9).beginFastConnect;
+    const beginFastConnect = require("../../tti_analytics/TTITracker.tsx").beginFastConnect;
     beginFastConnect.measure(() => {
       let client_state = callback2;
       let prepareIdentifyResult = table;

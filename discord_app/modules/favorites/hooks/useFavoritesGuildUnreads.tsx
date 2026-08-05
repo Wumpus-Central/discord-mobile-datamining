@@ -13,7 +13,7 @@ const result = require("ensureGuildLoaded").fileFinishedImporting("modules/favor
 export default function useFavoritesGuildUnreads(arg0) {
   const _require = arg0;
   const items = [rebuild, ensureGuildLoaded, updateGuildUnreadSentinel, storeThread, getUncachedChannelPermissions, generateOldThreadCutoff, updateUserGuildSettingsInternal];
-  return _require(589).useStateFromStoresObject(items, () => {
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
     const keys = outer1_1(outer1_2[8]).keys(set);
     set = new Set();
     return keys.reduce((badge, id) => {

@@ -36,7 +36,7 @@ function mergeMessage(self, id) {
     }
     return messageRecord;
   }
-  messageRecord = require(4504) /* createMinimalMessageRecord */.createMessageRecord(id);
+  messageRecord = require("../modules/messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */.createMessageRecord(id);
 }
 ({ MAX_MESSAGES_PER_CHANNEL: c4, MAX_LOADED_MESSAGES: c5, MAX_MESSAGE_CACHE_SIZE: closure_6, TRUNCATED_MESSAGE_VIEW_SIZE: error, MessageStates: metroImportAll } = ME);
 let c9 = new require("apply")("ChannelMessages");
@@ -95,7 +95,7 @@ prototype["clear"] = function clear() {
 };
 prototype["remove"] = function remove(arg0) {
   let closure_0 = arg0;
-  this._messages = importDefault(12).filter(this._messages, (id) => id.id !== closure_0);
+  this._messages = require("../../_runtime/00012_apply.js").filter(this._messages, (id) => id.id !== closure_0);
   delete tmp[tmp2];
 };
 prototype["removeMany"] = function removeMany(arg0) {
@@ -254,7 +254,7 @@ class ChannelMessages {
 }
 const prototype2 = ChannelMessages.prototype;
 ChannelMessages["forEach"] = function forEach(arg0) {
-  const item = importDefault(12).forEach(ChannelMessages._channelMessages, arg0);
+  const item = require("../../_runtime/00012_apply.js").forEach(ChannelMessages._channelMessages, arg0);
 };
 ChannelMessages["get"] = function get(arg0) {
   return ChannelMessages._channelMessages[arg0];
@@ -270,7 +270,7 @@ ChannelMessages["getOrCreate"] = function getOrCreate(channelId) {
       HermesBuiltin.throwTypeError();
     }
     let obj = Object.create(tmp.prototype);
-    obj[2] = require(4217) /* GuildThemeSourcePreference */.JumpType.ANIMATED;
+    obj[2] = require("../flow/Client.tsx") /* GuildThemeSourcePreference */.JumpType.ANIMATED;
     obj[21] = [];
     if (typeof MessageCache !== "function") {
       HermesBuiltin.throwTypeError();
@@ -322,7 +322,7 @@ prototype2["mutate"] = function mutate(obj, flag) {
     HermesBuiltin.throwTypeError();
   }
   obj = Object.create(ChannelMessages.prototype);
-  obj[2] = require(4217) /* GuildThemeSourcePreference */.JumpType.ANIMATED;
+  obj[2] = require("../flow/Client.tsx") /* GuildThemeSourcePreference */.JumpType.ANIMATED;
   obj[21] = [];
   if (typeof MessageCache !== "function") {
     HermesBuiltin.throwTypeError();
@@ -492,7 +492,7 @@ prototype2["forAll"] = function forAll(arg0) {
 };
 prototype2["findOldest"] = function findOldest(isTermsFormField) {
   const self = this;
-  let found = importDefault(12).find(this._before._messages, isTermsFormField);
+  let found = require("../../_runtime/00012_apply.js").find(this._before._messages, isTermsFormField);
   if (found == null) {
     let tmpResult = tmp(12);
     found = tmpResult.find(self._array, isTermsFormField);
@@ -505,7 +505,7 @@ prototype2["findOldest"] = function findOldest(isTermsFormField) {
 };
 prototype2["findNewest"] = function findNewest(arg0) {
   const self = this;
-  let findLastResult = importDefault(12).findLast(this._after._messages, arg0);
+  let findLastResult = require("../../_runtime/00012_apply.js").findLast(this._after._messages, arg0);
   if (findLastResult == null) {
     let tmpResult = tmp(12);
     findLastResult = tmpResult.findLast(self._array, arg0);
@@ -1177,7 +1177,7 @@ prototype2["receiveMessage"] = function receiveMessage(nonce) {
         }
         return truncateTopResult;
       }
-      obj2 = importDefault(11);
+      obj2 = require("../utils/SnowflakeUtils.tsx");
       const tmp8 = importDefault;
     }
     const items = [messageRecord1];
@@ -1196,7 +1196,7 @@ prototype2["receivePushNotification"] = function receivePushNotification(closure
   } else if (null != self.get(closure_1.id, true)) {
     return self;
   } else {
-    let obj = require(4958) /* isIOSPushNotificationRawPayloadFixExperimentEnabled */;
+    let obj = require("../modules/notifications/IOSPushNotificationRawPayloadFixExperiment.tsx") /* isIOSPushNotificationRawPayloadFixExperimentEnabled */;
     const result = obj.isIOSPushNotificationRawPayloadFixExperimentEnabled();
     let tmp5 = !result;
     if (result) {
@@ -1300,7 +1300,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
     flag6 = false;
   }
   const self = this;
-  let obj = importDefault(12)(items);
+  let obj = require("../../_runtime/00012_apply.js")(items);
   const reversed = obj.reverse();
   const valueResult = reversed.map((message) => callback(table[2]).createMessageRecord(message)).value();
   if (flag) {
@@ -1320,7 +1320,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
         jumpType = jump.jumpType;
       }
       if (jumpType == null) {
-        jumpType = require(4217) /* GuildThemeSourcePreference */.JumpType.ANIMATED;
+        jumpType = require("../flow/Client.tsx") /* GuildThemeSourcePreference */.JumpType.ANIMATED;
       }
       obj = { ready: true, loadingMore: false, jumpType: null, jumpFlash: null, jumped: null, jumpedToPresent: null, jumpTargetId: null, jumpTargetOffset: null, jumpSequenceId: null, jumpReturnTargetId: null, onJumpComplete: null, hasMoreBefore: null, hasMoreAfter: null, cached: null, hasFetched: null, error: false, initialScrollSequenceId: null, suppressRowAnimationSequenceId: null };
       obj[2] = jumpType;

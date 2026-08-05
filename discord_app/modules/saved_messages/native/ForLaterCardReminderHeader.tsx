@@ -21,7 +21,7 @@ export const ForLaterCardReminderHeader = function ForLaterCardReminderHeader(sa
   savedMessage = savedMessage.savedMessage;
   ({ throttledNow, actions } = savedMessage);
   const tmp = callback3();
-  let obj = require(10194) /* _savedMessageJumpToMessage */;
+  let obj = require("../SavedMessageUtils.tsx") /* _savedMessageJumpToMessage */;
   let dueAt;
   if (savedMessage != null) {
     dueAt = savedMessage.saveData.dueAt;
@@ -36,7 +36,7 @@ export const ForLaterCardReminderHeader = function ForLaterCardReminderHeader(sa
     if (isOverdue) {
       str = "text-feedback-critical";
     }
-    const colors = importDefault(712).colors;
+    const colors = require("../../../../discord_common/js/packages/tokens/native.tsx").colors;
     obj = { style: null, children: null };
     obj[0] = tmp.container;
     const obj1 = { style: null, children: null };

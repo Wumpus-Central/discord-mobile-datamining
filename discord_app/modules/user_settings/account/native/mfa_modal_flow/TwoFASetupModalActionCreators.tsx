@@ -4,11 +4,11 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/user_s
 
 export default {
   open(initialRouteName) {
-    let obj = importDefault(4490);
+    let obj = require("../../../../../actions/ModalActionCreators.tsx");
     obj = { initialRouteName };
-    obj.pushLazy(require(1959) /* asyncRequireImpl */(13932, dependencyMap.paths), obj, TWO_FA_SETUP_MODAL_KEY);
+    obj.pushLazy(require("../../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(13932, dependencyMap.paths), obj, TWO_FA_SETUP_MODAL_KEY);
   },
   close() {
-    importDefault(4490).popWithKey(TWO_FA_SETUP_MODAL_KEY);
+    require("../../../../../actions/ModalActionCreators.tsx").popWithKey(TWO_FA_SETUP_MODAL_KEY);
   }
 };

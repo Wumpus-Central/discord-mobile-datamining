@@ -83,6 +83,6 @@ export default function ActivityEmoji(emoji) {
     items2[2] = obj1;
     obj[3] = items2;
     obj[4] = tmp.emoji;
-    jsx(importDefault(5301), { width: null, height: null });
+    jsx(require("../../emojis/native/Emoji.tsx"), { width: null, height: null });
   }
 };

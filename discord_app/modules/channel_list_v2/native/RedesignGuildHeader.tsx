@@ -192,15 +192,15 @@ let closure_16 = createCacheKey.createStyles((arg0) => {
   obj = { width: "100%", maxHeight: arg0 * closure_10, aspectRatio: closure_9, overflow: "hidden" };
   obj = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
-  obj.backgroundColor = importDefault(712).colors.BLACK;
+  obj.backgroundColor = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BLACK;
   obj[2] = obj;
   return obj;
 });
 let result = createCacheKey.experimental_createToken((gradient) => {
   if (null != gradient.gradient) {
-    let PANEL_BG = importDefault(712).colors.BACKGROUND_BASE_LOW;
+    let PANEL_BG = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW;
   } else {
-    PANEL_BG = importDefault(712).colors.PANEL_BG;
+    PANEL_BG = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.PANEL_BG;
   }
   return PANEL_BG;
 });
@@ -230,17 +230,17 @@ const result1 = require("maybeApplyNoTextColorForLightCustomTheme").fileFinished
 
 export default memoResult;
 export const useRedesignGuildHeaderHeight = function useRedesignGuildHeaderHeight(id) {
-  let isThemeDarkResult = importDefault(8203)();
+  let isThemeDarkResult = require("../../client_themes/native/useIsUsingClientTheme.tsx")();
   if (!isThemeDarkResult) {
-    isThemeDarkResult = require(4131) /* AccessibilityAnnouncer */.isThemeDark(tmp4);
-    const obj = require(4131) /* AccessibilityAnnouncer */;
+    isThemeDarkResult = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */.isThemeDark(tmp4);
+    const obj = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */;
   }
-  const fontScale = require(4701) /* getFontScale */.useFontScale();
-  const obj2 = require(4701) /* getFontScale */;
-  const tmp8 = null != importDefault(15152)(id);
-  const isFavoritesGuildIdResult = require(1865) /* getFavoritesAwareGuildName */.isFavoritesGuildId(id.id);
-  const obj3 = require(1865) /* getFavoritesAwareGuildName */;
-  const scaleTextLineHeightResult = require(9370) /* map */.scaleTextLineHeight("redesign/heading-18/bold", fontScale);
+  const fontScale = require("../../screen/native/useFontScale.tsx") /* getFontScale */.useFontScale();
+  const obj2 = require("../../screen/native/useFontScale.tsx") /* getFontScale */;
+  const tmp8 = null != require("hooks/useStickyServerHeaderSubtitle.tsx")(id);
+  const isFavoritesGuildIdResult = require("../../favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */.isFavoritesGuildId(id.id);
+  const obj3 = require("../../favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
+  const scaleTextLineHeightResult = require("../../screen/native/useScaledTextLineHeight.android.tsx") /* map */.scaleTextLineHeight("redesign/heading-18/bold", fontScale);
   let num = 0;
   if (isThemeDarkResult) {
     num = 1;
@@ -265,5 +265,5 @@ export const useRedesignGuildHeaderHeight = function useRedesignGuildHeaderHeigh
     const _Math = Math;
     bound = Math.max(scaleTextLineHeightResult, tmp6(4699).SMALL_BUTTON_HEIGHT);
   }
-  return importDefault(10167)(16 + bound + num4 + num2 + num3 + num);
+  return require("../../voice_panel/native/utils/roundToNearestPixel.tsx")(16 + bound + num4 + num2 + num3 + num);
 };

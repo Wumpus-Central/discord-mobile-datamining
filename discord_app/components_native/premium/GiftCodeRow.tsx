@@ -54,7 +54,7 @@ class GiftCodeRow extends PureComponent {
 }
 const prototype = GiftCodeRow.prototype;
 prototype["handleRevoke"] = function handleRevoke(code) {
-  importDefault(10327).revokeGiftCode(code);
+  require("../../actions/GiftCodeActionCreators.tsx").revokeGiftCode(code);
 };
 prototype["render"] = function render() {
   let self = this;

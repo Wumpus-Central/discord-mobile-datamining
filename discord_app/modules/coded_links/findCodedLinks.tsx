@@ -205,7 +205,7 @@ function getPathsFromURL(target) {
 }
 function parseURLSafely(url) {
   try {
-    return require(1469) /* Url */.parse(url);
+    return require("../../../_runtime/01469_Url.js") /* Url */.parse(url);
   } catch (err) {
     return null;
   }

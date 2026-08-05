@@ -49,5 +49,5 @@ export const useActiveSpeakerPillState = function useActiveSpeakerPillState() {
     const items = [, ];
     ({ showActiveSpeakerPill: arr[0], setShowActiveSpeakerPill: arr[1] } = arg0);
     return items;
-  }, require(3898) /* isIterable */.shallow);
+  }, require("../../../../_runtime/03898_isIterable.js") /* isIterable */.shallow);
 };

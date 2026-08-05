@@ -90,11 +90,11 @@ export default function useMaybeGetSortedBoosts(arg0, arg1) {
 };
 export const useGetBoostUserConfig = function useGetBoostUserConfig(boost) {
   const _require = boost;
-  let obj = importDefault(11);
+  let obj = require("../../../../utils/SnowflakeUtils.tsx");
   const date = new Date(obj.extractTimestamp(boost.id));
   const items = [trackCommunicationDisabled];
   const items1 = [boost];
-  const stateFromStoresObject = _require(589).useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
     const member = outer1_7.getMember(boost.guildId, boost.userId);
     let nick = outer1_7.getNick(boost.guildId, boost.userId);
     if (nick == null) {

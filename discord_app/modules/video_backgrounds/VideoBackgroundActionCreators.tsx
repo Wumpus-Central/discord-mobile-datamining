@@ -394,7 +394,7 @@ export const deleteVideoFilterAsset = function deleteVideoFilterAsset() {
 export { saveLastUsedBackgroundOption };
 export const applyMediaFilterSettings = function applyMediaFilterSettings(arg0) {
   if (_detectH265HardwareDecode.isSupported()) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS", settings: null };
     obj[1] = arg0;
     obj.dispatch(obj);
@@ -402,10 +402,10 @@ export const applyMediaFilterSettings = function applyMediaFilterSettings(arg0) 
 };
 export const startApplyMediaFilterSettings = function startApplyMediaFilterSettings() {
   if (_detectH265HardwareDecode.isSupported()) {
-    importDefault(709).dispatch({ type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START" });
-    const obj = importDefault(709);
+    require("../../Dispatcher.tsx").dispatch({ type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START" });
+    const obj = require("../../Dispatcher.tsx");
   }
 };
 export const errorApplyingMediaFilterSettings = function errorApplyingMediaFilterSettings() {
-  importDefault(709).dispatch({ type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_ERROR" });
+  require("../../Dispatcher.tsx").dispatch({ type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_ERROR" });
 };

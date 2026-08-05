@@ -31,5 +31,5 @@ export default function UserSettingsSensitiveContentFilters() {
     obj[0] = items1;
     return obj.createList(obj);
   }, []);
-  return jsx(importDefault(13793), { node });
+  return jsx(require("../../../settings/native/renderer/SettingLayout.tsx"), { node });
 };

@@ -23,9 +23,9 @@ prototype["getDiscoveryCategories"] = function getDiscoveryCategories() {
     return closure_9.find((categoryId) => categoryId.categoryId === closure_0);
   });
   const obj = { categoryId: closure_5, name: null };
-  const found = mapped.filter(require(1351) /* isDiscordFrontendDevelopment */.isNotNullish);
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl.string(require(1236) /* getSystemLocale */.t.Ym2Ri6);
+  const found = mapped.filter(require("../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Ym2Ri6);
   const items = [obj, ...found];
   return items;
 };
@@ -35,9 +35,9 @@ prototype["getClanDiscoveryCategories"] = function getClanDiscoveryCategories() 
     return closure_9.find((categoryId) => categoryId.categoryId === closure_0);
   });
   const obj = { categoryId: closure_5, name: null };
-  const found = mapped.filter(require(1351) /* isDiscordFrontendDevelopment */.isNotNullish);
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl.string(require(1236) /* getSystemLocale */.t.QToH29);
+  const found = mapped.filter(require("../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.QToH29);
   const items = [obj, ...found];
   return items;
 };
@@ -49,8 +49,8 @@ prototype["getFetchedLocale"] = function getFetchedLocale() {
 };
 prototype["getCategoryName"] = function getCategoryName(arg0) {
   if (arg0 === closure_5) {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    let stringResult = intl.string(require(1236) /* getSystemLocale */.t.Ym2Ri6);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    let stringResult = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Ym2Ri6);
   } else {
     stringResult = table[arg0];
   }
@@ -116,7 +116,7 @@ export const areDiscoveryCategoriesEqual = function areDiscoveryCategoriesEqual(
     ({ categoryId: arr[0], name: arr[1] } = arg0);
     return items;
   });
-  return importDefault(12).isEqual(mapped, arr2.map((arg0) => {
+  return require("../../../_runtime/00012_apply.js").isEqual(mapped, arr2.map((arg0) => {
     const items = [, ];
     ({ categoryId: arr[0], name: arr[1] } = arg0);
     return items;

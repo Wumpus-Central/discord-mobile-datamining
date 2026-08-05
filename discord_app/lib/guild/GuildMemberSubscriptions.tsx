@@ -26,7 +26,7 @@ prototype["get"] = function get(arg0) {
   if (obj == null) {
     obj = {};
   }
-  return importDefault(11).keys(obj);
+  return require("../../utils/SnowflakeUtils.tsx").keys(obj);
 };
 prototype["clear"] = function clear(arg0) {
   delete tmp3[tmp2];
@@ -95,7 +95,7 @@ prototype["checkForLeaks"] = function checkForLeaks(arg0, arg1) {
   }
   const diff = num - num2;
   if (diff > 5) {
-    const obj = new importDefault(3)("GuildMemberSubscriptions");
+    const obj = new require("../../modules/debug/Logger.tsx")("GuildMemberSubscriptions");
     const _HermesInternal = HermesInternal;
     obj.warn("GuildMemberSubscriptions.subscribe(...): Potential reference leak! (" + diff + " subscriptions)");
   }
@@ -104,7 +104,7 @@ prototype["flushUnsubscriptions"] = function flushUnsubscriptions() {
   let self = this;
   self = this;
   if (!obj.isEmpty(this._unsubscriptions)) {
-    let item = importDefault(12).forEach(self._unsubscriptions, (arg0, arg1) => {
+    let item = require("../../../_runtime/00012_apply.js").forEach(self._unsubscriptions, (arg0, arg1) => {
       const self = tmp3;
       const item = outer1_1(outer1_2[4]).forEach(arg0, (arg0, arg1) => {
         let num = tmp3[arg1];
@@ -124,7 +124,7 @@ prototype["flushUnsubscriptions"] = function flushUnsubscriptions() {
       self._onChange(arg1, self.get(arg1));
     });
     self._unsubscriptions = {};
-    const tmpResult = importDefault(12);
+    const tmpResult = require("../../../_runtime/00012_apply.js");
   }
 };
 

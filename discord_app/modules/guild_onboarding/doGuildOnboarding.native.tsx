@@ -10,7 +10,7 @@ let c9;
 let metroImportAll;
 const require = arg1;
 function getBaseAnimationData() {
-  return JSON.parse(JSON.stringify(require(5208)));
+  return JSON.parse(JSON.stringify(require("../../../_runtime/metro/05208__.js")));
 }
 function _doGuildOnboarding() {
   let self = this;
@@ -292,7 +292,7 @@ function _fetchLandingAsset() {
 }
 function openAndWaitForOnboarding(arg0) {
   const _require = arg0;
-  const result = _require(5214).waitForOnboardingCompletion(arg0);
+  const result = _require("doGuildOnboardingHelpers.tsx").waitForOnboardingCompletion(arg0);
   result.then(() => {
     if (null != outer1_11[closure_0]) {
       tmp4();
@@ -300,7 +300,7 @@ function openAndWaitForOnboarding(arg0) {
     delete tmp[tmp2];
     outer1_1(outer1_2[15]).finishOnboarding(closure_0);
   });
-  let obj = _require(5214);
+  let obj = _require("doGuildOnboardingHelpers.tsx");
   return new Promise((arg0) => {
     if (null == outer1_11[callback]) {
       tmp[tmp2] = arg0;

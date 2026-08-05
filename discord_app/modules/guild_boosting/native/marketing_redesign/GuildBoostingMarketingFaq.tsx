@@ -31,106 +31,106 @@ createCacheKey = createCacheKey.createStyles(createCacheKey);
 let items1 = [
   {
     getQuestion() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.string(require(1236) /* getSystemLocale */.t.C4J8UB);
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.C4J8UB);
     },
     getAnswer() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.string(require(1236) /* getSystemLocale */.t.nhkk6k);
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.nhkk6k);
     }
   },
   {
     getQuestion() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.string(require(1236) /* getSystemLocale */.t.ai4ym2);
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.ai4ym2);
     },
     getAnswer() {
-      const intl = require(1236) /* getSystemLocale */.intl;
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
       const obj = { helpCenterUrl: null };
-      obj[0] = importDefault(1945).getArticleURL(HelpdeskArticles.GUILD_BOOSTING_FAQ);
-      return intl.format(require(1236) /* getSystemLocale */.t["8zlqlD"], obj);
+      obj[0] = require("../../../../utils/HelpdeskUtils.tsx").getArticleURL(HelpdeskArticles.GUILD_BOOSTING_FAQ);
+      return intl.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["8zlqlD"], obj);
     }
   },
   {
     getQuestion() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.string(require(1236) /* getSystemLocale */.t.kMVGsC);
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.kMVGsC);
     },
     getAnswer() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.string(require(1236) /* getSystemLocale */.t["Vz/SCQ"]);
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["Vz/SCQ"]);
     }
   },
   {
     getQuestion() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.string(require(1236) /* getSystemLocale */.t.kYmXWF);
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.kYmXWF);
     },
     getAnswer() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.string(require(1236) /* getSystemLocale */.t["+OURPp"]);
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["+OURPp"]);
     }
   },
   {
     getQuestion() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.string(require(1236) /* getSystemLocale */.t["LsX/vb"]);
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["LsX/vb"]);
     },
     getAnswer() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.string(require(1236) /* getSystemLocale */.t["3TeauK"]);
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["3TeauK"]);
     }
   },
   {
     getQuestion() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.string(require(1236) /* getSystemLocale */.t.fRlnXU);
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.fRlnXU);
     },
     getAnswer() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.string(require(1236) /* getSystemLocale */.t.bTRacj);
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.bTRacj);
     }
   },
   {
     getQuestion() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.string(require(1236) /* getSystemLocale */.t["8Mu5Q9"]);
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["8Mu5Q9"]);
     },
     getAnswer() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.string(require(1236) /* getSystemLocale */.t["2T5iPo"]);
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["2T5iPo"]);
     }
   },
   {
     getQuestion() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.string(require(1236) /* getSystemLocale */.t["6EN+TZ"]);
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["6EN+TZ"]);
     },
     getAnswer() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.string(require(1236) /* getSystemLocale */.t.NZax1u);
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.NZax1u);
     }
   },
   {
     getQuestion() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.string(require(1236) /* getSystemLocale */.t.f5B4EW);
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.f5B4EW);
     },
     getAnswer() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.string(require(1236) /* getSystemLocale */.t.Aje8Pb);
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Aje8Pb);
     }
   }
 ];
 const obj4 = { flexGrow: 0, flexShrink: 0, tintColor: require("Themes").colors.ICON_MUTED };
 const obj5 = {
   getQuestion() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.C4J8UB);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.C4J8UB);
   },
   getAnswer() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.nhkk6k);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.nhkk6k);
   }
 };
 const result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingFaq.tsx");
@@ -144,9 +144,9 @@ export default function GuildBoostingMarketingFaq() {
   let obj = { style: tmp.wrapper, children: null };
   obj = { style: tmp.content, children: null };
   obj = { style: tmp.heading, variant: "heading-xxl/bold", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl.string(require(1236) /* getSystemLocale */.t.HPJ6Nj);
-  let items = [callback2(require(4281) /* Text */.Heading, obj), ];
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.HPJ6Nj);
+  let items = [callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Heading, obj), ];
   const tmp2 = callback(React.useState(null), 2);
   items[1] = callback2(View, {
     style: tmp.list,

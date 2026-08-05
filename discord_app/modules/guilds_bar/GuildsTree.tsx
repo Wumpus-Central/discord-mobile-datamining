@@ -71,10 +71,10 @@ prototype["moveNextTo"] = function moveNextTo(node, node1, moveToBelow) {
   if (tmp7) {
     tmp7 = root.type === tmp6.FOLDER;
   }
-  importDefault(38)(!tmp7, "[GUILDS TREE] Tried moving a folder (" + node.id + ") inside of another folder (" + root.id + ")");
+  require("../../../_runtime/metro/00038__.js")(!tmp7, "[GUILDS TREE] Tried moving a folder (" + node.id + ") inside of another folder (" + root.id + ")");
   const tmp3 = importDefault;
-  const tmp5 = importDefault(38);
-  importDefault(38)(index >= 0, "[GUILDS TREE] target node (" + node1.id + ") did not exist within its specified parent (" + node1.parentId + ")");
+  const tmp5 = require("../../../_runtime/metro/00038__.js");
+  require("../../../_runtime/metro/00038__.js")(index >= 0, "[GUILDS TREE] target node (" + node1.id + ") did not exist within its specified parent (" + node1.parentId + ")");
   let num = 0;
   if (flag) {
     num = 1;
@@ -114,16 +114,16 @@ prototype["addNode"] = function addNode(type, c0, flag) {
   if (flag === undefined) {
     flag = true;
   }
-  importDefault(38)(type.type !== obj.ROOT, "[GUILDS TREE] Tried adding another root node into the tree");
-  importDefault(38)(null != type.id, "[GUILDS TREE] Tried adding a node without an id");
-  importDefault(38)(null == self.nodes[type.id], "[GUILDS TREE] Tried adding a node that already exists (" + type.id + ")");
+  require("../../../_runtime/metro/00038__.js")(type.type !== obj.ROOT, "[GUILDS TREE] Tried adding another root node into the tree");
+  require("../../../_runtime/metro/00038__.js")(null != type.id, "[GUILDS TREE] Tried adding a node without an id");
+  require("../../../_runtime/metro/00038__.js")(null == self.nodes[type.id], "[GUILDS TREE] Tried adding a node that already exists (" + type.id + ")");
   self.nodes[type.id] = type;
   self.version = self.version + 1;
   return self.moveInto(type, root, flag);
 };
 prototype["removeNode"] = function removeNode(id) {
-  importDefault(38)(id !== this.root, "[GUILDS TREE] Tried removing the root node from the tree");
-  importDefault(38)(null != id.id, "[GUILDS TREE] Tried removing a node without an id");
+  require("../../../_runtime/metro/00038__.js")(id !== this.root, "[GUILDS TREE] Tried removing the root node from the tree");
+  require("../../../_runtime/metro/00038__.js")(null != id.id, "[GUILDS TREE] Tried removing a node without an id");
   this._pluckNode(id);
   id.parentId = undefined;
   delete tmp2[tmp];
@@ -132,8 +132,8 @@ prototype["removeNode"] = function removeNode(id) {
 };
 prototype["replaceNode"] = function replaceNode(node, cloneNodeResult) {
   const self = this;
-  importDefault(38)(null != node.id, "[GUILDS TREE] Tried replacing a node without an id");
-  importDefault(38)(null != cloneNodeResult.id, "[GUILDS TREE] Tried replacing a node with one that does not have an id");
+  require("../../../_runtime/metro/00038__.js")(null != node.id, "[GUILDS TREE] Tried replacing a node without an id");
+  require("../../../_runtime/metro/00038__.js")(null != cloneNodeResult.id, "[GUILDS TREE] Tried replacing a node with one that does not have an id");
   if (null != node.parentId) {
     let root = self.nodes[node.parentId];
   } else {
@@ -141,7 +141,7 @@ prototype["replaceNode"] = function replaceNode(node, cloneNodeResult) {
   }
   const children = root.children;
   const index = children.indexOf(node);
-  importDefault(38)(index >= 0, "[GUILDS TREE] existing node (" + node.id + ") did not exist within its specified parent (" + node.parentId + ")");
+  require("../../../_runtime/metro/00038__.js")(index >= 0, "[GUILDS TREE] existing node (" + node.id + ") did not exist within its specified parent (" + node.parentId + ")");
   const items = [...root.children];
   root.children = items;
   const children1 = root.children;
@@ -154,7 +154,7 @@ prototype["replaceNode"] = function replaceNode(node, cloneNodeResult) {
   return self;
 };
 prototype["cloneNode"] = function cloneNode(node) {
-  return require(12) /* apply */.clone(node);
+  return require("../../../_runtime/00012_apply.js") /* apply */.clone(node);
 };
 prototype["convertToFolder"] = function convertToFolder(node) {
   const self = this;
@@ -260,11 +260,11 @@ prototype["_pluckNode"] = function _pluckNode(parentId) {
   } else {
     root = self.root;
   }
-  importDefault(38)(null != root, "[GUILDS TREE] source node (" + parentId.id + ") had a parent id (" + parentId.parentId + ") which doesn't exist in the tree");
+  require("../../../_runtime/metro/00038__.js")(null != root, "[GUILDS TREE] source node (" + parentId.id + ") had a parent id (" + parentId.parentId + ") which doesn't exist in the tree");
   const children = root.children;
-  const tmp = importDefault(38);
+  const tmp = require("../../../_runtime/metro/00038__.js");
   const tmp2 = null != root;
-  importDefault(38)(null != children, "[GUILDS TREE] source node (" + parentId.id + ") had a parent id (" + parentId.parentId + ") which contains no children");
+  require("../../../_runtime/metro/00038__.js")(null != children, "[GUILDS TREE] source node (" + parentId.id + ") had a parent id (" + parentId.parentId + ") which contains no children");
   root.children = children.filter((arg0) => arg0 !== closure_0);
   parentId.parentId = undefined;
   self.version = self.version + 1;

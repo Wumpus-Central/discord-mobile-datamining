@@ -69,7 +69,7 @@ prototype["get"] = function get(arg0) {
   return dependencyMap[arg0];
 };
 prototype["getGiftable"] = function getGiftable() {
-  return importDefault(12).values(closure_10);
+  return require("../../../_runtime/00012_apply.js").values(closure_10);
 };
 prototype["getForApplication"] = function getForApplication(arg0) {
   if (null == dependencyMap3[arg0]) {
@@ -200,8 +200,8 @@ prototype["isEntitledToSku"] = function isEntitledToSku(arg0, arg1, applicationI
     }
     let tmp13 = null == libraryApplication || libraryApplication.sku.id !== arg1;
     if (!tmp13) {
-      tmp13 = !require(4329) /* getComboId */.isUserEntitledToLibraryApplication(libraryApplication);
-      const obj3 = require(4329) /* getComboId */;
+      tmp13 = !require("../../utils/LibraryApplicationUtils.tsx") /* getComboId */.isUserEntitledToLibraryApplication(libraryApplication);
+      const obj3 = require("../../utils/LibraryApplicationUtils.tsx") /* getComboId */;
     }
     let tmp16 = !tmp13;
     if (tmp13) {

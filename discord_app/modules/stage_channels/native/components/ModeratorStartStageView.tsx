@@ -50,7 +50,7 @@ export default function ModeratorStartStageView(channel) {
     }
     const items2 = [tmp10Result, , , ];
     tmp10Result = null;
-    if (importDefault(10654)(channel.id, true).moderator) {
+    if (require("../../useCurrentUserStageRoles.tsx")(channel.id, true).moderator) {
       obj1 = { channel: null, isLive: null };
       obj1[0] = channel;
       obj1[1] = isLive;

@@ -7,20 +7,20 @@ const result = require("set").fileFinishedImporting("utils/native/AutocompleteUt
 export default {
   MENTION_EVERYONE() {
     const obj = { type: AutoCompleteResultTypes.GLOBAL, test: "everyone", text: "@everyone", description: null };
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[3] = intl.string(require(1236) /* getSystemLocale */.t["5atMLZ"]);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[3] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["5atMLZ"]);
     return obj;
   },
   MENTION_HERE() {
     const obj = { type: AutoCompleteResultTypes.GLOBAL, test: "here", text: "@here", description: null };
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[3] = intl.string(require(1236) /* getSystemLocale */.t.iX9SFD);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[3] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.iX9SFD);
     return obj;
   },
   MENTION_GAME() {
     const obj = { test: "game", text: "@game", inlineAutocompleteType: "gameMentionInput", description: null };
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[3] = intl.string(require(1236) /* getSystemLocale */.t["1kR88y"]);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[3] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["1kR88y"]);
     return obj;
   },
   LAUNCHABLE_APPLICATIONS() {

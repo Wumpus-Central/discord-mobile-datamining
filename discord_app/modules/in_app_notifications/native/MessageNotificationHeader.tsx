@@ -194,7 +194,7 @@ export const SimpleNotificationHeader = function SimpleNotificationHeader(second
   const tmp = createCacheKey();
   let obj = { style: tmp.container, children: null };
   const items = [tmp.primaryText, labelStyle];
-  const items1 = [callback(require(4281) /* Text */.Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, style: items, children: text }), ];
+  const items1 = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, style: items, children: text }), ];
   let tmp2Result = null != secondaryText;
   if (tmp2Result) {
     obj = { style: null, children: null };

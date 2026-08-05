@@ -9,7 +9,7 @@ export const openAcceptFriendRequestConfirmModal = function openAcceptFriendRequ
   let importDefault;
   let require;
   ({ onConfirm: require, onCancel: importDefault } = arg0);
-  let obj = importDefault(698);
+  let obj = require("../../../utils/AnalyticsUtils.tsx");
   obj = { type: closure_3 };
   obj.track(AnalyticEvents.OPEN_MODAL, obj);
   obj = {
@@ -32,5 +32,5 @@ export const openAcceptFriendRequestConfirmModal = function openAcceptFriendRequ
       });
     }
   };
-  importDefault(4624).openLazy(obj);
+  require("../../../actions/native/AlertActionCreators.tsx").openLazy(obj);
 };

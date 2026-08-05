@@ -4,16 +4,16 @@ import { jsx } from "jsxProd";
 
 const require = arg1;
 function onModalClose() {
-  importDefault(16621).close();
+  require("../../EnableCommunityModalActionCreators.tsx").close();
 }
 function HeaderBackButton(arg0) {
-  require(5244) /* useNavigatorBackPressHandler */.useNavigatorBackPressHandler(() => {
+  require("../../../../../design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx") /* useNavigatorBackPressHandler */.useNavigatorBackPressHandler(() => {
     callback(table[2]).close();
     return true;
   });
-  const obj = require(5244) /* useNavigatorBackPressHandler */;
-  const intl = require(1236) /* getSystemLocale */.intl;
-  return require(5238) /* HeaderBackImage */.getHeaderTextButton(intl.string(require(1236) /* getSystemLocale */.t["13/7kX"]), onModalClose)(arg0);
+  const obj = require("../../../../../design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx") /* useNavigatorBackPressHandler */;
+  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  return require("../../../../../design/components/Navigator/native/NavigatorHeader.native.tsx") /* HeaderBackImage */.getHeaderTextButton(intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["13/7kX"]), onModalClose)(arg0);
 }
 const result = require("module_16621").fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/EnableCommunityModal.tsx");
 
@@ -58,8 +58,8 @@ export default function EnableCommunityModal() {
     return { [closure_0(closure_2[8]).EnableCommunityModalSteps.STEP_1]: obj, [closure_0(closure_2[8]).EnableCommunityModalSteps.STEP_2]: obj, [closure_0(closure_2[8]).EnableCommunityModalSteps.STEP_3]: obj };
   }, []);
   let obj = { screens: memo, initialRouteName: null, headerBackTitle: null };
-  obj[1] = require(16623) /* EnableCommunityModalSteps */.EnableCommunityModalSteps.STEP_1;
-  let intl = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl.string(require(1236) /* getSystemLocale */.t["13/7kX"]);
-  return jsx(require(5665) /* NavigationStack */.Navigator, { screens: memo, initialRouteName: null, headerBackTitle: null });
+  obj[1] = require("EnableCommunitySharedNavigation.tsx") /* EnableCommunityModalSteps */.EnableCommunityModalSteps.STEP_1;
+  let intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["13/7kX"]);
+  return jsx(require("../../../../../design/components/Navigator/native/Navigator.native.tsx") /* NavigationStack */.Navigator, { screens: memo, initialRouteName: null, headerBackTitle: null });
 };

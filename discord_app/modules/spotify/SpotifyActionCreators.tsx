@@ -326,7 +326,7 @@ const result = require("ME").fileFinishedImporting("modules/spotify/SpotifyActio
 export const SpotifyAPI = obj;
 export const getAccessToken = function getAccessToken(id) {
   const _require = id;
-  const HTTP = _require(530).HTTP;
+  const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
   const value = HTTP.get({ url: closure_7.CONNECTION_ACCESS_TOKEN(constants.SPOTIFY, id), oldFormErrors: true, rejectWithError: false });
   const obj = { url: closure_7.CONNECTION_ACCESS_TOKEN(constants.SPOTIFY, id), oldFormErrors: true, rejectWithError: false };
   return value.catch((body) => {
@@ -550,19 +550,19 @@ export const pause = function pause(arg0, arg1) {
 export const fetchIsSpotifyProtocolRegistered = function fetchIsSpotifyProtocolRegistered() {
   if (!protocolRegistered.isProtocolRegistered()) {
     if (obj.isDesktop()) {
-      const obj2 = importDefault(9198);
-      importDefault(9198).isProtocolRegistered(closure_4).then((isRegistered) => {
+      const obj2 = require("../../utils/GameUtils.native.tsx");
+      require("../../utils/GameUtils.native.tsx").isProtocolRegistered(closure_4).then((isRegistered) => {
         let obj = callback(table[5]);
         obj = { type: "SPOTIFY_SET_PROTOCOL_REGISTERED", isRegistered };
         obj.dispatch(obj);
       });
-      const isProtocolRegisteredResult = importDefault(9198).isProtocolRegistered(closure_4);
+      const isProtocolRegisteredResult = require("../../utils/GameUtils.native.tsx").isProtocolRegistered(closure_4);
     }
-    obj = require(500) /* set */;
+    obj = require("../../utils/PlatformUtils.tsx") /* set */;
   }
 };
 export const setActiveDevice = function setActiveDevice(accountId, deviceId) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "SPOTIFY_SET_ACTIVE_DEVICE", accountId, deviceId };
   obj.dispatch(obj);
 };

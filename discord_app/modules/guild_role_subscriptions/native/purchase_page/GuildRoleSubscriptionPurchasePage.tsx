@@ -24,10 +24,10 @@ function Separator() {
 }
 function LegalDisclaimer() {
   let obj = { variant: "text-xs/normal", color: "text-muted", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   obj = { termsURL: constants3.TERMS, paidURL: constants3.PAID_TERMS };
-  obj[2] = intl.format(require(1236) /* getSystemLocale */.t.FSPTDI, obj);
-  return callback(require(4281) /* Text */.Text, obj);
+  obj[2] = intl.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.FSPTDI, obj);
+  return callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
 }
 function SocialBadge(onPress) {
   let iconSource;
@@ -44,12 +44,12 @@ function SocialBadge(onPress) {
   obj[1] = num;
   obj[2] = onPress;
   obj = { source: iconSource, style: tmp.socialBadgeIcon, resizeMode: "contain", disableColor: true };
-  const items = [callback(require(1297) /* Button */.Icon, obj), callback(require(4281) /* Text */.Text, { variant: "text-sm/medium", color: "text-default", children: text }), ];
+  const items = [callback(require("../../../../design/void/native.tsx") /* Button */.Icon, obj), callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-sm/medium", color: "text-default", children: text }), ];
   if (tmp5Result) {
     obj = { source: null, style: null };
-    obj[0] = importDefault(10711);
+    obj[0] = require("../../../../../_runtime/10711_registerAsset.js");
     obj[1] = tmp.socialBadgeArrow;
-    tmp5Result = callback(require(1297) /* Button */.Icon, obj);
+    tmp5Result = callback(require("../../../../design/void/native.tsx") /* Button */.Icon, obj);
   }
   items[2] = tmp5Result;
   obj[3] = items;

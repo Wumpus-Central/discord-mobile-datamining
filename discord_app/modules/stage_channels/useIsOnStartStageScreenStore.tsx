@@ -11,16 +11,16 @@ const result = require("handleConnectionOpen").fileFinishedImporting("modules/st
 export default keys;
 export const setIsOnStartStageScreen = function setIsOnStartStageScreen(arg0) {
   const _require = arg0;
-  _require(705).batchUpdates(() => outer1_6.setState({ isOnStartStageScreen: c0 }));
+  _require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_6.setState({ isOnStartStageScreen: c0 }));
 };
 export const useUpdateIsOnStartStageScreenEffect = function useUpdateIsOnStartStageScreenEffect(id) {
   const _require = id;
   const items = [handleConnectionOpen];
-  const stateFromStores = _require(589).useStateFromStores(items, () => outer1_5.getVoiceChannelId() === id.id);
-  let obj = _require(589);
+  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_5.getVoiceChannelId() === id.id);
+  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
   const items1 = [getUncachedChannelPermissions];
   const items2 = [id];
-  const stateFromStores1 = _require(589).useStateFromStores(items1, () => outer1_4.can(id(tmp3[6]).MODERATE_STAGE_CHANNEL_PERMISSIONS, id), items2);
+  const stateFromStores1 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => outer1_4.can(id(tmp3[6]).MODERATE_STAGE_CHANNEL_PERMISSIONS, id), items2);
   let tmp3 = stateFromStores1;
   if (stateFromStores1) {
     tmp3 = !stateFromStores(7699)(id.id);

@@ -1,5 +1,5 @@
 // discord_app/modules/icymi/native/content_inventory/GamingLikeEntryRow.tsx
-import module_8835 from "module_8835";
+import ICYMIActionCreators from "../../ICYMIActionCreators.tsx";
 import { View } from "Screenshot";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import jsxProd from "useReplyActions";
@@ -15,7 +15,7 @@ let items = [obj, , , , ];
 obj = {
   Badge: require("ActiveTimestamp").StreakBadge,
   predicate(entry) {
-    let num = require(8048) /* calculateTimestampDurations */.getStreakCount(entry);
+    let num = require("../../../content_inventory/utils.tsx") /* calculateTimestampDurations */.getStreakCount(entry);
     if (num == null) {
       num = 0;
     }
@@ -26,10 +26,10 @@ items[1] = obj;
 obj = {
   Badge: require("ActiveTimestamp").TrendingBadge,
   predicate(entry) {
-    const trendingType = require(8048) /* calculateTimestampDurations */.getTrendingType(entry);
-    const obj = require(8048) /* calculateTimestampDurations */;
+    const trendingType = require("../../../content_inventory/utils.tsx") /* calculateTimestampDurations */.getTrendingType(entry);
+    const obj = require("../../../content_inventory/utils.tsx") /* calculateTimestampDurations */;
     const tmp = require;
-    return null != trendingType && trendingType !== require(12200) /* TrendingType */.TrendingType.TRENDING_TYPE_UNSPECIFIED;
+    return null != trendingType && trendingType !== require("../../../../../discord_common/js/shared/shared-constants/TrendingType.tsx") /* TrendingType */.TrendingType.TRENDING_TYPE_UNSPECIFIED;
   }
 };
 items[2] = obj;
@@ -48,26 +48,26 @@ let obj1 = {
 items[4] = {
   Badge: require("ActiveTimestamp").MarathonBadge,
   predicate(entry) {
-    return true === require(8048) /* calculateTimestampDurations */.isEntryMarathon(entry);
+    return true === require("../../../content_inventory/utils.tsx") /* calculateTimestampDurations */.isEntryMarathon(entry);
   }
 };
 let closure_11 = createICYMIStyles.createICYMIStyles((gap) => {
   let obj = { card: null, cardInnerContainer: null, image: null, gameName: null, badges: null };
-  obj = { flexDirection: "row", gap: gap.margin, alignItems: "center", padding: gap.margin, marginLeft: gap.inset, borderRadius: importDefault(712).radii.lg, backgroundColor: importDefault(712).colors.BACKGROUND_SURFACE_HIGH };
-  const merged = Object.assign(importDefault(712).shadows.SHADOW_HIGH);
+  obj = { flexDirection: "row", gap: gap.margin, alignItems: "center", padding: gap.margin, marginLeft: gap.inset, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SURFACE_HIGH };
+  const merged = Object.assign(require("../../../../../discord_common/js/packages/tokens/native.tsx").shadows.SHADOW_HIGH);
   obj[0] = obj;
   obj[1] = { overflow: "hidden", flex: 1 };
-  obj = { width: 72, height: 72, borderRadius: importDefault(712).radii.sm };
+  obj = { width: 72, height: 72, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.sm };
   obj[2] = obj;
-  obj[3] = { maxWidth: 275, color: importDefault(712).colors.CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY };
-  const obj1 = { maxWidth: 275, color: importDefault(712).colors.CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY };
-  obj[4] = { display: "flex", flexDirection: "row", gap: importDefault(712).space.PX_8, flexWrap: "wrap", alignItems: "center", marginTop: 6 };
+  obj[3] = { maxWidth: 275, color: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY };
+  const obj1 = { maxWidth: 275, color: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY };
+  obj[4] = { display: "flex", flexDirection: "row", gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, flexWrap: "wrap", alignItems: "center", marginTop: 6 };
   return obj;
 });
 let obj2 = {
   Badge: require("ActiveTimestamp").MarathonBadge,
   predicate(entry) {
-    return true === require(8048) /* calculateTimestampDurations */.isEntryMarathon(entry);
+    return true === require("../../../content_inventory/utils.tsx") /* calculateTimestampDurations */.isEntryMarathon(entry);
   }
 };
 const result = require("mergeGuildAvatar").fileFinishedImporting("modules/icymi/native/content_inventory/GamingLikeEntryRow.tsx");

@@ -589,7 +589,7 @@ function getVideoQuality() {
 }
 function getAppDir() {
   if (obj.isAndroid()) {
-    if (null == importDefault(1271)) {
+    if (null == require("../../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx")) {
       const _Error = Error;
       const error = new Error("RTNFileManager doesn't exist?");
       throw error;
@@ -601,7 +601,7 @@ function getAppDir() {
   } else {
     return "/private" + closure_6.DCDFileManager.DocumentsDirPath.replace(/Documents$/, "");
   }
-  obj = require(500) /* set */;
+  obj = require("../PlatformUtils.tsx") /* set */;
 }
 function getFileInfo(closure_0, closure_1) {
   let allowOptimization;
@@ -618,7 +618,7 @@ function getFileInfo(closure_0, closure_1) {
   if (closure_1 === undefined) {
     str = "";
   }
-  if (item.platform !== require(4817) /* cancel */.UploadPlatform.REACT_NATIVE) {
+  if (item.platform !== require("../../lib/uploader/Upload.tsx") /* cancel */.UploadPlatform.REACT_NATIVE) {
     const _Error = Error;
     const error = new Error("Try to get file info for unsupported upload item");
     throw error;
@@ -885,17 +885,17 @@ function _shouldConvertToPNG() {
   return applyArgumentsResult;
 }
 function isVideo(uri, overrideType) {
-  let obj = require(4818) /* items */;
+  let obj = require("../UploadUtils.tsx") /* items */;
   obj = { uri, overrideType };
   return obj.getFile(obj).isVideo;
 }
 function isImage(uri, overrideType) {
-  let obj = require(4818) /* items */;
+  let obj = require("../UploadUtils.tsx") /* items */;
   obj = { uri, overrideType };
   return obj.getFile(obj).isImage;
 }
 function getType(uri) {
-  let obj = require(4818) /* items */;
+  let obj = require("../UploadUtils.tsx") /* items */;
   obj = { uri };
   return obj.getFile(obj).type;
 }
@@ -910,20 +910,20 @@ function convertVideo(videoMetadata) {
   let result1;
   let obj;
   let c7;
-  const VideoQualityTarget = require(4849) /* toString */.VideoQualityTarget;
+  const VideoQualityTarget = require("../../modules/media_uploads/native/VideoUploadUtils.tsx") /* toString */.VideoQualityTarget;
   const result = VideoQualityTarget.fromCompressionQuality(videoQualitySetting);
-  obj = require(4849) /* toString */;
-  result1 = obj.canSkipVideoTranscode(result, videoMetadata, videoMetadata.fileSize, require(4822) /* getUploadFileSizeSum */.maxFileSize());
-  let obj2 = require(4822) /* getUploadFileSizeSum */;
-  const result2 = require(4849) /* toString */.calculateTargetDimensions(videoMetadata, result.targetResolution);
-  let obj3 = require(4849) /* toString */;
+  obj = require("../../modules/media_uploads/native/VideoUploadUtils.tsx") /* toString */;
+  result1 = obj.canSkipVideoTranscode(result, videoMetadata, videoMetadata.fileSize, require("../FileUtils.tsx") /* getUploadFileSizeSum */.maxFileSize());
+  let obj2 = require("../FileUtils.tsx") /* getUploadFileSizeSum */;
+  const result2 = require("../../modules/media_uploads/native/VideoUploadUtils.tsx") /* toString */.calculateTargetDimensions(videoMetadata, result.targetResolution);
+  let obj3 = require("../../modules/media_uploads/native/VideoUploadUtils.tsx") /* toString */;
   obj = {};
-  const result3 = require(4849) /* toString */.calculateOptimalBitrate(videoMetadata, result, require(4849) /* toString */.DEFAULT_VIDEO_ENCODING_CONFIG.bitrateFloor);
-  const merged = Object.assign(require(4849) /* toString */.DEFAULT_VIDEO_ENCODING_CONFIG);
+  const result3 = require("../../modules/media_uploads/native/VideoUploadUtils.tsx") /* toString */.calculateOptimalBitrate(videoMetadata, result, require("../../modules/media_uploads/native/VideoUploadUtils.tsx") /* toString */.DEFAULT_VIDEO_ENCODING_CONFIG.bitrateFloor);
+  const merged = Object.assign(require("../../modules/media_uploads/native/VideoUploadUtils.tsx") /* toString */.DEFAULT_VIDEO_ENCODING_CONFIG);
   obj.videoQuality = result;
   ({ width: obj5.targetWidth, height: obj5.targetHeight } = result2);
   obj.targetBitrate = result3;
-  let obj4 = require(4849) /* toString */;
+  let obj4 = require("../../modules/media_uploads/native/VideoUploadUtils.tsx") /* toString */;
   if (obj6.isAndroid()) {
     if (tmpResult.getSystemVersionMajor() > 34) {
       let _Math = Math;
@@ -2488,8 +2488,8 @@ function getCaptionLabel(type, isVideo, item) {
   if (isVideo) {
     let str3 = "VIDEO";
     if (null != item.playableDuration) {
-      str3 = require(4856) /* getTimeFormat */.getTimeFormat(item.playableDuration);
-      const obj = require(4856) /* getTimeFormat */;
+      str3 = require("TimeUtils.tsx") /* getTimeFormat */.getTimeFormat(item.playableDuration);
+      const obj = require("TimeUtils.tsx") /* getTimeFormat */;
     }
     let str2 = str3;
   } else {
@@ -3081,10 +3081,10 @@ export const getFileSize = function getFileSize(uri) {
   if (obj.isIOS()) {
     replaced = uri.replace(/file:\/\//, "");
   }
-  obj = require(500) /* set */;
+  obj = require("../PlatformUtils.tsx") /* set */;
   const tmp = require;
   if (tmpResult.isAndroid()) {
-    if (null == importDefault(1271)) {
+    if (null == require("../../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx")) {
       let rejectResult = Promise.reject("RTNFileManager doesn't exist?");
     } else {
       rejectResult = tmp5(1271).getSize(replaced);
@@ -3101,7 +3101,7 @@ export { getFileInfo };
 export const shouldConvertToJPG = require("isPhotoKitAsset").shouldConvertToJPG;
 export const shouldForceConvertToJPG = require("isPhotoKitAsset").shouldForceConvertToJPG;
 export const shouldResolveToMediaFilePath = function shouldResolveToMediaFilePath(str) {
-  let isAndroidResult = require(500) /* set */.isAndroid();
+  let isAndroidResult = require("../PlatformUtils.tsx") /* set */.isAndroid();
   if (isAndroidResult) {
     isAndroidResult = null != str.match(/^content:\/\/.+$/i);
   }
@@ -3116,7 +3116,7 @@ export { isHEVCEncodingSupported };
 export { checkVideoEncodingSupport };
 export { calculateImageQualityMetrics };
 export const getFileFromUploadItem = function getFileFromUploadItem(result1) {
-  let obj = require(4818) /* items */;
+  let obj = require("../UploadUtils.tsx") /* items */;
   obj = { uri: result1.uri, overrideFilename: result1.filename, overrideType: result1.mimeType };
   return obj.getFile(obj);
 };

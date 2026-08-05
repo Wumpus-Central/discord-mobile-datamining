@@ -13,7 +13,7 @@ const require = arg1;
 ({ AppState: closure_6, View: error } = get_ActivityIndicator);
 let closure_10 = createCacheKey.createStyles(() => {
   let obj = { container: null, video: null, image: null };
-  obj = { borderRadius: importDefault(712).radii.sm, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" };
+  obj = { borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.sm, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" };
   obj[0] = obj;
   obj[1] = { overflow: "hidden", height: "100%", width: "100%" };
   obj[2] = { height: "100%", width: "100%" };

@@ -20,7 +20,7 @@ export const handleSensitiveMediaFilterPress = function handleSensitiveMediaFilt
   }
   let hasItem;
   if (excluded != null) {
-    hasItem = excluded.includes(require(1306) /* create */.ExplicitContentRedaction.SHOW);
+    hasItem = excluded.includes(require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.ExplicitContentRedaction.SHOW);
   }
   let tmp5 = !hasItem;
   if (!hasItem) {
@@ -29,9 +29,9 @@ export const handleSensitiveMediaFilterPress = function handleSensitiveMediaFilt
   const items = [];
   if (tmp5) {
     let obj = { value: null, label: null, onPress: null };
-    obj[0] = require(1306) /* create */.ExplicitContentRedaction.SHOW;
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[1] = intl.string(require(1236) /* getSystemLocale */.t["5k5OFp"]);
+    obj[0] = require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.ExplicitContentRedaction.SHOW;
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[1] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["5k5OFp"]);
     obj[2] = function onPress() {
       let obj = outer1_0(outer1_2[5]);
       if (obj.shouldAgeVerifyForExplicitMedia()) {
@@ -47,13 +47,13 @@ export const handleSensitiveMediaFilterPress = function handleSensitiveMediaFilt
   }
   let hasItem1;
   if (excluded != null) {
-    hasItem1 = excluded.includes(require(1306) /* create */.ExplicitContentRedaction.BLUR);
+    hasItem1 = excluded.includes(require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.ExplicitContentRedaction.BLUR);
   }
   if (!hasItem1) {
     obj = { value: null, label: null, onPress: null };
-    obj[0] = require(1306) /* create */.ExplicitContentRedaction.BLUR;
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.S49Uad);
+    obj[0] = require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.ExplicitContentRedaction.BLUR;
+    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[1] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.S49Uad);
     obj[2] = function onPress() {
       callback(outer1_0(outer1_2[3]).ExplicitContentRedaction.BLUR);
     };
@@ -61,25 +61,25 @@ export const handleSensitiveMediaFilterPress = function handleSensitiveMediaFilt
   }
   let hasItem2;
   if (excluded != null) {
-    hasItem2 = excluded.includes(require(1306) /* create */.ExplicitContentRedaction.BLOCK);
+    hasItem2 = excluded.includes(require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.ExplicitContentRedaction.BLOCK);
   }
   if (!hasItem2) {
     obj = { value: null, label: null, onPress: null };
-    obj[0] = require(1306) /* create */.ExplicitContentRedaction.BLOCK;
-    const intl3 = require(1236) /* getSystemLocale */.intl;
-    obj[1] = intl3.string(require(1236) /* getSystemLocale */.t["D/157Y"]);
+    obj[0] = require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.ExplicitContentRedaction.BLOCK;
+    const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[1] = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["D/157Y"]);
     obj[2] = function onPress() {
       callback(outer1_0(outer1_2[3]).ExplicitContentRedaction.BLOCK);
     };
     items.push(obj);
   }
-  importDefault(4253).openLazy(require(1959) /* asyncRequireImpl */(13972, dependencyMap.paths), closure_4, { title, subtitle, options: items, currentValue });
+  require("../../action_sheet/native/ActionSheetActionCreators.tsx").openLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(13972, dependencyMap.paths), closure_4, { title, subtitle, options: items, currentValue });
 };
 export const shouldAgeVerifyForSearchMedia = function shouldAgeVerifyForSearchMedia(media, found) {
   if (null == found) {
     return false;
   } else {
-    const enabledHarmTypesForMessage = require(5818) /* getEligibleHarmTypesConfigsForContext */.getEnabledHarmTypesForMessage(found);
+    const enabledHarmTypesForMessage = require("../ObscuredMediaUtils.tsx") /* getEligibleHarmTypesConfigsForContext */.getEnabledHarmTypesForMessage(found);
     if (0 === enabledHarmTypesForMessage) {
       return false;
     } else {
@@ -114,6 +114,6 @@ export const shouldAgeVerifyForSearchMedia = function shouldAgeVerifyForSearchMe
       }
       return tmp2;
     }
-    const obj5 = require(5818) /* getEligibleHarmTypesConfigsForContext */;
+    const obj5 = require("../ObscuredMediaUtils.tsx") /* getEligibleHarmTypesConfigsForContext */;
   }
 };

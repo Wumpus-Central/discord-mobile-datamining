@@ -13,7 +13,7 @@ function handleUserSettingsProtoStoreChange() {
   if (applications == null) {
     applications = {};
   }
-  tmp2.overwriteHistory(importDefault(12).mapValues(applications, (recentUses) => {
+  tmp2.overwriteHistory(require("../../../_runtime/00012_apply.js").mapValues(applications, (recentUses) => {
     const obj = {};
     const merged = Object.assign(recentUses);
     recentUses = recentUses.recentUses;

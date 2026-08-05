@@ -9,21 +9,21 @@ prototype["isSessionActive"] = function isSessionActive() {
   return null != this.searchSessionId;
 };
 prototype["initialize"] = function initialize() {
-  this.searchSessionId = require(514) /* v1 */.v4();
+  this.searchSessionId = require("../../../../_runtime/00514_v1.js") /* v1 */.v4();
   this.searchSessionStartTime = Date.now();
   this.isQueryEnteredTracked = false;
 };
 prototype["maybeTrackQueryEntered"] = function maybeTrackQueryEntered() {
   if (!this.isQueryEnteredTracked) {
-    const result = require(5924) /* trackSettingSearchInputFocused */.trackSettingSearchQueryEntered();
+    const result = require("Tracking.tsx") /* trackSettingSearchInputFocused */.trackSettingSearchQueryEntered();
     tmp.isQueryEnteredTracked = true;
-    const obj = require(5924) /* trackSettingSearchInputFocused */;
+    const obj = require("Tracking.tsx") /* trackSettingSearchInputFocused */;
   }
 };
 prototype["terminate"] = function terminate() {
   const self = this;
   if (tmp) {
-    let obj = require(5924) /* trackSettingSearchInputFocused */;
+    let obj = require("Tracking.tsx") /* trackSettingSearchInputFocused */;
     obj = { searchSessionDuration: null };
     const _Date = Date;
     obj[0] = Date.now() - self.searchSessionStartTime;

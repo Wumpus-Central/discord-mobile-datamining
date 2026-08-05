@@ -7,17 +7,17 @@ class ICYMIManager extends tmp2 {
 }
 const prototype = ICYMIManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const subscription = importDefault(709).subscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
+  const subscription = require("../../Dispatcher.tsx").subscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
 };
 prototype["_terminate"] = function _terminate() {
-  importDefault(709).unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
+  require("../../Dispatcher.tsx").unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
 };
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
-  let obj = require(8836) /* apexExperiment */;
+  let obj = require("ICYMIExperiment.tsx") /* apexExperiment */;
   if (obj.getICYMIEnabled("ICYMIManager")) {
     obj = { isInitialLoad: null };
     obj[0] = true;
-    const dehydrated = importDefault(8835).fetchDehydrated(obj);
+    const dehydrated = require("ICYMIActionCreators.tsx").fetchDehydrated(obj);
     if (null != timeout) {
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
@@ -56,7 +56,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
     const guildChannelScores = tmp2Result.getGuildChannelScores();
     tmp2Result = tmp2(8835);
     const recommendedGuilds = tmp2Result.getRecommendedGuilds();
-    const obj2 = importDefault(8835);
+    const obj2 = require("ICYMIActionCreators.tsx");
   }
 };
 const iCYMIManager = new ICYMIManager();

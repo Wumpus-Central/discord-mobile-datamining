@@ -17,7 +17,7 @@ let unpackModuleId;
 const require = arg1;
 function handleClose() {
   state.setState({ isReportOpen: false });
-  let arr = importDefault(4490);
+  let arr = require("../../../../actions/ModalActionCreators.tsx");
   arr = arr.pop();
 }
 class BugCreateScreen {

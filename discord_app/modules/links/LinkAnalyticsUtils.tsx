@@ -13,11 +13,11 @@ const items = [
   (target) => {
     let channelId;
     let guildId;
-    const safeParseWithQueryResult = importDefault(1467).safeParseWithQuery(target);
+    const safeParseWithQueryResult = require("../../utils/URLUtils.tsx").safeParseWithQuery(target);
     if (null == safeParseWithQueryResult) {
       return null;
     } else {
-      const tryParseChannelPathResult = require(4476) /* ME */.tryParseChannelPath(safeParseWithQueryResult.path);
+      const tryParseChannelPathResult = require("LinkUtils.tsx") /* ME */.tryParseChannelPath(safeParseWithQueryResult.path);
       if (null == tryParseChannelPathResult) {
         return null;
       } else {
@@ -34,7 +34,7 @@ const items = [
         }
         UNKNOWN = constants.UNKNOWN;
       }
-      const obj2 = require(4476) /* ME */;
+      const obj2 = require("LinkUtils.tsx") /* ME */;
     }
   },
   (arg0) => {
@@ -49,7 +49,7 @@ const result = require("isDiscordProxiedAssetUrl").fileFinishedImporting("module
 
 export default {
   trackDiscordLinkClicked(guildId) {
-    importDefault(698);
+    require("../../utils/AnalyticsUtils.tsx");
     if (null != guildId.guildId) {
       if (null != guildId.channelId) {
         if (null != guildId.messageId) {
@@ -69,9 +69,9 @@ export default {
   },
   trackLinkClicked(closure_1) {
     if (null != closure_1) {
-      let obj = importDefault(1467);
+      let obj = require("../../utils/URLUtils.tsx");
       let tmp3 = obj.isDiscordUrl(closure_1, true) || null != arg1;
-      importDefault(698);
+      require("../../utils/AnalyticsUtils.tsx");
       obj = { is_discord_link: null, discord_link_type: null };
       obj[0] = tmp3;
       if (!tmp3) {
@@ -121,6 +121,6 @@ export default {
     let sourceChannelId;
     let sourceGuildId;
     ({ messageId, channelId, guildId, sourceChannelId, sourceGuildId } = arg0);
-    importDefault(698).track(AnalyticEvents.ANNOUNCEMENT_MESSAGE_LINK_CLICKED, { message_id: messageId, channel_id: channelId, guild_id: guildId, source_channel_id: sourceChannelId, source_guild_id: sourceGuildId });
+    require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.ANNOUNCEMENT_MESSAGE_LINK_CLICKED, { message_id: messageId, channel_id: channelId, guild_id: guildId, source_channel_id: sourceChannelId, source_guild_id: sourceGuildId });
   }
 };

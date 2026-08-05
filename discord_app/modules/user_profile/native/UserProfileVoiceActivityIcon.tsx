@@ -24,7 +24,7 @@ export default function UserProfileVoiceActivityIcon(channel) {
       const isGuildStageVoiceResult = channel.isGuildStageVoice();
       let tmp6 = !stateFromStores;
       if (stateFromStores) {
-        tmp6 = importDefault(4775)(channel);
+        tmp6 = require("../../channel/isRoleRequired.tsx")(channel);
       }
       if (isGuildStageVoiceResult) {
         if (tmp6) {

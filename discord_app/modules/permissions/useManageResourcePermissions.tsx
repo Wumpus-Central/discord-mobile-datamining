@@ -97,7 +97,7 @@ export const useManageResourcePermissions = function useManageResourcePermission
   let dependencyMap;
   let importAll;
   const _require = channel;
-  let obj = _require(1411);
+  let obj = _require("../../utils/GuildRecordUtils.tsx");
   if (obj.isGuildRecord(channel)) {
     let items = [, ];
     ({ CREATE_EVENTS: arr3[0], MANAGE_EVENTS: arr3[1] } = Permissions);

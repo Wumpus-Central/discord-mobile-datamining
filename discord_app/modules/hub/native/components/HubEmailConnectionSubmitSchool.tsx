@@ -134,7 +134,7 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
     return applyArgumentsResult;
   }
   let tmp = createCacheKey();
-  let obj = require(1480) /* useNavigation */;
+  let obj = require("../../../../design/components/Navigator/native/useNavigation.native.tsx") /* useNavigation */;
   dependencyMap = obj.useNavigation();
   const tmp4 = callback(ref.useState(false), 2);
   ME = tmp4[1];
@@ -145,29 +145,29 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
   obj = { ref, contentContainerStyle: null, children: null };
   const items = [tmp.scrollViewContainer, ];
   obj = { paddingBottom: null };
-  obj[0] = importDefault(5310)().insets.bottom + importDefault(712).space.PX_16;
+  obj[0] = require("../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx")().insets.bottom + require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16;
   items[1] = obj;
   obj[1] = items;
   let obj1 = { style: tmp.container, children: null };
   obj2 = { style: tmp.title, accessibilityRole: "header", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj2[2] = intl.string(require(1236) /* getSystemLocale */.t["2FNWBG"]);
-  const items1 = [callback2(require(1297) /* Button */.LegacyText, obj2), , ];
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj2[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["2FNWBG"]);
+  const items1 = [callback2(require("../../../../design/void/native.tsx") /* Button */.LegacyText, obj2), , ];
   const obj3 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj3[3] = intl2.string(require(1236) /* getSystemLocale */.t["/4y6ox"]);
-  items1[1] = callback2(require(4281) /* Text */.Text, obj3);
+  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj3[3] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["/4y6ox"]);
+  items1[1] = callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj3);
   const obj4 = { label: null, placeholder: null, value: null, onChangeText: null, style: null, textStyle: null, clearButtonVisibility: null, error: null, onFocus: null, onBlur: null };
   const tmp11 = _submitWaitlist;
   const tmp5 = callback(ref.useState(null), 2);
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj4[0] = intl3.string(require(1236) /* getSystemLocale */.t["L+AfJr"]);
-  const intl4 = require(1236) /* getSystemLocale */.intl;
-  obj4[1] = intl4.string(require(1236) /* getSystemLocale */.t.Y1btJd);
+  const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj4[0] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["L+AfJr"]);
+  const intl4 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj4[1] = intl4.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Y1btJd);
   obj4[2] = first;
   obj4[3] = tmp7[1];
   ({ input: obj8[4], redesignTextInput: obj8[5] } = tmp);
-  obj4[6] = require(1297) /* Button */.ClearButtonVisibility.WITH_CONTENT;
+  obj4[6] = require("../../../../design/void/native.tsx") /* Button */.ClearButtonVisibility.WITH_CONTENT;
   let anyErrorMessage;
   if (obj1 != null) {
     anyErrorMessage = obj1.getAnyErrorMessage();
@@ -190,13 +190,13 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
       }
     }, 100);
   };
-  items1[2] = callback2(importDefault(8276), obj4);
+  items1[2] = callback2(require("../../../../design/void/Form/native/FreeFormInputGroup.tsx"), obj4);
   obj1[1] = items1;
   const items2 = [closure_10(first, obj1), callback2(first, { style: tmp.redesignGrowSpacing }), ];
   const obj7 = { style: tmp.redesignSubmit, children: null };
   const obj8 = { size: "lg", loading: tmp4[0], text: null, onPress: null };
   const intl5 = tmp2(1236).intl;
-  obj8[2] = intl5.string(require(1236) /* getSystemLocale */.t.PDsYAo);
+  obj8[2] = intl5.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.PDsYAo);
   obj8[3] = function submitWaitlist() {
     const self = this;
     const apply = _submitWaitlist.apply;
@@ -207,9 +207,9 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
     }
     return applyArgumentsResult;
   };
-  obj7[1] = callback2(require(4695) /* Button */.Button, obj8);
+  obj7[1] = callback2(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj8);
   items2[2] = callback2(first, obj7);
   obj[2] = items2;
   obj5[0] = closure_10(tmp11, obj);
-  return callback2(require(11994) /* HubEmailConnectionModal */.HubEmailConnectionScreen, obj5);
+  return callback2(require("HubEmailConnectionModal.tsx") /* HubEmailConnectionModal */.HubEmailConnectionScreen, obj5);
 };

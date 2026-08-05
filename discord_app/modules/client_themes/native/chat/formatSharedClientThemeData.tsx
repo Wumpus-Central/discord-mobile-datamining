@@ -14,14 +14,14 @@ export const formatSharedClientThemeData = function formatSharedClientThemeData(
       str2 = ensureAvatarSourceResult.uri;
     }
     obj[3] = str2;
-    obj[4] = Image.resolveAssetSource(importDefault(7626)).uri;
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[5] = intl.string(require(1236) /* getSystemLocale */.t.SKNnqq);
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    obj[6] = intl2.string(importDefault(2483).yl1iMm);
-    const intl3 = require(1236) /* getSystemLocale */.intl;
+    obj[4] = Image.resolveAssetSource(require("../../../../../_runtime/07626_registerAsset.js")).uri;
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[5] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.SKNnqq);
+    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[6] = intl2.string(require("../../intl/ClientThemes.messages.js").yl1iMm);
+    const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const _HermesInternal = HermesInternal;
-    obj[7] = "" + intl3.format(importDefault(2483).fQPSEf, { username: "__USERNAME__" });
+    obj[7] = "" + intl3.format(require("../../intl/ClientThemes.messages.js").fQPSEf, { username: "__USERNAME__" });
     return obj;
   }
 };

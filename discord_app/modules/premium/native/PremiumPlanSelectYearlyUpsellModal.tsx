@@ -89,7 +89,7 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
     obj[0] = tmp.container;
     obj1 = { style: null, source: null };
     obj1[0] = tmp.image;
-    obj1[1] = importDefault(12729);
+    obj1[1] = require("../../../../_runtime/12729_registerAsset.js");
     const items2 = [callback2(closure_5, obj1), , , , , ];
     obj2 = { style: null, accessibilityRole: "header", children: null };
     obj2[0] = tmp.header;
@@ -145,7 +145,7 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
     items2[5] = callback2(closure_6, obj11);
     obj[1] = items2;
     obj[2] = closure_12(closure_6, obj);
-    return callback2(importDefault(4713), obj);
+    return callback2(require("../../../components_native/common/Alert.tsx"), obj);
   }
   const tmp3 = callback(React.useState(null), 2);
 };

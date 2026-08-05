@@ -11,7 +11,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_BACKDROP,
   getComponent() {
-    return require(14707) /* BackdropCard */.default;
+    return require("../../design_system/native/UserSettingsDesignSystemBackdrop.tsx") /* BackdropCard */.default;
   }
 };
 const route = createToggle.createRoute(obj);

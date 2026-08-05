@@ -1,6 +1,6 @@
 // discord_app/polyfillsNative.tsx
 import timestamp from "_typeof";
-import module_13474 from "module_13474";
+import 13474__ from "../_runtime/metro/13474__.js";
 import get_ActivityIndicator from "get ActivityIndicator";
 import _typeof from "_typeof";
 import GetOption from "GetOption";

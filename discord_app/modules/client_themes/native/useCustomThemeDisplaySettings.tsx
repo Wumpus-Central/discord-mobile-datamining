@@ -9,7 +9,7 @@ export const useCustomThemeDisplaySettings = function useCustomThemeDisplaySetti
   let tmp2;
   let tmp3;
   let tmp4;
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   let items = [reset];
   [tmp2, tmp3, tmp4] = callback(obj.useStateFromStoresArray(items, () => {
     const items = [store.getCustomTheme(), store.getBaseTheme(), store.getPreviewTheme()];

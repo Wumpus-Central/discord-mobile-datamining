@@ -18,7 +18,7 @@ function maybePresentModal(daysRemaining) {
   if (daysRemaining != null) {
     const surfaces = daysRemaining.surfaces;
     if (surfaces != null) {
-      hasItem = surfaces.includes(require(14018) /* frozen */.ParentalConsentWarningSurface.MODAL);
+      hasItem = surfaces.includes(require("../ParentalConsentWarningTypes.tsx") /* frozen */.ParentalConsentWarningSurface.MODAL);
     }
   }
   let tmp5 = true === hasItem && null != daysRemaining;
@@ -45,8 +45,8 @@ function maybePresentModal(daysRemaining) {
   if (tmp5) {
     const obj = { daysRemaining: null };
     obj[0] = daysRemaining;
-    importDefault(4253).openLazy(require(1959) /* asyncRequireImpl */(16416, dependencyMap.paths), "ParentalConsentWarningModal", obj);
-    const obj2 = importDefault(4253);
+    require("../../action_sheet/native/ActionSheetActionCreators.tsx").openLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(16416, dependencyMap.paths), "ParentalConsentWarningModal", obj);
+    const obj2 = require("../../action_sheet/native/ActionSheetActionCreators.tsx");
   }
 }
 ({ UserLinkStatus: error, UserLinkType: metroImportAll } = items);

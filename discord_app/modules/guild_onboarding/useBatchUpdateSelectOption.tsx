@@ -10,7 +10,7 @@ let result = require("handleUpdate").fileFinishedImporting("modules/guild_onboar
 
 export default function useBatchUpdateSelectOption(arg0) {
   const _require = arg0;
-  let obj = _require(589);
+  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
   let items = [handleUpdate];
   let items1 = [arg0];
   const stateFromStores = obj.useStateFromStores(items, () => {

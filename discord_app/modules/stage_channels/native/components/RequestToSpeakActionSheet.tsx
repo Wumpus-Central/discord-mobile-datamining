@@ -15,14 +15,14 @@ function RequestToSpeakRow(channel) {
   let c0;
   let tmp2;
   let _require;
-  let obj = _require(10688);
+  let obj = _require("../../useRequestToSpeakPermission.tsx");
   [tmp2, c0] = callback(obj.useRequestToSpeakPermission(channel.channel.id), 2);
   obj = { label: null, subLabel: null, value: null, onValueChange: null };
-  const intl = _require(1236).intl;
-  obj[0] = intl.string(_require(1236).t.TYZgzW);
-  const intl2 = _require(1236).intl;
+  const intl = _require("../../../../intl/index.native.tsx").intl;
+  obj[0] = intl.string(_require("../../../../intl/index.native.tsx").t.TYZgzW);
+  const intl2 = _require("../../../../intl/index.native.tsx").intl;
   const string = intl2.string;
-  const t = _require(1236).t;
+  const t = _require("../../../../intl/index.native.tsx").t;
   if (tmp2) {
     let stringResult = string(t["JcFI/U"]);
   } else {
@@ -33,7 +33,7 @@ function RequestToSpeakRow(channel) {
   obj[3] = function onValueChange(arg0) {
     return _undefined(arg0);
   };
-  return closure_9(_require(5650).TableSwitchRow, obj);
+  return closure_9(_require("../../../../design/components/TableRow/native/TableSwitchRow.native.tsx").TableSwitchRow, obj);
 }
 function ManageSelfSpeakerRow(channel) {
   channel = channel.channel;
@@ -46,8 +46,8 @@ function ManageSelfSpeakerRow(channel) {
     id = channel.id;
   }
   const tmp4 = importDefault;
-  const tmp5 = importDefault(4469);
-  const tmp8 = importDefault(4469)(stateFromStores, id) === channel(4469).RequestToSpeakStates.ON_STAGE;
+  const tmp5 = require("../../useAudienceRequestToSpeakState.tsx");
+  const tmp8 = require("../../useAudienceRequestToSpeakState.tsx")(stateFromStores, id) === channel(4469).RequestToSpeakStates.ON_STAGE;
   importDefault = tmp8;
   const intl = tmp(1236).intl;
   const string = intl.string;

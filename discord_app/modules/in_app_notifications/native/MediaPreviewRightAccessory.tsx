@@ -17,20 +17,20 @@ let metroImportAll;
 const require = arg1;
 function VideoBadge() {
   const tmp = createCacheKey();
-  obj = { style: tmp.badge, children: callback(require(8777) /* PlayIcon */.PlayIcon, obj) };
+  obj = { style: tmp.badge, children: callback(require("../../../design/components/Icon/native/redesign/generated/PlayIcon.tsx") /* PlayIcon */.PlayIcon, obj) };
   obj = { style: tmp.icon, size: "custom", color: "white" };
   return callback(View, obj);
 }
 function CountBadge(children) {
-  return callback(View, { style: callback3().badge, children: callback(require(4281) /* Text */.Text, { variant: "text-xs/semibold", color: "text-default", children: children.total }) });
+  return callback(View, { style: callback3().badge, children: callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-xs/semibold", color: "text-default", children: children.total }) });
 }
 function ObscuredMediaOverlay(isSpoiler) {
   let children;
   let isObscured;
   ({ isObscured, children } = isSpoiler);
   const tmp = createCacheKey();
-  let obj = require(3989) /* map */;
-  const token = obj.useToken(importDefault(712).colors.SPOILER_HIDDEN_BACKGROUND);
+  let obj = require("../../../design/tokens/native/useToken.tsx") /* map */;
+  const token = obj.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").colors.SPOILER_HIDDEN_BACKGROUND);
   if (!isObscured) {
     if (!isSpoiler.isSpoiler) {
       return children;
@@ -54,7 +54,7 @@ function ObscuredMediaOverlay(isSpoiler) {
     obj[0] = str;
     obj[1] = token;
     obj[2] = StyleSheet.absoluteFill;
-    tmp11 = callback(importDefault(4685), obj);
+    tmp11 = callback(require("../../visual_effect_view/native/VisualEffectView.tsx"), obj);
   }
   items[2] = tmp11;
   const obj1 = { style: tmp.spoilerIconContainer, children: null };
@@ -83,15 +83,15 @@ function SinglePreviewableMedia(arg0) {
   let width;
   ({ previewableMedia, size, message } = arg0);
   const tmp = createCacheKey();
-  let obj = require(647) /* defaultAreStatesEqual */;
+  let obj = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   ({ type, media, icon } = previewableMedia);
-  let obj1 = require(6968) /* redactionSettingToRenderedString */;
+  let obj1 = require("../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx") /* redactionSettingToRenderedString */;
   const shouldAgeVerifyForExplicitMedia = obj1.useShouldAgeVerifyForExplicitMedia();
-  let obj2 = require(9763) /* useEnabledHarmTypesBitmaskForChannelAndAuthorId */;
+  let obj2 = require("../../explicit_media_redaction/hooks/useContentHarmTypes.tsx") /* useEnabledHarmTypesBitmaskForChannelAndAuthorId */;
   const enabledHarmTypesBitmaskForMessage = obj2.useEnabledHarmTypesBitmaskForMessage(message);
-  if (require(9721) /* VoiceMessageIcon */.PreviewableMediaTypes.VOICE_MESSAGE === type) {
+  if (require("hooks/usePreviewableMedia.tsx") /* VoiceMessageIcon */.PreviewableMediaTypes.VOICE_MESSAGE === type) {
     obj = { style: null, children: null };
     obj = { width: null, height: null };
     obj[0] = size;
@@ -148,7 +148,7 @@ function SinglePreviewableMedia(arg0) {
                         obj6[0] = url;
                         obj5[4] = obj6;
                         obj5[5] = url2;
-                        let tmp16Result = tmp16(importDefault(8792), obj5);
+                        let tmp16Result = tmp16(require("../../../components_native/common/Video.tsx"), obj5);
                       }
                       obj4[2] = tmp16Result;
                       obj2[1] = tmp16(tmp18, obj4);
@@ -160,7 +160,7 @@ function SinglePreviewableMedia(arg0) {
                   obj8[0] = url2;
                   obj7[0] = obj8;
                   obj7[1] = tmp.mediaThumbnail;
-                  tmp16Result = tmp16(importDefault(5236), obj7);
+                  tmp16Result = tmp16(require("../../../components_native/common/FastImage.tsx"), obj7);
                 }
                 url2 = thumbnail.url;
               }
@@ -176,7 +176,7 @@ function SinglePreviewableMedia(arg0) {
               obj11[0] = media;
               obj11[1] = size;
               obj11[2] = !stateFromStores;
-              obj9[1] = callback(importDefault(9764), obj11);
+              obj9[1] = callback(require("../../stickers/native/Sticker.tsx"), obj11);
               return callback(View, obj9);
             } else {
               return null;
@@ -222,7 +222,7 @@ function SinglePreviewableMedia(arg0) {
                 obj18[0] = srcWithWidthAndHeight;
                 obj17[0] = obj18;
                 obj17[1] = tmp.mediaThumbnail;
-                const items4 = [callback(importDefault(5236), obj17), ];
+                const items4 = [callback(require("../../../components_native/common/FastImage.tsx"), obj17), ];
                 let tmp24Result = null;
                 if (type === tmp2(9721).PreviewableMediaTypes.VIDEO) {
                   tmp24Result = tmp24(VideoBadge, {});
@@ -272,7 +272,7 @@ function MultiplePreviewableMedia(arg0) {
   items = [memo];
   const tmp = callback4();
   obj[1] = callback(SinglePreviewableMedia, { previewableMedia, size: 56, message });
-  const items1 = [callback(importDefault(8103), obj), callback(CountBadge, { total: totalMediaCount })];
+  const items1 = [callback(require("../../../design/components/Icon/native/ClipView.tsx"), obj), callback(CountBadge, { total: totalMediaCount })];
   obj[1] = items1;
   return callback2(View, obj);
 }
@@ -316,7 +316,7 @@ function ExpandableMediaPreview(accessoryExitProgressSV) {
   obj = { style: items, children: null };
   items = [callback5().rightAccessoryAbsolute, animatedStyle];
   obj[1] = callback(MediaPreviewRightAccessoryContent, { previewableMedia, totalMediaCount, message });
-  return callback(importDefault(4146).View, obj);
+  return callback(require("../../reanimated/ReanimatedRexport.tsx").View, obj);
 }
 function SimpleMediaPreview(arg0) {
   let message;
@@ -368,7 +368,7 @@ export const MediaPreviewRightAccessory = function MediaPreviewRightAccessory(ar
   let accessoryExitProgressSV;
   let message;
   ({ message, accessoryExitProgressSV } = arg0);
-  let obj = require(9721) /* VoiceMessageIcon */;
+  let obj = require("hooks/usePreviewableMedia.tsx") /* VoiceMessageIcon */;
   const previewableMedia = obj.usePreviewableMedia(message);
   if (0 === previewableMedia.length) {
     return null;

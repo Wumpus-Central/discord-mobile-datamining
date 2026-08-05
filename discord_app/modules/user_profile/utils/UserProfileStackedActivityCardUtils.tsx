@@ -4,7 +4,7 @@ import { ActivityTypes } from "ME";
 const result = require("set").fileFinishedImporting("modules/user_profile/utils/UserProfileStackedActivityCardUtils.tsx");
 
 export const getUserProfileLiveActivities = function getUserProfileLiveActivities(stateFromStores) {
-  return require(12) /* apply */.uniqWith(stateFromStores.filter((type) => {
+  return require("../../../../_runtime/00012_apply.js") /* apply */.uniqWith(stateFromStores.filter((type) => {
     type = type.type;
     return type !== constants.CUSTOM_STATUS && type !== constants.HANG_STATUS;
   }), (application_id, application_id2) => {

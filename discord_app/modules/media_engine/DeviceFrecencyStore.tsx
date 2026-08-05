@@ -155,7 +155,7 @@ prototype["getUsageStats"] = function getUsageStats() {
 };
 DeviceFrecencyStore.displayName = "DeviceFrecencyStore";
 DeviceFrecencyStore.persistKey = "DeviceFrecencyStore";
-let items = [(arg0) => importDefault(12).mapKeys(arg0, (arg0, arg1) => table[arg1])];
+let items = [(arg0) => require("../../../_runtime/00012_apply.js").mapKeys(arg0, (arg0, arg1) => table[arg1])];
 DeviceFrecencyStore.migrations = items;
 const deviceFrecencyStore = new DeviceFrecencyStore(require("dispatcher"), {
   AUDIO_SET_INPUT_DEVICE(oldId) {

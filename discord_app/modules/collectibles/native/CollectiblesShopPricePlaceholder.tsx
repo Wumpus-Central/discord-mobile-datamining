@@ -29,5 +29,5 @@ export const CollectiblesShopPricePlaceholder = function CollectiblesShopPricePl
   fn.__initData = closure_6;
   const animatedStyle = sharedValue(4146).useAnimatedStyle(fn);
   style = [tmp.skeletonContainer, style.style, animatedStyle];
-  return jsx(importDefault(4146).View, { style });
+  return jsx(require("../../reanimated/ReanimatedRexport.tsx").View, { style });
 };

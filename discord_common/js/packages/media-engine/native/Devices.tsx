@@ -60,7 +60,7 @@ export const sanitizeDevices = function sanitizeDevices(AUDIO_INPUT, items) {
     isMatch = !importDefault;
   }
   if (isMatch) {
-    const tmp5 = importDefault(669);
+    const tmp5 = require("../../../../../_runtime/00669_format.js");
     let family;
     if (tmp5 != null) {
       const os = tmp5.os;
@@ -72,7 +72,7 @@ export const sanitizeDevices = function sanitizeDevices(AUDIO_INPUT, items) {
   }
   if (isMatch) {
     let obj = /^win/i;
-    isMatch = obj.test(importDefault(669).os.family);
+    isMatch = obj.test(require("../../../../../_runtime/00669_format.js").os.family);
   }
   if (isMatch) {
     obj = { id: null, type: null, index: -1, name: "Default" };

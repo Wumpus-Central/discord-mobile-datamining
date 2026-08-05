@@ -5,10 +5,10 @@ let set = new Set(Object.values(require("LEGACY_BADGE_ID_MAP").LEGACY_BADGE_ID_M
 const result = set.fileFinishedImporting("modules/badges/BadgeIdResolution.tsx");
 
 export const legacyBadgeIdToBadgeId = function legacyBadgeIdToBadgeId(arg0) {
-  return require(8714) /* LEGACY_BADGE_ID_MAP */.LEGACY_BADGE_ID_MAP[arg0];
+  return require("../../../discord_common/js/shared/shared-constants/LegacyBadgeIdMap.tsx") /* LEGACY_BADGE_ID_MAP */.LEGACY_BADGE_ID_MAP[arg0];
 };
 export const resolveProfileBadgeId = function resolveProfileBadgeId(id) {
-  const tmp3 = require(8714) /* LEGACY_BADGE_ID_MAP */.LEGACY_BADGE_ID_MAP[id];
+  const tmp3 = require("../../../discord_common/js/shared/shared-constants/LegacyBadgeIdMap.tsx") /* LEGACY_BADGE_ID_MAP */.LEGACY_BADGE_ID_MAP[id];
   if (null != tmp3) {
     return tmp3;
   } else {

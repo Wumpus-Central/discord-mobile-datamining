@@ -49,9 +49,9 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
   let first;
   const tmp = createCacheKey();
   dependencyMap = tmp;
-  let obj = _require(1480);
+  let obj = _require("../../design/components/Navigator/native/useNavigation.native.tsx");
   navigation = obj.useNavigation();
-  let obj1 = _require(589);
+  let obj1 = _require("../../../discord_common/js/packages/flux/index.tsx");
   const items = [closure_10];
   stateFromStores = obj1.useStateFromStores(items, () => outer1_10.getChannel(closure_0));
   _require = undefined;
@@ -336,9 +336,9 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
     }
   }, items4);
   obj = { variant: "text-md/medium", color: "text-muted", children: null };
-  let obj3 = _require(4475);
+  let obj3 = _require("../../modules/channel/useChannelName.tsx");
   obj[2] = obj3.computeChannelName(stateFromStores, mergeGuildAvatar, upsertRelationship, true);
-  let tmp10 = callback(_require(4281).Text, obj);
+  let tmp10 = callback(_require("../../design/components/Text/native/Text.tsx").Text, obj);
   if (fromCreate.type === constants.MEMBER) {
     obj = { userId: null, guildId: null, start: true, end: true, trailing: null };
     obj[0] = id;
@@ -357,7 +357,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
     obj1 = { end: true, label: null, start: true, trailing: null };
     obj1[1] = str;
     obj1[3] = tmp10;
-    tmp9Result = tmp9(_require(5315).TableRow, obj1);
+    tmp9Result = tmp9(_require("../../design/components/TableRow/native/TableRow.native.tsx").TableRow, obj1);
   }
   let obj2 = { style: tmp.container, contentContainerStyle: items5, children: null };
   items5 = [tmp.containerContent, { paddingBottom: tmp.containerContent.paddingBottom + id(1581)().bottom }];

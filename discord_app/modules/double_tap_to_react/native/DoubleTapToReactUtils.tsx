@@ -15,7 +15,7 @@ const require = arg1;
 let result = set.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapToReactUtils.tsx");
 
 export const getFallbackDoubleTapDisambiguatedEmoji = function getFallbackDoubleTapDisambiguatedEmoji() {
-  let byName = importDefault(3926).getByName("heart");
+  let byName = require("../../emojis/UnicodeEmojis.tsx").getByName("heart");
   if (byName == null) {
     byName = null;
   }
@@ -37,7 +37,7 @@ export const reactionEmojiFromSettingsValue = function reactionEmojiFromSettings
     if ("" !== emojiName) {
       let result = emojiName;
       if (null == tmp) {
-        let obj = importDefault(3926);
+        let obj = require("../../emojis/UnicodeEmojis.tsx");
         result = obj.convertNameToSurrogate(emojiName);
       }
       str2 = result;
@@ -70,8 +70,8 @@ export const disambiguatedEmojiFromSettingsValue = function disambiguatedEmojiFr
   if (null == customEmojiById) {
     let byName = null;
     if (null != tmp2) {
-      byName = importDefault(3926).getByName(tmp2);
-      const obj = importDefault(3926);
+      byName = require("../../emojis/UnicodeEmojis.tsx").getByName(tmp2);
+      const obj = require("../../emojis/UnicodeEmojis.tsx");
     }
     customEmojiById = byName;
   }
@@ -108,7 +108,7 @@ export const handleAddDefaultDoubleTapReaction = function handleAddDefaultDouble
         if ("" !== emojiName) {
           let result = emojiName;
           if (null == tmp5) {
-            let obj1 = importDefault(3926);
+            let obj1 = require("../../emojis/UnicodeEmojis.tsx");
             result = obj1.convertNameToSurrogate(emojiName);
           }
           str2 = result;
@@ -125,7 +125,7 @@ export const handleAddDefaultDoubleTapReaction = function handleAddDefaultDouble
       }
       obj[2] = animated;
       if (null == setting) {
-        let obj3 = importDefault(3926);
+        let obj3 = require("../../emojis/UnicodeEmojis.tsx");
         const result1 = obj3.convertNameToSurrogate("heart");
         let tmp11 = null;
         if ("" !== result1) {
@@ -161,7 +161,7 @@ export const handleAddDefaultDoubleTapReaction = function handleAddDefaultDouble
         tmp(7143).removeReaction(obj1);
       } else {
         if (flag) {
-          let obj7 = importDefault(3926);
+          let obj7 = require("../../emojis/UnicodeEmojis.tsx");
           let byName = obj7.getByName("heart");
           if (byName == null) {
             byName = null;
@@ -186,7 +186,7 @@ export const handleAddDefaultDoubleTapReaction = function handleAddDefaultDouble
           if (null == customEmojiById) {
             let byName1 = null;
             if (null != tmp13) {
-              let obj6 = importDefault(3926);
+              let obj6 = require("../../emojis/UnicodeEmojis.tsx");
               byName1 = obj6.getByName(tmp13);
             }
             customEmojiById = byName1;
@@ -198,7 +198,7 @@ export const handleAddDefaultDoubleTapReaction = function handleAddDefaultDouble
             obj3[0] = customEmojiById;
             obj3[1] = channel;
             obj3[2] = constants2.REACTION;
-            const emojiUnavailableReason = importDefault(3930).getEmojiUnavailableReason(obj3);
+            const emojiUnavailableReason = require("../../../utils/EmojiUtils.tsx").getEmojiUnavailableReason(obj3);
             if (emojiUnavailableReason === constants.PREMIUM_LOCKED) {
               const lazyResult = React.lazy(() => obj(paths[16])(paths[15], paths.paths));
               const obj4 = { emojiName: null };
@@ -210,7 +210,7 @@ export const handleAddDefaultDoubleTapReaction = function handleAddDefaultDouble
               obj5[1] = emojiUnavailableReason;
               const result3 = tmp(7889).showDoubleTapErrorToast(obj5);
             }
-            const obj12 = importDefault(3930);
+            const obj12 = require("../../../utils/EmojiUtils.tsx");
           }
           const result4 = tmp(4254).triggerHapticFeedback(tmp(4254).HapticFeedbackTypes.IMPACT_LIGHT);
           const tmpResult5 = tmp(7143);

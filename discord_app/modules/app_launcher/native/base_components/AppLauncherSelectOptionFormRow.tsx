@@ -20,7 +20,7 @@ export default function AppLauncherSelectOptionFormRow(arg0) {
   ({ selected, selectedItemName: require, unselectedSubLabel } = arg0);
   ({ style, option, autoFocus } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  let obj = require(11469) /* useAnimationDelayedAutoFocus */;
+  let obj = require("../hooks/useAnimationDelayedAutoFocus.tsx") /* useAnimationDelayedAutoFocus */;
   const animationDelayedAutoFocus = obj.useAnimationDelayedAutoFocus(autoFocus, merged.onPress);
   obj = { start: true, end: true, style: items, label: null, subLabel: null, trailing: null };
   items = [createCacheKey().formRow, style];
@@ -35,7 +35,7 @@ export default function AppLauncherSelectOptionFormRow(arg0) {
   }
   obj[1] = str2;
   obj[3] = option.displayName;
-  obj[3] = jsx(require(4281) /* Text */.Text, { variant: str, color: null, lineClamp: 1, children: null });
+  obj[3] = jsx(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: str, color: null, lineClamp: 1, children: null });
   if (selected) {
     let fn = () => outer1_3(outer1_0(outer1_2[6]).Text, { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: closure_0 });
   } else {
@@ -47,8 +47,8 @@ export default function AppLauncherSelectOptionFormRow(arg0) {
   obj[4] = fn;
   const obj1 = { source: null, size: null };
   obj1[0] = unselectedSubLabel(5324);
-  obj1[1] = require(1297) /* Button */.IconSizes.SMALL_20;
-  obj[5] = jsx(require(1297) /* Button */.Icon, { source: null, size: null });
+  obj1[1] = require("../../../../design/void/native.tsx") /* Button */.IconSizes.SMALL_20;
+  obj[5] = jsx(require("../../../../design/void/native.tsx") /* Button */.Icon, { source: null, size: null });
   const merged1 = Object.assign(merged);
-  return jsx(require(7777) /* Form */.FormRow, { variant: str, color: null, lineClamp: 1, children: null });
+  return jsx(require("../../../../design/void/Form/native/index.tsx") /* Form */.FormRow, { variant: str, color: null, lineClamp: 1, children: null });
 };

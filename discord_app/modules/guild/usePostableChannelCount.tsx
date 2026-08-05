@@ -11,7 +11,7 @@ export default function useSendMessageChannelCount(arg0) {
   const _require = arg0;
   let items = [comparator];
   const items1 = [arg0];
-  const stateFromStores = _require(589).useStateFromStores(items, () => {
+  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let items = outer1_3.getChannels(closure_0)[outer1_4];
     if (items == null) {
       items = [];

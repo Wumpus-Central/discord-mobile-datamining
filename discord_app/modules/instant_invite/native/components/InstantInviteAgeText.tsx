@@ -23,7 +23,7 @@ export default function InstantInviteAgeText(style) {
     canEditInvite = true;
   }
   ({ onEdit: View, source: updateWithLatestInvite } = style);
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [updateWithLatestInvite];
   const stateFromStores = obj.useStateFromStores(items, () => inviteSettings.getInviteSettings());
   let tmp6Result = null;

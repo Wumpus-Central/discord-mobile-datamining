@@ -23,7 +23,7 @@ function Text(arg0) {
   const obj = {};
   const merged = Object.assign(arg0);
   obj.style = callback3().text;
-  return callback(require(1297) /* Button */.LegacyText, obj);
+  return callback(require("../../design/void/native.tsx") /* Button */.LegacyText, obj);
 }
 function Section(arg0) {
   let children;
@@ -181,7 +181,7 @@ let closure_23 = importAllResult.memo((userId) => {
 });
 let closure_25 = {
   [MediaEngineContextTypes.DEFAULT]: function DefaultContextInfo() {
-    let obj = require(589) /* initialize */;
+    let obj = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
     const items = [createRTCConnection];
     obj = {
       obj: obj.useStateFromStoresObject(items, () => {
@@ -234,11 +234,11 @@ export default function RTCDebugOverlay(arg0) {
   const items2 = [callback2(closure_6, obj), ];
   obj = { style: tmp.buttonClose, children: null };
   const obj1 = { text: null, onPress: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj1[0] = intl.string(require(1236) /* getSystemLocale */.t.cpT0Cq);
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj1[0] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.cpT0Cq);
   obj1[1] = onClose;
-  obj[1] = callback(require(4695) /* Button */.Button, obj1);
+  obj[1] = callback(require("../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj1);
   items2[1] = callback(closure_5, obj);
   obj[5] = items2;
-  return callback2(require(5272) /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  return callback2(require("../common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
 };

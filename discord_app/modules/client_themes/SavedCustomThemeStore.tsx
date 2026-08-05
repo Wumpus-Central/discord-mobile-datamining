@@ -18,7 +18,7 @@ function validateSavedTheme(colors) {
     }
     return tmp5;
   } catch (tmp8) {
-    let obj = importDefault(1208);
+    let obj = require("../../utils/SentryUtils.native.tsx");
     obj = { tags: null };
     obj[0] = { app_context: "SavedCustomThemeStore" };
     obj.captureMessage("Invalid saved custom theme: " + tmp8, obj);
@@ -92,7 +92,7 @@ obj = {
   },
   SAVED_CUSTOM_THEMES_FETCH_FAILURE: function handleCustomThemesFetchFailure(error) {
     const ERROR = obj.ERROR;
-    obj = importDefault(1208);
+    obj = require("../../utils/SentryUtils.native.tsx");
     obj.captureException(error.error, { tags: { app_context: "SavedCustomThemeStore" } });
   }
 };

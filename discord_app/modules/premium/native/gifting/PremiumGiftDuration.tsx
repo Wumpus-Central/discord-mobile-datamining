@@ -107,7 +107,7 @@ export default function PremiumGiftDuration() {
   const tmp = callback3();
   let obj = planInterval(9529);
   planInterval = obj.useNativeGiftContext().planInterval;
-  const tmp2 = importDefault(5598)(importDefault(9531).useConfig({ location: "PremiumGiftDuration" }).monthlyDefaultSelected);
+  const tmp2 = require("../../../../hooks/useInitialValue.tsx")(require("../../gifting/experiments/NitroGiftPriceCopyExperiment.tsx").useConfig({ location: "PremiumGiftDuration" }).monthlyDefaultSelected);
   importDefault = tmp2;
   let items = [tmp2];
   const memo = React.useMemo(() => {

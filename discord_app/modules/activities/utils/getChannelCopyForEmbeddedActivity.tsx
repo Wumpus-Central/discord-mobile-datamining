@@ -4,8 +4,8 @@ const result = require("set").fileFinishedImporting("modules/activities/utils/ge
 export default function getChannelCopyForEmbeddedActivity(arg0) {
   let stringResult = arg0;
   if (null == arg0) {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    stringResult = intl.string(require(1236) /* getSystemLocale */.t["2YCamo"]);
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    stringResult = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["2YCamo"]);
   }
   return stringResult;
 };

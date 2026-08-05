@@ -12,7 +12,7 @@ import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";
 import jsxProd from "apexExperiment";
 import createCacheKey from "createCacheKey";
 import { LinearTransition } from "module_4146";
-import module_300 from "module_300";
+import get BatchedBridge from "../../../../_runtime/00300_get_BatchedBridge.js";
 import dampingResult from "module_100";
 
 let c5;
@@ -39,10 +39,10 @@ const massResult = LinearTransition.springify().mass(0.8);
 function exitingAnimation() {
   let obj = { animations: null, initialValues: null };
   obj = { opacity: null, transform: null };
-  obj[0] = require(4286) /* CONFIG_NEVER_ANIMATE_TIMING */.withTiming(0, { duration: 150 });
+  obj[0] = require("../../../design/animation/reanimated/timing/timing.tsx") /* CONFIG_NEVER_ANIMATE_TIMING */.withTiming(0, { duration: 150 });
   obj = { scale: null };
-  const obj3 = require(4286) /* CONFIG_NEVER_ANIMATE_TIMING */;
-  obj[0] = require(4286) /* CONFIG_NEVER_ANIMATE_TIMING */.withTiming(0.8, { duration: 150 });
+  const obj3 = require("../../../design/animation/reanimated/timing/timing.tsx") /* CONFIG_NEVER_ANIMATE_TIMING */;
+  obj[0] = require("../../../design/animation/reanimated/timing/timing.tsx") /* CONFIG_NEVER_ANIMATE_TIMING */.withTiming(0.8, { duration: 150 });
   const items = [obj];
   obj[1] = items;
   obj[0] = obj;

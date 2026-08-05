@@ -9,5 +9,5 @@ export default function MentionsBadge(arg0) {
   let isMentionLowImportance;
   let mentionsCount;
   ({ mentionsCount, isMentionLowImportance } = arg0);
-  return jsx(require(1297) /* Button */.Badge, { value, isMentionLowImportance });
+  return jsx(require("../../../design/void/native.tsx") /* Button */.Badge, { value, isMentionLowImportance });
 };

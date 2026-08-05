@@ -86,7 +86,7 @@ export default function VideoEmptyState(style) {
   const items2 = [ensureGuildLoaded];
   const items3 = [stream.channelId];
   importDefault = obj8.useStateFromStores(items2, () => outer1_4.getChannel(stream.channelId), items3);
-  importDefault(4711)(() => {
+  require("../../../hooks/useMountEffect.tsx")(() => {
     let isGuildStageVoiceResult;
     if (closure_1 != null) {
       isGuildStageVoiceResult = closure_1.isGuildStageVoice();

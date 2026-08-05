@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/chat/native/SettingsChatScreen.tsx
-import module_13793 from "module_13793";
+import SettingLayout from "../../../settings/native/renderer/SettingLayout.tsx";
 import { View } from "dispatcher";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import reset from "reset";
@@ -12,10 +12,10 @@ let c10;
 let c9;
 const require = arg1;
 function VideoUploadQualityNitroUpsell() {
-  let obj = _require(1480);
+  let obj = _require("../../../../design/components/Navigator/native/useNavigation.native.tsx");
   _require = obj.useStackNavigation();
   const tmp3 = createCacheKey();
-  let obj1 = _require(647);
+  let obj1 = _require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx");
   const items = [mergeGuildAvatar, reset];
   const stateFromStores = obj1.useStateFromStores(items, () => {
     premiumTypeSubscription = premiumTypeSubscription.getPremiumTypeSubscription();
@@ -23,9 +23,9 @@ function VideoUploadQualityNitroUpsell() {
     return arr(table[11]).hasPremiumSubscriptionToDisplay(currentUser, premiumTypeSubscription);
   });
   obj = { variant: "text-xs/normal", color: "text-muted", children: null };
-  const intl = _require(1236).intl;
-  obj[2] = intl.format(_require(1236).t["Up+hSO"], { supportURL: "https://support.discord.com/hc/articles/9665451164951" });
-  const children = [callback(_require(4281).Text, obj), ];
+  const intl = _require("../../../../intl/index.native.tsx").intl;
+  obj[2] = intl.format(_require("../../../../intl/index.native.tsx").t["Up+hSO"], { supportURL: "https://support.discord.com/hc/articles/9665451164951" });
+  const children = [callback(_require("../../../../design/components/Text/native/Text.tsx").Text, obj), ];
   let tmp7Result = !stateFromStores;
   if (!stateFromStores) {
     obj = { style: null, children: null };
@@ -35,9 +35,9 @@ function VideoUploadQualityNitroUpsell() {
     obj2[0] = tmp3.cardContent;
     const obj3 = { style: null, source: null, size: null, color: null };
     obj3[0] = tmp3.cardIcon;
-    obj3[1] = importDefault(9883);
+    obj3[1] = require("../../../../../_runtime/09883_registerAsset.js");
     obj3[2] = tmp(1297).Icon.Sizes.SMALL;
-    obj3[3] = importDefault(712).unsafe_rawColors.PRIMARY_400;
+    obj3[3] = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.PRIMARY_400;
     const items2 = [tmp7(tmp(1297).Icon, obj3), ];
     const obj4 = { variant: "text-sm/medium", color: "text-muted", children: null };
     const intl2 = tmp(1236).intl;
@@ -158,5 +158,5 @@ export default function SettingsChatScreen(route) {
     obj[1] = initialSetting;
     return obj.createList(obj);
   }, items);
-  return callback(importDefault(13793), { node });
+  return callback(require("../../../settings/native/renderer/SettingLayout.tsx"), { node });
 };

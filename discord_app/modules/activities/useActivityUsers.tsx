@@ -10,7 +10,7 @@ export default function useActivityUsers(arg0, arg1) {
   const dependencyMap = arg1;
   let items = [participantFromServer, mergeGuildAvatar];
   const items1 = [arg1, arg0];
-  return _require(647).useStateFromStoresArray(items, () => {
+  return _require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresArray(items, () => {
     if (null == closure_1) {
       return [];
     } else {

@@ -127,17 +127,17 @@ export default function ChooseAccount() {
     return applyArgumentsResult;
   }
   let tmp = createCacheKey();
-  let obj = _require(1480);
+  let obj = _require("../../../design/components/Navigator/native/useNavigation.native.tsx");
   _require = obj.useNavigation();
-  let obj1 = _require(14982);
+  let obj1 = _require("../useMultiAccount.tsx");
   const multiAccountUsers = obj1.useMultiAccountUsers().multiAccountUsers;
   obj = { headerText: null, subHeader: null, backgroundImageSource: null, backgroundImageCover: true, contentStyle: null, children: null };
-  let intl = _require(1236).intl;
-  obj[0] = intl.string(_require(1236).t.bVbB63);
+  let intl = _require("../../../intl/index.native.tsx").intl;
+  obj[0] = intl.string(_require("../../../intl/index.native.tsx").t.bVbB63);
   obj = { variant: "text-sm/medium", color: "text-default", children: null };
-  let intl2 = _require(1236).intl;
-  obj[2] = intl2.string(_require(1236).t["0M5fN7"]);
-  obj[1] = callback(_require(4281).Text, obj);
+  let intl2 = _require("../../../intl/index.native.tsx").intl;
+  obj[2] = intl2.string(_require("../../../intl/index.native.tsx").t["0M5fN7"]);
+  obj[1] = callback(_require("../../../design/components/Text/native/Text.tsx").Text, obj);
   obj[2] = multiAccountUsers(13118);
   obj[4] = tmp.container;
   obj1 = { style: tmp.mainCard, children: null };
@@ -213,11 +213,11 @@ export default function ChooseAccount() {
   let obj2 = { leading: null, label: null, labelStyle: null, onPress: null };
   let obj3 = { themedColor: null, size: null, source: null };
   obj3[0] = multiAccountUsers(712).colors.TEXT_LINK;
-  obj3[1] = _require(1297).Icon.Sizes.SMALL_20;
+  obj3[1] = _require("../../../design/void/native.tsx").Icon.Sizes.SMALL_20;
   obj3[2] = multiAccountUsers(14984);
-  obj2[0] = callback(_require(7777).FormRow.Icon, obj3);
-  let intl3 = _require(1236).intl;
-  obj2[1] = intl3.string(_require(1236).t.bPP34Q);
+  obj2[0] = callback(_require("../../../design/void/Form/native/index.tsx").FormRow.Icon, obj3);
+  let intl3 = _require("../../../intl/index.native.tsx").intl;
+  obj2[1] = intl3.string(_require("../../../intl/index.native.tsx").t.bPP34Q);
   obj2[2] = tmp.addAccountLabel;
   obj2[3] = function handlePressAddAccount() {
     if (multiAccountUsers.length >= outer1_7) {
@@ -236,7 +236,7 @@ export default function ChooseAccount() {
       obj.track(outer1_9.LOGIN_VIEWED, { source: "choose_account_add_account" });
     }
   };
-  items[1] = callback(_require(7777).FormRow, obj2);
+  items[1] = callback(_require("../../../design/void/Form/native/index.tsx").FormRow, obj2);
   obj1[1] = items;
   obj[5] = callback2(View, obj1);
   return callback(multiAccountUsers(8310), obj);

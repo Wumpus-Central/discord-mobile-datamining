@@ -6,14 +6,14 @@ const require = arg1;
 const result = require("canFulfillStreamRequest").fileFinishedImporting("modules/request_to_stream/native/getRequestToStreamCTAAndIsDisabled.tsx");
 
 export default function getRequestToStreamCTAAndIsDisabled(id) {
-  const tmp3 = callback(require(11079) /* canFulfillStreamRequest */.canFulfillStreamRequest(id, true), 2);
+  const tmp3 = callback(require("../useCanFulfillStreamRequest.tsx") /* canFulfillStreamRequest */.canFulfillStreamRequest(id, true), 2);
   id = id.getId();
-  const obj = require(11079) /* canFulfillStreamRequest */;
-  const obj2 = importDefault(11);
-  const sum = importDefault(11).extractTimestamp(id.id) + require(11067) /* result */.EMBED_LIFETIME;
-  const extractTimestampResult = importDefault(11).extractTimestamp(id.id);
-  const intl = require(1236) /* getSystemLocale */.intl;
-  const stringResult = intl.string(importDefault(2739)["5+172e"]);
+  const obj = require("../useCanFulfillStreamRequest.tsx") /* canFulfillStreamRequest */;
+  const obj2 = require("../../../utils/SnowflakeUtils.tsx");
+  const sum = require("../../../utils/SnowflakeUtils.tsx").extractTimestamp(id.id) + require("../../activities/utils/isInviteActive.tsx") /* result */.EMBED_LIFETIME;
+  const extractTimestampResult = require("../../../utils/SnowflakeUtils.tsx").extractTimestamp(id.id);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const stringResult = intl.string(require("../RequestToStream.messages.js")["5+172e"]);
   if (tmp9) {
     const intl6 = tmp(1236).intl;
     let text = intl6.string(tmp6(2739).u4QmWl);

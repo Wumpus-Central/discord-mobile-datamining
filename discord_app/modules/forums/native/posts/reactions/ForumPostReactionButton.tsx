@@ -150,14 +150,14 @@ export const AdditionalReactionCount = function AdditionalReactionCount(arg0) {
   let threadId;
   ({ count, threadId, containerStyle } = arg0);
   const obj = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl.string(require(1236) /* getSystemLocale */.t.N8hbZB);
+  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.N8hbZB);
   const items = [createCacheKey().container, containerStyle];
   obj[2] = items;
-  obj[3] = importDefault(9815)({ threadId }).onTapReactionCount;
+  obj[3] = require("../hooks/useNativeForumPostHandlers.tsx")({ threadId }).onTapReactionCount;
   const items1 = ["+", count];
-  obj[4] = callback(require(4281) /* Text */.Text, { variant: "heading-sm/medium", color: "interactive-text-default", children: items1 });
-  return callback2(require(4812) /* PressableBase */.PressableOpacity, obj);
+  obj[4] = callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "heading-sm/medium", color: "interactive-text-default", children: items1 });
+  return callback2(require("../../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
 };
 export const AddReactionButton = function AddReactionButton(reactionType) {
   let containerStyle;
@@ -165,15 +165,15 @@ export const AddReactionButton = function AddReactionButton(reactionType) {
   let NORMAL = reactionType.reactionType;
   ({ threadId, containerStyle } = reactionType);
   if (NORMAL === undefined) {
-    NORMAL = require(7142) /* ReactionTypes */.ReactionTypes.NORMAL;
+    NORMAL = require("../../../../messages/MessageReactionsTypes.tsx") /* ReactionTypes */.ReactionTypes.NORMAL;
   }
   const obj = { style: items, accessible: true, accessibilityLabel: null, onPress: null, children: null };
   items = [createCacheKey().container, containerStyle];
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl.string(require(1236) /* getSystemLocale */.t.lfIHs4);
-  obj[3] = importDefault(9815)({ threadId, reactionType: NORMAL }).onTapAddReaction;
-  obj[4] = callback2(require(8423) /* handleOutOfSuperReactions */.ADD_REACTION_ICON_COMPONENTS[NORMAL], { size: "xs" });
-  return callback2(require(4812) /* PressableBase */.PressableOpacity, obj);
+  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.lfIHs4);
+  obj[3] = require("../hooks/useNativeForumPostHandlers.tsx")({ threadId, reactionType: NORMAL }).onTapAddReaction;
+  obj[4] = callback2(require("../../../../reactions/native/ReactionUtils.tsx") /* handleOutOfSuperReactions */.ADD_REACTION_ICON_COMPONENTS[NORMAL], { size: "xs" });
+  return callback2(require("../../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
 };
 export const ForumPostReactionButton = function ForumPostReactionButton(emojiSize) {
   let animateCount;

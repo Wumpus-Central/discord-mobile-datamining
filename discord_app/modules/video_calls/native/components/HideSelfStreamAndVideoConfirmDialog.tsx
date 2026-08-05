@@ -68,5 +68,5 @@ export default function HideSelfStreamAndVideoConfirmDialog(arg0) {
   items[1] = closure_5(tmp6(4281).Text, obj1);
   obj[1] = items;
   obj.children = callback(View, obj);
-  return closure_5(importDefault(4713), obj);
+  return closure_5(require("../../../../components_native/common/Alert.tsx"), obj);
 };

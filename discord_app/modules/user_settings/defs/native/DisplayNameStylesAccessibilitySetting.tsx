@@ -5,15 +5,15 @@ import createToggle from "createToggle";
 const require = arg1;
 function useValue() {
   const items = [maybeApplyNoTextColorForLightCustomTheme];
-  return require(589) /* initialize */.useStateFromStores(items, () => obj.displayNameStylesEnabled);
+  return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => obj.displayNameStylesEnabled);
 }
 function onValueChange(enabled) {
-  const result = require(13617) /* setFontSize */.setDisplayNameStylesEnabled(enabled);
+  const result = require("../../../a11y/AccessibilityActionCreators.tsx") /* setFontSize */.setDisplayNameStylesEnabled(enabled);
 }
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(importDefault(2643)["2gFUEw"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../display_name_styles/intl/DisplayNameStyles.messages.js")["2gFUEw"]);
   },
   parent: require("MobileSetting").MobileSetting.ACCESSIBILITY,
   useValue,

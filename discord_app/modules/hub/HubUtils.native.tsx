@@ -4,7 +4,7 @@ import importDefaultResult from "apply";
 
 let closure_3 = require("apply").throttle((code) => {
   invite = invite.getInvite(code.code);
-  importDefault(12010).open({ invite });
+  require("native/components/HubEmailConnectionModalActionCreators.tsx").open({ invite });
 }, 1000, { trailing: false });
 const obj = {
   onOpenHubInvite(invite) {

@@ -8,9 +8,9 @@ export const createPurchaseNotificationSystemMessage = function createPurchaseNo
     type = purchaseNotification.type;
   }
   let guildProductPurchaseSystemMessage = null;
-  if (type === require(1906) /* PermissionOverwriteType */.PurchaseNotificationType.GUILD_PRODUCT) {
-    guildProductPurchaseSystemMessage = require(7941) /* createGuildProductPurchaseSystemMessage */.createGuildProductPurchaseSystemMessage(message);
-    const tmp2Result = require(7941) /* createGuildProductPurchaseSystemMessage */;
+  if (type === require("../../../../../flow/Server.tsx") /* PermissionOverwriteType */.PurchaseNotificationType.GUILD_PRODUCT) {
+    guildProductPurchaseSystemMessage = require("GuildProductPurchaseSystemMessage.tsx") /* createGuildProductPurchaseSystemMessage */.createGuildProductPurchaseSystemMessage(message);
+    const tmp2Result = require("GuildProductPurchaseSystemMessage.tsx") /* createGuildProductPurchaseSystemMessage */;
   }
   return guildProductPurchaseSystemMessage;
 };

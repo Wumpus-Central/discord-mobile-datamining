@@ -4,7 +4,7 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/connec
 
 export const openGuildRoleConnectionsModal = function openGuildRoleConnectionsModal(guildId) {
   const onClose = guildId.onClose;
-  let obj = importDefault(4490);
+  let obj = require("../../../actions/ModalActionCreators.tsx");
   obj = {
     guildId: guildId.guildId,
     onClose() {
@@ -20,7 +20,7 @@ export const makeGuildRoleConnectionsConnectAccountsActionSheetKey = function ma
   return "GuildRoleConnectionsConnectAccountsActionSheet-" + id;
 };
 export const openGuildRoleConnectionsConnectAccountModal = function openGuildRoleConnectionsConnectAccountModal(id, guildId) {
-  let obj = importDefault(4253);
+  let obj = require("../../action_sheet/native/ActionSheetActionCreators.tsx");
   obj = { role: id, guildId };
-  obj.openLazy(require(1959) /* asyncRequireImpl */(10949, dependencyMap.paths), "GuildRoleConnectionsConnectAccountsActionSheet-" + id.id, obj);
+  obj.openLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(10949, dependencyMap.paths), "GuildRoleConnectionsConnectAccountsActionSheet-" + id.id, obj);
 };

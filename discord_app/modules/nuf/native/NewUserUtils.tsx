@@ -82,11 +82,11 @@ function _shouldSkipContactSyncStep() {
   return applyArgumentsResult;
 }
 function lastStepComplete(STEP_GUILD_TEMPLATE) {
-  require(11950) /* trackNUFStep */.trackNUFStep(STEP_GUILD_TEMPLATE, "NUF Complete");
-  const obj = require(11950) /* trackNUFStep */;
-  if (obj2.isModalOpen(require(16392) /* NEW_USER_MODAL_KEY */.NEW_USER_MODAL_KEY)) {
-    importDefault(4490).popWithKey(tmp(16392).NEW_USER_MODAL_KEY);
-    const obj3 = importDefault(4490);
+  require("NewUserAnalyticsUtils.tsx") /* trackNUFStep */.trackNUFStep(STEP_GUILD_TEMPLATE, "NUF Complete");
+  const obj = require("NewUserAnalyticsUtils.tsx") /* trackNUFStep */;
+  if (obj2.isModalOpen(require("components/NewUserModalTypes.tsx") /* NEW_USER_MODAL_KEY */.NEW_USER_MODAL_KEY)) {
+    require("../../../actions/ModalActionCreators.tsx").popWithKey(tmp(16392).NEW_USER_MODAL_KEY);
+    const obj3 = require("../../../actions/ModalActionCreators.tsx");
   }
   let tmpResult = tmp(1222);
   tmpResult.transitionTo(constants.ME, { navigationReplace: true });
@@ -442,7 +442,7 @@ let items = [
     key: "accept-invite",
     shouldShowStep: require("showInstantInviteActionSheet").hasDeferredInvite,
     transitionStep() {
-      importDefault(709).dispatch({ type: "DEFERRED_INVITE_SHOW" });
+      require("../../../Dispatcher.tsx").dispatch({ type: "DEFERRED_INVITE_SHOW" });
     }
   }
 ];
@@ -450,7 +450,7 @@ let obj1 = {
   key: "accept-invite",
   shouldShowStep: require("showInstantInviteActionSheet").hasDeferredInvite,
   transitionStep() {
-    importDefault(709).dispatch({ type: "DEFERRED_INVITE_SHOW" });
+    require("../../../Dispatcher.tsx").dispatch({ type: "DEFERRED_INVITE_SHOW" });
   }
 };
 let result = require("initialize").fileFinishedImporting("modules/nuf/native/NewUserUtils.tsx");

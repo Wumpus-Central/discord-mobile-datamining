@@ -21,9 +21,9 @@ export default function ViewAllRow(title) {
   obj = { style: callback().expandCTALabelContainer, children: null };
   const obj1 = { color: "text-brand", variant: "text-md/semibold", children: null };
   const intl2 = tmp3(1236).intl;
-  obj1[2] = intl2.format(require(1236) /* getSystemLocale */.t.gVw57p, {});
-  obj[1] = jsx(require(4281) /* Text */.Text, { color: "text-brand", variant: "text-md/semibold", children: null });
+  obj1[2] = intl2.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.gVw57p, {});
+  obj[1] = jsx(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { color: "text-brand", variant: "text-md/semibold", children: null });
   obj[1] = <View style={callback().expandCTALabelContainer}>{null}</View>;
   obj[2] = title.onPress;
-  return jsx(require(5315) /* TableRowInner */.TableRow, { style: callback().expandCTALabelContainer, children: null });
+  return jsx(require("../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, { style: callback().expandCTALabelContainer, children: null });
 };

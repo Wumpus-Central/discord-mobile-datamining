@@ -2,24 +2,24 @@
 const result = require("set").fileFinishedImporting("hooks/useUnmountAbortSignal.tsx");
 
 export default function useUnmountAbortSignal() {
-  const tmp = importDefault(5598)(() => {
+  const tmp = require("useInitialValue.tsx")(() => {
     const abortController = new AbortController();
     return abortController;
   });
   const require = tmp;
-  const unmountEffect = require(4711) /* useMountLayoutEffect */.useUnmountEffect(() => {
+  const unmountEffect = require("useMountEffect.tsx") /* useMountLayoutEffect */.useUnmountEffect(() => {
     tmp.abort();
   });
   return tmp.signal;
 };
 export const useUnmountAbortSignalWithDelay = function useUnmountAbortSignalWithDelay(arg0) {
   const _require = arg0;
-  const tmp = importDefault(5598)(() => {
+  const tmp = require("useInitialValue.tsx")(() => {
     const abortController = new AbortController();
     return abortController;
   });
   importDefault = tmp;
-  const unmountEffect = _require(4711).useUnmountEffect(() => {
+  const unmountEffect = _require("useMountEffect.tsx").useUnmountEffect(() => {
     const timerId = setTimeout(() => {
       closure_1.abort();
     }, closure_0);

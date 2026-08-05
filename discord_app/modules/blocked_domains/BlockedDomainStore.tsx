@@ -5,17 +5,17 @@ const prototype = function BlockedDomainStore() {
   return Object.create(new.target.prototype);
 }.prototype;
 prototype["isBlockedDomain"] = function isBlockedDomain(arg0) {
-  let obj = require(1869) /* isBlockedDomain */;
+  let obj = require("../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx") /* isBlockedDomain */;
   let isBlockedDomainResult = null;
   if (obj.isLibdiscoreInitialized()) {
-    isBlockedDomainResult = require(1869) /* isBlockedDomain */.isBlockedDomain(arg0);
-    const tmpResult = require(1869) /* isBlockedDomain */;
+    isBlockedDomainResult = require("../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx") /* isBlockedDomain */.isBlockedDomain(arg0);
+    const tmpResult = require("../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx") /* isBlockedDomain */;
   }
   if (tmp5) {
     obj = { blocked_domain: null };
     obj[0] = isBlockedDomainResult;
-    importDefault(698).track(AnalyticEvents.LINK_SECURITY_CHECK_BLOCKED, obj);
-    const obj3 = importDefault(698);
+    require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.LINK_SECURITY_CHECK_BLOCKED, obj);
+    const obj3 = require("../../utils/AnalyticsUtils.tsx");
   }
   return isBlockedDomainResult;
 };

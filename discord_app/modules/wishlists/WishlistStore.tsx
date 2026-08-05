@@ -109,7 +109,7 @@ const wishlistStore = new WishlistStore(require("dispatcher"), {
     tmp2.lastFetchedAt = Date.now();
   },
   WISHLIST_ADD_SKU_FAILURE: function handleAddSkuFailure(error) {
-    importDefault(1208).captureException(error.error);
+    require("../../utils/SentryUtils.native.tsx").captureException(error.error);
   },
   WISHLIST_REMOVE_SKU_START: function handleRemoveSkuStart(arg0) {
     let require;
@@ -154,7 +154,7 @@ const wishlistStore = new WishlistStore(require("dispatcher"), {
       tmp2 = obj;
     }
     tmp2.updatedAt = undefined;
-    importDefault(1208).captureException(wishlistId.error);
+    require("../../utils/SentryUtils.native.tsx").captureException(wishlistId.error);
   },
   WISHLIST_UPDATE_VISIBILITY_SUCCESS: function handleUpdateVisibilitySuccess(wishlistId) {
     wishlistId = wishlistId.wishlistId;
@@ -169,7 +169,7 @@ const wishlistStore = new WishlistStore(require("dispatcher"), {
     tmp2.lastFetchedAt = Date.now();
   },
   WISHLIST_UPDATE_VISIBILITY_FAILURE: function handleUpdateVisibilityFailure(error) {
-    importDefault(1208).captureException(error.error);
+    require("../../utils/SentryUtils.native.tsx").captureException(error.error);
   },
   WISHLIST_REORDER_START: function handleReorderStart(wishlistId) {
     wishlistId = wishlistId.wishlistId;
@@ -203,13 +203,13 @@ const wishlistStore = new WishlistStore(require("dispatcher"), {
       tmp2 = obj;
     }
     tmp2.updatedAt = undefined;
-    importDefault(1208).captureException(wishlistId.error);
+    require("../../utils/SentryUtils.native.tsx").captureException(wishlistId.error);
   },
   WISHLIST_ITEM_PURCHASED: function handleWishlistItemPurchased(arg0) {
     let recipientId;
     let skuId;
     ({ recipientId, skuId } = arg0);
-    const firstWishlistId = require(6989) /* createUserWidgetFromServer */.default.getFirstWishlistId(recipientId);
+    const firstWishlistId = require("../user_profile/UserProfileStore.tsx") /* createUserWidgetFromServer */.default.getFirstWishlistId(recipientId);
     let tmp2 = null != firstWishlistId;
     if (tmp2) {
       tmp2 = null != dependencyMap[firstWishlistId];

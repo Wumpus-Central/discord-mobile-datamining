@@ -126,10 +126,10 @@ export default function AddImageDescriptionModal(arg0) {
   let require;
   ({ source: require, channelId: importDefault, id: dependencyMap } = arg0);
   const obj = { screenKey: "addImageDescriptionModal", title: null, render: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl.string(require(1236) /* getSystemLocale */.t["5S2AK+"]);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["5S2AK+"]);
   obj[2] = function render() {
     return outer1_10(outer1_13, { source: closure_0, channelId: closure_1, id: closure_2 });
   };
-  return callback(importDefault(9596), obj);
+  return callback(require("../../main_tabs_v2/native/utils/ModalStackNavigator.tsx"), obj);
 };

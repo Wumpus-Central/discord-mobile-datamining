@@ -10,7 +10,7 @@ let result = require("map").fileFinishedImporting("modules/collectibles/profile_
 export default function useProfileEffect(arg0) {
   const _require = arg0;
   const items = [updateCategoriesAndProducts, map];
-  const stateFromStores = _require(589).useStateFromStores(items, () => {
+  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null != closure_0) {
       const product = outer1_3.getProduct(tmp);
       let first;

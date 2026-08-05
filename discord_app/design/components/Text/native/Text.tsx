@@ -12,7 +12,7 @@ const require = arg1;
 let closure_5 = require("module_4146").createAnimatedComponent(Text);
 const keys = Object.keys(require("Themes").colors);
 let closure_6 = Object.fromEntries(keys.map((arg0) => {
-  const items = [importDefault(12).kebabCase(arg0), arg0];
+  const items = [require("../../../../../_runtime/00012_apply.js").kebabCase(arg0), arg0];
   return items;
 }));
 let obj = { 400: null, 500: null, 600: null, 700: null, 800: null };
@@ -59,7 +59,7 @@ let result = useManaTextMigrationHighlight.withManaTextMigrationHighlight(fromEn
 let closure_12 = createCacheKey.createStyles((arg0, arg1) => {
   let tmp;
   if ("none" !== arg0) {
-    tmp = importDefault(712).colors[table[arg0]];
+    tmp = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors[table[arg0]];
   }
   const text = { color: tmp, fontVariant: null };
   let items;
@@ -99,16 +99,16 @@ const forwardRefResult = importAllResult.forwardRef((animated) => {
     color = "text-default";
   }
   if (flag2) {
-    let NativeText = require(299) /* NativeText */.NativeText;
+    let NativeText = require("../../../../../_runtime/00299_NativeText.js") /* NativeText */.NativeText;
   } else {
     NativeText = flag ? closure_5 : Text;
   }
-  let obj = require(4290) /* useTypographyVariantRemap */;
+  let obj = require("../../../../../discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx") /* useTypographyVariantRemap */;
   const typographyVariantRemap = obj.useTypographyVariantRemap(variant, false);
   const tmp2 = closure_12;
   const tmp2Result = closure_12(color, tabularNumbers);
   const items = [dependencyMap[typographyVariantRemap], tmp2Result.text, , ];
-  const manaTextMigrationHighlight = require(4283) /* useManaTextMigrationHighlight */.useManaTextMigrationHighlight(dependencyMap[typographyVariantRemap], style);
+  const manaTextMigrationHighlight = require("useManaTextMigrationHighlight.tsx") /* useManaTextMigrationHighlight */.useManaTextMigrationHighlight(dependencyMap[typographyVariantRemap], style);
   if (includeFontPadding) {
     obj = { includeFontPadding: null };
     obj[0] = includeFontPadding;
@@ -132,7 +132,7 @@ const forwardRefResult = importAllResult.forwardRef((animated) => {
   return <NativeText style={null} numberOfLines={null} ellipsizeMode={null} allowFontScaling ref={null} />;
 });
 const forwardRefResult1 = importAllResult.forwardRef((variant, ref) => {
-  let obj = require(4290) /* useTypographyVariantRemap */;
+  let obj = require("../../../../../discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx") /* useTypographyVariantRemap */;
   obj = { ref };
   const typographyVariantRemap = obj.useTypographyVariantRemap(variant.variant, true);
   const merged = Object.assign(variant);

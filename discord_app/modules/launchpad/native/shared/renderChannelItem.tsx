@@ -20,8 +20,8 @@ function LaunchpadChannelIcon(channel) {
   obj = { children: null };
   obj = { style: tmp.guildBadgeIcon, children: null };
   const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getGuild(channel.guild_id));
-  const tmp2 = importDefault(15921)();
-  obj[1] = callback(importDefault(5661), { guild: stateFromStores, size: importDefault(15921)().icon.guildBadgeIconSize });
+  const tmp2 = require("getLayoutStyles.tsx")();
+  obj[1] = callback(require("../../../guild/native/GuildIcon.tsx"), { guild: stateFromStores, size: require("getLayoutStyles.tsx")().icon.guildBadgeIconSize });
   const items1 = [callback(View, obj), callback(channel(11488).ChannelIcon, { channel, size: "sm", wrapperSize: 32 })];
   obj[0] = items1;
   return callback2(closure_9, obj);
@@ -29,7 +29,7 @@ function LaunchpadChannelIcon(channel) {
 ({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles(() => {
   let obj = { guildBadgeIcon: null };
-  obj = { position: "absolute", zIndex: 1, bottom: -4, right: -4, borderColor: importDefault(712).colors.BACKGROUND_BASE_LOW, borderWidth: 2, borderRadius: 6 };
+  obj = { position: "absolute", zIndex: 1, bottom: -4, right: -4, borderColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW, borderWidth: 2, borderRadius: 6 };
   obj[0] = obj;
   return obj;
 });
@@ -82,15 +82,15 @@ export default function renderChannelItem(unread) {
   if (null != latestMessageTimestamp) {
     relativeTimestamp = null;
     if (!flag3) {
-      let obj = require(7022) /* getRelativeTimestamp */;
+      let obj = require("../../../notification_center/NotificationCenterUtils.tsx") /* getRelativeTimestamp */;
       relativeTimestamp = obj.getRelativeTimestamp(latestMessageTimestamp);
     }
   }
-  const tmp7 = importDefault(15921)();
+  const tmp7 = require("getLayoutStyles.tsx")();
   const children = [unreadBadge, , , ];
   obj = { style: null, children: null };
   obj = { position: "relative", borderRadius: null, justifyContent: "center", alignItems: "center", flexShrink: 0, flexGrow: 0, width: null, height: null };
-  obj[1] = importDefault(712).radii.round;
+  obj[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.round;
   obj[6] = tmp7.icon.wrapper.size;
   obj[7] = tmp7.icon.wrapper.size;
   const merged = Object.assign(tmp7.icon.margin);
@@ -108,13 +108,13 @@ export default function renderChannelItem(unread) {
   obj[1] = tmp11Result;
   children[1] = closure_8(View, obj);
   const tmp10 = closure_9;
-  const tmp8 = importDefault(15923);
+  const tmp8 = require("renderChannelWrapper.tsx");
   const tmp9 = closure_10;
   if (channelName == null) {
-    channelName = require(4475) /* computeChannelName */.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
-    const obj6 = require(4475) /* computeChannelName */;
+    channelName = require("../../../channel/useChannelName.tsx") /* computeChannelName */.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+    const obj6 = require("../../../channel/useChannelName.tsx") /* computeChannelName */;
   }
-  children[2] = importDefault(15926)({ name: channelName, subtitle, unread: flag, resolvedUnreadSetting: ONLY_MENTIONS, muted: flag3, lastMessageTimestampString: relativeTimestamp, channel, channelCategoryName, locked, connected, live: flag2, mentionCount, mentionBadge, isSubscriptionGated, needSubscriptionToAccess: flag4 });
+  children[2] = require("renderChannelContent.tsx")({ name: channelName, subtitle, unread: flag, resolvedUnreadSetting: ONLY_MENTIONS, muted: flag3, lastMessageTimestampString: relativeTimestamp, channel, channelCategoryName, locked, connected, live: flag2, mentionCount, mentionBadge, isSubscriptionGated, needSubscriptionToAccess: flag4 });
   tmp11Result = null;
   if (null != end) {
     const obj3 = { style: null, children: null };
@@ -132,5 +132,5 @@ export const getChannelAccessibilityProps = function getChannelAccessibilityProp
   let unread;
   let voiceStates;
   ({ channel, unread, mentionCount, voiceStates, embeddedActivitiesCount } = arg0);
-  return { accessible: true, accessibilityRole: "button", accessibilityLabel: importDefault(8955)({ channel, unread, mentionCount, voiceStates, embeddedActivitiesCount }) };
+  return { accessible: true, accessibilityRole: "button", accessibilityLabel: require("../../../channel/getChannelA11yLabel.tsx")({ channel, unread, mentionCount, voiceStates, embeddedActivitiesCount }) };
 };

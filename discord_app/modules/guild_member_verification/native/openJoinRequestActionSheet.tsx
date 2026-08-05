@@ -2,7 +2,7 @@
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/guild_member_verification/native/openJoinRequestActionSheet.tsx");
 
 export default function openJoinRequestActionSheet(joinRequest) {
-  let obj = importDefault(4253);
+  let obj = require("../../action_sheet/native/ActionSheetActionCreators.tsx");
   obj = { joinRequest };
-  obj.openLazy(require(1959) /* asyncRequireImpl */(15568, dependencyMap.paths), "joinRequestActionSheet" + joinRequest.joinRequestId, obj);
+  obj.openLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(15568, dependencyMap.paths), "joinRequestActionSheet" + joinRequest.joinRequestId, obj);
 };

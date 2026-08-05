@@ -9,8 +9,8 @@ BlockedDomainManager.prototype["_initialize"] = function _initialize() {
     const _window = window;
     const _HermesInternal = HermesInternal;
     const combined = "https:" + window.GLOBAL_ENV.WEBAPP_ENDPOINT + "/bad-hash-delta";
-    const result = require(1869) /* isBlockedDomain */.startFetchingBlockedDomains(combined);
-    const tmpResult = require(1869) /* isBlockedDomain */;
+    const result = require("../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx") /* isBlockedDomain */.startFetchingBlockedDomains(combined);
+    const tmpResult = require("../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx") /* isBlockedDomain */;
   }
 };
 const blockedDomainManager = new BlockedDomainManager();

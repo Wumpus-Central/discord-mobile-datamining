@@ -16,7 +16,7 @@ function Spacer() {
 }
 function ListPadding() {
   let obj = { style: null };
-  obj = { width: importDefault(712).space.PX_16 };
+  obj = { width: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
   obj[0] = obj;
   return callback(closure_6, obj);
 }
@@ -123,13 +123,13 @@ export default function GameProfileSimilarGames(trackAction) {
   const GameProfileSimilarGamesMobileExperiment = trackAction(9226).GameProfileSimilarGamesMobileExperiment;
   const config = GameProfileSimilarGamesMobileExperiment.useConfig({ location: "GameProfileSimilarGames" });
   ({ enabled, dense } = config);
-  const tmp6 = importDefault(12089)(trackAction.gameId, enabled);
+  const tmp6 = require("../../hooks/useSimilarGames.tsx")(trackAction.gameId, enabled);
   const similarGames = tmp6.similarGames;
   let num = 3;
   if (dense) {
     num = 4;
   }
-  const result = (importDefault(1474)().width - 2 * PX_16 - (num - 1) * PX_12 - PX_12) / num;
+  const result = (require("../../../screen/useWindowDimensions.native.tsx")().width - 2 * PX_16 - (num - 1) * PX_12 - PX_12) / num;
   importDefault = result;
   if (tmp6.isFetching) {
     let obj = { style: null, children: null };

@@ -18,8 +18,8 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((overrideVari
   }
   obj.variant = str;
   obj.maxFontSizeMultiplier = 2;
-  obj[3] = jsx(require(7672) /* IconButton */.IconButton, {});
-  return jsx(importDefault(7819), {});
+  obj[3] = jsx(require("../../../../design/components/Button/native/IconButton.native.tsx") /* IconButton */.IconButton, {});
+  return jsx(require("../../../core/native/ReanimatedNativeView.tsx"), {});
 }));
 const result = require("module_7819").fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelIconButton.tsx");
 

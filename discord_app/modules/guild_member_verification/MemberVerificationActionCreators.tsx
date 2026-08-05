@@ -549,7 +549,7 @@ export default {
     return applyArgumentsResult;
   },
   updateVerificationFormFieldsLocal(guildId, formFields) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "MEMBER_VERIFICATION_FORM_UPDATE", guildId, form: obj, isLocalUpdate: true };
     obj = { formFields };
     obj.dispatch(obj);
@@ -565,7 +565,7 @@ export default {
     return applyArgumentsResult;
   },
   updateVerificationFormDescriptionLocal(guildId, description) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "MEMBER_VERIFICATION_FORM_UPDATE", guildId, form: obj, isLocalUpdate: true };
     obj = { description };
     obj.dispatch(obj);
@@ -591,7 +591,7 @@ export default {
     return applyArgumentsResult;
   },
   clearCoachmark() {
-    importDefault(709).dispatch({ type: "USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR" });
+    require("../../Dispatcher.tsx").dispatch({ type: "USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR" });
   },
   reportApplication(arg0) {
     let guild;
@@ -601,14 +601,14 @@ export default {
     let reasonOther;
     let responses;
     ({ guild, guildJoinRequest, guildJoinRequestUser, reason, reasonOther, responses } = arg0);
-    let obj = importDefault(698);
+    let obj = require("../../utils/AnalyticsUtils.tsx");
     obj = { application_id: guildJoinRequest.joinRequestId, applicant_id: guildJoinRequestUser.id, guild_id: guild.id, reason, reason_other: reasonOther, responses };
     obj.track(constants.GUILD_MEMBER_APPLICATION_REPORTED, obj);
   }
 };
 export const DISABLE_JOIN_REQUEST_COACHMARK = -1;
 export const showCoachmark = function showCoachmark(guildId) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW", guildId };
   obj.dispatch(obj);
 };

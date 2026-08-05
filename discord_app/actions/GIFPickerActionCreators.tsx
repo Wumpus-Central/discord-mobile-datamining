@@ -23,10 +23,10 @@ function doSearchRequest(q, arg1, limit) {
   } else {
     obj = {};
   }
-  let obj2 = importDefault(4479);
-  obj = { search_type: constants3.GIF, load_id: store.getAnalyticsID(), num_modifiers: Object.keys(obj).length, modifiers: obj, gif_provider: _require(9851).GIF_PROVIDER };
+  let obj2 = require("../modules/app_analytics/AppAnalyticsUtils.tsx");
+  obj = { search_type: constants3.GIF, load_id: store.getAnalyticsID(), num_modifiers: Object.keys(obj).length, modifiers: obj, gif_provider: _require("../modules/gif_picker/GifProvider.tsx").GIF_PROVIDER };
   obj2.trackWithMetadata(constants.SEARCH_STARTED, obj);
-  const HTTP = _require(530).HTTP;
+  const HTTP = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
   let obj1 = { url: constants2.GIFS_SEARCH, query: null, oldFormErrors: true, rejectWithError: true };
   obj2 = { q, media_format: store.getSelectedFormat(), locale: _getSystemLocale.locale, limit };
   obj1[1] = obj2;
@@ -79,8 +79,8 @@ export const trackSearchStart = function trackSearchStart(arg0) {
   } else {
     obj = {};
   }
-  obj = { search_type: constants3.GIF, load_id: store.getAnalyticsID(), num_modifiers: Object.keys(obj).length, modifiers: obj, gif_provider: require(9851) /* GIF_PROVIDER */.GIF_PROVIDER };
-  importDefault(4479).trackWithMetadata(constants.SEARCH_STARTED, obj);
+  obj = { search_type: constants3.GIF, load_id: store.getAnalyticsID(), num_modifiers: Object.keys(obj).length, modifiers: obj, gif_provider: require("../modules/gif_picker/GifProvider.tsx") /* GIF_PROVIDER */.GIF_PROVIDER };
+  require("../modules/app_analytics/AppAnalyticsUtils.tsx").trackWithMetadata(constants.SEARCH_STARTED, obj);
 };
 export const trackSearchResultViewed = function trackSearchResultViewed(totalResults, TRENDING_GIFS) {
   let obj = arg2;
@@ -90,7 +90,7 @@ export const trackSearchResultViewed = function trackSearchResultViewed(totalRes
   const startTime = obj.startTime;
   const merged = Object.assign(obj, Object.create(null));
   obj = { offset: 0, limit: null, totalResults: totalResults.length };
-  let obj2 = require(9852) /* isKlipyProvider */;
+  let obj2 = require("../utils/GIFPickerUtils.tsx") /* isKlipyProvider */;
   obj = {};
   const analyticsID = store.getAnalyticsID();
   const merged1 = Object.assign(obj);
@@ -107,8 +107,8 @@ export const trackSearchResultViewed = function trackSearchResultViewed(totalRes
   obj2 = {};
   const merged3 = Object.assign(result);
   const merged4 = Object.assign(obj1);
-  obj2.gif_provider = require(9851) /* GIF_PROVIDER */.GIF_PROVIDER;
-  importDefault(4479).trackWithMetadata(constants.SEARCH_RESULT_VIEWED, obj2);
+  obj2.gif_provider = require("../modules/gif_picker/GifProvider.tsx") /* GIF_PROVIDER */.GIF_PROVIDER;
+  require("../modules/app_analytics/AppAnalyticsUtils.tsx").trackWithMetadata(constants.SEARCH_RESULT_VIEWED, obj2);
 };
 export const search = function search(q, arg1, arg2, limit) {
   let flag = arg2;
@@ -116,10 +116,10 @@ export const search = function search(q, arg1, arg2, limit) {
     flag = false;
   }
   if ("" === q) {
-    importDefault(709).dispatch({ type: "GIF_PICKER_QUERY", query: "" });
-    const obj3 = importDefault(709);
+    require("../Dispatcher.tsx").dispatch({ type: "GIF_PICKER_QUERY", query: "" });
+    const obj3 = require("../Dispatcher.tsx");
   } else {
-    let obj = importDefault(709);
+    let obj = require("../Dispatcher.tsx");
     obj = { type: "GIF_PICKER_QUERY", query: null };
     obj[1] = q;
     obj.dispatch(obj);
@@ -137,7 +137,7 @@ export const fetchSuggestions = function fetchSuggestions(arg0) {
     tmp = null != arg0;
   }
   if (tmp) {
-    const HTTP = _require(530).HTTP;
+    const HTTP = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     let obj = { url: null, query: null, oldFormErrors: true, rejectWithError: true };
     obj[0] = constants2.GIFS_SUGGEST;
     obj = { q: null, limit: 5, locale: null };
@@ -153,7 +153,7 @@ export const fetchSuggestions = function fetchSuggestions(arg0) {
   }
 };
 export const resetSearch = function resetSearch() {
-  importDefault(709).dispatch({ type: "GIF_PICKER_QUERY", query: "" });
+  require("../Dispatcher.tsx").dispatch({ type: "GIF_PICKER_QUERY", query: "" });
 };
 export const trackSelectGIF = function trackSelectGIF(arg0) {
   let gifId;
@@ -166,9 +166,9 @@ export const trackSelectGIF = function trackSelectGIF(arg0) {
   let type;
   ({ query, gifId } = arg0);
   ({ type, index, offset, limit, results, totalResults } = arg0);
-  let obj = require(9852) /* isKlipyProvider */;
+  let obj = require("../utils/GIFPickerUtils.tsx") /* isKlipyProvider */;
   const result = obj.calculateAnalyticsMetadata(store.getAnalyticsID(), type, { offset, limit, results, totalResults });
-  let obj1 = importDefault(4479);
+  let obj1 = require("../modules/app_analytics/AppAnalyticsUtils.tsx");
   obj = {};
   const merged = Object.assign(result);
   obj.index_num = index;
@@ -176,7 +176,7 @@ export const trackSelectGIF = function trackSelectGIF(arg0) {
   obj.query = query;
   obj1.trackWithMetadata(constants.SEARCH_RESULT_SELECTED, obj);
   if (null != gifId) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
     obj[0] = constants2.GIFS_SELECT;
     obj1 = { id: null, q: null };
@@ -191,16 +191,16 @@ export const initializeSearch = function initializeSearch() {
   replaced = obj.v4().replace(closure_11, "");
   const str = obj.v4();
   obj = { search_type: constants3.GIF, load_id: replaced };
-  importDefault(4479).trackWithMetadata(constants.SEARCH_OPENED, obj);
-  const obj2 = importDefault(4479);
-  importDefault(709).wait(() => {
+  require("../modules/app_analytics/AppAnalyticsUtils.tsx").trackWithMetadata(constants.SEARCH_OPENED, obj);
+  const obj2 = require("../modules/app_analytics/AppAnalyticsUtils.tsx");
+  require("../Dispatcher.tsx").wait(() => {
     let obj = outer1_1(outer1_2[8]);
     obj = { type: "GIF_PICKER_INITIALIZE", analyticsID: replaced };
     obj.dispatch(obj);
   });
 };
 export const fetchTrending = function fetchTrending() {
-  const HTTP = require(530) /* sendRequest */.HTTP;
+  const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
   let obj = { url: constants2.GIFS_TRENDING, query: null, oldFormErrors: true, rejectWithError: true };
   obj = { locale: _getSystemLocale.locale, media_format: store.getSelectedFormat() };
   obj[1] = obj;
@@ -224,10 +224,10 @@ export const fetchTrendingGIFs = function fetchTrendingGIFs(closure_10) {
   } else {
     obj = {};
   }
-  let obj2 = importDefault(4479);
-  obj = { search_type: constants3.GIF, load_id: store.getAnalyticsID(), num_modifiers: Object.keys(obj).length, modifiers: obj, gif_provider: _require(9851).GIF_PROVIDER };
+  let obj2 = require("../modules/app_analytics/AppAnalyticsUtils.tsx");
+  obj = { search_type: constants3.GIF, load_id: store.getAnalyticsID(), num_modifiers: Object.keys(obj).length, modifiers: obj, gif_provider: _require("../modules/gif_picker/GifProvider.tsx").GIF_PROVIDER };
   obj2.trackWithMetadata(constants.SEARCH_STARTED, obj);
-  const HTTP = _require(530).HTTP;
+  const HTTP = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
   let obj1 = { url: constants2.GIFS_TRENDING_GIFS, query: null, oldFormErrors: true, rejectWithError: true };
   obj2 = { media_format: store.getSelectedFormat(), locale: _getSystemLocale.locale, limit: closure_10 };
   obj1[1] = obj2;
@@ -266,7 +266,7 @@ export const fetchTrendingGIFs = function fetchTrendingGIFs(closure_10) {
 };
 export const gifUrlKey = function gifUrlKey(uri) {
   let str = uri;
-  const toURLSafeResult = importDefault(1467).toURLSafe(uri);
+  const toURLSafeResult = require("../utils/URLUtils.tsx").toURLSafe(uri);
   let tmp4 = uri;
   if (null != toURLSafeResult) {
     if (obj2.isAttachmentUrl(toURLSafeResult)) {
@@ -275,14 +275,14 @@ export const gifUrlKey = function gifUrlKey(uri) {
       const tmp5Result = tmp5(9661);
     }
     tmp4 = str;
-    obj2 = require(9661) /* shouldRefreshAttachmentUrl */;
+    obj2 = require("../modules/messages/SignedAttachmentLinkUtils.tsx") /* shouldRefreshAttachmentUrl */;
     tmp5 = require;
   }
   return tmp4;
 };
 export const addFavoriteGIF = function addFavoriteGIF(item) {
   const _require = item;
-  const FrecencyUserSettingsActionCreators = _require(1355).FrecencyUserSettingsActionCreators;
+  const FrecencyUserSettingsActionCreators = _require("../modules/user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
   FrecencyUserSettingsActionCreators.updateAsync("favoriteGifs", (gifs) => {
     let obj = outer1_1(outer1_2[9]);
     const values = Object.values(gifs.gifs);
@@ -407,7 +407,7 @@ export const addFavoriteGIF = function addFavoriteGIF(item) {
 };
 export const removeFavoriteGIF = function removeFavoriteGIF(uri) {
   const _require = uri;
-  const FrecencyUserSettingsActionCreators = _require(1355).FrecencyUserSettingsActionCreators;
+  const FrecencyUserSettingsActionCreators = _require("../modules/user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
   FrecencyUserSettingsActionCreators.updateAsync("favoriteGifs", (gifs) => {
     if (uri in gifs.gifs) {
       delete tmp[tmp2];
@@ -433,7 +433,7 @@ export const removeFavoriteGIF = function removeFavoriteGIF(uri) {
   }, constants5.INFREQUENT_USER_ACTION);
 };
 export const fetchTrendingSearchTerms = function fetchTrendingSearchTerms() {
-  const HTTP = require(530) /* sendRequest */.HTTP;
+  const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
   obj = { url: constants2.GIFS_TRENDING_SEARCH, query: obj, oldFormErrors: true, rejectWithError: true };
   obj = { limit: 5, locale: _getSystemLocale.locale };
   const value = HTTP.get(obj);

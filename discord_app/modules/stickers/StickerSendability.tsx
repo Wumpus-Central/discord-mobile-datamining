@@ -8,8 +8,8 @@ function getStickerSendability(stickerById, trackCommunicationDisabled, channel)
   if (null == trackCommunicationDisabled) {
     return obj.NONSENDABLE;
   } else {
-    const result = importDefault(3931).canUseCustomStickersEverywhere(trackCommunicationDisabled);
-    const obj4 = importDefault(3931);
+    const result = require("../../utils/PremiumUtils.tsx").canUseCustomStickersEverywhere(trackCommunicationDisabled);
+    const obj4 = require("../../utils/PremiumUtils.tsx");
     const tmp22 = require;
     if (obj5.isStandardSticker(stickerById)) {
       if (null == stickerPack.getStickerPack(stickerById.pack_id)) {
@@ -45,7 +45,7 @@ function getStickerSendability(stickerById, trackCommunicationDisabled, channel)
       }
       return obj.NONSENDABLE;
     }
-    obj5 = require(4619) /* getStickerExtensionFromFormatType */;
+    obj5 = require("StickersUtils.tsx") /* getStickerExtensionFromFormatType */;
   }
 }
 let obj = { SENDABLE: 0, [0]: "SENDABLE", SENDABLE_WITH_PREMIUM: 1, [1]: "SENDABLE_WITH_PREMIUM", NONSENDABLE: 2, [2]: "NONSENDABLE", SENDABLE_WITH_BOOSTED_GUILD: 3, [3]: "SENDABLE_WITH_BOOSTED_GUILD" };

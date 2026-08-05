@@ -8,7 +8,7 @@ const require = arg1;
 function useKeyboardOpenPaddingStyle() {
   let importDefault;
   let tmp5;
-  token = token(3989).useToken(importDefault(712).modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL);
+  token = token(3989).useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL);
   let obj = token(3989);
   const obj2 = React;
   [tmp5, importDefault] = sharedValue(React.useState(() => {
@@ -90,6 +90,6 @@ export default function FloatingChatInputContainer(arg0) {
   style = [, ];
   style[0] = style;
   style[1] = useKeyboardOpenPaddingStyle();
-  return jsx(importDefault(4146).View, { style, onLayout, children });
+  return jsx(require("../../reanimated/ReanimatedRexport.tsx").View, { style, onLayout, children });
 };
 export { useKeyboardOpenPaddingStyle };

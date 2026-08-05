@@ -58,7 +58,7 @@ export const Backdrop = function Backdrop(animatedProps) {
     const obj1 = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, "aria-hidden": null };
     const items2 = [backgroundColor.accessibilityDismiss, , ];
     const obj2 = { top: null };
-    obj2[0] = importDefault(1581)().top;
+    obj2[0] = require("../../../../modules/safe_area/useSafeAreaInsets.native.tsx")().top;
     items2[1] = obj2;
     items2[2] = accessibleDismissStyle;
     obj1[0] = items2;
@@ -93,6 +93,6 @@ export const Backdrop = function Backdrop(animatedProps) {
     obj5.style = items4;
     items3[1] = tmp8(tmp9, obj5);
     obj[3] = items3;
-    return closure_6(importDefault(4146).View, obj);
+    return closure_6(require("../../../../modules/reanimated/ReanimatedRexport.tsx").View, obj);
   }
 };

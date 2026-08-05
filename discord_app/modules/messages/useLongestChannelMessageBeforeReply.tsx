@@ -9,7 +9,7 @@ export const useLongestChannelMessageBeforeReply = function useLongestChannelMes
   const dependencyMap = recipientId;
   const items = [reinjectEphemerals];
   const items1 = [id, recipientId];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null != closure_1) {
       const messages = outer1_2.getMessages(closure_0);
       const findOldestResult = messages.findOldest((author) => author.author.id === closure_1);

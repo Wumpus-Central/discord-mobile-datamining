@@ -8,7 +8,7 @@ const result = require("createRpcJoiSchemaObject").fileFinishedImporting("module
 export default {
   [sum.RPCCommands.SET_ORIENTATION_LOCK_STATE]: {
     validation(number) {
-      let obj = importDefault(10546)(number);
+      let obj = require("../../helpers/createRpcJoiSchemaObject.tsx")(number);
       obj = { lock_state: null, picture_in_picture_lock_state: null, grid_lock_state: null };
       const requiredResult = obj.required();
       let validResult = number.number().valid(OrientationLockState.UNLOCKED, OrientationLockState.PORTRAIT, OrientationLockState.LANDSCAPE);
@@ -31,10 +31,10 @@ export default {
       if (null == id) {
         let obj = { errorCode: null };
         obj[0] = RPCErrors.INVALID_COMMAND;
-        const tmp12 = new importDefault(10543)(obj, "No application.");
+        const tmp12 = new require("../../RPCError.tsx")(obj, "No application.");
         throw tmp12;
       } else {
-        obj = importDefault(709);
+        obj = require("../../../../Dispatcher.tsx");
         obj = { type: "FRAME_SET_ORIENTATION_LOCK_STATE", applicationId: null, lockState: null, pictureInPictureLockState: null };
         obj[1] = id;
         obj[2] = lock_state;
@@ -45,7 +45,7 @@ export default {
         obj1[2] = lock_state;
         obj1[3] = picture_in_picture_lock_state;
         obj1[4] = tmp;
-        importDefault(709).dispatch(obj1);
+        require("../../../../Dispatcher.tsx").dispatch(obj1);
       }
     }
   }

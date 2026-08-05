@@ -2,7 +2,7 @@
 const result = require("set").fileFinishedImporting("modules/voice_messages/downsampleWaveform.tsx");
 
 export default function downsampleWaveform(arg0, arg1) {
-  importDefault(38)(arg0.length >= arg1, "Waveform smaller than samples");
+  require("../../../_runtime/metro/00038__.js")(arg0.length >= arg1, "Waveform smaller than samples");
   if (arg0.length === arg1) {
     return arg0;
   } else {

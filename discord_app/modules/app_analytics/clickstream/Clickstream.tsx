@@ -9,14 +9,14 @@ function isClickstreamEnabled(flag) {
     flag = true;
   }
   if (flag) {
-    const extractTimestampResult = importDefault(11).extractTimestamp(store.getId());
+    const extractTimestampResult = require("../../../utils/SnowflakeUtils.tsx").extractTimestamp(store.getId());
     if (extractTimestampResult !== c7) {
       drainClickstream(false);
       c7 = extractTimestampResult;
     }
-    const obj = importDefault(11);
-    let closure_8 = require(6836) /* clickstreamExperimentEnabled */.clickstreamExperimentEnabled();
-    const obj2 = require(6836) /* clickstreamExperimentEnabled */;
+    const obj = require("../../../utils/SnowflakeUtils.tsx");
+    let closure_8 = require("ClickstreamExperiment.tsx") /* clickstreamExperimentEnabled */.clickstreamExperimentEnabled();
+    const obj2 = require("ClickstreamExperiment.tsx") /* clickstreamExperimentEnabled */;
   }
   return closure_8;
 }
@@ -32,9 +32,9 @@ function drainClickstream(flag) {
       let first = tmp8[0];
       let tmp10 = importDefault;
       let tmp11 = dependencyMap;
-      let obj2 = importDefault(698);
+      let obj2 = require("../../../utils/AnalyticsUtils.tsx");
       let tmp12 = require;
-      let obj3 = require(6837) /* getClickstreamDrainEvent */;
+      let obj3 = require("ClickstreamEvents.tsx") /* getClickstreamDrainEvent */;
       let trackResult = obj2.track(first, obj3.getClickstreamDrainEvent(first, tmp8[1]));
       continue;
     }
@@ -49,13 +49,13 @@ let c8 = false;
 let result = require("createRTCConnection").fileFinishedImporting("modules/app_analytics/clickstream/Clickstream.tsx");
 
 export const trackClickstream = function trackClickstream(GUILD_VIEWED_CLICKSTREAM, arg1) {
-  let obj = importDefault(11);
+  let obj = require("../../../utils/SnowflakeUtils.tsx");
   const extractTimestampResult = obj.extractTimestamp(store.getId());
   if (extractTimestampResult !== c7) {
     drainClickstream(false);
     c7 = extractTimestampResult;
   }
-  const result = require(6836) /* clickstreamExperimentEnabled */.clickstreamExperimentEnabled();
+  const result = require("ClickstreamExperiment.tsx") /* clickstreamExperimentEnabled */.clickstreamExperimentEnabled();
   let c8 = result;
   if (result) {
     if (!map.has(GUILD_VIEWED_CLICKSTREAM)) {

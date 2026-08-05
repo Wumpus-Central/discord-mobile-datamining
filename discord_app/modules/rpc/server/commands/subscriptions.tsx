@@ -138,7 +138,7 @@ obj = {
       let obj = { errorCode: null };
       obj[0] = constants.INVALID_EVENT;
       const _HermesInternal = HermesInternal;
-      let tmp6 = importDefault(10543);
+      let tmp6 = require("../../RPCError.tsx");
       tmp6 = new tmp6(obj, "Invalid event: " + evt);
       throw tmp6;
     } else {

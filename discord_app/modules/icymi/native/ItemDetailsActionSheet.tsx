@@ -23,13 +23,13 @@ export default function ItemDetailsActionSheet(arg0) {
   let importDefault;
   let require;
   ({ guildId: require, channelId: importDefault, id: dependencyMap } = arg0);
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [ensureGuildLoaded];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getChannel(closure_1));
-  let obj1 = require(589) /* initialize */;
+  let obj1 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items1 = [createGuildRecordFromRust];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => outer1_5.getGuild(closure_0));
-  let obj2 = require(589) /* initialize */;
+  let obj2 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items2 = [filterStaffGuild];
   const stateFromStores2 = obj2.useStateFromStores(items2, () => {
     let dehydratedItem = null;
@@ -39,7 +39,7 @@ export default function ItemDetailsActionSheet(arg0) {
     return dehydratedItem;
   });
   const tmp5 = importDefault;
-  const tmp6 = importDefault(4475)(stateFromStores, true);
+  const tmp6 = require("../../channel/useChannelName.tsx")(stateFromStores, true);
   if (null != stateFromStores1) {
     obj = { guild: null, size: null };
     obj[0] = stateFromStores1;
@@ -53,7 +53,7 @@ export default function ItemDetailsActionSheet(arg0) {
     tmp9 = callback(tmp(1297).Avatar, obj);
   }
   let result = null != stateFromStores;
-  const tmp8 = importDefault(5240)("show_icymi_debug_scores");
+  const tmp8 = require("../../devtools/design_toggles/useDesignToggle.tsx")("show_icymi_debug_scores");
   if (result) {
     result = null != stateFromStores1;
   }
@@ -111,5 +111,5 @@ export default function ItemDetailsActionSheet(arg0) {
   }
   items3[2] = tmp16Result;
   obj2[3] = items3;
-  return closure_9(require(5646) /* ActionSheet */.ActionSheet, obj2);
+  return closure_9(require("../../../design/components/Sheet/native/ActionSheet.native.tsx") /* ActionSheet */.ActionSheet, obj2);
 };

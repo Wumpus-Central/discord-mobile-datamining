@@ -11,7 +11,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_LEGACY_BUTTON,
   getComponent() {
-    return require(14675) /* ComparisonRow */.default;
+    return require("../../design_system/native/UserSettingsDesignSystemLegacyButton.tsx") /* ComparisonRow */.default;
   }
 };
 const route = createToggle.createRoute(obj);

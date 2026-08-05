@@ -3,14 +3,14 @@ const result = require("formatUsernameOnClick").fileFinishedImporting("modules/m
 
 export const createStageTopicSystemMessage = function createStageTopicSystemMessage(roleStyle) {
   const message = roleStyle.message;
-  let obj = require(7879) /* getMessageAuthorWithProcessedColor */;
+  let obj = require("useAuthorWithProcessedColor.tsx") /* getMessageAuthorWithProcessedColor */;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
   obj = { content: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: null, topic: null };
-  obj[1] = importDefault(7881)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
+  obj[1] = require("formatUsernameOnClick.tsx")({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
   obj[2] = message.content;
-  obj[0] = intl.formatToParts(require(1236) /* getSystemLocale */.t.ro3RM0, obj);
-  const merged = Object.assign(importDefault(7882)(roleStyle));
+  obj[0] = intl.formatToParts(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.ro3RM0, obj);
+  const merged = Object.assign(require("createCommonMessage.tsx")(roleStyle));
   return obj;
 };

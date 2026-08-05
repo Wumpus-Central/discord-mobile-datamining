@@ -5,12 +5,12 @@ const result = require("dispatcher").fileFinishedImporting("modules/emojis/top_e
 
 export const fetchTopEmojis = function fetchTopEmojis(guildId) {
   const _require = guildId;
-  let obj = _require(4120);
+  let obj = _require("../../routing/RouteUtils.tsx");
   if (!obj.isPseudoGuildId(guildId)) {
     obj = { type: "TOP_EMOJIS_FETCH", guildId: null };
     obj[1] = guildId;
-    importDefault(709).dispatch(obj);
-    const HTTP = _require(530).HTTP;
+    require("../../../Dispatcher.tsx").dispatch(obj);
+    const HTTP = _require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     obj = { url: null, oldFormErrors: true, rejectWithError: true };
     obj[0] = Endpoints.TOP_EMOJIS_FOR_GUILD(guildId);
     const value = HTTP.get(obj);
@@ -26,23 +26,23 @@ export const fetchTopEmojis = function fetchTopEmojis(guildId) {
       obj = { type: "TOP_EMOJIS_FETCH_FAILURE", guildId: closure_0 };
       return obj.dispatch(obj);
     });
-    const obj2 = importDefault(709);
+    const obj2 = require("../../../Dispatcher.tsx");
   }
 };
 export const updateNewlyAddedLastSeen = function updateNewlyAddedLastSeen(guildId, id) {
-  let obj = importDefault(709);
+  let obj = require("../../../Dispatcher.tsx");
   obj.dispatch({ type: "NEWLY_ADDED_EMOJI_SEEN_UPDATED" });
   if (tmp4) {
     obj = { type: "NEWLY_ADDED_EMOJI_SEEN_PENDING", guildId: null, emojiId: null };
     obj[1] = guildId;
     obj[2] = id;
-    importDefault(709).dispatch(obj);
-    const tmpResult = importDefault(709);
+    require("../../../Dispatcher.tsx").dispatch(obj);
+    const tmpResult = require("../../../Dispatcher.tsx");
   }
 };
 export const updateNewlyAddedEmojiSeenAcknowledged = function updateNewlyAddedEmojiSeenAcknowledged(arg0, arg1) {
   if (tmp) {
-    let obj = importDefault(709);
+    let obj = require("../../../Dispatcher.tsx");
     obj = { type: "NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED", guildId: null, emojiId: null };
     obj[1] = arg0;
     obj[2] = arg1;

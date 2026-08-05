@@ -29,7 +29,7 @@ let unpackModuleId;
 const require = arg1;
 function AlwaysCompressImagesSwitch(isKestrelTreatment) {
   const tmp = createCacheKey();
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [CHANNEL_SIDEBAR_WIDTH];
   const stateFromStores = obj.useStateFromStores(items, () => dataSavingMode.dataSavingMode);
   const callback = React.useCallback((dataSavingMode) => {
@@ -64,20 +64,20 @@ function PremiumUpsellImage(arg0) {
   let style;
   let useReducedMotion;
   ({ image, style, useReducedMotion } = arg0);
-  let obj = require(500) /* set */;
+  let obj = require("../../../../../utils/PlatformUtils.tsx") /* set */;
   if (obj.isAndroid()) {
     if (!useReducedMotion) {
       if (null != image.uri) {
         obj = { url: null, style: null, autoplay: true };
         obj[0] = image.uri;
         obj[1] = style;
-        let tmp5 = callback2(require(9304) /* useAPNGPlayerControls */.APNGPlayer, obj);
+        let tmp5 = callback2(require("../../../../image/native/APNGPlayer.android.tsx") /* useAPNGPlayerControls */.APNGPlayer, obj);
       }
       return tmp5;
     }
   }
   obj = { source: image, resizeMode: "contain", style, enableAnimation: !useReducedMotion, accessible: false };
-  tmp5 = callback2(importDefault(5236), obj);
+  tmp5 = callback2(require("../../../../../components_native/common/FastImage.tsx"), obj);
 }
 ({ PremiumSubscriptionSKUs: unpackModuleId, PremiumTypes: closure_12, PremiumUpsellTypes: map1 } = GuildFeatures);
 ({ AnalyticEvents: closure_14, AnalyticsPages: closure_15, HelpdeskArticles: closure_16, ThemeTypes: closure_17 } = ME);

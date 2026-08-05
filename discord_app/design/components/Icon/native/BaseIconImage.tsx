@@ -18,7 +18,7 @@ export const BaseIconImage = function BaseIconImage(source) {
   }
   const color = source.color;
   ({ resizeMode, style, accessible, accessibilityLabel } = source);
-  let obj = require(3989) /* map */;
+  let obj = require("../../../tokens/native/useToken.tsx") /* map */;
   const token = obj.useToken(color);
   if (null != token) {
     obj = { tintColor: null };

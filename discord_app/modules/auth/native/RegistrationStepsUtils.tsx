@@ -206,7 +206,7 @@ export const getAllAuthScreens = function getAllAuthScreens() {
   obj = {
     ignoreKeyboard: true,
     fullscreen: true,
-    impressionName: require(503) /* encodeProperties */.ImpressionNames.USER_WELCOME,
+    impressionName: require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionNames.USER_WELCOME,
     headerTitle,
     headerShown: false,
     render() {
@@ -214,8 +214,8 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     }
   };
   obj[AuthStates.WELCOME] = obj;
-  obj = { ignoreKeyboard: true, fullscreen: true, impressionName: require(503) /* encodeProperties */.ImpressionNames.USER_REGISTRATION, impressionProperties: null, headerTitle: null, headerLeft: null, render: null };
-  obj[3] = { impression_group: require(503) /* encodeProperties */.ImpressionGroups.USER_REGISTRATION_FLOW, step: constants.IDENTITY };
+  obj = { ignoreKeyboard: true, fullscreen: true, impressionName: require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionNames.USER_REGISTRATION, impressionProperties: null, headerTitle: null, headerLeft: null, render: null };
+  obj[3] = { impression_group: require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionGroups.USER_REGISTRATION_FLOW, step: constants.IDENTITY };
   obj[4] = headerTitle;
   obj[5] = function headerLeft(arg0) {
     const obj = {};
@@ -238,9 +238,9 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     return callback4(callback(14986).RegisterIdentity, {});
   };
   obj[AuthStates.REGISTER_IDENTITY] = obj;
-  const obj2 = { ignoreKeyboard: true, fullscreen: true, impressionName: require(503) /* encodeProperties */.ImpressionNames.USER_REGISTRATION, impressionProperties: null, headerTitle: null, headerLeft: null, render: null };
-  const obj1 = { impression_group: require(503) /* encodeProperties */.ImpressionGroups.USER_REGISTRATION_FLOW, step: constants.IDENTITY };
-  obj2[3] = { impression_group: require(503) /* encodeProperties */.ImpressionGroups.USER_REGISTRATION_FLOW, step: constants.DISPLAY_NAME };
+  const obj2 = { ignoreKeyboard: true, fullscreen: true, impressionName: require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionNames.USER_REGISTRATION, impressionProperties: null, headerTitle: null, headerLeft: null, render: null };
+  const obj1 = { impression_group: require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionGroups.USER_REGISTRATION_FLOW, step: constants.IDENTITY };
+  obj2[3] = { impression_group: require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionGroups.USER_REGISTRATION_FLOW, step: constants.DISPLAY_NAME };
   obj2[4] = headerTitle;
   obj2[5] = function headerLeft(arg0) {
     const obj = {};
@@ -263,9 +263,9 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     return callback4(callback2(14998), {});
   };
   obj[AuthStates.REGISTER_DISPLAY_NAME] = obj2;
-  const obj4 = { ignoreKeyboard: true, fullscreen: true, impressionName: require(503) /* encodeProperties */.ImpressionNames.USER_REGISTRATION, impressionProperties: null, headerTitle: null, headerLeft: null, render: null };
-  const obj3 = { impression_group: require(503) /* encodeProperties */.ImpressionGroups.USER_REGISTRATION_FLOW, step: constants.DISPLAY_NAME };
-  obj4[3] = { impression_group: require(503) /* encodeProperties */.ImpressionGroups.USER_REGISTRATION_FLOW, step: constants.ACCOUNT_INFORMATION };
+  const obj4 = { ignoreKeyboard: true, fullscreen: true, impressionName: require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionNames.USER_REGISTRATION, impressionProperties: null, headerTitle: null, headerLeft: null, render: null };
+  const obj3 = { impression_group: require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionGroups.USER_REGISTRATION_FLOW, step: constants.DISPLAY_NAME };
+  obj4[3] = { impression_group: require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionGroups.USER_REGISTRATION_FLOW, step: constants.ACCOUNT_INFORMATION };
   obj4[4] = headerTitle;
   obj4[5] = function headerLeft(arg0) {
     const obj = {};
@@ -288,9 +288,9 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     return callback4(callback2(14999), {});
   };
   obj[AuthStates.REGISTER_ACCOUNT_INFORMATION] = obj4;
-  const obj6 = { ignoreKeyboard: true, impressionName: require(503) /* encodeProperties */.ImpressionNames.USER_VERIFY_PHONE, impressionProperties: null, headerTitle: null, headerLeft: null, render: null };
-  const obj5 = { impression_group: require(503) /* encodeProperties */.ImpressionGroups.USER_REGISTRATION_FLOW, step: constants.ACCOUNT_INFORMATION };
-  obj6[2] = { impression_group: require(503) /* encodeProperties */.ImpressionGroups.USER_REGISTRATION_FLOW };
+  const obj6 = { ignoreKeyboard: true, impressionName: require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionNames.USER_VERIFY_PHONE, impressionProperties: null, headerTitle: null, headerLeft: null, render: null };
+  const obj5 = { impression_group: require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionGroups.USER_REGISTRATION_FLOW, step: constants.ACCOUNT_INFORMATION };
+  obj6[2] = { impression_group: require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionGroups.USER_REGISTRATION_FLOW };
   obj6[3] = headerTitle;
   obj6[4] = function headerLeft(arg0) {
     const obj = {};
@@ -303,9 +303,9 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     return callback4(callback2(15005), {});
   };
   obj[AuthStates.VERIFY_PHONE] = obj6;
-  const obj8 = { ignoreKeyboard: true, fullscreen: true, impressionName: require(503) /* encodeProperties */.ImpressionNames.USER_LOGIN, impressionProperties: null, headerTitle: null, render: null };
-  const obj7 = { impression_group: require(503) /* encodeProperties */.ImpressionGroups.USER_REGISTRATION_FLOW };
-  obj8[3] = { impression_group: require(503) /* encodeProperties */.ImpressionGroups.USER_LOGIN_FLOW };
+  const obj8 = { ignoreKeyboard: true, fullscreen: true, impressionName: require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionNames.USER_LOGIN, impressionProperties: null, headerTitle: null, render: null };
+  const obj7 = { impression_group: require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionGroups.USER_REGISTRATION_FLOW };
+  obj8[3] = { impression_group: require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionGroups.USER_LOGIN_FLOW };
   obj8[4] = headerTitle;
   obj8[5] = function render() {
     return callback4(callback2(8281), {});
@@ -352,11 +352,11 @@ export const getAllAuthScreens = function getAllAuthScreens() {
       return callback4(callback2(15012), {});
     }
   };
-  const obj9 = { impression_group: require(503) /* encodeProperties */.ImpressionGroups.USER_LOGIN_FLOW };
+  const obj9 = { impression_group: require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionGroups.USER_LOGIN_FLOW };
   obj[AuthStates.AGE_GATE] = {
     ignoreKeyboard: true,
     fullscreen: true,
-    impressionName: require(503) /* encodeProperties */.ImpressionNames.USER_AGE_GATE,
+    impressionName: require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionNames.USER_AGE_GATE,
     headerTitle,
     headerLeft(arg0) {
       const obj = {};
@@ -382,7 +382,7 @@ export const getAllAuthScreens = function getAllAuthScreens() {
   const obj10 = {
     ignoreKeyboard: true,
     fullscreen: true,
-    impressionName: require(503) /* encodeProperties */.ImpressionNames.USER_AGE_GATE,
+    impressionName: require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionNames.USER_AGE_GATE,
     headerTitle,
     headerLeft(arg0) {
       const obj = {};
@@ -408,7 +408,7 @@ export const getAllAuthScreens = function getAllAuthScreens() {
   obj[AuthStates.AGE_GATE_UNDERAGE] = {
     ignoreKeyboard: true,
     fullscreen: true,
-    impressionName: require(503) /* encodeProperties */.ImpressionNames.USER_AGE_GATE_UNDERAGE,
+    impressionName: require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionNames.USER_AGE_GATE_UNDERAGE,
     impressionProperties(existingUser) {
       return { impression_group: callback(503).ImpressionGroups.USER_REGISTRATION_FLOW, existing_user: existingUser.existingUser };
     },

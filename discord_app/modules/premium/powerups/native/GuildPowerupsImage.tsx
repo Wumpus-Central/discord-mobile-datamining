@@ -16,7 +16,7 @@ export default function GuildPowerupsImage(style) {
   }
   style = style.style;
   const tmp = callback();
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   if (obj2.isAndroid()) {
@@ -26,11 +26,11 @@ export default function GuildPowerupsImage(style) {
         const items1 = [tmp.image, style];
         obj[0] = items1;
         obj[1] = imageUrl;
-        let tmp6 = jsx(importDefault(8107), { style: null, url: null });
+        let tmp6 = jsx(require("../../../../../discord_common/js/packages/rtn-codegen/js/APNGDecorationNativeComponent.tsx"), { style: null, url: null });
       }
       return tmp6;
     }
   }
   const items2 = [tmp.image, style];
-  tmp6 = jsx(importDefault(5236), { style: items2, source: { uri: imageUrl } });
+  tmp6 = jsx(require("../../../../components_native/common/FastImage.tsx"), { style: items2, source: { uri: imageUrl } });
 };

@@ -4,8 +4,8 @@ const result = require("set").fileFinishedImporting("modules/app_database/module
 export const requireSortedDescending = function requireSortedDescending(messages) {
   let tmp4 = messages.length <= 2;
   if (!tmp4) {
-    tmp4 = importDefault(11).compare(messages[0].id, messages[messages.length - 1].id) >= 0;
-    const tmpResult = importDefault(11);
+    tmp4 = require("../../../../utils/SnowflakeUtils.tsx").compare(messages[0].id, messages[messages.length - 1].id) >= 0;
+    const tmpResult = require("../../../../utils/SnowflakeUtils.tsx");
   }
-  importDefault(38)(tmp4, "messages must be sorted in descending order.");
+  require("../../../../../_runtime/metro/00038__.js")(tmp4, "messages must be sorted in descending order.");
 };

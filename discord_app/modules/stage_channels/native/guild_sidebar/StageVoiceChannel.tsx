@@ -44,7 +44,7 @@ const memoResult = importAllResult.memo((channel) => {
   }, items1);
   ({ stageInstance, hasUnread, hasMedia, collapsed } = stateFromStoresObject);
   ({ resolvedUnreadSetting, voiceStates, locked } = stateFromStoresObject);
-  let arr3 = importDefault(15239)(channel.guild_id)[channel.id];
+  let arr3 = require("../../useStageChannelSpeakerVoiceStates.tsx")(channel.guild_id)[channel.id];
   if (arr3 == null) {
     arr3 = NO_VOICE_STATES;
   }
@@ -69,7 +69,7 @@ const memoResult = importAllResult.memo((channel) => {
   const callback1 = importAllResult.useCallback(() => {
     const result = channel(outer1_3[23]).openChannelLongPressActionSheet(channel.id);
   }, items3);
-  const tmp10 = importDefault(4475)(channel, false);
+  const tmp10 = require("../../../channel/useChannelName.tsx")(channel, false);
   tmp2Result = tmp2(9659);
   const isConnectedToVoiceChannel = tmp2Result.useIsConnectedToVoiceChannel(channel);
   if (stageInstance != null) {

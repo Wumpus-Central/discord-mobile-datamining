@@ -200,7 +200,7 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
 prototype["renderCategory"] = function renderCategory(label) {
   const self = this;
   const _require = label;
-  return callback3(_require(5315).TableRow, {
+  return callback3(_require("../../design/components/TableRow/native/TableRow.native.tsx").TableRow, {
     label: label.name,
     onPress() {
       return self.handleSetCategory(label.id);
@@ -227,7 +227,7 @@ prototype["renderCategories"] = function renderCategories() {
   if (mapped.length > 0) {
     const obj = { hasIcons: false, children: null };
     obj[1] = mapped;
-    tmp4 = callback3(require(5649) /* TableRowGroupTitle */.TableRowGroup, obj);
+    tmp4 = callback3(require("../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj);
   }
   return tmp4;
 };
@@ -282,6 +282,6 @@ export default function ConnectedChannelSettingsChangeCategory(channelId) {
   const channel = channelId(589).useStateFromStores(items, () => outer1_6.getChannel(channelId));
   const obj = channelId(589);
   const navigation = channelId(1480).useNavigation();
-  importDefault(38)(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
+  require("../../../_runtime/metro/00038__.js")(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
   return callback3(ChannelSettingsChangeCategory, { channel, navigation });
 };

@@ -22,17 +22,17 @@ export default function useActivityTimer(start) {
     return () => closure_0.stop();
   }, items);
   const diff = start.end - start;
-  const result = diff / importDefault(687).Millis.SECOND;
+  const result = diff / require("../../../utils/Durations.tsx").Millis.SECOND;
   const diff1 = tmp3[0] - start;
-  const bound = Math.max(Math.min(diff1 / importDefault(687).Millis.SECOND, result), 0);
+  const bound = Math.max(Math.min(diff1 / require("../../../utils/Durations.tsx").Millis.SECOND, result), 0);
   return { elapsed: bound, duration: result, percentage: Math.max(Math.min(bound / result, 1), 0) };
 };
 export const formatTime = function formatTime(arg0) {
   const rounded = Math.floor(arg0);
-  const result = rounded % importDefault(687).Seconds.MINUTE;
-  const rounded1 = Math.floor(arg0 / importDefault(687).Seconds.MINUTE);
-  const result1 = rounded1 % importDefault(687).Seconds.MINUTE;
-  const rounded2 = Math.floor(arg0 / importDefault(687).Seconds.HOUR);
+  const result = rounded % require("../../../utils/Durations.tsx").Seconds.MINUTE;
+  const rounded1 = Math.floor(arg0 / require("../../../utils/Durations.tsx").Seconds.MINUTE);
+  const result1 = rounded1 % require("../../../utils/Durations.tsx").Seconds.MINUTE;
+  const rounded2 = Math.floor(arg0 / require("../../../utils/Durations.tsx").Seconds.HOUR);
   if (0 === rounded2) {
     const _String4 = String;
     const _String5 = String;
@@ -57,9 +57,9 @@ export const formatTime = function formatTime(arg0) {
 };
 export const formatTimeForA11yLabel = function formatTimeForA11yLabel(arg0) {
   const rounded = Math.floor(arg0);
-  const seconds = rounded % importDefault(687).Seconds.MINUTE;
-  const rounded1 = Math.floor(arg0 / importDefault(687).Seconds.MINUTE);
-  const minutes = rounded1 % importDefault(687).Seconds.MINUTE;
-  const hours = Math.floor(arg0 / importDefault(687).Seconds.HOUR);
-  return require(8048) /* calculateTimestampDurations */.formatTimestampToA11yLabel({ hours, minutes, seconds });
+  const seconds = rounded % require("../../../utils/Durations.tsx").Seconds.MINUTE;
+  const rounded1 = Math.floor(arg0 / require("../../../utils/Durations.tsx").Seconds.MINUTE);
+  const minutes = rounded1 % require("../../../utils/Durations.tsx").Seconds.MINUTE;
+  const hours = Math.floor(arg0 / require("../../../utils/Durations.tsx").Seconds.HOUR);
+  return require("../../content_inventory/utils.tsx") /* calculateTimestampDurations */.formatTimestampToA11yLabel({ hours, minutes, seconds });
 };

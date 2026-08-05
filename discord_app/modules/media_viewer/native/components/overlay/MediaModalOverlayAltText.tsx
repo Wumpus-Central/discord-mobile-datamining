@@ -6,7 +6,7 @@ import importAllResult from "noop";
 const require = arg1;
 let closure_4 = createCacheKey.createStyles((arg0) => {
   let obj = { container: null };
-  obj = { backgroundColor: importDefault(712).colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE, marginVertical: importDefault(712).space.PX_8, marginHorizontal: importDefault(712).space.PX_8, marginRight: importDefault(712).space.PX_8 + arg0, paddingHorizontal: importDefault(712).space.PX_8, paddingVertical: importDefault(712).space.PX_4, borderRadius: importDefault(712).radii.sm, alignSelf: "flex-end" };
+  obj = { backgroundColor: require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE, marginVertical: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, marginHorizontal: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, marginRight: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 + arg0, paddingHorizontal: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, paddingVertical: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, borderRadius: require("../../../../../../discord_common/js/packages/tokens/native.tsx").radii.sm, alignSelf: "flex-end" };
   obj[0] = obj;
   return obj;
 });

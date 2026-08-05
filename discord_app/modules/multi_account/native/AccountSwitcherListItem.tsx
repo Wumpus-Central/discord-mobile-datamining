@@ -66,10 +66,10 @@ export default function AccountSwitcherListItem(arg0) {
   ({ sortHandlers, trailing } = arg0);
   ({ delayLongPress, leading } = arg0);
   const tmp = callback2();
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [initialize];
   const stateFromStores = obj.useStateFromStores(items, () => obj.hidePersonalInformation);
-  let obj1 = require(589) /* initialize */;
+  let obj1 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items1 = [mergeGuildAvatar];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => currentUser.getCurrentUser());
   let id;
@@ -123,7 +123,7 @@ export default function AccountSwitcherListItem(arg0) {
     }
     const obj7 = { mode: "username", identifiable: null };
     obj7[1] = str;
-    obj6[4] = importDefault(4124).getUserTag(obj2, obj7);
+    obj6[4] = require("../../../utils/UserUtils.tsx").getUserTag(obj2, obj7);
     const items4 = [callback(tmp2(4281).Text, obj6), ];
     let tmp18Result = !stateFromStores;
     if (!stateFromStores) {

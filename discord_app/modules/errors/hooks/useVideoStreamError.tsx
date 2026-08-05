@@ -10,7 +10,7 @@ export default function useVideoStreamError(arg0, arg1) {
   const _require = arg0;
   const dependencyMap = arg1;
   let items = [isAVErrorContextOfType, fetchFingerprint];
-  const stateFromStores = _require(589).useStateFromStores(items, () => {
+  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let getActiveErrorsOfType;
     let getActiveErrorsOfType2;
     if (outer1_2.getId() !== dependencyMap) {
@@ -36,7 +36,7 @@ export const useVideoStreamErrorContext = function useVideoStreamErrorContext(ar
   const _require = arg0;
   const dependencyMap = arg1;
   const items = [isAVErrorContextOfType, fetchFingerprint];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let getActiveErrorsOfType;
     let getActiveErrorsOfType2;
     if (outer1_2.getId() !== dependencyMap) {

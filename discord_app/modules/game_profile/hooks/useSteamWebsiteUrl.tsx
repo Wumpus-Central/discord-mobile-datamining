@@ -12,7 +12,7 @@ export const useSteamWebsiteUrl = function useSteamWebsiteUrl(id) {
   const _require = id;
   const items = [handleLoadMessages];
   const items1 = [id];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null == id) {
       return null;
     } else {

@@ -19,7 +19,7 @@ let closure_8 = createCacheKey.createStyles((arg0) => {
     flag = true;
   }
   let obj = { chevron: { flexShrink: 0, flexGrow: 0 }, container: null, divider: null, guildBadge: null, flex: null, header: null, headerRow: null, headerRowTitle: null, headerRowInset: null, headerIcon: null, subheader: null, ellipse: null };
-  obj = { gap: importDefault(712).space.PX_8, paddingTop: importDefault(712).space.PX_16, paddingBottom: null };
+  obj = { gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, paddingTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, paddingBottom: null };
   if (flag) {
     let num = 0;
     if (!arg0) {
@@ -39,23 +39,23 @@ let closure_8 = createCacheKey.createStyles((arg0) => {
   const merged = Object.assign(obj);
   obj.zIndex = 1;
   obj[1] = obj;
-  obj[2] = { height: 1, backgroundColor: importDefault(712).colors.BORDER_SUBTLE, marginHorizontal: importDefault(712).space.PX_16 };
+  obj[2] = { height: 1, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE, marginHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
   obj[3] = { margin: 0 };
   obj[4] = { flexShrink: 1 };
-  const obj1 = { height: 1, backgroundColor: importDefault(712).colors.BORDER_SUBTLE, marginHorizontal: importDefault(712).space.PX_16 };
-  obj[5] = { alignItems: "center", flexDirection: "row", gap: importDefault(712).space.PX_4, paddingHorizontal: importDefault(712).space.PX_16 };
-  const obj2 = { alignItems: "center", flexDirection: "row", gap: importDefault(712).space.PX_4, paddingHorizontal: importDefault(712).space.PX_16 };
-  obj[6] = { alignItems: "center", flexDirection: "row", gap: importDefault(712).space.PX_8 };
+  const obj1 = { height: 1, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE, marginHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
+  obj[5] = { alignItems: "center", flexDirection: "row", gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
+  const obj2 = { alignItems: "center", flexDirection: "row", gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
+  obj[6] = { alignItems: "center", flexDirection: "row", gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
   obj[7] = { flexGrow: 1, flexShrink: 1 };
-  const obj3 = { alignItems: "center", flexDirection: "row", gap: importDefault(712).space.PX_8 };
-  obj[8] = { paddingEnd: importDefault(712).space.PX_16 };
-  const obj4 = { paddingEnd: importDefault(712).space.PX_16 };
-  obj[9] = { marginRight: importDefault(712).space.PX_4 };
-  const obj5 = { marginRight: importDefault(712).space.PX_4 };
-  obj[10] = { flexDirection: "row", alignItems: "center", paddingHorizontal: importDefault(712).space.PX_16, gap: importDefault(712).space.PX_8 };
+  const obj3 = { alignItems: "center", flexDirection: "row", gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
+  obj[8] = { paddingEnd: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
+  const obj4 = { paddingEnd: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
+  obj[9] = { marginRight: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
+  const obj5 = { marginRight: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
+  obj[10] = { flexDirection: "row", alignItems: "center", paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
   const colors = tmp(712).colors;
-  const obj6 = { flexDirection: "row", alignItems: "center", paddingHorizontal: importDefault(712).space.PX_16, gap: importDefault(712).space.PX_8 };
-  obj[11] = { width: 4, height: 4, backgroundColor: arg0 ? colors.TEXT_SUBTLE : colors.BACKGROUND_MOD_STRONG, borderRadius: importDefault(712).radii.round };
+  const obj6 = { flexDirection: "row", alignItems: "center", paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
+  obj[11] = { width: 4, height: 4, backgroundColor: arg0 ? colors.TEXT_SUBTLE : colors.BACKGROUND_MOD_STRONG, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.round };
   return obj;
 });
 let result = require("jsxProd").fileFinishedImporting("modules/channel_list_v2/native/components/ChannelListStickyHeader.tsx");
@@ -78,7 +78,7 @@ export default function ChannelListStickyHeader(guild) {
     flag3 = false;
   }
   let importDefault;
-  const tmp3 = importDefault(1348)("ChannelListStickyHeader");
+  const tmp3 = require("../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("ChannelListStickyHeader");
   const tmp4 = callback2(tmp3, flag);
   let obj = React;
   const ref = React.useRef(null);
@@ -98,7 +98,7 @@ export default function ChannelListStickyHeader(guild) {
       _undefined(outer1_2[10])(guild);
     }
   }, items);
-  const tmp10 = importDefault(15152)(guild);
+  const tmp10 = require("../hooks/useStickyServerHeaderSubtitle.tsx")(guild);
   let tmp6Result = tmp6(5320);
   const iOSPressEffects = tmp6Result.useIOSPressEffects(4);
   ({ onPressIn, onPressOut, pressableStyles } = iOSPressEffects);
@@ -152,7 +152,7 @@ export default function ChannelListStickyHeader(guild) {
   const obj2 = { ref, collapsable: false, style: tmp4.flex, children: callback(guild(4281).Text, { experimental_useNativeText: true, color: "mobile-text-heading-primary", variant: token, lineClamp: 1, children: favoritesAwareGuildName }) };
   obj3[1] = guild(1297).Icon.Sizes.REFRESH_SMALL_16;
   obj3[2] = tmp4.guildBadge;
-  items2[2] = callback(importDefault(9180), obj3);
+  items2[2] = callback(require("../../../guild/native/GuildBadgeV2.tsx"), obj3);
   let tmp24Result = null;
   if (flag2) {
     const obj4 = { size: "xxs", color: null, style: null };

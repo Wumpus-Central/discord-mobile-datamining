@@ -16,9 +16,9 @@ let c4 = importAllResult;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles(() => {
   let obj = { gradientContainer: null, gradientContainerRefresh: null, transparentBackground: null };
-  obj = { position: "absolute", top: 0, left: importDefault(712).space.PX_4, right: importDefault(712).space.PX_4, bottom: 0, borderRadius: importDefault(712).radii.round };
+  obj = { position: "absolute", top: 0, left: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, right: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, bottom: 0, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.round };
   obj[0] = obj;
-  obj = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, borderRadius: importDefault(712).radii.sm };
+  obj = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.sm };
   obj[1] = obj;
   obj[2] = { backgroundColor: "transparent" };
   return obj;

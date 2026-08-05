@@ -25,12 +25,12 @@ export default function RolePermissionTemplatesActionSheet(guildId) {
     obj.track(constants.OPEN_POPOUT, obj);
   }, []);
   let obj = { title: null };
-  let intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.KgCkoQ);
+  let intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.KgCkoQ);
   const tmp = createCacheKey();
-  obj = { header: jsx(require(5337) /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, { title: null }), startExpanded: true, children: null };
+  obj = { header: jsx(require("../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx") /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, { title: null }), startExpanded: true, children: null };
   obj = { style: tmp.templateContainer, children: null };
-  obj[1] = jsx(importDefault(16573), {
+  obj[1] = jsx(require("../GuildSettingsRoleTemplate.tsx"), {
     onSelect(arg0) {
       let closure_0 = arg0;
       if (closure_0) {
@@ -66,5 +66,5 @@ export default function RolePermissionTemplatesActionSheet(guildId) {
     guildId: guildId.guildId
   });
   obj[2] = <View style={tmp.templateContainer}>{null}</View>;
-  return jsx(require(5646) /* ActionSheet */.ActionSheet, { style: tmp.templateContainer, children: null });
+  return jsx(require("../../../../../design/components/Sheet/native/ActionSheet.native.tsx") /* ActionSheet */.ActionSheet, { style: tmp.templateContainer, children: null });
 };

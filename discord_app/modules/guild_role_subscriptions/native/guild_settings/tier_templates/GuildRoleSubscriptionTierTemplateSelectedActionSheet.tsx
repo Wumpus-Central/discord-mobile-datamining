@@ -28,7 +28,7 @@ export default function GuildRoleSubscriptionTierTemplateSelectedActionSheet(mar
     children: null
   };
   obj = { style: tmp.container, children: null };
-  obj = { contentContainerStyle: { paddingBottom: importDefault(1581)().bottom }, children: null };
+  obj = { contentContainerStyle: { paddingBottom: require("../../../../safe_area/useSafeAreaInsets.native.tsx")().bottom }, children: null };
   const obj1 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = markAsDismissed(1236).intl;
   obj1[2] = intl.string(markAsDismissed(1236).t.Y0PTc0);

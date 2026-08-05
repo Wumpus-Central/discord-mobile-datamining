@@ -214,9 +214,9 @@ export const openAddModeratorsActionSheet = function openAddModeratorsActionShee
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = importDefault(698);
+  let obj = require("../../../../utils/AnalyticsUtils.tsx");
   obj.track(AnalyticEvents.OPEN_POPOUT, { type: "Grant Channel Access" });
-  const obj2 = importDefault(4253);
+  const obj2 = require("../../../action_sheet/native/ActionSheetActionCreators.tsx");
   obj = { channel, canSkip: flag };
-  obj2.openLazy(require(1959) /* asyncRequireImpl */(15770, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj);
+  obj2.openLazy(require("../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(15770, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj);
 };

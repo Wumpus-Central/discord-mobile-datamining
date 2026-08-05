@@ -40,25 +40,25 @@ export default function PremiumGroupFeaturesTableCard(arg0) {
   let subheaderString;
   ({ style, premiumGroupRole } = arg0);
   const tmp = callback3();
-  const tmp4 = importDefault(12662)(premiumGroupRole, false);
+  const tmp4 = require("../hooks/usePremiumGroupFeaturesTableCardText.tsx")(premiumGroupRole, false);
   if (null == tmp4) {
     return null;
   } else {
     ({ subheaderString, bodyString } = tmp4);
     let obj = { borderWidth: 2, direction: null, colors: null, borderRadius: null, style: null, children: null };
-    obj[1] = require(1297) /* Button */.GradientBorder.Direction.HORIZONTAL;
+    obj[1] = require("../../../../design/void/native.tsx") /* Button */.GradientBorder.Direction.HORIZONTAL;
     obj[2] = Gradients.PREMIUM_TIER_2;
     obj[3] = tmp2(712).radii.sm;
     obj[4] = style;
     obj = { start: null, end: null, colors: null, locations: null, style: null, children: null };
     obj[0] = { x: 0, y: 0 };
     obj[1] = { x: 1, y: 0 };
-    let obj2 = require(4129) /* hexToRgba */;
+    let obj2 = require("../../../../utils/ColorUtils.tsx") /* hexToRgba */;
     const items = [obj2.hexWithOpacity("#8547C6", 0.15), , ];
     const tmp2Result = tmp2(4706);
-    items[1] = require(4129) /* hexToRgba */.hexWithOpacity("#B845C1", 0.15);
-    const obj4 = require(4129) /* hexToRgba */;
-    items[2] = require(4129) /* hexToRgba */.hexWithOpacity("#AB5D8A", 0.15);
+    items[1] = require("../../../../utils/ColorUtils.tsx") /* hexToRgba */.hexWithOpacity("#B845C1", 0.15);
+    const obj4 = require("../../../../utils/ColorUtils.tsx") /* hexToRgba */;
+    items[2] = require("../../../../utils/ColorUtils.tsx") /* hexToRgba */.hexWithOpacity("#AB5D8A", 0.15);
     obj[2] = items;
     obj[3] = [0, 0.4996, 0.9593];
     obj[4] = tmp.premiumGroupCard;
@@ -70,14 +70,14 @@ export default function PremiumGroupFeaturesTableCard(arg0) {
     const obj1 = { variant: "text-sm/normal", style: null, children: null };
     obj1[1] = tmp.title;
     obj1[2] = subheaderString;
-    items2[1] = callback(require(4281) /* Text */.Text, obj1);
+    items2[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
     obj2 = { variant: "text-sm/normal", style: null, children: null };
     obj2[1] = tmp.description;
     obj2[2] = bodyString;
-    items2[2] = callback(require(4281) /* Text */.Text, obj2);
+    items2[2] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
     obj[5] = items2;
     obj[5] = callback2(tmp2Result, obj);
-    return callback(require(1297) /* Button */.GradientBorder, obj);
+    return callback(require("../../../../design/void/native.tsx") /* Button */.GradientBorder, obj);
   }
 };
 export { BetaPill };

@@ -3,8 +3,8 @@ import createToggle from "createToggle";
 
 obj = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["5b3FNI"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["5b3FNI"]);
   },
   parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
   unsearchable: true,
@@ -13,7 +13,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.SECURE_FRAMES_VERIFIED_DEVICES,
   getComponent() {
-    return require(14768) /* VerificationListItem */.default;
+    return require("../../privacy_and_safety/native/SettingsSecureFramesVerificationsScreen.tsx") /* VerificationListItem */.default;
   }
 };
 const route = createToggle.createRoute(obj);

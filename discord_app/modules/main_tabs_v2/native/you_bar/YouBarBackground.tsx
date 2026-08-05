@@ -23,10 +23,10 @@ function YouBarMaskedBackground(barWidth) {
   const obj3 = { style: obj4, colors: null, start: null, end: null, locations: null, pointerEvents: "none" };
   const obj2 = { position: "absolute", top: YOU_BAR_HEIGHT / 2, left: diff - 1, right: 0, bottom: 0, backgroundColor: "black" };
   obj4 = { position: "absolute", top: YOU_BAR_HEIGHT / 2, width: 8, left: diff - 8, height: YOU_BAR_HEIGHT / 2 };
-  const tmp3 = importDefault(5260);
-  const tmp4 = importDefault(4706);
-  const obj8 = importDefault(689)("#000000");
-  const items1 = [importDefault(689)("#000000").alpha(0).hex(), "#000000"];
+  const tmp3 = require("../../../../../_runtime/05260__isNativeReflectConstruct.js");
+  const tmp4 = require("../../../../../_runtime/04706_LinearGradient.js");
+  const obj8 = require("../../../../../_runtime/00689_n.js")("#000000");
+  const items1 = [require("../../../../../_runtime/00689_n.js")("#000000").alpha(0).hex(), "#000000"];
   obj3[1] = items1;
   obj3[2] = { x: 0, y: 0 };
   obj3[3] = { x: 1, y: 0 };
@@ -44,11 +44,11 @@ function YouBarAnimatedBackground(arg0) {
   let _require;
   let importDefault;
   ({ barWidth, backgroundColor } = arg0);
-  let obj = _require(3989);
-  const token = obj.useToken(importDefault(712).modules.mobile.YOU_BAR_BORDER_RADIUS);
-  const tmp3 = importDefault(14325)(token);
+  let obj = _require("../../../../design/tokens/native/useToken.tsx");
+  const token = obj.useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.YOU_BAR_BORDER_RADIUS);
+  const tmp3 = require("../../../quests/native/QuestDock/useQuestDockAnimatedBorderRadius.tsx")(token);
   _require = tmp3;
-  const tmp4 = importDefault(14325)(token, YOU_BAR_HEIGHT / 2);
+  const tmp4 = require("../../../quests/native/QuestDock/useQuestDockAnimatedBorderRadius.tsx")(token, YOU_BAR_HEIGHT / 2);
   importDefault = tmp4;
   const tmp = callback3();
   const fn = function u() {
@@ -60,13 +60,13 @@ function YouBarAnimatedBackground(arg0) {
     obj[2] = _undefined(outer1_2[12]).withSpring(_undefined2.get(), outer1_5);
     return obj;
   };
-  obj = { withSpring: _require(4694).withSpring, questDockAnimatedBorderRadius: tmp3, YOU_BAR_SPRING_CONFIG, questDockAnimatedBottomLeftRadius: tmp4 };
+  obj = { withSpring: _require("../../../../design/animation/reanimated/spring/spring.tsx").withSpring, questDockAnimatedBorderRadius: tmp3, YOU_BAR_SPRING_CONFIG, questDockAnimatedBottomLeftRadius: tmp4 };
   fn.__closure = obj;
   fn.__workletHash = 14606701040012;
   fn.__initData = closure_10;
-  const animatedStyle = _require(4146).useAnimatedStyle(fn);
+  const animatedStyle = _require("../../../reanimated/ReanimatedRexport.tsx").useAnimatedStyle(fn);
   const style = [{ position: "absolute" }, tmp.youRowFloating, { width: barWidth, height: YOU_BAR_HEIGHT, backgroundColor }, { borderTopRightRadius: 0, borderTopLeftRadius: 0 }, animatedStyle];
-  return callback(importDefault(4146).View, { style });
+  return callback(require("../../../reanimated/ReanimatedRexport.tsx").View, { style });
 }
 const YOU_BAR_HEIGHT = CONNECTION_BANNER_HEIGHT.YOU_BAR_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = CONNECTION_BANNER_HEIGHT.YOU_BAR_SPRING_CONFIG;
@@ -82,10 +82,10 @@ const memoResult = require("noop").memo(function YouBarBackground(barWidth) {
   let isLargeAvatar;
   barWidth = barWidth.barWidth;
   ({ hasNameplate, isLargeAvatar, avatarSize } = barWidth);
-  let obj = require(3989) /* map */;
-  let token = obj.useToken(importDefault(712).colors.MOBILE_FLOATINGBAR_BACKGROUND);
+  let obj = require("../../../../design/tokens/native/useToken.tsx") /* map */;
+  let token = obj.useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_FLOATINGBAR_BACKGROUND);
   if (hasNameplate) {
-    token = obj2.useToken(importDefault(712).colors.MOBILE_FLOATINGBAR_BACKGROUND_NAMEPLATE);
+    token = obj2.useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_FLOATINGBAR_BACKGROUND_NAMEPLATE);
   }
   if (isLargeAvatar) {
     obj = { barWidth: null, backgroundColor: null, avatarSize: null };

@@ -1,5 +1,5 @@
 // discord_app/modules/activate_device/useDeviceCodeAuthorizeCallback.tsx
-import module_38 from "module_38";
+import 00038__ from "../../../_runtime/metro/00038__.js";
 import noop from "noop";
 
 const require = arg1;

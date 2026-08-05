@@ -41,10 +41,10 @@ export default function MessageRequestsButton(alternateVariant) {
     flag = false;
   }
   const merged = Object.assign(alternateVariant, Object.create(null));
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [processChannel];
   let str = obj.useStateFromStores(items, () => messageRequestsCount.getMessageRequestsCount());
-  let obj1 = require(589) /* initialize */;
+  let obj1 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items1 = [closure_6];
   if (0 === str) {
     if (0 === obj1.useStateFromStores(items1, () => spamChannelsCount.getSpamChannelsCount())) {
@@ -81,7 +81,7 @@ export default function MessageRequestsButton(alternateVariant) {
     return closure_8(View, obj);
   } else {
     const obj2 = { source: null, IconComponent: null, accessibilityLabel: null, buttonText: null, badge: null, badgePosition: "right" };
-    obj2[0] = importDefault(9039);
+    obj2[0] = require("../../../../../_runtime/09039_registerAsset.js");
     obj2[1] = MessageRequestAnimation;
     const intl = tmp3(1236).intl;
     obj2[2] = intl.string(tmp3(1236).t.e7GWjQ);
@@ -92,7 +92,7 @@ export default function MessageRequestsButton(alternateVariant) {
     obj2[3] = str1;
     obj2[4] = str > 0;
     const merged3 = Object.assign(merged);
-    return callback(importDefault(12444), obj2);
+    return callback(require("IconActionButton.tsx"), obj2);
   }
   tmp2 = callback2();
 };

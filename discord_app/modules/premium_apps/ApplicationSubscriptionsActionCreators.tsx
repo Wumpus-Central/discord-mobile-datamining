@@ -19,17 +19,17 @@ function transformSubscriptionListingToStoreListing(id) {
   return obj;
 }
 function dispatchCompat(arr) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "SKUS_FETCH_SUCCESS", skus: arr.map(transformSubscriptionListingToSku) };
   obj.dispatch(obj);
   obj = { type: "STORE_LISTINGS_FETCH_SUCCESS", storeListings: arr.map(transformSubscriptionListingToStoreListing) };
-  importDefault(709).dispatch(obj);
+  require("../../Dispatcher.tsx").dispatch(obj);
   const iter = arr[Symbol.iterator]();
-  const obj3 = importDefault(709);
+  const obj3 = require("../../Dispatcher.tsx");
   while (iter !== undefined) {
     let tmp4 = importDefault;
     let tmp5 = dependencyMap;
-    let obj5 = importDefault(709);
+    let obj5 = require("../../Dispatcher.tsx");
     let obj1 = { type: "SUBSCRIPTION_PLANS_FETCH_SUCCESS", skuId: null, subscriptionPlans: null };
     ({ id: obj6[1], subscription_plans: obj6[2] } = nextResult);
     let dispatchResult2 = obj5.dispatch(obj1);
@@ -330,7 +330,7 @@ export const fetchEntitlementsForGuild = function fetchEntitlementsForGuild() {
   return applyArgumentsResult;
 };
 export const dismissApplicationSubscriptionExpirationNotice = function dismissApplicationSubscriptionExpirationNotice(guildId) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "APPLICATION_SUBSCRIPTIONS_CHANNEL_NOTICE_DISMISSED", guildId };
   obj.dispatch(obj);
 };

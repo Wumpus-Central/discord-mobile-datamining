@@ -5,15 +5,15 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.OAOUoQ);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.OAOUoQ);
   },
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   useValue: function useDMsMessagePreviewsValue() {
-    return require(14453) /* useMessagePreview */.useMessagePreviewSetting();
+    return require("../../../main_tabs_v2/useMessagePreviews.tsx") /* useMessagePreview */.useMessagePreviewSetting();
   },
   onValueChange: function onDMsMessagePreviewsValueChange(arg0) {
-    const MessagePreviewSetting = require(3958) /* explicitContentFromProto */.MessagePreviewSetting;
+    const MessagePreviewSetting = require("../../UserSettings.tsx") /* explicitContentFromProto */.MessagePreviewSetting;
     MessagePreviewSetting.updateSetting(arg0);
   },
   useOptions: function useDMsMessagePreviewsOptions() {

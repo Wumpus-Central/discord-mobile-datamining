@@ -9,12 +9,12 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["3340dY"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["3340dY"]);
   },
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   useIsDisabled: function useSyncThemeDisabled() {
-    let stateFromStores = importDefault(1348)("SyncThemeSetting");
+    let stateFromStores = require("../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("SyncThemeSetting");
     const items = [handleThemeChange];
     if (stateFromStores) {
       stateFromStores = obj.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
@@ -23,7 +23,7 @@ createToggle = {
   },
   useValue: function useSyncThemeAcrossClientsValue() {
     const items = [initialize];
-    return require(589) /* initialize */.useStateFromStores(items, () => false !== initialize.shouldSync("appearance"));
+    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => false !== initialize.shouldSync("appearance"));
   },
   onValueChange: function onSyncThemeAcrossClientsValueChange(is_sync_enabled) {
     gradientPreset = gradientPreset.gradientPreset;
@@ -42,14 +42,14 @@ createToggle = {
         prop = clientThemeSettings.customUserThemeSettings;
       }
     }
-    let obj = require(14445) /* track */;
+    let obj = require("../../../../actions/AnalyticsTrackingActionCreators.tsx") /* track */;
     obj = { is_sync_enabled, base_theme: theme.theme, client_theme: id, has_custom_theme: null != prop };
     obj.track(AnalyticEvents.SYNC_ACROSS_CLIENTS_TOGGLED, obj);
-    const result = importDefault(8620).setShouldSyncAppearanceSettings(is_sync_enabled);
+    const result = require("../../../../actions/UserSettingsActionCreators.tsx").setShouldSyncAppearanceSettings(is_sync_enabled);
   },
   useDescription: function useSyncThemeAcrossClientsDescription() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.CRtkeH).trim();
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.CRtkeH).trim();
   }
 };
 createToggle = createToggle.createToggle(createToggle);

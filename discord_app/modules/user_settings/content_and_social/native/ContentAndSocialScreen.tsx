@@ -185,7 +185,7 @@ export const ConnectedGamesPage = function ConnectedGamesPage() {
   let showLoadingIndicator;
   let slayerSdkApplications;
   const tmp = createCacheKey();
-  ({ showLoadingIndicator, slayerSdkApplications } = importDefault(14781)());
+  ({ showLoadingIndicator, slayerSdkApplications } = require("../../authorized_apps/useAuthorizedSlayerApplications.tsx")());
   if (showLoadingIndicator) {
     let obj = { style: null };
     obj[0] = tmp.loadingIndicator;
@@ -194,15 +194,15 @@ export const ConnectedGamesPage = function ConnectedGamesPage() {
     obj = { style: null, children: null };
     obj[0] = tmp.emptyContainer;
     let obj1 = { variant: "text-md/semibold", color: "text-strong", children: null };
-    let intl = require(1236) /* getSystemLocale */.intl;
-    obj1[2] = intl.string(require(1236) /* getSystemLocale */.t["+0U77d"]);
-    let items = [callback2(require(4281) /* Text */.Text, obj1), ];
+    let intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj1[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["+0U77d"]);
+    let items = [callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1), ];
     let obj2 = { variant: "text-sm/normal", color: "text-muted", children: null };
-    let intl2 = require(1236) /* getSystemLocale */.intl;
+    let intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj3 = { helpdeskArticle: null };
     obj3[0] = tmp2(1945).getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS);
-    obj2[2] = intl2.format(require(1236) /* getSystemLocale */.t.V8wClM, obj3);
-    items[1] = callback2(require(4281) /* Text */.Text, obj2);
+    obj2[2] = intl2.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.V8wClM, obj3);
+    items[1] = callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
     obj[1] = items;
     tmp7 = callback3(closure_6, obj);
     const tmp2Result = tmp2(1945);

@@ -3,7 +3,7 @@ const result = require("set").fileFinishedImporting("modules/guild_role_subscrip
 
 export const getRoleSubscriptionPlanId = function getRoleSubscriptionPlanId(items) {
   items = items.items;
-  importDefault(38)(1 === items.length, "more than 1 subscription item for role subscription");
+  require("../../../_runtime/metro/00038__.js")(1 === items.length, "more than 1 subscription item for role subscription");
   return items[0].planId;
 };
 export const getRoleSubscriptionMutationPlanId = function getRoleSubscriptionMutationPlanId(renewalMutations) {
@@ -15,7 +15,7 @@ export const getRoleSubscriptionMutationPlanId = function getRoleSubscriptionMut
     }
   }
   if (null != items) {
-    importDefault(38)(items.length <= 1, "more than 1 renewal mutation for role subscription");
+    require("../../../_runtime/metro/00038__.js")(items.length <= 1, "more than 1 renewal mutation for role subscription");
     let planId;
     if (items != null) {
       planId = items[0].planId;

@@ -26,15 +26,15 @@ export default function HSVColorPicker(arg0) {
   let value;
   ({ hue, saturation, value, onPanUpdate, onPanFinalize } = arg0);
   ({ saturationValuePickerStyle, saturationValueColorBoxStyle, saturationValueColorBoxInnerStyle, saturationValueSelectorStyle, huePickerStyle, hueColorBarInnerStyle, hueSliderStyle } = arg0);
-  let obj = require(4146);
+  let obj = require("../../reanimated/ReanimatedRexport.tsx");
   const sharedValue = obj.useSharedValue(0);
   const tmp = callback();
-  const sharedValue1 = require(4146).useSharedValue(1);
-  const obj2 = require(4146);
+  const sharedValue1 = require("../../reanimated/ReanimatedRexport.tsx").useSharedValue(1);
+  const obj2 = require("../../reanimated/ReanimatedRexport.tsx");
   obj = { style: tmp.hsvColorPicker, children: null };
-  const sharedValue2 = require(4146).useSharedValue(1);
+  const sharedValue2 = require("../../reanimated/ReanimatedRexport.tsx").useSharedValue(1);
   let tmp11 = hue;
-  const obj3 = require(4146);
+  const obj3 = require("../../reanimated/ReanimatedRexport.tsx");
   const tmp6 = closure_5;
   const tmp7 = View;
   const tmp9 = importDefault;
@@ -56,8 +56,8 @@ export default function HSVColorPicker(arg0) {
   obj[6] = saturationValueSelectorStyle;
   obj[7] = onPanUpdate;
   obj[8] = onPanFinalize;
-  const items = [closure_4(importDefault(13815), obj), ];
-  const tmp10 = importDefault(13815);
+  const items = [closure_4(require("SaturationValueColorPicker.tsx"), obj), ];
+  const tmp10 = require("SaturationValueColorPicker.tsx");
   if (hue == null) {
     hue = sharedValue;
   }

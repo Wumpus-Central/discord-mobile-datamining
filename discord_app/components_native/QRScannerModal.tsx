@@ -1,6 +1,6 @@
 // discord_app/components_native/QRScannerModal.tsx
 import _slicedToArray from "_slicedToArray";
-import module_4624 from "module_4624";
+import AlertActionCreators from "../actions/native/AlertActionCreators.tsx";
 import get_ActivityIndicator from "FAMILY_CENTER_REQUEST_MODAL_KEY";
 import { UserSettingsSections } from "ME";
 import { FAMILY_CENTER_LINK_REQUEST_REGEX as closure_7 } from "items";
@@ -53,7 +53,7 @@ export default function QRScannerModal(showHelp) {
   const tmp = undefined !== showHelp && showHelp;
   const tmp2 = callback(React.useState(true), 2);
   let obj = { style: { flex: 1 }, children: null };
-  ({ bottom, top } = importDefault(1581)());
+  ({ bottom, top } = require("../modules/safe_area/useSafeAreaInsets.native.tsx")());
   if (tmp3) {
     obj = { style: null };
     const items = [, ];
@@ -126,15 +126,15 @@ export default function QRScannerModal(showHelp) {
   }
   const items1 = [tmp10Result, , ];
   let obj1 = { accessibilityRole: "button", accessibilityLabel: null, source: null, style: null, onPress: null };
-  const tmp7 = importDefault(1581)();
+  const tmp7 = require("../modules/safe_area/useSafeAreaInsets.native.tsx")();
   let tmp8 = closure_9;
   let intl = onScanSuccess(1236).intl;
   obj1[1] = intl.string(onScanSuccess(1236).t.cpT0Cq);
-  obj1[2] = importDefault(7870);
+  obj1[2] = require("../../_runtime/07870_registerAsset.js");
   const items2 = [tmp12.closeButton, { marginTop: top }];
   obj1[3] = items2;
-  obj1[4] = importDefault(4490).pop;
-  items1[1] = tmp14(importDefault(8979), obj1);
+  obj1[4] = require("../actions/ModalActionCreators.tsx").pop;
+  items1[1] = tmp14(require("../design/void/TouchableHitBox/native/TouchableHitBox.tsx"), obj1);
   let tmp14Result = null;
   if (tmp) {
     tmp14Result = null;

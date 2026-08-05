@@ -27,8 +27,8 @@ function updateRegion(encodeStreamKeyResult, preferredRegion) {
     tmp3 = preferredRegion !== store.getRegion(hostname.getHostname(encodeStreamKeyResult));
   }
   if (tmp3) {
-    require(4464) /* watchStream */.changeStreamRegion(encodeStreamKeyResult, preferredRegion);
-    const obj = require(4464) /* watchStream */;
+    require("../../actions/StreamActionCreators.tsx") /* watchStream */.changeStreamRegion(encodeStreamKeyResult, preferredRegion);
+    const obj = require("../../actions/StreamActionCreators.tsx") /* watchStream */;
   }
 }
 ({ GO_LIVE_NOTIFY_FRIENDS_MIN_MEMBER_COUNT, STREAM_NOTIFY_GUILD_MAX_SIZE } = StreamIssueReportReasons);

@@ -12,43 +12,43 @@ const require = arg1;
 let closure_9 = {
   mic(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(require(16122) /* PTTButton */.MicButton, {}, arg0);
+    return jsx(require("buttons/VoicePanelMicButton.tsx") /* PTTButton */.MicButton, {}, arg0);
   },
   ptt(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(require(16122) /* PTTButton */.PTTButton, {}, arg0);
+    return jsx(require("buttons/VoicePanelMicButton.tsx") /* PTTButton */.PTTButton, {}, arg0);
   },
   micConnected(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(require(16122) /* PTTButton */.MicButton, {}, arg0);
+    return jsx(require("buttons/VoicePanelMicButton.tsx") /* PTTButton */.MicButton, {}, arg0);
   },
   connect(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(importDefault(16125), {}, arg0);
+    return jsx(require("buttons/VoicePanelConnectButton.tsx"), {}, arg0);
   },
   chat(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(importDefault(16131), {}, arg0);
+    return jsx(require("buttons/VoicePanelChatButton.tsx"), {}, arg0);
   },
   disconnectCancel(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(importDefault(16133), {}, arg0);
+    return jsx(require("buttons/VoicePanelDisconnectCancelButton.tsx"), {}, arg0);
   },
   video(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(importDefault(16135), {}, arg0);
+    return jsx(require("buttons/VoicePanelVideoButton.tsx"), {}, arg0);
   },
   soundboard(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(importDefault(16137), {}, arg0);
+    return jsx(require("buttons/VoicePanelSoundboardButton.tsx"), {}, arg0);
   },
   screenshare(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(importDefault(16139), {}, arg0);
+    return jsx(require("buttons/VoicePanelScreenshareButton.tsx"), {}, arg0);
   },
   drawerToggle(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(importDefault(16142), {}, arg0);
+    return jsx(require("buttons/VoicePanelDrawerToggleButton.tsx"), {}, arg0);
   }
 };
 let closure_10 = { code: "function useControlsButtonsTsx1(){const{getControlsDefaultWidth,windowDimensions,safeArea}=this.__closure;return getControlsDefaultWidth(windowDimensions.get().width,safeArea.get().left,safeArea.get().right);}" };

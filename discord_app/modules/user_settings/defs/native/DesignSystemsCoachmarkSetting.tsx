@@ -11,7 +11,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_COACHMARK,
   getComponent() {
-    return require(14703) /* Content */.default;
+    return require("../../design_system/native/UserSettingsDesignSystemCoachmark.tsx") /* Content */.default;
   }
 };
 const route = createToggle.createRoute(obj);

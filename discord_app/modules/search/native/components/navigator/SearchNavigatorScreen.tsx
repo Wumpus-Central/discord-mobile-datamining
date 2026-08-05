@@ -46,13 +46,13 @@ export default function SearchNavigatorScreen(navigation) {
     obj[0] = outer1_5(navigation(outer1_2[8]).PressableOpacity, obj);
     return outer1_5(outer1_4, obj);
   }, items);
-  const items1 = [callback(importDefault(4814), { absolute: true, wide: true, tall: true }), ];
+  const items1 = [callback(require("../../../../client_themes/native/ThemedGradient.tsx"), { absolute: true, wide: true, tall: true }), ];
   obj = { gesture, children: null };
   const obj1 = { style: items2, children: null };
-  items2 = [tmp.wrapper, { paddingTop: importDefault(15810)() }];
-  const items3 = [callback(importDefault(15582), { searchContext, suggestionsDismissed: dismissed, setSuggestionsDismissed: setDismissed, onSuggestionsLayoutMesure: onLayoutMeasure, backButton: memo }), ];
-  const tmp3 = importDefault(15810)();
-  items3[1] = callback(View, { style: tmp.tabs, children: callback(importDefault(15593), { searchContext, width: importDefault(4141)().width }) });
+  items2 = [tmp.wrapper, { paddingTop: require("../../hooks/useSearchLayoutInsetTop.tsx")() }];
+  const items3 = [callback(require("../layout/SearchScreenSearchBar.tsx"), { searchContext, suggestionsDismissed: dismissed, setSuggestionsDismissed: setDismissed, onSuggestionsLayoutMesure: onLayoutMeasure, backButton: memo }), ];
+  const tmp3 = require("../../hooks/useSearchLayoutInsetTop.tsx")();
+  items3[1] = callback(View, { style: tmp.tabs, children: callback(require("../layout/SearchScreenLayout.tsx"), { searchContext, width: require("../../../../screen/native/useBaseAppContainerDimensions.tsx")().width }) });
   obj1[1] = items3;
   obj[1] = callback2(View, obj1);
   items1[1] = callback(navigation(15357).NonCollapsableGestureDetector, obj);

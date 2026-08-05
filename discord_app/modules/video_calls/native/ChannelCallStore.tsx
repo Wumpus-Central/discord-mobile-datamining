@@ -30,7 +30,7 @@ let result = require("BOX_MODE_ACTIONSHEET_WIDTH").fileFinishedImporting("module
 export const focusTimeout = timeout;
 export const setFocus = function setFocus(arg0) {
   const _require = arg0;
-  _require(705).batchUpdates(() => outer1_10.setState({ focus: closure_0 }));
+  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_10.setState({ focus: closure_0 }));
 };
 export const toggleFocus = function toggleFocus() {
   const focus = obj2.getState().focus;
@@ -49,8 +49,8 @@ export const resetFocus = function resetFocus() {
       callback(table[8]).batchUpdates(() => state.setState({ focus: false }));
     });
   } else {
-    require(705) /* batchUpdates */.batchUpdates(() => state.setState({ focus: true }));
-    const obj = require(705) /* batchUpdates */;
+    require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => state.setState({ focus: true }));
+    const obj = require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */;
   }
 };
 export const clearFocusTimer = function clearFocusTimer() {
@@ -60,10 +60,10 @@ export const setVoiceChatDrawerState = function setVoiceChatDrawerState(embedded
   const _require = embeddedActivityLocationChannelId;
   const importDefault = CLOSED;
   if (!tmp) {
-    importDefault(709).wait(() => CLOSED(outer1_2[10]).updateChatOpen(closure_0, CLOSED === outer1_5.OPEN));
-    const obj = importDefault(709);
+    require("../../../Dispatcher.tsx").wait(() => CLOSED(outer1_2[10]).updateChatOpen(closure_0, CLOSED === outer1_5.OPEN));
+    const obj = require("../../../Dispatcher.tsx");
   }
-  _require(705).batchUpdates(() => outer1_10.setState({ voiceChatDrawerState: closure_1 }));
+  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_10.setState({ voiceChatDrawerState: closure_1 }));
 };
 export const togglePipFocus = throttleResult;
 export const useIsVoiceChatFocused = function useIsVoiceChatFocused() {
@@ -71,9 +71,9 @@ export const useIsVoiceChatFocused = function useIsVoiceChatFocused() {
   return voiceChatDrawerState === VoiceChatDrawerState.OPEN || voiceChatDrawerState === VoiceChatDrawerState.CLOSING;
 };
 export const useChannelCallOrientationHandlers = function useChannelCallOrientationHandlers(isGuildStageVoice) {
-  const tmp2 = importDefault(9657)(isGuildStageVoice);
+  const tmp2 = require("useIsPrivateAudioOnlyCall.tsx")(isGuildStageVoice);
   const require = tmp2;
-  const tmp3 = importDefault(9658)(isGuildStageVoice);
+  const tmp3 = require("../useSelectedParticipant.tsx")(isGuildStageVoice);
   importDefault = tmp3;
   let isGuildStageVoiceResult = isGuildStageVoice.isGuildStageVoice();
   if (isGuildStageVoiceResult) {
@@ -91,12 +91,12 @@ export const useChannelCallOrientationHandlers = function useChannelCallOrientat
   if (currentEmbeddedActivity != null) {
     applicationId = currentEmbeddedActivity.applicationId;
   }
-  obj = require(9659) /* useIsConnectedToVoiceChannel */;
+  obj = require("../../voice_chat/VoiceChatHooks.tsx") /* useIsConnectedToVoiceChannel */;
   const tmp7 = require;
   const tmp8 = applicationId;
   const items = [tmp8];
   const items1 = [applicationId];
-  stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => {
+  stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
     if (null != applicationId) {
       let UNLOCKED2 = applicationId.getOrientationLockStateForApp(tmp);
       if (UNLOCKED2 == null) {
@@ -147,6 +147,6 @@ export const useChannelCallOrientationHandlers = function useChannelCallOrientat
 };
 export const resetChannelCallStore = function resetChannelCallStore() {
   timeout.stop();
-  require(705) /* batchUpdates */.batchUpdates(() => state.setState(closure_9));
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => state.setState(closure_9));
 };
 export const useChannelCallStore = obj2;

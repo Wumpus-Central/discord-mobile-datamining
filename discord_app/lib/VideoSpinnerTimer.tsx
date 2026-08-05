@@ -20,8 +20,8 @@ class VideoSpinnerTimer {
 const prototype = VideoSpinnerTimer.prototype;
 prototype["onSpinnerStarted"] = function onSpinnerStarted() {
   if (null == this.spinnerVisibleStart) {
-    tmp.spinnerVisibleStart = require(4360) /* sleep */.now();
-    const obj = require(4360) /* sleep */;
+    tmp.spinnerVisibleStart = require("../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */.now();
+    const obj = require("../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */;
   }
 };
 prototype["trackSpinnerDuration"] = function trackSpinnerDuration(videoSpinnerContext, userId, arg2) {
@@ -33,7 +33,7 @@ prototype["trackSpinnerDuration"] = function trackSpinnerDuration(videoSpinnerCo
     }
     const sum = num + 1;
     const result = map.set(arg2, sum);
-    let obj = require(4360) /* sleep */;
+    let obj = require("../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */;
     const diff = obj.now() - self.spinnerVisibleStart;
     self.spinnerVisibleStart = null;
     if (diff < 0) {
@@ -76,8 +76,8 @@ prototype["trackSpinnerDuration"] = function trackSpinnerDuration(videoSpinnerCo
       obj[9] = store.getType();
       obj[10] = store.getEffectiveConnectionSpeed();
       obj[11] = store.getServiceProvider();
-      importDefault(698).track(AnalyticEvents.VIDEO_SPINNER_SHOWN_V2, obj);
-      const obj2 = importDefault(698);
+      require("../utils/AnalyticsUtils.tsx").track(AnalyticEvents.VIDEO_SPINNER_SHOWN_V2, obj);
+      const obj2 = require("../utils/AnalyticsUtils.tsx");
     }
     const obj4 = map;
   }

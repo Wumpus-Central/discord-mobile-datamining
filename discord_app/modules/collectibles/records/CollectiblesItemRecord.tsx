@@ -54,7 +54,7 @@ function transformSKUToCollectiblesItem(productLine) {
       }
       if (null != item) {
         type = item.type;
-        if (require(1901) /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION === type) {
+        if (require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION === type) {
           obj = { type: "single", item: null };
           const obj1 = { skuId: null, type: null, asset: null, label: null };
           obj1[0] = productLine.id;

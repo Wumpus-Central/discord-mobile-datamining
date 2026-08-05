@@ -32,7 +32,7 @@ export const getSizedImageProxyURL = function getSizedImageProxyURL(value, arg1)
   let keepAspectRatio;
   let size;
   ({ size, keepAspectRatio } = arg1);
-  const str = importDefault(1467).toURLSafe(value);
+  const str = require("../../utils/URLUtils.tsx").toURLSafe(value);
   if (null != str) {
     let startsWithResult = set.has(str.hostname);
     if (startsWithResult) {
@@ -42,13 +42,13 @@ export const getSizedImageProxyURL = function getSizedImageProxyURL(value, arg1)
     if (startsWithResult) {
       if (null != size) {
         const _String = String;
-        const obj2 = require(1450) /* handleImageLoad */;
-        const StringResult = String(obj2.getBestMediaProxySize(size * require(1450) /* handleImageLoad */.getDevicePixelRatio()));
+        const obj2 = require("../image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */;
+        const StringResult = String(obj2.getBestMediaProxySize(size * require("../image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */.getDevicePixelRatio()));
         const searchParams = str.searchParams;
         const result = searchParams.set("width", StringResult);
         const searchParams2 = str.searchParams;
         const result1 = searchParams2.set("height", StringResult);
-        const obj3 = require(1450) /* handleImageLoad */;
+        const obj3 = require("../image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */;
       }
       if (null != keepAspectRatio) {
         const searchParams3 = str.searchParams;

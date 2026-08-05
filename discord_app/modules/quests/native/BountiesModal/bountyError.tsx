@@ -6,7 +6,7 @@ let set = new Set([260021]);
 const result = set.fileFinishedImporting("modules/quests/native/BountiesModal/bountyError.tsx");
 
 export const openBountyRewardClaimErrorToast = function openBountyRewardClaimErrorToast(closure_0) {
-  let obj = importDefault(3986);
+  let obj = require("../../../toast/native/ToastActionCreators.tsx");
   let code;
   if (closure_0 != null) {
     code = closure_0.code;
@@ -22,11 +22,11 @@ export const openBountyRewardClaimErrorToast = function openBountyRewardClaimErr
       }
       obj = { key: "QUESTS_BOUNTIES_REWARD_CLAIM_FAILED", content: null, icon: null, toastDurationMs: null };
       obj[1] = message;
-      obj[2] = importDefault(8256);
+      obj[2] = require("../../../../../_runtime/08256_registerAsset.js");
       obj[3] = closure_3;
       obj.open(obj);
     }
   }
-  const intl = require(1236) /* getSystemLocale */.intl;
-  message = intl.string(require(1236) /* getSystemLocale */.t.uLjCfn);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  message = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.uLjCfn);
 };

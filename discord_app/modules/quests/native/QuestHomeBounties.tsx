@@ -14,7 +14,7 @@ const require = arg1;
 function EmptyState(reason) {
   reason = reason.reason;
   const tmp = callback4();
-  let obj = require(11086) /* useTrackQuestEventWithImpression */;
+  let obj = require("../lib/analytics/AnalyticsHooks.tsx") /* useTrackQuestEventWithImpression */;
   const bountyCarouselEmptyStateAnalytics = obj.useBountyCarouselEmptyStateAnalytics(reason);
   if (reason === constants.COMPLETED) {
     const intl2 = tmp2(1236).intl;
@@ -29,9 +29,9 @@ function EmptyState(reason) {
     ReqPds = tmp2(1236).t.ReqPds;
   }
   obj = { style: tmp.emptyState, children: null };
-  const items = [callback2(require(5936) /* AccountAgeTier10LargeBadge */.BountiesPosterIllocon, { size: 32 }), ];
+  const items = [callback2(require("../../../design/assets/native.tsx") /* AccountAgeTier10LargeBadge */.BountiesPosterIllocon, { size: 32 }), ];
   obj = { style: tmp.emptyStateText, children: null };
-  const items1 = [callback2(require(4281) /* Text */.Text, { variant: "text-sm/semibold", color: "text-default", children: stringResult }), ];
+  const items1 = [callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-sm/semibold", color: "text-default", children: stringResult }), ];
   const obj1 = { variant: "text-xs/medium", color: "text-muted", children: null };
   const intl3 = tmp2(1236).intl;
   obj1[2] = intl3.format(ReqPds, {
@@ -39,7 +39,7 @@ function EmptyState(reason) {
       callback(table[14])();
     }
   });
-  items1[1] = callback2(require(4281) /* Text */.Text, obj1);
+  items1[1] = callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
   obj[1] = items1;
   items[1] = callback3(View, obj);
   obj[1] = items;
@@ -362,11 +362,11 @@ PX_16 = require("Themes").space.PX_16;
 let closure_13 = require("CARD_WIDTH").CARD_WIDTH + PX_16;
 let closure_14 = createCacheKey.createStyles(() => {
   let obj = { container: null, listContentContainer: null, emptyState: null, emptyStateText: null };
-  obj = { marginBottom: importDefault(712).space.PX_48 };
+  obj = { marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_48 };
   obj[0] = obj;
   obj = { paddingLeft: PX_16 };
   obj[1] = obj;
-  obj[2] = { flexDirection: "row", alignItems: "center", gap: importDefault(712).space.PX_12, borderWidth: 1, borderColor: importDefault(712).colors.BORDER_MUTED, backgroundColor: importDefault(712).colors.BACKGROUND_SURFACE_HIGH, borderRadius: importDefault(712).radii.lg, overflow: "hidden", paddingHorizontal: importDefault(712).space.PX_16, paddingVertical: 14, marginHorizontal: importDefault(712).space.PX_16 };
+  obj[2] = { flexDirection: "row", alignItems: "center", gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, borderWidth: 1, borderColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_MUTED, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, overflow: "hidden", paddingHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, paddingVertical: 14, marginHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
   obj[3] = { flex: 1, gap: 2 };
   return obj;
 });
@@ -445,7 +445,7 @@ const memoResult = importAllResult.memo(function QuestHomeBounties(arg0) {
         obj[0] = tmp2.container;
         obj = { bounties: null };
         obj[0] = questHomeBounties;
-        const items5 = [callback2(importDefault(14229), obj), ];
+        const items5 = [callback2(require("BountiesCtaHeader.tsx"), obj), ];
         let tmp17Result = null;
         if (tmp10) {
           obj1 = { orbShopProducts: null, obtainableOrbRewards: null, showOrbShopPlaceholderCarousel: null };
@@ -480,8 +480,8 @@ const memoResult = importAllResult.memo(function QuestHomeBounties(arg0) {
       tmp8 = stateFromStores;
     }
     obj[1] = tmp8;
-    let tmp20Result = tmp20(importDefault(14229), obj);
-    const tmp25 = importDefault(14229);
+    let tmp20Result = tmp20(require("BountiesCtaHeader.tsx"), obj);
+    const tmp25 = require("BountiesCtaHeader.tsx");
   } else {
     const obj4 = { reason: null };
     obj4[0] = tmp8 ? closure_7.EMPTY : closure_7.COMPLETED;

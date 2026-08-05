@@ -21,7 +21,7 @@ function GuildRow(guildActivity) {
     obj = { guild: null, style: null };
     obj[0] = stateFromStores;
     obj[1] = tmp.guildIcon;
-    obj[2] = callback(importDefault(5661), obj);
+    obj[2] = callback(require("../../guild/native/GuildIcon.tsx"), obj);
     return callback(tmp2(5315).TableRow, obj);
   }
   tmp = createCacheKey();
@@ -37,12 +37,12 @@ export default function FamilyCenterTopGuildsBottomSheet(topGuildActivities) {
   topGuildActivities = topGuildActivities.topGuildActivities;
   let obj = { children: null };
   obj = { variant: "text-md/bold", style: createCacheKey().header, children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl.string(importDefault(2285).Lq9Set);
-  const items = [callback(require(4281) /* Text */.Text, obj), ];
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl.string(require("../FamilyCenter.messages.js").Lq9Set);
+  const items = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
   obj = { hasIcons: true, children: null };
   obj[1] = topGuildActivities.map((guildActivity) => callback(closure_7, { guildActivity }, guildActivity.guild_id));
-  items[1] = callback(require(5649) /* TableRowGroupTitle */.TableRowGroup, obj);
+  items[1] = callback(require("../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj);
   obj[0] = items;
-  return callback2(require(5646) /* ActionSheet */.ActionSheet, obj);
+  return callback2(require("../../../design/components/Sheet/native/ActionSheet.native.tsx") /* ActionSheet */.ActionSheet, obj);
 };

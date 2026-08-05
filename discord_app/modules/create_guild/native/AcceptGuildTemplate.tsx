@@ -20,7 +20,7 @@ let metroImportAll;
 let unpackModuleId;
 const require = arg1;
 function GuildTemplateResolving() {
-  return callback(closure_4, { style: createCacheKey().resolvingContainer, children: callback(require(5732) /* ActivityIndicator */.ActivityIndicator, {}) });
+  return callback(closure_4, { style: createCacheKey().resolvingContainer, children: callback(require("../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx") /* ActivityIndicator */.ActivityIndicator, {}) });
 }
 function GuildTemplateResolved(guildTemplate) {
   let chooseIcon;
@@ -32,20 +32,20 @@ function GuildTemplateResolved(guildTemplate) {
   const errors = guildTemplate.errors;
   ({ createServer, name, setName, icon, chooseIcon } = guildTemplate);
   const tmp = createCacheKey();
-  importDefault(38)(null != guildTemplate, "guild template cannot be null");
-  importDefault(38)(guildTemplate.state !== GuildTemplateStates.RESOLVING, "guild must be resolved");
+  require("../../../../_runtime/metro/00038__.js")(null != guildTemplate, "guild template cannot be null");
+  require("../../../../_runtime/metro/00038__.js")(guildTemplate.state !== GuildTemplateStates.RESOLVING, "guild must be resolved");
   const roles = guildTemplate.serializedSourceGuild.roles;
   const mapped = roles.map((arg0) => outer1_2(outer1_3[13]).fromServer(guildTemplate.serializedSourceGuild.id, arg0));
   const found = mapped.filter((arg0) => !callback(arg0));
   let obj = { contentContainerStyle: items, keyboardShouldPersistTaps: "handled", children: null };
-  items = [tmp.wrapper, { marginBottom: importDefault(1581)().bottom }];
+  items = [tmp.wrapper, { marginBottom: require("../../safe_area/useSafeAreaInsets.native.tsx")().bottom }];
   obj = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = guildTemplate(1236).intl;
   obj[3] = intl.string(guildTemplate(1236).t.QzUORX);
   const items1 = [callback(guildTemplate(4281).Text, obj), , , , , , , , , , ];
   obj = { style: tmp.description, variant: "text-lg/medium", color: "text-default", children: guildTemplate.name };
   items1[1] = callback(guildTemplate(4281).Text, obj);
-  items1[2] = callback(importDefault(11109), { iconBackgroundColor: tmp.wrapper.backgroundColor, style: tmp.iconUploader, onPress: chooseIcon, icon });
+  items1[2] = callback(require("../../guild/native/GuildIconUploader.tsx"), { iconBackgroundColor: tmp.wrapper.backgroundColor, style: tmp.iconUploader, onPress: chooseIcon, icon });
   const obj2 = { label: null, error: null, hint: null, value: null, onChangeText: null, autoFocus: true, autoCorrect: false, returnKeyType: "done" };
   const intl2 = guildTemplate(1236).intl;
   obj2[0] = intl2.string(guildTemplate(1236).t.dBih7e);
@@ -58,7 +58,7 @@ function GuildTemplateResolved(guildTemplate) {
   obj2[2] = intl3.format(guildTemplate(1236).t["2bprXx"], { guidelinesURL: constants.GUIDELINES });
   obj2[3] = name;
   obj2[4] = setName;
-  items1[3] = callback(importDefault(8276), obj2);
+  items1[3] = callback(require("../../../design/void/Form/native/FreeFormInputGroup.tsx"), obj2);
   const obj4 = { style: tmp.createButtonWrapper, children: null };
   const obj5 = { size: "md", text: null, onPress: null, loading: null, disabled: null, grow: true };
   const intl4 = tmp10(1236).intl;
@@ -68,7 +68,7 @@ function GuildTemplateResolved(guildTemplate) {
   obj5[4] = guildTemplate.state === GuildTemplateStates.ACCEPTING;
   obj4[1] = callback(guildTemplate(4695).Button, obj5);
   items1[4] = callback(closure_4, obj4);
-  items1[5] = callback(importDefault(7330), { style: tmp.divider, outer: true });
+  items1[5] = callback(require("../../../design/void/Form/native/FormDivider.tsx"), { style: tmp.divider, outer: true });
   const obj7 = { style: tmp.sectionHeader, variant: "heading-md/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl5 = tmp10(1236).intl;
   obj7[3] = intl5.string(guildTemplate(1236).t.OGiMXJ);
@@ -114,7 +114,7 @@ function Channels(channels) {
   let c0;
   const tmp = createCacheKey();
   c0 = tmp;
-  let obj = importDefault(12)(channels.channels);
+  let obj = require("../../../../_runtime/00012_apply.js")(channels.channels);
   const sortByResult = obj.sortBy((parent_id) => {
     if (null == parent_id.parent_id) {
       const _Number2 = Number;

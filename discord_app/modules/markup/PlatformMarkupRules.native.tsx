@@ -19,7 +19,7 @@ obj = {
           const json = JSON.stringify(match[0]);
           tmp3 = null;
         }
-        obj = importDefault(3926);
+        obj = require("../emojis/UnicodeEmojis.tsx");
       }
       return tmp3;
     }
@@ -42,7 +42,7 @@ obj[2] = {
       obj[0] = arg0[0];
       return obj;
     } else {
-      obj = importDefault(3926);
+      obj = require("../emojis/UnicodeEmojis.tsx");
       const result = obj.maybeTranslateSurrogatesToInlineEmoji(arg0[0]);
       if (null == result) {
         obj = { content: null };
@@ -60,7 +60,7 @@ obj[2] = {
 };
 obj[3] = {
   parse(content) {
-    let obj = importDefault(3926);
+    let obj = require("../emojis/UnicodeEmojis.tsx");
     obj = { type: "emoji", content: content[0], surrogate: obj.convertNameToSurrogate(content[1]) };
     return obj;
   }
@@ -80,10 +80,10 @@ obj[4] = {
     if (flag === undefined) {
       flag = false;
     }
-    let obj = importDefault(1416);
+    let obj = require("../../utils/AvatarUtils.tsx");
     obj = { id: tmp3, animated: "a" === tmp, size: 48 };
     let emojiURL = obj.getEmojiURL(obj);
-    const emojiURL1 = importDefault(1416).getEmojiURL({ id: tmp3, animated: false, size: 48 });
+    const emojiURL1 = require("../../utils/AvatarUtils.tsx").getEmojiURL({ id: tmp3, animated: false, size: 48 });
     obj = { id: tmp3, alt: tmp2, src: null, frozenSrc: null };
     if (flag) {
       emojiURL = emojiURL1;
@@ -95,7 +95,7 @@ obj[4] = {
 };
 obj[5] = {
   parse(arg0, arg1, arg2) {
-    const channelMention = importDefault(4725).channelMention;
+    const channelMention = require("MarkupChannelMentionRule.tsx").channelMention;
     const parsed = channelMention.parse(arg0, arg1, arg2);
     const obj = {};
     const merged = Object.assign(parsed);
@@ -164,7 +164,7 @@ obj[5] = {
 };
 obj[6] = {
   parse(arg0, arg1, arg2) {
-    const channelOrMessageUrl = importDefault(4725).channelOrMessageUrl;
+    const channelOrMessageUrl = require("MarkupChannelMentionRule.tsx").channelOrMessageUrl;
     const parsed = channelOrMessageUrl.parse(arg0, arg1, arg2);
     const obj = {};
     const merged = Object.assign(parsed);
@@ -233,7 +233,7 @@ obj[6] = {
 };
 obj[7] = {
   parse(arg0, arg1, arg2) {
-    const mediaPostLink = importDefault(4725).mediaPostLink;
+    const mediaPostLink = require("MarkupChannelMentionRule.tsx").mediaPostLink;
     const parsed = mediaPostLink.parse(arg0, arg1, arg2);
     let obj = {};
     let merged = Object.assign(parsed);
@@ -302,7 +302,7 @@ obj[7] = {
 };
 obj[8] = {
   parse(arg0, arg1, arg2) {
-    const attachmentLink = importDefault(4728).attachmentLink;
+    const attachmentLink = require("MarkupAttachmentLinkRule.tsx").attachmentLink;
     return attachmentLink.parse(arg0, arg1, arg2);
   }
 };
@@ -321,10 +321,10 @@ let obj1 = {
     if (flag === undefined) {
       flag = false;
     }
-    let obj = importDefault(1416);
+    let obj = require("../../utils/AvatarUtils.tsx");
     obj = { id: tmp3, animated: "a" === tmp, size: 48 };
     let emojiURL = obj.getEmojiURL(obj);
-    const emojiURL1 = importDefault(1416).getEmojiURL({ id: tmp3, animated: false, size: 48 });
+    const emojiURL1 = require("../../utils/AvatarUtils.tsx").getEmojiURL({ id: tmp3, animated: false, size: 48 });
     obj = { id: tmp3, alt: tmp2, src: null, frozenSrc: null };
     if (flag) {
       emojiURL = emojiURL1;

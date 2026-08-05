@@ -7,5 +7,5 @@ export const isRecentlyActiveChannelsEnabled = function isRecentlyActiveChannels
   return getUserAgnosticState.get("enable_recently_active");
 };
 export const useRecentlyActiveChannelsEnabled = function useRecentlyActiveChannelsEnabled() {
-  return importDefault(5240)("enable_recently_active");
+  return require("../devtools/design_toggles/useDesignToggle.tsx")("enable_recently_active");
 };

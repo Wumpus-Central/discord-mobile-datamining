@@ -25,7 +25,7 @@ function FamilyCenterAcceptedLinkRow(otherUser) {
     obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
     obj = { name: null };
     obj[0] = str;
-    obj[1] = intl.formatToPlainString(importDefault(2285).T7DUoU, obj);
+    obj[1] = intl.formatToPlainString(require("../FamilyCenter.messages.js").T7DUoU, obj);
     obj[2] = function onPress() {
       let obj = outer1_1(outer1_2[15]);
       obj = { otherUser: str };
@@ -34,12 +34,12 @@ function FamilyCenterAcceptedLinkRow(otherUser) {
     obj[3] = tmp.actionButton;
     const obj1 = { size: null, disableColor: true, source: null };
     obj1[0] = str(1297).Icon.Sizes.SMALL;
-    obj1[2] = importDefault(14073);
+    obj1[2] = require("../../../../_runtime/14073_registerAsset.js");
     obj[4] = closure_6(str(1297).Icon, obj1);
     obj[1] = closure_6(str(4812).PressableOpacity, obj);
-    tmp4Result = tmp4(importDefault(14068), obj);
+    tmp4Result = tmp4(require("FamilyCenterLinkRow.tsx"), obj);
     const tmp5 = importDefault;
-    const tmp7 = importDefault(14068);
+    const tmp7 = require("FamilyCenterLinkRow.tsx");
   }
   return tmp4Result;
 }
@@ -59,16 +59,16 @@ const result = require("items").fileFinishedImporting("modules/parent_tools/nati
 
 export default function FamilyCenterAcceptedLinks() {
   const tmp = createCacheKey();
-  let obj = require(7259) /* useUserIdsForLinkStatus */;
+  let obj = require("../hooks/useUserLinks.tsx") /* useUserIdsForLinkStatus */;
   const activeLinkUsers = obj.useActiveLinkUsers();
-  obj = { count: activeLinkUsers.length, max: importDefault(7260)() ? closure_4 : closure_5 };
-  const tmp4 = importDefault(7260)();
+  obj = { count: activeLinkUsers.length, max: require("../hooks/useIsInAdultAgeGroup.tsx")() ? closure_4 : closure_5 };
+  const tmp4 = require("../hooks/useIsInAdultAgeGroup.tsx")();
   const intl = tmp5(1236).intl;
-  const tmp5Result = require(11239) /* useAgeSpecificText */;
+  const tmp5Result = require("../hooks/useAgeSpecificText.tsx") /* useAgeSpecificText */;
   const intl2 = tmp5(1236).intl;
   obj = { style: tmp.container, children: null };
-  const ageSpecificText = tmp5Result.useAgeSpecificText(intl.formatToPlainString(importDefault(2285)["+tnO34"], obj), intl2.formatToPlainString(tmp2(2285)["pu6/U0"], obj));
-  const items = [callback(require(4281) /* Text */.Text, { style: tmp.header, variant: "eyebrow", color: "text-default", children: ageSpecificText }), ];
+  const ageSpecificText = tmp5Result.useAgeSpecificText(intl.formatToPlainString(require("../FamilyCenter.messages.js")["+tnO34"], obj), intl2.formatToPlainString(tmp2(2285)["pu6/U0"], obj));
+  const items = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: tmp.header, variant: "eyebrow", color: "text-default", children: ageSpecificText }), ];
   const obj2 = { style: tmp.content, children: null };
   if (0 === activeLinkUsers.length) {
     const obj3 = { style: null, children: null };

@@ -7,7 +7,7 @@ const result = require("ThirdPartyGameApplicationWebsiteCategory").fileFinishedI
 
 export default function getGameProfileStoreWebsiteData(category) {
   category = category.category;
-  if (require(9204) /* ThirdPartyGameApplicationWebsiteCategory */.ThirdPartyGameApplicationWebsiteCategory.STEAM === category) {
+  if (require("../../../../../discord_common/js/shared/shared-constants/ThirdPartyGameApplicationWebsiteCategory.tsx") /* ThirdPartyGameApplicationWebsiteCategory */.ThirdPartyGameApplicationWebsiteCategory.STEAM === category) {
     let obj = { icon: null, action: null, title: null, url: null };
     obj[0] = jsx(tmp(9209).SteamNeutralIcon, { size: "md" });
     obj[1] = tmp(9200).GameProfileTrackActionActions.SteamStoreLink;

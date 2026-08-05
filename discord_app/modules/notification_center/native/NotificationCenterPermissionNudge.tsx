@@ -30,7 +30,7 @@ function NotificationCenterBannerImpl(onDismiss) {
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.iconContainer, children: null };
   obj = { size: "md", color: null };
-  obj[1] = importDefault(712).colors.ICON_STRONG;
+  obj[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.ICON_STRONG;
   obj[1] = callback4(onDismiss(9647).BellSlashIcon, obj);
   const items = [callback4(View, obj), , ];
   const obj1 = { style: tmp.contentContainer, children: null };
@@ -40,7 +40,7 @@ function NotificationCenterBannerImpl(onDismiss) {
   const items1 = [callback4(onDismiss(4281).Text, obj2), , ];
   const obj3 = { variant: "text-md/medium", color: "text-muted", style: null, children: null };
   const obj4 = { marginTop: null };
-  obj4[0] = importDefault(712).space.PX_4;
+  obj4[0] = require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4;
   obj3[2] = obj4;
   const intl2 = onDismiss(1236).intl;
   obj3[3] = intl2.string(onDismiss(1236).t["9CoPDE"]);
@@ -94,9 +94,9 @@ let obj2 = { alignSelf: "flex-start", marginTop: require("Themes").space.PX_12 }
 const result = require("get ActivityIndicator").fileFinishedImporting("modules/notification_center/native/NotificationCenterPermissionNudge.tsx");
 
 export default function NotificationCenterPermissionNudge() {
-  let obj = importDefault(14560);
-  const canSeePushNotificationNudge = require(11692) /* _requestPushNotificationPermission */.useCanSeePushNotificationNudge();
-  const obj2 = require(11692) /* _requestPushNotificationPermission */;
+  let obj = require("../../nuf/native/ContextualOptInNudgeHoldoutExperiment.tsx");
+  const canSeePushNotificationNudge = require("../../nuf/native/NotificationPermissionUtil.tsx") /* _requestPushNotificationPermission */.useCanSeePushNotificationNudge();
+  const obj2 = require("../../nuf/native/NotificationPermissionUtil.tsx") /* _requestPushNotificationPermission */;
   let prop = null;
   if (!obj.useConfig({ location: "NotificationCenterPermissionNudge" }).inHoldout) {
     prop = null;
@@ -104,12 +104,12 @@ export default function NotificationCenterPermissionNudge() {
       prop = tmp2(1358).DismissibleContent.NOTIFICATION_NUDGE_NOTIFICATION_CENTER_BANNER;
     }
   }
-  const tmp5 = callback(require(5931) /* useSelectedDismissibleContent */.useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: 604800000 }), 2);
+  const tmp5 = callback(require("../../dismissible_content/hooks/useSelectedDismissibleContent.tsx") /* useSelectedDismissibleContent */.useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: 604800000 }), 2);
   require = tmp6;
   const items = [tmp5[1]];
-  const obj3 = require(5931) /* useSelectedDismissibleContent */;
+  const obj3 = require("../../dismissible_content/hooks/useSelectedDismissibleContent.tsx") /* useSelectedDismissibleContent */;
   let tmp8 = null;
-  if (tmp5[0] === require(1358) /* DismissibleContent */.DismissibleContent.NOTIFICATION_NUDGE_NOTIFICATION_CENTER_BANNER) {
+  if (tmp5[0] === require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.NOTIFICATION_NUDGE_NOTIFICATION_CENTER_BANNER) {
     obj = { onDismiss: null };
     obj[0] = tmp7;
     tmp8 = callback4(NotificationCenterBannerImpl, obj);

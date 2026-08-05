@@ -53,10 +53,10 @@ class ToastEmoji {
 }
 function ToastText(emoji) {
   let obj = { variant: "text-sm/normal", style: createCacheKey().toastText, children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   obj = { emojiName: emoji.emoji.name };
-  obj[2] = intl.format(require(1236) /* getSystemLocale */.t.nKY0Fl, obj);
-  return jsx(require(4281) /* Text */.Text, { emojiName: emoji.emoji.name });
+  obj[2] = intl.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.nKY0Fl, obj);
+  return jsx(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { emojiName: emoji.emoji.name });
 }
 createCacheKey = { toastEmoji: null, toastEmojiCustom: null, toastEmojiText: null, toastText: null };
 createCacheKey = { marginLeft: require("Themes").space.PX_8, marginVertical: require("Themes").space.PX_8 };
@@ -96,7 +96,7 @@ export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdated
     obj[2] = function content() {
       return outer1_6(outer1_9, { emoji });
     };
-    importDefault(3986).open(obj);
-    const obj2 = importDefault(3986);
+    require("../../toast/native/ToastActionCreators.tsx").open(obj);
+    const obj2 = require("../../toast/native/ToastActionCreators.tsx");
   }
 };

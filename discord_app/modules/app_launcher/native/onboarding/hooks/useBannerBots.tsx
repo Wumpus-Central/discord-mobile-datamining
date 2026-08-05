@@ -22,8 +22,8 @@ export const useBannerBots = function useBannerBots(context) {
       return map;
     }, items);
   })({ context });
-  let apps = _require(11366).useApplicationsInContext({ context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
-  const obj2 = _require(11366);
+  let apps = _require("../../../utils/AppLauncherSearchUtils.tsx").useApplicationsInContext({ context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
+  const obj2 = _require("../../../utils/AppLauncherSearchUtils.tsx");
   const tmp2 = _require;
   const obj3 = (function useCommandsMap(context) {
     let commands;
@@ -60,8 +60,8 @@ export const useBannerBots = function useBannerBots(context) {
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  const activityApplications = _require(11337).useActivityApplications({ guildId: guild_id, fetchesShelf: true });
-  const obj4 = _require(11337);
+  const activityApplications = _require("useActivityApplications.tsx").useActivityApplications({ guildId: guild_id, fetchesShelf: true });
+  const obj4 = _require("useActivityApplications.tsx");
   let items = [initialize];
   const stateFromStores = tmp2(589).useStateFromStores(items, () => recentApplicationCommandMetadata.getRecentApplicationCommandMetadata());
   let value = null;

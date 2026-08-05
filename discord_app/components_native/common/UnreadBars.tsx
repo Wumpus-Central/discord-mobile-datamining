@@ -143,9 +143,9 @@ prototype["render"] = function render() {
   obj = { style: items, nativeID: "unread-bar-view-" + mention + "-" + section, children: null };
   items[1] = mention;
   const obj1 = { style: tmp.unreadText, maxFontSizeMultiplier: 1.5, children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
   const string = intl.string;
-  const t = require(1236) /* getSystemLocale */.t;
+  const t = require("../../intl/index.native.tsx") /* getSystemLocale */.t;
   if (props.compact) {
     let stringResult = string(t.y2b7CA);
   } else if (mention) {
@@ -154,7 +154,7 @@ prototype["render"] = function render() {
     stringResult = string(t.FCRiT3);
   }
   obj1[2] = stringResult;
-  obj[2] = closure_8(require(1297) /* Button */.LegacyText, obj1);
+  obj[2] = closure_8(require("../../design/void/native.tsx") /* Button */.LegacyText, obj1);
   obj[2] = closure_8(closure_4, obj);
   obj[5] = closure_8(RN.View, obj);
   return closure_8(closure_6, obj);
@@ -179,7 +179,7 @@ export default function UnreadBars(contentInset) {
   function handlePress(section) {
     callback({ section: section.section, item: section.row, animated: true });
   }
-  let obj1 = require(589) /* initialize */;
+  let obj1 = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj1.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let obj = { component: importAllResult.Fragment, children: null };
@@ -206,5 +206,5 @@ export default function UnreadBars(contentInset) {
   }
   items1[1] = tmp6;
   obj[1] = items1;
-  return closure_9(require(10206) /* _toPropertyKey */.TransitionGroup, obj);
+  return closure_9(require("../../../discord_common/js/packages/transition-group/TransitionGroup.tsx") /* _toPropertyKey */.TransitionGroup, obj);
 };

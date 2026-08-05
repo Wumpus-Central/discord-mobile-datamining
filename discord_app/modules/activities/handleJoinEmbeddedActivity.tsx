@@ -316,8 +316,8 @@ let result = require("ensureGuildLoaded").fileFinishedImporting("modules/activit
 
 export default function handleJoinEmbeddedActivity(arg0) {
   const _require = arg0;
-  const obj = _require(10536);
-  return obj.wrapPreemptiveActivityPopout(_require(10536).shouldOpenActivityInPopoutWindow(), () => (function handleJoinEmbeddedActivityInternal(closure_0) {
+  const obj = _require("ActivityPopoutUtils.native.tsx");
+  return obj.wrapPreemptiveActivityPopout(_require("ActivityPopoutUtils.native.tsx").shouldOpenActivityInPopoutWindow(), () => (function handleJoinEmbeddedActivityInternal(closure_0) {
     const self = this;
     const apply = closure_10.apply;
     if (typeof apply === "unknown") {

@@ -9,6 +9,6 @@ export const useIsRelationshipTypeSpamReportable = function useIsRelationshipTyp
   const _require = id;
   const items = [upsertRelationship];
   const items1 = [id];
-  const stateFromStores = _require(589).useStateFromStores(items, () => outer1_2.getRelationshipType(closure_0), items1);
+  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_2.getRelationshipType(closure_0), items1);
   return stateFromStores === RelationshipTypes.NONE || stateFromStores === RelationshipTypes.BLOCKED || stateFromStores === RelationshipTypes.PENDING_INCOMING;
 };

@@ -43,7 +43,7 @@ prototype["initialize"] = function initialize() {
   if (null != muxEnvKey) {
     if (0 !== muxEnvKey.length) {
       try {
-        let obj = importDefault(14283);
+        let obj = require("../../../../_runtime/14283_U.js");
         let flag = self.config.debug;
         if (flag == null) {
           flag = false;
@@ -96,9 +96,9 @@ prototype["emitPlayerReady"] = function emitPlayerReady() {
   if (this.isInitialized) {
     if (!self.playerReadyEmitted) {
       try {
-        importDefault(14283).emit(self.playerId, "playerready");
+        require("../../../../_runtime/14283_U.js").emit(self.playerId, "playerready");
         self.playerReadyEmitted = true;
-        const obj = importDefault(14283);
+        const obj = require("../../../../_runtime/14283_U.js");
       } catch (tmp4) {
         logger.error("Error emitting playerready event", tmp4);
       }
@@ -110,9 +110,9 @@ prototype["emitViewInit"] = function emitViewInit() {
   if (this.isInitialized) {
     if (!self.viewInitEmitted) {
       try {
-        importDefault(14283).emit(self.playerId, "viewinit");
+        require("../../../../_runtime/14283_U.js").emit(self.playerId, "viewinit");
         self.viewInitEmitted = true;
-        const obj = importDefault(14283);
+        const obj = require("../../../../_runtime/14283_U.js");
       } catch (tmp4) {
         logger.error("Error emitting viewinit event", tmp4);
       }
@@ -147,10 +147,10 @@ prototype["emitPlay"] = function emitPlay() {
         self.emitViewInit();
       }
       self.updatePlayerState(false);
-      importDefault(14283).emit(self.playerId, "play");
+      require("../../../../_runtime/14283_U.js").emit(self.playerId, "play");
       self.playStarted = true;
       self.playingEmitted = false;
-      const obj = importDefault(14283);
+      const obj = require("../../../../_runtime/14283_U.js");
     } catch (tmp6) {
       logger.error("Error emitting play event", tmp6);
     }
@@ -161,8 +161,8 @@ prototype["emitPause"] = function emitPause() {
   if (this.isInitialized) {
     try {
       self.updatePlayerState(true);
-      importDefault(14283).emit(self.playerId, "pause");
-      const obj = importDefault(14283);
+      require("../../../../_runtime/14283_U.js").emit(self.playerId, "pause");
+      const obj = require("../../../../_runtime/14283_U.js");
     } catch (tmp5) {
       logger.error("Error emitting pause event", tmp5);
     }
@@ -177,13 +177,13 @@ prototype["emitPlaying"] = function emitPlaying() {
           self.emitViewInit();
         }
         if (!self.playStarted) {
-          importDefault(14283).emit(self.playerId, "play");
+          require("../../../../_runtime/14283_U.js").emit(self.playerId, "play");
           self.playStarted = true;
-          const obj = importDefault(14283);
+          const obj = require("../../../../_runtime/14283_U.js");
         }
-        importDefault(14283).emit(self.playerId, "playing");
+        require("../../../../_runtime/14283_U.js").emit(self.playerId, "playing");
         self.playingEmitted = true;
-        const obj2 = importDefault(14283);
+        const obj2 = require("../../../../_runtime/14283_U.js");
       } catch (tmp8) {
         logger.error("Error emitting playing event", tmp8);
       }
@@ -193,8 +193,8 @@ prototype["emitPlaying"] = function emitPlaying() {
 prototype["emitWaiting"] = function emitWaiting() {
   if (this.isInitialized) {
     try {
-      importDefault(14283).emit(tmp.playerId, "waiting");
-      const obj = importDefault(14283);
+      require("../../../../_runtime/14283_U.js").emit(tmp.playerId, "waiting");
+      const obj = require("../../../../_runtime/14283_U.js");
     } catch (tmp5) {
       logger.error("Error emitting waiting event", tmp5);
     }
@@ -206,8 +206,8 @@ prototype["emitCanPlay"] = function emitCanPlay() {
 prototype["emitSeeking"] = function emitSeeking() {
   if (this.isInitialized) {
     try {
-      importDefault(14283).emit(tmp.playerId, "seeking");
-      const obj = importDefault(14283);
+      require("../../../../_runtime/14283_U.js").emit(tmp.playerId, "seeking");
+      const obj = require("../../../../_runtime/14283_U.js");
     } catch (tmp5) {
       logger.error("Error emitting seeking event", tmp5);
     }
@@ -216,8 +216,8 @@ prototype["emitSeeking"] = function emitSeeking() {
 prototype["emitSeeked"] = function emitSeeked() {
   if (this.isInitialized) {
     try {
-      importDefault(14283).emit(tmp.playerId, "seeked");
-      const obj = importDefault(14283);
+      require("../../../../_runtime/14283_U.js").emit(tmp.playerId, "seeked");
+      const obj = require("../../../../_runtime/14283_U.js");
     } catch (tmp5) {
       logger.error("Error emitting seeked event", tmp5);
     }
@@ -227,9 +227,9 @@ prototype["emitEnded"] = function emitEnded() {
   const self = this;
   if (this.isInitialized) {
     try {
-      importDefault(14283).emit(self.playerId, "ended");
+      require("../../../../_runtime/14283_U.js").emit(self.playerId, "ended");
       self.emitViewEnd();
-      const obj = importDefault(14283);
+      const obj = require("../../../../_runtime/14283_U.js");
     } catch (tmp5) {
       logger.error("Error emitting ended event", tmp5);
     }
@@ -238,8 +238,8 @@ prototype["emitEnded"] = function emitEnded() {
 prototype["emitError"] = function emitError(arg0) {
   if (this.isInitialized) {
     try {
-      importDefault(14283).emit(tmp.playerId, "error", arg0);
-      const obj = importDefault(14283);
+      require("../../../../_runtime/14283_U.js").emit(tmp.playerId, "error", arg0);
+      const obj = require("../../../../_runtime/14283_U.js");
     } catch (tmp6) {
       logger.error("Error emitting error event", tmp6);
     }
@@ -256,7 +256,7 @@ prototype["emitTimeUpdate"] = function emitTimeUpdate() {
       if (playStarted) {
         self.emitPlaying();
       }
-      let obj = importDefault(14283);
+      let obj = require("../../../../_runtime/14283_U.js");
       obj = { player_playhead_time: null };
       obj[0] = self.currentPlayheadTime * c6;
       obj.emit(self.playerId, "timeupdate", obj);
@@ -279,8 +279,8 @@ prototype["emitRenditionChange"] = function emitRenditionChange(width, height, b
       obj[0] = width;
       obj[1] = height;
       obj[2] = bitrate;
-      importDefault(14283).emit(self.playerId, "renditionchange", obj);
-      const obj2 = importDefault(14283);
+      require("../../../../_runtime/14283_U.js").emit(self.playerId, "renditionchange", obj);
+      const obj2 = require("../../../../_runtime/14283_U.js");
     } catch (tmp9) {
       logger.error("Error emitting renditionchange event", tmp9);
     }
@@ -291,7 +291,7 @@ prototype["destroy"] = function destroy() {
   if (this.isInitialized) {
     try {
       self.emitViewEnd();
-      let obj = importDefault(14283);
+      let obj = require("../../../../_runtime/14283_U.js");
       obj.emit(self.playerId, "destroy");
       self.isInitialized = false;
       obj = { playerId: null };
@@ -305,8 +305,8 @@ prototype["destroy"] = function destroy() {
 prototype["emitViewEnd"] = function emitViewEnd() {
   if (this.isInitialized) {
     try {
-      importDefault(14283).emit(tmp.playerId, "viewend");
-      const obj = importDefault(14283);
+      require("../../../../_runtime/14283_U.js").emit(tmp.playerId, "viewend");
+      const obj = require("../../../../_runtime/14283_U.js");
     } catch (tmp5) {
       logger.error("Error emitting viewend event", tmp5);
     }

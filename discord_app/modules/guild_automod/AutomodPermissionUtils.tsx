@@ -88,7 +88,7 @@ export const useCurrentUserAutomodQuaratinedProfile = function useCurrentUserAut
   const _require = guild_id;
   const items = [trackCommunicationDisabled];
   const items1 = [guild_id];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let tmp2 = null != selfMember;
     if (tmp2) {
       selfMember = outer1_2.getSelfMember(tmp);

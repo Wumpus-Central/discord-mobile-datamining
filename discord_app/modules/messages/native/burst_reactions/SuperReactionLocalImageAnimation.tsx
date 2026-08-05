@@ -11,14 +11,14 @@ export default function SuperReactionLocalImageAnimation(arg0) {
   let tmp = null;
   ({ localImageSource, animationSource } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  let obj = require(7163) /* _generateAnimationSource */;
+  let obj = require("BurstReactionEffectUtils.tsx") /* _generateAnimationSource */;
   const superReactionAnimationSourceFromLocalImage = obj.useSuperReactionAnimationSourceFromLocalImage({ animationSource, localImageSource });
   if (null != superReactionAnimationSourceFromLocalImage) {
     obj = { loop: true, source: null };
     obj[1] = superReactionAnimationSourceFromLocalImage;
     const merged1 = Object.assign(merged);
-    tmp = jsx(importDefault(7206), { loop: true, source: null });
-    const tmp7 = importDefault(7206);
+    tmp = jsx(require("FadeOutLottieAnimation.tsx"), { loop: true, source: null });
+    const tmp7 = require("FadeOutLottieAnimation.tsx");
   }
   return tmp;
 };

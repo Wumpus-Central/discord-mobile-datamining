@@ -115,7 +115,7 @@ class NotificationSettings extends PureComponent {
 }
 const prototype = NotificationSettings.prototype;
 prototype["componentDidMount"] = function componentDidMount() {
-  let obj = importDefault(4479);
+  let obj = require("../../app_analytics/AppAnalyticsUtils.tsx");
   obj = { settings_type: "guild", destination_pane: constants4.GUILD_NOTIFICATION_SETTINGS };
   obj.trackWithMetadata(constants.SETTINGS_PANE_VIEWED, obj);
 };
@@ -133,15 +133,15 @@ prototype["renderServerSettings"] = function renderServerSettings() {
     obj = { children: null };
     const obj1 = { guildId: null };
     obj1[0] = self.props.guildId;
-    const items = [callback2(require(9744) /* NotificationSettingsPresets */.NotificationSettingsGuildPresets, obj1), , ];
+    const items = [callback2(require("../../notifications/settings/native/NotificationSettingsPresets.tsx") /* NotificationSettingsPresets */.NotificationSettingsGuildPresets, obj1), , ];
     const obj2 = { style: null, guildId: null };
     obj2[0] = { marginTop: 24 };
     obj2[1] = self.props.guildId;
-    items[1] = callback2(require(9748) /* NotificationSettingsMessageNotification */.NotificationSettingsGuildMessageNotification, obj2);
+    items[1] = callback2(require("../../notifications/settings/native/NotificationSettingsMessageNotification.tsx") /* NotificationSettingsMessageNotification */.NotificationSettingsGuildMessageNotification, obj2);
     const obj3 = { style: null, guildId: null };
     obj3[0] = { marginTop: 24 };
     obj3[1] = self.props.guildId;
-    items[2] = callback2(require(9755) /* NotificationSettingsMessageUnread */.NotificationSettingsGuildMessageUnread, obj3);
+    items[2] = callback2(require("../../notifications/settings/native/NotificationSettingsMessageUnread.tsx") /* NotificationSettingsMessageUnread */.NotificationSettingsGuildMessageUnread, obj3);
     obj[0] = items;
     const items1 = [tmp2(View, obj), ];
     const obj4 = { style: null };
@@ -151,13 +151,13 @@ prototype["renderServerSettings"] = function renderServerSettings() {
     let tmp2Result = tmp2(closure_28, obj);
   } else {
     obj = { title: null, value: null, onChange: null, hasIcons: false, children: null };
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[0] = intl.string(require(1236) /* getSystemLocale */.t.lprV7V);
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.lprV7V);
     obj[1] = messageNotifications;
     obj[2] = self.handleTypeChange;
     const obj5 = { label: null, disabled: null, value: null, subLabel: null };
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    obj5[0] = intl2.string(require(1236) /* getSystemLocale */.t["n/bTaY"]);
+    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj5[0] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["n/bTaY"]);
     obj5[1] = muted;
     obj5[2] = constants2.ALL_MESSAGES;
     let stringResult = null;
@@ -169,21 +169,21 @@ prototype["renderServerSettings"] = function renderServerSettings() {
       }
     }
     obj5[3] = stringResult;
-    const items2 = [callback2(require(7794) /* TableRadioRow */.TableRadioRow, obj5), , ];
+    const items2 = [callback2(require("../../../design/components/TableRow/native/TableRadioRow.native.tsx") /* TableRadioRow */.TableRadioRow, obj5), , ];
     const obj6 = { label: null, value: null, disabled: null };
     const intl4 = tmp3(1236).intl;
-    obj6[0] = intl4.format(require(1236) /* getSystemLocale */.t.L2hmYy, {});
+    obj6[0] = intl4.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.L2hmYy, {});
     obj6[1] = constants2.ONLY_MENTIONS;
     obj6[2] = muted;
-    items2[1] = callback2(require(7794) /* TableRadioRow */.TableRadioRow, obj6);
+    items2[1] = callback2(require("../../../design/components/TableRow/native/TableRadioRow.native.tsx") /* TableRadioRow */.TableRadioRow, obj6);
     const obj7 = { label: null, value: null, disabled: null };
     const intl5 = tmp3(1236).intl;
-    obj7[0] = intl5.string(require(1236) /* getSystemLocale */.t.CtVGyQ);
+    obj7[0] = intl5.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.CtVGyQ);
     obj7[1] = constants2.NO_MESSAGES;
     obj7[2] = muted;
-    items2[2] = callback2(require(7794) /* TableRadioRow */.TableRadioRow, obj7);
+    items2[2] = callback2(require("../../../design/components/TableRow/native/TableRadioRow.native.tsx") /* TableRadioRow */.TableRadioRow, obj7);
     obj[4] = items2;
-    tmp2Result = tmp2(require(7795) /* context */.TableRadioGroup, obj);
+    tmp2Result = tmp2(require("../../../design/components/TableRow/native/TableRadioGroup.native.tsx") /* context */.TableRadioGroup, obj);
   }
   return tmp2Result;
 };
@@ -198,8 +198,8 @@ prototype["renderNotificationOptions"] = function renderNotificationOptions() {
   const props = this.props;
   ({ muted, suppressEveryone, suppressRoles, mobilePush, muteEvents, guildId: require } = props);
   let obj = { label: null, value: null, onValueChange: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.format(require(1236) /* getSystemLocale */.t.OWiWAp, {});
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.OWiWAp, {});
   if (suppressEveryone == null) {
     suppressEveryone = false;
   }
@@ -208,10 +208,10 @@ prototype["renderNotificationOptions"] = function renderNotificationOptions() {
     const NotificationLabel = outer1_0(outer1_2[22]).NotificationLabel;
     self.handleToggleChange("suppress_everyone", arg0, NotificationLabel.suppressEveryone(arg0));
   };
-  const items = [closure_26(require(5650) /* TableSwitchRow */.TableSwitchRow, obj), , ];
+  const items = [closure_26(require("../../../design/components/TableRow/native/TableSwitchRow.native.tsx") /* TableSwitchRow */.TableSwitchRow, obj), , ];
   obj = { label: null, value: null, onValueChange: null };
   const intl2 = tmp5(1236).intl;
-  obj[0] = intl2.string(require(1236) /* getSystemLocale */.t["O/QdoD"]);
+  obj[0] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["O/QdoD"]);
   if (suppressRoles == null) {
     suppressRoles = false;
   }
@@ -220,10 +220,10 @@ prototype["renderNotificationOptions"] = function renderNotificationOptions() {
     const NotificationLabel = outer1_0(outer1_2[22]).NotificationLabel;
     self.handleToggleChange("suppress_roles", arg0, NotificationLabel.suppressRoles(arg0));
   };
-  items[1] = closure_26(require(5650) /* TableSwitchRow */.TableSwitchRow, obj);
+  items[1] = closure_26(require("../../../design/components/TableRow/native/TableSwitchRow.native.tsx") /* TableSwitchRow */.TableSwitchRow, obj);
   obj = { disabled: muted, label: null, value: null, onValueChange: null };
   const intl3 = tmp5(1236).intl;
-  obj[1] = intl3.string(require(1236) /* getSystemLocale */.t.gPuteJ);
+  obj[1] = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.gPuteJ);
   let tmp8 = muted;
   if (!muted) {
     tmp8 = props.notifyHighlights === constants6.DISABLED;
@@ -237,13 +237,13 @@ prototype["renderNotificationOptions"] = function renderNotificationOptions() {
     const NotificationLabel = outer1_0(outer1_2[22]).NotificationLabel;
     const result = obj.updateGuildNotificationSettings(closure_0, obj, NotificationLabel.highlights(!arg0));
   };
-  items[2] = closure_26(require(5650) /* TableSwitchRow */.TableSwitchRow, obj);
+  items[2] = closure_26(require("../../../design/components/TableRow/native/TableSwitchRow.native.tsx") /* TableSwitchRow */.TableSwitchRow, obj);
   obj2[1] = items;
-  const items1 = [closure_27(require(5649) /* TableRowGroupTitle */.TableRowGroup, obj2), , ];
+  const items1 = [closure_27(require("../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj2), , ];
   const obj3 = { variant: "text-sm/medium", color: "text-muted", style: { marginTop: 8 }, children: null };
   const intl4 = tmp5(1236).intl;
-  obj3[3] = intl4.string(require(1236) /* getSystemLocale */.t["Vw/Xn8"]);
-  items1[1] = closure_26(require(4281) /* Text */.Text, obj3);
+  obj3[3] = intl4.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["Vw/Xn8"]);
+  items1[1] = closure_26(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj3);
   const obj4 = {
     style: createCacheKey(this.context).highlightsLearnMore,
     accessibilityRole: "link",
@@ -254,13 +254,13 @@ prototype["renderNotificationOptions"] = function renderNotificationOptions() {
     children: null
   };
   const intl5 = tmp5(1236).intl;
-  obj4[3] = intl5.string(require(1236) /* getSystemLocale */.t.PRBn9K);
-  items1[2] = closure_26(require(1297) /* Button */.LegacyText, obj4);
+  obj4[3] = intl5.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.PRBn9K);
+  items1[2] = closure_26(require("../../../design/void/native.tsx") /* Button */.LegacyText, obj4);
   obj1[0] = items1;
   const items2 = [closure_27(View, obj1), ];
   const obj5 = { label: null, value: null, onValueChange: null };
   const intl6 = tmp5(1236).intl;
-  obj5[0] = intl6.string(require(1236) /* getSystemLocale */.t.ONG3Yz);
+  obj5[0] = intl6.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ONG3Yz);
   if (muteEvents == null) {
     muteEvents = false;
   }
@@ -269,10 +269,10 @@ prototype["renderNotificationOptions"] = function renderNotificationOptions() {
     const NotificationLabel = outer1_0(outer1_2[22]).NotificationLabel;
     self.handleToggleChange("mute_scheduled_events", arg0, NotificationLabel.mutedEvents(arg0));
   };
-  const items3 = [closure_26(require(5650) /* TableSwitchRow */.TableSwitchRow, obj5), ];
+  const items3 = [closure_26(require("../../../design/components/TableRow/native/TableSwitchRow.native.tsx") /* TableSwitchRow */.TableSwitchRow, obj5), ];
   const obj6 = { disabled: muted, label: null, value: null, onValueChange: null };
   const intl7 = tmp5(1236).intl;
-  obj6[1] = intl7.string(require(1236) /* getSystemLocale */.t.h1DL66);
+  obj6[1] = intl7.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.h1DL66);
   let tmp10 = !muted;
   if (!muted) {
     if (mobilePush == null) {
@@ -287,9 +287,9 @@ prototype["renderNotificationOptions"] = function renderNotificationOptions() {
     const NotificationLabel = outer1_0(outer1_2[22]).NotificationLabel;
     self.handleToggleChange("mobile_push", arg0, NotificationLabel.mobilePush(arg0));
   };
-  items3[1] = closure_26(require(5650) /* TableSwitchRow */.TableSwitchRow, obj6);
+  items3[1] = closure_26(require("../../../design/components/TableRow/native/TableSwitchRow.native.tsx") /* TableSwitchRow */.TableSwitchRow, obj6);
   obj8[1] = items3;
-  items2[1] = closure_27(require(5649) /* TableRowGroupTitle */.TableRowGroup, obj8);
+  items2[1] = closure_27(require("../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj8);
   obj7[0] = items2;
   return closure_27(closure_28, obj7);
 };
@@ -304,19 +304,19 @@ prototype["renderMuteSection"] = function renderMuteSection() {
     let tmp15 = null;
     if (muted) {
       let obj = { title: null, subtitle: null, style: null, onPressUnmute: null };
-      const intl3 = require(1236) /* getSystemLocale */.intl;
-      obj[0] = intl3.string(require(1236) /* getSystemLocale */.t.ZSkXJY);
-      obj[1] = require(9743) /* NotificationSettingsMuteBanner */.getMuteBannerSubtitleFromConfig(muteConfig);
+      const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      obj[0] = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ZSkXJY);
+      obj[1] = require("../../notifications/settings/native/NotificationSettingsMuteBanner.tsx") /* NotificationSettingsMuteBanner */.getMuteBannerSubtitleFromConfig(muteConfig);
       obj[2] = { marginBottom: 16 };
       obj[3] = self.handleMutePress;
-      tmp15 = callback2(require(9743) /* NotificationSettingsMuteBanner */.NotificationSettingsMuteBanner, obj);
-      const obj7 = require(9743) /* NotificationSettingsMuteBanner */;
+      tmp15 = callback2(require("../../notifications/settings/native/NotificationSettingsMuteBanner.tsx") /* NotificationSettingsMuteBanner */.NotificationSettingsMuteBanner, obj);
+      const obj7 = require("../../notifications/settings/native/NotificationSettingsMuteBanner.tsx") /* NotificationSettingsMuteBanner */;
     }
     return tmp15;
   } else {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const format = intl.format;
-    const t = require(1236) /* getSystemLocale */.t;
+    const t = require("../../../intl/index.native.tsx") /* getSystemLocale */.t;
     if (muted) {
       let name;
       if (guild != null) {
@@ -350,8 +350,8 @@ prototype["renderMuteSection"] = function renderMuteSection() {
       const obj3 = { muteConfig: null, type: null };
       obj3[0] = muteConfig;
       obj3[1] = tmp7(9738).MuteSettingType.SERVER;
-      tmp10Result = callback2(importDefault(9738), obj3, "muted-until");
-      const tmp14 = importDefault(9738);
+      tmp10Result = callback2(require("../../main_tabs_v2/native/sidebar/details/screens/MutedUntilText.tsx"), obj3, "muted-until");
+      const tmp14 = require("../../main_tabs_v2/native/sidebar/details/screens/MutedUntilText.tsx");
     }
     items[1] = tmp10Result;
     return items;
@@ -386,7 +386,7 @@ prototype["renderChannel"] = function renderChannel(parent_id) {
     if (null != parent_id.parent_id) {
       channel = channel.getChannel(parent_id.parent_id);
     }
-    let obj = _require(3916);
+    let obj = _require("../../../lib/MuteTimers.tsx");
     if (obj.computeIsMuted(self.props.channelOverrides[parent_id.id])) {
       const intl3 = tmp4(1236).intl;
       let stringResult = intl3.string(tmp4(1236).t.fpKdS1);
@@ -411,10 +411,10 @@ prototype["renderChannel"] = function renderChannel(parent_id) {
     }
     obj = { icon: null, label: null, onPress: null, subLabel: null, trailing: null, arrow: true };
     obj = { IconComponent: null };
-    obj[0] = _require(4745).getChannelIconComponent(parent_id);
-    obj[0] = callback2(_require(5321).TableRowIcon, obj);
-    const tmp4Result1 = _require(4745);
-    obj[1] = _require(4475).computeChannelName(parent_id, mergeGuildAvatar, upsertRelationship);
+    obj[0] = _require("../../../utils/native/ChannelUtils.tsx").getChannelIconComponent(parent_id);
+    obj[0] = callback2(_require("../../../design/components/TableRow/native/TableRowIcon.native.tsx").TableRowIcon, obj);
+    const tmp4Result1 = _require("../../../utils/native/ChannelUtils.tsx");
+    obj[1] = _require("../../channel/useChannelName.tsx").computeChannelName(parent_id, mergeGuildAvatar, upsertRelationship);
     obj[2] = function onPress() {
       return self.handleChannelSelect(parent_id.id);
     };
@@ -431,7 +431,7 @@ prototype["renderChannel"] = function renderChannel(parent_id) {
       tmp10Result = tmp10(tmp4(5315).TableRow.TrailingText, obj1);
     }
     obj[4] = tmp10Result;
-    return callback2(_require(5315).TableRow, obj, parent_id.id);
+    return callback2(_require("../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, obj, parent_id.id);
   }
 };
 prototype["render"] = function render() {
@@ -443,18 +443,18 @@ prototype["render"] = function render() {
     const features = guild.features;
     hasItem = features.has(constants5.HUB);
   }
-  const Form = require(7777) /* Form */.Form;
+  const Form = require("../../../design/void/Form/native/index.tsx") /* Form */.Form;
   let obj = { contentContainerStyle: { paddingTop: 16 }, children: null };
   if (hasItem) {
     obj = { spacing: null, style: null, children: null };
-    obj[0] = importDefault(712).space.PX_24;
+    obj[0] = require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24;
     obj[1] = tmp.formStack;
     obj[2] = self.renderMuteSection();
     obj[1] = tmp4(tmp5(4693).Stack, obj);
     let tmp4Result = tmp4(Form, obj);
   } else {
     obj = { spacing: null, style: null, children: null };
-    obj[0] = importDefault(712).space.PX_24;
+    obj[0] = require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24;
     obj[1] = tmp.formStack;
     const items = [self.renderMuteSection(), self.renderServerSettings(), self.renderNotificationOptions(), self.renderChannels()];
     obj[2] = items;
@@ -484,7 +484,7 @@ let obj2 = { paddingHorizontal: require("Themes").modules.mobile.TABLE_ROW_PADDI
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/notification_settings/native/NotificationSettingsModal.native.tsx");
 
 export default function NotificationSettingsModal() {
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [FormStates];
   let stateFromStores = obj.useStateFromStores(items, () => props.getProps().guildId);
   const memo = importAllResult.useMemo(() => {
@@ -525,6 +525,6 @@ export default function NotificationSettingsModal() {
   obj[1] = { guildId: stateFromStores };
   const items1 = [obj];
   obj[1] = items1;
-  return closure_26(require(5665) /* NavigationStack */.Navigator, obj);
+  return closure_26(require("../../../design/components/Navigator/native/Navigator.native.tsx") /* NavigationStack */.Navigator, obj);
 };
 export { NotificationSettings };

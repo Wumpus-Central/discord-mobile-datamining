@@ -8,7 +8,7 @@ let c5;
 const result = require("PlatformTypes").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarMargins.tsx");
 
 export const useYouBarHorizontalMargin = function useYouBarHorizontalMargin() {
-  if (importDefault(1581)().bottom > 0) {
+  if (require("../../../../safe_area/useSafeAreaInsets.native.tsx")().bottom > 0) {
     if (obj.isIOS()) {
       let tmp3 = closure_3;
     }
@@ -17,8 +17,8 @@ export const useYouBarHorizontalMargin = function useYouBarHorizontalMargin() {
   tmp3 = closure_4;
 };
 export const useYouBarBottomMargin = function useYouBarBottomMargin() {
-  const bottom = importDefault(1581)().bottom;
-  require(3989) /* map */;
+  const bottom = require("../../../../safe_area/useSafeAreaInsets.native.tsx")().bottom;
+  require("../../../../../design/tokens/native/useToken.tsx") /* map */;
   if (tmp2) {
     const _Math2 = Math;
     let bound = Math.max(tmp5, bottom);
@@ -27,7 +27,7 @@ export const useYouBarBottomMargin = function useYouBarBottomMargin() {
       if (tmp3Result.isIOS()) {
         bound = closure_3;
       }
-      tmp3Result = require(501) /* PlatformTypes */;
+      tmp3Result = require("../../../../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */;
     }
     const _Math = Math;
     bound = Math.max(closure_5, bottom);

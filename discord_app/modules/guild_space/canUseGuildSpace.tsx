@@ -16,7 +16,7 @@ export const useIsGuildSpaceAdmin = function useIsGuildSpaceAdmin(arg0) {
   const _require = arg0;
   const items = [getUncachedChannelPermissions];
   const items1 = [arg0];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
       canResult = outer1_2.can(outer1_3.MANAGE_GUILD, tmp);
@@ -32,13 +32,13 @@ export const useCanUseGuildSpace = function useCanUseGuildSpace(id, useGuildActi
   if (id != null) {
     id = id.id;
   }
-  const guildSpaceExperimentEnabled = _require(5756).useGuildSpaceExperimentEnabled(id, useGuildActionRows);
+  const guildSpaceExperimentEnabled = _require("GuildSpaceExperiment.tsx").useGuildSpaceExperimentEnabled(id, useGuildActionRows);
   _require = id;
-  const obj = _require(5756);
+  const obj = _require("GuildSpaceExperiment.tsx");
   const tmp = _require;
   const items = [getUncachedChannelPermissions];
   const items1 = [id];
-  const stateFromStores = _require(589).useStateFromStores(items, () => {
+  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
       canResult = outer1_2.can(outer1_3.MANAGE_GUILD, tmp);

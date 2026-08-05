@@ -46,14 +46,14 @@ const memoResult = importAllResult.memo((withDescription) => {
   let obj = { style: tmp.header, children: null };
   obj = { style: tmp.headline, children: null };
   obj = { style: tmp.label, lineClamp: 1, variant: "text-md/bold", color: "mobile-text-heading-primary", children: stickerPack.name };
-  const items = [callback(require(4281) /* Text */.Text, obj), , ];
-  let obj3 = require(4619) /* getStickerExtensionFromFormatType */;
+  const items = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), , ];
+  let obj3 = require("../StickersUtils.tsx") /* getStickerExtensionFromFormatType */;
   let result = obj3.isStickerPackAnimated(stickerPack);
   if (result) {
     const obj1 = { style: null, children: null };
     obj1[0] = tmp.iconContainer;
     const obj2 = { source: null, style: null, size: null, color: null };
-    obj2[0] = importDefault(9882);
+    obj2[0] = require("../../../../_runtime/09882_registerAsset.js");
     obj2[1] = tmp.animatedIcon;
     obj2[2] = tmp6(1297).Icon.Sizes.EXTRA_SMALL;
     obj2[3] = tmp.icon.color;
@@ -63,11 +63,11 @@ const memoResult = importAllResult.memo((withDescription) => {
   items[1] = result;
   obj3 = { style: tmp.iconContainer, children: null };
   const obj4 = { source: null, style: null, size: null, color: null };
-  obj4[0] = importDefault(9883);
+  obj4[0] = require("../../../../_runtime/09883_registerAsset.js");
   obj4[1] = tmp.premiumIcon;
-  obj4[2] = require(1297) /* Button */.Icon.Sizes.EXTRA_SMALL;
+  obj4[2] = require("../../../design/void/native.tsx") /* Button */.Icon.Sizes.EXTRA_SMALL;
   obj4[3] = tmp.icon.color;
-  obj3[1] = callback(require(1297) /* Button */.Icon, obj4);
+  obj3[1] = callback(require("../../../design/void/native.tsx") /* Button */.Icon, obj4);
   items[2] = callback(View, obj3);
   obj[1] = items;
   obj[1] = closure_5(View, obj);
@@ -84,15 +84,15 @@ const memoResult = importAllResult.memo((withDescription) => {
   items1[1] = flag;
   const obj7 = { lineClamp: 1, variant: "text-xs/medium", color: "text-default", children: null };
   const intl = tmp6(1236).intl;
-  obj7[3] = intl.format(require(1236) /* getSystemLocale */.t["0S3JpO"], { numStickers: stickerPack.stickers.length });
-  items1[2] = callback(require(4281) /* Text */.Text, obj7);
+  obj7[3] = intl.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["0S3JpO"], { numStickers: stickerPack.stickers.length });
+  items1[2] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj7);
   obj6[0] = items1;
   const tmp2Result = closure_5(closure_6, obj6);
   if (withBanner) {
     const obj9 = { stickerPack: null, containerStyle: null, style: null };
     obj9[0] = stickerPack;
     ({ bannerContainer: obj13[1], banner: obj13[2] } = tmp);
-    withBanner = tmp4(importDefault(9884), obj9);
+    withBanner = tmp4(require("StickerPackBanner.tsx"), obj9);
   }
   const children = [withBanner, ];
   if (null != onPress) {

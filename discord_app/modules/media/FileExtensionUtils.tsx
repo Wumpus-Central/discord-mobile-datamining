@@ -9,7 +9,7 @@ export const decideFileExtension = function decideFileExtension(closure_0, conte
   }
   let tmp;
   if (flag) {
-    const toURLSafeResult = importDefault(1467).toURLSafe(closure_0);
+    const toURLSafeResult = require("../../utils/URLUtils.tsx").toURLSafe(closure_0);
     let formatted;
     if (toURLSafeResult != null) {
       const searchParams = toURLSafeResult.searchParams;
@@ -29,7 +29,7 @@ export const decideFileExtension = function decideFileExtension(closure_0, conte
       }
     }
     tmp = tmp7;
-    const obj = importDefault(1467);
+    const obj = require("../../utils/URLUtils.tsx");
   }
   if (tmp == null) {
     let tmp9;
@@ -55,7 +55,7 @@ export const decideFileExtension = function decideFileExtension(closure_0, conte
     tmp = tmp9;
   }
   if (tmp == null) {
-    const toURLSafeResult1 = importDefault(1467).toURLSafe(closure_0);
+    const toURLSafeResult1 = require("../../utils/URLUtils.tsx").toURLSafe(closure_0);
     let tmp15;
     if (null != toURLSafeResult1) {
       let formatted1;
@@ -77,7 +77,7 @@ export const decideFileExtension = function decideFileExtension(closure_0, conte
       tmp15 = tmp14;
     }
     tmp = tmp15;
-    const obj3 = importDefault(1467);
+    const obj3 = require("../../utils/URLUtils.tsx");
   }
   return tmp;
 };

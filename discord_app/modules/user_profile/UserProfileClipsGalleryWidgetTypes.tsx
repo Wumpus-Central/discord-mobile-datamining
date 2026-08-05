@@ -41,7 +41,7 @@ prototype["isEqual"] = function isEqual(clips) {
   let tmp = clips instanceof ClipsGalleryWidget;
   if (tmp) {
     const self = this;
-    tmp = importDefault(659)(this.clips, clips.clips);
+    tmp = require("../../../_runtime/00659_isUndefinedOrNull.js")(this.clips, clips.clips);
   }
   return tmp;
 };

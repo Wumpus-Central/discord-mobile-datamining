@@ -29,11 +29,11 @@ function disconnect() {
   if (flag) {
     const currentClientVoiceChannelId1 = currentClientVoiceChannelId.getCurrentClientVoiceChannelId(null);
     if (null != currentClientVoiceChannelId1) {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      importDefault(6826).sendBotMessage(currentClientVoiceChannelId1, intl.formatToPlainString(require(1236) /* getSystemLocale */.t.XYof5G, { number: 3 }));
-      const obj3 = importDefault(6826);
-      const voiceChannel = importDefault(5096).selectVoiceChannel(null);
-      const obj4 = importDefault(5096);
+      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      require("../../actions/MessageActionCreators.tsx").sendBotMessage(currentClientVoiceChannelId1, intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.XYof5G, { number: 3 }));
+      const obj3 = require("../../actions/MessageActionCreators.tsx");
+      const voiceChannel = require("../../actions/SelectedChannelActionCreators.tsx").selectVoiceChannel(null);
+      const obj4 = require("../../actions/SelectedChannelActionCreators.tsx");
     }
   }
 }
@@ -41,7 +41,7 @@ let c7 = 180000;
 let prototype = function CallIdleManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   const require = applyArgumentsResult;
-  const timeout = new require(4170) /* start */.Timeout();
+  const timeout = new require("../../../discord_common/js/packages/timers/Timers.tsx") /* start */.Timeout();
   applyArgumentsResult.idleTimeout = timeout;
   applyArgumentsResult.handleConnectionClosed = function handleConnectionClosed() {
     const idleTimeout = applyArgumentsResult.idleTimeout;

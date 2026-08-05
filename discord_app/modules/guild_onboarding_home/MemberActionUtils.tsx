@@ -10,13 +10,13 @@ const result = require("set").fileFinishedImporting("modules/guild_onboarding_ho
 export const useMemberActionsForChannel = function useMemberActionsForChannel(guild_id, channel) {
   const _require = guild_id;
   const importDefault = channel;
-  let obj = _require(647);
+  let obj = _require("../../../discord_common/js/packages/flux/useStateFromStores.tsx");
   const items = [handleSettingsLoadSuccess];
   const items1 = [guild_id];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getNewMemberActions(closure_0), items1);
-  const tmp = importDefault(5754)(guild_id);
+  const tmp = require("useIsNewMember.tsx")(guild_id);
   const items2 = [set];
-  const stateFromStores1 = _require(647).useStateFromStores(items2, () => outer1_5.getCompletedActions(closure_0));
+  const stateFromStores1 = _require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items2, () => outer1_5.getCompletedActions(closure_0));
   if (tmp) {
     let num;
     if (stateFromStores != null) {
@@ -47,16 +47,16 @@ export const useMemberActionsForChannel = function useMemberActionsForChannel(gu
   } else {
     return {};
   }
-  const obj3 = _require(647);
+  const obj3 = _require("../../../discord_common/js/packages/flux/useStateFromStores.tsx");
 };
 export const useNextMemberAction = function useNextMemberAction(guild_id, channelId) {
   const _require = guild_id;
   let closure_1 = channelId;
   const items = [handleSettingsLoadSuccess];
-  const stateFromStores = _require(647).useStateFromStores(items, () => outer1_4.getNewMemberActions(closure_0));
-  const obj = _require(647);
+  const stateFromStores = _require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => outer1_4.getNewMemberActions(closure_0));
+  const obj = _require("../../../discord_common/js/packages/flux/useStateFromStores.tsx");
   const items1 = [set];
-  const dependencyMap = _require(647).useStateFromStores(items1, () => outer1_5.getCompletedActions(closure_0));
+  const dependencyMap = _require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items1, () => outer1_5.getCompletedActions(closure_0));
   let found;
   if (stateFromStores != null) {
     found = stateFromStores.find((channelId) => {
@@ -76,8 +76,8 @@ export const useNextMemberAction = function useNextMemberAction(guild_id, channe
 export const useAllActionsCompleted = function useAllActionsCompleted(guild_id) {
   const _require = guild_id;
   const items = [trackCommunicationDisabled];
-  const stateFromStores = _require(647).useStateFromStores(items, () => outer1_3.getSelfMember(closure_0));
-  const obj = _require(647);
+  const stateFromStores = _require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => outer1_3.getSelfMember(closure_0));
+  const obj = _require("../../../discord_common/js/packages/flux/useStateFromStores.tsx");
   let num;
   if (stateFromStores != null) {
     num = stateFromStores.flags;
@@ -85,5 +85,5 @@ export const useAllActionsCompleted = function useAllActionsCompleted(guild_id) 
   if (num == null) {
     num = 0;
   }
-  return _require(1384).hasFlag(num, GuildMemberFlags.COMPLETED_HOME_ACTIONS);
+  return _require("../../../discord_common/js/shared/utils/FlagUtils.tsx").hasFlag(num, GuildMemberFlags.COMPLETED_HOME_ACTIONS);
 };

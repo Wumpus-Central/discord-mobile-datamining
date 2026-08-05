@@ -27,21 +27,21 @@ function Select(children) {
   obj.maxValues = num;
   obj.type = type;
   obj.id = String(type);
-  let obj1 = _require(8026);
+  let obj1 = _require("../../../../interaction_components/ComponentStateContext.tsx");
   let state = obj1.useComponentState(obj).state;
   obj = { style: { gap: 8 }, children: null };
-  const items = [callback(_require(4281).Text, { variant: "heading-lg/medium", children: children.title }), , , ];
-  if (obj.type === _require(1906).ComponentType.STRING_SELECT) {
+  const items = [callback(_require("../../../../../design/components/Text/native/Text.tsx").Text, { variant: "heading-lg/medium", children: children.title }), , , ];
+  if (obj.type === _require("../../../../../flow/Server.tsx").ComponentType.STRING_SELECT) {
     obj = {};
     const merged1 = Object.assign(obj);
-    let tmp7Result = tmp7(importDefault(14928), obj);
-    const tmp15 = importDefault(14928);
+    let tmp7Result = tmp7(require("../../../../interaction_components/native/actions/StringSelectActionComponent.tsx"), obj);
+    const tmp15 = require("../../../../interaction_components/native/actions/StringSelectActionComponent.tsx");
   } else {
     obj1 = {};
     const merged2 = Object.assign(obj);
     obj1.type = obj.type;
-    tmp7Result = tmp7(importDefault(14931), obj1);
-    const tmp9 = importDefault(14931);
+    tmp7Result = tmp7(require("../../../../interaction_components/native/actions/SearchableSelectActionComponent.tsx"), obj1);
+    const tmp9 = require("../../../../interaction_components/native/actions/SearchableSelectActionComponent.tsx");
   }
   items[1] = tmp7Result;
   type = undefined;
@@ -73,7 +73,7 @@ function Select(children) {
     };
     items[3] = tmp7(tmp4(4695).Button, obj2);
     obj[1] = items;
-    return tmp6(_require(5317).Card, obj);
+    return tmp6(_require("../../../../../design/components/Card/native/Card.native.tsx").Card, obj);
   }
 }
 let c3 = importDefaultResult;
@@ -100,28 +100,28 @@ export default function DevToolsComponentsTestingScreen() {
   const tmp = createCacheKey();
   let obj = { style: tmp.wrap, contentContainerStyle: tmp.contentContainer, children: null };
   obj = { spacing: 16, children: null };
-  const items = [callback(require(4281) /* Text */.Text, { variant: "text-md/normal", children: "Test screen for embedding native components in RN" }), , ];
+  const items = [callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-md/normal", children: "Test screen for embedding native components in RN" }), , ];
   obj = { modal: null, children: null };
   const obj1 = { customId: modal, channelId: null, components: null };
   obj1[1] = channelId.getChannelId();
   obj1[2] = closure_10;
   obj[0] = obj1;
   const merged = Object.assign(closure_12);
-  const items1 = [callback(importDefault(14932), {}), , , , , ];
+  const items1 = [callback(require("../../../../interaction_components/native/display/TextDisplayComponent.tsx"), {}), , , , , ];
   const obj2 = {};
-  const tmp2 = importDefault(14932);
-  items1[1] = callback(Select, { title: "String Select", type: require(1906) /* PermissionOverwriteType */.ComponentType.STRING_SELECT });
-  const obj3 = { title: "String Select", type: require(1906) /* PermissionOverwriteType */.ComponentType.STRING_SELECT };
-  items1[2] = callback(Select, { title: "User Select", type: require(1906) /* PermissionOverwriteType */.ComponentType.USER_SELECT });
-  const obj4 = { title: "User Select", type: require(1906) /* PermissionOverwriteType */.ComponentType.USER_SELECT };
-  items1[3] = callback(Select, { title: "Role Select", type: require(1906) /* PermissionOverwriteType */.ComponentType.ROLE_SELECT });
-  const obj5 = { title: "Role Select", type: require(1906) /* PermissionOverwriteType */.ComponentType.ROLE_SELECT };
-  items1[4] = callback(Select, { title: "Mentionable Select", type: require(1906) /* PermissionOverwriteType */.ComponentType.MENTIONABLE_SELECT });
-  const obj6 = { title: "Mentionable Select", type: require(1906) /* PermissionOverwriteType */.ComponentType.MENTIONABLE_SELECT };
-  items1[5] = callback(Select, { title: "Channel Select", type: require(1906) /* PermissionOverwriteType */.ComponentType.CHANNEL_SELECT });
+  const tmp2 = require("../../../../interaction_components/native/display/TextDisplayComponent.tsx");
+  items1[1] = callback(Select, { title: "String Select", type: require("../../../../../flow/Server.tsx") /* PermissionOverwriteType */.ComponentType.STRING_SELECT });
+  const obj3 = { title: "String Select", type: require("../../../../../flow/Server.tsx") /* PermissionOverwriteType */.ComponentType.STRING_SELECT };
+  items1[2] = callback(Select, { title: "User Select", type: require("../../../../../flow/Server.tsx") /* PermissionOverwriteType */.ComponentType.USER_SELECT });
+  const obj4 = { title: "User Select", type: require("../../../../../flow/Server.tsx") /* PermissionOverwriteType */.ComponentType.USER_SELECT };
+  items1[3] = callback(Select, { title: "Role Select", type: require("../../../../../flow/Server.tsx") /* PermissionOverwriteType */.ComponentType.ROLE_SELECT });
+  const obj5 = { title: "Role Select", type: require("../../../../../flow/Server.tsx") /* PermissionOverwriteType */.ComponentType.ROLE_SELECT };
+  items1[4] = callback(Select, { title: "Mentionable Select", type: require("../../../../../flow/Server.tsx") /* PermissionOverwriteType */.ComponentType.MENTIONABLE_SELECT });
+  const obj6 = { title: "Mentionable Select", type: require("../../../../../flow/Server.tsx") /* PermissionOverwriteType */.ComponentType.MENTIONABLE_SELECT };
+  items1[5] = callback(Select, { title: "Channel Select", type: require("../../../../../flow/Server.tsx") /* PermissionOverwriteType */.ComponentType.CHANNEL_SELECT });
   obj[1] = items1;
-  items[1] = callback2(require(8026) /* isInteractionComponent */.ComponentStateContextProvider, obj);
-  items[2] = callback(require(4695) /* Button */.Button, {
+  items[1] = callback2(require("../../../../interaction_components/ComponentStateContext.tsx") /* isInteractionComponent */.ComponentStateContextProvider, obj);
+  items[2] = callback(require("../../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, {
     onPress() {
       let obj = callback(table[17]);
       obj = { type: "CLEAR_INTERACTION_MODAL_STATE", customId: closure_13 };
@@ -130,6 +130,6 @@ export default function DevToolsComponentsTestingScreen() {
     text: "Reset Modal State"
   });
   obj[1] = items;
-  obj[2] = callback2(require(4693) /* Stack */.Stack, obj);
+  obj[2] = callback2(require("../../../../../design/components/Stack/native/Stack.native.tsx") /* Stack */.Stack, obj);
   return callback(ScrollView, obj);
 };

@@ -3,7 +3,7 @@ import { Endpoints } from "ME";
 
 function handleRequestSuccess(body) {
   if (tmp) {
-    let obj = importDefault(709);
+    let obj = require("../Dispatcher.tsx");
     obj = { type: "UPDATE_CONSENTS", consents: null };
     obj = {};
     const merged = Object.assign(body.body);
@@ -15,8 +15,8 @@ function handleRequestSuccess(body) {
 function handleRequestFailure(status) {
   if (status.status >= 500) {
     if (status.status <= 599) {
-      const intl2 = require(1236) /* getSystemLocale */.intl;
-      let message = intl2.string(require(1236) /* getSystemLocale */.t.cvJdtg);
+      const intl2 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+      let message = intl2.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.cvJdtg);
     }
     const _Error = Error;
     const error = new Error(message);
@@ -29,15 +29,15 @@ function handleRequestFailure(status) {
       }
     }
   }
-  const intl = require(1236) /* getSystemLocale */.intl;
-  message = intl.string(require(1236) /* getSystemLocale */.t.cvJdtg);
+  const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+  message = intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.cvJdtg);
 }
 const result = require("getSystemLocale").fileFinishedImporting("actions/ConsentActionCreators.tsx");
 
 export const fetchConsents = function fetchConsents() {
-  const HTTP = require(530) /* sendRequest */.HTTP;
+  const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
   const obj = { url: Endpoints.SETTINGS_CONSENT, oldFormErrors: true, rejectWithError: null };
-  obj[2] = require(530) /* sendRequest */.rejectWithMigratedError();
+  obj[2] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
   const value = HTTP.get(obj);
   return value.then(handleRequestSuccess, (body) => {
     const error = new Error(body.body.message);
@@ -45,10 +45,10 @@ export const fetchConsents = function fetchConsents() {
   });
 };
 export const setConsents = function setConsents(items, items2) {
-  const HTTP = require(530) /* sendRequest */.HTTP;
+  const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
   obj = { url: Endpoints.SETTINGS_CONSENT, body: obj, oldFormErrors: true, rejectWithError: null };
   obj = { grant: items, revoke: items2 };
-  obj[3] = require(530) /* sendRequest */.rejectWithMigratedError();
-  const obj3 = require(530) /* sendRequest */;
+  obj[3] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+  const obj3 = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */;
   return HTTP.post(obj).then(handleRequestSuccess, handleRequestFailure);
 };

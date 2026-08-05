@@ -46,7 +46,7 @@ function IconOrPreview(arg0) {
   if (stream != null) {
     ownerId = stream.ownerId;
   }
-  const previewUrl = importDefault(10837)(guildId, channelId, ownerId).previewUrl;
+  const previewUrl = require("../../../../go_live/useFetchStreamPreview.tsx")(guildId, channelId, ownerId).previewUrl;
   let assetImage;
   if (null != previewUrl) {
     assetImage = previewUrl;
@@ -63,7 +63,7 @@ function IconOrPreview(arg0) {
     tmp9 = null != large_image;
   }
   if (tmp9) {
-    let obj = _require(8051);
+    let obj = _require("../../../../../utils/ApplicationAssetUtils.tsx");
     let application_id;
     if (activity != null) {
       application_id = activity.application_id;
@@ -94,7 +94,7 @@ function IconOrPreview(arg0) {
     tmp17 = null != small_image;
   }
   if (tmp17) {
-    let obj1 = _require(8051);
+    let obj1 = _require("../../../../../utils/ApplicationAssetUtils.tsx");
     let application_id1;
     if (activity != null) {
       application_id1 = activity.application_id;
@@ -107,15 +107,15 @@ function IconOrPreview(arg0) {
     assetImage = obj1.getAssetImage(application_id1, small_image1, items1);
   }
   if (null != assetImage) {
-    let obj3 = _require(8114);
+    let obj3 = _require("../../../../calls/native/VideoBackground.tsx");
     const memoizedImageSourceResult = obj3.memoizedImageSource(assetImage);
-    let obj4 = _require(8114);
+    let obj4 = _require("../../../../calls/native/VideoBackground.tsx");
     const dominantRGBFromImage = obj4.useDominantRGBFromImage(assetImage, memoizedImageSourceResult);
     ({ r, g, b } = dominantRGBFromImage);
-    const rgbToHexResult = _require(4129).rgbToHex(r, g, b);
+    const rgbToHexResult = _require("../../../../../utils/ColorUtils.tsx").rgbToHex(r, g, b);
     importDefault = rgbToHexResult;
-    const obj6 = _require(4129);
-    const hexWithOpacityResult = _require(4129).hexWithOpacity(rgbToHexResult, 0.2);
+    const obj6 = _require("../../../../../utils/ColorUtils.tsx");
+    const hexWithOpacityResult = _require("../../../../../utils/ColorUtils.tsx").hexWithOpacity(rgbToHexResult, 0.2);
     dependencyMap = hexWithOpacityResult;
     const items2 = [rgbToHexResult, tmp.cardImageAssetContainer];
     const memo = importAllResult.useMemo(() => {
@@ -175,7 +175,7 @@ function IconOrPreview(arg0) {
       obj2[2] = callback(closure_4, obj3);
       return callback(closure_4, obj2);
     }
-    const obj7 = _require(4129);
+    const obj7 = _require("../../../../../utils/ColorUtils.tsx");
   } else {
     let type2;
     if (activity != null) {
@@ -194,7 +194,7 @@ function StageStreamAvatars(stage) {
   let audienceCount;
   let audienceFriends;
   stage = stage.stage;
-  let obj = require(15099) /* useLiveStageData */;
+  let obj = require("useLiveStageData.tsx") /* useLiveStageData */;
   const liveStageData = obj.useLiveStageData(stage);
   obj = { style: callback2().avatarStackContainer, children: null };
   ({ audienceCount, audienceFriends } = liveStageData);
@@ -204,8 +204,8 @@ function StageStreamAvatars(stage) {
   obj[0] = items;
   obj[1] = stage.guild_id;
   obj[2] = audienceCount + 1;
-  obj[4] = require(1297) /* Button */.AvatarSizes.SIZE_16;
-  obj[1] = callback(require(15110) /* HappeningNowAvatarStack */.HappeningNowAvatarStack, obj);
+  obj[4] = require("../../../../../design/void/native.tsx") /* Button */.AvatarSizes.SIZE_16;
+  obj[1] = callback(require("HappeningNowAvatarStack.tsx") /* HappeningNowAvatarStack */.HappeningNowAvatarStack, obj);
   return callback(closure_4, obj);
 }
 let c3 = importAllResult;

@@ -3,13 +3,13 @@ const result = require("set").fileFinishedImporting("modules/telemetry_ring/nati
 
 export default {
   append(arg0, arg1, arg2, arg3, arg4) {
-    importDefault(13367).append(arg0, arg1, arg2, arg3, arg4);
+    require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTelemetryRingModule.tsx").append(arg0, arg1, arg2, arg3, arg4);
   },
   snapshot(arg0, arg1, arg2, arg3) {
-    return importDefault(13367).snapshot(arg0, arg1, arg2, arg3);
+    return require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTelemetryRingModule.tsx").snapshot(arg0, arg1, arg2, arg3);
   },
   clear() {
-    importDefault(13367).clear();
+    require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTelemetryRingModule.tsx").clear();
   }
 };
 export const TelemetryChannel = { SENTRY: "SENTRY", NORMAL: "NORMAL", ZOOMED: "ZOOMED" };

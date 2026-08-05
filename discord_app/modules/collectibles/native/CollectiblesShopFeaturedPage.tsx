@@ -16,15 +16,15 @@ export default function _default(shopBlock) {
       let obj = { block: null, screen: null };
       obj[0] = shopBlock;
       obj[1] = constants.FEATURED_PAGE;
-      let tmp6 = jsx(importDefault(14731), { block: null, screen: null });
+      let tmp6 = jsx(require("ShopBlockItem.tsx"), { block: null, screen: null });
     }
     return tmp6;
   }
   obj = { style: callback().container, children: null };
   obj = { style: { marginTop: 42 }, Illustration: null, body: null };
-  obj[1] = require(8749) /* getNoResultsSource */.NoResults;
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl.string(require(1236) /* getSystemLocale */.t.eAn6z2);
-  obj[1] = jsx(require(1297) /* Button */.EmptyState, { style: { marginTop: 42 }, Illustration: null, body: null });
+  obj[1] = require("../../../design/components/Illustration/native/redesign/generated/NoResults.tsx") /* getNoResultsSource */.NoResults;
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.eAn6z2);
+  obj[1] = jsx(require("../../../design/void/native.tsx") /* Button */.EmptyState, { style: { marginTop: 42 }, Illustration: null, body: null });
   tmp6 = <View style={{ marginTop: 42 }} Illustration={null} body={null} />;
 };

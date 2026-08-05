@@ -84,20 +84,20 @@ const result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/na
 
 export default function ClearAllIncomingRequestsAlertModal(incomingRequestCount) {
   let obj = { title: null, content: null, actions: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.z2pFjo);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.formatToPlainString(require(1236) /* getSystemLocale */.t["0nTvEw"], { incomingRequestCount: incomingRequestCount.incomingRequestCount });
+  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.z2pFjo);
+  const intl2 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl2.formatToPlainString(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["0nTvEw"], { incomingRequestCount: incomingRequestCount.incomingRequestCount });
   obj = { children: null };
   obj = { variant: "destructive", onPress: handleConfirm, text: null };
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl3.string(require(1236) /* getSystemLocale */.t["cY+Oob"]);
-  const items = [callback2(require(4628) /* getAlertModalItemKey */.AlertActionButton, obj, "confirm"), ];
+  const intl3 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl3.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["cY+Oob"]);
+  const items = [callback2(require("../../../../../design/components/AlertModal/native/AlertModal.native.tsx") /* getAlertModalItemKey */.AlertActionButton, obj, "confirm"), ];
   const obj1 = { variant: "secondary", text: null };
-  const intl4 = require(1236) /* getSystemLocale */.intl;
-  obj1[1] = intl4.string(require(1236) /* getSystemLocale */.t["ETE/oC"]);
-  items[1] = callback2(require(4628) /* getAlertModalItemKey */.AlertActionButton, obj1, "cancel");
+  const intl4 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj1[1] = intl4.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["ETE/oC"]);
+  items[1] = callback2(require("../../../../../design/components/AlertModal/native/AlertModal.native.tsx") /* getAlertModalItemKey */.AlertActionButton, obj1, "cancel");
   obj[0] = items;
-  obj[2] = callback3(require(4628) /* getAlertModalItemKey */.AlertActions, obj);
-  return callback2(require(4628) /* getAlertModalItemKey */.AlertModal, obj);
+  obj[2] = callback3(require("../../../../../design/components/AlertModal/native/AlertModal.native.tsx") /* getAlertModalItemKey */.AlertActions, obj);
+  return callback2(require("../../../../../design/components/AlertModal/native/AlertModal.native.tsx") /* getAlertModalItemKey */.AlertModal, obj);
 };

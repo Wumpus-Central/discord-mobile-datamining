@@ -352,7 +352,7 @@ prototype["merge"] = function merge(topic) {
 prototype["computeLurkerPermissionsAllowList"] = function computeLurkerPermissionsAllowList() {
   if (this.isGuildStageVoice()) {
     if (_public.isPublic(this.id)) {
-      return require(1380) /* Permissions */.LURKER_STAGE_CHANNEL_PERMISSIONS_ALLOWLIST;
+      return require("../modules/stage_channels/StageChannelPermissions.tsx") /* Permissions */.LURKER_STAGE_CHANNEL_PERMISSIONS_ALLOWLIST;
     }
   }
 };
@@ -533,11 +533,11 @@ prototype["getApplicationId"] = function getApplicationId() {
 };
 prototype["getDefaultSortOrder"] = function getDefaultSortOrder() {
   if (this.isGameInvitesChannel()) {
-    let LATEST_ACTIVITY = require(1381) /* set */.ThreadSortOrder.CREATION_DATE;
+    let LATEST_ACTIVITY = require("../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx") /* set */.ThreadSortOrder.CREATION_DATE;
   } else {
     LATEST_ACTIVITY = this.defaultSortOrder;
     if (LATEST_ACTIVITY == null) {
-      LATEST_ACTIVITY = require(1381) /* set */.ThreadSortOrder.LATEST_ACTIVITY;
+      LATEST_ACTIVITY = require("../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx") /* set */.ThreadSortOrder.LATEST_ACTIVITY;
     }
   }
   return LATEST_ACTIVITY;
@@ -547,20 +547,20 @@ prototype["getDefaultLayout"] = function getDefaultLayout() {
   if (!this.isMediaChannel()) {
     if (!self.isGameInvitesChannel()) {
       if (null != self.defaultForumLayout) {
-        if (self.defaultForumLayout !== require(1382) /* set */.ForumLayout.DEFAULT) {
+        if (self.defaultForumLayout !== require("../../discord_common/js/shared/shared-constants/ForumLayout.tsx") /* set */.ForumLayout.DEFAULT) {
           let GRID = self.defaultForumLayout;
         }
       }
-      GRID = require(1382) /* set */.ForumLayout.LIST;
+      GRID = require("../../discord_common/js/shared/shared-constants/ForumLayout.tsx") /* set */.ForumLayout.LIST;
     }
     return GRID;
   }
-  GRID = require(1382) /* set */.ForumLayout.GRID;
+  GRID = require("../../discord_common/js/shared/shared-constants/ForumLayout.tsx") /* set */.ForumLayout.GRID;
 };
 prototype["getDefaultTagSetting"] = function getDefaultTagSetting() {
   let MATCH_SOME = this.defaultTagSetting;
   if (MATCH_SOME == null) {
-    MATCH_SOME = require(1383) /* set */.ThreadSearchTagSetting.MATCH_SOME;
+    MATCH_SOME = require("../../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx") /* set */.ThreadSearchTagSetting.MATCH_SOME;
   }
   return MATCH_SOME;
 };
@@ -590,7 +590,7 @@ Object.defineProperty(prototype, "accessPermissions", {
   set: undefined
 });
 prototype["hasFlag"] = function hasFlag(arg0) {
-  return require(1384) /* hasFlag */.hasFlag(this.flags, arg0);
+  return require("../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(this.flags, arg0);
 };
 Object.defineProperty(prototype, "isHDStreamSplashed", {
   get: function isHDStreamSplashed() {
@@ -672,11 +672,11 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id) {
     if (null == nicks) {
       let obj2 = {};
     } else {
-      obj2 = importDefault(12).reduce(nicks, (arg0, id) => {
+      obj2 = require("../../_runtime/00012_apply.js").reduce(nicks, (arg0, id) => {
         arg0[id.id] = id.nick;
         return arg0;
       }, {});
-      const arr3 = importDefault(12);
+      const arr3 = require("../../_runtime/00012_apply.js");
     }
     obj[26] = obj2;
     ({ nsfw: obj[27], origin_channel_id: obj[28], owner_id: obj[29], parent_id: obj[30], permission_overwrites } = application_id);
@@ -1109,11 +1109,11 @@ PrivateChannelRecord["fromServer"] = function fromServer(application_id) {
   if (null == nicks) {
     reduced = {};
   } else {
-    reduced = importDefault(12).reduce(nicks, (arg0, id) => {
+    reduced = require("../../_runtime/00012_apply.js").reduce(nicks, (arg0, id) => {
       arg0[id.id] = id.nick;
       return arg0;
     }, {});
-    const arr2 = importDefault(12);
+    const arr2 = require("../../_runtime/00012_apply.js");
   }
   reduced[11] = reduced;
   reduced[12] = application_id.owner_id;
@@ -1126,7 +1126,7 @@ PrivateChannelRecord["fromServer"] = function fromServer(application_id) {
     DM = ChannelTypes.DM;
   }
   reduced[18] = DM;
-  return require(1385) /* exact */.dangerouslyCast(reduced, PrivateChannelRecord);
+  return require("../../discord_common/js/packages/type-utils/TypeUtils.tsx") /* exact */.dangerouslyCast(reduced, PrivateChannelRecord);
 };
 prototype2["isSystemDM"] = function isSystemDM() {
   const first = this.rawRecipients[0];
@@ -1145,14 +1145,14 @@ prototype2["getRecipientId"] = function getRecipientId() {
 prototype2["addRecipient"] = function addRecipient(arg0, arg1, arg2) {
   const self = this;
   if (arg0 !== arg2) {
-    let obj = importDefault(12);
+    let obj = require("../../_runtime/00012_apply.js");
     let recipients = self.recipients;
     if (recipients == null) {
       recipients = [];
     }
     const items = [];
     items[HermesBuiltin.arraySpread(recipients, 0)] = arg0;
-    const result = self.set("recipients", obj.uniq(items).sort(importDefault(11).compare));
+    const result = self.set("recipients", obj.uniq(items).sort(require("../utils/SnowflakeUtils.tsx").compare));
     let result1 = result;
     if (null != arg1) {
       obj = {};
@@ -1166,7 +1166,7 @@ prototype2["addRecipient"] = function addRecipient(arg0, arg1, arg2) {
   }
 };
 prototype2["removeRecipient"] = function removeRecipient(id2) {
-  return this.set("recipients", importDefault(12).without(this.recipients, id2));
+  return this.set("recipients", require("../../_runtime/00012_apply.js").without(this.recipients, id2));
 };
 class DMChannelRecord extends PrivateChannelRecord {
 }
@@ -1247,7 +1247,7 @@ prototype3["fromServer"] = function fromServer(applied_tags) {
   }
   obj[20] = PUBLIC_THREAD;
   ({ user_limit: obj[21], video_quality_mode: obj[22], last_non_message_activity_timestamp: obj[23] } = applied_tags);
-  return require(1385) /* exact */.dangerouslyCast(obj, prototype3);
+  return require("../../discord_common/js/packages/type-utils/TypeUtils.tsx") /* exact */.dangerouslyCast(obj, prototype3);
 };
 let closure_29 = { [ChannelTypes.DM]: PrivateChannelRecord.fromServer, [ChannelTypes.GROUP_DM]: PrivateChannelRecord.fromServer, [ChannelTypes.GUILD_TEXT]: GuildTextualChannelRecord.fromServer, [ChannelTypes.GUILD_VOICE]: GuildVocalChannelRecord.fromServer, [ChannelTypes.GUILD_STAGE_VOICE]: GuildVocalChannelRecord.fromServer, [ChannelTypes.GUILD_CATEGORY]: GuildTextualChannelRecord.fromServer, [ChannelTypes.GUILD_ANNOUNCEMENT]: GuildTextualChannelRecord.fromServer, [ChannelTypes.GUILD_STORE]: GuildTextualChannelRecord.fromServer, [ChannelTypes.ANNOUNCEMENT_THREAD]: prototype3.fromServer, [ChannelTypes.PUBLIC_THREAD]: prototype3.fromServer, [ChannelTypes.PRIVATE_THREAD]: prototype3.fromServer, [ChannelTypes.MEDIA_THREAD]: prototype3.fromServer, [ChannelTypes.GUILD_DIRECTORY]: GuildTextualChannelRecord.fromServer, [ChannelTypes.GUILD_FORUM]: ForumChannelRecord.fromServer, [ChannelTypes.GUILD_MEDIA]: ForumChannelRecord.fromServer };
 let closure_30 = { [ChannelTypes.DM]: DMChannelRecord, [ChannelTypes.GROUP_DM]: GroupDMChannelRecord, [ChannelTypes.GUILD_TEXT]: GuildTextChannelRecord, [ChannelTypes.GUILD_VOICE]: GuildVoiceChannelRecord, [ChannelTypes.GUILD_STAGE_VOICE]: GuildStageVoiceChannelRecord, [ChannelTypes.GUILD_CATEGORY]: GuildCategoryChannelRecord, [ChannelTypes.GUILD_ANNOUNCEMENT]: GuildAnnouncementChannelRecord, [ChannelTypes.GUILD_STORE]: GuildStoreChannelRecord, [ChannelTypes.ANNOUNCEMENT_THREAD]: prototype3, [ChannelTypes.PUBLIC_THREAD]: prototype3, [ChannelTypes.PRIVATE_THREAD]: prototype3, [ChannelTypes.MEDIA_THREAD]: prototype3, [ChannelTypes.GUILD_DIRECTORY]: GuildDirectoryChannelRecord, [ChannelTypes.GUILD_FORUM]: ForumChannelRecord, [ChannelTypes.GUILD_MEDIA]: ForumChannelRecord };
@@ -1388,6 +1388,6 @@ export const castChannelRecord = function castChannelRecord(type) {
   if (tmp3 == null) {
     tmp3 = UnknownChannelRecord;
   }
-  return require(1385) /* exact */.dangerouslyCast(type, tmp3);
+  return require("../../discord_common/js/packages/type-utils/TypeUtils.tsx") /* exact */.dangerouslyCast(type, tmp3);
 };
 export { createChannelRecord };

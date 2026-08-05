@@ -49,10 +49,10 @@ function ExternalPipViewVideoUser(arg0) {
   let require;
   let speaking;
   ({ userId: require, channelId: importDefault, speaking } = arg0);
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_9.getUser(closure_0));
-  require(589) /* initialize */;
+  require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   [][0] = ensureGuildLoaded;
   obj = { style: callback3().user, children: null };
   let tmp7Result = null;
@@ -191,7 +191,7 @@ const memoResult = importAllResult.memo(function ExternalPipViewVideo(onLayout) 
   let selectedParticipantSpeaking;
   let selectedParticipantStreamId;
   let selectedParticipantUserId;
-  const tmp2 = importDefault(15949)();
+  const tmp2 = require("useExternalPipParticipant.android.tsx")();
   ({ selectedParticipantStreamId, selectedParticipantUserId, focusedParticipantType } = tmp2);
   const items = [selectedParticipantStreamId, selectedParticipantUserId, focusedParticipantType];
   ({ channelId, selectedParticipantSpeaking } = tmp2);

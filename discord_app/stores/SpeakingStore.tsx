@@ -225,7 +225,7 @@ prototype["getVoiceVolume"] = function getVoiceVolume(arg0) {
   if (arg1 === undefined) {
     DEFAULT = constants2.DEFAULT;
   }
-  const config = importDefault(5105).getConfig({ location: "SpeakingStore" });
+  const config = require("../modules/calls/ProportionalVadIndicatorExperiment.tsx").getConfig({ location: "SpeakingStore" });
   let num = -Infinity;
   if (config.enabled) {
     num = -Infinity;

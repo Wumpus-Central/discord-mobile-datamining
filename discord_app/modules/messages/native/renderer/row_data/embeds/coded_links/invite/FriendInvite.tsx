@@ -12,10 +12,10 @@ export const createFriendInvite = function createFriendInvite(inviter) {
   let acceptLabelGreenColor;
   let baseColors;
   let colors;
-  ({ colors, baseColors } = importDefault(7863)(arg3));
-  const intl = require(1236) /* getSystemLocale */.intl;
+  ({ colors, baseColors } = require("../../getEmbedThemeColors.tsx")(arg3));
+  const intl = require("../../../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   const string = intl.string;
-  const t = require(1236) /* getSystemLocale */.t;
+  const t = require("../../../../../../../../intl/index.native.tsx") /* getSystemLocale */.t;
   if (arg1) {
     let str = string(t.eQyu1F);
     let tmp5 = tmp4;

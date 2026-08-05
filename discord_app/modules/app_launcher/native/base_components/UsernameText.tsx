@@ -21,7 +21,7 @@ export default function UsernameText(color) {
     str = "text-default";
   }
   let obj = { variant, color: str };
-  let obj1 = require(4474) /* getNickname */;
+  let obj1 = require("../../../../utils/NicknameUtils.tsx") /* getNickname */;
   const name = obj1.getName(color.guildId, null, user);
   if (user.hasUniqueUsername()) {
     str = user.toString();
@@ -53,5 +53,5 @@ export default function UsernameText(color) {
     tmp13 = callback(closure_3, obj2);
   }
   obj1.children = tmp13;
-  return closure_4(require(4281) /* Text */.Text, obj1);
+  return closure_4(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
 };

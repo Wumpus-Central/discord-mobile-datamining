@@ -27,5 +27,5 @@ export const useGetOrFetchNotificationCenterItemsApplications = function useGetO
     });
     return items;
   }, items);
-  return importDefault(5616)(memo);
+  return require("../applications/useGetOrFetchApplications.tsx")(memo);
 };

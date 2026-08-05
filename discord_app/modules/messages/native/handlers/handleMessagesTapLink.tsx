@@ -26,10 +26,10 @@ function handleMessagesTapURLLink(data, channelId) {
     const node = data.node;
     let flag2 = false;
     if (null != node) {
-      let obj = require(10990) /* isLinkTrusted */;
+      let obj = require("../../../markup/MarkupReactLinkUtils.tsx") /* isLinkTrusted */;
       flag2 = false;
       if (obj.isLinkTrusted(node)) {
-        const payload = importDefault(4266)(tmp).payload;
+        const payload = require("../../../../utils/native/parseURL.tsx")(tmp).payload;
         flag2 = false;
         if (payload.type === constants.INVITE) {
           flag2 = false;
@@ -52,7 +52,7 @@ function handleMessagesTapURLLink(data, channelId) {
       tmp2 = require;
     }
     if (!flag2) {
-      const payload2 = importDefault(4266)(data.url).payload;
+      const payload2 = require("../../../../utils/native/parseURL.tsx")(data.url).payload;
       let flag3 = false;
       if (payload2.type === constants.GAME_PROFILE) {
         const gameId = payload2.gameId;
@@ -69,14 +69,14 @@ function handleMessagesTapURLLink(data, channelId) {
         }
         obj = { gameId: null, source: null, sourceUserId: null, gameProfileModalChecks: null };
         obj[0] = gameId;
-        obj[1] = require(9200) /* GameProfileEmbedAction */.GameProfileSources.Deeplink;
+        obj[1] = require("../../../game_profile/GameProfileAnalyticUtils.tsx") /* GameProfileEmbedAction */.GameProfileSources.Deeplink;
         obj[2] = tmp13;
         obj = { shouldOpenGameProfile: true, gameId: null };
         obj[1] = gameId;
         obj[3] = obj;
-        require(9194).default.openGameProfileModal(obj);
+        require("../../../game_profile/GameProfileActionCreators.native.tsx").default.openGameProfileModal(obj);
         flag3 = true;
-        const _default = require(9194).default;
+        const _default = require("../../../game_profile/GameProfileActionCreators.native.tsx").default;
       }
       flag2 = flag3;
     }
@@ -92,9 +92,9 @@ function handleMessagesTapURLLink(data, channelId) {
       obj1[1] = isLinkTrustedResult;
       obj1[2] = data.messageId;
       obj1[3] = channelId;
-      require(8854) /* isLinkTrusted */.handleClick(obj1);
+      require("../../../../utils/MaskedLinkUtils.tsx") /* isLinkTrusted */.handleClick(obj1);
       flag = true;
-      const obj5 = require(8854) /* isLinkTrusted */;
+      const obj5 = require("../../../../utils/MaskedLinkUtils.tsx") /* isLinkTrusted */;
       tmp19 = require;
     }
   }
@@ -132,6 +132,6 @@ export const handleMessagesTapLink = function handleMessagesTapLink(tapLinkData)
     }
     tmp4 = handleMessagesTapURLLink;
   } else {
-    const obj = require(10931) /* isAlertOrActionSheetOpen */;
+    const obj = require("../../../../components_native/chat/isAlertOrActionSheetOpen.tsx") /* isAlertOrActionSheetOpen */;
   }
 };

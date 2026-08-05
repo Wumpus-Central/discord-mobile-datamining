@@ -11,7 +11,7 @@ const require = arg1;
 const result = require("ensureGuildLoaded").fileFinishedImporting("modules/guild/markGuildsAsRead.tsx");
 
 export default function markGuildsAsRead(arr, source, onFinished) {
-  let obj = importDefault(12);
+  let obj = require("../../../_runtime/00012_apply.js");
   const mapped = obj.flatMap(arr, (closure_0) => {
     const selectableChannelIds = store.getSelectableChannelIds(closure_0);
     const vocalChannelIds = store.getVocalChannelIds(closure_0);
@@ -84,7 +84,7 @@ export default function markGuildsAsRead(arr, source, onFinished) {
     return items;
   });
   obj = { source, type: "guild" };
-  importDefault(698).track(AnalyticEvents.MARK_AS_READ, obj);
-  let obj2 = importDefault(698);
+  require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.MARK_AS_READ, obj);
+  let obj2 = require("../../utils/AnalyticsUtils.tsx");
   return mapped(5221).bulkAck(mapped, onFinished);
 };

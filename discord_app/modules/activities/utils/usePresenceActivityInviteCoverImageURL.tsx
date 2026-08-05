@@ -12,7 +12,7 @@ function _getPresenceActivityInviteCoverImageURL(messageId) {
   if (null === coverImageURL) {
     return { cachedImageURL: null, imageURL: null };
   } else {
-    const result = 600 * importDefault(1849)();
+    const result = 600 * require("../../../utils/getDevicePixelRatio.native.tsx")();
     obj = { cachedImageURL: null, imageURL: null };
     obj[0] = coverImageURL;
     let invite_cover_image;
@@ -24,8 +24,8 @@ function _getPresenceActivityInviteCoverImageURL(messageId) {
     }
     let assetImage = null;
     if (null != invite_cover_image) {
-      assetImage = require(8051) /* updateAssets */.getAssetImage(presenceActivity.application_id, presenceActivity.assets.invite_cover_image, result);
-      const obj2 = require(8051) /* updateAssets */;
+      assetImage = require("../../../utils/ApplicationAssetUtils.tsx") /* updateAssets */.getAssetImage(presenceActivity.application_id, presenceActivity.assets.invite_cover_image, result);
+      const obj2 = require("../../../utils/ApplicationAssetUtils.tsx") /* updateAssets */;
     }
     if (assetImage == null) {
       assetImage = coverImageURL;

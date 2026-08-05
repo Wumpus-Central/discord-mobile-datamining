@@ -14,7 +14,7 @@ export const getOrRefreshAdSession = function getOrRefreshAdSession(shouldExtend
     const _Date = Date;
     const timestamp1 = Date.now();
     if (timestamp1 < obj.createdAtTimestamp) {
-      obj = importDefault(1208);
+      obj = require("../../utils/SentryUtils.native.tsx");
       obj = { category: "ad", message: null };
       const _HermesInternal = HermesInternal;
       obj[1] = "future facing timestamp Date.now(): " + timestamp1 + ", initialized timestamp: " + tmp11.createdAtTimestamp;
@@ -22,7 +22,7 @@ export const getOrRefreshAdSession = function getOrRefreshAdSession(shouldExtend
       let flag2 = true;
     } else {
       const diff = timestamp1 - tmp11.lastUsedTimestamp;
-      flag2 = diff > require(6840) /* result */.SESSION_IDLE_TIMEOUT_MILLIS || timestamp1 - tmp11.createdAtTimestamp > closure_3;
+      flag2 = diff > require("SessionUtils.tsx") /* result */.SESSION_IDLE_TIMEOUT_MILLIS || timestamp1 - tmp11.createdAtTimestamp > closure_3;
     }
     if (!flag2) {
       if (flag) {
@@ -33,12 +33,12 @@ export const getOrRefreshAdSession = function getOrRefreshAdSession(shouldExtend
     return tmp9;
   }
   obj = { uuid: null, createdAtTimestamp: null, lastUsedTimestamp: null, version: null };
-  obj[0] = require(514) /* v1 */.v4();
+  obj[0] = require("../../../_runtime/00514_v1.js") /* v1 */.v4();
   obj[1] = timestamp;
   obj[2] = timestamp;
-  obj[3] = require(6840) /* result */.CLIENT_SESSION_STORAGE_VERSION;
-  const obj4 = require(514) /* v1 */;
-  importDefault(709).dispatch({ type: "AD_SESSION_RESET" });
+  obj[3] = require("SessionUtils.tsx") /* result */.CLIENT_SESSION_STORAGE_VERSION;
+  const obj4 = require("../../../_runtime/00514_v1.js") /* v1 */;
+  require("../../Dispatcher.tsx").dispatch({ type: "AD_SESSION_RESET" });
   tmp9 = obj;
 };
 export function clearAdSession() {
@@ -50,7 +50,7 @@ export function getCurrentAdSession() {
 export const isAdSessionExpired = function isAdSessionExpired(createdAtTimestamp) {
   const timestamp = Date.now();
   if (timestamp < createdAtTimestamp.createdAtTimestamp) {
-    let obj = importDefault(1208);
+    let obj = require("../../utils/SentryUtils.native.tsx");
     obj = { category: "ad", message: null };
     const _HermesInternal = HermesInternal;
     obj[1] = "future facing timestamp Date.now(): " + timestamp + ", initialized timestamp: " + createdAtTimestamp.createdAtTimestamp;
@@ -58,6 +58,6 @@ export const isAdSessionExpired = function isAdSessionExpired(createdAtTimestamp
     return true;
   } else {
     const diff = timestamp - createdAtTimestamp.lastUsedTimestamp;
-    return diff > require(6840) /* result */.SESSION_IDLE_TIMEOUT_MILLIS || timestamp - createdAtTimestamp.createdAtTimestamp > closure_3;
+    return diff > require("SessionUtils.tsx") /* result */.SESSION_IDLE_TIMEOUT_MILLIS || timestamp - createdAtTimestamp.createdAtTimestamp > closure_3;
   }
 };

@@ -12,7 +12,7 @@ import { PersistedStore } from "initialize";
 
 const require = arg1;
 function isSyncedModeThemesEnabled() {
-  return require(1348) /* useIsMobileVisualRefreshExperimentEnabled */.isMobileVisualRefreshEnabled("ClientThemesBackgroundStore");
+  return require("../themes/experiments/MobileVisualRefreshExperiment.tsx") /* useIsMobileVisualRefreshExperimentEnabled */.isMobileVisualRefreshEnabled("ClientThemesBackgroundStore");
 }
 function reset() {
   if (c14) {
@@ -21,17 +21,17 @@ function reset() {
   let c15 = false;
 }
 function handleUserStoreChange() {
-  const tmp = !importDefault(3931).canUseClientThemes(currentUser.getCurrentUser());
+  const tmp = !require("../../utils/PremiumUtils.tsx").canUseClientThemes(currentUser.getCurrentUser());
   if (tmp === c14) {
     return false;
   } else {
     c14 = tmp;
   }
-  const obj = importDefault(3931);
+  const obj = require("../../utils/PremiumUtils.tsx");
 }
 function handleSelectivelySyncedStoreChange() {
   if (initialize.shouldSync("appearance")) {
-    const ClientThemeSettings = require(3958) /* explicitContentFromProto */.ClientThemeSettings;
+    const ClientThemeSettings = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.ClientThemeSettings;
     const backgroundGradientPresetId = ClientThemeSettings.getSetting().backgroundGradientPresetId;
     if (null == backgroundGradientPresetId) {
       if (null == c3) {
@@ -49,14 +49,14 @@ function handleSelectivelySyncedStoreChange() {
   }
 }
 function handleSyncedModeChange() {
-  return require(1347) /* isPerModeThemingActive */.isPerModeThemingActive(isSyncedModeThemesEnabled);
+  return require("../user_settings/isPerModeThemingActive.tsx") /* isPerModeThemingActive */.isPerModeThemingActive(isSyncedModeThemesEnabled);
 }
 function handleSameAsDeviceThemeToggle() {
-  return require(1348) /* useIsMobileVisualRefreshExperimentEnabled */.isMobileVisualRefreshEnabled("ClientThemesBackgroundStore");
+  return require("../themes/experiments/MobileVisualRefreshExperiment.tsx") /* useIsMobileVisualRefreshExperimentEnabled */.isMobileVisualRefreshEnabled("ClientThemesBackgroundStore");
 }
 function handleUserSettingsProtoStoreUpdate() {
   if (initialize.shouldSync("appearance")) {
-    const ClientThemeSettings = require(3958) /* explicitContentFromProto */.ClientThemeSettings;
+    const ClientThemeSettings = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.ClientThemeSettings;
     const backgroundGradientPresetId = ClientThemeSettings.getSetting().backgroundGradientPresetId;
     let result = useSystemTheme.useSystemTheme !== SystemThemeState.ON;
     if (!result) {
@@ -66,8 +66,8 @@ function handleUserSettingsProtoStoreUpdate() {
       result = handleThemeChange.isSameAsDeviceThemeEnabled();
     }
     if (!result) {
-      require(4127) /* setSystemTheme */.setUseSystemTheme(SystemThemeState.OFF);
-      const tmpResult = require(4127) /* setSystemTheme */;
+      require("../user_settings/ThemeActionCreators.tsx") /* setSystemTheme */.setUseSystemTheme(SystemThemeState.OFF);
+      const tmpResult = require("../user_settings/ThemeActionCreators.tsx") /* setSystemTheme */;
     }
     if (null != backgroundGradientPresetId) {
       let tmp13 = null == tmp12;
@@ -160,15 +160,15 @@ Object.defineProperty(prototype, "gradientPreset", {
     } else {
       return closure_3;
     }
-    obj = require(1347) /* isPerModeThemingActive */;
+    obj = require("../user_settings/isPerModeThemingActive.tsx") /* isPerModeThemingActive */;
   },
   set: undefined
 });
 prototype["getLinearGradient"] = function getLinearGradient() {
   let linearGradientForBackgroundGradient = null;
   if (null != this.gradientPreset) {
-    linearGradientForBackgroundGradient = require(4128) /* getThemeForColor */.getLinearGradientForBackgroundGradient(tmp.gradientPreset);
-    const obj = require(4128) /* getThemeForColor */;
+    linearGradientForBackgroundGradient = require("ClientThemesUtils.tsx") /* getThemeForColor */.getLinearGradientForBackgroundGradient(tmp.gradientPreset);
+    const obj = require("ClientThemesUtils.tsx") /* getThemeForColor */;
   }
   return linearGradientForBackgroundGradient;
 };
@@ -217,7 +217,7 @@ const clientThemesBackgroundStore = new ClientThemesBackgroundStore(require("dis
     channelId = channelId.channelId;
     if (null != channelId) {
       if (null != channelId.guildId) {
-        if (!obj2.UNSAFE_isDismissibleContentDismissed(require(1358) /* DismissibleContent */.DismissibleContent.CLIENT_THEMES_COACHMARK)) {
+        if (!obj2.UNSAFE_isDismissibleContentDismissed(require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.CLIENT_THEMES_COACHMARK)) {
           if (tmp6Result.ageEligibleForPremiumUpsell(tmp)) {
             channel = channel.getChannel(channelId);
             let tmp4 = null != channel;
@@ -230,7 +230,7 @@ const clientThemesBackgroundStore = new ClientThemesBackgroundStore(require("dis
           }
           tmp6Result = tmp6(4124);
         }
-        obj2 = require(4101) /* UNSAFE_isDismissibleContentDismissed */;
+        obj2 = require("../dismissible_content/DismissibleContentUnsafeUtils.tsx") /* UNSAFE_isDismissibleContentDismissed */;
         tmp6 = require;
       }
     }

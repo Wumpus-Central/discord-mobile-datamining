@@ -14,7 +14,7 @@ export default function MountMeasure(arg0) {
   let style;
   ({ batchKey: require, onMeasure: dependencyMap, onCancel: View } = arg0);
   ({ style, children } = arg0);
-  let obj = require(4711) /* useMountLayoutEffect */;
+  let obj = require("../../../../../../hooks/useMountEffect.tsx") /* useMountLayoutEffect */;
   const unmountEffect = obj.useUnmountEffect(() => callback2(closure_0));
   obj = {
     style,

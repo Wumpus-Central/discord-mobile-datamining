@@ -6,7 +6,7 @@ export const hideLiveChannelNotice = function hideLiveChannelNotice(arg0) {
   let stageId;
   ({ eventId, stageId } = arg0);
   if (!tmp) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "LIVE_CHANNEL_NOTICE_HIDE", eventId: null, stageId: null };
     obj[1] = eventId;
     obj[2] = stageId;
@@ -14,17 +14,17 @@ export const hideLiveChannelNotice = function hideLiveChannelNotice(arg0) {
   }
 };
 export const hideUpcomingEventNotice = function hideUpcomingEventNotice(eventId) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "UPCOMING_GUILD_EVENT_NOTICE_HIDE", eventId };
   obj.dispatch(obj);
 };
 export const markUpcomingEventNoticeAsSeen = function markUpcomingEventNoticeAsSeen(guildEventId) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "UPCOMING_GUILD_EVENT_NOTICE_SEEN", guildEventId };
   obj.dispatch(obj);
 };
 export const dismissEventBanner = function dismissEventBanner(id) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "EVENT_BANNER_DISMISS", eventId: id };
   obj.dispatch(obj);
 };

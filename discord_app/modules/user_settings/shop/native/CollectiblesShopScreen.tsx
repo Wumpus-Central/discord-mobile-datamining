@@ -7,12 +7,12 @@ const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/user_settings/shop/native/CollectiblesShopScreen.tsx");
 
 export default function CollectiblesShopScreen() {
-  let obj = require(6787) /* useSettingNavigationRoute */;
+  let obj = require("../../core/native/useSettingNavigationRoute.tsx") /* useSettingNavigationRoute */;
   const settingNavigationRoute = obj.useSettingNavigationRoute();
-  const shopOrientationLock = require(14722) /* useShopOrientationLock */.useShopOrientationLock();
-  const obj2 = require(14722) /* useShopOrientationLock */;
+  const shopOrientationLock = require("../../../collectibles/native/useShopOrientationLock.tsx") /* useShopOrientationLock */.useShopOrientationLock();
+  const obj2 = require("../../../collectibles/native/useShopOrientationLock.tsx") /* useShopOrientationLock */;
   const tmp = require;
-  const giftCardMobileConsumptionHalfsheet = require(5928) /* useGiftCardMobileConsumptionHalfsheet */.useGiftCardMobileConsumptionHalfsheet();
+  const giftCardMobileConsumptionHalfsheet = require("../../../checkout/native/useGiftCardMobileConsumptionHalfsheet.tsx") /* useGiftCardMobileConsumptionHalfsheet */.useGiftCardMobileConsumptionHalfsheet();
   const params = settingNavigationRoute.params;
   let screen;
   if (params != null) {
@@ -27,7 +27,7 @@ export default function CollectiblesShopScreen() {
     analyticsSource = params2.analyticsSource;
   }
   if (analyticsSource == null) {
-    analyticsSource = importDefault(5630).COLLECTIBLES_SHOP;
+    analyticsSource = require("../../../app_analytics/AnalyticsLocation.tsx").COLLECTIBLES_SHOP;
   }
   obj = { analyticsSource, screen, onNavigateAway: null };
   const params3 = settingNavigationRoute.params;

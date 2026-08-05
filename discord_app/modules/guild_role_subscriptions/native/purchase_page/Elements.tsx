@@ -100,23 +100,23 @@ export const ArrowButton = function ArrowButton(arg0) {
   const tmp = createCacheKey();
   let obj = { accessibilityRole: "button", style: tmp.arrowButton, onPress, children: null };
   obj = { variant: "text-md/semibold", color: "text-default", style: tmp.arrowButtonText, children: text };
-  const items = [callback2(require(4281) /* Text */.Text, obj), ];
+  const items = [callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
   obj = { size: null, source: null, style: null };
-  obj[0] = require(1297) /* Button */.Icon.Sizes.SMALL;
-  obj[1] = importDefault(15531);
+  obj[0] = require("../../../../design/void/native.tsx") /* Button */.Icon.Sizes.SMALL;
+  obj[1] = require("../../../../../_runtime/15531_registerAsset.js");
   obj[2] = tmp.arrowButtonIcon;
-  items[1] = callback2(require(1297) /* Button */.Icon, obj);
+  items[1] = callback2(require("../../../../design/void/native.tsx") /* Button */.Icon, obj);
   obj[3] = items;
-  return callback3(require(4812) /* PressableBase */.PressableOpacity, obj);
+  return callback3(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
 };
 export const useFormattedSubscriptionPlan = function useFormattedSubscriptionPlan(listingId) {
-  const obj = importDefault(7572);
+  const obj = require("../../../payments/native/hooks/NativePaymentHooks.android.tsx");
   const _require = callback(importAll(14363).useSubscriptionPlan(listingId), 1)[0];
   const obj2 = importAll(14363);
   const tmp2 = _require;
   const items = [addSubscriptionPlan];
-  const stateFromStores = _require(647).useStateFromStores(items, () => outer1_8.get(id.id));
-  const price = importDefault(7573)(stateFromStores, obj.useNativeIAPPayments().storeFront).price;
+  const stateFromStores = _require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => outer1_8.get(id.id));
+  const price = require("../../../billing/native/subscription/useStoreFrontPrice.tsx")(stateFromStores, obj.useNativeIAPPayments().storeFront).price;
   let str = "No Price Available";
   if (null != price) {
     const _HermesInternal = HermesInternal;

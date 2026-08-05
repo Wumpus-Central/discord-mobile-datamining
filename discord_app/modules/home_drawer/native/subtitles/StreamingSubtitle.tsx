@@ -10,9 +10,9 @@ export default function StreamingSubtitle(arg0) {
   let streamingUser;
   ({ guildId, streamingUser } = arg0);
   let obj = { variant: "text-xs/medium", color: "text-voice-connected", lineClamp: 1, children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   obj = { username: null };
-  obj[0] = importDefault(4474).getName(guildId, null, streamingUser);
-  obj[3] = intl.format(require(1236) /* getSystemLocale */.t.k5IKep, obj);
-  return jsx(require(4281) /* Text */.Text, { username: null });
+  obj[0] = require("../../../../utils/NicknameUtils.tsx").getName(guildId, null, streamingUser);
+  obj[3] = intl.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.k5IKep, obj);
+  return jsx(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { username: null });
 };

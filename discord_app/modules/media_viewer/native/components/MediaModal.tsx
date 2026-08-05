@@ -1,7 +1,7 @@
 // discord_app/modules/media_viewer/native/components/MediaModal.tsx
 import IMPACT_LIGHT from "IMPACT_LIGHT";
 import get_ActivityIndicator from "handleOrientationChange";
-import module_8784 from "module_8784";
+import AppFreezeStore from "../../../panels/morphable/AppFreezeStore.tsx";
 import getState from "getState";
 import ME from "ME";
 import { jsx } from "useMediaShareActions";

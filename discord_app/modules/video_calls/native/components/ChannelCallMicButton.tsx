@@ -18,7 +18,7 @@ export const ChannelCallMicButton = function ChannelCallMicButton(disableTint) {
   let obj = mute(589);
   const items = [set];
   const stateFromStores = obj.useStateFromStores(items, () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
-  const tmp3 = importDefault(5869)(channel);
+  const tmp3 = require("../../useMuteStates.tsx")(channel);
   const muteHandler = mute(10764).createMuteHandler(tmp3, stateFromStores);
   mute = muteHandler.mute;
   const items1 = [mute];

@@ -13,7 +13,7 @@ export const useInvitesDisabledPermission = function useInvitesDisabledPermissio
   const _require = guild;
   const items = [getUncachedChannelPermissions];
   const items1 = [guild];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
       canResult = outer1_3.can(outer1_5.MANAGE_GUILD, tmp);
@@ -24,7 +24,7 @@ export const useInvitesDisabledPermission = function useInvitesDisabledPermissio
 export const useInvitesDisabled = function useInvitesDisabled(features) {
   const _require = features;
   const items = [computeAlertSettings];
-  const stateFromStores = _require(589).useStateFromStores(items, () => {
+  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let guildIncident = null;
     if (null != closure_0) {
       guildIncident = outer1_2.getGuildIncident(tmp.id);
@@ -57,7 +57,7 @@ export const useShouldShowInvitesDisabledNotif = function useShouldShowInvitesDi
   let _require = guild;
   const items = [getUncachedChannelPermissions];
   const items1 = [guild];
-  let stateFromStores = _require(589).useStateFromStores(items, () => {
+  let stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
       canResult = outer1_3.can(outer1_5.MANAGE_GUILD, tmp);
@@ -65,9 +65,9 @@ export const useShouldShowInvitesDisabledNotif = function useShouldShowInvitesDi
     return canResult;
   }, items1);
   _require = guild;
-  const obj = _require(589);
+  const obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const items2 = [computeAlertSettings];
-  const stateFromStores1 = _require(589).useStateFromStores(items2, () => {
+  const stateFromStores1 = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
     let guildIncident = null;
     if (null != closure_0) {
       guildIncident = outer1_2.getGuildIncident(tmp.id);

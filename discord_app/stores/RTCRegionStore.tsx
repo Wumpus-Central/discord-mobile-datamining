@@ -37,7 +37,7 @@ prototype["getUserAgnosticState"] = function getUserAgnosticState() {
 prototype["shouldPerformLatencyTest"] = function shouldPerformLatencyTest(mapped) {
   let tmp = null === obj.preferredRegions;
   if (!tmp) {
-    obj = importDefault(12);
+    obj = require("../../_runtime/00012_apply.js");
     let lastGeoRankedOrder = obj.lastGeoRankedOrder;
     if (lastGeoRankedOrder == null) {
       lastGeoRankedOrder = [];

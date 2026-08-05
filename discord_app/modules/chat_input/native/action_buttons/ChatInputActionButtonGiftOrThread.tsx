@@ -40,7 +40,7 @@ function renderChatInputActionButtonGiftAndThread(arg0, styleButton, state, clea
     tmpResult = tmp(tmp2(11531), obj);
   }
   obj[2] = tmpResult;
-  return jsx(importDefault(11529), { cleanup, state, children: null }, arg0);
+  return jsx(require("ChatInputActionButtonTransitionItem.tsx"), { cleanup, state, children: null }, arg0);
 }
 function getChatInputActionButtonGiftAndThreadKey(shouldShowThread) {
   let str = "gift";
@@ -56,17 +56,17 @@ let closure_7 = createCacheKey.createStyles((height) => {
 });
 const memoResult = importAllResult.memo(function ChatInputActionButtonGiftOrThread(arg0) {
   const _require = arg0;
-  let obj = _require(3989);
-  const token = obj.useToken(importDefault(712).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
+  let obj = _require("../../../../design/tokens/native/useToken.tsx");
+  const token = obj.useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
   let items = [arg0];
-  const obj2 = _require(3989);
-  obj = { style: callback(token, _require(3989).useToken(importDefault(712).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN)).container, children: null };
+  const obj2 = _require("../../../../design/tokens/native/useToken.tsx");
+  obj = { style: callback(token, _require("../../../../design/tokens/native/useToken.tsx").useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN)).container, children: null };
   const memo = importAllResult.useMemo(() => {
     const items = [closure_0];
     return items;
   }, items);
   obj = { items: memo, renderItem: renderChatInputActionButtonGiftAndThread, getItemKey: getChatInputActionButtonGiftAndThreadKey };
-  obj[1] = jsx(_require(4629).TransitionGroup, { items: memo, renderItem: renderChatInputActionButtonGiftAndThread, getItemKey: getChatInputActionButtonGiftAndThreadKey });
+  obj[1] = jsx(_require("../../../../design/components/TransitionGroup/TransitionGroup.tsx").TransitionGroup, { items: memo, renderItem: renderChatInputActionButtonGiftAndThread, getItemKey: getChatInputActionButtonGiftAndThreadKey });
   return <View items={memo} renderItem={renderChatInputActionButtonGiftAndThread} getItemKey={getChatInputActionButtonGiftAndThreadKey} />;
 });
 const result = require("TextAreaCta").fileFinishedImporting("modules/chat_input/native/action_buttons/ChatInputActionButtonGiftOrThread.tsx");

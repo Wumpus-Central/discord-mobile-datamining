@@ -195,7 +195,7 @@ const result = require("noop").fileFinishedImporting("modules/devtools/native/co
 
 export default function DevToolsGeneratedTestUsersScreen() {
   const tmp = createCacheKey();
-  let obj = _require(589);
+  let obj = _require("../../../../../../discord_common/js/packages/flux/index.tsx");
   const items = [handleAddUser];
   const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
     pools = pools.getPools();
@@ -278,21 +278,21 @@ export default function DevToolsGeneratedTestUsersScreen() {
     }
     return applyArgumentsResult;
   }, []);
-  obj1[0] = importDefault(712).space.PX_16 + importDefault(5310)({ includeKeyboardHeight: true }).insets.bottom;
+  obj1[0] = require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 + require("../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx")({ includeKeyboardHeight: true }).insets.bottom;
   items1[1] = obj1;
   obj[0] = items1;
   const items2 = [callback3(PoolIdInput, { onSubmit: callback }), ];
   let tmp5Result = 0 === stateFromStoresArray.length;
   if (tmp5Result) {
-    tmp5Result = tmp5(_require(5315).TableRow, { label: "No pools available." });
+    tmp5Result = tmp5(_require("../../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, { label: "No pools available." });
   }
   const obj2 = { spacing: 16, children: null };
   const obj3 = { title: "Generated Test User Pools", hasIcons: true, children: null };
   const items3 = [tmp5Result, stateFromStoresArray.map((id) => outer1_10(outer1_17, { pool: id, start: 0 === arg1, end: arg1 === length.length - 1 }, id.id))];
   obj3[2] = items3;
-  items2[1] = closure_11(_require(5649).TableRowGroup, obj3);
+  items2[1] = closure_11(_require("../../../../../design/components/TableRow/native/TableRowGroup.native.tsx").TableRowGroup, obj3);
   obj2[1] = items2;
-  obj[1] = closure_11(_require(4693).Stack, obj2);
+  obj[1] = closure_11(_require("../../../../../design/components/Stack/native/Stack.native.tsx").Stack, obj2);
   obj[1] = callback3(closure_7, obj);
   return callback3(closure_6, obj);
 };

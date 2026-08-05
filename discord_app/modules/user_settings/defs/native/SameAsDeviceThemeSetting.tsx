@@ -5,19 +5,19 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.c445ix);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.c445ix);
   },
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   usePredicate() {
-    return importDefault(1348)("SameAsDeviceThemeSetting");
+    return require("../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("SameAsDeviceThemeSetting");
   },
   useValue: function useSameAsDeviceThemeValue() {
     const items = [handleThemeChange];
-    return require(589) /* initialize */.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
+    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   },
   onValueChange: function onSameAsDeviceThemeValueChange(arg0) {
-    const obj = require(14318) /* handleSaveTheme */;
+    const obj = require("../../appearance/native/UserSettingsAppearanceThemeUtils.tsx") /* handleSaveTheme */;
     if (arg0) {
       const result = obj.enableSameAsDeviceTheme();
     } else {
@@ -25,8 +25,8 @@ createToggle = {
     }
   },
   useDescription() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["+tBsvs"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["+tBsvs"]);
   }
 };
 createToggle = createToggle.createToggle(createToggle);

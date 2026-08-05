@@ -22,5 +22,5 @@ export const Caption = function Caption(arg0) {
   const tmp = callback();
   const items = [tmp.labelContainer, style];
   const items1 = [tmp.captionText, textStyle];
-  return <View style={items}>{jsx(require(1297) /* Button */.LegacyText, { style: items1, children: label })}</View>;
+  return <View style={items}>{jsx(require("../../../design/void/native.tsx") /* Button */.LegacyText, { style: items1, children: label })}</View>;
 };

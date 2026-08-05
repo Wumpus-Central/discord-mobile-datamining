@@ -3,8 +3,8 @@ import createToggle from "createToggle";
 
 obj = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(importDefault(2643).ZPMAlX);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../display_name_styles/intl/DisplayNameStyles.messages.js").ZPMAlX);
   },
   parent: null,
   unsearchable: true,
@@ -16,7 +16,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DISPLAY_NAME_STYLES,
   getComponent() {
-    return require(14469) /* ApplyButton */.default;
+    return require("../../../display_name_styles/native/DisplayNameStylesEditScreen.tsx") /* ApplyButton */.default;
   }
 };
 const route = createToggle.createRoute(obj);

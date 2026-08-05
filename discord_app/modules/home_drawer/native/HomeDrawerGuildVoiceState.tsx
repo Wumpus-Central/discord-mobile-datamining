@@ -27,7 +27,7 @@ function VoiceUsers(arg0) {
     let obj = { style: null, children: null };
     obj[0] = { flexDirection: "row", alignItems: "center", gap: 4 };
     obj = { size: null, names: null, totalCount: null, children: null };
-    obj[0] = require(1297) /* Button */.AvatarSizes.XSMALL;
+    obj[0] = require("../../../design/void/native.tsx") /* Button */.AvatarSizes.XSMALL;
     obj[1] = substr.map((username) => username.username);
     obj[2] = substr.length;
     obj[3] = substr.map((id) => {
@@ -37,7 +37,7 @@ function VoiceUsers(arg0) {
       obj[2] = closure_0;
       return outer1_11(outer1_0(outer1_2[11]).Avatar, obj, id.id);
     });
-    obj[1] = callback(require(12214) /* AvatarPile */.AvatarPile, obj);
+    obj[1] = callback(require("../../../design/components/Pile/native/AvatarPile.native.tsx") /* AvatarPile */.AvatarPile, obj);
     tmp = callback(View, obj);
   }
   return tmp;
@@ -46,9 +46,9 @@ function LiveTag() {
   const tmp = callback3();
   let obj = { style: tmp.tag, children: null };
   obj = { variant: "text-xxs/bold", style: tmp.tagText, lineClamp: 1, children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[3] = intl.string(require(1236) /* getSystemLocale */.t.dI3q4h).toUpperCase();
-  obj[1] = callback(require(4281) /* Text */.Text, obj);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[3] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.dI3q4h).toUpperCase();
+  obj[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   return callback(View, obj);
 }
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
@@ -82,7 +82,7 @@ export const GuildVoiceState = function GuildVoiceState(arg0) {
   if (streamingUser != null) {
     id = streamingUser.id;
   }
-  const previewUrl = importDefault(10837)(guildId, streamingChannelId, id).previewUrl;
+  const previewUrl = require("../../go_live/useFetchStreamPreview.tsx")(guildId, streamingChannelId, id).previewUrl;
   if (!tmp2) {
     return null;
   } else {

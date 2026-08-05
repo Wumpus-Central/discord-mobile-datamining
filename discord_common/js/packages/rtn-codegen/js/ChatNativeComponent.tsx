@@ -9,26 +9,26 @@ obj[2] = obj;
 obj = {
   scrollTo(arg0, arg1, arg2, arg3, arg4) {
     const items = [arg1, arg2, arg3, arg4];
-    require(114) /* renderElement */.dispatchCommand(arg0, "scrollTo", items);
+    require("../../../../../_runtime/00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "scrollTo", items);
   },
   scrollToBottom(arg0, arg1) {
     const items = [arg1];
-    require(114) /* renderElement */.dispatchCommand(arg0, "scrollToBottom", items);
+    require("../../../../../_runtime/00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "scrollToBottom", items);
   },
   scrollIntoView(arg0, arg1, arg2, arg3) {
     const items = [arg1, arg2, arg3];
-    require(114) /* renderElement */.dispatchCommand(arg0, "scrollIntoView", items);
+    require("../../../../../_runtime/00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "scrollIntoView", items);
   },
   updateRows(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) {
     const items = [arg1, arg2, arg3, arg4, arg5, arg6, arg7];
-    require(114) /* renderElement */.dispatchCommand(arg0, "updateRows", items);
+    require("../../../../../_runtime/00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "updateRows", items);
   },
   clearRows(arg0, arg1) {
     const items = [arg1];
-    require(114) /* renderElement */.dispatchCommand(arg0, "clearRows", items);
+    require("../../../../../_runtime/00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "clearRows", items);
   },
   fadeIn(arg0) {
-    require(114) /* renderElement */.dispatchCommand(arg0, "fadeIn", []);
+    require("../../../../../_runtime/00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "fadeIn", []);
   }
 };
 const value = setRuntimeConfigProvider.get("DCDChat", () => obj);

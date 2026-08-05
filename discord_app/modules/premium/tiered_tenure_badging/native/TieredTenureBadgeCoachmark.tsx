@@ -11,7 +11,7 @@ const require = arg1;
 function CoachmarkImg(badge) {
   badge = badge.badge;
   const tmp = callback2();
-  let obj = require(9402) /* useMobileTenureBadgeImages */;
+  let obj = require("hooks/useMobileTenureBadgeImages.tsx") /* useMobileTenureBadgeImages */;
   let id;
   if (badge != null) {
     id = badge.id;
@@ -29,7 +29,7 @@ function CoachmarkImg(badge) {
     const obj1 = { uri: null };
     obj1[0] = medium;
     obj[2] = obj1;
-    obj[1] = jsx(importDefault(5236), { resizeMode: "contain", style: null, source: null });
+    obj[1] = jsx(require("../../../../components_native/common/FastImage.tsx"), { resizeMode: "contain", style: null, source: null });
     tmp5 = <View resizeMode="contain" style={null} source={null} />;
   }
   return tmp5;

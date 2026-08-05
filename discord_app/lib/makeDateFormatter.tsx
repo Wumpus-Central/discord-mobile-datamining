@@ -154,11 +154,11 @@ export default function makeFormatter(str) {
   _require = tmp;
   let result = undefined === arg1 && !flag;
   if (result) {
-    result = undefined !== _require(3972).makeFormatter;
+    result = undefined !== _require("../modules/system_date_format/SystemDateFormatter.native.tsx").makeFormatter;
   }
   if (result) {
-    result = _require(3972).supportsSystemDateFormatter();
-    const obj = _require(3972);
+    result = _require("../modules/system_date_format/SystemDateFormatter.native.tsx").supportsSystemDateFormatter();
+    const obj = _require("../modules/system_date_format/SystemDateFormatter.native.tsx");
   }
   let replaced = str;
   if (!result) {

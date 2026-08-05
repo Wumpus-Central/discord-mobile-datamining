@@ -21,7 +21,7 @@ let closure_15;
 let closure_16;
 const require = arg1;
 function messageEventsValidation(string) {
-  let obj = importDefault(10546)(string);
+  let obj = require("../../helpers/createRpcJoiSchemaObject.tsx")(string);
   obj = { channel_id: null };
   const requiredResult = obj.required();
   obj[0] = string.string().required();
@@ -37,22 +37,22 @@ function messageEvents(args) {
         let obj = { errorCode: null };
         obj[0] = constants2.INVALID_CHANNEL;
         const _HermesInternal = HermesInternal;
-        let tmp3 = importDefault(10543);
+        let tmp3 = require("../../RPCError.tsx");
         tmp3 = new tmp3(obj, "Invalid nsfw channel id: " + channel.id);
         throw tmp3;
       }
       tmp13Result = tmp13(4498);
     }
-    obj4 = require(10548) /* recurseReplaceContentTree */;
+    obj4 = require("../../RPCHelpers.tsx") /* recurseReplaceContentTree */;
     tmp13 = require;
   }
   obj = { errorCode: constants2.INVALID_CHANNEL };
-  let tmp11 = importDefault(10543);
+  let tmp11 = require("../../RPCError.tsx");
   tmp11 = new tmp11(obj, "Invalid channel id: " + channel_id);
   throw tmp11;
 }
 function speakingEventsValidation(string) {
-  let obj = importDefault(10546)(string);
+  let obj = require("../../helpers/createRpcJoiSchemaObject.tsx")(string);
   obj = { channel_id: null };
   obj[0] = string.string().allow(null);
   return obj.keys(obj);
@@ -64,7 +64,7 @@ function speakingEvents(args) {
       const obj = { errorCode: null };
       obj[0] = constants2.INVALID_CHANNEL;
       const _HermesInternal = HermesInternal;
-      let tmp4 = importDefault(10543);
+      let tmp4 = require("../../RPCError.tsx");
       tmp4 = new tmp4(obj, "Invalid channel id: " + channel_id);
       throw tmp4;
     }
@@ -76,7 +76,7 @@ let obj = {};
 obj = {
   scope: require("set").OAuth2Scopes.RPC,
   validation(string) {
-    let obj = importDefault(10546)(string);
+    let obj = require("../../helpers/createRpcJoiSchemaObject.tsx")(string);
     obj = { guild_id: null };
     const requiredResult = obj.required();
     obj[0] = string.string().required();
@@ -88,7 +88,7 @@ obj = {
       let obj = { errorCode: null };
       obj[0] = constants2.INVALID_GUILD;
       const _HermesInternal = HermesInternal;
-      let tmp3 = importDefault(10543);
+      let tmp3 = require("../../RPCError.tsx");
       tmp3 = new tmp3(obj, "Invalid guild id: " + guild_id);
       throw tmp3;
     } else {
@@ -123,7 +123,7 @@ const items = [require("set").OAuth2Scopes.RPC, require("set").OAuth2Scopes.RPC_
 obj1[RPC_SCOPE_CONFIG.ANY] = items;
 obj[0] = obj1;
 obj[1] = function validation(string) {
-  let obj = importDefault(10546)(string);
+  let obj = require("../../helpers/createRpcJoiSchemaObject.tsx")(string);
   obj = { channel_id: null };
   const requiredResult = obj.required();
   obj[0] = string.string().required();
@@ -135,7 +135,7 @@ obj[2] = function handler(args) {
     const obj = { errorCode: null };
     obj[0] = constants2.INVALID_CHANNEL;
     const _HermesInternal = HermesInternal;
-    let tmp3 = importDefault(10543);
+    let tmp3 = require("../../RPCError.tsx");
     tmp3 = new tmp3(obj, "Invalid channel id: " + channel_id);
     throw tmp3;
   } else {
@@ -167,7 +167,7 @@ const items1 = [require("set").OAuth2Scopes.RPC, require("set").OAuth2Scopes.RPC
 obj3[RPC_SCOPE_CONFIG.ANY] = items1;
 obj2[0] = obj3;
 obj2[1] = function validation(string) {
-  let obj = importDefault(10546)(string);
+  let obj = require("../../helpers/createRpcJoiSchemaObject.tsx")(string);
   obj = { channel_id: null };
   const requiredResult = obj.required();
   obj[0] = string.string().required();
@@ -179,7 +179,7 @@ obj2[2] = function handler(args) {
     const obj = { errorCode: null };
     obj[0] = constants2.INVALID_CHANNEL;
     const _HermesInternal = HermesInternal;
-    let tmp3 = importDefault(10543);
+    let tmp3 = require("../../RPCError.tsx");
     tmp3 = new tmp3(obj, "Invalid channel id: " + channel_id);
     throw tmp3;
   } else {
@@ -206,7 +206,7 @@ const items2 = [require("set").OAuth2Scopes.RPC, require("set").OAuth2Scopes.RPC
 obj5[RPC_SCOPE_CONFIG.ANY] = items2;
 obj4[0] = obj5;
 obj4[1] = function validation(string) {
-  let obj = importDefault(10546)(string);
+  let obj = require("../../helpers/createRpcJoiSchemaObject.tsx")(string);
   obj = { channel_id: null };
   const requiredResult = obj.required();
   obj[0] = string.string().required();
@@ -218,7 +218,7 @@ obj4[2] = function handler(args) {
     const obj = { errorCode: null };
     obj[0] = constants2.INVALID_CHANNEL;
     const _HermesInternal = HermesInternal;
-    let tmp3 = importDefault(10543);
+    let tmp3 = require("../../RPCError.tsx");
     tmp3 = new tmp3(obj, "Invalid channel id: " + channel_id);
     throw tmp3;
   } else {
@@ -441,7 +441,7 @@ obj[RPCEvents.RELATIONSHIP_UPDATE] = {
     if (obj.has(deserializeResult, tmpResult.deserialize(constants.DISABLE_RELATIONSHIPS_ACCESS))) {
       obj = { errorCode: null };
       obj[0] = constants2.INVALID_PERMISSIONS;
-      const tmp9 = new importDefault(10543)(obj, "Missing Permissions");
+      const tmp9 = new require("../../RPCError.tsx")(obj, "Missing Permissions");
       throw tmp9;
     }
     tmpResult = tmp(506);
@@ -604,7 +604,7 @@ const obj37 = {
     if (obj.has(deserializeResult, tmpResult.deserialize(constants.DISABLE_RELATIONSHIPS_ACCESS))) {
       obj = { errorCode: null };
       obj[0] = constants2.INVALID_PERMISSIONS;
-      const tmp9 = new importDefault(10543)(obj, "Missing Permissions");
+      const tmp9 = new require("../../RPCError.tsx")(obj, "Missing Permissions");
       throw tmp9;
     }
     tmpResult = tmp(506);

@@ -23,10 +23,10 @@ obj[1] = createCacheKey;
 let closure_10 = createCacheKey.createStyles(obj);
 const context = importAllResult.createContext({ menuClose: NOOP, menuDismiss: NOOP });
 function measureButtonRef(arg0, arg1) {
-  const measureResult = require(4146).measure(arg0);
+  const measureResult = require("../../../../modules/reanimated/ReanimatedRexport.tsx").measure(arg0);
   if (null != measureResult) {
-    require(4146).runOnJS(arg1)(measureResult);
-    const tmpResult = require(4146);
+    require("../../../../modules/reanimated/ReanimatedRexport.tsx").runOnJS(arg1)(measureResult);
+    const tmpResult = require("../../../../modules/reanimated/ReanimatedRexport.tsx");
   }
 }
 measureButtonRef.__closure = { measure: require("module_4146").measure, runOnJS: require("module_4146").runOnJS };

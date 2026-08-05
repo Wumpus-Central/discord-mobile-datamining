@@ -11,22 +11,22 @@ class AbstractSearchSessionAnalyticsManager {
 const prototype = AbstractSearchSessionAnalyticsManager.prototype;
 prototype["getSession"] = function getSession(searchContext) {
   const sessions = this.sessions;
-  let value = sessions.get(require(11624) /* SearchTokenTypes */.getSearchContextId(searchContext));
+  let value = sessions.get(require("../SearchUtils.tsx") /* SearchTokenTypes */.getSearchContextId(searchContext));
   if (value == null) {
     value = null;
   }
   return value;
 };
 prototype["setSession"] = function setSession(searchContext) {
-  let obj = require(11624) /* SearchTokenTypes */;
+  let obj = require("../SearchUtils.tsx") /* SearchTokenTypes */;
   const searchContextId = obj.getSearchContextId(searchContext);
   const sessions = this.sessions;
   let value = sessions.get(searchContextId);
   if (value == null) {
     obj = { sessionId: null, searchQueryId: null };
-    obj[0] = require(514) /* v1 */.v4();
+    obj[0] = require("../../../../_runtime/00514_v1.js") /* v1 */.v4();
     value = obj;
-    const tmpResult = require(514) /* v1 */;
+    const tmpResult = require("../../../../_runtime/00514_v1.js") /* v1 */;
   }
   const sessions2 = this.sessions;
   obj = {};
@@ -36,7 +36,7 @@ prototype["setSession"] = function setSession(searchContext) {
 };
 prototype["deleteSession"] = function deleteSession(searchContext) {
   const sessions = this.sessions;
-  sessions.delete(require(11624) /* SearchTokenTypes */.getSearchContextId(searchContext));
+  sessions.delete(require("../SearchUtils.tsx") /* SearchTokenTypes */.getSearchContextId(searchContext));
 };
 prototype["getSessionId"] = function getSessionId(arg0) {
   const session = this.getSession(arg0);
@@ -62,14 +62,14 @@ prototype["getQueryId"] = function getQueryId(arg0) {
 };
 prototype["refreshQueryId"] = function refreshQueryId(searchContext) {
   const obj = { searchQueryId: null };
-  obj[0] = require(514) /* v1 */.v4();
+  obj[0] = require("../../../../_runtime/00514_v1.js") /* v1 */.v4();
   this.setSession(searchContext, obj);
 };
 prototype["initialize"] = function initialize(arg0) {
   const items = [arg0, ...HermesBuiltin.copyRestArgs()];
   this._initialize.apply(items);
   const obj = { sessionId: null, searchQueryId: null };
-  obj[0] = require(514) /* v1 */.v4();
+  obj[0] = require("../../../../_runtime/00514_v1.js") /* v1 */.v4();
   this.setSession(arg0, obj);
 };
 prototype["terminate"] = function terminate(arg0) {
@@ -81,13 +81,13 @@ prototype["transferSession"] = function transferSession(arg0, searchContext) {
   this._transferSession(arg0, searchContext);
   let session = this.getSession(arg0);
   const sessions = this.sessions;
-  let obj = require(11624) /* SearchTokenTypes */;
+  let obj = require("../SearchUtils.tsx") /* SearchTokenTypes */;
   const searchContextId = obj.getSearchContextId(searchContext);
   if (session == null) {
     obj = { sessionId: null, searchQueryId: null };
-    obj[0] = require(514) /* v1 */.v4();
+    obj[0] = require("../../../../_runtime/00514_v1.js") /* v1 */.v4();
     session = obj;
-    const tmp3Result = require(514) /* v1 */;
+    const tmp3Result = require("../../../../_runtime/00514_v1.js") /* v1 */;
   }
   const result = sessions.set(searchContextId, session);
   self.deleteSession(arg0);

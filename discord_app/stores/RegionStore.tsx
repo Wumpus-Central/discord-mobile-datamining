@@ -20,8 +20,8 @@ prototype["getOptimalRegion"] = function getOptimalRegion(guildId) {
   if (null != regions) {
     let found = regions.find((optimal) => optimal.optimal);
     if (found == null) {
-      found = importDefault(12).sample(regions);
-      const obj = importDefault(12);
+      found = require("../../_runtime/00012_apply.js").sample(regions);
+      const obj = require("../../_runtime/00012_apply.js");
     }
     tmp2 = found;
   }
@@ -47,8 +47,8 @@ prototype["getRandomRegion"] = function getRandomRegion(guildId) {
   const regions = this.getRegions(tmp);
   let sampleResult = null;
   if (null != regions) {
-    sampleResult = importDefault(12).sample(regions);
-    const obj = importDefault(12);
+    sampleResult = require("../../_runtime/00012_apply.js").sample(regions);
+    const obj = require("../../_runtime/00012_apply.js");
   }
   return sampleResult;
 };
@@ -75,7 +75,7 @@ prototype["getRegions"] = function getRegions(guildId) {
 RegionStore.displayName = "RegionStore";
 const regionStore = new RegionStore(require("dispatcher"), {
   LOAD_REGIONS: function handleLoadRegions(regions) {
-    const sortByResult = importDefault(12).sortBy(regions.regions, (name) => name.name);
+    const sortByResult = require("../../_runtime/00012_apply.js").sortBy(regions.regions, (name) => name.name);
     if (null != regions.guildId) {
       closure_4[regions.guildId] = sortByResult;
     } else {

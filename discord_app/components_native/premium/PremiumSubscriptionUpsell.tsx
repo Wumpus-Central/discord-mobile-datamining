@@ -44,10 +44,10 @@ export default function PremiumSubscriptionUpsell(arg0) {
   ({ onLearnMorePremium, style } = arg0);
   let tmp = createCacheKey();
   let stringResult = dependencyMap;
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = importDefault(3931);
+  let obj1 = require("../../utils/PremiumUtils.tsx");
   if (obj1.canUsePremiumGuildMemberProfile(stateFromStores)) {
     return null;
   } else {

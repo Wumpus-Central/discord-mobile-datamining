@@ -9,7 +9,7 @@ let obj1;
 ({ View: obj1, ActivityIndicator: c3 } = get_ActivityIndicator);
 let closure_5 = createCacheKey.createStyles(() => {
   let obj = { container: null };
-  obj = { paddingTop: importDefault(712).space.PX_8, paddingBottom: importDefault(712).space.PX_24, alignItems: "center", justifyContent: "center" };
+  obj = { paddingTop: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, paddingBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24, alignItems: "center", justifyContent: "center" };
   obj[0] = obj;
   return obj;
 });

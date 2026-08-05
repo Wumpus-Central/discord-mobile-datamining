@@ -8,7 +8,7 @@ let c3;
 let c4;
 const require = arg1;
 function announceActioned(intl) {
-  const AccessibilityAnnouncer = require(3998) /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
+  const AccessibilityAnnouncer = require("../../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx") /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
   AccessibilityAnnouncer.announce(intl);
 }
 ({ jsx: c3, jsxs: c4 } = jsxProd);

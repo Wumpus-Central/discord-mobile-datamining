@@ -1034,7 +1034,7 @@ export default function BountiesModalContentScroll(arg0) {
   let sourceQuestContent;
   ({ bountyId, sourceQuestContent } = arg0);
   const obj = { theme: null, children: null };
-  obj[0] = require(7668) /* items */.ThemeTypes.DARKER;
+  obj[0] = require("../../../../../discord_common/js/packages/design/shared/ThemeTypes.tsx") /* items */.ThemeTypes.DARKER;
   obj[1] = callback2(BountiesModalContentScrollInner, { initialBountyId: bountyId, sourceQuestContent });
-  return callback2(require(4009) /* ThemeContextProvider */.ThemeContextProvider, obj);
+  return callback2(require("../../../../../discord_common/js/packages/design/components/ThemeContextProvider/ThemeContextProvider.tsx") /* ThemeContextProvider */.ThemeContextProvider, obj);
 };

@@ -10,18 +10,18 @@ const result = require("Stack").fileFinishedImporting("modules/conversations/com
 
 export default function ConversationPreviewBlockedMessage(reason) {
   let obj = { direction: "horizontal", spacing: null, align: "center", children: null };
-  obj[1] = importDefault(712).space.PX_8;
+  obj[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8;
   if ("blocked" === reason.reason) {
     let EyeSlashIcon = tmp2(8396).DenyIcon;
   } else {
     EyeSlashIcon = tmp2(8306).EyeSlashIcon;
   }
-  obj = { size: "sm", color: importDefault(712).colors.TEXT_MUTED };
+  obj = { size: "sm", color: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_MUTED };
   const items = [closure_3(EyeSlashIcon, obj), ];
   const intl = tmp2(1236).intl;
   const t = tmp2(1236).t;
   obj = { variant: "text-md/normal", color: "text-muted", children: intl.string(tmp6 ? t["WPe+xL"] : t.uxrh1O) };
-  items[1] = closure_3(require(4281) /* Text */.Text, obj);
+  items[1] = closure_3(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   obj[3] = items;
-  return closure_4(require(4693) /* Stack */.Stack, obj);
+  return closure_4(require("../../../../design/components/Stack/native/Stack.native.tsx") /* Stack */.Stack, obj);
 };

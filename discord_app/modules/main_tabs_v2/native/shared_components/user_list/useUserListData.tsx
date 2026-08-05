@@ -171,8 +171,8 @@ function parseUserSearchResults(affinitySuggestionsLimit) {
     found = items7.filter((user) => user.user.id !== id);
   }
   if (withFriends) {
-    const mapped = importDefault(12)(tmp).map((items, title) => ({ title, items }));
-    const arr12 = importDefault(12)(tmp);
+    const mapped = require("../../../../../../_runtime/00012_apply.js")(tmp).map((items, title) => ({ title, items }));
+    const arr12 = require("../../../../../../_runtime/00012_apply.js")(tmp);
     items = mapped.sortBy((title) => title.title).value();
     const iter = mapped.sortBy((title) => title.title);
   } else {
@@ -184,7 +184,7 @@ function parseUserSearchResults(affinitySuggestionsLimit) {
   const intl = id(1236).intl;
   obj[0] = intl.string(id(1236).t.HbJ7eD);
   if (withAffinitySuggestions) {
-    let obj3 = importDefault(12)(items);
+    let obj3 = require("../../../../../../_runtime/00012_apply.js")(items);
     const sortByResult = obj3.sortBy((affinity) => -affinity.affinity);
     let valueResult = obj3.sortBy((affinity) => -affinity.affinity).slice(0, num).value();
     const iter2 = obj3.sortBy((affinity) => -affinity.affinity).slice(0, num);
@@ -438,7 +438,7 @@ prototype["subscribe"] = function subscribe(onUpdate) {
   self.onUpdate = onUpdate;
   let userSearchContext = null;
   if (flag) {
-    userSearchContext = importDefault(7234).getUserSearchContext((results) => {
+    userSearchContext = require("../../../../autocompleter/UserSearchManager.tsx").getUserSearchContext((results) => {
       results = results.results;
       let items;
       if (items.currentQuery === results.query) {
@@ -471,32 +471,32 @@ prototype["subscribe"] = function subscribe(onUpdate) {
         }
       }
     }, 20);
-    const obj = importDefault(7234);
+    const obj = require("../../../../autocompleter/UserSearchManager.tsx");
   }
   self.userSearchContext = userSearchContext;
-  const subscription = importDefault(709).subscribe("POST_CONNECTION_OPEN", self.handlePostConnectionOpen);
-  const obj2 = importDefault(709);
-  const subscription1 = importDefault(709).subscribe("RELATIONSHIP_ADD", self.handleRelationship);
-  const obj3 = importDefault(709);
-  const subscription2 = importDefault(709).subscribe("RELATIONSHIP_REMOVE", self.handleRelationship);
-  const obj4 = importDefault(709);
-  const subscription3 = importDefault(709).subscribe("RELATIONSHIP_UPDATE", self.handleRelationship);
-  const obj5 = importDefault(709);
-  const subscription4 = importDefault(709).subscribe("GAME_RELATIONSHIP_ADD", self.handleGameRelationshipAdd);
-  const obj6 = importDefault(709);
-  const subscription5 = importDefault(709).subscribe("GAME_RELATIONSHIP_REMOVE", self.handleGameRelationshipRemove);
-  const obj7 = importDefault(709);
-  const subscription6 = importDefault(709).subscribe("FRIEND_SUGGESTION_CREATE", self.handleFriendSuggestionCreate);
-  const obj8 = importDefault(709);
-  const subscription7 = importDefault(709).subscribe("FRIEND_SUGGESTION_DELETE", self.handleFriendSuggestionDelete);
-  const obj9 = importDefault(709);
-  const subscription8 = importDefault(709).subscribe("GUILD_MEMBER_ADD", self.handleGuildMember);
-  const obj10 = importDefault(709);
-  const subscription9 = importDefault(709).subscribe("GUILD_MEMBER_UPDATE", self.handleGuildMember);
-  const obj11 = importDefault(709);
-  const subscription10 = importDefault(709).subscribe("GUILD_MEMBER_REMOVE", self.handleGuildMember);
-  const obj12 = importDefault(709);
-  const subscription11 = importDefault(709).subscribe("GUILD_MEMBERS_CHUNK_BATCH", self.handleGuildMembersChunkBatch);
+  const subscription = require("../../../../../Dispatcher.tsx").subscribe("POST_CONNECTION_OPEN", self.handlePostConnectionOpen);
+  const obj2 = require("../../../../../Dispatcher.tsx");
+  const subscription1 = require("../../../../../Dispatcher.tsx").subscribe("RELATIONSHIP_ADD", self.handleRelationship);
+  const obj3 = require("../../../../../Dispatcher.tsx");
+  const subscription2 = require("../../../../../Dispatcher.tsx").subscribe("RELATIONSHIP_REMOVE", self.handleRelationship);
+  const obj4 = require("../../../../../Dispatcher.tsx");
+  const subscription3 = require("../../../../../Dispatcher.tsx").subscribe("RELATIONSHIP_UPDATE", self.handleRelationship);
+  const obj5 = require("../../../../../Dispatcher.tsx");
+  const subscription4 = require("../../../../../Dispatcher.tsx").subscribe("GAME_RELATIONSHIP_ADD", self.handleGameRelationshipAdd);
+  const obj6 = require("../../../../../Dispatcher.tsx");
+  const subscription5 = require("../../../../../Dispatcher.tsx").subscribe("GAME_RELATIONSHIP_REMOVE", self.handleGameRelationshipRemove);
+  const obj7 = require("../../../../../Dispatcher.tsx");
+  const subscription6 = require("../../../../../Dispatcher.tsx").subscribe("FRIEND_SUGGESTION_CREATE", self.handleFriendSuggestionCreate);
+  const obj8 = require("../../../../../Dispatcher.tsx");
+  const subscription7 = require("../../../../../Dispatcher.tsx").subscribe("FRIEND_SUGGESTION_DELETE", self.handleFriendSuggestionDelete);
+  const obj9 = require("../../../../../Dispatcher.tsx");
+  const subscription8 = require("../../../../../Dispatcher.tsx").subscribe("GUILD_MEMBER_ADD", self.handleGuildMember);
+  const obj10 = require("../../../../../Dispatcher.tsx");
+  const subscription9 = require("../../../../../Dispatcher.tsx").subscribe("GUILD_MEMBER_UPDATE", self.handleGuildMember);
+  const obj11 = require("../../../../../Dispatcher.tsx");
+  const subscription10 = require("../../../../../Dispatcher.tsx").subscribe("GUILD_MEMBER_REMOVE", self.handleGuildMember);
+  const obj12 = require("../../../../../Dispatcher.tsx");
+  const subscription11 = require("../../../../../Dispatcher.tsx").subscribe("GUILD_MEMBERS_CHUNK_BATCH", self.handleGuildMembersChunkBatch);
   recomputeAffinities.addChangeListener(self.handleUserAffinitiesUpdate);
 };
 prototype["unsubscribe"] = function unsubscribe() {
@@ -506,34 +506,34 @@ prototype["unsubscribe"] = function unsubscribe() {
   if (userSearchContext != null) {
     userSearchContext.destroy();
   }
-  importDefault(709).unsubscribe("POST_CONNECTION_OPEN", self.handlePostConnectionOpen);
-  const obj = importDefault(709);
-  importDefault(709).unsubscribe("RELATIONSHIP_ADD", self.handleRelationship);
-  const obj2 = importDefault(709);
-  importDefault(709).unsubscribe("RELATIONSHIP_REMOVE", self.handleRelationship);
-  const obj3 = importDefault(709);
-  importDefault(709).unsubscribe("RELATIONSHIP_UPDATE", self.handleRelationship);
-  const obj4 = importDefault(709);
-  importDefault(709).unsubscribe("GAME_RELATIONSHIP_ADD", self.handleGameRelationshipAdd);
-  const obj5 = importDefault(709);
-  importDefault(709).unsubscribe("GAME_RELATIONSHIP_REMOVE", self.handleGameRelationshipRemove);
-  const obj6 = importDefault(709);
-  importDefault(709).unsubscribe("FRIEND_SUGGESTION_CREATE", self.handleFriendSuggestionCreate);
-  const obj7 = importDefault(709);
-  importDefault(709).unsubscribe("FRIEND_SUGGESTION_DELETE", self.handleFriendSuggestionDelete);
-  const obj8 = importDefault(709);
-  importDefault(709).unsubscribe("GUILD_MEMBER_ADD", self.handleGuildMember);
-  const obj9 = importDefault(709);
-  importDefault(709).unsubscribe("GUILD_MEMBER_UPDATE", self.handleGuildMember);
-  const obj10 = importDefault(709);
-  importDefault(709).unsubscribe("GUILD_MEMBER_REMOVE", self.handleGuildMember);
-  const obj11 = importDefault(709);
-  importDefault(709).unsubscribe("GUILD_MEMBERS_CHUNK_BATCH", self.handleGuildMembersChunkBatch);
+  require("../../../../../Dispatcher.tsx").unsubscribe("POST_CONNECTION_OPEN", self.handlePostConnectionOpen);
+  const obj = require("../../../../../Dispatcher.tsx");
+  require("../../../../../Dispatcher.tsx").unsubscribe("RELATIONSHIP_ADD", self.handleRelationship);
+  const obj2 = require("../../../../../Dispatcher.tsx");
+  require("../../../../../Dispatcher.tsx").unsubscribe("RELATIONSHIP_REMOVE", self.handleRelationship);
+  const obj3 = require("../../../../../Dispatcher.tsx");
+  require("../../../../../Dispatcher.tsx").unsubscribe("RELATIONSHIP_UPDATE", self.handleRelationship);
+  const obj4 = require("../../../../../Dispatcher.tsx");
+  require("../../../../../Dispatcher.tsx").unsubscribe("GAME_RELATIONSHIP_ADD", self.handleGameRelationshipAdd);
+  const obj5 = require("../../../../../Dispatcher.tsx");
+  require("../../../../../Dispatcher.tsx").unsubscribe("GAME_RELATIONSHIP_REMOVE", self.handleGameRelationshipRemove);
+  const obj6 = require("../../../../../Dispatcher.tsx");
+  require("../../../../../Dispatcher.tsx").unsubscribe("FRIEND_SUGGESTION_CREATE", self.handleFriendSuggestionCreate);
+  const obj7 = require("../../../../../Dispatcher.tsx");
+  require("../../../../../Dispatcher.tsx").unsubscribe("FRIEND_SUGGESTION_DELETE", self.handleFriendSuggestionDelete);
+  const obj8 = require("../../../../../Dispatcher.tsx");
+  require("../../../../../Dispatcher.tsx").unsubscribe("GUILD_MEMBER_ADD", self.handleGuildMember);
+  const obj9 = require("../../../../../Dispatcher.tsx");
+  require("../../../../../Dispatcher.tsx").unsubscribe("GUILD_MEMBER_UPDATE", self.handleGuildMember);
+  const obj10 = require("../../../../../Dispatcher.tsx");
+  require("../../../../../Dispatcher.tsx").unsubscribe("GUILD_MEMBER_REMOVE", self.handleGuildMember);
+  const obj11 = require("../../../../../Dispatcher.tsx");
+  require("../../../../../Dispatcher.tsx").unsubscribe("GUILD_MEMBERS_CHUNK_BATCH", self.handleGuildMembersChunkBatch);
   recomputeAffinities.removeChangeListener(self.handleUserAffinitiesUpdate);
 };
 prototype["fetch"] = function fetch(toLocaleLowerCase) {
   const self = this;
-  let obj = require(7042) /* cleanString */;
+  let obj = require("../../../UserSearchUtils.tsx") /* cleanString */;
   const cleanStringResult = obj.cleanString(toLocaleLowerCase);
   if ("" === cleanStringResult) {
     const userSearchContext2 = self.userSearchContext;
@@ -542,8 +542,8 @@ prototype["fetch"] = function fetch(toLocaleLowerCase) {
     }
   } else {
     if (arg1) {
-      const members = importDefault(5199).requestMembers(null, cleanStringResult);
-      const obj2 = importDefault(5199);
+      const members = require("../../../../../utils/GuildUtils.tsx").requestMembers(null, cleanStringResult);
+      const obj2 = require("../../../../../utils/GuildUtils.tsx");
     }
     const userSearchContext = self.userSearchContext;
     if (userSearchContext != null) {
@@ -558,7 +558,7 @@ prototype["filter"] = function filter(toLocaleLowerCase) {
   let self = this;
   self = this;
   let _require = toLocaleLowerCase;
-  let obj = _require(7042);
+  let obj = _require("../../../UserSearchUtils.tsx");
   const cleanStringResult = obj.cleanString(toLocaleLowerCase);
   _require = cleanStringResult;
   if (this.currentQuery === cleanStringResult) {
@@ -639,7 +639,7 @@ prototype["initializeUsersFromStores"] = function initializeUsersFromStores() {
 };
 prototype["initializeUsersFromCache"] = function initializeUsersFromCache() {
   const self = this;
-  const all = importDefault(7038).getAll();
+  const all = require("../../../../app_database/modules/UserSearchItems.tsx").getAll();
   return all.then((arg0) => {
     while (tmp !== undefined) {
       let tmp3 = self;
@@ -649,7 +649,7 @@ prototype["initializeUsersFromCache"] = function initializeUsersFromCache() {
   });
 };
 prototype["updateUser"] = function updateUser(id) {
-  if (importDefault(7038).shouldUseCache) {
+  if (require("../../../../app_database/modules/UserSearchItems.tsx").shouldUseCache) {
     return false;
   } else {
     const self = this;
@@ -658,7 +658,7 @@ prototype["updateUser"] = function updateUser(id) {
         const indexMap = self.indexMap;
         return indexMap.delete(id);
       }
-      obj = require(7042) /* cleanString */;
+      obj = require("../../../UserSearchUtils.tsx") /* cleanString */;
     }
     const value = self.getItem(id);
     if (null == value) {
@@ -679,7 +679,7 @@ prototype["getItem"] = function getItem(closure_0) {
     return null;
   } else {
     const self = this;
-    names = require(7042) /* cleanString */.getNames(user);
+    names = require("../../../UserSearchUtils.tsx") /* cleanString */.getNames(user);
     ({ nick, names } = names);
     let obj = { user: null, names: null, affinity: null, firstMatch: null };
     obj[0] = user;
@@ -693,9 +693,9 @@ prototype["getItem"] = function getItem(closure_0) {
       nick = isMatch(names, self.currentQuery, { contains: true });
     }
     obj[3] = nick;
-    const obj4 = require(7042) /* cleanString */;
+    const obj4 = require("../../../UserSearchUtils.tsx") /* cleanString */;
     const tmp12 = require;
-    const relationshipType = require(7042) /* cleanString */.getRelationshipType(user.id);
+    const relationshipType = require("../../../UserSearchUtils.tsx") /* cleanString */.getRelationshipType(user.id);
     if (relationshipType !== RelationshipTypes.FRIEND) {
       const gameFriendsForUser = authStore.getGameFriendsForUser(closure_0);
       if (gameFriendsForUser.length > 0) {

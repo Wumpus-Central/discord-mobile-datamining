@@ -50,7 +50,7 @@ function deriveStickerMetadata(arg0, tags) {
       }
       const str3 = guild.name;
     }
-    const byName = importDefault(3926).getByName(str);
+    const byName = require("../emojis/UnicodeEmojis.tsx").getByName(str);
     if (null != byName) {
       const obj1 = { type: null, value: null };
       obj1[0] = tmp(4951).StickerMetadataTypes.CORRELATED_EMOJI;
@@ -58,7 +58,7 @@ function deriveStickerMetadata(arg0, tags) {
       items.push(obj1);
       byName.forEachDiversity((surrogates) => items.push({ type: items(outer1_2[4]).StickerMetadataTypes.CORRELATED_EMOJI, value: surrogates.surrogates }));
     }
-    const obj5 = importDefault(3926);
+    const obj5 = require("../emojis/UnicodeEmojis.tsx");
   }
   return items;
 }

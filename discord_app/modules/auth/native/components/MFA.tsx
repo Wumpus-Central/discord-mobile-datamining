@@ -5,7 +5,7 @@ import { jsx } from "jsxProd";
 
 const require = arg1;
 function statesAreEqual(arg0, arg1) {
-  return importDefault(12).isEqual(arg0, arg1);
+  return require("../../../../../_runtime/00012_apply.js").isEqual(arg0, arg1);
 }
 let closure_7 = { flex: 1, position: "relative" };
 const result = require("jsxProd").fileFinishedImporting("modules/auth/native/components/MFA.tsx");

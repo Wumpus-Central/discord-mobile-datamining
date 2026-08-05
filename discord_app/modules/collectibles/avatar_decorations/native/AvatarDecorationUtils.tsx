@@ -5,7 +5,7 @@ let result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/
 
 export const getDecorationSizeForAvatarSize = function getDecorationSizeForAvatarSize(NORMAL) {
   if (typeof NORMAL !== "number") {
-    let result = require(1297) /* Button */.AVATAR_SIZE_MAP[NORMAL] * closure_3;
+    let result = require("../../../../design/void/native.tsx") /* Button */.AVATAR_SIZE_MAP[NORMAL] * closure_3;
   } else {
     result = NORMAL * closure_3;
   }
@@ -22,7 +22,7 @@ export const getDecorationCutoutForAvatarCutout = function getDecorationCutoutFo
       inset = 0;
     }
     obj[2] = inset + arg1;
-    obj[3] = _require(1297).CutoutType.RECTANGULAR;
+    obj[3] = _require("../../../../design/void/native.tsx").CutoutType.RECTANGULAR;
     const nativeCutouts = memo.nativeCutouts;
     let mapped;
     if (nativeCutouts != null) {
@@ -46,7 +46,7 @@ export const openAvatarDecorationActionSheet = function openAvatarDecorationActi
   let isTryItOut;
   let user;
   ({ user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations } = arg0);
-  importDefault(4253).hideActionSheet();
-  const obj = importDefault(4253);
-  importDefault(4253).openLazy(require(1959) /* asyncRequireImpl */(8070, dependencyMap.paths), "Edit Avatar Decoration", { user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations });
+  require("../../../action_sheet/native/ActionSheetActionCreators.tsx").hideActionSheet();
+  const obj = require("../../../action_sheet/native/ActionSheetActionCreators.tsx");
+  require("../../../action_sheet/native/ActionSheetActionCreators.tsx").openLazy(require("../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(8070, dependencyMap.paths), "Edit Avatar Decoration", { user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations });
 };

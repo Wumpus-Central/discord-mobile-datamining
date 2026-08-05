@@ -11,13 +11,13 @@ export default function ChatGDMCustomizeActionSheet(channelId) {
   channelId = channelId.channelId;
   let importDefault;
   let dependencyMap;
-  ({ onGoBack: c1, ref: c2 } = importDefault(9594)());
+  ({ onGoBack: c1, ref: c2 } = require("../../main_tabs_v2/native/utils/useNavigatorConfirmChangesOnBack.tsx")());
   const obj = { screenKey: "kick", title: null, render: null };
-  const tmp = importDefault(9594)();
+  const tmp = require("../../main_tabs_v2/native/utils/useNavigatorConfirmChangesOnBack.tsx")();
   const intl = channelId(1236).intl;
   obj[1] = intl.string(channelId(1236).t["1r5E+m"]);
   obj[2] = function render() {
     return outer1_3(_undefined(_undefined2[5]), { ref: _undefined2, onFinish: _undefined, channelId });
   };
-  return jsx(importDefault(9596), { screenKey: "kick", title: null, render: null });
+  return jsx(require("../../main_tabs_v2/native/utils/ModalStackNavigator.tsx"), { screenKey: "kick", title: null, render: null });
 };

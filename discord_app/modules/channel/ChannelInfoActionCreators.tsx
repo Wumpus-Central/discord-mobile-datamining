@@ -6,7 +6,7 @@ const result = require("dispatcher").fileFinishedImporting("modules/channel/Chan
 
 export const fetchChannelInfo = function fetchChannelInfo(guild_id) {
   if (!handleConnectionReset.hasRequestedStatuses(guild_id)) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "FETCH_CHANNEL_INFO", guildId: null };
     obj[1] = guild_id;
     obj.dispatch(obj);

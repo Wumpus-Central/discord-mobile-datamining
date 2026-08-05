@@ -38,7 +38,7 @@ export const canSeeExperimentEmbeds = function canSeeExperimentEmbeds() {
 };
 export const useCanSeeExperimentEmbeds = function useCanSeeExperimentEmbeds() {
   const items = [mergeGuildAvatar];
-  return require(589) /* initialize */.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
     const items = [stateFromStores2];
     const first = stateFromStoresObject1(items, 1)[0];
     const currentUser = first.getCurrentUser();

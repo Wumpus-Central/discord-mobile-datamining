@@ -12,5 +12,5 @@ export const setIsPurchasing = function setIsPurchasing(arg0) {
     tmp = null;
   }
   const dependencyMap = tmp;
-  _require(705).batchUpdates(() => outer1_2.setState({ isPurchasing: closure_0, purchasingProductId: closure_1 }));
+  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_2.setState({ isPurchasing: closure_0, purchasingProductId: closure_1 }));
 };

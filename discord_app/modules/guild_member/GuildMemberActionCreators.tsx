@@ -13,14 +13,14 @@ export const updateGuildSelfMember = function updateGuildSelfMember(outer1_0, ar
   if (fullServerPreview.isFullServerPreview(outer1_0)) {
     let obj = { memberOptions: null };
     obj[0] = arg1;
-    const result = require(5216) /* updateImpersonating */.updateImpersonatedData(outer1_0, obj);
+    const result = require("../impersonate/ImpersonateActionCreators.tsx") /* updateImpersonating */.updateImpersonatedData(outer1_0, obj);
   } else {
-    obj = importDefault(709);
+    obj = require("../../Dispatcher.tsx");
     obj = { type: "GUILD_MEMBER_UPDATE_LOCAL", guildId: null, roles: null, flags: null };
     obj[1] = outer1_0;
     ({ roles: obj2[2], flags: obj2[3] } = arg1);
     obj.dispatch(obj);
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     const obj1 = { url: null, body: null, oldFormErrors: null, rejectWithError: false };
     obj1[0] = Endpoints.SET_GUILD_MEMBER(outer1_0);
     obj1[1] = arg1;

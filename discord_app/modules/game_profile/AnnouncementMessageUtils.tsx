@@ -241,7 +241,7 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
   });
 };
 export const getPollExpiryLabel = function getPollExpiryLabel(poll) {
-  let result = require(8133) /* formatExpirationLabel */.formatExpirationLabel(poll.expiry);
+  let result = require("../polls/chat/useFormattedExpirationLabel.tsx") /* formatExpirationLabel */.formatExpirationLabel(poll.expiry);
   if (result == null) {
     const intl = tmp(1236).intl;
     result = intl.string(tmp(1236).t["e+J3JZ"]);
@@ -249,7 +249,7 @@ export const getPollExpiryLabel = function getPollExpiryLabel(poll) {
   return result;
 };
 export const getPosterUrl = function getPosterUrl(proxyUrl, arg1, c12) {
-  let str = importDefault(1467).toURLSafe(proxyUrl);
+  let str = require("../../utils/URLUtils.tsx").toURLSafe(proxyUrl);
   str = null;
   if (null != str) {
     const searchParams = str.searchParams;

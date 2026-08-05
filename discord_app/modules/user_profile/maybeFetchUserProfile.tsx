@@ -111,8 +111,8 @@ export default function maybeFetchUserProfile(id, closure_0, guildMember) {
       profileEffect = userProfile.profileEffect;
     }
     if (null != profileEffect) {
-      const result = _require(6909).maybeFetchCollectiblesProduct(profileEffect.skuId);
-      const obj2 = _require(6909);
+      const result = _require("../collectibles/CollectiblesActionCreators.tsx").maybeFetchCollectiblesProduct(profileEffect.skuId);
+      const obj2 = _require("../collectibles/CollectiblesActionCreators.tsx");
     }
     if (null != guildId) {
       let profileFrame;
@@ -123,12 +123,12 @@ export default function maybeFetchUserProfile(id, closure_0, guildMember) {
       profileFrame = userProfile.profileFrame;
     }
     if (null != profileFrame) {
-      const result1 = _require(6909).maybeFetchCollectiblesProduct(profileFrame.skuId);
-      const obj3 = _require(6909);
+      const result1 = _require("../collectibles/CollectiblesActionCreators.tsx").maybeFetchCollectiblesProduct(profileFrame.skuId);
+      const obj3 = _require("../collectibles/CollectiblesActionCreators.tsx");
     }
     if (null != closure_0) {
-      _require(8045).maybeFetchColors(closure_0);
-      const obj4 = _require(8045);
+      _require("../avatar/useAvatarColor.tsx").maybeFetchColors(closure_0);
+      const obj4 = _require("../avatar/useAvatarColor.tsx");
     }
     obj = { type: null, withMutualGuilds: null, withMutualFriends: null, withMutualFriendsCount: null, guildId: null, joinRequestId: null, abortSignal: null, connectionsRoleId: null };
     obj[0] = type;
@@ -143,13 +143,13 @@ export default function maybeFetchUserProfile(id, closure_0, guildMember) {
       obj = { guildMember: null, channel: null };
       obj[0] = member.getMember(guildId, id);
       obj[1] = channel.getChannel(tmp);
-      const visibleConnectionsRole = _require(5091).getVisibleConnectionsRole(obj);
+      const visibleConnectionsRole = _require("../connections/ConnectionsUtils.tsx").getVisibleConnectionsRole(obj);
       id = undefined;
       if (visibleConnectionsRole != null) {
         id = visibleConnectionsRole.id;
       }
       tmp34 = id;
-      const obj6 = _require(5091);
+      const obj6 = _require("../connections/ConnectionsUtils.tsx");
     }
     obj[7] = tmp34;
     if (flag3) {
@@ -159,7 +159,7 @@ export default function maybeFetchUserProfile(id, closure_0, guildMember) {
       });
       return Promise.resolve();
     } else {
-      const profile = _require(8119).fetchProfile(id, obj, obj(8120));
+      const profile = _require("../../actions/UserActionCreators.tsx").fetchProfile(id, obj, obj(8120));
       let resolved = profile;
       if (tmp18) {
         resolved = profile;

@@ -50,7 +50,7 @@ function computeGuildRoleSubscriptionSettingsVisibility(guild) {
 }
 function useGuildRoleSubscriptionSettingsVisibility(stateFromStores) {
   const _require = stateFromStores;
-  let obj = _require(589);
+  let obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const items = [getUncachedChannelPermissions];
   const items1 = [stateFromStores];
   stateFromStores = obj.useStateFromStores(items, () => {
@@ -61,16 +61,16 @@ function useGuildRoleSubscriptionSettingsVisibility(stateFromStores) {
     return canResult;
   }, items1);
   const items2 = [mergeGuildAvatar];
-  const stateFromStores1 = _require(589).useStateFromStores(items2, () => {
+  const stateFromStores1 = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
     let tmp3 = null != closure_0;
     if (tmp3) {
       tmp3 = outer1_2(tmp2, tmp);
     }
     return tmp3;
   });
-  const obj2 = _require(589);
-  const isUserInCreatorMonetizationEligibleCountry = _require(5790).useIsUserInCreatorMonetizationEligibleCountry();
-  _require(5782);
+  const obj2 = _require("../../../../discord_common/js/packages/flux/index.tsx");
+  const isUserInCreatorMonetizationEligibleCountry = _require("../../creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx").useIsUserInCreatorMonetizationEligibleCountry();
+  _require("../../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx");
   if (stateFromStores != null) {
     const id = stateFromStores.id;
   }
@@ -146,7 +146,7 @@ export const getGuildRoleSubscriptionSettingsVisibility = function getGuildRoleS
       canResult = getUncachedChannelPermissions.can(constants2.ADMINISTRATOR, guild);
     }
     obj[2] = canResult;
-    obj = require(5790) /* set */;
+    obj = require("../../creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx") /* set */;
     obj[3] = obj.isUserInCreatorMonetizationEligibleCountry();
     const features = guild.features;
     obj[4] = features.has(constants.CREATOR_MONETIZABLE_RESTRICTED);
@@ -160,7 +160,7 @@ export const useCanManageGuildRoleSubscriptions = function useCanManageGuildRole
   const _require = guild;
   const items = [getUncachedChannelPermissions];
   const items1 = [guild];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
       canResult = outer1_3.can(outer1_6.ADMINISTRATOR, tmp);

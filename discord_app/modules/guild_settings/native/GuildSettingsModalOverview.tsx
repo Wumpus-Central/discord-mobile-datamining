@@ -37,36 +37,36 @@ let items = [
   {
     value: 60,
     label() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.iXLF9W, { minutes: 1 });
+      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.iXLF9W, { minutes: 1 });
     }
   },
   {
     value: 300,
     label() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.iXLF9W, { minutes: 5 });
+      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.iXLF9W, { minutes: 5 });
     }
   },
   {
     value: 900,
     label() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.iXLF9W, { minutes: 15 });
+      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.iXLF9W, { minutes: 15 });
     }
   },
   {
     value: 1800,
     label() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.iXLF9W, { minutes: 30 });
+      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.iXLF9W, { minutes: 30 });
     }
   },
   {
     value: 3600,
     label() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.xCjYxK, { hours: 1 });
+      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.xCjYxK, { hours: 1 });
     }
   }
 ];
@@ -249,8 +249,8 @@ prototype["componentDidUpdate"] = function componentDidUpdate(errors) {
     tmp2 = null != errors.message;
   }
   if (tmp2) {
-    require(3985) /* presentAddedFriendToast */.presentError(errors.message);
-    const obj = require(3985) /* presentAddedFriendToast */;
+    require("../../toast/native/ToastUtils.tsx") /* presentAddedFriendToast */.presentError(errors.message);
+    const obj = require("../../toast/native/ToastUtils.tsx") /* presentAddedFriendToast */;
   }
 };
 prototype["updateNavigator"] = function updateNavigator(submitting) {
@@ -282,7 +282,7 @@ prototype["updateNavigator"] = function updateNavigator(submitting) {
   }
 };
 prototype["componentWillUnmount"] = function componentWillUnmount() {
-  importDefault(8943).cancelChanges(this.props.guild.id);
+  require("../GuildSettingsActionCreators.tsx").cancelChanges(this.props.guild.id);
 };
 prototype["getError"] = function getError(arg0) {
   const errors = this.props.errors;
@@ -295,12 +295,12 @@ prototype["getError"] = function getError(arg0) {
   return first;
 };
 prototype["handleSystemChannelFlagsChange"] = function handleSystemChannelFlagsChange(SUPPRESS_GUILD_REMINDER_NOTIFICATIONS, arg1) {
-  const obj = require(1384) /* hasFlag */;
-  const setFlagResult = require(1384) /* hasFlag */.setFlag(this.props.guild.systemChannelFlags, SUPPRESS_GUILD_REMINDER_NOTIFICATIONS, arg1);
-  importDefault(8943).updateGuild({ systemChannelFlags: setFlagResult });
+  const obj = require("../../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
+  const setFlagResult = require("../../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.setFlag(this.props.guild.systemChannelFlags, SUPPRESS_GUILD_REMINDER_NOTIFICATIONS, arg1);
+  require("../GuildSettingsActionCreators.tsx").updateGuild({ systemChannelFlags: setFlagResult });
 };
 prototype["handleDefaultNotificationsChange"] = function handleDefaultNotificationsChange(defaultMessageNotifications) {
-  let obj = importDefault(8943);
+  let obj = require("../GuildSettingsActionCreators.tsx");
   obj = { defaultMessageNotifications };
   obj.updateGuild(obj);
 };
@@ -309,13 +309,13 @@ prototype["renderGuildName"] = function renderGuildName() {
   let guild;
   ({ guild, canManage } = this.props);
   const obj = { label: null, value: null, isDisabled: null, onChange: null, errorMessage: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.dBih7e);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.dBih7e);
   obj[1] = guild.name;
   obj[2] = !canManage;
   obj[3] = this.handleNameChange;
   obj[4] = this.getError("name");
-  return callback2(require(7713) /* TextInput */.TextInput, obj);
+  return callback2(require("../../../design/components/TextInput/native/TextInput.native.tsx") /* TextInput */.TextInput, obj);
 };
 prototype["renderAFKSettings"] = function renderAFKSettings() {
   let afkChannel;
@@ -376,13 +376,13 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
   const self = this;
   ({ guild, canManage, systemChannel } = this.props);
   if (null != systemChannel) {
-    let obj = require(4475) /* computeChannelName */;
+    let obj = require("../../channel/useChannelName.tsx") /* computeChannelName */;
     let channelName = obj.computeChannelName(systemChannel, mergeGuildAvatar, upsertRelationship);
     let tmp = require;
   } else {
     tmp = require;
-    const intl = require(1236) /* getSystemLocale */.intl;
-    channelName = intl.string(require(1236) /* getSystemLocale */.t.ibUhoa);
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    channelName = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ibUhoa);
   }
   let tmpResult = tmp(7909);
   const result = tmpResult.isEligibleForRoleSubscriptionPurchaseSystemMessageSettings(guild);
@@ -522,7 +522,7 @@ prototype["renderBoostProgressBar"] = function renderBoostProgressBar() {
   let canManage;
   let guild;
   ({ guild, canManage } = this.props);
-  let obj = require(15163) /* apexExperiment */;
+  let obj = require("../../premium/powerups/experiments/MobileBoostProgressBarExperiment.tsx") /* apexExperiment */;
   let tmp3 = null;
   if (obj.getMobileBoostProgressBarEnabled("GuildSettingsModalOverview")) {
     obj = { title: null, description: null, hasIcons: false, children: null };
@@ -549,14 +549,14 @@ prototype["renderSplash"] = function renderSplash() {
   let tmp = null;
   if (features.has(constants2.INVITE_SPLASH)) {
     let obj = { title: null, description: null, helperText: null, hasIcons: false, hasTrailingText: null, children: null };
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[0] = intl.string(require(1236) /* getSystemLocale */.t.tzGY0q);
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.FEFkkG);
-    const intl3 = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.tzGY0q);
+    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[1] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.FEFkkG);
+    const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { articleURL: null };
-    obj[0] = importDefault(1945).getArticleURL(constants3.GUILD_INVITE_SPLASH);
-    obj[2] = intl3.format(require(1236) /* getSystemLocale */.t.ZYA9PV, obj);
+    obj[0] = require("../../../utils/HelpdeskUtils.tsx").getArticleURL(constants3.GUILD_INVITE_SPLASH);
+    obj[2] = intl3.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ZYA9PV, obj);
     obj[4] = null != guild.splash && canManage;
     obj = { disabled: null, guild: null, rawSource: null, getSource: null, onChooseAsset: null, size: null };
     obj[0] = !canManage;
@@ -569,9 +569,9 @@ prototype["renderSplash"] = function renderSplash() {
     };
     obj[4] = this.handleSplashChange;
     obj[5] = { width: 1920, height: 1080 };
-    obj[5] = closure_19(importDefault(16486), obj);
-    tmp = tmp2(require(5649) /* TableRowGroupTitle */.TableRowGroup, obj);
-    const obj3 = importDefault(1945);
+    obj[5] = closure_19(require("AssetChooser.tsx"), obj);
+    tmp = tmp2(require("../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj);
+    const obj3 = require("../../../utils/HelpdeskUtils.tsx");
     const tmp5 = importDefault;
   }
   return tmp;
@@ -579,12 +579,12 @@ prototype["renderSplash"] = function renderSplash() {
 prototype["renderSummaries"] = function renderSummaries() {
   const props = this.props;
   const guild = props.guild;
-  let obj = require(10237) /* canSeeChannelSummaries */;
+  let obj = require("../../../experiments/ChannelSummariesExperiment.tsx") /* canSeeChannelSummaries */;
   if (obj.canGuildUseConversationSummaries(guild, false)) {
     const intl = tmp(1236).intl;
     obj = { helpdeskArticle: null };
-    obj[0] = importDefault(1945).getArticleURL(constants3.CONVERSATION_SUMMARIES);
-    const obj3 = importDefault(1945);
+    obj[0] = require("../../../utils/HelpdeskUtils.tsx").getArticleURL(constants3.CONVERSATION_SUMMARIES);
+    const obj3 = require("../../../utils/HelpdeskUtils.tsx");
     obj = { title: null, description: null, hasIcons: false, children: null };
     const intl2 = tmp(1236).intl;
     obj[0] = intl2.string(tmp(1236).t.XPDhcc);
@@ -608,11 +608,11 @@ prototype["renderDescription"] = function renderDescription() {
   let guild;
   ({ guild, canManage } = this.props);
   const obj = { label: null, description: null, maxLength: null, value: null, isDisabled: null, onChange: null, placeholder: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t["RSfm+i"]);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require(1236) /* getSystemLocale */.t["/B6PRw"]);
-  obj[2] = require(5280) /* MAX_TRAITS */.MAX_DESCRIPTION_LENGTH;
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["RSfm+i"]);
+  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["/B6PRw"]);
+  obj[2] = require("../../../../discord_common/js/shared/shared-constants/GuildProfileLimits.tsx") /* MAX_TRAITS */.MAX_DESCRIPTION_LENGTH;
   let str = guild.description;
   if (str == null) {
     str = "";
@@ -621,8 +621,8 @@ prototype["renderDescription"] = function renderDescription() {
   obj[4] = !canManage;
   obj[5] = this.handleDescriptionChange;
   const intl3 = tmp2(1236).intl;
-  obj[6] = intl3.string(require(1236) /* getSystemLocale */.t.Nvfowl);
-  return closure_19(require(7786) /* TextArea */.TextArea, obj);
+  obj[6] = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Nvfowl);
+  return closure_19(require("../../../design/components/TextInput/native/TextArea.native.tsx") /* TextArea */.TextArea, obj);
 };
 prototype["renderBanner"] = function renderBanner() {
   let canManage;
@@ -631,14 +631,14 @@ prototype["renderBanner"] = function renderBanner() {
   let features = guild.features;
   if (features.has(constants2.BANNER)) {
     let obj = { title: null, description: null, helperText: null, hasIcons: false, hasTrailingText: null, children: null };
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[0] = intl.string(require(1236) /* getSystemLocale */.t["0r0AzF"]);
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.UfqmIb);
-    const intl3 = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["0r0AzF"]);
+    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[1] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.UfqmIb);
+    const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { articleURL: null };
-    obj[0] = importDefault(1945).getArticleURL(constants3.GUILD_BANNER_SPLASH);
-    obj[2] = intl3.format(require(1236) /* getSystemLocale */.t.vBcWUv, obj);
+    obj[0] = require("../../../utils/HelpdeskUtils.tsx").getArticleURL(constants3.GUILD_BANNER_SPLASH);
+    obj[2] = intl3.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.vBcWUv, obj);
     obj[4] = null != guild.banner && canManage;
     obj = { disabled: null, guild: null, rawSource: null, getSource: null, onChooseAsset: null, size: null };
     obj[0] = !canManage;
@@ -651,8 +651,8 @@ prototype["renderBanner"] = function renderBanner() {
     };
     obj[4] = this.handleBannerChange;
     obj[5] = { width: 960, height: 540 };
-    obj[5] = closure_19(importDefault(16486), obj);
-    return closure_19(require(5649) /* TableRowGroupTitle */.TableRowGroup, obj);
+    obj[5] = closure_19(require("AssetChooser.tsx"), obj);
+    return closure_19(require("../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj);
   } else {
     return null;
   }
@@ -665,11 +665,11 @@ prototype["renderDeleteGuild"] = function renderDeleteGuild() {
     if (callback(this.props.guild, currentUser)) {
       let obj = { hasIcons: false, children: null };
       obj = { variant: "danger", label: null, onPress: null };
-      const intl = require(1236) /* getSystemLocale */.intl;
-      obj[1] = intl.string(require(1236) /* getSystemLocale */.t.l3hWP6);
+      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      obj[1] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.l3hWP6);
       obj[2] = this.handleDeleteServer;
-      obj[1] = callback2(require(5315) /* TableRowInner */.TableRow, obj);
-      tmp2 = callback2(require(5649) /* TableRowGroupTitle */.TableRowGroup, obj);
+      obj[1] = callback2(require("../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj);
+      tmp2 = callback2(require("../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj);
     }
   }
   return tmp2;
@@ -680,11 +680,11 @@ prototype["render"] = function render() {
   obj = { style: tmp.overview, contentContainerStyle: items, children: null };
   items = [tmp.overviewContent, this.props.contentContainerStyle];
   obj = { style: tmp.stackPadding, spacing: null, children: null };
-  obj[1] = importDefault(712).space.PX_24;
+  obj[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24;
   const items1 = [this.renderGuildName(), this.renderSummaries(), this.renderAFKSettings(), this.renderSystemMessageSettings(), this.renderDefaultNotificationSettings(), this.renderBoostProgressBar(), this.renderDescription(), this.renderBanner(), this.renderSplash(), this.renderDeleteGuild()];
   obj[2] = items1;
-  obj[2] = callback3(require(4693) /* Stack */.Stack, obj);
-  const items2 = [callback2(require(7777) /* Form */.Form, obj), callback2(require(5596) /* NavScrim */.NavScrim, {})];
+  obj[2] = callback3(require("../../../design/components/Stack/native/Stack.native.tsx") /* Stack */.Stack, obj);
+  const items2 = [callback2(require("../../../design/void/Form/native/index.tsx") /* Form */.Form, obj), callback2(require("../../../design/components/Navigator/native/NavScrim.android.tsx") /* NavScrim */.NavScrim, {})];
   obj[0] = items2;
   return callback3(closure_21, obj);
 };
@@ -692,8 +692,8 @@ GuildSettingsModalOverview.contextType = require("ManaContext").ThemeContext;
 let obj1 = {
   value: 60,
   label() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.iXLF9W, { minutes: 1 });
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.iXLF9W, { minutes: 1 });
   }
 };
 let result = require("ensureGuildLoaded").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalOverview.tsx");

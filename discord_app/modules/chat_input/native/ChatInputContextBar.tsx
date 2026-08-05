@@ -18,12 +18,12 @@ let unpackModuleId;
 const require = arg1;
 function ChatInputReplyBarNoAuthor(onCancelReplying) {
   onCancelReplying = onCancelReplying.onCancelReplying;
-  let obj = require(1348) /* useIsMobileVisualRefreshExperimentEnabled */;
+  let obj = require("../../themes/experiments/MobileVisualRefreshExperiment.tsx") /* useIsMobileVisualRefreshExperimentEnabled */;
   const tmp3 = callback3();
-  let obj1 = require(3989) /* map */;
-  const token = obj1.useToken(importDefault(712).modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
-  let obj2 = require(3989) /* map */;
-  const bound = Math.max(0, (token - obj2.useToken(importDefault(712).modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_SIZE)) / 2);
+  let obj1 = require("../../../design/tokens/native/useToken.tsx") /* map */;
+  const token = obj1.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
+  let obj2 = require("../../../design/tokens/native/useToken.tsx") /* map */;
+  const bound = Math.max(0, (token - obj2.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_SIZE)) / 2);
   if (obj.useMobileVisualRefreshConfig({ location: "ChatInputContextBar" }).chatInputFloating) {
     obj = { style: null, children: null };
     obj[0] = tmp3.contextBarRow;
@@ -409,13 +409,13 @@ class ChatInputReplyBar {
   }
 }
 function ChatInputEditBar(onCancelEditing) {
-  let obj = require(1348) /* useIsMobileVisualRefreshExperimentEnabled */;
+  let obj = require("../../themes/experiments/MobileVisualRefreshExperiment.tsx") /* useIsMobileVisualRefreshExperimentEnabled */;
   const chatInputFloating = obj.useMobileVisualRefreshConfig({ location: "ChatInputContextBar" }).chatInputFloating;
   const tmp3 = callback3();
-  let obj1 = require(3989) /* map */;
-  const token = obj1.useToken(importDefault(712).modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
-  let obj2 = require(3989) /* map */;
-  const bound = Math.max(0, (token - obj2.useToken(importDefault(712).modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_SIZE)) / 2);
+  let obj1 = require("../../../design/tokens/native/useToken.tsx") /* map */;
+  const token = obj1.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
+  let obj2 = require("../../../design/tokens/native/useToken.tsx") /* map */;
+  const bound = Math.max(0, (token - obj2.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_SIZE)) / 2);
   let str = "text-sm/medium";
   if (chatInputFloating) {
     str = "text-sm/normal";
@@ -428,11 +428,11 @@ function ChatInputEditBar(onCancelEditing) {
   obj[2] = str2;
   obj[3] = chatInputFloating ? tmp3.floatingReplyTextWrapper : tmp3.contextButtonText;
   const intl = tmp(1236).intl;
-  obj[4] = intl.string(require(1236) /* getSystemLocale */.t.rtNXxN);
-  let tmp7Result = tmp7(require(4281) /* Text */.Text, obj);
+  obj[4] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.rtNXxN);
+  let tmp7Result = tmp7(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   obj = { accessibilityRole: "button", accessibilityLabel: null, activeOpacity: 0.5, hitSlop: null, style: null, onPress: null, children: null };
   const intl2 = tmp(1236).intl;
-  obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.qv9j1K);
+  obj[1] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.qv9j1K);
   let tmp9;
   if (chatInputFloating) {
     if (bound > 0) {
@@ -447,7 +447,7 @@ function ChatInputEditBar(onCancelEditing) {
   obj[4] = prop;
   obj[5] = onCancelEditing.onCancelEditing;
   obj1 = { source: null, size: null, style: null };
-  obj1[0] = importDefault(8279);
+  obj1[0] = require("../../../../_runtime/08279_registerAsset.js");
   const Sizes = tmp(1297).Icon.Sizes;
   obj1[1] = chatInputFloating ? Sizes.CUSTOM : Sizes.SMALL_20;
   let floatingCloseIcon;
@@ -455,7 +455,7 @@ function ChatInputEditBar(onCancelEditing) {
     floatingCloseIcon = tmp3.floatingCloseIcon;
   }
   obj1[2] = floatingCloseIcon;
-  obj[6] = closure_10(require(1297) /* Button */.Icon, obj1);
+  obj[6] = closure_10(require("../../../design/void/native.tsx") /* Button */.Icon, obj1);
   tmp7Result = tmp7(tmp(4812).PressableOpacity, obj);
   obj2 = { style: tmp3.contextBarRow, children: null };
   const obj3 = { children: null };
@@ -485,31 +485,31 @@ let obj = { duration: 250, easing: require("Button").STANDARD_EASING };
 let closure_14 = createCacheKey.createStyles((arg0) => {
   let backgroundColor = arg0;
   if (arg0 == null) {
-    backgroundColor = importDefault(712).colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND;
+    backgroundColor = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND;
   }
   return { contextBar: { backgroundColor } };
 });
 let closure_15 = createCacheKey.createStyles(() => {
   let obj = { contextBarRow: null, floatingReplyTextWrapper: null, contextCancelIconWrapper: null, contextButtonText: null, floatingContextBar: null, replyMentionButton: null, replyMentionButtonActive: null, replyMentionIcon: null, replyMentionIconActive: null, floatingRightActions: null, floatingMentionGroup: null, floatingDivider: null, floatingCloseIcon: null };
-  obj = { overflow: "hidden", flexDirection: "row", alignItems: "center", paddingHorizontal: importDefault(712).modules.mobile.CHAT_INPUT_CONTEXT_BAR_PADDING_HORIZONTAL, paddingVertical: importDefault(712).modules.mobile.CHAT_INPUT_CONTEXT_BAR_PADDING_VERTICAL, gap: importDefault(712).modules.mobile.CHAT_INPUT_CONTEXT_BAR_GAP };
+  obj = { overflow: "hidden", flexDirection: "row", alignItems: "center", paddingHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_CONTEXT_BAR_PADDING_HORIZONTAL, paddingVertical: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_CONTEXT_BAR_PADDING_VERTICAL, gap: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_CONTEXT_BAR_GAP };
   obj[0] = obj;
   obj[1] = { flexShrink: 1, minWidth: 0 };
   obj[2] = { paddingHorizontal: 12, paddingVertical: 10 };
   obj[3] = { flexGrow: 1, flexShrink: 1, justifyContent: "center", alignSelf: "stretch", paddingRight: 12, paddingVertical: 10 };
-  obj = { borderBottomWidth: closure_4.hairlineWidth, borderBottomColor: importDefault(712).colors.BORDER_MUTED, overflow: "hidden" };
+  obj = { borderBottomWidth: closure_4.hairlineWidth, borderBottomColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_MUTED, overflow: "hidden" };
   obj[4] = obj;
   obj[5] = { flexDirection: "row", alignItems: "center", paddingHorizontal: 12, paddingVertical: 10 };
-  obj[6] = { color: importDefault(712).colors.CONTROL_BRAND_FOREGROUND };
-  const obj1 = { color: importDefault(712).colors.CONTROL_BRAND_FOREGROUND };
-  obj[7] = { width: importDefault(712).modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_SIZE, height: importDefault(712).modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_SIZE, tintColor: importDefault(712).colors.TEXT_MUTED, marginRight: importDefault(712).modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_MARGIN_RIGHT };
-  const obj2 = { width: importDefault(712).modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_SIZE, height: importDefault(712).modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_SIZE, tintColor: importDefault(712).colors.TEXT_MUTED, marginRight: importDefault(712).modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_MARGIN_RIGHT };
-  obj[8] = { tintColor: importDefault(712).colors.CONTROL_BRAND_FOREGROUND };
+  obj[6] = { color: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_BRAND_FOREGROUND };
+  const obj1 = { color: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_BRAND_FOREGROUND };
+  obj[7] = { width: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_SIZE, height: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_SIZE, tintColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_MUTED, marginRight: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_MARGIN_RIGHT };
+  const obj2 = { width: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_SIZE, height: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_SIZE, tintColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_MUTED, marginRight: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_MARGIN_RIGHT };
+  obj[8] = { tintColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_BRAND_FOREGROUND };
   obj[9] = { flexGrow: 1, flexShrink: 0, flexDirection: "row", alignItems: "center", justifyContent: "flex-end", gap: 8 };
   obj[10] = { flexDirection: "row", alignItems: "center", gap: 2 };
-  const obj3 = { tintColor: importDefault(712).colors.CONTROL_BRAND_FOREGROUND };
-  obj[11] = { width: closure_4.hairlineWidth, alignSelf: "stretch", backgroundColor: importDefault(712).colors.BORDER_SUBTLE };
-  const obj4 = { width: closure_4.hairlineWidth, alignSelf: "stretch", backgroundColor: importDefault(712).colors.BORDER_SUBTLE };
-  obj[12] = { width: importDefault(712).modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_SIZE, height: importDefault(712).modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_SIZE, tintColor: importDefault(712).colors.INTERACTIVE_ICON_DEFAULT };
+  const obj3 = { tintColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_BRAND_FOREGROUND };
+  obj[11] = { width: closure_4.hairlineWidth, alignSelf: "stretch", backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE };
+  const obj4 = { width: closure_4.hairlineWidth, alignSelf: "stretch", backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE };
+  obj[12] = { width: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_SIZE, height: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_SIZE, tintColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_ICON_DEFAULT };
   return obj;
 });
 let closure_19 = { code: "function ChatInputContextBarTsx1(){const{stylesBackgroundColor,chatInputFloating,heightSv}=this.__closure;return{backgroundColor:stylesBackgroundColor,...(chatInputFloating?{maxHeight:heightSv.get()}:{height:heightSv.get()})};}" };

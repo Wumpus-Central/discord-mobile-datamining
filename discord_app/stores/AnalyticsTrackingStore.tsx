@@ -10,7 +10,7 @@ encodeProperties = {
   waitFor: items,
   getFingerprint: importDefaultResult.getFingerprint,
   getSessionId() {
-    const session = require(6832) /* trackHeartbeat */.getSession();
+    const session = require("../modules/analytics_sessions/SessionHeartbeatScheduler.tsx") /* trackHeartbeat */.getSession();
     return session.then((uuid) => {
       let sessionId;
       if (uuid != null) {
@@ -20,32 +20,32 @@ encodeProperties = {
     });
   },
   getLaunchSignature() {
-    return require(698) /* expandEventProperties */.launchSignature;
+    return require("../utils/AnalyticsUtils.tsx") /* expandEventProperties */.launchSignature;
   },
   scheduleWhenIdle: require("setOriginWindow").requestSafeIdleCallback,
   sendUnloadRequest: require("sendUnloadRequest").sendUnloadRequest
 };
 encodeProperties = {
   CONNECTION_OPEN(arg0) {
-    return require(503) /* encodeProperties */.AnalyticsActionHandlers.handleConnectionOpen(arg0);
+    return require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.AnalyticsActionHandlers.handleConnectionOpen(arg0);
   },
   OVERLAY_INITIALIZE(arg0) {
-    return require(503) /* encodeProperties */.AnalyticsActionHandlers.handleConnectionOpen(arg0);
+    return require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.AnalyticsActionHandlers.handleConnectionOpen(arg0);
   },
   CURRENT_USER_UPDATE(arg0) {
-    return require(503) /* encodeProperties */.AnalyticsActionHandlers.handleConnectionOpen(arg0);
+    return require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.AnalyticsActionHandlers.handleConnectionOpen(arg0);
   },
   CONNECTION_CLOSED() {
-    return require(503) /* encodeProperties */.AnalyticsActionHandlers.handleConnectionClosed();
+    return require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.AnalyticsActionHandlers.handleConnectionClosed();
   },
   FINGERPRINT() {
-    return require(503) /* encodeProperties */.AnalyticsActionHandlers.handleFingerprint();
+    return require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.AnalyticsActionHandlers.handleFingerprint();
   },
   TRACK(arg0) {
-    return require(503) /* encodeProperties */.AnalyticsActionHandlers.handleTrack(arg0);
+    return require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.AnalyticsActionHandlers.handleTrack(arg0);
   },
   SET_ANALYTICS_TOKEN(arg0) {
-    return require(503) /* encodeProperties */.AnalyticsActionHandlers.handleSetAnalyticsToken(arg0);
+    return require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.AnalyticsActionHandlers.handleSetAnalyticsToken(arg0);
   }
 };
 items = [importDefaultResult];

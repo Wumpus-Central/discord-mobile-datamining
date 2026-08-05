@@ -27,5 +27,5 @@ export const useEnsureHydratedUsers = function useEnsureHydratedUsers(guild_id, 
       }
     });
   }, items1);
-  const subscribeGuildMembers = _require(5835).useSubscribeGuildMembers(memo, "useEnsureHydratedUsers");
+  const subscribeGuildMembers = _require("../../../../../lib/guild/subscribeGuildMembers.tsx").useSubscribeGuildMembers(memo, "useEnsureHydratedUsers");
 };

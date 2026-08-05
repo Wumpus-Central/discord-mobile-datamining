@@ -26,16 +26,16 @@ export default function GuildRoleSubscriptionsUpsellActionSheet(arg0) {
     children: null
   };
   obj = { source: null };
-  obj[0] = importDefault(15247);
-  const items = [callback(importDefault(5236), obj), , , , ];
+  obj[0] = require("../../../../../_runtime/15247_registerAsset.js");
+  const items = [callback(require("../../../../components_native/common/FastImage.tsx"), obj), , , , ];
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[4] = intl.string(require(1236) /* getSystemLocale */.t.C0m4rQ);
-  items[1] = callback(require(4281) /* Text */.Text, obj);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[4] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.C0m4rQ);
+  items[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   const obj1 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj1[3] = intl2.string(require(1236) /* getSystemLocale */.t.zOHfEX);
-  items[2] = callback(require(4281) /* Text */.Text, obj1);
+  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj1[3] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.zOHfEX);
+  items[2] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
   const obj2 = {
     onPress() {
       callback(outer1_5.UNKNOWN);
@@ -43,9 +43,9 @@ export default function GuildRoleSubscriptionsUpsellActionSheet(arg0) {
     },
     text: null
   };
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj2[1] = intl3.string(require(1236) /* getSystemLocale */.t.OgQQbG);
-  items[3] = callback(require(4695) /* Button */.Button, obj2);
+  const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj2[1] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.OgQQbG);
+  items[3] = callback(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj2);
   const obj3 = { style: tmp.dismissButton, children: null };
   const obj4 = {
     onPress() {
@@ -54,10 +54,10 @@ export default function GuildRoleSubscriptionsUpsellActionSheet(arg0) {
     text: null,
     variant: "secondary"
   };
-  const intl4 = require(1236) /* getSystemLocale */.intl;
-  obj4[1] = intl4.string(require(1236) /* getSystemLocale */.t.WAI6xu);
-  obj3[1] = callback(require(4695) /* Button */.Button, obj4);
+  const intl4 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj4[1] = intl4.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.WAI6xu);
+  obj3[1] = callback(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj4);
   items[4] = callback(View, obj3);
   obj[2] = items;
-  return callback2(require(5338) /* Background */.BottomSheet, obj);
+  return callback2(require("../../../../design/components/Sheet/native/BottomSheet.native.tsx") /* Background */.BottomSheet, obj);
 };

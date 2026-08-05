@@ -61,19 +61,19 @@ function ChannelContent(arg0) {
   }
   const obj2 = { style: { flexDirection: "row", paddingRight: num, alignItems: "center" }, children: null };
   const obj3 = { title: name, muted, unread, resolvedUnreadSetting: null, connected: null };
-  const tmp4 = importDefault(15921)();
+  const tmp4 = require("getLayoutStyles.tsx")();
   if (resolvedUnreadSetting == null) {
     resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
   }
   obj3[3] = resolvedUnreadSetting;
   obj3[4] = connected;
-  const items1 = [closure_7(importDefault(15927), obj3), , ];
+  const items1 = [closure_7(require("ChannelTitle.tsx"), obj3), , ];
   tmp9Result = null;
   if (null != channelCategoryName) {
     const obj4 = { variant: "text-xs/bold", color: "text-muted", style: null, children: null };
     obj4[2] = { marginRight: 4 };
     obj4[3] = channelCategoryName;
-    tmp9Result = tmp9(require(4281) /* Text */.Text, obj4);
+    tmp9Result = tmp9(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj4);
   }
   items1[1] = tmp9Result;
   let tmp11Result = tmp9Result;
@@ -97,13 +97,13 @@ function ChannelContent(arg0) {
     if (tmp9Result) {
       const obj7 = { size: "xxs", color: "icon-muted", style: null };
       obj7[2] = tmp.channelTraitIcon;
-      tmp9Result = tmp9(require(4804) /* LockIcon */.LockIcon, obj7);
+      tmp9Result = tmp9(require("../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx") /* LockIcon */.LockIcon, obj7);
     }
     const items3 = [tmp9Result, , ];
     if (isNSFWResult) {
       const obj8 = { size: "xxs", color: "icon-muted", style: null };
       obj8[2] = tmp.channelTraitIcon;
-      isNSFWResult = tmp9(require(7772) /* WarningIcon */.WarningIcon, obj8);
+      isNSFWResult = tmp9(require("../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx") /* WarningIcon */.WarningIcon, obj8);
     }
     items3[1] = isNSFWResult;
     if (isSubscriptionGated) {
@@ -153,7 +153,7 @@ function ChannelContent(arg0) {
     obj15[1] = num6;
     obj14[2] = obj15;
     obj14[4] = lastMessageTimestampString;
-    tmp9Result2 = tmp9(require(4281) /* Text */.Text, obj14);
+    tmp9Result2 = tmp9(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj14);
   }
   const items7 = [tmp9Result2, , ];
   const items8 = [{ alignItems: "center", paddingLeft: 4 }, ];

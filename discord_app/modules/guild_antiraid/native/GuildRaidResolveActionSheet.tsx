@@ -1,6 +1,6 @@
 // discord_app/modules/guild_antiraid/native/GuildRaidResolveActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
-import module_7707 from "module_7707";
+import SafetyToastsActionCreators.native from "../../safety_common/SafetyToastsActionCreators.native.tsx";
 import { View } from "collectGuildAnalyticsMetadata";
 import { AnalyticEvents } from "ME";
 import { SafetyToastType } from "SafetyToastType";
@@ -43,36 +43,36 @@ export default function GuildRaidResolveActionSheet(arg0) {
   const tmp2 = callback(React.useState([]), 2);
   [c5, c6] = callback(React.useState(), 2);
   let obj = { text: null, value: null };
-  let intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.yeaXw5);
-  obj[1] = require(6886) /* Feedback */.RaidResolutionType.LEGITIMATE_ACTIVITY;
+  let intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.yeaXw5);
+  obj[1] = require("../../guild_automod/AutomodFeedback.tsx") /* Feedback */.RaidResolutionType.LEGITIMATE_ACTIVITY;
   let items = [obj, , , ];
   obj = { text: null, value: null };
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl2.string(require(1236) /* getSystemLocale */.t["o++3B8"]);
-  obj[1] = require(6886) /* Feedback */.RaidResolutionType.DM_SPAM;
+  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["o++3B8"]);
+  obj[1] = require("../../guild_automod/AutomodFeedback.tsx") /* Feedback */.RaidResolutionType.DM_SPAM;
   items[1] = obj;
   obj = { text: null, value: null };
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl3.string(require(1236) /* getSystemLocale */.t.UfHAwZ);
-  obj[1] = require(6886) /* Feedback */.RaidResolutionType.JOIN_RAID;
+  const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.UfHAwZ);
+  obj[1] = require("../../guild_automod/AutomodFeedback.tsx") /* Feedback */.RaidResolutionType.JOIN_RAID;
   items[2] = obj;
   let obj1 = { text: null, value: null };
-  const intl4 = require(1236) /* getSystemLocale */.intl;
-  obj1[0] = intl4.string(require(1236) /* getSystemLocale */.t.K3UWeR);
-  obj1[1] = require(6886) /* Feedback */.RaidResolutionType.OTHER;
+  const intl4 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj1[0] = intl4.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.K3UWeR);
+  obj1[1] = require("../../guild_automod/AutomodFeedback.tsx") /* Feedback */.RaidResolutionType.OTHER;
   items[3] = obj1;
   let obj2 = { children: null };
   let obj3 = { style: tmp.container, children: null };
   const tmp3 = callback(React.useState(), 2);
   let obj4 = { style: tmp.title, variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
-  const intl5 = require(1236) /* getSystemLocale */.intl;
-  obj4[3] = intl5.string(require(1236) /* getSystemLocale */.t["1zmw/H"]);
-  const items1 = [callback2(require(4281) /* Text */.Text, obj4), , , , ];
+  const intl5 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj4[3] = intl5.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["1zmw/H"]);
+  const items1 = [callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj4), , , , ];
   let obj5 = { style: tmp.subtitle, variant: "text-sm/normal", color: "text-default", children: null };
-  const intl6 = require(1236) /* getSystemLocale */.intl;
-  obj5[3] = intl6.string(require(1236) /* getSystemLocale */.t.nF79oO);
-  items1[1] = callback2(require(4281) /* Text */.Text, obj5);
+  const intl6 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj5[3] = intl6.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.nF79oO);
+  items1[1] = callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj5);
   items1[2] = items.map((value) => {
     value = value.value;
     let closure_0 = value;
@@ -129,9 +129,9 @@ export default function GuildRaidResolveActionSheet(arg0) {
     text: null,
     size: "md"
   };
-  const intl7 = require(1236) /* getSystemLocale */.intl;
-  obj6[1] = intl7.string(require(1236) /* getSystemLocale */.t.Gh3A0O);
-  items1[3] = callback2(require(4695) /* Button */.Button, obj6);
+  const intl7 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj6[1] = intl7.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Gh3A0O);
+  items1[3] = callback2(require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj6);
   const obj7 = {
     onPress: function handleClose() {
       callback(_undefined[10]).hideActionSheet("GuildRaidResolveActionSheet");
@@ -140,10 +140,10 @@ export default function GuildRaidResolveActionSheet(arg0) {
     variant: "secondary",
     size: "md"
   };
-  const intl8 = require(1236) /* getSystemLocale */.intl;
-  obj7[1] = intl8.string(require(1236) /* getSystemLocale */.t["ETE/oC"]);
-  items1[4] = callback2(require(4695) /* Button */.Button, obj7);
+  const intl8 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj7[1] = intl8.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["ETE/oC"]);
+  items1[4] = callback2(require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj7);
   obj3[1] = items1;
-  obj2[0] = callback3(importDefault(5733), obj3);
-  return callback2(require(5646) /* ActionSheet */.ActionSheet, obj2);
+  obj2[0] = callback3(require("../../keyboard/native/KeyboardAwareView.tsx"), obj3);
+  return callback2(require("../../../design/components/Sheet/native/ActionSheet.native.tsx") /* ActionSheet */.ActionSheet, obj2);
 };

@@ -24,5 +24,5 @@ export default function SafetyTipsRow(arg0) {
   obj[1] = tip;
   obj[2] = description;
   obj[3] = end;
-  return jsx(_require(5315).TableRow, { icon: null, label: null, subLabel: null, end: null });
+  return jsx(_require("../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, { icon: null, label: null, subLabel: null, end: null });
 };

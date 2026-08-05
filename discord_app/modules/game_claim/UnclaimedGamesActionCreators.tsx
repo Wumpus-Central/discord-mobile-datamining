@@ -109,8 +109,8 @@ initialize = {
 };
 initialize = {
   backoff() {
-    let tmp = importDefault(584);
-    tmp = new tmp(5 * importDefault(687).Millis.MINUTE);
+    let tmp = require("../../../discord_common/js/packages/backoff/Backoff.tsx");
+    tmp = new tmp(5 * require("../../utils/Durations.tsx").Millis.MINUTE);
     return tmp;
   },
   maxRetries: 10

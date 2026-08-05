@@ -46,7 +46,7 @@ function findInlineEmojisFromSurrogates(content, arg1) {
             let str3 = "";
             let tmp16 = require;
             let tmp17 = dependencyMap;
-            let tmp18 = require(3928).surrogateToEmoji[`${tmp3}`];
+            let tmp18 = require("../../../_runtime/metro/03928__.js").surrogateToEmoji[`${tmp3}`];
             let tmp19 = null;
             if (null != tmp18) {
               tmp19 = tmp16(3928).emojis[tmp18];
@@ -82,7 +82,7 @@ function findInlineEmojisFromSurrogates(content, arg1) {
             } else {
               let tmp10 = require;
               let tmp11 = dependencyMap;
-              let tmp12 = require(3928).surrogateToEmoji[str];
+              let tmp12 = require("../../../_runtime/metro/03928__.js").surrogateToEmoji[str];
               let tmp13 = null;
               if (null != tmp12) {
                 tmp13 = tmp10(3928).emojis[tmp12];
@@ -123,7 +123,7 @@ function findInlineEmojisFromSurrogates(content, arg1) {
   if (!tmp23) {
     return items1;
   } else {
-    const tmp26 = require(3928).surrogateToEmoji[str2];
+    const tmp26 = require("../../../_runtime/metro/03928__.js").surrogateToEmoji[str2];
     let tmp27 = null;
     if (null != tmp26) {
       tmp27 = tmp24(3928).emojis[tmp26];
@@ -277,11 +277,11 @@ Object.defineProperty(prototype, "url", {
   get: function url() {
     const defaultDiversityChild = this.defaultDiversityChild;
     if (null != defaultDiversityChild) {
-      let uRL = importDefault(3930).getURL(defaultDiversityChild.surrogates);
-      const obj2 = importDefault(3930);
+      let uRL = require("../../utils/EmojiUtils.tsx").getURL(defaultDiversityChild.surrogates);
+      const obj2 = require("../../utils/EmojiUtils.tsx");
     } else {
-      uRL = importDefault(3930).getURL(tmp.surrogates);
-      const obj = importDefault(3930);
+      uRL = require("../../utils/EmojiUtils.tsx").getURL(tmp.surrogates);
+      const obj = require("../../utils/EmojiUtils.tsx");
     }
     return uRL;
   },
@@ -292,7 +292,7 @@ Object.defineProperty(prototype, "name", {
     const self = this;
     if (this.hasDiversity) {
       if (null != c4) {
-        const tmp6 = require(3928).surrogateToEmoji[c4];
+        const tmp6 = require("../../../_runtime/metro/03928__.js").surrogateToEmoji[c4];
         let tmp7 = null;
         if (null != tmp6) {
           tmp7 = tmp4(3928).emojis[tmp6];
@@ -320,12 +320,12 @@ Object.defineProperty(prototype, "optionallyDiverseSequence", {
 });
 prototype["forEachDiversity"] = function forEachDiversity(arg0) {
   if (null != this.diversityChildren) {
-    importDefault(12).each(tmp.diversityChildren, arg0);
-    const obj = importDefault(12);
+    require("../../../_runtime/00012_apply.js").each(tmp.diversityChildren, arg0);
+    const obj = require("../../../_runtime/00012_apply.js");
   }
 };
 prototype["forEachName"] = function forEachName(arg0) {
-  importDefault(12).each(this.names, arg0);
+  require("../../../_runtime/00012_apply.js").each(this.names, arg0);
 };
 const map = new Map();
 const re15 = /^(?:\uDB40[\uDC61-\uDC7A])$/;
@@ -344,13 +344,13 @@ let obj = {
     let c4 = tmp;
   },
   getCategories() {
-    return Object.keys(require(3928).emojisByCategory);
+    return Object.keys(require("../../../_runtime/metro/03928__.js").emojisByCategory);
   },
   getByName(arg0) {
-    const tmp3 = require(3928).nameToEmoji[arg0];
+    const tmp3 = require("../../../_runtime/metro/03928__.js").nameToEmoji[arg0];
     let tmp4 = null;
     if (null != tmp3) {
-      tmp4 = require(3928).emojis[tmp3];
+      tmp4 = require("../../../_runtime/metro/03928__.js").emojis[tmp3];
     }
     let tmp5 = null;
     if (null != tmp4) {
@@ -368,13 +368,13 @@ let obj = {
   getByCategory(name) {
     let value = map.get(name);
     if (null == value) {
-      const tmp4 = require(3928).emojisByCategory[name];
-      const emojis = require(3928).emojis;
-      const result = importDefault(3930).filterUnsupportedEmojis(emojis.slice(tmp4[0], tmp4[1]));
+      const tmp4 = require("../../../_runtime/metro/03928__.js").emojisByCategory[name];
+      const emojis = require("../../../_runtime/metro/03928__.js").emojis;
+      const result = require("../../utils/EmojiUtils.tsx").filterUnsupportedEmojis(emojis.slice(tmp4[0], tmp4[1]));
       const mapped = result.map(parseRawEmojiObject);
       const result1 = map.set(name, mapped);
       value = mapped;
-      const obj2 = importDefault(3930);
+      const obj2 = require("../../utils/EmojiUtils.tsx");
     }
     return value;
   },
@@ -425,10 +425,10 @@ let obj = {
     if (arg1 === undefined) {
       str = "";
     }
-    const tmp3 = require(3928).nameToEmoji[emojiName];
+    const tmp3 = require("../../../_runtime/metro/03928__.js").nameToEmoji[emojiName];
     let tmp4 = null;
     if (null != tmp3) {
-      tmp4 = require(3928).emojis[tmp3];
+      tmp4 = require("../../../_runtime/metro/03928__.js").emojis[tmp3];
     }
     let surrogates;
     if (tmp4 != null) {
@@ -448,10 +448,10 @@ let obj = {
     if (arg2 === undefined) {
       str = "";
     }
-    const tmp3 = require(3928).surrogateToEmoji[name];
+    const tmp3 = require("../../../_runtime/metro/03928__.js").surrogateToEmoji[name];
     let tmp4 = null;
     if (null != tmp3) {
-      tmp4 = require(3928).emojis[tmp3];
+      tmp4 = require("../../../_runtime/metro/03928__.js").emojis[tmp3];
     }
     let first;
     if (tmp4 != null) {
@@ -478,7 +478,7 @@ let obj = {
     }
     const call = hasOwnProperty.call;
     if (typeof call === "unknown" ? hasOwnProperty(key10009) : call(tmp3, key10009)) {
-      str = require(13238)[key10009];
+      str = require("../../../_runtime/metro/13238__.js")[key10009];
     }
     let combined = str;
     if (flag) {
@@ -489,7 +489,7 @@ let obj = {
   },
   convertSurrogateToBase(surrogates) {
     const reduced = items.reduce((str) => str.replace(arg1, ""), surrogates);
-    const tmp4 = require(3928).surrogateToEmoji[reduced];
+    const tmp4 = require("../../../_runtime/metro/03928__.js").surrogateToEmoji[reduced];
     let tmp5 = null;
     if (null != tmp4) {
       tmp5 = tmp2(3928).emojis[tmp4];
@@ -501,7 +501,7 @@ let obj = {
     if (str == null) {
       str = "";
     }
-    const tmp6 = require(3928).nameToEmoji[str];
+    const tmp6 = require("../../../_runtime/metro/03928__.js").nameToEmoji[str];
     let tmp7 = null;
     if (null != tmp6) {
       tmp7 = tmp2(3928).emojis[tmp6];
@@ -541,8 +541,8 @@ let obj = {
   EMOJI_NAME_AND_DIVERSITY_RE: tmp3,
   EMOJI_SHORTCUT_RE: /^(>:\(|>:\-\(|>=\(|>=\-\(|:"\)|:\-"\)|="\)|=\-"\)|<\/3|<\\3|:\-\\|:\-\/|=\-\\|=\-\/|:'\(|:'\-\(|:,\(|:,\-\(|='\(|='\-\(|=,\(|=,\-\(|:\(|:\-\(|=\(|=\-\(|<3|♡|\]:\(|\]:\-\(|\]=\(|\]=\-\(|o:\)|O:\)|o:\-\)|O:\-\)|0:\)|0:\-\)|o=\)|O=\)|o=\-\)|O=\-\)|0=\)|0=\-\)|:'D|:'\-D|:,D|:,\-D|='D|='\-D|=,D|=,\-D|:\*|:\-\*|=\*|=\-\*|x\-\)|X\-\)|:\||:\-\||=\||=\-\||:o|:\-o|:O|:\-O|=o|=\-o|=O|=\-O|:@|:\-@|=@|=\-@|:D|:\-D|=D|=\-D|:'\)|:'\-\)|:,\)|:,\-\)|='\)|='\-\)|=,\)|=,\-\)|:\)|:\-\)|=\)|=\-\)|\]:\)|\]:\-\)|\]=\)|\]=\-\)|:,'\(|:,'\-\(|;\(|;\-\(|=,'\(|=,'\-\(|:P|:\-P|=P|=\-P|8\-\)|B\-\)|,:\(|,:\-\(|,=\(|,=\-\(|,:\)|,:\-\)|,=\)|,=\-\)|:s|:\-S|:z|:\-Z|:\$|:\-\$|=s|=\-S|=z|=\-Z|=\$|=\-\$|;\)|;\-\))/,
   hasSurrogates(tags) {
-    const obj = importDefault(12);
-    return importDefault(12).toArray(tags).some((arg0) => null != callback(table[1]).surrogateToEmoji[arg0]);
+    const obj = require("../../../_runtime/00012_apply.js");
+    return require("../../../_runtime/00012_apply.js").toArray(tags).some((arg0) => null != callback(table[1]).surrogateToEmoji[arg0]);
   }
 };
 let result = require("EmojiTypes").fileFinishedImporting("modules/emojis/UnicodeEmojis.tsx");

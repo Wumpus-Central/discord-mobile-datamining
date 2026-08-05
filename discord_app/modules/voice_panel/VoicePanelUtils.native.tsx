@@ -7,7 +7,7 @@ const require = arg1;
 let result = require("withEqualityFn").fileFinishedImporting("modules/voice_panel/VoicePanelUtils.native.tsx");
 
 export const isVoicePanelEnabled = function isVoicePanelEnabled(channel2) {
-  const result = require(4496) /* useIsStageVoicePanelEnabled */.isStageVoicePanelEnabled("voice_panel_utils");
+  const result = require("../stage_channels/StageVoicePanelExperiment.tsx") /* useIsStageVoicePanelEnabled */.isStageVoicePanelEnabled("voice_panel_utils");
   let tmp2 = !result;
   if (!result) {
     let isGuildStageVoiceResult;
@@ -20,7 +20,7 @@ export const isVoicePanelEnabled = function isVoicePanelEnabled(channel2) {
 };
 export const useIsVoicePanelShowing = function useIsVoicePanelShowing() {
   const items = [ensureGuildLoaded, createRTCConnection];
-  return require(647) /* defaultAreStatesEqual */.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */.useStateFromStores(items, () => {
     channel = channel.getChannel(channelId.getChannelId());
     let tmp = null != channel;
     if (tmp) {

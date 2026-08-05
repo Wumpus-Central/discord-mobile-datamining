@@ -219,8 +219,8 @@ prototype["render"] = function render() {
       let tmp3Result = tmp3(tmp4, obj);
       if (tmp) {
         if (accessibilityLabel == null) {
-          const intl = require(1236) /* getSystemLocale */.intl;
-          accessibilityLabel = intl.string(require(1236) /* getSystemLocale */.t.OIDkcp);
+          const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+          accessibilityLabel = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.OIDkcp);
         }
         obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
         obj[1] = accessibilityLabel;

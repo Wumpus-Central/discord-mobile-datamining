@@ -25,9 +25,9 @@ let closure_15 = createCacheKey.createStyles((arg0, arg1) => {
     flag = false;
   }
   let obj = { container: null, selected: null, selectedBorder: null, row: null, rowWithSubtitle: null, channelLabel: null, channelLabelText: null };
-  obj = { position: "relative", marginVertical: closure_11, marginHorizontal: 8, borderRadius: importDefault(712).modules.mobile.CHANNEL_ITEM_RADIUS, flexGrow: 1 };
+  obj = { position: "relative", marginVertical: closure_11, marginHorizontal: 8, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHANNEL_ITEM_RADIUS, flexGrow: 1 };
   obj[0] = obj;
-  obj = { backgroundColor: importDefault(712).colors.MOBILE_CHANNEL_ITEM_BACKGROUND_SELECTED };
+  obj = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_CHANNEL_ITEM_BACKGROUND_SELECTED };
   obj[1] = obj;
   const obj1 = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, borderWidth: 1, borderColor: null, borderRadius: null };
   let BORDER_MUTED;
@@ -35,7 +35,7 @@ let closure_15 = createCacheKey.createStyles((arg0, arg1) => {
     BORDER_MUTED = tmp(712).colors.BORDER_MUTED;
   }
   obj1[6] = BORDER_MUTED;
-  obj1[7] = importDefault(712).modules.mobile.CHANNEL_ITEM_RADIUS;
+  obj1[7] = require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHANNEL_ITEM_RADIUS;
   obj[2] = obj1;
   obj[3] = { padding: 8, flexDirection: "row", alignItems: "center" };
   obj[4] = { flexGrow: 1, paddingVertical: 6 };

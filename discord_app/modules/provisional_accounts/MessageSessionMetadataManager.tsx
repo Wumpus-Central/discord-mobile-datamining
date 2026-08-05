@@ -34,7 +34,7 @@ prototype["_getAuthorizedApplicationIds"] = function _getAuthorizedApplicationId
 prototype["_trackIfSessionMetadataExists"] = function _trackIfSessionMetadataExists(message) {
   let author;
   if (null != message.session_metadata) {
-    let obj = importDefault(698);
+    let obj = require("../../utils/AnalyticsUtils.tsx");
     obj = { message_id: null, channel_id: null, author_id: null, authorized_application_ids: null };
     ({ id: obj2[0], channel_id: obj2[1], author } = message);
     let id;

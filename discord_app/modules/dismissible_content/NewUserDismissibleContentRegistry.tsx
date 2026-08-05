@@ -39,7 +39,7 @@ export const disableNewUserDismissibleContent = function disableNewUserDismissib
     id = id.getId();
     let tmp5 = null != id;
     if (tmp5) {
-      obj = importDefault(11);
+      obj = require("../../utils/SnowflakeUtils.tsx");
       let tmp11 = dependencyMap[prop];
       if (tmp11 == null) {
         tmp11 = DAY;
@@ -55,12 +55,12 @@ export const isUserAccountOldEnough = function isUserAccountOldEnough(arg0, arg1
   let tmp = null != arg0;
   if (tmp) {
     let tmp7 = dependencyMap[arg1];
-    const obj = importDefault(11);
+    const obj = require("../../utils/SnowflakeUtils.tsx");
     if (tmp7 == null) {
       tmp7 = DAY;
     }
-    tmp = importDefault(11).age(arg0) >= tmp7;
-    const ageResult = importDefault(11).age(arg0);
+    tmp = require("../../utils/SnowflakeUtils.tsx").age(arg0) >= tmp7;
+    const ageResult = require("../../utils/SnowflakeUtils.tsx").age(arg0);
   }
   return tmp;
 };

@@ -20,7 +20,7 @@ function BundleProductPreview(onActiveItemTypeChange) {
   let product;
   let width;
   ({ product, width, handlePreviewPress, onTrackPress, onActiveItemChange } = onActiveItemTypeChange);
-  let obj = require(9312) /* useCollectiblesMobileFlexibleBundlesExperiment */;
+  let obj = require("../experiments/CollectiblesMobileFlexibleBundlesExperiment.tsx") /* useCollectiblesMobileFlexibleBundlesExperiment */;
   if (obj.useCollectiblesMobileFlexibleBundlesExperiment("ProductDetailsActionSheetPreview").enabled) {
     obj = { product: null, width: null, handlePreviewPress: null, onTrackPress: null, onActiveItemChange: null };
     obj[0] = product;
@@ -28,7 +28,7 @@ function BundleProductPreview(onActiveItemTypeChange) {
     obj[2] = handlePreviewPress;
     obj[3] = onTrackPress;
     obj[4] = onActiveItemChange;
-    let tmp3Result = tmp3(importDefault(9361), obj);
+    let tmp3Result = tmp3(require("BundleProductDetailsActionSheetPreview.tsx"), obj);
   } else {
     obj = { style: null, children: null };
     obj[0] = tmp.previewDivider;
@@ -209,7 +209,7 @@ export default function ProductDetailsActionSheetPreview(arg0) {
     }, []),
     children: null
   };
-  if (product.type === _require(1901).CollectiblesItemType.BUNDLE) {
+  if (product.type === _require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx").CollectiblesItemType.BUNDLE) {
     obj = { product: null, width: null, handlePreviewPress: null, onTrackPress: null, onActiveItemChange: null, onActiveItemTypeChange: null };
     obj[0] = product;
     obj[1] = tmp3;
@@ -226,7 +226,7 @@ export default function ProductDetailsActionSheetPreview(arg0) {
     obj1[1] = tmp3;
     obj1[2] = handlePreviewPress;
     obj1[3] = onTrackPress;
-    obj[1] = tmp7(_require(9363).IndividualProductPreview, obj1);
+    obj[1] = tmp7(_require("IndividualProductPreview.tsx").IndividualProductPreview, obj1);
     tmp7Result = tmp7(tmp8, obj);
   }
   obj[2] = tmp7Result;

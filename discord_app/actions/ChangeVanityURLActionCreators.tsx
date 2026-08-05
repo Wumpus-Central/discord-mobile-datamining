@@ -5,15 +5,15 @@ const result = require("sendRequest").fileFinishedImporting("actions/ChangeVanit
 
 export default {
   openModal(id, vanityURLCode) {
-    let obj = importDefault(709);
+    let obj = require("../Dispatcher.tsx");
     obj = { type: "CHANGE_VANITY_URL_MODAL_OPEN", guildId: id, code: vanityURLCode };
     obj.dispatch(obj);
   },
   closeModal() {
-    importDefault(709).dispatch({ type: "CHANGE_VANITY_URL_MODAL_CLOSE" });
+    require("../Dispatcher.tsx").dispatch({ type: "CHANGE_VANITY_URL_MODAL_CLOSE" });
   },
   removeVanityURL(id) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     const obj = { url: Endpoints.GUILD_VANITY_URL(id), body: { code: null }, oldFormErrors: true, rejectWithError: true };
     return HTTP.patch({ url: Endpoints.GUILD_VANITY_URL(id), body: { code: null }, oldFormErrors: true, rejectWithError: true }).then(() => {
       callback(table[1]).dispatch({ type: "GUILD_SETTINGS_SET_VANITY_URL", code: null, uses: 0 });
@@ -21,7 +21,7 @@ export default {
   },
   changeVanityURL(id, vanityURLCode) {
     const self = this;
-    let obj = importDefault(709);
+    let obj = require("../Dispatcher.tsx");
     obj.dispatch({ type: "CHANGE_VANITY_URL_MODAL_SUBMIT" });
     const HTTP = self(530).HTTP;
     obj = { url: Endpoints.GUILD_VANITY_URL(id), body: obj, oldFormErrors: true, rejectWithError: true };
@@ -40,11 +40,11 @@ export default {
     });
   },
   setVanityURL(id, code) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: Endpoints.GUILD_VANITY_URL(id), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { code };
-    obj[3] = require(530) /* sendRequest */.rejectWithMigratedError();
-    const obj3 = require(530) /* sendRequest */;
+    obj[3] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+    const obj3 = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */;
     return HTTP.patch(obj).then((body) => {
       let code;
       let uses;

@@ -15,14 +15,14 @@ export const NativeCheckoutStoreContextOrNull = context;
 export const useNativeCheckoutStore = function useNativeCheckoutStore(arg0) {
   let shallow = arg1;
   if (arg1 === undefined) {
-    shallow = require(3898) /* isIterable */.shallow;
+    shallow = require("../../../../_runtime/03898_isIterable.js") /* isIterable */.shallow;
   }
   return callback()(arg0, shallow);
 };
 export const useNativeCheckoutStoreOrNull = function useNativeCheckoutStoreOrNull(arg0) {
   let shallow = arg1;
   if (arg1 === undefined) {
-    shallow = require(3898) /* isIterable */.shallow;
+    shallow = require("../../../../_runtime/03898_isIterable.js") /* isIterable */.shallow;
   }
   context = importAllResult.useContext(context);
   let contextResult = null;
@@ -40,7 +40,7 @@ export const createNativeStore = function createNativeStore(arg0) {
   let importDefault;
   let require;
   ({ order: require, checkoutInitParameters: importDefault, contextMetadata: dependencyMap, paymentGateway: isIterable, orderRequired: closure_4, onOrderRetryCancellation: createFromOrder, initialSubscriptionFacet: closure_6 } = arg0);
-  return require(700) /* identity */.createWithEqualityFn((arg0, arg1) => {
+  return require("../../../../_runtime/00700_identity.js") /* identity */.createWithEqualityFn((arg0, arg1) => {
     let closure_0 = arg0;
     let closure_1 = arg1;
     function runPatchOrderLineItems() {
@@ -554,6 +554,6 @@ export const createNativeStore = function createNativeStore(arg0) {
     };
     obj[12] = _runRecreateOrder;
     return obj;
-  }, require(3898) /* isIterable */.shallow);
+  }, require("../../../../_runtime/03898_isIterable.js") /* isIterable */.shallow);
 };
 export const NativeCheckoutStoreContext = importDefaultResultResult[0];

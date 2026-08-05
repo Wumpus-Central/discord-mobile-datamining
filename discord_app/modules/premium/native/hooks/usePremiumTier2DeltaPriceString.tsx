@@ -10,7 +10,7 @@ function getViewerProductId(subscription) {
     return null;
   } else {
     try {
-      return require(6780) /* getPremiumBundledItemsFromProductId */.getProductIdFromSubscription(subscription, false);
+      return require("../PremiumBundledPlansUtils.tsx") /* getPremiumBundledItemsFromProductId */.getProductIdFromSubscription(subscription, false);
     } catch (err) {
       return tmp;
     }

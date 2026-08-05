@@ -140,7 +140,7 @@ const memoResult = importAllResult.memo(function GIFPickerHeader(arg0) {
   ({ categoryType, onQueryClear } = arg0);
   ({ columnWidth, onQueryChange, onFavoritesQueryChange, searchInputRef } = arg0);
   const tmp = callback();
-  require(9851) /* GIF_PROVIDER */;
+  require("../GifProvider.tsx") /* GIF_PROVIDER */;
   let obj = { style: tmp.container, children: null };
   if (categoryType === GIFPickerResultTypes.SEARCH) {
     obj = { size: "md", onChange: null, placeholder: null, onClear: null, ref: null, isRound: true };
@@ -161,7 +161,7 @@ const memoResult = importAllResult.memo(function GIFPickerHeader(arg0) {
     obj2[0] = intl5.string(tmp2(1236).t.ffgJrs);
     obj1[3] = intl4.formatToPlainString(tmp2(1236).t.UTypEu, obj2);
     const obj3 = { color: null, size: "sm" };
-    obj3[0] = importDefault(712).colors.INTERACTIVE_TEXT_ACTIVE;
+    obj3[0] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_TEXT_ACTIVE;
     const items = [tmp6(tmp2(9860).ChevronLargeLeftIcon, obj3), ];
     if (categoryType === tmp8.TRENDING_GIFS) {
       const intl3 = tmp2(1236).intl;

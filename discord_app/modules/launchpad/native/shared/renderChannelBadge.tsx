@@ -23,29 +23,29 @@ export default function renderChannelBadge(newChannel) {
       let obj = { value: null, isMentionLowImportance: null };
       obj[0] = num;
       obj[1] = tmp;
-      let tmp2 = jsx(require(1297) /* Button */.Badge, { value: null, isMentionLowImportance: null });
+      let tmp2 = jsx(require("../../../../design/void/native.tsx") /* Button */.Badge, { value: null, isMentionLowImportance: null });
     }
     return tmp2;
   }
   if (flag) {
-    tmp2 = jsx(importDefault(11580), {});
+    tmp2 = jsx(require("../../../channel_list_v2/native/components/NewBadge.tsx"), {});
   } else {
     if (null != newPostCount) {
       if (newPostCount > 0) {
         obj = { variant: "text-xs/bold", color: "text-brand", children: null };
-        const intl = require(1236) /* getSystemLocale */.intl;
+        const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
         const obj1 = { count: null };
-        obj1[0] = require(1851) /* shortenAndLocalizeNumber */.humanizeValue(newPostCount, newChannel.locale);
-        obj[2] = intl.format(require(1236) /* getSystemLocale */.t.GkAbqY, obj1);
-        tmp2 = jsx(require(4281) /* Text */.Text, { variant: "text-xs/bold", color: "text-brand", children: null });
-        const obj5 = require(1851) /* shortenAndLocalizeNumber */;
+        obj1[0] = require("../../../../utils/NumberUtils.tsx") /* shortenAndLocalizeNumber */.humanizeValue(newPostCount, newChannel.locale);
+        obj[2] = intl.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.GkAbqY, obj1);
+        tmp2 = jsx(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-xs/bold", color: "text-brand", children: null });
+        const obj5 = require("../../../../utils/NumberUtils.tsx") /* shortenAndLocalizeNumber */;
       }
     }
     if (null != postsWithUnreadsCount) {
       if (postsWithUnreadsCount > 0) {
         const obj2 = { variant: "text-xs/bold", color: "text-muted", children: null };
         obj2[2] = postsWithUnreadsCount;
-        tmp2 = jsx(require(4281) /* Text */.Text, { variant: "text-xs/bold", color: "text-muted", children: null });
+        tmp2 = jsx(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-xs/bold", color: "text-muted", children: null });
       }
     }
     tmp2 = null;
@@ -54,7 +54,7 @@ export default function renderChannelBadge(newChannel) {
       if (eventsMentionCount > 0) {
         obj = { value: null, eventsMentionBadge: true };
         obj[0] = eventsMentionCount;
-        tmp2 = jsx(require(1297) /* Button */.Badge, { value: null, eventsMentionBadge: true });
+        tmp2 = jsx(require("../../../../design/void/native.tsx") /* Button */.Badge, { value: null, eventsMentionBadge: true });
       }
     }
   }

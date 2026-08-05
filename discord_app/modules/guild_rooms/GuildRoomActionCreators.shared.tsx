@@ -470,7 +470,7 @@ function _guildRoomObjectDelete() {
   return applyArgumentsResult;
 }
 function deletePendingGuildRoomNote(roomId) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "GUILD_ROOM_PENDING_NOTE_DELETE", roomId };
   obj.dispatch(obj);
 }
@@ -706,19 +706,19 @@ export const guildRoomConnect = function guildRoomConnect() {
   return applyArgumentsResult;
 };
 export const guildRoomDisconnect = function guildRoomDisconnect(guildId, channelId) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "GUILD_ROOM_DISCONNECT", userId: id.getId(), roomId: channelId };
   obj.dispatch(obj);
   if (channelId !== guildId) {
     obj = { guildId: null, channelId: null };
     obj[0] = guildId;
     obj[1] = channelId;
-    const result = require(16315) /* trackGuildRoomObjectInteracted */.trackGuildRoomUserDisconnected(obj);
-    const obj3 = require(16315) /* trackGuildRoomObjectInteracted */;
+    const result = require("GuildRoomAnalytics.tsx") /* trackGuildRoomObjectInteracted */.trackGuildRoomUserDisconnected(obj);
+    const obj3 = require("GuildRoomAnalytics.tsx") /* trackGuildRoomObjectInteracted */;
   }
 };
 export const guildRoomLocalDisconnect = function guildRoomLocalDisconnect(userId, oldChannelId) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "GUILD_ROOM_DISCONNECT", userId, roomId: oldChannelId };
   obj.dispatch(obj);
 };
@@ -733,12 +733,12 @@ export const guildRoomUpdate = function guildRoomUpdate() {
   return applyArgumentsResult;
 };
 export const selectGuildRoomLocalPosition = function selectGuildRoomLocalPosition(position) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "GUILD_ROOM_LOCAL_POSITION_REQUESTED", position };
   obj.dispatch(obj);
 };
 export const guildRoomToggleLayout = function guildRoomToggleLayout(channelId, clearLayout) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "GUILD_ROOM_TOGGLE_LAYOUT", roomId: channelId, clearLayout };
   obj.dispatch(obj);
 };
@@ -755,12 +755,12 @@ export const guildRoomObjectUpdate = function guildRoomObjectUpdate() {
 };
 export { guildRoomObjectDelete };
 export const startPendingGuildRoomNote = function startPendingGuildRoomNote(roomId) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "GUILD_ROOM_PENDING_NOTE_START", roomId };
   obj.dispatch(obj);
 };
 export const placePendingGuildRoomNote = function placePendingGuildRoomNote(roomId, position) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "GUILD_ROOM_PENDING_NOTE_PLACE", roomId, position };
   obj.dispatch(obj);
 };

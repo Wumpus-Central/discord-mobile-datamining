@@ -39,14 +39,14 @@ export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectib
   let c13;
   let hasExpiredShopBlocks;
   let c15;
-  let obj = _require(589);
+  let obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
   let items = [c6];
   stateFromStores = obj.useStateFromStores(items, () => _undefined.hasLoadedExperiments);
   const items1 = [c7];
-  stateFromStores1 = _require(589).useStateFromStores(items1, () => _undefined2.skipNumCategories);
-  const obj2 = _require(589);
+  stateFromStores1 = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => _undefined2.skipNumCategories);
+  const obj2 = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const items2 = [c8];
-  const tmp3 = callback(_require(589).useStateFromStoresArray(items2, () => {
+  const tmp3 = callback(_require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items2, () => {
     const items = [_undefined3.getShopBlocks(closure_0), , , , , , , ];
     let num = _undefined3.getLastSuccessfulFetch(closure_0);
     if (num == null) {
@@ -88,13 +88,13 @@ export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectib
   const items4 = [tmp3[3], tmp13];
   const tmp14 = callback2(() => !HOME(6909).areRequestOptionsEqual(c7, c12), items4);
   c13 = tmp14;
-  const obj3 = _require(589);
+  const obj3 = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const tmp12 = callback2;
   let flag2 = tmp9;
   if (tmp3[5] == null) {
     flag2 = false;
   }
-  hasExpiredShopBlocks = _require(14726).useHasExpiredShopBlocks(tmp4, flag2, flag);
+  hasExpiredShopBlocks = _require("useHasExpiredShopBlocks.tsx").useHasExpiredShopBlocks(tmp4, flag2, flag);
   const items5 = [tmp5, hasExpiredShopBlocks];
   const tmp12Result = tmp12(() => {
     let tmp = !hasExpiredShopBlocks;

@@ -21,7 +21,7 @@ function UserRow(user) {
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
   obj = { onPress, label: null, icon: null, start: null, end: null };
   const obj2 = user(589);
-  obj[1] = importDefault(4474).getName(channel.guild_id, channel.id, user);
+  obj[1] = require("../../../utils/NicknameUtils.tsx").getName(channel.guild_id, channel.id, user);
   obj = { user, avatarDecoration, size: null, guildId: null, status: null, isMobileOnline: null, isVROnline: null, autoStatusCutout: true };
   obj[2] = user(1297).AvatarSizes.REFRESH_MEDIUM_32;
   obj[3] = channel.guild_id;
@@ -43,8 +43,8 @@ export default function UserProfileActivityVoiceChannelUsers(arg0) {
   ({ channel: require, onPressUser: importDefault } = arg0);
   ({ users, onBack } = arg0);
   let obj = { title: null, onBack: null, scrollable: true, children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t["3xHUJ+"]);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["3xHUJ+"]);
   obj[1] = onBack;
   obj = {
     data: users,
@@ -64,7 +64,7 @@ export default function UserProfileActivityVoiceChannelUsers(arg0) {
       }, item.id);
     }
   };
-  obj[3] = jsx(require(9386) /* UserProfileStackedActionSheet */.UserProfileStackedActionSheetList, {
+  obj[3] = jsx(require("UserProfileStackedActionSheet.tsx") /* UserProfileStackedActionSheet */.UserProfileStackedActionSheetList, {
     data: users,
     keyExtractor(id) {
       return id.id;
@@ -82,7 +82,7 @@ export default function UserProfileActivityVoiceChannelUsers(arg0) {
       }, item.id);
     }
   });
-  return jsx(importDefault(9386), {
+  return jsx(require("UserProfileStackedActionSheet.tsx"), {
     data: users,
     keyExtractor(id) {
       return id.id;

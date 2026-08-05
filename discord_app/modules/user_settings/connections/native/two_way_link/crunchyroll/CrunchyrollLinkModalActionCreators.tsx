@@ -4,11 +4,11 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/user_s
 
 export default {
   showModal(locationStack) {
-    let obj = importDefault(4490);
+    let obj = require("../../../../../../actions/ModalActionCreators.tsx");
     obj = { locationStack };
-    obj.pushLazy(require(1959) /* asyncRequireImpl */(10484, dependencyMap.paths), obj, c3);
+    obj.pushLazy(require("../../../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(10484, dependencyMap.paths), obj, c3);
   },
   hideModal() {
-    importDefault(4490).popWithKey(c3);
+    require("../../../../../../actions/ModalActionCreators.tsx").popWithKey(c3);
   }
 };

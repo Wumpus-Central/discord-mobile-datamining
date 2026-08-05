@@ -14,7 +14,7 @@ const secondaryIndexMap = new require("version").SecondaryIndexMap((guild_id) =>
   }
   return items;
 }, (id) => {
-  const extractTimestampResult = importDefault(11).extractTimestamp(id.id);
+  const extractTimestampResult = require("../../utils/SnowflakeUtils.tsx").extractTimestamp(id.id);
   if (id.published) {
     let diff = -extractTimestampResult;
   } else {

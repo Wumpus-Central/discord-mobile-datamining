@@ -14,7 +14,7 @@ const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
 let closure_8 = createCacheKey.createStyles((arg0) => {
-  const item = { borderRadius: importDefault(712).radii.lg, paddingVertical: null, flexDirection: "row", justifyContent: "center" };
+  const item = { borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, paddingVertical: null, flexDirection: "row", justifyContent: "center" };
   let num = 8;
   if ("experimental_Small" === arg0) {
     num = 4;

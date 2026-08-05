@@ -32,10 +32,10 @@ export default require("noop").memo(function VEVOOSlider(disabled) {
   items[1] = { opacity: num };
   const current = initialValue.current;
   obj[2] = current;
-  obj[5] = importDefault(712).unsafe_rawColors.BRAND_500;
-  obj[6] = importDefault(712).unsafe_rawColors.PRIMARY_400;
+  obj[5] = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.BRAND_500;
+  obj[6] = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.PRIMARY_400;
   obj[7] = onValueChange;
-  const tmp5 = importDefault(7799);
+  const tmp5 = require("../../../../../_runtime/07799__getRequireWildcardCache.js");
   let fn;
   if (obj2.isAndroid()) {
     fn = () => true;

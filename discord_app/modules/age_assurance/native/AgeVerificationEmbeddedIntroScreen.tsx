@@ -45,7 +45,7 @@ export default function AgeVerificationEmbeddedIntroScreen(arg0) {
   obj3[3] = items2;
   items1[1] = callback2(navigation(4693).Stack, obj3);
   obj2[3] = items1;
-  const items3 = [callback2(navigation(4693).Stack, obj2), callback(navigation(7771).AgeVerificationMethodsContainer, { ageVerificationMethods: importDefault(7769)({ onClose, classificationId, onGoogleWalletSelect: callback }).ageVerificationMethods, modalSessionId })];
+  const items3 = [callback2(navigation(4693).Stack, obj2), callback(navigation(7771).AgeVerificationMethodsContainer, { ageVerificationMethods: require("../hooks/useAgeVerificationMethods.tsx")({ onClose, classificationId, onGoogleWalletSelect: callback }).ageVerificationMethods, modalSessionId })];
   obj1[3] = items3;
   const items4 = [callback2(navigation(4693).Stack, obj1), ];
   const obj6 = { variant: "text-xs/medium", color: "text-muted", style: tmp.helpLink, children: null };
@@ -56,7 +56,7 @@ export default function AgeVerificationEmbeddedIntroScreen(arg0) {
       obj.openUrl(callback(1945).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
     }
   };
-  obj6[3] = intl.format(importDefault(2803).lG69e1, obj7);
+  obj6[3] = intl.format(require("../AgeAssurance.messages.js").lG69e1, obj7);
   items4[1] = callback(navigation(4281).Text, obj6);
   obj[0] = items4;
   obj[0] = callback2(navigation(7758).ModalContent, obj);

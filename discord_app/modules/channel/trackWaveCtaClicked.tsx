@@ -13,7 +13,7 @@ export const getDmHasMessageHistory = function getDmHasMessageHistory(arg0) {
   return null != lastMessageId;
 };
 export const trackWaveCtaClicked = function trackWaveCtaClicked(channelId) {
-  let obj = importDefault(698);
+  let obj = require("../../utils/AnalyticsUtils.tsx");
   obj = { channel_id: channelId.channelId, source: channelId.source, dm_has_message_history: null };
   const channel = store.getChannel(channelId.channelId);
   let lastMessageId;

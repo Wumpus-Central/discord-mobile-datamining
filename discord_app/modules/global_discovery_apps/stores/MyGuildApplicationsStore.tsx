@@ -88,7 +88,7 @@ obj = {
     closure_3.fetchState = obj.ERROR;
     if (null != retryAfterSeconds) {
       const _Date = Date;
-      const result = retryAfterSeconds * importDefault(687).Millis.SECOND;
+      const result = retryAfterSeconds * require("../../../utils/Durations.tsx").Millis.SECOND;
       tmp.nextFetchRetryTimeMs = Date.now() + result;
     }
   },

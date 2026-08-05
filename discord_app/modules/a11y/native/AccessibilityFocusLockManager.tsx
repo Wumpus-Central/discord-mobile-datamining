@@ -51,8 +51,8 @@ prototype["_updateAccessibilityFocusLock"] = function _updateAccessibilityFocusL
   }
   if (self._focusLockEnabled) {
     if (obj.isAndroid()) {
-      importDefault(4682).disableFocusLock();
-      let obj2 = importDefault(4682);
+      require("../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceAccessibilityModule.tsx").disableFocusLock();
+      let obj2 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceAccessibilityModule.tsx");
     } else {
       let DCDAccessibilityManager = NativeModules.DCDAccessibilityManager;
       DCDAccessibilityManager.disableFocusLock();

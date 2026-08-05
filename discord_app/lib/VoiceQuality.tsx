@@ -466,14 +466,14 @@ class VoiceQuality extends tmp2 {
 const prototype = VoiceQuality.prototype;
 prototype["start"] = function start() {
   const connection = this.connection;
-  connection.on(require(4381) /* BaseConnectionEvent */.BaseConnectionEvent.Stats, this.sampleStats);
+  connection.on(require("../../discord_common/js/packages/media-engine/index.tsx") /* BaseConnectionEvent */.BaseConnectionEvent.Stats, this.sampleStats);
 };
 prototype["stop"] = function stop() {
   const connection = this.connection;
-  connection.off(require(4381) /* BaseConnectionEvent */.BaseConnectionEvent.Stats, this.sampleStats);
+  connection.off(require("../../discord_common/js/packages/media-engine/index.tsx") /* BaseConnectionEvent */.BaseConnectionEvent.Stats, this.sampleStats);
 };
 prototype["getMosStats"] = function getMosStats() {
-  const reduced = importDefault(12).reduce(this.inboundStats, (mosSum, mosSum2) => {
+  const reduced = require("../../_runtime/00012_apply.js").reduce(this.inboundStats, (mosSum, mosSum2) => {
     mosSum.mosSum = mosSum.mosSum + mosSum2.mosSum;
     mosSum.mosCount = mosSum.mosCount + mosSum2.mosCount;
     let num = 0;
@@ -491,7 +491,7 @@ prototype["getMosStats"] = function getMosStats() {
   return { mos_mean: num, mos_1: reduced.mosBuckets[1], mos_2: reduced.mosBuckets[2], mos_3: reduced.mosBuckets[3], mos_4: reduced.mosBuckets[4] };
 };
 prototype["getPacketStats"] = function getPacketStats() {
-  const reduced = importDefault(12).reduce(this.inboundStats, (packetsReceived, packetsReceived2) => {
+  const reduced = require("../../_runtime/00012_apply.js").reduce(this.inboundStats, (packetsReceived, packetsReceived2) => {
     packetsReceived.packetsReceived = packetsReceived.packetsReceived + packetsReceived2.packetsReceived;
     packetsReceived.packetsReceivedLost = packetsReceived.packetsReceivedLost + packetsReceived2.packetsLost;
     packetsReceived.nackCount = packetsReceived.nackCount + packetsReceived2.nackCount;
@@ -504,7 +504,7 @@ prototype["getPacketStats"] = function getPacketStats() {
 prototype["getBytesStats"] = function getBytesStats() {
   const self = this;
   const result = this.outboundStats.aggregationDurationMs / 1000;
-  const obj = { bytes_sent: this.outboundStats.bytesSent, bytes_received: importDefault(12).reduce(this.inboundStats, (arg0, bytesReceived) => arg0 + bytesReceived.bytesReceived, 0), outbound_bandwidth_estimate: null, audio_target_bitrate: null };
+  const obj = { bytes_sent: this.outboundStats.bytesSent, bytes_received: require("../../_runtime/00012_apply.js").reduce(this.inboundStats, (arg0, bytesReceived) => arg0 + bytesReceived.bytesReceived, 0), outbound_bandwidth_estimate: null, audio_target_bitrate: null };
   let num = 0;
   if (0 < result) {
     const _Math = Math;
@@ -528,7 +528,7 @@ prototype["getSystemResourceStats"] = function getSystemResourceStats() {
   return systemResources.getStats();
 };
 prototype["getBufferStats"] = function getBufferStats() {
-  const reduced = importDefault(12).reduce(this.inboundStats, (arg0, bufferStats) => {
+  const reduced = require("../../_runtime/00012_apply.js").reduce(this.inboundStats, (arg0, bufferStats) => {
     const audioJitterBufferHistogram = bufferStats.bufferStats.audioJitterBufferHistogram;
     if (audioJitterBufferHistogram.getSamples() > 0) {
       const audioJitterBufferHistogram2 = bufferStats.bufferStats.audioJitterBufferHistogram;
@@ -592,7 +592,7 @@ prototype["getBufferStats"] = function getBufferStats() {
           let obj4 = obj[key10055];
           let tmp29 = require;
           let tmp30 = dependencyMap;
-          if (obj4 instanceof require(7122) /* getSamples */.Histogram) {
+          if (obj4 instanceof require("Histogram.tsx") /* getSamples */.Histogram) {
             let report = obj4.getReport([75, 95, 99]);
             let _Math = Math;
             let text = `${key10055}_mean`;
@@ -683,7 +683,7 @@ prototype["getBufferStats"] = function getBufferStats() {
   }
 };
 prototype["getFrameOpStats"] = function getFrameOpStats() {
-  const reduced = importDefault(12).reduce(this.inboundStats, (silent, frameOpStats) => {
+  const reduced = require("../../_runtime/00012_apply.js").reduce(this.inboundStats, (silent, frameOpStats) => {
     if (null != frameOpStats.frameOpStats.silent) {
       silent.silent = silent.silent + frameOpStats.frameOpStats.silent;
     }
@@ -716,7 +716,7 @@ prototype["getTransportStats"] = function getTransportStats() {
   return { decryption_failures: this.decryptionFailures, routing_failures: this.routingFailures };
 };
 prototype["getE2EEStats"] = function getE2EEStats() {
-  const reduced = importDefault(12).reduce(this.inboundStats, (passthroughCount, passthroughCount2) => {
+  const reduced = require("../../_runtime/00012_apply.js").reduce(this.inboundStats, (passthroughCount, passthroughCount2) => {
     let num = passthroughCount2.passthroughCount;
     if (num == null) {
       num = 0;

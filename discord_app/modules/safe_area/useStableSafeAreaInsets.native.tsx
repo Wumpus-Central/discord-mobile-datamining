@@ -41,14 +41,14 @@ export default function useStableSafeAreaInsets() {
 };
 export const getStableSafeAreaInsets = function getStableSafeAreaInsets(DEFAULT_APP_ENTRY_KEY) {
   if (DEFAULT_APP_ENTRY_KEY === undefined) {
-    DEFAULT_APP_ENTRY_KEY = require(1477) /* context */.DEFAULT_APP_ENTRY_KEY;
+    DEFAULT_APP_ENTRY_KEY = require("../window/native/AppEntryKeyContext.tsx") /* context */.DEFAULT_APP_ENTRY_KEY;
   }
   if (obj.isAndroid()) {
-    let stableSafeAreaInsets = importDefault(1593).getStableSafeAreaInsets(DEFAULT_APP_ENTRY_KEY);
-    const obj3 = importDefault(1593);
+    let stableSafeAreaInsets = require("../../../discord_common/js/packages/rtn-codegen/js/NativeSafeAreaInsetsModule.tsx").getStableSafeAreaInsets(DEFAULT_APP_ENTRY_KEY);
+    const obj3 = require("../../../discord_common/js/packages/rtn-codegen/js/NativeSafeAreaInsetsModule.tsx");
   } else {
-    stableSafeAreaInsets = require(1581) /* useSafeAreaInsets */.getSafeAreaInsets(DEFAULT_APP_ENTRY_KEY);
-    const tmp3Result = require(1581) /* useSafeAreaInsets */;
+    stableSafeAreaInsets = require("useSafeAreaInsets.native.tsx") /* useSafeAreaInsets */.getSafeAreaInsets(DEFAULT_APP_ENTRY_KEY);
+    const tmp3Result = require("useSafeAreaInsets.native.tsx") /* useSafeAreaInsets */;
   }
   return stableSafeAreaInsets;
 };

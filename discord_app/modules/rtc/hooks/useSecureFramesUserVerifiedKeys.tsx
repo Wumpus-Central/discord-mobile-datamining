@@ -7,7 +7,7 @@ const result = require("apply").fileFinishedImporting("modules/rtc/hooks/useSecu
 export const useSecureFramesUserVerifiedKeys = function useSecureFramesUserVerifiedKeys(userId) {
   const _require = userId;
   const items = [initialize];
-  return _require(589).useStateFromStoresArray(items, () => {
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
     const tmp = outer1_1(outer1_2[2]);
     const entries = outer1_1(outer1_2[2])(outer1_3.getUserVerifiedKeys(closure_0)).entries();
     const mapped = entries.map((arg0) => {

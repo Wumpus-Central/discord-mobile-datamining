@@ -13,7 +13,7 @@ function VariantOption(onPress) {
   let variant;
   ({ variant, isSelected } = onPress);
   const tmp = callback2(isSelected);
-  let obj = require(9331) /* getProductPurchaseState */;
+  let obj = require("../hooks/useProductPurchaseState.tsx") /* getProductPurchaseState */;
   let isPurchased = obj.useProductPurchaseState(variant).isPurchased;
   if (isPurchased) {
     const intl = tmp2(1236).intl;
@@ -33,13 +33,13 @@ function VariantOption(onPress) {
   }
   obj1[1] = isPurchased;
   obj[5] = closure_4(View, obj1);
-  return closure_4(require(4812) /* PressableBase */.PressableOpacity, obj);
+  return closure_4(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
 }
 function VariantCheckmark(variant) {
-  const colors = importDefault(712).colors;
-  const tmp = importDefault(9349)(variant.variant);
+  const colors = require("../../../../discord_common/js/packages/tokens/native.tsx").colors;
+  const tmp = require("../hooks/useIsVariantColorLight.tsx")(variant.variant);
   const tmp2 = closure_4;
-  return tmp2(require(5304) /* CheckmarkSmallIcon */.CheckmarkSmallIcon, { color: importDefault(9349)(variant.variant) ? colors.BLACK : colors.WHITE, size: "md" });
+  return tmp2(require("../../../design/components/Icon/native/redesign/generated/CheckmarkSmallIcon.tsx") /* CheckmarkSmallIcon */.CheckmarkSmallIcon, { color: require("../hooks/useIsVariantColorLight.tsx")(variant.variant) ? colors.BLACK : colors.WHITE, size: "md" });
 }
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: null, headerRow: null, variantsContainer: null, text: null };
@@ -51,8 +51,8 @@ createCacheKey[2] = { display: "flex", flexWrap: "wrap", flexDirection: "row", a
 createCacheKey[3] = { flexGrow: 1, flexShrink: 1, minWidth: 28 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 let closure_7 = createCacheKey.createStyles((arg0) => {
-  let obj = { width: 28, height: 28, borderRadius: importDefault(712).radii.round, justifyContent: "center", alignItems: "center", borderWidth: 1, borderColor: null };
-  const colors = importDefault(712).colors;
+  let obj = { width: 28, height: 28, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.round, justifyContent: "center", alignItems: "center", borderWidth: 1, borderColor: null };
+  const colors = require("../../../../discord_common/js/packages/tokens/native.tsx").colors;
   obj = { variantOption: obj, variantOptionInner: null };
   obj[6] = arg0 ? colors.BUTTON_OUTLINE_PRIMARY_TEXT : colors.BORDER_STRONG;
   obj = { width: "100%", height: "100%", justifyContent: "center", alignItems: "center", borderRadius: tmp(712).radii.round, borderWidth: 1, borderColor: tmp(712).colors.BACKGROUND_BASE_LOW };

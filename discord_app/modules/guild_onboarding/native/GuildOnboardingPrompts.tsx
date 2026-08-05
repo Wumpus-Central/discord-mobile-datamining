@@ -54,12 +54,12 @@ function BackgroundImageGradient(uri) {
   const tmp = createCacheKey();
   let obj = { children: null };
   const items = [tmp.backgroundImage];
-  const items1 = [callback2(importDefault(5236), { source: { uri: uri.splashUrl }, style: items, resizeMode: "cover" }), ];
+  const items1 = [callback2(require("../../../components_native/common/FastImage.tsx"), { source: { uri: uri.splashUrl }, style: items, resizeMode: "cover" }), ];
   obj = { style: tmp.backgroundColorGradient, start: null, end: null, colors: null };
-  obj[1] = require(691) /* keys */.VerticalGradient.START;
-  obj[2] = require(691) /* keys */.VerticalGradient.END;
-  const tmp2 = importDefault(4706);
-  const items2 = [require(4129) /* hexToRgba */.hexWithOpacity(color, 0.16), color];
+  obj[1] = require("../../../ConstantsIOS.tsx") /* keys */.VerticalGradient.START;
+  obj[2] = require("../../../ConstantsIOS.tsx") /* keys */.VerticalGradient.END;
+  const tmp2 = require("../../../../_runtime/04706_LinearGradient.js");
+  const items2 = [require("../../../utils/ColorUtils.tsx") /* hexToRgba */.hexWithOpacity(color, 0.16), color];
   obj[3] = items2;
   items1[1] = callback2(tmp2, obj);
   obj[0] = items1;

@@ -71,8 +71,8 @@ export const launchPremiumPlanSelect = function launchPremiumPlanSelect(isBoostP
     obj[10] = onPaymentSuccess;
     obj[11] = onPaymentDismiss;
     const obj3 = flag2(4490);
-    obj3.pushLazy(require(1959) /* asyncRequireImpl */(6783, dependencyMap.paths), obj, require(6783) /* PremiumModal */.PREMIUM_KEY);
-    const tmp7 = require(1959) /* asyncRequireImpl */(6783, dependencyMap.paths);
+    obj3.pushLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(6783, dependencyMap.paths), obj, require("../../../components_native/premium/PremiumModal.tsx") /* PremiumModal */.PREMIUM_KEY);
+    const tmp7 = require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(6783, dependencyMap.paths);
   }
-  let result = require(5922) /* getSanitizedRestrictedGuilds */.trackUserSettingsPaneViewed({ destinationPane: PREMIUM_PLAN_SELECT });
+  let result = require("../../../utils/UserSettingsUtils.tsx") /* getSanitizedRestrictedGuilds */.trackUserSettingsPaneViewed({ destinationPane: PREMIUM_PLAN_SELECT });
 };

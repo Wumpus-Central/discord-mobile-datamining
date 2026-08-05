@@ -73,9 +73,9 @@ function getTargetType(action) {
                               CHANNEL = constants.GUILD;
                             } else {
                               const _HermesInternal = HermesInternal;
-                              importDefault(1208).captureMessage("Unknown target type for: " + action);
+                              require("../utils/SentryUtils.native.tsx").captureMessage("Unknown target type for: " + action);
                               CHANNEL = constants.UNKNOWN;
-                              const obj = importDefault(1208);
+                              const obj = require("../utils/SentryUtils.native.tsx");
                             }
                           }
                         }
@@ -268,9 +268,9 @@ const prototype = function AuditLogRecord(timestampEnd) {
   tmp5.actionType = getActionType(tmp5.action);
   ({ targetId: tmp5.targetId, timestampStart } = timestampEnd);
   if (timestampStart == null) {
-    const tmp8 = importDefault(3867);
-    timestampStart = tmp8(importDefault(11).extractTimestamp(tmp5.id));
-    const obj = importDefault(11);
+    const tmp8 = require("../../_runtime/03867_t.js");
+    timestampStart = tmp8(require("../utils/SnowflakeUtils.tsx").extractTimestamp(tmp5.id));
+    const obj = require("../utils/SnowflakeUtils.tsx");
   }
   tmp5.timestampStart = timestampStart;
   let timestampStart2 = timestampEnd.timestampEnd;

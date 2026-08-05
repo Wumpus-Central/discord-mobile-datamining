@@ -23,15 +23,15 @@ function extraWishlistParams() {
     if (tmpResult.isIOS()) {
       obj.payment_gateway = constants.APPLE;
     }
-    tmpResult = require(501) /* PlatformTypes */;
+    tmpResult = require("../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */;
   }
   return obj;
 }
 function maybeDispatchAdditionalActions(wishlist_items) {
   wishlist_items = wishlist_items.wishlist_items;
   const mapped = wishlist_items.map((sku) => sku.sku);
-  const found = mapped.filter(require(1351) /* isDiscordFrontendDevelopment */.isNotNullish);
-  let obj = importDefault(709);
+  const found = mapped.filter(require("../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
+  let obj = require("../../Dispatcher.tsx");
   obj.dispatch({ type: "SKUS_FETCH_SUCCESS", skus: found });
   const storefront_pricing = wishlist_items.storefront_pricing;
   if (null != storefront_pricing) {
@@ -39,10 +39,10 @@ function maybeDispatchAdditionalActions(wishlist_items) {
     obj = { type: "skus", skuIds: null };
     obj[1] = found.map((id) => id.id);
     obj[1] = obj;
-    const tmp3Result = importDefault(709);
-    obj[2] = require(5761) /* useSKUPrice */.transformStorefrontPricesServer(storefront_pricing);
+    const tmp3Result = require("../../Dispatcher.tsx");
+    obj[2] = require("../storefront/StorefrontUtils.tsx") /* useSKUPrice */.transformStorefrontPricesServer(storefront_pricing);
     tmp3Result.dispatch(obj);
-    const tmpResult = require(5761) /* useSKUPrice */;
+    const tmpResult = require("../storefront/StorefrontUtils.tsx") /* useSKUPrice */;
   }
 }
 ({ AnalyticEvents: c10, Endpoints: unpackModuleId, PaymentGateways: closure_12 } = ME);

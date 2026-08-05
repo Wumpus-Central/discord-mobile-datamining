@@ -1212,13 +1212,13 @@ export const resendPaymentVerificationEmail = function resendPaymentVerification
   return applyArgumentsResult;
 };
 export const clearPurchaseError = function clearPurchaseError() {
-  importDefault(709).dispatch({ type: "SKU_PURCHASE_CLEAR_ERROR" });
+  require("../Dispatcher.tsx").dispatch({ type: "SKU_PURCHASE_CLEAR_ERROR" });
 };
 export const showPurchaseConfirmationStep = function showPurchaseConfirmationStep() {
-  importDefault(709).wait(() => callback(table[4]).dispatch({ type: "SKU_PURCHASE_SHOW_CONFIRMATION_STEP" }));
+  require("../Dispatcher.tsx").wait(() => callback(table[4]).dispatch({ type: "SKU_PURCHASE_SHOW_CONFIRMATION_STEP" }));
 };
 export const updateSKUPaymentIsGift = function updateSKUPaymentIsGift(isGift) {
-  let obj = importDefault(709);
+  let obj = require("../Dispatcher.tsx");
   obj = { type: "SKU_PURCHASE_UPDATE_IS_GIFT", isGift };
   obj.dispatch(obj);
 };

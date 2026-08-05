@@ -21,7 +21,7 @@ export const isHeicUTI = function isHeicUTI(str) {
   }
 };
 export const shouldForceConvertToJPG = function shouldForceConvertToJPG(closure_0, outer1_1, outer1_10) {
-  let isIOSResult = require(500) /* set */.isIOS();
+  let isIOSResult = require("../../../utils/PlatformUtils.tsx") /* set */.isIOS();
   if (isIOSResult) {
     let flag = false;
     if (null != outer1_10) {
@@ -90,7 +90,7 @@ export const shouldConvertToJPG = function shouldConvertToJPG(closure_0, outer1_
               }
               const tmp14Result = tmp14(4848);
             }
-            obj2 = importDefault(4848);
+            obj2 = require("../../media/native/IosImageTypesManager.tsx");
             tmp14 = importDefault;
           }
           return false;
@@ -124,5 +124,5 @@ export const shouldConvertToJPG = function shouldConvertToJPG(closure_0, outer1_
   } else {
     return false;
   }
-  obj = require(500) /* set */;
+  obj = require("../../../utils/PlatformUtils.tsx") /* set */;
 };

@@ -13,9 +13,9 @@ export default function PhoneVerificationModal(onClose) {
   const _require = onClose;
   obj = {};
   obj = { headerTitle: null, headerLeft: null, render: null };
-  obj[0] = _require(5238).getHeaderNoTitle();
-  const obj4 = _require(5238);
-  obj[1] = _require(5238).getHeaderCloseButton(onClose.onClose);
+  obj[0] = _require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderNoTitle();
+  const obj4 = _require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx");
+  obj[1] = _require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderCloseButton(onClose.onClose);
   obj[2] = function render(reason) {
     const onClose = reason;
     let closure_1 = arg1;
@@ -48,9 +48,9 @@ export default function PhoneVerificationModal(onClose) {
   };
   obj[VerificationModalScenes.ADD_PHONE] = obj;
   let obj1 = { headerTitle: null, impressionName: null, render: null };
-  const obj5 = _require(5238);
-  obj1[0] = _require(5238).getHeaderNoTitle();
-  obj1[1] = _require(503).ImpressionNames.USER_VERIFY_PHONE;
+  const obj5 = _require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx");
+  obj1[0] = _require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderNoTitle();
+  obj1[1] = _require("../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx").ImpressionNames.USER_VERIFY_PHONE;
   obj1[2] = function render(arg0, arg1) {
     let closure_0 = arg1;
     let obj = {};
@@ -152,8 +152,8 @@ export default function PhoneVerificationModal(onClose) {
   };
   obj[VerificationModalScenes.VERIFY_PHONE] = obj1;
   let obj2 = { headerTitle: null, render: null };
-  const obj7 = _require(5238);
-  obj2[0] = _require(5238).getHeaderNoTitle();
+  const obj7 = _require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx");
+  obj2[0] = _require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderNoTitle();
   obj2[1] = function render(arg0) {
     const merged = Object.assign(arg0);
     return callback2(callback(table[11]), {});
@@ -161,7 +161,7 @@ export default function PhoneVerificationModal(onClose) {
   obj[VerificationModalScenes.VERIFY_PASSWORD] = obj2;
   obj[0] = obj;
   obj[1] = VerificationModalScenes.ADD_PHONE;
-  const intl = _require(1236).intl;
-  obj[2] = intl.string(_require(1236).t["13/7kX"]);
-  return jsx(_require(5665).Navigator, { headerTitle: null, headerLeft: null, render: null });
+  const intl = _require("../../../../intl/index.native.tsx").intl;
+  obj[2] = intl.string(_require("../../../../intl/index.native.tsx").t["13/7kX"]);
+  return jsx(_require("../../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, { headerTitle: null, headerLeft: null, render: null });
 };

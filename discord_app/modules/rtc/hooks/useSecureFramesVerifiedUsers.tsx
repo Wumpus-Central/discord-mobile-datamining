@@ -6,5 +6,5 @@ const result = require("set").fileFinishedImporting("modules/rtc/hooks/useSecure
 
 export const useSecureFramesVerifiedUserIds = function useSecureFramesVerifiedUserIds() {
   const items = [initialize];
-  return require(589) /* initialize */.useStateFromStoresArray(items, () => userIds.getUserIds());
+  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStoresArray(items, () => userIds.getUserIds());
 };

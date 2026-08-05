@@ -10,7 +10,7 @@ export const convertRouteToNavigation = function convertRouteToNavigation(pathna
   let navigationReplace;
   let openChannel;
   pathname = pathname.pathname;
-  let obj = require(4137) /* getRootNavigationRef */;
+  let obj = require("../main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */;
   const rootNavigationRef = obj.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {

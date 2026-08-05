@@ -8,22 +8,22 @@ const result = require("batchUpdates").fileFinishedImporting("modules/guild_anti
 export const useGuildIncidentsActionSheetStore = obj;
 export const setTime = function setTime(arg0) {
   const _require = arg0;
-  _require(705).batchUpdates(() => outer1_3.setState({ time: closure_0, hasTimeChanges: true }));
+  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_3.setState({ time: closure_0, hasTimeChanges: true }));
 };
 export const setInitialTime = function setInitialTime(arg0) {
   const _require = arg0;
-  _require(705).batchUpdates(() => outer1_3.setState({ time: closure_0, hasTimeChanges: false }));
+  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_3.setState({ time: closure_0, hasTimeChanges: false }));
 };
 export const setPauseInvites = function setPauseInvites(arg0) {
   const _require = arg0;
-  _require(705).batchUpdates(() => outer1_3.setState({ pauseInvites: closure_0 }));
+  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_3.setState({ pauseInvites: closure_0 }));
 };
 export const setPauseDms = function setPauseDms(arg0) {
   const _require = arg0;
-  _require(705).batchUpdates(() => outer1_3.setState({ pauseDms: closure_0 }));
+  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_3.setState({ pauseDms: closure_0 }));
 };
 export const resetGuildIncidentsActionSheetStore = function resetGuildIncidentsActionSheetStore() {
-  require(705) /* batchUpdates */.batchUpdates(() => {
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => {
     state.setState({ time: closure_2, pauseInvites: true, pauseDms: true, hasTimeChanges: false });
   });
 };

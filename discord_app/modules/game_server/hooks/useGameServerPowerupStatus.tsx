@@ -9,7 +9,7 @@ export default function useGameServerPowerupStatus(arg0) {
   const _require = arg0;
   const items = [handleGameServerInstanceCreated];
   const items1 = [arg0];
-  const stateFromStores = _require(589).useStateFromStores(items, () => {
+  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const stateForGuild = outer1_4.getStateForGuild(closure_0);
     let entitlements;
     if (stateForGuild != null) {

@@ -24,7 +24,7 @@ function CreateThreadViewInner(screenIndex) {
   const parentChannel = screenIndex.parentChannel;
   threadSettingsDraft = parentChannel;
   const tmp = callback3();
-  let obj = _require(8165);
+  let obj = _require("../../../ThreadCreationHooks.tsx");
   const privateThreadMode = obj.usePrivateThreadMode(parentChannel);
   let obj1 = importAllResult;
   const items = [parentChannel.id];
@@ -40,7 +40,7 @@ function CreateThreadViewInner(screenIndex) {
   callback = undefined;
   importAllResult = undefined;
   let c6;
-  let obj2 = _require(1481);
+  let obj2 = _require("../../../../../../_runtime/01481_Link.js");
   navigation = obj2.useNavigation();
   callback = importAllResult.useRef(false);
   importAllResult = tmp9;
@@ -247,7 +247,7 @@ function CreateThreadViewInner(screenIndex) {
   let obj5 = { style: tmp.optionsInner, children: null };
   const isForumLikeChannelResult = parentChannel.isForumLikeChannel();
   const tmp20 = null != threadSettingsDraft.parentMessageId;
-  const items6 = [callback2(c6, { style: tmp.threadIconContainer, children: callback2(_require(4783).ThreadIcon, { size: "lg" }) }), callback2(threadSettingsDraft(15575), { ref: ref1, chatInputRef: ref, threadSettingsDraft, threadNameError: tmp6[0], optional: tmp20 }), ];
+  const items6 = [callback2(c6, { style: tmp.threadIconContainer, children: callback2(_require("../../../../../design/components/Icon/native/redesign/generated/ThreadIcon.tsx").ThreadIcon, { size: "lg" }) }), callback2(threadSettingsDraft(15575), { ref: ref1, chatInputRef: ref, threadSettingsDraft, threadNameError: tmp6[0], optional: tmp20 }), ];
   let tmp22Result = null;
   if (!isForumLikeChannelResult) {
     tmp22Result = null;
@@ -315,7 +315,7 @@ function CreateThreadViewInner(screenIndex) {
   obj1[1] = items5;
   items3[1] = closure_14(c6, obj1);
   obj[1] = items3;
-  return closure_14(_require(5610).AnalyticsLocationProvider, obj);
+  return closure_14(_require("../../../../app_analytics/useAnalyticsLocations.tsx").AnalyticsLocationProvider, obj);
 }
 let c5 = importAllResult;
 ({ View: closure_6, ScrollView: error, StyleSheet } = get_ActivityIndicator);
@@ -343,7 +343,7 @@ const memoResult = importAllResult.memo((arg0) => {
   let channelId;
   let screenIndex;
   ({ channelId, screenIndex } = arg0);
-  const tmp = importDefault(10248)(channelId);
+  const tmp = require("../../useCreateThreadViewProps.tsx")(channelId);
   let tmp2 = null;
   if (null != tmp) {
     const obj = { parentChannel: null, screenIndex: null, threadSettingsDraft: null };

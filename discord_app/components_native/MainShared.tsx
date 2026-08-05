@@ -16,13 +16,13 @@ export const SoundPlayer = require("MuteDeafen");
 export const MainViewTooltipActionSheetsV2 = require("trackActionSheetImpression");
 export const ToastContainer = require("AnimatedToast");
 export const PictureInPictureGlobalContainer = function PictureInPictureGlobalContainer() {
-  let obj = require(589) /* initialize */;
+  let obj = require("../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [ensureGuildLoaded, createRTCConnection];
   const stateFromStores = obj.useStateFromStores(items, () => channel.getChannel(channelId.getChannelId()));
-  const hasPipParticipant = require(10571) /* usePipVideoOrStream */.useHasPipParticipant({ isActivityViewFocused: false });
-  const obj2 = require(10571) /* usePipVideoOrStream */;
-  const isModalOpen = require(4136) /* navigationToRootTabHelper */.useIsModalOpen();
-  require(10663) /* isVoicePanelEnabled */;
+  const hasPipParticipant = require("../modules/video_calls/native/usePipVideoOrStream.tsx") /* usePipVideoOrStream */.useHasPipParticipant({ isActivityViewFocused: false });
+  const obj2 = require("../modules/video_calls/native/usePipVideoOrStream.tsx") /* usePipVideoOrStream */;
+  const isModalOpen = require("../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */.useIsModalOpen();
+  require("../modules/voice_panel/VoicePanelUtils.native.tsx") /* isVoicePanelEnabled */;
   let tmp7 = null;
   if (null != stateFromStores) {
     tmp7 = null;
@@ -33,7 +33,7 @@ export const PictureInPictureGlobalContainer = function PictureInPictureGlobalCo
         if (!tmp6) {
           obj = { channel: null };
           obj[0] = stateFromStores;
-          tmp7 = jsx(importDefault(15853), { channel: null });
+          tmp7 = jsx(require("../modules/video_calls/native/components/PictureInPictureGlobal.tsx"), { channel: null });
         }
       }
     }
@@ -58,7 +58,7 @@ export const useAppKeyCommands = function useAppKeyCommands() {
     const items = [obj];
     return items;
   }, []);
-  const keyCommands = require(13742) /* KeyCommandsView */.useKeyCommands(memo);
+  const keyCommands = require("../modules/keyboard/native/KeyCommandsView.tsx") /* KeyCommandsView */.useKeyCommands(memo);
 };
 export const useScreenReaderEnabled = function useScreenReaderEnabled() {
   const effect = React.useEffect(() => {

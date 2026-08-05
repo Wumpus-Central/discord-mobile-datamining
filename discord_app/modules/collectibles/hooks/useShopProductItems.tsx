@@ -12,25 +12,25 @@ class ItemsSortingHat {
 const prototype = ItemsSortingHat.prototype;
 Object.defineProperty(prototype, "firstAvatarDecoration", {
   get: function firstAvatarDecoration(first) {
-    return this.getFirstItemByType(require(1901) /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION);
+    return this.getFirstItemByType(require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION);
   },
   set: undefined
 });
 Object.defineProperty(prototype, "firstProfileEffect", {
   get: function firstProfileEffect() {
-    return this.getFirstItemByType(require(1901) /* CollectiblesItemType */.CollectiblesItemType.PROFILE_EFFECT);
+    return this.getFirstItemByType(require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.PROFILE_EFFECT);
   },
   set: undefined
 });
 Object.defineProperty(prototype, "firstNameplate", {
   get: function firstNameplate(first) {
-    return this.getFirstItemByType(require(1901) /* CollectiblesItemType */.CollectiblesItemType.NAMEPLATE);
+    return this.getFirstItemByType(require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.NAMEPLATE);
   },
   set: undefined
 });
 Object.defineProperty(prototype, "firstProfileFrame", {
   get: function firstProfileFrame(first) {
-    return this.getFirstItemByType(require(1901) /* CollectiblesItemType */.CollectiblesItemType.PROFILE_FRAME);
+    return this.getFirstItemByType(require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.PROFILE_FRAME);
   },
   set: undefined
 });
@@ -72,12 +72,12 @@ export const useShopProductItems = function useShopProductItems(product) {
   }, items);
 };
 export const getBundleItemNames = function getBundleItemNames(bundledProducts) {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  let stringResult = intl.string(require(1236) /* getSystemLocale */.t["7v0T9P"]);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  let stringResult1 = intl2.string(require(1236) /* getSystemLocale */.t.wR5wOo);
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  let stringResult2 = intl3.string(require(1236) /* getSystemLocale */.t.x5CoXR);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  let stringResult = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["7v0T9P"]);
+  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  let stringResult1 = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.wR5wOo);
+  const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  let stringResult2 = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.x5CoXR);
   let itemThreeName = stringResult2;
   let itemTwoName = stringResult1;
   let itemOneName = stringResult;

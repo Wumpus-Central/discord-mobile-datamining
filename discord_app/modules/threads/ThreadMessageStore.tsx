@@ -322,8 +322,8 @@ prototype["getMostRecentMessage"] = function getMostRecentMessage(id) {
     if (tmp3) {
       let message = store2.getMessage(id, tmp.mostRecentRawMessage.id);
       if (message == null) {
-        message = require(4504) /* createMinimalMessageRecord */.createMessageRecord(tmp.mostRecentRawMessage);
-        const obj = require(4504) /* createMinimalMessageRecord */;
+        message = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */.createMessageRecord(tmp.mostRecentRawMessage);
+        const obj = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */;
       }
       tmp.mostRecentMessage = message;
       tmp.mostRecentRawMessage = null;
@@ -396,7 +396,7 @@ const threadMessageStore = new ThreadMessageStore(require("dispatcher"), {
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
     const id = guild.guild.id;
-    closure_12 = importDefault(12).omitBy(closure_12, (guildId) => {
+    closure_12 = require("../../../_runtime/00012_apply.js").omitBy(closure_12, (guildId) => {
       if (guildId.guildId === id) {
         const parentId = guildId.parentId;
         delete tmp2[tmp];
@@ -458,7 +458,7 @@ const threadMessageStore = new ThreadMessageStore(require("dispatcher"), {
   },
   CHANNEL_DELETE: function handleChannelDelete(channel) {
     const id = channel.channel.id;
-    closure_12 = importDefault(12).omitBy(closure_12, (parentId) => parentId.parentId === id);
+    closure_12 = require("../../../_runtime/00012_apply.js").omitBy(closure_12, (parentId) => parentId.parentId === id);
     delete tmp[tmp2];
   },
   MESSAGE_CREATE: function handleMessageCreate(message) {
@@ -479,7 +479,7 @@ const threadMessageStore = new ThreadMessageStore(require("dispatcher"), {
               const isForumPostResult = channel.isForumPost();
               let tmp9 = !isForumPostResult;
               if (isForumPostResult) {
-                let obj = importDefault(11);
+                let obj = require("../../utils/SnowflakeUtils.tsx");
                 tmp9 = message.id !== obj.castChannelIdAsMessageId(channel.id);
               }
               tmp7 = tmp9;
@@ -538,12 +538,12 @@ const threadMessageStore = new ThreadMessageStore(require("dispatcher"), {
           }
           dependencyMap2[tmp.parentId] = num + 1;
           if (null != tmp.mostRecentMessage) {
-            tmp.mostRecentMessage = require(4504) /* createMinimalMessageRecord */.updateMessageRecord(tmp.mostRecentMessage, message);
-            const obj = require(4504) /* createMinimalMessageRecord */;
+            tmp.mostRecentMessage = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */.updateMessageRecord(tmp.mostRecentMessage, message);
+            const obj = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */;
           }
           if (null != tmp.mostRecentRawMessage) {
-            tmp.mostRecentRawMessage = require(4504) /* createMinimalMessageRecord */.updateServerMessage(tmp.mostRecentRawMessage, message);
-            const obj2 = require(4504) /* createMinimalMessageRecord */;
+            tmp.mostRecentRawMessage = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */.updateServerMessage(tmp.mostRecentRawMessage, message);
+            const obj2 = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */;
           }
         }
       }
@@ -557,7 +557,7 @@ const threadMessageStore = new ThreadMessageStore(require("dispatcher"), {
     if (null == dependencyMap[channelId]) {
       return false;
     } else {
-      const result = importDefault(11).castChannelIdAsMessageId(channelId);
+      const result = require("../../utils/SnowflakeUtils.tsx").castChannelIdAsMessageId(channelId);
       const hasItem = set.has(id);
       let num = dependencyMap2[tmp.parentId];
       if (num == null) {
@@ -581,7 +581,7 @@ const threadMessageStore = new ThreadMessageStore(require("dispatcher"), {
         obj2.add(id);
       }
       count = tmp.count;
-      const obj = importDefault(11);
+      const obj = require("../../utils/SnowflakeUtils.tsx");
       obj2 = set;
       tmp3 = null != mostRecentMessage && mostRecentMessage.id === id;
     }

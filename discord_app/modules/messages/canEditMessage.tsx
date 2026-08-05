@@ -14,10 +14,10 @@ export default function canEditMessage(author) {
     if (tmp3) {
       let tmp5 = author.state === constants2.SENT;
       if (tmp5) {
-        const tmp8 = importDefault(5799)(author);
+        const tmp8 = require("isSystemMessage.tsx")(author);
         let tmp9 = !tmp8;
         if (!tmp8) {
-          let result = require(4504) /* createMinimalMessageRecord */.canEditMessageWithStickers(author);
+          let result = require("MessageRecordUtils.tsx") /* createMinimalMessageRecord */.canEditMessageWithStickers(author);
           if (result) {
             const hasFlagResult = author.hasFlag(constants.IS_VOICE_MESSAGE);
             let tmp14 = !hasFlagResult;
@@ -41,7 +41,7 @@ export default function canEditMessage(author) {
             result = tmp14;
           }
           tmp9 = result;
-          const obj = require(4504) /* createMinimalMessageRecord */;
+          const obj = require("MessageRecordUtils.tsx") /* createMinimalMessageRecord */;
         }
         tmp5 = tmp9;
         tmp6 = importDefault;

@@ -7,13 +7,13 @@ const result = require("getRelativeTimestamp").fileFinishedImporting("modules/no
 export const useNotificationCenterItemAcked = function useNotificationCenterItemAcked(item, ackedBeforeId) {
   const _require = item;
   const items = [handleLoadFinished];
-  let stateFromStores = _require(589).useStateFromStores(items, () => outer1_2.isLocalItemAcked(closure_0));
+  let stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_2.isLocalItemAcked(closure_0));
   const forceUnacked = item.forceUnacked;
   let tmp4 = !forceUnacked;
   if (!forceUnacked) {
     if (!stateFromStores) {
-      stateFromStores = _require(7022).isRemoteAcked(item, ackedBeforeId);
-      const tmpResult = _require(7022);
+      stateFromStores = _require("NotificationCenterUtils.tsx").isRemoteAcked(item, ackedBeforeId);
+      const tmpResult = _require("NotificationCenterUtils.tsx");
     }
     tmp4 = stateFromStores;
   }

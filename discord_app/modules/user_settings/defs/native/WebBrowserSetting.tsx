@@ -3,11 +3,11 @@ import createToggle from "createToggle";
 
 obj = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["C+DkPu"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["C+DkPu"]);
   },
   usePredicate() {
-    return require(14555) /* useWebBrowserSettingOptions */.useWebBrowserSettingOptions().length > 1;
+    return require("SelectWebBrowserSetting.tsx") /* useWebBrowserSettingOptions */.useWebBrowserSettingOptions().length > 1;
   },
   parent: null,
   IconComponent: require("GlobeEarthIcon").GlobeEarthIcon,
@@ -16,7 +16,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.BROWSER,
   getComponent() {
-    return require(14556).default;
+    return require("../../web_browser/native/SettingsWebBrowserScreen.tsx").default;
   }
 };
 const route = createToggle.createRoute(obj);

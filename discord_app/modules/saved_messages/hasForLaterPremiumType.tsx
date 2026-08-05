@@ -7,9 +7,9 @@ const result = require("isPremiumAtLeast").fileFinishedImporting("modules/saved_
 
 export default function hasForLaterPremiumType() {
   currentUser = currentUser.getCurrentUser();
-  return require(1897) /* isPremiumAtLeast */.isPremium(currentUser, PremiumTypes.TIER_2);
+  return require("../../utils/PremiumTypeUtils.tsx") /* isPremiumAtLeast */.isPremium(currentUser, PremiumTypes.TIER_2);
 };
 export const useHasForLaterPremiumType = function useHasForLaterPremiumType() {
   const items = [mergeGuildAvatar];
-  return require(589) /* initialize */.useStateFromStores(items, () => callback(table[2]).isPremium(currentUser.getCurrentUser(), TIER_2.TIER_2));
+  return require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => callback(table[2]).isPremium(currentUser.getCurrentUser(), TIER_2.TIER_2));
 };

@@ -11,7 +11,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_BUTTON,
   getComponent() {
-    return require(14670) /* ExampleButton */.default;
+    return require("../../design_system/native/UserSettingsDesignSystemButton.tsx") /* ExampleButton */.default;
   }
 };
 const route = createToggle.createRoute(obj);

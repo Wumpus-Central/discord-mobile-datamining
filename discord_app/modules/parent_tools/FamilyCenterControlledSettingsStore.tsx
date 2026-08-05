@@ -49,8 +49,8 @@ const familyCenterControlledSettingsStore = new FamilyCenterControlledSettingsSt
     let userId;
     ({ userId, settings, consents } = arg0);
     if (null != settings) {
-      closure_3[userId] = require(1342) /* b64ToProto */.b64ToPreloadedUserSettingsProto(settings);
-      const obj = require(1342) /* b64ToProto */;
+      closure_3[userId] = require("../user_settings/UserSettingsUtils.tsx") /* b64ToProto */.b64ToPreloadedUserSettingsProto(settings);
+      const obj = require("../user_settings/UserSettingsUtils.tsx") /* b64ToProto */;
     }
     if (null != consents) {
       closure_4[userId] = consents;
@@ -62,9 +62,9 @@ const familyCenterControlledSettingsStore = new FamilyCenterControlledSettingsSt
   },
   FAMILY_CENTER_TEEN_UPDATE_SETTINGS_SUCCESS: function handleTeenUpdateSettingsSuccess(userId) {
     userId = userId.userId;
-    const result = require(1342) /* b64ToProto */.b64ToPreloadedUserSettingsProto(userId.settings);
-    const obj = require(1342) /* b64ToProto */;
-    dependencyMap[userId] = require(1342) /* b64ToProto */.mergeTopLevelFields(require(1306) /* create */.PreloadedUserSettings, dependencyMap[userId], result);
+    const result = require("../user_settings/UserSettingsUtils.tsx") /* b64ToProto */.b64ToPreloadedUserSettingsProto(userId.settings);
+    const obj = require("../user_settings/UserSettingsUtils.tsx") /* b64ToProto */;
+    dependencyMap[userId] = require("../user_settings/UserSettingsUtils.tsx") /* b64ToProto */.mergeTopLevelFields(require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.PreloadedUserSettings, dependencyMap[userId], result);
   },
   LOGOUT: function handleLogout() {
     let closure_3 = {};

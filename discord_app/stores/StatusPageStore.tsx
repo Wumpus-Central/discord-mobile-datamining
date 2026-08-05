@@ -10,7 +10,7 @@ class MaintenanceStore extends Store {
 }
 const prototype = MaintenanceStore.prototype;
 prototype["initialize"] = function initialize() {
-  const Storage = require(595) /* Storage */.Storage;
+  const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
   let closure_5 = Storage.get(MaintenanceStore);
 };
 prototype["getIncident"] = function getIncident() {
@@ -61,7 +61,7 @@ const maintenanceStore = new MaintenanceStore(require("dispatcher"), {
       return false;
     } else {
       const id = _null.id;
-      const Storage = require(595) /* Storage */.Storage;
+      const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
       const result = Storage.set(MaintenanceStore, id);
     }
   }

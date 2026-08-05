@@ -10,7 +10,7 @@ export const createChannelLinkedToLobbySystemMessage = function createChannelLin
   let theme;
   message = message.message;
   ({ roleStyle, theme } = message);
-  const tmp3 = importDefault(7872)(theme);
+  const tmp3 = require("../resolveMessageContentColors.tsx")(theme);
   let str = message.applicationId;
   if (str == null) {
     str = "";
@@ -19,7 +19,7 @@ export const createChannelLinkedToLobbySystemMessage = function createChannelLin
   if (null == application) {
     return null;
   } else {
-    let obj = require(7879) /* getMessageAuthorWithProcessedColor */;
+    let obj = require("useAuthorWithProcessedColor.tsx") /* getMessageAuthorWithProcessedColor */;
     const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
     obj = { username: null, usernameOnClick: null, applicationName: null, applicationNameOnClick: null, urlOnClick: null };
     obj[0] = messageAuthorWithProcessedColor.nick;
@@ -37,8 +37,8 @@ export const createChannelLinkedToLobbySystemMessage = function createChannelLin
     obj2[2] = tmp3.linkColor;
     obj[4] = obj2;
     const obj3 = { content: null };
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj3[0] = intl.formatToParts(require(1236) /* getSystemLocale */.t.gZfhOw, obj);
+    const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj3[0] = intl.formatToParts(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.gZfhOw, obj);
     const merged = Object.assign(tmp(7882)(message));
     return obj3;
   }

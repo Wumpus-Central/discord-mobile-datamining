@@ -31,8 +31,8 @@ function maybeGetParticipants(id) {
         const guild_id = channel.guild_id;
         if (!set.has(guild_id)) {
           obj.add(guild_id);
-          const tmp6 = importDefault(12);
-          const values = importDefault(12)(store.getMutableGuildChannelsForGuild(guild_id)).values();
+          const tmp6 = require("../../../_runtime/00012_apply.js");
+          const values = require("../../../_runtime/00012_apply.js")(store.getMutableGuildChannelsForGuild(guild_id)).values();
           const item = values.forEach((isGuildStageVoice) => {
             let tmp = null != isGuildStageVoice && isGuildStageVoice.isGuildStageVoice();
             if (tmp) {
@@ -42,7 +42,7 @@ function maybeGetParticipants(id) {
               const result = closure_16.set(isGuildStageVoice.id, isGuildStageVoice);
             }
           });
-          const tmp6Result = importDefault(12)(store.getMutableGuildChannelsForGuild(guild_id));
+          const tmp6Result = require("../../../_runtime/00012_apply.js")(store.getMutableGuildChannelsForGuild(guild_id));
         }
         let tmp8 = null != channel && channel.isGuildStageVoice();
         if (tmp8) {
@@ -52,7 +52,7 @@ function maybeGetParticipants(id) {
         if (tmp8) {
           let tmp12 = dependencyMap[id];
           if (null == tmp12) {
-            const obj3 = new importDefault(5109)(id);
+            const obj3 = new require("StageChannelParticipants.tsx")(id);
             dependencyMap[id] = obj3;
             obj3.rebuild();
             tmp12 = obj3;
@@ -69,7 +69,7 @@ function maybeGetParticipants(id) {
 function getOrCreateParticipants(item10010) {
   let tmp = dependencyMap[item10010];
   if (null == tmp) {
-    const obj = new importDefault(5109)(item10010);
+    const obj = new require("StageChannelParticipants.tsx")(item10010);
     dependencyMap[item10010] = obj;
     obj.rebuild();
     tmp = obj;
@@ -397,8 +397,8 @@ prototype["getChannels"] = function getChannels(id) {
   }
   if (!set.has(tmp2)) {
     set.add(tmp2);
-    const tmp6 = importDefault(12);
-    const values = importDefault(12)(store.getMutableGuildChannelsForGuild(tmp2)).values();
+    const tmp6 = require("../../../_runtime/00012_apply.js");
+    const values = require("../../../_runtime/00012_apply.js")(store.getMutableGuildChannelsForGuild(tmp2)).values();
     const item = values.forEach((isGuildStageVoice) => {
       let tmp = null != isGuildStageVoice && isGuildStageVoice.isGuildStageVoice();
       if (tmp) {
@@ -408,7 +408,7 @@ prototype["getChannels"] = function getChannels(id) {
         const result = closure_16.set(isGuildStageVoice.id, isGuildStageVoice);
       }
     });
-    const tmp6Result = importDefault(12)(store.getMutableGuildChannelsForGuild(tmp2));
+    const tmp6Result = require("../../../_runtime/00012_apply.js")(store.getMutableGuildChannelsForGuild(tmp2));
   }
   if (tmp == null) {
     tmp = NO_GUILD;

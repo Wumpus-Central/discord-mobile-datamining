@@ -33,7 +33,7 @@ function makeRequest(arg0, arg1) {
   if (null != targetId) {
     obj.target_id = targetId;
   }
-  const HTTP = require(530) /* sendRequest */.HTTP;
+  const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
   obj = { url: closure_4.GUILD_AUDIT_LOG(arg0), query: obj, oldFormErrors: true, rejectWithError: true };
   return HTTP.get(obj);
 }
@@ -43,7 +43,7 @@ const result = require("sendRequest").fileFinishedImporting("actions/AuditLogAct
 export const fetchLogs = function fetchLogs(guildId) {
   if (!tmp) {
     if (null != guildId) {
-      let obj = importDefault(709);
+      let obj = require("../Dispatcher.tsx");
       obj.dispatch({ type: "AUDIT_LOG_FETCH_START" });
       obj = { userId: null, action: null, targetId: null };
       obj[0] = arg1;
@@ -77,7 +77,7 @@ export const fetchNextLogPage = function fetchNextLogPage(guildId) {
         if (null != logs[logs.length - 1]) {
           id = tmp10.id;
         }
-        let obj = importDefault(709);
+        let obj = require("../Dispatcher.tsx");
         obj = { type: "AUDIT_LOG_FETCH_NEXT_PAGE_START", before: null, isGroupedFetch: null };
         obj[1] = id;
         obj[2] = flag;
@@ -106,14 +106,14 @@ export const filterByAction = function filterByAction(arg0, guildId) {
     if (null != guildId) {
       let obj = { type: "AUDIT_LOG_FILTER_BY_ACTION", action: null };
       obj[1] = arg0;
-      importDefault(709).dispatch(obj);
+      require("../Dispatcher.tsx").dispatch(obj);
       let nextPromise;
       if (!tmp5) {
         if (null != guildId) {
-          importDefault(709).dispatch({ type: "AUDIT_LOG_FETCH_START" });
+          require("../Dispatcher.tsx").dispatch({ type: "AUDIT_LOG_FETCH_START" });
           obj = { userId: null, action: null, targetId: null };
           obj[1] = arg0;
-          const tmp10Result = importDefault(709);
+          const tmp10Result = require("../Dispatcher.tsx");
           nextPromise = makeRequest(guildId, obj).then((body) => {
             let application_commands;
             let audit_log_entries;
@@ -138,14 +138,14 @@ export const filterByUserId = function filterByUserId(id, guildId) {
     if (null != guildId) {
       let obj = { type: "AUDIT_LOG_FILTER_BY_USER", userId: null };
       obj[1] = id;
-      importDefault(709).dispatch(obj);
+      require("../Dispatcher.tsx").dispatch(obj);
       let nextPromise;
       if (!tmp5) {
         if (null != guildId) {
-          importDefault(709).dispatch({ type: "AUDIT_LOG_FETCH_START" });
+          require("../Dispatcher.tsx").dispatch({ type: "AUDIT_LOG_FETCH_START" });
           obj = { userId: null, action: "Array", targetId: "isArray" };
           obj[0] = id;
-          const tmp10Result = importDefault(709);
+          const tmp10Result = require("../Dispatcher.tsx");
           nextPromise = makeRequest(guildId, obj).then((body) => {
             let application_commands;
             let audit_log_entries;
@@ -170,14 +170,14 @@ export const filterByTargetId = function filterByTargetId(arg0, arg1) {
     if (null != arg1) {
       let obj = { type: "AUDIT_LOG_FILTER_BY_TARGET", targetId: null };
       obj[1] = arg0;
-      importDefault(709).dispatch(obj);
+      require("../Dispatcher.tsx").dispatch(obj);
       let nextPromise;
       if (!tmp5) {
         if (null != arg1) {
-          importDefault(709).dispatch({ type: "AUDIT_LOG_FETCH_START" });
+          require("../Dispatcher.tsx").dispatch({ type: "AUDIT_LOG_FETCH_START" });
           obj = { userId: null, action: "Array", targetId: 8 };
           obj[2] = arg0;
-          const tmp10Result = importDefault(709);
+          const tmp10Result = require("../Dispatcher.tsx");
           nextPromise = makeRequest(arg1, obj).then((body) => {
             let application_commands;
             let audit_log_entries;

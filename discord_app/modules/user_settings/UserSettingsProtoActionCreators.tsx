@@ -363,7 +363,7 @@ prototype["updateAsync"] = function updateAsync(favorites, arg1, INFREQUENT_USER
 };
 prototype["markDirty"] = function markDirty(protoToSave, dispatch) {
   const self = this;
-  importDefault(38)(true, "this cannot run in the overlay");
+  require("../../../_runtime/metro/00038__.js")(true, "this cannot run in the overlay");
   const editInfo = this.getEditInfo().editInfo;
   let obj = { timeout: editInfo.timeout };
   if (editInfo.loaded) {
@@ -429,7 +429,7 @@ prototype["markDirty"] = function markDirty(protoToSave, dispatch) {
   }
 };
 prototype["dispatchChanges"] = function dispatchChanges(changes) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { changes, type: this.type };
   obj.dispatch({ type: "USER_SETTINGS_PROTO_UPDATE_EDIT_INFO", settings: obj });
 };
@@ -592,10 +592,10 @@ prototype["loadIfNecessary"] = function loadIfNecessary(arg0) {
   })();
 };
 prototype["markDirtyFromMigration"] = function markDirtyFromMigration(c4, cleanupFuncs) {
-  importDefault(38)(true, "this cannot run in the overlay");
+  require("../../../_runtime/metro/00038__.js")(true, "this cannot run in the overlay");
   const logger = this.logger;
   logger.log("Marking dirty due to migrates");
-  importDefault(38)(null == this.getEditInfo().editInfo.offlineEditDataVersion, "offline changes are not supported with migrations");
+  require("../../../_runtime/metro/00038__.js")(null == this.getEditInfo().editInfo.offlineEditDataVersion, "offline changes are not supported with migrations");
   this.markDirty(c4, { cleanup: cleanupFuncs, dispatch: false, delaySeconds: UserSettingsDelay.AUTOMATED, jitter: true });
 };
 prototype["markDirtyIfHasPendingChange"] = function markDirtyIfHasPendingChange(arg0) {
@@ -610,13 +610,13 @@ prototype["markDirtyIfHasPendingChange"] = function markDirtyIfHasPendingChange(
   }
 };
 prototype["scheduleSaveFromOfflineEdit"] = function scheduleSaveFromOfflineEdit() {
-  importDefault(38)(true, "this cannot run in the overlay");
+  require("../../../_runtime/metro/00038__.js")(true, "this cannot run in the overlay");
   const logger = this.logger;
   logger.log("Scheduling save from offline edit");
   const editInfo = this.getEditInfo().editInfo;
-  importDefault(38)(null != editInfo.protoToSave, "protoToSave cannot be null");
-  importDefault(38)(null != editInfo.offlineEditDataVersion, "offlineEditDataVersion cannot be null");
-  importDefault(38)(null == editInfo.timeout, "timeout must not be set already");
+  require("../../../_runtime/metro/00038__.js")(null != editInfo.protoToSave, "protoToSave cannot be null");
+  require("../../../_runtime/metro/00038__.js")(null != editInfo.offlineEditDataVersion, "offlineEditDataVersion cannot be null");
+  require("../../../_runtime/metro/00038__.js")(null == editInfo.timeout, "timeout must not be set already");
   const sum = 5000 + Math.floor(5000 * Math.random());
   this.dispatchChanges({ timeout: setTimeout(this.persistChanges, sum), timeoutDelay: sum });
 };
@@ -1026,8 +1026,8 @@ export const addDismissedContent = function addDismissedContent(closure_0) {
     if (!hasBitResult) {
       obj = { content_type: null };
       obj[0] = obj(1358).DismissibleContent[closure_0];
-      importDefault(698).track(constants.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, obj);
-      const obj2 = importDefault(698);
+      require("../../utils/AnalyticsUtils.tsx").track(constants.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, obj);
+      const obj2 = require("../../utils/AnalyticsUtils.tsx");
     }
   }
   return obj.updateAsync("userContent", (dismissedContents) => {

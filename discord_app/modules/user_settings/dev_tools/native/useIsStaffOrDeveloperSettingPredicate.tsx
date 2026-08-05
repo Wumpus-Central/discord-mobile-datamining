@@ -6,5 +6,5 @@ const result = require("set").fileFinishedImporting("modules/user_settings/dev_t
 
 export const useStaffOrDeveloperSettingPredicate = function useStaffOrDeveloperSettingPredicate() {
   const items = [init];
-  return require(589) /* initialize */.useStateFromStores(items, () => isDeveloper.isDeveloper);
+  return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => isDeveloper.isDeveloper);
 };

@@ -127,12 +127,12 @@ let obj = {
     return store.getFetchStateForApplication(arg0) !== FetchState.FETCHING;
   },
   onQueued(applicationIds) {
-    let request = importDefault(709);
+    let request = require("../../Dispatcher.tsx");
     request = { type: "partial", applicationIds };
     return request.dispatch({ type: "USER_AUTHORIZED_APPS_REQUEST", request });
   },
   onCancelled(applicationIds) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "USER_AUTHORIZED_APPS_REQUEST_CANCELLED", applicationIds };
     return obj.dispatch(obj);
   }
@@ -150,7 +150,7 @@ obj = {
         const queueResult = batchInvocationManager.queue(arg0);
       } else {
         batchInvocationManager.reset();
-        let obj = importDefault(709);
+        let obj = require("../../Dispatcher.tsx");
         obj = { type: "USER_AUTHORIZED_APPS_REQUEST", request: null };
         obj[1] = { type: "full" };
         obj.dispatch(obj);

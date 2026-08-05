@@ -6,7 +6,7 @@ export default function useShowTryItOutButtonInAppLauncher(arg0) {
   let botUserId;
   let context;
   ({ context, application, botUserId } = arg0);
-  let obj = require(10885) /* _getPrimaryAppCommand */;
+  let obj = require("../application_commands/getPrimaryAppCommand.tsx") /* _getPrimaryAppCommand */;
   obj = { context, applicationId: application.id, botUserId };
   let isPrimaryAppCommandUsableInAppDM = obj.useIsPrimaryAppCommandUsableInAppDM(obj);
   let channel;
@@ -14,8 +14,8 @@ export default function useShowTryItOutButtonInAppLauncher(arg0) {
     channel = context.channel;
   }
   const tmp = require;
-  const tmp4 = importDefault(11445);
-  const tmp4Result = importDefault(11445)(channel);
+  const tmp4 = require("useIsAppDM.tsx");
+  const tmp4Result = require("useIsAppDM.tsx")(channel);
   const canLaunchFrameResult = tmp(10509).canLaunchFrame(application);
   let tmp8 = !canLaunchFrameResult;
   if (!canLaunchFrameResult) {

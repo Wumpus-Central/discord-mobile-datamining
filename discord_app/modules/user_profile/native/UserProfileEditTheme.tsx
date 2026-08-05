@@ -15,21 +15,21 @@ function ColorSwatch(color) {
   color = color.color;
   ({ label, accessibilityLabel, onPress, style } = color);
   const tmp = createCacheKey();
-  let obj = require(688) /* int2hslRaw */;
+  let obj = require("../../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */;
   const int2hexResult = obj.int2hex(color);
-  let obj1 = require(5655) /* getHigherContrastColor */;
+  let obj1 = require("../utils/getHigherContrastColor.tsx") /* getHigherContrastColor */;
   const items = [WHITE, PRIMARY_530];
   obj = { style: tmp.colorSwatchContainer, children: null };
   const higherContrastColor = obj1.getHigherContrastColor({ backgroundColor: int2hexResult, colors: items });
   obj = { accessibilityRole: "button", accessibilityLabel, accessibilityHint: null, style: null, onPress: null, children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl.string(require(1236) /* getSystemLocale */.t.Qp04hK);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Qp04hK);
   const items1 = [tmp.colorSwatch, { backgroundColor: int2hexResult }, style];
   obj[3] = items1;
   obj[4] = onPress;
   obj1 = { size: "xs", color: higherContrastColor, style: tmp.dropperIcon };
-  obj[5] = callback(require(9591) /* PencilIcon */.PencilIcon, obj1);
-  const items2 = [callback(require(4812) /* PressableBase */.PressableOpacity, obj, color), callback(require(4281) /* Text */.Text, { variant: "text-sm/normal", color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: label })];
+  obj[5] = callback(require("../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx") /* PencilIcon */.PencilIcon, obj1);
+  const items2 = [callback(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj, color), callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-sm/normal", color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: label })];
   obj[1] = items2;
   return callback2(View, obj);
 }
@@ -135,10 +135,10 @@ export default function UserProfileEditTheme(pendingThemeColors) {
         }
       };
       obj5[0] = () => {
-        let obj = require(4101) /* UNSAFE_isDismissibleContentDismissed */;
-        const result = obj.UNSAFE_markDismissibleContentAsDismissed(require(1358) /* DismissibleContent */.DismissibleContent.PROFILE_THEMES_SETTINGS_VIEWED_V2);
+        let obj = require("../../dismissible_content/DismissibleContentUnsafeUtils.tsx") /* UNSAFE_isDismissibleContentDismissed */;
+        const result = obj.UNSAFE_markDismissibleContentAsDismissed(require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.PROFILE_THEMES_SETTINGS_VIEWED_V2);
         obj = { color: secondaryColor, onSelect: f92377, suggestedColors: closure_4 };
-        importDefault(13810)(obj);
+        require("../../color_picker/native/showCustomColorPickerActionSheet.tsx")(obj);
       };
       obj5[1] = primaryColor;
       const intl2 = tmp6(tmp3[8]).intl;
@@ -168,10 +168,10 @@ export default function UserProfileEditTheme(pendingThemeColors) {
         }
       };
       obj7[1] = () => {
-        let obj = require(4101) /* UNSAFE_isDismissibleContentDismissed */;
-        const result = obj.UNSAFE_markDismissibleContentAsDismissed(require(1358) /* DismissibleContent */.DismissibleContent.PROFILE_THEMES_SETTINGS_VIEWED_V2);
+        let obj = require("../../dismissible_content/DismissibleContentUnsafeUtils.tsx") /* UNSAFE_isDismissibleContentDismissed */;
+        const result = obj.UNSAFE_markDismissibleContentAsDismissed(require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.PROFILE_THEMES_SETTINGS_VIEWED_V2);
         obj = { color: secondaryColor, onSelect: f92377, suggestedColors: closure_4 };
-        importDefault(13810)(obj);
+        require("../../color_picker/native/showCustomColorPickerActionSheet.tsx")(obj);
       };
       const intl4 = tmp6(tmp3[8]).intl;
       obj7[2] = intl4.string(tmp6(tmp3[8]).t["8elvy6"]);

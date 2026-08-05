@@ -25,8 +25,8 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   const channelId = store.getChannelId(closure_9);
   const voiceChannelId = store.getVoiceChannelId();
   if (guild.id === channelId) {
-    require(5866) /* transitionToGuild */.transitionToGuild(guild.id);
-    const obj = require(5866) /* transitionToGuild */;
+    require("../routing/transitionToGuild.native.tsx") /* transitionToGuild */.transitionToGuild(guild.id);
+    const obj = require("../routing/transitionToGuild.native.tsx") /* transitionToGuild */;
   }
   let tmp6 = guild.id === voiceChannelId;
   if (tmp6) {
@@ -36,8 +36,8 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
     tmp6 = null == voiceChannelId;
   }
   if (tmp6) {
-    const voiceChannel = importDefault(5096).selectVoiceChannel(findFirstVoiceChannelId(guild.id));
-    const obj2 = importDefault(5096);
+    const voiceChannel = require("../../actions/SelectedChannelActionCreators.tsx").selectVoiceChannel(findFirstVoiceChannelId(guild.id));
+    const obj2 = require("../../actions/SelectedChannelActionCreators.tsx");
   }
 };
 prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
@@ -46,20 +46,20 @@ prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
     const originChannelId = channel.originChannelId;
     const channelId = store.getChannelId(closure_10);
     if (tmp) {
-      require(1222) /* transitionTo */.transitionTo(closure_8.CHANNEL(closure_9, channel.id));
-      const obj = require(1222) /* transitionTo */;
+      require("../routing/router_utils.tsx") /* transitionTo */.transitionTo(closure_8.CHANNEL(closure_9, channel.id));
+      const obj = require("../routing/router_utils.tsx") /* transitionTo */;
     }
     const obj3 = store;
     tmp = null == guildId.getGuildId() && null != originChannelId && originChannelId === channelId;
     if (tmp7) {
-      const voiceChannel = importDefault(5096).selectVoiceChannel(channel.id, videoEnabled.isVideoEnabled());
-      const obj2 = importDefault(5096);
+      const voiceChannel = require("../../actions/SelectedChannelActionCreators.tsx").selectVoiceChannel(channel.id, videoEnabled.isVideoEnabled());
+      const obj2 = require("../../actions/SelectedChannelActionCreators.tsx");
     }
     tmp7 = null != originChannelId && originChannelId === store.getVoiceChannelId();
   }
 };
 prototype["handleLogout"] = function handleLogout() {
-  importDefault(709).dispatch({ type: "VOICE_CHANNEL_SELECT", channelId: null, guildId: null, video: false, currentVoiceChannelId: null, joinVoiceId: null });
+  require("../../Dispatcher.tsx").dispatch({ type: "VOICE_CHANNEL_SELECT", channelId: null, guildId: null, video: false, currentVoiceChannelId: null, joinVoiceId: null });
 };
 const selectedChannelManager = new SelectedChannelManager();
 const result = require("handleConnectionOpen").fileFinishedImporting("modules/channel/SelectedChannelManager.tsx");

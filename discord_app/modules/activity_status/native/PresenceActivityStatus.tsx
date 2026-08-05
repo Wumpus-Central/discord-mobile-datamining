@@ -30,22 +30,22 @@ export default function PresenceActivityStatus(hideText) {
       return null;
     }
   }
-  if (importDefault(7119)(activity)) {
-    let AppsIcon = require(7611) /* AppsIcon */.AppsIcon;
+  if (require("../../activities/utils/isEmbeddedActivity.tsx")(activity)) {
+    let AppsIcon = require("../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx") /* AppsIcon */.AppsIcon;
   } else if (activity.type === ActivityTypes.PLAYING) {
-    AppsIcon = require(8684) /* GameControllerIcon */.GameControllerIcon;
+    AppsIcon = require("../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx") /* GameControllerIcon */.GameControllerIcon;
   } else if (activity.type === tmp3.LISTENING) {
-    AppsIcon = require(9568) /* MusicIcon */.MusicIcon;
+    AppsIcon = require("../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx") /* MusicIcon */.MusicIcon;
   } else {
     if (activity.type !== tmp3.WATCHING) {
       if (activity.type !== tmp3.STREAMING) {
         AppsIcon = null;
         if (activity.type === tmp3.COMPETING) {
-          AppsIcon = require(8684) /* GameControllerIcon */.GameControllerIcon;
+          AppsIcon = require("../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx") /* GameControllerIcon */.GameControllerIcon;
         }
       }
     }
-    AppsIcon = require(9563) /* TvIcon */.TvIcon;
+    AppsIcon = require("../../../design/components/Icon/native/redesign/generated/TvIcon.tsx") /* TvIcon */.TvIcon;
   }
   let tmp12 = !hideIcon;
   if (!hideIcon) {
@@ -63,7 +63,7 @@ export default function PresenceActivityStatus(hideText) {
     obj = { style: null, maxFontSizeMultiplier: null, children: null };
     obj[0] = textStyle;
     obj[1] = maxFontSizeMultiplier;
-    obj[2] = importDefault(9570)(activity, true).text;
+    obj[2] = require("../getActivityStatusText.tsx")(activity, true).text;
     tmp15 = callback(tmp(9565), obj);
   }
   children[1] = tmp15;

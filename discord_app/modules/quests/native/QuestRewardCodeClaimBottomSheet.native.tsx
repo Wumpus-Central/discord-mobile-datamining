@@ -215,7 +215,7 @@ function QuestRewardCodeClaimBottomSheet(quest) {
 ({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles((paddingBottom) => {
   let obj = { wrapper: null, footer: null, claimingIndicator: null, codeCopyWrapperLoading: null, redemptionInstructions: null };
-  obj = { display: "flex", paddingHorizontal: importDefault(712).space.PX_16, gap: importDefault(712).space.PX_24 };
+  obj = { display: "flex", paddingHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
   obj[0] = obj;
   obj = { paddingBottom };
   obj[1] = obj;

@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/native/EditProfileEffectActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
-import module_8087 from "module_8087";
+import EditCollectiblesCTAButton from "EditCollectiblesCTAButton.tsx";
 import get_ActivityIndicator from "Text";
 import map from "map";
 import { isProfileEffectRecord } from "fromServer";

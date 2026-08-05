@@ -9,16 +9,16 @@ export const maybeOpenSpoilerGateForVoiceChannel = function maybeOpenSpoilerGate
   channel = channel.getChannel(id);
   let tmp2 = null == channel;
   if (!tmp2) {
-    let obj = require(5853) /* isChannelSpoilerGated */;
+    let obj = require("SpoilerChannelUtils.tsx") /* isChannelSpoilerGated */;
     tmp2 = !obj.shouldShowSpoilerGateForChannelId(id);
   }
   let flag = !tmp2;
   if (!tmp2) {
     obj = { channelId: null };
     obj[0] = channel.id;
-    require(4625) /* useAlertStore */.openAlert(require(12574) /* VoicePanelSpoilerAlert */.VOICE_PANEL_SPOILER_KEY, jsx(importDefault(12574), { channelId: null }));
+    require("../../design/components/AlertModal/native/useAlertStore.native.tsx") /* useAlertStore */.openAlert(require("native/VoicePanelSpoilerAlert.tsx") /* VoicePanelSpoilerAlert */.VOICE_PANEL_SPOILER_KEY, jsx(require("native/VoicePanelSpoilerAlert.tsx"), { channelId: null }));
     flag = true;
-    const obj2 = require(4625) /* useAlertStore */;
+    const obj2 = require("../../design/components/AlertModal/native/useAlertStore.native.tsx") /* useAlertStore */;
   }
   return flag;
 };

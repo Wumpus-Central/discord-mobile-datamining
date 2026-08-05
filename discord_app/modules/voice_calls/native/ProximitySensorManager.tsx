@@ -12,9 +12,9 @@ function handleChange() {
   currentRouteType = currentRouteType.getCurrentRouteType();
   const tmp3 = null != currentEmbeddedActivity.getCurrentEmbeddedActivity();
   const isConnectedResult = connected.isConnected();
-  let tmp8 = currentRouteType === require(9072) /* RouteTypes */.RouteTypes.RECEIVER && isConnectedResult;
+  let tmp8 = currentRouteType === require("../VoiceCallTypes.tsx") /* RouteTypes */.RouteTypes.RECEIVER && isConnectedResult;
   if (tmp8) {
-    let isIOSResult = require(500) /* set */.isIOS();
+    let isIOSResult = require("../../../utils/PlatformUtils.tsx") /* set */.isIOS();
     if (!isIOSResult) {
       let tmp10 = !tmp3;
       if (!tmp3) {
@@ -23,7 +23,7 @@ function handleChange() {
       isIOSResult = tmp10;
     }
     tmp8 = isIOSResult;
-    const tmp6Result = require(500) /* set */;
+    const tmp6Result = require("../../../utils/PlatformUtils.tsx") /* set */;
   }
   const result = ProximitySensorManager.setProximityMonitoringEnabled(tmp8);
 }

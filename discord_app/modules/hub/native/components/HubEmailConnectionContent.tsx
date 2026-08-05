@@ -217,7 +217,7 @@ export default function HubEmailConnectionContent(arg0) {
     return applyArgumentsResult;
   }
   let tmp = createCacheKey();
-  let obj = require(1480) /* useNavigation */;
+  let obj = require("../../../../design/components/Navigator/native/useNavigation.native.tsx") /* useNavigation */;
   dependencyMap = obj.useNavigation();
   const tmp4 = callback(React.useState(""), 2);
   first = tmp4[0];
@@ -225,8 +225,8 @@ export default function HubEmailConnectionContent(arg0) {
   callback = tmp6[1];
   [obj2, c5] = callback(React.useState(null), 2);
   ref = React.useRef(null);
-  const intl = require(1236) /* getSystemLocale */.intl;
-  const stringResult = intl.string(require(1236) /* getSystemLocale */.t.H1jCHH);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const stringResult = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.H1jCHH);
   let guild;
   if (invite != null) {
     guild = invite.guild;
@@ -258,17 +258,17 @@ export default function HubEmailConnectionContent(arg0) {
   obj2 = { style: tmp.container, children: null };
   const tmp16 = _signup;
   const tmp7 = callback(React.useState(null), 2);
-  const items1 = [callback2(ref, { style: tmp.header, children: callback2(require(5936) /* AccountAgeTier10LargeBadge */.StudyGroupsSpotIllustration, { scale: 0.75 }) }), callback2(require(4281) /* Text */.Text, { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, accessibilityRole: "header", children: formatToPlainStringResult }), , ];
+  const items1 = [callback2(ref, { style: tmp.header, children: callback2(require("../../../../design/assets/native.tsx") /* AccountAgeTier10LargeBadge */.StudyGroupsSpotIllustration, { scale: 0.75 }) }), callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, accessibilityRole: "header", children: formatToPlainStringResult }), , ];
   let obj5 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl3 = tmp2(1236).intl;
-  obj5[3] = intl3.format(require(1236) /* getSystemLocale */.t["6kzaqs"], {
+  obj5[3] = intl3.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["6kzaqs"], {
     onClick() {
       invite(paths[18]).openLazy(callback(paths[20])(paths[19], paths.paths), "HubEmailConnectionDescriptionActionsheet");
     }
   });
-  items1[2] = callback2(require(4281) /* Text */.Text, obj5);
+  items1[2] = callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj5);
   let obj7 = { label: null, placeholder: null, value: null, textContentType: "emailAddress", autoCapitalize: "none", keyboardType: "email-address", hint: null, textStyle: null, onChangeText: null, style: null, clearButtonVisibility: null, error: null, onFocus: null, onBlur: null };
-  let obj3 = { style: tmp.header, children: callback2(require(5936) /* AccountAgeTier10LargeBadge */.StudyGroupsSpotIllustration, { scale: 0.75 }) };
+  let obj3 = { style: tmp.header, children: callback2(require("../../../../design/assets/native.tsx") /* AccountAgeTier10LargeBadge */.StudyGroupsSpotIllustration, { scale: 0.75 }) };
   let obj4 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, accessibilityRole: "header", children: formatToPlainStringResult };
   let obj6 = {
     onClick() {
@@ -276,16 +276,16 @@ export default function HubEmailConnectionContent(arg0) {
     }
   };
   const intl4 = tmp2(1236).intl;
-  obj7[0] = intl4.string(require(1236) /* getSystemLocale */.t["K/7rLI"]);
+  obj7[0] = intl4.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["K/7rLI"]);
   const intl5 = tmp2(1236).intl;
-  obj7[1] = intl5.string(require(1236) /* getSystemLocale */.t.ImAOh5);
+  obj7[1] = intl5.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.ImAOh5);
   obj7[2] = first;
   const intl6 = tmp2(1236).intl;
-  obj7[6] = intl6.format(require(1236) /* getSystemLocale */.t.RPT0vj, { termsURL: MarketingURLs.TERMS, privacyURL: MarketingURLs.PRIVACY });
+  obj7[6] = intl6.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.RPT0vj, { termsURL: MarketingURLs.TERMS, privacyURL: MarketingURLs.PRIVACY });
   obj7[7] = tmp.textInput;
   obj7[8] = tmp4[1];
   obj7[9] = tmp.input;
-  obj7[10] = require(1297) /* Button */.ClearButtonVisibility.WITH_CONTENT;
+  obj7[10] = require("../../../../design/void/native.tsx") /* Button */.ClearButtonVisibility.WITH_CONTENT;
   let anyErrorMessage;
   if (obj1 != null) {
     anyErrorMessage = obj1.getAnyErrorMessage();
@@ -314,7 +314,7 @@ export default function HubEmailConnectionContent(arg0) {
   const obj11 = { style: tmp.buttonContainer, children: null };
   const obj12 = { size: "lg", text: null, onPress: null, loading: null };
   const intl7 = tmp2(1236).intl;
-  obj12[1] = intl7.string(require(1236) /* getSystemLocale */.t["8vmKO0"]);
+  obj12[1] = intl7.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["8vmKO0"]);
   obj12[2] = function signup() {
     const self = this;
     const apply = _signup.apply;
@@ -326,9 +326,9 @@ export default function HubEmailConnectionContent(arg0) {
     return applyArgumentsResult;
   };
   obj12[3] = tmp6[0];
-  obj11[1] = callback2(require(4695) /* Button */.Button, obj12);
+  obj11[1] = callback2(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj12);
   items2[2] = callback2(ref, obj11);
   obj[2] = items2;
   obj9[0] = closure_13(tmp16, obj);
-  return callback2(require(11994) /* HubEmailConnectionModal */.HubEmailConnectionScreen, obj9);
+  return callback2(require("HubEmailConnectionModal.tsx") /* HubEmailConnectionModal */.HubEmailConnectionScreen, obj9);
 };

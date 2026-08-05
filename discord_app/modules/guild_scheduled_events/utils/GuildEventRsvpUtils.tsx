@@ -16,13 +16,13 @@ export const getExistingRsvp = function getExistingRsvp(id, outer1_1) {
 export const ResponseOptions = obj;
 export const getResponseOptions = function getResponseOptions() {
   let obj = { name: null, value: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.uoorxi);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.uoorxi);
   obj[1] = obj.SERIES;
   const items = [obj, ];
   obj = { name: null, value: null };
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl2.string(require(1236) /* getSystemLocale */.t.lwZCFT);
+  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.lwZCFT);
   obj[1] = obj.RECURRENCE;
   items[1] = obj;
   return items;
@@ -36,8 +36,8 @@ export const handleRsvp = function handleRsvp(openRsvpPicker) {
   ({ eventId, recurrenceId, guildId, updateRsvp, onRsvp } = openRsvpPicker);
   const guildScheduledEvent = store2.getGuildScheduledEvent(eventId);
   if (null != guildScheduledEvent) {
-    const eventException = require(8869) /* useEventException */.getEventException(recurrenceId, eventId);
-    const obj4 = require(8869) /* useEventException */;
+    const eventException = require("../useEventException.tsx") /* useEventException */.getEventException(recurrenceId, eventId);
+    const obj4 = require("../useEventException.tsx") /* useEventException */;
     let scheduled_start_time;
     if (guildScheduledEvent != null) {
       scheduled_start_time = guildScheduledEvent.scheduled_start_time;
@@ -86,6 +86,6 @@ export const handleRsvp = function handleRsvp(openRsvpPicker) {
     } else {
       openRsvpPicker.openRsvpPicker(guildScheduledEvent, tmp12);
     }
-    obj5 = require(8870) /* useEventSchedule */;
+    obj5 = require("../useEventSchedule.tsx") /* useEventSchedule */;
   }
 };

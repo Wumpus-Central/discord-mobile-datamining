@@ -20,14 +20,14 @@ function ICYMIMessageRowPreview(pointerEvents) {
   let setting;
   let setting1;
   let setting2;
-  let obj = require(4285) /* createCacheKey */;
+  let obj = require("../../../design/components/Styles/native/createStyles.tsx") /* createCacheKey */;
   obj = { seeMoreLabelColor: messageOptions(712).colors.TEXT_DEFAULT };
   dependencyMap = obj.createNativeStyleProperties(obj)(messageOptions(4221)());
-  const RenderEmbeds = require(3958) /* explicitContentFromProto */.RenderEmbeds;
+  const RenderEmbeds = require("../../user_settings/UserSettings.tsx") /* explicitContentFromProto */.RenderEmbeds;
   setting = RenderEmbeds.getSetting();
-  const InlineEmbedMedia = require(3958) /* explicitContentFromProto */.InlineEmbedMedia;
+  const InlineEmbedMedia = require("../../user_settings/UserSettings.tsx") /* explicitContentFromProto */.InlineEmbedMedia;
   setting1 = InlineEmbedMedia.getSetting();
-  const InlineAttachmentMedia = require(3958) /* explicitContentFromProto */.InlineAttachmentMedia;
+  const InlineAttachmentMedia = require("../../user_settings/UserSettings.tsx") /* explicitContentFromProto */.InlineAttachmentMedia;
   setting2 = InlineAttachmentMedia.getSetting();
   const items = [setting, setting1, setting2, messageOptions];
   const memo = setting.useMemo(() => {

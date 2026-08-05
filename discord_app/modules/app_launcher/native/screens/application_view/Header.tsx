@@ -57,7 +57,7 @@ export default function Header(application) {
     appLauncherIconSource = tmpResult.getAppLauncherIconSource(application);
   }
   tmpResult = tmp(3989);
-  let str = tmpResult.useToken(importDefault(712).colors.BACKGROUND_BASE_LOW);
+  let str = tmpResult.useToken(require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW);
   let tmp7 = appLauncherIconSource;
   if (typeof appLauncherIconSource !== "number") {
     let uri;
@@ -69,7 +69,7 @@ export default function Header(application) {
   if (str == null) {
     str = "";
   }
-  const tmp6Result = importDefault(8045)(tmp7, str);
+  const tmp6Result = require("../../../../avatar/useAvatarColor.tsx")(tmp7, str);
   if (null != appLauncherIconSource) {
     obj = { iconSource: null, iconBorderRadius: null, iconSize: 72 };
     obj[0] = appLauncherIconSource;
@@ -82,7 +82,7 @@ export default function Header(application) {
     tmp12 = callback(currentUser2, obj);
     tmp13 = callback;
   }
-  const tmp6 = importDefault(8045);
+  const tmp6 = require("../../../../avatar/useAvatarColor.tsx");
   const fn = function n() {
     let obj = { transform: null };
     obj = { translateY: null };
@@ -167,13 +167,13 @@ export default function Header(application) {
   const obj8 = { style: items4, pointerEvents: "box-none", children: null };
   items4 = [tmp3.collapsedHeaderBanner, { backgroundColor: tmp6Result }, animatedStyle1];
   const items5 = [tmp3.collapsedHeaderBannerOverlay, animatedStyle3];
-  const items6 = [tmp13(importDefault(4146).View, { style: items5, pointerEvents: "none" }), tmp13(importDefault(11431), { onPress: onPressBack }), , ];
+  const items6 = [tmp13(require("../../../../reanimated/ReanimatedRexport.tsx").View, { style: items5, pointerEvents: "none" }), tmp13(require("../../base_components/AppLauncherBackButton.tsx"), { onPress: onPressBack }), , ];
   const obj9 = { style: animatedStyle2, pointerEvents: "none", children: null };
   obj9[2] = tmp13(scrollOffsetY(4281).Heading, { variant: "heading-lg/bold", color: "text-overlay-light", children: str2 });
-  items6[2] = tmp13(importDefault(4146).View, obj9);
+  items6[2] = tmp13(require("../../../../reanimated/ReanimatedRexport.tsx").View, obj9);
   items6[3] = tmp13(scrollOffsetY(1297).Spacer, { size: 32, pointerEvents: "none" });
   obj8[2] = items6;
-  items3[1] = callback2(importDefault(4146).View, obj8);
+  items3[1] = callback2(require("../../../../reanimated/ReanimatedRexport.tsx").View, obj8);
   let tmp22Result = null;
   if (null != application) {
     tmp22Result = null;
@@ -221,7 +221,7 @@ export default function Header(application) {
   }
   items3[2] = tmp22Result;
   obj5[2] = items3;
-  return callback2(importDefault(4146).View, obj5);
+  return callback2(require("../../../../reanimated/ReanimatedRexport.tsx").View, obj5);
 };
 export const SHEET_HANDLE_CONTAINER_HEIGHT = 16;
 export const EXPANDED_HEADER_HEIGHT = 161;

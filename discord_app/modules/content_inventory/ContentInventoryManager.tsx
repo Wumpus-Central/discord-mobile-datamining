@@ -21,7 +21,7 @@ function getBackoffJitter() {
   return Math.random() * (num + 1) * closure_11;
 }
 function setFeedState(feedId, state) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "CONTENT_INVENTORY_SET_FEED_STATE", feedId, state };
   obj.dispatch(obj);
 }
@@ -55,7 +55,7 @@ function canFetch(GLOBAL_FEED) {
       } else {
         return false;
       }
-      obj = require(12861) /* apexExperiment */;
+      obj = require("ContentInventoryExperiments.tsx") /* apexExperiment */;
     }
     return true;
   }
@@ -66,7 +66,7 @@ function scheduleNextFetch() {
     num = 0;
   }
   if (num <= 0) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "CONTENT_INVENTORY_SET_FEED_STATE", feedId: null, state: null };
     obj[1] = tmp;
     obj[2] = { loading: false };
@@ -101,7 +101,7 @@ function scheduleNextFetch() {
               flag = false;
             }
           }
-          obj9 = require(12861) /* apexExperiment */;
+          obj9 = require("ContentInventoryExperiments.tsx") /* apexExperiment */;
         }
       } else {
         flag = false;
@@ -282,7 +282,7 @@ function handlePostConnectionOpen() {
   scheduleNextFetch();
 }
 function handleConnectionClosed() {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "CONTENT_INVENTORY_SET_FEED_STATE", feedId: GLOBAL_FEED, state: { loading: false } };
   obj.dispatch(obj);
   const value = map.get(GLOBAL_FEED);
@@ -294,7 +294,7 @@ function handleConnectionClosed() {
 }
 function handleManualRefresh(feature) {
   const feedId = feature.feedId;
-  importDefault(709).dispatch({ type: "CONTENT_INVENTORY_SET_FEED_STATE", feedId, state: { loading: false } });
+  require("../../Dispatcher.tsx").dispatch({ type: "CONTENT_INVENTORY_SET_FEED_STATE", feedId, state: { loading: false } });
   const value = map.get(feedId);
   if (undefined !== value) {
     const _clearTimeout = clearTimeout;
@@ -336,7 +336,7 @@ function handleSpotifyNewTrack(connectionId) {
   }
 }
 function handleFetchGameProfileFeed() {
-  fetchInventory({ feedId: ContentInventoryFeedKey.GLOBAL_FEED, feature: require(16772) /* ContentInventoryFeature */.ContentInventoryFeature.GAME_PROFILE });
+  fetchInventory({ feedId: ContentInventoryFeedKey.GLOBAL_FEED, feature: require("../../../discord_common/js/shared/shared-constants/ContentInventoryFeature.tsx") /* ContentInventoryFeature */.ContentInventoryFeature.GAME_PROFILE });
 }
 let closure_11 = 2 * require("set").Millis.MINUTE;
 const GLOBAL_FEED = ContentInventoryFeedKey.GLOBAL_FEED;

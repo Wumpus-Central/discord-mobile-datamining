@@ -193,12 +193,12 @@ function UserDCSwitchRow(dc) {
   let handleToggleDismissState;
   let isDismissed;
   dc = dc.dc;
-  ({ isDismissed, handleToggleDismissState } = importDefault(14833)(dc));
+  ({ isDismissed, handleToggleDismissState } = require("../../../../dismissible_content/utils/toggleDismissibleContentDismissState.tsx")(dc));
   const obj = { label: null, value: null, onValueChange: null };
   obj[0] = callback3(dc);
   obj[1] = isDismissed;
   obj[2] = handleToggleDismissState;
-  return callback4(require(5650) /* TableSwitchRow */.TableSwitchRow, obj);
+  return callback4(require("../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx") /* TableSwitchRow */.TableSwitchRow, obj);
 }
 function GuildDCSwitchRow(dc) {
   dc = dc.dc;
@@ -292,7 +292,7 @@ export default function DevToolsGuildPowerupsScreen() {
     obj[0] = tmp.container;
     const items5 = [tmp.scrollContainer, ];
     obj1 = { paddingBottom: null };
-    obj1[0] = tmp4.bottom + importDefault(712).space.PX_16;
+    obj1[0] = tmp4.bottom + require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16;
     items5[1] = obj1;
     obj[1] = items5;
     let str = stateFromStores1;

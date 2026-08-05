@@ -29,7 +29,7 @@ if (global.__DEV__) {
 let result = set.fileFinishedImporting("components_native/App.tsx");
 
 export default function App() {
-  const renderApp = importDefault(9).renderApp;
+  const renderApp = require("../modules/tti_analytics/TTITracker.tsx").renderApp;
   renderApp.record();
   const effect = React.useEffect(() => {
     callback(13614).init();
@@ -190,8 +190,8 @@ export default function App() {
   let obj3 = shouldUseAltGateway(13721);
   obj[0] = shouldUseAltGateway(10917).Profiles.App;
   obj = { appEntryKey: "main", children: null };
-  const tmp11 = importDefault(10917);
-  obj[1] = jsx(importDefault(14972), {});
-  obj[1] = jsx(importDefault(13723), { appEntryKey: "main", children: null });
+  const tmp11 = require("../modules/app_startup/StartupProfiler.tsx");
+  obj[1] = jsx(require("../modules/main_tabs_v2/native/MainNavigator.tsx"), {});
+  obj[1] = jsx(require("AppContainer.tsx"), { appEntryKey: "main", children: null });
   return <tmp11 appEntryKey="main">{null}</tmp11>;
 };

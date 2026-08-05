@@ -4,8 +4,8 @@ function compareGuildRoles(guildId, id) {
   if (guildId.id === guildId) {
     let num2 = 1;
     if (id.id === guildId) {
-      num2 = importDefault(11).compare(guildId.id, id.id);
-      const obj2 = importDefault(11);
+      num2 = require("SnowflakeUtils.tsx").compare(guildId.id, id.id);
+      const obj2 = require("SnowflakeUtils.tsx");
     }
     let num = num2;
   } else {
@@ -14,8 +14,8 @@ function compareGuildRoles(guildId, id) {
       if (guildId.position !== id.position) {
         let diff = id.position - guildId.position;
       } else {
-        diff = importDefault(11).compare(guildId.id, id.id);
-        const obj = importDefault(11);
+        diff = require("SnowflakeUtils.tsx").compare(guildId.id, id.id);
+        const obj = require("SnowflakeUtils.tsx");
       }
     }
   }
@@ -33,8 +33,8 @@ export const doesRoleSortHigher = function doesRoleSortHigher(guildId, id) {
   if (guildId.id === guildId) {
     let num2 = 1;
     if (id.id === guildId) {
-      num2 = importDefault(11).compare(guildId.id, id.id);
-      const obj2 = importDefault(11);
+      num2 = require("SnowflakeUtils.tsx").compare(guildId.id, id.id);
+      const obj2 = require("SnowflakeUtils.tsx");
     }
     let num = num2;
   } else {
@@ -43,8 +43,8 @@ export const doesRoleSortHigher = function doesRoleSortHigher(guildId, id) {
       if (guildId.position !== id.position) {
         let diff = id.position - guildId.position;
       } else {
-        diff = importDefault(11).compare(guildId.id, id.id);
-        const obj = importDefault(11);
+        diff = require("SnowflakeUtils.tsx").compare(guildId.id, id.id);
+        const obj = require("SnowflakeUtils.tsx");
       }
     }
   }
@@ -54,8 +54,8 @@ export const sortInviteRoles = function sortInviteRoles(position, position2) {
   if (position.position !== position2.position) {
     let diff = position2.position - position.position;
   } else {
-    diff = importDefault(11).compare(position.id, position2.id);
-    const obj = importDefault(11);
+    diff = require("SnowflakeUtils.tsx").compare(position.id, position2.id);
+    const obj = require("SnowflakeUtils.tsx");
   }
   return diff;
 };
@@ -63,14 +63,14 @@ export const inviteRoleToDisplayData = function inviteRoleToDisplayData(id, id) 
   const obj = { id: id.id, name: id.name, guildId: id, colorString: null, colorStrings: null, icon: null, unicodeEmoji: null };
   let int2hexResult = null;
   if (0 !== id.color) {
-    int2hexResult = require(688) /* int2hslRaw */.int2hex(id.color);
-    const obj2 = require(688) /* int2hslRaw */;
+    int2hexResult = require("../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */.int2hex(id.color);
+    const obj2 = require("../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */;
   }
   obj[3] = int2hexResult;
   let result = null;
   if (null != id.colors) {
-    result = require(1938) /* extractColorStringsFromServerColors */.extractColorStringsFromServerColors(id.colors);
-    const obj3 = require(1938) /* extractColorStringsFromServerColors */;
+    result = require("../modules/premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx") /* extractColorStringsFromServerColors */.extractColorStringsFromServerColors(id.colors);
+    const obj3 = require("../modules/premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx") /* extractColorStringsFromServerColors */;
   }
   obj[4] = result;
   let icon = id.icon;

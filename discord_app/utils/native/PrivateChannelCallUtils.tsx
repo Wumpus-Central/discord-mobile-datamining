@@ -17,10 +17,10 @@ let map1;
 let unpackModuleId;
 const require = arg1;
 function openChannelCallModal(channel) {
-  let obj = require(4498) /* shouldShowAgeGateForVoiceChannel */;
+  let obj = require("../../modules/age_gate/AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */;
   if (!obj.maybeOpenAgeGateForVoiceChannel(channel.id)) {
-    const result = importDefault(4478).rebuildRTCActiveChannels();
-    const obj2 = importDefault(4478);
+    const result = require("../../actions/ChannelRTCActionCreators.tsx").rebuildRTCActiveChannels();
+    const obj2 = require("../../actions/ChannelRTCActionCreators.tsx");
     const tmp3 = importDefault;
     if (tmpResult.isVoicePanelEnabled(channel)) {
       state = state.getState();
@@ -118,14 +118,14 @@ function guardPrivateCallForChannel(id, arg1) {
               }
             }
           });
-          let obj = importDefault(4624);
+          let obj = require("../../actions/native/AlertActionCreators.tsx");
           obj = { title: null, body: null, cancelText: null, onConfirm: null, onCancel: null };
-          const intl = _require(1236).intl;
-          obj[0] = intl.string(_require(1236).t["91WuJ9"]);
-          const intl2 = _require(1236).intl;
-          obj[1] = intl2.string(_require(1236).t["Rs+Vk1"]);
-          const intl3 = _require(1236).intl;
-          obj[2] = intl3.string(_require(1236).t["ETE/oC"]);
+          const intl = _require("../../intl/index.native.tsx").intl;
+          obj[0] = intl.string(_require("../../intl/index.native.tsx").t["91WuJ9"]);
+          const intl2 = _require("../../intl/index.native.tsx").intl;
+          obj[1] = intl2.string(_require("../../intl/index.native.tsx").t["Rs+Vk1"]);
+          const intl3 = _require("../../intl/index.native.tsx").intl;
+          obj[2] = intl3.string(_require("../../intl/index.native.tsx").t["ETE/oC"]);
           obj[3] = function onConfirm() {
             return callback();
           };
@@ -153,39 +153,39 @@ export const isVoiceChannelModalKey = function isVoiceChannelModalKey(openModalK
 export { openChannelCallModal };
 export const maybeShowAgeGateModal = function maybeShowAgeGateModal(width) {
   if (obj.shouldShowAgeGateForChannelId(width)) {
-    require(5730) /* runAfterInteractions */.runAfterInteractions(() => {
+    require("RunAfterInteractionsUtils.tsx") /* runAfterInteractions */.runAfterInteractions(() => {
       callback(table[20]).openAgeGateModal(constants.NSFW_VOICE_CHANNEL);
     }, 150);
-    const tmpResult = require(5730) /* runAfterInteractions */;
+    const tmpResult = require("RunAfterInteractionsUtils.tsx") /* runAfterInteractions */;
   }
 };
 export const openVoiceChannelActionSheet = function openVoiceChannelActionSheet(closure_0) {
-  let obj = importDefault(4253);
+  let obj = require("../../modules/action_sheet/native/ActionSheetActionCreators.tsx");
   obj = { channel: closure_0 };
-  obj.openLazy(require(1959) /* asyncRequireImpl */(12937, dependencyMap.paths), "" + c17 + "-" + closure_0.id, obj);
+  obj.openLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(12937, dependencyMap.paths), "" + c17 + "-" + closure_0.id, obj);
 };
 export const hideVoiceChannelActionSheet = function hideVoiceChannelActionSheet(closure_0) {
-  importDefault(4253).hideActionSheet("" + c17 + "-" + closure_0.id);
+  require("../../modules/action_sheet/native/ActionSheetActionCreators.tsx").hideActionSheet("" + c17 + "-" + closure_0.id);
 };
 export const dismissVoiceChannelScreens = function dismissVoiceChannelScreens(channel, onExited) {
   const combined = "" + c17 + "-" + channel.id;
-  importDefault(4490).popWithKey(combined, onExited);
+  require("../../actions/ModalActionCreators.tsx").popWithKey(combined, onExited);
   if (key.getKey() === combined) {
-    importDefault(4253).hideActionSheet();
-    const tmp2Result = importDefault(4253);
+    require("../../modules/action_sheet/native/ActionSheetActionCreators.tsx").hideActionSheet();
+    const tmp2Result = require("../../modules/action_sheet/native/ActionSheetActionCreators.tsx");
   }
 };
 export { monkeyPatchCall };
 export const showGuardCallAlert = function showGuardCallAlert(arg0) {
   const _require = arg0;
-  let obj = importDefault(4624);
+  let obj = require("../../actions/native/AlertActionCreators.tsx");
   obj = { title: null, body: null, cancelText: null, onConfirm: null, onCancel: null };
-  const intl = _require(1236).intl;
-  obj[0] = intl.string(_require(1236).t["91WuJ9"]);
-  const intl2 = _require(1236).intl;
-  obj[1] = intl2.string(_require(1236).t["Rs+Vk1"]);
-  const intl3 = _require(1236).intl;
-  obj[2] = intl3.string(_require(1236).t["ETE/oC"]);
+  const intl = _require("../../intl/index.native.tsx").intl;
+  obj[0] = intl.string(_require("../../intl/index.native.tsx").t["91WuJ9"]);
+  const intl2 = _require("../../intl/index.native.tsx").intl;
+  obj[1] = intl2.string(_require("../../intl/index.native.tsx").t["Rs+Vk1"]);
+  const intl3 = _require("../../intl/index.native.tsx").intl;
+  obj[2] = intl3.string(_require("../../intl/index.native.tsx").t["ETE/oC"]);
   obj[3] = function onConfirm() {
     return callback();
   };
@@ -596,14 +596,14 @@ export const navigateToVoiceChannel = function navigateToVoiceChannel(channel, L
   if (channel.isPrivate()) {
     openChannelCallModal(channel);
   } else if (channel.isGuildStageVoice()) {
-    require(7697) /* openStageChannelSettings */.openStageChannel(channel);
-    const obj2 = require(7697) /* openStageChannelSettings */;
+    require("../../modules/stage_channels/StageChannelActionCreatorExtras.native.tsx") /* openStageChannelSettings */.openStageChannel(channel);
+    const obj2 = require("../../modules/stage_channels/StageChannelActionCreatorExtras.native.tsx") /* openStageChannelSettings */;
   } else {
     const _HermesInternal = HermesInternal;
     const combined = "" + c17 + "-" + channel.id;
     if (!obj.isModalOpen(combined)) {
       openChannelCallModal(channel);
     }
-    obj = require(4136) /* navigationToRootTabHelper */;
+    obj = require("../../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */;
   }
 };

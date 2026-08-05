@@ -157,7 +157,7 @@ function getItemKey(key) {
   return key.key;
 }
 function wrapChildren(children) {
-  return jsx(require(1297) /* Button */.NonExpandingOverlayView, { children });
+  return jsx(require("../../../design/void/native.tsx") /* Button */.NonExpandingOverlayView, { children });
 }
 let c3 = importAllResult;
 let obj = { container: null };

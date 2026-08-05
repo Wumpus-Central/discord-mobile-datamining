@@ -17,7 +17,7 @@ export default function useCreateThread(arg0) {
   let useDefaultThreadName;
   let analyticsLocations;
   ({ parentChannel, parentMessageId, threadSettings, privateThreadMode, location: _location, onThreadCreated, useDefaultThreadName } = arg0);
-  analyticsLocations = importDefault(5610)().analyticsLocations;
+  analyticsLocations = require("../../app_analytics/useAnalyticsLocations.tsx")().analyticsLocations;
   let obj = analyticsLocations(8165);
   obj = {
     parentChannel,
@@ -110,7 +110,7 @@ export const useCreateForumPost = function useCreateForumPost(parentChannel) {
     }
     return applyArgumentsResult;
   }, items);
-  let obj = _require(8165);
+  let obj = _require("../ThreadCreationHooks.tsx");
   obj = { parentChannel, name: null, appliedTags: null, analyticsLocations: null, onThreadCreated: null, upload: null };
   let str;
   if (threadSettings != null) {

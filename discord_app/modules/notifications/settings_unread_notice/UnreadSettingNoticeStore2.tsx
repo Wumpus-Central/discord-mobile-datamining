@@ -43,7 +43,7 @@ function startInterval() {
       if (flag) {
         closure_21.emitChange();
       }
-    }, 15 * importDefault(687).Millis.SECOND);
+    }, 15 * require("../../../utils/Durations.tsx").Millis.SECOND);
   }
   return false;
 }
@@ -71,8 +71,8 @@ function shouldTrackChannel(channelId) {
                 if (!tmp9) {
                   let tmp11 = null == tmp7.flags;
                   if (!tmp11) {
-                    tmp11 = !require(1384) /* hasFlag */.hasAnyFlag(tmp7.flags, constants.UNREADS_ALL_MESSAGES | constants.UNREADS_ONLY_MENTIONS);
-                    const obj2 = require(1384) /* hasFlag */;
+                    tmp11 = !require("../../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasAnyFlag(tmp7.flags, constants.UNREADS_ALL_MESSAGES | constants.UNREADS_ONLY_MENTIONS);
+                    const obj2 = require("../../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
                   }
                   tmp9 = !tmp11;
                 }
@@ -96,8 +96,8 @@ function shouldTrackChannel(channelId) {
                   if (!tmp18) {
                     let tmp20 = null == tmp16.flags;
                     if (!tmp20) {
-                      tmp20 = !require(1384) /* hasFlag */.hasAnyFlag(tmp16.flags, constants.UNREADS_ALL_MESSAGES | constants.UNREADS_ONLY_MENTIONS);
-                      const obj3 = require(1384) /* hasFlag */;
+                      tmp20 = !require("../../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasAnyFlag(tmp16.flags, constants.UNREADS_ALL_MESSAGES | constants.UNREADS_ONLY_MENTIONS);
+                      const obj3 = require("../../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
                     }
                     tmp18 = !tmp20;
                   }
@@ -206,9 +206,9 @@ prototype["maybeAutoUpgradeChannel"] = function maybeAutoUpgradeChannel(id) {
         const channels = closure_14.channels;
         delete tmp[tmp2];
         set.add(id);
-        const result = require(9741) /* useChannelPresetSettings */.updateChannelUnreadSetting(basicChannel.guild_id, basicChannel.id, UnreadSetting.ALL_MESSAGES);
+        const result = require("../settings/utils/notficationSettingsChannelFlagUtils.tsx") /* useChannelPresetSettings */.updateChannelUnreadSetting(basicChannel.guild_id, basicChannel.id, UnreadSetting.ALL_MESSAGES);
         flag2 = true;
-        let obj = require(9741) /* useChannelPresetSettings */;
+        let obj = require("../settings/utils/notficationSettingsChannelFlagUtils.tsx") /* useChannelPresetSettings */;
       }
       tmp6 = flag2;
     }
@@ -230,7 +230,7 @@ const unreadSettingNoticeStore2Class = new UnreadSettingNoticeStore2Class(requir
         }
         const _Date = Date;
         const timestamp = Date.now();
-        if (closure_14.channels[channelId].lastActionTime <= timestamp - importDefault(687).Millis.DAY) {
+        if (closure_14.channels[channelId].lastActionTime <= timestamp - require("../../../utils/Durations.tsx").Millis.DAY) {
           const _Date2 = Date;
           const timestamp1 = Date.now();
           tmp5.lastActionTime = timestamp1;
@@ -280,10 +280,10 @@ const unreadSettingNoticeStore2Class = new UnreadSettingNoticeStore2Class(requir
         if (flag) {
           closure_21.emitChange();
         }
-      }, 15 * importDefault(687).Millis.SECOND);
+      }, 15 * require("../../../utils/Durations.tsx").Millis.SECOND);
     }
     let closure_0 = Date.now() - WEEK;
-    const item = importDefault(11).forEach(closure_14.channels, (lastActionTime) => {
+    const item = require("../../../utils/SnowflakeUtils.tsx").forEach(closure_14.channels, (lastActionTime) => {
       if (lastActionTime.lastActionTime < closure_0) {
         const channels = outer1_14.channels;
         delete tmp[tmp2];

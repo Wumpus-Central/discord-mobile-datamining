@@ -221,7 +221,7 @@ let obj = {
     })();
   },
   ackPins(channelId) {
-    let obj = importDefault(709);
+    let obj = require("../Dispatcher.tsx");
     obj = { type: "CHANNEL_PINS_ACK", channelId };
     obj.dispatch(obj);
   },
@@ -272,12 +272,12 @@ let obj = {
       tmp = flag2;
     }
     if (tmp) {
-      let obj = importDefault(709);
+      let obj = require("../Dispatcher.tsx");
       obj = { type: "LOAD_PINNED_MESSAGES", channelId: null, reset: null };
       obj[1] = channelId;
       obj[2] = flag;
       obj.dispatch(obj);
-      const HTTP = _require(530).HTTP;
+      const HTTP = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
       obj = { url: null, query: null, retries: 2, oldFormErrors: true, rejectWithError: true };
       obj[0] = closure_7.PINS(channelId);
       const obj1 = { limit: null, before: null };

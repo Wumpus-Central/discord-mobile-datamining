@@ -27,7 +27,7 @@ export default function OfficialConnectionIcon(arg0) {
   ({ guildId, displayRoleIcon } = arg0);
   const tmp = callback3();
   let obj = { width: size, height: size };
-  let obj1 = require(5634) /* useRoleIcon */;
+  let obj1 = require("../../guild_boosting/native/RoleIconUtils.tsx") /* useRoleIcon */;
   obj = { guildId, roleId: null, size: null };
   if (roleId == null) {
     let id;
@@ -61,7 +61,7 @@ export default function OfficialConnectionIcon(arg0) {
   if (roleColor == null) {
     roleColor = closure_4;
   }
-  let PRIMARY_630 = importDefault(712).unsafe_rawColors.WHITE;
+  let PRIMARY_630 = require("../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.WHITE;
   let tmp2Result = tmp2(688);
   tmp2Result = tmp2(688);
   if (tmp2Result.getDarkness(hex2intResult) < 0.3) {
@@ -71,16 +71,16 @@ export default function OfficialConnectionIcon(arg0) {
   items1 = [style, obj];
   const obj2 = { style: items2, size: null, source: null, color: null };
   items2 = [tmp.verifiedCheck, obj];
-  obj2[1] = require(1297) /* Button */.Icon.Sizes.CUSTOM;
-  obj2[2] = importDefault(10954);
+  obj2[1] = require("../../../design/void/native.tsx") /* Button */.Icon.Sizes.CUSTOM;
+  obj2[2] = require("../../../../_runtime/10954_registerAsset.js");
   obj2[3] = roleColor;
-  const items3 = [callback(require(1297) /* Button */.Icon, obj2), ];
+  const items3 = [callback(require("../../../design/void/native.tsx") /* Button */.Icon, obj2), ];
   const obj3 = { style: items4, size: null, source: null, color: null };
   items4 = [tmp.verifiedCheck, obj];
-  obj3[1] = require(1297) /* Button */.Icon.Sizes.CUSTOM;
-  obj3[2] = importDefault(10955);
+  obj3[1] = require("../../../design/void/native.tsx") /* Button */.Icon.Sizes.CUSTOM;
+  obj3[2] = require("../../../../_runtime/10955_registerAsset.js");
   obj3[3] = PRIMARY_630;
-  items3[1] = callback(require(1297) /* Button */.Icon, obj3);
+  items3[1] = callback(require("../../../design/void/native.tsx") /* Button */.Icon, obj3);
   obj1[1] = items3;
   return callback2(View, obj1);
 };

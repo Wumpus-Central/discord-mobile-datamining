@@ -17,7 +17,7 @@ function updateWithLatestInvite(channelId, arg1) {
     guild_id = channel.guild_id;
   }
   guild = guild.getGuild(guild_id);
-  let obj = require(8991) /* getDefaultInviteExpiration */;
+  let obj = require("../modules/instant_invite/DefaultInviteExpirationExperiments.tsx") /* getDefaultInviteExpiration */;
   let maxAge = obj.getDefaultInviteExpiration({ guild });
   invite = invite.getInvite(channelId, { targetType, targetUserId, targetApplicationId });
   obj = { channelId, maxAge: null, maxUses: null, temporary: null, flags: null, targetType: null, targetUserId: null, targetApplicationId: null, roleIds: null };
@@ -154,7 +154,7 @@ const createInviteModalStore = new CreateInviteModalStore(require("dispatcher"),
   CREATE_INVITE_MODAL_GENERATE_INVITE_SUCCESS: function handleGenerateInviteSuccess(channelId) {
     let c4 = null;
     let c15 = false;
-    importDefault(38)(null != closure_6, "No invite settings for generated invite");
+    require("../../_runtime/metro/00038__.js")(null != closure_6, "No invite settings for generated invite");
     updateWithLatestInvite(channelId.channelId, { targetType: closure_6.targetType, targetUserId: closure_6.targetUserId, targetApplicationId: closure_6.targetApplicationId });
   },
   CREATE_INVITE_MODAL_GENERATE_INVITE_FAILURE: function handleGenerateInviteFailure(message) {

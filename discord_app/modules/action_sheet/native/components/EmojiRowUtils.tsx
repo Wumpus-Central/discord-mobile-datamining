@@ -22,8 +22,8 @@ export const shouldShowEmojiRow = function shouldShowEmojiRow(closure_8, message
     tmp = message.type !== constants3.THREAD_STARTER_MESSAGE;
   }
   if (tmp) {
-    tmp = !require(1384) /* hasFlag */.hasFlag(message.flags, constants.EPHEMERAL);
-    const obj = require(1384) /* hasFlag */;
+    tmp = !require("../../../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(message.flags, constants.EPHEMERAL);
+    const obj = require("../../../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
   }
   return tmp;
 };

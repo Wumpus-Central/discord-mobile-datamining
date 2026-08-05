@@ -16,7 +16,7 @@ obj = { tts: obj, me: obj, tableflip: obj1, unflip: obj2, shrug: obj3, nick: obj
 obj = {
   action() {
     const obj = { tts: null };
-    const EnableTTSCommand = require(3958) /* explicitContentFromProto */.EnableTTSCommand;
+    const EnableTTSCommand = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.EnableTTSCommand;
     obj[0] = EnableTTSCommand.getSetting();
     return obj;
   }
@@ -40,8 +40,8 @@ obj5[1] = function action(str, channel) {
           const trimmed = str.trim();
           const byName = disambiguatedEmojiContext.getByName(trimmed.slice(2, -1));
           if (null != byName) {
-            const obj3 = require(7143) /* checkReactionResponse */;
-            obj3.addReaction(channel.id, lastResult.id, require(3924) /* MAX_REACTIONS */.toReactionEmoji(byName));
+            const obj3 = require("../reactions/ReactionActionCreators.tsx") /* checkReactionResponse */;
+            obj3.addReaction(channel.id, lastResult.id, require("../reactions/ReactionUtils.tsx") /* MAX_REACTIONS */.toReactionEmoji(byName));
             return { content: "" };
           }
         }
@@ -77,7 +77,7 @@ obj4 = {
   action(arg0, channel) {
     channel = channel.channel;
     if (null != channel.guild_id) {
-      const obj = importDefault(8163);
+      const obj = require("../../actions/ChangeNicknameActionCreators.tsx");
       obj.changeNickname(channel.guild_id, channel.id, closure_8, arg0);
       return { content: "" };
     }
@@ -114,7 +114,7 @@ obj6[1] = function action(str, channel) {
         }
         if (null == str7) {
           if (0 === lastEditableMessage.attachments.length) {
-            let obj = importDefault(6826);
+            let obj = require("../../actions/MessageActionCreators.tsx");
             obj.deleteMessage(channel.id, lastEditableMessage.id);
           }
           return { content: "" };
@@ -122,8 +122,8 @@ obj6[1] = function action(str, channel) {
         if (str7 !== lastEditableMessage.content) {
           obj = { content: null };
           obj[0] = str7;
-          importDefault(6826).editMessage(channel.id, lastEditableMessage.id, obj);
-          const obj2 = importDefault(6826);
+          require("../../actions/MessageActionCreators.tsx").editMessage(channel.id, lastEditableMessage.id, obj);
+          const obj2 = require("../../actions/MessageActionCreators.tsx");
         }
         const tmp5 = callback(Array.from(match), 4);
       }
@@ -162,7 +162,7 @@ export const handleLegacyCommands = function handleLegacyCommands(text, arg1) {
         let tmp2 = arg1;
         let tmp3 = importDefault;
         let tmp4 = dependencyMap;
-        let obj = importDefault(4479);
+        let obj = require("../app_analytics/AppAnalyticsUtils.tsx");
         let tmp5 = constants;
         obj = { command: null };
         obj[0] = key10005;

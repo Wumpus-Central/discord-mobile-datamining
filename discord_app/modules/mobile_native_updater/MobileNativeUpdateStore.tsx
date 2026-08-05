@@ -18,17 +18,17 @@ class MobileNativeUpdateStore extends Store {
 const prototype = MobileNativeUpdateStore.prototype;
 prototype["checkForNewerBuild"] = function checkForNewerBuild() {
   if (true !== checking.checking) {
-    importDefault(709).dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_STARTED" });
-    let obj = importDefault(709);
-    const obj2 = require(13160) /* _checkForNewerBuild */;
-    require(13160) /* _checkForNewerBuild */.checkForNewerBuild().then((newBuild) => {
+    require("../../Dispatcher.tsx").dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_STARTED" });
+    let obj = require("../../Dispatcher.tsx");
+    const obj2 = require("MobileNativeUpdateUtils.tsx") /* _checkForNewerBuild */;
+    require("MobileNativeUpdateUtils.tsx") /* _checkForNewerBuild */.checkForNewerBuild().then((newBuild) => {
       let obj = callback(709);
       obj = { type: "MOBILE_NATIVE_UPDATE_CHECK_FINISHED", newBuild };
       obj.dispatch(obj);
     }, () => {
       callback(709).dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_FAILED" });
     });
-    const checkForNewerBuildResult = require(13160) /* _checkForNewerBuild */.checkForNewerBuild();
+    const checkForNewerBuildResult = require("MobileNativeUpdateUtils.tsx") /* _checkForNewerBuild */.checkForNewerBuild();
   }
 };
 prototype["ensureInitialized"] = function ensureInitialized() {

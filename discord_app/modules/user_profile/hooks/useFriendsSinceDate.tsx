@@ -9,17 +9,17 @@ const result = require("ME").fileFinishedImporting("modules/user_profile/hooks/u
 export const useFriendsSinceDate = function useFriendsSinceDate(userId) {
   const _require = userId;
   const items = [_getSystemLocale];
-  const stateFromStores = _require(647).useStateFromStores(items, () => locale.locale);
-  const obj = _require(647);
+  const stateFromStores = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => locale.locale);
+  const obj = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx");
   const items1 = [upsertRelationship];
   const items2 = [userId];
-  const stateFromStores1 = _require(647).useStateFromStores(items1, () => {
+  const stateFromStores1 = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items1, () => {
     let since = null;
     if (outer1_3.getRelationshipType(closure_0) === outer1_4.FRIEND) {
       since = outer1_3.getSince(closure_0);
     }
     return since;
   }, items2);
-  const obj2 = _require(647);
-  return _require(5091).getCreatedAtDate(stateFromStores1, stateFromStores);
+  const obj2 = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx");
+  return _require("../../connections/ConnectionsUtils.tsx").getCreatedAtDate(stateFromStores1, stateFromStores);
 };

@@ -46,7 +46,7 @@ function getVoiceInviteEmbedRenderInfo(state) {
               return tmp4;
             }
           }
-          obj5 = require(7115) /* InviteTypes */;
+          obj5 = require("../../instant_invite/InviteTypeUtils.tsx") /* InviteTypes */;
         }
       }
     }

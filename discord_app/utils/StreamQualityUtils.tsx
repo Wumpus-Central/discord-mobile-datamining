@@ -80,19 +80,19 @@ export const getPremiumRequirement = function getPremiumRequirement(arg0, arg1, 
 };
 export const getResolutionText = function getResolutionText(maxResolution) {
   if (maxResolution.type === ResolutionTypes.SOURCE) {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    let stringResult = intl2.string(require(1236) /* getSystemLocale */.t.XjXqzh);
+    const intl2 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    let stringResult = intl2.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.XjXqzh);
   } else {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj = { resolution: null };
     obj[0] = maxResolution.height;
-    stringResult = intl.formatToPlainString(require(1236) /* getSystemLocale */.t.TEOC0I, obj);
+    stringResult = intl.formatToPlainString(require("../intl/index.native.tsx") /* getSystemLocale */.t.TEOC0I, obj);
   }
   return stringResult;
 };
 export const getFPSText = function getFPSText(maxFrameRate) {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.Qb44XH, { fps: maxFrameRate });
+  const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+  return intl.formatToPlainString(require("../intl/index.native.tsx") /* getSystemLocale */.t.Qb44XH, { fps: maxFrameRate });
 };
 export const getMaxQuality = function getMaxQuality(participant) {
   let tmp = null;
@@ -164,7 +164,7 @@ export const trackStreamSettingsUpdate = function trackStreamSettingsUpdate(pres
   if (null != guildId) {
     guild = guild.getGuild(guildId);
   }
-  let obj = importDefault(698);
+  let obj = require("AnalyticsUtils.tsx");
   let premiumType;
   if (currentUser != null) {
     premiumType = currentUser.premiumType;

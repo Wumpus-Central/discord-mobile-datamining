@@ -18,11 +18,11 @@ export const useMaybeFetchCollectiblesCategoriesShared = function useMaybeFetchC
   const _require = arg0;
   const dependencyMap = noOp;
   const callback = arg2;
-  let obj = _require(589);
+  let obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
   let items = [getHash];
   const stateFromStores = obj.useStateFromStores(items, () => tmp4.hasLoadedExperiments);
   const items1 = [updateCategoriesAndProducts];
-  const tmp2 = callback(_require(589).useStateFromStoresArray(items1, () => {
+  const tmp2 = callback(_require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items1, () => {
     let lastErrorTimestamp;
     const items = [, , , , , , ];
     ({ isFetchingCategories: arr[0], lastFetchOptions: arr[1], error: arr[2], lastErrorTimestamp } = updateCategoriesAndProducts);

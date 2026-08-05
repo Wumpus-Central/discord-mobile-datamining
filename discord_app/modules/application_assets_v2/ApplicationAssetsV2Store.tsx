@@ -6,7 +6,7 @@ function handleFeaturedOrDeveloperFetchSuccess(configs) {
   const values = Object.values(configs.configs);
   const _require = false;
   const flatResult = values.flat();
-  const entries = Object.entries(_require(12).groupBy(flatResult, (application_id) => application_id.application_id));
+  const entries = Object.entries(_require("../../../_runtime/00012_apply.js").groupBy(flatResult, (application_id) => application_id.application_id));
   const mapped = entries.map((arg0) => {
     let obj;
     let tmp;
@@ -70,7 +70,7 @@ const applicationAssetsV2Store = new ApplicationAssetsV2Store(require("dispatche
   },
   APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS: function handleFetchSuccess(configs) {
     const _require = false;
-    const entries = Object.entries(_require(12).groupBy(configs.configs, (application_id) => application_id.application_id));
+    const entries = Object.entries(_require("../../../_runtime/00012_apply.js").groupBy(configs.configs, (application_id) => application_id.application_id));
     const mapped = entries.map((arg0) => {
       let obj;
       let tmp;

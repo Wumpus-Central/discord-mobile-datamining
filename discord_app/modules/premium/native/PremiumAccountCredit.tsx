@@ -19,10 +19,10 @@ function AccountCreditTier(arg0) {
   ({ planId, currentSubscription } = arg0);
   ({ months, shouldAddDivider, unconsumedFractionalPremiumUnits, hasPremiumGroup } = arg0);
   const tmp = createCacheKey();
-  let obj = require(3931) /* getPremiumPlanItem */;
-  let obj1 = importDefault(3931);
+  let obj = require("../../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */;
+  let obj1 = require("../../../utils/PremiumUtils.tsx");
   const result = obj.castPremiumSubscriptionAsSkuId(obj1.getSkuIdForPlan(planId));
-  let obj2 = importDefault(3931);
+  let obj2 = require("../../../utils/PremiumUtils.tsx");
   const tierDisplayNameByPlanId = obj2.getTierDisplayNameByPlanId(planId);
   if (hasPremiumGroup) {
     const intl3 = tmp2(1236).intl;
@@ -62,14 +62,14 @@ function AccountCreditTier(arg0) {
   obj1 = { style: items, children: null };
   items[1] = divider;
   obj2 = { size: null, skuId: null };
-  obj2[0] = require(5620) /* GameIcon */.GameIconSizes.SMALL;
+  obj2[0] = require("../../game_detection/native/GameIcon.tsx") /* GameIcon */.GameIconSizes.SMALL;
   obj2[1] = result;
-  const items1 = [callback(importDefault(5620), obj2), , ];
+  const items1 = [callback(require("../../game_detection/native/GameIcon.tsx"), obj2), , ];
   const obj3 = { style: tmp.textContainer, children: null };
   const obj4 = { style: tmp.headerText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl4 = tmp2(1236).intl;
-  obj4[3] = intl4.format(require(1236) /* getSystemLocale */.t.LzobT9, { planName: tierDisplayNameByPlanId });
-  const items2 = [callback(require(4281) /* Text */.Text, obj4), ];
+  obj4[3] = intl4.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.LzobT9, { planName: tierDisplayNameByPlanId });
+  const items2 = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj4), ];
   let tmp21Result = !tmp17;
   if (!(null != currentSubscription && currentSubscription.isPurchasedExternally)) {
     const obj5 = { style: null, variant: "text-xs/medium", color: "text-default", children: null };
@@ -82,8 +82,8 @@ function AccountCreditTier(arg0) {
   items1[1] = closure_7(View, obj3);
   const obj6 = { style: tmp.timeText, variant: "text-md/medium", color: "text-default", children: null };
   const intl5 = tmp2(1236).intl;
-  obj6[3] = intl5.format(require(1236) /* getSystemLocale */.t["ess/xl"], { count: months });
-  items1[2] = callback(require(4281) /* Text */.Text, obj6);
+  obj6[3] = intl5.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["ess/xl"], { count: months });
+  items1[2] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj6);
   obj1[1] = items1;
   return closure_7(View, obj1);
 }
@@ -170,7 +170,7 @@ export default function PremiumAccountCredit(currentSubscription) {
       obj[1] = items1;
       return closure_7(c3, obj);
     }
-    obj8 = importDefault(3931);
+    obj8 = require("../../../utils/PremiumUtils.tsx");
     tmp11 = importDefault;
   }
   return null;

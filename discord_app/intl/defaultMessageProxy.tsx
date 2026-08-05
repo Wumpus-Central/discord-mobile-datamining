@@ -1,5 +1,5 @@
 // discord_app/intl/defaultMessageProxy.tsx
-import module_1274 from "module_1274";
+import 01274__ from "../../_runtime/metro/01274__.js";
 import importDefaultResult from "messagesProxy";
 import chainMessagesObjectsResult from "messagesProxy";
 

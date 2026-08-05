@@ -34,7 +34,7 @@ export default function InAppReportsBottomButton(button) {
       const intl2 = tmp17(1236).intl;
       const string = intl2.string;
       if (isModeratorReport) {
-        let stringResult = string(importDefault(2385).ZUyreS);
+        let stringResult = string(require("../../../report_to_mod/ReportToMod.messages.js").ZUyreS);
       } else {
         const intl3 = tmp17(1236).intl;
         const stringResult1 = string(tmp17(1236).t["G+vU89"]);
@@ -55,7 +55,7 @@ export default function InAppReportsBottomButton(button) {
       const intl4 = tmp17(1236).intl;
       const string2 = intl4.string;
       if (isModeratorReport) {
-        let string2Result = string2(importDefault(2385).psKFdJ);
+        let string2Result = string2(require("../../../report_to_mod/ReportToMod.messages.js").psKFdJ);
       } else {
         string2Result = string2(tmp17(1236).t.h6D8Vy);
       }

@@ -354,7 +354,7 @@ const memoResult = importAllResult.memo(function GuildsBarDragPreview() {
       }
       return null;
     }
-  }, require(3898) /* isIterable */.shallow);
+  }, require("../../../../_runtime/03898_isIterable.js") /* isIterable */.shallow);
   let tmp2 = null;
   if (null != tmp) {
     let obj = {};

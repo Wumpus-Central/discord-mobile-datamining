@@ -101,14 +101,14 @@ export const transformSearchableSelectOptions = function transformSearchableSele
       return null;
     }
   });
-  return mapped.filter(_require(1351).isNotNullish);
+  return mapped.filter(_require("../../../utils/GlobalUtils.tsx").isNotNullish);
 };
 export const getChannelIconData = function getChannelIconData(channel, guild) {
   if (channel.type === constants.GUILD_CATEGORY) {
-    let channelIconWithGuild = importDefault(8038);
+    let channelIconWithGuild = require("../../../../_runtime/08038_registerAsset.js");
   } else {
-    channelIconWithGuild = require(4745) /* getChannelIcon */.getChannelIconWithGuild(channel, guild);
-    const obj = require(4745) /* getChannelIcon */;
+    channelIconWithGuild = require("../../../utils/native/ChannelUtils.tsx") /* getChannelIcon */.getChannelIconWithGuild(channel, guild);
+    const obj = require("../../../utils/native/ChannelUtils.tsx") /* getChannelIcon */;
   }
   return channelIconWithGuild;
 };

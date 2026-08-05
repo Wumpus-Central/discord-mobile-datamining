@@ -4,9 +4,9 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/guild_
 
 export default {
   open() {
-    importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(16568, dependencyMap.paths), undefined, GUILD_SETTINGS_ROLE_CREATE_MODAL_KEY);
+    require("../../../../actions/ModalActionCreators.tsx").pushLazy(require("../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(16568, dependencyMap.paths), undefined, GUILD_SETTINGS_ROLE_CREATE_MODAL_KEY);
   },
   close() {
-    importDefault(4490).popWithKey(GUILD_SETTINGS_ROLE_CREATE_MODAL_KEY);
+    require("../../../../actions/ModalActionCreators.tsx").popWithKey(GUILD_SETTINGS_ROLE_CREATE_MODAL_KEY);
   }
 };

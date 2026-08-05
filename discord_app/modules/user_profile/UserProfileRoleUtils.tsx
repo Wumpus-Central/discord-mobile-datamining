@@ -14,8 +14,8 @@ export const sortRolesByVerification = function sortRolesByVerification(tags, ta
   }
   if (undefined === guild_connections) {
     if (tmp3) {
-      let num2 = require(1939) /* compareGuildRoles */.compareGuildRoles(tags, tags2);
-      const obj = require(1939) /* compareGuildRoles */;
+      let num2 = require("../../utils/GuildRoleUtils.tsx") /* compareGuildRoles */.compareGuildRoles(tags, tags2);
+      const obj = require("../../utils/GuildRoleUtils.tsx") /* compareGuildRoles */;
     } else {
       num2 = -1;
     }

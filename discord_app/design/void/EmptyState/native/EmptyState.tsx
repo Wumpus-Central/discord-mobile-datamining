@@ -26,7 +26,7 @@ export default function EmptyState(Illustration) {
   let children;
   let title;
   const tmp = createCacheKey();
-  require(4131) /* AccessibilityAnnouncer */;
+  require("../../../shared.tsx") /* AccessibilityAnnouncer */;
   if (null != Illustration.Illustration) {
     let obj = { accessible: false, importantForAccessibility: "no", accessibilityRole: "none", resizeMode: "contain", style: null };
     const items = [tmp.emptyImage, Illustration.imageStyle];

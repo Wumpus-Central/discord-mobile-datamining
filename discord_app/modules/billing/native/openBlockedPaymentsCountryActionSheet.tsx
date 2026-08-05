@@ -2,7 +2,7 @@
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/billing/native/openBlockedPaymentsCountryActionSheet.tsx");
 
 export default function openBlockedPaymentsCountryActionSheet() {
-  importDefault(4253).hideActionSheet();
-  const obj = importDefault(4253);
-  importDefault(4253).openLazy(require(1959) /* asyncRequireImpl */(7367, dependencyMap.paths), "BlockedPaymentsCountryActionSheet");
+  require("../../action_sheet/native/ActionSheetActionCreators.tsx").hideActionSheet();
+  const obj = require("../../action_sheet/native/ActionSheetActionCreators.tsx");
+  require("../../action_sheet/native/ActionSheetActionCreators.tsx").openLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(7367, dependencyMap.paths), "BlockedPaymentsCountryActionSheet");
 };

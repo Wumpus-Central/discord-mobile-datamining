@@ -20,10 +20,10 @@ const result = require("ContentDismissActionType").fileFinishedImporting("module
 
 export default function UserProfileWidgetsBoardEditNotice() {
   const _require = createCacheKey();
-  importDefault = importDefault(8757)();
-  const dependencyMap = importDefault(1348)("UserProfileWidgetsBoardEditNotice");
+  importDefault = require("UserProfileSharedStyles.tsx")();
+  const dependencyMap = require("../../themes/experiments/MobileVisualRefreshExperiment.tsx")("UserProfileWidgetsBoardEditNotice");
   let obj = { contentTypes: null, bypassAutoDismiss: true, children: null };
-  let items = [_require(1358).DismissibleContent.USER_PROFILE_WIDGETS_BOARD_MOBILE_EDIT_NOTICE];
+  let items = [_require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleContent.USER_PROFILE_WIDGETS_BOARD_MOBILE_EDIT_NOTICE];
   obj[0] = items;
   obj[2] = function children(markAsDismissed) {
     markAsDismissed = markAsDismissed.markAsDismissed;
@@ -71,5 +71,5 @@ export default function UserProfileWidgetsBoardEditNotice() {
     }
     return tmp4Result;
   };
-  return callback(importDefault(9916), obj);
+  return callback(require("../../dismissible_content/native/SelectedDismissibleContent.tsx"), obj);
 };

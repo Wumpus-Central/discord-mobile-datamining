@@ -464,8 +464,8 @@ const relationshipStore = new RelationshipStore(require("dispatcher"), {
       if (tmp48) {
         const obj3 = { type: "FRIEND_REQUEST_ACCEPTED", user: null };
         obj3[1] = relationship.relationship.user;
-        importDefault(709).dispatch(obj3);
-        const obj11 = importDefault(709);
+        require("../Dispatcher.tsx").dispatch(obj3);
+        const obj11 = require("../Dispatcher.tsx");
       }
     } else {
       if (null != value) {

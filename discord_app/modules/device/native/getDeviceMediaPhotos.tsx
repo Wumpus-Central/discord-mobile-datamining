@@ -21,9 +21,9 @@ export default function getDeviceMediaPhotos(arg0) {
       callback(table[2]).captureException(arg0, { tags: { source: "DEVICE_MEDIA" } });
     };
   }
-  let obj = require(500) /* set */;
+  let obj = require("../../../utils/PlatformUtils.tsx") /* set */;
   if (obj.isIOS()) {
-    const obj3 = importDefault(9935);
+    const obj3 = require("DCDPhotos.tsx");
     if (obj3 != null) {
       obj = { first: null, groupTypes: "Recents", assetType: "All", after: null, extensions: null };
       obj[0] = batchSize;

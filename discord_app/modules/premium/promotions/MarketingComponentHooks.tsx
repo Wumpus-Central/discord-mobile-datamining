@@ -5,10 +5,10 @@ const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/premium/promotions/MarketingComponentHooks.tsx");
 
 export const useThemeAndReducedMotionAwareAssetUrl = function useThemeAndReducedMotionAwareAssetUrl(asset, arg1) {
-  const tmp2 = importDefault(4221)();
+  const tmp2 = require("../../../hooks/useTheme.tsx")();
   const tmp3 = require;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
-  const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   if (null == asset) {
     return null;
   } else {

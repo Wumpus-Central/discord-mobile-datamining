@@ -51,7 +51,7 @@ export default function _default(subblock) {
   obj[1] = intl.formatToPlainString(subblock(1236).t.FNtLb3, obj1);
   const intl2 = tmp2(1236).intl;
   obj[2] = intl2.string(subblock(1236).t.F8ma9x);
-  obj2 = { radius: importDefault(712).radii.lg };
+  obj2 = { radius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.lg };
   obj[4] = obj2;
   obj[6] = function onPress() {
     let obj = navigation(table[15]);
@@ -104,7 +104,7 @@ export default function _default(subblock) {
     tmp11Result = tmp11(stateFromStores, obj3);
   }
   const items1 = [tmp11Result, ];
-  const tmp12 = importDefault(12085);
+  const tmp12 = require("VisibilitySensor.tsx");
   const tmp13 = closure_9;
   let result = subblock(6922).shouldShowLimitedTimeBadge(date);
   if (result) {

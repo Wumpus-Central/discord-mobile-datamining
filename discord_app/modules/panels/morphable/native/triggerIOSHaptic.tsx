@@ -5,7 +5,7 @@ let result = require("set").fileFinishedImporting("modules/panels/morphable/nati
 
 export default function triggerIOSHaptic() {
   if (IS_IOS) {
-    const result = require(4254) /* HapticFeedbackTypes */.triggerHapticFeedback(require(4254) /* HapticFeedbackTypes */.HapticFeedbackTypes.IMPACT_MEDIUM);
-    const obj = require(4254) /* HapticFeedbackTypes */;
+    const result = require("../../../haptics/HapticUtils.native.tsx") /* HapticFeedbackTypes */.triggerHapticFeedback(require("../../../haptics/HapticUtils.native.tsx") /* HapticFeedbackTypes */.HapticFeedbackTypes.IMPACT_MEDIUM);
+    const obj = require("../../../haptics/HapticUtils.native.tsx") /* HapticFeedbackTypes */;
   }
 };

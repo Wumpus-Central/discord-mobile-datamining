@@ -30,16 +30,16 @@ export const useCanReportRaid = function useCanReportRaid(guild) {
   const _require = guild;
   const items = [getUncachedChannelPermissions];
   const items1 = [guild];
-  const stateFromStores = _require(589).useStateFromStores(items, () => {
+  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (outer1_2 !== undefined) {
       return obj.can(outer1_5.BAN_MEMBERS, tmp) || obj.can(outer1_5.KICK_MEMBERS, tmp) || obj.can(outer1_5.MODERATE_MEMBERS, tmp) || obj.can(outer1_5.MANAGE_GUILD, tmp);
     }
   }, items1);
-  const obj = _require(589);
+  const obj = _require("../../../discord_common/js/packages/flux/index.tsx");
   const tmp = _require;
   const items2 = [computeAlertSettings];
   const items3 = [guild];
-  const stateFromStores1 = _require(589).useStateFromStores(items2, () => {
+  const stateFromStores1 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
     let guildIncident = null;
     if (null != closure_0) {
       guildIncident = outer1_3.getGuildIncident(tmp.id);
@@ -68,7 +68,7 @@ export const useCanEnableRaidAlerts = function useCanEnableRaidAlerts(arg0) {
   const _require = arg0;
   const items = [getUncachedChannelPermissions];
   const items1 = [arg0];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (outer1_2 !== undefined) {
       return outer1_2.can(outer1_5.MANAGE_GUILD, tmp);
     }
@@ -78,12 +78,12 @@ export const useShowMentionRaidLimitUpsell = function useShowMentionRaidLimitUps
   const _require = id;
   const items = [getUncachedChannelPermissions];
   const items1 = [id];
-  const stateFromStores = _require(589).useStateFromStores(items, () => {
+  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (outer1_2 !== undefined) {
       return outer1_2.can(outer1_5.MANAGE_GUILD, tmp);
     }
   }, items1);
-  const obj = _require(589);
+  const obj = _require("../../../discord_common/js/packages/flux/index.tsx");
   id = undefined;
   if (id != null) {
     id = id.id;
@@ -91,6 +91,6 @@ export const useShowMentionRaidLimitUpsell = function useShowMentionRaidLimitUps
   if (id == null) {
     id = closure_4;
   }
-  const obj2 = _require(9689);
-  return _require(9689).useIsMentionRaidExperimentEnabled(id, false) && stateFromStores;
+  const obj2 = _require("../guild_automod/ExperimentUtils.tsx");
+  return _require("../guild_automod/ExperimentUtils.tsx").useIsMentionRaidExperimentEnabled(id, false) && stateFromStores;
 };

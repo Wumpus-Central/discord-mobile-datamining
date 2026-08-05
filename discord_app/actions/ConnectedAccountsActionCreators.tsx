@@ -13,21 +13,21 @@ function callback(arg0, arg1) {
   if (arg2 === undefined) {
     flag = false;
   }
-  const HTTP = require(530) /* sendRequest */.HTTP;
+  const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
   let obj = { url: closure_6.CONNECTIONS_CALLBACK(arg0), body: null, oldFormErrors: true, rejectWithError: null };
   obj = {};
   const merged = Object.assign(arg1);
   obj.insecure = flag;
   obj.friend_sync = set.has(arg0);
   obj[1] = obj;
-  obj[3] = require(530) /* sendRequest */.rejectWithMigratedError();
+  obj[3] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
   return HTTP.post(obj);
 }
 ({ AbortCodes: c5, Endpoints: closure_6, FRIEND_SYNC_PLATFORM_TYPES: error, AnalyticEvents: metroImportAll } = ME);
 let c9 = new require("timestamp")("ConnectedAccounts");
 let obj = {
   fetch() {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     const value = HTTP.get({ url: closure_6.CONNECTIONS, oldFormErrors: true, rejectWithError: true });
     return value.then((accounts) => {
       let obj = callback(709);
@@ -96,7 +96,7 @@ let obj = {
   },
   callback,
   connect(arg0, arg1, name, location, friend_sync) {
-    let obj = importDefault(5094);
+    let obj = require("../utils/TrackedHTTPUtils.tsx");
     obj = { url: closure_6.CONNECTION(arg0, arg1), body: null, context: null, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { name, friend_sync: null };
     friend_sync = undefined;
@@ -109,23 +109,23 @@ let obj = {
     obj[1] = friend_sync;
     obj[1] = obj;
     obj[2] = { location };
-    const obj1 = { event: require(503) /* encodeProperties */.NetworkActionNames.USER_CONNECTIONS_UPDATE, properties: null };
+    const obj1 = { event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.NetworkActionNames.USER_CONNECTIONS_UPDATE, properties: null };
     obj1[1] = { name, friend_sync: set.has(arg0) };
     obj[4] = obj1;
     const obj2 = { name, friend_sync: set.has(arg0) };
-    obj[5] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[5] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return obj.put(obj);
   },
   disconnect(arg0, arg1) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     const obj = { url: closure_6.CONNECTION(arg0, arg1), oldFormErrors: true, rejectWithError: null };
-    obj[2] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[2] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.del(obj);
   },
   refresh(arg0, arg1) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     const obj = { url: closure_6.CONNECTION_REFRESH(arg0, arg1), oldFormErrors: true, rejectWithError: null };
-    obj[2] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[2] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.post(obj);
   },
   setVisibility(type, id, inProgressVisibility) {
@@ -141,24 +141,24 @@ let obj = {
     return this.update(type, id, { show_activity: closure_0 });
   },
   update(arg0, arg1, body) {
-    let obj = importDefault(5094);
+    let obj = require("../utils/TrackedHTTPUtils.tsx");
     obj = { url: closure_6.CONNECTION(arg0, arg1), body, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
-    obj = { event: require(503) /* encodeProperties */.NetworkActionNames.USER_CONNECTIONS_UPDATE, properties: null };
+    obj = { event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.NetworkActionNames.USER_CONNECTIONS_UPDATE, properties: null };
     const merged = Object.assign(body);
     obj[1] = {};
     obj[3] = obj;
-    obj[4] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[4] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return obj.patch(obj);
   },
   joinServer(id, arg1) {
     const _require = id;
     const importDefault = arg1;
-    let obj = importDefault(709);
+    let obj = require("../Dispatcher.tsx");
     obj = { type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId: id, joining: true };
     obj.dispatch(obj);
-    const HTTP = _require(530).HTTP;
+    const HTTP = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     obj = { url: closure_6.INTEGRATION_JOIN(id), oldFormErrors: true, rejectWithError: null };
-    obj[2] = _require(530).rejectWithMigratedError();
+    obj[2] = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
     HTTP.post(obj, (ok) => {
       let obj = callback(outer1_2[5]);
       obj = { type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId: closure_0, joining: false };
@@ -270,12 +270,12 @@ let obj = {
     })();
   },
   linkDispatchAuthCallback(arg0, arg1) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     let obj = { url: closure_6.CONNECTIONS_LINK_DISPATCH_AUTH_CALLBACK(arg0), body: null, oldFormErrors: true, rejectWithError: null };
     obj = {};
     const merged = Object.assign(arg1);
     obj[1] = obj;
-    obj[3] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[3] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.post(obj);
   },
   completeTwoWayLink(outer1_2, location, closure_0, outer1_1) {
@@ -361,10 +361,10 @@ let obj = {
     })();
   },
   sessionHandoff(arg0, state, code, openid_params, iss) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: closure_6.CONNECTIONS_SESSION_HANDOFF(arg0), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { state, code, openid_params, iss };
-    obj[3] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[3] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return HTTP.post(obj);
   },
   getHandoffStatus(arg0, state) {
@@ -372,7 +372,7 @@ let obj = {
     str.append("state", state);
     const result = closure_6.CONNECTIONS_SESSION_HANDOFF(arg0);
     const url = "" + result + "?" + str.toString();
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     const body = { state };
     return HTTP.get({ url, body, rejectWithError: true });
   }

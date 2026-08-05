@@ -11,9 +11,9 @@ export default function openGuildActionSheet(id) {
   if (arg1 === undefined) {
     flag = true;
   }
-  let obj = require(1865) /* getFavoritesAwareGuildName */;
+  let obj = require("../../favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
   if (!obj.isFavoritesGuildId(id.id)) {
-    let obj1 = importDefault(698);
+    let obj1 = require("../../../utils/AnalyticsUtils.tsx");
     obj = { type: "Guild Profile", guild_id: null };
     obj[1] = id.id;
     obj1.track(constants.OPEN_POPOUT, obj);

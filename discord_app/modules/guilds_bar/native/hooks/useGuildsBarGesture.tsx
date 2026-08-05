@@ -7,9 +7,9 @@ import insertUnsortedGuilds from "insertUnsortedGuilds";
 import { GuildsNodeType } from "insertUnsortedGuilds";
 import importDefaultResult from "withEqualityFn";
 import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE";
-import module_4146 from "module_4146";
-import module_4146 from "module_4146";
-import module_4146 from "module_4146";
+import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
+import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
+import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import apply from "module_1208";
 import apply from "module_1208";
 import importDefaultResult1 from "debounce";
@@ -60,26 +60,26 @@ function triggerHapticsAndAnnouncementsIfNecessary(type) {
         name = guild.name;
       }
       if (name == null) {
-        const intl11 = require(1236) /* getSystemLocale */.intl;
-        name = intl11.string(require(1236) /* getSystemLocale */.t.fKYRlM);
+        const intl11 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        name = intl11.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.fKYRlM);
       }
       let tmp39 = name;
     } else if (tmp38.FOLDER === type4) {
       let name4 = node.name;
       if (name4 == null) {
-        const intl10 = require(1236) /* getSystemLocale */.intl;
-        name4 = intl10.string(require(1236) /* getSystemLocale */.t.ebAnWE);
+        const intl10 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        name4 = intl10.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.ebAnWE);
       }
       tmp39 = name4;
     }
     if (null != tmp39) {
-      const AccessibilityAnnouncer = require(4131) /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
-      const intl12 = require(1236) /* getSystemLocale */.intl;
+      const AccessibilityAnnouncer = require("../../../../design/shared.tsx") /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
+      const intl12 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
       let obj = { itemName: null };
       obj[0] = tmp39;
-      AccessibilityAnnouncer.announce(intl12.formatToPlainString(require(1236) /* getSystemLocale */.t["vHD/Je"], obj));
+      AccessibilityAnnouncer.announce(intl12.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["vHD/Je"], obj));
     }
-    lib(require(4254) /* HapticFeedbackTypes */.HapticFeedbackTypes.DRAG_AND_DROP_START);
+    lib(require("../../../haptics/HapticUtils.native.tsx") /* HapticFeedbackTypes */.HapticFeedbackTypes.DRAG_AND_DROP_START);
     lib.flush();
   } else if ("drag-move" === type) {
     type = undefined;
@@ -114,7 +114,7 @@ function triggerHapticsAndAnnouncementsIfNecessary(type) {
     }
     if (tmp7 !== tmp8Result) {
       let fKYRlM = dependencyMap;
-      lib(require(4254) /* HapticFeedbackTypes */.HapticFeedbackTypes.DRAG_AND_DROP_MOVE);
+      lib(require("../../../haptics/HapticUtils.native.tsx") /* HapticFeedbackTypes */.HapticFeedbackTypes.DRAG_AND_DROP_MOVE);
       ({ dragNode, overNode, overState: overState2 } = type);
       if ("convert-before" !== overState2) {
         if ("convert-after" !== overState2) {
@@ -207,7 +207,7 @@ function triggerHapticsAndAnnouncementsIfNecessary(type) {
       }
       overNode = { itemName: null };
       overNode[0] = tmp33;
-      intl7.formatToPlainString(require(1236) /* getSystemLocale */.t.qiQ0QI, overNode);
+      intl7.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.qiQ0QI, overNode);
     } else {
       const overState = type.overState;
       let startsWithResult = null != overState;
@@ -221,12 +221,12 @@ function triggerHapticsAndAnnouncementsIfNecessary(type) {
     }
     tmp8Result = tmp8(type.dragNode, type.overNode, type.overState);
   } else if ("drag-drop" === type) {
-    lib(require(4254) /* HapticFeedbackTypes */.HapticFeedbackTypes.DRAG_AND_DROP_END);
+    lib(require("../../../haptics/HapticUtils.native.tsx") /* HapticFeedbackTypes */.HapticFeedbackTypes.DRAG_AND_DROP_END);
     lib.flush();
     lib2.flush();
-    const AccessibilityAnnouncer2 = require(4131) /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
-    const intl13 = require(1236) /* getSystemLocale */.intl;
-    AccessibilityAnnouncer2.announce(intl13.string(require(1236) /* getSystemLocale */.t.lMkmz7));
+    const AccessibilityAnnouncer2 = require("../../../../design/shared.tsx") /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
+    const intl13 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    AccessibilityAnnouncer2.announce(intl13.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.lMkmz7));
   }
   let tmp57;
   if ("drag-drop" !== type.type) {
@@ -272,7 +272,7 @@ function getItemAndNodeFromTouchEvent(arg0, arg1, current) {
         GUILDS = store2.getFastListGuildFolders()[item.section - tmp8.GUILDS];
         if (null != GUILDS) {
           const type = item.type;
-          if (require(7818) /* renderDefaultEmpty */.FastListItemTypes.SECTION !== type) {
+          if (require("../../../../lib/native/FastList.tsx") /* renderDefaultEmpty */.FastListItemTypes.SECTION !== type) {
             if (tmp10(7818).FastListItemTypes.ITEM === type) {
               if (GUILDS.type !== GuildsNodeType.ROOT) {
                 let tmp13 = GUILDS;
@@ -305,16 +305,16 @@ obj[1] = module_4146.makeMutable([]);
 obj[2] = require("module_4294967295");
 let closure_16 = require("debounce")(require("HapticFeedbackTypes").triggerHapticFeedback, 16);
 let closure_17 = require("debounce")((intl) => {
-  const AccessibilityAnnouncer = require(4131) /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
+  const AccessibilityAnnouncer = require("../../../../design/shared.tsx") /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
   AccessibilityAnnouncer.announce(intl);
 }, 500);
 let closure_18 = apply.throttle((data) => {
-  let obj = importDefault(1208);
+  let obj = require("../../../../utils/SentryUtils.native.tsx");
   obj = { category: "GuildsBarGesture", message: "handleGuildDrag started", data };
   obj.addBreadcrumb(obj);
 }, 2000);
 let closure_19 = apply.throttle((data) => {
-  let obj = importDefault(1208);
+  let obj = require("../../../../utils/SentryUtils.native.tsx");
   obj = { category: "GuildsBarGesture", message: "handleGestureEnd started", data };
   obj.addBreadcrumb(obj);
 }, 3000);

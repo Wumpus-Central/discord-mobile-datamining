@@ -25,23 +25,23 @@ let closure_17 = createCacheKey.createStyles({ container: { height: "100%" }, co
 let items = [
   {
     renderLabel() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.string(require(1236) /* getSystemLocale */.t["2p07FR"]);
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["2p07FR"]);
     },
     id: "edit-user-profile",
     renderPage(autoFocusElement) {
-      return callback(importDefault(13803), { autoFocusElement: autoFocusElement.autoFocusElement });
+      return callback(require("UserSettingsEditUserProfile.tsx"), { autoFocusElement: autoFocusElement.autoFocusElement });
     },
     subSection: ProfileCustomizationSubsection.USER_PROFILE
   },
   {
     renderLabel() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.string(require(1236) /* getSystemLocale */.t.kPHroX);
+      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.kPHroX);
     },
     id: "edit-user-profiles-guilds",
     renderPage() {
-      return callback(importDefault(13859), {});
+      return callback(require("UserSettingsEditGuildProfile.tsx"), {});
     },
     subSection: ProfileCustomizationSubsection.GUILD
   }
@@ -234,12 +234,12 @@ const memoResult = importAllResult.memo(() => {
 });
 let obj = {
   renderLabel() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["2p07FR"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["2p07FR"]);
   },
   id: "edit-user-profile",
   renderPage(autoFocusElement) {
-    return callback(importDefault(13803), { autoFocusElement: autoFocusElement.autoFocusElement });
+    return callback(require("UserSettingsEditUserProfile.tsx"), { autoFocusElement: autoFocusElement.autoFocusElement });
   },
   subSection: ProfileCustomizationSubsection.USER_PROFILE
 };

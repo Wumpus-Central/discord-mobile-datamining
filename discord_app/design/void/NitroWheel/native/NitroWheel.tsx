@@ -6,7 +6,7 @@ const result = require("preload").fileFinishedImporting("design/void/NitroWheel/
 
 export default function NitroWheel(style) {
   const obj = { source: null, style: null, resizeMode: "contain" };
-  obj[0] = importDefault(8622);
+  obj[0] = require("../../../../../_runtime/08622_registerAsset.js");
   obj[1] = style.style;
-  return jsx(importDefault(5236), { source: null, style: null, resizeMode: "contain" });
+  return jsx(require("../../../../components_native/common/FastImage.tsx"), { source: null, style: null, resizeMode: "contain" });
 };

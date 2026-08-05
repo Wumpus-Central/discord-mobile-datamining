@@ -11,9 +11,9 @@ const result = require("GdmWarningMedium").fileFinishedImporting("modules/shared
 
 export const showVoiceChannelBlockedUserWarning = function showVoiceChannelBlockedUserWarning(channelId, id) {
   state = state.getState();
-  if (state === require(691) /* keys */.AppStates.ACTIVE) {
+  if (state === require("../../../ConstantsIOS.tsx") /* keys */.AppStates.ACTIVE) {
     callback2();
-    let obj = importDefault(4253);
+    let obj = require("../../action_sheet/native/ActionSheetActionCreators.tsx");
     obj = { channelId: null, blockedUserId: null, impressionName: null, impressionProperties: null };
     obj[0] = channelId;
     obj[1] = id;

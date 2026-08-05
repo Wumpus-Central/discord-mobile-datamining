@@ -108,19 +108,19 @@ prototype["sendMessage"] = function sendMessage(arg0, arg1, arg2, arr) {
     const _window = window;
     const _HermesInternal = HermesInternal;
     const combined = "" + location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT + "/channels/" + str + "/" + arg0 + "/roll-dice/" + arg1 + "d" + arg2;
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     let obj = { count: null, sides: null };
     obj[0] = arg1;
     obj[1] = arg2;
     const _HermesInternal2 = HermesInternal;
-    const combined1 = "[`" + intl.formatToPlainString(require(1236) /* getSystemLocale */.t.uV5JaG, obj) + "`](" + combined + ")";
+    const combined1 = "[`" + intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.uV5JaG, obj) + "`](" + combined + ")";
     const reduced = arr.reduce((arg0, arg1) => arg0 + arg1, 0);
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     obj = { total: null, count: null, sides: null };
     obj[0] = reduced;
     obj[1] = arg1;
     obj[2] = arg2;
-    const result = intl2.formatToMarkdownString(require(1236) /* getSystemLocale */.t.tmSbYW, obj);
+    const result = intl2.formatToMarkdownString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.tmSbYW, obj);
     const mapped = arr.map((arg0) => ":game_die: " + arg0.toString());
     let str10 = " ";
     const _HermesInternal3 = HermesInternal;
@@ -131,8 +131,8 @@ prototype["sendMessage"] = function sendMessage(arg0, arg1, arg2, arr) {
       const _HermesInternal4 = HermesInternal;
       combined3 = "### " + result + ` ` + combined1 + "\n" + combined2;
     }
-    str10 = importDefault(6826);
-    obj1 = importDefault(7062);
+    str10 = require("../../actions/MessageActionCreators.tsx");
+    obj1 = require("../messages/MessageParser.tsx");
     obj1 = { location: null };
     obj1[0] = MessageSendLocation.CHAT_INPUT;
     str10.sendMessage(arg0, obj1.parse(channel, combined3), true, obj1);

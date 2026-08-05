@@ -18,7 +18,7 @@ export default {
       if (num == null) {
         num = 0;
       }
-      const hasFlagResult = require(1384) /* hasFlag */.hasFlag(num, GuildMemberFlags.IS_GUEST);
+      const hasFlagResult = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(num, GuildMemberFlags.IS_GUEST);
       let hasFlagResult1 = !hasFlagResult;
       if (hasFlagResult) {
         let num2 = guild.flags;
@@ -29,7 +29,7 @@ export default {
         const tmp2Result = tmp2(1384);
       }
       tmp = hasFlagResult1;
-      const obj2 = require(1384) /* hasFlag */;
+      const obj2 = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
     }
     return tmp;
   }

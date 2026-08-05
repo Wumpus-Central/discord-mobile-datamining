@@ -14,7 +14,7 @@ const require = arg1;
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
 let closure_9 = createCacheKey.createStyles((arg0) => {
   let obj = { container: null, content: null, underlay: null, wrapper: null, floating: null, text: null, subtext: null, spacing: null };
-  obj = { paddingHorizontal: importDefault(712).space.PX_12, paddingBottom: importDefault(712).space.PX_8 };
+  obj = { paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, paddingBottom: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
   obj[0] = obj;
   let lg;
   if (arg0) {
@@ -27,19 +27,19 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   }
   obj[1] = str;
   obj[1] = obj;
-  const obj1 = { backgroundColor: importDefault(712).colors.BACKGROUND_BASE_LOWER, height: null };
-  obj1[1] = importDefault(712).space.PX_8 + require(806) /* Radius */.Radius.lg;
+  const obj1 = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOWER, height: null };
+  obj1[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 + require("../../../../../discord_common/js/packages/tokens/radii/generated/generated-definitions.tsx") /* Radius */.Radius.lg;
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
   obj1.top = undefined;
   obj[2] = obj1;
-  obj[3] = { borderColor: importDefault(712).colors.BORDER_MUTED, paddingHorizontal: importDefault(712).space.PX_12, paddingTop: importDefault(712).space.PX_16, backgroundColor: importDefault(712).colors.BACKGROUND_SURFACE_HIGH, borderRadius: importDefault(712).radii.lg, borderWidth: 1 };
-  const obj2 = { borderColor: importDefault(712).colors.BORDER_MUTED, paddingHorizontal: importDefault(712).space.PX_12, paddingTop: importDefault(712).space.PX_16, backgroundColor: importDefault(712).colors.BACKGROUND_SURFACE_HIGH, borderRadius: importDefault(712).radii.lg, borderWidth: 1 };
-  obj[4] = { backgroundColor: importDefault(712).colors.BACKGROUND_SURFACE_HIGH, borderRadius: importDefault(712).modules.mobile.TABLE_ROW_BORDER_RADIUS, borderColor: importDefault(712).colors.BORDER_MUTED, borderWidth: 1 };
+  obj[3] = { borderColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_MUTED, paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, paddingTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, borderWidth: 1 };
+  const obj2 = { borderColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_MUTED, paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, paddingTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, borderWidth: 1 };
+  obj[4] = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_BORDER_RADIUS, borderColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_MUTED, borderWidth: 1 };
   obj[5] = { textAlign: "center" };
-  const obj3 = { backgroundColor: importDefault(712).colors.BACKGROUND_SURFACE_HIGH, borderRadius: importDefault(712).modules.mobile.TABLE_ROW_BORDER_RADIUS, borderColor: importDefault(712).colors.BORDER_MUTED, borderWidth: 1 };
-  obj[6] = { marginTop: importDefault(712).space.PX_4, textAlign: "center" };
-  const obj4 = { marginTop: importDefault(712).space.PX_4, textAlign: "center" };
-  obj[7] = { marginTop: importDefault(712).space.PX_8 };
+  const obj3 = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_BORDER_RADIUS, borderColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_MUTED, borderWidth: 1 };
+  obj[6] = { marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, textAlign: "center" };
+  const obj4 = { marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, textAlign: "center" };
+  obj[7] = { marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
   return obj;
 });
 const result = require("updateChatInputContainerHeight").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuard.tsx");
@@ -64,7 +64,7 @@ export default function ChatInputGuard(type) {
   let message2;
   let subtext;
   let subtext2;
-  const tmp3 = callback2(importDefault(8203)());
+  const tmp3 = callback2(require("../../../client_themes/native/useIsUsingClientTheme.tsx")());
   if ("simple-action" === type.type) {
     ({ countdown, actionIcon, actionLabel, actionOnPress } = type);
     let obj = { style: null, children: null };
@@ -113,13 +113,13 @@ export default function ChatInputGuard(type) {
     obj5[2] = buttonPrimaryText;
     obj5[3] = buttonPrimaryOnPress;
     obj5[5] = buttonPrimaryVariant;
-    const tmp15 = callback(require(4695) /* Button */.Button, obj5);
+    const tmp15 = callback(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj5);
     const obj6 = { style: null, children: null };
     obj6[0] = tmp3.wrapper;
     const obj7 = { style: null, variant: "text-sm/semibold", children: null };
     obj7[0] = tmp3.text;
     obj7[2] = message2;
-    const items1 = [callback(require(4281) /* Text */.Text, obj7), , , ];
+    const items1 = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj7), , , ];
     let tmp13Result = null;
     if (null != subtext2) {
       tmp13Result = null;
@@ -152,7 +152,7 @@ export default function ChatInputGuard(type) {
     }
     const obj10 = { children: null };
     obj10[0] = tmp16Result;
-    items1[2] = callback(require(5117) /* ButtonGroup */.ButtonGroup, obj10);
+    items1[2] = callback(require("../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx") /* ButtonGroup */.ButtonGroup, obj10);
     tmp13Result = null;
     if (null != countdown2) {
       const obj11 = { style: null, deadline: null };
@@ -173,7 +173,7 @@ export const ChatInputGuardContainer = function ChatInputGuardContainer(screenIn
   screenIndex = screenIndex.screenIndex;
   const channelId = screenIndex.channelId;
   ({ onJumpToPresent, children } = screenIndex);
-  const tmp3 = importDefault(8203)();
+  const tmp3 = require("../../../client_themes/native/useIsUsingClientTheme.tsx")();
   let obj = screenIndex(1348);
   const chatInputFloating = obj.useMobileVisualRefreshConfig({ location: "ChatInputGuardContainer" }).chatInputFloating;
   let obj1 = screenIndex(11544);
@@ -183,7 +183,7 @@ export const ChatInputGuardContainer = function ChatInputGuardContainer(screenIn
   const callback = React.useCallback((nativeEvent) => {
     outer1_6(screenIndex, nativeEvent.nativeEvent.layout.height);
   }, items);
-  const items1 = [importDefault(11543)({ isCreatingThread: false }), ];
+  const items1 = [require("../getChatInputPositionStyle.tsx")({ isCreatingThread: false }), ];
   let tmp10 = chatInputFloating;
   if (chatInputFloating) {
     tmp10 = chatInputFloatingOverlayStyle;

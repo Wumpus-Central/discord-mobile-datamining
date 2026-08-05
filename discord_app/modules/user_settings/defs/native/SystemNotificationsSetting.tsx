@@ -101,8 +101,8 @@ function _handleEnableSystemNotification() {
 ({ EventActionType: error, EventActionLocation: metroImportAll } = EventActionType);
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.nl2Dqx);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.nl2Dqx);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   onPress: function handleEnableSystemNotification() {

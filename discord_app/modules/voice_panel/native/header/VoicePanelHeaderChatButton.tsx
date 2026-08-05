@@ -22,17 +22,17 @@ export default function VoicePanelHeaderChatButton(channelId) {
     const ComponentDispatch = callback(table[5]).ComponentDispatch;
     ComponentDispatch.dispatch(constants.VOICE_PANEL_OPEN_CHAT_TAB);
   }, []);
-  const tmp5 = importDefault(16074)(channelId.channelId);
+  const tmp5 = require("../hooks/useChatBadge.tsx")(channelId.channelId);
   const tmp6 = closure_6;
   let obj = { icon: null, accessibilityLabel: null, onPress: null };
-  const tmp7 = importDefault(5663);
+  const tmp7 = require("../../../core/native/NativeView.tsx");
   obj = { color: null, size: "sm" };
-  obj[0] = importDefault(712).colors.WHITE;
-  obj[0] = callback(require(4781) /* ChatIcon */.ChatIcon, obj);
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl.string(require(1236) /* getSystemLocale */.t["5KxXrK"]);
+  obj[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE;
+  obj[0] = callback(require("../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx") /* ChatIcon */.ChatIcon, obj);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["5KxXrK"]);
   obj[2] = callback;
-  const children = [callback(importDefault(15979), obj), ];
+  const children = [callback(require("../shared/VoicePanelIconButton.tsx"), obj), ];
   let tmp8Result = null != tmp5;
   if (tmp8Result) {
     obj = { style: null, children: null };

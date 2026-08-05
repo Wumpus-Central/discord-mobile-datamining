@@ -32,7 +32,7 @@ export default function parseUserProfileCollectibles(collectibles) {
       let tmp13 = nextResult;
       let tmp14 = require;
       let tmp15 = dependencyMap;
-      if (tmp7.type === require(1901) /* CollectiblesItemType */.CollectiblesItemType.PROFILE_EFFECT) {
+      if (tmp7.type === require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.PROFILE_EFFECT) {
         obj = { skuId: null, expiresAt: null };
         let tmp20 = nextResult;
         obj[0] = tmp7.sku_id;

@@ -15,7 +15,7 @@ function handleUserSettingsProtoStoreChange() {
   if (applicationCommands == null) {
     applicationCommands = {};
   }
-  tmp3.overwriteHistory(importDefault(12).mapValues(applicationCommands, (recentUses) => {
+  tmp3.overwriteHistory(require("../../../_runtime/00012_apply.js").mapValues(applicationCommands, (recentUses) => {
     const obj = {};
     const merged = Object.assign(recentUses);
     recentUses = recentUses.recentUses;

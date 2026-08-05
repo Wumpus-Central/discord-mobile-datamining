@@ -6,7 +6,7 @@ const result = require("createMessage").fileFinishedImporting("modules/premium/O
 
 export const updateClientPremiumTypeOverride = function updateClientPremiumTypeOverride(premiumType, outer1_2) {
   let currentUser = outer1_2;
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "SET_PREMIUM_TYPE_OVERRIDE", premiumType };
   obj.dispatch(obj);
   if (outer1_2 == null) {
@@ -19,13 +19,13 @@ export const updateClientPremiumTypeOverride = function updateClientPremiumTypeO
     tmp2Result.dispatch(obj);
     tmp2Result = tmp2(709);
     const obj1 = { type: "CURRENT_USER_UPDATE", user: null };
-    obj1[1] = require(7132) /* createMessage */.userRecordToServer(currentUser);
+    obj1[1] = require("../messages/createMessage.tsx") /* createMessage */.userRecordToServer(currentUser);
     tmp2Result.dispatch(obj1);
-    const obj7 = require(7132) /* createMessage */;
+    const obj7 = require("../messages/createMessage.tsx") /* createMessage */;
   }
 };
 export const updateClientCreatedAtOverride = function updateClientCreatedAtOverride(createdAt) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "SET_CREATED_AT_OVERRIDE", createdAt };
   obj.dispatch(obj);
 };

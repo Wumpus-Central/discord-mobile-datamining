@@ -5,13 +5,13 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["9AjdkD"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["9AjdkD"]);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   useTrailing: function useAccountDisplayNameSettingTrailing() {
     const items = [mergeGuildAvatar];
-    return require(589) /* initialize */.useStateFromStores(items, () => {
+    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
       currentUser = currentUser.getCurrentUser();
       let globalName;
       if (currentUser != null) {
@@ -25,7 +25,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.PROFILE_CUSTOMIZATION,
   getComponent() {
-    return require(13802) /* ProfileCustomizationSubsection */.default;
+    return require("../../profiles/native/ProfileCustomizationSettingScreen.tsx") /* ProfileCustomizationSubsection */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

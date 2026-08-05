@@ -17,7 +17,7 @@ let QuestsExperimentLocations;
 let closure_12;
 const require = arg1;
 function isQuestProgressable(item10046) {
-  const isQuestExpiredResult = require(7078) /* getQuestDeliveryDataForPlacement */.isQuestExpired(item10046);
+  const isQuestExpiredResult = require("../utils/QuestDataUtils.tsx") /* getQuestDeliveryDataForPlacement */.isQuestExpired(item10046);
   let tmp2 = !isQuestExpiredResult;
   if (!isQuestExpiredResult) {
     tmp2 = null != item10046.userStatus;
@@ -31,7 +31,7 @@ function isQuestProgressable(item10046) {
   return tmp2;
 }
 function handleEmbeddedActivityLaunchSuccess(applicationId) {
-  let obj = require(10503) /* questMatchesActivity */;
+  let obj = require("../utils/QuestMatchingUtils.tsx") /* questMatchesActivity */;
   const eligibleQuestsForApplicationId = obj.getEligibleQuestsForApplicationId(initializeState.quests, applicationId);
   for (const item10020 of eligibleQuestsForApplicationId) {
     if (tmp) {
@@ -41,7 +41,7 @@ function handleEmbeddedActivityLaunchSuccess(applicationId) {
       let tmp8 = dependencyMap;
       let tmp5 = require;
       let tmp7 = dependencyMap;
-      if (features.includes(require(5129) /* QuestVariants */.QuestVariants.MOBILE_ACTIVITY_QUEST)) {
+      if (features.includes(require("../../../../discord_common/js/shared/shared-constants/QuestVariants.tsx") /* QuestVariants */.QuestVariants.MOBILE_ACTIVITY_QUEST)) {
         let tmp9 = tmp5;
         let tmp10 = tmp7;
         let tmp6Result = tmp6(10376);
@@ -63,8 +63,8 @@ function isQuestRobloxRelated(arr, distributor) {
   if (tmp) {
     let someResult = arr.some((arg0) => arg0 === callback(table[19]).ROBLOX_APPLICATION_ID);
     if (someResult) {
-      someResult = require(4455) /* _openRobloxURLWithRootPlaceId */.isRobloxSubgame(distributor);
-      const obj = require(4455) /* _openRobloxURLWithRootPlaceId */;
+      someResult = require("../../roblox_subgame_detection/RobloxSubgameUtils.tsx") /* _openRobloxURLWithRootPlaceId */.isRobloxSubgame(distributor);
+      const obj = require("../../roblox_subgame_detection/RobloxSubgameUtils.tsx") /* _openRobloxURLWithRootPlaceId */;
     }
     tmp = someResult;
   }
@@ -451,7 +451,7 @@ prototype["syncHeartbeats"] = function syncHeartbeats(items, EMBEDDED_ACTIVITY_U
 };
 prototype["getActivelyProgressingQuests"] = function getActivelyProgressingQuests(closure_1) {
   const self = this;
-  if (require(5135) /* set */.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP === closure_1) {
+  if (require("../../../../discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx") /* set */.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP === closure_1) {
     return self.getActivelyProgressingPlayOnDesktopQuests();
   } else if (tmp(5135).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP === closure_1) {
     return self.getActivelyProgressingStreamOnDesktopQuests();
@@ -593,7 +593,7 @@ prototype["getActivelyProgressingStreamOnDesktopQuests"] = function getActivelyP
           let tmp6 = require;
           let tmp7 = dependencyMap;
           let tmp5 = nextResult;
-          let obj3 = require(7103) /* getApplicationIdsByTaskTypes */;
+          let obj3 = require("../utils/QuestTaskUtils.tsx") /* getApplicationIdsByTaskTypes */;
           let streamingApplicationId = obj3.getStreamingApplicationId(nextResult);
           let tmp9 = isQuestProgressable;
           let tmp10 = isQuestProgressable(nextResult);
@@ -642,7 +642,7 @@ prototype["getActivelyProgressingActivityQuests"] = function getActivelyProgress
         let tmp11 = require;
         let tmp12 = dependencyMap;
         let tmp10 = item10046;
-        let obj4 = require(7103) /* getApplicationIdsByTaskTypes */;
+        let obj4 = require("../utils/QuestTaskUtils.tsx") /* getApplicationIdsByTaskTypes */;
         let playActivityApplicationId = obj4.getPlayActivityApplicationId(item10046);
         let tmp14 = isQuestProgressable;
         let tmp15 = isQuestProgressable(item10046);
@@ -673,7 +673,7 @@ prototype["getActivelyProgressingActivityQuests"] = function getActivelyProgress
       if (result1) {
         let tmp28 = require;
         let tmp29 = dependencyMap;
-        let obj6 = require(7101) /* isSponsoredPlayQuest */;
+        let obj6 = require("../utils/QuestUtils.tsx") /* isSponsoredPlayQuest */;
         let tmp30 = item10073;
         result1 = obj6.isPlayAnyActivityQuest(tmp25);
       }

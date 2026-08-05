@@ -6,14 +6,14 @@ import createToggle from "createToggle";
 const require = arg1;
 function useAppearanceSettingTrailing() {
   const tmp = importDefault;
-  const tmp3 = importDefault(4221)();
-  const tmp4 = importDefault(1348)("AppearanceSettingTrailing");
+  const tmp3 = require("../../../../hooks/useTheme.tsx")();
+  const tmp4 = require("../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("AppearanceSettingTrailing");
   const items = [isSyncedModeThemesEnabled];
-  const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => gradientPreset.gradientPreset);
-  const obj = require(589) /* initialize */;
-  const themeName = require(4128) /* getThemeForColor */.getThemeName(tmp3, tmp4);
-  const obj2 = require(4128) /* getThemeForColor */;
-  const activeThemeType = require(8204) /* useActiveThemeType */.useActiveThemeType();
+  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => gradientPreset.gradientPreset);
+  const obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const themeName = require("../../../client_themes/ClientThemesUtils.tsx") /* getThemeForColor */.getThemeName(tmp3, tmp4);
+  const obj2 = require("../../../client_themes/ClientThemesUtils.tsx") /* getThemeForColor */;
+  const activeThemeType = require("../../../client_themes/native/useActiveTheme.tsx") /* useActiveThemeType */.useActiveThemeType();
   if (ActiveThemeType.CUSTOM === activeThemeType) {
     const intl2 = tmp5(1236).intl;
     return intl2.string(tmp(2483).KSBBpC);
@@ -35,12 +35,12 @@ function useAppearanceSettingTrailing() {
   } else {
     return tmp9.DEFAULT === activeThemeType ? themeName : undefined;
   }
-  const obj3 = require(8204) /* useActiveThemeType */;
+  const obj3 = require("../../../client_themes/native/useActiveTheme.tsx") /* useActiveThemeType */;
 }
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["iHH+ky"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["iHH+ky"]);
   },
   parent: null,
   IconComponent: require("PaintPaletteIcon").PaintPaletteIcon,
@@ -50,7 +50,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.APPEARANCE,
   getComponent() {
-    return require(14398).default;
+    return require("../../appearance/native/SettingsAppearanceScreen.tsx").default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

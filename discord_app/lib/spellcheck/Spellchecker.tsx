@@ -7,11 +7,11 @@ import importDefaultResult1 from "apply";
 
 const require = arg1;
 function normalizeLocale(arg0) {
-  let str = importDefault(5289)[arg0];
+  let str = require("fallbackLocales.tsx")[arg0];
   if (str == null) {
     str = arg0;
   }
-  const parsed = require(5290) /* parse */.parse(str.replace(/[_-]/g, "-"));
+  const parsed = require("../../../_runtime/05290_parse.js") /* parse */.parse(str.replace(/[_-]/g, "-"));
   if (null != parsed) {
     if (null != parsed.langtag.language) {
       if (null != parsed.langtag.region) {
@@ -186,7 +186,7 @@ let closure_10 = require("apply").debounce((detectLanguage, hasAttribute) => {
       }
     }
     textContent = hasAttribute.value;
-    obj = require(1859) /* set */;
+    obj = require("../../../discord_common/js/shared/utils/DOMUtils.tsx") /* set */;
   }
   if (null != textContent) {
     detectLanguage.detectLanguage(textContent);

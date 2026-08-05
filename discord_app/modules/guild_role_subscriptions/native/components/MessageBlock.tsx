@@ -9,20 +9,20 @@ let obj = { RED: 0, [0]: "RED", YELLOW: 1, [1]: "YELLOW" };
 let closure_6 = createCacheKey.createStyles((arg0) => {
   if (obj.RED === arg0) {
     obj = { backgroundColor: null, borderColor: null };
-    obj[0] = importDefault(712).colors.BACKGROUND_FEEDBACK_CRITICAL;
-    obj[1] = importDefault(712).colors.BORDER_FEEDBACK_CRITICAL;
+    obj[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_FEEDBACK_CRITICAL;
+    obj[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_FEEDBACK_CRITICAL;
     let tmp2 = obj;
   } else if (tmp.YELLOW === arg0) {
     obj = { backgroundColor: null, borderColor: null };
-    obj[0] = importDefault(712).colors.BACKGROUND_FEEDBACK_WARNING;
-    obj[1] = importDefault(712).colors.STATUS_WARNING;
+    obj[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_FEEDBACK_WARNING;
+    obj[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.STATUS_WARNING;
     tmp2 = obj;
   }
   obj = { container: null, text: null };
   const obj1 = {};
   const merged = Object.assign(tmp2);
   obj1.alignItems = "center";
-  obj1.borderRadius = importDefault(712).radii.xs;
+  obj1.borderRadius = require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.xs;
   obj1.borderWidth = 1;
   obj1.padding = 8;
   obj1.width = "100%";
@@ -39,7 +39,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/guild_role_subs
 
 export default function MessageBlock(children) {
   const tmp = callback(children.color);
-  obj = { style: tmp.container, children: jsx(require(1297) /* Button */.LegacyText, obj) };
+  obj = { style: tmp.container, children: jsx(require("../../../../design/void/native.tsx") /* Button */.LegacyText, obj) };
   obj = { style: tmp.text, children: children.children };
   return <View style={tmp.text}>{arg0.children}</View>;
 };

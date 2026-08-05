@@ -82,10 +82,10 @@ export const getDeviceMediaPerformanceClass = function getDeviceMediaPerformance
       tmp5 = null == value;
     }
     if (tmp5) {
-      mediaPerformanceClass2 = importDefault(671).getMediaPerformanceClass();
+      mediaPerformanceClass2 = require("../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceModule.tsx").getMediaPerformanceClass();
       const Storage2 = tmp(595).Storage;
       const result = Storage2.set(mediaPerformanceClass, mediaPerformanceClass2);
-      const obj2 = importDefault(671);
+      const obj2 = require("../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceModule.tsx");
     }
     tmp3 = mediaPerformanceClass2;
   }

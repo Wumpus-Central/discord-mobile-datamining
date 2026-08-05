@@ -40,7 +40,7 @@ export default function useMemberListAction(channel) {
   let callback1;
   let tmp = callback();
   importDefault = tmp;
-  const tmp4 = importDefault(1348)("useMemberListAction");
+  const tmp4 = require("../../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("useMemberListAction");
   dependencyMap = tmp4;
   const items = [c9];
   stateFromStores = channel(647).useStateFromStores(items, () => {
@@ -94,7 +94,7 @@ export default function useMemberListAction(channel) {
   if (channel != null) {
     id = channel.id;
   }
-  const tmp15 = importDefault(8334)();
+  const tmp15 = require("useScaledRowHeight.tsx")();
   c9 = tmp15;
   const tmp16 = stateFromStores(React.useState(undefined), 2);
   first = tmp16[0];

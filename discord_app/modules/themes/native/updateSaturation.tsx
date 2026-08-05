@@ -5,8 +5,8 @@ const result = require("enforcing").fileFinishedImporting("modules/themes/native
 
 export const updateSaturation = function updateSaturation(saturation) {
   if (obj.isAndroid()) {
-    let updateSaturationResult = importDefault(13619).updateSaturation(saturation);
-    const obj2 = importDefault(13619);
+    let updateSaturationResult = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeThemeModule.tsx").updateSaturation(saturation);
+    const obj2 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeThemeModule.tsx");
   } else {
     const DCDTheme = NativeModules.DCDTheme;
     updateSaturationResult = DCDTheme.updateSaturation(saturation);

@@ -45,7 +45,7 @@ function addGameIdToNameCache(id, item10026) {
 function addDetectableGame(id) {
   let name;
   let tmp = id;
-  if (id instanceof require(4319) /* GameTheme */.DetectableGameRecord) {
+  if (id instanceof require("../modules/game_detection/GameDetectionTypes.tsx") /* GameTheme */.DetectableGameRecord) {
     tmp = convertGameRecordToGame(id);
     const tmp2 = convertGameRecordToGame;
   }
@@ -133,7 +133,7 @@ prototype["initialize"] = function initialize(detectableGamesEtag) {
   }
 };
 prototype["getState"] = function getState() {
-  let obj = require(500) /* set */;
+  let obj = require("../utils/PlatformUtils.tsx") /* set */;
   if (obj.isDesktop()) {
     obj = { detectableGamesEtag: null, detectableGames: null, blocklistEtag: null, blocklistExecutables: null, blocklistPatterns: null };
     obj[0] = c12;
@@ -156,7 +156,7 @@ Object.defineProperty(prototype, "games", {
   set: undefined
 });
 prototype["getDetectableGame"] = function getDetectableGame(id) {
-  return tmp2.get(importDefault(11).cast(id));
+  return tmp2.get(require("../utils/SnowflakeUtils.tsx").cast(id));
 };
 prototype["searchGamesByName"] = function searchGamesByName(name) {
   if (null == name) {
@@ -223,7 +223,7 @@ prototype["findGame"] = function findGame(nextResult) {
     }
     if (null != nextResult.exePath) {
       let parts = nextResult.exePath.split("/");
-      let found = parts.filter(_require(1351).isNotNullish);
+      let found = parts.filter(_require("../utils/GlobalUtils.tsx").isNotNullish);
       const gameByExecutable = self.getGameByExecutable(found.pop());
       if (null != gameByExecutable) {
         return gameByExecutable;
@@ -477,8 +477,8 @@ prototype["maybeTrackApplicationLookupFallthrough"] = function maybeTrackApplica
       name1 = null;
     }
     obj[4] = name1;
-    importDefault(698).track(AnalyticEvents.GAME_APPLICATION_LOOKUP_FALLTHROUGH, obj);
-    const obj2 = importDefault(698);
+    require("../utils/AnalyticsUtils.tsx").track(AnalyticEvents.GAME_APPLICATION_LOOKUP_FALLTHROUGH, obj);
+    const obj2 = require("../utils/AnalyticsUtils.tsx");
   }
 };
 prototype["trackNameMatchFallback"] = function trackNameMatchFallback(name, dependencyMap, exePath) {
@@ -504,8 +504,8 @@ prototype["trackNameMatchFallback"] = function trackNameMatchFallback(name, depe
     }
     obj[2] = tmp10;
     obj[3] = tmp5;
-    importDefault(698).track(AnalyticEvents.GAME_NAME_MATCH_FALLBACK, obj);
-    const obj2 = importDefault(698);
+    require("../utils/AnalyticsUtils.tsx").track(AnalyticEvents.GAME_NAME_MATCH_FALLBACK, obj);
+    const obj2 = require("../utils/AnalyticsUtils.tsx");
   }
 };
 prototype["maybeTrackBlock"] = function maybeTrackBlock(exePath, explicit_list, found) {
@@ -532,8 +532,8 @@ prototype["maybeTrackBlock"] = function maybeTrackBlock(exePath, explicit_list, 
     }
     obj[2] = origGameName;
     obj[3] = str2;
-    importDefault(698).track(AnalyticEvents.GAME_BLOCKLIST_TRIGGERED, obj);
-    const obj2 = importDefault(698);
+    require("../utils/AnalyticsUtils.tsx").track(AnalyticEvents.GAME_BLOCKLIST_TRIGGERED, obj);
+    const obj2 = require("../utils/AnalyticsUtils.tsx");
   }
 };
 prototype["shouldReport"] = function shouldReport(name) {
@@ -546,7 +546,7 @@ prototype["shouldReport"] = function shouldReport(name) {
     if (tmp3) {
       tmp3 = null != obj[name.name];
     }
-    const ShowCurrentGame = require(3958) /* explicitContentFromProto */.ShowCurrentGame;
+    const ShowCurrentGame = require("../modules/user_settings/UserSettings.tsx") /* explicitContentFromProto */.ShowCurrentGame;
     let setting = ShowCurrentGame.getSetting();
     if (setting) {
       setting = !c13;
@@ -562,7 +562,7 @@ prototype["shouldReport"] = function shouldReport(name) {
 };
 prototype["markGameReported"] = function markGameReported(arg0) {
   obj[arg0] = true;
-  const Storage = require(595) /* Storage */.Storage;
+  const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
   const result = Storage.set(GameStoreReportedGames, obj);
 };
 DetectableGameStore.displayName = "GameStore";
@@ -598,7 +598,7 @@ let items = [
   },
   (arg0) => {
     let tmp = arg0;
-    let obj = require(500) /* set */;
+    let obj = require("../utils/PlatformUtils.tsx") /* set */;
     if (!obj.isDesktop()) {
       obj = { detectableGamesEtag: "", detectableGames: null };
       obj[1] = [];

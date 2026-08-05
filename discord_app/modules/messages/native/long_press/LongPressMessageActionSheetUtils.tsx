@@ -27,11 +27,11 @@ function handleEdit(id, isForumPost, current, source) {
     flag = false;
   }
   if (isForumPost.isForumPost()) {
-    let obj = importDefault(11);
+    let obj = require("../../../../utils/SnowflakeUtils.tsx");
     if (isForumPost.id === obj.castMessageIdAsChannelId(id.id)) {
       if (null != isForumPost.parent_id) {
-        require(10131) /* createPendingReply */.deletePendingReply(isForumPost.id);
-        const obj7 = require(10131) /* createPendingReply */;
+        require("../../../replies/PendingReplyActionCreators.tsx") /* createPendingReply */.deletePendingReply(isForumPost.id);
+        const obj7 = require("../../../replies/PendingReplyActionCreators.tsx") /* createPendingReply */;
         obj = { guildId: null, parentChannelId: null, threadId: null, messageId: null, isEdit: true, analyticsLocations: null, analyticsLocationObject: null };
         ({ guild_id: obj9[0], parent_id: obj9[1], id: obj9[2] } = isForumPost);
         obj[3] = id.id;
@@ -42,8 +42,8 @@ function handleEdit(id, isForumPost, current, source) {
         obj[1] = constants4.FORUM_POST_HEADER;
         obj[2] = constants2.CONTEXT_MENU;
         obj[6] = obj;
-        const result = require(9820) /* openCreateForumPostModal */.openCreateForumPostModal(obj);
-        const obj8 = require(9820) /* openCreateForumPostModal */;
+        const result = require("../../../forums/native/composer/ForumComposerModalActionCreators.tsx") /* openCreateForumPostModal */.openCreateForumPostModal(obj);
+        const obj8 = require("../../../forums/native/composer/ForumComposerModalActionCreators.tsx") /* openCreateForumPostModal */;
       }
     }
   }
@@ -59,17 +59,17 @@ function handleEdit(id, isForumPost, current, source) {
           tmp15 = currentUser.id === id.author.id;
         }
         obj1[5] = tmp15;
-        importDefault(698).track(constants.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj1);
-        const obj4 = importDefault(698);
+        require("../../../../utils/AnalyticsUtils.tsx").track(constants.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj1);
+        const obj4 = require("../../../../utils/AnalyticsUtils.tsx");
         const tmp11 = importDefault;
-        importDefault(6826).endEditMessage(isForumPost.id);
+        require("../../../../actions/MessageActionCreators.tsx").endEditMessage(isForumPost.id);
         if (current != null) {
           const current2 = current.current;
           if (current2 != null) {
             current2.dismissKeyboard();
           }
         }
-        const tmp11Result = importDefault(6826);
+        const tmp11Result = require("../../../../actions/MessageActionCreators.tsx");
       }
     }
   }
@@ -88,12 +88,12 @@ function handleEdit(id, isForumPost, current, source) {
     }
     obj2[4] = str3;
     obj2[5] = null != currentUser1 && currentUser1.id === pendingReply.message.author.id;
-    importDefault(698).track(constants.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj2);
-    const obj11 = importDefault(698);
+    require("../../../../utils/AnalyticsUtils.tsx").track(constants.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj2);
+    const obj11 = require("../../../../utils/AnalyticsUtils.tsx");
   }
-  obj1 = require(10131) /* createPendingReply */;
+  obj1 = require("../../../replies/PendingReplyActionCreators.tsx") /* createPendingReply */;
   obj1.deletePendingReply(isForumPost.id);
-  obj2 = importDefault(6826);
+  obj2 = require("../../../../actions/MessageActionCreators.tsx");
   const result1 = obj2.startEditMessageRecord(isForumPost.id, id, source);
   if (current != null) {
     current = current.current;
@@ -132,24 +132,24 @@ export const handleCreateThread = function handleCreateThread(guild_id, id, Mess
   if (id != null) {
     id = id.id;
   }
-  const result = importDefault(7144).openThreadCreationForMobile(guild_id, id, str);
+  const result = require("../../../threads/ThreadActionCreators.tsx").openThreadCreationForMobile(guild_id, id, str);
   let result1 = null == id;
   if (!result1) {
     let tmpResult = tmp(11);
-    result1 = require(4136) /* navigationToRootTabHelper */.navigateToCreateThread(guild_id.guild_id, tmpResult.castMessageIdAsChannelId(id.id));
-    const obj2 = require(4136) /* navigationToRootTabHelper */;
+    result1 = require("../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */.navigateToCreateThread(guild_id.guild_id, tmpResult.castMessageIdAsChannelId(id.id));
+    const obj2 = require("../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */;
   }
   if (!result1) {
     tmpResult = tmp(11);
-    require(1222) /* transitionTo */.transitionToGuild(guild_id.guild_id, tmpResult.castMessageIdAsChannelId(id.id));
-    const obj4 = require(1222) /* transitionTo */;
+    require("../../../routing/router_utils.tsx") /* transitionTo */.transitionToGuild(guild_id.guild_id, tmpResult.castMessageIdAsChannelId(id.id));
+    const obj4 = require("../../../routing/router_utils.tsx") /* transitionTo */;
   }
 };
 export const handleCopyMessageLink = function handleCopyMessageLink(channel, message_id) {
-  let obj = importDefault(698);
+  let obj = require("../../../../utils/AnalyticsUtils.tsx");
   obj = { message_id, channel: channel.id };
   obj.track(constants.MESSAGE_LINK_COPIED, obj);
-  const channelPermalink = require(4467) /* allowChannelAccess */.getChannelPermalink(channel.guild_id, channel.id, message_id);
+  const channelPermalink = require("../../../../utils/ChannelUtils.tsx") /* allowChannelAccess */.getChannelPermalink(channel.guild_id, channel.id, message_id);
   if (null != channelPermalink) {
     let tmp3Result = tmp3(5638);
     tmp3Result.copy(channelPermalink);
@@ -158,9 +158,9 @@ export const handleCopyMessageLink = function handleCopyMessageLink(channel, mes
   }
 };
 export const handleCopyId = function handleCopyId(arg0) {
-  require(5638) /* _copy */.copy(arg0);
-  const obj = require(5638) /* _copy */;
-  const result = require(3985) /* presentAddedFriendToast */.presentMessageIdCopied();
+  require("../../../../utils/ClipboardUtils.native.tsx") /* _copy */.copy(arg0);
+  const obj = require("../../../../utils/ClipboardUtils.native.tsx") /* _copy */;
+  const result = require("../../../toast/native/ToastUtils.tsx") /* presentAddedFriendToast */.presentMessageIdCopied();
 };
 export const longPressMessageOptionHandler = function longPressMessageOptionHandler(analyticsLocations) {
   let actionSheetSource;

@@ -26,7 +26,7 @@ Object.defineProperty(prototype, "safetyCheck", {
 });
 Object.defineProperty(prototype, "channelSetup", {
   get: function channelSetup() {
-    return require(16629) /* getChannelSetupSource */.getChannelSetupSource(this.theme);
+    return require("../../../../../design/components/Illustration/native/redesign/generated/ChannelSetup.tsx") /* getChannelSetupSource */.getChannelSetupSource(this.theme);
   },
   set: undefined
 });
@@ -43,14 +43,14 @@ Object.defineProperty(prototype, "finishingTouches", {
 });
 Object.defineProperty(prototype, "close", {
   get: function close() {
-    return require(7837) /* registerAsset */;
+    return require("../../../../../../_runtime/07837_registerAsset.js") /* registerAsset */;
   },
   set: undefined
 });
 const result = require("sum").fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/useEnableCommunityModalIcons.tsx");
 
 export default function useEnableCommunityModalIcons() {
-  let closure_0 = importDefault(4221)();
+  let closure_0 = require("../../../../../hooks/useTheme.tsx")();
   return callback(React.useState(() => {
     if (typeof outer1_6 !== "function") {
       HermesBuiltin.throwTypeError();

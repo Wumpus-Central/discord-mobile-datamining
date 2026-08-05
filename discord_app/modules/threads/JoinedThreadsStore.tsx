@@ -181,13 +181,13 @@ const joinedThreadsStoreClass = new JoinedThreadsStoreClass(require("dispatcher"
     });
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(joinedThreads) {
-    const mapped = importDefault(12)(joinedThreads.joinedThreads).map((joinTimestamp) => {
+    const mapped = require("../../../_runtime/00012_apply.js")(joinedThreads.joinedThreads).map((joinTimestamp) => {
       const obj = {};
       const merged = Object.assign(joinTimestamp);
       obj.joinTimestamp = new Date(joinTimestamp.joinTimestamp);
       return obj;
     });
-    const arr = importDefault(12)(joinedThreads.joinedThreads);
+    const arr = require("../../../_runtime/00012_apply.js")(joinedThreads.joinedThreads);
     let closure_4 = mapped.keyBy("threadId").value();
   },
   GUILD_CREATE: function handleGuildCreate(guild) {

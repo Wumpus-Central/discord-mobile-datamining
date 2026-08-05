@@ -10,30 +10,30 @@ function validateNumericOptionRange(NumberResult, minValue, _8Y5zsp, CyRLmH, VD3
   if (null != minValue.maxValue) {
     if (null != minValue.minValue) {
       let obj = { success: false, error: null };
-      const intl3 = require(1236) /* getSystemLocale */.intl;
+      const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
       obj = { minimum: null, maximum: null };
       const minValue2 = minValue.minValue;
-      obj[0] = minValue2.toLocaleString(require(1236) /* getSystemLocale */.intl.currentLocale, { useGrouping: false });
+      obj[0] = minValue2.toLocaleString(require("../../intl/index.native.tsx") /* getSystemLocale */.intl.currentLocale, { useGrouping: false });
       const maxValue2 = minValue.maxValue;
-      obj[1] = maxValue2.toLocaleString(require(1236) /* getSystemLocale */.intl.currentLocale, { useGrouping: false });
+      obj[1] = maxValue2.toLocaleString(require("../../intl/index.native.tsx") /* getSystemLocale */.intl.currentLocale, { useGrouping: false });
       obj[1] = intl3.formatToPlainString(_8Y5zsp, obj);
       return obj;
     }
   }
   if (null != minValue.minValue) {
     const obj1 = { success: false, error: null };
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj2 = { minimum: null };
     minValue = minValue.minValue;
-    obj2[0] = minValue.toLocaleString(require(1236) /* getSystemLocale */.intl.currentLocale, { useGrouping: false });
+    obj2[0] = minValue.toLocaleString(require("../../intl/index.native.tsx") /* getSystemLocale */.intl.currentLocale, { useGrouping: false });
     obj1[1] = intl2.formatToPlainString(CyRLmH, obj2);
     return obj1;
   } else if (null != minValue.maxValue) {
     obj = { success: false, error: null };
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj3 = { maximum: null };
     const maxValue = minValue.maxValue;
-    obj3[0] = maxValue.toLocaleString(require(1236) /* getSystemLocale */.intl.currentLocale, { useGrouping: false });
+    obj3[0] = maxValue.toLocaleString(require("../../intl/index.native.tsx") /* getSystemLocale */.intl.currentLocale, { useGrouping: false });
     obj[1] = intl.formatToPlainString(VD3Q_S, obj3);
     return obj;
   }
@@ -47,12 +47,12 @@ let obj = {
     } else {
       const obj = { success: null };
       const trimmed = type.text.trim();
-      obj[0] = null != require(9913) /* toChoiceBooleanValue */.toChoiceBooleanValue(trimmed);
+      obj[0] = null != require("ApplicationCommandChoiceUtils.tsx") /* toChoiceBooleanValue */.toChoiceBooleanValue(trimmed);
       return obj;
     }
   },
   [arg1(1906).ApplicationCommandOptionType.STRING]: (type, type2, id) => {
-    importDefault(38)(type2.type === require(1906) /* PermissionOverwriteType */.ApplicationCommandOptionType.STRING, "option type must match validator type");
+    require("../../../_runtime/metro/00038__.js")(type2.type === require("../../flow/Server.tsx") /* PermissionOverwriteType */.ApplicationCommandOptionType.STRING, "option type must match validator type");
     type = type.type;
     if ("emoji" === type) {
       let surrogate = type.surrogate;
@@ -133,10 +133,10 @@ let obj = {
       }
       return { success: true };
     }
-    const tmp2 = importDefault(38);
+    const tmp2 = require("../../../_runtime/metro/00038__.js");
   },
   [arg1(1906).ApplicationCommandOptionType.INTEGER]: (type, type2, id) => {
-    importDefault(38)(type2.type === require(1906) /* PermissionOverwriteType */.ApplicationCommandOptionType.INTEGER, "option type must match validator type");
+    require("../../../_runtime/metro/00038__.js")(type2.type === require("../../flow/Server.tsx") /* PermissionOverwriteType */.ApplicationCommandOptionType.INTEGER, "option type must match validator type");
     let trimmed = null;
     if ("text" === type.type) {
       trimmed = type.text.trim();
@@ -179,7 +179,7 @@ let obj = {
     return { success: false };
   },
   [arg1(1906).ApplicationCommandOptionType.NUMBER]: (type, type2, id) => {
-    importDefault(38)(type2.type === require(1906) /* PermissionOverwriteType */.ApplicationCommandOptionType.NUMBER, "option type must match validator type");
+    require("../../../_runtime/metro/00038__.js")(type2.type === require("../../flow/Server.tsx") /* PermissionOverwriteType */.ApplicationCommandOptionType.NUMBER, "option type must match validator type");
     let trimmed = null;
     if ("text" === type.type) {
       trimmed = type.text.trim();
@@ -234,7 +234,7 @@ let obj = {
         obj[0] = "userMention" === type;
         return obj;
       }
-      obj2 = require(6889) /* buildCommand */;
+      obj2 = require("ApplicationCommandUtils.tsx") /* buildCommand */;
       tmp = require;
     } else {
       obj = { success: null };
@@ -256,7 +256,7 @@ let obj = {
         obj[0] = "channelMention" === type;
         return obj;
       }
-      obj2 = require(6889) /* buildCommand */;
+      obj2 = require("ApplicationCommandUtils.tsx") /* buildCommand */;
       tmp = require;
     } else {
       obj = { success: null };
@@ -279,7 +279,7 @@ let obj = {
         obj[0] = "roleMention" === type;
         return obj;
       }
-      obj2 = require(6889) /* buildCommand */;
+      obj2 = require("ApplicationCommandUtils.tsx") /* buildCommand */;
       tmp3 = require;
     } else {
       let tmp = "roleMention" === type.type;
@@ -321,7 +321,7 @@ let obj = {
         obj[0] = tmp10;
         return obj;
       }
-      obj2 = require(6889) /* buildCommand */;
+      obj2 = require("ApplicationCommandUtils.tsx") /* buildCommand */;
       tmp4 = require;
     } else {
       let tmp = "userMention" === type.type;
@@ -345,7 +345,7 @@ let obj = {
     if ("text" !== type.type) {
       return { success: false };
     } else {
-      let obj = require(6889) /* buildCommand */;
+      let obj = require("ApplicationCommandUtils.tsx") /* buildCommand */;
       upload = upload.getUpload(channelId, name.name, obj.getCommandAttachmentDraftType(closure_10));
       obj = { success: null };
       obj[0] = null != upload && upload.filename === type.text;

@@ -9,8 +9,8 @@ export const createConnectionsRoleTag = function createConnectionsRoleTag(merged
   if (colorString == null) {
     colorString = DEFAULT_ROLE_COLOR_HEX;
   }
-  let PRIMARY_630 = importDefault(712).unsafe_rawColors.WHITE;
-  let obj = require(688) /* int2hslRaw */;
+  let PRIMARY_630 = require("../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.WHITE;
+  let obj = require("../../../../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */;
   const hex2intResult = obj.hex2int(colorString);
   const tmp = importDefault;
   if (obj2.getDarkness(hex2intResult) < 0.3) {

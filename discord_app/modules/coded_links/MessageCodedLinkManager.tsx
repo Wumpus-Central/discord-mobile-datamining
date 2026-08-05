@@ -6,7 +6,7 @@ import "initialize";
 
 const require = arg1;
 function resolveMessageCodedLinks(content) {
-  const arr = importDefault(4269)(content.content);
+  const arr = require("findCodedLinks.tsx")(content.content);
   let tmp = null != arr;
   if (tmp) {
     tmp = 0 !== arr.length;

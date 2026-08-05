@@ -10,11 +10,11 @@ export const useFullscreenPlaceholderCount = function useFullscreenPlaceholderCo
   let numColumns;
   let placeholderHeight;
   ({ placeholderHeight, numColumns } = arg0);
-  return Math.ceil(importDefault(1474)({ ignoreKeyboard: true }).height / placeholderHeight) * numColumns;
+  return Math.ceil(require("../../../screen/useWindowDimensions.native.tsx")({ ignoreKeyboard: true }).height / placeholderHeight) * numColumns;
 };
 export const usePlaceholderAnimatedStyle = function usePlaceholderAnimatedStyle(visible) {
   const _require = visible;
-  let obj = _require(589);
+  let obj = _require("../../../../../discord_common/js/packages/flux/index.tsx");
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   class A {
@@ -73,9 +73,9 @@ export const usePlaceholderAnimatedStyle = function usePlaceholderAnimatedStyle(
       return tmp5;
     }
   }
-  obj = { useReducedMotion: stateFromStores, visible, withRepeat: _require(4146).withRepeat, withSequence: _require(4146).withSequence, withTiming: _require(4286).withTiming, STANDARD_EASING: _require(1297).STANDARD_EASING, FADE_LAYOUT_ANIMATION_DURATION: closure_4 };
+  obj = { useReducedMotion: stateFromStores, visible, withRepeat: _require("../../../reanimated/ReanimatedRexport.tsx").withRepeat, withSequence: _require("../../../reanimated/ReanimatedRexport.tsx").withSequence, withTiming: _require("../../../../design/animation/reanimated/timing/timing.tsx").withTiming, STANDARD_EASING: _require("../../../../design/void/native.tsx").STANDARD_EASING, FADE_LAYOUT_ANIMATION_DURATION: closure_4 };
   A.__closure = obj;
   A.__workletHash = 9750536800906;
   A.__initData = closure_5;
-  return _require(4146).useAnimatedStyle(A);
+  return _require("../../../reanimated/ReanimatedRexport.tsx").useAnimatedStyle(A);
 };

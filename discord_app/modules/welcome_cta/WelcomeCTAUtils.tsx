@@ -13,8 +13,8 @@ export const pickHelloSticker = function pickHelloSticker() {
   }
   let num = 0;
   if (null != id) {
-    num = importDefault(11).extractTimestamp(id);
-    const obj = importDefault(11);
+    num = require("../../utils/SnowflakeUtils.tsx").extractTimestamp(id);
+    const obj = require("../../utils/SnowflakeUtils.tsx");
   }
   return WELCOME_STICKERS[num % WELCOME_STICKERS.length];
 };
@@ -26,17 +26,17 @@ export const pickWelcomeSticker = function pickWelcomeSticker(id) {
   }
   let num = 0;
   if (null != id) {
-    num = importDefault(11).extractTimestamp(id);
-    const obj = importDefault(11);
+    num = require("../../utils/SnowflakeUtils.tsx").extractTimestamp(id);
+    const obj = require("../../utils/SnowflakeUtils.tsx");
   }
-  const obj2 = importDefault(11);
+  const obj2 = require("../../utils/SnowflakeUtils.tsx");
   return WELCOME_STICKERS[(num + obj2.extractTimestamp(obj2, id)) % WELCOME_STICKERS.length];
 };
 export const handleWelcomeCtaClicked = function handleWelcomeCtaClicked(messageChannel, message, stickerId) {
-  let obj = importDefault(6826);
+  let obj = require("../../actions/MessageActionCreators.tsx");
   obj = { channel: messageChannel, message, shouldMention: true, showMentionToggle: true };
-  obj.sendGreetMessage(messageChannel.id, stickerId, importDefault(6826).getSendMessageOptionsForReply(obj));
-  const obj2 = importDefault(6826);
+  obj.sendGreetMessage(messageChannel.id, stickerId, require("../../actions/MessageActionCreators.tsx").getSendMessageOptionsForReply(obj));
+  const obj2 = require("../../actions/MessageActionCreators.tsx");
   obj = { is_reply: true, sticker_id: stickerId, target_user: message.author.id, sender: null };
   const currentUser = authStore.getCurrentUser();
   let id;
@@ -44,5 +44,5 @@ export const handleWelcomeCtaClicked = function handleWelcomeCtaClicked(messageC
     id = currentUser.id;
   }
   obj[3] = id;
-  importDefault(698).track(AnalyticEvents.WELCOME_CTA_CLICKED, obj);
+  require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.WELCOME_CTA_CLICKED, obj);
 };

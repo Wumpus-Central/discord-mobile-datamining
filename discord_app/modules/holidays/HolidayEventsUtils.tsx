@@ -3,14 +3,14 @@ const result = require("set").fileFinishedImporting("modules/holidays/HolidayEve
 
 export default {
   isEligible() {
-    const isExperimentEligible = importDefault(16327).getIsExperimentEligible();
+    const isExperimentEligible = require("HolidayEventsConfig.tsx").getIsExperimentEligible();
     const timestamp = Date.now();
-    const obj = importDefault(16327);
+    const obj = require("HolidayEventsConfig.tsx");
     const tmp = importDefault;
-    return timestamp >= importDefault(16327).startTimeMs && timestamp <= importDefault(16327).endTimeMs && isExperimentEligible;
+    return timestamp >= require("HolidayEventsConfig.tsx").startTimeMs && timestamp <= require("HolidayEventsConfig.tsx").endTimeMs && isExperimentEligible;
   },
   useHolidaySoundpack() {
-    let obj = importDefault(16327);
+    let obj = require("HolidayEventsConfig.tsx");
     const isExperimentEligible = obj.useIsExperimentEligible();
     const timestamp = Date.now();
     let tmp6 = null;
@@ -29,11 +29,11 @@ export default {
     return tmp6;
   },
   useIsEligible() {
-    const isExperimentEligible = importDefault(16327).useIsExperimentEligible();
+    const isExperimentEligible = require("HolidayEventsConfig.tsx").useIsExperimentEligible();
     const timestamp = Date.now();
-    const obj = importDefault(16327);
+    const obj = require("HolidayEventsConfig.tsx");
     const tmp = importDefault;
-    return timestamp >= importDefault(16327).startTimeMs && timestamp <= importDefault(16327).endTimeMs && isExperimentEligible;
+    return timestamp >= require("HolidayEventsConfig.tsx").startTimeMs && timestamp <= require("HolidayEventsConfig.tsx").endTimeMs && isExperimentEligible;
   },
   getAppSpinnerSources() {
     const timestamp = Date.now();
@@ -58,9 +58,9 @@ export default {
     return tmp5;
   },
   getHolidaySoundpack() {
-    const isExperimentEligible = importDefault(16327).getIsExperimentEligible();
+    const isExperimentEligible = require("HolidayEventsConfig.tsx").getIsExperimentEligible();
     const timestamp = Date.now();
-    const obj = importDefault(16327);
+    const obj = require("HolidayEventsConfig.tsx");
     let soundpack = null;
     if (tmp5) {
       soundpack = null;

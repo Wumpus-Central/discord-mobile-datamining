@@ -12,7 +12,7 @@ function updateActivities() {
     }
     continue;
   }
-  const tmp6 = importDefault(659)(items, items);
+  const tmp6 = require("../../../_runtime/00659_isUndefinedOrNull.js")(items, items);
   let flag = !tmp6;
   if (!tmp6) {
     flag = true;

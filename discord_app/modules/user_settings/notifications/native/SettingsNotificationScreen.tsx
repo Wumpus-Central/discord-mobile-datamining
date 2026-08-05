@@ -12,10 +12,10 @@ let metroImportAll;
 const require = arg1;
 function SystemNotificationsSubLabel() {
   const tmp = callback2();
-  let obj = require(11692) /* _requestPushNotificationPermission */;
+  let obj = require("../../../nuf/native/NotificationPermissionUtil.tsx") /* _requestPushNotificationPermission */;
   let showReactivationPrompt = obj.useShowReactivationPrompt();
-  let obj1 = importDefault(14560);
-  let obj2 = require(14561) /* hasAndroidNotificationChannels */;
+  let obj1 = require("../../../nuf/native/ContextualOptInNudgeHoldoutExperiment.tsx");
+  let obj2 = require("SettingsNotificationUtils.tsx") /* hasAndroidNotificationChannels */;
   let result = obj2.hasAndroidNotificationChannels();
   if (result) {
     obj = { variant: "text-sm/medium", color: "text-muted", children: null };
@@ -34,7 +34,7 @@ function SystemNotificationsSubLabel() {
     obj2 = { style: null, children: null };
     obj2[0] = tmp.cardContent;
     const obj3 = { color: null };
-    obj3[0] = importDefault(712).unsafe_rawColors.YELLOW_300;
+    obj3[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.YELLOW_300;
     const items1 = [callback(tmp2(7716).CircleErrorIcon, obj3), ];
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.text;
@@ -62,7 +62,7 @@ let closure_10 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(() => {
   isFamilyCenterV3Enabled = isFamilyCenterV3Enabled(6962).useIsFamilyCenterV3Enabled({ location: "SettingsNotificationsScreen" });
   let obj = isFamilyCenterV3Enabled(6962);
-  let tmp2 = !importDefault(14560).useConfig({ location: "SettingsNotificationsScreen" }).inHoldout;
+  let tmp2 = !require("../../../nuf/native/ContextualOptInNudgeHoldoutExperiment.tsx").useConfig({ location: "SettingsNotificationsScreen" }).inHoldout;
   importDefault = tmp2;
   let items = [tmp2];
   const node = importAllResult.useMemo(() => {
@@ -148,7 +148,7 @@ const memoResult = importAllResult.memo(() => {
   const effect1 = importAllResult.useEffect(() => {
     const result = isFamilyCenterV3Enabled(outer1_2[17]).prefetchFamilyCenterAgeGroupWhen(isFamilyCenterV3Enabled);
   }, items1);
-  return callback(importDefault(13793), { node });
+  return callback(require("../../../settings/native/renderer/SettingLayout.tsx"), { node });
 });
 let result = require("_initializeAndroidNotificationSettingsStore").fileFinishedImporting("modules/user_settings/notifications/native/SettingsNotificationScreen.tsx");
 

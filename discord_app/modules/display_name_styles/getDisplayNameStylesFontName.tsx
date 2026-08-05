@@ -17,7 +17,7 @@ const result = require("set").fileFinishedImporting("modules/display_name_styles
 export default function getDisplayNameStylesFontName(arg0) {
   let ZEL6mz = obj[arg0];
   if (ZEL6mz == null) {
-    ZEL6mz = importDefault(2643).ZEL6mz;
+    ZEL6mz = require("intl/DisplayNameStyles.messages.js").ZEL6mz;
   }
   return ZEL6mz;
 };

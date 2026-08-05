@@ -61,5 +61,5 @@ export default function ActivitiesPrivateChannelCallTooltip(onClosePress) {
   obj3[1] = jsx(num(4695).Button, { text: null, onPress: null, variant: "secondary", size: "sm", grow: true });
   obj1[5] = <View style={tmp.closeButtonWrapper}>{null}</View>;
   obj[1] = jsx(num(1297).Tooltip, { containerStyle: tmp.tooltip, labelStyle: tmp.tooltipText, arrowStyle: items2, label: null, title: null, children: null });
-  return jsx(importDefault(4146).View, { style: items1, children: null });
+  return jsx(require("../../reanimated/ReanimatedRexport.tsx").View, { style: items1, children: null });
 };

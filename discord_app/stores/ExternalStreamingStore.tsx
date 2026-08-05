@@ -8,7 +8,7 @@ import set from "initialize";
 
 const require = arg1;
 function makeTwitchRequest(arg0, query) {
-  const HTTP = require(530) /* sendRequest */.HTTP;
+  const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
   let obj = { url: "https://api.twitch.tv/helix" + arg0, query, headers: null, rejectWithError: false };
   obj = { "Client-ID": "33kozedd0zs6fbauka98psnc7zwom2s", Authorization: "Bearer " + arg2 };
   obj[2] = obj;
@@ -76,8 +76,8 @@ prototype["start"] = function start() {
   if (!this._started) {
     self._started = true;
     if (closure_4.isFetching()) {
-      const response = importDefault(5090).fetch();
-      const obj = importDefault(5090);
+      const response = require("../actions/ConnectedAccountsActionCreators.tsx").fetch();
+      const obj = require("../actions/ConnectedAccountsActionCreators.tsx");
     } else {
       self._check();
     }
@@ -91,7 +91,7 @@ prototype["stop"] = function stop() {
     const _clearTimeout = clearTimeout;
     clearTimeout(tmp._nextCheck);
   }
-  importDefault(709).dispatch({ type: "STREAMING_UPDATE", stream: null });
+  require("../Dispatcher.tsx").dispatch({ type: "STREAMING_UPDATE", stream: null });
 };
 prototype["_checkTwitch"] = function _checkTwitch(accessToken, arg1) {
   let closure_0 = accessToken;
@@ -539,7 +539,7 @@ prototype2["getStream"] = function getStream() {
 ExternalStreamingStore.displayName = "ExternalStreamingStore";
 obj = {
   STREAMING_UPDATE: function streamUpdate(stream) {
-    if (importDefault(659)(stream.stream, stream)) {
+    if (require("../../_runtime/00659_isUndefinedOrNull.js")(stream.stream, stream)) {
       return false;
     } else {
       stream = stream.stream;

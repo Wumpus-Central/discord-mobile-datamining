@@ -4,5 +4,5 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/expres
 
 export const EXPRESSION_PICKER_ACTION_SHEET_KEY = "ExpressionPickerActionSheet";
 export const openExpressionPickerActionSheet = function openExpressionPickerActionSheet(arg0) {
-  importDefault(4253).openLazy(require(1959) /* asyncRequireImpl */(9841, dependencyMap.paths), ExpressionPickerActionSheet, arg0);
+  require("../../action_sheet/native/ActionSheetActionCreators.tsx").openLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(9841, dependencyMap.paths), ExpressionPickerActionSheet, arg0);
 };

@@ -9,7 +9,7 @@ import createCacheKey from "createCacheKey";
 const require = arg1;
 let closure_6 = createCacheKey.createStyles((width) => {
   let obj = { emojiContainer: null };
-  obj = { width, height: width, alignItems: "center", justifyContent: "center", backgroundColor: importDefault(712).colors.MOBILE_EMOJI_BUTTON_BACKGROUND, borderRadius: importDefault(712).modules.button.BORDER_RADIUS, overflow: "hidden" };
+  obj = { width, height: width, alignItems: "center", justifyContent: "center", backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_EMOJI_BUTTON_BACKGROUND, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.button.BORDER_RADIUS, overflow: "hidden" };
   obj[0] = obj;
   return obj;
 });
@@ -20,7 +20,7 @@ let closure_7 = createCacheKey.createStyles((width, fontSize, lineHeight) => {
   }
   obj = { emojiImage: obj, emojiText: null };
   obj = { width, height: width };
-  obj = { lineHeight, fontSize, color: importDefault(712).colors.INTERACTIVE_TEXT_DEFAULT, textAlign: "center", width: tmp, height: tmp };
+  obj = { lineHeight, fontSize, color: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_TEXT_DEFAULT, textAlign: "center", width: tmp, height: tmp };
   const merged = Object.assign(tmp2);
   obj[1] = obj;
   return obj;
@@ -32,24 +32,24 @@ export const EmojiPickerRowButton = function EmojiPickerRowButton(iconSize) {
   let styles;
   let str = iconSize.iconSize;
   ({ onPress, styles } = iconSize);
-  let obj = require(4131) /* AccessibilityAnnouncer */;
+  let obj = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */;
   const tmp = callback(iconSize.emojiContainerSize);
-  const obj2 = require(4131) /* AccessibilityAnnouncer */;
-  const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  const isThemeLightResult = require(4131) /* AccessibilityAnnouncer */.isThemeLight(obj.useThemeContext().theme);
+  const obj2 = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */;
+  const unsafe_rawColors = require("../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors;
+  const isThemeLightResult = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */.isThemeLight(obj.useThemeContext().theme);
   obj = { activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, hitSlop: 4, onPress: null, style: null, children: null };
   const intl = tmp2(1236).intl;
-  obj[2] = intl.string(require(1236) /* getSystemLocale */.t.lfIHs4);
+  obj[2] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.lfIHs4);
   obj[4] = onPress;
   const items = [tmp.emojiContainer, styles];
   obj[5] = items;
-  obj = { color: require(4131) /* AccessibilityAnnouncer */.isThemeLight(obj.useThemeContext().theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300, size: null };
+  obj = { color: require("../../../design/shared.tsx") /* AccessibilityAnnouncer */.isThemeLight(obj.useThemeContext().theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300, size: null };
   if (str == null) {
     str = "md";
   }
   obj[1] = str;
-  obj[6] = jsx(require(7576) /* ReactionIcon */.ReactionIcon, { color: require(4131) /* AccessibilityAnnouncer */.isThemeLight(obj.useThemeContext().theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300, size: null });
-  return jsx(require(4812) /* PressableBase */.PressableOpacity, { color: require(4131) /* AccessibilityAnnouncer */.isThemeLight(obj.useThemeContext().theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300, size: null });
+  obj[6] = jsx(require("../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx") /* ReactionIcon */.ReactionIcon, { color: require("../../../design/shared.tsx") /* AccessibilityAnnouncer */.isThemeLight(obj.useThemeContext().theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300, size: null });
+  return jsx(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, { color: require("../../../design/shared.tsx") /* AccessibilityAnnouncer */.isThemeLight(obj.useThemeContext().theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300, size: null });
 };
 export const EmojiReactionRowButton = function EmojiReactionRowButton(emojiContainerSize) {
   let animated;
@@ -65,19 +65,19 @@ export const EmojiReactionRowButton = function EmojiReactionRowButton(emojiConta
   const tmp = callback(emojiContainerSize.emojiContainerSize);
   const memo = React.useMemo(() => ({ foreground: true }), []);
   obj = { androidRippleConfig: memo, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, disabled: null, hitSlop: 4, onPress: null, style: null, children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   let name;
   if (animated != null) {
     name = animated.name;
   }
-  obj[3] = intl.formatToPlainString(require(1236) /* getSystemLocale */.t["/iYSo6"], { emojiName: name });
+  obj[3] = intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["/iYSo6"], { emojiName: name });
   obj[4] = null == animated;
   obj[6] = onPress;
   const items = [tmp.emojiContainer, styles];
   obj[7] = items;
   if (null == animated) {
     obj[8] = null;
-    return tmp4(require(4812) /* PressableBase */.PressableOpacity, obj);
+    return tmp4(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
   } else {
     obj = { textEmojiStyle: null, fastImageStyle: null, name: null, src: null };
     ({ emojiText: obj3[0], emojiImage: obj3[1] } = tmp2);
@@ -106,6 +106,6 @@ export const getEmojiKey = function getEmojiKey(type, arg1) {
   if (null == type) {
     return arg1;
   } else {
-    type.type === require(3929) /* EmojiTypes */.EmojiTypes.UNICODE ? type.surrogates : type.id;
+    type.type === require("../../emojis/EmojiTypes.tsx") /* EmojiTypes */.EmojiTypes.UNICODE ? type.surrogates : type.id;
   }
 };

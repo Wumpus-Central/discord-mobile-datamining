@@ -4,20 +4,20 @@ import createToggle from "createToggle";
 
 const require = arg1;
 function useBugReporterExperimentSettingPredicate() {
-  return importDefault(9811).useConfig({ location: "native-settings" }).hasBugReporterAccess;
+  return require("../../../bug_reporter/BugReporterExperiment.tsx").useConfig({ location: "native-settings" }).hasBugReporterAccess;
 }
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["/tZh0A"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["/tZh0A"]);
   },
   parent: null,
   IconComponent: require("BugIcon").BugIcon,
   onPress: function handleBugReporterSettingPress() {
     if (!field.getField("isReportOpen")) {
       field.setState({ isReportOpen: true });
-      importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(9782, dependencyMap.paths));
-      const obj2 = importDefault(4490);
+      require("../../../../actions/ModalActionCreators.tsx").pushLazy(require("../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(9782, dependencyMap.paths));
+      const obj2 = require("../../../../actions/ModalActionCreators.tsx");
     }
   },
   withArrow: true,

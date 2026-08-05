@@ -19,7 +19,7 @@ const memoResult = importAllResult.memo(function YouScreenContainer(route) {
   let items1 = callback();
   let tmp = importDefault;
   let tmp5Result = dependencyMap;
-  let obj = require(15045) /* trackTabPressed */;
+  let obj = require("../TabsPerformanceTracker.tsx") /* trackTabPressed */;
   const trackTabPerformance = obj.useTrackTabPerformance(RootNavigatorScreen.YOU);
   if (route != null) {
     const params = route.params;
@@ -34,7 +34,7 @@ const memoResult = importAllResult.memo(function YouScreenContainer(route) {
     if (tmp3Result.isAndroid()) {
       obj = {};
       const merged = Object.assign(items1.androidContainer);
-      obj.paddingTop = importDefault(1581)().top;
+      obj.paddingTop = require("../../../../safe_area/useSafeAreaInsets.native.tsx")().top;
       tmp7 = obj;
     }
     obj = { style: null, children: null };

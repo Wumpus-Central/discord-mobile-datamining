@@ -45,7 +45,7 @@ export default function NotificationReactivationActionSheet(location) {
   let obj = { children: null };
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.image, source: null, resizeMode: "contain" };
-  obj[1] = importDefault(16402);
+  obj[1] = require("../../../../../../_runtime/16402_registerAsset.js");
   const items2 = [callback(closure_5, obj), , , ];
   const obj1 = { style: tmp.title, variant: "heading-xl/bold", accessibilityRole: "header", children: null };
   const intl = _location(1236).intl;

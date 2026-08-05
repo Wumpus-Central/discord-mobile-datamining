@@ -29,7 +29,7 @@ function UserRowSubLabel(arg0) {
   ({ user, type, applicationId: require } = arg0);
   ({ animate, isGameRelationship, guildId } = arg0);
   let gameIcon = callback2();
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [addApplication];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getApplication(closure_0));
   if (type !== constants.PENDING_INCOMING) {
@@ -40,7 +40,7 @@ function UserRowSubLabel(arg0) {
         obj[1] = guildId;
         obj[2] = gameIcon.activityText;
         obj[3] = animate;
-        return callback(importDefault(9557), obj);
+        return callback(require("../../../../activity_status/native/ActivityStatus.tsx"), obj);
       }
     }
   }

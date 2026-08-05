@@ -21,8 +21,8 @@ if (!set.isAndroid()) {
     let obj = channelId(8026);
     const componentContainerId = obj.useComponentContainerId();
     channelId = channelId.getChannelId();
-    importDefault(38)(null != channelId, "channelId not available in TextDisplayComponent");
-    let obj1 = importDefault(4275);
+    require("../../../../../_runtime/metro/00038__.js")(null != channelId, "channelId not available in TextDisplayComponent");
+    let obj1 = require("../../../markup/MarkupUtils.tsx");
     let obj2 = channelId(8011);
     obj = { channelId, renderOptions: closure_6 };
     const parseToASTResult = obj1.parseToAST(content.content, true, obj2.getInitialParserState(obj));

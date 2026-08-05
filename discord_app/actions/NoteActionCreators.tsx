@@ -5,7 +5,7 @@ const result = require("set").fileFinishedImporting("actions/NoteActionCreators.
 
 export default {
   updateNote(closure_0, closure_5) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     obj = { url: Endpoints.NOTE(closure_0), body: obj, oldFormErrors: true, rejectWithError: true };
     obj = { note: closure_5 };
     return HTTP.put(obj);

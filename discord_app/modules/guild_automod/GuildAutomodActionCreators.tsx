@@ -10,18 +10,18 @@ let metroImportAll;
 const require = arg1;
 function _transformClientActionToApiAction(type) {
   const obj = { type: type.type, metadata: null };
-  obj[1] = require(11180) /* _transformMetadataToCamelCase */._transformMetadataToSnakeCase(type.metadata);
+  obj[1] = require("DataUtils.tsx") /* _transformMetadataToCamelCase */._transformMetadataToSnakeCase(type.metadata);
   return obj;
 }
 function _transformClientRuleToApiRule(id) {
-  let obj = require(11180) /* _transformMetadataToCamelCase */;
+  let obj = require("DataUtils.tsx") /* _transformMetadataToCamelCase */;
   const result = obj._transformMetadataToSnakeCase(id.triggerMetadata);
   if (null != result) {
     delete tmp2[tmp];
   }
   obj = { id: id.id, name: id.name, guild_id: id.guildId, event_type: id.eventType, trigger_type: id.triggerType, trigger_metadata: result, actions: null, enabled: null, creator_id: null, position: null, exempt_channels: null, exempt_roles: null };
   const actions = id.actions;
-  const found = actions.filter(require(1351) /* isDiscordFrontendDevelopment */.isNotNullish);
+  const found = actions.filter(require("../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
   obj[6] = found.map(_transformClientActionToApiAction);
   ({ enabled: obj2[7], creatorId: obj2[8], position: obj2[9] } = id);
   let exemptChannels = id.exemptChannels;
@@ -38,27 +38,27 @@ function _transformClientRuleToApiRule(id) {
 }
 function _transformApiActionToClientAction(type) {
   const obj = { type: type.type, metadata: null };
-  obj[1] = require(11180) /* _transformMetadataToCamelCase */._transformMetadataToCamelCase(type.metadata);
+  obj[1] = require("DataUtils.tsx") /* _transformMetadataToCamelCase */._transformMetadataToCamelCase(type.metadata);
   return obj;
 }
 function _transformApiRuletoClientRule(id) {
   id = id.id;
   if (id == null) {
-    let obj = importDefault(11);
+    let obj = require("../../utils/SnowflakeUtils.tsx");
     const _Date = Date;
     id = obj.fromTimestamp(Date.now());
   }
   obj = { id, name: id.name, guildId: id.guild_id, eventType: id.event_type, triggerType: id.trigger_type, triggerMetadata: null, actions: null, enabled: null, creatorId: null, position: null, exemptChannels: null, exemptRoles: null };
-  obj[5] = require(11180) /* _transformMetadataToCamelCase */._transformMetadataToCamelCase(id.trigger_metadata);
+  obj[5] = require("DataUtils.tsx") /* _transformMetadataToCamelCase */._transformMetadataToCamelCase(id.trigger_metadata);
   const actions = id.actions;
-  const found = actions.filter(require(1351) /* isDiscordFrontendDevelopment */.isNotNullish);
+  const found = actions.filter(require("../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
   obj[6] = found.map(_transformApiActionToClientAction);
   ({ enabled: obj2[7], creator_id: obj2[8], position: obj2[9] } = id);
   let exempt_channels = id.exempt_channels;
   if (exempt_channels == null) {
     exempt_channels = [];
   }
-  const obj3 = require(11180) /* _transformMetadataToCamelCase */;
+  const obj3 = require("DataUtils.tsx") /* _transformMetadataToCamelCase */;
   obj[10] = new Set(exempt_channels);
   let exempt_roles = id.exempt_roles;
   if (exempt_roles == null) {
@@ -417,7 +417,7 @@ export const removeMentionRaidRestrictionWithFeedback = function removeMentionRa
     canResult = getUncachedChannelPermissions.can(constants.MANAGE_GUILD, guild);
   }
   if (canResult) {
-    const result = _require(11173).openConfirmRemoveMentionRaid(() => {
+    const result = _require("GuildAutomodActionActionCreators.native.tsx").openConfirmRemoveMentionRaid(() => {
       let obj = callback(4479);
       obj = { feedback_type: callback(6886).Feedback.MENTION_RAID_REMOVE_RESTRICTION, decision_id: closure_1 };
       obj.trackWithMetadata(outer1_6.GUILD_AUTOMOD_FEEDBACK, obj);
@@ -426,11 +426,11 @@ export const removeMentionRaidRestrictionWithFeedback = function removeMentionRa
       HTTP.post(obj);
       dependencyMap();
     });
-    let obj = _require(11173);
+    let obj = _require("GuildAutomodActionActionCreators.native.tsx");
   }
 };
 export const clearMentionRaidDetected = function clearMentionRaidDetected(guildId) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "AUTO_MODERATION_MENTION_RAID_NOTICE_DISMISS", guildId };
   obj.dispatch(obj);
 };

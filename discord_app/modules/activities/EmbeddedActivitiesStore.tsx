@@ -26,7 +26,7 @@ function updateEmbeddedActivities(content_classification) {
   ({ application_id, launch_id, composite_instance_id, location: _location, participants } = content_classification);
   const mapped = participants.map(participantFromServer);
   let combined = importDefault;
-  const tmp3 = importDefault(10508)(application_id);
+  const tmp3 = require("getURLForApplication.tsx")(application_id);
   if (null != tmp3) {
     const embeddedActivityLocationChannelId = application_id(3903).getEmbeddedActivityLocationChannelId(_location);
     if (null != embeddedActivityLocationChannelId) {
@@ -330,7 +330,7 @@ prototype["clear"] = function clear() {
 };
 prototype["getItems"] = function getItems(arg0) {
   const self = this;
-  const ContentClassificationEmbeddedActivityFilterExperiment = require(10563) /* apexExperiment */.ContentClassificationEmbeddedActivityFilterExperiment;
+  const ContentClassificationEmbeddedActivityFilterExperiment = require("ContentClassificationEmbeddedActivityFilterExperiment.tsx") /* apexExperiment */.ContentClassificationEmbeddedActivityFilterExperiment;
   if (ContentClassificationEmbeddedActivityFilterExperiment.getConfig({ location: "embedded_activity_store" }).enabled) {
     if ("all" !== arg0) {
       if ("visible" === arg0) {
@@ -573,7 +573,7 @@ prototype2["getLayoutModeForApp"] = function getLayoutModeForApp(id) {
 };
 prototype2["getConnectedActivityChannelId"] = function getConnectedActivityChannelId() {
   if (null != c29) {
-    return require(3903) /* getEmbeddedActivityLocationChannelId */.getEmbeddedActivityLocationChannelId(c29);
+    return require("utils/embeddedActivityLocationUtils.tsx") /* getEmbeddedActivityLocationChannelId */.getEmbeddedActivityLocationChannelId(c29);
   }
 };
 prototype2["getConnectedActivityLocation"] = function getConnectedActivityLocation() {
@@ -698,7 +698,7 @@ const items2 = [
     shouldShowNewActivityIndicator.surfacesToShowNewActivityIndicator = new Set();
     if (shouldShowNewActivityIndicator.shouldShowNewActivityIndicator) {
       const surfacesToShowNewActivityIndicator = shouldShowNewActivityIndicator.surfacesToShowNewActivityIndicator;
-      surfacesToShowNewActivityIndicator.add(require(1906) /* PermissionOverwriteType */.EmbeddedActivitySurfaces.VOICE_LAUNCHER);
+      surfacesToShowNewActivityIndicator.add(require("../../flow/Server.tsx") /* PermissionOverwriteType */.EmbeddedActivitySurfaces.VOICE_LAUNCHER);
     }
     delete tmp2[tmp];
     const merged = Object.assign(shouldShowNewActivityIndicator);
@@ -795,7 +795,7 @@ obj = {
     let launchParams;
     ({ componentId, commandOrigin, launchParams, inviterUserId } = applicationId);
     const result = map4.set("" + applicationId.applicationId + ":" + applicationId.channelId, { isLaunching: true, componentId, inviterUserId, launchParams });
-    if (commandOrigin === require(6891) /* ApplicationCommandSectionType */.CommandOrigin.APP_DMS_ENTRY_POINT_COMMAND_BUTTON) {
+    if (commandOrigin === require("../application_commands/ApplicationCommandTypes.tsx") /* ApplicationCommandSectionType */.CommandOrigin.APP_DMS_ENTRY_POINT_COMMAND_BUTTON) {
       let RESIZABLE = FocusedActivityLayouts.NO_CHAT;
     } else {
       RESIZABLE = FocusedActivityLayouts.RESIZABLE;
@@ -923,7 +923,7 @@ obj = {
     const timestamp = Date.now();
     let importDefault;
     let obj = timestamp(500);
-    importDefault = importDefault(10522)(obj.getOS());
+    importDefault = require("utils/getPlatform.tsx")(obj.getOS());
     obj.dateRangesForSurfaces = activities.reduce((arg0, arg1) => {
       let closure_0 = arg0;
       let closure_1 = tmp;
@@ -1004,7 +1004,7 @@ obj = {
   },
   CHANNEL_SELECT: function handleChannelSelect(arg0) {
     if (null != c29) {
-      const embeddedActivityLocationChannelId = require(3903) /* getEmbeddedActivityLocationChannelId */.getEmbeddedActivityLocationChannelId(c29);
+      const embeddedActivityLocationChannelId = require("utils/embeddedActivityLocationUtils.tsx") /* getEmbeddedActivityLocationChannelId */.getEmbeddedActivityLocationChannelId(c29);
       let tmp6 = null != embeddedActivityLocationChannelId && embeddedActivityLocationChannelId !== tmp;
       if (tmp6) {
         tmp6 = PIP === ActivityPanelModes.PANEL;
@@ -1012,7 +1012,7 @@ obj = {
       if (tmp6) {
         PIP = ActivityPanelModes.PIP;
       }
-      const obj = require(3903) /* getEmbeddedActivityLocationChannelId */;
+      const obj = require("utils/embeddedActivityLocationUtils.tsx") /* getEmbeddedActivityLocationChannelId */;
     }
   },
   POPOUT_WINDOW_CLOSE: function handlePopoutWindowClose(key) {

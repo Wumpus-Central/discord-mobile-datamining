@@ -21,8 +21,8 @@ let closure_11 = createCacheKey.createStyles((arg0, arg1) => {
   if (arg0) {
     num = 6;
   }
-  let obj = { position: "absolute", right: "50%", zIndex: 1, marginVertical: 12, marginHorizontal: 0, paddingRight: 9, paddingLeft: num, paddingVertical: 4, minHeight: 24, flexDirection: "row", justifyContent: "center", alignItems: "center", borderRadius: importDefault(712).radii.round, backgroundColor: null, elevation: 4, shadowColor: null, shadowOffset: null, shadowOpacity: 0.08, shadowRadius: 4, borderWidth: 1, borderColor: null };
-  const tmp3 = importDefault(712);
+  let obj = { position: "absolute", right: "50%", zIndex: 1, marginVertical: 12, marginHorizontal: 0, paddingRight: 9, paddingLeft: num, paddingVertical: 4, minHeight: 24, flexDirection: "row", justifyContent: "center", alignItems: "center", borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.round, backgroundColor: null, elevation: 4, shadowColor: null, shadowOffset: null, shadowOpacity: 0.08, shadowRadius: 4, borderWidth: 1, borderColor: null };
+  const tmp3 = require("../../../../../discord_common/js/packages/tokens/native.tsx");
   if (arg0) {
     let RED_400 = tmp3.unsafe_rawColors.RED_400;
   } else {
@@ -31,9 +31,9 @@ let closure_11 = createCacheKey.createStyles((arg0, arg1) => {
   }
   obj = { unreadBar: null, text: null };
   obj[13] = RED_400;
-  obj[15] = importDefault(712).colors.BLACK;
+  obj[15] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BLACK;
   obj[16] = { width: 0, height: 1 };
-  obj[20] = importDefault(712).colors.BORDER_SUBTLE;
+  obj[20] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE;
   obj[0] = obj;
   let num2 = 0;
   if (obj3.isAndroid()) {

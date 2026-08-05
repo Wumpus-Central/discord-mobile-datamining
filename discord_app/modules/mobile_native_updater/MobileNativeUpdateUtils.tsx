@@ -109,9 +109,9 @@ function openBuildInstallerUrl(install) {
       const _HermesInternal = HermesInternal;
       tmp2.error("Attempted to follow invalid install URL " + str);
     } else {
-      const openURLExternally = require(3982).default.openURLExternally;
+      const openURLExternally = require("../../lib/native/Linking.tsx").default.openURLExternally;
       if (obj.isIOS()) {
-        openURLExternally(str.toString(), require(691) /* keys */.WebBrowserType.SAFARI);
+        openURLExternally(str.toString(), require("../../ConstantsIOS.tsx") /* keys */.WebBrowserType.SAFARI);
       } else {
         openURLExternally(str.toString());
       }

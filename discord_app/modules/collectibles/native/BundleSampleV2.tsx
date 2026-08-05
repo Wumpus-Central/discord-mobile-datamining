@@ -44,9 +44,9 @@ function BundleStaticPreviewContent(mutedBackground) {
     obj[0] = combined;
     obj[0] = obj;
     obj[1] = closure_9.bgImage;
-    tmp = closure_6(importDefault(5236), obj);
+    tmp = closure_6(require("../../../components_native/common/FastImage.tsx"), obj);
     const tmp2 = closure_6;
-    const tmp5 = importDefault(5236);
+    const tmp5 = require("../../../components_native/common/FastImage.tsx");
   }
   obj = { style: closure_9.container, children: null };
   let tmp21Result = !disableBackground;
@@ -94,9 +94,9 @@ function BundleStaticPreviewContent(mutedBackground) {
     obj5[0] = combined1;
     obj4[0] = obj5;
     obj4[1] = tmp19.fgImage;
-    obj3[2] = closure_6(importDefault(5236), obj4);
+    obj3[2] = closure_6(require("../../../components_native/common/FastImage.tsx"), obj4);
     tmp24Result = tmp24(tmp18, obj3);
-    const tmp27 = importDefault(5236);
+    const tmp27 = require("../../../components_native/common/FastImage.tsx");
   }
   items[1] = tmp24Result;
   obj[1] = items;
@@ -114,10 +114,10 @@ function BundleSampleV2Composed(arg0) {
   const tmp = callback2(size);
   let nameplateData;
   if (null != nameplate) {
-    importDefault(38)(nameplate.type === require(1901) /* CollectiblesItemType */.CollectiblesItemType.NAMEPLATE, "Item must be Nameplate");
-    let obj = require(1898) /* getNameplateData */;
+    require("../../../../_runtime/metro/00038__.js")(nameplate.type === require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.NAMEPLATE, "Item must be Nameplate");
+    let obj = require("../nameplates/utils.tsx") /* getNameplateData */;
     nameplateData = obj.getNameplateData(nameplate);
-    const tmp5 = importDefault(38);
+    const tmp5 = require("../../../../_runtime/metro/00038__.js");
   }
   obj = { style: tmp.bundle, children: null };
   let tmp12 = null != pfx;
@@ -126,7 +126,7 @@ function BundleSampleV2Composed(arg0) {
     obj[0] = tmp.pfx;
     const obj1 = { item: null };
     obj1[0] = pfx;
-    obj[1] = callback(importDefault(9295), obj1);
+    obj[1] = callback(require("ProfileEffectSampleV2.tsx"), obj1);
     tmp12 = callback(tmp11, obj);
   }
   const items = [tmp12, , ];
@@ -150,7 +150,7 @@ function BundleSampleV2Composed(arg0) {
       }
       obj3[1] = XSMALL_20;
       obj3[2] = nameplateData;
-      obj3 = tmp22(require(9307) /* NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG */.NameplateDummyUserPreview, obj3);
+      obj3 = tmp22(require("../nameplates/native/NameplateDummyUserPreview.tsx") /* NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG */.NameplateDummyUserPreview, obj3);
       obj2[1] = obj3;
       callback(tmp11, obj2);
     }
@@ -162,7 +162,7 @@ function BundleSampleV2Composed(arg0) {
     obj5[0] = deco;
     obj5[1] = tmp9;
     obj5[2] = null != nameplateData;
-    obj4[1] = callback(importDefault(9305), obj5);
+    obj4[1] = callback(require("AvatarDecorationSampleV2.tsx"), obj5);
     callback(tmp11, obj4);
   }
 }
@@ -174,7 +174,7 @@ function BundleSampleV2StaticPreview(composedFallbackProps) {
   let targetSize;
   composedFallbackProps = composedFallbackProps.composedFallbackProps;
   ({ previewAssets, disableStaticBackground, mutedStaticBackground, targetSize, exposureLocation } = composedFallbackProps);
-  let obj = require(9312) /* useCollectiblesMobileFlexibleBundlesExperiment */;
+  let obj = require("../experiments/CollectiblesMobileFlexibleBundlesExperiment.tsx") /* useCollectiblesMobileFlexibleBundlesExperiment */;
   if (obj.useCollectiblesMobileFlexibleBundlesExperiment(exposureLocation).enabled) {
     obj = { previewAssets: null, disableBackground: null, mutedBackground: null, targetSize: null };
     obj[0] = previewAssets;
@@ -218,18 +218,18 @@ obj[5] = {};
 const styles = StyleSheet.create(obj);
 let closure_10 = createCacheKey.createStyles((arg0) => {
   let obj = { bundle: null, pfx: null, avatar: null, avatarWithNameplate: null, nameplate: null };
-  obj = { width: tmp.bundleWidth, height: tmp.bundleHeight, borderRadius: importDefault(712).radii.xs };
+  obj = { width: tmp.bundleWidth, height: tmp.bundleHeight, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.xs };
   obj[0] = obj;
-  obj = { position: "absolute", top: tmp.pfxTop, left: tmp.pfxLeft, width: tmp.pfxWidth, height: tmp.pfxHeight, backgroundColor: importDefault(712).colors.BACKGROUND_BASE_LOW, transform: items, zIndex: 0, overflow: "hidden", borderRadius: importDefault(712).radii.xs };
+  obj = { position: "absolute", top: tmp.pfxTop, left: tmp.pfxLeft, width: tmp.pfxWidth, height: tmp.pfxHeight, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW, transform: items, zIndex: 0, overflow: "hidden", borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.xs };
   items = [{ rotate: "-8deg" }];
   obj[1] = obj;
   const items1 = [{ rotate: "8deg" }];
   obj[2] = { position: "absolute", top: BUNDLE_PREVIEW_CONFIG[arg0].avatarTop, right: BUNDLE_PREVIEW_CONFIG[arg0].avatarRight, transform: items1, zIndex: 1, alignItems: "center", justifyContent: "center" };
   const items2 = [{ rotate: "8deg" }];
-  obj[3] = { position: "absolute", top: BUNDLE_PREVIEW_CONFIG[arg0].avatarWithNameplateTop, right: BUNDLE_PREVIEW_CONFIG[arg0].avatarWithNameplateRight, transform: items2, zIndex: 1, alignItems: "center", justifyContent: "center", shadowColor: importDefault(712).colors.BLACK, shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.5, shadowRadius: 4 };
+  obj[3] = { position: "absolute", top: BUNDLE_PREVIEW_CONFIG[arg0].avatarWithNameplateTop, right: BUNDLE_PREVIEW_CONFIG[arg0].avatarWithNameplateRight, transform: items2, zIndex: 1, alignItems: "center", justifyContent: "center", shadowColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BLACK, shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.5, shadowRadius: 4 };
   const obj1 = { position: "absolute", top: BUNDLE_PREVIEW_CONFIG[arg0].avatarTop, right: BUNDLE_PREVIEW_CONFIG[arg0].avatarRight, transform: items1, zIndex: 1, alignItems: "center", justifyContent: "center" };
-  const obj2 = { position: "absolute", top: BUNDLE_PREVIEW_CONFIG[arg0].avatarWithNameplateTop, right: BUNDLE_PREVIEW_CONFIG[arg0].avatarWithNameplateRight, transform: items2, zIndex: 1, alignItems: "center", justifyContent: "center", shadowColor: importDefault(712).colors.BLACK, shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.5, shadowRadius: 4 };
-  obj[4] = { position: "absolute", bottom: BUNDLE_PREVIEW_CONFIG[arg0].nameplateBottom, marginHorizontal: 10, width: "90%", backgroundColor: importDefault(712).colors.BACKGROUND_BASE_LOWER, zIndex: 2, borderRadius: importDefault(712).radii.sm, shadowColor: importDefault(712).colors.BLACK, shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.5, shadowRadius: 4 };
+  const obj2 = { position: "absolute", top: BUNDLE_PREVIEW_CONFIG[arg0].avatarWithNameplateTop, right: BUNDLE_PREVIEW_CONFIG[arg0].avatarWithNameplateRight, transform: items2, zIndex: 1, alignItems: "center", justifyContent: "center", shadowColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BLACK, shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.5, shadowRadius: 4 };
+  obj[4] = { position: "absolute", bottom: BUNDLE_PREVIEW_CONFIG[arg0].nameplateBottom, marginHorizontal: 10, width: "90%", backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOWER, zIndex: 2, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.sm, shadowColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BLACK, shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.5, shadowRadius: 4 };
   return obj;
 });
 const result = require("SAMPLE_PROFILE_ASPECT_RATIO").fileFinishedImporting("modules/collectibles/native/BundleSampleV2.tsx");

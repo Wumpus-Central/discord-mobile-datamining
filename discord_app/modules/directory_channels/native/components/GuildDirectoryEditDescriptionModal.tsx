@@ -134,7 +134,7 @@ export default function GuildDirectoryEditDescriptionModal(arg0) {
   const _require = arg0;
   obj = {};
   obj = { fullscreen: true, headerLeft: null, headerTitle: null, render: null };
-  obj[1] = _require(5238).getHeaderCloseButton(importDefault(11598).close);
+  obj[1] = _require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderCloseButton(require("GuildDirectoryEditDescriptionModalActionCreators.tsx").close);
   obj[2] = function headerTitle() {
     return null;
   };
@@ -145,5 +145,5 @@ export default function GuildDirectoryEditDescriptionModal(arg0) {
   obj[EDIT_DESCRIPTION] = obj;
   obj[0] = obj;
   obj[1] = EDIT_DESCRIPTION;
-  return callback(_require(5665).Navigator, obj);
+  return callback(_require("../../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, obj);
 };

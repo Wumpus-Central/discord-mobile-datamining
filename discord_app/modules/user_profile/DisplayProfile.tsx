@@ -114,7 +114,7 @@ Object.defineProperty(prototype, "gameWidgets", {
     const widgets = this._userProfile.widgets;
     let found;
     if (widgets != null) {
-      found = widgets.filter(require(6991) /* items */.isGameWidget);
+      found = widgets.filter(require("UserProfileGameWidgetTypes.tsx") /* items */.isGameWidget);
     }
     return found;
   },
@@ -136,7 +136,7 @@ Object.defineProperty(prototype, "primaryColor", {
 });
 Object.defineProperty(prototype, "canUsePremiumProfileCustomization", {
   get: function canUsePremiumProfileCustomization() {
-    return importDefault(3931).isPremiumAtLeast(this.premiumType, PremiumTypes.TIER_2);
+    return require("../../utils/PremiumUtils.tsx").isPremiumAtLeast(this.premiumType, PremiumTypes.TIER_2);
   },
   set: undefined
 });
@@ -248,12 +248,12 @@ prototype["getBannerURL"] = function getBannerURL(arg0) {
       ({ userId: obj4[0], guildId: obj4[1], banner: obj4[2] } = self);
       obj[3] = canAnimate;
       obj[4] = size;
-      let guildMemberBannerURL = require(1416) /* getAvatarURL */.getGuildMemberBannerURL(obj);
-      const obj3 = require(1416) /* getAvatarURL */;
+      let guildMemberBannerURL = require("../../utils/AvatarUtils.tsx") /* getAvatarURL */.getGuildMemberBannerURL(obj);
+      const obj3 = require("../../utils/AvatarUtils.tsx") /* getAvatarURL */;
     }
     return guildMemberBannerURL;
   }
-  obj = require(1416) /* getAvatarURL */;
+  obj = require("../../utils/AvatarUtils.tsx") /* getAvatarURL */;
   obj = { id: self.userId, banner: self.banner, canAnimate, size };
   guildMemberBannerURL = obj.getUserBannerURL(obj);
 };
@@ -275,8 +275,8 @@ prototype["getPreviewBanner"] = function getPreviewBanner(pendingBanner, arg1, a
         obj[1] = self;
         obj[2] = arg1;
         obj[3] = num;
-        userBannerURL = require(1416) /* getAvatarURL */.getUserBannerURL(obj);
-        const obj2 = require(1416) /* getAvatarURL */;
+        userBannerURL = require("../../utils/AvatarUtils.tsx") /* getAvatarURL */.getUserBannerURL(obj);
+        const obj2 = require("../../utils/AvatarUtils.tsx") /* getAvatarURL */;
       }
       let bannerURL = userBannerURL;
     } else {
@@ -288,7 +288,7 @@ prototype["getPreviewBanner"] = function getPreviewBanner(pendingBanner, arg1, a
   }
 };
 prototype["getPreviewBio"] = function getPreviewBio(pendingBio) {
-  let obj = require(8077) /* useAvatarsWithGuilds */;
+  let obj = require("../profile_customization/ProfileCustomizationUtils.tsx") /* useAvatarsWithGuilds */;
   obj = { pendingValue: pendingBio, userValue: this._userProfile.bio, guildValue: null, guildId: null };
   const _guildMemberProfile = this._guildMemberProfile;
   let bio;
@@ -300,7 +300,7 @@ prototype["getPreviewBio"] = function getPreviewBio(pendingBio) {
   return obj.getProfilePreviewValue(obj);
 };
 prototype["getPreviewPronouns"] = function getPreviewPronouns(pendingValue) {
-  let obj = require(8077) /* useAvatarsWithGuilds */;
+  let obj = require("../profile_customization/ProfileCustomizationUtils.tsx") /* useAvatarsWithGuilds */;
   obj = { pendingValue, userValue: this._userProfile.pronouns, guildValue: null, guildId: null };
   const _guildMemberProfile = this._guildMemberProfile;
   let pronouns;

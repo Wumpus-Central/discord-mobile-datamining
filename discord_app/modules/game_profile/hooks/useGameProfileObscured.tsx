@@ -5,15 +5,15 @@ const require = arg1;
 let result = require("initialize").fileFinishedImporting("modules/game_profile/hooks/useGameProfileObscured.tsx");
 
 export default function useGameProfileObscured(contentClassification) {
-  require(589) /* initialize */;
+  require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   [][0] = mergeGuildAvatar;
   let result = null != contentClassification;
   if (result) {
     result = false === tmp4;
   }
   if (result) {
-    result = require(7004) /* isAgeRestrictedContentClassification */.isAgeRestrictedContentClassification(contentClassification.contentClassification);
-    const tmpResult = require(7004) /* isAgeRestrictedContentClassification */;
+    result = require("../../content_classification/utils.tsx") /* isAgeRestrictedContentClassification */.isAgeRestrictedContentClassification(contentClassification.contentClassification);
+    const tmpResult = require("../../content_classification/utils.tsx") /* isAgeRestrictedContentClassification */;
   }
   return result;
 };
@@ -23,8 +23,8 @@ export const isGameProfileObscured = function isGameProfileObscured(game, nsfwAl
     result = false === nsfwAllowed;
   }
   if (result) {
-    result = require(7004) /* isAgeRestrictedContentClassification */.isAgeRestrictedContentClassification(game.contentClassification);
-    const obj = require(7004) /* isAgeRestrictedContentClassification */;
+    result = require("../../content_classification/utils.tsx") /* isAgeRestrictedContentClassification */.isAgeRestrictedContentClassification(game.contentClassification);
+    const obj = require("../../content_classification/utils.tsx") /* isAgeRestrictedContentClassification */;
   }
   return result;
 };

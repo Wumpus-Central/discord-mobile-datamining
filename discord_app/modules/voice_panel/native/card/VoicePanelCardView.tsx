@@ -21,7 +21,7 @@ function getCardKey(type) {
   return "" + type.type + "-" + type.id;
 }
 function renderCard(arg0, item, transitionState, cleanUp) {
-  return jsx(importDefault(16076), { item, transitionState, cleanUp }, arg0);
+  return jsx(require("VoicePanelCard.tsx"), { item, transitionState, cleanUp }, arg0);
 }
 function CardContentFreezer(children) {
   children = children.children;

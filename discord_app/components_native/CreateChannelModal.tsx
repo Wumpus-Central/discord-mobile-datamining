@@ -723,7 +723,7 @@ export default function CreateChannelModal(arg0) {
   let initialStack;
   let screens;
   const _require = arg0;
-  ({ screens, initialStack } = importDefault(5598)(() => {
+  ({ screens, initialStack } = require("../hooks/useInitialValue.tsx")(() => {
     let obj = { name: outer1_30.CREATE_CHANNEL, params: null };
     obj = {};
     let merged = Object.assign(callback);
@@ -761,6 +761,6 @@ export default function CreateChannelModal(arg0) {
     obj[1] = items;
     return obj;
   }));
-  return callback(_require(5665).Navigator, { screens, initialRouteStack });
+  return callback(_require("../design/components/Navigator/native/Navigator.native.tsx").Navigator, { screens, initialRouteStack });
 };
 export { CreateChannel };

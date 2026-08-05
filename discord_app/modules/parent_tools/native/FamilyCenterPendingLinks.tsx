@@ -98,7 +98,7 @@ function FamilyCenterPendingLinkRow(otherUser) {
     obj8[1] = tmp8Result;
     return tmp14(tmp2(14068), obj8);
   }
-  tmp4 = importDefault(7260)();
+  tmp4 = require("../hooks/useIsInAdultAgeGroup.tsx")();
 }
 ({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
 createCacheKey = { container: { marginTop: 24 }, content: null, header: null };
@@ -116,13 +116,13 @@ const result = require("items").fileFinishedImporting("modules/parent_tools/nati
 
 export default function FamilyCenterPendingLinks() {
   const tmp = createCacheKey();
-  let obj = require(7259) /* useUserIdsForLinkStatus */;
+  let obj = require("../hooks/useUserLinks.tsx") /* useUserIdsForLinkStatus */;
   const usersForLinkStatus = obj.useUsersForLinkStatus(UserLinkStatus.PENDING);
-  require(11239) /* useAgeSpecificText */;
-  const intl = require(1236) /* getSystemLocale */.intl;
+  require("../hooks/useAgeSpecificText.tsx") /* useAgeSpecificText */;
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   obj = { count: usersForLinkStatus.length };
-  intl.formatToPlainString(importDefault(2285).IkAgkG, obj);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
+  intl.formatToPlainString(require("../FamilyCenter.messages.js").IkAgkG, obj);
+  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   let tmp7 = null;
   if (0 !== usersForLinkStatus.length) {
     obj = { style: null, children: null };
@@ -130,7 +130,7 @@ export default function FamilyCenterPendingLinks() {
     const obj1 = { style: null, variant: "eyebrow", color: "text-default", children: null };
     obj1[0] = tmp.header;
     obj1[3] = tmp6;
-    const items = [callback(require(4281) /* Text */.Text, obj1), ];
+    const items = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1), ];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.content;
     obj2[1] = usersForLinkStatus.map((id) => callback(closure_10, { otherUser: id }, "pending-" + id.id));

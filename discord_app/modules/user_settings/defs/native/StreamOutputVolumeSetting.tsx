@@ -7,14 +7,14 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.pEAl4b);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.pEAl4b);
   },
   parent: require("MobileSetting").MobileSetting.VOICE,
   maximum: 200,
   useValue: function useStreamVolumeSettingValue() {
     let items = [reset, fetchFingerprint, _detectH265HardwareDecode];
-    return require(589) /* initialize */.useStateFromStores(items, () => {
+    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
       let obj;
       let obj2;
       const items = [reset, fetchFingerprint];
@@ -47,14 +47,14 @@ createToggle = {
         tmp2 = lastActiveStream;
       }
     }
-    importDefault(38)(null != tmp2, "Can not set stream volume without active stream");
-    importDefault(9077).setLocalVolume(tmp2.ownerId, arg0, require(4381) /* BaseConnectionEvent */.MediaEngineContextTypes.STREAM);
+    require("../../../../../_runtime/metro/00038__.js")(null != tmp2, "Can not set stream volume without active stream");
+    require("../../../../actions/AudioActionCreators.tsx").setLocalVolume(tmp2.ownerId, arg0, require("../../../../../discord_common/js/packages/media-engine/index.tsx") /* BaseConnectionEvent */.MediaEngineContextTypes.STREAM);
   },
   usePredicate: function useHasStreamVolumeSetting() {
-    const obj = importDefault(10743);
+    const obj = require("../../../media_engine/MobileAudioOutputExperiment.tsx");
     let items = [reset, fetchFingerprint];
-    const obj2 = require(589) /* initialize */;
-    return require(589) /* initialize */.useStateFromStores(items, () => {
+    const obj2 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
       let obj;
       let obj2;
       const items = [reset, fetchFingerprint];
@@ -71,10 +71,10 @@ createToggle = {
     }) && obj.getConfig({ location: "StreamOutputVolumeSetting" }).audioOutputPresent;
   },
   useSearchTerms() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    const items = [intl.string(require(1236) /* getSystemLocale */.t["3182VD"]), ];
-    const intl2 = require(1236) /* getSystemLocale */.intl;
-    items[1] = intl2.string(require(1236) /* getSystemLocale */.t["DGq/PR"]);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const items = [intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["3182VD"]), ];
+    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    items[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["DGq/PR"]);
     return items;
   }
 };

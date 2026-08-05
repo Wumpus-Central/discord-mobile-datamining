@@ -31,7 +31,7 @@ let closure_15 = createCacheKey.createStyles((arg0) => {
     num3 = 56;
   }
   let obj = { card: null, bannerContainer: null, banner: null, content: null, guildIconContainer: null, guildIcon: null, guildNameRow: null, guildBadge: null, guildName: null, description: null, memberCounts: null, memberCount: null, dot: null, dotOnline: null, dismissButton: null };
-  obj = { backgroundColor: importDefault(712).colors.BG_SURFACE_RAISED, borderColor: importDefault(712).colors.BORDER_MUTED, borderWidth: 1, borderRadius: importDefault(712).radii.lg, overflow: "hidden", flex: 1, marginBottom: importDefault(712).space.PX_16 };
+  obj = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BG_SURFACE_RAISED, borderColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_MUTED, borderWidth: 1, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, overflow: "hidden", flex: 1, marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
   obj[0] = obj;
   let num4 = 80;
   if ("one-column" === arg0) {
@@ -44,7 +44,7 @@ let closure_15 = createCacheKey.createStyles((arg0) => {
   if ("one-column" === arg0) {
     num5 = 32;
   }
-  obj[3] = { flex: 1, justifyContent: "space-between", marginTop: num5, marginBottom: importDefault(712).space.PX_12, marginHorizontal: importDefault(712).space.PX_12 };
+  obj[3] = { flex: 1, justifyContent: "space-between", marginTop: num5, marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, marginHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 };
   if ("one-column" === arg0) {
     num2 = 56;
   }
@@ -55,26 +55,26 @@ let closure_15 = createCacheKey.createStyles((arg0) => {
     diff = 80 - result - 2;
   }
   obj[4] = { position: "absolute", top: diff, left: 16 };
-  const obj1 = { flex: 1, justifyContent: "space-between", marginTop: num5, marginBottom: importDefault(712).space.PX_12, marginHorizontal: importDefault(712).space.PX_12 };
-  obj[5] = { width: num3, height: num3, borderRadius: importDefault(712).radii.lg };
-  const obj2 = { width: num3, height: num3, borderRadius: importDefault(712).radii.lg };
-  obj[6] = { flexDirection: "row", alignItems: "center", marginBottom: importDefault(712).space.PX_4 };
+  const obj1 = { flex: 1, justifyContent: "space-between", marginTop: num5, marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, marginHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 };
+  obj[5] = { width: num3, height: num3, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.lg };
+  const obj2 = { width: num3, height: num3, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.lg };
+  obj[6] = { flexDirection: "row", alignItems: "center", marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
   const space = tmp2(712).space;
   obj[7] = { marginRight: "one-column" === arg0 ? space.PX_8 : space.PX_4 };
   obj[8] = { flex: 1, minWidth: 0 };
   const space2 = tmp2(712).space;
   obj[9] = { marginBottom: "one-column" === arg0 ? space2.PX_8 : space2.PX_4 };
-  const obj3 = { flexDirection: "row", alignItems: "center", marginBottom: importDefault(712).space.PX_4 };
-  obj[10] = { flexDirection: "row", gap: importDefault(712).space.PX_16 };
+  const obj3 = { flexDirection: "row", alignItems: "center", marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
+  obj[10] = { flexDirection: "row", gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
   const space3 = tmp2(712).space;
   obj[11] = { display: "flex", flexDirection: "row", alignItems: "center", marginBottom: "one-column" === arg0 ? space3.PX_12 : space3.PX_8, gap: 6 };
-  const obj4 = { flexDirection: "row", gap: importDefault(712).space.PX_16 };
+  const obj4 = { flexDirection: "row", gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
   const result1 = num / 2;
-  obj[12] = { width: num, height: num, borderRadius: result1, backgroundColor: importDefault(712).colors.TEXT_STATUS_OFFLINE };
-  const obj5 = { width: num, height: num, borderRadius: result1, backgroundColor: importDefault(712).colors.TEXT_STATUS_OFFLINE };
-  obj[13] = { width: num, height: num, borderRadius: result1, backgroundColor: importDefault(712).colors.TEXT_STATUS_ONLINE };
-  const obj6 = { width: num, height: num, borderRadius: result1, backgroundColor: importDefault(712).colors.TEXT_STATUS_ONLINE };
-  obj[14] = { position: "absolute", top: 8, right: 8, width: 2 * importDefault(712).radii.lg, height: 2 * importDefault(712).radii.lg, borderRadius: importDefault(712).radii.lg, backgroundColor: importDefault(712).colors.BACKGROUND_MOD_SUBTLE, alignItems: "center", justifyContent: "center" };
+  obj[12] = { width: num, height: num, borderRadius: result1, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_STATUS_OFFLINE };
+  const obj5 = { width: num, height: num, borderRadius: result1, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_STATUS_OFFLINE };
+  obj[13] = { width: num, height: num, borderRadius: result1, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_STATUS_ONLINE };
+  const obj6 = { width: num, height: num, borderRadius: result1, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_STATUS_ONLINE };
+  obj[14] = { position: "absolute", top: 8, right: 8, width: 2 * require("../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, height: 2 * require("../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_SUBTLE, alignItems: "center", justifyContent: "center" };
   return obj;
 });
 let result = require("noop").fileFinishedImporting("modules/game_community_upsell/native/GameCommunityMultiGuildUpsellCard.tsx");

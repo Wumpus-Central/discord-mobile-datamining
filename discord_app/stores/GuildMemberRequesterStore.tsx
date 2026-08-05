@@ -67,7 +67,7 @@ function handleLoadSearchResults(arg0) {
 }
 let c3 = importDefaultResult;
 let c4 = new require("acknowledge")(importDefaultResult.isMember, (arg0, userIds) => {
-  let obj = importDefault(709);
+  let obj = require("../Dispatcher.tsx");
   obj = { type: "GUILD_MEMBERS_REQUEST", guildIds: items, userIds };
   items = [arg0];
   obj.dispatch(obj);
@@ -316,7 +316,7 @@ let obj = {
   }
 };
 const tmp3 = new require("acknowledge")(importDefaultResult.isMember, (arg0, userIds) => {
-  let obj = importDefault(709);
+  let obj = require("../Dispatcher.tsx");
   obj = { type: "GUILD_MEMBERS_REQUEST", guildIds: items, userIds };
   items = [arg0];
   obj.dispatch(obj);

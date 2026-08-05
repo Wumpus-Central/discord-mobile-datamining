@@ -6,13 +6,13 @@ const result = require("set").fileFinishedImporting("modules/guild_automod/Autom
 export const Feedback = obj;
 export const generateFeedbackOptions = function generateFeedbackOptions() {
   let obj = { name: null, value: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t["+MbOX4"]);
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["+MbOX4"]);
   obj[1] = obj.BUG;
   const items = [obj, ];
   obj = { name: null, value: null };
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl2.string(require(1236) /* getSystemLocale */.t.CRsCRC);
+  const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.CRsCRC);
   obj[1] = obj.ALLOWED;
   items[1] = obj;
   return items;

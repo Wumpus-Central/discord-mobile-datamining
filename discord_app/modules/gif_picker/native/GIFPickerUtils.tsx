@@ -4,7 +4,7 @@ import noop from "noop";
 const require = arg1;
 function transformFavoriteGifUrl(url) {
   let combined = url;
-  const str = importDefault(1467).toURLSafe(url);
+  const str = require("../../../utils/URLUtils.tsx").toURLSafe(url);
   if (null != str) {
     if (obj6.isExternalProxiedAttachmentUrl(str)) {
       const formatted = str.pathname.toLowerCase();
@@ -25,7 +25,7 @@ function transformFavoriteGifUrl(url) {
     } else {
       const tmp14Result = tmp14(9661);
     }
-    obj6 = require(9661) /* shouldRefreshAttachmentUrl */;
+    obj6 = require("../../messages/SignedAttachmentLinkUtils.tsx") /* shouldRefreshAttachmentUrl */;
     tmp14 = require;
   }
   if (regex.test(arg1)) {
@@ -46,7 +46,7 @@ function transformFavoriteGifUrl(url) {
     }
     return combined;
   }
-  const obj = importDefault(1467);
+  const obj = require("../../../utils/URLUtils.tsx");
 }
 require("ME").GIFPickerResultTypes;
 const re5 = /(https?:\/\/)(?!media(?:\d+)?\.)(?:[^.]+\.)*giphy\.com/;

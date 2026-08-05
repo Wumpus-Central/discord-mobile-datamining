@@ -8,7 +8,7 @@ const result = require("defaultAreStatesEqual").fileFinishedImporting("modules/g
 export default function useResourceChannels(arg0) {
   const _require = arg0;
   const items = [handleSettingsLoadSuccess, ensureGuildLoaded];
-  return _require(647).useStateFromStoresArray(items, () => {
+  return _require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresArray(items, () => {
     const resourceChannels = outer1_3.getResourceChannels(closure_0);
     return resourceChannels.filter((channelId) => null != channel.getChannel(channelId.channelId));
   });

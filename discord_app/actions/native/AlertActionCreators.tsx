@@ -33,10 +33,10 @@ export default {
   close() {
     if (null != c6) {
       c6 = null;
-      require(4625) /* useAlertStore */.dismissAlert(tmp);
-      const obj = require(4625) /* useAlertStore */;
+      require("../../design/components/AlertModal/native/useAlertStore.native.tsx") /* useAlertStore */.dismissAlert(tmp);
+      const obj = require("../../design/components/AlertModal/native/useAlertStore.native.tsx") /* useAlertStore */;
     }
-    importDefault(709).dispatch({ type: "ALERT_CLOSE" });
+    require("../../Dispatcher.tsx").dispatch({ type: "ALERT_CLOSE" });
   },
   show(hideActionSheet) {
     let body;

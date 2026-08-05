@@ -7,7 +7,7 @@ const result = require("module_4624").fileFinishedImporting("modules/activities/
 
 export const openIgnoreThermalStateAlert = function openIgnoreThermalStateAlert(arg0) {
   let closure_0 = arg0;
-  let obj = importDefault(4624);
+  let obj = require("../../../actions/native/AlertActionCreators.tsx");
   obj = {
     importer() {
       return callback(outer1_2[4])(outer1_2[3], outer1_2.paths).then((IgnoreThermalStateAlert) => {

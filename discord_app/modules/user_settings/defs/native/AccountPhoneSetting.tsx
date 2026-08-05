@@ -6,13 +6,13 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.dEYpSt);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.dEYpSt);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   useTrailing: function useAccountPhoneSettingTrailing() {
     const items = [mergeGuildAvatar];
-    return require(589) /* initialize */.useStateFromStores(items, () => {
+    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
       currentUser = currentUser.getCurrentUser();
       let phone;
       if (currentUser != null) {
@@ -22,10 +22,10 @@ createToggle = {
     });
   },
   onPress: function onAccountPhoneSettingPress() {
-    let obj = importDefault(4490);
+    let obj = require("../../../../actions/ModalActionCreators.tsx");
     obj = { allowDeletePhone: true, reason: null };
-    obj[1] = require(8330) /* ChangePhoneReason */.ChangePhoneReason.USER_SETTINGS_UPDATE;
-    obj.pushLazy(require(1959) /* asyncRequireImpl */(8327, dependencyMap.paths), obj, closure_4);
+    obj[1] = require("../../../phone/PhoneActionCreators.tsx") /* ChangePhoneReason */.ChangePhoneReason.USER_SETTINGS_UPDATE;
+    obj.pushLazy(require("../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(8327, dependencyMap.paths), obj, closure_4);
   },
   withArrow: true
 };

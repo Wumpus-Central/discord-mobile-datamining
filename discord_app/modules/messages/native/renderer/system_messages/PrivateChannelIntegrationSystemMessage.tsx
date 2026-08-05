@@ -5,9 +5,9 @@ const result = require("formatUsernameOnClick").fileFinishedImporting("modules/m
 
 export const createPrivateChannelIntegrationSystemMessage = function createPrivateChannelIntegrationSystemMessage(roleStyle, type) {
   const message = roleStyle.message;
-  let obj = require(7879) /* getMessageAuthorWithProcessedColor */;
+  let obj = require("useAuthorWithProcessedColor.tsx") /* getMessageAuthorWithProcessedColor */;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  const tmp5 = importDefault(7881)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
+  const tmp5 = require("formatUsernameOnClick.tsx")({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
   const application = message.application;
   let bot;
   if (application != null) {
@@ -35,6 +35,6 @@ export const createPrivateChannelIntegrationSystemMessage = function createPriva
     obj1[3] = tmp7;
     privateChannelIntegrationAddedSystemMessageASTContent = tmpResult.getPrivateChannelIntegrationRemovedSystemMessageASTContent(obj1);
   }
-  const merged = Object.assign(importDefault(7882)(roleStyle));
+  const merged = Object.assign(require("createCommonMessage.tsx")(roleStyle));
   return { content: privateChannelIntegrationAddedSystemMessageASTContent };
 };

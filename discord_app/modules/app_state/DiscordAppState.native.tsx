@@ -13,6 +13,6 @@ export default {
   },
   useCanUIRequestGatewaySocket() {
     const items = [getState];
-    return require(589) /* initialize */.useStateFromStores(items, () => "active" === state.getState());
+    return require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => "active" === state.getState());
   }
 };

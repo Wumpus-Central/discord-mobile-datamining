@@ -22,11 +22,11 @@ export const getContrastingColor = function getContrastingColor(arg0, arg1) {
   if (base == null) {
     base = arg0;
   }
-  const tmp4Result = importDefault(689)(base);
+  const tmp4Result = require("../../../../../../../_runtime/00689_n.js")(base);
   let obj3 = tmp2(689)(arg0);
-  const tmp4 = importDefault(689);
+  const tmp4 = require("../../../../../../../_runtime/00689_n.js");
   const luminanceResult = tmp4Result.luminance();
-  let contrastResult = importDefault(689).contrast(tmp4Result, obj3);
+  let contrastResult = require("../../../../../../../_runtime/00689_n.js").contrast(tmp4Result, obj3);
   let num2 = 99;
   while (true) {
     let tmp7 = contrastResult < NonText;
@@ -39,7 +39,7 @@ export const getContrastingColor = function getContrastingColor(arg0, arg1) {
           let brightenResult = obj3.brighten();
           let tmp13 = importDefault;
           let tmp14 = dependencyMap;
-          let obj6 = importDefault(689);
+          let obj6 = require("../../../../../../../_runtime/00689_n.js");
           contrastResult = obj6.contrast(tmp4Result, brightenResult);
           num2 = num2 - 1;
           obj3 = brightenResult;
@@ -71,17 +71,17 @@ export const getContrastingColor = function getContrastingColor(arg0, arg1) {
   }
 };
 export const darkenColor = function darkenColor(contrastingColor, arg1) {
-  const obj = importDefault(689)(contrastingColor);
-  const tmp = callback(importDefault(689)(contrastingColor).darken(arg1).rgba(), 4);
+  const obj = require("../../../../../../../_runtime/00689_n.js")(contrastingColor);
+  const tmp = callback(require("../../../../../../../_runtime/00689_n.js")(contrastingColor).darken(arg1).rgba(), 4);
   return "rgba(" + tmp[0] + ", " + tmp[1] + ", " + tmp[2] + ", " + tmp[3] + ")";
 };
 export const brightenColor = function brightenColor(profilePrimaryColor, arg1) {
-  const obj = importDefault(689)(profilePrimaryColor);
-  const tmp = callback(importDefault(689)(profilePrimaryColor).brighten(arg1).rgba(), 4);
+  const obj = require("../../../../../../../_runtime/00689_n.js")(profilePrimaryColor);
+  const tmp = callback(require("../../../../../../../_runtime/00689_n.js")(profilePrimaryColor).brighten(arg1).rgba(), 4);
   return "rgba(" + tmp[0] + ", " + tmp[1] + ", " + tmp[2] + ", " + tmp[3] + ")";
 };
 export const setColorOpacity = function setColorOpacity(white, alphaResult) {
-  const obj = importDefault(689)(white);
-  const tmp = callback(importDefault(689)(white).alpha(alphaResult).rgba(), 4);
+  const obj = require("../../../../../../../_runtime/00689_n.js")(white);
+  const tmp = callback(require("../../../../../../../_runtime/00689_n.js")(white).alpha(alphaResult).rgba(), 4);
   return "rgba(" + tmp[0] + ", " + tmp[1] + ", " + tmp[2] + ", " + tmp[3] + ")";
 };

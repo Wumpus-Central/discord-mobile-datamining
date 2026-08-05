@@ -1,16 +1,16 @@
 // discord_app/modules/in_app_reports/IarSettingsUpsellsConfigScFiltersSexualMedia.tsx
 let obj = {
   getTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t["Gtck/t"]);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["Gtck/t"]);
   },
   getDisabledTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.E6UmXa);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.E6UmXa);
   },
   getDescription() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.jcRSp6);
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.jcRSp6);
   },
   eligibleReportSubtypes: null,
   onApply: null,
@@ -22,17 +22,17 @@ obj[4] = function onApply() {
   let explicitContentFriendDm;
   let explicitContentGuilds;
   let explicitContentNonFriendDm;
-  let obj = require(5824) /* resolveExplicitContentSettingWithDefaults */;
-  const explicitContentSettingOrDefault = require(5824) /* resolveExplicitContentSettingWithDefaults */.getExplicitContentSettingOrDefault();
+  let obj = require("../explicit_media_redaction/SensitiveMediaExplicitRedactionSettingsUtils.tsx") /* resolveExplicitContentSettingWithDefaults */;
+  const explicitContentSettingOrDefault = require("../explicit_media_redaction/SensitiveMediaExplicitRedactionSettingsUtils.tsx") /* resolveExplicitContentSettingWithDefaults */.getExplicitContentSettingOrDefault();
   obj = {};
   ({ explicitContentGuilds, explicitContentFriendDm, explicitContentNonFriendDm } = explicitContentSettingOrDefault);
-  if (explicitContentGuilds === require(1306) /* create */.ExplicitContentRedaction.SHOW) {
+  if (explicitContentGuilds === require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.ExplicitContentRedaction.SHOW) {
     obj.explicitContentGuilds = tmp(1306).ExplicitContentRedaction.BLUR;
   }
-  if (explicitContentFriendDm === require(1306) /* create */.ExplicitContentRedaction.SHOW) {
+  if (explicitContentFriendDm === require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.ExplicitContentRedaction.SHOW) {
     obj.explicitContentFriendDm = tmp(1306).ExplicitContentRedaction.BLUR;
   }
-  if (explicitContentNonFriendDm === require(1306) /* create */.ExplicitContentRedaction.SHOW) {
+  if (explicitContentNonFriendDm === require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.ExplicitContentRedaction.SHOW) {
     obj.explicitContentNonFriendDm = tmp(1306).ExplicitContentRedaction.BLUR;
   }
   return obj.updateExplicitContentSetting(obj);
@@ -41,10 +41,10 @@ obj[5] = function predicate() {
   let explicitContentFriendDm;
   let explicitContentGuilds;
   let explicitContentNonFriendDm;
-  const explicitContentSettingOrDefault = require(5824) /* resolveExplicitContentSettingWithDefaults */.getExplicitContentSettingOrDefault();
+  const explicitContentSettingOrDefault = require("../explicit_media_redaction/SensitiveMediaExplicitRedactionSettingsUtils.tsx") /* resolveExplicitContentSettingWithDefaults */.getExplicitContentSettingOrDefault();
   ({ explicitContentGuilds, explicitContentFriendDm, explicitContentNonFriendDm } = explicitContentSettingOrDefault);
-  const obj = require(5824) /* resolveExplicitContentSettingWithDefaults */;
-  return explicitContentGuilds === require(1306) /* create */.ExplicitContentRedaction.SHOW || explicitContentFriendDm === require(1306) /* create */.ExplicitContentRedaction.SHOW || explicitContentNonFriendDm === require(1306) /* create */.ExplicitContentRedaction.SHOW;
+  const obj = require("../explicit_media_redaction/SensitiveMediaExplicitRedactionSettingsUtils.tsx") /* resolveExplicitContentSettingWithDefaults */;
+  return explicitContentGuilds === require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.ExplicitContentRedaction.SHOW || explicitContentFriendDm === require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.ExplicitContentRedaction.SHOW || explicitContentNonFriendDm === require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.ExplicitContentRedaction.SHOW;
 };
 const result = require("getSystemLocale").fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigScFiltersSexualMedia.tsx");
 

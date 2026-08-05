@@ -57,5 +57,5 @@ export default function SafetyToolsCrisisTextLineActionSheet(trackAnalyticsEvent
   items[2] = callback(trackAnalyticsEvent(4695).Button, obj2);
   obj[1] = items;
   obj[7] = callback2(View, obj);
-  return callback(importDefault(10295), obj);
+  return callback(require("SafetyToolsActionSheetWrapper.tsx"), obj);
 };

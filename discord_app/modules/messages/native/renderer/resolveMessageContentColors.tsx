@@ -4,15 +4,15 @@ import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 
 const result = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
-  const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_300 : unsafe_rawColors.PRIMARY_630;
+  const obj = require("../../../../design/shared.tsx") /* AccessibilityAnnouncer */;
+  const unsafe_rawColors = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors;
+  return require("../../../../design/shared.tsx") /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_300 : unsafe_rawColors.PRIMARY_630;
 });
 let obj = { textColor: null, linkColor: null, timestampColor: null, highlightColor: null, unsupportedColor: null, embedProviderColor: null, embedBorderLeftColor: null, embedBodyTextColor: null, embedHeaderTextColor: null, opTagTextColor: null, opTagBackgroundColor: null, failedMessageBodyTextColor: null, automodBlockedBodyTextColor: null, aiBotTagColor: null, editedColor: null, defaultUsernameColor: null, feedbackColor: null, reportFpTextColor: null, reportFpBackgroundColor: null, retryTextColor: null, retryBackgroundColor: null, clipTagBackgroundColor: null, clipTagTextColor: null };
 const result1 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
-  const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.BRAND_260 : unsafe_rawColors.BRAND_200;
+  const obj = require("../../../../design/shared.tsx") /* AccessibilityAnnouncer */;
+  const unsafe_rawColors = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors;
+  return require("../../../../design/shared.tsx") /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.BRAND_260 : unsafe_rawColors.BRAND_200;
 });
 obj[0] = require("Themes").colors.TEXT_STRONG;
 obj[1] = require("Themes").colors.TEXT_LINK;
@@ -38,7 +38,7 @@ obj[20] = require("Themes").colors.BACKGROUND_BRAND;
 obj[21] = require("Themes").colors.BACKGROUND_BRAND;
 obj[22] = require("Themes").unsafe_rawColors.WHITE;
 let closure_4 = createCacheKey.createNativeStyleProperties((arg0) => {
-  const colors = importDefault(712).colors;
+  const colors = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors;
   const obj = { embedBackgroundColor: arg0 ? colors.EMBED_BACKGROUND_ALTERNATE : colors.EMBED_BACKGROUND };
   const merged = Object.assign(obj);
   return obj;

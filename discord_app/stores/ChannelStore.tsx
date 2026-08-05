@@ -26,13 +26,13 @@ function ensureGuildLoaded(guild_id, Basic, getBasicChannel) {
     if ("null" !== guild_id) {
       if (!set.has(guild_id)) {
         if (Basic !== closure_35.Basic) {
-          const databaseResult = importDefault(1907).database();
+          const databaseResult = require("../modules/app_database/DatabaseDaos.tsx").database();
           importDefault = databaseResult;
           if (null != databaseResult) {
             const _HermesInternal4 = HermesInternal;
             tmp3.verbose("hydrating guild (guild: " + guild_id + ", trace: " + getBasicChannel + ")");
             const _HermesInternal5 = HermesInternal;
-            const result = _require(1926).tryLoadOrResetCacheGateway("ensureGuildLoaded(" + guild_id + ")", () => databaseResult(outer1_2[13]).getSync(closure_1, closure_0), "ensureGuildLoaded");
+            const result = _require("../modules/app_database/app/TryLoad.tsx").tryLoadOrResetCacheGateway("ensureGuildLoaded(" + guild_id + ")", () => databaseResult(outer1_2[13]).getSync(closure_1, closure_0), "ensureGuildLoaded");
             if (null == result) {
               set.add(guild_id);
               store.restored(guild_id);
@@ -66,9 +66,9 @@ function ensureGuildLoaded(guild_id, Basic, getBasicChannel) {
               const tmp4Result = tmp4(10);
             }
             obj3 = tmp3;
-            const obj4 = _require(1926);
+            const obj4 = _require("../modules/app_database/app/TryLoad.tsx");
           }
-          const obj = importDefault(1907);
+          const obj = require("../modules/app_database/DatabaseDaos.tsx");
         }
       }
     }
@@ -77,14 +77,14 @@ function ensureGuildLoaded(guild_id, Basic, getBasicChannel) {
 function deleteGuildChannels(id) {
   tmp3.fileOnly("Deleting guild channels for " + id);
   if (null != dependencyMap3[id]) {
-    const keys = importDefault(11).keys(dependencyMap3[id]);
+    const keys = require("../utils/SnowflakeUtils.tsx").keys(dependencyMap3[id]);
     for (const item10024 of keys) {
       let tmp13 = closure_19;
       delete tmp4[tmp5];
       continue;
     }
     delete tmp3[tmp2];
-    const obj = importDefault(11);
+    const obj = require("../utils/SnowflakeUtils.tsx");
   }
   if (null != dependencyMap6[id]) {
     delete tmp[tmp2];
@@ -199,8 +199,8 @@ function setChannel(isPrivate) {
     if (isPrivate.isScheduledForDeletion()) {
       obj = { type: "THREAD_DELETE", channel: null };
       obj[1] = isPrivate;
-      importDefault(709).dispatch(obj);
-      const obj4 = importDefault(709);
+      require("../Dispatcher.tsx").dispatch(obj);
+      const obj4 = require("../Dispatcher.tsx");
     }
     const tmp14 = closure_23;
   } else if (set.has(isPrivate.type)) {
@@ -262,8 +262,8 @@ function setThread(isScheduledForDeletion) {
   if (isScheduledForDeletion.isScheduledForDeletion()) {
     obj = { type: "THREAD_DELETE", channel: null };
     obj[1] = isScheduledForDeletion;
-    importDefault(709).dispatch(obj);
-    const obj2 = importDefault(709);
+    require("../Dispatcher.tsx").dispatch(obj);
+    const obj2 = require("../Dispatcher.tsx");
   }
 }
 function setGuildChannel(item10028) {
@@ -517,8 +517,8 @@ function addThreadIfMissing(id) {
     if (obj.isScheduledForDeletion()) {
       obj = { type: "THREAD_DELETE", channel: null };
       obj[1] = obj;
-      importDefault(709).dispatch(obj);
-      const obj3 = importDefault(709);
+      require("../Dispatcher.tsx").dispatch(obj);
+      const obj3 = require("../Dispatcher.tsx");
     }
     const tmp7 = closure_23;
   }
@@ -592,7 +592,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
   if (0 === found.length) {
     return null;
   } else {
-    const databaseResult = importDefault(1907).database();
+    const databaseResult = require("../modules/app_database/DatabaseDaos.tsx").database();
     importDefault = databaseResult;
     if (null == databaseResult) {
       return null;
@@ -778,7 +778,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
     } else {
       return null;
     }
-    let obj = importDefault(1907);
+    let obj = require("../modules/app_database/DatabaseDaos.tsx");
   }
   tmp = found;
 };
@@ -819,8 +819,8 @@ prototype2["loadAllGuildAndPrivateChannelsFromDisk"] = function loadAllGuildAndP
 prototype2["getChannelIds"] = function getChannelIds(guild_id) {
   ensureGuildLoaded(guild_id, closure_35.Basic, "getChannelIds");
   if (null == guild_id) {
-    let keys = importDefault(11).keys(closure_21);
-    const obj2 = importDefault(11);
+    let keys = require("../utils/SnowflakeUtils.tsx").keys(closure_21);
+    const obj2 = require("../utils/SnowflakeUtils.tsx");
   } else {
     let guildBasicChannels = store.getGuildBasicChannels(guild_id);
     if (guildBasicChannels == null) {
@@ -829,8 +829,8 @@ prototype2["getChannelIds"] = function getChannelIds(guild_id) {
     if (guildBasicChannels == null) {
       guildBasicChannels = closure_18;
     }
-    keys = importDefault(11).keys(guildBasicChannels);
-    const obj = importDefault(11);
+    keys = require("../utils/SnowflakeUtils.tsx").keys(guildBasicChannels);
+    const obj = require("../utils/SnowflakeUtils.tsx");
   }
   return keys;
 };
@@ -861,13 +861,13 @@ prototype2["getSortedLinkedChannelsForGuild"] = function getSortedLinkedChannels
   if (tmp == null) {
     tmp = closure_18;
   }
-  const values = importDefault(12).values(tmp);
+  const values = require("../../_runtime/00012_apply.js").values(tmp);
   return values.sort((id, id2) => callback(table[17]).compare(id.id, id2.id));
 };
 prototype2["getSortedPrivateChannels"] = function getSortedPrivateChannels() {
-  const values = importDefault(12)(closure_21).values();
+  const values = require("../../_runtime/00012_apply.js")(closure_21).values();
   const sorted = values.sort((lastMessageId, lastMessageId2) => callback(table[17]).compare(lastMessageId.lastMessageId, lastMessageId2.lastMessageId));
-  const obj = importDefault(12)(closure_21);
+  const obj = require("../../_runtime/00012_apply.js")(closure_21);
   return sorted.reverse().value();
 };
 prototype2["getDMFromUserId"] = function getDMFromUserId(id) {
@@ -885,7 +885,7 @@ prototype2["getMutableDMsByUserIds"] = function getMutableDMsByUserIds() {
   return closure_25;
 };
 prototype2["getDMUserIds"] = function getDMUserIds() {
-  return importDefault(11).keys(closure_25);
+  return require("../utils/SnowflakeUtils.tsx").keys(closure_25);
 };
 prototype2["getPrivateChannelsVersion"] = function getPrivateChannelsVersion() {
   return c26;
@@ -899,12 +899,12 @@ prototype2["getGuildChannelsVersion"] = function getGuildChannelsVersion(arg0) {
 };
 prototype2["getAllThreadsForParent"] = function getAllThreadsForParent(channelId) {
   let closure_0 = channelId;
-  const values = importDefault(12).values(closure_23);
+  const values = require("../../_runtime/00012_apply.js").values(closure_23);
   return values.filter((parent_id) => parent_id.parent_id === closure_0);
 };
 prototype2["getAllThreadsForGuild"] = function getAllThreadsForGuild(guildId) {
   let closure_0 = guildId;
-  const values = importDefault(12).values(closure_23);
+  const values = require("../../_runtime/00012_apply.js").values(closure_23);
   return values.filter((guild_id) => guild_id.guild_id === closure_0);
 };
 prototype2["getInitialOverlayState"] = function getInitialOverlayState() {
@@ -915,11 +915,11 @@ prototype2["getInitialOverlayState"] = function getInitialOverlayState() {
 };
 prototype2["getDebugInfo"] = function getDebugInfo() {
   const obj = { loadedGuildIds: null, pendingGuildLoads: null, guildSizes: null };
-  obj[0] = Array.from(set).sort(importDefault(11).compare);
+  obj[0] = Array.from(set).sort(require("../utils/SnowflakeUtils.tsx").compare);
   const keys = Object.keys(closure_30);
-  obj[1] = keys.sort(importDefault(11).compare);
+  obj[1] = keys.sort(require("../utils/SnowflakeUtils.tsx").compare);
   const keys1 = Object.keys(closure_20);
-  const sorted = keys1.sort(importDefault(11).compare);
+  const sorted = keys1.sort(require("../utils/SnowflakeUtils.tsx").compare);
   obj[2] = sorted.map((arg0) => {
     let length = null;
     if (null != dependencyMap[arg0]) {
@@ -1082,7 +1082,7 @@ const channelStore = new ChannelStore(require("dispatcher"), {
         let tmp4 = setChannel;
         let tmp5 = require;
         let tmp6 = dependencyMap;
-        let obj = require(1928) /* deserializeChannels */;
+        let obj = require("../modules/cache/deserializeChannels.tsx") /* deserializeChannels */;
         let tmp7 = callback5;
         let tmp8 = setChannel(obj.deserializeChannel(callback5(item10021)));
         continue;
@@ -1193,7 +1193,7 @@ const channelStore = new ChannelStore(require("dispatcher"), {
       if ("partial" === nextResult.dataMode) {
         let tmp5 = importDefault;
         let tmp6 = dependencyMap;
-        let arr = importDefault(12);
+        let arr = require("../../_runtime/00012_apply.js");
         let tmp7 = nextResult;
         let tmp8 = setGuildChannel;
         let item1 = arr.forEach(closure_20[tmp4.id], setGuildChannel);
@@ -1253,7 +1253,7 @@ const channelStore = new ChannelStore(require("dispatcher"), {
       let fileOnlyResult = tmp3.fileOnly("Lazy loaded guild channels for " + guildId);
       let tmp4 = importDefault;
       let tmp5 = dependencyMap;
-      let tmp6 = importDefault(1928)(channels);
+      let tmp6 = require("../modules/cache/deserializeChannels.tsx")(channels);
       let tmp7 = set;
       let addResult = set.add(guildId);
       let tmp9 = store;
@@ -1298,7 +1298,7 @@ const channelStore = new ChannelStore(require("dispatcher"), {
       let tmp3 = setChannel;
       let tmp4 = require;
       let tmp5 = dependencyMap;
-      let obj = require(1928) /* deserializeChannels */;
+      let obj = require("../modules/cache/deserializeChannels.tsx") /* deserializeChannels */;
       let tmp6 = callback5;
       let tmp7 = setChannel(obj.deserializeChannel(callback5(tmp2)));
       continue;

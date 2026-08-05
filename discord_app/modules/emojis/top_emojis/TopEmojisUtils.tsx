@@ -17,8 +17,8 @@ export const maybeFetchTopEmojisByGuild = function maybeFetchTopEmojisByGuild(gu
         }
       }
       if (!isFetching.getIsFetching(guildId)) {
-        const topEmojis = require(8566) /* fetchTopEmojis */.fetchTopEmojis(guildId);
-        const obj = require(8566) /* fetchTopEmojis */;
+        const topEmojis = require("TopEmojisActionCreators.tsx") /* fetchTopEmojis */.fetchTopEmojis(guildId);
+        const obj = require("TopEmojisActionCreators.tsx") /* fetchTopEmojis */;
       }
     }
   }

@@ -8,7 +8,7 @@ let c4;
 const require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles((arg0) => {
-  const labelPressable = { paddingBottom: importDefault(712).space.PX_4, gap: importDefault(712).space.PX_8, alignItems: "center", alignSelf: "center", flexGrow: null };
+  const labelPressable = { paddingBottom: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, alignItems: "center", alignSelf: "center", flexGrow: null };
   let num = 0;
   if (arg0) {
     num = 1;
@@ -38,14 +38,14 @@ const forwardRefResult = require("noop").forwardRef((grow) => {
     obj.accessibilityLabel = "";
     obj.size = "lg";
     obj.maxFontSizeMultiplier = maxFontSizeMultiplier;
-    const items = [callback(require(7673) /* BaseIconButton */.BaseIconButton, obj), ];
+    const items = [callback(require("BaseIconButton.native.tsx") /* BaseIconButton */.BaseIconButton, obj), ];
     const obj1 = { style: null, variant: "text-xs/medium", color: "interactive-text-default", maxFontSizeMultiplier: null, children: null };
     obj1[0] = tmp2.label;
     obj1[3] = maxFontSizeMultiplier;
     obj1[4] = label;
-    items[1] = callback(require(4281) /* Text */.Text, obj1);
+    items[1] = callback(require("../../Text/native/Text.tsx") /* Text */.Text, obj1);
     obj.children = items;
-    let tmp9 = callback2(require(4702) /* BaseButton */.BaseButton, obj);
+    let tmp9 = callback2(require("BaseButton.native.tsx") /* BaseButton */.BaseButton, obj);
   } else {
     obj = { ref: null };
     obj[0] = arg1;
@@ -53,7 +53,7 @@ const forwardRefResult = require("noop").forwardRef((grow) => {
     obj.accessibilityLabel = accessibilityLabel;
     obj.accessibilityHint = accessibilityHint;
     obj.maxFontSizeMultiplier = maxFontSizeMultiplier;
-    tmp9 = callback(require(7673) /* BaseIconButton */.BaseIconButton, obj);
+    tmp9 = callback(require("BaseIconButton.native.tsx") /* BaseIconButton */.BaseIconButton, obj);
   }
   return tmp9;
 });

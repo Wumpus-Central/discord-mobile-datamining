@@ -2,7 +2,7 @@
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/soundboard/native/utils/openSoundboardSoundPreviewActionSheet.tsx");
 
 export default function openSoundboardSoundPreviewActionSheet(channelId, sound) {
-  let obj = importDefault(4253);
+  let obj = require("../../../action_sheet/native/ActionSheetActionCreators.tsx");
   obj = { channelId, sound };
-  obj.openLazy(require(1959) /* asyncRequireImpl */(16020, dependencyMap.paths), "SoundboardSoundPreviewActionSheet", obj);
+  obj.openLazy(require("../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(16020, dependencyMap.paths), "SoundboardSoundPreviewActionSheet", obj);
 };

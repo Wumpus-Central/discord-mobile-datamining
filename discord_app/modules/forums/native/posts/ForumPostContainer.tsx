@@ -40,9 +40,9 @@ export const ForumPostPressableContainer = function ForumPostPressableContainer(
     }
   }), items);
   ({ onPressIn, onPressOut } = memo);
-  ({ onTapPost, onLongTapPost } = importDefault(9815)({ threadId }));
+  ({ onTapPost, onLongTapPost } = require("hooks/useNativeForumPostHandlers.tsx")({ threadId }));
   let str = "secondary";
-  if (importDefault(1348)("ForumPostContainer")) {
+  if (require("../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("ForumPostContainer")) {
     str = "surface-high";
   }
   obj = { style: tmp.card, children: jsx(sharedValue(5317).Card, { style: items1, variant: str, accessibilityRole: "button", onPress: onTapPost, onPressIn, onPressOut, onLongPress: onLongTapPost, unstable_pressDelay: 130, children }) };

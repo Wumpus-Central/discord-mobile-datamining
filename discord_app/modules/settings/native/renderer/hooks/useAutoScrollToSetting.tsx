@@ -10,7 +10,7 @@ export const useAutoScrollToSearchResultSetting = function useAutoScrollToSearch
   const _require = ref;
   const dependencyMap = memo;
   let current = ref.useField("selected");
-  const navigation = _require(1480).useNavigation();
+  const navigation = _require("../../../../../design/components/Navigator/native/useNavigation.native.tsx").useNavigation();
   ref = navigation.useRef(scrollTarget);
   if (current == null) {
     current = ref.current;

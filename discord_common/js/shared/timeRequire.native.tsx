@@ -10,12 +10,12 @@ export default function timeRequire(arg0, arg1) {
       const _Object = Object;
       const keys = Object.keys(modules);
       const _HermesInternal = HermesInternal;
-      importDefault(10).mark("\u{1F3C3}", "Require " + arg0 + " (" + keys.filter((arg0) => modules[arg0].isInitialized).length + " modules)", diff);
-      const obj = importDefault(10);
+      require("../packages/app-start-performance/AppStartPerformance.tsx").mark("\u{1F3C3}", "Require " + arg0 + " (" + keys.filter((arg0) => modules[arg0].isInitialized).length + " modules)", diff);
+      const obj = require("../packages/app-start-performance/AppStartPerformance.tsx");
     } else {
       const _HermesInternal2 = HermesInternal;
-      importDefault(10).mark("\u{1F3C3}", "Require " + arg0, diff);
-      const obj3 = importDefault(10);
+      require("../packages/app-start-performance/AppStartPerformance.tsx").mark("\u{1F3C3}", "Require " + arg0, diff);
+      const obj3 = require("../packages/app-start-performance/AppStartPerformance.tsx");
     }
     obj2 = modules;
   }

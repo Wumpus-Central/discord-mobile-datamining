@@ -1,5 +1,5 @@
 // discord_app/modules/premium/referral_program/hooks/useReferralProgramEligibleUsers.tsx
-import module_38 from "module_38";
+import 00038__ from "../../../../../_runtime/metro/00038__.js";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import emitChanges from "emitChanges";

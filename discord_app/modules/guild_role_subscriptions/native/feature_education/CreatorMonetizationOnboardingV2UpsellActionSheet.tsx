@@ -27,16 +27,16 @@ export default function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
   };
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[4] = intl.string(require(1236) /* getSystemLocale */.t["v+Jm6X"]);
-  const items = [callback(require(4281) /* Text */.Text, obj), , , , ];
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[4] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["v+Jm6X"]);
+  const items = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), , , , ];
   const obj1 = { style: tmp.description, accessibilityRole: "text", variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj1[4] = intl2.string(require(1236) /* getSystemLocale */.t.kUUFbG);
-  items[1] = callback(require(4281) /* Text */.Text, obj1);
+  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj1[4] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.kUUFbG);
+  items[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
   const obj2 = { style: tmp.image, resizeMode: "contain", source: null };
-  obj2[2] = importDefault(15252);
-  items[2] = callback(importDefault(5236), obj2);
+  obj2[2] = require("../../../../../_runtime/15252_registerAsset.js");
+  items[2] = callback(require("../../../../components_native/common/FastImage.tsx"), obj2);
   const obj3 = {
     onPress() {
       callback(outer1_5.UNKNOWN);
@@ -44,9 +44,9 @@ export default function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
     },
     text: null
   };
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj3[1] = intl3.string(require(1236) /* getSystemLocale */.t.OgQQbG);
-  items[3] = callback(require(4695) /* Button */.Button, obj3);
+  const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj3[1] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.OgQQbG);
+  items[3] = callback(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj3);
   const obj4 = { style: tmp.dismissButton, children: null };
   const obj5 = {
     onPress() {
@@ -55,11 +55,11 @@ export default function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
     text: null,
     variant: "secondary"
   };
-  const intl4 = require(1236) /* getSystemLocale */.intl;
-  obj5[1] = intl4.string(require(1236) /* getSystemLocale */.t.WAI6xu);
-  obj4[1] = callback(require(4695) /* Button */.Button, obj5);
+  const intl4 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj5[1] = intl4.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.WAI6xu);
+  obj4[1] = callback(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj5);
   items[4] = callback(View, obj4);
   obj[1] = items;
   obj[2] = callback2(View, obj);
-  return callback(require(5338) /* Background */.BottomSheet, obj);
+  return callback(require("../../../../design/components/Sheet/native/BottomSheet.native.tsx") /* Background */.BottomSheet, obj);
 };

@@ -45,28 +45,28 @@ const require = arg1;
 function BoostPurchaseNitroBanner() {
   const tmp = callback5();
   let obj = { align: "center", spacing: null, style: null, children: null };
-  obj[1] = importDefault(712).space.PX_12;
+  obj[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12;
   obj[2] = tmp.nitroBanner;
-  const items = [callback3(require(5936) /* AccountAgeTier10LargeBadge */.TreasureChestBannerSpotIllustration, { width: 117, height: 93, accessible: false }), ];
+  const items = [callback3(require("../../../design/assets/native.tsx") /* AccountAgeTier10LargeBadge */.TreasureChestBannerSpotIllustration, { width: 117, height: 93, accessible: false }), ];
   obj = { align: "center", spacing: null, children: null };
-  obj[1] = importDefault(712).space.PX_4;
+  obj[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4;
   obj = { variant: "text-md/semibold", color: "text-default", style: tmp.nitroBannerText, children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   const obj1 = { discount: null };
   const obj2 = { variant: "text-md/semibold", color: "text-feedback-positive", children: null };
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj2[2] = intl2.format(require(1236) /* getSystemLocale */.t.RmVM19, { percentageOff: closure_16 });
-  obj1[0] = callback3(require(4281) /* Text */.Text, obj2, "discount");
-  obj[3] = intl.format(require(1236) /* getSystemLocale */.t.jbrHpT, obj1);
-  const items1 = [callback3(require(4281) /* Text */.Text, obj), ];
+  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj2[2] = intl2.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.RmVM19, { percentageOff: closure_16 });
+  obj1[0] = callback3(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2, "discount");
+  obj[3] = intl.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.jbrHpT, obj1);
+  const items1 = [callback3(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
   const obj4 = { variant: "text-sm/medium", color: "text-muted", style: tmp.nitroBannerText, children: null };
-  const intl3 = require(1236) /* getSystemLocale */.intl;
-  obj4[3] = intl3.format(require(1236) /* getSystemLocale */.t.HYpETY, { boostCount: closure_17 });
-  items1[1] = callback3(require(4281) /* Text */.Text, obj4);
+  const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj4[3] = intl3.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.HYpETY, { boostCount: closure_17 });
+  items1[1] = callback3(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj4);
   obj[2] = items1;
-  items[1] = callback4(require(4693) /* Stack */.Stack, obj);
+  items[1] = callback4(require("../../../design/components/Stack/native/Stack.native.tsx") /* Stack */.Stack, obj);
   obj[3] = items;
-  return callback4(require(4693) /* Stack */.Stack, obj);
+  return callback4(require("../../../design/components/Stack/native/Stack.native.tsx") /* Stack */.Stack, obj);
 }
 function getPlanDescription(premiumTier) {
   let flag = arg1;
@@ -74,15 +74,15 @@ function getPlanDescription(premiumTier) {
     flag = false;
   }
   if (null == premiumTier.premiumTier) {
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     let obj = { numSubscriptions: null };
     obj[0] = premiumTier.numPremiumGuild;
-    let formatToPlainStringResult = intl.formatToPlainString(require(1236) /* getSystemLocale */.t.gDsyB9, obj);
+    let formatToPlainStringResult = intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.gDsyB9, obj);
   } else if (0 === premiumTier.numPremiumGuild) {
-    formatToPlainStringResult = require(3931) /* getPremiumPlanItem */.getPremiumTypeDisplayName(premiumTier.premiumTier);
-    const obj3 = require(3931) /* getPremiumPlanItem */;
+    formatToPlainStringResult = require("../../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */.getPremiumTypeDisplayName(premiumTier.premiumTier);
+    const obj3 = require("../../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */;
   } else {
-    const intl2 = require(1236) /* getSystemLocale */.intl;
+    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const formatToPlainString = intl2.formatToPlainString;
     if (flag) {
       obj = { numSubscriptions: null };
@@ -106,21 +106,21 @@ function BoostDeltaPriceTrailing(arg0) {
   let price;
   ({ price, interval } = arg0);
   let obj = { direction: "horizontal", align: "center", spacing: null, children: null };
-  obj[2] = importDefault(712).space.PX_4;
+  obj[2] = require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4;
   obj = { size: "xs", color: null };
-  obj[1] = importDefault(712).colors.ICON_FEEDBACK_POSITIVE;
-  const items = [callback3(require(7625) /* NitroWheelIcon */.NitroWheelIcon, obj), ];
-  const intl = require(1236) /* getSystemLocale */.intl;
+  obj[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.ICON_FEEDBACK_POSITIVE;
+  const items = [callback3(require("../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx") /* NitroWheelIcon */.NitroWheelIcon, obj), ];
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   if (interval === constants.MONTH) {
     rS8FA_ = tmp2(1236).t.AbOLNu;
   } else {
     rS8FA_ = tmp2(1236).t["rS8FA+"];
   }
   obj = { variant: "text-sm/medium", color: "text-muted", children: null };
-  obj[2] = intl.format(rS8FA_, { price: callback3(require(4281) /* Text */.Text, { variant: "text-sm/semibold", color: "text-feedback-positive", children: price }, "price") });
-  items[1] = callback3(require(4281) /* Text */.Text, obj);
+  obj[2] = intl.format(rS8FA_, { price: callback3(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-sm/semibold", color: "text-feedback-positive", children: price }, "price") });
+  items[1] = callback3(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   obj[3] = items;
-  return closure_33(require(4693) /* Stack */.Stack, obj);
+  return closure_33(require("../../../design/components/Stack/native/Stack.native.tsx") /* Stack */.Stack, obj);
 }
 function PlanRow(plan) {
   let importDefault;
@@ -559,14 +559,14 @@ function CurrentPlanRow(subscription) {
       };
       obj[5] = tmp.currentPlanRow;
       obj[4] = closure_32(PlanRow, obj);
-      return closure_32(importDefault(4706), obj);
+      return closure_32(require("../../../../_runtime/04706_LinearGradient.js"), obj);
     }
   }
   return null;
 }
 function PlanSectionHeader(children) {
   const tmp = callback5();
-  return callback3(require(1297) /* Button */.LegacyText, { style: callback5().header, accessibilityRole: "header", children: children.string });
+  return callback3(require("../../../design/void/native.tsx") /* Button */.LegacyText, { style: callback5().header, accessibilityRole: "header", children: children.string });
 }
 function PlanSections(showCurrentPlan) {
   let analyticsLoadId;
@@ -786,13 +786,13 @@ obj[23] = { textAlign: "center" };
 let obj5 = { alignItems: "center", paddingTop: require("Themes").space.PX_16, paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING };
 obj[24] = { color: require("Themes").unsafe_rawColors.GUILD_BOOSTING_PINK };
 let closure_35 = createCacheKey.createStyles(obj);
-let closure_38 = { [importDefault(12723)]: "imgWumpusNitro", [importDefault(12725)]: "imgWumpusNitroBoost", [importDefault(12722)]: "imgWumpusNitroClassic", [importDefault(12724)]: "imgWumpusNitroClassicBoost", [importDefault(12721)]: "imgWumpusNitroTier0", [importDefault(12720)]: "imgBoost" };
+let closure_38 = { [require("../../../../_runtime/12723_registerAsset.js")]: "imgWumpusNitro", [require("../../../../_runtime/12725_registerAsset.js")]: "imgWumpusNitroBoost", [require("../../../../_runtime/12722_registerAsset.js")]: "imgWumpusNitroClassic", [require("../../../../_runtime/12724_registerAsset.js")]: "imgWumpusNitroClassicBoost", [require("../../../../_runtime/12721_registerAsset.js")]: "imgWumpusNitroTier0", [require("../../../../_runtime/12720_registerAsset.js")]: "imgBoost" };
 items = [
   {
     id: "premium",
     getLabel() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.string(require(1236) /* getSystemLocale */.t.A4BfLn);
+      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.A4BfLn);
     },
     predicate(premiumTier) {
       let tmp = null != premiumTier.premiumTier;
@@ -805,8 +805,8 @@ items = [
   {
     id: "premium-and-premium-guild",
     getLabel(arg0) {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      const t = require(1236) /* getSystemLocale */.t;
+      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const t = require("../../../intl/index.native.tsx") /* getSystemLocale */.t;
       return intl.string(arg0 ? t.rPoOQW : t.lyXyD0);
     },
     predicate(premiumTier) {
@@ -820,8 +820,8 @@ items = [
   {
     id: "premium-guild",
     getLabel() {
-      const intl = require(1236) /* getSystemLocale */.intl;
-      return intl.string(require(1236) /* getSystemLocale */.t.rPoOQW);
+      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.rPoOQW);
     },
     predicate(premiumTier) {
       let tmp = null == premiumTier.premiumTier;
@@ -1185,8 +1185,8 @@ let obj6 = { color: require("Themes").unsafe_rawColors.GUILD_BOOSTING_PINK };
 let obj7 = {
   id: "premium",
   getLabel() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.A4BfLn);
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.A4BfLn);
   },
   predicate(premiumTier) {
     let tmp = null != premiumTier.premiumTier;

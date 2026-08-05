@@ -9,7 +9,7 @@ export const useGuildEligibleForGuildProducts = function useGuildEligibleForGuil
   const _require = id;
   const items = [createGuildRecordFromRust];
   const items1 = [id];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null == closure_0) {
       return false;
     } else {

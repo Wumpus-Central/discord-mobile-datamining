@@ -64,7 +64,7 @@ export const captureOrIgnoreApiError = function captureOrIgnoreApiError(aPIError
     tmp = flag;
   }
   if (!tmp) {
-    importDefault(1208).captureException(aPIError);
-    const obj = importDefault(1208);
+    require("../../utils/SentryUtils.native.tsx").captureException(aPIError);
+    const obj = require("../../utils/SentryUtils.native.tsx");
   }
 };

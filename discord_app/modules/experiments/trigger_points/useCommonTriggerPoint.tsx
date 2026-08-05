@@ -9,9 +9,9 @@ const result = require("getHash").fileFinishedImporting("modules/experiments/tri
 export const useCommonTriggerPoint = function useCommonTriggerPoint(OpenNitroTriggerPoint) {
   const _require = OpenNitroTriggerPoint;
   let items = [getHash];
-  const obj = _require(589);
+  const obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
   const items1 = [OpenNitroTriggerPoint, , ];
-  [arr2[1], arr2[2]] = callback(_require(589).useStateFromStoresArray(items, () => {
+  [arr2[1], arr2[2]] = callback(_require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
     const items = [authStore.getAllUserExperimentDescriptors(), authStore.getGuildExperiments()];
     return items;
   }), 2);

@@ -5,20 +5,20 @@ import "initialize";
 function handleRelationshipAdd(relationship) {
   relationship = relationship.relationship;
   if (!tmp) {
-    const AccessibilityAnnouncer = require(4131) /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
-    const intl = require(1236) /* getSystemLocale */.intl;
+    const AccessibilityAnnouncer = require("../../design/shared.tsx") /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
+    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
     const obj = { username: null };
     obj[0] = relationship.user.username;
-    AccessibilityAnnouncer.announce(intl.formatToPlainString(require(1236) /* getSystemLocale */.t.zH0kC7, obj));
+    AccessibilityAnnouncer.announce(intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.zH0kC7, obj));
     const result = importAll(16428).showPendingNotification(relationship.user);
     const obj2 = importAll(16428);
   }
 }
 function handleFriendRequestAccepted(user) {
   user = user.user;
-  const AccessibilityAnnouncer = require(4131) /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
-  const intl = require(1236) /* getSystemLocale */.intl;
-  AccessibilityAnnouncer.announce(intl.formatToPlainString(require(1236) /* getSystemLocale */.t["/+7xky"], { username: user.username }));
+  const AccessibilityAnnouncer = require("../../design/shared.tsx") /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  AccessibilityAnnouncer.announce(intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t["/+7xky"], { username: user.username }));
   const result = importAll(16428).showAcceptedNotification(user);
 }
 let prototype = function RelationshipManager() {

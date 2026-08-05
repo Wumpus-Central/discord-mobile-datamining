@@ -47,9 +47,9 @@ export const onRouteSettingOnPress = function onRouteSettingOnPress(arg0) {
   }
 };
 export const getSettingTitle = function getSettingTitle(closure_0) {
-  const cachedSettingTitle = require(13799) /* map */.getCachedSettingTitle(closure_0);
-  const obj = require(13799) /* map */;
-  importDefault(38)(null != cachedSettingTitle, "Setting " + closure_0 + " is missing a title.");
+  const cachedSettingTitle = require("SettingHookHarness.tsx") /* map */.getCachedSettingTitle(closure_0);
+  const obj = require("SettingHookHarness.tsx") /* map */;
+  require("../../../../../_runtime/metro/00038__.js")(null != cachedSettingTitle, "Setting " + closure_0 + " is missing a title.");
   return cachedSettingTitle;
 };
 export const getSettingSearchableTitles = function getSettingSearchableTitles() {

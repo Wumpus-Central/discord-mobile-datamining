@@ -10,13 +10,13 @@ export const useProfilePrimaryColor = function useProfilePrimaryColor(guildProfi
   if (null != guildProfile) {
     guildIconURL = null;
     if (null == guildProfile.brandColorPrimary) {
-      let obj = importDefault(1416);
+      let obj = require("../../../utils/AvatarUtils.tsx");
       obj = { id: null, icon: null, size: 64 };
       ({ id: obj2[0], icon: obj2[1] } = guildProfile);
       guildIconURL = obj.getGuildIconURL(obj);
     }
   }
-  let brandColorPrimary = importDefault(8045)(guildIconURL, token);
+  let brandColorPrimary = require("../../avatar/useAvatarColor.tsx")(guildIconURL, token);
   brandColorPrimary = undefined;
   if (guildProfile != null) {
     brandColorPrimary = guildProfile.brandColorPrimary;
@@ -40,12 +40,12 @@ export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfi
   } else {
     let obj = { id: null, icon: null, size: 64 };
     ({ id: obj6[0], icon: obj6[1] } = guildProfileFromInvite);
-    const guildIconURL = importDefault(1416).getGuildIconURL(obj);
+    const guildIconURL = require("../../../utils/AvatarUtils.tsx").getGuildIconURL(obj);
     if (null == guildIconURL) {
       return null;
     } else {
-      require(8045) /* hasFetchedColors */.maybeFetchColors(guildIconURL);
-      const useColorStore = require(8045) /* hasFetchedColors */.useColorStore;
+      require("../../avatar/useAvatarColor.tsx") /* hasFetchedColors */.maybeFetchColors(guildIconURL);
+      const useColorStore = require("../../avatar/useAvatarColor.tsx") /* hasFetchedColors */.useColorStore;
       const tmp13 = useColorStore.getState().palette[guildIconURL];
       let first;
       if (tmp13 != null) {
@@ -73,8 +73,8 @@ export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfi
       } else {
         return null;
       }
-      const obj7 = require(8045) /* hasFetchedColors */;
+      const obj7 = require("../../avatar/useAvatarColor.tsx") /* hasFetchedColors */;
     }
-    const obj5 = importDefault(1416);
+    const obj5 = require("../../../utils/AvatarUtils.tsx");
   }
 };

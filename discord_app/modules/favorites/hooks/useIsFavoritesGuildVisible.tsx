@@ -43,9 +43,9 @@ export const isFavoritesGuildVisible = function isFavoritesGuildVisible() {
   let hasAccess;
   let isExperimentEnabled;
   let isFreemium;
-  const favoritesAccess = require(9629) /* useFavoritesAccess */.getFavoritesAccess();
+  const favoritesAccess = require("../FavoritesHooks.tsx") /* useFavoritesAccess */.getFavoritesAccess();
   ({ isExperimentEnabled, isFreemium, hasAccess } = favoritesAccess);
-  const obj = require(9629) /* useFavoritesAccess */;
+  const obj = require("../FavoritesHooks.tsx") /* useFavoritesAccess */;
   const obj2 = handleConnectionOpen;
   const tmp4 = initializeFromUserSettings;
   let tmp5 = isExperimentEnabled;

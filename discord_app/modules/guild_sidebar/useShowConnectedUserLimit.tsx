@@ -13,7 +13,7 @@ export default function useShowConnectedUserLimit(channel) {
   if (considerMaxStageVoiceUserLimit === undefined) {
     considerMaxStageVoiceUserLimit = true;
   }
-  const limit = importDefault(9076)(channel).limit;
+  const limit = require("../video_calls/useChannelVideoLimit.tsx")(channel).limit;
   let num = -1;
   if (channel.userLimit > 0) {
     num = channel.userLimit;
@@ -45,7 +45,7 @@ export const useConnectedUserLimit = function useConnectedUserLimit(arg0) {
   if (considerMaxStageVoiceUserLimit === undefined) {
     considerMaxStageVoiceUserLimit = true;
   }
-  const limit = importDefault(9076)(channel).limit;
+  const limit = require("../video_calls/useChannelVideoLimit.tsx")(channel).limit;
   let num = -1;
   if (channel.userLimit > 0) {
     num = channel.userLimit;
@@ -77,7 +77,7 @@ export const useConnectedUserLimitFormatted = function useConnectedUserLimitForm
   if (considerMaxStageVoiceUserLimit === undefined) {
     considerMaxStageVoiceUserLimit = true;
   }
-  const limit = importDefault(9076)(channel).limit;
+  const limit = require("../video_calls/useChannelVideoLimit.tsx")(channel).limit;
   let num = -1;
   if (channel.userLimit > 0) {
     num = channel.userLimit;

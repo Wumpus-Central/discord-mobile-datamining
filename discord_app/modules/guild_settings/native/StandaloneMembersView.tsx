@@ -16,7 +16,7 @@ export default function StandaloneMembersView(guildId) {
   const effect = React.useEffect(() => {
     navigation(8943).init(guildId);
   }, items);
-  obj = { paddingBottom: 16 + importDefault(1581)().bottom };
+  obj = { paddingBottom: 16 + require("../../safe_area/useSafeAreaInsets.native.tsx")().bottom };
   dependencyMap = { contentContainerStyle: obj };
   obj = {};
   const obj1 = { headerLeft: null, headerTitle: null, render: null };

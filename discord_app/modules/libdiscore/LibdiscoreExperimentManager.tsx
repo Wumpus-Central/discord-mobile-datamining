@@ -4,7 +4,7 @@ import "initialize";
 
 const require = arg1;
 function experimentStoreUpdateHandler() {
-  let obj = require(1869) /* isBlockedDomain */;
+  let obj = require("../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx") /* isBlockedDomain */;
   if (obj.isLibdiscoreInitialized()) {
     if (!tmpResult.isExperimentSyncDisabled()) {
       obj = {};
@@ -15,13 +15,13 @@ function experimentStoreUpdateHandler() {
       }
       let tmp7 = null != obj;
       if (tmp7) {
-        tmp7 = importDefault(643)(obj, obj);
+        tmp7 = require("../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx")(obj, obj);
       }
       if (!tmp7) {
-        const experimentCacher = require(1869) /* isBlockedDomain */.getExperimentCacher();
+        const experimentCacher = require("../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx") /* isBlockedDomain */.getExperimentCacher();
         const _JSON = JSON;
         experimentCacher.flushToCache(JSON.stringify(obj));
-        const obj4 = require(1869) /* isBlockedDomain */;
+        const obj4 = require("../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx") /* isBlockedDomain */;
       }
     }
     tmpResult = tmp(1866);
@@ -39,7 +39,7 @@ class LibdiscoreExperimentManager extends tmp2 {
 }
 const prototype = LibdiscoreExperimentManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const prop = require(1866) /* items */.ALL_LIBDISCORE_EXPERIMENTS;
+  const prop = require("libdiscoreExperiments.tsx") /* items */.ALL_LIBDISCORE_EXPERIMENTS;
   const item = prop.forEach((id) => {
     let obj = callback(table[4]);
     obj = { kind: "user", name: id.id, defaultConfig: { treatmentId: -1 }, variations: null };

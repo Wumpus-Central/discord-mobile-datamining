@@ -45,17 +45,17 @@ function AuditIcons(action) {
   const tmp = createCacheKey();
   const tmp2 = callback(action);
   if (constants.CREATE === tmp2) {
-    let tmp4 = importDefault(16507);
+    let tmp4 = require("../../../../_runtime/16507_registerAsset.js");
   } else if (tmp3.UPDATE === tmp2) {
-    tmp4 = importDefault(16508);
+    tmp4 = require("../../../../_runtime/16508_registerAsset.js");
   } else {
     tmp4 = null;
     if (tmp3.DELETE === tmp2) {
-      tmp4 = importDefault(16509);
+      tmp4 = require("../../../../_runtime/16509_registerAsset.js");
     }
   }
   if (action === constants2.MESSAGE_DELETE) {
-    let RobotIcon = require(4781) /* ChatIcon */.ChatIcon;
+    let RobotIcon = require("../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx") /* ChatIcon */.ChatIcon;
   } else {
     if (action !== tmp12.AUTO_MODERATION_BLOCK_MESSAGE) {
       if (action !== tmp12.AUTO_MODERATION_FLAG_TO_CHANNEL) {
@@ -66,7 +66,7 @@ function AuditIcons(action) {
         }
       }
     }
-    RobotIcon = require(10456) /* RobotIcon */.RobotIcon;
+    RobotIcon = require("../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx") /* RobotIcon */.RobotIcon;
   }
   let obj = { style: tmp.actionImageContainer, children: null };
   obj = { size: "custom", style: tmp.iconComponent };
@@ -75,7 +75,7 @@ function AuditIcons(action) {
   ({ actionImageOverlay: arr2[0], actionImage: arr2[1] } = tmp);
   items[1] = callback2(View, { style: items1 });
   obj = { style: tmp.actionImage, source: tmp4, disableColor: true };
-  items[2] = callback2(require(1297) /* Button */.Icon, obj);
+  items[2] = callback2(require("../../../design/void/native.tsx") /* Button */.Icon, obj);
   obj[1] = items;
   return callback3(View, obj);
 }

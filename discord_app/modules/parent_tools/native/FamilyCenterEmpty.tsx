@@ -17,8 +17,8 @@ const result = require("jsxProd").fileFinishedImporting("modules/parent_tools/na
 export default function FamilyCenterEmpty(children) {
   const tmp = callback3();
   let obj = { style: tmp.empty, children: null };
-  obj = { source: importDefault(14067), style: tmp.art, resizeMethod: "scale" };
-  const items = [callback(closure_4, obj), callback(require(4281) /* Text */.Text, { variant: "text-sm/medium", color: "text-muted", children: children.text })];
+  obj = { source: require("../../../../_runtime/14067_registerAsset.js"), style: tmp.art, resizeMethod: "scale" };
+  const items = [callback(closure_4, obj), callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-sm/medium", color: "text-muted", children: children.text })];
   obj[1] = items;
   return callback2(closure_3, obj);
 };

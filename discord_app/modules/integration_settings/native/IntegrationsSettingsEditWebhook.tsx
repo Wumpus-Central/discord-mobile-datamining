@@ -239,7 +239,7 @@ prototype["render"] = function render() {
   let obj = { style: tmp.form, contentContainerStyle: items, children: null };
   items = [{ paddingTop: 16 }, self.props.contentContainerStyle];
   obj = { spacing: null, style: null, children: null };
-  obj[0] = importDefault(712).space.PX_24;
+  obj[0] = require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24;
   obj[1] = { paddingHorizontal: tmp.row.padding };
   tmp2Result = null;
   if (props.webhookType !== constants.CHANNEL_FOLLOWER) {
@@ -256,8 +256,8 @@ prototype["render"] = function render() {
     obj[0] = obj1;
     const intl2 = tmp3(1236).intl;
     obj[1] = intl2.string(tmp3(1236).t["7+5GQa"]);
-    tmp2Result = tmp2(importDefault(15795), obj);
-    const tmp8Result = importDefault(15795);
+    tmp2Result = tmp2(require("../../../components_native/common/IconLabelBlock.tsx"), obj);
+    const tmp8Result = require("../../../components_native/common/IconLabelBlock.tsx");
   }
   const items1 = [tmp2Result, , , , ];
   const obj2 = { label: null, value: null, onChange: null, errorMessage: null };
@@ -319,11 +319,11 @@ let obj1 = { padding: require("Themes").modules.mobile.TABLE_ROW_PADDING };
 const result = require("getUncachedChannelPermissions").fileFinishedImporting("modules/integration_settings/native/IntegrationsSettingsEditWebhook.tsx");
 
 export default function ConnectedEditWebhook(arg0) {
-  let obj = require(1480) /* useNavigation */;
+  let obj = require("../../../design/components/Navigator/native/useNavigation.native.tsx") /* useNavigation */;
   obj = { children: null };
   obj = { navigation: obj.useNavigation() };
   const merged = Object.assign(arg0);
-  const items = [callback(EditWebhook, obj), callback(require(5596) /* NavScrim */.NavScrim, {})];
+  const items = [callback(EditWebhook, obj), callback(require("../../../design/components/Navigator/native/NavScrim.android.tsx") /* NavScrim */.NavScrim, {})];
   obj[0] = items;
   return callback2(closure_13, obj);
 };

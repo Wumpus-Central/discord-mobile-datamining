@@ -99,14 +99,14 @@ export const VoiceStatus = memoResult;
 export const ModeratorStatus = memoResult1;
 export const BlockedStatus = function BlockedStatus() {
   const obj = { style: callback().restricted, source: null, size: null, color: null };
-  obj[1] = importDefault(10827);
-  obj[2] = require(1297) /* Button */.Icon.Sizes.EXTRA_SMALL;
-  obj[3] = importDefault(712).unsafe_rawColors.RED_400;
-  return jsx(require(1297) /* Button */.Icon, { style: callback().restricted, source: null, size: null, color: null });
+  obj[1] = require("../../../../../_runtime/10827_registerAsset.js");
+  obj[2] = require("../../../../design/void/native.tsx") /* Button */.Icon.Sizes.EXTRA_SMALL;
+  obj[3] = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.RED_400;
+  return jsx(require("../../../../design/void/native.tsx") /* Button */.Icon, { style: callback().restricted, source: null, size: null, color: null });
 };
 export const IgnoredStatus = function IgnoredStatus() {
   const obj = { style: callback().restricted, source: null, size: null };
-  obj[1] = importDefault(8307);
-  obj[2] = require(1297) /* Button */.Icon.Sizes.EXTRA_SMALL;
-  return jsx(require(1297) /* Button */.Icon, { style: callback().restricted, source: null, size: null });
+  obj[1] = require("../../../../../_runtime/08307_registerAsset.js");
+  obj[2] = require("../../../../design/void/native.tsx") /* Button */.Icon.Sizes.EXTRA_SMALL;
+  return jsx(require("../../../../design/void/native.tsx") /* Button */.Icon, { style: callback().restricted, source: null, size: null });
 };

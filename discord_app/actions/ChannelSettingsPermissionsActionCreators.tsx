@@ -107,25 +107,25 @@ export const updatePermission = function updatePermission(outer1_0, id, addResul
   return applyArgumentsResult;
 };
 export const selectPermission = function selectPermission(id) {
-  let obj = importDefault(709);
+  let obj = require("../Dispatcher.tsx");
   obj = { type: "CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION", id };
   obj.dispatch(obj);
 };
 export const setAdvancedMode = function setAdvancedMode(advancedMode) {
-  let obj = importDefault(709);
+  let obj = require("../Dispatcher.tsx");
   obj = { type: "CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE", advancedMode };
   obj.dispatch(obj);
 };
 export const init = function init() {
-  importDefault(709).dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_INIT" });
+  require("../Dispatcher.tsx").dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_INIT" });
 };
 export const savePermissionUpdates = function savePermissionUpdates(id, items, arg2) {
   let closure_0 = id;
   const importDefault = items;
   const dependencyMap = [];
   let asyncGeneratorStep = arg2;
-  importDefault(709).dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING" });
-  let obj = importDefault(709);
+  require("../Dispatcher.tsx").dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING" });
+  let obj = require("../Dispatcher.tsx");
   return new Promise((arg0) => {
     let closure_0 = arg0;
     function chain() {
@@ -167,8 +167,8 @@ export const saveAndClearPermissionUpdates = function saveAndClearPermissionUpda
   const importDefault = arg1;
   const dependencyMap = arg2;
   let asyncGeneratorStep = arg3;
-  importDefault(709).dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING" });
-  const obj = importDefault(709);
+  require("../Dispatcher.tsx").dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING" });
+  const obj = require("../Dispatcher.tsx");
   return new Promise((arg0) => {
     let closure_0 = arg0;
     function chain() {

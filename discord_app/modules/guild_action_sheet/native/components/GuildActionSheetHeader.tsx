@@ -20,12 +20,12 @@ function CommunityPill(guildVisibility) {
   const tmp = createCacheKey();
   const intl = GlobeEarthIcon(1236).intl;
   importDefault = intl.string(GlobeEarthIcon(1236).t.TME4LJ);
-  let tmp4Result = importDefault(9182);
+  let tmp4Result = require("../../../../../_runtime/09182_registerAsset.js");
   if (guildVisibility.guildVisibility === GlobeEarthIcon(9178).GuildVisibility.PUBLIC) {
     const intl2 = tmp2(1236).intl;
     importDefault = intl2.string(tmp2(1236).t.op2cJ6);
     GlobeEarthIcon = tmp2(10450).GlobeEarthIcon;
-    tmp4Result = importDefault(9185);
+    tmp4Result = require("../../../../../_runtime/09185_registerAsset.js");
   }
   let obj = {
     style: tmp.communityPill,

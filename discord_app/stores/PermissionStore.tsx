@@ -75,7 +75,7 @@ function getUncachedChannelPermissions(id, arg1) {
             }
             return NONE2;
           }
-          obj2 = importDefault(12);
+          obj2 = require("../../_runtime/00012_apply.js");
         }
       }
       obj = { user: null, context: null, checkElevated: null };
@@ -157,7 +157,7 @@ function handleGuildRole(guildId) {
   guildId = guildId.guildId;
   delete tmp[tmp2];
   const mutableBasicGuildChannelsForGuild = store.getMutableBasicGuildChannelsForGuild(guildId);
-  const item = importDefault(12).forEach(mutableBasicGuildChannelsForGuild, (arg0) => {
+  const item = require("../../_runtime/00012_apply.js").forEach(mutableBasicGuildChannelsForGuild, (arg0) => {
     delete tmp2[tmp];
   });
   closure_22 = closure_22 + 1;
@@ -193,7 +193,7 @@ function handleImpersonateUpdate(guildId) {
   guildId = guildId.guildId;
   delete tmp[tmp2];
   const mutableBasicGuildChannelsForGuild = store.getMutableBasicGuildChannelsForGuild(guildId);
-  const item = importDefault(12).forEach(mutableBasicGuildChannelsForGuild, (arg0) => {
+  const item = require("../../_runtime/00012_apply.js").forEach(mutableBasicGuildChannelsForGuild, (arg0) => {
     delete tmp2[tmp];
   });
   closure_22 = closure_22 + 1;
@@ -231,7 +231,7 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
       NONE = tmp11;
     }
   } else {
-    let obj = require(1411) /* fromGuildPropertiesWithAdditionalFields */;
+    let obj = require("../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */;
     if (obj.isGuildRecord(context)) {
       const id = context.id;
       let NONE2 = dependencyMap[id];
@@ -410,13 +410,13 @@ prototype["can"] = function can(arg0, arg1, arg2, arg3, arg4) {
 };
 prototype["canBasicChannel"] = function canBasicChannel(VIEW_CHANNEL, basicChannel) {
   if ("basicPermissions" in basicChannel) {
-    let hasItem = importDefault(3921).has(basicChannel.basicPermissions, VIEW_CHANNEL);
-    const obj3 = importDefault(3921);
+    let hasItem = require("../utils/BasicPermissionUtils.tsx").has(basicChannel.basicPermissions, VIEW_CHANNEL);
+    const obj3 = require("../utils/BasicPermissionUtils.tsx");
   } else {
     const obj = importAll(506);
     const tmp8 = computePermissions(basicChannel, arg2, arg3, arg4);
-    hasItem = obj.has(tmp8, importDefault(3921).asBigFlag(VIEW_CHANNEL));
-    const obj2 = importDefault(3921);
+    hasItem = obj.has(tmp8, require("../utils/BasicPermissionUtils.tsx").asBigFlag(VIEW_CHANNEL));
+    const obj2 = require("../utils/BasicPermissionUtils.tsx");
   }
   return hasItem;
 };
@@ -427,8 +427,8 @@ prototype["computeBasicPermissions"] = function computeBasicPermissions(basicCha
   if ("basicPermissions" in basicChannel) {
     let basicPermissions = basicChannel.basicPermissions;
   } else {
-    basicPermissions = importDefault(3921).asBasicFlag(computePermissions(basicChannel));
-    const obj = importDefault(3921);
+    basicPermissions = require("../utils/BasicPermissionUtils.tsx").asBasicFlag(computePermissions(basicChannel));
+    const obj = require("../utils/BasicPermissionUtils.tsx");
   }
   return basicPermissions;
 };
@@ -631,7 +631,7 @@ const permissionStore = new PermissionStore(require("dispatcher"), {
     return flag;
   },
   THREAD_MEMBERS_UPDATE: function handleThreadMembersUpdate(guildId) {
-    let flag = require(3920) /* doesThreadMembersActionAffectMe */.doesThreadMembersActionAffectMe(guildId);
+    let flag = require("../modules/threads/ThreadActionUtils.tsx") /* doesThreadMembersActionAffectMe */.doesThreadMembersActionAffectMe(guildId);
     if (flag) {
       guildId = guildId.guildId;
       flag = true;

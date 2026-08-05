@@ -30,7 +30,7 @@ prototype["withoutLogging"] = function withoutLogging() {
   const obj = Object.create(MessageDao.prototype);
   obj.originalPrefix = originalPrefix;
   const items = [originalPrefix];
-  const table = new require(1912) /* fromDatabaseTransaction */.Table(items, this.table.tableId, this.table.database, false);
+  const table = new require("Table.tsx") /* fromDatabaseTransaction */.Table(items, this.table.tableId, this.table.database, false);
   obj.table = table;
   return obj;
 };
@@ -42,7 +42,7 @@ prototype["get"] = function get(arg0, arg1, str) {
 prototype["getLatest"] = function getLatest(arg0, arg1, limit) {
   const table = this.table;
   const items = [arg0, arg1];
-  return table.getMany(items, { ordering: require(1914) /* TableId */.Ordering.Descending, limit });
+  return table.getMany(items, { ordering: require("../types/index.tsx") /* TableId */.Ordering.Descending, limit });
 };
 prototype["getRange"] = function getRange(arg0, arg1, str, str2) {
   const table = this.table;
@@ -57,7 +57,7 @@ prototype["getMostRecents"] = function getMostRecents(outer1_0) {
 prototype["put"] = function put(arg0, arg1, data) {
   let Replace = arg3;
   if (arg3 === undefined) {
-    Replace = require(1914) /* TableId */.ConflictOptions.Replace;
+    Replace = require("../types/index.tsx") /* TableId */.ConflictOptions.Replace;
   }
   const table = this.table;
   const id = data.id;
@@ -70,7 +70,7 @@ prototype["putAll"] = function putAll(arg0, arg1, arr) {
   const dependencyMap = arg1;
   let Replace = arg3;
   if (arg3 === undefined) {
-    Replace = _require(1914).ConflictOptions.Replace;
+    Replace = _require("../types/index.tsx").ConflictOptions.Replace;
   }
   const table = this.table;
   return table.putAll(arr.map((data) => {
@@ -138,7 +138,7 @@ MessageDaoTransaction["fromTableTransaction"] = function fromTableTransaction(tr
   return obj;
 };
 MessageDaoTransaction["fromDatabaseTransaction"] = function fromDatabaseTransaction(prefix, tableId, transaction) {
-  const tableTransaction = new require(1912) /* fromDatabaseTransaction */.TableTransaction(prefix, tableId, transaction);
+  const tableTransaction = new require("Table.tsx") /* fromDatabaseTransaction */.TableTransaction(prefix, tableId, transaction);
   if (typeof MessageDaoTransaction !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -149,7 +149,7 @@ MessageDaoTransaction["fromDatabaseTransaction"] = function fromDatabaseTransact
 prototype2["put"] = function put(arg0, arg1, data) {
   let Replace = arg3;
   if (arg3 === undefined) {
-    Replace = require(1914) /* TableId */.ConflictOptions.Replace;
+    Replace = require("../types/index.tsx") /* TableId */.ConflictOptions.Replace;
   }
   const transaction = this.transaction;
   const id = data.id;
@@ -162,7 +162,7 @@ prototype2["putAll"] = function putAll(arg0, arg1, arr) {
   const dependencyMap = arg1;
   let Replace = arg3;
   if (arg3 === undefined) {
-    Replace = _require(1914).ConflictOptions.Replace;
+    Replace = _require("../types/index.tsx").ConflictOptions.Replace;
   }
   const transaction = this.transaction;
   transaction.putAll(arr.map((data) => {

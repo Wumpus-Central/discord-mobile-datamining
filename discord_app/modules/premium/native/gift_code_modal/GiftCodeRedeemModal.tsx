@@ -20,7 +20,7 @@ export default function GiftCodeRedeemModal(code) {
   let obj1 = stateFromStores1(589);
   const items1 = [mergeGuildAvatar];
   stateFromStores1 = obj1.useStateFromStores(items1, () => currentUser.getCurrentUser());
-  const tmp6 = importDefault(10332)(code, stateFromStores1);
+  const tmp6 = require("useGiftCodeErrorMessage.tsx")(code, stateFromStores1);
   if (null == stateFromStores1) {
     return null;
   } else {

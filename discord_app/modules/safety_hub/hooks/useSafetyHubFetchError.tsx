@@ -6,5 +6,5 @@ const result = require("set").fileFinishedImporting("modules/safety_hub/hooks/us
 
 export const useSafetyHubFetchError = function useSafetyHubFetchError() {
   const items = [handleSafetyHubRequestAgeVerificationResetModalAction];
-  return require(589) /* initialize */.useStateFromStores(items, () => fetchError.getFetchError());
+  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => fetchError.getFetchError());
 };

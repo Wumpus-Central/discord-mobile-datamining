@@ -1,5 +1,5 @@
 // discord_app/modules/safety_flows/native/SafetyFlowsUtils.tsx
-import module_4490 from "module_4490";
+import ModalActionCreators from "../../../actions/ModalActionCreators.tsx";
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 
@@ -41,16 +41,16 @@ function _fetchAndUpdateTask() {
 }
 function navigateToScreenForTask(closure_1, closure_0) {
   if (null == closure_0) {
-    let obj = importDefault(4490);
-    obj.popWithKey(require(16824) /* SAFETY_FLOWS_MODAL_KEY */.SAFETY_FLOWS_MODAL_KEY);
+    let obj = require("../../../actions/ModalActionCreators.tsx");
+    obj.popWithKey(require("../constants.tsx") /* SAFETY_FLOWS_MODAL_KEY */.SAFETY_FLOWS_MODAL_KEY);
     obj = { key: "SAFETY_FLOWS_VERIFY_EMAIL_SUCCESS", icon: null, content: null };
-    obj[1] = importDefault(9793);
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[2] = intl.string(importDefault(2547)["/fHz9S"]);
-    importDefault(3986).open(obj);
+    obj[1] = require("../../../../_runtime/09793_registerAsset.js");
+    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[2] = intl.string(require("../SafetyFlows.messages.js")["/fHz9S"]);
+    require("../../toast/native/ToastActionCreators.tsx").open(obj);
   } else {
     const task_type = closure_0.task_type;
-    const tmp16 = require(16823) /* TaskType */.TASK_TYPE_TO_SCREENS[task_type];
+    const tmp16 = require("../types.tsx") /* TaskType */.TASK_TYPE_TO_SCREENS[task_type];
     let tmp5 = null;
     if (null != tmp16) {
       let tmp = tmp16;
@@ -78,7 +78,7 @@ function navigateToScreenForTask(closure_1, closure_0) {
 const result = require("mergeGuildAvatar").fileFinishedImporting("modules/safety_flows/native/SafetyFlowsUtils.tsx");
 
 export const getScreensForTaskType = function getScreensForTaskType(task_type) {
-  const tmp3 = require(16823) /* TaskType */.TASK_TYPE_TO_SCREENS[task_type];
+  const tmp3 = require("../types.tsx") /* TaskType */.TASK_TYPE_TO_SCREENS[task_type];
   let tmp4 = null;
   if (null != tmp3) {
     let tmp5 = tmp3;

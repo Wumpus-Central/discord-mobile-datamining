@@ -14,10 +14,10 @@ export const ActivityIndicator = function ActivityIndicator(size) {
     flag = true;
   }
   const merged = Object.assign(size, Object.create(null));
-  let obj = require(3989) /* map */;
+  let obj = require("../../../tokens/native/useToken.tsx") /* map */;
   let color = merged.color;
   if (color == null) {
-    color = obj.useToken(importDefault(712).colors.BACKGROUND_BRAND);
+    color = obj.useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BRAND);
   }
   obj = {};
   const merged1 = Object.assign(merged);

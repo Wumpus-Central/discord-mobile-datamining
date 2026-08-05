@@ -1,6 +1,6 @@
 // discord_app/modules/premium/hooks/useOutboundPromotionRedemptionEndDate.tsx
 import noop from "noop";
-import module_30 from "module_30";
+import get from "../../../../_runtime/00030_get.js";
 import importDefaultResult from "t";
 
 const require = arg1;

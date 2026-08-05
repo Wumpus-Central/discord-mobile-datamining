@@ -10,7 +10,7 @@ let c5;
 const require = arg1;
 function GuildSettingsRoleSubscriptionsEmptyContent(guild) {
   guild = guild.guild;
-  let obj = require(1480) /* useNavigation */;
+  let obj = require("../../../../design/components/Navigator/native/useNavigation.native.tsx") /* useNavigation */;
   const str = obj.useNavigation();
   if (tmp3.loading) {
     let tmp7 = jsx(tmp2(16640), {});
@@ -44,7 +44,7 @@ export default function GuildSettingsRoleSubscriptionsEmpty(guildId) {
   const items = [createGuildRecordFromRust];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_3.getGuild(guildId));
   if (null == stateFromStores) {
-    let tmp5 = jsx(importDefault(16640), {});
+    let tmp5 = jsx(require("../components/Placeholder.tsx"), {});
   } else {
     obj = { guild: null };
     obj[0] = stateFromStores;

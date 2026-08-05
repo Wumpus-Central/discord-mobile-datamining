@@ -19,11 +19,11 @@ function isSubscriptionGated(role) {
   let isPreviewingRoles;
   role = role.role;
   ({ guildId, isPreviewingRoles } = role);
-  let isSubscriptionRoleResult = require(3904) /* isSubscriptionRole */.isSubscriptionRole(role);
+  let isSubscriptionRoleResult = require("../guild_role_subscriptions/PremiumRoleUtils.tsx") /* isSubscriptionRole */.isSubscriptionRole(role);
   if (isSubscriptionRoleResult) {
     let tmp4 = isPreviewingRoles;
     if (!tmp4) {
-      let result = require(3904) /* isSubscriptionRole */.isSubscriptionRoleAvailableForPurchase(role);
+      let result = require("../guild_role_subscriptions/PremiumRoleUtils.tsx") /* isSubscriptionRole */.isSubscriptionRoleAvailableForPurchase(role);
       if (!result) {
         let flag = false;
         if (null != role) {
@@ -43,7 +43,7 @@ function isSubscriptionGated(role) {
       }
       tmp4 = result;
       const tmp6 = role;
-      const tmpResult = require(3904) /* isSubscriptionRole */;
+      const tmpResult = require("../guild_role_subscriptions/PremiumRoleUtils.tsx") /* isSubscriptionRole */;
     }
     isSubscriptionRoleResult = tmp4;
   }
@@ -74,7 +74,7 @@ function isChannelSubscriptionGatedInGuild(channel, guild) {
       let tmp9 = nextResult;
       let tmp10 = require;
       let tmp11 = dependencyMap;
-      let obj2 = require(3905) /* hasViewChannelPermission */;
+      let obj2 = require("../guild_role_subscriptions/RolePermissionUtils.tsx") /* hasViewChannelPermission */;
       if (obj2.isChannelAccessGrantedBy(channel, channel.permissionOverwrites[tmp5])) {
         let tmp12 = iter;
         iter.return();
@@ -101,7 +101,7 @@ function isChannelSubscriptionGatedInGuild(channel, guild) {
         if (isSubscriptionGated(obj)) {
           let tmp21 = require;
           let tmp22 = dependencyMap;
-          let obj7 = require(3905) /* hasViewChannelPermission */;
+          let obj7 = require("../guild_role_subscriptions/RolePermissionUtils.tsx") /* hasViewChannelPermission */;
           let tmp23 = item10077;
           if (obj7.hasViewChannelPermission(tmp19)) {
             let tmp24 = obj5;

@@ -52,10 +52,10 @@ function applyAppleReceipt(arg0) {
   if (null != jwsRepresentations) {
     first = jwsRepresentations[0];
   }
-  let obj = importDefault(1217);
+  let obj = require("../../../_runtime/01217_MurmurHashV3.js");
   const v3Result = obj.v3(first);
   const require = v3Result;
-  let Storage = require(595) /* Storage */.Storage;
+  let Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
   if (!skipDupCheck) {
     if (Storage.get(localAppleReceiptHash) === v3Result) {
       let resolved = Promise.resolve(null);
@@ -81,7 +81,7 @@ function applyAppleReceipt(arg0) {
     tmp2(698).track(constants.GIFT_INFO_OPTIONS_MISSING, obj);
     const tmp2Result = tmp2(698);
   }
-  const HTTP = require(530) /* sendRequest */.HTTP;
+  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
   obj = { url: constants2.BILLING_APPLY_APPLE_RECEIPT, body: { encoded_receipt: encodedReceipt, entitlement_sku_id: entitlementSkuId, presentment_currency: presentmentCurrency, presentment_amount: presentmentAmount, app_store_region: appStoreRegion, gift_info_options: giftInfoOptions, is_gift: isGift, source, jws_representations: jwsRepresentations, order_id: orderId }, retries, oldFormErrors: true, rejectWithError: true };
   const postResult = HTTP.post(obj);
   tmp2 = importDefault;
@@ -145,9 +145,9 @@ function handlePurchaseException(code) {
     flag = true;
   }
   if (!set.has(code.code)) {
-    let obj = require(7258) /* isSpendingLimitError */;
+    let obj = require("../../modules/parent_tools/native/showSpendingLimitReachedAlert.tsx") /* isSpendingLimitError */;
     let billingError = code;
-    if (!(code instanceof require(4184) /* V6OrEarlierAPIError */.BillingError)) {
+    if (!(code instanceof require("../../errors/index.tsx") /* V6OrEarlierAPIError */.BillingError)) {
       billingError = new tmp(4184).BillingError(code);
     }
     if (obj.isSpendingLimitError(billingError)) {
@@ -164,7 +164,7 @@ function handlePurchaseException(code) {
         const intl2 = tmp(1236).intl;
         obj[0] = intl2.string(tmp(1236).t.POsVOt);
         obj[1] = underlyingIOSError;
-        importDefault(4624).show(obj);
+        require("AlertActionCreators.tsx").show(obj);
         throw code;
       } else {
         const intl3 = tmp(1236).intl;
@@ -204,7 +204,7 @@ function handlePurchaseException(code) {
         if (tmp19) {
           message2 = billingError1.message;
         }
-        let obj2 = importDefault(4624);
+        let obj2 = require("AlertActionCreators.tsx");
         obj = { title: null, body: null, isDismissable: true, hideActionSheet: null };
         const intl = tmp(1236).intl;
         obj[0] = intl.string(tmp(1236).t.zrhHH3);
@@ -229,14 +229,14 @@ function canMakeIAPRequest() {
   const isBusyResult = busy.isBusy();
   let tmp2 = !isBusyResult;
   if (!isBusyResult) {
-    const isPaymentsBlocked = require(6790) /* useBlockedPaymentsConfig */.getIsPaymentsBlocked();
+    const isPaymentsBlocked = require("../../modules/billing/experiments/BlockedPaymentsCountryExperiment.tsx") /* useBlockedPaymentsConfig */.getIsPaymentsBlocked();
     let flag = !isPaymentsBlocked;
     if (isPaymentsBlocked) {
-      importDefault(7366)();
+      require("../../modules/billing/native/openBlockedPaymentsCountryActionSheet.tsx")();
       flag = false;
     }
     tmp2 = flag;
-    const obj = require(6790) /* useBlockedPaymentsConfig */;
+    const obj = require("../../modules/billing/experiments/BlockedPaymentsCountryExperiment.tsx") /* useBlockedPaymentsConfig */;
   }
   return tmp2;
 }
@@ -644,7 +644,7 @@ function _updateAppleSubscription() {
   return applyArgumentsResult;
 }
 function determineProductId(arg0) {
-  if (require(7504) /* APBRequestOperations */.APBRequestOperations.CREATE !== arg0) {
+  if (require("../../../discord_common/js/shared/shared-constants/APBRequestOperations.tsx") /* APBRequestOperations */.APBRequestOperations.CREATE !== arg0) {
     if (tmp(7504).APBRequestOperations.CANCEL !== arg0) {
       if (tmp(7504).APBRequestOperations.RESUBSCRIBE !== arg0) {
         if (tmp(7504).APBRequestOperations.REACTIVATE !== arg0) {
@@ -672,7 +672,7 @@ function determineProductId(arg0) {
       }
     }
   }
-  return require(5770) /* SubscriptionPlans */.ProductIds.GENERIC_SUBSCRIPTION;
+  return require("../../modules/premium/native/ProductIds.android.tsx") /* SubscriptionPlans */.ProductIds.GENERIC_SUBSCRIPTION;
 }
 function _cancelGenericSubscription() {
   const self = this;
@@ -2300,7 +2300,7 @@ let obj = {
     })();
   },
   disconnectGenericIap() {
-    importDefault(709).dispatch({ type: "GENERIC_IAP_END_CONNECTION" });
+    require("../../Dispatcher.tsx").dispatch({ type: "GENERIC_IAP_END_CONNECTION" });
   },
   loadProducts(arg0) {
     let closure_0 = arg0;

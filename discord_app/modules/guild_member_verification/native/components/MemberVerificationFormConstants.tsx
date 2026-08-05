@@ -7,5 +7,5 @@ export const AVATAR_SIZE = 76;
 export const AVATAR_BORDER_WIDTH = 6;
 export const SCROLL_EVENT_TIMER_MS = 16;
 export const useBannerHeight = function useBannerHeight() {
-  return importDefault(1474)().width * c2;
+  return require("../../../screen/useWindowDimensions.native.tsx")().width * c2;
 };

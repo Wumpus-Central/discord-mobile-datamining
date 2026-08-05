@@ -35,7 +35,7 @@ export default {
     })();
   },
   ignore(id) {
-    const HTTP = require(530) /* sendRequest */.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
     HTTP.del({ url: Endpoints.FRIEND_SUGGESTION(id), rejectWithError: true });
   }
 };

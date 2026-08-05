@@ -8,7 +8,7 @@ export const useSocialLayerStorefrontMobileAccountLinkingDisabled = function use
   const _require = applicationId;
   const items = [handleUserSettingsStoreUpdate];
   const items1 = [applicationId];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
       const configForApplicationId = outer1_2.getConfigForApplicationId(tmp);

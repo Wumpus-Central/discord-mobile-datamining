@@ -110,7 +110,7 @@ function trackLibdiscoreSuccess() {
       items.push(enabledFeatureName);
     }
   });
-  importDefault(698).track(AnalyticEvents.LIBDISCORE_LOADED, { success: true, experimental_features: items });
+  require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.LIBDISCORE_LOADED, { success: true, experimental_features: items });
 }
 function trackLibdiscoreFailure(arg0) {
   let message;
@@ -135,7 +135,7 @@ function trackLibdiscoreFailure(arg0) {
     const _HermesInternal = HermesInternal;
     combined = "" + name + ": " + text;
   }
-  importDefault(698).track(AnalyticEvents.LIBDISCORE_LOADED, { success: false, error: combined });
+  require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.LIBDISCORE_LOADED, { success: false, error: combined });
 }
 let c5 = new require("_initLibdiscore")("libdiscore");
 let c6 = false;

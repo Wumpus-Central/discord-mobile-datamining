@@ -73,7 +73,7 @@ export default function VideoQuestTranscriptActionSheet(quest) {
   const intl = quest(1236).intl;
   obj[0] = intl.string(quest(1236).t["1YS80z"]);
   obj[1] = callback2(quest(5337).BottomSheetTitleHeader, obj);
-  obj = { contentContainerStyle: { paddingBottom: importDefault(1581)().bottom }, children: null };
+  obj = { contentContainerStyle: { paddingBottom: require("../../../safe_area/useSafeAreaInsets.native.tsx")().bottom }, children: null };
   const obj1 = { spacing: 16, style: tmp.content, children: null };
   let fetchStatus;
   if (tmp2 != null) {

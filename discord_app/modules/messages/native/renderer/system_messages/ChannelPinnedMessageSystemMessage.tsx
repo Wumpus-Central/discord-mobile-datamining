@@ -3,9 +3,9 @@ const result = require("getSystemLocale").fileFinishedImporting("modules/message
 
 export const createChannelPinnedMessageSystemMessage = function createChannelPinnedMessageSystemMessage(roleStyle) {
   const message = roleStyle.message;
-  let obj = require(7879) /* getMessageAuthorWithProcessedColor */;
+  let obj = require("useAuthorWithProcessedColor.tsx") /* getMessageAuthorWithProcessedColor */;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: importDefault(7881)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), pinsOnClick: obj };
+  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: require("formatUsernameOnClick.tsx")({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), pinsOnClick: obj };
   obj = { action: "bindOpenPins", messageChannelId: message.channel_id, medium: true };
   const messageReference = message.messageReference;
   if (null != messageReference) {
@@ -20,7 +20,7 @@ export const createChannelPinnedMessageSystemMessage = function createChannelPin
     const intl = tmp(1236).intl;
     formatToPartsResult = intl.formatToParts(tmp(1236).t["6TrHq2"], obj);
   }
-  const tmp9 = importDefault(7882)(roleStyle);
+  const tmp9 = require("createCommonMessage.tsx")(roleStyle);
   let accessibilityActions = tmp9.accessibilityActions;
   if (accessibilityActions == null) {
     accessibilityActions = [];
@@ -28,8 +28,8 @@ export const createChannelPinnedMessageSystemMessage = function createChannelPin
   const items = [...accessibilityActions];
   const obj3 = { label: null, name: null };
   const intl3 = tmp(1236).intl;
-  obj3[0] = intl3.string(require(1236) /* getSystemLocale */.t["mp1N/2"]);
-  obj3[1] = require(7885) /* MessageAccessibilityAction */.MessageAccessibilityAction.OPEN_PINS;
+  obj3[0] = intl3.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["mp1N/2"]);
+  obj3[1] = require("../../MessageAccessibilityActions.tsx") /* MessageAccessibilityAction */.MessageAccessibilityAction.OPEN_PINS;
   items.push(obj3);
   if (null != messageReference) {
     const obj4 = { label: null, name: null };

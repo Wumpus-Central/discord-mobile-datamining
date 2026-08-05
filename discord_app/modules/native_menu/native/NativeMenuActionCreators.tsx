@@ -5,7 +5,7 @@ export default {
   showNativeMenu(key, memo) {
     let closure_0 = key;
     const importDefault = memo;
-    importDefault(709).wait(() => {
+    require("../../../Dispatcher.tsx").wait(() => {
       let obj = key(outer1_2[1]);
       const result = obj.triggerHapticFeedback(memo(outer1_2[2]).IMPACT_LIGHT);
       obj = { type: "SHOW_NATIVE_MENU", key, menu: memo };
@@ -13,7 +13,7 @@ export default {
     });
   },
   hideNativeMenu(key) {
-    let obj = importDefault(709);
+    let obj = require("../../../Dispatcher.tsx");
     obj = { type: "HIDE_NATIVE_MENU", key };
     obj.dispatch(obj);
   }

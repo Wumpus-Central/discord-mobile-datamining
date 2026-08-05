@@ -11,7 +11,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_STACK,
   getComponent() {
-    return require(14705) /* StackBlock */.default;
+    return require("../../design_system/native/UserSettingsDesignSystemStack.tsx") /* StackBlock */.default;
   }
 };
 const route = createToggle.createRoute(obj);

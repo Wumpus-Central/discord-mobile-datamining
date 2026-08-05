@@ -13,5 +13,5 @@ export default function openGuildPowerupsModal(navigationParams) {
     obj.autoOpenRequestId = sum;
     tmp2 = obj;
   }
-  importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(11753, dependencyMap.paths), tmp2, "guild_powerups_modal_key", navigationParams.navigationParams);
+  require("../../../../../actions/ModalActionCreators.tsx").pushLazy(require("../../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(11753, dependencyMap.paths), tmp2, "guild_powerups_modal_key", navigationParams.navigationParams);
 };

@@ -15,10 +15,10 @@ export default function validateComponent(type, arg1, modal) {
   let values;
   values = arg1;
   if (null != arg1) {
-    importDefault(38)(values.type === type.type, "component type matches state");
+    require("../../../_runtime/metro/00038__.js")(values.type === type.type, "component type matches state");
   }
   type = type.type;
-  if (require(1906) /* PermissionOverwriteType */.ComponentType.BUTTON === type) {
+  if (require("../../flow/Server.tsx") /* PermissionOverwriteType */.ComponentType.BUTTON === type) {
     return null;
   } else {
     if (tmp4(1906).ComponentType.STRING_SELECT !== type) {
@@ -124,7 +124,7 @@ export default function validateComponent(type, arg1, modal) {
               } else if (tmp4(1906).ComponentType.CHECKBOX === type) {
                 return null;
               } else {
-                importDefault(38)(false, "missing validator for this component");
+                require("../../../_runtime/metro/00038__.js")(false, "missing validator for this component");
               }
             }
           }

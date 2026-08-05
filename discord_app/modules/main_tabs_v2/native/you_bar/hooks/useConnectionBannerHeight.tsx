@@ -9,9 +9,9 @@ const result = require("apexExperiment").fileFinishedImporting("modules/main_tab
 export const useConnectionBannerHeight = function useConnectionBannerHeight() {
   let hidden;
   let timeoutMs;
-  const config = importDefault(12856).useConfig({ location: "useConnectionBannerHeight" });
+  const config = require("../../ConnectionIndicatorExperiment.tsx").useConfig({ location: "useConnectionBannerHeight" });
   ({ timeoutMs, hidden } = config);
-  require(589) /* initialize */;
+  require("../../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   [][0] = updateState;
   let num = 0;
   if (null != timeoutMs) {

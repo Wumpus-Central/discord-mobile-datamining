@@ -2,7 +2,7 @@
 const result = require("set").fileFinishedImporting("modules/guild_automod/GuildAutomodMessageActionCreators.tsx");
 
 export const removeAutomodMessageNotice = function removeAutomodMessageNotice(messageId) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "REMOVE_AUTOMOD_MESSAGE_NOTICE", messageId };
   obj.dispatch(obj);
 };

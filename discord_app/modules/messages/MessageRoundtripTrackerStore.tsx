@@ -19,10 +19,10 @@ function trackRoundtrip(channelId) {
       if (null != channelId.gatewaySeenTimestamp) {
         diff1 = channelId.gatewaySeenTimestamp - channelId.initialSendTimestamp;
       }
-      let obj = require(6830) /* receiveNetworkInfoformation */;
+      let obj = require("../network/NetStats.android.tsx") /* receiveNetworkInfoformation */;
       const signalStrength = obj.getSignalStrength();
       obj = {};
-      const merged = Object.assign(importDefault(7057)());
+      const merged = Object.assign(require("../device/getDeviceMetadata.native.tsx")());
       obj.api_latency_ms = diff;
       obj.gateway_latency_ms = diff1;
       ({ id: obj3.channel_id, type: obj3.channel_type, guild_id: obj3.guild_id } = basicChannel);
@@ -36,8 +36,8 @@ function trackRoundtrip(channelId) {
         tmp17 = obj;
       }
       const merged1 = Object.assign(tmp17);
-      importDefault(698).track(AnalyticEvents.SEND_MESSAGE_ROUNDTRIP, obj);
-      const obj2 = importDefault(698);
+      require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.SEND_MESSAGE_ROUNDTRIP, obj);
+      const obj2 = require("../../utils/AnalyticsUtils.tsx");
     }
   } else {
     const _HermesInternal = HermesInternal;

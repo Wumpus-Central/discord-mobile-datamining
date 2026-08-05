@@ -17,7 +17,7 @@ function Code(arg0) {
   let color;
   ({ children, color } = arg0);
   const tmp = createCacheKey();
-  return callback2(require(4281) /* Text */.Text, { variant: "text-sm/normal", color, lineClamp: 1, style: createCacheKey().code, children });
+  return callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-sm/normal", color, lineClamp: 1, style: createCacheKey().code, children });
 }
 ({ jsx: metroImportAll, jsxs: c9, Fragment: c10 } = jsxProd);
 createCacheKey = { wrap: null, code: null, border: null };
@@ -44,7 +44,7 @@ export default function UserSettingsStartupTimings() {
   React = useResult;
   let items = [useResult, first, first1];
   const memo = React.useMemo(() => first(9790)(TableRowGroupTitle, !first, first1).split("\n"), items);
-  let obj1 = require(589) /* initialize */;
+  let obj1 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   let items1 = [refreshSourceMapCookie];
   let closure_6 = obj1.useStateFromStores(items1, () => alertStartupMetrics.alertStartupMetrics);
   refreshSourceMapCookie = first(9).loadIndex.start - useResult;
@@ -53,7 +53,7 @@ export default function UserSettingsStartupTimings() {
   let closure_9 = first(9).loadLazyCache.end - first(9).loadLazyCache.start;
   let closure_10 = first(9).ready.end - first(9).ready.start;
   createCacheKey = Math.ceil(first(9).renderLatestMessages.importTime);
-  const lastTrackedAppUiViewed2Properties = require(6843) /* getDeviceMetadata */.getLastTrackedAppUiViewed2Properties();
+  const lastTrackedAppUiViewed2Properties = require("../../../tti_analytics/native/TTIAnalyticsUtils.tsx") /* getDeviceMetadata */.getLastTrackedAppUiViewed2Properties();
   num = undefined;
   if (lastTrackedAppUiViewed2Properties != null) {
     num = lastTrackedAppUiViewed2Properties.time_first_contentful_paint;
@@ -263,6 +263,6 @@ export default function UserSettingsStartupTimings() {
   obj[3] = function renderItem(children) {
     return callback(lastTrackedAppUiViewed2Properties, { children: children.item });
   };
-  obj[1] = callback2(require(7666) /* noop */.FlashList, obj);
+  obj[1] = callback2(require("../../../../../discord_common/js/packages/flash-list/index.js") /* noop */.FlashList, obj);
   return callback2(closure_6, obj);
 };

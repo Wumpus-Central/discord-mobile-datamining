@@ -29,9 +29,9 @@ export default function usePreloadedAsset(arg0) {
   let combined;
   c5 = undefined;
   const items = [c5];
-  const stateFromStores = _require(589).useStateFromStores(items, () => _undefined2.useReducedMotion);
-  let obj2 = _require(589);
-  const tmp2 = _require(500).isAndroid() && flag && !stateFromStores;
+  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => _undefined2.useReducedMotion);
+  let obj2 = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const tmp2 = _require("../../utils/PlatformUtils.tsx").isAndroid() && flag && !stateFromStores;
   dependencyMap = tmp2;
   let tmp3 = !tmp2;
   if (tmp2) {
@@ -43,7 +43,7 @@ export default function usePreloadedAsset(arg0) {
     str = "apng";
   }
   combined = "" + str + ":" + arg0;
-  const obj3 = _require(500);
+  const obj3 = _require("../../utils/PlatformUtils.tsx");
   const obj4 = combined;
   [tmp8, c5] = callback(combined.useState(null), 2);
   let status = "skipped";

@@ -92,7 +92,7 @@ export default function GetStartedScreen(onComplete) {
   obj[0] = callback4(closure_5, obj);
   const items2 = [callback3(closure_4, obj), ];
   obj8 = { style: items3, children: null };
-  items3 = [tmp.getStartedFooterContainer, { paddingBottom: importDefault(1581)().bottom }];
+  items3 = [tmp.getStartedFooterContainer, { paddingBottom: require("../../safe_area/useSafeAreaInsets.native.tsx")().bottom }];
   let tmp9Result = !isManualAgeVerificationHidden;
   if (!isManualAgeVerificationHidden) {
     const obj9 = { style: null, children: null };
@@ -170,7 +170,7 @@ export default function GetStartedScreen(onComplete) {
     }
   });
   const obj15 = { color: null };
-  obj15[0] = importDefault(712).colors.WHITE;
+  obj15[0] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE;
   obj14[4] = callback3(modalSessionId(7765).LinkExternalSmallIcon, obj15);
   obj14[5] = loading;
   obj13[1] = callback3(modalSessionId(4695).Button, obj14);

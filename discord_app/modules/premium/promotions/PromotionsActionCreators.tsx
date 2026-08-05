@@ -103,7 +103,7 @@ function _fetchActivePromotions() {
   return applyArgumentsResult;
 }
 function dismissOutboundPromotionNotice() {
-  importDefault(709).dispatch({ type: "OUTBOUND_PROMOTION_NOTICE_DISMISS" });
+  require("../../../Dispatcher.tsx").dispatch({ type: "OUTBOUND_PROMOTION_NOTICE_DISMISS" });
   const lastDismissedOutboundPromotionStartDate = createEmptyPromotionsByType.lastDismissedOutboundPromotionStartDate;
   if (null != lastDismissedOutboundPromotionStartDate) {
     const PreloadedUserSettingsActionCreators = lastDismissedOutboundPromotionStartDate(1355).PreloadedUserSettingsActionCreators;
@@ -268,7 +268,7 @@ function _fetchClaimedOutboundPromotionCodes() {
   return applyArgumentsResult;
 }
 function addClaimedOutboundPromotionCode(claimedOutboundPromotionCode) {
-  let obj = importDefault(709);
+  let obj = require("../../../Dispatcher.tsx");
   obj = { type: "CLAIMED_OUTBOUND_PROMOTION_CODE_ADD", claimedOutboundPromotionCode };
   obj.dispatch(obj);
 }
@@ -280,7 +280,7 @@ export default {
   addClaimedOutboundPromotionCode,
   dismissOutboundPromotionNotice,
   markOutboundPromotionsSeen() {
-    importDefault(709).dispatch({ type: "OUTBOUND_PROMOTIONS_SEEN" });
+    require("../../../Dispatcher.tsx").dispatch({ type: "OUTBOUND_PROMOTIONS_SEEN" });
   },
   fetchActiveBogoPromotion
 };
@@ -301,7 +301,7 @@ export const maybeFetchActivePromotions = function maybeFetchActivePromotions(ar
   }
 };
 export const clearActivePromotions = function clearActivePromotions() {
-  importDefault(709).dispatch({ type: "ACTIVE_PROMOTIONS_CLEAR" });
+  require("../../../Dispatcher.tsx").dispatch({ type: "ACTIVE_PROMOTIONS_CLEAR" });
 };
 export { fetchActivePromotions };
 export { dismissOutboundPromotionNotice };

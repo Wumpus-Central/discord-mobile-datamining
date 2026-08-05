@@ -16,7 +16,7 @@ export default function TypingSubtitle(arg0) {
   let text;
   ({ channel, channelName } = arg0);
   ({ guild, text } = arg0);
-  let obj = require(15321) /* styles */;
+  let obj = require("useSubtitleStyles.tsx") /* styles */;
   const subtitleStyles = obj.useSubtitleStyles();
   let channelIconComponentWithGuild;
   if (null != channel) {
@@ -44,7 +44,7 @@ export default function TypingSubtitle(arg0) {
   }
   const items2 = [tmp5Result, text];
   obj1[4] = items2;
-  items[1] = closure_4(require(4281) /* Text */.Text, obj1);
+  items[1] = closure_4(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
   obj[1] = items;
   return closure_4(View, obj);
 };

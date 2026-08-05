@@ -5,38 +5,38 @@ const require = arg1;
 let result = require("computeEntryState").fileFinishedImporting("modules/keyboard/native/useKeyboardType.tsx");
 
 export default function useKeyboardType() {
-  _require = _require(1477).useAppEntryKey();
-  return importDefault(1478)((arg0) => arg0.byAppEntry[closure_0].keyboardType);
+  _require = _require("../../window/native/AppEntryKeyContext.tsx").useAppEntryKey();
+  return require("KeyboardUIStore.native.tsx")((arg0) => arg0.byAppEntry[closure_0].keyboardType);
 };
 export const getKeyboardContextForType = function getKeyboardContextForType(arg0) {
   let DEFAULT_APP_ENTRY_KEY = arg1;
   if (arg1 === undefined) {
-    DEFAULT_APP_ENTRY_KEY = require(1477) /* context */.DEFAULT_APP_ENTRY_KEY;
+    DEFAULT_APP_ENTRY_KEY = require("../../window/native/AppEntryKeyContext.tsx") /* context */.DEFAULT_APP_ENTRY_KEY;
   }
-  return importDefault(1478).getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardContexts[arg0];
+  return require("KeyboardUIStore.native.tsx").getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardContexts[arg0];
 };
 export const useKeyboardContextForType = function useKeyboardContextForType(SYSTEM) {
   const _require = SYSTEM;
-  const importDefault = _require(1477).useAppEntryKey();
-  return importDefault(1478)((arg0) => arg0.byAppEntry[closure_1].keyboardContexts[closure_0]);
+  const importDefault = _require("../../window/native/AppEntryKeyContext.tsx").useAppEntryKey();
+  return require("KeyboardUIStore.native.tsx")((arg0) => arg0.byAppEntry[closure_1].keyboardContexts[closure_0]);
 };
 export const getKeyboardType = function getKeyboardType(arg0) {
   let DEFAULT_APP_ENTRY_KEY = arg0;
   if (arg0 === undefined) {
-    DEFAULT_APP_ENTRY_KEY = require(1477) /* context */.DEFAULT_APP_ENTRY_KEY;
+    DEFAULT_APP_ENTRY_KEY = require("../../window/native/AppEntryKeyContext.tsx") /* context */.DEFAULT_APP_ENTRY_KEY;
   }
-  return importDefault(1478).getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardType;
+  return require("KeyboardUIStore.native.tsx").getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardType;
 };
 export const getKeyboardTypePrevious = function getKeyboardTypePrevious() {
   let DEFAULT_APP_ENTRY_KEY = arg0;
   if (arg0 === undefined) {
-    DEFAULT_APP_ENTRY_KEY = require(1477) /* context */.DEFAULT_APP_ENTRY_KEY;
+    DEFAULT_APP_ENTRY_KEY = require("../../window/native/AppEntryKeyContext.tsx") /* context */.DEFAULT_APP_ENTRY_KEY;
   }
-  return importDefault(1478).getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardTypePrevious;
+  return require("KeyboardUIStore.native.tsx").getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardTypePrevious;
 };
 export const useKeyboardTypePrevious = function useKeyboardTypePrevious() {
-  _require = _require(1477).useAppEntryKey();
-  return importDefault(1478)((arg0) => arg0.byAppEntry[closure_0].keyboardTypePrevious);
+  _require = _require("../../window/native/AppEntryKeyContext.tsx").useAppEntryKey();
+  return require("KeyboardUIStore.native.tsx")((arg0) => arg0.byAppEntry[closure_0].keyboardTypePrevious);
 };
 export const useKeyboardTypeSharedValue = function useKeyboardTypeSharedValue() {
   appEntryKey = appEntryKey(1477).useAppEntryKey();

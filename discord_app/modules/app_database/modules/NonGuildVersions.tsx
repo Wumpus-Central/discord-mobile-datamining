@@ -144,7 +144,7 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
 };
 prototype["handleConnectionOpen"] = function handleConnectionOpen(apiCodeVersion, database) {
   if (null != apiCodeVersion.apiCodeVersion) {
-    let obj = importDefault(1907);
+    let obj = require("../DatabaseDaos.tsx");
     const result = obj.nonGuildVersionsTransaction(database);
     obj = { id: "api_code_version", version: null };
     obj[1] = apiCodeVersion.apiCodeVersion;

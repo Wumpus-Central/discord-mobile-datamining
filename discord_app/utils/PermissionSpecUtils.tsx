@@ -10,7 +10,7 @@ let closure_6;
 let error;
 let metroImportAll;
 function getPermissionOptions(id) {
-  let obj = require(15775) /* isGuildEligibleForStageChannels */;
+  let obj = require("../modules/stage_channels/useGuildEligibleForStageChannels.tsx") /* isGuildEligibleForStageChannels */;
   const result = obj.isGuildEligibleForStageChannels(id);
   const guild = store.getGuild(id);
   let result1 = null != guild;
@@ -25,13 +25,13 @@ function getPermissionOptions(id) {
   const intl = tmp(1236).intl;
   const obj1 = { keybind: null };
   const intl2 = tmp(1236).intl;
-  obj1[0] = intl2.string(require(1236) /* getSystemLocale */.t.DkSwJ2);
-  obj[0] = intl.format(require(1236) /* getSystemLocale */.t.ZuzwPz, obj1);
+  obj1[0] = intl2.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.DkSwJ2);
+  obj[0] = intl.format(require("../intl/index.native.tsx") /* getSystemLocale */.t.ZuzwPz, obj1);
   const intl3 = tmp(1236).intl;
   const obj2 = { helpCenterArticle: null };
-  const tmpResult1 = require(15776) /* experiment */;
-  obj2[0] = importDefault(1945).getArticleURL(constants.SOUNDBOARD);
-  obj[1] = intl3.format(require(1236) /* getSystemLocale */.t.fVE8y8, obj2);
+  const tmpResult1 = require("../modules/hangout_window/HangoutWindowExperiment.tsx") /* experiment */;
+  obj2[0] = require("HelpdeskUtils.tsx").getArticleURL(constants.SOUNDBOARD);
+  obj[1] = intl3.format(require("../intl/index.native.tsx") /* getSystemLocale */.t.fVE8y8, obj2);
   obj[2] = result;
   obj[5] = result1;
   obj[6] = soundmojiRenderingExperiment;
@@ -70,7 +70,7 @@ export default {
       hasItem = features.has(constants3.VERIFIED);
     }
     if (hasItem) {
-      let obj5 = importDefault(5797);
+      let obj5 = require("../modules/messages/GuildOfficialMessagesExperiment.tsx");
       obj = { guildId: null, location: "generateChannelPermissionSpec" };
       obj[0] = guild_id;
       hasItem = obj5.getCurrentConfig(obj).enabled;
@@ -287,8 +287,8 @@ export default {
     if (enabled) {
       let obj = { guildId: null, location: "generateGuildPermissionSpec" };
       obj[0] = features.id;
-      enabled = importDefault(5797).getCurrentConfig(obj).enabled;
-      const obj2 = importDefault(5797);
+      enabled = require("../modules/messages/GuildOfficialMessagesExperiment.tsx").getCurrentConfig(obj).enabled;
+      const obj2 = require("../modules/messages/GuildOfficialMessagesExperiment.tsx");
     }
     if (!enabled) {
       set.add(constants4.MANAGE_OFFICIAL_MESSAGES.toString());

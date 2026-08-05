@@ -38,18 +38,18 @@ export default function BannerBase(arg0) {
   const tmp = createCacheKey();
   let num = 0;
   [tmp3, c0] = callback(React.useState(0), 2);
-  let obj = _require(4146);
+  let obj = _require("../../../../reanimated/ReanimatedRexport.tsx");
   sharedValue = obj.useSharedValue(false);
   const diff = sharedValue(1474)().width - 2 * sharedValue(712).space.PX_16;
   const backgroundColor = tmp.bannerGradientColor.backgroundColor;
-  let obj1 = _require(4129);
+  let obj1 = _require("../../../../../utils/ColorUtils.tsx");
   let items = [obj1.hexOpacityToRgba(backgroundColor, 0.2), ];
-  let obj2 = _require(4129);
+  let obj2 = _require("../../../../../utils/ColorUtils.tsx");
   items[1] = obj2.hexOpacityToRgba(backgroundColor, 0);
-  let obj3 = _require(589);
+  let obj3 = _require("../../../../../../discord_common/js/packages/flux/index.tsx");
   const items1 = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj3.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
-  let obj4 = _require(4146);
+  let obj4 = _require("../../../../reanimated/ReanimatedRexport.tsx");
   const fn = function _() {
     let obj = sharedValue;
     let num = 0;
@@ -69,7 +69,7 @@ export default function BannerBase(arg0) {
     obj[1] = items;
     return obj;
   };
-  obj = { bannerMeasured: sharedValue, withDelay: _require(4146).withDelay, withSpring: _require(4694).withSpring, SPRING_CONFIG: closure_9 };
+  obj = { bannerMeasured: sharedValue, withDelay: _require("../../../../reanimated/ReanimatedRexport.tsx").withDelay, withSpring: _require("../../../../../design/animation/reanimated/spring/spring.tsx").withSpring, SPRING_CONFIG: closure_9 };
   fn.__closure = obj;
   fn.__workletHash = 5314641176204;
   fn.__initData = closure_11;
@@ -100,7 +100,7 @@ export default function BannerBase(arg0) {
   obj1 = { style: tmp.imageContainer, children: null };
   obj2 = { style: tmp.trinketsLottie, source: null, autoPlay: null };
   const tmp2 = callback(React.useState(0), 2);
-  obj2[1] = _require(11361);
+  obj2[1] = _require("../../../../../../_runtime/metro/11361__.js");
   obj2[2] = !stateFromStores;
   const items5 = [callback2(sharedValue(5601), obj2), image];
   obj1[1] = items5;

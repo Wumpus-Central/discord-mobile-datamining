@@ -30,10 +30,10 @@ export default function PremiumPlanActionSheetHeader(arg0) {
     if (subscription_trial != null) {
       sku_id = subscription_trial.sku_id;
     }
-    let obj = importDefault(3931);
+    let obj = require("../../../utils/PremiumUtils.tsx");
     tmp2 = sku_id === obj.getSkuIdForPremiumType(premiumType);
   }
-  require(3931) /* getPremiumPlanItem */;
+  require("../../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */;
   let tmp10 = null != discountOffer;
   if (tmp10) {
     const discount = discountOffer.discount;
@@ -46,10 +46,10 @@ export default function PremiumPlanActionSheetHeader(arg0) {
   }
   obj = { style: tmp.header, colors: null, start: null, end: null, accessible: true, accessibilityRole: "header", accessibilityLabel: null, children: null };
   obj[1] = getPremiumGradientColor(premiumType);
-  obj[2] = require(691) /* keys */.HorizontalGradient.START;
-  obj[3] = require(691) /* keys */.HorizontalGradient.END;
-  const tmp14 = importDefault(4706);
-  obj[6] = require(3931) /* getPremiumPlanItem */.getPremiumTypeDisplayName(premiumType);
+  obj[2] = require("../../../ConstantsIOS.tsx") /* keys */.HorizontalGradient.START;
+  obj[3] = require("../../../ConstantsIOS.tsx") /* keys */.HorizontalGradient.END;
+  const tmp14 = require("../../../../_runtime/04706_LinearGradient.js");
+  obj[6] = require("../../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */.getPremiumTypeDisplayName(premiumType);
   if (TIER_0.TIER_0 === premiumType) {
     let tmp13Result = tmp13(6806);
   } else {

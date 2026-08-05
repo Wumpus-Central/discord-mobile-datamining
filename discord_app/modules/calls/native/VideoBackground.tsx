@@ -30,8 +30,8 @@ function useDominantRGBFromImage(arg0, arg1) {
     hexToRgbResult = tmp3(8116).cachedDominantColors[arg0];
   }
   if (hexToRgbResult == null) {
-    hexToRgbResult = _require(4129).hexToRgb(tmp3(712).unsafe_rawColors.PRIMARY_800);
-    const obj2 = _require(4129);
+    hexToRgbResult = _require("../../../utils/ColorUtils.tsx").hexToRgb(tmp3(712).unsafe_rawColors.PRIMARY_800);
+    const obj2 = _require("../../../utils/ColorUtils.tsx");
   }
   const tmp8 = callback(importAllResult.useState(hexToRgbResult), 2);
   callback = tmp8[1];

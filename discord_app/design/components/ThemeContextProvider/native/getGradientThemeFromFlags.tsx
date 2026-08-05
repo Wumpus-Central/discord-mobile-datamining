@@ -2,8 +2,8 @@
 const result = require("set").fileFinishedImporting("design/components/ThemeContextProvider/native/getGradientThemeFromFlags.tsx");
 
 export const getGradientThemeFromFlags = function getGradientThemeFromFlags(themeContext) {
-  const obj = require(3997) /* ManaContext */;
-  require(3997) /* ManaContext */;
+  const obj = require("../../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */;
+  require("../../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */;
   let str = "dark";
   if (!hasThemeFlagResult) {
     let str2 = null;

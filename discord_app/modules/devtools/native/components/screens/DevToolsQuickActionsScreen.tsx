@@ -1,5 +1,5 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsQuickActionsScreen.tsx
-import module_13931 from "module_13931";
+import TwoFASetupModalActionCreators from "../../../../user_settings/account/native/mfa_modal_flow/TwoFASetupModalActionCreators.tsx";
 import _handleConnectionOpen from "_handleConnectionOpen";
 import Themes from "Themes";
 import { ScrollView } from "jsxProd";
@@ -26,49 +26,49 @@ let closure_22;
 let closure_23;
 const require = arg1;
 function handleNewUserOnboarding() {
-  require(12013) /* setNewUser */.setNewUser(NewUserTypes.ORGANIC_REGISTERED);
-  const obj = require(12013) /* setNewUser */;
-  importDefault(709).wait(require(11971) /* _startContactSyncForDiscoverability */.startOnboarding);
+  require("../../../../nuf/NUFActionCreators.tsx") /* setNewUser */.setNewUser(NewUserTypes.ORGANIC_REGISTERED);
+  const obj = require("../../../../nuf/NUFActionCreators.tsx") /* setNewUser */;
+  require("../../../../../Dispatcher.tsx").wait(require("../../../../nuf/native/NUFActionCreators.tsx") /* _startContactSyncForDiscoverability */.startOnboarding);
 }
 function handleThemeChange(arg0) {
-  importDefault(8620).updateTheme(arg0 ? ThemeTypes.LIGHT : ThemeTypes.DARK);
+  require("../../../../../actions/UserSettingsActionCreators.tsx").updateTheme(arg0 ? ThemeTypes.LIGHT : ThemeTypes.DARK);
 }
 function handleReducedMotionChange(arg0) {
   let str = "no-preference";
   if (arg0) {
     str = "reduce";
   }
-  const result = require(13617) /* setFontSize */.setPrefersReducedMotion(str);
+  const result = require("../../../../a11y/AccessibilityActionCreators.tsx") /* setFontSize */.setPrefersReducedMotion(str);
 }
 function handleLaunchWelcomeReset() {
-  const result = require(1355) /* updateUserGuildSettings */.removeDismissedContent(require(1358) /* DismissibleContent */.DismissibleContent.SEEN_LAUNCH_WELCOME);
-  const obj = require(1355) /* updateUserGuildSettings */;
-  const result1 = require(4101) /* UNSAFE_isDismissibleContentDismissed */.UNSAFE_markDismissibleContentAsDismissed(require(1358) /* DismissibleContent */.DismissibleContent.SEEN_OLD_DESIGN);
+  const result = require("../../../../user_settings/UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.removeDismissedContent(require("../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.SEEN_LAUNCH_WELCOME);
+  const obj = require("../../../../user_settings/UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */;
+  const result1 = require("../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx") /* UNSAFE_isDismissibleContentDismissed */.UNSAFE_markDismissibleContentAsDismissed(require("../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.SEEN_OLD_DESIGN);
 }
 function showVibingWumpus() {
-  let obj = importDefault(4490);
+  let obj = require("../../../../../actions/ModalActionCreators.tsx");
   obj = {
     onClose() {
 
     }
   };
-  obj.pushLazy(require(1959) /* asyncRequireImpl */(10298, dependencyMap.paths), obj, VIBING_WUMPUS_MODAL_KEY);
+  obj.pushLazy(require("../../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(10298, dependencyMap.paths), obj, VIBING_WUMPUS_MODAL_KEY);
 }
 function handleResetDoubleTapState() {
-  const result = require(1355) /* updateUserGuildSettings */.removeDismissedContent(require(1358) /* DismissibleContent */.DismissibleContent.DOUBLE_TAP_TO_REACT_UPSELL);
-  const obj = require(1355) /* updateUserGuildSettings */;
-  const result1 = require(1355) /* updateUserGuildSettings */.removeDismissedContent(require(1358) /* DismissibleContent */.DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER);
-  const obj2 = require(1355) /* updateUserGuildSettings */;
-  const result2 = require(1355) /* updateUserGuildSettings */.removeDismissedContent(require(1358) /* DismissibleContent */.DismissibleContent.DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL);
-  const PreloadedUserSettingsActionCreators = require(1355) /* updateUserGuildSettings */.PreloadedUserSettingsActionCreators;
+  const result = require("../../../../user_settings/UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.removeDismissedContent(require("../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.DOUBLE_TAP_TO_REACT_UPSELL);
+  const obj = require("../../../../user_settings/UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */;
+  const result1 = require("../../../../user_settings/UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.removeDismissedContent(require("../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER);
+  const obj2 = require("../../../../user_settings/UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */;
+  const result2 = require("../../../../user_settings/UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.removeDismissedContent(require("../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL);
+  const PreloadedUserSettingsActionCreators = require("../../../../user_settings/UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.PreloadedUserSettingsActionCreators;
   PreloadedUserSettingsActionCreators.updateAsync("textAndImages", (arg0) => {
     arg0.defaultReactionEmoji = undefined;
-  }, require(1355) /* updateUserGuildSettings */.UserSettingsDelay.INFREQUENT_USER_ACTION);
+  }, require("../../../../user_settings/UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.UserSettingsDelay.INFREQUENT_USER_ACTION);
 }
 function launchTotpSetupSuccess() {
-  let arr = importDefault(4490);
+  let arr = require("../../../../../actions/ModalActionCreators.tsx");
   arr = arr.pop();
-  const items = [require(1959) /* asyncRequireImpl */(13931, dependencyMap.paths), require(1959) /* asyncRequireImpl */(13933, dependencyMap.paths)];
+  const items = [require("../../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(13931, dependencyMap.paths), require("../../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(13933, dependencyMap.paths)];
   Promise.all(items).then((arg0) => {
     const iter = arg0[Symbol.iterator]();
     let nextResult;
@@ -185,9 +185,9 @@ createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: require("Themes").space.PX_16 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 function launchMFA() {
-  let arr = importDefault(4490);
+  let arr = require("../../../../../actions/ModalActionCreators.tsx");
   arr = arr.pop();
-  require(1959) /* asyncRequireImpl */(14881, dependencyMap.paths).then((openMFAModal) => {
+  require("../../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(14881, dependencyMap.paths).then((openMFAModal) => {
     const items = [{ type: "webauthn", challenge: "{}" }, { type: "totp" }, { type: "backup" }, { type: "sms" }, { type: "password" }];
     openMFAModal.openMFAModal({ ticket: "ticket", methods: items }, () => {
 

@@ -27,7 +27,7 @@ export const createModeratorOverwrite = function createModeratorOverwrite(id, ME
   if (deny == null) {
     deny = tmp2(3918).NONE;
   }
-  obj[2] = importAll(506).remove(deny, require(1380) /* Permissions */.MODERATE_STAGE_CHANNEL_PERMISSIONS);
+  obj[2] = importAll(506).remove(deny, require("StageChannelPermissions.tsx") /* Permissions */.MODERATE_STAGE_CHANNEL_PERMISSIONS);
   const obj2 = importAll(506);
   let allow;
   if (tmp != null) {
@@ -36,7 +36,7 @@ export const createModeratorOverwrite = function createModeratorOverwrite(id, ME
   if (allow == null) {
     allow = tmp2(3918).NONE;
   }
-  obj[3] = importAll(506).combine(require(1380) /* Permissions */.MODERATE_STAGE_CHANNEL_PERMISSIONS, allow);
+  obj[3] = importAll(506).combine(require("StageChannelPermissions.tsx") /* Permissions */.MODERATE_STAGE_CHANNEL_PERMISSIONS, allow);
   return obj;
 };
 export const createOrUpdateModeratorOverwrite = function createOrUpdateModeratorOverwrite(id, type, deny) {
@@ -48,7 +48,7 @@ export const createOrUpdateModeratorOverwrite = function createOrUpdateModerator
   if (deny == null) {
     deny = tmp(3918).NONE;
   }
-  obj[2] = importAll(506).remove(deny, require(1380) /* Permissions */.MODERATE_STAGE_CHANNEL_PERMISSIONS);
+  obj[2] = importAll(506).remove(deny, require("StageChannelPermissions.tsx") /* Permissions */.MODERATE_STAGE_CHANNEL_PERMISSIONS);
   const obj2 = importAll(506);
   let allow;
   if (deny != null) {
@@ -57,7 +57,7 @@ export const createOrUpdateModeratorOverwrite = function createOrUpdateModerator
   if (allow == null) {
     allow = tmp(3918).NONE;
   }
-  obj[3] = importAll(506).combine(require(1380) /* Permissions */.MODERATE_STAGE_CHANNEL_PERMISSIONS, allow);
+  obj[3] = importAll(506).combine(require("StageChannelPermissions.tsx") /* Permissions */.MODERATE_STAGE_CHANNEL_PERMISSIONS, allow);
   return obj;
 };
 export const removeModeratorOverwrite = function removeModeratorOverwrite(id, MEMBER, closure_0) {
@@ -81,7 +81,7 @@ export const removeModeratorOverwrite = function removeModeratorOverwrite(id, ME
   if (allow == null) {
     allow = importAll(3918).NONE;
   }
-  obj[3] = importAll(506).remove(allow, require(1380) /* Permissions */.MODERATE_STAGE_CHANNEL_PERMISSIONS);
+  obj[3] = importAll(506).remove(allow, require("StageChannelPermissions.tsx") /* Permissions */.MODERATE_STAGE_CHANNEL_PERMISSIONS);
   return obj;
 };
 export const isEmptyOverwrite = function isEmptyOverwrite(c2) {
@@ -99,7 +99,7 @@ export const useCanCreateStageChannelByGuild = function useCanCreateStageChannel
   const _require = guildId;
   const items = [getUncachedChannelPermissions, fetchFingerprint, createGuildRecordFromRust];
   const items1 = [guildId];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const id = outer1_5.getId();
     const guild = outer1_7.getGuild(guildId);
     let tmp3 = null != guild;
@@ -122,7 +122,7 @@ export const useCanUpdateStageChannelModerators = function useCanUpdateStageChan
   const _require = id;
   const items = [getUncachedChannelPermissions, createGuildRecordFromRust, ensureGuildLoaded];
   const items1 = [id];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const channel = outer1_6.getChannel(id);
     let guildId;
     if (channel != null) {
@@ -144,7 +144,7 @@ export const useCanModerateRequestToSpeak = function useCanModerateRequestToSpea
   const _require = id;
   const items = [ensureGuildLoaded, getUncachedChannelPermissions];
   const items1 = [id];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
       canResult = outer1_8.can(outer1_11.MUTE_MEMBERS, outer1_6.getChannel(tmp));
@@ -160,7 +160,7 @@ export const canLurkerListen = function canLurkerListen(channel) {
     if (isLurkingResult) {
       let canResult = _public.isPublic(channel.id);
       if (canResult) {
-        canResult = getUncachedChannelPermissions.can(require(1380) /* Permissions */.JOIN_VOCAL_CHANNEL_PERMISSIONS, channel);
+        canResult = getUncachedChannelPermissions.can(require("StageChannelPermissions.tsx") /* Permissions */.JOIN_VOCAL_CHANNEL_PERMISSIONS, channel);
       }
       isLurkingResult = canResult;
     }

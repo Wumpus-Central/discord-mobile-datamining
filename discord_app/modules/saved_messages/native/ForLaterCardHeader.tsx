@@ -15,8 +15,8 @@ function HeaderIcon(channel) {
     obj = { guild: null, size: null };
     obj[0] = stateFromStores;
     obj[1] = tmp2(5661).GuildIconSizes.XSMALL;
-    let tmp6Result = callback(importDefault(5661), obj);
-    const tmp13 = importDefault(5661);
+    let tmp6Result = callback(require("../../guild/native/GuildIcon.tsx"), obj);
+    const tmp13 = require("../../guild/native/GuildIcon.tsx");
   } else {
     let isGroupDMResult;
     if (channel != null) {
@@ -26,8 +26,8 @@ function HeaderIcon(channel) {
       obj = { channel: null, size: null };
       obj[0] = channel;
       obj[1] = tmp2(1297).AvatarSizes.XSMALL;
-      tmp6Result = tmp6(importDefault(9582), obj);
-      const tmp10 = importDefault(9582);
+      tmp6Result = tmp6(require("../../group_dm/native/GroupDMAvatar.tsx"), obj);
+      const tmp10 = require("../../group_dm/native/GroupDMAvatar.tsx");
     } else {
       const obj1 = { style: null, children: null };
       obj1[0] = tmp.dmIcon;
@@ -43,7 +43,7 @@ function ChannelName(channel) {
   let obj = channel(589);
   const items = [createGuildRecordFromRust];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getGuild(channel.guild_id));
-  const tmp5 = importDefault(4475)(channel, false);
+  const tmp5 = require("../../channel/useChannelName.tsx")(channel, false);
   let obj1 = channel(4745);
   const channelIconComponentWithGuild = obj1.getChannelIconComponentWithGuild(channel, stateFromStores);
   let isPrivateResult = channel.isPrivate();
@@ -86,7 +86,7 @@ export const ForLaterCardHeader = function ForLaterCardHeader(channel) {
   const items = [callback(HeaderIcon, { channel }), , , ];
   let tmp4Result = null;
   if (!channel.isPrivate()) {
-    tmp4Result = tmp4(require(5660) /* ChevronSmallRightIcon */.ChevronSmallRightIcon, { size: "xxs" });
+    tmp4Result = tmp4(require("../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx") /* ChevronSmallRightIcon */.ChevronSmallRightIcon, { size: "xxs" });
   }
   items[1] = tmp4Result;
   items[2] = callback(ChannelName, { channel });

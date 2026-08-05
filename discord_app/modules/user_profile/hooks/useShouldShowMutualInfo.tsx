@@ -6,12 +6,12 @@ const result = require("useIsUserProfileObfuscated").fileFinishedImporting("modu
 
 export default function useShouldShowMutualInfo(id) {
   const items = [mergeGuildAvatar];
-  const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
   id = undefined;
-  const obj = require(589) /* initialize */;
+  const obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  const tmp2 = importDefault(12180)(id);
-  return id !== id.id && !importDefault(12180)(id);
+  const tmp2 = require("useIsUserProfileObfuscated.tsx")(id);
+  return id !== id.id && !require("useIsUserProfileObfuscated.tsx")(id);
 };

@@ -108,7 +108,7 @@ prototype2["acknowledge"] = function acknowledge(_guildId) {
 };
 prototype2["flushRequests"] = function flushRequests() {
   const self = this;
-  const item = importDefault(12).forEach(this._guildStates, (flushRequests) => flushRequests.flushRequests(self._onChange));
+  const item = require("../../../_runtime/00012_apply.js").forEach(this._guildStates, (flushRequests) => flushRequests.flushRequests(self._onChange));
 };
 prototype2["requestUnacknowledged"] = function requestUnacknowledged() {
   if (arr.reduce(this._guildStates, (arg0, requestUnacknowledged) => false !== requestUnacknowledged.requestUnacknowledged() || arg0, false)) {

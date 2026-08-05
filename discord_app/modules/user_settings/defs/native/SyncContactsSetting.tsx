@@ -7,14 +7,14 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.uSvEy7);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.uSvEy7);
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useContactSyncSettingValue() {
-    const contactSyncAccount = require(11947) /* _uploadContacts */.useContactSyncAccount();
-    const obj = require(11947) /* _uploadContacts */;
-    return require(11947) /* _uploadContacts */.isContactSyncEnabled(contactSyncAccount);
+    const contactSyncAccount = require("../../../contact_sync/native/ContactSyncUtils.tsx") /* _uploadContacts */.useContactSyncAccount();
+    const obj = require("../../../contact_sync/native/ContactSyncUtils.tsx") /* _uploadContacts */;
+    return require("../../../contact_sync/native/ContactSyncUtils.tsx") /* _uploadContacts */.isContactSyncEnabled(contactSyncAccount);
   },
   onValueChange: function onContactSyncSettingValueChange(arg0) {
     localAccount = localAccount.getLocalAccount(PlatformTypes.CONTACTS);
@@ -23,7 +23,7 @@ createToggle = {
     if (currentUser != null) {
       phone = currentUser.phone;
     }
-    require(13994) /* syncContacts */.handleSyncContacts(localAccount, phone, arg0);
+    require("../../../contact_sync/native/components/ContactSyncSettings.tsx") /* syncContacts */.handleSyncContacts(localAccount, phone, arg0);
   }
 };
 createToggle = createToggle.createToggle(createToggle);

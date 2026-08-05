@@ -15,7 +15,7 @@ export const isValidFormResponse = function isValidFormResponse(required) {
     if (null == response) {
       return false;
     } else {
-      if (require(4105) /* MAX_RESULTS_PER_PAGE */.VerificationFormFieldTypes.TERMS !== field_type) {
+      if (require("MemberVerificationTypes.tsx") /* MAX_RESULTS_PER_PAGE */.VerificationFormFieldTypes.TERMS !== field_type) {
         if (tmp4(4105).VerificationFormFieldTypes.VERIFICATION !== field_type) {
           if (tmp4(4105).VerificationFormFieldTypes.TEXT_INPUT !== field_type) {
             if (tmp4(4105).VerificationFormFieldTypes.PARAGRAPH !== field_type) {

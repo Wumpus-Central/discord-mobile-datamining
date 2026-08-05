@@ -28,11 +28,11 @@ export default function NsfwGateChat() {
   obj = { style: tmp.border };
   const items = [callback(closure_3, obj), ];
   obj = { style: tmp.container, children: null };
-  const items1 = [callback(closure_4, { source: importDefault(11933) }), ];
+  const items1 = [callback(closure_4, { source: require("../../../../../_runtime/11933_registerAsset.js") }), ];
   const obj2 = { style: tmp.description, variant: "text-md/medium", color: "text-muted", children: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj2[3] = intl.string(require(1236) /* getSystemLocale */.t.W4Qyxr);
-  items1[1] = callback(require(4281) /* Text */.Text, obj2);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj2[3] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.W4Qyxr);
+  items1[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
   obj[1] = items1;
   items[1] = callback2(closure_3, obj);
   obj[0] = items;

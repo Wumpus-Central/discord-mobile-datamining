@@ -15,17 +15,17 @@ const require = arg1;
 function getUsers(getGuildId) {
   const guildId = getGuildId.getGuildId();
   if (getGuildId.isPrivate()) {
-    let mapped = importDefault(12)(getGuildId.recipients).map((userId) => ({ userId }));
-    const arr3 = importDefault(12)(getGuildId.recipients);
+    let mapped = require("../../../../_runtime/00012_apply.js")(getGuildId.recipients).map((userId) => ({ userId }));
+    const arr3 = require("../../../../_runtime/00012_apply.js")(getGuildId.recipients);
   } else if (null != guildId) {
-    const tmp7 = importDefault(12);
-    mapped = importDefault(12)(members.getMembers(guildId)).map((userId) => ({ userId: userId.userId }));
-    const tmp7Result = importDefault(12)(members.getMembers(guildId));
+    const tmp7 = require("../../../../_runtime/00012_apply.js");
+    mapped = require("../../../../_runtime/00012_apply.js")(members.getMembers(guildId)).map((userId) => ({ userId: userId.userId }));
+    const tmp7Result = require("../../../../_runtime/00012_apply.js")(members.getMembers(guildId));
   } else {
-    mapped = importDefault(12)([]);
+    mapped = require("../../../../_runtime/00012_apply.js")([]);
   }
   const mapped1 = mapped.map((userId) => user.getUser(userId.userId));
-  const found = mapped1.filter(require(1351) /* isDiscordFrontendDevelopment */.isNotNullish);
+  const found = mapped1.filter(require("../../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
   return found.map((id) => ({ id: id.id, text: id.tag }));
 }
 function getChannels(getGuildId, arr) {
@@ -45,8 +45,8 @@ function getChannels(getGuildId, arr) {
   } else {
     const dependencyMap = textChannelNameDisambiguations.getTextChannelNameDisambiguations(guildId);
     const tmp9 = guildId(12);
-    const tmp9Result = guildId(12)(_require(5126).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS);
-    const combined = guildId(12)(_require(5126).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS).flatMap((arg0) => outer1_6.getChannels(guildId)[arg0].map((channel) => channel.channel)).concat(rebuild.computeAllActiveJoinedThreads(guildId));
+    const tmp9Result = guildId(12)(_require("../../../utils/AutocompleteUtils.tsx").COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS);
+    const combined = guildId(12)(_require("../../../utils/AutocompleteUtils.tsx").COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS).flatMap((arg0) => outer1_6.getChannels(guildId)[arg0].map((channel) => channel.channel)).concat(rebuild.computeAllActiveJoinedThreads(guildId));
     const found = combined.filter((type) => {
       let hasItem = null == closure_0;
       if (!hasItem) {
@@ -267,7 +267,7 @@ export const getRoles = function getRoles(guild_id) {
   } else {
     sortedRoles = [];
   }
-  return importDefault(12)(sortedRoles).map((id) => ({ id: id.id, text: id.name }));
+  return require("../../../../_runtime/00012_apply.js")(sortedRoles).map((id) => ({ id: id.id, text: id.name }));
 };
 export { getChannels };
 export const ApplicationCommandOptionValueParser = prototype;
@@ -277,7 +277,7 @@ export const parseOptionValuesForSend = function parseOptionValuesForSend(channe
   } else {
     let obj = {};
     const options = activeCommand.options;
-    const parserState = require(7062) /* rebuild */.createParserState(channel);
+    const parserState = require("../../messages/MessageParser.tsx") /* rebuild */.createParserState(channel);
     const iter = options[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
@@ -291,7 +291,7 @@ export const parseOptionValuesForSend = function parseOptionValuesForSend(channe
           let tmp23 = require;
           let tmp24 = dependencyMap;
           let tmp25 = dependencyMap;
-          if (tmp4.type === require(1906) /* PermissionOverwriteType */.ApplicationCommandOptionType.STRING) {
+          if (tmp4.type === require("../../../flow/Server.tsx") /* PermissionOverwriteType */.ApplicationCommandOptionType.STRING) {
             let tmp7 = nextResult;
             if (null == tmp4.choices) {
               let tmp8 = nextResult;
@@ -300,7 +300,7 @@ export const parseOptionValuesForSend = function parseOptionValuesForSend(channe
                 obj = { type: "text", text: null };
                 let tmp10 = importDefault;
                 let tmp11 = tmp24;
-                let obj2 = importDefault(7062);
+                let obj2 = require("../../messages/MessageParser.tsx");
                 let tmp12 = tmp5;
                 obj[1] = obj2.parse(channel, tmp6[0].text, parserState).content;
                 let items = [obj];

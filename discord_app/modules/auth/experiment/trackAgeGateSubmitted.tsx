@@ -4,7 +4,7 @@ import { AnalyticEvents } from "ME";
 const result = require("t").fileFinishedImporting("modules/auth/experiment/trackAgeGateSubmitted.tsx");
 
 export default function trackAgeGateSubmitted(format, section) {
-  let obj = importDefault(698);
+  let obj = require("../../../utils/AnalyticsUtils.tsx");
   let formatResult = null;
   if (obj2.diff(format, "years") < 18) {
     formatResult = format.format("YYYY-MM-DD");

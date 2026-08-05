@@ -8,7 +8,7 @@ export const getAttachmentObscurityProps = function getAttachmentObscurityProps(
   let enabledContentHarmTypeFlags;
   let shouldObscureSpoiler;
   ({ attachment, shouldObscureSpoiler, enabledContentHarmTypeFlags } = shouldAgeVerify);
-  let obj = require(1384) /* hasFlag */;
+  let obj = require("../../../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
   let num = attachment.flags;
   if (num == null) {
     num = 0;
@@ -33,7 +33,7 @@ export const getAttachmentObscurityProps = function getAttachmentObscurityProps(
   const mediaObscuredReasonFromBitmask = tmpResult.getMediaObscuredReasonFromBitmask(obj, enabledContentHarmTypeFlags);
   tmpResult = tmp(5818);
   let isVerifiedTeenResult = tmp5;
-  const obj1 = { type: require(5823) /* ContentHarmTypeChannel */.ObscuredMediaTypes.Attachment, media: obj };
+  const obj1 = { type: require("../../../explicit_media_redaction/ExplicitMediaRedactionModels.tsx") /* ContentHarmTypeChannel */.ObscuredMediaTypes.Attachment, media: obj };
   if (mediaObscuredReasonFromBitmask.length > 0) {
     isVerifiedTeenResult = tmp(4500).isVerifiedTeen();
     const tmpResult1 = tmp(4500);
@@ -60,7 +60,7 @@ export const getAttachmentObscurityProps = function getAttachmentObscurityProps(
     str = intl2.string(tmp(1236).t.SpxcUR);
   }
   obj2[3] = str;
-  obj2[4] = tmpResult.isMediaScanPending({ type: require(5823) /* ContentHarmTypeChannel */.ObscuredMediaTypes.Attachment, media: obj }, enabledContentHarmTypeFlags);
+  obj2[4] = tmpResult.isMediaScanPending({ type: require("../../../explicit_media_redaction/ExplicitMediaRedactionModels.tsx") /* ContentHarmTypeChannel */.ObscuredMediaTypes.Attachment, media: obj }, enabledContentHarmTypeFlags);
   shouldAgeVerify = tmp5;
   if (mediaObscuredReasonFromBitmask.length > 0) {
     shouldAgeVerify = shouldAgeVerify.shouldAgeVerify;
@@ -80,8 +80,8 @@ export const getUnfurledMediaItemObscurityProps = function getUnfurledMediaItemO
   let type;
   ({ type, mediaItem, isSpoilered, isAuthorBot, enabledContentHarmTypeFlags } = arg0);
   ({ shouldObscureSpoiler, shouldAgeVerify } = arg0);
-  let obj = require(5818) /* getEligibleHarmTypesConfigsForContext */;
-  obj = { type: require(5823) /* ContentHarmTypeChannel */.ObscuredMediaTypes.GenericMedia, media: mediaItem };
+  let obj = require("../../../explicit_media_redaction/ObscuredMediaUtils.tsx") /* getEligibleHarmTypesConfigsForContext */;
+  obj = { type: require("../../../explicit_media_redaction/ExplicitMediaRedactionModels.tsx") /* ContentHarmTypeChannel */.ObscuredMediaTypes.GenericMedia, media: mediaItem };
   let isMediaScanPendingResult = !isAuthorBot;
   const mediaObscuredReasonFromBitmask = obj.getMediaObscuredReasonFromBitmask(obj, enabledContentHarmTypeFlags);
   if (!isAuthorBot) {

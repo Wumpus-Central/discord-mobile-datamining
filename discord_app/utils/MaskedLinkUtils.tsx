@@ -64,12 +64,12 @@ export const handleClick = function handleClick(href, preventDefault) {
     }
     let tmp3Result = tmp3(4623);
     obj = { title: null, body: null, isDismissable: true, contextKey: null };
-    const intl = _require(1236).intl;
-    obj[0] = intl.string(_require(1236).t.x87gan);
-    const intl2 = _require(1236).intl;
+    const intl = _require("../intl/index.native.tsx").intl;
+    obj[0] = intl.string(_require("../intl/index.native.tsx").t.x87gan);
+    const intl2 = _require("../intl/index.native.tsx").intl;
     obj = { url: null };
     obj[0] = href.href;
-    obj[1] = intl2.format(_require(1236).t["9rqRwl"], obj);
+    obj[1] = intl2.format(_require("../intl/index.native.tsx").t["9rqRwl"], obj);
     obj[3] = arg3;
     tmp3Result.show(obj);
   } else {
@@ -202,7 +202,7 @@ export const handleClick = function handleClick(href, preventDefault) {
         if (hasItem1) {
           tmp3Result = tmp3(698);
           const obj1 = { url_domain: null, guild_id: null, channel_id: null };
-          let obj4 = _require(8857);
+          let obj4 = _require("../stores/MaskedLinkStoreMethodsAdditional.native.tsx");
           obj1[0] = obj4.getHostname(tmp8);
           obj1[1] = guild1.id;
           obj1[2] = channel.id;
@@ -221,7 +221,7 @@ export const handleClick = function handleClick(href, preventDefault) {
         obj3[1] = items;
         obj3[2] = messageId;
         obj3[3] = channelId;
-        const defaultResult = _require(8861).default(tmp8, obj3);
+        const defaultResult = _require("../lib/getOnClick.tsx").default(tmp8, obj3);
       }
       if (onCancel == null) {
         onCancel = () => {
@@ -239,10 +239,10 @@ export const handleClick = function handleClick(href, preventDefault) {
           trustedResult = trusted();
         }
         if (!trustedResult) {
-          const TRUSTED_URLS = _require(12138).TRUSTED_URLS;
+          const TRUSTED_URLS = _require("../modules/masked_link/constants/TrustedURLs.tsx").TRUSTED_URLS;
           trustedResult = TRUSTED_URLS.has(tmp8);
         }
-        const protocol = _require(8857).getProtocol(tmp8);
+        const protocol = _require("../stores/MaskedLinkStoreMethodsAdditional.native.tsx").getProtocol(tmp8);
         let tmp55 = "http:" === protocol;
         if (!tmp55) {
           tmp55 = "https:" === protocol;
@@ -306,7 +306,7 @@ export const handleClick = function handleClick(href, preventDefault) {
           let result = tmp3(8859).trackAnnouncementMessageLinkClicked(obj6);
           const tmp3Result6 = tmp3(8859);
         }
-        const obj10 = _require(8857);
+        const obj10 = _require("../stores/MaskedLinkStoreMethodsAdditional.native.tsx");
       }
       const tmp3Result2 = tmp3(8859);
     } catch (err) {

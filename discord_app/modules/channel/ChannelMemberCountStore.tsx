@@ -41,7 +41,7 @@ const channelMemberCountStore = new ChannelMemberCountStore(require("dispatcher"
       const socket = store.getSocket();
       const channelMemberCount = socket.requestChannelMemberCount(_null.guildId, _null.channelId);
     }
-    const keys = importDefault(11).keys(closure_6);
+    const keys = require("../../utils/SnowflakeUtils.tsx").keys(closure_6);
     const item = keys.forEach((arg0) => {
       if (null == channel.getChannel(arg0)) {
         delete tmp[tmp2];

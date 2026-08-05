@@ -261,24 +261,24 @@ export const saveGuildIdentityChanges = function saveGuildIdentityChanges(id1, g
   return applyArgumentsResult;
 };
 export const setCurrentGuild = function setCurrentGuild(id) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "USER_PROFILE_SETTINGS_SET_GUILD", guildId: id };
   obj.dispatch(obj);
 };
 export const initGuildIdentitySettings = function initGuildIdentitySettings(id) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "USER_PROFILE_SETTINGS_INIT", guildId: id };
   obj.dispatch(obj);
 };
 export const resetPendingMemberChanges = function resetPendingMemberChanges() {
-  importDefault(709).dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES" });
+  require("../../Dispatcher.tsx").dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES" });
 };
 export const resetPendingProfileChanges = function resetPendingProfileChanges() {
-  importDefault(709).dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES" });
+  require("../../Dispatcher.tsx").dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES" });
 };
 export const resetAllPending = function resetAllPending() {
-  importDefault(709).dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES" });
+  require("../../Dispatcher.tsx").dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES" });
 };
 export const clearErrors = function clearErrors() {
-  importDefault(709).dispatch({ type: "USER_PROFILE_SETTINGS_CLEAR_ERRORS" });
+  require("../../Dispatcher.tsx").dispatch({ type: "USER_PROFILE_SETTINGS_CLEAR_ERRORS" });
 };

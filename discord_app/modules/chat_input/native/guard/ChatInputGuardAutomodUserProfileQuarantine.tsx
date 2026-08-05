@@ -46,7 +46,7 @@ const memoResult = importAllResult.memo(function ChatInputGuardAutomodUserProfil
   tmp6 = GuildMemberFlags;
   obj[3] = jsx(guildId(11738).ChatXIcon, {});
   obj[4] = stringResult1;
-  return jsx(importDefault(11721), { type: "simple-action", actionOnPress: callback, actionLabel: stringResult, icon: null, message: null });
+  return jsx(require("ChatInputGuard.tsx"), { type: "simple-action", actionOnPress: callback, actionLabel: stringResult, icon: null, message: null });
 });
 let result = require("trackCommunicationDisabled").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardAutomodUserProfileQuarantine.tsx");
 

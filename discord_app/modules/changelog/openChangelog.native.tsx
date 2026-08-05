@@ -10,11 +10,11 @@ export const openChangelog = function openChangelog() {
   }
   let isModalOpenResult = !flag;
   if (!flag) {
-    isModalOpenResult = require(4136) /* navigationToRootTabHelper */.isModalOpen();
-    const obj = require(4136) /* navigationToRootTabHelper */;
+    isModalOpenResult = require("../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */.isModalOpen();
+    const obj = require("../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */;
   }
   if (!isModalOpenResult) {
-    importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(14622, dependencyMap.paths), {}, CHANGELOG_MODAL_KEY);
-    const obj2 = importDefault(4490);
+    require("../../actions/ModalActionCreators.tsx").pushLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(14622, dependencyMap.paths), {}, CHANGELOG_MODAL_KEY);
+    const obj2 = require("../../actions/ModalActionCreators.tsx");
   }
 };

@@ -9,7 +9,7 @@ function _rewardRedemptionInstructionsFromServer(redemption_instructions_by_plat
     let tmp5 = require;
     let tmp6 = dependencyMap;
     let tmp4 = parsed;
-    let QUEST_REWARD_CODE_PLATFORMS_SET = require(5131) /* QuestsVisibleMessagesChangedSource */.QUEST_REWARD_CODE_PLATFORMS_SET;
+    let QUEST_REWARD_CODE_PLATFORMS_SET = require("../../QuestTypes.tsx") /* QuestsVisibleMessagesChangedSource */.QUEST_REWARD_CODE_PLATFORMS_SET;
     if (QUEST_REWARD_CODE_PLATFORMS_SET.has(parsed)) {
       let tmp7 = parsed;
       let tmp8 = item10012;
@@ -21,7 +21,7 @@ function _rewardRedemptionInstructionsFromServer(redemption_instructions_by_plat
 }
 function _questRewardV2FromServer(type) {
   type = type.type;
-  if (require(7085) /* QuestRewardTypes */.QuestRewardTypes.REWARD_CODE === type) {
+  if (require("../../../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx") /* QuestRewardTypes */.QuestRewardTypes.REWARD_CODE === type) {
     let obj = { type: null, skuId: null, asset: null, assetVideo: null, messages: null, approximateCount: null, redemptionLink: null };
     obj[0] = tmp(7085).QuestRewardTypes.REWARD_CODE;
     ({ sku_id: obj9[1], asset: obj9[2], asset_video: obj9[3] } = type);

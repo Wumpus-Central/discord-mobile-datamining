@@ -9,12 +9,12 @@ export const useIsMessageRequest = function useIsMessageRequest(id) {
   const _require = id;
   const items = [processChannel];
   const items1 = [id];
-  return _require(589).useStateFromStores(items, () => outer1_2.isMessageRequest(closure_0), items1);
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_2.isMessageRequest(closure_0), items1);
 };
 export const useIsEitherTypeOfMessageRequest = function useIsEitherTypeOfMessageRequest(arg0) {
   const _require = arg0;
   const items = [processChannel, closure_3];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
       let isMessageRequestResult = outer1_2.isMessageRequest(tmp);

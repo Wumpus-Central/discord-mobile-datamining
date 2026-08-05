@@ -36,7 +36,7 @@ export default function RatingSelector(ratingOptions) {
   obj = undefined;
   obj = {};
   obj = { source: null, getLabel: null, rating: null };
-  obj = { selected: importDefault(11006), normal: null };
+  obj = { selected: require("../../../../_runtime/11006_registerAsset.js"), normal: null };
   let obj3 = obj(11007);
   obj[1] = obj3.useFeedbackModalSadDesaturatedSource();
   obj[0] = obj;
@@ -47,7 +47,7 @@ export default function RatingSelector(ratingOptions) {
   obj[2] = constants.BAD;
   obj[constants.BAD] = obj;
   let obj1 = { source: null, getLabel: null, rating: null };
-  let obj2 = { selected: importDefault(11011), normal: null };
+  let obj2 = { selected: require("../../../../_runtime/11011_registerAsset.js"), normal: null };
   tmp = callback2();
   obj2[1] = obj(11012).useFeedbackModalNeutralDesaturatedSource();
   obj1[0] = obj2;
@@ -58,7 +58,7 @@ export default function RatingSelector(ratingOptions) {
   obj1[2] = constants.NEUTRAL;
   obj[constants.NEUTRAL] = obj1;
   obj3 = { source: null, getLabel: null, rating: null };
-  let obj4 = { selected: importDefault(11016), normal: null };
+  let obj4 = { selected: require("../../../../_runtime/11016_registerAsset.js"), normal: null };
   const obj7 = obj(11012);
   obj4[1] = obj(11017).useFeedbackModalHappyDesaturatedSource();
   obj3[0] = obj4;

@@ -24,11 +24,11 @@ function renderCard(kind, fullWidth) {
       const merged = Object.assign(kind);
       const merged1 = Object.assign(fullWidth);
       obj.cardKey = keyExtractor(kind);
-      return jsx(importDefault(15100), {});
+      return jsx(require("HappeningNowCardUnifiedVC.tsx"), {});
     }
   }
   obj = { fullWidth: fullWidth.fullwidth, panelVariant: fullWidth.panelVariant };
-  return jsx(require(15097) /* HappeningNowCardPlaceholder */.HappeningNowCardPlaceholder, { fullWidth: fullWidth.fullwidth, panelVariant: fullWidth.panelVariant });
+  return jsx(require("HappeningNowCardPlaceholder.tsx") /* HappeningNowCardPlaceholder */.HappeningNowCardPlaceholder, { fullWidth: fullWidth.fullwidth, panelVariant: fullWidth.panelVariant });
 }
 function keyExtractor(voiceState) {
   let kind;
@@ -57,7 +57,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   obj = { ref };
   const merged = Object.assign(arg0);
   obj[1] = <closure_5 ref={arg1} />;
-  return jsx(require(5368) /* Directions */.GestureDetector, { ref });
+  return jsx(require("../../../../../../_runtime/05368_Directions.js") /* Directions */.GestureDetector, { ref });
 });
 forwardRefResult.displayName = "HappeningNowScrollView";
 const NativeResult = Gesture.Native();

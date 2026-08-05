@@ -206,11 +206,11 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
     const none = "none";
     let c4 = false;
     const telemetry2 = self.scheduler.telemetry;
-    telemetry2.measure(_require(12819).WorkSchedulerTelemetryMeasurement.COUNT_INITIAL_DISPATCHS_LENGTH, items.length);
+    telemetry2.measure(_require("WorkSchedulerTelemetry.tsx").WorkSchedulerTelemetryMeasurement.COUNT_INITIAL_DISPATCHS_LENGTH, items.length);
     try {
       let tmp2 = [];
       tmp2 = importDefault;
-      if (self.socket.connectionState === importDefault(12821).RESUMING) {
+      if (self.socket.connectionState === require("ConnectionState.tsx").RESUMING) {
         const Emitter = tmp2(589).Emitter;
         Emitter.pause(150);
       }
@@ -325,29 +325,29 @@ prototype["dispatchOne"] = function dispatchOne(arg0) {
   const self = this;
   ({ data, type, compressionAnalytics, preloadedData } = arg0);
   const nowResult = performance.now();
-  if (this.socket.connectionState !== importDefault(12821).RESUMING) {
+  if (this.socket.connectionState !== require("ConnectionState.tsx").RESUMING) {
     tmp2(12822).flush(type, data);
     if ("READY" === type) {
-      const readyPayloadByteSizeAnalytics = require(12820) /* prettyPrintTrace_ */.getReadyPayloadByteSizeAnalytics(data);
+      const readyPayloadByteSizeAnalytics = require("GatewaySocketAnalytics.tsx") /* prettyPrintTrace_ */.getReadyPayloadByteSizeAnalytics(data);
       const dispatchHandler = self.getDispatchHandler(type);
       if (dispatchHandler != null) {
         dispatchHandler.dispatch(data, type, preloadedData);
       }
-      const tmp11Result = require(12820) /* prettyPrintTrace_ */;
+      const tmp11Result = require("GatewaySocketAnalytics.tsx") /* prettyPrintTrace_ */;
       const result = tmp11Result.logReadyPayloadReceived(self.socket, data, nowResult, compressionAnalytics, readyPayloadByteSizeAnalytics);
-      const obj6 = require(12820) /* prettyPrintTrace_ */;
+      const obj6 = require("GatewaySocketAnalytics.tsx") /* prettyPrintTrace_ */;
       const tmp11 = require;
     } else if ("RESUMED" === type) {
       const dispatchHandler1 = self.getDispatchHandler(type);
       if (dispatchHandler1 != null) {
         dispatchHandler1.dispatch(data, type, preloadedData);
       }
-      require(12820) /* prettyPrintTrace_ */.logResumeAnalytics(self.resumeAnalytics);
+      require("GatewaySocketAnalytics.tsx") /* prettyPrintTrace_ */.logResumeAnalytics(self.resumeAnalytics);
       const socket = self.socket;
       const result1 = socket.handleResumeDispatched();
-      const obj4 = require(12820) /* prettyPrintTrace_ */;
-      self.resumeAnalytics = require(12820) /* prettyPrintTrace_ */.createResumeAnalytics();
-      const obj5 = require(12820) /* prettyPrintTrace_ */;
+      const obj4 = require("GatewaySocketAnalytics.tsx") /* prettyPrintTrace_ */;
+      self.resumeAnalytics = require("GatewaySocketAnalytics.tsx") /* prettyPrintTrace_ */.createResumeAnalytics();
+      const obj5 = require("GatewaySocketAnalytics.tsx") /* prettyPrintTrace_ */;
     } else {
       const dispatchHandler2 = self.getDispatchHandler(type);
       if (dispatchHandler2 != null) {

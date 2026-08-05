@@ -13,8 +13,8 @@ export default function BountiesScrollIndicatorAnimation(startAnimation) {
   let tmp6;
   let tmp7;
   const visible = startAnimation.visible;
-  let obj = require(3989) /* map */;
-  const token = obj.useToken(importDefault(712).colors.TEXT_DEFAULT);
+  let obj = require("../../../../design/tokens/native/useToken.tsx") /* map */;
+  const token = obj.useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_DEFAULT);
   const tmp = callback2();
   const tmp2 = require;
   [tmp6, tmp7] = callback(React.useState(0), 2);

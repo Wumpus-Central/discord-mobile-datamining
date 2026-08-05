@@ -248,33 +248,33 @@ prototype["showErrorModal"] = function showErrorModal(reason, id) {
   let code;
   let message;
   ({ code, message } = reason);
-  let obj = importDefault(4624);
+  let obj = require("../../../actions/native/AlertActionCreators.tsx");
   obj = { title: null, body: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.formatToPlainString(require(1236) /* getSystemLocale */.t.hbiAO6, { code });
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.hbiAO6, { code });
   obj[1] = message;
   obj.show(obj);
 };
 prototype["showLaunchErrorModal"] = function showLaunchErrorModal(message) {
-  let obj = importDefault(4624);
+  let obj = require("../../../actions/native/AlertActionCreators.tsx");
   obj = { title: null, body: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(require(1236) /* getSystemLocale */.t.PtobXW);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.PtobXW);
   obj[1] = message;
   obj.show(obj);
 };
 prototype["showDevShelfOverrideEnabled"] = function showDevShelfOverrideEnabled() {
-  let obj = importDefault(3986);
+  let obj = require("../../toast/native/ToastActionCreators.tsx");
   obj = { key: "EMBEDDED_ACTIVITIES_DEV_SHELF_URL_OVERRIDE_ENABLED", content: null, icon: null, iconColor: "status-positive" };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl.string(require(1236) /* getSystemLocale */.t.JfA7IK);
-  obj[2] = importDefault(9793);
+  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.JfA7IK);
+  obj[2] = require("../../../../_runtime/09793_registerAsset.js");
   obj.open(obj);
 };
 prototype["releaseWebView"] = function releaseWebView() {
   const releaseIframeIdResult = this.releaseIframeId();
   if (null != releaseIframeIdResult) {
-    const ComponentDispatch = require(1231) /* ComponentDispatcher */.ComponentDispatch;
+    const ComponentDispatch = require("../../../utils/ComponentDispatchUtils.tsx") /* ComponentDispatcher */.ComponentDispatch;
     const obj = { id: null };
     obj[0] = releaseIframeIdResult;
     ComponentDispatch.dispatch(constants.IFRAME_UNMOUNT, obj);
@@ -290,8 +290,8 @@ prototype["leaveActivity"] = function leaveActivity(arg0) {
   ({ location: _location, applicationId, showFeedback } = arg0);
   let isNotNullishResult = null != _location;
   if (isNotNullishResult) {
-    isNotNullishResult = require(1351) /* isDiscordFrontendDevelopment */.isNotNullish(applicationId);
-    const obj = require(1351) /* isDiscordFrontendDevelopment */;
+    isNotNullishResult = require("../../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish(applicationId);
+    const obj = require("../../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */;
   }
   if (isNotNullishResult) {
     let tmp5 = null != releaseWebViewResult;
@@ -307,11 +307,11 @@ prototype["hidePIPEmbed"] = function hidePIPEmbed(arg0) {
   }
 };
 prototype["clearEmbeddedActivityState"] = function clearEmbeddedActivityState(_location, applicationId, showFeedback) {
-  let obj = require(10513) /* _runPrimaryAppCommandOrJoinEmbeddedActivity */;
+  let obj = require("../EmbeddedActivitiesActionCreators.tsx") /* _runPrimaryAppCommandOrJoinEmbeddedActivity */;
   obj = { location: _location, applicationId, showFeedback };
   obj.stopEmbeddedActivity(obj);
   obj = { type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE", applicationId, lockState: null, pictureInPictureLockState: null };
-  importDefault(709).dispatch(obj);
+  require("../../../Dispatcher.tsx").dispatch(obj);
 };
 prototype["releaseIframeId"] = function releaseIframeId() {
   this.iframeId = undefined;
@@ -325,7 +325,7 @@ prototype["getOrCreateIframeId"] = function getOrCreateIframeId() {
   if (null != iframeId) {
     return iframeId;
   } else {
-    const v4Result = require(514) /* v1 */.v4();
+    const v4Result = require("../../../../_runtime/00514_v1.js") /* v1 */.v4();
     tmp.iframeId = v4Result;
     return v4Result;
   }

@@ -18,7 +18,7 @@ let metroImportAll;
 let unpackModuleId;
 const require = arg1;
 function closeModal() {
-  importDefault(4490).popWithKey(closure_11);
+  require("../../../../actions/ModalActionCreators.tsx").popWithKey(closure_11);
 }
 function NavigationBar(guild) {
   let tmp2 = null;
@@ -28,13 +28,13 @@ function NavigationBar(guild) {
     ({ contentContainer: arr[0], contentTopSpacing: arr[1] } = tmp);
     obj[0] = items;
     obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj[1] = intl.string(require(1236) /* getSystemLocale */.t.cpT0Cq);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.cpT0Cq);
     obj[2] = closeModal;
     obj = { source: null };
-    obj[0] = importDefault(7870);
-    obj[3] = callback2(require(1297) /* Button */.Icon, obj);
-    obj[1] = callback2(require(4812) /* PressableBase */.PressableOpacity, obj);
+    obj[0] = require("../../../../../_runtime/07870_registerAsset.js");
+    obj[3] = callback2(require("../../../../design/void/native.tsx") /* Button */.Icon, obj);
+    obj[1] = callback2(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
     tmp2 = callback2(closure_7, obj);
   }
   return tmp2;
@@ -42,14 +42,14 @@ function NavigationBar(guild) {
 function HeaderIcon(guild) {
   guild = guild.guild;
   if (null == guild) {
-    let tmp7 = callback2(importDefault(7710), {});
+    let tmp7 = callback2(require("../components/StageSparkle.tsx"), {});
   } else {
     const obj = { style: null, size: null, guild: null };
     obj[0] = tmp.guildIcon;
-    obj[1] = require(5661) /* GuildIconSizes */.GuildIconSizes.LARGE;
+    obj[1] = require("../../../guild/native/GuildIcon.tsx") /* GuildIconSizes */.GuildIconSizes.LARGE;
     obj[2] = guild;
-    tmp7 = callback2(importDefault(5661), obj);
-    const tmp5 = importDefault(5661);
+    tmp7 = callback2(require("../../../guild/native/GuildIcon.tsx"), obj);
+    const tmp5 = require("../../../guild/native/GuildIcon.tsx");
   }
   return tmp7;
 }

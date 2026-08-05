@@ -5,7 +5,7 @@ import "initialize";
 
 let prototype = function UserSettingsNativeBridgeManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult.saveExplicitContentSettingsToDisk = require(500) /* set */.isIOS() ? (() => {
+  applyArgumentsResult.saveExplicitContentSettingsToDisk = require("../../../../utils/PlatformUtils.tsx") /* set */.isIOS() ? (() => {
     settings = settings.settings;
     if (settings != null) {
       const textAndImages = settings.textAndImages;

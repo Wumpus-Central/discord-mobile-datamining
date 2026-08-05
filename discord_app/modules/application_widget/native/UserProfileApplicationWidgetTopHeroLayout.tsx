@@ -41,26 +41,26 @@ export default function UserProfileApplicationWidgetTopHeroLayout(header) {
   let _require;
   const tmp = createCacheKey();
   [tmp3, c0] = callback(React.useState(null), 2);
-  let obj = _require(12264);
+  let obj = _require("../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx");
   const textComponentValues = obj.resolveTextComponentValues(topConfig.components.title, resolveFieldValue, numberFormat, true);
-  let obj1 = _require(12264);
+  let obj1 = _require("../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx");
   const textComponentValues1 = obj1.resolveTextComponentValues(topConfig.components.subtitle_1, resolveFieldValue, numberFormat);
-  let obj2 = _require(12264);
+  let obj2 = _require("../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx");
   const textComponentValues2 = obj2.resolveTextComponentValues(topConfig.components.subtitle_2, resolveFieldValue, numberFormat);
-  let obj3 = _require(12264);
+  let obj3 = _require("../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx");
   const hero_image = topConfig.components.hero_image;
   let image;
   const textComponentValues3 = obj3.resolveTextComponentValues(topConfig.components.subtitle_3, resolveFieldValue, numberFormat);
   if (hero_image != null) {
     image = hero_image.fields.image;
   }
-  const items = [_require(12264).ResolvedValueType.MEDIA];
+  const items = [_require("../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx").ResolvedValueType.MEDIA];
   const fieldValue = resolveFieldValue(image, items);
   obj = { style: tmp.root, children: null };
   const items1 = [header.header, , ];
   obj = { style: tmp.contentRow, children: null };
   obj1 = { style: tmp.heroText, children: null };
-  const items2 = [callback2(_require(12351).FieldText, { field: textComponentValues, variant: "text-lg/medium", color: "text-default" }), callback2(_require(12351).FieldText, { field: textComponentValues1, variant: "text-sm/normal", color: "text-muted" }), callback2(_require(12351).FieldText, { field: textComponentValues2, variant: "text-sm/normal", color: "text-muted" }), callback2(_require(12351).FieldText, { field: textComponentValues3, variant: "text-sm/normal", color: "text-muted" })];
+  const items2 = [callback2(_require("../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx").FieldText, { field: textComponentValues, variant: "text-lg/medium", color: "text-default" }), callback2(_require("../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx").FieldText, { field: textComponentValues1, variant: "text-sm/normal", color: "text-muted" }), callback2(_require("../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx").FieldText, { field: textComponentValues2, variant: "text-sm/normal", color: "text-muted" }), callback2(_require("../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx").FieldText, { field: textComponentValues3, variant: "text-sm/normal", color: "text-muted" })];
   obj1[1] = items2;
   const items3 = [callback3(closure_6, obj1), ];
   obj2 = { style: tmp.heroImageColumn, children: null };
@@ -96,7 +96,7 @@ export default function UserProfileApplicationWidgetTopHeroLayout(header) {
       ({ START: obj14[0], END: obj14[1] } = HorizontalGradient);
       obj8[2] = closure_10;
       obj8[3] = tmp.heroImageFadeGradient;
-      const items4 = [tmp14(importDefault(4706), obj8), ];
+      const items4 = [tmp14(require("../../../../_runtime/04706_LinearGradient.js"), obj8), ];
       const obj9 = { style: null };
       obj9[0] = tmp.heroImageMaskRemainder;
       items4[1] = tmp14(tmp13, obj9);
@@ -108,8 +108,8 @@ export default function UserProfileApplicationWidgetTopHeroLayout(header) {
       obj10[0] = obj11;
       obj10[1] = { width: "100%", height: "100%" };
       obj5[3] = tmp14(closure_5, obj10);
-      tmp14Result = tmp14(importDefault(5260), obj5);
-      const tmp20 = importDefault(5260);
+      tmp14Result = tmp14(require("../../../../_runtime/05260__isNativeReflectConstruct.js"), obj5);
+      const tmp20 = require("../../../../_runtime/05260__isNativeReflectConstruct.js");
     }
     obj4[3] = tmp14Result;
     tmp14Result1 = tmp14(tmp13, obj4);

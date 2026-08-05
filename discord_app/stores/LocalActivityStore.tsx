@@ -229,7 +229,7 @@ const localActivityStore = new LocalActivityStore(require("dispatcher"), {
     let socketId;
     ({ socketId, pid, activity, partyPrivacy } = arg0);
     const items = [pid, activity, partyPrivacy];
-    if (importDefault(659)(table[socketId], items)) {
+    if (require("../../_runtime/00659_isUndefinedOrNull.js")(table[socketId], items)) {
       return false;
     } else {
       if (null != activity) {

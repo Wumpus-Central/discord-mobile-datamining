@@ -77,7 +77,7 @@ export default function DisplayNameStylesFontPickerSheet(displayName) {
   obj = { style: tmp.header, children: null };
   obj1 = { title: null, trailing: null };
   let intl = onSelectFont(1236).intl;
-  obj1[0] = intl.string(importDefault(2643)["0JCuGm"]);
+  obj1[0] = intl.string(require("../intl/DisplayNameStyles.messages.js")["0JCuGm"]);
   obj2 = { style: tmp.headerTrailing, children: null };
   obj3 = { text: null, onPress: null, variant: "primary", size: "sm" };
   let intl2 = onSelectFont(1236).intl;
@@ -162,7 +162,7 @@ export default function DisplayNameStylesFontPickerSheet(displayName) {
     const obj8 = { variant: "text-xs/normal", color: "text-subtle", style: null, children: null };
     obj8[2] = tmp.disclaimerText;
     let intl3 = tmp2(1236).intl;
-    obj8[3] = intl3.string(importDefault(2643)["+O1xL2"]);
+    obj8[3] = intl3.string(require("../intl/DisplayNameStyles.messages.js")["+O1xL2"]);
     items2[1] = tmp11(tmp2(4281).Text, obj8);
     obj7[1] = items2;
     tmp14Result = tmp14(tmp12, obj7);

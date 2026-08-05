@@ -136,11 +136,11 @@ export default {
     });
   },
   createRoleSubscriptionTemplateChannel(closure_0, name, type, topic) {
-    let obj = importDefault(5094);
+    let obj = require("../utils/TrackedHTTPUtils.tsx");
     obj = { url: closure_6.GUILD_CHANNELS(closure_0), body: obj, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { name, type, topic };
     obj[3] = {
-      event: require(503) /* encodeProperties */.NetworkActionNames.CHANNEL_CREATE,
+      event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
         let obj = callback(table[6]);
         let id;
@@ -163,7 +163,7 @@ export default {
       }
     };
     const obj1 = {
-      event: require(503) /* encodeProperties */.NetworkActionNames.CHANNEL_CREATE,
+      event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
         let obj = callback(table[6]);
         let id;
@@ -185,7 +185,7 @@ export default {
         return obj.exact(obj);
       }
     };
-    obj[4] = require(530) /* sendRequest */.rejectWithMigratedError();
+    obj[4] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
     return obj.post(obj);
   }
 };

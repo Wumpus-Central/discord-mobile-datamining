@@ -7,7 +7,7 @@ const result = require("set").fileFinishedImporting("modules/activities/utils/us
 export default function useIsPrivateChannelWithEnabledActivities(arg0) {
   const _require = arg0;
   const items = [ensureGuildLoaded];
-  const stateFromStores = _require(647).useStateFromStores(items, () => outer1_2.getChannel(closure_0));
+  const stateFromStores = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => outer1_2.getChannel(closure_0));
   let flag;
   if (stateFromStores != null) {
     flag = stateFromStores.isPrivate();

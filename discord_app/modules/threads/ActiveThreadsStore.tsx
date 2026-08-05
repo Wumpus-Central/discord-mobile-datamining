@@ -58,7 +58,7 @@ function deleteThread(channel) {
           if (obj3.isEmpty(dependencyMap[guild_id][parent_id])) {
             delete tmp2[tmp3];
           }
-          obj3 = importDefault(12);
+          obj3 = require("../../../_runtime/00012_apply.js");
         }
         tmp9 = tmp11;
       }
@@ -101,11 +101,11 @@ prototype["getThreadsForParent"] = function getThreadsForParent(guild_id, id) {
   return tmp;
 };
 prototype["hasThreadsForChannel"] = function hasThreadsForChannel(guild_id, id) {
-  return !importDefault(12).isEmpty(this.getThreadsForParent(guild_id, id));
+  return !require("../../../_runtime/00012_apply.js").isEmpty(this.getThreadsForParent(guild_id, id));
 };
 prototype["forEachGuild"] = function forEachGuild(arg0) {
   const importDefault = arg0;
-  const keys = importDefault(11).keys(closure_5);
+  const keys = require("../../utils/SnowflakeUtils.tsx").keys(closure_5);
   const item = keys.forEach((arg0) => {
     callback(arg0, outer1_5[arg0]);
   });
@@ -145,8 +145,8 @@ const activeThreadsStore = new ActiveThreadsStore(require("dispatcher"), {
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(channels) {
     let closure_5 = {};
-    const found = importDefault(12)(channels.channels).filter((type) => set.has(type.type));
-    const arr = importDefault(12)(channels.channels);
+    const found = require("../../../_runtime/00012_apply.js")(channels.channels).filter((type) => set.has(type.type));
+    const arr = require("../../../_runtime/00012_apply.js")(channels.channels);
     let item = found.groupBy("guild_id").forEach((arr) => {
       let closure_0 = arg1;
       closure_5[arg1] = {};

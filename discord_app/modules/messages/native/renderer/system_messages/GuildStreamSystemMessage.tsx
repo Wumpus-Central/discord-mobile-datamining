@@ -12,15 +12,15 @@ export const createGuildStreamSystemMessage = function createGuildStreamSystemMe
     messageReference = {};
   }
   ({ channel_id, guild_id } = messageReference);
-  const tmp3 = importDefault(7897)(message);
-  let obj1 = require(7879) /* getMessageAuthorWithProcessedColor */;
+  const tmp3 = require("../../../getHumanizedCallDuration.tsx")(message);
+  let obj1 = require("useAuthorWithProcessedColor.tsx") /* getMessageAuthorWithProcessedColor */;
   const messageAuthorWithProcessedColor = obj1.getMessageAuthorWithProcessedColor(message);
-  let obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: importDefault(7881)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
+  let obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: require("formatUsernameOnClick.tsx")({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
   obj = { streamType: StreamTypes.GUILD, channelId: channel_id, ownerId: message.author.id, guildId: guild_id };
   obj1 = { ended: tmp4, content: null };
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   const formatToParts = intl.formatToParts;
-  const t = require(1236) /* getSystemLocale */.t;
+  const t = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t;
   if (null != tmp3) {
     const obj2 = {};
     const merged = Object.assign(obj);
@@ -33,6 +33,6 @@ export const createGuildStreamSystemMessage = function createGuildStreamSystemMe
     formatToPartsResult = formatToParts(t.dMmbGk, obj3);
   }
   obj1[1] = formatToPartsResult;
-  const merged2 = Object.assign(importDefault(7882)(roleStyle));
+  const merged2 = Object.assign(require("createCommonMessage.tsx")(roleStyle));
   return obj1;
 };

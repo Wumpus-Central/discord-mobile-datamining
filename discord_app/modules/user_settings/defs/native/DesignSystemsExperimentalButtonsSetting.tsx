@@ -11,7 +11,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_EXPERIMENTAL_BUTTONS,
   getComponent() {
-    return require(14681) /* UserSettingsDesignSystemExperimentalButtons */.default;
+    return require("../../design_system/native/UserSettingsDesignSystemExperimentalButtons.tsx") /* UserSettingsDesignSystemExperimentalButtons */.default;
   }
 };
 const route = createToggle.createRoute(obj);

@@ -97,7 +97,7 @@ export default {
   },
   refreshAssets(batchSize) {
     batchSize = batchSize.batchSize;
-    importDefault(9934)({
+    require("getDeviceMediaPhotos.tsx")({
       batchSize,
       extensions: batchSize.extensions,
       onFetched(edges) {

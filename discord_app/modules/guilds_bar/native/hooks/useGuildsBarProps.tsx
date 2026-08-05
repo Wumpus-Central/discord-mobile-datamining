@@ -1,5 +1,5 @@
 // discord_app/modules/guilds_bar/native/hooks/useGuildsBarProps.tsx
-import module_15311 from "module_15311";
+import GuildsBarGuild from "../GuildsBarGuild.tsx";
 import _handleConnectionOpen from "_handleConnectionOpen";
 import initialize from "initialize";
 import processChannel from "processChannel";

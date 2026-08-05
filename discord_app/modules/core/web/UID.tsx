@@ -6,11 +6,11 @@ export const uid = function uid() {
   if (arg0 === undefined) {
     str = "uid_";
   }
-  return importDefault(4491)(str);
+  return require("../../../../_runtime/04491_uniqueId.js")(str);
 };
 export const useUID = function useUID() {
-  return importDefault(5598)(() => callback(table[0])("uid_"));
+  return require("../../../hooks/useInitialValue.tsx")(() => callback(table[0])("uid_"));
 };
 export const UID = function UID(children) {
-  return children.children(importDefault(5598)(() => callback(table[0])("uid_")));
+  return children.children(require("../../../hooks/useInitialValue.tsx")(() => callback(table[0])("uid_")));
 };

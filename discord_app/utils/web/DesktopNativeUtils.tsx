@@ -101,7 +101,7 @@ function normalizeRunningGame(id) {
   obj[17] = windowHandle;
   let UNKNOWN = id.fullscreenType;
   if (UNKNOWN == null) {
-    UNKNOWN = require(4217) /* GuildThemeSourcePreference */.RunningProcessFullscreenType.UNKNOWN;
+    UNKNOWN = require("../../flow/Client.tsx") /* GuildThemeSourcePreference */.RunningProcessFullscreenType.UNKNOWN;
   }
   obj[18] = UNKNOWN;
   let flag = id.isLauncher;
@@ -113,7 +113,7 @@ function normalizeRunningGame(id) {
   return obj;
 }
 function backwardCompatSend(APP_ASYNC_INDEX_TSX_LOADED) {
-  const obj = require(500) /* set */;
+  const obj = require("../PlatformUtils.tsx") /* set */;
   if (obj.isDesktop()) {
     try {
       obj.sendIPC(APP_ASYNC_INDEX_TSX_LOADED);
@@ -166,7 +166,7 @@ obj = {
     return requireModuleResult;
   },
   ensureModule(discord_voice) {
-    if (require(500) /* set */.isPlatformEmbedded) {
+    if (require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded) {
       const nativeModules = DiscordNative.nativeModules;
       let ensureModuleResult = nativeModules.ensureModule(discord_voice);
     } else {
@@ -219,15 +219,15 @@ obj.beforeUnload = function beforeUnload() {
     const _window2 = window;
     let supportsFeatureResult = window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN;
     if (supportsFeatureResult) {
-      const Storage = require(595) /* Storage */.Storage;
-      supportsFeatureResult = true !== Storage.get(require(5293) /* DomainMigrationEventType */.DOMAIN_MIGRATION_SUCCESS_KEY);
+      const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+      supportsFeatureResult = true !== Storage.get(require("../../../discord_common/js/shared/domain-migration/DomainMigrationUtils.tsx") /* DomainMigrationEventType */.DOMAIN_MIGRATION_SUCCESS_KEY);
     }
     if (supportsFeatureResult) {
       supportsFeatureResult = self.supportsFeature(NativeFeatures.USER_DATA_CACHE);
     }
     if (supportsFeatureResult) {
       const userDataCache = DiscordNative.userDataCache;
-      const Storage2 = require(595) /* Storage */.Storage;
+      const Storage2 = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
       userDataCache.cacheUserData(Storage2.stringify());
     }
   } catch (err) {
@@ -255,7 +255,7 @@ obj.inputEventUnregister = function inputEventUnregister(joined) {
   discordUtils.inputEventUnregister(parseInt(joined));
 };
 obj.setOnInputEventCallback = function setOnInputEventCallback(arg0) {
-  if (require(500) /* set */.isPlatformEmbedded) {
+  if (require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded) {
     const self = this;
     const discordUtils = this.getDiscordUtils();
     discordUtils.inputWatchAll(arg0);
@@ -394,7 +394,7 @@ obj.setObserverDebugCallback = function setObserverDebugCallback(arg0, NONE, arg
 };
 obj.clearObserverDebugCallback = function clearObserverDebugCallback() {
   const discordUtils = this.getDiscordUtils();
-  const result = discordUtils.setObserverDebugCallback(null, require(4319) /* GameTheme */.GameDetectionDebugLevel.NONE, 0);
+  const result = discordUtils.setObserverDebugCallback(null, require("../../modules/game_detection/GameDetectionTypes.tsx") /* GameTheme */.GameDetectionDebugLevel.NONE, 0);
 };
 obj.shouldDisplayNotifications = function shouldDisplayNotifications() {
   const discordUtils = this.getDiscordUtils();
@@ -404,10 +404,10 @@ obj.getVoiceEngine = function getVoiceEngine() {
   const requireModuleResult = this.requireModule("discord_voice");
   const require = requireModuleResult;
   if (!c15) {
-    require(4) /* log */.setNativeLogFn((arg0, arg1, arg2) => {
+    require("../../../discord_common/js/packages/logger/Logger.tsx") /* log */.setNativeLogFn((arg0, arg1, arg2) => {
       closure_0.consoleLog(arg1, "[" + arg0 + "] " + arg2);
     });
-    const obj = require(4) /* log */;
+    const obj = require("../../../discord_common/js/packages/logger/Logger.tsx") /* log */;
   }
   c15 = true;
   return requireModuleResult;
@@ -423,7 +423,7 @@ obj.getDiscordUtils = function getDiscordUtils() {
   return self.requireModule("discord_utils");
 };
 obj.isSystemDarkMode = function isSystemDarkMode() {
-  let isWindowsResult = require(500) /* set */.isWindows();
+  let isWindowsResult = require("../PlatformUtils.tsx") /* set */.isWindows();
   if (isWindowsResult) {
     const self = this;
     const discordUtils = this.getDiscordUtils();
@@ -496,13 +496,13 @@ obj.setBadge = function setBadge(arg0) {
   }
 };
 obj.setSystemTrayIcon = function setSystemTrayIcon(arg0) {
-  if (require(500) /* set */.isPlatformEmbedded) {
+  if (require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded) {
     const self = this;
-    this.sendIPC(require(5294) /* IPCEvents */.IPCEvents.SYSTEM_TRAY_SET_ICON, arg0);
+    this.sendIPC(require("../../../discord_common/js/packages/discord-native-types/IPCEvents.tsx") /* IPCEvents */.IPCEvents.SYSTEM_TRAY_SET_ICON, arg0);
   }
 };
 obj.setThumbarButtons = function setThumbarButtons(arg0, arg1) {
-  if (require(500) /* set */.isPlatformEmbedded) {
+  if (require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded) {
     const thumbar = DiscordNative.thumbar;
     if (thumbar != null) {
       const setThumbarButtons = thumbar.setThumbarButtons;
@@ -580,15 +580,15 @@ obj.bounceDock = function bounceDock(arg0) {
   }
 };
 obj.setSystemTrayApplications = function setSystemTrayApplications(arg0) {
-  if (require(500) /* set */.isPlatformEmbedded) {
+  if (require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded) {
     const self = this;
-    this.sendIPC(require(5294) /* IPCEvents */.IPCEvents.SYSTEM_TRAY_SET_APPLICATIONS, arg0);
+    this.sendIPC(require("../../../discord_common/js/packages/discord-native-types/IPCEvents.tsx") /* IPCEvents */.IPCEvents.SYSTEM_TRAY_SET_APPLICATIONS, arg0);
   }
 };
 Object.defineProperty(obj, "architecture", {
   get: () => {
     let str = "";
-    if (require(500) /* set */.isPlatformEmbedded) {
+    if (require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded) {
       str = DiscordNative.process.arch;
     }
     return str;
@@ -598,7 +598,7 @@ Object.defineProperty(obj, "architecture", {
 Object.defineProperty(obj, "releaseChannel", {
   get: () => {
     let str = "";
-    if (require(500) /* set */.isPlatformEmbedded) {
+    if (require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded) {
       const app = DiscordNative.app;
       str = app.getReleaseChannel();
     }
@@ -611,7 +611,7 @@ Object.defineProperty(obj, "buildNumber", { get: () => closure_10, set: undefine
 Object.defineProperty(obj, "moduleVersions", { get: () => closure_11, set: undefined });
 Object.defineProperty(obj, "parsedOSRelease", {
   get: () => {
-    if (require(500) /* set */.isPlatformEmbedded) {
+    if (require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded) {
       const parts = DiscordNative.os.release.split(".");
       let mapped = parts.map((joined) => parseInt(joined, 10));
       const str = DiscordNative.os.release;
@@ -623,7 +623,7 @@ Object.defineProperty(obj, "parsedOSRelease", {
   set: undefined
 });
 obj.copy = function copy(arg0) {
-  if (require(500) /* set */.isPlatformEmbedded) {
+  if (require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded) {
     const clipboard = DiscordNative.clipboard;
     clipboard.copy(arg0);
   }
@@ -763,7 +763,7 @@ obj.copyImageBlob = function copyImageBlob(arg0, arg1) {
 };
 obj.canSaveImage = function canSaveImage(closure_0, contentType) {
   if (null != closure_0) {
-    if (require(500) /* set */.isPlatformEmbedded) {
+    if (require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded) {
       const decideFileExtensionResult = tmp(5295).decideFileExtension(closure_0, contentType);
       let hasItem = null == decideFileExtensionResult;
       if (!hasItem) {
@@ -1187,7 +1187,7 @@ obj.cleanupUnusedOpenH264Files = function cleanupUnusedOpenH264Files(c0) {
   })();
 };
 obj.getOpenH264LibraryPath = function getOpenH264LibraryPath() {
-  if (require(500) /* set */.isPlatformEmbedded) {
+  if (require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded) {
     const fileManager = DiscordNative.fileManager;
     const getOpenH264LibraryPathSync = fileManager.getOpenH264LibraryPathSync;
     let openH264LibraryPathSync;
@@ -1198,7 +1198,7 @@ obj.getOpenH264LibraryPath = function getOpenH264LibraryPath() {
   }
 };
 obj.canCopyImage = function canCopyImage(closure_0) {
-  if (require(500) /* set */.isPlatformEmbedded) {
+  if (require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded) {
     if (typeof DiscordNative.clipboard.copyImage !== "function") {
       return false;
     } else {
@@ -1219,27 +1219,27 @@ obj.canCopyImage = function canCopyImage(closure_0) {
   tmp2 = require;
 };
 obj.cut = function cut() {
-  if (require(500) /* set */.isPlatformEmbedded) {
+  if (require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded) {
     const clipboard = DiscordNative.clipboard;
     clipboard.cut();
   }
 };
 obj.paste = function paste() {
-  if (require(500) /* set */.isPlatformEmbedded) {
+  if (require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded) {
     const clipboard = DiscordNative.clipboard;
     clipboard.paste();
   }
 };
 obj.readClipboard = function readClipboard() {
   let str = "";
-  if (require(500) /* set */.isPlatformEmbedded) {
+  if (require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded) {
     const clipboard = DiscordNative.clipboard;
     str = clipboard.read();
   }
   return str;
 };
 obj.clipboardHasMixedContent = function clipboardHasMixedContent() {
-  let isPlatformEmbedded = require(500) /* set */.isPlatformEmbedded;
+  let isPlatformEmbedded = require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded;
   if (isPlatformEmbedded) {
     const clipboard = DiscordNative.clipboard;
     const hasMixedContent = clipboard.hasMixedContent;
@@ -1283,7 +1283,7 @@ obj.sendIPC = function sendIPC(APP_BADGE_SET, arg1) {
   ipc.send.apply(items);
 };
 obj.isIPCReady = function isIPCReady() {
-  if (require(500) /* set */.isPlatformEmbedded) {
+  if (require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded) {
     try {
       let ipc;
       if (DiscordNative != null) {
@@ -1418,8 +1418,8 @@ obj.focus = function focus(arg0) {
   }
   let isWindowsResult = flag;
   if (flag) {
-    isWindowsResult = require(500) /* set */.isWindows();
-    const obj = require(500) /* set */;
+    isWindowsResult = require("../PlatformUtils.tsx") /* set */.isWindows();
+    const obj = require("../PlatformUtils.tsx") /* set */;
   }
   if (isWindowsResult) {
     const self = this;
@@ -1429,7 +1429,7 @@ obj.focus = function focus(arg0) {
   _window.focus(flag, arg0);
 };
 obj.blur = function blur() {
-  if (require(500) /* set */.isPlatformEmbedded) {
+  if (require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded) {
     if (null != DiscordNative.window.blur) {
       const _window = DiscordNative.window;
       _window.blur();
@@ -1446,7 +1446,7 @@ obj.close = function close(arg0) {
   _window.close(arg0);
 };
 obj.clearNavigationHistory = function clearNavigationHistory() {
-  backwardCompatSend(require(5294) /* IPCEvents */.IPCEvents.NAVIGATION_HISTORY_CLEAR);
+  backwardCompatSend(require("../../../discord_common/js/packages/discord-native-types/IPCEvents.tsx") /* IPCEvents */.IPCEvents.NAVIGATION_HISTORY_CLEAR);
 };
 obj.setAlwaysOnTop = function setAlwaysOnTop(arg0, arg1) {
   if (typeof DiscordNative.window.setAlwaysOnTop === "function") {
@@ -1538,7 +1538,7 @@ obj.setMinimumSize = function setMinimumSize(arg0, arg1) {
   }
 };
 obj.setTrafficLightPosition = function setTrafficLightPosition(arg0) {
-  if (require(500) /* set */.isPlatformEmbedded) {
+  if (require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded) {
     if ("darwin" === tmpResult.getPlatformName()) {
       try {
         const self = this;
@@ -1550,7 +1550,7 @@ obj.setTrafficLightPosition = function setTrafficLightPosition(arg0) {
   }
 };
 obj.purgeMemory = function purgeMemory() {
-  if (require(500) /* set */.isPlatformEmbedded) {
+  if (require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded) {
     const processUtils = DiscordNative.processUtils;
     processUtils.purgeMemory();
   }
@@ -1564,7 +1564,7 @@ obj.triggerJSException = function triggerJSException(arg0) {
   crashReporter.triggerJSException(arg0);
 };
 obj.flushDNSCache = function flushDNSCache() {
-  if (require(500) /* set */.isPlatformEmbedded) {
+  if (require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded) {
     const processUtils = DiscordNative.processUtils;
     processUtils.flushDNSCache();
   }
@@ -1574,7 +1574,7 @@ obj.supportsFeature = function supportsFeature(arg0) {
   return features.supports(arg0);
 };
 obj.getEnableHardwareAcceleration = function getEnableHardwareAcceleration() {
-  const isPlatformEmbedded = require(500) /* set */.isPlatformEmbedded;
+  const isPlatformEmbedded = require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded;
   let enableHardwareAcceleration = !isPlatformEmbedded;
   if (isPlatformEmbedded) {
     const gpuSettings = DiscordNative.gpuSettings;
@@ -1654,7 +1654,7 @@ obj.getGPUDriverVersions = function getGPUDriverVersions() {
   gPUDriverVersions = Promise.resolve(Object.freeze({}));
 };
 obj.setZoomFactor = function setZoomFactor(arg0) {
-  let flag = require(500) /* set */.isPlatformEmbedded;
+  let flag = require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded;
   if (flag) {
     const _window = DiscordNative.window;
     _window.setZoomFactor(arg0);
@@ -1966,7 +1966,7 @@ obj.showOpenDialog = function showOpenDialog(properties) {
 };
 obj.flushStorageData = function flushStorageData(arg0) {
   let _Promise = Promise;
-  if (require(500) /* set */.isPlatformEmbedded) {
+  if (require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded) {
     _Promise = new _Promise((arg0, arg1) => {
       let closure_0 = arg0;
       let closure_1 = arg1;
@@ -1993,7 +1993,7 @@ obj.flushStorageData = function flushStorageData(arg0) {
 };
 obj.flushCookies = function flushCookies() {
   let _Promise = Promise;
-  if (require(500) /* set */.isPlatformEmbedded) {
+  if (require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded) {
     _Promise = new _Promise((arg0, arg1) => {
       let closure_0 = arg0;
       let closure_1 = arg1;
@@ -2019,7 +2019,7 @@ obj.flushCookies = function flushCookies() {
   return _Promise;
 };
 obj.setCrashInformation = function setCrashInformation(arg0, arg1) {
-  let isPlatformEmbedded = require(500) /* set */.isPlatformEmbedded;
+  let isPlatformEmbedded = require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded;
   if (isPlatformEmbedded) {
     let setCrashInformation;
     if (DiscordNative != null) {
@@ -2037,7 +2037,7 @@ obj.setCrashInformation = function setCrashInformation(arg0, arg1) {
 };
 obj.blockDisplaySleep = function blockDisplaySleep() {
   let blockDisplaySleepResult = null;
-  if (require(500) /* set */.isPlatformEmbedded) {
+  if (require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded) {
     blockDisplaySleepResult = null;
     if (null != DiscordNative.powerSaveBlocker) {
       const powerSaveBlocker = DiscordNative.powerSaveBlocker;
@@ -2047,7 +2047,7 @@ obj.blockDisplaySleep = function blockDisplaySleep() {
   return blockDisplaySleepResult;
 };
 obj.unblockDisplaySleep = function unblockDisplaySleep(arg0) {
-  let isPlatformEmbedded = require(500) /* set */.isPlatformEmbedded;
+  let isPlatformEmbedded = require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded;
   if (isPlatformEmbedded) {
     isPlatformEmbedded = null != DiscordNative.powerSaveBlocker;
   }
@@ -2057,7 +2057,7 @@ obj.unblockDisplaySleep = function unblockDisplaySleep(arg0) {
   }
 };
 obj.cleanupDisplaySleep = function cleanupDisplaySleep() {
-  let isPlatformEmbedded = require(500) /* set */.isPlatformEmbedded;
+  let isPlatformEmbedded = require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded;
   if (isPlatformEmbedded) {
     isPlatformEmbedded = null != DiscordNative.powerSaveBlocker;
   }
@@ -2067,7 +2067,7 @@ obj.cleanupDisplaySleep = function cleanupDisplaySleep() {
   }
 };
 obj.relaunch = function relaunch() {
-  if (require(500) /* set */.isPlatformEmbedded) {
+  if (require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded) {
     const app = DiscordNative.app;
     app.relaunch();
   }
@@ -2076,9 +2076,9 @@ obj.makeChunkedRequest = function makeChunkedRequest(closure_0, array, arg2, arg
   let chunkInterval;
   let dependencyMap;
   let importDefault;
-  let obj = _require(530);
+  let obj = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
   _require = "" + obj.getAPIBaseURL() + closure_0;
-  if (_require(500).isPlatformEmbedded) {
+  if (_require("../PlatformUtils.tsx").isPlatformEmbedded) {
     if (null == DiscordNative.http) {
       const _Error2 = Error;
       let error = new Error("HTTP module not available");
@@ -2134,7 +2134,7 @@ obj.makeChunkedRequest = function makeChunkedRequest(closure_0, array, arg2, arg
   }
 };
 obj.submitLiveCrashReport = function submitLiveCrashReport(arg0) {
-  let obj = require(500) /* set */;
+  let obj = require("../PlatformUtils.tsx") /* set */;
   if (obj.isWindows()) {
     const self = this;
     if (null != this.getDiscordUtils().submitLiveCrashReport) {
@@ -2164,7 +2164,7 @@ obj.crash = function crash(arg0) {
   return flag;
 };
 obj.setApplicationBackgroundColor = function setApplicationBackgroundColor(arg0) {
-  this.sendIPC(require(5294) /* IPCEvents */.IPCEvents.SETTINGS_UPDATE_BACKGROUND_COLOR, arg0);
+  this.sendIPC(require("../../../discord_common/js/packages/discord-native-types/IPCEvents.tsx") /* IPCEvents */.IPCEvents.SETTINGS_UPDATE_BACKGROUND_COLOR, arg0);
 };
 obj.initializeExitHook = function initializeExitHook() {
   const initializeExitHook = this.getDiscordUtils().initializeExitHook;
@@ -2228,7 +2228,7 @@ obj.GetWindowFullscreenTypeByPid = function GetWindowFullscreenTypeByPid(arg0, a
     windowFullscreenTypeByPid = arg2;
   }
   if (windowFullscreenTypeByPid == null) {
-    windowFullscreenTypeByPid = require(4217) /* GuildThemeSourcePreference */.RunningProcessFullscreenType.UNKNOWN;
+    windowFullscreenTypeByPid = require("../../flow/Client.tsx") /* GuildThemeSourcePreference */.RunningProcessFullscreenType.UNKNOWN;
   }
   return windowFullscreenTypeByPid;
 };
@@ -2240,7 +2240,7 @@ obj.GetWindowFullscreenTypeExtraByPid = function GetWindowFullscreenTypeExtraByP
     }
     return windowFullscreenTypeExtraByPid;
   }
-  windowFullscreenTypeExtraByPid = { quns: require(4217) /* GuildThemeSourcePreference */.QueryUserNotificationState.QUNS_UNKNOWN };
+  windowFullscreenTypeExtraByPid = { quns: require("../../flow/Client.tsx") /* GuildThemeSourcePreference */.QueryUserNotificationState.QUNS_UNKNOWN };
 };
 obj.SetGPUBoostEnabledByPid = function SetGPUBoostEnabledByPid(arg0, arg1) {
   const setGPUBoostEnabledByPid = this.getDiscordUtils().setGPUBoostEnabledByPid;
@@ -2450,7 +2450,7 @@ obj.fetchRiotGamesLiveClientData = function fetchRiotGamesLiveClientData(arg0) {
   if (arg1 === undefined) {
     obj = {};
   }
-  if (require(500) /* set */.isPlatformEmbedded) {
+  if (require("../PlatformUtils.tsx") /* set */.isPlatformEmbedded) {
     if (null == DiscordNative.riotGames) {
       const _Error2 = Error;
       const error = new Error("Riot Games module not available");
@@ -2534,7 +2534,7 @@ obj.appViewed = function appViewed() {
     const self = this;
     const _performance = performance;
     performance.mark("app_viewed");
-    this.sendIPC(require(5294) /* IPCEvents */.IPCEvents.APP_VIEWED);
+    this.sendIPC(require("../../../discord_common/js/packages/discord-native-types/IPCEvents.tsx") /* IPCEvents */.IPCEvents.APP_VIEWED);
   }
 };
 obj.appFirstRenderAfterReadyPayload = function appFirstRenderAfterReadyPayload(arg0) {
@@ -2542,14 +2542,14 @@ obj.appFirstRenderAfterReadyPayload = function appFirstRenderAfterReadyPayload(a
     const self = this;
     const _performance = performance;
     performance.mark("app_first_render_after_ready_payload");
-    this.sendIPC(require(5294) /* IPCEvents */.IPCEvents.APP_FIRST_RENDER_AFTER_READY_PAYLOAD, arg0);
+    this.sendIPC(require("../../../discord_common/js/packages/discord-native-types/IPCEvents.tsx") /* IPCEvents */.IPCEvents.APP_FIRST_RENDER_AFTER_READY_PAYLOAD, arg0);
   }
 };
 obj.appLoaded = function appLoaded() {
-  backwardCompatSend(require(5294) /* IPCEvents */.IPCEvents.APP_LOADED);
+  backwardCompatSend(require("../../../discord_common/js/packages/discord-native-types/IPCEvents.tsx") /* IPCEvents */.IPCEvents.APP_LOADED);
 };
 obj.indexLoadedAsync = function indexLoadedAsync() {
-  backwardCompatSend(require(5294) /* IPCEvents */.IPCEvents.APP_ASYNC_INDEX_TSX_LOADED);
+  backwardCompatSend(require("../../../discord_common/js/packages/discord-native-types/IPCEvents.tsx") /* IPCEvents */.IPCEvents.APP_ASYNC_INDEX_TSX_LOADED);
 };
 obj.setUseRequireModuleCache = function setUseRequireModuleCache(arg0) {
   let closure_13 = arg0;

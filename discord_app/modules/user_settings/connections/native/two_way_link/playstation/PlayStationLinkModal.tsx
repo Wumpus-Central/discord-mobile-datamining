@@ -6,13 +6,13 @@ import { jsx } from "jsxProd";
 const require = arg1;
 function CloseButton() {
   const obj = { source: null, onPress: null, accessibilityLabel: null };
-  obj[0] = importDefault(7837);
+  obj[0] = require("../../../../../../../_runtime/07837_registerAsset.js");
   obj[1] = function onPress() {
     return callback(table[5]).hideModal();
   };
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl.string(require(1236) /* getSystemLocale */.t.cpT0Cq);
-  return jsx(require(5917) /* HeaderActionButton */.HeaderActionButton, { source: null, onPress: null, accessibilityLabel: null });
+  const intl = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.cpT0Cq);
+  return jsx(require("../../../../../../design/components/Navigator/native/HeaderActionButton.native.tsx") /* HeaderActionButton */.HeaderActionButton, { source: null, onPress: null, accessibilityLabel: null });
 }
 const result = require("jsxProd").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkModal.tsx");
 

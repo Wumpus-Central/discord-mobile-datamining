@@ -12,16 +12,16 @@ export const DATE_CONFIG = obj;
 export const hasDetectedActivity = function hasDetectedActivity(stateFromStores1) {
   let tmp = null != stateFromStores1.dmSpamDetectedAt;
   if (tmp) {
-    const obj = importDefault(3867)(stateFromStores1.dmSpamDetectedAt);
-    tmp = importDefault(3867)(stateFromStores1.dmSpamDetectedAt).add(closure_3, "hours") > importDefault(3867)();
-    const addResult = importDefault(3867)(stateFromStores1.dmSpamDetectedAt).add(closure_3, "hours");
+    const obj = require("../../../_runtime/03867_t.js")(stateFromStores1.dmSpamDetectedAt);
+    tmp = require("../../../_runtime/03867_t.js")(stateFromStores1.dmSpamDetectedAt).add(closure_3, "hours") > require("../../../_runtime/03867_t.js")();
+    const addResult = require("../../../_runtime/03867_t.js")(stateFromStores1.dmSpamDetectedAt).add(closure_3, "hours");
   }
   if (!tmp) {
     let tmp6 = null != stateFromStores1.raidDetectedAt;
     if (tmp6) {
-      const obj2 = importDefault(3867)(stateFromStores1.raidDetectedAt);
-      tmp6 = importDefault(3867)(stateFromStores1.raidDetectedAt).add(closure_3, "hours") > importDefault(3867)();
-      const addResult1 = importDefault(3867)(stateFromStores1.raidDetectedAt).add(closure_3, "hours");
+      const obj2 = require("../../../_runtime/03867_t.js")(stateFromStores1.raidDetectedAt);
+      tmp6 = require("../../../_runtime/03867_t.js")(stateFromStores1.raidDetectedAt).add(closure_3, "hours") > require("../../../_runtime/03867_t.js")();
+      const addResult1 = require("../../../_runtime/03867_t.js")(stateFromStores1.raidDetectedAt).add(closure_3, "hours");
     }
     tmp = tmp6;
   }
@@ -30,18 +30,18 @@ export const hasDetectedActivity = function hasDetectedActivity(stateFromStores1
 export const hasDetectedRaid = function hasDetectedRaid(raidDetectedAt) {
   let tmp = null != raidDetectedAt.raidDetectedAt;
   if (tmp) {
-    const obj = importDefault(3867)(raidDetectedAt.raidDetectedAt);
-    tmp = importDefault(3867)(raidDetectedAt.raidDetectedAt).add(closure_3, "hours") > importDefault(3867)();
-    const addResult = importDefault(3867)(raidDetectedAt.raidDetectedAt).add(closure_3, "hours");
+    const obj = require("../../../_runtime/03867_t.js")(raidDetectedAt.raidDetectedAt);
+    tmp = require("../../../_runtime/03867_t.js")(raidDetectedAt.raidDetectedAt).add(closure_3, "hours") > require("../../../_runtime/03867_t.js")();
+    const addResult = require("../../../_runtime/03867_t.js")(raidDetectedAt.raidDetectedAt).add(closure_3, "hours");
   }
   return tmp;
 };
 export const hasDetectedDMRaid = function hasDetectedDMRaid(dmSpamDetectedAt) {
   let tmp = null != dmSpamDetectedAt.dmSpamDetectedAt;
   if (tmp) {
-    const obj = importDefault(3867)(dmSpamDetectedAt.dmSpamDetectedAt);
-    tmp = importDefault(3867)(dmSpamDetectedAt.dmSpamDetectedAt).add(closure_3, "hours") > importDefault(3867)();
-    const addResult = importDefault(3867)(dmSpamDetectedAt.dmSpamDetectedAt).add(closure_3, "hours");
+    const obj = require("../../../_runtime/03867_t.js")(dmSpamDetectedAt.dmSpamDetectedAt);
+    tmp = require("../../../_runtime/03867_t.js")(dmSpamDetectedAt.dmSpamDetectedAt).add(closure_3, "hours") > require("../../../_runtime/03867_t.js")();
+    const addResult = require("../../../_runtime/03867_t.js")(dmSpamDetectedAt.dmSpamDetectedAt).add(closure_3, "hours");
   }
   return tmp;
 };
@@ -49,30 +49,30 @@ export const getIncidentAlertType = function getIncidentAlertType(guildIncident)
   if (null != guildIncident) {
     let tmp = null != guildIncident.raidDetectedAt;
     if (tmp) {
-      const obj = importDefault(3867)(guildIncident.raidDetectedAt);
-      tmp = importDefault(3867)(guildIncident.raidDetectedAt).add(closure_3, "hours") > importDefault(3867)();
-      const addResult = importDefault(3867)(guildIncident.raidDetectedAt).add(closure_3, "hours");
+      const obj = require("../../../_runtime/03867_t.js")(guildIncident.raidDetectedAt);
+      tmp = require("../../../_runtime/03867_t.js")(guildIncident.raidDetectedAt).add(closure_3, "hours") > require("../../../_runtime/03867_t.js")();
+      const addResult = require("../../../_runtime/03867_t.js")(guildIncident.raidDetectedAt).add(closure_3, "hours");
     }
-    const GuildIncidentAlertTypes = require(7934) /* GuildIncidentActionSources */.GuildIncidentAlertTypes;
+    const GuildIncidentAlertTypes = require("GuildAntiRaidTypes.tsx") /* GuildIncidentActionSources */.GuildIncidentAlertTypes;
   }
 };
 export const getEnabledInterventions = function getEnabledInterventions(pauseInvites, pauseDms) {
   const items = [];
   if (pauseInvites) {
-    items.push(require(7934) /* GuildIncidentActionSources */.GuildIncidentActionTypes.INVITES_DISABLED);
+    items.push(require("GuildAntiRaidTypes.tsx") /* GuildIncidentActionSources */.GuildIncidentActionTypes.INVITES_DISABLED);
   }
   if (pauseDms) {
-    items.push(require(7934) /* GuildIncidentActionSources */.GuildIncidentActionTypes.DMS_DISABLED);
+    items.push(require("GuildAntiRaidTypes.tsx") /* GuildIncidentActionSources */.GuildIncidentActionTypes.DMS_DISABLED);
   }
   return items;
 };
 export const getDisabledInterventions = function getDisabledInterventions(pauseInvites, pauseDms) {
   const items = [];
   if (!pauseInvites) {
-    items.push(require(7934) /* GuildIncidentActionSources */.GuildIncidentActionTypes.INVITES_DISABLED);
+    items.push(require("GuildAntiRaidTypes.tsx") /* GuildIncidentActionSources */.GuildIncidentActionTypes.INVITES_DISABLED);
   }
   if (!pauseDms) {
-    items.push(require(7934) /* GuildIncidentActionSources */.GuildIncidentActionTypes.DMS_DISABLED);
+    items.push(require("GuildAntiRaidTypes.tsx") /* GuildIncidentActionSources */.GuildIncidentActionTypes.DMS_DISABLED);
   }
   return items;
 };
@@ -153,29 +153,29 @@ export const getSecurityActionDetailsString = function getSecurityActionDetailsS
       tmp = tmp28;
     }
     if (tmp === true) {
-      const intl3 = require(1236) /* getSystemLocale */.intl;
+      const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
       let obj = { guildName: null, time: null };
       obj[0] = arg1;
       const _Date3 = Date;
       const date = new Date(invitesDisabledUntil);
-      obj[1] = date.toLocaleString(require(1236) /* getSystemLocale */.intl.currentLocale, obj);
-      return intl3.formatToPlainString(require(1236) /* getSystemLocale */.t.hCZitf, obj);
+      obj[1] = date.toLocaleString(require("../../intl/index.native.tsx") /* getSystemLocale */.intl.currentLocale, obj);
+      return intl3.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.hCZitf, obj);
     } else if (tmp27 === true) {
-      const intl2 = require(1236) /* getSystemLocale */.intl;
+      const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
       obj = { guildName: null, time: null };
       obj[0] = arg1;
       const _Date2 = Date;
       const date1 = new Date(invitesDisabledUntil);
-      obj[1] = date1.toLocaleString(require(1236) /* getSystemLocale */.intl.currentLocale, obj);
-      return intl2.formatToPlainString(require(1236) /* getSystemLocale */.t["HNKxf+"], obj);
+      obj[1] = date1.toLocaleString(require("../../intl/index.native.tsx") /* getSystemLocale */.intl.currentLocale, obj);
+      return intl2.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t["HNKxf+"], obj);
     } else if (tmp28 === true) {
-      const intl = require(1236) /* getSystemLocale */.intl;
+      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
       obj = { guildName: null, time: null };
       obj[0] = arg1;
       const _Date = Date;
       const date2 = new Date(invitesDisabledUntil);
-      obj[1] = date2.toLocaleString(require(1236) /* getSystemLocale */.intl.currentLocale, obj);
-      return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.M3iSyL, obj);
+      obj[1] = date2.toLocaleString(require("../../intl/index.native.tsx") /* getSystemLocale */.intl.currentLocale, obj);
+      return intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.M3iSyL, obj);
     } else {
       return "";
     }

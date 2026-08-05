@@ -12,27 +12,27 @@ createToggle = {
   parent: null,
   IconComponent: require("BeakerIcon").BeakerIcon,
   useDescription: function useExperimentOverrideActiveDescription() {
-    let obj = require(589) /* initialize */;
+    let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
     const items = [getHash];
     const stateFromStores = obj.useStateFromStores(items, () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length);
     const items1 = [initialize];
-    const obj2 = require(589) /* initialize */;
+    const obj2 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
     obj = { label: "Experiments overridden: ", value: null };
-    obj[1] = stateFromStores + require(589) /* initialize */.useStateFromStores(items1, () => Object.keys(clientOverrides.getClientOverrides()).length).toString();
-    return jsx(require(13749) /* DevToolsContentSortButtons */.DevToolsContentSubLabel, { label: "Experiments overridden: ", value: null });
+    obj[1] = stateFromStores + require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items1, () => Object.keys(clientOverrides.getClientOverrides()).length).toString();
+    return jsx(require("../../../devtools/native/components/DevToolsContent.tsx") /* DevToolsContentSortButtons */.DevToolsContentSubLabel, { label: "Experiments overridden: ", value: null });
   },
   usePredicate: function useHasExperimentOverrideActive() {
-    const staffOrDeveloperSettingPredicate = require(13992) /* useStaffOrDeveloperSettingPredicate */.useStaffOrDeveloperSettingPredicate();
-    const obj = require(13992) /* useStaffOrDeveloperSettingPredicate */;
+    const staffOrDeveloperSettingPredicate = require("../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx") /* useStaffOrDeveloperSettingPredicate */.useStaffOrDeveloperSettingPredicate();
+    const obj = require("../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx") /* useStaffOrDeveloperSettingPredicate */;
     const items = [getHash];
-    const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length);
-    const obj2 = require(589) /* initialize */;
+    const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length);
+    const obj2 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
     const items1 = [initialize];
-    const obj3 = require(589) /* initialize */;
-    return stateFromStores + require(589) /* initialize */.useStateFromStores(items1, () => Object.keys(clientOverrides.getClientOverrides()).length) > 0 && staffOrDeveloperSettingPredicate;
+    const obj3 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+    return stateFromStores + require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items1, () => Object.keys(clientOverrides.getClientOverrides()).length) > 0 && staffOrDeveloperSettingPredicate;
   },
   onPress: function handleExperimentOverrideActivePress() {
-    require(13748) /* navigateToDevTools */.navigateToDevTools({ screenKey: "experiments" });
+    require("../../../devtools/native/components/DevToolsNavigator.tsx") /* navigateToDevTools */.navigateToDevTools({ screenKey: "experiments" });
   },
   withArrow: true
 };

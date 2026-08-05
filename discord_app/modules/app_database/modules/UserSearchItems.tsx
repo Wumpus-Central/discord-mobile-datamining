@@ -183,7 +183,7 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
     }
     continue;
   }
-  const result = importDefault(1907).userSearchItemsTransaction(database);
+  const result = require("../DatabaseDaos.tsx").userSearchItemsTransaction(database);
   result.delete();
   result.putAll(Object.values(obj));
 };

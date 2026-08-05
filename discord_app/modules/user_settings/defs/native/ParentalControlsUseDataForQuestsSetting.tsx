@@ -5,18 +5,18 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle: function useDataForQuestsSettingTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(importDefault(2285).ZhaNu8);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../parent_tools/FamilyCenter.messages.js").ZhaNu8);
   },
   parent: require("MobileSetting").MobileSetting.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useDataToSupportQuestsSettingValue() {
     const selectedTeenId = store.getSelectedTeenId();
-    const ParentalControlledDropsOptedOut = require(13975) /* result */.ParentalControlledDropsOptedOut;
+    const ParentalControlledDropsOptedOut = require("../../family_center/ParentalControlledUserSettings.tsx") /* result */.ParentalControlledDropsOptedOut;
     return !ParentalControlledDropsOptedOut.useControlledSetting(selectedTeenId);
   },
   onValueChange: function onDataToSupportQuestsSettingValueChange(arg0) {
     const selectedTeenId = store.getSelectedTeenId();
-    const ParentalControlledDropsOptedOut = require(13975) /* result */.ParentalControlledDropsOptedOut;
+    const ParentalControlledDropsOptedOut = require("../../family_center/ParentalControlledUserSettings.tsx") /* result */.ParentalControlledDropsOptedOut;
     const result = ParentalControlledDropsOptedOut.updateControlledSetting(selectedTeenId, !arg0);
   },
   unsearchable: true

@@ -46,7 +46,7 @@ export const getDevicePushProvider = function getDevicePushProvider() {
     if (!obj.isAndroid()) {
       str = str2;
     }
-    obj = require(500) /* set */;
+    obj = require("../../utils/PlatformUtils.tsx") /* set */;
   }
   return str;
 };

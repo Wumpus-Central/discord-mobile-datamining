@@ -1427,8 +1427,8 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     case "cha":
     break;
     case "ha":
-      obj[0] = importDefault(712).colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT;
-      obj[1] = importDefault(712).colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE;
+      obj[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT;
+      obj[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE;
       obj[2] = c4;
       obj[3] = c4;
     break;
@@ -2217,7 +2217,7 @@ export const useProfileThemedButtonStyles = function useProfileThemedButtonStyle
   }, items);
 };
 export const useForegroundColor = function useForegroundColor(variant) {
-  return require(3989) /* map */.useToken(createCacheKey[variant]);
+  return require("../../../tokens/native/useToken.tsx") /* map */.useToken(createCacheKey[variant]);
 };
 export const useButtonColorStyles = styleProperties;
 export const useButtonTextColorStyles = function useButtonTextColorStyles(style) {
@@ -2521,7 +2521,7 @@ export const useButtonScaleStyles = function useButtonScaleStyles(pressed, width
   const _require = pressed;
   let closure_1 = width;
   const dependencyMap = scaleAmountInPx;
-  let obj = _require(4146);
+  let obj = _require("../../../../modules/reanimated/ReanimatedRexport.tsx");
   const fn = function n() {
     let obj = sharedValue1;
     let num = 1;
@@ -2539,7 +2539,7 @@ export const useButtonScaleStyles = function useButtonScaleStyles(pressed, width
     obj[0] = items1;
     return obj;
   };
-  obj = { width, scaleAmountInPx, withSpring: _require(4694).withSpring, interpolate: _require(4146).interpolate, pressed, ON_PRESS_SPRING: _require(4698).ON_PRESS_SPRING };
+  obj = { width, scaleAmountInPx, withSpring: _require("../../../animation/reanimated/spring/spring.tsx").withSpring, interpolate: _require("../../../../modules/reanimated/ReanimatedRexport.tsx").interpolate, pressed, ON_PRESS_SPRING: _require("../../../animation/reanimated/spring/springPresets.tsx").ON_PRESS_SPRING };
   fn.__closure = obj;
   fn.__workletHash = 17256006845494;
   fn.__initData = closure_10;

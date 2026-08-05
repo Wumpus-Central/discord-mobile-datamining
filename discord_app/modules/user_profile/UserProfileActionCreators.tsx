@@ -179,14 +179,14 @@ function _saveProfileChanges() {
 const result = require("ME").fileFinishedImporting("modules/user_profile/UserProfileActionCreators.tsx");
 
 export const notifyUnsavedUserProfileChangesInModal = function notifyUnsavedUserProfileChangesInModal() {
-  const ComponentDispatch = require(1231) /* ComponentDispatcher */.ComponentDispatch;
+  const ComponentDispatch = require("../../utils/ComponentDispatchUtils.tsx") /* ComponentDispatcher */.ComponentDispatch;
   ComponentDispatch.dispatch(constants.SHAKE_PROFILE_MODAL);
-  const ComponentDispatch2 = require(1231) /* ComponentDispatcher */.ComponentDispatch;
+  const ComponentDispatch2 = require("../../utils/ComponentDispatchUtils.tsx") /* ComponentDispatcher */.ComponentDispatch;
   ComponentDispatch2.dispatch(constants.EMPHASIZE_NOTICE);
-  const AccessibilityAnnouncer = require(4131) /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
-  const intl = require(1236) /* getSystemLocale */.intl;
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  AccessibilityAnnouncer.announce("" + intl.string(require(1236) /* getSystemLocale */.t.GP7JLE) + " " + intl2.string(require(1236) /* getSystemLocale */.t.gKoO1D));
+  const AccessibilityAnnouncer = require("../../design/shared.tsx") /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  AccessibilityAnnouncer.announce("" + intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.GP7JLE) + " " + intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.gKoO1D));
 };
 export const saveProfileChanges = function saveProfileChanges(outer1_8, id2, c7) {
   const self = this;
@@ -205,7 +205,7 @@ export const pinUserProfileBadgesOnClient = function pinUserProfileBadgesOnClien
     id = currentUser.id;
   }
   if (null != id) {
-    let obj = importDefault(709);
+    let obj = require("../../Dispatcher.tsx");
     obj = { type: "USER_PROFILE_PIN_BADGES_ON_CLIENT", badges: null, ttlInSeconds: null, userId: null };
     obj[1] = items;
     obj[2] = arg1;
@@ -214,61 +214,61 @@ export const pinUserProfileBadgesOnClient = function pinUserProfileBadgesOnClien
   }
 };
 export const resetPendingProfileChanges = function resetPendingProfileChanges() {
-  importDefault(709).dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES" });
+  require("../../Dispatcher.tsx").dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES" });
 };
 export const resetAllPendingChanges = function resetAllPendingChanges() {
-  importDefault(709).dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES" });
+  require("../../Dispatcher.tsx").dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES" });
 };
 export const resetAllTryItOutChanges = function resetAllTryItOutChanges() {
-  importDefault(709).dispatch({ type: "USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES" });
+  require("../../Dispatcher.tsx").dispatch({ type: "USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES" });
 };
 export const setTryItOutAvatar = function setTryItOutAvatar(outer1_4) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR", avatar: outer1_4 };
   obj.dispatch(obj);
   obj = { feature_name: constants4.ANIMATED_AVATAR, feature_tier: constants3.PREMIUM_STANDARD };
-  importDefault(698).track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
+  require("../../utils/AnalyticsUtils.tsx").track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
 };
 export const setTryItOutAvatarDecoration = function setTryItOutAvatarDecoration(avatarDecoration) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR_DECORATION", avatarDecoration };
   obj.dispatch(obj);
   obj = { feature_name: constants4.AVATAR_DECORATION, feature_tier: constants3.PREMIUM_STANDARD };
-  importDefault(698).track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
+  require("../../utils/AnalyticsUtils.tsx").track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
 };
 export const setTryItOutProfileEffect = function setTryItOutProfileEffect(profileEffect) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PROFILE_EFFECT", profileEffect };
   obj.dispatch(obj);
   obj = { feature_name: constants4.PROFILE_EFFECT, feature_tier: constants3.PREMIUM_STANDARD };
-  importDefault(698).track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
+  require("../../utils/AnalyticsUtils.tsx").track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
 };
 export const setTryItOutBanner = function setTryItOutBanner(c5) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_BANNER", banner: c5 };
   obj.dispatch(obj);
   obj = { feature_name: constants4.PROFILE_BANNER, feature_tier: constants3.PREMIUM_STANDARD };
-  importDefault(698).track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
+  require("../../utils/AnalyticsUtils.tsx").track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
 };
 export const setTryItOutThemeColors = function setTryItOutThemeColors(themeColors) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_THEME_COLORS", themeColors };
   obj.dispatch(obj);
   obj = { feature_name: constants4.PROFILE_THEME_COLOR, feature_tier: constants3.PREMIUM_STANDARD };
-  importDefault(698).track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
+  require("../../utils/AnalyticsUtils.tsx").track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
 };
 export const setTryItOutDisplayNameStyles = function setTryItOutDisplayNameStyles(displayNameStyles) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES", displayNameStyles };
   obj.dispatch(obj);
   obj = { feature_name: constants4.DISPLAY_NAME_STYLES, feature_tier: constants3.PREMIUM_STANDARD };
-  importDefault(698).track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
+  require("../../utils/AnalyticsUtils.tsx").track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
 };
 export const setTryItOutPreset = function setTryItOutPreset(arg0) {
-  let obj = importDefault(709);
+  let obj = require("../../Dispatcher.tsx");
   obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET" };
   const merged = Object.assign(arg0);
   obj.dispatch(obj);
   obj = { feature_name: constants4.PRESET, feature_tier: constants3.PREMIUM_STANDARD };
-  importDefault(698).track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
+  require("../../utils/AnalyticsUtils.tsx").track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
 };

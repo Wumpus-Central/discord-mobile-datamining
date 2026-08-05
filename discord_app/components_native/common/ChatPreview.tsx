@@ -477,7 +477,7 @@ prototype["render"] = function render() {
     if (null != guild_id) {
       let obj = { guildId: null, channelId: null };
       ({ guild_id: obj8[0], id: obj8[1] } = channel);
-      let tmp14 = callback(importDefault(10856), obj);
+      let tmp14 = callback(require("../warnings/GuildNSFW.tsx"), obj);
     }
     obj = { style: null, children: null };
     obj[0] = tmp.containerInner;
@@ -493,17 +493,17 @@ prototype["render"] = function render() {
     if (null != guild_id1) {
       let obj1 = { guildId: null, channelId: null };
       ({ guild_id: obj7[0], id: obj7[1] } = channel);
-      tmp14 = callback(importDefault(11934), obj1);
+      tmp14 = callback(require("../../modules/spoiler_channels/native/ChannelSpoiler.tsx"), obj1);
     }
   }
   obj = { ref: self.chatRef, style: tmp.chat, inverted: true, onTapLink: self.handleTapLink, onTapChannel: self.handleTapChannel, onLongPressChannel: self.handleLongPressChannel, onLongPressLink: self.handleLongPressLink, onLongPressMessage: self.handleLongPressMessage, onLongPressReaction: self.handleLongPressReaction, onTapReaction: self.handleTapReaction, onTapImage: self.handleTapImage, onCompleteFirstLayout: null, onFirstLayout: null };
-  obj1 = require(500) /* set */;
+  obj1 = require("../../utils/PlatformUtils.tsx") /* set */;
   let prop;
   if (obj1.isIOS()) {
     prop = self.handleCompleteFirstLayout;
   }
   obj[11] = prop;
-  const tmp8 = importDefault(11205);
+  const tmp8 = require("../../modules/chat/native/Chat.android.tsx");
   let prop1;
   if (!tmp9Result.isIOS()) {
     prop1 = self.handleCompleteFirstLayout;
@@ -512,8 +512,8 @@ prototype["render"] = function render() {
   tmp6Result = tmp6(tmp8, obj);
   const obj2 = { bottom: true, style: tmp.jumpToChatButtonContainer, children: null };
   const obj3 = { accessibilityRole: "button", style: tmp.jumpToChatButton, onPress: self.handleJumpToChat, children: null };
-  obj3[3] = callback(require(4281) /* Text */.Text, { style: tmp.jumpToChatText, variant: "text-md/medium", color: "interactive-text-default", children: self.props.jumpToChatProps.jumpToChatText });
-  obj2[2] = callback(require(4812) /* PressableBase */.PressableOpacity, obj3);
+  obj3[3] = callback(require("../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: tmp.jumpToChatText, variant: "text-md/medium", color: "interactive-text-default", children: self.props.jumpToChatProps.jumpToChatText });
+  obj2[2] = callback(require("../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj3);
   tmp6Result = tmp6(tmp9(5272).SafeAreaPaddingView, obj2);
   tmp14 = tmp6Result;
 };
@@ -549,7 +549,7 @@ export const ChatPreview = function ChatPreview(channelId) {
   obj.renderEmbeds = setting2;
   obj.roleStyle = stateFromStores;
   obj.channel = stateFromStores1;
-  obj.width = importDefault(1474)().width;
+  obj.width = require("../../modules/screen/useWindowDimensions.native.tsx")().width;
   obj.isSpoilerHidden = isChannelSpoilerGated;
   obj.isNSFWHidden = isChannelContentGated;
   let tmp12 = !isChannelSpoilerGated;

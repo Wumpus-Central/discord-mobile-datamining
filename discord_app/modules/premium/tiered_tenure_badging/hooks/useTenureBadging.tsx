@@ -57,13 +57,13 @@ const result = require("reset").fileFinishedImporting("modules/premium/tiered_te
 export const TieredTenureBadgeStatus = obj;
 export const useTieredTenureBadge = function useTieredTenureBadge() {
   const items = [mergeGuildAvatar];
-  const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => authStore.getCurrentUser());
-  const obj = require(589) /* initialize */;
+  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => authStore.getCurrentUser());
+  const obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   let id;
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  let tieredTenureBadgeForUser = require(9429) /* useTieredTenureBadgeForUser */.useTieredTenureBadgeForUser(id);
+  let tieredTenureBadgeForUser = require("useTieredTenureBadgeForUser.tsx") /* useTieredTenureBadgeForUser */.useTieredTenureBadgeForUser(id);
   if (tieredTenureBadgeForUser == null) {
     tieredTenureBadgeForUser = null;
   }
@@ -72,7 +72,7 @@ export const useTieredTenureBadge = function useTieredTenureBadge() {
 export const usePremiumSinceForUser = function usePremiumSinceForUser(userId) {
   const _require = userId;
   const items = [createUserWidgetFromServer];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null == id) {
       return null;
     } else {
@@ -89,16 +89,16 @@ export { usePremiumSince };
 export const useTieredTenureBadgesFromSubscriptionData = function useTieredTenureBadgesFromSubscriptionData() {
   const values = Object.values(closure_7);
   const items = [mergeGuildAvatar];
-  const stateFromStores = _require(589).useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj = _require(589);
+  const stateFromStores = _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj = _require("../../../../../discord_common/js/packages/flux/index.tsx");
   const items1 = [reset];
-  const stateFromStores1 = _require(589).useStateFromStores(items1, () => premiumTypeSubscription.getPremiumTypeSubscription());
-  const obj2 = _require(589);
+  const stateFromStores1 = _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => premiumTypeSubscription.getPremiumTypeSubscription());
+  const obj2 = _require("../../../../../discord_common/js/packages/flux/index.tsx");
   if (obj3.isPremiumExactly(stateFromStores, closure_6.TIER_2)) {
     if (null != stateFromStores1) {
       if (null != stateFromStores1.premiumSince) {
-        const obj4 = importDefault(3867)();
-        _require = obj4.diff(importDefault(3867)(stateFromStores1.premiumSince).add(1, "day"), "months");
+        const obj4 = require("../../../../../_runtime/03867_t.js")();
+        _require = obj4.diff(require("../../../../../_runtime/03867_t.js")(stateFromStores1.premiumSince).add(1, "day"), "months");
         return values.reduce((arg0, tenureReqNumMonths) => {
           let id = arg0;
           if (closure_0 >= tenureReqNumMonths.tenureReqNumMonths) {
@@ -113,13 +113,13 @@ export const useTieredTenureBadgesFromSubscriptionData = function useTieredTenur
 };
 export const useTieredTenureEarnedOnDate = function useTieredTenureEarnedOnDate() {
   const items = [mergeGuildAvatar];
-  const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => authStore.getCurrentUser());
-  const obj = require(589) /* initialize */;
+  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => authStore.getCurrentUser());
+  const obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   let id;
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  let tieredTenureBadgeForUser = require(9429) /* useTieredTenureBadgeForUser */.useTieredTenureBadgeForUser(id);
+  let tieredTenureBadgeForUser = require("useTieredTenureBadgeForUser.tsx") /* useTieredTenureBadgeForUser */.useTieredTenureBadgeForUser(id);
   if (tieredTenureBadgeForUser == null) {
     tieredTenureBadgeForUser = null;
   }
@@ -140,7 +140,7 @@ export const useTieredTenureEarnedOnDate = function useTieredTenureEarnedOnDate(
   return earnedOnDate;
 };
 export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
-  let obj = require(589) /* initialize */;
+  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => authStore.getCurrentUser());
   let id;
@@ -160,14 +160,14 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
   if (stateFromStores1 != null) {
     id1 = stateFromStores1.id;
   }
-  let tieredTenureBadgeForUser1 = require(9429) /* useTieredTenureBadgeForUser */.useTieredTenureBadgeForUser(id1);
+  let tieredTenureBadgeForUser1 = require("useTieredTenureBadgeForUser.tsx") /* useTieredTenureBadgeForUser */.useTieredTenureBadgeForUser(id1);
   if (tieredTenureBadgeForUser1 == null) {
     tieredTenureBadgeForUser1 = null;
   }
   const tmp3 = mergeGuildAvatar;
-  const tmpResult1 = require(9429) /* useTieredTenureBadgeForUser */;
+  const tmpResult1 = require("useTieredTenureBadgeForUser.tsx") /* useTieredTenureBadgeForUser */;
   const items2 = [reset];
-  const stateFromStores2 = require(589) /* initialize */.useStateFromStores(items2, () => premiumTypeSubscription.getPremiumTypeSubscription());
+  const stateFromStores2 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items2, () => premiumTypeSubscription.getPremiumTypeSubscription());
   let earnedOnDate = null;
   if (null != tieredTenureBadgeForUser1) {
     earnedOnDate = null;
@@ -198,7 +198,7 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
   return tmp15;
 };
 export const useTieredTenureBadgeDataForUser = function useTieredTenureBadgeDataForUser(userId) {
-  const tieredTenureBadgeForUser = require(9429) /* useTieredTenureBadgeForUser */.useTieredTenureBadgeForUser(userId);
+  const tieredTenureBadgeForUser = require("useTieredTenureBadgeForUser.tsx") /* useTieredTenureBadgeForUser */.useTieredTenureBadgeForUser(userId);
   let tmp2 = null;
   if (null != tieredTenureBadgeForUser) {
     tmp2 = dependencyMap[tieredTenureBadgeForUser];

@@ -36,5 +36,5 @@ export const SubmittingOverlay = function SubmittingOverlay(submitting) {
     submitting = tmp5(submitting(4710).Ellipsis, { variant: "active", size: "md" });
   }
   obj[1] = submitting;
-  return jsx(importDefault(4146).View, { style: items, children: null });
+  return jsx(require("../../../../reanimated/ReanimatedRexport.tsx").View, { style: items, children: null });
 };

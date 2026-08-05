@@ -8,57 +8,57 @@ export const useMessageRequestTimestampText = function useMessageRequestTimestam
   let lastMessageId;
   let message;
   const _require = channel;
-  let obj = _require(11865);
+  let obj = _require("useMessageRequestPreview.tsx");
   const messageRequestPreview = obj.useMessageRequestPreview(channel);
   obj = { lastMessageId: null };
   const items = [generateOldThreadCutoff];
-  obj[0] = _require(589).useStateFromStores(items, () => outer1_3.lastMessageId(id.id));
+  obj[0] = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_3.lastMessageId(id.id));
   const merged = Object.assign(messageRequestPreview);
   ({ lastMessageId, message } = obj);
   if (obj.loaded) {
     if (null != message) {
-      let extractTimestampResult = importDefault(11).extractTimestamp(message.id);
-      const obj5 = importDefault(11);
+      let extractTimestampResult = require("../../../utils/SnowflakeUtils.tsx").extractTimestamp(message.id);
+      const obj5 = require("../../../utils/SnowflakeUtils.tsx");
     }
     let str = "";
     if (null != extractTimestampResult) {
-      str = importDefault(3867)(extractTimestampResult).calendar();
-      const obj6 = importDefault(3867)(extractTimestampResult);
+      str = require("../../../../_runtime/03867_t.js")(extractTimestampResult).calendar();
+      const obj6 = require("../../../../_runtime/03867_t.js")(extractTimestampResult);
     }
     return str;
   }
   extractTimestampResult = null;
   if (null != lastMessageId) {
-    extractTimestampResult = importDefault(11).extractTimestamp(lastMessageId);
-    const obj4 = importDefault(11);
+    extractTimestampResult = require("../../../utils/SnowflakeUtils.tsx").extractTimestamp(lastMessageId);
+    const obj4 = require("../../../utils/SnowflakeUtils.tsx");
   }
 };
 export const useMessageRequestRelativeTimestampText = function useMessageRequestRelativeTimestampText(channel) {
   let lastMessageId;
   let message;
   const _require = channel;
-  let obj = _require(11865);
+  let obj = _require("useMessageRequestPreview.tsx");
   const messageRequestPreview = obj.useMessageRequestPreview(channel);
   obj = { lastMessageId: null };
   const items = [generateOldThreadCutoff];
-  obj[0] = _require(589).useStateFromStores(items, () => outer1_3.lastMessageId(id.id));
+  obj[0] = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_3.lastMessageId(id.id));
   const merged = Object.assign(messageRequestPreview);
   ({ lastMessageId, message } = obj);
   if (obj.loaded) {
     if (null != message) {
-      let extractTimestampResult = importDefault(11).extractTimestamp(message.id);
-      const obj5 = importDefault(11);
+      let extractTimestampResult = require("../../../utils/SnowflakeUtils.tsx").extractTimestamp(message.id);
+      const obj5 = require("../../../utils/SnowflakeUtils.tsx");
     }
     let str = "";
     if (null != extractTimestampResult) {
-      str = _require(7160).getTimestampString(extractTimestampResult);
-      const tmpResult = _require(7160);
+      str = _require("../../threads/ThreadUtils.tsx").getTimestampString(extractTimestampResult);
+      const tmpResult = _require("../../threads/ThreadUtils.tsx");
     }
     return str;
   }
   extractTimestampResult = null;
   if (null != lastMessageId) {
-    extractTimestampResult = importDefault(11).extractTimestamp(lastMessageId);
-    const obj4 = importDefault(11);
+    extractTimestampResult = require("../../../utils/SnowflakeUtils.tsx").extractTimestamp(lastMessageId);
+    const obj4 = require("../../../utils/SnowflakeUtils.tsx");
   }
 };

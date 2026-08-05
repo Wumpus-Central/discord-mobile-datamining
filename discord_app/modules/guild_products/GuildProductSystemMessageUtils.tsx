@@ -8,6 +8,6 @@ export const getGuildProductPurchaseSystemMessageContentMobile = function getGui
   if (usernameHook === undefined) {
     usernameHook = NOOP;
   }
-  const intl = require(1236) /* getSystemLocale */.intl;
-  return intl.formatToParts(require(1236) /* getSystemLocale */.t["w4iXs+"], { username: username.username, usernameHook, productName: username.productName });
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  return intl.formatToParts(require("../../intl/index.native.tsx") /* getSystemLocale */.t["w4iXs+"], { username: username.username, usernameHook, productName: username.productName });
 };

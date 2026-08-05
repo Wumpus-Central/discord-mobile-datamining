@@ -4,7 +4,7 @@ function resolveFieldValue(image, items, applicationAssets) {
   applicationAssets = applicationAssets.applicationAssets;
   if (null == image) {
     return null;
-  } else if (image.value_type === _require(12269).ApplicationWidgetFieldValueType.DATA) {
+  } else if (image.value_type === _require("../../../shared/shared-constants/ApplicationWidgetFieldValueType.tsx").ApplicationWidgetFieldValueType.DATA) {
     let iter = tmp[image.value];
     const presentation_type = image.presentation_type;
     if (null != iter) {
@@ -79,7 +79,7 @@ const items = [obj.STRING];
 const items1 = [obj.NUMBER];
 const items2 = [obj.MEDIA];
 const items3 = [obj.NUMBER];
-let closure_3 = { [require(12268).ApplicationWidgetFieldPresentationType.TEXT]: items, [require(12268).ApplicationWidgetFieldPresentationType.NUMBER]: items1, [require(12268).ApplicationWidgetFieldPresentationType.IMAGE]: items2, [require(12268).ApplicationWidgetFieldPresentationType.DURATION]: items3 };
+let closure_3 = { [require("../../../shared/shared-constants/ApplicationWidgetFieldPresentationType.tsx").ApplicationWidgetFieldPresentationType.TEXT]: items, [require("../../../shared/shared-constants/ApplicationWidgetFieldPresentationType.tsx").ApplicationWidgetFieldPresentationType.NUMBER]: items1, [require("../../../shared/shared-constants/ApplicationWidgetFieldPresentationType.tsx").ApplicationWidgetFieldPresentationType.IMAGE]: items2, [require("../../../shared/shared-constants/ApplicationWidgetFieldPresentationType.tsx").ApplicationWidgetFieldPresentationType.DURATION]: items3 };
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/resolvedValues.tsx");
 
 export const ResolvedValueType = obj;

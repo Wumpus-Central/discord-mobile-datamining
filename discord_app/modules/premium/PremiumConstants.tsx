@@ -282,6 +282,6 @@ export const TIERED_TENURE_BADGE_ORDER = items32;
 export const TENURE_BADGES = obj39;
 export const FractionalPremiumStates = { NONE: 0, [0]: "NONE", FP_ONLY: 1, [1]: "FP_ONLY", FP_SUB_PAUSED: 2, [2]: "FP_SUB_PAUSED" };
 export const FractionalPremiumIntervalTypes = obj48;
-export const FRACTIONAL_PREMIUM_SKU_INTERVAL_COUNTS = { [require(679).FractionalPremiumSKUs.PREMIUM_TIER_2_1_HOUR]: items33, [require(679).FractionalPremiumSKUs.PREMIUM_TIER_2_1_DAY]: items34, [require(679).FractionalPremiumSKUs.PREMIUM_TIER_2_3_DAY]: items35 };
+export const FRACTIONAL_PREMIUM_SKU_INTERVAL_COUNTS = { [require("../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx").FractionalPremiumSKUs.PREMIUM_TIER_2_1_HOUR]: items33, [require("../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx").FractionalPremiumSKUs.PREMIUM_TIER_2_1_DAY]: items34, [require("../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx").FractionalPremiumSKUs.PREMIUM_TIER_2_3_DAY]: items35 };
 export const NAMESPACE_SNOWFLAKE_UUID = "8e884ace-bee4-12e4-8dfc-aa07a5b093db";
 export const PREMIUM_PLAN_SELECTION_ACTION_SHEET_KEY = "PremiumPlanSelectionActionSheetWithOrderCTX";

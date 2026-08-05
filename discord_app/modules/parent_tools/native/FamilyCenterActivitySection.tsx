@@ -17,13 +17,13 @@ const require = arg1;
 function FamilyCenterActivitySectionHeader(displayType) {
   displayType = displayType.displayType;
   const tmp = createCacheKey();
-  let flag = importDefault(7260)();
-  let obj = require(6961) /* getEmptyActivityFormatter */;
+  let flag = require("../hooks/useIsInAdultAgeGroup.tsx")();
+  let obj = require("../FamilyCenterUtils.tsx") /* getEmptyActivityFormatter */;
   const activityTypeTextConfigs = obj.getActivityTypeTextConfigs();
   const value = activityTypeTextConfigs.get(displayType);
-  const actionsForDisplayType = require(14044) /* useActionsForDisplayType */.useActionsForDisplayType(displayType);
-  const obj4 = require(14044) /* useActionsForDisplayType */;
-  const formattedTotalForDisplayType = require(14044) /* useActionsForDisplayType */.useFormattedTotalForDisplayType(displayType);
+  const actionsForDisplayType = require("../hooks/useFamilyCenterActivities.tsx") /* useActionsForDisplayType */.useActionsForDisplayType(displayType);
+  const obj4 = require("../hooks/useFamilyCenterActivities.tsx") /* useActionsForDisplayType */;
+  const formattedTotalForDisplayType = require("../hooks/useFamilyCenterActivities.tsx") /* useActionsForDisplayType */.useFormattedTotalForDisplayType(displayType);
   if (displayType === constants.PURCHASES) {
     let length = formattedTotalForDisplayType;
     let sectionHeaderResult;

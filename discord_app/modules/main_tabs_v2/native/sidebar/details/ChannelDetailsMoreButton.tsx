@@ -15,11 +15,11 @@ export default function MoreButton(channel) {
       obj = { accessibilityLabel: null, source: null, onPress: null };
       const intl = channel(1236).intl;
       obj[0] = intl.string(channel(1236).t["UKOtz+"]);
-      obj[1] = importDefault(8973);
+      obj[1] = require("../../../../../../_runtime/08973_registerAsset.js");
       obj[2] = tmp;
       obj[0] = jsx(channel(8193).HeaderIconButton, { accessibilityLabel: null, source: null, onPress: null });
-      tmp2 = jsx(importDefault(8196), { accessibilityLabel: null, source: null, onPress: null });
-      const tmp6 = importDefault(8196);
+      tmp2 = jsx(require("../../shared_components/navigator/PressableNavigatorButtonWrapper.tsx"), { accessibilityLabel: null, source: null, onPress: null });
+      const tmp6 = require("../../shared_components/navigator/PressableNavigatorButtonWrapper.tsx");
     } else {
       tmp2 = null;
     }

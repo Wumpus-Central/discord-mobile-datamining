@@ -8,7 +8,7 @@ const result = require("sortKey").fileFinishedImporting("modules/activities/useI
 export default function useIsActivityFocused(arg0) {
   const _require = arg0;
   const items = [getParticipants, participantFromServer];
-  return _require(589).useStateFromStores(items, () => {
+  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const selectedParticipant = outer1_2.getSelectedParticipant(callback);
     const currentEmbeddedActivity = outer1_3.getCurrentEmbeddedActivity();
     let tmp3 = null != selectedParticipant && null != currentEmbeddedActivity;
@@ -34,7 +34,7 @@ export const isActivityFocused = function isActivityFocused(channelId) {
   const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
   let tmp3 = null != selectedParticipant && null != currentEmbeddedActivity;
   if (tmp3) {
-    let obj = require(10560) /* sortKey */;
+    let obj = require("../calls/ChannelRTCParticipants.tsx") /* sortKey */;
     obj = { applicationId: null, instanceId: null };
     obj[0] = currentEmbeddedActivity.applicationId;
     let compositeInstanceId;

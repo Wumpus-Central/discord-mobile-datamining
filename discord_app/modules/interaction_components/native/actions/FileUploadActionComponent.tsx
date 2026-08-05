@@ -19,27 +19,27 @@ function MainAreaCanUpload(arg0) {
   let types;
   ({ minValues, maxValues } = arg0);
   ({ openFilePicker, types, maxSizeBytes } = arg0);
-  let obj = require(4180) /* formatSize */;
+  let obj = require("../../../../utils/FileSizeUtils.tsx") /* formatSize */;
   obj = { onPress: openFilePicker, icon: null, label: null, subLabel: null, start: true, end: true, arrow: true };
   obj = { IconComponent: null };
-  obj[0] = require(13789) /* FileUpIcon */.FileUpIcon;
-  obj[1] = callback(require(5315) /* TableRowInner */.TableRow.Icon, obj);
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl.format(require(1236) /* getSystemLocale */.t["/2JwTv"], { maxValues });
-  const formatSizeResult = obj.formatSize(maxSizeBytes / require(4180) /* formatSize */.BYTE_IN_KB, { useKibibytes: true, useSpace: true });
-  obj[3] = require(4506) /* flattenComponents */.getFileUploadComponentSubtitle(minValues, maxValues, types, formatSizeResult);
-  return callback(require(5315) /* TableRowInner */.TableRow, obj);
+  obj[0] = require("../../../../design/components/Icon/native/redesign/generated/FileUpIcon.tsx") /* FileUpIcon */.FileUpIcon;
+  obj[1] = callback(require("../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow.Icon, obj);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["/2JwTv"], { maxValues });
+  const formatSizeResult = obj.formatSize(maxSizeBytes / require("../../../../utils/FileSizeUtils.tsx") /* formatSize */.BYTE_IN_KB, { useKibibytes: true, useSpace: true });
+  obj[3] = require("../../InteractionComponentUtils.tsx") /* flattenComponents */.getFileUploadComponentSubtitle(minValues, maxValues, types, formatSizeResult);
+  return callback(require("../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj);
 }
 function MainAreaLimitReached() {
   let obj = { icon: null, label: null, subLabel: null, disabled: true, start: true, end: true };
   obj = { IconComponent: null };
-  obj[0] = require(4246) /* CircleCheckIcon */.CircleCheckIcon;
-  obj[0] = callback(require(5315) /* TableRowInner */.TableRow.Icon, obj);
-  const intl = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl.string(require(1236) /* getSystemLocale */.t["0PhgpK"]);
-  const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl2.string(require(1236) /* getSystemLocale */.t.HYg2Hn);
-  return callback(require(5315) /* TableRowInner */.TableRow, obj);
+  obj[0] = require("../../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx") /* CircleCheckIcon */.CircleCheckIcon;
+  obj[0] = callback(require("../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow.Icon, obj);
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["0PhgpK"]);
+  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[2] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.HYg2Hn);
+  return callback(require("../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj);
 }
 function File(upload) {
   upload = upload.upload;

@@ -7,7 +7,7 @@ import createCacheKey from "createCacheKey";
 const require = arg1;
 let closure_5 = createCacheKey.createStyles((arg0) => {
   let obj = { container: null };
-  obj = { position: "absolute", bottom: arg0 + importDefault(712).space.PX_12, left: 0, right: 0 };
+  obj = { position: "absolute", bottom: arg0 + require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, left: 0, right: 0 };
   obj[0] = obj;
   return obj;
 });

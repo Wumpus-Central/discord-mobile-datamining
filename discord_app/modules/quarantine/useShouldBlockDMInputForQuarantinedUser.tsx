@@ -7,8 +7,8 @@ const result = require("MAX_MESSAGES_ALLOWED_FOR_GREETING").fileFinishedImportin
 
 export default function useShouldBlockDMInputForQuarantinedUser(hasFlag, channel) {
   const _require = channel;
-  const showConvoStarterInDM = _require(11549).useShowConvoStarterInDM(channel);
-  _require(589);
+  const showConvoStarterInDM = _require("../messages/useShowConvoStarterInDM.tsx").useShowConvoStarterInDM(channel);
+  _require("../../../discord_common/js/packages/flux/index.tsx");
   [][0] = channel;
   let tmp4 = null != hasFlag;
   if (tmp4) {

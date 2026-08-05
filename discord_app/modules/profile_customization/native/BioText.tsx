@@ -23,7 +23,7 @@ function LinkButton(arg0) {
       callback(698).track(constants.CHANGE_LOG_CTA_CLICKED, obj);
     },
     style: tmp.link,
-    children: callback(require(4281) /* Text */.Text, obj)
+    children: callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj)
   };
   obj = { variant: "text-md/normal", color: "text-link", lineClamp, style: tmp.link, children: items };
   items = ["\n", text];

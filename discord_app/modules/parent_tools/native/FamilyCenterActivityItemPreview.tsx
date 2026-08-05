@@ -12,7 +12,7 @@ function AvatarDecorationPreviewImage(arg0) {
   let product;
   let styles;
   ({ product, styles } = arg0);
-  let obj = require(14052) /* getCollectibleTypeName */;
+  let obj = require("../FamilyCenterActivityPurchaseRowUtils.tsx") /* getCollectibleTypeName */;
   const avatarDecorationPreviewUrl = obj.getAvatarDecorationPreviewUrl(product);
   let tmp2 = null;
   if (null != avatarDecorationPreviewUrl) {
@@ -27,7 +27,7 @@ function AvatarDecorationPreviewImage(arg0) {
 }
 function NameplatePreviewImage(styles) {
   styles = styles.styles;
-  let obj = require(9309) /* getNameplateAssets */;
+  let obj = require("../../collectibles/nameplates/native/NameplateUtils.tsx") /* getNameplateAssets */;
   const staticImageUrl = obj.getNameplateAssets(styles.nameplateData).staticImageUrl;
   let tmp = null;
   if (null != staticImageUrl) {
@@ -47,7 +47,7 @@ function ProfileEffectPreviewImage(arg0) {
   let product;
   let styles;
   ({ product, styles } = arg0);
-  let obj = require(14052) /* getCollectibleTypeName */;
+  let obj = require("../FamilyCenterActivityPurchaseRowUtils.tsx") /* getCollectibleTypeName */;
   const profileEffectPreviewUrl = obj.getProfileEffectPreviewUrl(product);
   let tmp2 = null;
   if (null != profileEffectPreviewUrl) {
@@ -64,15 +64,15 @@ function ProfileFramePreviewImage(arg0) {
   let product;
   let styles;
   ({ product, styles } = arg0);
-  const tmp3 = importDefault(8719)(product.skuId, "FamilyCenterActivityItemPreview");
+  const tmp3 = require("../../collectibles/profile_frames/hooks/useMaybeFetchProfileFrame.tsx")(product.skuId, "FamilyCenterActivityItemPreview");
   let tmp4 = null;
   if (null != tmp3) {
     let obj = { style: null, children: null };
     obj[0] = styles.profileFrameContainer;
     obj = { profileFrame: null, previewWidth: null, previewHeight: null, profileBackgroundColor: null };
     obj[0] = tmp3;
-    obj[1] = require(14052) /* getCollectibleTypeName */.PREVIEW_SIZE * closure_5;
-    obj[2] = require(14052) /* getCollectibleTypeName */.PREVIEW_SIZE;
+    obj[1] = require("../FamilyCenterActivityPurchaseRowUtils.tsx") /* getCollectibleTypeName */.PREVIEW_SIZE * closure_5;
+    obj[2] = require("../FamilyCenterActivityPurchaseRowUtils.tsx") /* getCollectibleTypeName */.PREVIEW_SIZE;
     obj[3] = tmp(712).colors.BACKGROUND_BASE_LOW;
     obj[1] = jsx(tmp(9313), { profileFrame: null, previewWidth: null, previewHeight: null, profileBackgroundColor: null });
     tmp4 = <closure_3 profileFrame={null} previewWidth={null} previewHeight={null} profileBackgroundColor={null} />;
@@ -89,7 +89,7 @@ function SubscriptionPreview(arg0) {
     obj[0] = styles.purchasePlaceholder;
     obj = { size: "custom", style: null };
     obj[1] = { width: 20, height: 20 };
-    obj[1] = jsx(require(11438) /* ShopIcon */.ShopIcon, { size: "custom", style: null });
+    obj[1] = jsx(require("../../../design/components/Icon/native/redesign/generated/ShopIcon.tsx") /* ShopIcon */.ShopIcon, { size: "custom", style: null });
     return <closure_3 size="custom" style={null} />;
   } else {
     const obj1 = { style: null, children: null };
@@ -114,11 +114,11 @@ function CollectiblePreview(arg0) {
     obj[0] = styles.purchasePlaceholder;
     obj = { size: "custom", style: null };
     obj[1] = { width: 20, height: 20 };
-    obj[1] = jsx(require(11438) /* ShopIcon */.ShopIcon, { size: "custom", style: null });
+    obj[1] = jsx(require("../../../design/components/Icon/native/redesign/generated/ShopIcon.tsx") /* ShopIcon */.ShopIcon, { size: "custom", style: null });
     return <closure_3 size="custom" style={null} />;
   } else {
     const type = product.type;
-    if (require(1901) /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION === type) {
+    if (require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION === type) {
       const obj1 = { product: null, styles: null };
       obj1[0] = product;
       obj1[1] = styles;

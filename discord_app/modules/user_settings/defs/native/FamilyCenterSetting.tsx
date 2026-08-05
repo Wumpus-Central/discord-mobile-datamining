@@ -6,15 +6,15 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(importDefault(2285).RZqaJn);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../parent_tools/FamilyCenter.messages.js").RZqaJn);
   },
   parent: null,
   IconComponent: require("GroupIcon").GroupIcon,
   useTrailing: function useFamilyCenterTrailing() {
-    let obj = require(14015) /* useIsParentalConsentBannerActive */;
+    let obj = require("../../../parent_tools/useIsParentalConsentBannerActive.tsx") /* useIsParentalConsentBannerActive */;
     const isParentalConsentBannerActive = obj.useIsParentalConsentBannerActive();
-    const parentalConsentWarning = require(14016) /* useParentalConsentWarning */.useParentalConsentWarning();
+    const parentalConsentWarning = require("../../../parent_tools/useParentalConsentWarning.tsx") /* useParentalConsentWarning */.useParentalConsentWarning();
     let daysRemaining;
     if (parentalConsentWarning != null) {
       daysRemaining = parentalConsentWarning.daysRemaining;
@@ -29,9 +29,9 @@ createToggle = {
         tmp6 = null;
         if (daysRemaining >= 0) {
           obj = { size: "sm", color: null, accessible: true, accessibilityLabel: null };
-          obj[1] = importDefault(712).colors.ICON_FEEDBACK_WARNING;
+          obj[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.ICON_FEEDBACK_WARNING;
           const intl = tmp(1236).intl;
-          obj[3] = intl.string(importDefault(2285).wucWfE);
+          obj[3] = intl.string(require("../../../parent_tools/FamilyCenter.messages.js").wucWfE);
           tmp6 = jsx(tmp(7772).WarningIcon, { size: "sm", color: null, accessible: true, accessibilityLabel: null });
         }
       }
@@ -43,7 +43,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.FAMILY_CENTER,
   getComponent() {
-    return require(14019) /* FamilyCenterLoading */.default;
+    return require("../../family_center/native/UserSettingsFamilyCenter.tsx") /* FamilyCenterLoading */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

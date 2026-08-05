@@ -22,7 +22,7 @@ export default function ExpressionPickerCategories(arg0) {
   let style;
   ({ children, portalHostName, style } = arg0);
   const tmp = createCacheKey();
-  const tmp4 = importDefault(1348)("ExpressionPickerCategories");
+  const tmp4 = require("../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("ExpressionPickerCategories");
   let obj = { hostName: portalHostName, children: null };
   const items = [tmp.container, , ];
   let containerRefresh = null;
@@ -34,10 +34,10 @@ export default function ExpressionPickerCategories(arg0) {
   items[2] = style;
   let tmp5Result = null;
   if (!tmp4) {
-    tmp5Result = tmp5(importDefault(8695), {});
+    tmp5Result = tmp5(require("ExpressionPickerCategoriesBackdrop.tsx"), {});
   }
   const items1 = [tmp5Result, children];
   obj[1] = items1;
   obj[1] = closure_5(View, obj);
-  return closure_4(require(4156) /* Portal */.Portal, obj);
+  return closure_4(require("../../../../../_runtime/04156_Portal.js") /* Portal */.Portal, obj);
 };

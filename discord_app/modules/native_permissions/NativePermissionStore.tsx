@@ -44,7 +44,7 @@ prototype["handleSetNativePermission"] = function handleSetNativePermission(arg0
   let NONE = permissionStates[permissionType];
   permissionStates[permissionType] = state;
   if (NONE !== state) {
-    let obj = importDefault(698);
+    let obj = require("../../utils/AnalyticsUtils.tsx");
     obj = { type: null, action: null, previous_action: null };
     obj[0] = permissionType;
     obj[1] = state;

@@ -19,11 +19,11 @@ let unpackModuleId;
 const require = arg1;
 function compareUserItems(user, user2) {
   if (user.user.id === user2.user.id) {
-    let compareResult = importDefault(11).compare(user.applicationId, user2.applicationId);
-    const obj2 = importDefault(11);
+    let compareResult = require("../../../../../utils/SnowflakeUtils.tsx").compare(user.applicationId, user2.applicationId);
+    const obj2 = require("../../../../../utils/SnowflakeUtils.tsx");
   } else {
-    compareResult = importDefault(11).compare(user.user.id, user2.user.id);
-    const obj = importDefault(11);
+    compareResult = require("../../../../../utils/SnowflakeUtils.tsx").compare(user.user.id, user2.user.id);
+    const obj = require("../../../../../utils/SnowflakeUtils.tsx");
   }
   return compareResult;
 }

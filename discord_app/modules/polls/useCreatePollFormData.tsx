@@ -81,7 +81,7 @@ export default function useCreatePollCommonData(id, arg1, arg2, initialQuestion)
     tmp15 = 0 === found1.length;
   }
   const tmpResult2 = first(obj.useState({}), 2);
-  const tmpResult4 = first(importDefault(11500)(importDefault(10197).createPoll), 2);
+  const tmpResult4 = first(require("../../hooks/useRequest.tsx")(require("PollsActionCreators.tsx").createPoll), 2);
   const first4 = tmpResult4[0];
   const loading = tmp20.loading;
   let closure_16 = tmp21;

@@ -98,7 +98,7 @@ export const getFirstRouteFor = function getFirstRouteFor(getSections) {
       return constants.MEMBER_SAFETY;
     }
   }
-  let SECTION_INDEX_UNCATEGORIZED_CHANNELS = require(6896) /* computeSubtitle */.SECTION_INDEX_UNCATEGORIZED_CHANNELS;
+  let SECTION_INDEX_UNCATEGORIZED_CHANNELS = require("../guild_sidebar/ChannelListState.tsx") /* computeSubtitle */.SECTION_INDEX_UNCATEGORIZED_CHANNELS;
   if (SECTION_INDEX_UNCATEGORIZED_CHANNELS < getSections.voiceChannelsSectionNumber) {
     while (true) {
       let tmp6 = SECTION_INDEX_UNCATEGORIZED_CHANNELS;
@@ -123,10 +123,10 @@ export const clearRecentChannels = function clearRecentChannels(closure_0, closu
   if (arg2 === undefined) {
     tmp = null;
   }
-  require(10947) /* _bulkClearRecents */.bulkClearRecents(closure_0, closure_1);
-  const obj = require(10947) /* _bulkClearRecents */;
+  require("../recent_channels/RecentChannelsActionCreators.tsx") /* _bulkClearRecents */.bulkClearRecents(closure_0, closure_1);
+  const obj = require("../recent_channels/RecentChannelsActionCreators.tsx") /* _bulkClearRecents */;
   const tmp2 = require;
-  require(5221) /* ack */.bulkAck(closure_1.map((channelId) => ({ channelId, readStateType: constants.CHANNEL, messageId: generateOldThreadCutoff.lastMessageId(channelId) })));
+  require("../../actions/ReadStateActionCreators.tsx") /* ack */.bulkAck(closure_1.map((channelId) => ({ channelId, readStateType: constants.CHANNEL, messageId: generateOldThreadCutoff.lastMessageId(channelId) })));
   if (null != tmp) {
     tmp2(1222).transitionTo(closure_9.CHANNEL(closure_0, tmp));
     const tmp2Result = tmp2(1222);
@@ -136,11 +136,11 @@ export const useChannelBrowserSections = function useChannelBrowserSections(guil
   const _require = guildId;
   let closure_1 = filterCategoriesByQuery;
   const dependencyMap = arg2;
-  let obj = _require(4101);
-  let result = obj.useIsDismissibleContentDismissed_UNSAFE(_require(1358).DismissibleContent.CHANNEL_BROWSER_NUX);
+  let obj = _require("../dismissible_content/DismissibleContentUnsafeUtils.tsx");
+  let result = obj.useIsDismissibleContentDismissed_UNSAFE(_require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleContent.CHANNEL_BROWSER_NUX);
   const items = [ensureGuildLoaded];
   const items1 = [guildId];
-  let DismissibleContent = _require(589).useStateFromStoresObject(items, () => {
+  let DismissibleContent = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
     const obj = {};
     const mutableGuildChannelsForGuild = outer1_4.getMutableGuildChannelsForGuild(closure_0);
     for (const key10009 in mutableGuildChannelsForGuild) {
@@ -188,7 +188,7 @@ export const useChannelBrowserSections = function useChannelBrowserSections(guil
 export const useChannelBrowserChannelCount = function useChannelBrowserChannelCount(arg0) {
   const _require = arg0;
   const items = [setIndex];
-  const stateFromStores = _require(589).useStateFromStores(items, () => outer1_5.getCategories(closure_0));
+  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_5.getCategories(closure_0));
   let sum = stateFromStores._categories[stateFromStores._categories.length - 1];
   if (null == sum) {
     return 0;
@@ -212,14 +212,14 @@ export const useChannelBrowserChannelCount = function useChannelBrowserChannelCo
   }
 };
 export const getActiveAgoTimestamp = function getActiveAgoTimestamp(id) {
-  const intl = require(1236) /* getSystemLocale */.intl;
-  let obj = importDefault(11);
+  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  let obj = require("../../utils/SnowflakeUtils.tsx");
   let lastMessageIdResult = generateOldThreadCutoff.lastMessageId(id);
   if (lastMessageIdResult == null) {
     lastMessageIdResult = id;
   }
   obj = { timeAgo: null };
-  const tmp = importDefault(3867);
-  obj[0] = importDefault(3867)(obj.extractTimestamp(lastMessageIdResult)).fromNow();
-  return intl.formatToPlainString(require(1236) /* getSystemLocale */.t["8N0BHR"], obj);
+  const tmp = require("../../../_runtime/03867_t.js");
+  obj[0] = require("../../../_runtime/03867_t.js")(obj.extractTimestamp(lastMessageIdResult)).fromNow();
+  return intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t["8N0BHR"], obj);
 };

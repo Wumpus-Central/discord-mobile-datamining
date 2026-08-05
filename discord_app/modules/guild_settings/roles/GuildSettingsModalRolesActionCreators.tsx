@@ -66,15 +66,15 @@ let result = require("sendRequest").fileFinishedImporting("modules/guild_setting
 
 export default {
   startReordering(guildId) {
-    let obj = importDefault(709);
+    let obj = require("../../../Dispatcher.tsx");
     obj = { type: "GUILD_SETTINGS_MODAL_ROLES_START_REORDER", guildId };
     obj.dispatch(obj);
   },
   stopReordering() {
-    importDefault(709).wait(() => callback(table[4]).dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_STOP_REORDER" }));
+    require("../../../Dispatcher.tsx").wait(() => callback(table[4]).dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_STOP_REORDER" }));
   },
   updateRoleOrder(arg0, to) {
-    let obj = importDefault(709);
+    let obj = require("../../../Dispatcher.tsx");
     obj = { type: "GUILD_SETTINGS_MODAL_ROLES_EDIT_ORDER", from: arg0, to };
     obj.dispatch(obj);
   },
@@ -82,25 +82,25 @@ export default {
     return updateGuildRole({ guildId, roleId: id.id, name: id.name, permissions: id.permissions, color: id.color, hoist, mentionable });
   },
   startEditingPermissions(guildId, roleId) {
-    let obj = importDefault(709);
+    let obj = require("../../../Dispatcher.tsx");
     obj = { type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_START_EDITING", guildId, roleId };
     obj.dispatch(obj);
   },
   stopEditingPermissions() {
-    importDefault(709).dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_STOP_EDITING" });
+    require("../../../Dispatcher.tsx").dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_STOP_EDITING" });
   },
   allowPermission(permission) {
-    let obj = importDefault(709);
+    let obj = require("../../../Dispatcher.tsx");
     obj = { type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSION_ALLOW", permission };
     obj.dispatch(obj);
   },
   denyPermission(permission) {
-    let obj = importDefault(709);
+    let obj = require("../../../Dispatcher.tsx");
     obj = { type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSION_DENY", permission };
     obj.dispatch(obj);
   },
   cancelPermissionChanges() {
-    importDefault(709).dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_CANCEL" });
+    require("../../../Dispatcher.tsx").dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_CANCEL" });
   },
   savePermissionChanges(arg0) {
     let color;
@@ -111,8 +111,8 @@ export default {
     let permissions;
     let roleId;
     ({ guildId, roleId, name, permissions, color, hoist, mentionable } = arg0);
-    importDefault(709).dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_SUBMITTING" });
-    const obj = importDefault(709);
+    require("../../../Dispatcher.tsx").dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_SUBMITTING" });
+    const obj = require("../../../Dispatcher.tsx");
     updateGuildRole({ guildId, roleId, name, permissions, color, hoist, mentionable }).then(() => callback(709).dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_SUBMITTING_SUCCESS" }), () => callback(709).dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_SUBMITTING_FAILURE" }));
   }
 };

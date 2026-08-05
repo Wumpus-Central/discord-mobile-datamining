@@ -5,20 +5,20 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.e3TR1b);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.e3TR1b);
   },
   parent: require("MobileSetting").MobileSetting.ACCESSIBILITY,
   useValue: function useReducedMotionSettingValue() {
     const items = [maybeApplyNoTextColorForLightCustomTheme];
-    return require(589) /* initialize */.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   },
   onValueChange: function onReducedMotionSettingValueChange(arg0) {
     let str = "no-preference";
     if (arg0) {
       str = "reduce";
     }
-    const result = require(13617) /* setFontSize */.setPrefersReducedMotion(str);
+    const result = require("../../../a11y/AccessibilityActionCreators.tsx") /* setFontSize */.setPrefersReducedMotion(str);
   }
 };
 createToggle = createToggle.createToggle(createToggle);

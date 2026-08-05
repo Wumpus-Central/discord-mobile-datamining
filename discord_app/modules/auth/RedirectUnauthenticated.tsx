@@ -11,17 +11,17 @@ export default function RedirectUnauthenticated() {
   if (CONFERENCE_MODE_ENABLED) {
     let to = Routes.REGISTER;
   } else {
-    to = require(507) /* getAuthenticationPath */.getLoginPath(tmp4, false);
-    const tmp2Result = require(507) /* getAuthenticationPath */;
+    to = require("../../../discord_common/js/shared/utils/PathUtils.tsx") /* getAuthenticationPath */.getLoginPath(tmp4, false);
+    const tmp2Result = require("../../../discord_common/js/shared/utils/PathUtils.tsx") /* getAuthenticationPath */;
   }
-  return jsx(require(4113) /* _extends */.Redirect, { to });
+  return jsx(require("../../../_runtime/metro/04113__extends.js") /* _extends */.Redirect, { to });
 };
 export const getRedirectPath = function getRedirectPath() {
   if (CONFERENCE_MODE_ENABLED) {
     let REGISTER = Routes.REGISTER;
   } else {
-    REGISTER = require(507) /* getAuthenticationPath */.getLoginPath(tmp, false);
-    const obj = require(507) /* getAuthenticationPath */;
+    REGISTER = require("../../../discord_common/js/shared/utils/PathUtils.tsx") /* getAuthenticationPath */.getLoginPath(tmp, false);
+    const obj = require("../../../discord_common/js/shared/utils/PathUtils.tsx") /* getAuthenticationPath */;
   }
   return REGISTER;
 };

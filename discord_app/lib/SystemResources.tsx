@@ -24,7 +24,7 @@ prototype["getStats"] = function getStats() {
   const report = cpuHistogram.getReport();
   const memoryHistogram = this.memoryHistogram;
   const report1 = memoryHistogram.getReport();
-  let obj = importDefault(7055);
+  let obj = require("../utils/ProcessUtils.native.tsx");
   const cumulativeCPUUsage = obj.getCumulativeCPUUsage();
   let result;
   if (null != this.startCPU) {
@@ -47,10 +47,10 @@ prototype["getStats"] = function getStats() {
 };
 prototype["takeSample"] = function takeSample() {
   const self = this;
-  const cumulativeCPUUsage = importDefault(7055).getCumulativeCPUUsage();
-  const obj = importDefault(7055);
+  const cumulativeCPUUsage = require("../utils/ProcessUtils.native.tsx").getCumulativeCPUUsage();
+  const obj = require("../utils/ProcessUtils.native.tsx");
   const tmp = importDefault;
-  const currentMemoryUsageKB = importDefault(7055).getCurrentMemoryUsageKB();
+  const currentMemoryUsageKB = require("../utils/ProcessUtils.native.tsx").getCurrentMemoryUsageKB();
   if (null != cumulativeCPUUsage) {
     let flag = true;
     if (null != self.lastCPU) {

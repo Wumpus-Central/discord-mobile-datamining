@@ -420,7 +420,7 @@ export default function ReactActionSheet(arg0) {
     obj = {};
     const merged1 = Object.assign(merged);
     obj[0] = callback2(ReactActionSheetBase, obj);
-    return callback2(require(15442) /* context */.ICYMIContextProvider, obj);
+    return callback2(require("../ICYMIContext.tsx") /* context */.ICYMIContextProvider, obj);
   }
 };
 export const getStatusReplyContent = function getStatusReplyContent(reply) {
@@ -433,9 +433,9 @@ export const getStatusReplyContent = function getStatusReplyContent(reply) {
   if (isForward === undefined) {
     isForward = false;
   }
-  const intl = require(1236) /* getSystemLocale */.intl;
+  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
   const formatToPlainString = intl.formatToPlainString;
-  const t = require(1236) /* getSystemLocale */.t;
+  const t = require("../../../../intl/index.native.tsx") /* getSystemLocale */.t;
   if (isForward) {
     let obj = { username: null };
     obj[0] = username;

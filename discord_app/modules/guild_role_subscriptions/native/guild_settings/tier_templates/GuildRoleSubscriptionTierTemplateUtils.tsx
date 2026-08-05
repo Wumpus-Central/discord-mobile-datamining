@@ -2,7 +2,7 @@
 const result = require("VoiceLockIcon").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateUtils.tsx");
 
 export const getPrivateChannelIconComponent = function getPrivateChannelIconComponent(type) {
-  if (require(692) /* set */.ChannelTypes.GUILD_TEXT === type) {
+  if (require("../../../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx") /* set */.ChannelTypes.GUILD_TEXT === type) {
     return tmp(4788).TextLockIcon;
   } else if (tmp(692).ChannelTypes.GUILD_VOICE === type) {
     return tmp(4807).VoiceLockIcon;

@@ -33,20 +33,20 @@ function AppRowLabel(renderedName) {
     obj = { style: null, variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: null };
     obj[0] = tmp.appRowLabelWithPromotedTextContainer;
     obj[4] = renderedName;
-    const items = [callback2(require(4281) /* Text */.Text, obj), ];
+    const items = [callback2(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
     const obj1 = { style: null, children: null };
     obj1[0] = tmp.promotedLabel;
     const obj2 = { variant: "text-xxs/semibold", color: "text-muted", children: null };
-    const intl = require(1236) /* getSystemLocale */.intl;
-    obj2[2] = intl.string(require(1236) /* getSystemLocale */.t["/eVltv"]);
-    obj1[1] = callback2(require(4281) /* Text */.Text, obj2);
+    const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    obj2[2] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["/eVltv"]);
+    obj1[1] = callback2(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
     items[1] = callback2(closure_6, obj1);
     obj[1] = items;
     let tmp5 = callback3(closure_6, obj);
   } else {
     obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: null };
     obj[3] = renderedName;
-    tmp5 = callback2(require(4281) /* Text */.Text, obj);
+    tmp5 = callback2(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
   }
   return tmp5;
 }
@@ -132,7 +132,7 @@ function AppRow(isLastRow) {
   if (flag === undefined) {
     flag = false;
   }
-  let obj = require(11350) /* handleApplicationSelected */;
+  let obj = require("../../AppLauncherNativeUtils.tsx") /* handleApplicationSelected */;
   obj = { application: section.application, iconSource: obj.getAppLauncherIconSource(section.application), onPress: isLastRow.onPress, isFirstRow, isLastRow: flag };
   return callback2(BaseAppRow, obj);
 }
@@ -480,7 +480,7 @@ function RecommendationItem(onPress) {
   return closure_20(sectionName(application[32]).PressableScale, obj3);
 }
 function Divider() {
-  const rect = importDefault(1581)();
+  const rect = require("../../../../safe_area/useSafeAreaInsets.native.tsx")();
   const style = [createCacheKey().divider, { marginLeft: -DEFAULT_CONTENT_PADDING - rect.left, marginRight: -DEFAULT_CONTENT_PADDING - rect.right }];
   return callback2(closure_6, { style });
 }
@@ -494,13 +494,13 @@ function RecommendationSectionHeader(arg0) {
     obj = { marginTop: 24 };
   }
   style[1] = obj;
-  return closure_19(require(4281) /* Text */.Text, { accessibilityRole: "header", variant: "heading-lg/bold", color: "mobile-text-heading-primary", style, children });
+  return closure_19(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { accessibilityRole: "header", variant: "heading-lg/bold", color: "mobile-text-heading-primary", style, children });
 }
 function getRecommendationItemsWithViewAll(arr) {
   const _require = arg1;
   let COLLAPSED_LIST_ITEM_MAX = arg3;
   if (arg3 === undefined) {
-    COLLAPSED_LIST_ITEM_MAX = _require(11407).COLLAPSED_LIST_ITEM_MAX;
+    COLLAPSED_LIST_ITEM_MAX = _require("../../base_components/ExpandableList.tsx").COLLAPSED_LIST_ITEM_MAX;
   }
   const importDefault = tmp3;
   let bound;
@@ -514,7 +514,7 @@ function getRecommendationItemsWithViewAll(arr) {
     dependencyMap = tmp12;
     items = [];
     let obj = { type: null, section: null, sectionName: null, numItems: null, numVisibleItems: null };
-    obj[0] = _require(11387).AppLauncherHomeListItemType.RECOMMENDATION_SECTION_HEADER;
+    obj[0] = _require("AppLauncherHomeTypes.tsx").AppLauncherHomeListItemType.RECOMMENDATION_SECTION_HEADER;
     obj[1] = arg2;
     obj[2] = arg1;
     obj[3] = length;
@@ -535,7 +535,7 @@ function getRecommendationItemsWithViewAll(arr) {
     });
     if (bound < length) {
       obj = { type: null, applications: null, promotedApplicationIds: null, sectionName: null, sectionOverallPosition: null, title: null };
-      obj[0] = _require(11387).AppLauncherHomeListItemType.VIEW_ALL;
+      obj[0] = _require("AppLauncherHomeTypes.tsx").AppLauncherHomeListItemType.VIEW_ALL;
       obj[1] = arr.map((application) => application.application);
       const _Set = Set;
       const set = new Set();

@@ -9,7 +9,7 @@ let result = require("initialize").fileFinishedImporting("modules/multi_account/
 
 export const useMultiAccountUsers = function useMultiAccountUsers() {
   let items = [initialize, mergeGuildAvatar];
-  const stateFromStoresObject = require(589) /* initialize */.useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStoresObject(items, () => {
     let obj = users;
     users = users.getUsers();
     currentUser = currentUser.getCurrentUser();

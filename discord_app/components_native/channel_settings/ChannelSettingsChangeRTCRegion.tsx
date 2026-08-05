@@ -81,7 +81,7 @@ prototype["handleSetRegion"] = function handleSetRegion(arg0) {
   });
 };
 prototype["renderRegion"] = function renderRegion(label) {
-  return jsx(require(7794) /* TableRadioRow */.TableRadioRow, { label: label.name, value: label.id }, label.id);
+  return jsx(require("../../design/components/TableRow/native/TableRadioRow.native.tsx") /* TableRadioRow */.TableRadioRow, { label: label.name, value: label.id }, label.id);
 };
 prototype["renderRegions"] = function renderRegions() {
   const self = this;
@@ -99,7 +99,7 @@ prototype["renderRegions"] = function renderRegions() {
 prototype["render"] = function render() {
   const obj = { style: createCacheKey(this.context).form, children: null };
   obj[1] = this.renderRegions();
-  return jsx(require(7777) /* Form */.Form, { style: createCacheKey(this.context).form, children: null });
+  return jsx(require("../../design/void/Form/native/index.tsx") /* Form */.Form, { style: createCacheKey(this.context).form, children: null });
 };
 ChannelSettingsChangeRTCRegion.contextType = require("ManaContext").ThemeContext;
 const result = require("ensureGuildLoaded").fileFinishedImporting("components_native/channel_settings/ChannelSettingsChangeRTCRegion.tsx");
@@ -108,6 +108,6 @@ export default function ConnectedChannelSettingsChangeRTCRegion(channelId) {
   channelId = channelId.channelId;
   const items = [ensureGuildLoaded];
   const channel = channelId(589).useStateFromStores(items, () => outer1_4.getChannel(channelId));
-  importDefault(38)(null != channel, "ConnectedChannelSettingsChangeRTCRegion: channel cannot be undefined");
+  require("../../../_runtime/metro/00038__.js")(null != channel, "ConnectedChannelSettingsChangeRTCRegion: channel cannot be undefined");
   return <ChannelSettingsChangeRTCRegion channel={channel} />;
 };

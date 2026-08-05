@@ -5,18 +5,18 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(require(1236) /* getSystemLocale */.t.ix8XIj);
+    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.ix8XIj);
   },
   parent: require("MobileSetting").MobileSetting.CHAT,
   useValue: function useDataSavingModeSettingValue() {
     const items = [CHANNEL_SIDEBAR_WIDTH];
-    return require(589) /* initialize */.useStateFromStores(items, () => dataSavingMode.dataSavingMode);
+    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => dataSavingMode.dataSavingMode);
   },
   onValueChange: function onDataSavingModeSettingValueChange(arg0) {
-    let obj = require(14542) /* UserSettingsText */;
+    let obj = require("../../chat/native/UserSettingsText.tsx") /* UserSettingsText */;
     obj = { videoUploadQuality: CHANNEL_SIDEBAR_WIDTH.videoUploadQuality, viewImageDescriptions: null, lowQualityImageMode: null, dataSavingMode: null };
-    const ViewImageDescriptions = require(3958) /* explicitContentFromProto */.ViewImageDescriptions;
+    const ViewImageDescriptions = require("../../UserSettings.tsx") /* explicitContentFromProto */.ViewImageDescriptions;
     obj[1] = ViewImageDescriptions.getSetting();
     obj[2] = CHANNEL_SIDEBAR_WIDTH.lowQualityImageMode;
     obj[3] = arg0;

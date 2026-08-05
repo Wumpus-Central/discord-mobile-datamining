@@ -22,7 +22,7 @@ const memoResult = importAllResult.memo(() => {
     }
   });
   let items = [handleThemeChange, isSyncedModeThemesEnabled];
-  const stateFromStoresObject = _require(647).useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = _require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresObject(items, () => {
     const obj = { theme: theme.theme, gradientPresetId: null };
     gradientPreset = gradientPreset.gradientPreset;
     let str;
@@ -40,8 +40,8 @@ const memoResult = importAllResult.memo(() => {
   ({ theme, gradientPresetId } = stateFromStoresObject);
   const tmp3 = callback();
   _require = tmp3;
-  let obj = _require(647);
-  nativeStackNavigation = _require(1480).useNativeStackNavigation();
+  let obj = _require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx");
+  nativeStackNavigation = _require("../../../../design/components/Navigator/native/useNavigation.native.tsx").useNativeStackNavigation();
   let items1 = [nativeStackNavigation, , , , ];
   ({ fontScale: arr2[1], isClassicChatFontScaleEnabled: arr2[2], persistedFontScale: arr2[3], persistedIsClassicChatFontScaleEnabled: arr2[4] } = tmp3);
   const effect = importAllResult.useEffect(() => {
@@ -104,7 +104,7 @@ const memoResult = importAllResult.memo(() => {
     obj[0] = items1;
     return obj.createList(obj);
   }, []);
-  let obj2 = _require(1480);
+  let obj2 = _require("../../../../design/components/Navigator/native/useNavigation.native.tsx");
   return jsx(nativeStackNavigation(13793), { node }, "" + theme + "-" + gradientPresetId);
 });
 const result = require("initialize").fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceScreen.tsx");

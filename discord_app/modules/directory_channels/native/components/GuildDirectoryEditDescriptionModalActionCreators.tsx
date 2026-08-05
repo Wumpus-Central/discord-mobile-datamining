@@ -4,9 +4,9 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/direct
 
 export default {
   open(closure_0) {
-    importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(11599, dependencyMap.paths), closure_0, c3);
+    require("../../../../actions/ModalActionCreators.tsx").pushLazy(require("../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(11599, dependencyMap.paths), closure_0, c3);
   },
   close() {
-    importDefault(4490).popWithKey(c3);
+    require("../../../../actions/ModalActionCreators.tsx").popWithKey(c3);
   }
 };

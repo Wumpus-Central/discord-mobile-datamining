@@ -4,7 +4,7 @@ import { ProtoAudioSettingsContextTypes as closure_2 } from "MAX_FAVORITES";
 let result = require("AudioSettingsDefaultVolumes").fileFinishedImporting("modules/user_settings/voice/AudioSettingsUtils.tsx");
 
 export const snapVolumeToDefault = function snapVolumeToDefault(USER, DEFAULT) {
-  if (DEFAULT === require(4381) /* BaseConnectionEvent */.MediaEngineContextTypes.STREAM) {
+  if (DEFAULT === require("../../../../discord_common/js/packages/media-engine/index.tsx") /* BaseConnectionEvent */.MediaEngineContextTypes.STREAM) {
     USER = tmp(9080).AudioSettingsDefaultVolumes.STREAM;
   } else {
     USER = tmp(9080).AudioSettingsDefaultVolumes.USER;
@@ -19,7 +19,7 @@ export const snapVolumeToDefault = function snapVolumeToDefault(USER, DEFAULT) {
   return tmp3;
 };
 export const coerceAudioContextForProto = function coerceAudioContextForProto(first) {
-  if (require(4381) /* BaseConnectionEvent */.MediaEngineContextTypes.DEFAULT === first) {
+  if (require("../../../../discord_common/js/packages/media-engine/index.tsx") /* BaseConnectionEvent */.MediaEngineContextTypes.DEFAULT === first) {
     return constants.USER;
   } else if (tmp(4381).MediaEngineContextTypes.STREAM === first) {
     return constants.STREAM;

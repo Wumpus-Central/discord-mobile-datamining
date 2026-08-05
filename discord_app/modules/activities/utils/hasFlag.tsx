@@ -12,8 +12,8 @@ export default function hasFlag(flags) {
       if (num == null) {
         num = 0;
       }
-      hasFlagResult = require(1384) /* hasFlag */.hasFlag(num, arg1);
-      const obj = require(1384) /* hasFlag */;
+      hasFlagResult = require("../../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(num, arg1);
+      const obj = require("../../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
     }
     tmp = hasFlagResult;
   }

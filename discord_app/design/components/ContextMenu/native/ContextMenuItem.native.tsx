@@ -11,16 +11,16 @@ const require = arg1;
 let closure_6 = require("module_4146").createAnimatedComponent(require("get ActivityIndicator").Pressable);
 let closure_7 = createCacheKey.createStyles((arg0) => {
   let obj = { container: null, containerRefresh: null, roundedTop: null, roundedBottom: null, border: null, pressed: null, icon: null, label: null, trailingIndicator: null };
-  obj = { padding: require(8410) /* CONTEXT_MENU_LONG_PRESS_DURATION_MS */.CONTEXT_MENU_ITEM_PADDING, minHeight: require(8410) /* CONTEXT_MENU_LONG_PRESS_DURATION_MS */.CONTEXT_MENU_ITEM_BASE_HEIGHT, flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: 8 };
+  obj = { padding: require("ContextMenuConstants.native.tsx") /* CONTEXT_MENU_LONG_PRESS_DURATION_MS */.CONTEXT_MENU_ITEM_PADDING, minHeight: require("ContextMenuConstants.native.tsx") /* CONTEXT_MENU_LONG_PRESS_DURATION_MS */.CONTEXT_MENU_ITEM_BASE_HEIGHT, flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: 8 };
   obj[0] = obj;
   obj[1] = { justifyContent: "flex-start" };
-  obj = { borderTopLeftRadius: importDefault(712).radii.lg, borderTopRightRadius: importDefault(712).radii.lg };
+  obj = { borderTopLeftRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, borderTopRightRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg };
   obj[2] = obj;
-  obj[3] = { borderBottomLeftRadius: importDefault(712).radii.lg, borderBottomRightRadius: importDefault(712).radii.lg };
-  const obj1 = { borderBottomLeftRadius: importDefault(712).radii.lg, borderBottomRightRadius: importDefault(712).radii.lg };
-  obj[4] = { borderBottomWidth: 1, borderBottomColor: importDefault(712).colors.BORDER_SUBTLE };
-  const obj2 = { borderBottomWidth: 1, borderBottomColor: importDefault(712).colors.BORDER_SUBTLE };
-  obj[5] = { backgroundColor: importDefault(712).colors.BACKGROUND_MOD_SUBTLE };
+  obj[3] = { borderBottomLeftRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, borderBottomRightRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg };
+  const obj1 = { borderBottomLeftRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, borderBottomRightRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg };
+  obj[4] = { borderBottomWidth: 1, borderBottomColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE };
+  const obj2 = { borderBottomWidth: 1, borderBottomColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE };
+  obj[5] = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_SUBTLE };
   if ("destructive" === arg0) {
     let TEXT_STRONG = tmp2(712).colors.TEXT_FEEDBACK_CRITICAL;
   } else {

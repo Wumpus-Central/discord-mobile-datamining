@@ -10,8 +10,8 @@ export const canViewPotentiallyNSFWChannel = function canViewPotentiallyNSFWChan
   const channel = store.getChannel(channel_id);
   let tmp3 = null != currentUser && null != channel;
   if (tmp3) {
-    tmp3 = !require(4498) /* shouldShowAgeGateForVoiceChannel */.isChannelContentGated(channel);
-    const obj = require(4498) /* shouldShowAgeGateForVoiceChannel */;
+    tmp3 = !require("../age_gate/AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */.isChannelContentGated(channel);
+    const obj = require("../age_gate/AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */;
   }
   return tmp3;
 };

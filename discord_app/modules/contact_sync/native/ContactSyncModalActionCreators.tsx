@@ -804,12 +804,12 @@ export const bulkAddFriendSuggestions = function bulkAddFriendSuggestions(arg0, 
   return applyArgumentsResult;
 };
 export const goBackToLanding = function goBackToLanding(closure_1) {
-  require(11949) /* Steps */.trackFlowStep(require(11949) /* Steps */.Steps.LANDING, false, true);
+  require("ContactSyncAnalyticsUtils.tsx") /* Steps */.trackFlowStep(require("ContactSyncAnalyticsUtils.tsx") /* Steps */.Steps.LANDING, false, true);
   closure_1.pop(closure_1.getState().routes.length - 1);
 };
 export const submitPhone = function submitPhone(arg0, closure_0) {
   callback2(arg0);
-  require(11949) /* Steps */.trackFlowStep(require(11949) /* Steps */.Steps.VERIFY_PHONE_NUMBER, false, false);
+  require("ContactSyncAnalyticsUtils.tsx") /* Steps */.trackFlowStep(require("ContactSyncAnalyticsUtils.tsx") /* Steps */.Steps.VERIFY_PHONE_NUMBER, false, false);
   closure_0.navigate(constants2.VERIFY_PHONE);
 };
 export const verifyPhone = function verifyPhone() {
@@ -823,15 +823,15 @@ export const verifyPhone = function verifyPhone() {
   return applyArgumentsResult;
 };
 export const verifyPhoneWithPassword = function verifyPhoneWithPassword(arg0, navigation) {
-  require(11949) /* Steps */.trackFlowStep(require(11949) /* Steps */.Steps.PASSWORD_CONFIRM, false, false);
+  require("ContactSyncAnalyticsUtils.tsx") /* Steps */.trackFlowStep(require("ContactSyncAnalyticsUtils.tsx") /* Steps */.Steps.PASSWORD_CONFIRM, false, false);
   callback3(arg0);
   navigation.navigate(constants2.VERIFY_PASSWORD);
 };
 export const upsellDismissed = function upsellDismissed() {
-  require(11949) /* Steps */.trackFlowEnd(true);
+  require("ContactSyncAnalyticsUtils.tsx") /* Steps */.trackFlowEnd(true);
 };
 export const openContactSyncModal = function openContactSyncModal(initialRoutes, FRIENDS_ADD_FRIENDS_MODAL) {
-  let obj = require(11947) /* _uploadContacts */;
+  let obj = require("ContactSyncUtils.tsx") /* _uploadContacts */;
   const result = obj.checkContactPermissions();
   result.then((arg0) => {
     callback(arg0);
@@ -846,9 +846,9 @@ export const openContactSyncModal = function openContactSyncModal(initialRoutes,
     const tmpResult = tmp(11949);
   }
   obj = { initialRoutes: initialRoutes.initialRoutes, openSettingsSheet: initialRoutes.openSettings, customLandingPage: initialRoutes.customLandingPage };
-  const obj4 = importDefault(4490);
+  const obj4 = require("../../../actions/ModalActionCreators.tsx");
   const tmp2 = dependencyMap;
-  importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(11952, dependencyMap.paths), obj, closure_20).then(arg2);
+  require("../../../actions/ModalActionCreators.tsx").pushLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(11952, dependencyMap.paths), obj, closure_20).then(arg2);
 };
 export const openContactSyncModalOnboarding = function openContactSyncModalOnboarding() {
   let flag = arg0;
@@ -858,11 +858,11 @@ export const openContactSyncModalOnboarding = function openContactSyncModalOnboa
   if (!flag) {
     let obj = { location: null };
     obj = { page: null };
-    obj[0] = require(11949) /* Steps */.CONTACT_SYNC_ONBOARDING_LOCATION;
+    obj[0] = require("ContactSyncAnalyticsUtils.tsx") /* Steps */.CONTACT_SYNC_ONBOARDING_LOCATION;
     obj[0] = obj;
-    require(11949) /* Steps */.trackFlowStart(obj);
-    const obj2 = require(11949) /* Steps */;
-    importDefault(4490).pushLazy(callback(function*() {
+    require("ContactSyncAnalyticsUtils.tsx") /* Steps */.trackFlowStart(obj);
+    const obj2 = require("ContactSyncAnalyticsUtils.tsx") /* Steps */;
+    require("../../../actions/ModalActionCreators.tsx").pushLazy(callback(function*() {
       let closure_1 = tmp5;
       let callback = tmp2;
       yield outer1_0(paths[20])(paths[19], paths.paths);
@@ -873,30 +873,30 @@ export const openContactSyncModalOnboarding = function openContactSyncModalOnboa
       return callback;
     }), {}, closure_20);
   } else {
-    obj = require(8987) /* showInstantInviteActionSheet */;
+    obj = require("../../instant_invite/native/InstantInviteUtils.tsx") /* showInstantInviteActionSheet */;
     closure_14(obj.hasDeferredInvite() ? closure_13.ONBOARDING_INVITE : closure_13.ONBOARDING);
     const tmp = closure_14;
   }
 };
 export const openContactSyncModalDeeplink = function openContactSyncModalDeeplink() {
   let obj = {};
-  const result = require(11947) /* _uploadContacts */.checkContactPermissions();
+  const result = require("ContactSyncUtils.tsx") /* _uploadContacts */.checkContactPermissions();
   result.then((arg0) => {
     callback(arg0);
   });
   if (null == obj.initialRoutes) {
     callback4(constants.NORMAL);
   }
-  const obj2 = require(11947) /* _uploadContacts */;
+  const obj2 = require("ContactSyncUtils.tsx") /* _uploadContacts */;
   const tmp2 = dependencyMap;
-  require(11949) /* Steps */.trackFlowStart({ location: { page: "Deep Link" } });
-  const tmpResult = require(11949) /* Steps */;
+  require("ContactSyncAnalyticsUtils.tsx") /* Steps */.trackFlowStart({ location: { page: "Deep Link" } });
+  const tmpResult = require("ContactSyncAnalyticsUtils.tsx") /* Steps */;
   obj = { initialRoutes: obj.initialRoutes, openSettingsSheet: obj.openSettings, customLandingPage: obj.customLandingPage };
-  const obj4 = importDefault(4490);
-  importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(11952, tmp2.paths), obj, closure_20).then(undefined);
+  const obj4 = require("../../../actions/ModalActionCreators.tsx");
+  require("../../../actions/ModalActionCreators.tsx").pushLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(11952, tmp2.paths), obj, closure_20).then(undefined);
 };
 export const refreshContactSyncPermissionStatus = function refreshContactSyncPermissionStatus() {
-  const result = require(11947) /* _uploadContacts */.checkContactPermissions();
+  const result = require("ContactSyncUtils.tsx") /* _uploadContacts */.checkContactPermissions();
   result.then((arg0) => {
     callback(arg0);
   });

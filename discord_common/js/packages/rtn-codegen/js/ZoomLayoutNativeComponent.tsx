@@ -9,11 +9,11 @@ obj[2] = obj;
 obj = {
   zoomTo(arg0, arg1, arg2, arg3, arg4) {
     const items = [arg1, arg2, arg3, arg4];
-    require(114) /* renderElement */.dispatchCommand(arg0, "zoomTo", items);
+    require("../../../../../_runtime/00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "zoomTo", items);
   },
   unzoom(arg0, arg1) {
     const items = [arg1];
-    require(114) /* renderElement */.dispatchCommand(arg0, "unzoom", items);
+    require("../../../../../_runtime/00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "unzoom", items);
   }
 };
 const value = setRuntimeConfigProvider.get("DCDZoomLayoutAndroid", () => obj);

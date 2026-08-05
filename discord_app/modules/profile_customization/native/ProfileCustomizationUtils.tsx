@@ -6,7 +6,7 @@ export const useEditBannerSource = function useEditBannerSource(arg0) {
   let pendingBanner;
   ({ displayProfile, pendingBanner } = arg0);
   if (null != pendingBanner) {
-    return require(8114) /* useDominantRGBFromImage */.memoizedImageSource(pendingBanner);
+    return require("../../calls/native/VideoBackground.tsx") /* useDominantRGBFromImage */.memoizedImageSource(pendingBanner);
   } else {
     if (null === pendingBanner) {
       let result;
@@ -24,8 +24,8 @@ export const useEditBannerSource = function useEditBannerSource(arg0) {
           if (displayProfile != null) {
             bannerURL = displayProfile.getBannerURL({ size: 600, canAnimate: true });
           }
-          source = require(1416) /* getAvatarURL */.makeSource(bannerURL);
-          const obj = require(1416) /* getAvatarURL */;
+          source = require("../../../utils/AvatarUtils.tsx") /* getAvatarURL */.makeSource(bannerURL);
+          const obj = require("../../../utils/AvatarUtils.tsx") /* getAvatarURL */;
         }
         return source;
       }
@@ -36,8 +36,8 @@ export const useEditBannerSource = function useEditBannerSource(arg0) {
     }
     let source1 = null;
     if (null != previewBanner) {
-      source1 = require(1416) /* getAvatarURL */.makeSource(previewBanner);
-      const obj2 = require(1416) /* getAvatarURL */;
+      source1 = require("../../../utils/AvatarUtils.tsx") /* getAvatarURL */.makeSource(previewBanner);
+      const obj2 = require("../../../utils/AvatarUtils.tsx") /* getAvatarURL */;
     }
     return source1;
   }
@@ -48,11 +48,11 @@ export const useUserProfileBannerBackgroundColor = function useUserProfileBanner
   let user;
   ({ user, pendingAvatarSrc, displayProfile } = arg0);
   if (null == user) {
-    const obj3 = require(8114) /* useDominantRGBFromImage */;
-    const memoizedImageSourceResult = require(8114) /* useDominantRGBFromImage */.memoizedImageSource(null);
-    const obj4 = require(688) /* int2hslRaw */;
+    const obj3 = require("../../calls/native/VideoBackground.tsx") /* useDominantRGBFromImage */;
+    const memoizedImageSourceResult = require("../../calls/native/VideoBackground.tsx") /* useDominantRGBFromImage */.memoizedImageSource(null);
+    const obj4 = require("../../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */;
     let primaryColor;
-    const obj5 = require(8114) /* useDominantRGBFromImage */;
+    const obj5 = require("../../calls/native/VideoBackground.tsx") /* useDominantRGBFromImage */;
     if (displayProfile != null) {
       primaryColor = displayProfile.primaryColor;
     }
@@ -63,7 +63,7 @@ export const useUserProfileBannerBackgroundColor = function useUserProfileBanner
   } else if (null == pendingAvatarSrc) {
     pendingAvatarSrc = user.getAvatarURL(tmp, 80);
   } else if (pendingAvatarSrc == null) {
-    let obj = require(1416) /* getAvatarURL */;
+    let obj = require("../../../utils/AvatarUtils.tsx") /* getAvatarURL */;
     obj = {};
     const merged = Object.assign(user);
     obj.avatar = null;
@@ -76,11 +76,11 @@ export const getAvatarSource = function getAvatarSource(getAvatarURL) {
   } else {
     let userAvatarURL = arg2;
     if (undefined === arg2) {
-      let memoizedImageSourceResult = require(8114) /* useDominantRGBFromImage */.memoizedImageSource(getAvatarURL.getAvatarURL(arg1, 80, !arg3));
-      const obj4 = require(8114) /* useDominantRGBFromImage */;
+      let memoizedImageSourceResult = require("../../calls/native/VideoBackground.tsx") /* useDominantRGBFromImage */.memoizedImageSource(getAvatarURL.getAvatarURL(arg1, 80, !arg3));
+      const obj4 = require("../../calls/native/VideoBackground.tsx") /* useDominantRGBFromImage */;
       const tmp2 = !arg3;
     } else {
-      let obj = require(8114) /* useDominantRGBFromImage */;
+      let obj = require("../../calls/native/VideoBackground.tsx") /* useDominantRGBFromImage */;
       if (userAvatarURL == null) {
         obj = {};
         const merged = Object.assign(getAvatarURL);
