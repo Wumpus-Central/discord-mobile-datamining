@@ -1,5 +1,5 @@
-import { flag } from "00564_flag.js";
 // _runtime/01405_hasPropertyDescriptors.js
+import { flag } from "00564_flag.js";
 function hasPropertyDescriptors(arg0) {
   return flag /* flag */;
 }

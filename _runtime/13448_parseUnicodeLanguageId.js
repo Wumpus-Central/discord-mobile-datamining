@@ -1,5 +1,5 @@
-import { e } from "01281_e.js";
 // _runtime/13448_parseUnicodeLanguageId.js
+import { e } from "01281_e.js";
 const require = arg1;
 const exports = arg5;
 const dependencyMap = arg6;

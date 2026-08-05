@@ -1,7 +1,7 @@
-import { c } from "04036_c.js";
 // _runtime/04047_useRive.js
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
+import { c } from "04036_c.js";
 
 let c3;
 let c4;

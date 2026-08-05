@@ -1,7 +1,7 @@
-import { ReactFabric } from "00116_ReactFabric.js";
-import { getExtendedError } from "00289_getExtendedError.js";
 // _runtime/00115_renderElement.js
 import "noop";
+import { ReactFabric } from "00116_ReactFabric.js";
+import { getExtendedError } from "00289_getExtendedError.js";
 
 const require = arg1;
 

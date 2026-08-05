@@ -1,9 +1,9 @@
+// _runtime/00869_captureCheckIn.js
+import asyncGeneratorStep from "addContextToFrame";
 import { addContextToFrame } from "00830_addContextToFrame.js";
 import { getClient } from "00848_getClient.js";
 import { applyClientOptions } from "00870_applyClientOptions.js";
 import { 00821__ } from "metro/00821__.js";
-// _runtime/00869_captureCheckIn.js
-import asyncGeneratorStep from "addContextToFrame";
 
 function captureCheckIn(arg0, arg1) {
   const currentScope = getClient /* getClient */.getCurrentScope();

@@ -1,6 +1,6 @@
+// _runtime/00849_instrumentError.js
 import { addHandler } from "00850_addHandler.js";
 import { 00821__ } from "metro/00821__.js";
-// _runtime/00849_instrumentError.js
 const require = arg1;
 const dependencyMap = arg6;
 function instrumentError() {

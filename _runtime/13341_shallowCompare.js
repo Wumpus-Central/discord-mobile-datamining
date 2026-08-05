@@ -1,5 +1,5 @@
-import { shallowEqual } from "13342_shallowEqual.js";
 // _runtime/13341_shallowCompare.js
+import { shallowEqual } from "13342_shallowEqual.js";
 
 export default function shallowCompare(props) {
   const tmp3 = shallowEqual /* shallowEqual */(props.props, arg1);

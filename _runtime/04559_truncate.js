@@ -1,6 +1,6 @@
+// _runtime/04559_truncate.js
 import { floor } from "04560_floor.js";
 import { 00541__ } from "metro/00541__.js";
-// _runtime/04559_truncate.js
 
 export default function truncate(num) {
   if (typeof num !== "number") {

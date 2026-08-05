@@ -1,8 +1,3 @@
-import { flattenStyle } from "00148_flattenStyle.js";
-import { set } from "00357_set.js";
-import { _assertNativeAnimatedModule } from "00367__assertNativeAnimatedModule.js";
-import { _isNativeReflectConstruct } from "00381__isNativeReflectConstruct.js";
-import { 00038__ } from "metro/00038__.js";
 // _runtime/00380__isNativeReflectConstruct.js
 import _slicedToArray from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
@@ -13,6 +8,11 @@ import importDefaultResult from "_createClass";
 import _classPrivateFieldBase from "_classPrivateFieldBase";
 import importDefaultResult2 from "_classPrivateFieldKey";
 import importDefaultResult1 from "_inherits";
+import { flattenStyle } from "00148_flattenStyle.js";
+import { set } from "00357_set.js";
+import { _assertNativeAnimatedModule } from "00367__assertNativeAnimatedModule.js";
+import { _isNativeReflectConstruct } from "00381__isNativeReflectConstruct.js";
+import { 00038__ } from "metro/00038__.js";
 
 const AnimatedProps = arg1;
 function _isNativeReflectConstruct() {

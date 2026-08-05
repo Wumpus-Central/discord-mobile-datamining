@@ -1,7 +1,7 @@
-import { inlineStyles } from "08437_inlineStyles.js";
 // _runtime/09034_QRCodeSvg.js
 import emptyFunction from "emptyFunction";
 import noop from "noop";
+import { inlineStyles } from "08437_inlineStyles.js";
 
 let fn = Object.assign;
 if (!fn) {

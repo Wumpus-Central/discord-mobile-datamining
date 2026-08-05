@@ -1,5 +1,5 @@
-import { getInstalledNitro } from "04019_getInstalledNitro.js";
 // _runtime/04018_installWorkletsSupport.js
+import { getInstalledNitro } from "04019_getInstalledNitro.js";
 let require = arg1;
 const dependencyMap = arg6;
 let closure_2 = { code: "function determine_Pnpm_installWorkletsSupportTs1(value){const{boxedNitroProxy}=this.__closure;const nitroProxy=boxedNitroProxy.unbox();return nitroProxy.isHybridObject(value);}" };

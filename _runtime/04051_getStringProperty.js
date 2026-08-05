@@ -1,7 +1,7 @@
-import { c } from "04036_c.js";
-import { useRiveProperty } from "04049_useRiveProperty.js";
 // _runtime/04051_getStringProperty.js
 import _slicedToArray from "_slicedToArray";
+import { c } from "04036_c.js";
+import { useRiveProperty } from "04049_useRiveProperty.js";
 
 const require = arg1;
 function getStringProperty(stringProperty) {

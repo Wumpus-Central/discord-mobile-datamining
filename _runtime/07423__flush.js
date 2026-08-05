@@ -1,9 +1,9 @@
+// _runtime/07423__flush.js
+import asyncGeneratorStep from "addContextToFrame";
 import { getGlobalSingleton } from "07376_getGlobalSingleton.js";
 import { addContextToFrame } from "07386_addContextToFrame.js";
 import { getClient } from "07402_getClient.js";
 import { applyClientOptions } from "07424_applyClientOptions.js";
-// _runtime/07423__flush.js
-import asyncGeneratorStep from "addContextToFrame";
 
 function _flush() {
   const self = this;

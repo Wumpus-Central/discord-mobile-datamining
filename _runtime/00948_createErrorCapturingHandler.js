@@ -1,5 +1,5 @@
-import { captureError } from "00947_captureError.js";
 // _runtime/00948_createErrorCapturingHandler.js
+import { captureError } from "00947_captureError.js";
 const require = arg1;
 const dependencyMap = arg6;
 function createErrorCapturingHandler(apply) {

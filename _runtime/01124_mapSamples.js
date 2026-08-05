@@ -1,6 +1,6 @@
+// _runtime/01124_mapSamples.js
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 import { DEFAULT_BUNDLE_NAME } from "01120_DEFAULT_BUNDLE_NAME.js";
-// _runtime/01124_mapSamples.js
 function mapSamples(samples) {
   let tmp = arg1;
   if (arg1 === undefined) {

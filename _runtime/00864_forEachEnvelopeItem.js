@@ -1,9 +1,9 @@
+// _runtime/00864_forEachEnvelopeItem.js
+import _slicedToArray from "_slicedToArray";
 import { getGlobalSingleton } from "00825_getGlobalSingleton.js";
 import { dsnFromString } from "00837_dsnFromString.js";
 import { normalize } from "00865_normalize.js";
 import { 00821__ } from "metro/00821__.js";
-// _runtime/00864_forEachEnvelopeItem.js
-import _slicedToArray from "_slicedToArray";
 
 function forEachEnvelopeItem(arg0, arg1) {
   for (const item10007 of tmp) {

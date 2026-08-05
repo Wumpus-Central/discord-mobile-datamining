@@ -1,8 +1,8 @@
-import { __INTERNAL_VIEW_CONFIG } from "metro/04674___INTERNAL_VIEW_CONFIG.js";
 // _runtime/04673_TabsAccessoryContent.js
 import "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { __INTERNAL_VIEW_CONFIG } from "metro/04674___INTERNAL_VIEW_CONFIG.js";
 
 
 export default function TabsAccessoryContent(style) {

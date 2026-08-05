@@ -1,9 +1,9 @@
-import { getClient } from "07402_getClient.js";
 // _runtime/07446_getTraceData.js
 import "errorCallback";
 import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__";
 import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__";
 import dateTimestampInSeconds from "dateTimestampInSeconds";
+import { getClient } from "07402_getClient.js";
 
 
 export const getTraceData = function getTraceData() {

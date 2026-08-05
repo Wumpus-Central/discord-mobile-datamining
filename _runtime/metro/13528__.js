@@ -1,5 +1,5 @@
-import { 13526__ } from "13526__.js";
 // _runtime/metro/13528__.js
+import { 13526__ } from "13526__.js";
 
 export default (arg0, arg1) => {
   const tmp = 13526__(arg0);

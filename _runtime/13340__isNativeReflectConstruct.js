@@ -1,4 +1,3 @@
-import { shallowCompare } from "13341_shallowCompare.js";
 // _runtime/13340__isNativeReflectConstruct.js
 import _slicedToArray from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
@@ -11,6 +10,7 @@ import { jsx } from "jsxProd";
 import importDefaultResult1 from "_inherits";
 import importDefaultResult3 from "emptyFunction";
 import importDefaultResult4 from "emptyFunction";
+import { shallowCompare } from "13341_shallowCompare.js";
 
 let FlatList;
 let I18nManager;

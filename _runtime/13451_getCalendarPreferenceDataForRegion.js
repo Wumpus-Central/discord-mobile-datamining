@@ -1,9 +1,9 @@
+// _runtime/13451_getCalendarPreferenceDataForRegion.js
 import { e } from "01281_e.js";
 import { 13452__ } from "metro/13452__.js";
 import { 13453__ } from "metro/13453__.js";
 import { 13454__ } from "metro/13454__.js";
 import { 13455__ } from "metro/13455__.js";
-// _runtime/13451_getCalendarPreferenceDataForRegion.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getCalendarPreferenceDataForRegion = function getCalendarPreferenceDataForRegion(region) {

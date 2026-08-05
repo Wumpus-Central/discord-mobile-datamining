@@ -1,9 +1,9 @@
+// _runtime/01017_getPromisePolyfill.js
 import { RN_GLOBAL_OBJ } from "00816_RN_GLOBAL_OBJ.js";
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 import { TurboModuleRegistry } from "00997_TurboModuleRegistry.js";
 import { valuePromise } from "01021_valuePromise.js";
 import { items } from "01022_items.js";
-// _runtime/01017_getPromisePolyfill.js
 const require = arg1;
 const dependencyMap = arg6;
 function getPromisePolyfill() {

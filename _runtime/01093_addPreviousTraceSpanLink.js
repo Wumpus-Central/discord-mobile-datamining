@@ -1,6 +1,3 @@
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-import { ignoreNextOnError } from "01028_ignoreNextOnError.js";
-import { __SENTRY_DEBUG__ } from "metro/01072___SENTRY_DEBUG__.js";
 // _runtime/01093_addPreviousTraceSpanLink.js
 import "addClsInstrumentationHandler";
 import items from "items";
@@ -11,6 +8,9 @@ import _getUnhandledRejectionError from "_getUnhandledRejectionError";
 import httpContextIntegration from "httpContextIntegration";
 import linkedErrorsIntegration from "linkedErrorsIntegration";
 import INTEGRATION_NAME from "INTEGRATION_NAME";
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
+import { ignoreNextOnError } from "01028_ignoreNextOnError.js";
+import { __SENTRY_DEBUG__ } from "metro/01072___SENTRY_DEBUG__.js";
 
 function addPreviousTraceSpanLink(spanContext, spanContext2, sampleRand) {
   let spanId;

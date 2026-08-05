@@ -1,5 +1,5 @@
-import { addNonEnumerableProperty } from "00822_addNonEnumerableProperty.js";
 // _runtime/00844__getSpanForScope.js
+import { addNonEnumerableProperty } from "00822_addNonEnumerableProperty.js";
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

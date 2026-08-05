@@ -1,7 +1,7 @@
+// _runtime/metro/04408__.js
 import { arrayPush } from "../00794_arrayPush.js";
 import { getOwnPropertySymbols } from "../00795_getOwnPropertySymbols.js";
 import { overArg } from "../04404_overArg.js";
-// _runtime/metro/04408__.js
 if (Object.getOwnPropertySymbols) {
   let fn = (arg0) => {
     let tmp = arg0;

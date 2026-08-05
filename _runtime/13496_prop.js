@@ -1,5 +1,5 @@
-import { 13477__ } from "metro/13477__.js";
 // _runtime/13496_prop.js
+import { 13477__ } from "metro/13477__.js";
 let prop = Object.getOwnPropertySymbols;
 if (prop) {
   prop = !require("module_13481")(() => {

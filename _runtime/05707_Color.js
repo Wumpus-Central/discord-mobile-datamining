@@ -1,9 +1,9 @@
-import { keys } from "05708_keys.js";
-import { hasOwnProperty } from "05712_hasOwnProperty.js";
 // _runtime/05707_Color.js
 import _slicedToArray from "_slicedToArray";
 import keys from "keys";
 import keys from "keys";
+import { keys } from "05708_keys.js";
+import { hasOwnProperty } from "05712_hasOwnProperty.js";
 
 class Color {
   constructor(arg0, arg1) {

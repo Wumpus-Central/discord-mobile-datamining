@@ -1,5 +1,5 @@
-import { toString } from "00762_toString.js";
 // _runtime/04491_uniqueId.js
+import { toString } from "00762_toString.js";
 let c2 = 0;
 
 export default function uniqueId(arg0) {

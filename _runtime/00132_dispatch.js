@@ -1,9 +1,9 @@
-import { Event } from "00133_Event.js";
-import { SymbolResult1 } from "00134_SymbolResult1.js";
 // _runtime/00132_dispatch.js
 import _classCallCheck from "_classCallCheck";
 import importDefaultResult from "_createClass";
 import setPlatformObject from "setPlatformObject";
+import { Event } from "00133_Event.js";
+import { SymbolResult1 } from "00134_SymbolResult1.js";
 
 const EventTarget = global;
 const require = arg1;

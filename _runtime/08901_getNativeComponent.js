@@ -1,6 +1,6 @@
-import { getInstallationErrorMessage } from "08902_getInstallationErrorMessage.js";
 // _runtime/08901_getNativeComponent.js
 import get_ActivityIndicator from "get ActivityIndicator";
+import { getInstallationErrorMessage } from "08902_getInstallationErrorMessage.js";
 
 let Platform;
 let c3;

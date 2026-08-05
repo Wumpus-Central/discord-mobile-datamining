@@ -1,5 +1,5 @@
-import { 00038__ } from "metro/00038__.js";
 // _runtime/00469_reject.js
+import { 00038__ } from "metro/00038__.js";
 const require = arg1;
 const dependencyMap = arg6;
 function reject(arg0) {

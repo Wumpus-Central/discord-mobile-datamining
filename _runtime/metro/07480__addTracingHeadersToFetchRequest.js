@@ -1,5 +1,3 @@
-import { hasTracingEnabled } from "../07407_hasTracingEnabled.js";
-import { getTraceData } from "../07446_getTraceData.js";
 // _runtime/metro/07480__addTracingHeadersToFetchRequest.js
 import _toArray from "_toArray";
 import "errorCallback";
@@ -8,6 +6,8 @@ import consoleSandbox from "consoleSandbox";
 import dateTimestampInSeconds from "dateTimestampInSeconds";
 import "SyncPromise";
 import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__";
+import { hasTracingEnabled } from "../07407_hasTracingEnabled.js";
+import { getTraceData } from "../07446_getTraceData.js";
 
 function _addTracingHeadersToFetchRequest(headers, headers2, span) {
   let baggage;

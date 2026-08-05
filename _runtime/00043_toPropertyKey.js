@@ -1,5 +1,5 @@
-import { toPrimitive } from "00044_toPrimitive.js";
 // _runtime/00043_toPropertyKey.js
+import { toPrimitive } from "00044_toPrimitive.js";
 
 export default function toPropertyKey(arg0) {
   const tmp = toPrimitive /* toPrimitive */(arg0, "string");

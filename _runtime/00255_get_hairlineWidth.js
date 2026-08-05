@@ -1,6 +1,6 @@
+// _runtime/00255_get_hairlineWidth.js
 import { result } from "00026_result.js";
 import { PixelRatio } from "00087_PixelRatio.js";
-// _runtime/00255_get_hairlineWidth.js
 const require = arg1;
 let obj = { position: "absolute", left: 0, right: 0, top: 0, bottom: 0 };
 obj = {};

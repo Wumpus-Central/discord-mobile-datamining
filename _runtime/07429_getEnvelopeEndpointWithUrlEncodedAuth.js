@@ -1,5 +1,5 @@
-import { dsnFromString } from "07422_dsnFromString.js";
 // _runtime/07429_getEnvelopeEndpointWithUrlEncodedAuth.js
+import { dsnFromString } from "07422_dsnFromString.js";
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getEnvelopeEndpointWithUrlEncodedAuth = function getEnvelopeEndpointWithUrlEncodedAuth(protocol, arg1, name) {

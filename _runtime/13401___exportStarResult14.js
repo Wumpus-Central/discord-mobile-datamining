@@ -1,7 +1,7 @@
-import { getMultiInternalSlots } from "13386_getMultiInternalSlots.js";
 // _runtime/13401___exportStarResult14.js
 import e from "e";
 import digitsToString from "digitsToString";
+import { getMultiInternalSlots } from "13386_getMultiInternalSlots.js";
 
 const result = digitsToString.default.set({ toExpPos: 100 });
 

@@ -1,6 +1,6 @@
-import { 00038__ } from "metro/00038__.js";
 // _runtime/00061_processTransformOrigin.js
 import "_slicedToArray";
+import { 00038__ } from "metro/00038__.js";
 
 const re2 = /(top|bottom|left|right|center|\d+(?:%|px)|0)/gi;
 

@@ -1,7 +1,7 @@
-import { call } from "13500_call.js";
 // _runtime/13491_withoutSetter.js
 import prop from "prop";
 import { Symbol as _Symbol } from "module_13477";
+import { call } from "13500_call.js";
 
 let closure_2 = require("__core-js_shared__")("wks");
 if (prop) {

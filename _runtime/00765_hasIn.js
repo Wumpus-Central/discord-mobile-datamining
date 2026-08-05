@@ -1,6 +1,6 @@
+// _runtime/00765_hasIn.js
 import { hasPath } from "00766_hasPath.js";
 import { baseHasIn } from "00767_baseHasIn.js";
-// _runtime/00765_hasIn.js
 
 export default function hasIn(arg0, arg1) {
   let tmp = null != arg0;

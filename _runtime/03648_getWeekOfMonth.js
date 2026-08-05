@@ -1,10 +1,10 @@
-import { getDefaultOptions } from "03369_getDefaultOptions.js";
 // _runtime/03648_getWeekOfMonth.js
 import getDate from "getDate";
 import getDay from "getDay";
 import startOfMonth from "startOfMonth";
 import requiredArgs from "requiredArgs";
 import toInteger from "toInteger";
+import { getDefaultOptions } from "03369_getDefaultOptions.js";
 
 if (!getDate) {
   let obj = { default: null };

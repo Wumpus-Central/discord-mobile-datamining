@@ -1,5 +1,5 @@
-import { addLogBoxLog } from "01611_addLogBoxLog.js";
 // _runtime/01612_logToConsole.js
+import { addLogBoxLog } from "01611_addLogBoxLog.js";
 const global = arg0;
 const require = arg1;
 const dependencyMap = arg6;

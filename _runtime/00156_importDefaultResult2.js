@@ -1,7 +1,3 @@
-import { _isNativeReflectConstruct } from "00157__isNativeReflectConstruct.js";
-import { importDefaultResult1 } from "00166_importDefaultResult1.js";
-import { importDefaultResult1 } from "00167_importDefaultResult1.js";
-import { structuredCloneInternal } from "00168_structuredCloneInternal.js";
 // _runtime/00156_importDefaultResult2.js
 import _classCallCheck from "_classCallCheck";
 import _classPrivateFieldBase from "_classPrivateFieldBase";
@@ -9,6 +5,10 @@ import importDefaultResult from "_createClass";
 import importDefaultResult1 from "_classPrivateFieldKey";
 import importDefaultResult2Result from "NativePerformanceCxx";
 import setPlatformObject from "setPlatformObject";
+import { _isNativeReflectConstruct } from "00157__isNativeReflectConstruct.js";
+import { importDefaultResult1 } from "00166_importDefaultResult1.js";
+import { importDefaultResult1 } from "00167_importDefaultResult1.js";
+import { structuredCloneInternal } from "00168_structuredCloneInternal.js";
 
 let c10;
 let c9;

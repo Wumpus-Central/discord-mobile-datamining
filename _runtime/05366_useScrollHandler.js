@@ -1,6 +1,6 @@
+// _runtime/05366_useScrollHandler.js
 import { cancelAnimation } from "01606_cancelAnimation.js";
 import { useScrollEventsHandlersDefault } from "05367_useScrollEventsHandlersDefault.js";
-// _runtime/05366_useScrollHandler.js
 const require = arg1;
 let dependencyMap = arg6;
 let closure_2 = { code: "function pnpm_useScrollHandlerTs1(event,context){const{handleOnScroll,onScroll,runOnJS}=this.__closure;handleOnScroll(event,context);if(onScroll){runOnJS(onScroll)({nativeEvent:event});}}" };

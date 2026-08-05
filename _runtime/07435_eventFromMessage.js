@@ -1,8 +1,8 @@
+// _runtime/07435_eventFromMessage.js
+import _slicedToArray from "_slicedToArray";
 import { addNonEnumerableProperty } from "07381_addNonEnumerableProperty.js";
 import { isInstanceOf } from "07382_isInstanceOf.js";
 import { addContextToFrame } from "07386_addContextToFrame.js";
-// _runtime/07435_eventFromMessage.js
-import _slicedToArray from "_slicedToArray";
 
 
 export const eventFromMessage = function eventFromMessage(arg0, message, arg2, event_id) {

@@ -1,5 +1,5 @@
-import { 00562__ } from "metro/00562__.js";
 // _runtime/04600_PromiseResolve.js
+import { 00562__ } from "metro/00562__.js";
 const tmp = require("getEvalledConstructor")("%Promise.resolve%", true);
 let tmp2 = tmp;
 if (tmp) {

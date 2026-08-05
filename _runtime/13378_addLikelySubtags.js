@@ -1,7 +1,7 @@
-import { isStructurallyValidLanguageTag } from "13444_isStructurallyValidLanguageTag.js";
 // _runtime/13378_addLikelySubtags.js
 import e from "e";
 import getInternalSlots from "getInternalSlots";
+import { isStructurallyValidLanguageTag } from "13444_isStructurallyValidLanguageTag.js";
 
 function addLikelySubtags(locale) {
   let lang;

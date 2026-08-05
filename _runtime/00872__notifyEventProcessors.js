@@ -1,6 +1,6 @@
+// _runtime/00872__notifyEventProcessors.js
 import { SyncPromise } from "00873_SyncPromise.js";
 import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
-// _runtime/00872__notifyEventProcessors.js
 const require = arg1;
 let dependencyMap = arg6;
 function _notifyEventProcessors(arg0, arg1, arg2, arg3) {

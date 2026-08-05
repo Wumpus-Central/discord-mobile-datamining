@@ -1,7 +1,7 @@
+// _runtime/00537_pushToArray.js
 import { items } from "00536_items.js";
 import { getSideChannel } from "00538_getSideChannel.js";
 import { 00534__ } from "metro/00534__.js";
-// _runtime/00537_pushToArray.js
 let obj = {
   brackets(arg0) {
     return arg0 + "[]";

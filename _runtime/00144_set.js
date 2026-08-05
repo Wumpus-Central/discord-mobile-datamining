@@ -1,6 +1,6 @@
+// _runtime/00144_set.js
 import { renderElement } from "00114_renderElement.js";
 import { Commands } from "00145_Commands.js";
-// _runtime/00144_set.js
 const require = arg1;
 const dependencyMap = arg6;
 let c2 = null;

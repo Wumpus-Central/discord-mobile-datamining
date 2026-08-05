@@ -1,7 +1,7 @@
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-import { 01158__ } from "metro/01158__.js";
 // _runtime/01160_startIdleSpan.js
 import { AppState } from "get ActivityIndicator";
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
+import { 01158__ } from "metro/01158__.js";
 
 let c3 = "Route Change";
 let obj = { idleTimeout: 1000, finalTimeout: 600000 };

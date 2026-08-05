@@ -1,6 +1,6 @@
+// _runtime/metro/04872__.js
 import { getFileChunk } from "../04869_getFileChunk.js";
 import { 04870__ } from "04870__.js";
-// _runtime/metro/04872__.js
 const self = this;
 let self2 = this;
 if (this) {

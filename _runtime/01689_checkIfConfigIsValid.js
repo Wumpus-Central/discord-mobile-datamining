@@ -1,6 +1,6 @@
-import { addLogBoxLog } from "01610_addLogBoxLog.js";
 // _runtime/01689_checkIfConfigIsValid.js
 import _slicedToArray from "_slicedToArray";
+import { addLogBoxLog } from "01610_addLogBoxLog.js";
 
 const require = arg1;
 function checkIfConfigIsValid(duration) {

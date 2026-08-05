@@ -1,6 +1,6 @@
+// _runtime/04938_parseTags.js
 import { getDataView } from "04897_getDataView.js";
 import { 04939__ } from "metro/04939__.js";
-// _runtime/04938_parseTags.js
 const require = arg1;
 const dependencyMap = arg6;
 function parseTags(buffer) {

@@ -1,5 +1,5 @@
-import { feedbackAsyncIntegration } from "01024_feedbackAsyncIntegration.js";
 // _runtime/01144_reactRouterV3BrowserTracingIntegration.js
+import { feedbackAsyncIntegration } from "01024_feedbackAsyncIntegration.js";
 let require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

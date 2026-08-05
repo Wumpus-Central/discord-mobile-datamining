@@ -1,8 +1,8 @@
-import { renderElement } from "../00114_renderElement.js";
 // _runtime/metro/00422___INTERNAL_VIEW_CONFIG.js
 import "noop";
 import weakSet from "weakSet";
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
+import { renderElement } from "../00114_renderElement.js";
 
 const require = arg1;
 let obj = { uiViewClassName: "AndroidSwitch", bubblingEventTypes: { topChange: { phasedRegistrationNames: { captured: "onChangeCapture", bubbled: "onChange" } } }, validAttributes: null };

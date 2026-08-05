@@ -1,5 +1,5 @@
-import { 00599__ } from "metro/00599__.js";
 // _runtime/00763_toString.js
+import { 00599__ } from "metro/00599__.js";
 let prototype;
 if (require("module_608")) {
   prototype = require("module_608").prototype;

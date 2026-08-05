@@ -1,8 +1,8 @@
+// _runtime/01059_extractNetworkProtocol.js
+import _slicedToArray from "_slicedToArray";
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 import { WINDOW } from "01039_WINDOW.js";
 import { onHidden } from "01060_onHidden.js";
-// _runtime/01059_extractNetworkProtocol.js
-import _slicedToArray from "_slicedToArray";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 

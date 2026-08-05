@@ -1,5 +1,5 @@
-import { isObjectLike } from "00620_isObjectLike.js";
 // _runtime/00638_isSymbol.js
+import { isObjectLike } from "00620_isObjectLike.js";
 
 export default function isSymbol(arg0) {
   let tmp = typeof arg0 === "symbol";

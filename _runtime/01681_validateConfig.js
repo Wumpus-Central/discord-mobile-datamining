@@ -1,9 +1,9 @@
+// _runtime/01681_validateConfig.js
 import { t } from "01617_t.js";
 import { isValidLayoutAnimationProp } from "01646_isValidLayoutAnimationProp.js";
 import { isValidRubberBandConfig } from "01682_isValidRubberBandConfig.js";
 import { rubberBandDecay } from "01683_rubberBandDecay.js";
 import { rigidDecay } from "01684_rigidDecay.js";
-// _runtime/01681_validateConfig.js
 const require = arg1;
 let dependencyMap = arg6;
 function validateConfig(clamp) {

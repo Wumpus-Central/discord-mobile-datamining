@@ -1,6 +1,6 @@
+// _runtime/00598_forEach.js
 import { castFunction } from "00633_castFunction.js";
 import { 00599__ } from "metro/00599__.js";
-// _runtime/00598_forEach.js
 
 export default function forEach(arg0, arg1) {
   if (00599__(arg0)) {

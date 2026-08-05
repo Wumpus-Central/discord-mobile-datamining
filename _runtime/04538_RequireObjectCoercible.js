@@ -1,5 +1,5 @@
-import { 00541__ } from "metro/00541__.js";
 // _runtime/04538_RequireObjectCoercible.js
+import { 00541__ } from "metro/00541__.js";
 
 export default function RequireObjectCoercible(arg0) {
   if (null == arg0) {

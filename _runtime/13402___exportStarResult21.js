@@ -1,6 +1,6 @@
+// _runtime/13402___exportStarResult21.js
 import { getMultiInternalSlots } from "13386_getMultiInternalSlots.js";
 import { TEN } from "13388_TEN.js";
-// _runtime/13402___exportStarResult21.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.FormatNumericToString = function FormatNumericToString(roundingType, timesResult) {

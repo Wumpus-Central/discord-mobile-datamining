@@ -1,7 +1,7 @@
+// _runtime/13521_items.js
 import { call } from "13500_call.js";
 import { 13482__ } from "metro/13482__.js";
 import { 13522__ } from "metro/13522__.js";
-// _runtime/13521_items.js
 let closure_2 = require("call")([].push);
 
 export default (arg0, arg1) => {

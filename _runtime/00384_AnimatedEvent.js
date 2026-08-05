@@ -1,6 +1,6 @@
-import { 00038__ } from "metro/00038__.js";
 // _runtime/00384_AnimatedEvent.js
 import _classCallCheck from "_classCallCheck";
+import { 00038__ } from "metro/00038__.js";
 
 let AnimatedEvent = arg1;
 class AnimatedEvent {

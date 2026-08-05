@@ -1,4 +1,3 @@
-import { _isNativeReflectConstruct } from "01744__isNativeReflectConstruct.js";
 // _runtime/01639_ReanimatedFlatList.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";
@@ -6,6 +5,7 @@ import { useRef } from "noop";
 import { jsx } from "jsxProd";
 import createAnimatedComponent from "createAnimatedComponent";
 import isReactRendering from "isReactRendering";
+import { _isNativeReflectConstruct } from "01744__isNativeReflectConstruct.js";
 
 let require = arg1;
 let closure_2 = ["itemLayoutAnimation", "skipEnteringExitingAnimations", "CellRendererComponentStyle"];

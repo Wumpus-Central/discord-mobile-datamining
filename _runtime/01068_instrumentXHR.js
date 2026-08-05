@@ -1,7 +1,7 @@
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-import { WINDOW } from "01039_WINDOW.js";
 // _runtime/01068_instrumentXHR.js
 import _slicedToArray from "_slicedToArray";
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
+import { WINDOW } from "01039_WINDOW.js";
 
 function instrumentXHR() {
   if (WINDOW /* WINDOW */.WINDOW.XMLHttpRequest) {

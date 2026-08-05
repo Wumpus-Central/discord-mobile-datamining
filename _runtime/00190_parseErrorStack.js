@@ -1,5 +1,5 @@
-import { parse } from "00191_parse.js";
 // _runtime/00190_parseErrorStack.js
+import { parse } from "00191_parse.js";
 const global = arg0;
 const require = arg1;
 const dependencyMap = arg6;

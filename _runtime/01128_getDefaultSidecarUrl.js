@@ -1,5 +1,5 @@
-import { TurboModuleRegistry } from "00997_TurboModuleRegistry.js";
 // _runtime/01128_getDefaultSidecarUrl.js
+import { TurboModuleRegistry } from "00997_TurboModuleRegistry.js";
 const require = arg1;
 const dependencyMap = arg6;
 function getDefaultSidecarUrl() {

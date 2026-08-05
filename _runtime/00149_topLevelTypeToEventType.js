@@ -1,5 +1,5 @@
-import { map } from "00066_map.js";
 // _runtime/00149_topLevelTypeToEventType.js
+import { map } from "00066_map.js";
 const require = arg1;
 const dependencyMap = arg6;
 let closure_2 = {};

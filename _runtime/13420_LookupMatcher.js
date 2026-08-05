@@ -1,6 +1,6 @@
+// _runtime/13420_LookupMatcher.js
 import { isMatched } from "13421_isMatched.js";
 import { BestAvailableLocale } from "13424_BestAvailableLocale.js";
-// _runtime/13420_LookupMatcher.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.LookupMatcher = function LookupMatcher(arg0, arg1, arg2) {

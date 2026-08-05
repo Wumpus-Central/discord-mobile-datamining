@@ -1,6 +1,6 @@
-import { addNonEnumerableProperty } from "00822_addNonEnumerableProperty.js";
 // _runtime/00937_wrapTransportError.js
 import asyncGeneratorStep from "getClient";
+import { addNonEnumerableProperty } from "00822_addNonEnumerableProperty.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 

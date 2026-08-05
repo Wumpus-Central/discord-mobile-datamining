@@ -1,8 +1,8 @@
+// _runtime/13541_assign.js
 import { getOwnPropertyDescriptor } from "13480_getOwnPropertyDescriptor.js";
 import { 13483__ } from "metro/13483__.js";
 import { 13501__ } from "metro/13501__.js";
 import { 13530__ } from "metro/13530__.js";
-// _runtime/13541_assign.js
 let closure_4 = require("call")([].concat);
 if (!assign) {
   assign = function assign(arg0, arg1) {

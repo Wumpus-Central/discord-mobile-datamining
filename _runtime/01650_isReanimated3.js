@@ -1,10 +1,10 @@
+// _runtime/01650_isReanimated3.js
+import controlEdgeToEdgeValues from "controlEdgeToEdgeValues";
+import isJest from "isJest";
 import { isJest } from "01609_isJest.js";
 import { ReanimatedModule } from "01614_ReanimatedModule.js";
 import { freezeObjectInDev } from "01636_freezeObjectInDev.js";
 import { SensorContainer } from "01652_SensorContainer.js";
-// _runtime/01650_isReanimated3.js
-import controlEdgeToEdgeValues from "controlEdgeToEdgeValues";
-import isJest from "isJest";
 
 controlEdgeToEdgeValues = controlEdgeToEdgeValues.isEdgeToEdge();
 isJest = isJest.shouldBeUseWeb();

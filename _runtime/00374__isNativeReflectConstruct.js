@@ -1,10 +1,10 @@
-import { normalizeColor } from "00051_normalizeColor.js";
 // _runtime/00374__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import _get from "_get";
 import importDefaultResult from "_createClass";
+import { normalizeColor } from "00051_normalizeColor.js";
 
 let AnimatedColor = arg1;
 function _isNativeReflectConstruct() {

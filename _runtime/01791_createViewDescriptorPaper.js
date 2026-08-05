@@ -1,6 +1,6 @@
-import { updateProps } from "01706_updateProps.js";
 // _runtime/01791_createViewDescriptorPaper.js
 import isJest from "isJest";
+import { updateProps } from "01706_updateProps.js";
 
 function createViewDescriptorPaper(topScreenId) {
   return { tag: topScreenId, name: "RCTView" };

@@ -1,5 +1,5 @@
-import { 00599__ } from "metro/00599__.js";
 // _runtime/00769_baseIsEqualDeep.js
+import { 00599__ } from "metro/00599__.js";
 
 export default function baseIsEqualDeep(value, value2) {
   const tmp3 = 00599__(value);

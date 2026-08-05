@@ -1,7 +1,7 @@
+// _runtime/metro/00247__.js
 import { SymbolResult1 } from "../00134_SymbolResult1.js";
 import { _isNativeReflectConstruct } from "../00248__isNativeReflectConstruct.js";
 import { DeviceEventManager } from "../00249_DeviceEventManager.js";
-// _runtime/metro/00247__.js
 const require = arg1;
 let closure_3 = [];
 require("_isNativeReflectConstruct").addListener("hardwareBackPress", (timeStamp) => {

@@ -1,6 +1,6 @@
+// _runtime/00613_baseForOwn.js
 import { createBaseFor } from "00614_createBaseFor.js";
 import { keys } from "00616_keys.js";
-// _runtime/00613_baseForOwn.js
 
 export default function baseForOwn(arg0, arg1) {
   let tmp = arg0;

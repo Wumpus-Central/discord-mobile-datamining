@@ -1,7 +1,7 @@
+// _runtime/00830_addContextToFrame.js
 import { addNonEnumerableProperty } from "00822_addNonEnumerableProperty.js";
 import { safeDateNow } from "00831_safeDateNow.js";
 import { isMatchingPattern } from "00832_isMatchingPattern.js";
-// _runtime/00830_addContextToFrame.js
 let require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

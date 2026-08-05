@@ -1,5 +1,3 @@
-import { 08515__ } from "metro/08515__.js";
-import { __INTERNAL_VIEW_CONFIG } from "metro/08520___INTERNAL_VIEW_CONFIG.js";
 // _runtime/08518__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -7,6 +5,8 @@ import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
 import "noop";
 import { jsx } from "jsxProd";
+import { 08515__ } from "metro/08515__.js";
+import { __INTERNAL_VIEW_CONFIG } from "metro/08520___INTERNAL_VIEW_CONFIG.js";
 
 const Mask = arg1;
 function _isNativeReflectConstruct() {

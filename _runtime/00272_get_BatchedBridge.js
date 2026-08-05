@@ -1,3 +1,4 @@
+// _runtime/00272_get_BatchedBridge.js
 import { MessageQueue } from "00039_MessageQueue.js";
 import { map } from "00066_map.js";
 import { measure } from "00068_measure.js";
@@ -14,7 +15,6 @@ import { legacySendAccessibilityEvent } from "00279_legacySendAccessibilityEvent
 import { EventEmitter } from "00280_EventEmitter.js";
 import { createPublicRootInstance } from "00281_createPublicRootInstance.js";
 import { dispatchNativeEvent } from "00282_dispatchNativeEvent.js";
-// _runtime/00272_get_BatchedBridge.js
 const obj = {};
 Object.defineProperty(obj, "BatchedBridge", { get: () => MessageQueue /* MessageQueue */.default, set: undefined });
 Object.defineProperty(obj, "ExceptionsManager", { get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default, set: undefined });

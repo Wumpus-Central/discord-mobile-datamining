@@ -1,7 +1,7 @@
+// _runtime/07371_errorCallback.js
 import { instrumentError } from "07372_instrumentError.js";
 import { instrumentUnhandledRejection } from "07379_instrumentUnhandledRejection.js";
 import { spanTimeInputToSeconds } from "07380_spanTimeInputToSeconds.js";
-// _runtime/07371_errorCallback.js
 const require = arg1;
 const dependencyMap = arg6;
 function errorCallback() {

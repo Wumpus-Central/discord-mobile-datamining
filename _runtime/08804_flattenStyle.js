@@ -1,5 +1,5 @@
-import { deprecatedCreateStrictShapeTypeChecker } from "08805_deprecatedCreateStrictShapeTypeChecker.js";
 // _runtime/08804_flattenStyle.js
+import { deprecatedCreateStrictShapeTypeChecker } from "08805_deprecatedCreateStrictShapeTypeChecker.js";
 function flattenStyle(obj) {
   if (null !== obj) {
     if (typeof obj === "object") {

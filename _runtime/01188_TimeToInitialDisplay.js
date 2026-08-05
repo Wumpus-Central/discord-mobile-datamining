@@ -1,8 +1,8 @@
-import { _isNativeReflectConstruct } from "01189__isNativeReflectConstruct.js";
 // _runtime/01188_TimeToInitialDisplay.js
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { useState } from "noop";
+import { _isNativeReflectConstruct } from "01189__isNativeReflectConstruct.js";
 
 const require = arg1;
 class TimeToInitialDisplay {

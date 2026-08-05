@@ -1,5 +1,5 @@
-import { cancelAnimation } from "01606_cancelAnimation.js";
 // _runtime/01836_t.js
+import { cancelAnimation } from "01606_cancelAnimation.js";
 const require = arg1;
 const dependencyMap = arg6;
 const fn = function t(arg0, arg1, arg2) {

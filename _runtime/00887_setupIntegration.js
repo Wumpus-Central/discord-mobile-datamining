@@ -1,6 +1,6 @@
+// _runtime/00887_setupIntegration.js
 import { getClient } from "00848_getClient.js";
 import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
-// _runtime/00887_setupIntegration.js
 const require = arg1;
 let dependencyMap = arg6;
 function setupIntegration(on, name) {

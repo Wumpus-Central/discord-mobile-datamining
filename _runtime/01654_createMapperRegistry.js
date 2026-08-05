@@ -1,6 +1,6 @@
-import { runWorkletOnJS } from "01613_runWorkletOnJS.js";
 // _runtime/01654_createMapperRegistry.js
 import isJest from "isJest";
+import { runWorkletOnJS } from "01613_runWorkletOnJS.js";
 
 isJest = isJest.isJest();
 function createMapperRegistry() {

@@ -1,9 +1,9 @@
-import { RN_GLOBAL_OBJ } from "00816_RN_GLOBAL_OBJ.js";
-import { TurboModuleRegistry } from "00997_TurboModuleRegistry.js";
-import { getExpoConstants } from "01003_getExpoConstants.js";
 // _runtime/01002_isHermesEnabled.js
 import _slicedToArray from "_slicedToArray";
 import { Platform } from "get ActivityIndicator";
+import { RN_GLOBAL_OBJ } from "00816_RN_GLOBAL_OBJ.js";
+import { TurboModuleRegistry } from "00997_TurboModuleRegistry.js";
+import { getExpoConstants } from "01003_getExpoConstants.js";
 
 const require = arg1;
 

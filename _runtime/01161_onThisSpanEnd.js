@@ -1,6 +1,6 @@
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 // _runtime/01161_onThisSpanEnd.js
 import { AppState } from "get ActivityIndicator";
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 
 
 export const onThisSpanEnd = function onThisSpanEnd(on) {

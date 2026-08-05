@@ -1,6 +1,6 @@
-import { ShareModule } from "00486_ShareModule.js";
 // _runtime/00485_Share.js
 import _classCallCheck from "_classCallCheck";
+import { ShareModule } from "00486_ShareModule.js";
 
 const Share = arg1;
 class Share {

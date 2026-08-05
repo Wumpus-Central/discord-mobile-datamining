@@ -1,8 +1,8 @@
-import { 05373__ } from "metro/05373__.js";
 // _runtime/05374_setGestureState.js
 import toArray from "toArray";
 import { Reanimated } from "cancelAnimation";
 import { Reanimated as Reanimated2 } from "cancelAnimation";
+import { 05373__ } from "metro/05373__.js";
 
 const tagMessageResult = toArray.tagMessage("react-native-reanimated is required in order to use synchronous state management");
 let useSharedValue;

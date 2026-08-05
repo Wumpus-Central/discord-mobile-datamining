@@ -1,6 +1,6 @@
+// _runtime/05712_hasOwnProperty.js
 import { keys } from "05710_keys.js";
 import { swizzle } from "05713_swizzle.js";
-// _runtime/05712_hasOwnProperty.js
 let obj = Object.create(null);
 for (const key10013 in require("keys")) {
   let tmp3 = key10013;

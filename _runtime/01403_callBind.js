@@ -1,6 +1,6 @@
+// _runtime/01403_callBind.js
 import { callBindBasic } from "00551_callBindBasic.js";
 import { setFunctionLength } from "01404_setFunctionLength.js";
-// _runtime/01403_callBind.js
 if (require("flag")) {
   const obj = { value: null };
   const _module = require("flag");

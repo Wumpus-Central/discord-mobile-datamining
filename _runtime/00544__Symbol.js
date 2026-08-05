@@ -1,5 +1,5 @@
-import { hasSymbols } from "00545_hasSymbols.js";
 // _runtime/00544__Symbol.js
+import { hasSymbols } from "00545_hasSymbols.js";
 let _Symbol = typeof Symbol !== "undefined";
 if (typeof Symbol !== "undefined") {
   _Symbol = Symbol;

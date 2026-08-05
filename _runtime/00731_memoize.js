@@ -1,5 +1,5 @@
-import { MapCache } from "00732_MapCache.js";
 // _runtime/00731_memoize.js
+import { MapCache } from "00732_MapCache.js";
 function memoize(fn, fn2) {
   const _require = fn;
   const dependencyMap = fn2;

@@ -1,8 +1,8 @@
-import { getStatics } from "04119_getStatics.js";
 // _runtime/05381_gestureHandlerRootHOC.js
 import "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { getStatics } from "04119_getStatics.js";
 
 const styles = StyleSheet.create({ container: { flex: 1 } });
 

@@ -1,7 +1,7 @@
-import { toArray } from "05372_toArray.js";
-import { 05392__ } from "metro/05392__.js";
 // _runtime/05391_transformIntoHandlerTags.js
 import get_ActivityIndicator from "get ActivityIndicator";
+import { toArray } from "05372_toArray.js";
+import { 05392__ } from "metro/05392__.js";
 
 let Platform;
 let c3;

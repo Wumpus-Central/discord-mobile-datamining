@@ -1,6 +1,6 @@
-import { noop } from "01527_noop.js";
 // _runtime/01555_usePreventRemoveContext.js
 import noop from "noop";
+import { noop } from "01527_noop.js";
 
 
 export default function usePreventRemoveContext() {

@@ -1,7 +1,7 @@
+// _runtime/13479_getOwnPropertyDescriptor.js
 import { text } from "13489_text.js";
 import { 13482__ } from "metro/13482__.js";
 import { 13512__ } from "metro/13512__.js";
-// _runtime/13479_getOwnPropertyDescriptor.js
 if (!require("getOwnPropertyDescriptor")) {
   getOwnPropertyDescriptor = function getOwnPropertyDescriptor(arg0, arg1) {
     const tmp3 = 13482__(arg0);

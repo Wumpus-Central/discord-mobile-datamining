@@ -1,5 +1,5 @@
-import { 00038__ } from "00038__.js";
 // _runtime/metro/00351__.js
+import { 00038__ } from "00038__.js";
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;

@@ -1,5 +1,3 @@
-import { extractFeFlood } from "08475_extractFeFlood.js";
-import { __INTERNAL_VIEW_CONFIG } from "metro/08492___INTERNAL_VIEW_CONFIG.js";
 // _runtime/08491__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -7,6 +5,8 @@ import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
 import "noop";
 import { jsx } from "jsxProd";
+import { extractFeFlood } from "08475_extractFeFlood.js";
+import { __INTERNAL_VIEW_CONFIG } from "metro/08492___INTERNAL_VIEW_CONFIG.js";
 
 const FeFlood = arg1;
 function _isNativeReflectConstruct() {

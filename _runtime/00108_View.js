@@ -1,9 +1,9 @@
-import { noop } from "00111_noop.js";
-import { Commands } from "00112_Commands.js";
 // _runtime/00108_View.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import { use } from "noop";
 import { jsx } from "jsxProd";
+import { noop } from "00111_noop.js";
+import { Commands } from "00112_Commands.js";
 
 let closure_3 = ["accessibilityState", "accessibilityValue", "aria-busy", "aria-checked", "aria-disabled", "aria-expanded", "aria-hidden", "aria-label", "aria-labelledby", "aria-live", "aria-selected", "aria-valuemax", "aria-valuemin", "aria-valuenow", "aria-valuetext", "id", "tabIndex"];
 const forwardRefResult = require("noop").forwardRef(function View_withRef(arg0, ref) {

@@ -1,4 +1,3 @@
-import { 00038__ } from "metro/00038__.js";
 // _runtime/00321__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -9,6 +8,7 @@ import { isValidElement } from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import importAllResult from "noop";
+import { 00038__ } from "metro/00038__.js";
 
 let StyleSheet;
 let c9;

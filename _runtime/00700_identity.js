@@ -1,6 +1,6 @@
-import { is } from "00701_is.js";
 // _runtime/00700_identity.js
 import noop from "noop";
+import { is } from "00701_is.js";
 
 function identity(arg0) {
   return arg0;

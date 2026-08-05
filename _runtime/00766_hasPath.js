@@ -1,6 +1,6 @@
+// _runtime/00766_hasPath.js
 import { toKey } from "00725_toKey.js";
 import { castPath } from "00728_castPath.js";
-// _runtime/00766_hasPath.js
 
 export default function hasPath(arg0, arg1, arg2) {
   let tmp4;

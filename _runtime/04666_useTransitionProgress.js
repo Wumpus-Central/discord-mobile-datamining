@@ -1,6 +1,6 @@
-import { noop } from "04645_noop.js";
 // _runtime/04666_useTransitionProgress.js
 import noop from "noop";
+import { noop } from "04645_noop.js";
 
 
 export default function useTransitionProgress() {

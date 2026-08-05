@@ -1,5 +1,5 @@
-import { toString } from "00762_toString.js";
 // _runtime/04122_escapeRegExp.js
+import { toString } from "00762_toString.js";
 const tmp = /[\\^$.*+?()[\]{}|]/g;
 let closure_3 = RegExp(tmp.source);
 

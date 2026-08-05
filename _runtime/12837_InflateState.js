@@ -1,8 +1,8 @@
+// _runtime/12837_InflateState.js
 import { assign } from "12827_assign.js";
 import { inflate_table } from "12838_inflate_table.js";
 import { inflate_fast } from "12839_inflate_fast.js";
 import { 12834__ } from "metro/12834__.js";
-// _runtime/12837_InflateState.js
 const require = arg1;
 const dependencyMap = arg6;
 function InflateState() {

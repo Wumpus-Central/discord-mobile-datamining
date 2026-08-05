@@ -1,9 +1,9 @@
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-import { feedbackAsyncIntegration } from "01024_feedbackAsyncIntegration.js";
-import { getStatics } from "01140_getStatics.js";
 // _runtime/01146_instrumentReactRouter.js
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
+import { feedbackAsyncIntegration } from "01024_feedbackAsyncIntegration.js";
+import { getStatics } from "01140_getStatics.js";
 
 function instrumentReactRouter(f102430, arg1, arg2, location) {
   let tmp5;

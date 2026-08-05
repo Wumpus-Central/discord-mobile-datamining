@@ -1,5 +1,5 @@
-import { PlatformColor } from "00052_PlatformColor.js";
 // _runtime/00051_normalizeColor.js
+import { PlatformColor } from "00052_PlatformColor.js";
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;

@@ -1,5 +1,5 @@
-import { getExpoConstants } from "01003_getExpoConstants.js";
 // _runtime/01127_getExpoUpdatesContext.js
+import { getExpoConstants } from "01003_getExpoConstants.js";
 const require = arg1;
 const dependencyMap = arg6;
 function getExpoUpdatesContext() {

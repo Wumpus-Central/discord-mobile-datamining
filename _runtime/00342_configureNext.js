@@ -1,5 +1,5 @@
-import { getFabricUIManager } from "00071_getFabricUIManager.js";
 // _runtime/00342_configureNext.js
+import { getFabricUIManager } from "00071_getFabricUIManager.js";
 const require = arg1;
 function configureNext(duration) {
   const _global = arg1;

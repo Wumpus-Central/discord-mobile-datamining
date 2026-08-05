@@ -1,7 +1,7 @@
+// _runtime/13419_ResolveLocale.js
 import { LookupMatcher } from "13420_LookupMatcher.js";
 import { isMatched } from "13421_isMatched.js";
 import { BestFitMatcher } from "13425_BestFitMatcher.js";
-// _runtime/13419_ResolveLocale.js
 let require = arg1;
 const dependencyMap = arg6;
 arg5.ResolveLocale = function ResolveLocale(arg0, arg1, localeMatcher) {

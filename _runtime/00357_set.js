@@ -1,8 +1,8 @@
-import { NativeEventEmitter } from "00209_NativeEventEmitter.js";
-import { 00038__ } from "metro/00038__.js";
 // _runtime/00357_set.js
 import importDefaultResult from "shouldUseTurboAnimatedModule";
 import importAllResult1 from "javaScriptFlagGetter";
+import { NativeEventEmitter } from "00209_NativeEventEmitter.js";
+import { 00038__ } from "metro/00038__.js";
 
 let importDefault;
 if (importDefaultResult == null) {

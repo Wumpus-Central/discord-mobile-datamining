@@ -1,5 +1,5 @@
-import { dynamicRequire } from "00988_dynamicRequire.js";
 // _runtime/00987_isBrowser.js
+import { dynamicRequire } from "00988_dynamicRequire.js";
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

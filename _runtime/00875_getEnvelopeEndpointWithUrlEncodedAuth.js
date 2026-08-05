@@ -1,5 +1,5 @@
-import { dsnFromString } from "00837_dsnFromString.js";
 // _runtime/00875_getEnvelopeEndpointWithUrlEncodedAuth.js
+import { dsnFromString } from "00837_dsnFromString.js";
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

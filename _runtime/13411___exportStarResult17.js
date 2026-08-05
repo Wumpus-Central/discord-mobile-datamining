@@ -1,5 +1,5 @@
-import { __exportStarResult24 } from "13412___exportStarResult24.js";
 // _runtime/13411___exportStarResult17.js
+import { __exportStarResult24 } from "13412___exportStarResult24.js";
 const require = arg1;
 const dependencyMap = arg6;
 arg5.FormatNumeric = function FormatNumeric(internalSlots, isNaN) {

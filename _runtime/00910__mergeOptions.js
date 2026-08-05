@@ -1,7 +1,7 @@
-import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
 // _runtime/00910__mergeOptions.js
 import setupIntegration from "setupIntegration";
 import setupIntegration from "setupIntegration";
+import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
 
 function _mergeOptions() {
   let obj = arg0;

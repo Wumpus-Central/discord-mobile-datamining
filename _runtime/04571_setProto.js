@@ -1,6 +1,6 @@
+// _runtime/04571_setProto.js
 import { setPrototypeOf } from "04572_setPrototypeOf.js";
 import { 04574__ } from "metro/04574__.js";
-// _runtime/04571_setProto.js
 if (require("setPrototypeOf")) {
   function setProto(arg0, arg1) {
     if (setPrototypeOf /* setPrototypeOf */(arg0, arg1)) {

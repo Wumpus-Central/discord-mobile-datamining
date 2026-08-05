@@ -1,4 +1,3 @@
-import { keys } from "03543_keys.js";
 // _runtime/03657_intlFormatDistance.js
 import differenceInCalendarDays from "differenceInCalendarDays";
 import differenceInCalendarMonths from "differenceInCalendarMonths";
@@ -10,6 +9,7 @@ import differenceInMinutes from "differenceInMinutes";
 import differenceInSeconds from "differenceInSeconds";
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
+import { keys } from "03543_keys.js";
 
 if (!differenceInCalendarDays) {
   let obj = { default: null };

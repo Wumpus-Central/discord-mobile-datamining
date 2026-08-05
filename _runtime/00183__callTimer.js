@@ -1,7 +1,7 @@
+// _runtime/00183__callTimer.js
 import { toError } from "00184_toError.js";
 import { Timing } from "00185_Timing.js";
 import { 00038__ } from "metro/00038__.js";
-// _runtime/00183__callTimer.js
 let require = arg1;
 function _callTimer(arg0, arg1) {
   const _global = arg1;

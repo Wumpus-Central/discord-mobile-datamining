@@ -1,9 +1,9 @@
+// _runtime/04536_map.js
 import { ToObject } from "04537_ToObject.js";
 import { ToUint32 } from "04540_ToUint32.js";
 import { ToString } from "04552_ToString.js";
 import { apply } from "04564_apply.js";
 import { HasProperty } from "04588_HasProperty.js";
-// _runtime/04536_map.js
 const ObjectResult = Object("a");
 let tmp2 = "a" !== ObjectResult[0];
 if (!tmp2) {

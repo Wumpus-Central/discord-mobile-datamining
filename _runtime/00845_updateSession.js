@@ -1,6 +1,6 @@
+// _runtime/00845_updateSession.js
 import { addContextToFrame } from "00830_addContextToFrame.js";
 import { dateTimestampInSeconds } from "00838_dateTimestampInSeconds.js";
-// _runtime/00845_updateSession.js
 const require = arg1;
 const dependencyMap = arg6;
 function updateSession(ipAddress) {

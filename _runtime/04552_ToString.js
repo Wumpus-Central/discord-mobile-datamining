@@ -1,5 +1,5 @@
-import { 00541__ } from "metro/00541__.js";
 // _runtime/04552_ToString.js
+import { 00541__ } from "metro/00541__.js";
 let closure_2 = require("getEvalledConstructor")("%String%");
 
 export default function ToString(arg0) {

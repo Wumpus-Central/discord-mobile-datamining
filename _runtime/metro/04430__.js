@@ -1,6 +1,6 @@
+// _runtime/metro/04430__.js
 import { getNative } from "../00805_getNative.js";
 import { constant } from "../04431_constant.js";
-// _runtime/metro/04430__.js
 if (require("getNative")) {
   let fn = (arg0, arg1) => {
     const obj = { configurable: true, enumerable: false, value: null, writable: true };

@@ -1,10 +1,10 @@
-import { initialize } from "05369_initialize.js";
-import { noop } from "05383_noop.js";
-import { __INTERNAL_VIEW_CONFIG } from "metro/05384___INTERNAL_VIEW_CONFIG.js";
 // _runtime/05382_GestureHandlerRootView.js
 import "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { initialize } from "05369_initialize.js";
+import { noop } from "05383_noop.js";
+import { __INTERNAL_VIEW_CONFIG } from "metro/05384___INTERNAL_VIEW_CONFIG.js";
 
 const require = arg1;
 const styles = StyleSheet.create({ container: { flex: 1 } });

@@ -1,5 +1,5 @@
-import { getHttpSpanDetailsFromUrlObject } from "00900_getHttpSpanDetailsFromUrlObject.js";
 // _runtime/00899_isSentryRequestUrl.js
+import { getHttpSpanDetailsFromUrlObject } from "00900_getHttpSpanDetailsFromUrlObject.js";
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

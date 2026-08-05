@@ -1,7 +1,7 @@
-import { setPlatformObject } from "00126_setPlatformObject.js";
-import { _isNativeReflectConstruct } from "00157__isNativeReflectConstruct.js";
 // _runtime/00168_structuredCloneInternal.js
 import _slicedToArray from "_slicedToArray";
+import { setPlatformObject } from "00126_setPlatformObject.js";
+import { _isNativeReflectConstruct } from "00157__isNativeReflectConstruct.js";
 
 const require = arg1;
 function structuredCloneInternal(style) {

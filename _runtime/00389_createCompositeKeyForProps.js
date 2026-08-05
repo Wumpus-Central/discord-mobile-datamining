@@ -1,10 +1,10 @@
+// _runtime/00389_createCompositeKeyForProps.js
+import noop from "noop";
 import { nullthrows } from "00070_nullthrows.js";
 import { flattenStyle } from "00148_flattenStyle.js";
 import { _assertNativeAnimatedModule } from "00367__assertNativeAnimatedModule.js";
 import { _isNativeReflectConstruct } from "00382__isNativeReflectConstruct.js";
 import { AnimatedEvent } from "00384_AnimatedEvent.js";
-// _runtime/00389_createCompositeKeyForProps.js
-import noop from "noop";
 
 let c3;
 let c4;

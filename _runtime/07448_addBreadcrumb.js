@@ -1,5 +1,5 @@
-import { getClient } from "07402_getClient.js";
 // _runtime/07448_addBreadcrumb.js
+import { getClient } from "07402_getClient.js";
 const require = arg1;
 let dependencyMap = arg6;
 arg5.addBreadcrumb = function addBreadcrumb(arg0, arg1) {

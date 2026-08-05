@@ -1,6 +1,6 @@
-import { conditional } from "05718_conditional.js";
 // _runtime/05717_Animated.js
 import get_ActivityIndicator from "get ActivityIndicator";
+import { conditional } from "05718_conditional.js";
 
 let Animated;
 let Platform;

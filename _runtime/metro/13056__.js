@@ -1,7 +1,7 @@
+// _runtime/metro/13056__.js
 import { SemVer } from "../13021_SemVer.js";
 import { SemVer } from "../13041_SemVer.js";
 import { Range } from "../13050_Range.js";
-// _runtime/metro/13056__.js
 
 export default (arg0, arg1) => {
   let require;

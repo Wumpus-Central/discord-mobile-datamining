@@ -1,5 +1,5 @@
-import { measureFabric } from "01783_measureFabric.js";
 // _runtime/01782_getRelativeCoords.js
+import { measureFabric } from "01783_measureFabric.js";
 const require = arg1;
 const dependencyMap = arg6;
 function getRelativeCoords(arg0, arg1, arg2) {

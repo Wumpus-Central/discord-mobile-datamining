@@ -1,5 +1,5 @@
-import { compareAscending } from "07694_compareAscending.js";
 // _runtime/07693_compareMultiple.js
+import { compareAscending } from "07694_compareAscending.js";
 
 export default function compareMultiple(criteria, index) {
   criteria = criteria.criteria;

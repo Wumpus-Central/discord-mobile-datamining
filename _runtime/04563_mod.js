@@ -1,5 +1,5 @@
-import { 00566__ } from "metro/00566__.js";
 // _runtime/04563_mod.js
+import { 00566__ } from "metro/00566__.js";
 
 export default function mod(arg0, arg1) {
   const result = arg0 % arg1;

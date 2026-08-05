@@ -1,6 +1,6 @@
-import { 00038__ } from "metro/00038__.js";
 // _runtime/00065_setRuntimeConfigProvider.js
 import "noop";
+import { 00038__ } from "metro/00038__.js";
 
 const require = arg1;
 

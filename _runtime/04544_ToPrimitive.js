@@ -1,6 +1,6 @@
+// _runtime/04544_ToPrimitive.js
 import { apply } from "01402_apply.js";
 import { isPrimitive } from "04545_isPrimitive.js";
-// _runtime/04544_ToPrimitive.js
 let tmp = typeof Symbol === "function";
 if (typeof Symbol === "function") {
   let _Symbol = Symbol;

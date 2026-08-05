@@ -1,3 +1,4 @@
+// _runtime/07380_spanTimeInputToSeconds.js
 import { consoleSandbox } from "07375_consoleSandbox.js";
 import { addNonEnumerableProperty } from "07381_addNonEnumerableProperty.js";
 import { generatePropagationContext } from "07385_generatePropagationContext.js";
@@ -7,7 +8,6 @@ import { getMetricSummaryJsonForSpan } from "07391_getMetricSummaryJsonForSpan.j
 import { getSpanStatusFromHttpCode } from "07392_getSpanStatusFromHttpCode.js";
 import { getMainCarrier } from "07393_getMainCarrier.js";
 import { getAsyncContextStrategy } from "07394_getAsyncContextStrategy.js";
-// _runtime/07380_spanTimeInputToSeconds.js
 const require = arg1;
 const dependencyMap = arg6;
 function spanTimeInputToSeconds(num) {

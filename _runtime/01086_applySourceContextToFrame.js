@@ -1,6 +1,6 @@
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 // _runtime/01086_applySourceContextToFrame.js
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 

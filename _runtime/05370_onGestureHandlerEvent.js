@@ -1,6 +1,6 @@
-import { map } from "05371_map.js";
 // _runtime/05370_onGestureHandlerEvent.js
 import { DeviceEventEmitter } from "get ActivityIndicator";
+import { map } from "05371_map.js";
 
 function onGestureHandlerEvent(handlerTag) {
   let obj = map /* map */;

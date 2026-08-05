@@ -1,8 +1,8 @@
-import { Background } from "05674_Background.js";
 // _runtime/05673_HeaderContainer.js
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { Background } from "05674_Background.js";
 
 let StyleSheet;
 let c4;

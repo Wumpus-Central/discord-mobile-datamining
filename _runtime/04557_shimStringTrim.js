@@ -1,6 +1,6 @@
+// _runtime/04557_shimStringTrim.js
 import { defineDataProperty } from "01406_defineDataProperty.js";
 import { getPolyfill } from "04550_getPolyfill.js";
-// _runtime/04557_shimStringTrim.js
 let closure_2 = require("hasPropertyDescriptors")();
 
 export default function shimStringTrim() {

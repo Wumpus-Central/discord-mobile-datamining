@@ -1,6 +1,6 @@
-import { addClsInstrumentationHandler } from "01033_addClsInstrumentationHandler.js";
 // _runtime/01087__getGraphQLOperation.js
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
+import { addClsInstrumentationHandler } from "01033_addClsInstrumentationHandler.js";
 
 function _getGraphQLOperation(obj) {
   let operationName;

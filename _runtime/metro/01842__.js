@@ -1,9 +1,9 @@
-import { useResizeMode } from "../01800_useResizeMode.js";
-import { KeyboardAvoidingView } from "../01811_KeyboardAvoidingView.js";
 // _runtime/metro/01842__.js
 import "noop";
 import { Animated } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { useResizeMode } from "../01800_useResizeMode.js";
+import { KeyboardAvoidingView } from "../01811_KeyboardAvoidingView.js";
 
 const require = arg1;
 let closure_3 = Animated.createAnimatedComponent(require("nativeEventEmitter").KeyboardBackgroundView);

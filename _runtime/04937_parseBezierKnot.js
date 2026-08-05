@@ -1,7 +1,7 @@
-import { getDataView } from "04897_getDataView.js";
-import { 04914__ } from "metro/04914__.js";
 // _runtime/04937_parseBezierKnot.js
 import _slicedToArray from "_slicedToArray";
+import { getDataView } from "04897_getDataView.js";
+import { 04914__ } from "metro/04914__.js";
 
 const require = arg1;
 function parseBezierKnot(dataView) {

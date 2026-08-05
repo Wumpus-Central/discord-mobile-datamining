@@ -1,9 +1,9 @@
+// _runtime/07419_forEachEnvelopeItem.js
+import _slicedToArray from "_slicedToArray";
 import { getGlobalSingleton } from "07376_getGlobalSingleton.js";
 import { addNonEnumerableProperty } from "07381_addNonEnumerableProperty.js";
 import { normalize } from "07420_normalize.js";
 import { dsnFromString } from "07422_dsnFromString.js";
-// _runtime/07419_forEachEnvelopeItem.js
-import _slicedToArray from "_slicedToArray";
 
 function forEachEnvelopeItem(arg0, arg1) {
   for (const item10007 of tmp) {

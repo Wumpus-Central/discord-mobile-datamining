@@ -1,6 +1,6 @@
+// _runtime/metro/13048__.js
 import { SemVer } from "../13020_SemVer.js";
 import { SemVer } from "../13021_SemVer.js";
-// _runtime/metro/13048__.js
 
 export default (num) => {
   if (num instanceof SemVer /* SemVer */) {

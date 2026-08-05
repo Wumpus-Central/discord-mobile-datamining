@@ -1,7 +1,7 @@
+// _runtime/00720_baseIteratee.js
 import { identity } from "00634_identity.js";
 import { property } from "00801_property.js";
 import { 00599__ } from "metro/00599__.js";
-// _runtime/00720_baseIteratee.js
 
 export default function baseIteratee(fn) {
   let tmp;

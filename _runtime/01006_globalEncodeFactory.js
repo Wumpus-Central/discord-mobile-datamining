@@ -1,5 +1,5 @@
-import { utf8ToBytes } from "01007_utf8ToBytes.js";
 // _runtime/01006_globalEncodeFactory.js
+import { utf8ToBytes } from "01007_utf8ToBytes.js";
 const require = arg1;
 const dependencyMap = arg6;
 function globalEncodeFactory(arg0) {

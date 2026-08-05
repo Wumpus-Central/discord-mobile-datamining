@@ -1,6 +1,6 @@
+// _runtime/13384___exportStarResult32.js
 import { digitsToString } from "13385_digitsToString.js";
 import { TEN } from "13388_TEN.js";
-// _runtime/13384___exportStarResult32.js
 const require = arg1;
 const dependencyMap = arg6;
 class ToNumber {

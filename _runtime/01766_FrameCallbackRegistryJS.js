@@ -1,7 +1,7 @@
-import { isReanimated3 } from "01650_isReanimated3.js";
 // _runtime/01766_FrameCallbackRegistryJS.js
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
+import { isReanimated3 } from "01650_isReanimated3.js";
 
 const FrameCallbackRegistryJS = global;
 const require = arg1;

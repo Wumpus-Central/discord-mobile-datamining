@@ -1,4 +1,3 @@
-import { __INTERNAL_VIEW_CONFIG } from "metro/00347___INTERNAL_VIEW_CONFIG.js";
 // _runtime/00346__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -8,6 +7,7 @@ import importDefaultResult1 from "_inherits";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
 import { default as _default } from "getConstants";
+import { __INTERNAL_VIEW_CONFIG } from "metro/00347___INTERNAL_VIEW_CONFIG.js";
 
 const Modal = arg1;
 function _isNativeReflectConstruct() {

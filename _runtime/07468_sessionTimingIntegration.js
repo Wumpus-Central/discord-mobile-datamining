@@ -1,6 +1,6 @@
-import { dateTimestampInSeconds } from "07389_dateTimestampInSeconds.js";
 // _runtime/07468_sessionTimingIntegration.js
 import setupIntegration from "setupIntegration";
+import { dateTimestampInSeconds } from "07389_dateTimestampInSeconds.js";
 
 
 export const sessionTimingIntegration = setupIntegration.defineIntegration(() => {

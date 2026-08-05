@@ -1,6 +1,6 @@
-import { 04920__ } from "metro/04920__.js";
 // _runtime/04935_calculateGPSValue.js
 import _slicedToArray from "_slicedToArray";
+import { 04920__ } from "metro/04920__.js";
 
 function calculateGPSValue(str) {
   let tmp2;

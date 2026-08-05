@@ -1,7 +1,7 @@
-import { getRoundingMethod } from "03558_getRoundingMethod.js";
 // _runtime/03772_roundToNearestMinutes.js
 import _typeof from "_typeof";
 import toInteger from "toInteger";
+import { getRoundingMethod } from "03558_getRoundingMethod.js";
 
 if (!_typeof) {
   let obj = { default: null };

@@ -1,5 +1,5 @@
-import { isNaN } from "00572_isNaN.js";
 // _runtime/04566_isInteger.js
+import { isNaN } from "00572_isNaN.js";
 
 export default function isInteger(num) {
   if (typeof num === "number") {

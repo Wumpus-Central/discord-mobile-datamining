@@ -1,6 +1,6 @@
+// _runtime/01034_triggerHandlers.js
 import { observe } from "01046_observe.js";
 import { __SENTRY_DEBUG__ } from "metro/01035___SENTRY_DEBUG__.js";
-// _runtime/01034_triggerHandlers.js
 const require = arg1;
 let dependencyMap = arg6;
 function triggerHandlers(arg0, arg1) {

@@ -1,5 +1,5 @@
-import { I18nManager } from "00412_I18nManager.js";
 // _runtime/00411_getConstants.js
+import { I18nManager } from "00412_I18nManager.js";
 if (require("I18nManager")) {
   const constants = require("I18nManager").getConstants();
   let obj = { isRTL: null, doLeftAndRightSwapInRTL: null, localeIdentifier: null };

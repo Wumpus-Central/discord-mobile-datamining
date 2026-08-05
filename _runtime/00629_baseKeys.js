@@ -1,5 +1,5 @@
-import { isPrototype } from "00630_isPrototype.js";
 // _runtime/00629_baseKeys.js
+import { isPrototype } from "00630_isPrototype.js";
 
 export default function baseKeys(arg0) {
   if (isPrototype /* isPrototype */(arg0)) {

@@ -1,7 +1,7 @@
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 // _runtime/01085__parseCookieHeaders.js
 import _slicedToArray from "_slicedToArray";
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 
 function _parseCookieHeaders(arg0, headers) {
   const tmp2 = (function _extractFetchHeaders(headers) {

@@ -1,6 +1,6 @@
-import { 00038__ } from "metro/00038__.js";
 // _runtime/00031_genModule.js
 import _slicedToArray from "_slicedToArray";
+import { 00038__ } from "metro/00038__.js";
 
 let require = arg1;
 function genModule(arg0, arg1) {

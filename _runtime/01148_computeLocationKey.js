@@ -1,12 +1,12 @@
+// _runtime/01148_computeLocationKey.js
+import asyncGeneratorStep from "createAsyncHandlerProxy";
+import _slicedToArray from "_slicedToArray";
+import noop from "noop";
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 import { feedbackAsyncIntegration } from "01024_feedbackAsyncIntegration.js";
 import { getStatics } from "01140_getStatics.js";
 import { pickSplat } from "01149_pickSplat.js";
 import { __SENTRY_DEBUG__ } from "metro/01142___SENTRY_DEBUG__.js";
-// _runtime/01148_computeLocationKey.js
-import asyncGeneratorStep from "createAsyncHandlerProxy";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
 
 function computeLocationKey(_location) {
   let pathname;

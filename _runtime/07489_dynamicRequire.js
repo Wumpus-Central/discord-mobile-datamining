@@ -1,5 +1,5 @@
-import { getSDKSource } from "07490_getSDKSource.js";
 // _runtime/07489_dynamicRequire.js
+import { getSDKSource } from "07490_getSDKSource.js";
 const require = arg1;
 let dependencyMap = arg4;
 dependencyMap = arg6;

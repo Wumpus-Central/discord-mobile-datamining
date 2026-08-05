@@ -1,5 +1,5 @@
-import { get64BitValue } from "04908_get64BitValue.js";
 // _runtime/04907_parseItemLocationBox.js
+import { get64BitValue } from "04908_get64BitValue.js";
 const require = arg1;
 const dependencyMap = arg6;
 arg5.parseItemLocationBox = function parseItemLocationBox(getUint8, uint8, arg2, length) {

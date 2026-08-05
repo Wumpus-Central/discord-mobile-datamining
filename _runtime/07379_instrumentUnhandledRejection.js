@@ -1,6 +1,6 @@
+// _runtime/07379_instrumentUnhandledRejection.js
 import { addHandler } from "07373_addHandler.js";
 import { getGlobalSingleton } from "07376_getGlobalSingleton.js";
-// _runtime/07379_instrumentUnhandledRejection.js
 const require = arg1;
 const dependencyMap = arg6;
 function instrumentUnhandledRejection() {

@@ -1,5 +1,5 @@
-import { 00821__ } from "metro/00821__.js";
 // _runtime/00952_createConsoleTemplateAttributes.js
+import { 00821__ } from "metro/00821__.js";
 const require = arg1;
 let dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

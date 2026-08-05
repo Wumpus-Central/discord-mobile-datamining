@@ -1,5 +1,5 @@
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 // _runtime/01178_createUserFeedbackEnvelope.js
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 const require = arg1;
 const dependencyMap = arg6;
 arg5.header = 0;

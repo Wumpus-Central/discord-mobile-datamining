@@ -1,6 +1,6 @@
+// _runtime/metro/13507__.js
 import { all } from "../13508_all.js";
 import { 13488__ } from "13488__.js";
-// _runtime/metro/13507__.js
 
 export default (arg0, arg1) => {
   let tmp4;

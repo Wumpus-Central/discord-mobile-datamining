@@ -1,5 +1,5 @@
-import { all } from "13503_all.js";
 // _runtime/13502_all.js
+import { all } from "13503_all.js";
 
 export default (obj) => {
   if (typeof obj === "object") {

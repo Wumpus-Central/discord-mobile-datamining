@@ -1,5 +1,3 @@
-import { Event } from "00133_Event.js";
-import { _isNativeReflectConstruct } from "00207__isNativeReflectConstruct.js";
 // _runtime/00199__isNativeReflectConstruct.js
 import _get from "_get";
 import _classCallCheck from "_classCallCheck";
@@ -7,6 +5,8 @@ import importDefaultResult from "_createClass";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult1 from "_inherits";
+import { Event } from "00133_Event.js";
+import { _isNativeReflectConstruct } from "00207__isNativeReflectConstruct.js";
 
 let XMLHttpRequest = arg1;
 function _isNativeReflectConstruct() {

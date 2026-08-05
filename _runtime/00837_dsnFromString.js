@@ -1,6 +1,6 @@
-import { consoleSandbox } from "00824_consoleSandbox.js";
 // _runtime/00837_dsnFromString.js
 import _slicedToArray from "_slicedToArray";
+import { consoleSandbox } from "00824_consoleSandbox.js";
 
 function dsnFromString(arg0) {
   const _require = arg0;

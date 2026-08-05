@@ -1,10 +1,10 @@
-import { toArray } from "05372_toArray.js";
 // _runtime/05439_RefreshControl.js
 import _slicedToArray from "_slicedToArray";
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { toArray } from "05372_toArray.js";
 
 let DrawerLayoutAndroid;
 let RefreshControl;

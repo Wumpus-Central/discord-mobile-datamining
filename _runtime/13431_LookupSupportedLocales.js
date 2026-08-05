@@ -1,6 +1,6 @@
+// _runtime/13431_LookupSupportedLocales.js
 import { isMatched } from "13421_isMatched.js";
 import { BestAvailableLocale } from "13424_BestAvailableLocale.js";
-// _runtime/13431_LookupSupportedLocales.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.LookupSupportedLocales = function LookupSupportedLocales(arg0, arg1) {

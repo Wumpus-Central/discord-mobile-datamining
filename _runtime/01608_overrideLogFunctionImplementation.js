@@ -1,12 +1,12 @@
-import { isJest } from "01609_isJest.js";
-import { addLogBoxLog } from "01610_addLogBoxLog.js";
-import { runWorkletOnJS } from "01613_runWorkletOnJS.js";
 // _runtime/01608_overrideLogFunctionImplementation.js
 import isJest from "isJest";
 import isJest from "isJest";
 import isJest from "isJest";
 import addLogBoxLog from "addLogBoxLog";
 import addLogBoxLog from "addLogBoxLog";
+import { isJest } from "01609_isJest.js";
+import { addLogBoxLog } from "01610_addLogBoxLog.js";
+import { runWorkletOnJS } from "01613_runWorkletOnJS.js";
 
 isJest = isJest.isJest();
 isJest = isJest.shouldBeUseWeb();

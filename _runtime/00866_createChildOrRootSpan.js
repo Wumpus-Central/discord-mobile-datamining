@@ -1,10 +1,10 @@
+// _runtime/00866_createChildOrRootSpan.js
+import _slicedToArray from "_slicedToArray";
 import { getGlobalSingleton } from "00825_getGlobalSingleton.js";
 import { getAsyncContextStrategy } from "00841_getAsyncContextStrategy.js";
 import { getClient } from "00848_getClient.js";
 import { hasSpansEnabled } from "00855_hasSpansEnabled.js";
 import { 00839__ } from "metro/00839__.js";
-// _runtime/00866_createChildOrRootSpan.js
-import _slicedToArray from "_slicedToArray";
 
 function createChildOrRootSpan(arg0) {
   let forceTransaction;

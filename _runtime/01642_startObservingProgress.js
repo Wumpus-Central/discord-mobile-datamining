@@ -1,7 +1,7 @@
-import { isWorkletFunction } from "01631_isWorkletFunction.js";
 // _runtime/01642_startObservingProgress.js
 import isJest from "isJest";
 import runWorkletOnJS from "runWorkletOnJS";
+import { isWorkletFunction } from "01631_isWorkletFunction.js";
 
 isJest = isJest.isAndroid();
 function startObservingProgress(arg0, addListener) {

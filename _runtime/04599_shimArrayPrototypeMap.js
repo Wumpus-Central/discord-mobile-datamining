@@ -1,6 +1,6 @@
+// _runtime/04599_shimArrayPrototypeMap.js
 import { getPolyfill } from "04534_getPolyfill.js";
 import { defineProperty } from "04553_defineProperty.js";
-// _runtime/04599_shimArrayPrototypeMap.js
 
 export default function shimArrayPrototypeMap() {
   const tmp = getPolyfill /* getPolyfill */();

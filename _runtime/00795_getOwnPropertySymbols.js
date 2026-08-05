@@ -1,5 +1,5 @@
-import { arrayFilter } from "00797_arrayFilter.js";
 // _runtime/00795_getOwnPropertySymbols.js
+import { arrayFilter } from "00797_arrayFilter.js";
 if (getOwnPropertySymbols) {
   let fn = (arg0) => {
     let _require = arg0;

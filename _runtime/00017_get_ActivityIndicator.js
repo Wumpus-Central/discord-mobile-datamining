@@ -1,3 +1,4 @@
+// _runtime/00017_get_ActivityIndicator.js
 import { ActivityIndicator } from "00018_ActivityIndicator.js";
 import { ProgressBarAndroid } from "00023_ProgressBarAndroid.js";
 import { get } from "00030_get.js";
@@ -90,7 +91,6 @@ import { 00466__ } from "metro/00466__.js";
 import { 00467__ } from "metro/00467__.js";
 import { 00474__ } from "metro/00474__.js";
 import { 00483__ } from "metro/00483__.js";
-// _runtime/00017_get_ActivityIndicator.js
 const obj = {};
 Object.defineProperty(obj, "ActivityIndicator", { get: () => ActivityIndicator /* ActivityIndicator */.default, set: undefined });
 Object.defineProperty(obj, "Button", { get: () => Button /* Button */.default, set: undefined });

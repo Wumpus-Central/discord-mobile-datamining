@@ -1,5 +1,5 @@
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 // _runtime/01193_addGestureBreadcrumb.js
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 const require = arg1;
 const dependencyMap = arg6;
 function addGestureBreadcrumb(message, event) {

@@ -1,6 +1,6 @@
-import { noop } from "05672_noop.js";
 // _runtime/05726_useGestureHandlerRef.js
 import noop from "noop";
+import { noop } from "05672_noop.js";
 
 
 export default function useGestureHandlerRef() {

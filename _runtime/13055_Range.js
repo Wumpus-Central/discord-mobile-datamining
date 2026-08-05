@@ -1,5 +1,5 @@
-import { Range } from "13050_Range.js";
 // _runtime/13055_Range.js
+import { Range } from "13050_Range.js";
 
 export default (arr) => {
   const _require = arg2;

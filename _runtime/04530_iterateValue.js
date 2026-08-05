@@ -1,5 +1,5 @@
-import { getIterator } from "04531_getIterator.js";
 // _runtime/04530_iterateValue.js
+import { getIterator } from "04531_getIterator.js";
 
 export default function iterateValue(arg0) {
   const tmp3 = getIterator /* getIterator */(arg0);

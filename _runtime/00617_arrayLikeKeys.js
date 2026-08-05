@@ -1,6 +1,6 @@
+// _runtime/00617_arrayLikeKeys.js
 import { isIndex } from "00628_isIndex.js";
 import { 00599__ } from "metro/00599__.js";
-// _runtime/00617_arrayLikeKeys.js
 
 export default function arrayLikeKeys(obj) {
   const tmp3 = 00599__(obj);

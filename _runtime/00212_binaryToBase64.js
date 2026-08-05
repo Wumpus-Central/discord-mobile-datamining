@@ -1,5 +1,5 @@
-import { byteLength } from "00206_byteLength.js";
 // _runtime/00212_binaryToBase64.js
+import { byteLength } from "00206_byteLength.js";
 const require = arg1;
 const dependencyMap = arg6;
 arg5.default = function binaryToBase64(arg0) {

@@ -1,7 +1,7 @@
-import { __INTERNAL_VIEW_CONFIG } from "metro/00024___INTERNAL_VIEW_CONFIG.js";
 // _runtime/00023_ProgressBarAndroid.js
 import { jsx } from "jsxProd";
 import noop from "noop";
+import { __INTERNAL_VIEW_CONFIG } from "metro/00024___INTERNAL_VIEW_CONFIG.js";
 
 
 export default function ProgressBarAndroid(styleAttr) {

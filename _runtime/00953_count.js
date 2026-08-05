@@ -1,5 +1,5 @@
-import { _INTERNAL_captureSerializedMetric } from "00885__INTERNAL_captureSerializedMetric.js";
 // _runtime/00953_count.js
+import { _INTERNAL_captureSerializedMetric } from "00885__INTERNAL_captureSerializedMetric.js";
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

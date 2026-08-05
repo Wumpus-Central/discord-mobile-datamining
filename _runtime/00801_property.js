@@ -1,5 +1,5 @@
-import { isKey } from "00722_isKey.js";
 // _runtime/00801_property.js
+import { isKey } from "00722_isKey.js";
 
 export default function property(arg0) {
   if (isKey /* isKey */(arg0)) {

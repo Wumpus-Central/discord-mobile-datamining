@@ -1,8 +1,8 @@
-import { addLogBoxLog } from "01610_addLogBoxLog.js";
-import { dispatchCommandFabric } from "01781_dispatchCommandFabric.js";
 // _runtime/01784_scrollToFabric.js
 import isJest from "isJest";
 import isJest from "isJest";
+import { addLogBoxLog } from "01610_addLogBoxLog.js";
+import { dispatchCommandFabric } from "01781_dispatchCommandFabric.js";
 
 function scrollToFabric(arg0, arg1, arg2, arg3) {
   const items = [arg1, arg2, arg3];

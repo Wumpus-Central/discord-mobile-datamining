@@ -1,5 +1,5 @@
-import { feedbackAsyncIntegration } from "01024_feedbackAsyncIntegration.js";
 // _runtime/01145_tanstackRouterBrowserTracingIntegration.js
+import { feedbackAsyncIntegration } from "01024_feedbackAsyncIntegration.js";
 const require = arg1;
 let dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

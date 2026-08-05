@@ -1,9 +1,9 @@
+// _runtime/00857_getDynamicSamplingContextFromSpan.js
 import { addNonEnumerableProperty } from "00822_addNonEnumerableProperty.js";
 import { baggageHeaderToDynamicSamplingContext } from "00835_baggageHeaderToDynamicSamplingContext.js";
 import { dsnFromString } from "00837_dsnFromString.js";
 import { getClient } from "00848_getClient.js";
 import { 00858__ } from "metro/00858__.js";
-// _runtime/00857_getDynamicSamplingContextFromSpan.js
 const require = arg1;
 const dependencyMap = arg6;
 function getDynamicSamplingContextFromSpan(spanContext) {

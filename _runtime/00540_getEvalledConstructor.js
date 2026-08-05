@@ -1,6 +1,3 @@
-import { getProto } from "00546_getProto.js";
-import { 00541__ } from "metro/00541__.js";
-import { 00542__ } from "metro/00542__.js";
 // _runtime/00540_getEvalledConstructor.js
 import bind from "bind";
 import 00556__ from "metro/00556__.js";
@@ -12,6 +9,9 @@ import bind from "bind";
 import 00556__ from "metro/00556__.js";
 import bind from "bind";
 import 00556__ from "metro/00556__.js";
+import { getProto } from "00546_getProto.js";
+import { 00541__ } from "metro/00541__.js";
+import { 00542__ } from "metro/00542__.js";
 
 function getEvalledConstructor(arg0) {
   try {

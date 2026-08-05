@@ -1,5 +1,5 @@
-import { baseGet } from "00727_baseGet.js";
 // _runtime/00726_get.js
+import { baseGet } from "00727_baseGet.js";
 
 export default function get(arg0, arg1, arg2) {
   let tmp;

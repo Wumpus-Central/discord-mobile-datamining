@@ -1,4 +1,3 @@
-import { getDefaultOptions } from "../03369_getDefaultOptions.js";
 // _runtime/metro/03666__typeof.js
 import code from "code";
 import subMilliseconds from "subMilliseconds";
@@ -8,6 +7,7 @@ import dateLongFormatter from "dateLongFormatter";
 import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds";
 import toInteger from "toInteger";
 import requiredArgs from "requiredArgs";
+import { getDefaultOptions } from "../03369_getDefaultOptions.js";
 
 function _typeof(arg0) {
   if (typeof Symbol === "function") {

@@ -1,5 +1,5 @@
-import { SegmentFetcher } from "00242_SegmentFetcher.js";
 // _runtime/00241___fetchSegment.js
+import { SegmentFetcher } from "00242_SegmentFetcher.js";
 const require = arg1;
 const dependencyMap = arg6;
 arg0.__fetchSegment = function __fetchSegment(arg0, arg1, arg2) {

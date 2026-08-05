@@ -1,6 +1,6 @@
+// _runtime/01391_checkBoxedPrimitive.js
 import { isTypedArray } from "01397_isTypedArray.js";
 import { 01398__ } from "metro/01398__.js";
-// _runtime/01391_checkBoxedPrimitive.js
 function checkBoxedPrimitive(obj, closure_6) {
   if (typeof obj !== "object") {
     return false;

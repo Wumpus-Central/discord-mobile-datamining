@@ -1,5 +1,5 @@
-import { e } from "01281_e.js";
 // _runtime/13445_emitUnicodeLanguageId.js
+import { e } from "01281_e.js";
 const require = arg1;
 const dependencyMap = arg6;
 arg5.emitUnicodeLanguageId = function emitUnicodeLanguageId(arg0) {

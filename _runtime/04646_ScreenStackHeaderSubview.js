@@ -1,9 +1,9 @@
-import { context } from "04647_context.js";
-import { __INTERNAL_VIEW_CONFIG } from "metro/04650___INTERNAL_VIEW_CONFIG.js";
 // _runtime/04646_ScreenStackHeaderSubview.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { context } from "04647_context.js";
+import { __INTERNAL_VIEW_CONFIG } from "metro/04650___INTERNAL_VIEW_CONFIG.js";
 
 let Platform;
 let StyleSheet;

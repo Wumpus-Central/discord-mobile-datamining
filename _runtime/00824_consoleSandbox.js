@@ -1,6 +1,6 @@
+// _runtime/00824_consoleSandbox.js
 import { getGlobalSingleton } from "00825_getGlobalSingleton.js";
 import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
-// _runtime/00824_consoleSandbox.js
 const require = arg1;
 let dependencyMap = arg6;
 function consoleSandbox(arg0) {

@@ -1,6 +1,6 @@
-import { noop } from "05715_noop.js";
 // _runtime/05725_useCardAnimation.js
 import noop from "noop";
+import { noop } from "05715_noop.js";
 
 
 export default function useCardAnimation() {

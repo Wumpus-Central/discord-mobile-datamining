@@ -1,5 +1,5 @@
-import { byteLength } from "00206_byteLength.js";
 // _runtime/00511_Buffer.js
+import { byteLength } from "00206_byteLength.js";
 const require = arg1;
 const exports = arg5;
 const dependencyMap = arg6;

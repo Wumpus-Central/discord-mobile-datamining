@@ -1,6 +1,6 @@
-import { 13477__ } from "metro/13477__.js";
 // _runtime/13513_element.js
 import all from "all";
+import { 13477__ } from "metro/13477__.js";
 
 let _moduleResult = all(require("module_13477").document);
 if (_moduleResult) {

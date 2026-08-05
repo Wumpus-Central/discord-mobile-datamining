@@ -1,6 +1,6 @@
-import { forEachEnvelopeItem } from "00864_forEachEnvelopeItem.js";
 // _runtime/00897_eventFromEnvelope.js
 import asyncGeneratorStep from "asyncGeneratorStep";
+import { forEachEnvelopeItem } from "00864_forEachEnvelopeItem.js";
 
 function eventFromEnvelope(arg0, arg1) {
   const _require = arg1;

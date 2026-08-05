@@ -1,5 +1,5 @@
-import { WINDOW } from "01039_WINDOW.js";
 // _runtime/01041_addPageListener.js
+import { WINDOW } from "01039_WINDOW.js";
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

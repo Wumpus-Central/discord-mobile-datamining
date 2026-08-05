@@ -1,9 +1,9 @@
-import { NativeSafeAreaProvider } from "01586_NativeSafeAreaProvider.js";
 // _runtime/01585_context.js
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { NativeSafeAreaProvider } from "01586_NativeSafeAreaProvider.js";
 
 let StyleSheet;
 let c4;

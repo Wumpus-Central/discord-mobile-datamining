@@ -1,5 +1,5 @@
-import { 00599__ } from "metro/00599__.js";
 // _runtime/00728_castPath.js
+import { 00599__ } from "metro/00599__.js";
 
 export default function castPath(arg0, arg1) {
   if (00599__(arg0)) {

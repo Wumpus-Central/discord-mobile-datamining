@@ -1,7 +1,7 @@
-import { TurboModuleRegistry } from "00997_TurboModuleRegistry.js";
-import { isHermesEnabled } from "01002_isHermesEnabled.js";
 // _runtime/01196_isModalSupported.js
 import { Alert } from "get ActivityIndicator";
+import { TurboModuleRegistry } from "00997_TurboModuleRegistry.js";
+import { isHermesEnabled } from "01002_isHermesEnabled.js";
 
 
 export const isModalSupported = function isModalSupported() {

@@ -1,10 +1,10 @@
+// _runtime/07409_createChildOrRootSpan.js
+import _slicedToArray from "_slicedToArray";
 import { getMainCarrier } from "07393_getMainCarrier.js";
 import { getAsyncContextStrategy } from "07394_getAsyncContextStrategy.js";
 import { getClient } from "07402_getClient.js";
 import { hasTracingEnabled } from "07407_hasTracingEnabled.js";
 import { 07390__ } from "metro/07390__.js";
-// _runtime/07409_createChildOrRootSpan.js
-import _slicedToArray from "_slicedToArray";
 
 function createChildOrRootSpan(forceTransaction) {
   let parentSpan;

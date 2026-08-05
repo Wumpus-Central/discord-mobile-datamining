@@ -1,5 +1,5 @@
-import { all } from "../13503_all.js";
 // _runtime/metro/13534__.js
+import { all } from "../13503_all.js";
 
 export default (arg0, arg1, arg2, arg3) => {
   let obj = arg3;

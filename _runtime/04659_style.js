@@ -1,9 +1,9 @@
-import { ScreenContentWrapper } from "04660_ScreenContentWrapper.js";
 // _runtime/04659_style.js
 import "_objectWithoutProperties";
 import "noop";
 import { Platform } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { ScreenContentWrapper } from "04660_ScreenContentWrapper.js";
 
 
 export default function _default(arg0) {

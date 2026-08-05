@@ -1,5 +1,5 @@
-import { dateTimestampInSeconds } from "07389_dateTimestampInSeconds.js";
 // _runtime/07370_registerSpanErrorInstrumentation.js
+import { dateTimestampInSeconds } from "07389_dateTimestampInSeconds.js";
 
 export const registerSpanErrorInstrumentation = require("errorCallback").registerSpanErrorInstrumentation;
 export const getCapturedScopesOnSpan = require("getCapturedScopesOnSpan").getCapturedScopesOnSpan;

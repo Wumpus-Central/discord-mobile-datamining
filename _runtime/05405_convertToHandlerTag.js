@@ -1,7 +1,7 @@
-import { _isNativeReflectConstruct } from "05407__isNativeReflectConstruct.js";
 // _runtime/05405_convertToHandlerTag.js
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
+import { _isNativeReflectConstruct } from "05407__isNativeReflectConstruct.js";
 
 let c3;
 let c4;

@@ -1,5 +1,5 @@
-import { getDataView } from "04897_getDataView.js";
 // _runtime/04911_getDataView.js
+import { getDataView } from "04897_getDataView.js";
 const require = arg1;
 const dependencyMap = arg6;
 let c2 = 6;

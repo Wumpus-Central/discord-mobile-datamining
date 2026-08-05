@@ -1,8 +1,8 @@
-import { colorToHex } from "08904_colorToHex.js";
 // _runtime/08899_getTheme.js
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import { DatePickerAndroid } from "getStyle";
+import { colorToHex } from "08904_colorToHex.js";
 
 let Platform;
 let Text;

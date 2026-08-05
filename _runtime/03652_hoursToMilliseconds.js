@@ -1,6 +1,6 @@
-import { keys } from "03543_keys.js";
 // _runtime/03652_hoursToMilliseconds.js
 import requiredArgs from "requiredArgs";
+import { keys } from "03543_keys.js";
 
 if (!requiredArgs) {
   const obj = { default: null };

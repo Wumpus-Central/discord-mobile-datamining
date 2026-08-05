@@ -1,7 +1,7 @@
+// _runtime/00938_extractClientInfo.js
 import { isJsonRpcNotification } from "00936_isJsonRpcNotification.js";
 import { weakMap } from "00939_weakMap.js";
 import { 00940__ } from "metro/00940__.js";
-// _runtime/00938_extractClientInfo.js
 const require = arg1;
 const dependencyMap = arg6;
 function extractClientInfo(requestInfo) {

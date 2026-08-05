@@ -1,9 +1,9 @@
-import { usePortal } from "04158_usePortal.js";
-import { usePortalState } from "04162_usePortalState.js";
 // _runtime/04161_PortalHost.js
 import noop from "noop";
 import "noop";
 import jsxProd from "jsxProd";
+import { usePortal } from "04158_usePortal.js";
+import { usePortalState } from "04162_usePortalState.js";
 
 let c3;
 let c4;

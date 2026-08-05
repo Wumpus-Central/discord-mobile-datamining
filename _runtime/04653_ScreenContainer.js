@@ -1,10 +1,10 @@
-import { isNativePlatformSupported } from "04634_isNativePlatformSupported.js";
-import { __INTERNAL_VIEW_CONFIG } from "metro/04654___INTERNAL_VIEW_CONFIG.js";
 // _runtime/04653_ScreenContainer.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import get_ActivityIndicator from "get ActivityIndicator";
 import "noop";
 import { jsx } from "jsxProd";
+import { isNativePlatformSupported } from "04634_isNativePlatformSupported.js";
+import { __INTERNAL_VIEW_CONFIG } from "metro/04654___INTERNAL_VIEW_CONFIG.js";
 
 let Platform;
 let c5;

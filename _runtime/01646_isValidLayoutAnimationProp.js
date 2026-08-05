@@ -1,9 +1,9 @@
+// _runtime/01646_isValidLayoutAnimationProp.js
+import isJest from "isJest";
 import { runWorkletOnJS } from "01613_runWorkletOnJS.js";
 import { t } from "01617_t.js";
 import { isWorkletFunction } from "01631_isWorkletFunction.js";
 import { isAffineMatrixFlat } from "01648_isAffineMatrixFlat.js";
-// _runtime/01646_isValidLayoutAnimationProp.js
-import isJest from "isJest";
 
 let c2 = false;
 isJest = isJest.shouldBeUseWeb();

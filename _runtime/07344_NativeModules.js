@@ -1,7 +1,7 @@
-import { 07346__ } from "metro/07346__.js";
 // _runtime/07344_NativeModules.js
 import RNIapAmazonModule from "RNIapAmazonModule";
 import get_ActivityIndicator from "get ActivityIndicator";
+import { 07346__ } from "metro/07346__.js";
 
 let NativeModules;
 let Platform;

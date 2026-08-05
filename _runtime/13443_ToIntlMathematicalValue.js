@@ -1,7 +1,7 @@
-import { __exportStarResult32 } from "13384___exportStarResult32.js";
 // _runtime/13443_ToIntlMathematicalValue.js
 import e from "e";
 import digitsToString from "digitsToString";
+import { __exportStarResult32 } from "13384___exportStarResult32.js";
 
 
 export const ToIntlMathematicalValue = function ToIntlMathematicalValue(arg0) {

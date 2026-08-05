@@ -1,6 +1,6 @@
+// _runtime/04868_detectFile.js
 import { getFileChunk } from "04869_getFileChunk.js";
 import { 04870__ } from "metro/04870__.js";
-// _runtime/04868_detectFile.js
 let require = arg1;
 const dependencyMap = arg6;
 arg5.detectFile = function detectFile(uint8Array, chunkSize) {

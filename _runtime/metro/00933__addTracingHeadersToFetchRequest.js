@@ -1,7 +1,7 @@
+// _runtime/metro/00933__addTracingHeadersToFetchRequest.js
 import { getClient } from "../00848_getClient.js";
 import { hasSpansEnabled } from "../00855_hasSpansEnabled.js";
 import { getTraceData } from "../00904_getTraceData.js";
-// _runtime/metro/00933__addTracingHeadersToFetchRequest.js
 const require = arg1;
 const dependencyMap = arg6;
 function _addTracingHeadersToFetchRequest(headers, headers2, span, propagateTraceparent) {

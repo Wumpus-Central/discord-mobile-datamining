@@ -1,6 +1,6 @@
+// _runtime/13505_all.js
 import { all } from "13503_all.js";
 import { 13477__ } from "metro/13477__.js";
-// _runtime/13505_all.js
 
 export default (arg0, arg1) => {
   if (arguments.length < 2) {

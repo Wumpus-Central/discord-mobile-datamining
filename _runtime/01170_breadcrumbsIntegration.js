@@ -1,5 +1,5 @@
-import { isHermesEnabled } from "01002_isHermesEnabled.js";
 // _runtime/01170_breadcrumbsIntegration.js
+import { isHermesEnabled } from "01002_isHermesEnabled.js";
 const require = arg1;
 const dependencyMap = arg6;
 arg5.breadcrumbsIntegration = () => {

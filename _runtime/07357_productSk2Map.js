@@ -1,5 +1,5 @@
-import { 07345__ } from "metro/07345__.js";
 // _runtime/07357_productSk2Map.js
+import { 07345__ } from "metro/07345__.js";
 const require = arg1;
 const dependencyMap = arg6;
 arg5.productSk2Map = (displayName) => {

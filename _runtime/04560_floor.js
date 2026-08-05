@@ -1,5 +1,5 @@
-import { 00566__ } from "metro/00566__.js";
 // _runtime/04560_floor.js
+import { 00566__ } from "metro/00566__.js";
 
 export default function floor(arg0) {
   let tmp = arg0;

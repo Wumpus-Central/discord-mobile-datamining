@@ -1,5 +1,5 @@
-import { toPropertyKey } from "00043_toPropertyKey.js";
 // _runtime/14632__defineProperty.js
+import { toPropertyKey } from "00043_toPropertyKey.js";
 
 export default function _defineProperty(arg0, arg1, arg2) {
   const tmp = toPropertyKey /* toPropertyKey */(arg1);

@@ -1,7 +1,7 @@
-import { addHandler } from "07373_addHandler.js";
 // _runtime/07486__resolveResponse.js
 import _slicedToArray from "_slicedToArray";
 import asyncGeneratorStep from "getGlobalSingleton";
+import { addHandler } from "07373_addHandler.js";
 
 function _resolveResponse() {
   const self = this;

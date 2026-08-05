@@ -1,3 +1,4 @@
+// _runtime/01075_forceLoad.js
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 import { _isNativeReflectConstruct } from "01030__isNativeReflectConstruct.js";
 import { makeFetchTransport } from "01032_makeFetchTransport.js";
@@ -8,7 +9,6 @@ import { linkedErrorsIntegration } from "01079_linkedErrorsIntegration.js";
 import { httpContextIntegration } from "01080_httpContextIntegration.js";
 import { browserSessionIntegration } from "01081_browserSessionIntegration.js";
 import { checkAndWarnIfIsEmbeddedBrowserExtension } from "01082_checkAndWarnIfIsEmbeddedBrowserExtension.js";
-// _runtime/01075_forceLoad.js
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

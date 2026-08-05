@@ -1,7 +1,7 @@
+// _runtime/07436_createCheckInEnvelope.js
 import { addNonEnumerableProperty } from "07381_addNonEnumerableProperty.js";
 import { forEachEnvelopeItem } from "07419_forEachEnvelopeItem.js";
 import { dsnFromString } from "07422_dsnFromString.js";
-// _runtime/07436_createCheckInEnvelope.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.createCheckInEnvelope = function createCheckInEnvelope(arg0, arg1, sdk) {

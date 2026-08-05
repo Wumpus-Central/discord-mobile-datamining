@@ -1,5 +1,5 @@
-import { isObject } from "04529_isObject.js";
 // _runtime/04590_CreateDataPropertyOrThrow.js
+import { isObject } from "04529_isObject.js";
 
 export default function CreateDataPropertyOrThrow(arg0, arg1, arg2) {
   if (isObject /* isObject */(arg0)) {

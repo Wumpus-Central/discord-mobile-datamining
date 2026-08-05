@@ -1,6 +1,6 @@
+// _runtime/00884_createLogContainerEnvelopeItem.js
 import { dsnFromString } from "00837_dsnFromString.js";
 import { forEachEnvelopeItem } from "00864_forEachEnvelopeItem.js";
-// _runtime/00884_createLogContainerEnvelopeItem.js
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

@@ -1,6 +1,6 @@
+// _runtime/07393_getMainCarrier.js
 import { getGlobalSingleton } from "07376_getGlobalSingleton.js";
 import { 07377__ } from "metro/07377__.js";
-// _runtime/07393_getMainCarrier.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getMainCarrier = function getMainCarrier() {

@@ -1,9 +1,9 @@
+// _runtime/00200_BlobManager.js
+import _classCallCheck from "_classCallCheck";
 import { BlobModule } from "00201_BlobModule.js";
 import { Blob } from "00203_Blob.js";
 import { map } from "00204_map.js";
 import { 00038__ } from "metro/00038__.js";
-// _runtime/00200_BlobManager.js
-import _classCallCheck from "_classCallCheck";
 
 const BlobManager = global;
 const require = arg1;

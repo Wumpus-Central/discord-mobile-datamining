@@ -1,9 +1,9 @@
-import { getShadowNodeWrapperFromRef } from "01634_getShadowNodeWrapperFromRef.js";
 // _runtime/01632_importDefaultResult1.js
 import _classCallCheck from "_classCallCheck";
 import importDefaultResult from "_createClass";
 import _classPrivateFieldBase from "_classPrivateFieldBase";
 import importDefaultResult1 from "_classPrivateFieldKey";
+import { getShadowNodeWrapperFromRef } from "01634_getShadowNodeWrapperFromRef.js";
 
 let DummyReanimatedModuleProxy = global;
 const require = arg1;

@@ -1,7 +1,7 @@
-import { getRoundingMethod } from "03558_getRoundingMethod.js";
 // _runtime/03566_differenceInQuarters.js
 import differenceInMonths from "differenceInMonths";
 import requiredArgs from "requiredArgs";
+import { getRoundingMethod } from "03558_getRoundingMethod.js";
 
 if (!differenceInMonths) {
   let obj = { default: null };

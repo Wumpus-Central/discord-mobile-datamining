@@ -1,7 +1,7 @@
-import { forEachEnvelopeItem } from "07419_forEachEnvelopeItem.js";
 // _runtime/07418_createEventEnvelope.js
 import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__";
 import consoleSandbox from "consoleSandbox";
+import { forEachEnvelopeItem } from "07419_forEachEnvelopeItem.js";
 
 
 export const createEventEnvelope = function createEventEnvelope(type, arg1, sdk) {

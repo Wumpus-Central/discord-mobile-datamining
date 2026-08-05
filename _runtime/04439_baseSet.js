@@ -1,6 +1,6 @@
+// _runtime/04439_baseSet.js
 import { isObject } from "00606_isObject.js";
 import { toKey } from "00725_toKey.js";
-// _runtime/04439_baseSet.js
 
 export default function baseSet(arg0, arg1, arg2, arg3) {
   if (isObject /* isObject */(arg0)) {

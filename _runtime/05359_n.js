@@ -1,5 +1,5 @@
-import { GESTURE_SOURCE } from "05341_GESTURE_SOURCE.js";
 // _runtime/05359_n.js
+import { GESTURE_SOURCE } from "05341_GESTURE_SOURCE.js";
 const require = arg1;
 const dependencyMap = arg6;
 const fn = function n(arg0) {

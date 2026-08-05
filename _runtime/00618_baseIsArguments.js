@@ -1,6 +1,6 @@
-import { isObjectLike } from "00620_isObjectLike.js";
 // _runtime/00618_baseIsArguments.js
 import baseIsArguments from "baseIsArguments";
+import { isObjectLike } from "00620_isObjectLike.js";
 
 let c3;
 let obj1;

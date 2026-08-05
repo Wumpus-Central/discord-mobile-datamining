@@ -1,7 +1,7 @@
+// _runtime/00822_addNonEnumerableProperty.js
 import { isInstanceOf } from "00827_isInstanceOf.js";
 import { _htmlElementAsString } from "00828__htmlElementAsString.js";
 import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
-// _runtime/00822_addNonEnumerableProperty.js
 const require = arg1;
 const dependencyMap = arg6;
 function addNonEnumerableProperty(arg0, arg1, arg2) {

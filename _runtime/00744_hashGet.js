@@ -1,5 +1,5 @@
-import { getNative } from "00736_getNative.js";
 // _runtime/00744_hashGet.js
+import { getNative } from "00736_getNative.js";
 
 export default function hashGet(arg0) {
   const __data__ = this.__data__;

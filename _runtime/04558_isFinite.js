@@ -1,5 +1,5 @@
-import { isNaN } from "00572_isNaN.js";
 // _runtime/04558_isFinite.js
+import { isNaN } from "00572_isNaN.js";
 
 export default function isFinite(num) {
   let tmp = typeof num === "number";

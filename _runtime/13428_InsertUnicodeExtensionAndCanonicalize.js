@@ -1,6 +1,6 @@
+// _runtime/13428_InsertUnicodeExtensionAndCanonicalize.js
 import { isMatched } from "13421_isMatched.js";
 import { CanonicalizeUnicodeLocaleId } from "13429_CanonicalizeUnicodeLocaleId.js";
-// _runtime/13428_InsertUnicodeExtensionAndCanonicalize.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.InsertUnicodeExtensionAndCanonicalize = function InsertUnicodeExtensionAndCanonicalize(arr) {

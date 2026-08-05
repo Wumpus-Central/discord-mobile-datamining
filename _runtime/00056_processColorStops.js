@@ -1,6 +1,6 @@
-import { processColor } from "00050_processColor.js";
 // _runtime/00056_processColorStops.js
 import _slicedToArray from "_slicedToArray";
+import { processColor } from "00050_processColor.js";
 
 const require = arg1;
 function processColorStops(nextResult) {

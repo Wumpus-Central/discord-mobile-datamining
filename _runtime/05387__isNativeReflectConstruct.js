@@ -1,6 +1,3 @@
-import { RNGestureHandlerModule } from "05377_RNGestureHandlerModule.js";
-import { transformIntoHandlerTags } from "05391_transformIntoHandlerTags.js";
-import { 05392__ } from "metro/05392__.js";
 // _runtime/05387__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
@@ -11,6 +8,9 @@ import noop from "noop";
 import get_ActivityIndicator from "MountRegistry";
 import { jsx } from "jsxProd";
 import toArray from "toArray";
+import { RNGestureHandlerModule } from "05377_RNGestureHandlerModule.js";
+import { transformIntoHandlerTags } from "05391_transformIntoHandlerTags.js";
+import { 05392__ } from "metro/05392__.js";
 
 let DeviceEventEmitter;
 let Platform;

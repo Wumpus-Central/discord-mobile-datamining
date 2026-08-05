@@ -1,11 +1,11 @@
-import { Animated } from "../04635_Animated.js";
-import { warnOnce } from "../04640_warnOnce.js";
-import { style } from "../04659_style.js";
 // _runtime/metro/04658__.js
 import "_objectWithoutProperties";
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
+import { Animated } from "../04635_Animated.js";
+import { warnOnce } from "../04640_warnOnce.js";
+import { style } from "../04659_style.js";
 
 let StyleSheet;
 let c4;

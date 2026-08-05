@@ -1,6 +1,6 @@
-import { getNative } from "../00773_getNative.js";
 // _runtime/metro/06987__.js
 import noop from "noop";
+import { getNative } from "../00773_getNative.js";
 
 if (require("getNative")) {
   const _module = require("setToArray");

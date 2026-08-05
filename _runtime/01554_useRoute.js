@@ -1,6 +1,6 @@
-import { noop } from "01507_noop.js";
 // _runtime/01554_useRoute.js
 import noop from "noop";
+import { noop } from "01507_noop.js";
 
 
 export default function useRoute() {

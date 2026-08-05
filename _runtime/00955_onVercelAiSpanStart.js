@@ -1,8 +1,8 @@
+// _runtime/00955_onVercelAiSpanStart.js
 import { spanToJSON } from "00819_spanToJSON.js";
 import { convertPromptToMessages } from "00957_convertPromptToMessages.js";
 import { 00956__ } from "metro/00956__.js";
 import { 00958__ } from "metro/00958__.js";
-// _runtime/00955_onVercelAiSpanStart.js
 const require = arg1;
 const dependencyMap = arg6;
 function onVercelAiSpanStart(setAttribute) {

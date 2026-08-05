@@ -1,4 +1,3 @@
-import { LinearGradient } from "04708_LinearGradient.js";
 // _runtime/04707__isNativeReflectConstruct.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _classCallCheck from "_classCallCheck";
@@ -9,6 +8,7 @@ import noop from "noop";
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
+import { LinearGradient } from "04708_LinearGradient.js";
 
 let Component;
 let c10;

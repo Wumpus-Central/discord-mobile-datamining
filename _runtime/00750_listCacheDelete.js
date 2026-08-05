@@ -1,5 +1,5 @@
-import { assocIndexOf } from "00751_assocIndexOf.js";
 // _runtime/00750_listCacheDelete.js
+import { assocIndexOf } from "00751_assocIndexOf.js";
 
 export default function listCacheDelete(arg0) {
   const self = this;

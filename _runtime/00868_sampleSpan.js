@@ -1,5 +1,5 @@
-import { hasSpansEnabled } from "00855_hasSpansEnabled.js";
 // _runtime/00868_sampleSpan.js
+import { hasSpansEnabled } from "00855_hasSpansEnabled.js";
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

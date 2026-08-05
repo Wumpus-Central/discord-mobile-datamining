@@ -1,6 +1,6 @@
+// _runtime/03672_dayPeriodEnumToHours.js
 import { keys } from "03543_keys.js";
 import { 03673__ } from "metro/03673__.js";
-// _runtime/03672_dayPeriodEnumToHours.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.dayPeriodEnumToHours = function dayPeriodEnumToHours(arg0) {

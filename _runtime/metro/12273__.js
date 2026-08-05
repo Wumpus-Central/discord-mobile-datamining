@@ -1,6 +1,6 @@
+// _runtime/metro/12273__.js
 import { stringProcessor } from "../12336_stringProcessor.js";
 import { JSONSchemaGenerator } from "../12337_JSONSchemaGenerator.js";
-// _runtime/metro/12273__.js
 const self = this;
 let self2 = this;
 if (this) {

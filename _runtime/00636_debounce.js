@@ -1,6 +1,6 @@
+// _runtime/00636_debounce.js
 import { isObject } from "00606_isObject.js";
 import { toNumber } from "00637_toNumber.js";
-// _runtime/00636_debounce.js
 
 export default function debounce(fn, arg1, leading) {
   const _require = fn;

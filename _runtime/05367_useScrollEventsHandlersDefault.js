@@ -1,8 +1,8 @@
+// _runtime/05367_useScrollEventsHandlersDefault.js
 import { cancelAnimation } from "01606_cancelAnimation.js";
 import { GESTURE_SOURCE } from "05341_GESTURE_SOURCE.js";
 import { useBottomSheetInternal } from "05348_useBottomSheetInternal.js";
 import { Directions } from "05368_Directions.js";
-// _runtime/05367_useScrollEventsHandlersDefault.js
 const require = arg1;
 let dependencyMap = arg6;
 let closure_2 = { code: "function pnpm_useScrollEventsHandlersDefaultTs1(){const{_lockableScrollableContentOffsetY}=this.__closure;return _lockableScrollableContentOffsetY.value;}" };

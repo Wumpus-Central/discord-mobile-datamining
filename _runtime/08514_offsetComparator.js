@@ -1,10 +1,10 @@
-import { extractOpacity } from "08443_extractOpacity.js";
-import { appendTransformProps } from "08445_appendTransformProps.js";
-import { 08515__ } from "metro/08515__.js";
 // _runtime/08514_offsetComparator.js
 import noop from "noop";
 import { Children } from "noop";
 import { processColor } from "get ActivityIndicator";
+import { extractOpacity } from "08443_extractOpacity.js";
+import { appendTransformProps } from "08445_appendTransformProps.js";
+import { 08515__ } from "metro/08515__.js";
 
 const re5 = /^([+-]?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)(%?)$/;
 function offsetComparator(arg0, arg1) {

@@ -1,12 +1,12 @@
-import { createContext } from "04159_createContext.js";
-import { PortalHost } from "04161_PortalHost.js";
-import { registerHost } from "04164_registerHost.js";
-import { 04160__ } from "metro/04160__.js";
 // _runtime/04163_memo.js
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import "noop";
 import jsxProd from "jsxProd";
+import { createContext } from "04159_createContext.js";
+import { PortalHost } from "04161_PortalHost.js";
+import { registerHost } from "04164_registerHost.js";
+import { 04160__ } from "metro/04160__.js";
 
 let c3;
 let c4;

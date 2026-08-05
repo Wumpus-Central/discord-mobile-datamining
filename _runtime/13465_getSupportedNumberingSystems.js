@@ -1,5 +1,5 @@
-import { 13466__ } from "metro/13466__.js";
 // _runtime/13465_getSupportedNumberingSystems.js
+import { 13466__ } from "metro/13466__.js";
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getSupportedNumberingSystems = function getSupportedNumberingSystems(locale) {

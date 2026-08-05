@@ -1,7 +1,7 @@
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-import { __SENTRY_DEBUG__ } from "metro/01035___SENTRY_DEBUG__.js";
 // _runtime/01069_serializeFormData.js
 import _slicedToArray from "_slicedToArray";
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
+import { __SENTRY_DEBUG__ } from "metro/01035___SENTRY_DEBUG__.js";
 
 function serializeFormData(fetchRequestArgBody) {
   return new URLSearchParams(fetchRequestArgBody).toString();

@@ -1,5 +1,5 @@
-import { getStringValue } from "04922_getStringValue.js";
 // _runtime/04925_getStringValue.js
+import { getStringValue } from "04922_getStringValue.js";
 const require = arg1;
 const dependencyMap = arg6;
 const obj = { 45056: null, 45057: "NumberOfImages", 45058: "MPEntry", 45059: "ImageUIDList", 45060: "TotalFrames" };

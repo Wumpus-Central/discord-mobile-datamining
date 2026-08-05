@@ -1,6 +1,6 @@
+// _runtime/04906_parseBox.js
 import { getDataView } from "04897_getDataView.js";
 import { parseItemLocationBox } from "04907_parseItemLocationBox.js";
-// _runtime/04906_parseBox.js
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;

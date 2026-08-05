@@ -1,7 +1,7 @@
-import { noop } from "../01570_noop.js";
 // _runtime/metro/01569__.js
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
+import { noop } from "../01570_noop.js";
 
 const require = arg1;
 let c3 = importAllResult;

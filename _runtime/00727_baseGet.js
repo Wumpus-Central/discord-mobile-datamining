@@ -1,5 +1,5 @@
-import { castPath } from "00728_castPath.js";
 // _runtime/00727_baseGet.js
+import { castPath } from "00728_castPath.js";
 
 export default function baseGet(arg0, arg1) {
   const arr = castPath /* castPath */(arg1, arg0);

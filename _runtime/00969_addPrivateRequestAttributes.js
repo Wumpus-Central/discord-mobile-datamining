@@ -1,8 +1,8 @@
+// _runtime/00969_addPrivateRequestAttributes.js
+import asyncGeneratorStep from "captureCheckIn";
 import { getSpanStatusFromHttpCode } from "00840_getSpanStatusFromHttpCode.js";
 import { captureCheckIn } from "00869_captureCheckIn.js";
 import { handleResponseError } from "00970_handleResponseError.js";
-// _runtime/00969_addPrivateRequestAttributes.js
-import asyncGeneratorStep from "captureCheckIn";
 
 function addPrivateRequestAttributes(setAttributes, prompt) {
   let obj = handleResponseError /* handleResponseError */;

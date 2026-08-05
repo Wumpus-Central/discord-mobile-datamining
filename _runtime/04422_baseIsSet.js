@@ -1,6 +1,6 @@
+// _runtime/04422_baseIsSet.js
 import { isObjectLike } from "00620_isObjectLike.js";
 import { 00770__ } from "metro/00770__.js";
-// _runtime/04422_baseIsSet.js
 
 export default function baseIsSet(arg0) {
   let tmp3 = isObjectLike /* isObjectLike */(arg0);

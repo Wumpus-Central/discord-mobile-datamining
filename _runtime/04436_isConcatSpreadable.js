@@ -1,6 +1,6 @@
+// _runtime/04436_isConcatSpreadable.js
 import { baseIsArguments } from "00618_baseIsArguments.js";
 import { 00599__ } from "metro/00599__.js";
-// _runtime/04436_isConcatSpreadable.js
 let isConcatSpreadable;
 if (require("module_608")) {
   isConcatSpreadable = require("module_608").isConcatSpreadable;

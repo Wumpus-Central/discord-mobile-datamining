@@ -1,5 +1,5 @@
-import { 09030__ } from "metro/09030__.js";
 // _runtime/09029_QRPolynomial.js
+import { 09030__ } from "metro/09030__.js";
 class QRPolynomial {
   constructor(arg0, arg1) {
     if (null == global.length) {

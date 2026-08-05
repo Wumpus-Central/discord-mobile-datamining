@@ -1,8 +1,8 @@
-import { TEST_ID_KEYBOARD_TOOLBAR } from "../01824_TEST_ID_KEYBOARD_TOOLBAR.js";
 // _runtime/metro/01829__.js
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { TEST_ID_KEYBOARD_TOOLBAR } from "../01824_TEST_ID_KEYBOARD_TOOLBAR.js";
 
 let StyleSheet;
 let obj1;

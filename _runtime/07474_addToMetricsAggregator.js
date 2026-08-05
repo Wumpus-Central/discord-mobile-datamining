@@ -1,6 +1,6 @@
+// _runtime/07474_addToMetricsAggregator.js
 import { addToMetricsAggregator } from "07471_addToMetricsAggregator.js";
 import { MetricsAggregator } from "07475_MetricsAggregator.js";
-// _runtime/07474_addToMetricsAggregator.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.metricsDefault = {

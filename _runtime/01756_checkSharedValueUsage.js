@@ -1,11 +1,11 @@
-import { t } from "01617_t.js";
-import { updateProps } from "01706_updateProps.js";
-import { isAnimated } from "01752_isAnimated.js";
-import { o } from "01757_o.js";
 // _runtime/01756_checkSharedValueUsage.js
 import noop from "noop";
 import { Platform } from "get ActivityIndicator";
 import isJest from "isJest";
+import { t } from "01617_t.js";
+import { updateProps } from "01706_updateProps.js";
+import { isAnimated } from "01752_isAnimated.js";
+import { o } from "01757_o.js";
 
 let c3;
 let c4;

@@ -1,11 +1,11 @@
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-import { TurboModuleRegistry } from "00997_TurboModuleRegistry.js";
-import { convertToNormalizedObject } from "01014_convertToNormalizedObject.js";
 // _runtime/01001_NativeModules.js
 import _slicedToArray from "_slicedToArray";
 import get_ActivityIndicator from "get ActivityIndicator";
 import isHermesEnabled from "isHermesEnabled";
 import encodeUTF8 from "encodeUTF8";
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
+import { TurboModuleRegistry } from "00997_TurboModuleRegistry.js";
+import { convertToNormalizedObject } from "01014_convertToNormalizedObject.js";
 
 let self = this;
 const require = arg1;

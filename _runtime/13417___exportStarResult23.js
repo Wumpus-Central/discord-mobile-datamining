@@ -1,9 +1,9 @@
+// _runtime/13417___exportStarResult23.js
 import { CanonicalizeLocaleList } from "13381_CanonicalizeLocaleList.js";
 import { __exportStarResult2 } from "13383___exportStarResult2.js";
 import { getMultiInternalSlots } from "13386_getMultiInternalSlots.js";
 import { __exportStarResult4 } from "13391___exportStarResult4.js";
 import { match } from "13418_match.js";
-// _runtime/13417___exportStarResult23.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.InitializeNumberFormat = function InitializeNumberFormat(arg0, arg1, arg2, arg3) {

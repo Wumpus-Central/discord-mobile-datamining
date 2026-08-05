@@ -1,3 +1,4 @@
+// _runtime/metro/01274__.js
 import { makeDataFormatters } from "../01275_makeDataFormatters.js";
 import { dataFormatterCache } from "../01277_dataFormatterCache.js";
 import { _isNativeReflectConstruct } from "../01278__isNativeReflectConstruct.js";
@@ -6,7 +7,6 @@ import { DEFAULT_LOCALE } from "../01292_DEFAULT_LOCALE.js";
 import { serializeAst } from "../01293_serializeAst.js";
 import { MessageLoader } from "../01294_MessageLoader.js";
 import { chainMessagesObjects } from "../01295_chainMessagesObjects.js";
-// _runtime/metro/01274__.js
 const self = this;
 let self2 = this;
 if (this) {

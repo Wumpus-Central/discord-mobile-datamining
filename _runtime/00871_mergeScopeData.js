@@ -1,8 +1,8 @@
+// _runtime/00871_mergeScopeData.js
 import { spanToJSON } from "00819_spanToJSON.js";
 import { merge } from "00846_merge.js";
 import { getClient } from "00848_getClient.js";
 import { getDynamicSamplingContextFromSpan } from "00857_getDynamicSamplingContextFromSpan.js";
-// _runtime/00871_mergeScopeData.js
 const require = arg1;
 const dependencyMap = arg6;
 function mergeScopeData(extra) {

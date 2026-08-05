@@ -1,8 +1,8 @@
-import { isInstanceOf } from "00827_isInstanceOf.js";
-import { addHandler } from "00850_addHandler.js";
 // _runtime/00985__resolveResponse.js
 import _slicedToArray from "_slicedToArray";
 import asyncGeneratorStep from "module_821";
+import { isInstanceOf } from "00827_isInstanceOf.js";
+import { addHandler } from "00850_addHandler.js";
 
 function _resolveResponse() {
   const self = this;

@@ -1,5 +1,5 @@
-import { isObjectLike } from "00620_isObjectLike.js";
 // _runtime/00626_baseIsTypedArray.js
+import { isObjectLike } from "00620_isObjectLike.js";
 const obj = {};
 obj["[object Uint32Array]"] = true;
 obj["[object Uint16Array]"] = true;

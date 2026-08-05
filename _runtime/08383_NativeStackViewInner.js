@@ -1,13 +1,13 @@
-import { Link } from "01481_Link.js";
-import { enableScreens } from "04631_enableScreens.js";
-import { Background } from "05674_Background.js";
-import { StyleSheet } from "08385_StyleSheet.js";
-import { 08384__ } from "metro/08384__.js";
 // _runtime/08383_NativeStackViewInner.js
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
+import { Link } from "01481_Link.js";
+import { enableScreens } from "04631_enableScreens.js";
+import { Background } from "05674_Background.js";
+import { StyleSheet } from "08385_StyleSheet.js";
+import { 08384__ } from "metro/08384__.js";
 
 let Platform;
 let StyleSheet;

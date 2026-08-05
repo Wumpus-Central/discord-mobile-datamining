@@ -1,5 +1,5 @@
-import { defineLazyObjectProperty } from "00049_defineLazyObjectProperty.js";
 // _runtime/00123_polyfillObjectProperty.js
+import { defineLazyObjectProperty } from "00049_defineLazyObjectProperty.js";
 const global = arg0;
 const require = arg1;
 const dependencyMap = arg6;

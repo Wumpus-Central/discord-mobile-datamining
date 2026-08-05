@@ -1,3 +1,4 @@
+// _runtime/00120_setUpDefaltReactNativeEnvironment.js
 import { javaScriptFlagGetter } from "00027_javaScriptFlagGetter.js";
 import { env } from "00121_env.js";
 import { setUpDOM } from "00122_setUpDOM.js";
@@ -12,7 +13,6 @@ import { 00188__ } from "metro/00188__.js";
 import { 00195__ } from "metro/00195__.js";
 import { 00198__ } from "metro/00198__.js";
 import { 00235__ } from "metro/00235__.js";
-// _runtime/00120_setUpDefaltReactNativeEnvironment.js
 const require = arg1;
 const dependencyMap = arg6;
 let c2 = false;

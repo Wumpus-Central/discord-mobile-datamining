@@ -1,8 +1,8 @@
+// _runtime/01101_createProfilePayload.js
+import StringResult from "registerSpanErrorInstrumentation";
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 import { ignoreNextOnError } from "01028_ignoreNextOnError.js";
 import { __SENTRY_DEBUG__ } from "metro/01072___SENTRY_DEBUG__.js";
-// _runtime/01101_createProfilePayload.js
-import StringResult from "registerSpanErrorInstrumentation";
 
 function createProfilePayload(arg0, arg1, resources, type) {
   if ("transaction" !== type.type) {

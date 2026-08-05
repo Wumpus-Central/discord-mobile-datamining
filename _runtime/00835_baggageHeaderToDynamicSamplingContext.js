@@ -1,5 +1,5 @@
-import { isInstanceOf } from "00827_isInstanceOf.js";
 // _runtime/00835_baggageHeaderToDynamicSamplingContext.js
+import { isInstanceOf } from "00827_isInstanceOf.js";
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

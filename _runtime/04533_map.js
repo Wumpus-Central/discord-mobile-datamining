@@ -1,7 +1,7 @@
-import { RequireObjectCoercible } from "04538_RequireObjectCoercible.js";
 // _runtime/04533_map.js
 import callBind from "callBind";
 import defineProperty from "defineProperty";
+import { RequireObjectCoercible } from "04538_RequireObjectCoercible.js";
 
 let closure_2 = callBind.apply(require("getPolyfill")());
 let closure_3 = require("callBoundIntrinsic")("Array.prototype.slice");

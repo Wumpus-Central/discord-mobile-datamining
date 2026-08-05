@@ -1,9 +1,9 @@
-import { NativeText } from "00299_NativeText.js";
 // _runtime/00298_useTextPressability.js
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import noop from "noop";
 import { jsx } from "jsxProd";
+import { NativeText } from "00299_NativeText.js";
 
 let c5;
 let closure_6;

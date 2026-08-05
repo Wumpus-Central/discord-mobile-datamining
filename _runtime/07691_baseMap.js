@@ -1,6 +1,6 @@
+// _runtime/07691_baseMap.js
 import { baseForOwn } from "00601_baseForOwn.js";
 import { isArrayLike } from "00603_isArrayLike.js";
-// _runtime/07691_baseMap.js
 
 export default function baseMap(arg0, arg1) {
   const _require = arg1;

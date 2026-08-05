@@ -1,10 +1,10 @@
-import { useAnimatedGestureHandler } from "01749_useAnimatedGestureHandler.js";
 // _runtime/01748_AnimatedScrollView.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import "noop";
 import { jsx } from "jsxProd";
 import createAnimatedComponent from "createAnimatedComponent";
 import isReactRendering from "isReactRendering";
+import { useAnimatedGestureHandler } from "01749_useAnimatedGestureHandler.js";
 
 const require = arg1;
 let closure_2 = ["scrollViewOffset"];

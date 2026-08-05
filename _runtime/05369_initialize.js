@@ -1,6 +1,6 @@
+// _runtime/05369_initialize.js
 import { onGestureHandlerEvent } from "05370_onGestureHandlerEvent.js";
 import { toArray } from "05372_toArray.js";
-// _runtime/05369_initialize.js
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;

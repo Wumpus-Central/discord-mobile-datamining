@@ -1,10 +1,10 @@
-import { emitUnicodeLanguageId } from "13445_emitUnicodeLanguageId.js";
-import { compareKV } from "13446_compareKV.js";
-import { parseUnicodeLanguageId } from "13448_parseUnicodeLanguageId.js";
 // _runtime/13444_isStructurallyValidLanguageTag.js
 import e from "e";
 import e from "e";
 import e from "e";
+import { emitUnicodeLanguageId } from "13445_emitUnicodeLanguageId.js";
+import { compareKV } from "13446_compareKV.js";
+import { parseUnicodeLanguageId } from "13448_parseUnicodeLanguageId.js";
 
 e.__exportStar(require("emitUnicodeLanguageId"), exports);
 e.__exportStar(require("__exportStarResult1"), exports);

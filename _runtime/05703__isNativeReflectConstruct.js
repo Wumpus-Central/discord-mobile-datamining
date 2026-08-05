@@ -1,5 +1,3 @@
-import { getDistanceForDirection } from "05706_getDistanceForDirection.js";
-import { findLastIndex } from "05721_findLastIndex.js";
 // _runtime/05703__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -9,6 +7,8 @@ import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import importDefaultResult1 from "_inherits";
+import { getDistanceForDirection } from "05706_getDistanceForDirection.js";
+import { findLastIndex } from "05721_findLastIndex.js";
 
 let Platform;
 let StyleSheet;

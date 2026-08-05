@@ -1,5 +1,5 @@
-import { convertToHandlerTag } from "05405_convertToHandlerTag.js";
 // _runtime/05409_useDetectorUpdater.js
+import { convertToHandlerTag } from "05405_convertToHandlerTag.js";
 require("noop").useCallback;
 
 export const useDetectorUpdater = function useDetectorUpdater(current, current2, arg2, gesture, webEventHandlers) {

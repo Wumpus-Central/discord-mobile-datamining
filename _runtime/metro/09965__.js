@@ -1,10 +1,10 @@
+// _runtime/metro/09965__.js
+import { jsx } from "jsxProd";
 import { useInitProps } from "../09966_useInitProps.js";
 import { useCommonVariables } from "../09969_useCommonVariables.js";
 import { usePropsErrorBoundary } from "../09973_usePropsErrorBoundary.js";
 import { context } from "../09974_context.js";
 import { CarouselLayout } from "../09975_CarouselLayout.js";
-// _runtime/metro/09965__.js
-import { jsx } from "jsxProd";
 
 const require = arg1;
 

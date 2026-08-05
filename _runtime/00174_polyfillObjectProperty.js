@@ -1,5 +1,5 @@
-import { finally } from "00175_finally.js";
 // _runtime/00174_polyfillObjectProperty.js
+import { finally } from "00175_finally.js";
 let hasPromiseResult;
 if (global != null) {
   const _HermesInternal = global.HermesInternal;

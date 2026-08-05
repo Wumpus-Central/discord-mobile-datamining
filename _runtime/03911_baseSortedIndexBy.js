@@ -1,5 +1,5 @@
-import { isSymbol } from "00638_isSymbol.js";
 // _runtime/03911_baseSortedIndexBy.js
+import { isSymbol } from "00638_isSymbol.js";
 
 export default function baseSortedIndexBy(arg0, arg1, arg2, arg3) {
   let num = 0;

@@ -1,3 +1,4 @@
+// _runtime/00941_createMcpSpan.js
 import { getClient } from "00848_getClient.js";
 import { createChildOrRootSpan } from "00866_createChildOrRootSpan.js";
 import { extractClientInfo } from "00938_extractClientInfo.js";
@@ -6,7 +7,6 @@ import { getNotificationAttributes } from "00943_getNotificationAttributes.js";
 import { set } from "00944_set.js";
 import { 00839__ } from "metro/00839__.js";
 import { 00940__ } from "metro/00940__.js";
-// _runtime/00941_createMcpSpan.js
 const require = arg1;
 const dependencyMap = arg6;
 function createMcpSpan(arg0) {

@@ -1,7 +1,7 @@
+// _runtime/01153_patchAppRegistryRunApplication.js
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 import { TurboModuleRegistry } from "00997_TurboModuleRegistry.js";
 import { fillTyped } from "01154_fillTyped.js";
-// _runtime/01153_patchAppRegistryRunApplication.js
 const require = arg1;
 const dependencyMap = arg6;
 let AppRegistry = "AppRegistry";

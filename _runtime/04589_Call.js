@@ -1,5 +1,5 @@
-import { getEvalledConstructor } from "04567_getEvalledConstructor.js";
 // _runtime/04589_Call.js
+import { getEvalledConstructor } from "04567_getEvalledConstructor.js";
 let tmp = require("getEvalledConstructor")("%Reflect.apply%", true);
 if (!tmp) {
   tmp = require("callBoundIntrinsic")("Function.prototype.apply");

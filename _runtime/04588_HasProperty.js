@@ -1,5 +1,5 @@
-import { isObject } from "04529_isObject.js";
 // _runtime/04588_HasProperty.js
+import { isObject } from "04529_isObject.js";
 
 export default function HasProperty(arg0, arg1) {
   if (isObject /* isObject */(arg0)) {

@@ -1,9 +1,9 @@
-import { renderElement } from "../00114_renderElement.js";
 // _runtime/metro/00418___INTERNAL_VIEW_CONFIG.js
 import "noop";
 import processColorElement from "processColorElement";
 import weakSet from "weakSet";
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
+import { renderElement } from "../00114_renderElement.js";
 
 const require = arg1;
 let obj = { uiViewClassName: "AndroidSwipeRefreshLayout", directEventTypes: { topRefresh: { registrationName: "onRefresh" } }, validAttributes: null };

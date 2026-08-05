@@ -1,6 +1,6 @@
-import { isJsonRpcNotification } from "00936_isJsonRpcNotification.js";
 // _runtime/00946_extractPromptResultAttributes.js
 import _slicedToArray from "_slicedToArray";
+import { isJsonRpcNotification } from "00936_isJsonRpcNotification.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 

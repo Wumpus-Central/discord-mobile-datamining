@@ -1,5 +1,5 @@
-import { RN_GLOBAL_OBJ } from "00816_RN_GLOBAL_OBJ.js";
 // _runtime/00815_createStealthXhr.js
+import { RN_GLOBAL_OBJ } from "00816_RN_GLOBAL_OBJ.js";
 const require = arg1;
 const dependencyMap = arg6;
 arg5.XHR_READYSTATE_DONE = 4;

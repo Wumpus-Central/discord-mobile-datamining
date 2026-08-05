@@ -1,7 +1,7 @@
-import { NativeModules } from "07344_NativeModules.js";
-import { 07346__ } from "metro/07346__.js";
 // _runtime/07356_purchaseUpdatedListener.js
 import { NativeEventEmitter } from "get ActivityIndicator";
+import { NativeModules } from "07344_NativeModules.js";
+import { 07346__ } from "metro/07346__.js";
 
 
 export const purchaseUpdatedListener = (arg0, arg1) => {

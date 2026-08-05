@@ -1,5 +1,5 @@
-import { getGlobalSingleton } from "07376_getGlobalSingleton.js";
 // _runtime/07495_vercelWaitUntil.js
+import { getGlobalSingleton } from "07376_getGlobalSingleton.js";
 const require = arg1;
 const dependencyMap = arg6;
 arg5.vercelWaitUntil = function vercelWaitUntil(arg0) {

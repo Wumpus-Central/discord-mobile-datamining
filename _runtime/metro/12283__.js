@@ -1,3 +1,4 @@
+// _runtime/metro/12283__.js
 import { mergeDefs } from "../12284_mergeDefs.js";
 import { mergeDefs } from "../12285_mergeDefs.js";
 import { mergeDefs } from "../12286_mergeDefs.js";
@@ -47,7 +48,6 @@ import { mergeDefs } from "../12329_mergeDefs.js";
 import { mergeDefs } from "../12330_mergeDefs.js";
 import { mergeDefs } from "../12331_mergeDefs.js";
 import { mergeDefs } from "../12332_mergeDefs.js";
-// _runtime/metro/12283__.js
 const require = arg1;
 const dependencyMap = arg6;
 let fn = this;

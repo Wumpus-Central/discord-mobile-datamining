@@ -1,5 +1,5 @@
-import { assign } from "12827_assign.js";
 // _runtime/12832_StaticTreeDesc.js
+import { assign } from "12827_assign.js";
 const require = arg1;
 const dependencyMap = arg6;
 function StaticTreeDesc(static_tree, extra_bits, extra_base, elems, max_length) {

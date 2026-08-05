@@ -1,8 +1,8 @@
+// _runtime/04054_useRiveColor.js
+import _slicedToArray from "_slicedToArray";
 import { c } from "04036_c.js";
 import { RiveColor } from "04044_RiveColor.js";
 import { useRiveProperty } from "04049_useRiveProperty.js";
-// _runtime/04054_useRiveColor.js
-import _slicedToArray from "_slicedToArray";
 
 let require = arg1;
 require("noop").useCallback;

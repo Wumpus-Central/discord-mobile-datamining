@@ -1,4 +1,3 @@
-import { processColor } from "00050_processColor.js";
 // _runtime/00291__isNativeReflectConstruct.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _classCallCheck from "_classCallCheck";
@@ -8,6 +7,7 @@ import importDefaultResult from "_createClass";
 import importAllResult from "noop";
 import { cloneElement } from "noop";
 import { jsx } from "jsxProd";
+import { processColor } from "00050_processColor.js";
 
 const TouchableNativeFeedback = arg1;
 function _isNativeReflectConstruct() {

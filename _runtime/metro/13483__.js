@@ -1,5 +1,5 @@
-import { call } from "../13486_call.js";
 // _runtime/metro/13483__.js
+import { call } from "../13486_call.js";
 let fn = Object;
 let closure_3 = require("call")("".split);
 if (require("module_13481")(() => !Object("z").propertyIsEnumerable(0))) {

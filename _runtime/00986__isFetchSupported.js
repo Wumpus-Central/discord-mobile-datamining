@@ -1,5 +1,5 @@
-import { 00821__ } from "metro/00821__.js";
 // _runtime/00986__isFetchSupported.js
+import { 00821__ } from "metro/00821__.js";
 const require = arg1;
 const dependencyMap = arg6;
 function _isFetchSupported() {

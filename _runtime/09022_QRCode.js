@@ -1,9 +1,9 @@
+// _runtime/09022_QRCode.js
 import { QR8bitByte } from "09023_QR8bitByte.js";
 import { QRRSBlock } from "09025_QRRSBlock.js";
 import { QRBitBuffer } from "09027_QRBitBuffer.js";
 import { QRPolynomial } from "09029_QRPolynomial.js";
 import { 09028__ } from "metro/09028__.js";
-// _runtime/09022_QRCode.js
 class QRCode {
   constructor(arg0, arg1) {
     return;

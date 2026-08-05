@@ -1,8 +1,8 @@
-import { Link } from "01481_Link.js";
 // _runtime/05678_Background.js
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { Link } from "01481_Link.js";
 
 const require = arg1;
 

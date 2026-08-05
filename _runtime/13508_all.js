@@ -1,5 +1,5 @@
-import { all } from "13503_all.js";
 // _runtime/13508_all.js
+import { all } from "13503_all.js";
 
 export default (arg0) => {
   if (all /* all */(arg0)) {

@@ -1,7 +1,7 @@
+// _runtime/00943_getNotificationAttributes.js
 import { getHttpSpanDetailsFromUrlObject } from "00900_getHttpSpanDetailsFromUrlObject.js";
 import { extractTargetInfo } from "00942_extractTargetInfo.js";
 import { 00940__ } from "metro/00940__.js";
-// _runtime/00943_getNotificationAttributes.js
 const require = arg1;
 const dependencyMap = arg6;
 function getNotificationAttributes(arg0, requestId) {

@@ -1,8 +1,8 @@
+// _runtime/07402_getClient.js
 import { getGlobalSingleton } from "07376_getGlobalSingleton.js";
 import { addNonEnumerableProperty } from "07381_addNonEnumerableProperty.js";
 import { getMainCarrier } from "07393_getMainCarrier.js";
 import { getAsyncContextStrategy } from "07394_getAsyncContextStrategy.js";
-// _runtime/07402_getClient.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getClient = function getClient() {

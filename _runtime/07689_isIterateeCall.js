@@ -1,5 +1,5 @@
-import { isObject } from "00606_isObject.js";
 // _runtime/07689_isIterateeCall.js
+import { isObject } from "00606_isObject.js";
 
 export default function isIterateeCall(arg0, num) {
   if (isObject /* isObject */(arg2)) {

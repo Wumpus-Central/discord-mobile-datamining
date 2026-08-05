@@ -1,6 +1,6 @@
+// _runtime/00635_throttle.js
 import { isObject } from "00606_isObject.js";
 import { debounce } from "00636_debounce.js";
-// _runtime/00635_throttle.js
 
 export default function throttle(fn, arg1, leading) {
   if (typeof fn !== "function") {

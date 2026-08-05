@@ -1,6 +1,6 @@
+// _runtime/13463_isSupportedCurrency.js
 import { _formatToParts } from "13380__formatToParts.js";
 import { 13464__ } from "metro/13464__.js";
-// _runtime/13463_isSupportedCurrency.js
 const require = arg1;
 const dependencyMap = arg6;
 function isSupportedCurrency(arr3, locale) {

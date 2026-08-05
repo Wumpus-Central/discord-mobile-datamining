@@ -1,9 +1,9 @@
-import { addListenersToPropsValue } from "00388_addListenersToPropsValue.js";
 // _runtime/00387_createAnimatedComponent.js
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import { useMemo } from "noop";
 import { jsx } from "jsxProd";
+import { addListenersToPropsValue } from "00388_addListenersToPropsValue.js";
 
 
 export default function createAnimatedComponent(displayName) {

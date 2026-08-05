@@ -1,6 +1,6 @@
+// _runtime/00733_mapCacheClear.js
 import { Hash } from "00734_Hash.js";
 import { getNative } from "00747_getNative.js";
-// _runtime/00733_mapCacheClear.js
 
 export default function mapCacheClear() {
   const obj = { hash: null, map: null, string: null };

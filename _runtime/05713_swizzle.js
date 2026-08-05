@@ -1,5 +1,5 @@
-import { isArrayish } from "05714_isArrayish.js";
 // _runtime/05713_swizzle.js
+import { isArrayish } from "05714_isArrayish.js";
 function swizzle(arg0) {
   let items = [];
   let num = 0;

@@ -1,6 +1,6 @@
+// _runtime/00825_getGlobalSingleton.js
 import { 00821__ } from "metro/00821__.js";
 import { 00826__ } from "metro/00826__.js";
-// _runtime/00825_getGlobalSingleton.js
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

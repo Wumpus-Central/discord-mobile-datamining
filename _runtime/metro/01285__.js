@@ -1,8 +1,8 @@
+// _runtime/metro/01285__.js
 import { _isNativeReflectConstruct } from "../01286__isNativeReflectConstruct.js";
 import { _isNativeReflectConstruct } from "../01287__isNativeReflectConstruct.js";
 import { _isNativeReflectConstruct } from "../01288__isNativeReflectConstruct.js";
 import { _isNativeReflectConstruct } from "../01289__isNativeReflectConstruct.js";
-// _runtime/metro/01285__.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.astFormatter = undefined;

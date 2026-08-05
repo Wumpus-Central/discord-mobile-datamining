@@ -1,5 +1,5 @@
-import { linear } from "01658_linear.js";
 // _runtime/01698_JumpingTransition.js
+import { linear } from "01658_linear.js";
 const require = arg1;
 const dependencyMap = arg6;
 arg5.JumpingTransition = function JumpingTransition(name) {

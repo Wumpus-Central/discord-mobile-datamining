@@ -1,7 +1,7 @@
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-import { NativeModules } from "01001_NativeModules.js";
 // _runtime/01180_init.js
 import noop from "noop";
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
+import { NativeModules } from "01001_NativeModules.js";
 
 const require = arg1;
 let fn = this;

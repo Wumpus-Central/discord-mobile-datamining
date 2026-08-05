@@ -1,3 +1,4 @@
+// _runtime/metro/05419__.js
 import { _isNativeReflectConstruct } from "../05406__isNativeReflectConstruct.js";
 import { _isNativeReflectConstruct } from "../05420__isNativeReflectConstruct.js";
 import { _isNativeReflectConstruct } from "../05421__isNativeReflectConstruct.js";
@@ -9,7 +10,6 @@ import { _isNativeReflectConstruct } from "../05426__isNativeReflectConstruct.js
 import { _isNativeReflectConstruct } from "../05427__isNativeReflectConstruct.js";
 import { _isNativeReflectConstruct } from "../05428__isNativeReflectConstruct.js";
 import { _isNativeReflectConstruct } from "../05429__isNativeReflectConstruct.js";
-// _runtime/metro/05419__.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.GestureObjects = {

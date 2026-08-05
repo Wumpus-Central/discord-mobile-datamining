@@ -1,6 +1,6 @@
+// _runtime/04565_ArraySpeciesCreate.js
 import { isInteger } from "04566_isInteger.js";
 import { 00541__ } from "metro/00541__.js";
-// _runtime/04565_ArraySpeciesCreate.js
 let closure_2 = require("getEvalledConstructor")("%Symbol.species%", true);
 
 export default function ArraySpeciesCreate(arg0, arg1) {

@@ -1,9 +1,9 @@
+// _runtime/01675_setElementAnimation.js
 import { isWorkletFunction } from "01631_isWorkletFunction.js";
 import { isReducedMotionEnabledInSystem } from "01647_isReducedMotionEnabledInSystem.js";
 import { TransitionType } from "01662_TransitionType.js";
 import { BaseAnimationBuilder } from "01676_BaseAnimationBuilder.js";
 import { weakMap } from "01692_weakMap.js";
-// _runtime/01675_setElementAnimation.js
 const require = arg1;
 let dependencyMap = arg6;
 function setElementAnimation(dummy, dummyAnimationConfig, arg2) {

@@ -1,6 +1,6 @@
+// _runtime/07493_callFrameToStackFrame.js
 import { createStackParser } from "07378_createStackParser.js";
 import { addNonEnumerableProperty } from "07381_addNonEnumerableProperty.js";
-// _runtime/07493_callFrameToStackFrame.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.callFrameToStackFrame = function callFrameToStackFrame(location, str) {

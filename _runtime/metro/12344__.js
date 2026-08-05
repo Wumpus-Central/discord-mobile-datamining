@@ -1,5 +1,5 @@
-import { 12273__ } from "12273__.js";
 // _runtime/metro/12344__.js
+import { 12273__ } from "12273__.js";
 const self = this;
 let self2 = this;
 if (this) {

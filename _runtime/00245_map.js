@@ -1,6 +1,6 @@
+// _runtime/00245_map.js
 import { frozen } from "00257_frozen.js";
 import { HeadlessJsTaskSupport } from "00259_HeadlessJsTaskSupport.js";
-// _runtime/00245_map.js
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;

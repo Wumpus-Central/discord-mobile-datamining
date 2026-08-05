@@ -1,6 +1,6 @@
+// _runtime/07433_createClientReportEnvelope.js
 import { dateTimestampInSeconds } from "07389_dateTimestampInSeconds.js";
 import { forEachEnvelopeItem } from "07419_forEachEnvelopeItem.js";
-// _runtime/07433_createClientReportEnvelope.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.createClientReportEnvelope = function createClientReportEnvelope(discarded_events) {

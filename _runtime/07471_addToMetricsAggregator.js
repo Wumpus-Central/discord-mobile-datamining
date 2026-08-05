@@ -1,3 +1,6 @@
+// _runtime/07471_addToMetricsAggregator.js
+import "errorCallback";
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__";
 import { getGlobalSingleton } from "07376_getGlobalSingleton.js";
 import { spanTimeInputToSeconds } from "07380_spanTimeInputToSeconds.js";
 import { dateTimestampInSeconds } from "07389_dateTimestampInSeconds.js";
@@ -5,9 +8,6 @@ import { getClient } from "07402_getClient.js";
 import { createChildOrRootSpan } from "07409_createChildOrRootSpan.js";
 import { __SENTRY_DEBUG__ } from "metro/07403___SENTRY_DEBUG__.js";
 import { 07472__ } from "metro/07472__.js";
-// _runtime/07471_addToMetricsAggregator.js
-import "errorCallback";
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__";
 
 function addToMetricsAggregator(arg0, SET_METRIC_TYPE, arg2, arg3, arg4) {
   let environment;

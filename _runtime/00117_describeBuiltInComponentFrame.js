@@ -1,9 +1,9 @@
-import { peek } from "00287_peek.js";
 // _runtime/00117_describeBuiltInComponentFrame.js
 import setUpDefaltReactNativeEnvironment from "setUpDefaltReactNativeEnvironment";
 import { __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE } from "noop";
 import closure_158 from "setUpDefaltReactNativeEnvironment";
 import closure_162 from "setUpDefaltReactNativeEnvironment";
+import { peek } from "00287_peek.js";
 
 function describeBuiltInComponentFrame(type) {
   if (undefined !== str3) {

@@ -1,8 +1,8 @@
+// _runtime/13554_parseIPv4Number.js
 import { Buffer } from "00511_Buffer.js";
 import { error } from "13555_error.js";
 import { replaceByteInByteSequence } from "13557_replaceByteInByteSequence.js";
 import { 13556__ } from "metro/13556__.js";
-// _runtime/13554_parseIPv4Number.js
 const require = arg1;
 let dependencyMap = exports;
 dependencyMap = arg6;

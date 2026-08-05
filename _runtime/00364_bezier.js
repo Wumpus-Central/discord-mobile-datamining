@@ -1,5 +1,5 @@
-import { bezier } from "00365_bezier.js";
 // _runtime/00364_bezier.js
+import { bezier } from "00365_bezier.js";
 const require = arg1;
 const dependencyMap = arg6;
 const obj = {

@@ -1,8 +1,8 @@
-import { _isNativeReflectConstruct } from "00356__isNativeReflectConstruct.js";
-import { createCompositeKeyForProps } from "00389_createCompositeKeyForProps.js";
 // _runtime/00388_addListenersToPropsValue.js
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
+import { _isNativeReflectConstruct } from "00356__isNativeReflectConstruct.js";
+import { createCompositeKeyForProps } from "00389_createCompositeKeyForProps.js";
 
 let c10;
 let c5;

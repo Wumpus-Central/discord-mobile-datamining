@@ -1,8 +1,8 @@
+// _runtime/13535_text.js
+import __core_js_shared__ from "__core-js_shared__";
 import { call } from "13500_call.js";
 import { all } from "13503_all.js";
 import { state } from "13538_state.js";
-// _runtime/13535_text.js
-import __core_js_shared__ from "__core-js_shared__";
 
 let closure_5 = require("call")("".slice);
 let closure_6 = require("call")("".replace);

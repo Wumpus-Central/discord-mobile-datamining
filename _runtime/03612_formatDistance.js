@@ -1,4 +1,3 @@
-import { getDefaultOptions } from "03369_getDefaultOptions.js";
 // _runtime/03612_formatDistance.js
 import compareAsc from "compareAsc";
 import differenceInMonths from "differenceInMonths";
@@ -9,6 +8,7 @@ import cloneObject from "cloneObject";
 import assign from "assign";
 import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds";
 import requiredArgs from "requiredArgs";
+import { getDefaultOptions } from "03369_getDefaultOptions.js";
 
 if (!compareAsc) {
   let obj = { default: null };

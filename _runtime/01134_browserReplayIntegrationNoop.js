@@ -1,5 +1,5 @@
-import { init } from "01135_init.js";
 // _runtime/01134_browserReplayIntegrationNoop.js
+import { init } from "01135_init.js";
 const require = arg1;
 const dependencyMap = arg6;
 function browserReplayIntegrationNoop() {

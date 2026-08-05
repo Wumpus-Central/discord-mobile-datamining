@@ -1,9 +1,9 @@
-import { getDefaultOptions } from "03369_getDefaultOptions.js";
 // _runtime/03605_startOfUTCWeekYear.js
 import getUTCWeekYear from "getUTCWeekYear";
 import requiredArgs from "requiredArgs";
 import startOfUTCWeek from "startOfUTCWeek";
 import toInteger from "toInteger";
+import { getDefaultOptions } from "03369_getDefaultOptions.js";
 
 if (!getUTCWeekYear) {
   let obj = { default: null };

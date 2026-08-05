@@ -1,11 +1,11 @@
-import { _isNativeReflectConstruct } from "00124__isNativeReflectConstruct.js";
-import { _isNativeReflectConstruct } from "00131__isNativeReflectConstruct.js";
-import { NativeDOMCxx } from "00139_NativeDOMCxx.js";
 // _runtime/00141__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
+import { _isNativeReflectConstruct } from "00124__isNativeReflectConstruct.js";
+import { _isNativeReflectConstruct } from "00131__isNativeReflectConstruct.js";
+import { NativeDOMCxx } from "00139_NativeDOMCxx.js";
 
 const ReadOnlyElement = arg1;
 function _isNativeReflectConstruct() {

@@ -1,7 +1,7 @@
-import { getClient } from "07402_getClient.js";
-import { __SENTRY_DEBUG__ } from "metro/07403___SENTRY_DEBUG__.js";
 // _runtime/07431_setupIntegration.js
 import _slicedToArray from "_slicedToArray";
+import { getClient } from "07402_getClient.js";
+import { __SENTRY_DEBUG__ } from "metro/07403___SENTRY_DEBUG__.js";
 
 function setupIntegration(on, name) {
   const _require = on;

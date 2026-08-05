@@ -1,5 +1,5 @@
-import { isInstanceOf } from "00827_isInstanceOf.js";
 // _runtime/00912_aggregateExceptionsFromError.js
+import { isInstanceOf } from "00827_isInstanceOf.js";
 const require = arg1;
 let dependencyMap = arg6;
 function aggregateExceptionsFromError(arg0, arg1, arg2, errors, source, arg5, mechanism, exception_id) {

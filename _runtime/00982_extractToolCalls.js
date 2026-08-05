@@ -1,6 +1,6 @@
+// _runtime/00982_extractToolCalls.js
 import { asString } from "00978_asString.js";
 import { 00958__ } from "metro/00958__.js";
-// _runtime/00982_extractToolCalls.js
 const require = arg1;
 const dependencyMap = arg6;
 function extractToolCalls(substr) {

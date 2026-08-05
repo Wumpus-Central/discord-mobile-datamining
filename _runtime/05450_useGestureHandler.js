@@ -1,7 +1,7 @@
+// _runtime/05450_useGestureHandler.js
 import { cancelAnimation } from "01606_cancelAnimation.js";
 import { GESTURE_SOURCE } from "05341_GESTURE_SOURCE.js";
 import { Directions } from "05368_Directions.js";
-// _runtime/05450_useGestureHandler.js
 const require = arg1;
 let dependencyMap = arg6;
 let closure_2 = { code: "function pnpm_useGestureHandlerTs1(event){const{state,State,gestureSource,source,onStart}=this.__closure;state.value=State.BEGAN;gestureSource.value=source;onStart(source,event);return;}" };

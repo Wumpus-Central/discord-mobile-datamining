@@ -1,5 +1,5 @@
-import { baseGet } from "00727_baseGet.js";
 // _runtime/04438_basePickBy.js
+import { baseGet } from "00727_baseGet.js";
 
 export default function basePickBy(arg0, arg1, arg2) {
   const obj = {};

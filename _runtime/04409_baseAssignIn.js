@@ -1,6 +1,6 @@
+// _runtime/04409_baseAssignIn.js
 import { copyObject } from "04406_copyObject.js";
 import { keysIn } from "04410_keysIn.js";
-// _runtime/04409_baseAssignIn.js
 
 export default function baseAssignIn(arg0, arg1) {
   let tmp = arg0;

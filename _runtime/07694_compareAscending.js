@@ -1,5 +1,5 @@
-import { isSymbol } from "00638_isSymbol.js";
 // _runtime/07694_compareAscending.js
+import { isSymbol } from "00638_isSymbol.js";
 
 export default function compareAscending(arg0, arg1) {
   if (arg0 !== arg1) {

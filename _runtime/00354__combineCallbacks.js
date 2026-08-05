@@ -1,5 +1,5 @@
-import { AnimatedEvent } from "00384_AnimatedEvent.js";
 // _runtime/00354__combineCallbacks.js
+import { AnimatedEvent } from "00384_AnimatedEvent.js";
 let require = arg1;
 const module = arg2;
 let dependencyMap = arg6;

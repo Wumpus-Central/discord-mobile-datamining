@@ -1,5 +1,5 @@
-import { SemVer } from "13021_SemVer.js";
 // _runtime/13038_SemVer.js
+import { SemVer } from "13021_SemVer.js";
 
 export default (arg0, arg1, arg2) => {
   const obj = new SemVer /* SemVer */(arg0, arg2);

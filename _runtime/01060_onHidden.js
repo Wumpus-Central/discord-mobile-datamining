@@ -1,5 +1,5 @@
-import { addPageListener } from "01041_addPageListener.js";
 // _runtime/01060_onHidden.js
+import { addPageListener } from "01041_addPageListener.js";
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

@@ -1,6 +1,6 @@
-import { _isNativeReflectConstruct } from "../00143__isNativeReflectConstruct.js";
 // _runtime/metro/00444__.js
 import DEFAULT_INITIAL_NUM_TO_RENDER from "DEFAULT_INITIAL_NUM_TO_RENDER";
+import { _isNativeReflectConstruct } from "../00143__isNativeReflectConstruct.js";
 
 const FALLBACK_ESTIMATED_WIDTH = DEFAULT_INITIAL_NUM_TO_RENDER.FALLBACK_ESTIMATED_WIDTH;
 obj = {

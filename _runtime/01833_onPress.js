@@ -1,8 +1,8 @@
-import { disabled } from "01825_disabled.js";
-import { items } from "01826_items.js";
 // _runtime/01833_onPress.js
 import "noop";
 import { jsx } from "jsxProd";
+import { disabled } from "01825_disabled.js";
+import { items } from "01826_items.js";
 
 const require = arg1;
 require("noop").useCallback;

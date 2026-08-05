@@ -1,7 +1,7 @@
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 // _runtime/01026_mergeOptions.js
 import _slicedToArray from "_slicedToArray";
 import asyncGeneratorStep from "asyncGeneratorStep";
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 
 let closure_50;
 let closure_51;

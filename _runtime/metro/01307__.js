@@ -1,3 +1,4 @@
+// _runtime/metro/01307__.js
 import { typeofJsonValue } from "../01308_typeofJsonValue.js";
 import { parts } from "../01309_parts.js";
 import { fromCharCodes } from "../01310_fromCharCodes.js";
@@ -23,7 +24,6 @@ import { primitiveEq } from "../01332_primitiveEq.js";
 import { containsMessageType } from "../01333_containsMessageType.js";
 import { isEnumObject } from "../01334_isEnumObject.js";
 import { 01318__ } from "01318__.js";
-// _runtime/metro/01307__.js
 const require = arg1;
 const dependencyMap = arg6;
 let obj = {

@@ -1,11 +1,11 @@
-import { getMultiInternalSlots } from "13386_getMultiInternalSlots.js";
-import { __exportStarResult13 } from "13400___exportStarResult13.js";
-import { __exportStarResult21 } from "13402___exportStarResult21.js";
 // _runtime/13412___exportStarResult24.js
 import e from "e";
 import digitsToString from "digitsToString";
 import e from "e";
 import formatToParts from "formatToParts";
+import { getMultiInternalSlots } from "13386_getMultiInternalSlots.js";
+import { __exportStarResult13 } from "13400___exportStarResult13.js";
+import { __exportStarResult21 } from "13402___exportStarResult21.js";
 
 
 export const PartitionNumberPattern = function PartitionNumberPattern(internalSlots, isNaN) {

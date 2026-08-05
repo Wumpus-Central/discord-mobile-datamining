@@ -1,5 +1,5 @@
-import { 01284__ } from "metro/01284__.js";
 // _runtime/01283___exportStarResult1.js
+import { 01284__ } from "metro/01284__.js";
 const require = arg1;
 const dependencyMap = arg6;
 arg5.parseNumberSkeletonFromString = undefined;

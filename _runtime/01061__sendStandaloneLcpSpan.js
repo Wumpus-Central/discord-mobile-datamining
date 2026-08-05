@@ -1,7 +1,7 @@
+// _runtime/01061__sendStandaloneLcpSpan.js
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 import { extractNetworkProtocol } from "01059_extractNetworkProtocol.js";
 import { __SENTRY_DEBUG__ } from "metro/01035___SENTRY_DEBUG__.js";
-// _runtime/01061__sendStandaloneLcpSpan.js
 const require = arg1;
 let dependencyMap = arg6;
 function _sendStandaloneLcpSpan(arg0, startTime, sentry_pageload_span_id, sentry_report_event) {

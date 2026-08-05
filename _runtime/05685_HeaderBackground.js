@@ -1,8 +1,8 @@
-import { Link } from "01481_Link.js";
 // _runtime/05685_HeaderBackground.js
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { Link } from "01481_Link.js";
 
 let Platform;
 let StyleSheet;

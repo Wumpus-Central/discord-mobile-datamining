@@ -1,7 +1,7 @@
+// _runtime/00546_getProto.js
 import { getPrototypeOf } from "00547_getPrototypeOf.js";
 import { 00548__ } from "metro/00548__.js";
 import { 00550__ } from "metro/00550__.js";
-// _runtime/00546_getProto.js
 if (require("getPrototypeOf")) {
   function getProto(arg0) {
     return getPrototypeOf /* getPrototypeOf */(arg0);

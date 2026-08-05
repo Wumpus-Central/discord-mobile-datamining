@@ -1,8 +1,8 @@
+// _runtime/metro/01398__.js
 import { getProto } from "../00546_getProto.js";
 import { forEach } from "../01401_forEach.js";
 import { callBind } from "../01403_callBind.js";
 import { 00542__ } from "00542__.js";
-// _runtime/metro/01398__.js
 let closure_2 = require("callBoundIntrinsic")("Object.prototype.toString");
 let tmp = require("hasToStringTagShams")();
 let c3 = tmp;

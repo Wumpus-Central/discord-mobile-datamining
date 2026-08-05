@@ -1,6 +1,6 @@
-import { useUnmountAwareTimeout } from "05556_useUnmountAwareTimeout.js";
 // _runtime/05559_useBoundDetection.js
 import noop from "noop";
+import { useUnmountAwareTimeout } from "05556_useUnmountAwareTimeout.js";
 
 let c3;
 let c4;

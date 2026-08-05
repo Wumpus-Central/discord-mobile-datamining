@@ -1,7 +1,3 @@
-import { cancelAnimation } from "01606_cancelAnimation.js";
-import { useEventHandlerRegistration } from "01795_useEventHandlerRegistration.js";
-import { useAnimatedKeyboardHandler } from "01797_useAnimatedKeyboardHandler.js";
-import { NOOP } from "01799_NOOP.js";
 // _runtime/01604_Animated.js
 import closure_2 from "controlEdgeToEdgeValues";
 import _slicedToArray from "_slicedToArray";
@@ -10,6 +6,10 @@ import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import controlEdgeToEdgeValues from "controlEdgeToEdgeValues";
+import { cancelAnimation } from "01606_cancelAnimation.js";
+import { useEventHandlerRegistration } from "01795_useEventHandlerRegistration.js";
+import { useAnimatedKeyboardHandler } from "01797_useAnimatedKeyboardHandler.js";
+import { NOOP } from "01799_NOOP.js";
 
 let Platform;
 let StyleSheet;

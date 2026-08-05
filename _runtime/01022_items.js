@@ -1,5 +1,5 @@
-import { noop } from "01019_noop.js";
 // _runtime/01022_items.js
+import { noop } from "01019_noop.js";
 const require = arg1;
 let dependencyMap = arg6;
 const items = [ReferenceError, TypeError, RangeError];

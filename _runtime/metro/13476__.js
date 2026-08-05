@@ -1,7 +1,7 @@
+// _runtime/metro/13476__.js
 import { getOwnPropertyDescriptor } from "../13479_getOwnPropertyDescriptor.js";
 import { isForced } from "../13516_isForced.js";
 import { 13477__ } from "13477__.js";
-// _runtime/metro/13476__.js
 
 export default (dontCallGetSet, obj) => {
   let _global;

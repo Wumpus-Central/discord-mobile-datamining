@@ -1,6 +1,6 @@
-import { getColorScheme } from "00453_getColorScheme.js";
 // _runtime/00494_subscribe.js
 import { useSyncExternalStore } from "noop";
+import { getColorScheme } from "00453_getColorScheme.js";
 
 function subscribe(onChange) {
   _require = _getColorScheme.addChangeListener(onChange);

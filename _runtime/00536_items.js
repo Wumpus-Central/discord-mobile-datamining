@@ -1,5 +1,5 @@
-import { 00534__ } from "metro/00534__.js";
 // _runtime/00536_items.js
+import { 00534__ } from "metro/00534__.js";
 let items = [];
 let num = 0;
 do {

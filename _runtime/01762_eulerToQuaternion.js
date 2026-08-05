@@ -1,7 +1,7 @@
-import { isWorkletFunction } from "01631_isWorkletFunction.js";
-import { isReanimated3 } from "01650_isReanimated3.js";
 // _runtime/01762_eulerToQuaternion.js
 import noop from "noop";
+import { isWorkletFunction } from "01631_isWorkletFunction.js";
+import { isReanimated3 } from "01650_isReanimated3.js";
 
 let c3;
 let c4;

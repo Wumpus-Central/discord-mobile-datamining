@@ -1,5 +1,5 @@
-import { __exportStarResult32 } from "13384___exportStarResult32.js";
 // _runtime/13406___exportStarResult15.js
+import { __exportStarResult32 } from "13384___exportStarResult32.js";
 const require = arg1;
 const dependencyMap = arg6;
 arg5.CurrencyDigits = function CurrencyDigits(currency, currencyDigitsData) {

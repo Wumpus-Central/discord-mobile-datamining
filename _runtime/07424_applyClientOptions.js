@@ -1,7 +1,7 @@
+// _runtime/07424_applyClientOptions.js
 import { isMatchingPattern } from "07384_isMatchingPattern.js";
 import { getFilenameToDebugIdMap } from "07427_getFilenameToDebugIdMap.js";
 import { 07412__ } from "metro/07412__.js";
-// _runtime/07424_applyClientOptions.js
 const require = arg1;
 const dependencyMap = arg6;
 function applyClientOptions(environment, environment2) {

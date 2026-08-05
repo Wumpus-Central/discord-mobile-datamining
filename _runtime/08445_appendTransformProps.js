@@ -1,7 +1,7 @@
+// _runtime/08445_appendTransformProps.js
 import { append } from "08446_append.js";
 import { peg$SyntaxError } from "08447_peg_SyntaxError.js";
 import { peg$SyntaxError } from "08448_peg_SyntaxError.js";
-// _runtime/08445_appendTransformProps.js
 const require = arg1;
 const dependencyMap = arg6;
 function appendTransformProps(arg0) {

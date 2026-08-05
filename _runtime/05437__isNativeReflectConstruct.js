@@ -1,4 +1,3 @@
-import { _isNativeReflectConstruct } from "05435__isNativeReflectConstruct.js";
 // _runtime/05437__isNativeReflectConstruct.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _classCallCheck from "_classCallCheck";
@@ -8,6 +7,7 @@ import importDefaultResult from "_createClass";
 import get_ActivityIndicator from "get ActivityIndicator";
 import "noop";
 import { jsx } from "jsxProd";
+import { _isNativeReflectConstruct } from "05435__isNativeReflectConstruct.js";
 
 let c10;
 let c9;

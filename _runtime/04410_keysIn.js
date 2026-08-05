@@ -1,5 +1,5 @@
-import { isArrayLike } from "00603_isArrayLike.js";
 // _runtime/04410_keysIn.js
+import { isArrayLike } from "00603_isArrayLike.js";
 
 export default function keysIn(arg0) {
   if (isArrayLike /* isArrayLike */(arg0)) {

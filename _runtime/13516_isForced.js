@@ -1,5 +1,5 @@
-import { all } from "13503_all.js";
 // _runtime/13516_isForced.js
+import { all } from "13503_all.js";
 const re2 = /#|\.prototype\./;
 function isForced(arg0, arg1) {
   if (typeof fn !== "function") {

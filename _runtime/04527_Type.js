@@ -1,5 +1,5 @@
-import { Type } from "04528_Type.js";
 // _runtime/04527_Type.js
+import { Type } from "04528_Type.js";
 
 export default function Type(arg0) {
   let str = "Symbol";

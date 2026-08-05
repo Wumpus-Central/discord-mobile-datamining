@@ -1,5 +1,5 @@
-import { print } from "04165_print.js";
 // _runtime/04164_registerHost.js
+import { print } from "04165_print.js";
 const require = arg1;
 const dependencyMap = arg6;
 function registerHost(arg0, arg1) {

@@ -1,12 +1,12 @@
+// _runtime/01707_updatePropsOnReactJS.js
+import isJest from "isJest";
+import isJest from "isJest";
+import isJest from "isJest";
 import { isJest } from "01609_isJest.js";
 import { runWorkletOnJS } from "01613_runWorkletOnJS.js";
 import { call } from "01649_call.js";
 import { validateTransformOrigin } from "01708_validateTransformOrigin.js";
 import { map } from "01709_map.js";
-// _runtime/01707_updatePropsOnReactJS.js
-import isJest from "isJest";
-import isJest from "isJest";
-import isJest from "isJest";
 
 function updatePropsOnReactJS(arg0, arg1) {
   const ComponentRegistry = map /* map */.ComponentRegistry;

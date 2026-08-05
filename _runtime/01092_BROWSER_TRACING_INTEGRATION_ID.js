@@ -1,6 +1,6 @@
+// _runtime/01092_BROWSER_TRACING_INTEGRATION_ID.js
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 import { ignoreNextOnError } from "01028_ignoreNextOnError.js";
-// _runtime/01092_BROWSER_TRACING_INTEGRATION_ID.js
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const BrowserTracing = "BrowserTracing";
 let obj = {};

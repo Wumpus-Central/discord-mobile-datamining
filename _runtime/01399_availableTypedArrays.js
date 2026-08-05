@@ -1,5 +1,5 @@
-import { 01400__ } from "metro/01400__.js";
 // _runtime/01399_availableTypedArrays.js
+import { 01400__ } from "metro/01400__.js";
 if (typeof globalThis !== "undefined") {
   const global = globalThis;
 }

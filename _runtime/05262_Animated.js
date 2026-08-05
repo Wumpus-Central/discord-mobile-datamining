@@ -1,9 +1,9 @@
-import { Link } from "01481_Link.js";
 // _runtime/05262_Animated.js
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { Link } from "01481_Link.js";
 
 let Platform;
 let Pressable;

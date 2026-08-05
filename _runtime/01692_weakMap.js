@@ -1,5 +1,5 @@
-import { _makeShareableClone } from "01616__makeShareableClone.js";
 // _runtime/01692_weakMap.js
+import { _makeShareableClone } from "01616__makeShareableClone.js";
 const require = arg1;
 const dependencyMap = arg6;
 const weakMap = new WeakMap();

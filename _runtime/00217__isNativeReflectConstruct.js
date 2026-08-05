@@ -1,13 +1,13 @@
-import { BlobManager } from "00200_BlobManager.js";
-import { Blob } from "00203_Blob.js";
-import { WebSocketModule } from "00218_WebSocketModule.js";
-import { 00038__ } from "metro/00038__.js";
 // _runtime/00217__isNativeReflectConstruct.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
+import { BlobManager } from "00200_BlobManager.js";
+import { Blob } from "00203_Blob.js";
+import { WebSocketModule } from "00218_WebSocketModule.js";
+import { 00038__ } from "metro/00038__.js";
 
 const WebSocket = arg1;
 function _isNativeReflectConstruct() {

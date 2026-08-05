@@ -1,4 +1,3 @@
-import { getHostFromUrl } from "13613_getHostFromUrl.js";
 // _runtime/13583_reactNativeCorePlugins.js
 import asyncGeneratorStep from "sendToReactotron";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -14,6 +13,7 @@ import 13608__ from "metro/13608__.js";
 import getDevMenu from "getDevMenu";
 import keys from "keys";
 import getReactNativePlatformConstants from "getReactNativePlatformConstants";
+import { getHostFromUrl } from "13613_getHostFromUrl.js";
 
 let forceTouch;
 let interfaceIdiom;

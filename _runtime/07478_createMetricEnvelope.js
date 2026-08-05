@@ -1,8 +1,8 @@
+// _runtime/07478_createMetricEnvelope.js
 import { consoleSandbox } from "07375_consoleSandbox.js";
 import { forEachEnvelopeItem } from "07419_forEachEnvelopeItem.js";
 import { dsnFromString } from "07422_dsnFromString.js";
 import { items } from "07476_items.js";
-// _runtime/07478_createMetricEnvelope.js
 const require = arg1;
 const dependencyMap = arg6;
 function createMetricEnvelope(arg0, arg1, sdk) {

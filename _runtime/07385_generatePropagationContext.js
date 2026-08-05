@@ -1,5 +1,5 @@
-import { addContextToFrame } from "07386_addContextToFrame.js";
 // _runtime/07385_generatePropagationContext.js
+import { addContextToFrame } from "07386_addContextToFrame.js";
 const require = arg1;
 const dependencyMap = arg6;
 arg5.generatePropagationContext = function generatePropagationContext() {

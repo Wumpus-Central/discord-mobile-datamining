@@ -1,7 +1,7 @@
+// _runtime/05415_getHandler.js
 import { toArray } from "05372_toArray.js";
 import { _isNativeReflectConstruct } from "05407__isNativeReflectConstruct.js";
 import { 05376__ } from "metro/05376__.js";
-// _runtime/05415_getHandler.js
 const require = arg1;
 const dependencyMap = arg6;
 function getHandler(arg0, onBegin) {

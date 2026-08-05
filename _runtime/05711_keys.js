@@ -1,5 +1,5 @@
-import { keys } from "05709_keys.js";
 // _runtime/05711_keys.js
+import { keys } from "05709_keys.js";
 
 export default (arg0) => {
   let require;

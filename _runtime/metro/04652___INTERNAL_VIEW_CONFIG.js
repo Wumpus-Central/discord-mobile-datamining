@@ -1,8 +1,8 @@
-import { renderElement } from "../00114_renderElement.js";
 // _runtime/metro/04652___INTERNAL_VIEW_CONFIG.js
 import get_ActivityIndicator from "get ActivityIndicator";
 import weakSet from "weakSet";
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
+import { renderElement } from "../00114_renderElement.js";
 
 let codegenNativeCommands;
 let codegenNativeComponent;

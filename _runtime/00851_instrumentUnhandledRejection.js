@@ -1,6 +1,6 @@
+// _runtime/00851_instrumentUnhandledRejection.js
 import { addHandler } from "00850_addHandler.js";
 import { 00821__ } from "metro/00821__.js";
-// _runtime/00851_instrumentUnhandledRejection.js
 const require = arg1;
 const dependencyMap = arg6;
 function instrumentUnhandledRejection() {

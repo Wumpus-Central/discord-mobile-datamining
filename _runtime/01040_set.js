@@ -1,6 +1,6 @@
+// _runtime/01040_set.js
 import { WINDOW } from "01039_WINDOW.js";
 import { addPageListener } from "01041_addPageListener.js";
-// _runtime/01040_set.js
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

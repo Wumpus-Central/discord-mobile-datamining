@@ -1,7 +1,7 @@
-import { extractOpacity } from "08443_extractOpacity.js";
-import { extractBrush } from "08455_extractBrush.js";
 // _runtime/08475_extractFeFlood.js
 import noop from "noop";
+import { extractOpacity } from "08443_extractOpacity.js";
+import { extractBrush } from "08455_extractBrush.js";
 
 const re3 = /\s+/;
 let obj = { type: 0, payload: require("get ActivityIndicator").processColor("black") };

@@ -1,6 +1,6 @@
-import { getReactNativeVersionWithModules } from "13585_getReactNativeVersionWithModules.js";
 // _runtime/13584_getReactNativeVersion.js
 import get_ActivityIndicator from "get ActivityIndicator";
+import { getReactNativeVersionWithModules } from "13585_getReactNativeVersionWithModules.js";
 
 
 export default function getReactNativeVersion() {

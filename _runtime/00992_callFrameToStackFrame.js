@@ -1,6 +1,6 @@
+// _runtime/00992_callFrameToStackFrame.js
 import { createStackParser } from "00833_createStackParser.js";
 import { filenameIsInApp } from "00991_filenameIsInApp.js";
-// _runtime/00992_callFrameToStackFrame.js
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

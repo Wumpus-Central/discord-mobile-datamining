@@ -1,4 +1,3 @@
-import { __INTERNAL_VIEW_CONFIG } from "metro/00417___INTERNAL_VIEW_CONFIG.js";
 // _runtime/00416__isNativeReflectConstruct.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _classCallCheck from "_classCallCheck";
@@ -7,6 +6,7 @@ import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
 import importDefaultResult1 from "_inherits";
 import { jsx } from "jsxProd";
+import { __INTERNAL_VIEW_CONFIG } from "metro/00417___INTERNAL_VIEW_CONFIG.js";
 
 const RefreshControl = arg1;
 function _isNativeReflectConstruct() {

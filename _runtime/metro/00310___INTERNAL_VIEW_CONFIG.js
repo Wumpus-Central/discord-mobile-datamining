@@ -1,8 +1,8 @@
-import { renderElement } from "../00114_renderElement.js";
 // _runtime/metro/00310___INTERNAL_VIEW_CONFIG.js
 import "noop";
 import weakSet from "weakSet";
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
+import { renderElement } from "../00114_renderElement.js";
 
 const require = arg1;
 let obj = { uiViewClassName: "AndroidDrawerLayout", directEventTypes: { topDrawerSlide: { registrationName: "onDrawerSlide" }, topDrawerStateChanged: { registrationName: "onDrawerStateChanged" }, topDrawerOpen: { registrationName: "onDrawerOpen" }, topDrawerClose: { registrationName: "onDrawerClose" } }, validAttributes: null };

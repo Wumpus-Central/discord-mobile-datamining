@@ -1,6 +1,3 @@
-import { extractProps } from "08452_extractProps.js";
-import { extractFont } from "08459_extractFont.js";
-import { __INTERNAL_VIEW_CONFIG } from "metro/08537___INTERNAL_VIEW_CONFIG.js";
 // _runtime/08536__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -9,6 +6,9 @@ import importDefaultResult from "_createClass";
 import "noop";
 import { jsx } from "jsxProd";
 import extractFont from "extractFont";
+import { extractProps } from "08452_extractProps.js";
+import { extractFont } from "08459_extractFont.js";
+import { __INTERNAL_VIEW_CONFIG } from "metro/08537___INTERNAL_VIEW_CONFIG.js";
 
 const TSpan = arg1;
 function _isNativeReflectConstruct() {

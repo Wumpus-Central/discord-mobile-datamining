@@ -1,5 +1,5 @@
-import { makePromiseBuffer } from "00877_makePromiseBuffer.js";
 // _runtime/00878_createTransport.js
+import { makePromiseBuffer } from "00877_makePromiseBuffer.js";
 const require = arg1;
 let dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

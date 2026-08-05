@@ -1,6 +1,6 @@
+// _runtime/07372_instrumentError.js
 import { addHandler } from "07373_addHandler.js";
 import { getGlobalSingleton } from "07376_getGlobalSingleton.js";
-// _runtime/07372_instrumentError.js
 const require = arg1;
 const dependencyMap = arg6;
 function instrumentError() {

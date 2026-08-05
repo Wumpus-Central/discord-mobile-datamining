@@ -1,9 +1,9 @@
+// _runtime/01751_useHandler.js
+import noop from "noop";
 import { isJest } from "01609_isJest.js";
 import { isWorkletFunction } from "01631_isWorkletFunction.js";
 import { freezeObjectInDev } from "01636_freezeObjectInDev.js";
 import { isAnimated } from "01752_isAnimated.js";
-// _runtime/01751_useHandler.js
-import noop from "noop";
 
 let c3;
 let obj1;

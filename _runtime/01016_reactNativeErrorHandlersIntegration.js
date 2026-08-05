@@ -1,6 +1,6 @@
+// _runtime/01016_reactNativeErrorHandlersIntegration.js
 import { createSyntheticError } from "00813_createSyntheticError.js";
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-// _runtime/01016_reactNativeErrorHandlersIntegration.js
 const require = arg1;
 const dependencyMap = arg6;
 let fn = this;

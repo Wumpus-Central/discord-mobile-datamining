@@ -1,9 +1,9 @@
-import { addContextToFrame } from "07386_addContextToFrame.js";
-import { dateTimestampInSeconds } from "07389_dateTimestampInSeconds.js";
 // _runtime/07398_updateSession.js
 import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__";
 import consoleSandbox from "consoleSandbox";
 import "SyncPromise";
+import { addContextToFrame } from "07386_addContextToFrame.js";
+import { dateTimestampInSeconds } from "07389_dateTimestampInSeconds.js";
 
 function updateSession(ipAddress) {
   let obj = arg1;

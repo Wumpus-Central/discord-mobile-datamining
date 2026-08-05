@@ -1,6 +1,6 @@
+// _runtime/04569_ArrayCreate.js
 import { isInteger } from "04566_isInteger.js";
 import { 00541__ } from "metro/00541__.js";
-// _runtime/04569_ArrayCreate.js
 let closure_2 = require("getEvalledConstructor")("%Array.prototype%");
 
 export default function ArrayCreate(arg0) {

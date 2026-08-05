@@ -1,6 +1,6 @@
+// _runtime/00068_measure.js
 import { nullthrows } from "00070_nullthrows.js";
 import { getFabricUIManager } from "00071_getFabricUIManager.js";
-// _runtime/00068_measure.js
 if (true === global.RN$Bridgeless) {
   let _default = require("RN$LegacyInterop_UIManager_getConstants").default;
 } else {

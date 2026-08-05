@@ -1,4 +1,3 @@
-import { __INTERNAL_VIEW_CONFIG } from "metro/05604___INTERNAL_VIEW_CONFIG.js";
 // _runtime/05603__isNativeReflectConstruct.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _classCallCheck from "_classCallCheck";
@@ -8,6 +7,7 @@ import importDefaultResult from "_createClass";
 import importDefaultResult1 from "_inherits";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { __INTERNAL_VIEW_CONFIG } from "metro/05604___INTERNAL_VIEW_CONFIG.js";
 
 let c9;
 let metroImportAll;

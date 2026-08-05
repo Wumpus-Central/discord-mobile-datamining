@@ -1,5 +1,5 @@
-import { basePickBy } from "04438_basePickBy.js";
 // _runtime/04437_basePick.js
+import { basePickBy } from "04438_basePickBy.js";
 
 export default function basePick(arg0, arg1) {
   const _require = arg0;

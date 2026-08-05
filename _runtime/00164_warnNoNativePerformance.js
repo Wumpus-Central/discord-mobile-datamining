@@ -1,6 +1,6 @@
-import { warnOnce } from "00165_warnOnce.js";
 // _runtime/00164_warnNoNativePerformance.js
 import importDefaultResult from "NativePerformanceCxx";
+import { warnOnce } from "00165_warnOnce.js";
 
 let fn;
 if (importDefaultResult != null) {

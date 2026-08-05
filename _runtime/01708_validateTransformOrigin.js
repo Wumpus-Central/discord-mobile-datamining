@@ -1,6 +1,6 @@
-import { t } from "01617_t.js";
 // _runtime/01708_validateTransformOrigin.js
 import _slicedToArray from "_slicedToArray";
+import { t } from "01617_t.js";
 
 const require = arg1;
 function validateTransformOrigin(arg0) {

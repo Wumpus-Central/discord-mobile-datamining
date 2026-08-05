@@ -1,5 +1,5 @@
-import { isPropertyDescriptor } from "04580_isPropertyDescriptor.js";
 // _runtime/04584_IsDataDescriptor.js
+import { isPropertyDescriptor } from "04580_isPropertyDescriptor.js";
 
 export default function IsDataDescriptor(arg0) {
   if (undefined === arg0) {

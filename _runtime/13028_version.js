@@ -1,5 +1,5 @@
-import { SemVer } from "13020_SemVer.js";
 // _runtime/13028_version.js
+import { SemVer } from "13020_SemVer.js";
 
 export default (str) => {
   const tmp = SemVer /* SemVer */;

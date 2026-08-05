@@ -1,6 +1,6 @@
+// _runtime/07387_regExp.js
 import { generatePropagationContext } from "07385_generatePropagationContext.js";
 import { baggageHeaderToDynamicSamplingContext } from "07388_baggageHeaderToDynamicSamplingContext.js";
-// _runtime/07387_regExp.js
 const require = arg1;
 const dependencyMap = arg6;
 const regExp = new RegExp("^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$");

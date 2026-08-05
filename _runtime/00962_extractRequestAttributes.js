@@ -1,9 +1,9 @@
+// _runtime/00962_extractRequestAttributes.js
+import asyncGeneratorStep from "createChildOrRootSpan";
 import { buildMethodPath } from "00960_buildMethodPath.js";
 import { getOperationName } from "00963_getOperationName.js";
 import { 00839__ } from "metro/00839__.js";
 import { 00958__ } from "metro/00958__.js";
-// _runtime/00962_extractRequestAttributes.js
-import asyncGeneratorStep from "createChildOrRootSpan";
 
 function extractRequestAttributes(first, outer1_1) {
   let obj = { [closure_0(closure_1[1]).GEN_AI_SYSTEM_ATTRIBUTE]: "openai" };

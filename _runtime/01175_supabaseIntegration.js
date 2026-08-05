@@ -1,5 +1,5 @@
-import { feedbackAsyncIntegration } from "01024_feedbackAsyncIntegration.js";
 // _runtime/01175_supabaseIntegration.js
+import { feedbackAsyncIntegration } from "01024_feedbackAsyncIntegration.js";
 const require = arg1;
 const dependencyMap = arg6;
 arg5.supabaseIntegration = function supabaseIntegration(supabaseClient) {

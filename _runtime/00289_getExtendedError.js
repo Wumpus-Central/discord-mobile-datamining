@@ -1,6 +1,6 @@
-import { _isNativeReflectConstruct } from "00189__isNativeReflectConstruct.js";
 // _runtime/00289_getExtendedError.js
 import "noop";
+import { _isNativeReflectConstruct } from "00189__isNativeReflectConstruct.js";
 
 const require = arg1;
 function getExtendedError(value, componentStack) {

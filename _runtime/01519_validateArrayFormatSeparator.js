@@ -1,9 +1,9 @@
+// _runtime/01519_validateArrayFormatSeparator.js
+import _slicedToArray from "_slicedToArray";
 import { decodeComponents } from "01521_decodeComponents.js";
 import { 01520__ } from "metro/01520__.js";
 import { 01522__ } from "metro/01522__.js";
 import { 01523__ } from "metro/01523__.js";
-// _runtime/01519_validateArrayFormatSeparator.js
-import _slicedToArray from "_slicedToArray";
 
 function validateArrayFormatSeparator(arrayFormatSeparator) {
   const typeError = new TypeError("arrayFormatSeparator must be single character string");

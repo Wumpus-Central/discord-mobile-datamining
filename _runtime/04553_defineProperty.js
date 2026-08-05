@@ -1,6 +1,6 @@
+// _runtime/04553_defineProperty.js
 import { defineDataProperty } from "01406_defineDataProperty.js";
 import { keys } from "04554_keys.js";
-// _runtime/04553_defineProperty.js
 let tmp = typeof Symbol === "function";
 if (typeof Symbol === "function") {
   const _Symbol = Symbol;

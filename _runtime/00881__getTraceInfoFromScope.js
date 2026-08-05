@@ -1,5 +1,5 @@
-import { getClient } from "00848_getClient.js";
 // _runtime/00881__getTraceInfoFromScope.js
+import { getClient } from "00848_getClient.js";
 const require = arg1;
 let dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

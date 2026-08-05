@@ -1,6 +1,6 @@
-import { noop } from "01512_noop.js";
 // _runtime/01549_useCurrentRender.js
 import noop from "noop";
+import { noop } from "01512_noop.js";
 
 
 export default function useCurrentRender(arg0) {

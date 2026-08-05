@@ -1,5 +1,5 @@
-import { isValidRubberBandConfig } from "01682_isValidRubberBandConfig.js";
 // _runtime/01683_rubberBandDecay.js
+import { isValidRubberBandConfig } from "01682_isValidRubberBandConfig.js";
 const require = arg1;
 const dependencyMap = arg6;
 function rubberBandDecay(current, lastTimestamp, deceleration) {

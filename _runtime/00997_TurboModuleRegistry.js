@@ -1,9 +1,9 @@
+// _runtime/00997_TurboModuleRegistry.js
+import get_ActivityIndicator from "get ActivityIndicator";
 import { polyfillObjectProperty } from "00123_polyfillObjectProperty.js";
 import { parseErrorStack } from "00190_parseErrorStack.js";
 import { _symbolicateStackTrace } from "00998__symbolicateStackTrace.js";
 import { getDevServer } from "00999_getDevServer.js";
-// _runtime/00997_TurboModuleRegistry.js
-import get_ActivityIndicator from "get ActivityIndicator";
 
 let AppRegistry;
 let Platform;

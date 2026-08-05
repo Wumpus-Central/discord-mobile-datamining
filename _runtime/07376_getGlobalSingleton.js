@@ -1,5 +1,5 @@
-import { 07377__ } from "metro/07377__.js";
 // _runtime/07376_getGlobalSingleton.js
+import { 07377__ } from "metro/07377__.js";
 const require = arg1;
 const dependencyMap = arg6;
 arg5.GLOBAL_OBJ = globalThis;

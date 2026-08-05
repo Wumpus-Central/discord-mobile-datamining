@@ -1,5 +1,3 @@
-import { toStringTag } from "../00607_toStringTag.js";
-import { toSource } from "../00742_toSource.js";
 // _runtime/metro/00770__.js
 import toSource from "toSource";
 import getNative from "getNative";
@@ -13,6 +11,8 @@ import toSource from "toSource";
 import getNative from "getNative";
 import toStringTag from "toStringTag";
 import getNative from "getNative";
+import { toStringTag } from "../00607_toStringTag.js";
+import { toSource } from "../00742_toSource.js";
 
 if (getNative) {
   const _ArrayBuffer = ArrayBuffer;

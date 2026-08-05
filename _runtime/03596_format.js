@@ -1,4 +1,3 @@
-import { getDefaultOptions } from "03369_getDefaultOptions.js";
 // _runtime/03596_format.js
 import isValid from "isValid";
 import subMilliseconds from "subMilliseconds";
@@ -9,6 +8,7 @@ import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds";
 import toInteger from "toInteger";
 import requiredArgs from "requiredArgs";
 import code from "code";
+import { getDefaultOptions } from "03369_getDefaultOptions.js";
 
 if (!isValid) {
   let obj = { default: null };

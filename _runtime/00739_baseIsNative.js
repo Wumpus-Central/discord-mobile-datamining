@@ -1,5 +1,5 @@
-import { isObject } from "00606_isObject.js";
 // _runtime/00739_baseIsNative.js
+import { isObject } from "00606_isObject.js";
 const re2 = /^\[object .+?Constructor\]$/;
 const call = toString.call;
 const str = typeof call === "unknown" ? toString() : call(hasOwnProperty);

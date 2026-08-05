@@ -1,8 +1,8 @@
+// _runtime/00551_callBindBasic.js
 import { bind } from "00554_bind.js";
 import { 00541__ } from "metro/00541__.js";
 import { 00552__ } from "metro/00552__.js";
 import { 00556__ } from "metro/00556__.js";
-// _runtime/00551_callBindBasic.js
 
 export default function callBindBasic(items) {
   if (items.length >= 1) {

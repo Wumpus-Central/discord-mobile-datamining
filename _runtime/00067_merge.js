@@ -1,3 +1,4 @@
+// _runtime/00067_merge.js
 import { result } from "00026_result.js";
 import { processColor } from "00050_processColor.js";
 import { _getFilterAmount } from "00054__getFilterAmount.js";
@@ -13,7 +14,6 @@ import { pointsDiffer } from "00078_pointsDiffer.js";
 import { insetsDiffer } from "00079_insetsDiffer.js";
 import { processColorElement } from "00080_processColorElement.js";
 import { resolveAssetSource } from "00081_resolveAssetSource.js";
-// _runtime/00067_merge.js
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;

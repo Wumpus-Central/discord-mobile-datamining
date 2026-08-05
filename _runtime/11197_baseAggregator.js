@@ -1,5 +1,5 @@
-import { baseForOwn } from "00601_baseForOwn.js";
 // _runtime/11197_baseAggregator.js
+import { baseForOwn } from "00601_baseForOwn.js";
 
 export default function baseAggregator(arg0, arg1, arg2, arg3) {
   const _require = arg1;

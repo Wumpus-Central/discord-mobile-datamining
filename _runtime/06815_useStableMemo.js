@@ -1,6 +1,6 @@
-import { areHookInputsEqual } from "06816_areHookInputsEqual.js";
 // _runtime/06815_useStableMemo.js
 import { useRef } from "noop";
+import { areHookInputsEqual } from "06816_areHookInputsEqual.js";
 
 let closure_3 = [];
 

@@ -1,8 +1,8 @@
+// _runtime/09121_XorAndSalsa.js
+import asyncGeneratorStep from "asyncGeneratorStep";
 import { _asyncLoop } from "09122__asyncLoop.js";
 import { pbkdf2Init } from "09125_pbkdf2Init.js";
 import { _isNativeReflectConstruct } from "09127__isNativeReflectConstruct.js";
-// _runtime/09121_XorAndSalsa.js
-import asyncGeneratorStep from "asyncGeneratorStep";
 
 function XorAndSalsa(B32, sum, V, result1, B322, sum13) {
   let tmp81;

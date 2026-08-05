@@ -1,10 +1,10 @@
-import { Event } from "00133_Event.js";
-import { FileReaderModule } from "00224_FileReaderModule.js";
 // _runtime/00223__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
+import { Event } from "00133_Event.js";
+import { FileReaderModule } from "00224_FileReaderModule.js";
 
 const FileReader = arg1;
 function _isNativeReflectConstruct() {

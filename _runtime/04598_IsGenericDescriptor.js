@@ -1,5 +1,5 @@
-import { isPropertyDescriptor } from "04580_isPropertyDescriptor.js";
 // _runtime/04598_IsGenericDescriptor.js
+import { isPropertyDescriptor } from "04580_isPropertyDescriptor.js";
 
 export default function IsGenericDescriptor(arg0) {
   if (undefined === arg0) {

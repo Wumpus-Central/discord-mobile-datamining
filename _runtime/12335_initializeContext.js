@@ -1,5 +1,5 @@
-import { $output } from "12333__output.js";
 // _runtime/12335_initializeContext.js
+import { $output } from "12333__output.js";
 const require = arg1;
 let exports = arg5;
 const dependencyMap = arg6;

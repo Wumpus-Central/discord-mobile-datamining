@@ -1,10 +1,10 @@
-import { getDefaultOptions } from "03369_getDefaultOptions.js";
 // _runtime/03790_setWeekYear.js
 import differenceInCalendarDays from "differenceInCalendarDays";
 import startOfWeekYear from "startOfWeekYear";
 import _typeof from "_typeof";
 import toInteger from "toInteger";
 import requiredArgs from "requiredArgs";
+import { getDefaultOptions } from "03369_getDefaultOptions.js";
 
 if (!differenceInCalendarDays) {
   let obj = { default: null };

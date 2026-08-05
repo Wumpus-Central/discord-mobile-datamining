@@ -1,7 +1,7 @@
+// _runtime/01406_defineDataProperty.js
 import { flag } from "00564_flag.js";
 import { 00541__ } from "metro/00541__.js";
 import { 00542__ } from "metro/00542__.js";
-// _runtime/01406_defineDataProperty.js
 
 export default function defineDataProperty(obj, str) {
   if (obj) {

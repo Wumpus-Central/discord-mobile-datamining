@@ -1,6 +1,6 @@
-import { $output } from "12333__output.js";
 // _runtime/12345_convertBaseSchema.js
 import _slicedToArray from "_slicedToArray";
+import { $output } from "12333__output.js";
 
 const self = this;
 function convertBaseSchema(not, refs) {

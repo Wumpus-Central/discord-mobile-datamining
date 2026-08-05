@@ -1,7 +1,7 @@
-import { getDataView } from "04897_getDataView.js";
-import { 04914__ } from "metro/04914__.js";
 // _runtime/04936_getTagName.js
 import _slicedToArray from "_slicedToArray";
+import { getDataView } from "04897_getDataView.js";
+import { 04914__ } from "metro/04914__.js";
 
 let error;
 let length;

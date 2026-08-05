@@ -1,7 +1,7 @@
+// _runtime/01407_applyBind.js
 import { bind } from "00554_bind.js";
 import { 00552__ } from "metro/00552__.js";
 import { 00557__ } from "metro/00557__.js";
-// _runtime/01407_applyBind.js
 
 export default function applyBind() {
   const tmp = 00552__;

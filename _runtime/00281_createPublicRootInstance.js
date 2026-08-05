@@ -1,5 +1,5 @@
-import { _isNativeReflectConstruct } from "00140__isNativeReflectConstruct.js";
 // _runtime/00281_createPublicRootInstance.js
+import { _isNativeReflectConstruct } from "00140__isNativeReflectConstruct.js";
 const require = arg1;
 const module = arg2;
 const exports = arg3;

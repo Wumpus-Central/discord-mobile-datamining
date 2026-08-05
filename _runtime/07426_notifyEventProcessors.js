@@ -1,5 +1,5 @@
-import { SyncPromise } from "07399_SyncPromise.js";
 // _runtime/07426_notifyEventProcessors.js
+import { SyncPromise } from "07399_SyncPromise.js";
 const require = arg1;
 let dependencyMap = arg6;
 arg5.notifyEventProcessors = function notifyEventProcessors(arg0, arg1, arg2) {

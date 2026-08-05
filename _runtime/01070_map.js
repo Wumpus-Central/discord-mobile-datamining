@@ -1,5 +1,5 @@
-import { triggerHandlers } from "01034_triggerHandlers.js";
 // _runtime/01070_map.js
+import { triggerHandlers } from "01034_triggerHandlers.js";
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

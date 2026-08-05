@@ -1,5 +1,5 @@
-import { extractNetworkProtocol } from "01059_extractNetworkProtocol.js";
 // _runtime/01063_resourceTimingToSpanAttributes.js
+import { extractNetworkProtocol } from "01059_extractNetworkProtocol.js";
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

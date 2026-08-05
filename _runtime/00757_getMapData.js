@@ -1,5 +1,5 @@
-import { isKeyable } from "00758_isKeyable.js";
 // _runtime/00757_getMapData.js
+import { isKeyable } from "00758_isKeyable.js";
 
 export default function getMapData(__data__, str) {
   __data__ = __data__.__data__;

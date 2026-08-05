@@ -1,7 +1,7 @@
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-import { makeFetchTransport } from "01032_makeFetchTransport.js";
 // _runtime/01098__push.js
 import asyncGeneratorStep from "asyncGeneratorStep";
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
+import { makeFetchTransport } from "01032_makeFetchTransport.js";
 
 function _push(arg0, arg1, arg2) {
   let closure_0 = arg1;

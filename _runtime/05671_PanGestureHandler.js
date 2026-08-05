@@ -1,8 +1,8 @@
-import { Directions } from "05368_Directions.js";
-import { noop } from "05672_noop.js";
 // _runtime/05671_PanGestureHandler.js
 import noop from "noop";
 import { jsx } from "jsxProd";
+import { Directions } from "05368_Directions.js";
+import { noop } from "05672_noop.js";
 
 const require = arg1;
 

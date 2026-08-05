@@ -1,6 +1,6 @@
+// _runtime/01066_instrumentHistory.js
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 import { WINDOW } from "01039_WINDOW.js";
-// _runtime/01066_instrumentHistory.js
 const require = arg1;
 const dependencyMap = arg6;
 function instrumentHistory() {

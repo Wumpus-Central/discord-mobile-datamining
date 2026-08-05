@@ -1,6 +1,6 @@
+// _runtime/04595_ValidateAndApplyPropertyDescriptor.js
 import { isPropertyKey } from "04576_isPropertyKey.js";
 import { Type } from "04596_Type.js";
-// _runtime/04595_ValidateAndApplyPropertyDescriptor.js
 
 export default function ValidateAndApplyPropertyDescriptor(arg0, arg1, flag, __Configurable__) {
   const tmp3 = Type /* Type */(arg0);

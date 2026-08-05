@@ -1,8 +1,8 @@
+// _runtime/13545_setupURLPolyfill.js
+import get_ActivityIndicator from "get ActivityIndicator";
 import { BlobModule } from "13548_BlobModule.js";
 import { URLSearchParams } from "13561_URLSearchParams.js";
 import { 13547__ } from "metro/13547__.js";
-// _runtime/13545_setupURLPolyfill.js
-import get_ActivityIndicator from "get ActivityIndicator";
 
 for (const key10016 in require("BlobModule")) {
   let tmp3 = key10016;

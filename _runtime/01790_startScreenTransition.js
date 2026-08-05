@@ -1,6 +1,6 @@
-import { computeEasingProgress } from "01792_computeEasingProgress.js";
 // _runtime/01790_startScreenTransition.js
 import configureProps from "configureProps";
+import { computeEasingProgress } from "01792_computeEasingProgress.js";
 
 configureProps = configureProps.configureProps();
 function startScreenTransition(sharedEvent) {

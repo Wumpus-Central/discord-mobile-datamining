@@ -1,7 +1,7 @@
-import { addNonEnumerableProperty } from "07381_addNonEnumerableProperty.js";
-import { memoBuilder } from "07421_memoBuilder.js";
 // _runtime/07420_normalize.js
 import _slicedToArray from "_slicedToArray";
+import { addNonEnumerableProperty } from "07381_addNonEnumerableProperty.js";
+import { memoBuilder } from "07421_memoBuilder.js";
 
 function normalize(arg0) {
   let num = arg1;

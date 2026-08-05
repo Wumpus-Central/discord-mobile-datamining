@@ -1,8 +1,8 @@
-import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
 // _runtime/00925_markAsInstrumented.js
 import _slicedToArray from "_slicedToArray";
 import _toArray from "_toArray";
 import setupIntegration from "setupIntegration";
+import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
 
 function markAsInstrumented(arg0) {
   try {

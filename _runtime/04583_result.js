@@ -1,6 +1,6 @@
-import { flag } from "00564_flag.js";
 // _runtime/04583_result.js
 import hasPropertyDescriptors from "hasPropertyDescriptors";
+import { flag } from "00564_flag.js";
 
 hasPropertyDescriptors = hasPropertyDescriptors.hasArrayLengthDefineBug();
 if (hasPropertyDescriptors) {

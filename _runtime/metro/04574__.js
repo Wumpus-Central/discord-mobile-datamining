@@ -1,5 +1,5 @@
-import { 00541__ } from "00541__.js";
 // _runtime/metro/04574__.js
+import { 00541__ } from "00541__.js";
 const obj = {};
 try {
   obj.__proto__ = null;

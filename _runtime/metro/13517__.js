@@ -1,6 +1,6 @@
+// _runtime/metro/13517__.js
 import { call } from "../13500_call.js";
 import { 13518__ } from "13518__.js";
-// _runtime/metro/13517__.js
 
 export default (arg0, arg1, arg2) => {
   const arr = 13518__(arg1);

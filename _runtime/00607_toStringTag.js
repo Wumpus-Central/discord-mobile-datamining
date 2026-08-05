@@ -1,6 +1,6 @@
+// _runtime/00607_toStringTag.js
 import { toStringTag } from "00611_toStringTag.js";
 import { objectToString } from "00612_objectToString.js";
-// _runtime/00607_toStringTag.js
 let toStringTag;
 if (require("module_608")) {
   toStringTag = require("module_608").toStringTag;

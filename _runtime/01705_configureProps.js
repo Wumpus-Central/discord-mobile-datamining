@@ -1,8 +1,8 @@
+// _runtime/01705_configureProps.js
+import isJest from "isJest";
 import { addLogBoxLog } from "01610_addLogBoxLog.js";
 import { isReanimated3 } from "01650_isReanimated3.js";
 import { 01619__ } from "metro/01619__.js";
-// _runtime/01705_configureProps.js
-import isJest from "isJest";
 
 function configureProps() {
   for (const key10008 in 01619__.PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST) {

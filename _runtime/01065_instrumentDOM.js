@@ -1,6 +1,6 @@
+// _runtime/01065_instrumentDOM.js
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 import { WINDOW } from "01039_WINDOW.js";
-// _runtime/01065_instrumentDOM.js
 let require = arg1;
 let dependencyMap = arg6;
 function instrumentDOM() {

@@ -1,6 +1,6 @@
+// _runtime/04407_assignValue.js
 import { eq } from "00752_eq.js";
 import { baseAssignValue } from "00804_baseAssignValue.js";
-// _runtime/04407_assignValue.js
 
 export default function assignValue(arg0, arg1, arg2) {
   const call = hasOwnProperty.call;

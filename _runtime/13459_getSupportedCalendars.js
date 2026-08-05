@@ -1,5 +1,5 @@
-import { 13460__ } from "metro/13460__.js";
 // _runtime/13459_getSupportedCalendars.js
+import { 13460__ } from "metro/13460__.js";
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getSupportedCalendars = function getSupportedCalendars(locale) {

@@ -1,5 +1,5 @@
-import { define } from "../00197_define.js";
 // _runtime/metro/00195__.js
+import { define } from "../00197_define.js";
 try {
   const _module = require("isNativeFunction");
   let flag = _module.hasNativeConstructor(function*() {

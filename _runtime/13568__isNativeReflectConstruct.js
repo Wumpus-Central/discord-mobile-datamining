@@ -1,4 +1,3 @@
-import { base64Decode } from "13569_base64Decode.js";
 // _runtime/13568__isNativeReflectConstruct.js
 import _createClass from "_createClass";
 import _classCallCheck from "_classCallCheck";
@@ -7,6 +6,7 @@ import _getPrototypeOf from "_getPrototypeOf";
 import _inherits from "_inherits";
 import _wrapNativeSuper from "_wrapNativeSuper";
 import { NativeModules } from "get ActivityIndicator";
+import { base64Decode } from "13569_base64Decode.js";
 
 let QuotaExceededError = global;
 function _isNativeReflectConstruct() {

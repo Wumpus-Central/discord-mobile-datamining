@@ -1,6 +1,6 @@
+// _runtime/01186_getDefaultIntegrations.js
 import { debugSymbolicatorIntegration } from "00811_debugSymbolicatorIntegration.js";
 import { isHermesEnabled } from "01002_isHermesEnabled.js";
-// _runtime/01186_getDefaultIntegrations.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise) {

@@ -1,5 +1,5 @@
-import { isObject } from "00606_isObject.js";
 // _runtime/04411_baseKeysIn.js
+import { isObject } from "00606_isObject.js";
 
 export default function baseKeysIn(obj) {
   if (isObject /* isObject */(obj)) {

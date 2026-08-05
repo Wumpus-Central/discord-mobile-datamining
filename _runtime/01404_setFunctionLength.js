@@ -1,7 +1,7 @@
+// _runtime/01404_setFunctionLength.js
 import { defineDataProperty } from "01406_defineDataProperty.js";
 import { 00541__ } from "metro/00541__.js";
 import { 00542__ } from "metro/00542__.js";
-// _runtime/01404_setFunctionLength.js
 let closure_2 = require("hasPropertyDescriptors")();
 let closure_3 = require("getEvalledConstructor")("%Math.floor%");
 

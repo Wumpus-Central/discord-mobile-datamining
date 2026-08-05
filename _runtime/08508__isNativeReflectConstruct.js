@@ -1,4 +1,3 @@
-import { __INTERNAL_VIEW_CONFIG } from "metro/08509___INTERNAL_VIEW_CONFIG.js";
 // _runtime/08508__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -7,6 +6,7 @@ import importDefaultResult from "_createClass";
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { __INTERNAL_VIEW_CONFIG } from "metro/08509___INTERNAL_VIEW_CONFIG.js";
 
 const SvgImage = arg1;
 function _isNativeReflectConstruct() {

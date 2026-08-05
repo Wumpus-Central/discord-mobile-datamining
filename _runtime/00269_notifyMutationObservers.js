@@ -1,9 +1,9 @@
-import { getInstanceHandle } from "00136_getInstanceHandle.js";
-import { warnOnce } from "00165_warnOnce.js";
-import { NativeMutationObserverCxx } from "00271_NativeMutationObserverCxx.js";
 // _runtime/00269_notifyMutationObservers.js
 import _slicedToArray from "_slicedToArray";
 import { createMutationRecord } from "MutationRecord";
+import { getInstanceHandle } from "00136_getInstanceHandle.js";
+import { warnOnce } from "00165_warnOnce.js";
+import { NativeMutationObserverCxx } from "00271_NativeMutationObserverCxx.js";
 
 const require = arg1;
 function notifyMutationObservers() {

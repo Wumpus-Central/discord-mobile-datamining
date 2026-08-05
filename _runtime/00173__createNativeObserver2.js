@@ -1,10 +1,10 @@
-import { nullthrows } from "00070_nullthrows.js";
 // _runtime/00173__createNativeObserver2.js
 import _classCallCheck from "_classCallCheck";
 import importDefaultResult from "_createClass";
 import _classPrivateFieldBase from "_classPrivateFieldBase";
 import importDefaultResult1 from "_classPrivateFieldKey";
 import importDefaultResult2Result from "NativePerformanceCxx";
+import { nullthrows } from "00070_nullthrows.js";
 
 let PerformanceObserver = arg1;
 function _createNativeObserver2() {

@@ -1,6 +1,6 @@
-import { transformIntoHandlerTags } from "05391_transformIntoHandlerTags.js";
 // _runtime/05417_shouldUpdateDetector.js
 import noop from "noop";
+import { transformIntoHandlerTags } from "05391_transformIntoHandlerTags.js";
 
 let c4;
 let c5;

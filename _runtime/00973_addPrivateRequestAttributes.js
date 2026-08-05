@@ -1,8 +1,8 @@
+// _runtime/00973_addPrivateRequestAttributes.js
+import asyncGeneratorStep from "contentUnionToMessages";
 import { truncateTextByBytes } from "00961_truncateTextByBytes.js";
 import { contentUnionToMessages } from "00975_contentUnionToMessages.js";
 import { 00958__ } from "metro/00958__.js";
-// _runtime/00973_addPrivateRequestAttributes.js
-import asyncGeneratorStep from "contentUnionToMessages";
 
 function addPrivateRequestAttributes(setAttributes, config) {
   let systemInstruction = "config" in config && config.config && typeof config.config === "object";

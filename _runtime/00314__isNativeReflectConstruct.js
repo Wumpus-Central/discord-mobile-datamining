@@ -1,8 +1,3 @@
-import { nullthrows } from "00070_nullthrows.js";
-import { infoLog } from "00317_infoLog.js";
-import { _isNativeReflectConstruct } from "00321__isNativeReflectConstruct.js";
-import { clamp } from "00323_clamp.js";
-import { 00038__ } from "metro/00038__.js";
 // _runtime/00314__isNativeReflectConstruct.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _classCallCheck from "_classCallCheck";
@@ -13,6 +8,11 @@ import createContext from "createContext";
 import noop from "createContext";
 import get_ActivityIndicator from "elementsThatOverlapOffsets";
 import jsxProd from "nullthrows";
+import { nullthrows } from "00070_nullthrows.js";
+import { infoLog } from "00317_infoLog.js";
+import { _isNativeReflectConstruct } from "00321__isNativeReflectConstruct.js";
+import { clamp } from "00323_clamp.js";
+import { 00038__ } from "metro/00038__.js";
 
 let Platform;
 let StyleSheet;

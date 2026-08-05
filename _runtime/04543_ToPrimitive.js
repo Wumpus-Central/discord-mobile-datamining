@@ -1,5 +1,5 @@
-import { ToPrimitive } from "04544_ToPrimitive.js";
 // _runtime/04543_ToPrimitive.js
+import { ToPrimitive } from "04544_ToPrimitive.js";
 
 export default function ToPrimitive(arg0) {
   if (arguments.length > 1) {

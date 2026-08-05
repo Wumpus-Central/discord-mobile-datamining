@@ -1,8 +1,8 @@
-import { getSpanStatusFromHttpCode } from "00840_getSpanStatusFromHttpCode.js";
-import { captureCheckIn } from "00869_captureCheckIn.js";
 // _runtime/00976_AsyncFromSyncIterator.js
 import _awaitAsyncGenerator from "_awaitAsyncGenerator";
 import AsyncGenerator from "AsyncGenerator";
+import { getSpanStatusFromHttpCode } from "00840_getSpanStatusFromHttpCode.js";
+import { captureCheckIn } from "00869_captureCheckIn.js";
 
 function AsyncFromSyncIterator(arg0) {
   class AsyncFromSyncIterator {

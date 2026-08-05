@@ -1,6 +1,6 @@
+// _runtime/metro/04945__.js
 import { getDataView } from "../04897_getDataView.js";
 import { 04904__ } from "04904__.js";
-// _runtime/metro/04945__.js
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;

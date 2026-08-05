@@ -1,9 +1,9 @@
-import { styles } from "07804_styles.js";
 // _runtime/07806_SliderTrackMark.js
 import 07800__ from "metro/07800__.js";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
+import { styles } from "07804_styles.js";
 
 
 export const SliderTrackMark = function SliderTrackMark(arg0) {

@@ -1,9 +1,9 @@
+// _runtime/00170_rawToPerformanceEntry.js
 import { _isNativeReflectConstruct } from "00162__isNativeReflectConstruct.js";
 import { PerformanceEntry } from "00163_PerformanceEntry.js";
 import { _isNativeReflectConstruct } from "00169__isNativeReflectConstruct.js";
 import { _isNativeReflectConstruct } from "00171__isNativeReflectConstruct.js";
 import { _isNativeReflectConstruct } from "00172__isNativeReflectConstruct.js";
-// _runtime/00170_rawToPerformanceEntry.js
 const require = arg1;
 const dependencyMap = arg6;
 let obj = { MARK: 1, MEASURE: 2, EVENT: 3, LONGTASK: 4, RESOURCE: 5 };

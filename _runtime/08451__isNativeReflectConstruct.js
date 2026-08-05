@@ -1,4 +1,3 @@
-import { extractProps } from "08452_extractProps.js";
 // _runtime/08451__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -6,6 +5,7 @@ import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
 import "noop";
 import { jsx } from "jsxProd";
+import { extractProps } from "08452_extractProps.js";
 
 let closure_0 = arg1;
 function _isNativeReflectConstruct() {

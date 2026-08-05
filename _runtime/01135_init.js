@@ -1,6 +1,6 @@
-import { feedbackAsyncIntegration } from "01024_feedbackAsyncIntegration.js";
 // _runtime/01135_init.js
 import feedbackAsyncIntegration from "feedbackAsyncIntegration";
+import { feedbackAsyncIntegration } from "01024_feedbackAsyncIntegration.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let call = hasOwnProperty.call;

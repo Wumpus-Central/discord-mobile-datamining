@@ -1,5 +1,5 @@
-import { isInstanceOf } from "07382_isInstanceOf.js";
 // _runtime/07388_baggageHeaderToDynamicSamplingContext.js
+import { isInstanceOf } from "07382_isInstanceOf.js";
 const require = arg1;
 const dependencyMap = arg6;
 let c2 = "sentry-";

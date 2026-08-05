@@ -1,7 +1,7 @@
-import { cancelAnimation } from "01606_cancelAnimation.js";
-import { NOOP } from "01799_NOOP.js";
 // _runtime/01800_useResizeMode.js
 import noop from "noop";
+import { cancelAnimation } from "01606_cancelAnimation.js";
+import { NOOP } from "01799_NOOP.js";
 
 let c3;
 let obj1;

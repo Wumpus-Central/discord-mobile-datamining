@@ -1,4 +1,3 @@
-import { noop } from "00177_noop.js";
 // _runtime/00178_valuePromise.js
 import noop from "noop";
 import noop from "noop";
@@ -6,6 +5,7 @@ import noop from "noop";
 import noop from "noop";
 import noop from "noop";
 import noop from "noop";
+import { noop } from "00177_noop.js";
 
 function valuePromise(_z) {
   let tmp = noop /* noop */;

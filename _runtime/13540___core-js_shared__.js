@@ -1,5 +1,5 @@
-import { sum } from "13499_sum.js";
 // _runtime/13540___core-js_shared__.js
+import { sum } from "13499_sum.js";
 let closure_2 = require("__core-js_shared__")("keys");
 
 export default (arg0) => {

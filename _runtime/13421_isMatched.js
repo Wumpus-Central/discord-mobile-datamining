@@ -1,5 +1,5 @@
-import { 13422__ } from "metro/13422__.js";
 // _runtime/13421_isMatched.js
+import { 13422__ } from "metro/13422__.js";
 const require = arg1;
 const dependencyMap = arg6;
 function isMatched(region, str) {

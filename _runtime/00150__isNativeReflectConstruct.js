@@ -1,9 +1,9 @@
-import { NativeDOMCxx } from "00139_NativeDOMCxx.js";
 // _runtime/00150__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
+import { NativeDOMCxx } from "00139_NativeDOMCxx.js";
 
 const ReadOnlyCharacterData = arg1;
 function _isNativeReflectConstruct() {

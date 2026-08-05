@@ -1,6 +1,6 @@
+// _runtime/00603_isArrayLike.js
 import { isLength } from "00604_isLength.js";
 import { isFunction } from "00605_isFunction.js";
-// _runtime/00603_isArrayLike.js
 
 export default function isArrayLike(arg0) {
   let tmp = null != arg0;

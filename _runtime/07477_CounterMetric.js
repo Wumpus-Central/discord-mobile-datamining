@@ -1,7 +1,7 @@
-import { 07472__ } from "metro/07472__.js";
 // _runtime/07477_CounterMetric.js
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
+import { 07472__ } from "metro/07472__.js";
 
 let SetMetric = require;
 class CounterMetric {

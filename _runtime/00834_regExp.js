@@ -1,7 +1,7 @@
+// _runtime/00834_regExp.js
 import { generateSpanId } from "00829_generateSpanId.js";
 import { baggageHeaderToDynamicSamplingContext } from "00835_baggageHeaderToDynamicSamplingContext.js";
 import { dsnFromString } from "00837_dsnFromString.js";
-// _runtime/00834_regExp.js
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

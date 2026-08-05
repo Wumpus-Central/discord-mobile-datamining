@@ -1,6 +1,6 @@
+// _runtime/04540_ToUint32.js
 import { ToNumber } from "04541_ToNumber.js";
 import { isFinite } from "04558_isFinite.js";
-// _runtime/04540_ToUint32.js
 
 export default function ToUint32(arg0) {
   const tmp3 = ToNumber /* ToNumber */(arg0);

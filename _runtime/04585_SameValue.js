@@ -1,5 +1,5 @@
-import { isNaN } from "00572_isNaN.js";
 // _runtime/04585_SameValue.js
+import { isNaN } from "00572_isNaN.js";
 
 export default function SameValue(arg0, arg1) {
   if (arg0 === arg1) {

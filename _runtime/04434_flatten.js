@@ -1,5 +1,5 @@
-import { baseFlatten } from "04435_baseFlatten.js";
 // _runtime/04434_flatten.js
+import { baseFlatten } from "04435_baseFlatten.js";
 
 export default function flatten(arg0) {
   let num = 0;

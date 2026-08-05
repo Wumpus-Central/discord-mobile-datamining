@@ -1,5 +1,5 @@
-import { SemVer } from "13021_SemVer.js";
 // _runtime/13020_SemVer.js
+import { SemVer } from "13021_SemVer.js";
 
 export default (arg0, arg1) => {
   if (arg0 instanceof SemVer /* SemVer */) {

@@ -1,6 +1,6 @@
+// _runtime/01156_createSpanJSON.js
 import { RN_GLOBAL_OBJ } from "00816_RN_GLOBAL_OBJ.js";
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-// _runtime/01156_createSpanJSON.js
 const require = arg1;
 const dependencyMap = arg6;
 function createSpanJSON(span_id) {

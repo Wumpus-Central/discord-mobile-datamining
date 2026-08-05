@@ -1,7 +1,7 @@
-import { defineLazyObjectProperty } from "00049_defineLazyObjectProperty.js";
-import { UIManager } from "00074_UIManager.js";
 // _runtime/00073_getConstants.js
 import merged from "UIManager";
+import { defineLazyObjectProperty } from "00049_defineLazyObjectProperty.js";
+import { UIManager } from "00074_UIManager.js";
 
 const require = arg1;
 function getConstants() {

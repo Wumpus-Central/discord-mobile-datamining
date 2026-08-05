@@ -1,7 +1,3 @@
-import { getInvertedMultiplier } from "05705_getInvertedMultiplier.js";
-import { Color } from "05707_Color.js";
-import { noop } from "05715_noop.js";
-import { 05716__ } from "metro/05716__.js";
 // _runtime/05704__isNativeReflectConstruct.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _classCallCheck from "_classCallCheck";
@@ -11,6 +7,10 @@ import importDefaultResult from "_createClass";
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
+import { getInvertedMultiplier } from "05705_getInvertedMultiplier.js";
+import { Color } from "05707_Color.js";
+import { noop } from "05715_noop.js";
+import { 05716__ } from "metro/05716__.js";
 
 let Platform;
 let StyleSheet;

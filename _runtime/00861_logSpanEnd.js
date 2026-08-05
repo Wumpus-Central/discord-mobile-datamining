@@ -1,5 +1,5 @@
-import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
 // _runtime/00861_logSpanEnd.js
+import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

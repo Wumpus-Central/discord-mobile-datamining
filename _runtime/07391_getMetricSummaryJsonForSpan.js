@@ -1,6 +1,6 @@
-import { addNonEnumerableProperty } from "07381_addNonEnumerableProperty.js";
 // _runtime/07391_getMetricSummaryJsonForSpan.js
 import _slicedToArray from "_slicedToArray";
+import { addNonEnumerableProperty } from "07381_addNonEnumerableProperty.js";
 
 const _sentryMetrics = "_sentryMetrics";
 

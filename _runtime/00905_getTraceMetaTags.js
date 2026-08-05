@@ -1,5 +1,5 @@
-import { getTraceData } from "00904_getTraceData.js";
 // _runtime/00905_getTraceMetaTags.js
+import { getTraceData } from "00904_getTraceData.js";
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

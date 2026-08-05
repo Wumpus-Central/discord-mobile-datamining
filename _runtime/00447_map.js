@@ -1,5 +1,5 @@
-import { renderElement } from "00114_renderElement.js";
 // _runtime/00447_map.js
+import { renderElement } from "00114_renderElement.js";
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;

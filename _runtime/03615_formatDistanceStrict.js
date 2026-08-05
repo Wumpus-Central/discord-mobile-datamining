@@ -1,4 +1,3 @@
-import { getDefaultOptions } from "03369_getDefaultOptions.js";
 // _runtime/03615_formatDistanceStrict.js
 import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds";
 import compareAsc from "compareAsc";
@@ -7,6 +6,7 @@ import cloneObject from "cloneObject";
 import assign from "assign";
 import code from "code";
 import requiredArgs from "requiredArgs";
+import { getDefaultOptions } from "03369_getDefaultOptions.js";
 
 if (!getTimezoneOffsetInMilliseconds) {
   let obj = { default: null };

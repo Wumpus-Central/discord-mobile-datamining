@@ -1,3 +1,4 @@
+// _runtime/00819_spanToJSON.js
 import { unwrapScopeFromWeakRef } from "00820_unwrapScopeFromWeakRef.js";
 import { addNonEnumerableProperty } from "00822_addNonEnumerableProperty.js";
 import { consoleSandbox } from "00824_consoleSandbox.js";
@@ -7,7 +8,6 @@ import { regExp } from "00834_regExp.js";
 import { dateTimestampInSeconds } from "00838_dateTimestampInSeconds.js";
 import { getSpanStatusFromHttpCode } from "00840_getSpanStatusFromHttpCode.js";
 import { getAsyncContextStrategy } from "00841_getAsyncContextStrategy.js";
-// _runtime/00819_spanToJSON.js
 const require = arg1;
 const dependencyMap = arg6;
 function spanToJSON(getSpanJSON) {

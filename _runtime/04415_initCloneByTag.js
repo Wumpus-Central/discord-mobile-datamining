@@ -1,9 +1,9 @@
+// _runtime/04415_initCloneByTag.js
 import { cloneArrayBuffer } from "04416_cloneArrayBuffer.js";
 import { cloneDataView } from "04417_cloneDataView.js";
 import { cloneTypedArray } from "04418_cloneTypedArray.js";
 import { cloneRegExp } from "04419_cloneRegExp.js";
 import { valueOf } from "04420_valueOf.js";
-// _runtime/04415_initCloneByTag.js
 
 export default function initCloneByTag(arg0, arg1, arg2) {
   let constructor = arg0.constructor;

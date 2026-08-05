@@ -1,5 +1,5 @@
-import { __core-js_shared__ } from "13493___core-js_shared__.js";
 // _runtime/13492___core-js_shared__.js
+import { __core-js_shared__ } from "13493___core-js_shared__.js";
 
 export default (arg0, arg1) => {
   let tmp3 = __core-js_shared__ /* __core-js_shared__ */[arg0];

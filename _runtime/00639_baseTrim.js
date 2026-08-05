@@ -1,5 +1,5 @@
-import { trimmedEndIndex } from "00640_trimmedEndIndex.js";
 // _runtime/00639_baseTrim.js
+import { trimmedEndIndex } from "00640_trimmedEndIndex.js";
 const re2 = /^\s+/;
 
 export default function baseTrim(arr) {

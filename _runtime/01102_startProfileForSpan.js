@@ -1,6 +1,6 @@
-import { createProfilePayload } from "01101_createProfilePayload.js";
 // _runtime/01102_startProfileForSpan.js
 import asyncGeneratorStep from "asyncGeneratorStep";
+import { createProfilePayload } from "01101_createProfilePayload.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 

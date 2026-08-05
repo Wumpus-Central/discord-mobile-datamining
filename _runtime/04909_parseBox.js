@@ -1,5 +1,5 @@
-import { parseBox } from "04906_parseBox.js";
 // _runtime/04909_parseBox.js
+import { parseBox } from "04906_parseBox.js";
 const require = arg1;
 const dependencyMap = arg6;
 arg5.default = {

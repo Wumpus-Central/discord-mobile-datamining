@@ -1,5 +1,5 @@
-import { isKey } from "00722_isKey.js";
 // _runtime/00721_baseMatchesProperty.js
+import { isKey } from "00722_isKey.js";
 
 export default function baseMatchesProperty(arg0, arg1) {
   const _require = arg0;

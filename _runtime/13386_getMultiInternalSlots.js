@@ -1,5 +1,5 @@
-import { e } from "01281_e.js";
 // _runtime/13386_getMultiInternalSlots.js
+import { e } from "01281_e.js";
 function getMultiInternalSlots(get) {
   let length;
   const items = [];

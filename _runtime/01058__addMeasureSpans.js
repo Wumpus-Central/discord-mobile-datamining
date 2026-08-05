@@ -1,9 +1,9 @@
+// _runtime/01058__addMeasureSpans.js
+import _slicedToArray from "_slicedToArray";
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 import { triggerHandlers } from "01034_triggerHandlers.js";
 import { getNavigationEntry } from "01043_getNavigationEntry.js";
 import { extractNetworkProtocol } from "01059_extractNetworkProtocol.js";
-// _runtime/01058__addMeasureSpans.js
-import _slicedToArray from "_slicedToArray";
 
 function _addMeasureSpans(activeSpan, entryType) {
   if (!(function isReact19MeasureEntry(entryType) {

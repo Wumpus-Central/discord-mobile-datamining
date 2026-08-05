@@ -1,7 +1,7 @@
+// _runtime/13418_match.js
 import { ResolveLocale } from "13419_ResolveLocale.js";
 import { CanonicalizeLocaleList } from "13430_CanonicalizeLocaleList.js";
 import { LookupSupportedLocales } from "13431_LookupSupportedLocales.js";
-// _runtime/13418_match.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.LookupSupportedLocales = undefined;

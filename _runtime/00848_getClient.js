@@ -1,7 +1,7 @@
+// _runtime/00848_getClient.js
 import { getGlobalSingleton } from "00825_getGlobalSingleton.js";
 import { generateSpanId } from "00829_generateSpanId.js";
 import { getAsyncContextStrategy } from "00841_getAsyncContextStrategy.js";
-// _runtime/00848_getClient.js
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

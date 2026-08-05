@@ -1,5 +1,3 @@
-import { KeyboardImpl } from "00343_KeyboardImpl.js";
-import { _combineCallbacks } from "00354__combineCallbacks.js";
 // _runtime/00349__isNativeReflectConstruct.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _classCallCheck from "_classCallCheck";
@@ -10,6 +8,8 @@ import importAllResult from "KeyboardImpl";
 import { cloneElement } from "KeyboardImpl";
 import jsxProd from "VScrollViewNativeComponent";
 import importDefaultResult1 from "_inherits";
+import { KeyboardImpl } from "00343_KeyboardImpl.js";
+import { _combineCallbacks } from "00354__combineCallbacks.js";
 
 let closure_12;
 let jsxs;

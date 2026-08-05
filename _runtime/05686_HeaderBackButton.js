@@ -1,10 +1,10 @@
-import { Link } from "01481_Link.js";
-import { Animated } from "05689_Animated.js";
 // _runtime/05686_HeaderBackButton.js
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
+import { Link } from "01481_Link.js";
+import { Animated } from "05689_Animated.js";
 
 let I18nManager;
 let Platform;

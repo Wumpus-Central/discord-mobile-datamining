@@ -1,6 +1,6 @@
-import { useBottomSheetInternal } from "05348_useBottomSheetInternal.js";
 // _runtime/05365_useScrollableSetter.js
 import noop from "noop";
+import { useBottomSheetInternal } from "05348_useBottomSheetInternal.js";
 
 let c3;
 let obj1;

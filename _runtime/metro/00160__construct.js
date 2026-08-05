@@ -1,5 +1,5 @@
-import { _isNativeReflectConstruct } from "../00161__isNativeReflectConstruct.js";
 // _runtime/metro/00160__construct.js
+import { _isNativeReflectConstruct } from "../00161__isNativeReflectConstruct.js";
 
 export default function _construct(bind) {
   if (_isNativeReflectConstruct /* _isNativeReflectConstruct */()) {

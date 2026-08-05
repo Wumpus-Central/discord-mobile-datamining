@@ -1,5 +1,5 @@
-import { makePromiseBuffer } from "07439_makePromiseBuffer.js";
 // _runtime/07438_createTransport.js
+import { makePromiseBuffer } from "07439_makePromiseBuffer.js";
 const require = arg1;
 let dependencyMap = arg6;
 arg5.DEFAULT_TRANSPORT_BUFFER_SIZE = 64;

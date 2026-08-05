@@ -1,12 +1,3 @@
-import { _isNativeReflectConstruct } from "../00199__isNativeReflectConstruct.js";
-import { Blob } from "../00203_Blob.js";
-import { FormData } from "../00211_FormData.js";
-import { t } from "../00215_t.js";
-import { _isNativeReflectConstruct } from "../00217__isNativeReflectConstruct.js";
-import { _isNativeReflectConstruct } from "../00222__isNativeReflectConstruct.js";
-import { _isNativeReflectConstruct } from "../00223__isNativeReflectConstruct.js";
-import { URL } from "../00226_URL.js";
-import { _isNativeReflectConstruct } from "../00228__isNativeReflectConstruct.js";
 // _runtime/metro/00198__.js
 import polyfillObjectProperty from "polyfillObjectProperty";
 import polyfillObjectProperty from "polyfillObjectProperty";
@@ -22,6 +13,15 @@ import polyfillObjectProperty from "polyfillObjectProperty";
 import polyfillObjectProperty from "polyfillObjectProperty";
 import polyfillObjectProperty from "polyfillObjectProperty";
 import polyfillObjectProperty from "polyfillObjectProperty";
+import { _isNativeReflectConstruct } from "../00199__isNativeReflectConstruct.js";
+import { Blob } from "../00203_Blob.js";
+import { FormData } from "../00211_FormData.js";
+import { t } from "../00215_t.js";
+import { _isNativeReflectConstruct } from "../00217__isNativeReflectConstruct.js";
+import { _isNativeReflectConstruct } from "../00222__isNativeReflectConstruct.js";
+import { _isNativeReflectConstruct } from "../00223__isNativeReflectConstruct.js";
+import { URL } from "../00226_URL.js";
+import { _isNativeReflectConstruct } from "../00228__isNativeReflectConstruct.js";
 
 polyfillObjectProperty.polyfillGlobal("XMLHttpRequest", () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default);
 polyfillObjectProperty.polyfillGlobal("FormData", () => FormData /* FormData */.default);

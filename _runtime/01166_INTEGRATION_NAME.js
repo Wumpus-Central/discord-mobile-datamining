@@ -1,6 +1,6 @@
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 // _runtime/01166_INTEGRATION_NAME.js
 import isHermesEnabled from "isHermesEnabled";
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 
 const ReactNativeTracing = "ReactNativeTracing";
 let obj = { traceFetch: null, traceXHR: true, enableHTTPTimings: true };

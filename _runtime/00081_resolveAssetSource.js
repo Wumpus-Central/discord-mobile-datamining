@@ -1,5 +1,5 @@
-import { 00084__ } from "metro/00084__.js";
 // _runtime/00081_resolveAssetSource.js
+import { 00084__ } from "metro/00084__.js";
 function resolveAssetSource(source) {
   if (null != source) {
     if (typeof source !== "object") {

@@ -1,5 +1,5 @@
-import { pickNotNil } from "08453_pickNotNil.js";
 // _runtime/08452_extractProps.js
+import { pickNotNil } from "08453_pickNotNil.js";
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;

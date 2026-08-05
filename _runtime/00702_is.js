@@ -1,6 +1,6 @@
-import { checkIfSnapshotChanged } from "00703_checkIfSnapshotChanged.js";
 // _runtime/00702_is.js
 import noop from "noop";
+import { checkIfSnapshotChanged } from "00703_checkIfSnapshotChanged.js";
 
 let c3;
 let c4;

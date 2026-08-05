@@ -1,6 +1,6 @@
-import { processColor } from "00050_processColor.js";
 // _runtime/00054__getFilterAmount.js
 import _slicedToArray from "_slicedToArray";
+import { processColor } from "00050_processColor.js";
 
 function _getFilterAmount(arg0, str) {
   if (typeof str === "string") {

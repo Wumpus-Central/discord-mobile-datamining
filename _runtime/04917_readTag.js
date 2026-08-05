@@ -1,7 +1,7 @@
+// _runtime/04917_readTag.js
 import { importDefaultResult1 } from "04918_importDefaultResult1.js";
 import { 04900__ } from "metro/04900__.js";
 import { 04914__ } from "metro/04914__.js";
-// _runtime/04917_readTag.js
 const require = arg1;
 function readTag(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5) {
   let obj = 04914__;

@@ -1,4 +1,3 @@
-import { getDefaultOptions } from "03369_getDefaultOptions.js";
 // _runtime/03624_formatRelative.js
 import differenceInCalendarDays from "differenceInCalendarDays";
 import format from "format";
@@ -8,6 +7,7 @@ import _typeof from "_typeof";
 import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds";
 import requiredArgs from "requiredArgs";
 import toInteger from "toInteger";
+import { getDefaultOptions } from "03369_getDefaultOptions.js";
 
 if (!differenceInCalendarDays) {
   let obj = { default: null };

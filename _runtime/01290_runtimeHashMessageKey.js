@@ -1,5 +1,5 @@
-import { textEncoder } from "01291_textEncoder.js";
 // _runtime/01290_runtimeHashMessageKey.js
+import { textEncoder } from "01291_textEncoder.js";
 const require = arg1;
 const dependencyMap = arg6;
 arg5.runtimeHashMessageKey = function runtimeHashMessageKey(code) {

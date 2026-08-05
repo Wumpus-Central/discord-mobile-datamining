@@ -1,5 +1,5 @@
-import { _INTERNAL_captureSerializedLog } from "00880__INTERNAL_captureSerializedLog.js";
 // _runtime/00950_fmt.js
+import { _INTERNAL_captureSerializedLog } from "00880__INTERNAL_captureSerializedLog.js";
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const fmt = require("parameterize").fmt;

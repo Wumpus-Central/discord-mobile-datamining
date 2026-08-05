@@ -1,6 +1,6 @@
+// _runtime/04944_constructTag.js
 import { getDataView } from "04897_getDataView.js";
 import { 04904__ } from "metro/04904__.js";
-// _runtime/04944_constructTag.js
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;

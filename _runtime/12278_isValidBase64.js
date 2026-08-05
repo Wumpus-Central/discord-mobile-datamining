@@ -1,7 +1,7 @@
-import { mergeDefs } from "12277_mergeDefs.js";
 // _runtime/12278_isValidBase64.js
 import _slicedToArray from "_slicedToArray";
 import asyncGeneratorStep from "mergeDefs";
+import { mergeDefs } from "12277_mergeDefs.js";
 
 let self = this;
 function isValidBase64(replaced) {

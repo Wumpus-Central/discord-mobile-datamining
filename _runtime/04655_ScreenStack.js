@@ -1,8 +1,8 @@
-import { context } from "04656_context.js";
 // _runtime/04655_ScreenStack.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";
 import { jsx } from "jsxProd";
+import { context } from "04656_context.js";
 
 const require = arg1;
 let closure_4 = ["goBackGesture", "screensRefs", "currentScreenId", "transitionAnimation", "screenEdgeGesture", "onFinishTransitioning", "children"];

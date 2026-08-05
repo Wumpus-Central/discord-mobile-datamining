@@ -1,5 +1,5 @@
-import { bind } from "00573_bind.js";
 // _runtime/04580_isPropertyDescriptor.js
+import { bind } from "00573_bind.js";
 let closure_2 = Object.create(null);
 
 export default function isPropertyDescriptor(obj) {

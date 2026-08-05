@@ -1,8 +1,8 @@
-import { styles } from "05471_styles.js";
 // _runtime/05472_BottomSheetBackground.js
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { styles } from "05471_styles.js";
 
 const require = arg1;
 const memoResult = require("noop").memo((pointerEvents) => {

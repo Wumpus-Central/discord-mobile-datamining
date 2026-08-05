@@ -1,8 +1,8 @@
-import { isEnabled } from "00046_isEnabled.js";
-import { 00047__ } from "metro/00047__.js";
 // _runtime/00040_MessageQueue.js
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
+import { isEnabled } from "00046_isEnabled.js";
+import { 00047__ } from "metro/00047__.js";
 
 const MessageQueue = global;
 const require = arg1;

@@ -1,10 +1,10 @@
-import { replacer } from "00048_replacer.js";
-import { parseErrorStack } from "00190_parseErrorStack.js";
 // _runtime/00189__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
+import { replacer } from "00048_replacer.js";
+import { parseErrorStack } from "00190_parseErrorStack.js";
 
 let SyntheticError = global;
 const require = arg1;

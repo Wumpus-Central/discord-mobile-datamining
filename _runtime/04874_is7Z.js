@@ -1,6 +1,6 @@
+// _runtime/04874_is7Z.js
 import { getFileChunk } from "04869_getFileChunk.js";
 import { 04870__ } from "metro/04870__.js";
-// _runtime/04874_is7Z.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.is7Z = undefined;

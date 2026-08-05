@@ -1,7 +1,7 @@
-import { getInstanceHandle } from "00136_getInstanceHandle.js";
-import { NativeIntersectionObserverCxx } from "00265_NativeIntersectionObserverCxx.js";
 // _runtime/00264_getTargetFromInstanceHandle.js
 import _slicedToArray from "_slicedToArray";
+import { getInstanceHandle } from "00136_getInstanceHandle.js";
+import { NativeIntersectionObserverCxx } from "00265_NativeIntersectionObserverCxx.js";
 
 const require = arg1;
 function getTargetFromInstanceHandle(arg0) {

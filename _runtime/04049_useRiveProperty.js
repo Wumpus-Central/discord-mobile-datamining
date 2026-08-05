@@ -1,7 +1,7 @@
-import { useDisposableMemo } from "04050_useDisposableMemo.js";
 // _runtime/04049_useRiveProperty.js
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
+import { useDisposableMemo } from "04050_useDisposableMemo.js";
 
 let c3;
 let c4;

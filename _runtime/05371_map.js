@@ -1,5 +1,5 @@
-import { toArray } from "05372_toArray.js";
 // _runtime/05371_map.js
+import { toArray } from "05372_toArray.js";
 const require = arg1;
 const dependencyMap = arg6;
 const map = new Map();

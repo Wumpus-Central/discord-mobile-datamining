@@ -1,9 +1,9 @@
+// _runtime/00970_handleResponseError.js
 import { getSpanStatusFromHttpCode } from "00840_getSpanStatusFromHttpCode.js";
 import { captureCheckIn } from "00869_captureCheckIn.js";
 import { buildMethodPath } from "00960_buildMethodPath.js";
 import { 00958__ } from "metro/00958__.js";
 import { 00971__ } from "metro/00971__.js";
-// _runtime/00970_handleResponseError.js
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

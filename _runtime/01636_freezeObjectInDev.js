@@ -1,7 +1,7 @@
-import { weakMap } from "01637_weakMap.js";
 // _runtime/01636_freezeObjectInDev.js
 import _slicedToArray from "_slicedToArray";
 import isJest from "isJest";
+import { weakMap } from "01637_weakMap.js";
 
 const require = arg1;
 function freezeObjectInDev(arg0) {

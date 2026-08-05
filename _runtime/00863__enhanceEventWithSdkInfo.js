@@ -1,5 +1,5 @@
-import { forEachEnvelopeItem } from "00864_forEachEnvelopeItem.js";
 // _runtime/00863__enhanceEventWithSdkInfo.js
+import { forEachEnvelopeItem } from "00864_forEachEnvelopeItem.js";
 const require = arg1;
 const dependencyMap = arg6;
 function _enhanceEventWithSdkInfo(sdk, name) {

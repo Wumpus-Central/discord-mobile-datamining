@@ -1,9 +1,9 @@
-import { 07734__ } from "metro/07734__.js";
 // _runtime/07733_originWhitelistToRegex.js
 import noop from "noop";
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
+import { 07734__ } from "metro/07734__.js";
 
 let Platform;
 let c10;

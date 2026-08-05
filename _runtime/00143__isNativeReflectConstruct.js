@@ -1,10 +1,10 @@
-import { NativeDOMCxx } from "00139_NativeDOMCxx.js";
-import { set } from "00144_set.js";
 // _runtime/00143__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
+import { NativeDOMCxx } from "00139_NativeDOMCxx.js";
+import { set } from "00144_set.js";
 
 const ReactNativeElement = arg1;
 function _isNativeReflectConstruct() {

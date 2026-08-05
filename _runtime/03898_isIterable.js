@@ -1,6 +1,6 @@
+// _runtime/03898_isIterable.js
 import { isIterable } from "03899_isIterable.js";
 import { useShallow } from "03900_useShallow.js";
-// _runtime/03898_isIterable.js
 const require = arg1;
 const dependencyMap = arg6;
 let obj = {

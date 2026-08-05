@@ -1,4 +1,3 @@
-import { NativeDOMCxx } from "00139_NativeDOMCxx.js";
 // _runtime/00131__isNativeReflectConstruct.js
 import _slicedToArray from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
@@ -8,6 +7,7 @@ import importDefaultResult from "_createClass";
 import importDefaultResult1 from "_inherits";
 import importAllResult from "javaScriptFlagGetter";
 import setPlatformObject from "setPlatformObject";
+import { NativeDOMCxx } from "00139_NativeDOMCxx.js";
 
 const ReadOnlyNode = arg1;
 function _isNativeReflectConstruct() {

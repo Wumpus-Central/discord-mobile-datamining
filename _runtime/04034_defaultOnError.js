@@ -1,10 +1,10 @@
-import { NitroRiveView } from "04016_NitroRiveView.js";
-import { c } from "04036_c.js";
-import { 04035__ } from "metro/04035__.js";
 // _runtime/04034_defaultOnError.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";
 import { jsx } from "jsxProd";
+import { NitroRiveView } from "04016_NitroRiveView.js";
+import { c } from "04036_c.js";
+import { 04035__ } from "metro/04035__.js";
 
 let c4;
 let c5;

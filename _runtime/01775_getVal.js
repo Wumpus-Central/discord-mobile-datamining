@@ -1,5 +1,5 @@
-import { t } from "01617_t.js";
 // _runtime/01775_getVal.js
+import { t } from "01617_t.js";
 const require = arg1;
 const dependencyMap = arg6;
 let obj = { IDENTITY: "identity", CLAMP: "clamp", EXTEND: "extend" };

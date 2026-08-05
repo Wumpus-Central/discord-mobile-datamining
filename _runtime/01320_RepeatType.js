@@ -1,5 +1,5 @@
-import { lowerCamelCase } from "01321_lowerCamelCase.js";
 // _runtime/01320_RepeatType.js
+import { lowerCamelCase } from "01321_lowerCamelCase.js";
 const require = arg1;
 const dependencyMap = arg6;
 ScalarType.ScalarType = undefined;

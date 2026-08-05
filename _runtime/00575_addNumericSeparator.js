@@ -1,5 +1,5 @@
-import { 00576__ } from "metro/00576__.js";
 // _runtime/00575_addNumericSeparator.js
+import { 00576__ } from "metro/00576__.js";
 function addNumericSeparator(cause, typeError1) {
   let call5;
   let call6;

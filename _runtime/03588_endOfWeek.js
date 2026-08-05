@@ -1,8 +1,8 @@
-import { getDefaultOptions } from "03369_getDefaultOptions.js";
 // _runtime/03588_endOfWeek.js
 import _typeof from "_typeof";
 import toInteger from "toInteger";
 import requiredArgs from "requiredArgs";
+import { getDefaultOptions } from "03369_getDefaultOptions.js";
 
 if (!_typeof) {
   let obj = { default: null };

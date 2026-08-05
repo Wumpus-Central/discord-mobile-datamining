@@ -1,7 +1,7 @@
+// _runtime/13531_defineProperty.js
 import { text } from "13489_text.js";
 import { all } from "13529_all.js";
 import { 13512__ } from "metro/13512__.js";
-// _runtime/13531_defineProperty.js
 const enumerable = "enumerable";
 const configurable = "configurable";
 const writable = "writable";

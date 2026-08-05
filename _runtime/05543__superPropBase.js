@@ -1,5 +1,5 @@
-import { _getPrototypeOf } from "05541__getPrototypeOf.js";
 // _runtime/05543__superPropBase.js
+import { _getPrototypeOf } from "05541__getPrototypeOf.js";
 
 export default function _superPropBase(arg0, key10009) {
   const hasOwnProperty = {}.hasOwnProperty;

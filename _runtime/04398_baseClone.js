@@ -1,5 +1,5 @@
-import { isObject } from "00606_isObject.js";
 // _runtime/04398_baseClone.js
+import { isObject } from "00606_isObject.js";
 let obj = {};
 obj["[object Uint32Array]"] = true;
 obj["[object Uint16Array]"] = true;

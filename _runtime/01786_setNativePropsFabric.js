@@ -1,8 +1,8 @@
-import { addLogBoxLog } from "01610_addLogBoxLog.js";
-import { call } from "01649_call.js";
 // _runtime/01786_setNativePropsFabric.js
 import isJest from "isJest";
 import isJest from "isJest";
+import { addLogBoxLog } from "01610_addLogBoxLog.js";
+import { call } from "01649_call.js";
 
 function setNativePropsFabric(arg0, arg1) {
   if (globalThis._WORKLET) {

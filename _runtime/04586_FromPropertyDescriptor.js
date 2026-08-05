@@ -1,6 +1,6 @@
+// _runtime/04586_FromPropertyDescriptor.js
 import { isPropertyDescriptor } from "04580_isPropertyDescriptor.js";
 import { fromPropertyDescriptor } from "04587_fromPropertyDescriptor.js";
-// _runtime/04586_FromPropertyDescriptor.js
 
 export default function FromPropertyDescriptor(arg0) {
   if (undefined !== arg0) {

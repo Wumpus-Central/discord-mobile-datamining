@@ -1,6 +1,6 @@
+// _runtime/00960_buildMethodPath.js
 import { truncateTextByBytes } from "00961_truncateTextByBytes.js";
 import { 00958__ } from "metro/00958__.js";
-// _runtime/00960_buildMethodPath.js
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

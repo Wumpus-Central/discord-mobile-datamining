@@ -1,7 +1,7 @@
+// _runtime/05411_dropHandlers.js
 import { map } from "05371_map.js";
 import { transformIntoHandlerTags } from "05391_transformIntoHandlerTags.js";
 import { MountRegistry } from "05393_MountRegistry.js";
-// _runtime/05411_dropHandlers.js
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;

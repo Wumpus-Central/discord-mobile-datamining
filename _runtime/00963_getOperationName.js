@@ -1,6 +1,6 @@
+// _runtime/00963_getOperationName.js
 import { items } from "00964_items.js";
 import { 00958__ } from "metro/00958__.js";
-// _runtime/00963_getOperationName.js
 const require = arg1;
 const dependencyMap = arg6;
 function getOperationName(outer1_1) {

@@ -1,7 +1,3 @@
-import { getMultiInternalSlots } from "13386_getMultiInternalSlots.js";
-import { TEN } from "13388_TEN.js";
-import { isMissingLocaleDataError } from "13436_isMissingLocaleDataError.js";
-import { ToIntlMathematicalValue } from "13443_ToIntlMathematicalValue.js";
 // _runtime/13380__formatToParts.js
 import e from "e";
 import e from "e";
@@ -42,6 +38,10 @@ import e from "e";
 import e from "e";
 import e from "e";
 import e from "e";
+import { getMultiInternalSlots } from "13386_getMultiInternalSlots.js";
+import { TEN } from "13388_TEN.js";
+import { isMissingLocaleDataError } from "13436_isMissingLocaleDataError.js";
+import { ToIntlMathematicalValue } from "13443_ToIntlMathematicalValue.js";
 
 e.__exportStar(require("CanonicalizeLocaleList"), exports);
 e.__exportStar(require("__exportStarResult1"), exports);

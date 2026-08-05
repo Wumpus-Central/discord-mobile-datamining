@@ -1,5 +1,5 @@
-import { Appearance } from "00454_Appearance.js";
 // _runtime/00453_getColorScheme.js
+import { Appearance } from "00454_Appearance.js";
 let require = arg1;
 const module = arg2;
 const dependencyMap = arg6;

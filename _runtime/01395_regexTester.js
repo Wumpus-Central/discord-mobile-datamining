@@ -1,5 +1,5 @@
-import { isRegex } from "01396_isRegex.js";
 // _runtime/01395_regexTester.js
+import { isRegex } from "01396_isRegex.js";
 let closure_2 = require("callBoundIntrinsic")("RegExp.prototype.exec");
 
 export default function regexTester(arg0) {

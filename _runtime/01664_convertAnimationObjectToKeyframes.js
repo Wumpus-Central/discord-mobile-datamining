@@ -1,6 +1,6 @@
-import { getEasingByName } from "01665_getEasingByName.js";
 // _runtime/01664_convertAnimationObjectToKeyframes.js
 import _slicedToArray from "_slicedToArray";
+import { getEasingByName } from "01665_getEasingByName.js";
 
 const require = arg1;
 

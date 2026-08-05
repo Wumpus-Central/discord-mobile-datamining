@@ -1,5 +1,5 @@
-import { __SENTRY_DEBUG__ } from "metro/07403___SENTRY_DEBUG__.js";
 // _runtime/07413_logSpanEnd.js
+import { __SENTRY_DEBUG__ } from "metro/07403___SENTRY_DEBUG__.js";
 const require = arg1;
 const dependencyMap = arg6;
 arg5.logSpanEnd = function logSpanEnd(spanContext) {

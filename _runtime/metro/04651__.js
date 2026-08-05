@@ -1,9 +1,9 @@
-import { __INTERNAL_VIEW_CONFIG } from "04652___INTERNAL_VIEW_CONFIG.js";
 // _runtime/metro/04651__.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importDefaultResult from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { __INTERNAL_VIEW_CONFIG } from "04652___INTERNAL_VIEW_CONFIG.js";
 
 const require = arg1;
 let closure_3 = ["obscureBackground", "hideNavigationBar", "onFocus", "onBlur", "onSearchButtonPress", "onCancelButtonPress", "onChangeText"];

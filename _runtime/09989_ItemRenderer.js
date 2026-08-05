@@ -1,9 +1,9 @@
-import { cancelAnimation } from "01606_cancelAnimation.js";
-import { isArraysEqual } from "09990_isArraysEqual.js";
 // _runtime/09989_ItemRenderer.js
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import jsxProd from "jsxProd";
+import { cancelAnimation } from "01606_cancelAnimation.js";
+import { isArraysEqual } from "09990_isArraysEqual.js";
 
 let c4;
 let c5;

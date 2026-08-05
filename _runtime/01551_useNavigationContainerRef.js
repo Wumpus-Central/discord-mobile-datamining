@@ -1,6 +1,6 @@
-import { createNavigationContainerRef } from "01498_createNavigationContainerRef.js";
 // _runtime/01551_useNavigationContainerRef.js
 import noop from "noop";
+import { createNavigationContainerRef } from "01498_createNavigationContainerRef.js";
 
 
 export default function useNavigationContainerRef() {

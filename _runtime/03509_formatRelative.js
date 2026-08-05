@@ -1,6 +1,6 @@
-import { 03510__ } from "metro/03510__.js";
 // _runtime/03509_formatRelative.js
 import isSameUTCWeek from "isSameUTCWeek";
+import { 03510__ } from "metro/03510__.js";
 
 if (!isSameUTCWeek) {
   const obj = { default: null };

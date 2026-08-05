@@ -1,8 +1,8 @@
+// _runtime/00978_asString.js
 import { truncateTextByBytes } from "00961_truncateTextByBytes.js";
 import { 00839__ } from "metro/00839__.js";
 import { 00958__ } from "metro/00958__.js";
 import { 00979__ } from "metro/00979__.js";
-// _runtime/00978_asString.js
 const require = arg1;
 const dependencyMap = arg6;
 function asString(str) {

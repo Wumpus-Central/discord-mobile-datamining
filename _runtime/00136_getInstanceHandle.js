@@ -1,6 +1,6 @@
+// _runtime/00136_getInstanceHandle.js
 import { renderElement } from "00114_renderElement.js";
 import { createReactNativeDocumentInstanceHandle } from "00137_createReactNativeDocumentInstanceHandle.js";
-// _runtime/00136_getInstanceHandle.js
 const require = arg1;
 const dependencyMap = arg6;
 let closure_4 = Symbol("internalInstanceHandle");

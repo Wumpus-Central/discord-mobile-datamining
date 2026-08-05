@@ -1,7 +1,7 @@
-import { noop } from "01503_noop.js";
-import { noop } from "01508_noop.js";
 // _runtime/01532_useNavigation.js
 import noop from "noop";
+import { noop } from "01503_noop.js";
+import { noop } from "01508_noop.js";
 
 
 export default function useNavigation() {

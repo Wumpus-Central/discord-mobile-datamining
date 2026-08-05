@@ -1,6 +1,6 @@
-import { t } from "01617_t.js";
 // _runtime/01648_isAffineMatrixFlat.js
 import _slicedToArray from "_slicedToArray";
+import { t } from "01617_t.js";
 
 let require = arg1;
 function isAffineMatrixFlat(arr) {

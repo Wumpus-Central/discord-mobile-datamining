@@ -1,5 +1,5 @@
-import { arrayIncludes } from "06982_arrayIncludes.js";
 // _runtime/06981_baseUniq.js
+import { arrayIncludes } from "06982_arrayIncludes.js";
 
 export default function baseUniq(arg0, arg1, arg2) {
   let tmpResult = arrayIncludes /* arrayIncludes */;

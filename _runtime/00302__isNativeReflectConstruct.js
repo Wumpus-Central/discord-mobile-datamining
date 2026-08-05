@@ -1,5 +1,3 @@
-import { nullthrows } from "00070_nullthrows.js";
-import { View } from "00108_View.js";
 // _runtime/00302__isNativeReflectConstruct.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _classCallCheck from "_classCallCheck";
@@ -11,6 +9,8 @@ import { createRef } from "noop";
 import jsxProd from "jsxProd";
 import importAllResult from "noop";
 import importDefaultResult2 from "get hairlineWidth";
+import { nullthrows } from "00070_nullthrows.js";
+import { View } from "00108_View.js";
 
 let c10;
 let c9;

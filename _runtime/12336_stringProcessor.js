@@ -1,7 +1,7 @@
-import { mergeDefs } from "12277_mergeDefs.js";
-import { initializeContext } from "12335_initializeContext.js";
 // _runtime/12336_stringProcessor.js
 import _slicedToArray from "_slicedToArray";
+import { mergeDefs } from "12277_mergeDefs.js";
+import { initializeContext } from "12335_initializeContext.js";
 
 let closure_4 = { guid: "uuid", url: "uri", datetime: "date-time", json_string: "json-string", regex: "" };
 

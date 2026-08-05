@@ -1,5 +1,5 @@
-import { 13462__ } from "metro/13462__.js";
 // _runtime/13461_getSupportedCollations.js
+import { 13462__ } from "metro/13462__.js";
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getSupportedCollations = function getSupportedCollations(locale) {

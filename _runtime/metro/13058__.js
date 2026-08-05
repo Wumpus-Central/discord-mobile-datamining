@@ -1,8 +1,8 @@
+// _runtime/metro/13058__.js
 import { SemVer } from "../13021_SemVer.js";
 import { Comparator } from "../13049_Comparator.js";
 import { Range } from "../13050_Range.js";
 import { Range } from "../13052_Range.js";
-// _runtime/metro/13058__.js
 
 export default (arg0, arg1, arg2, arg3) => {
   let obj;

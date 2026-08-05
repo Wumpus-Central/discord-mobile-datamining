@@ -1,6 +1,6 @@
+// _runtime/01716_r.js
 import { call } from "01649_call.js";
 import { JEST_WORKER_ID } from "01717_JEST_WORKER_ID.js";
-// _runtime/01716_r.js
 const require = arg1;
 const dependencyMap = arg6;
 const fn = function r(obj) {

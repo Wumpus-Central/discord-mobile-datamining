@@ -1,5 +1,5 @@
-import { observe } from "01046_observe.js";
 // _runtime/01056_updateEstimate.js
+import { observe } from "01046_observe.js";
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

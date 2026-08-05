@@ -1,6 +1,6 @@
-import { _isNativeReflectConstruct } from "../05435__isNativeReflectConstruct.js";
 // _runtime/metro/05436__.js
 import { jsx } from "jsxProd";
+import { _isNativeReflectConstruct } from "../05435__isNativeReflectConstruct.js";
 
 
 export default require("noop").forwardRef((delayLongPress, ref) => {

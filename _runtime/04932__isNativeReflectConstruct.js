@@ -1,10 +1,10 @@
-import { calculateGPSValue } from "04935_calculateGPSValue.js";
 // _runtime/04932__isNativeReflectConstruct.js
 import _slicedToArray from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
+import { calculateGPSValue } from "04935_calculateGPSValue.js";
 
 const ParseError = arg1;
 function _isNativeReflectConstruct() {

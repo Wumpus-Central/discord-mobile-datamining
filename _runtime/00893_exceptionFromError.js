@@ -1,8 +1,8 @@
+// _runtime/00893_exceptionFromError.js
+import _slicedToArray from "_slicedToArray";
 import { addNonEnumerableProperty } from "00822_addNonEnumerableProperty.js";
 import { isInstanceOf } from "00827_isInstanceOf.js";
 import { addContextToFrame } from "00830_addContextToFrame.js";
-// _runtime/00893_exceptionFromError.js
-import _slicedToArray from "_slicedToArray";
 
 function exceptionFromError(arg0, name) {
   let obj = { type: name.name || name.constructor.name, value: null };

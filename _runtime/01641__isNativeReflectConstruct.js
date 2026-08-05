@@ -1,6 +1,3 @@
-import { isJest } from "01609_isJest.js";
-import { updateLayoutAnimations } from "01720_updateLayoutAnimations.js";
-import { 00038__ } from "metro/00038__.js";
 // _runtime/01641__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
@@ -15,6 +12,9 @@ import isJest from "isJest";
 import isJest from "isJest";
 import isJest from "isJest";
 import isJest from "isJest";
+import { isJest } from "01609_isJest.js";
+import { updateLayoutAnimations } from "01720_updateLayoutAnimations.js";
+import { 00038__ } from "metro/00038__.js";
 
 let Platform;
 let c10;

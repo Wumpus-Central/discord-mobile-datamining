@@ -1,10 +1,10 @@
+// _runtime/00424_Mixin.js
+import "noop";
+import { jsx } from "jsxProd";
 import { measure } from "00068_measure.js";
 import { SoundManager } from "00294_SoundManager.js";
 import { Position } from "00425_Position.js";
 import { BoundingDimensions } from "00427_BoundingDimensions.js";
-// _runtime/00424_Mixin.js
-import "noop";
-import { jsx } from "jsxProd";
 
 let touchableHandleBlur;
 let touchableHandleFocus;

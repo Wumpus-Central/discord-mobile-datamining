@@ -1,6 +1,6 @@
-import { addNonEnumerableProperty } from "00822_addNonEnumerableProperty.js";
 // _runtime/00865_normalize.js
 import _slicedToArray from "_slicedToArray";
+import { addNonEnumerableProperty } from "00822_addNonEnumerableProperty.js";
 
 function normalize(arg0) {
   let num = arg1;

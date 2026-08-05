@@ -1,7 +1,7 @@
+// _runtime/00862_setMeasurement.js
 import { spanToJSON } from "00819_spanToJSON.js";
 import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
 import { 00839__ } from "metro/00839__.js";
-// _runtime/00862_setMeasurement.js
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

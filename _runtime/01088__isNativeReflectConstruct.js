@@ -1,5 +1,3 @@
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-import { addClsInstrumentationHandler } from "01033_addClsInstrumentationHandler.js";
 // _runtime/01088__isNativeReflectConstruct.js
 import asyncGeneratorStep from "_slicedToArray";
 import c3 from "_possibleConstructorReturn";
@@ -9,6 +7,8 @@ import _wrapNativeSuper from "_wrapNativeSuper";
 import _slicedToArray from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
+import { addClsInstrumentationHandler } from "01033_addClsInstrumentationHandler.js";
 
 function _isNativeReflectConstruct() {
   try {
