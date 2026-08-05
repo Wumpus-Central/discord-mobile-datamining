@@ -1,3 +1,4 @@
+import { AnimatedEvent } from "00384_AnimatedEvent.js";
 // _runtime/00354__combineCallbacks.js
 let require = arg1;
 const module = arg2;
@@ -991,7 +992,7 @@ arg5.default = {
     return obj;
   },
   event(items, useNativeDriver) {
-    const animatedEvent = new require("00384_AnimatedEvent.js") /* AnimatedEvent */.AnimatedEvent(items, useNativeDriver);
+    const animatedEvent = new AnimatedEvent /* AnimatedEvent */.AnimatedEvent(items, useNativeDriver);
     let __getHandlerResult = animatedEvent;
     if (!animatedEvent.__isNative) {
       __getHandlerResult = animatedEvent.__getHandler();
@@ -1005,7 +1006,7 @@ arg5.default = {
     let closure_1 = listener;
     if (!__addListener) {
       return listener;
-    } else if (__addListener instanceof _require("00384_AnimatedEvent.js").AnimatedEvent) {
+    } else if (__addListener instanceof _AnimatedEvent.AnimatedEvent) {
       __addListener.__addListener(listener);
       let fn = __addListener;
     } else {
@@ -1023,7 +1024,7 @@ arg5.default = {
   unforkEvent: function unforkEventImpl(__removeListener) {
     let tmp = __removeListener;
     if (__removeListener) {
-      tmp = __removeListener instanceof require("00384_AnimatedEvent.js") /* AnimatedEvent */.AnimatedEvent;
+      tmp = __removeListener instanceof AnimatedEvent /* AnimatedEvent */.AnimatedEvent;
     }
     if (tmp) {
       __removeListener.__removeListener(arg1);

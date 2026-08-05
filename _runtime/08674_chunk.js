@@ -1,15 +1,18 @@
+import { toInteger } from "04365_toInteger.js";
+import { isIterateeCall } from "07689_isIterateeCall.js";
+import { baseSlice } from "08675_baseSlice.js";
 // _runtime/08674_chunk.js
 
 export default function chunk(arg0, arg1, arg2) {
   let sum1;
   if (arg2) {
-    let tmp = require("07689_isIterateeCall.js") /* isIterateeCall */(arg0, arg1, arg2);
+    let tmp = isIterateeCall /* isIterateeCall */(arg0, arg1, arg2);
   } else {
     tmp = undefined === arg1;
   }
   let num = 1;
   if (!tmp) {
-    num = max(require("04365_toInteger.js") /* toInteger */(arg1), 0);
+    num = max(toInteger /* toInteger */(arg1), 0);
   }
   let num3 = 0;
   if (null != arg0) {
@@ -27,7 +30,7 @@ export default function chunk(arg0, arg1, arg2) {
           let tmp12 = dependencyMap;
           let sum = num4 + 1;
           sum1 = num5 + num;
-          ArrayResult[num4] = require("08675_baseSlice.js") /* baseSlice */(arg0, num5, sum1);
+          ArrayResult[num4] = baseSlice /* baseSlice */(arg0, num5, sum1);
           num4 = sum;
           num5 = sum1;
         } while (sum1 < num3);

@@ -1,3 +1,4 @@
+import { getStringValue } from "04922_getStringValue.js";
 // _runtime/04925_getStringValue.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -5,7 +6,7 @@ const obj = { 45056: null, 45057: "NumberOfImages", 45058: "MPEntry", 45059: "Im
 obj[45056] = {
   name: "MPFVersion",
   description(value) {
-    return require("04922_getStringValue.js") /* getStringValue */.getStringValue(value);
+    return getStringValue /* getStringValue */.getStringValue(value);
   }
 };
 arg5.default = obj;

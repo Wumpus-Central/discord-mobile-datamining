@@ -1,3 +1,4 @@
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 // _runtime/01121_ANDROID_DEFAULT_BUNDLE_NAME.js
 import { Platform } from "get ActivityIndicator";
 
@@ -6,7 +7,7 @@ let c2 = "app:///index.android.bundle";
 export const ANDROID_DEFAULT_BUNDLE_NAME = "app:///index.android.bundle";
 export const IOS_DEFAULT_BUNDLE_NAME = "app:///main.jsbundle";
 export const createReactNativeRewriteFrames = function createReactNativeRewriteFrames() {
-  let obj = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
+  let obj = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
   obj = {
     iteratee(platform) {
       if ("java" !== platform.platform) {

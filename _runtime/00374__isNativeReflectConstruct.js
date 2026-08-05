@@ -1,3 +1,4 @@
+import { normalizeColor } from "00051_normalizeColor.js";
 // _runtime/00374__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -45,7 +46,7 @@ function processColor(arg0) {
     if (tmp) {
       return arg0;
     } else {
-      const tmp4 = require("00051_normalizeColor.js")(arg0);
+      const tmp4 = normalizeColor(arg0);
       if (null == tmp4) {
         return null;
       } else {

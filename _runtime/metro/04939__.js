@@ -1,3 +1,4 @@
+import { getDataView } from "../04897_getDataView.js";
 // _runtime/metro/04939__.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -5,7 +6,7 @@ obj = { 4: null, 8: null, 12: null, 16: null, 20: obj, 24: null, 36: null, 40: n
 obj = {
   name: "Preferred CMM type",
   value(dataView, sum) {
-    return require("../04897_getDataView.js") /* getDataView */.getStringFromDataView(dataView, sum, 4);
+    return getDataView /* getDataView */.getStringFromDataView(dataView, sum, 4);
   },
   description(str) {
     if (null === str) {
@@ -45,7 +46,7 @@ obj = {
 obj[12] = {
   name: "Profile/Device class",
   value(dataView, sum) {
-    return require("../04897_getDataView.js") /* getDataView */.getStringFromDataView(dataView, sum, 4);
+    return getDataView /* getDataView */.getStringFromDataView(dataView, sum, 4);
   },
   description(arg0) {
     return "MultiplexVisualization profile";
@@ -54,13 +55,13 @@ obj[12] = {
 obj[16] = {
   name: "Color Space",
   value(dataView, sum) {
-    return require("../04897_getDataView.js") /* getDataView */.getStringFromDataView(dataView, sum, 4);
+    return getDataView /* getDataView */.getStringFromDataView(dataView, sum, 4);
   }
 };
 obj[20] = {
   name: "Connection Space",
   value(dataView, sum) {
-    return require("../04897_getDataView.js") /* getDataView */.getStringFromDataView(dataView, sum, 4);
+    return getDataView /* getDataView */.getStringFromDataView(dataView, sum, 4);
   }
 };
 obj[24] = {
@@ -85,7 +86,7 @@ obj[36] = {
 obj[40] = {
   name: "Primary Platform",
   value(dataView, sum) {
-    return require("../04897_getDataView.js") /* getDataView */.getStringFromDataView(dataView, sum, 4);
+    return getDataView /* getDataView */.getStringFromDataView(dataView, sum, 4);
   },
   description(str) {
     const formatted = str.toLowerCase();
@@ -111,7 +112,7 @@ obj[40] = {
 obj[48] = {
   name: "Device Manufacturer",
   value(dataView, sum) {
-    return require("../04897_getDataView.js") /* getDataView */.getStringFromDataView(dataView, sum, 4);
+    return getDataView /* getDataView */.getStringFromDataView(dataView, sum, 4);
   },
   description(str) {
     const formatted = str.toLowerCase();
@@ -137,7 +138,7 @@ obj[48] = {
 obj[52] = {
   name: "Device Model Number",
   value(dataView, sum) {
-    return require("../04897_getDataView.js") /* getDataView */.getStringFromDataView(dataView, sum, 4);
+    return getDataView /* getDataView */.getStringFromDataView(dataView, sum, 4);
   }
 };
 obj[64] = {
@@ -162,7 +163,7 @@ obj[64] = {
 obj[80] = {
   name: "Profile Creator",
   value(dataView, sum) {
-    return require("../04897_getDataView.js") /* getDataView */.getStringFromDataView(dataView, sum, 4);
+    return getDataView /* getDataView */.getStringFromDataView(dataView, sum, 4);
   }
 };
 arg5.iccTags = { desc: { name: "ICC Description" }, cprt: { name: "ICC Copyright" }, dmdd: { name: "ICC Device Model Description" }, vued: { name: "ICC Viewing Conditions Description" }, dmnd: { name: "ICC Device Manufacturer for Display" }, tech: { name: "Technology" } };

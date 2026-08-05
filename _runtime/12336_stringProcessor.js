@@ -1,3 +1,5 @@
+import { mergeDefs } from "12277_mergeDefs.js";
+import { initializeContext } from "12335_initializeContext.js";
 // _runtime/12336_stringProcessor.js
 import _slicedToArray from "_slicedToArray";
 
@@ -7,7 +9,7 @@ export const toJSONSchema = function toJSONSchema(_idmap, uri) {
   let obj = {};
   const merged = Object.assign(uri);
   obj.processors = exports.allProcessors;
-  const initializeContextResult = require("12335_initializeContext.js") /* initializeContext */.initializeContext(obj);
+  const initializeContextResult = initializeContext /* initializeContext */.initializeContext(obj);
   if (tmp) {
     _idmap = _idmap._idmap;
     const entries = _idmap.entries();
@@ -18,7 +20,7 @@ export const toJSONSchema = function toJSONSchema(_idmap, uri) {
       let first = tmp15[0];
       let tmp17 = require;
       let tmp18 = dependencyMap;
-      let processResult = require("12335_initializeContext.js") /* initializeContext */.process(tmp15[1], initializeContextResult);
+      let processResult = initializeContext /* initializeContext */.process(tmp15[1], initializeContextResult);
       continue;
     }
     obj = {};
@@ -40,8 +42,8 @@ export const toJSONSchema = function toJSONSchema(_idmap, uri) {
       let tmp27 = tmp26[1];
       let tmp28 = require;
       let tmp29 = dependencyMap;
-      let extractDefsResult = require("12335_initializeContext.js") /* initializeContext */.extractDefs(initializeContextResult, tmp27);
-      obj[tmp26[0]] = require("12335_initializeContext.js") /* initializeContext */.finalize(initializeContextResult, tmp27);
+      let extractDefsResult = initializeContext /* initializeContext */.extractDefs(initializeContextResult, tmp27);
+      obj[tmp26[0]] = initializeContext /* initializeContext */.finalize(initializeContextResult, tmp27);
       continue;
     }
     const _Object = Object;
@@ -239,7 +241,7 @@ export const dateProcessor = (arg0, unrepresentable) => {
   }
 };
 export const enumProcessor = (_zod) => {
-  const enumValues = require("12277_mergeDefs.js") /* mergeDefs */.getEnumValues(_zod._zod.def.entries);
+  const enumValues = mergeDefs /* mergeDefs */.getEnumValues(_zod._zod.def.entries);
   if (enumValues.every((num) => typeof num === "number")) {
     arg2.type = "number";
   }
@@ -418,7 +420,7 @@ export const arrayProcessor = (_zod, arg1, arg2, path) => {
   const items = [];
   items[HermesBuiltin.arraySpread(path.path, 0)] = "items";
   obj.path = items;
-  arg2.items = require("12335_initializeContext.js") /* initializeContext */.process(_zod._zod.def.element, arg1, obj);
+  arg2.items = initializeContext /* initializeContext */.process(_zod._zod.def.element, arg1, obj);
 };
 export const objectProcessor = (_zod, io, properties, path) => {
   const _require = io;
@@ -441,7 +443,7 @@ export const objectProcessor = (_zod, io, properties, path) => {
     items[arraySpreadResult] = "properties";
     items[arraySpreadResult + 1] = key10015;
     obj.path = items;
-    arg2.properties[key10015] = _require("12335_initializeContext.js").process(shape[key10015], arg1, obj);
+    arg2.properties[key10015] = _initializeContext.process(shape[key10015], arg1, obj);
     continue;
   }
   const items1 = [...new Set(Object.keys(shape))];
@@ -472,7 +474,7 @@ export const objectProcessor = (_zod, io, properties, path) => {
       const items2 = [];
       items2[HermesBuiltin.arraySpread(path.path, 0)] = "additionalProperties";
       obj.path = items2;
-      properties.additionalProperties = _require("12335_initializeContext.js").process(def.catchall, io, obj);
+      properties.additionalProperties = _initializeContext.process(def.catchall, io, obj);
     }
   } else if ("output" === io.io) {
     properties.additionalProperties = false;
@@ -509,12 +511,12 @@ export const intersectionProcessor = (_zod, arg1, arg2, path) => {
   const merged = Object.assign(path);
   const items = [...path.path, "allOf", 0];
   obj.path = items;
-  const processResult = require("12335_initializeContext.js") /* initializeContext */.process(def.left, arg1, obj);
+  const processResult = initializeContext /* initializeContext */.process(def.left, arg1, obj);
   obj = {};
   const merged1 = Object.assign(path);
   const items1 = [...path.path, "allOf", 1];
   obj.path = items1;
-  const processResult1 = require("12335_initializeContext.js") /* initializeContext */.process(def.right, arg1, obj);
+  const processResult1 = initializeContext /* initializeContext */.process(def.right, arg1, obj);
   let tmp5 = "allOf" in processResult;
   if (tmp5) {
     const _Object = Object;
@@ -624,7 +626,7 @@ export const recordProcessor = (_zod, target, patternProperties, path) => {
     if (patterns) {
       if (patterns.size > 0) {
         let obj = {};
-        const _process = require("12335_initializeContext.js") /* initializeContext */.process;
+        const _process = initializeContext /* initializeContext */.process;
         const valueType = def.valueType;
         const merged = Object.assign(path);
         const items = [, ];
@@ -665,14 +667,14 @@ export const recordProcessor = (_zod, target, patternProperties, path) => {
     const items2 = [];
     items2[HermesBuiltin.arraySpread(path.path, 0)] = "propertyNames";
     obj.path = items2;
-    patternProperties.propertyNames = require("12335_initializeContext.js") /* initializeContext */.process(def.keyType, target, obj);
+    patternProperties.propertyNames = initializeContext /* initializeContext */.process(def.keyType, target, obj);
   }
   obj = {};
   const merged2 = Object.assign(path);
   const items3 = [];
   items3[HermesBuiltin.arraySpread(path.path, 0)] = "additionalProperties";
   obj.path = items3;
-  patternProperties.additionalProperties = require("12335_initializeContext.js") /* initializeContext */.process(def.valueType, target, obj);
+  patternProperties.additionalProperties = initializeContext /* initializeContext */.process(def.valueType, target, obj);
 };
 export const nullableProcessor = (_zod, target) => {
   const def = _zod._zod.def;
@@ -686,20 +688,20 @@ export const nullableProcessor = (_zod, target) => {
 };
 export const nonoptionalProcessor = (_zod, seen) => {
   const def = _zod._zod.def;
-  require("12335_initializeContext.js") /* initializeContext */.process(def.innerType, seen, arg3);
+  initializeContext /* initializeContext */.process(def.innerType, seen, arg3);
   seen = seen.seen;
   seen.get(_zod).ref = def.innerType;
 };
 export const defaultProcessor = (_zod, seen) => {
   const def = _zod._zod.def;
-  require("12335_initializeContext.js") /* initializeContext */.process(def.innerType, seen, arg3);
+  initializeContext /* initializeContext */.process(def.innerType, seen, arg3);
   seen = seen.seen;
   seen.get(_zod).ref = def.innerType;
   arg2.default = JSON.parse(JSON.stringify(def.defaultValue));
 };
 export const prefaultProcessor = (_zod, seen) => {
   const def = _zod._zod.def;
-  require("12335_initializeContext.js") /* initializeContext */.process(def.innerType, seen, arg3);
+  initializeContext /* initializeContext */.process(def.innerType, seen, arg3);
   seen = seen.seen;
   seen.get(_zod).ref = def.innerType;
   if ("input" === seen.io) {
@@ -710,7 +712,7 @@ export const prefaultProcessor = (_zod, seen) => {
 };
 export const catchProcessor = (_zod, seen) => {
   const def = _zod._zod.def;
-  require("12335_initializeContext.js") /* initializeContext */.process(def.innerType, seen, arg3);
+  initializeContext /* initializeContext */.process(def.innerType, seen, arg3);
   seen = seen.seen;
   seen.get(_zod).ref = def.innerType;
   try {
@@ -725,33 +727,33 @@ export const pipeProcessor = (_zod, io) => {
   const def = _zod._zod.def;
   if ("input" !== io.io) {
     const out = def.out;
-    require("12335_initializeContext.js") /* initializeContext */.process(out, io, arg3);
+    initializeContext /* initializeContext */.process(out, io, arg3);
     const seen = io.seen;
     seen.get(_zod).ref = out;
   }
 };
 export const readonlyProcessor = (_zod, seen) => {
   const def = _zod._zod.def;
-  require("12335_initializeContext.js") /* initializeContext */.process(def.innerType, seen, arg3);
+  initializeContext /* initializeContext */.process(def.innerType, seen, arg3);
   seen = seen.seen;
   seen.get(_zod).ref = def.innerType;
   arg2.readOnly = true;
 };
 export const promiseProcessor = (_zod, seen) => {
   const def = _zod._zod.def;
-  require("12335_initializeContext.js") /* initializeContext */.process(def.innerType, seen, arg3);
+  initializeContext /* initializeContext */.process(def.innerType, seen, arg3);
   seen = seen.seen;
   seen.get(_zod).ref = def.innerType;
 };
 export const optionalProcessor = (_zod, seen) => {
   const def = _zod._zod.def;
-  require("12335_initializeContext.js") /* initializeContext */.process(def.innerType, seen, arg3);
+  initializeContext /* initializeContext */.process(def.innerType, seen, arg3);
   seen = seen.seen;
   seen.get(_zod).ref = def.innerType;
 };
 export const lazyProcessor = (_zod, seen) => {
   const innerType = _zod._zod.innerType;
-  require("12335_initializeContext.js") /* initializeContext */.process(innerType, seen, arg3);
+  initializeContext /* initializeContext */.process(innerType, seen, arg3);
   seen = seen.seen;
   seen.get(_zod).ref = innerType;
 };

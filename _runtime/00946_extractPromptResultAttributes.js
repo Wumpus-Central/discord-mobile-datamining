@@ -1,3 +1,4 @@
+import { isJsonRpcNotification } from "00936_isJsonRpcNotification.js";
 // _runtime/00946_extractPromptResultAttributes.js
 import _slicedToArray from "_slicedToArray";
 
@@ -76,7 +77,7 @@ export const extractPromptResultAttributes = function extractPromptResultAttribu
   obj2 = obj(messages[2]);
 };
 export const extractToolResultAttributes = function extractToolResultAttributes(protocolVersion, recordOutputs) {
-  let obj = require("00936_isJsonRpcNotification.js") /* isJsonRpcNotification */;
+  let obj = isJsonRpcNotification /* isJsonRpcNotification */;
   if (obj.isValidContentItem(protocolVersion)) {
     const _Array = Array;
     if (Array.isArray(protocolVersion.content)) {

@@ -1,3 +1,4 @@
+import { __INTERNAL_VIEW_CONFIG } from "metro/08509___INTERNAL_VIEW_CONFIG.js";
 // _runtime/08508__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -96,7 +97,7 @@ const items = [
         }
       };
       const tmp7 = self(8450).alignEnum[tmp2] || "xMidYMid";
-      const tmp11 = require("metro/08509___INTERNAL_VIEW_CONFIG.js");
+      const tmp11 = __INTERNAL_VIEW_CONFIG;
       const merged = Object.assign(self(8452).withoutXY(this, props));
       const merged1 = Object.assign(obj);
       return <tmp11 ref={function ref(arg0) {

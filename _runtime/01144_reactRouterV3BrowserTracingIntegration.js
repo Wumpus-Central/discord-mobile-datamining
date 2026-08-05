@@ -1,3 +1,4 @@
+import { feedbackAsyncIntegration } from "01024_feedbackAsyncIntegration.js";
 // _runtime/01144_reactRouterV3BrowserTracingIntegration.js
 let require = arg1;
 const dependencyMap = arg6;
@@ -7,7 +8,7 @@ arg5.reactRouterV3BrowserTracingIntegration = function reactRouterV3BrowserTraci
   let closure_3;
   let dependencyMap;
   let instrumentPageLoad;
-  let obj = require("01024_feedbackAsyncIntegration.js") /* feedbackAsyncIntegration */;
+  let obj = feedbackAsyncIntegration /* feedbackAsyncIntegration */;
   obj = {};
   const merged = Object.assign(instrumentNavigation);
   obj.instrumentPageLoad = false;

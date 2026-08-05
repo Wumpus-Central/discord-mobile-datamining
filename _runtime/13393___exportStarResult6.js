@@ -1,3 +1,4 @@
+import { __exportStarResult32 } from "13384___exportStarResult32.js";
 // _runtime/13393___exportStarResult6.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -11,7 +12,7 @@ arg5.GetStringOrBooleanOption = function GetStringOrBooleanOption(result1, useGr
     if (false === Boolean(tmp)) {
       return arg4;
     } else {
-      let str = require("13384___exportStarResult32.js") /* __exportStarResult32 */.ToString(tmp);
+      let str = __exportStarResult32 /* __exportStarResult32 */.ToString(tmp);
       str = "true";
       if ("true" !== str) {
         if ("false" !== str) {

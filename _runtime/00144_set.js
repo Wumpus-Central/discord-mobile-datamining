@@ -1,3 +1,5 @@
+import { renderElement } from "00114_renderElement.js";
+import { Commands } from "00145_Commands.js";
 // _runtime/00144_set.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -26,7 +28,7 @@ arg5.default = {
     }
   },
   currentlyFocusedField() {
-    return require("00114_renderElement.js") /* renderElement */.findNodeHandle(c2);
+    return renderElement /* renderElement */.findNodeHandle(c2);
   },
   focusField(arg0) {
 
@@ -47,7 +49,7 @@ arg5.default = {
             if (tmp4) {
               closure_2 = self;
             }
-            const Commands = require("00145_Commands.js") /* Commands */.Commands;
+            const Commands = Commands /* Commands */.Commands;
             Commands.focus(self);
             tmp4 = closure_2 !== self && null != self;
           }
@@ -71,7 +73,7 @@ arg5.default = {
       if (tmp4) {
         c2 = null;
       }
-      const Commands = require("00145_Commands.js") /* Commands */.Commands;
+      const Commands = Commands /* Commands */.Commands;
       Commands.blur(result);
     }
   },

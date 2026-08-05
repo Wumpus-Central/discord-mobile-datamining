@@ -1,3 +1,6 @@
+import { extractProps } from "08452_extractProps.js";
+import { extractFont } from "08459_extractFont.js";
+import { __INTERNAL_VIEW_CONFIG } from "metro/08538___INTERNAL_VIEW_CONFIG.js";
 // _runtime/08535__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -79,13 +82,13 @@ let items = [
       const merged = Object.assign(propsAndStylesResult);
       obj.x = null;
       obj.y = null;
-      const tmp2Result = require("08452_extractProps.js")(obj, this);
-      const merged1 = Object.assign(tmp2Result, require("08459_extractFont.js")(propsAndStylesResult, true));
+      const tmp2Result = extractProps(obj, this);
+      const merged1 = Object.assign(tmp2Result, extractFont(propsAndStylesResult, true));
       tmp2Result.ref = this.refMethod;
       obj = {};
-      const tmp2 = require("08452_extractProps.js");
+      const tmp2 = extractProps;
       const merged2 = Object.assign(tmp2Result);
-      return jsx(require("metro/08538___INTERNAL_VIEW_CONFIG.js"), {});
+      return jsx(__INTERNAL_VIEW_CONFIG, {});
     }
   }
 ];

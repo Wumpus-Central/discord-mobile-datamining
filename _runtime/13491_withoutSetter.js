@@ -1,3 +1,4 @@
+import { call } from "13500_call.js";
 // _runtime/13491_withoutSetter.js
 import prop from "prop";
 import { Symbol as _Symbol } from "module_13477";
@@ -18,7 +19,7 @@ if (prop) {
 
 export default (arg0) => {
   let _Symbol = dependencyMap;
-  if (require("13500_call.js") /* call */(closure_2, arg0)) {
+  if (call /* call */(closure_2, arg0)) {
     return tmp2[arg0];
   } else {
     if (!tmp(13496)) {

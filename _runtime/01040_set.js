@@ -1,3 +1,5 @@
+import { WINDOW } from "01039_WINDOW.js";
+import { addPageListener } from "01041_addPageListener.js";
 // _runtime/01040_set.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -30,14 +32,14 @@ function onVisibilityUpdate(type) {
         if ("visibilitychange" === type.type) {
           num2 = type.timeStamp;
         }
-        require("01041_addPageListener.js") /* addPageListener */.removePageListener("prerenderingchange", onVisibilityUpdate, true);
-        const obj = require("01041_addPageListener.js") /* addPageListener */;
+        addPageListener /* addPageListener */.removePageListener("prerenderingchange", onVisibilityUpdate, true);
+        const obj = addPageListener /* addPageListener */;
       }
     }
   }
 }
 arg5.getVisibilityWatcher = () => {
-  if (_require("01039_WINDOW.js").WINDOW.document) {
+  if (_WINDOW.WINDOW.document) {
     if (c2 < 0) {
       let tmpResult = tmp(1042);
       _require = tmpResult.getActivationStart();

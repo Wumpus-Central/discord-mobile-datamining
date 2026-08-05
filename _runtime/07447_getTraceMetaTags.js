@@ -1,8 +1,9 @@
+import { getTraceData } from "07446_getTraceData.js";
 // _runtime/07447_getTraceMetaTags.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getTraceMetaTags = function getTraceMetaTags() {
-  const entries = Object.entries(require("07446_getTraceData.js") /* getTraceData */.getTraceData());
+  const entries = Object.entries(getTraceData /* getTraceData */.getTraceData());
   const mapped = entries.map((arg0) => {
     let tmp;
     let tmp2;

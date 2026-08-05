@@ -1,8 +1,9 @@
+import { 00788__ } from "metro/00788__.js";
 // _runtime/04416_cloneArrayBuffer.js
 
 export default function cloneArrayBuffer(byteLength) {
   const constructor = new byteLength.constructor(byteLength.byteLength);
-  const obj = new require("metro/00788__.js")(constructor);
-  const result = obj.set(new require("metro/00788__.js")(byteLength));
+  const obj = new 00788__(constructor);
+  const result = obj.set(new 00788__(byteLength));
   return constructor;
 };

@@ -1,3 +1,4 @@
+import { 00974__ } from "metro/00974__.js";
 // _runtime/00975_contentUnionToMessages.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -48,7 +49,7 @@ arg5.isStreamingMethod = function isStreamingMethod(arr) {
   return arr.includes("Stream");
 };
 arg5.shouldInstrument = function shouldInstrument(str) {
-  const GOOGLE_GENAI_INSTRUMENTED_METHODS = require("metro/00974__.js").GOOGLE_GENAI_INSTRUMENTED_METHODS;
+  const GOOGLE_GENAI_INSTRUMENTED_METHODS = 00974__.GOOGLE_GENAI_INSTRUMENTED_METHODS;
   if (GOOGLE_GENAI_INSTRUMENTED_METHODS.includes(str)) {
     return true;
   } else {

@@ -1,3 +1,4 @@
+import { 00821__ } from "metro/00821__.js";
 // _runtime/00828__htmlElementAsString.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -86,7 +87,7 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.getComponentName = function getComponentName(arg0) {
   let parentNode = arg0;
   let num = 0;
-  if (require("metro/00821__.js").GLOBAL_OBJ.HTMLElement) {
+  if (00821__.GLOBAL_OBJ.HTMLElement) {
     while (parentNode) {
       if (parentNode instanceof globalThis.HTMLElement) {
         let dataset = parentNode.dataset;
@@ -112,7 +113,7 @@ arg5.getComponentName = function getComponentName(arg0) {
 };
 arg5.getLocationHref = function getLocationHref() {
   try {
-    return require("metro/00821__.js").GLOBAL_OBJ.document.location.href;
+    return 00821__.GLOBAL_OBJ.document.location.href;
   } catch (err) {
     return "";
   }

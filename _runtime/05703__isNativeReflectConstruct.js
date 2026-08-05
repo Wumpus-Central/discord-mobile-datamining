@@ -1,3 +1,5 @@
+import { getDistanceForDirection } from "05706_getDistanceForDirection.js";
+import { findLastIndex } from "05721_findLastIndex.js";
 // _runtime/05703__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -62,7 +64,7 @@ function getProgressFromGesture(interpolate, width, options) {
   }
   const gestureDirection = options.gestureDirection;
   if (undefined !== gestureDirection) {
-    const tmp10 = require("05706_getDistanceForDirection.js")(obj, gestureDirection);
+    const tmp10 = getDistanceForDirection(obj, gestureDirection);
     if (tmp10 > 0) {
       obj = { inputRange: null, outputRange: null };
       const items = [0, tmp10];
@@ -301,7 +303,7 @@ let obj = {
             let tmp11 = !isModalPresentation;
             if (isModalPresentation) {
               let tmp12 = importDefault;
-              tmp11 = diff !== require("05721_findLastIndex.js")(scenes, (descriptor) => {
+              tmp11 = diff !== findLastIndex(scenes, (descriptor) => {
                 const cardStyleInterpolator = descriptor.descriptor.options.cardStyleInterpolator;
                 let tmp = cardStyleInterpolator === v1(closure_2[13]).forModalPresentationIOS;
                 if (!tmp) {

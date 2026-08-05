@@ -1,3 +1,4 @@
+import { bind } from "00573_bind.js";
 // _runtime/04580_isPropertyDescriptor.js
 let closure_2 = Object.create(null);
 
@@ -8,7 +9,7 @@ export default function isPropertyDescriptor(obj) {
         let tmp11 = key10001;
         let tmp12 = require;
         let tmp13 = dependencyMap;
-        if (!require("00573_bind.js") /* bind */(arg0, key10001)) {
+        if (!bind /* bind */(arg0, key10001)) {
           continue;
         } else {
           let tmp = table;
@@ -21,7 +22,7 @@ export default function isPropertyDescriptor(obj) {
         }
         continue;
       }
-      let tmp4 = require("00573_bind.js") /* bind */(obj, "[[Value]]");
+      let tmp4 = bind /* bind */(obj, "[[Value]]");
       if (!tmp4) {
         tmp4 = tmp2(573)(obj, "[[Writable]]");
       }

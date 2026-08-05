@@ -1,3 +1,4 @@
+import { Range } from "13050_Range.js";
 // _runtime/13055_Range.js
 
 export default (arr) => {
@@ -6,7 +7,7 @@ export default (arr) => {
   let c2 = null;
   let c3 = null;
   try {
-    let tmp9 = new _require("13050_Range.js")(arg1, arg2);
+    let tmp9 = new _Range(arg1, arg2);
     c3 = tmp9;
     const item = arr.forEach((arg0) => {
       if (_null3.test(arg0)) {

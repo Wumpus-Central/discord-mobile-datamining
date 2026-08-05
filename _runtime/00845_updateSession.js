@@ -1,3 +1,5 @@
+import { addContextToFrame } from "00830_addContextToFrame.js";
+import { dateTimestampInSeconds } from "00838_dateTimestampInSeconds.js";
 // _runtime/00845_updateSession.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -22,8 +24,8 @@ function updateSession(ipAddress) {
   }
   let timestamp = obj.timestamp;
   if (!timestamp) {
-    timestamp = require("00838_dateTimestampInSeconds.js") /* dateTimestampInSeconds */.timestampInSeconds();
-    const obj2 = require("00838_dateTimestampInSeconds.js") /* dateTimestampInSeconds */;
+    timestamp = dateTimestampInSeconds /* dateTimestampInSeconds */.timestampInSeconds();
+    const obj2 = dateTimestampInSeconds /* dateTimestampInSeconds */;
   }
   ipAddress.timestamp = timestamp;
   if (obj.abnormal_mechanism) {
@@ -92,8 +94,8 @@ function updateSession(ipAddress) {
     if (32 === obj.sid.length) {
       let sid = obj.sid;
     } else {
-      sid = require("00830_addContextToFrame.js") /* addContextToFrame */.uuid4();
-      const obj3 = require("00830_addContextToFrame.js") /* addContextToFrame */;
+      sid = addContextToFrame /* addContextToFrame */.uuid4();
+      const obj3 = addContextToFrame /* addContextToFrame */;
     }
     ipAddress.sid = sid;
   }

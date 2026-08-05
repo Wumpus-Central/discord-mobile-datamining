@@ -1,8 +1,10 @@
+import { properlyBoxed } from "04535_properlyBoxed.js";
+import { map } from "04536_map.js";
 // _runtime/04534_getPolyfill.js
 
 export default function getPolyfill() {
-  if (!require("04535_properlyBoxed.js") /* properlyBoxed */(map)) {
-    map = require("04536_map.js") /* map */;
+  if (!properlyBoxed /* properlyBoxed */(map)) {
+    map = map /* map */;
   }
   return map;
 };

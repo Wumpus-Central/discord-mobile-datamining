@@ -1,3 +1,4 @@
+import { _isNativeReflectConstruct } from "../05435__isNativeReflectConstruct.js";
 // _runtime/metro/05436__.js
 import { jsx } from "jsxProd";
 
@@ -13,5 +14,5 @@ export default require("noop").forwardRef((delayLongPress, ref) => {
   }
   const merged = Object.assign(delayLongPress, Object.create(null));
   const merged1 = Object.assign(merged);
-  return jsx(require("../05435__isNativeReflectConstruct.js"), { ref, delayLongPress: num, extraButtonProps });
+  return jsx(_isNativeReflectConstruct, { ref, delayLongPress: num, extraButtonProps });
 });

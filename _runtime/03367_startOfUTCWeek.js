@@ -1,3 +1,4 @@
+import { getDefaultOptions } from "03369_getDefaultOptions.js";
 // _runtime/03367_startOfUTCWeek.js
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
@@ -29,7 +30,7 @@ let c4 = tmp7;
 
 export default function startOfUTCWeek(arg0, weekStartsOn) {
   tmp5.default(1, arguments);
-  const defaultOptions = require("03369_getDefaultOptions.js") /* getDefaultOptions */.getDefaultOptions();
+  const defaultOptions = getDefaultOptions /* getDefaultOptions */.getDefaultOptions();
   weekStartsOn = undefined;
   if (null != weekStartsOn) {
     weekStartsOn = weekStartsOn.weekStartsOn;

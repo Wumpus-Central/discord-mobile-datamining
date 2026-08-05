@@ -1,3 +1,6 @@
+import { isJest } from "01609_isJest.js";
+import { updateLayoutAnimations } from "01720_updateLayoutAnimations.js";
+import { 00038__ } from "metro/00038__.js";
 // _runtime/01641__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
@@ -177,8 +180,8 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
         return tmp3Result;
       }
     }
-    require("metro/00038__.js")(tmp4, "Looks like you're passing a function component `" + fn.name + "` to `createAnimatedComponent` function which supports only class components. Please wrap your function component with `React.forwardRef()` or use a class component instead.");
-    let tmp3 = require("metro/00038__.js");
+    00038__(tmp4, "Looks like you're passing a function component `" + fn.name + "` to `createAnimatedComponent` function which supports only class components. Please wrap your function component with `React.forwardRef()` or use a class component instead.");
+    let tmp3 = 00038__;
   }
   class AnimatedComponent {
     constructor(arg0) {
@@ -876,7 +879,7 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
         if (!isJest) {
           if (exiting !== exiting2) {
             const self = this;
-            const obj = require("01720_updateLayoutAnimations.js") /* updateLayoutAnimations */;
+            const obj = updateLayoutAnimations /* updateLayoutAnimations */;
             if (obj2.isFabric()) {
               if (EXITING === tmp5(1631).LayoutAnimationType.ENTERING) {
                 let reanimatedID = self.reanimatedID;
@@ -898,7 +901,7 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
               const result = obj.updateLayoutAnimations(reanimatedID, EXITING, maybeBuildResult);
             }
             reanimatedID = self.getComponentViewTag();
-            obj2 = require("01609_isJest.js") /* isJest */;
+            obj2 = isJest /* isJest */;
           }
         }
       }

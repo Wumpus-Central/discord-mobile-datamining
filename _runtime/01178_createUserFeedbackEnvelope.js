@@ -1,3 +1,4 @@
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 // _runtime/01178_createUserFeedbackEnvelope.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -28,13 +29,13 @@ arg5.createUserFeedbackEnvelope = function createUserFeedbackEnvelope(event_id, 
   }
   if (tunnel) {
     const obj1 = { dsn: null };
-    obj1[0] = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.dsnToString(dsn);
+    obj1[0] = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.dsnToString(dsn);
     tunnel = obj1;
-    const obj6 = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
+    const obj6 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
   }
   const items = [{ type: "user_report" }, event_id];
   const merged1 = Object.assign(merged, tunnel);
   const date = new Date();
   const items1 = [items];
-  return require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.createEnvelope(merged1, items1);
+  return registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.createEnvelope(merged1, items1);
 };

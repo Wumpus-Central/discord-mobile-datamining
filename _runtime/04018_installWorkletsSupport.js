@@ -1,3 +1,4 @@
+import { getInstalledNitro } from "04019_getInstalledNitro.js";
 // _runtime/04018_installWorkletsSupport.js
 let require = arg1;
 const dependencyMap = arg6;
@@ -35,7 +36,7 @@ arg5.installWorkletsSupport = function installWorkletsSupport() {
     fn3.__workletHash = 16222078380838;
     fn3.__initData = closure_4;
     obj[3] = fn3;
-    const result = require("04019_getInstalledNitro.js") /* getInstalledNitro */.registerCustomSerializable(obj);
+    const result = getInstalledNitro /* getInstalledNitro */.registerCustomSerializable(obj);
   } catch (err) {
   }
 };

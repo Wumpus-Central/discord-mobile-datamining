@@ -1,3 +1,5 @@
+import { pickNotNil } from "08453_pickNotNil.js";
+import { extractLengthList } from "08458_extractLengthList.js";
 // _runtime/08459_extractFont.js
 import "noop";
 import { Children } from "noop";
@@ -23,7 +25,7 @@ function extractFont(propsAndStylesResult) {
   let wordSpacing;
   ({ fontFamily, fontFeatureSettings, font } = propsAndStylesResult);
   ({ fontData, fontStyle, fontVariant, fontWeight, fontStretch, fontSize, textAnchor, textDecoration, letterSpacing, wordSpacing, kerning, fontVariantLigatures, fontVariationSettings } = propsAndStylesResult);
-  let obj = require("08453_pickNotNil.js") /* pickNotNil */;
+  let obj = pickNotNil /* pickNotNil */;
   obj = { fontData, fontStyle, fontVariant, fontWeight, fontStretch, fontSize, fontFamily: null, textAnchor: null, textDecoration: null, letterSpacing: null, wordSpacing: null, kerning: null, fontFeatureSettings: null, fontVariantLigatures: null, fontVariationSettings: null };
   let replaced = null;
   if (fontFamily) {
@@ -127,11 +129,11 @@ export default function extractText(children) {
     obj[4] = tmp8;
     obj[5] = tmp9;
     obj[6] = extractFont(children);
-    obj[7] = require("08458_extractLengthList.js")(tmp);
-    obj[8] = require("08458_extractLengthList.js")(tmp2);
-    obj[9] = require("08458_extractLengthList.js")(tmp3);
-    obj[10] = require("08458_extractLengthList.js")(tmp4);
-    obj[11] = require("08458_extractLengthList.js")(tmp5);
+    obj[7] = extractLengthList(tmp);
+    obj[8] = extractLengthList(tmp2);
+    obj[9] = extractLengthList(tmp3);
+    obj[10] = extractLengthList(tmp4);
+    obj[11] = extractLengthList(tmp5);
     return obj;
   }
   let tmp13 = null;

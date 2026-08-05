@@ -1,3 +1,4 @@
+import { 00599__ } from "metro/00599__.js";
 // _runtime/00763_toString.js
 let prototype;
 if (require("module_608")) {
@@ -10,7 +11,7 @@ if (prototype) {
 function baseToString(str) {
   if (typeof str === "string") {
     return str;
-  } else if (require("metro/00599__.js")(str)) {
+  } else if (00599__(str)) {
     return "" + tmp5(764)(str, baseToString);
   } else if (tmp5(638)(str)) {
     if (!toString) {

@@ -1,3 +1,4 @@
+import { NativeDOMCxx } from "00139_NativeDOMCxx.js";
 // _runtime/00150__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -64,8 +65,8 @@ const items = [
       const nativeTextReference = ReadOnlyCharacterData(136).getNativeTextReference(this);
       let str = "";
       if (null != nativeTextReference) {
-        str = require("00139_NativeDOMCxx.js").getTextContent(nativeTextReference);
-        const obj2 = require("00139_NativeDOMCxx.js");
+        str = NativeDOMCxx.getTextContent(nativeTextReference);
+        const obj2 = NativeDOMCxx;
       }
       return str;
     }

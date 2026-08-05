@@ -1,3 +1,4 @@
+import { 00038__ } from "metro/00038__.js";
 // _runtime/00469_reject.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -62,7 +63,7 @@ arg5.default = {
     return -1;
   },
   clearInteractionHandle(interactionHandle) {
-    require("metro/00038__.js")(interactionHandle, "InteractionManager: Must provide a handle to clear.");
+    00038__(interactionHandle, "InteractionManager: Must provide a handle to clear.");
   },
   addListener(arg0, arg1, arg2) {
     return {

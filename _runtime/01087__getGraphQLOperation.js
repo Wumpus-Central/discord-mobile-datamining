@@ -1,3 +1,4 @@
+import { addClsInstrumentationHandler } from "01033_addClsInstrumentationHandler.js";
 // _runtime/01087__getGraphQLOperation.js
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
 
@@ -146,10 +147,10 @@ export const getRequestPayloadXhrOrFetch = function getRequestPayloadXhrOrFetch(
     let first1 = first;
     tmp5 = require;
   } else {
-    const fetchRequestArgBody = require("01033_addClsInstrumentationHandler.js") /* addClsInstrumentationHandler */.getFetchRequestArgBody(input.input);
-    const obj = require("01033_addClsInstrumentationHandler.js") /* addClsInstrumentationHandler */;
-    first1 = require("01033_addClsInstrumentationHandler.js") /* addClsInstrumentationHandler */.getBodyString(fetchRequestArgBody)[0];
-    const obj2 = require("01033_addClsInstrumentationHandler.js") /* addClsInstrumentationHandler */;
+    const fetchRequestArgBody = addClsInstrumentationHandler /* addClsInstrumentationHandler */.getFetchRequestArgBody(input.input);
+    const obj = addClsInstrumentationHandler /* addClsInstrumentationHandler */;
+    first1 = addClsInstrumentationHandler /* addClsInstrumentationHandler */.getBodyString(fetchRequestArgBody)[0];
+    const obj2 = addClsInstrumentationHandler /* addClsInstrumentationHandler */;
   }
   return first1;
 };

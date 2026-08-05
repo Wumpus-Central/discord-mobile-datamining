@@ -1,3 +1,5 @@
+import { addNonEnumerableProperty } from "07381_addNonEnumerableProperty.js";
+import { merge } from "07400_merge.js";
 // _runtime/07425_applyScopeDataToEvent.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -13,7 +15,7 @@ arg5.applyScopeDataToEvent = function applyScopeDataToEvent(extra) {
   let user;
   ({ fingerprint, span, breadcrumbs, sdkProcessingMetadata, level, transactionName } = arg1);
   ({ extra, tags, user, contexts } = arg1);
-  let obj = require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */;
+  let obj = addNonEnumerableProperty /* addNonEnumerableProperty */;
   const dropUndefinedKeysResult = obj.dropUndefinedKeys(extra);
   let length = dropUndefinedKeysResult;
   if (dropUndefinedKeysResult) {
@@ -52,7 +54,7 @@ arg5.applyScopeDataToEvent = function applyScopeDataToEvent(extra) {
     const merged5 = Object.assign(extra.user);
     extra.user = obj1;
   }
-  const dropUndefinedKeysResult3 = require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */.dropUndefinedKeys(contexts);
+  const dropUndefinedKeysResult3 = addNonEnumerableProperty /* addNonEnumerableProperty */.dropUndefinedKeys(contexts);
   let length4 = dropUndefinedKeysResult3;
   if (dropUndefinedKeysResult3) {
     const _Object4 = Object;
@@ -132,7 +134,7 @@ arg5.applyScopeDataToEvent = function applyScopeDataToEvent(extra) {
   }
 };
 arg5.mergeAndOverwriteScopeData = function mergeAndOverwriteScopeData(arg0, arg1, arg2) {
-  arg0[arg1] = require("07400_merge.js") /* merge */.merge(arg0[arg1], arg2, 1);
+  arg0[arg1] = merge /* merge */.merge(arg0[arg1], arg2, 1);
 };
 arg5.mergeScopeData = function mergeScopeData(extra) {
   let attachments;
@@ -149,15 +151,15 @@ arg5.mergeScopeData = function mergeScopeData(extra) {
   let user;
   ({ level, breadcrumbs, fingerprint, eventProcessors, attachments, propagationContext, transactionName, span } = arg1);
   ({ extra, tags, user, contexts, sdkProcessingMetadata } = arg1);
-  let obj = require("07400_merge.js") /* merge */;
+  let obj = merge /* merge */;
   extra.extra = obj.merge(extra.extra, extra, 1);
-  extra.tags = require("07400_merge.js") /* merge */.merge(extra.tags, tags, 1);
-  const obj2 = require("07400_merge.js") /* merge */;
-  extra.user = require("07400_merge.js") /* merge */.merge(extra.user, user, 1);
-  const obj3 = require("07400_merge.js") /* merge */;
-  extra.contexts = require("07400_merge.js") /* merge */.merge(extra.contexts, contexts, 1);
-  const obj4 = require("07400_merge.js") /* merge */;
-  extra.sdkProcessingMetadata = require("07400_merge.js") /* merge */.merge(extra.sdkProcessingMetadata, sdkProcessingMetadata, 2);
+  extra.tags = merge /* merge */.merge(extra.tags, tags, 1);
+  const obj2 = merge /* merge */;
+  extra.user = merge /* merge */.merge(extra.user, user, 1);
+  const obj3 = merge /* merge */;
+  extra.contexts = merge /* merge */.merge(extra.contexts, contexts, 1);
+  const obj4 = merge /* merge */;
+  extra.sdkProcessingMetadata = merge /* merge */.merge(extra.sdkProcessingMetadata, sdkProcessingMetadata, 2);
   if (level) {
     extra.level = level;
   }

@@ -1,3 +1,5 @@
+import { instrumentError } from "00849_instrumentError.js";
+import { instrumentUnhandledRejection } from "00851_instrumentUnhandledRejection.js";
 // _runtime/00818_registerSpanErrorInstrumentation.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -26,9 +28,9 @@ arg5.registerSpanErrorInstrumentation = function registerSpanErrorInstrumentatio
     }
     errorCallback.tag = "sentry_tracingErrorCallback";
     c2 = true;
-    const result = require("00849_instrumentError.js") /* instrumentError */.addGlobalErrorInstrumentationHandler(errorCallback);
-    let obj = require("00849_instrumentError.js") /* instrumentError */;
-    const result1 = require("00851_instrumentUnhandledRejection.js") /* instrumentUnhandledRejection */.addGlobalUnhandledRejectionInstrumentationHandler(errorCallback);
-    const obj2 = require("00851_instrumentUnhandledRejection.js") /* instrumentUnhandledRejection */;
+    const result = instrumentError /* instrumentError */.addGlobalErrorInstrumentationHandler(errorCallback);
+    let obj = instrumentError /* instrumentError */;
+    const result1 = instrumentUnhandledRejection /* instrumentUnhandledRejection */.addGlobalUnhandledRejectionInstrumentationHandler(errorCallback);
+    const obj2 = instrumentUnhandledRejection /* instrumentUnhandledRejection */;
   }
 };

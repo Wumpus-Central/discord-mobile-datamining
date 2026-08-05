@@ -1,3 +1,4 @@
+import { getDefaultOptions } from "../03369_getDefaultOptions.js";
 // _runtime/metro/03666__typeof.js
 import code from "code";
 import subMilliseconds from "subMilliseconds";
@@ -241,7 +242,7 @@ export default function parse(arg0, arg1, arg2, locale) {
   let tmp3 = String(arg0);
   const str = String(arg1);
   tmp3 = dependencyMap;
-  const defaultOptions = _require("../03369_getDefaultOptions.js").getDefaultOptions();
+  const defaultOptions = _getDefaultOptions.getDefaultOptions();
   locale = undefined;
   if (null != locale) {
     locale = locale.locale;

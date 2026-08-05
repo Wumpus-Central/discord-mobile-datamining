@@ -1,3 +1,4 @@
+import { hasSymbols } from "00545_hasSymbols.js";
 // _runtime/00544__Symbol.js
 let _Symbol = typeof Symbol !== "undefined";
 if (typeof Symbol !== "undefined") {
@@ -17,7 +18,7 @@ export default function hasNativeSymbols() {
         const SymbolResult = Symbol("bar");
         let tmp8 = typeof SymbolResult === "symbol";
         if (typeof SymbolResult === "symbol") {
-          tmp8 = require("00545_hasSymbols.js") /* hasSymbols */();
+          tmp8 = hasSymbols /* hasSymbols */();
         }
         tmp3 = tmp8;
       }

@@ -1,3 +1,5 @@
+import { isMatched } from "13421_isMatched.js";
+import { BestAvailableLocale } from "13424_BestAvailableLocale.js";
 // _runtime/13420_LookupMatcher.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -5,8 +7,8 @@ arg5.LookupMatcher = function LookupMatcher(arg0, arg1, arg2) {
   const obj = { locale: "" };
   let num = 0;
   if (0 < arg1.length) {
-    const replaced = str.replace(require("13421_isMatched.js") /* isMatched */.UNICODE_EXTENSION_SEQUENCE_REGEX, "");
-    const BestAvailableLocaleResult = require("13424_BestAvailableLocale.js") /* BestAvailableLocale */.BestAvailableLocale(arg0, replaced);
+    const replaced = str.replace(isMatched /* isMatched */.UNICODE_EXTENSION_SEQUENCE_REGEX, "");
+    const BestAvailableLocaleResult = BestAvailableLocale /* BestAvailableLocale */.BestAvailableLocale(arg0, replaced);
     while (!BestAvailableLocaleResult) {
       num = num + 1;
     }

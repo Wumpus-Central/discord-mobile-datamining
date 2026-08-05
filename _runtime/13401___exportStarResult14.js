@@ -1,3 +1,4 @@
+import { getMultiInternalSlots } from "13386_getMultiInternalSlots.js";
 // _runtime/13401___exportStarResult14.js
 import e from "e";
 import digitsToString from "digitsToString";
@@ -18,7 +19,7 @@ export const ComputeExponentForMagnitude = function ComputeExponentForMagnitude(
     floorResult = floorResult.div(3).floor();
     return floorResult.div(3).floor().times(3).toNumber();
   } else {
-    require("13386_getMultiInternalSlots.js") /* getMultiInternalSlots */.invariant("compact" === notation, "Invalid notation");
+    getMultiInternalSlots /* getMultiInternalSlots */.invariant("compact" === notation, "Invalid notation");
     if ("currency" === style.style) {
       let str = "name";
       if ("name" !== tmp11) {

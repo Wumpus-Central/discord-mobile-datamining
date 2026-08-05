@@ -1,10 +1,15 @@
+import { isJest } from "01609_isJest.js";
+import { runWorkletOnJS } from "01613_runWorkletOnJS.js";
+import { call } from "01649_call.js";
+import { validateTransformOrigin } from "01708_validateTransformOrigin.js";
+import { map } from "01709_map.js";
 // _runtime/01707_updatePropsOnReactJS.js
 import isJest from "isJest";
 import isJest from "isJest";
 import isJest from "isJest";
 
 function updatePropsOnReactJS(arg0, arg1) {
-  const ComponentRegistry = require("01709_map.js") /* map */.ComponentRegistry;
+  const ComponentRegistry = map /* map */.ComponentRegistry;
   const component = ComponentRegistry.getComponent(arg0);
   if (component) {
     const result = component._updateReanimatedProps(arg1);
@@ -44,10 +49,10 @@ if (isJest.shouldBeUseWeb()) {
       transformOrigin.lastUpdateByTag[tag.tag] = obj;
       transformOrigin.lastUpdateFrameTimeByTag[tag.tag] = transformOrigin.__frameTimestamp;
     });
-    require("01649_call.js") /* call */.processColorsInProps(transformOrigin);
+    call /* call */.processColorsInProps(transformOrigin);
     if ("transformOrigin" in transformOrigin) {
-      transformOrigin.transformOrigin = require("01708_validateTransformOrigin.js") /* validateTransformOrigin */.processTransformOrigin(transformOrigin.transformOrigin);
-      const tmp2Result = require("01708_validateTransformOrigin.js") /* validateTransformOrigin */;
+      transformOrigin.transformOrigin = validateTransformOrigin /* validateTransformOrigin */.processTransformOrigin(transformOrigin.transformOrigin);
+      const tmp2Result = validateTransformOrigin /* validateTransformOrigin */;
     }
     const UpdatePropsManager = _global.UpdatePropsManager;
     UpdatePropsManager.update(value, transformOrigin);
@@ -72,7 +77,7 @@ if (isJest.isFabric()) {
       if (__frameTimestamp) {
         if (tmp2) {
           if (__frameTimestamp - tmp2 >= 20) {
-            require("01613_runWorkletOnJS.js") /* runWorkletOnJS */.runOnJS(updatePropsOnReactJS)(arg0, tmp.lastUpdateByTag[arg0]);
+            runWorkletOnJS /* runWorkletOnJS */.runOnJS(updatePropsOnReactJS)(arg0, tmp.lastUpdateByTag[arg0]);
             tmp.lastUpdateByTag[arg0] = undefined;
           } else if (!obj[arg0]) {
             const _requestAnimationFrame = requestAnimationFrame;
@@ -166,7 +171,7 @@ if (isJest.shouldBeUseWeb()) {
       const reanimatedError = new tmp(1617).ReanimatedError("`UpdatePropsManager` is not available on non-native platform.");
       throw reanimatedError;
     }
-    obj = require("01609_isJest.js") /* isJest */;
+    obj = isJest /* isJest */;
     tmp = require;
   }
   const _Proxy = Proxy;
@@ -182,7 +187,7 @@ if (isJest.shouldBeUseWeb()) {
       const reanimatedError = new tmp(1617).ReanimatedError("`UpdatePropsManager` is not available on non-native platform.");
       throw reanimatedError;
     }
-    obj = require("01609_isJest.js") /* isJest */;
+    obj = isJest /* isJest */;
     tmp = require;
   };
   const proxy = new Proxy({}, obj5);

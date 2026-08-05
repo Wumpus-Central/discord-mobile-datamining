@@ -1,29 +1,33 @@
+import { getGlobalSingleton } from "07376_getGlobalSingleton.js";
+import { addNonEnumerableProperty } from "07381_addNonEnumerableProperty.js";
+import { getMainCarrier } from "07393_getMainCarrier.js";
+import { getAsyncContextStrategy } from "07394_getAsyncContextStrategy.js";
 // _runtime/07402_getClient.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getClient = function getClient() {
-  const mainCarrier = require("07393_getMainCarrier.js") /* getMainCarrier */.getMainCarrier();
-  const obj = require("07393_getMainCarrier.js") /* getMainCarrier */;
-  const asyncContextStrategy = require("07394_getAsyncContextStrategy.js") /* getAsyncContextStrategy */.getAsyncContextStrategy(mainCarrier);
+  const mainCarrier = getMainCarrier /* getMainCarrier */.getMainCarrier();
+  const obj = getMainCarrier /* getMainCarrier */;
+  const asyncContextStrategy = getAsyncContextStrategy /* getAsyncContextStrategy */.getAsyncContextStrategy(mainCarrier);
   const currentScope = asyncContextStrategy.getCurrentScope();
   return currentScope.getClient();
 };
 arg5.getCurrentScope = function getCurrentScope() {
-  const mainCarrier = require("07393_getMainCarrier.js") /* getMainCarrier */.getMainCarrier();
-  const obj = require("07393_getMainCarrier.js") /* getMainCarrier */;
-  const asyncContextStrategy = require("07394_getAsyncContextStrategy.js") /* getAsyncContextStrategy */.getAsyncContextStrategy(mainCarrier);
+  const mainCarrier = getMainCarrier /* getMainCarrier */.getMainCarrier();
+  const obj = getMainCarrier /* getMainCarrier */;
+  const asyncContextStrategy = getAsyncContextStrategy /* getAsyncContextStrategy */.getAsyncContextStrategy(mainCarrier);
   return asyncContextStrategy.getCurrentScope();
 };
 arg5.getGlobalScope = function getGlobalScope() {
-  return require("07376_getGlobalSingleton.js") /* getGlobalSingleton */.getGlobalSingleton("globalScope", () => {
+  return getGlobalSingleton /* getGlobalSingleton */.getGlobalSingleton("globalScope", () => {
     const scope = new callback(table[3]).Scope();
     return scope;
   });
 };
 arg5.getIsolationScope = function getIsolationScope() {
-  const mainCarrier = require("07393_getMainCarrier.js") /* getMainCarrier */.getMainCarrier();
-  const obj = require("07393_getMainCarrier.js") /* getMainCarrier */;
-  const asyncContextStrategy = require("07394_getAsyncContextStrategy.js") /* getAsyncContextStrategy */.getAsyncContextStrategy(mainCarrier);
+  const mainCarrier = getMainCarrier /* getMainCarrier */.getMainCarrier();
+  const obj = getMainCarrier /* getMainCarrier */;
+  const asyncContextStrategy = getAsyncContextStrategy /* getAsyncContextStrategy */.getAsyncContextStrategy(mainCarrier);
   return asyncContextStrategy.getIsolationScope();
 };
 arg5.getTraceContextFromScope = function getTraceContextFromScope(getPropagationContext) {
@@ -32,15 +36,15 @@ arg5.getTraceContextFromScope = function getTraceContextFromScope(getPropagation
   let traceId;
   const propagationContext = getPropagationContext.getPropagationContext();
   ({ traceId, spanId, parentSpanId } = propagationContext);
-  return require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */.dropUndefinedKeys({ trace_id, span_id, parent_span_id });
+  return addNonEnumerableProperty /* addNonEnumerableProperty */.dropUndefinedKeys({ trace_id, span_id, parent_span_id });
 };
 arg5.withIsolationScope = function withIsolationScope() {
   let tmp2;
   let tmp3;
   const items = [...arguments];
-  const mainCarrier = require("07393_getMainCarrier.js") /* getMainCarrier */.getMainCarrier();
-  const obj = require("07393_getMainCarrier.js") /* getMainCarrier */;
-  const asyncContextStrategy = require("07394_getAsyncContextStrategy.js") /* getAsyncContextStrategy */.getAsyncContextStrategy(mainCarrier);
+  const mainCarrier = getMainCarrier /* getMainCarrier */.getMainCarrier();
+  const obj = getMainCarrier /* getMainCarrier */;
+  const asyncContextStrategy = getAsyncContextStrategy /* getAsyncContextStrategy */.getAsyncContextStrategy(mainCarrier);
   if (2 === items.length) {
     [tmp2, tmp3] = items;
     if (tmp2) {
@@ -52,15 +56,15 @@ arg5.withIsolationScope = function withIsolationScope() {
   } else {
     return asyncContextStrategy.withIsolationScope(items[0]);
   }
-  const obj2 = require("07394_getAsyncContextStrategy.js") /* getAsyncContextStrategy */;
+  const obj2 = getAsyncContextStrategy /* getAsyncContextStrategy */;
 };
 arg5.withScope = function withScope() {
   let tmp2;
   let tmp3;
   const items = [...arguments];
-  const mainCarrier = require("07393_getMainCarrier.js") /* getMainCarrier */.getMainCarrier();
-  const obj = require("07393_getMainCarrier.js") /* getMainCarrier */;
-  const asyncContextStrategy = require("07394_getAsyncContextStrategy.js") /* getAsyncContextStrategy */.getAsyncContextStrategy(mainCarrier);
+  const mainCarrier = getMainCarrier /* getMainCarrier */.getMainCarrier();
+  const obj = getMainCarrier /* getMainCarrier */;
+  const asyncContextStrategy = getAsyncContextStrategy /* getAsyncContextStrategy */.getAsyncContextStrategy(mainCarrier);
   if (2 === items.length) {
     [tmp2, tmp3] = items;
     if (tmp2) {
@@ -72,5 +76,5 @@ arg5.withScope = function withScope() {
   } else {
     return asyncContextStrategy.withScope(items[0]);
   }
-  const obj2 = require("07394_getAsyncContextStrategy.js") /* getAsyncContextStrategy */;
+  const obj2 = getAsyncContextStrategy /* getAsyncContextStrategy */;
 };

@@ -1,3 +1,5 @@
+import { replacer } from "00048_replacer.js";
+import { parseErrorStack } from "00190_parseErrorStack.js";
 // _runtime/00189__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -80,11 +82,11 @@ function reportException(stack) {
     componentStack = stack.componentStack;
   }
   obj[3] = componentStack;
-  obj[4] = require("00190_parseErrorStack.js") /* parseErrorStack */.default(stack);
+  obj[4] = parseErrorStack /* parseErrorStack */.default(stack);
   obj[5] = sum;
   obj[6] = arg1;
   obj[7] = obj;
-  const defaultResult = require("00190_parseErrorStack.js") /* parseErrorStack */.default(stack);
+  const defaultResult = parseErrorStack /* parseErrorStack */.default(stack);
   const tmp = require;
   tmp10 = null != stack.cause && typeof stack.cause === "object";
   if (arg2) {
@@ -130,7 +132,7 @@ function reactConsoleErrorHandler() {
           stack = error.stack;
         }
         if (!stack) {
-          SyntheticError = require("00048_replacer.js") /* replacer */.default;
+          SyntheticError = replacer /* replacer */.default;
           const mapped = items.map((str) => {
             let tmp = str;
             if (typeof str !== "string") {

@@ -1,3 +1,4 @@
+import { 12831__ } from "metro/12831__.js";
 // _runtime/12828_Deflate.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -189,7 +190,7 @@ arg5.deflate = function deflate(arg0, arg1) {
   if (arr.err) {
     let msg = arr.msg;
     if (!msg) {
-      msg = require("metro/12831__.js")[arr.err];
+      msg = 12831__[arr.err];
     }
     throw msg;
   } else {
@@ -207,7 +208,7 @@ arg5.deflateRaw = function deflateRaw(arg0, arg1) {
   if (arr.err) {
     let msg = arr.msg;
     if (!msg) {
-      msg = require("metro/12831__.js")[arr.err];
+      msg = 12831__[arr.err];
     }
     throw msg;
   } else {
@@ -225,7 +226,7 @@ arg5.gzip = function gzip(arg0, arg1) {
   if (arr.err) {
     let msg = arr.msg;
     if (!msg) {
-      msg = require("metro/12831__.js")[arr.err];
+      msg = 12831__[arr.err];
     }
     throw msg;
   } else {

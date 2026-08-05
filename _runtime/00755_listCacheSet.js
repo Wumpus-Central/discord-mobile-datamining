@@ -1,9 +1,10 @@
+import { assocIndexOf } from "00751_assocIndexOf.js";
 // _runtime/00755_listCacheSet.js
 
 export default function listCacheSet(arg0, arg1) {
   const self = this;
   const __data__ = this.__data__;
-  const tmp = require("00751_assocIndexOf.js") /* assocIndexOf */(__data__, arg0);
+  const tmp = assocIndexOf /* assocIndexOf */(__data__, arg0);
   if (tmp < 0) {
     self.size = self.size + 1;
     const items = [arg0, arg1];

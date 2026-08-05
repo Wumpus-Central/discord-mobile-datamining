@@ -1,3 +1,5 @@
+import { Link } from "01481_Link.js";
+import { Animated } from "05689_Animated.js";
 // _runtime/05686_HeaderBackButton.js
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -77,7 +79,7 @@ export default function HeaderBackButton(accessibilityLabel) {
   }
   let dependencyMap;
   ({ testID, style } = accessibilityLabel);
-  let obj = require("01481_Link.js") /* Link */;
+  let obj = Link /* Link */;
   [tmp6, c2] = callback(React.useState(undefined), 2);
   if (undefined === tintColor) {
     tintColor = obj.useTheme().colors.text;
@@ -188,5 +190,5 @@ export default function HeaderBackButton(accessibilityLabel) {
   }
   items2[1] = tmp7Result;
   obj[11] = closure_9(tmp4.Fragment, { children: items2 });
-  return closure_8(require("05689_Animated.js"), obj);
+  return closure_8(Animated, obj);
 };

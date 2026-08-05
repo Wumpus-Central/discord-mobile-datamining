@@ -1,3 +1,5 @@
+import { getInstanceHandle } from "00136_getInstanceHandle.js";
+import { NativeIntersectionObserverCxx } from "00265_NativeIntersectionObserverCxx.js";
 // _runtime/00264_getTargetFromInstanceHandle.js
 import _slicedToArray from "_slicedToArray";
 
@@ -104,7 +106,7 @@ export const unregisterObserver = function unregisterObserver(arg0) {
     deleteResult = 0 === map.size;
   }
   if (deleteResult) {
-    const obj = require("00265_NativeIntersectionObserverCxx.js");
+    const obj = NativeIntersectionObserverCxx;
     if (obj != null) {
       obj.disconnect();
     }
@@ -116,7 +118,7 @@ export const observe = function observe(arg0) {
   let root;
   let target;
   ({ intersectionObserverId, root, target } = arg0);
-  if (null == require("00265_NativeIntersectionObserverCxx.js")) {
+  if (null == NativeIntersectionObserverCxx) {
     const _Error = Error;
     const error = new Error("Missing native implementation of IntersectionObserver");
     throw error;
@@ -128,7 +130,7 @@ export const observe = function observe(arg0) {
       console.error("IntersectionObserverManager: could not start observing target because IntersectionObserver with ID " + intersectionObserverId + " was not registered.");
       return false;
     } else {
-      const nativeNodeReference = require("00136_getInstanceHandle.js") /* getInstanceHandle */.getNativeNodeReference(target);
+      const nativeNodeReference = getInstanceHandle /* getInstanceHandle */.getNativeNodeReference(target);
       if (null == nativeNodeReference) {
         return false;
       } else {
@@ -169,12 +171,12 @@ export const observe = function observe(arg0) {
           return true;
         }
       }
-      const obj4 = require("00136_getInstanceHandle.js") /* getInstanceHandle */;
+      const obj4 = getInstanceHandle /* getInstanceHandle */;
     }
   }
 };
 export const unobserve = function unobserve(arg0, arg1) {
-  if (null != require("00265_NativeIntersectionObserverCxx.js")) {
+  if (null != NativeIntersectionObserverCxx) {
     if (null != map.get(arg0)) {
       const value = weakMap1.get(arg1);
       if (null != value) {

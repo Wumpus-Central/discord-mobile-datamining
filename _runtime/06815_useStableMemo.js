@@ -1,3 +1,4 @@
+import { areHookInputsEqual } from "06816_areHookInputsEqual.js";
 // _runtime/06815_useStableMemo.js
 import { useRef } from "noop";
 
@@ -9,7 +10,7 @@ export default function useStableMemo(arg0, items) {
   if (tmp2.current === closure_3) {
     tmp.current = arg0();
     tmp2.current = items;
-  } else if (!require("06816_areHookInputsEqual.js")(items, tmp2.current)) {
+  } else if (!areHookInputsEqual(items, tmp2.current)) {
     tmp.current = arg0();
     tmp2.current = items;
   }

@@ -1,3 +1,4 @@
+import { renderElement } from "00114_renderElement.js";
 // _runtime/00447_map.js
 const require = arg1;
 const module = arg2;
@@ -122,7 +123,7 @@ arg5.default = {
     module(279)(arg0, "focus");
   },
   sendAccessibilityEvent(arg0, arg1) {
-    const result = require("00114_renderElement.js") /* renderElement */.sendAccessibilityEvent(arg0, arg1);
+    const result = renderElement /* renderElement */.sendAccessibilityEvent(arg0, arg1);
   },
   announceForAccessibility(intl) {
     const obj = module(448);

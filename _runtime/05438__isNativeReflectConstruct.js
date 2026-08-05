@@ -1,3 +1,4 @@
+import { _isNativeReflectConstruct } from "05435__isNativeReflectConstruct.js";
 // _runtime/05438__isNativeReflectConstruct.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _classCallCheck from "_classCallCheck";
@@ -125,7 +126,7 @@ let items = [
       obj.style = items;
       obj.onStateChange = self.onStateChange;
       obj.children = self.renderChildren();
-      return jsx(require("05435__isNativeReflectConstruct.js"), {});
+      return jsx(_isNativeReflectConstruct, {});
     }
   }
 ];

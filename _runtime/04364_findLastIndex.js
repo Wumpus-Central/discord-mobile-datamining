@@ -1,3 +1,6 @@
+import { baseIteratee } from "00720_baseIteratee.js";
+import { toInteger } from "04365_toInteger.js";
+import { baseFindIndex } from "04367_baseFindIndex.js";
 // _runtime/04364_findLastIndex.js
 
 export default function findLastIndex(arg0, arg1, arg2) {
@@ -8,9 +11,9 @@ export default function findLastIndex(arg0, arg1, arg2) {
   if (num) {
     const diff = num - 1;
     if (undefined === arg2) {
-      return require("04367_baseFindIndex.js") /* baseFindIndex */(arg0, require("00720_baseIteratee.js") /* baseIteratee */(arg1, 3), diff, true);
+      return baseFindIndex /* baseFindIndex */(arg0, baseIteratee /* baseIteratee */(arg1, 3), diff, true);
     } else {
-      let sum = require("04365_toInteger.js") /* toInteger */(arg2);
+      let sum = toInteger /* toInteger */(arg2);
       if (arg2 < 0) {
         sum = num + sum;
         let tmp7 = max(sum, 0);

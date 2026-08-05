@@ -1,10 +1,13 @@
+import { getDataView } from "../04897_getDataView.js";
+import { readTag } from "../04917_readTag.js";
+import { importDefaultResult1 } from "../04918_importDefaultResult1.js";
 // _runtime/metro/04940__.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.default = {
   read(byteLength, sum, arg2, byteOrder) {
-    let obj = require("../04917_readTag.js") /* readTag */;
-    const ifd = obj.readIfd(byteLength, require("../04918_importDefaultResult1.js") /* importDefaultResult1 */.IFD_TYPE_CANON, sum, sum + arg2, byteOrder, arg4);
+    let obj = readTag /* readTag */;
+    const ifd = obj.readIfd(byteLength, importDefaultResult1 /* importDefaultResult1 */.IFD_TYPE_CANON, sum, sum + arg2, byteOrder, arg4);
     let tmp6 = ifd;
     if (ifd.ShotInfo) {
       const value = ifd.ShotInfo.value;
@@ -31,10 +34,10 @@ arg5.default = {
         obj[1] = str;
         obj.AutoRotate = obj;
       }
-      const tmp3Result = require("../04897_getDataView.js") /* getDataView */;
+      const tmp3Result = getDataView /* getDataView */;
       delete tmp[tmp2];
-      tmp6 = require("../04897_getDataView.js") /* getDataView */.objectAssign({}, ifd, obj);
-      const objectAssignResult = require("../04897_getDataView.js") /* getDataView */.objectAssign({}, ifd, obj);
+      tmp6 = getDataView /* getDataView */.objectAssign({}, ifd, obj);
+      const objectAssignResult = getDataView /* getDataView */.objectAssign({}, ifd, obj);
     }
     return tmp6;
   },

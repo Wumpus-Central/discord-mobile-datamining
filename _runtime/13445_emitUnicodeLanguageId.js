@@ -1,3 +1,4 @@
+import { e } from "01281_e.js";
 // _runtime/13445_emitUnicodeLanguageId.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -10,11 +11,11 @@ arg5.emitUnicodeLanguageId = function emitUnicodeLanguageId(arg0) {
     if (!variants) {
       variants = [];
     }
-    const obj = require("01281_e.js") /* e */;
+    const obj = e /* e */;
     const _Boolean = Boolean;
-    const found = require("01281_e.js") /* e */.__spreadArray(items, variants, true).filter(Boolean);
+    const found = e /* e */.__spreadArray(items, variants, true).filter(Boolean);
     str = found.join("-");
-    const __spreadArrayResult = require("01281_e.js") /* e */.__spreadArray(items, variants, true);
+    const __spreadArrayResult = e /* e */.__spreadArray(items, variants, true);
   }
   return str;
 };
@@ -31,11 +32,11 @@ arg5.emitUnicodeLocaleId = function emitUnicodeLocaleId(parseUnicodeLocaleIdResu
     if (!variants) {
       variants = [];
     }
-    const obj = require("01281_e.js") /* e */;
+    const obj = e /* e */;
     const _Boolean = Boolean;
-    const found = require("01281_e.js") /* e */.__spreadArray(items, variants, true).filter(Boolean);
+    const found = e /* e */.__spreadArray(items, variants, true).filter(Boolean);
     str = found.join("-");
-    const __spreadArrayResult = require("01281_e.js") /* e */.__spreadArray(items, variants, true);
+    const __spreadArrayResult = e /* e */.__spreadArray(items, variants, true);
   }
   const items1 = [str];
   for (let num = 0; num < extensions.length; num = num + 1) {
@@ -47,8 +48,8 @@ arg5.emitUnicodeLocaleId = function emitUnicodeLocaleId(parseUnicodeLocaleIdResu
       let push2 = items1.push;
       let tmp10 = require;
       let tmp11 = dependencyMap;
-      let obj6 = require("01281_e.js") /* e */;
-      let obj7 = require("01281_e.js") /* e */;
+      let obj6 = e /* e */;
+      let obj7 = e /* e */;
       let keywords = iter.keywords;
       let __spreadArrayResult1 = obj7.__spreadArray([], iter.attributes, false);
       let applyResult = push2.apply(items1, obj6.__spreadArray(__spreadArrayResult1, keywords.reduce((arr) => arr.concat(arg1), []), false));
@@ -56,7 +57,7 @@ arg5.emitUnicodeLocaleId = function emitUnicodeLocaleId(parseUnicodeLocaleIdResu
       let push = items1.push;
       let tmp7 = require;
       let tmp8 = dependencyMap;
-      let obj3 = require("01281_e.js") /* e */;
+      let obj3 = e /* e */;
       let lang2 = iter.lang;
       let str3 = "";
       if (lang2) {

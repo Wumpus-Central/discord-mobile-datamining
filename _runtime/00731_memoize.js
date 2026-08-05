@@ -1,3 +1,4 @@
+import { MapCache } from "00732_MapCache.js";
 // _runtime/00731_memoize.js
 function memoize(fn, fn2) {
   const _require = fn;
@@ -23,7 +24,7 @@ function memoize(fn, fn2) {
     }
     let Cache = memoized.Cache;
     if (!Cache) {
-      Cache = _require("00732_MapCache.js");
+      Cache = _MapCache;
     }
     let cache = new Cache();
     memoized.cache = cache;

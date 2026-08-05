@@ -1,7 +1,8 @@
+import { isObject } from "04529_isObject.js";
 // _runtime/04579_DefinePropertyOrThrow.js
 
 export default function DefinePropertyOrThrow(arg0, arg1, arg2) {
-  if (require("04529_isObject.js") /* isObject */(arg0)) {
+  if (isObject /* isObject */(arg0)) {
     if (tmp(4576)(arg1)) {
       let tmp13 = arg2;
       if (!tmp(4580)(arg2)) {

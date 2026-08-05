@@ -1,10 +1,11 @@
+import { forEachEnvelopeItem } from "07419_forEachEnvelopeItem.js";
 // _runtime/07418_createEventEnvelope.js
 import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__";
 import consoleSandbox from "consoleSandbox";
 
 
 export const createEventEnvelope = function createEventEnvelope(type, arg1, sdk) {
-  const sdkMetadataForEnvelopeHeader = require("07419_forEachEnvelopeItem.js") /* forEachEnvelopeItem */.getSdkMetadataForEnvelopeHeader(sdk);
+  const sdkMetadataForEnvelopeHeader = forEachEnvelopeItem /* forEachEnvelopeItem */.getSdkMetadataForEnvelopeHeader(sdk);
   let str = "event";
   if (type.type) {
     str = "event";
@@ -55,7 +56,7 @@ export const createEventEnvelope = function createEventEnvelope(type, arg1, sdk)
   return tmp3Result.createEnvelope(eventEnvelopeHeaders, items3);
 };
 export const createSessionEnvelope = function createSessionEnvelope(toJSON) {
-  let obj = require("07419_forEachEnvelopeItem.js") /* forEachEnvelopeItem */;
+  let obj = forEachEnvelopeItem /* forEachEnvelopeItem */;
   const sdkMetadataForEnvelopeHeader = obj.getSdkMetadataForEnvelopeHeader(arg2);
   obj = { sent_at: null };
   obj[0] = new Date().toISOString();

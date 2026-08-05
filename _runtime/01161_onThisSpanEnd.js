@@ -1,3 +1,4 @@
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 // _runtime/01161_onThisSpanEnd.js
 import { AppState } from "get ActivityIndicator";
 
@@ -44,7 +45,7 @@ export const adjustTransactionDuration = (on, activeSpan) => {
       }
     });
   } else {
-    const debug = _require("00817_registerSpanErrorInstrumentation.js").debug;
+    const debug = _registerSpanErrorInstrumentation.debug;
     debug.warn("Not sampling empty back spans only works for Sentry Transactions (Root Spans).");
   }
 };

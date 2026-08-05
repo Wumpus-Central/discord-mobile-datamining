@@ -1,8 +1,9 @@
+import { 00084__ } from "metro/00084__.js";
 // _runtime/00081_resolveAssetSource.js
 function resolveAssetSource(source) {
   if (null != source) {
     if (typeof source !== "object") {
-      const assetByID = require("metro/00084__.js").getAssetByID(source);
+      const assetByID = 00084__.getAssetByID(source);
       if (assetByID) {
         const _default = new tmp12(85).default((function getDevServerURL() {
           let tmp = first;
@@ -62,7 +63,7 @@ function resolveAssetSource(source) {
       } else {
         return null;
       }
-      const obj3 = require("metro/00084__.js");
+      const obj3 = 00084__;
       tmp12 = require;
     }
   }

@@ -1,3 +1,5 @@
+import { getFileChunk } from "04869_getFileChunk.js";
+import { 04870__ } from "metro/04870__.js";
 // _runtime/04873_isAAC.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -8,8 +10,8 @@ arg5.isM4A = undefined;
 arg5.isMP3 = undefined;
 arg5.isWAV = undefined;
 arg5.isAAC = function isAAC(fileChunk, excludeSimilarTypes) {
-  fileChunk = require("04869_getFileChunk.js") /* getFileChunk */.getFileChunk(fileChunk);
-  const FileTypes = require("metro/04870__.js").FileTypes;
+  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  const FileTypes = 04870__.FileTypes;
   let checkByFileTypeResult = FileTypes.checkByFileType(fileChunk, "aac");
   if (!checkByFileTypeResult) {
     excludeSimilarTypes = undefined;
@@ -26,27 +28,27 @@ arg5.isAAC = function isAAC(fileChunk, excludeSimilarTypes) {
   return checkByFileTypeResult;
 };
 arg5.isAMR = function isAMR(fileChunk) {
-  fileChunk = require("04869_getFileChunk.js") /* getFileChunk */.getFileChunk(fileChunk);
-  const FileTypes = require("metro/04870__.js").FileTypes;
+  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  const FileTypes = 04870__.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "amr");
 };
 arg5.isFLAC = function isFLAC(fileChunk) {
-  fileChunk = require("04869_getFileChunk.js") /* getFileChunk */.getFileChunk(fileChunk);
-  const FileTypes = require("metro/04870__.js").FileTypes;
+  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  const FileTypes = 04870__.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "flac");
 };
 arg5.isM4A = function isM4A(fileChunk) {
-  fileChunk = require("04869_getFileChunk.js") /* getFileChunk */.getFileChunk(fileChunk);
-  const FileTypes = require("metro/04870__.js").FileTypes;
+  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  const FileTypes = 04870__.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "m4a");
 };
 arg5.isMP3 = function isMP3(fileChunk) {
-  fileChunk = require("04869_getFileChunk.js") /* getFileChunk */.getFileChunk(fileChunk);
-  const FileTypes = require("metro/04870__.js").FileTypes;
+  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  const FileTypes = 04870__.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "mp3");
 };
 arg5.isWAV = function isWAV(fileChunk) {
-  fileChunk = require("04869_getFileChunk.js") /* getFileChunk */.getFileChunk(fileChunk);
-  const FileTypes = require("metro/04870__.js").FileTypes;
+  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  const FileTypes = 04870__.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "wav");
 };

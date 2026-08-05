@@ -1,3 +1,5 @@
+import { getDataView } from "04897_getDataView.js";
+import { 04914__ } from "metro/04914__.js";
 // _runtime/04937_parseBezierKnot.js
 import _slicedToArray from "_slicedToArray";
 
@@ -9,7 +11,7 @@ function parseBezierKnot(dataView) {
     let sum = arg1 + num;
     let tmp3 = dependencyMap;
     let tmp2 = importDefault;
-    let obj = require("metro/04914__.js");
+    let obj = 04914__;
     let longAt = obj.getLongAt(dataView, sum);
     let tmp5 = num;
     let num2 = -1;
@@ -19,11 +21,11 @@ function parseBezierKnot(dataView) {
     let str = (2130706432 & longAt) >>> 24;
     let _parseInt = parseInt;
     let tmp6 = require;
-    let obj2 = require("04897_getDataView.js") /* getDataView */;
+    let obj2 = getDataView /* getDataView */;
     let str2 = longAt & parseInt(obj2.strRepeat("1", 24), 2);
-    let obj3 = require("04897_getDataView.js") /* getDataView */;
+    let obj3 = getDataView /* getDataView */;
     let text = `${str.toString(2)}.`;
-    let obj4 = require("04897_getDataView.js") /* getDataView */;
+    let obj4 = getDataView /* getDataView */;
     let result = num2 * obj3.parseFloatRadix(`${str.toString(2)}.` + obj4.padStart(str2.toString(2), 24, "0"), 2);
     let tmp2Result = tmp2(4914);
     let longAt1 = tmp2Result.getLongAt(dataView, sum + 4);
@@ -54,7 +56,7 @@ obj[2000] = {
     for (let num = 0; num < byteLength.byteLength; num = num + 26) {
       let tmp = importDefault;
       let tmp2 = dependencyMap;
-      let obj2 = require("metro/04914__.js");
+      let obj2 = 04914__;
       let shortAt = obj2.getShortAt(byteLength, num);
       let tmp4 = table;
       let tmp5 = num;
@@ -75,13 +77,13 @@ obj[2000] = {
 obj[2999] = {
   name: "ClippingPathName",
   description(getUint8) {
-    return callback(require("04897_getDataView.js") /* getDataView */.getPascalStringFromDataView(getUint8, 0), 2)[1];
+    return callback(getDataView /* getDataView */.getPascalStringFromDataView(getUint8, 0), 2)[1];
   }
 };
 obj = {
   description: "Closed subpath length",
   path(dataView, sum) {
-    const items = [require("metro/04914__.js").getShortAt(dataView, sum)];
+    const items = [04914__.getShortAt(dataView, sum)];
     return items;
   }
 };
@@ -92,7 +94,7 @@ let closure_4 = {
   [obj.OPEN_SUBPATH_LENGTH]: {
     description: "Open subpath length",
     path(dataView, sum) {
-      const items = [require("metro/04914__.js").getShortAt(dataView, sum)];
+      const items = [04914__.getShortAt(dataView, sum)];
       return items;
     }
   },
@@ -107,25 +109,25 @@ let closure_4 = {
   [obj.INITIAL_FILL_RULE]: {
     description: "Initial fill rule",
     path(dataView, sum) {
-      const items = [require("metro/04914__.js").getShortAt(dataView, sum)];
+      const items = [04914__.getShortAt(dataView, sum)];
       return items;
     }
   },
   [obj.CLIPBOARD]: {
     description: "Clipboard",
     path: function parseClipboard(dataView, sum) {
-      const longAt = require("metro/04914__.js").getLongAt(dataView, sum);
+      const longAt = 04914__.getLongAt(dataView, sum);
       let num = -1;
       let num2 = -1;
       if (longAt >>> 31 === 0) {
         num2 = 1;
       }
-      const obj = require("metro/04914__.js");
-      const obj2 = require("04897_getDataView.js") /* getDataView */;
-      const str2 = longAt & parseInt(require("04897_getDataView.js") /* getDataView */.strRepeat("1", 24), 2);
+      const obj = 04914__;
+      const obj2 = getDataView /* getDataView */;
+      const str2 = longAt & parseInt(getDataView /* getDataView */.strRepeat("1", 24), 2);
       const text = `${str.toString(2)}.`;
-      const obj3 = require("04897_getDataView.js") /* getDataView */;
-      const items = [num2 * obj3.parseFloatRadix(`${(2130706432 & longAt) >>> 24.toString(2)}.` + require("04897_getDataView.js") /* getDataView */.padStart(str2.toString(2), 24, "0"), 2), , , ];
+      const obj3 = getDataView /* getDataView */;
+      const items = [num2 * obj3.parseFloatRadix(`${(2130706432 & longAt) >>> 24.toString(2)}.` + getDataView /* getDataView */.padStart(str2.toString(2), 24, "0"), 2), , , ];
       sum = sum + 4;
       let tmpResult = tmp(4914);
       const longAt1 = tmpResult.getLongAt(dataView, sum);
@@ -134,11 +136,11 @@ let closure_4 = {
         num3 = 1;
       }
       let tmp4Result = tmp4(4897);
-      const obj4 = require("04897_getDataView.js") /* getDataView */;
+      const obj4 = getDataView /* getDataView */;
       tmp4Result = tmp4(4897);
       const text1 = `${str3.toString(2)}.`;
       const str4 = longAt1 & parseInt(tmp4Result.strRepeat("1", 24), 2);
-      items[1] = num3 * tmp4Result.parseFloatRadix(`${(2130706432 & longAt1) >>> 24.toString(2)}.` + require("04897_getDataView.js") /* getDataView */.padStart(str4.toString(2), 24, "0"), 2);
+      items[1] = num3 * tmp4Result.parseFloatRadix(`${(2130706432 & longAt1) >>> 24.toString(2)}.` + getDataView /* getDataView */.padStart(str4.toString(2), 24, "0"), 2);
       const sum1 = sum + 8;
       tmpResult = tmp(4914);
       const longAt2 = tmpResult.getLongAt(dataView, sum1);
@@ -146,38 +148,38 @@ let closure_4 = {
       if (longAt2 >>> 31 === 0) {
         num4 = 1;
       }
-      const tmp4Result1 = require("04897_getDataView.js") /* getDataView */;
-      const tmp4Result2 = require("04897_getDataView.js") /* getDataView */;
-      const str6 = longAt2 & parseInt(require("04897_getDataView.js") /* getDataView */.strRepeat("1", 24), 2);
+      const tmp4Result1 = getDataView /* getDataView */;
+      const tmp4Result2 = getDataView /* getDataView */;
+      const str6 = longAt2 & parseInt(getDataView /* getDataView */.strRepeat("1", 24), 2);
       const text2 = `${str5.toString(2)}.`;
-      const tmp4Result3 = require("04897_getDataView.js") /* getDataView */;
-      items[2] = num4 * tmp4Result3.parseFloatRadix(`${(2130706432 & longAt2) >>> 24.toString(2)}.` + require("04897_getDataView.js") /* getDataView */.padStart(str6.toString(2), 24, "0"), 2);
+      const tmp4Result3 = getDataView /* getDataView */;
+      items[2] = num4 * tmp4Result3.parseFloatRadix(`${(2130706432 & longAt2) >>> 24.toString(2)}.` + getDataView /* getDataView */.padStart(str6.toString(2), 24, "0"), 2);
       const sum2 = sum + 12;
-      const tmp4Result4 = require("04897_getDataView.js") /* getDataView */;
-      const longAt3 = require("metro/04914__.js").getLongAt(dataView, sum2);
+      const tmp4Result4 = getDataView /* getDataView */;
+      const longAt3 = 04914__.getLongAt(dataView, sum2);
       let num5 = num;
       if (longAt3 >>> 31 === 0) {
         num5 = 1;
       }
-      const tmpResult1 = require("metro/04914__.js");
-      const tmp4Result5 = require("04897_getDataView.js") /* getDataView */;
-      const str8 = longAt3 & parseInt(require("04897_getDataView.js") /* getDataView */.strRepeat("1", 24), 2);
+      const tmpResult1 = 04914__;
+      const tmp4Result5 = getDataView /* getDataView */;
+      const str8 = longAt3 & parseInt(getDataView /* getDataView */.strRepeat("1", 24), 2);
       const text3 = `${str7.toString(2)}.`;
-      const tmp4Result6 = require("04897_getDataView.js") /* getDataView */;
-      items[3] = num5 * tmp4Result6.parseFloatRadix(`${(2130706432 & longAt3) >>> 24.toString(2)}.` + require("04897_getDataView.js") /* getDataView */.padStart(str8.toString(2), 24, "0"), 2);
+      const tmp4Result6 = getDataView /* getDataView */;
+      items[3] = num5 * tmp4Result6.parseFloatRadix(`${(2130706432 & longAt3) >>> 24.toString(2)}.` + getDataView /* getDataView */.padStart(str8.toString(2), 24, "0"), 2);
       const items1 = [items, ];
       const sum3 = sum + 16;
-      const tmp4Result7 = require("04897_getDataView.js") /* getDataView */;
-      const longAt4 = require("metro/04914__.js").getLongAt(dataView, sum3);
+      const tmp4Result7 = getDataView /* getDataView */;
+      const longAt4 = 04914__.getLongAt(dataView, sum3);
       if (longAt4 >>> 31 === 0) {
         num = 1;
       }
-      const tmpResult2 = require("metro/04914__.js");
-      const tmp4Result8 = require("04897_getDataView.js") /* getDataView */;
-      const str10 = longAt4 & parseInt(require("04897_getDataView.js") /* getDataView */.strRepeat("1", 24), 2);
+      const tmpResult2 = 04914__;
+      const tmp4Result8 = getDataView /* getDataView */;
+      const str10 = longAt4 & parseInt(getDataView /* getDataView */.strRepeat("1", 24), 2);
       const text4 = `${str9.toString(2)}.`;
-      const tmp4Result9 = require("04897_getDataView.js") /* getDataView */;
-      items1[1] = num * tmp4Result9.parseFloatRadix(`${(2130706432 & longAt4) >>> 24.toString(2)}.` + require("04897_getDataView.js") /* getDataView */.padStart(str10.toString(2), 24, "0"), 2);
+      const tmp4Result9 = getDataView /* getDataView */;
+      items1[1] = num * tmp4Result9.parseFloatRadix(`${(2130706432 & longAt4) >>> 24.toString(2)}.` + getDataView /* getDataView */.padStart(str10.toString(2), 24, "0"), 2);
       return items1;
     }
   }

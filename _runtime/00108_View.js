@@ -1,3 +1,5 @@
+import { noop } from "00111_noop.js";
+import { Commands } from "00112_Commands.js";
 // _runtime/00108_View.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import { use } from "noop";
@@ -26,7 +28,7 @@ const forwardRefResult = require("noop").forwardRef(function View_withRef(arg0, 
     HermesBuiltin.throwTypeError();
   } else {
     const merged = Object.assign(arg0, undefined);
-    const tmp45 = use(require("00111_noop.js"));
+    const tmp45 = use(noop);
     let tmp24 = merged;
     if (!obj6.enableNativeViewPropTransformations()) {
       ({ accessibilityState, accessibilityValue, aria-busy: tmp, aria-checked: tmp2, aria-disabled: tmp3, aria-expanded: tmp4, aria-hidden: tmp5, aria-label: tmp6, aria-labelledby: str, aria-live: tmp7, aria-selected: tmp8, aria-valuemax: tmp9, aria-valuemin: tmp10, aria-valuenow: tmp11, aria-valuetext: tmp12, id, tabIndex } = merged);
@@ -146,7 +148,7 @@ const forwardRefResult = require("noop").forwardRef(function View_withRef(arg0, 
       const merged2 = Object.assign(tmp24);
       obj1.ref = ref;
     }
-    const tmp30Result = jsx(require("00112_Commands.js"), obj1);
+    const tmp30Result = jsx(Commands, obj1);
     if (tmp45) {
       const obj2 = { value: false, children: null };
       obj2[1] = tmp30Result;
@@ -154,7 +156,7 @@ const forwardRefResult = require("noop").forwardRef(function View_withRef(arg0, 
     } else {
       return tmp30Result;
     }
-    const tmp43Result = require("00112_Commands.js");
+    const tmp43Result = Commands;
   }
 });
 forwardRefResult.displayName = "View";

@@ -1,3 +1,4 @@
+import { keys } from "03543_keys.js";
 // _runtime/03773_secondsToHours.js
 import requiredArgs from "requiredArgs";
 
@@ -11,6 +12,6 @@ if (!requiredArgs) {
 
 export default function secondsToHours(arg0) {
   tmp3.default(1, arguments);
-  return Math.floor(arg0 / require("03543_keys.js") /* keys */.secondsInHour);
+  return Math.floor(arg0 / keys /* keys */.secondsInHour);
 };
 export default exports.default;

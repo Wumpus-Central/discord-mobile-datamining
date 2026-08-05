@@ -1,3 +1,4 @@
+import { useMergeRefs } from "00334_useMergeRefs.js";
 // _runtime/00333_set.js
 import "noop";
 import { useRef } from "noop";
@@ -38,5 +39,5 @@ export const useWrapRefWithImageAttachedCallbacks = function useWrapRefWithImage
       }
     };
   }
-  return require("00334_useMergeRefs.js")(ref, tmp.current);
+  return useMergeRefs(ref, tmp.current);
 };

@@ -1,3 +1,4 @@
+import { getClient } from "00848_getClient.js";
 // _runtime/00881__getTraceInfoFromScope.js
 const require = arg1;
 let dependencyMap = arg6;
@@ -6,7 +7,7 @@ arg5._getTraceInfoFromScope = function _getTraceInfoFromScope(arg0, arg1) {
   const _require = arg0;
   const dependencyMap = arg1;
   if (arg1) {
-    let withScopeResult = _require("00848_getClient.js").withScope(arg1, () => {
+    let withScopeResult = _getClient.withScope(arg1, () => {
       const activeSpan = callback(table[1]).getActiveSpan();
       if (activeSpan) {
         let tmpResult = tmp(tmp2[1]);
@@ -24,7 +25,7 @@ arg5._getTraceInfoFromScope = function _getTraceInfoFromScope(arg0, arg1) {
       const items = [dynamicSamplingContextFromSpan, spanToTraceContextResult];
       return items;
     });
-    const obj = _require("00848_getClient.js");
+    const obj = _getClient;
   } else {
     withScopeResult = [undefined, undefined];
   }

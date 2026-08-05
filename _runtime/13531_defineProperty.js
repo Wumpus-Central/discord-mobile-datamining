@@ -1,3 +1,6 @@
+import { text } from "13489_text.js";
+import { all } from "13529_all.js";
+import { 13512__ } from "metro/13512__.js";
 // _runtime/13531_defineProperty.js
 const enumerable = "enumerable";
 const configurable = "configurable";
@@ -5,9 +8,9 @@ const writable = "writable";
 if (require("getOwnPropertyDescriptor")) {
   if (require("getOwnPropertyDescriptor")) {
     defineProperty = function defineProperty(fn, arg1, value) {
-      require("13529_all.js") /* all */(fn);
-      const tmp2 = require("13489_text.js") /* text */(arg1);
-      require("13529_all.js") /* all */(value);
+      all /* all */(fn);
+      const tmp2 = text /* text */(arg1);
+      all /* all */(value);
       let tmp4 = value;
       if (typeof fn === "function") {
         tmp4 = value;
@@ -41,10 +44,10 @@ if (require("getOwnPropertyDescriptor")) {
   let defineProperty2 = defineProperty;
 } else {
   defineProperty2 = function defineProperty(arg0, arg1, value) {
-    require("13529_all.js") /* all */(arg0);
-    const tmp2 = require("13489_text.js") /* text */(arg1);
-    require("13529_all.js") /* all */(value);
-    if (!require("metro/13512__.js")) {
+    all /* all */(arg0);
+    const tmp2 = text /* text */(arg1);
+    all /* all */(value);
+    if (!13512__) {
       if (!("get" in value)) {
         if (!("set" in value)) {
           if ("value" in value) {

@@ -1,3 +1,4 @@
+import { 00821__ } from "metro/00821__.js";
 // _runtime/00952_createConsoleTemplateAttributes.js
 const require = arg1;
 let dependencyMap = arg6;
@@ -12,7 +13,7 @@ arg5.createConsoleTemplateAttributes = function createConsoleTemplateAttributes(
   return obj;
 };
 arg5.formatConsoleArgs = function formatConsoleArgs(args, arg1, arg2) {
-  if ("util" in _require("metro/00821__.js").GLOBAL_OBJ) {
+  if ("util" in _00821__.GLOBAL_OBJ) {
     if (typeof tmp(821).GLOBAL_OBJ.util.format === "function") {
       const util = tmp(821).GLOBAL_OBJ.util;
       const format = util.format;

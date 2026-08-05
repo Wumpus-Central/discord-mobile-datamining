@@ -1,3 +1,4 @@
+import { isHermesEnabled } from "01002_isHermesEnabled.js";
 // _runtime/01170_breadcrumbsIntegration.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -9,11 +10,11 @@ arg5.breadcrumbsIntegration = () => {
   let _fetch = obj.fetch;
   const merged = Object.assign({ xhr: true, console: true, sentry: true }, obj);
   if (null === _fetch) {
-    _fetch = require("01002_isHermesEnabled.js") /* isHermesEnabled */.isWeb();
-    const obj2 = require("01002_isHermesEnabled.js") /* isHermesEnabled */;
+    _fetch = isHermesEnabled /* isHermesEnabled */.isWeb();
+    const obj2 = isHermesEnabled /* isHermesEnabled */;
   }
   obj = { fetch: _fetch, dom: null, history: null };
-  let isWebResult = require("01002_isHermesEnabled.js") /* isHermesEnabled */.isWeb();
+  let isWebResult = isHermesEnabled /* isHermesEnabled */.isWeb();
   if (isWebResult) {
     const dom = obj.dom;
     isWebResult = null === dom || undefined === dom || dom;

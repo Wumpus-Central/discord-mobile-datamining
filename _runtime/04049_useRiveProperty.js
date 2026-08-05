@@ -1,3 +1,4 @@
+import { useDisposableMemo } from "04050_useDisposableMemo.js";
 // _runtime/04049_useRiveProperty.js
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -16,7 +17,7 @@ export const useRiveProperty = function useRiveProperty(instance, FillColor, f28
   let tmp = first(undefined);
   const callback2 = tmp;
   const items = [instance, FillColor];
-  const disposableMemo = _require("04050_useDisposableMemo.js").useDisposableMemo(() => {
+  const disposableMemo = _useDisposableMemo.useDisposableMemo(() => {
     if (closure_0) {
       return callback(tmp, closure_1);
     }

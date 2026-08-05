@@ -1,3 +1,4 @@
+import { 00038__ } from "metro/00038__.js";
 // _runtime/00031_genModule.js
 import _slicedToArray from "_slicedToArray";
 
@@ -17,7 +18,7 @@ function genModule(arg0, arg1) {
     if (!startsWithResult) {
       tmp9 = !obj.startsWith("RK");
     }
-    require("metro/00038__.js")(tmp9, `Module name prefixes should've been stripped by the native side but wasn't for ${obj}`);
+    00038__(tmp9, `Module name prefixes should've been stripped by the native side but wasn't for ${obj}`);
     if (!tmp4) {
       if (!arr) {
         obj = { name: null };

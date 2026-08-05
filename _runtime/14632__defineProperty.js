@@ -1,7 +1,8 @@
+import { toPropertyKey } from "00043_toPropertyKey.js";
 // _runtime/14632__defineProperty.js
 
 export default function _defineProperty(arg0, arg1, arg2) {
-  const tmp = require("00043_toPropertyKey.js") /* toPropertyKey */(arg1);
+  const tmp = toPropertyKey /* toPropertyKey */(arg1);
   if (tmp in arg0) {
     const _Object = Object;
     const obj = { value: null, enumerable: true, configurable: true, writable: true };

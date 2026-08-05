@@ -1,3 +1,4 @@
+import { 04116__ } from "metro/04116__.js";
 // _runtime/04115_parse.js
 function parse(str, delimiter) {
   str = delimiter;
@@ -96,7 +97,7 @@ function tokensToRegExp(arg0, items, arg2) {
   let combined;
   let str3;
   let obj = arg2;
-  if (!require("metro/04116__.js")(items)) {
+  if (!04116__(items)) {
     let tmp = items;
     if (!items) {
       tmp = arg2;
@@ -181,7 +182,7 @@ function pathToRegexp(source, items, arg2) {
   let length;
   let length2;
   let obj = arg2;
-  if (!require("metro/04116__.js")(items)) {
+  if (!04116__(items)) {
     let tmp3 = items;
     if (!items) {
       tmp3 = arg2;
@@ -209,7 +210,7 @@ function pathToRegexp(source, items, arg2) {
     source.keys = items;
     let tmp6 = source;
     const str5 = source.source;
-  } else if (require("metro/04116__.js")(source)) {
+  } else if (04116__(source)) {
     const items1 = [];
     let num = 0;
     if (0 < source.length) {

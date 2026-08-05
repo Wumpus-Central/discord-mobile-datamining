@@ -1,3 +1,5 @@
+import { frozen } from "00257_frozen.js";
+import { HeadlessJsTaskSupport } from "00259_HeadlessJsTaskSupport.js";
 // _runtime/00245_map.js
 const require = arg1;
 const module = arg2;
@@ -137,7 +139,7 @@ arg5.runApplication = function runApplication(name) {
   obj = { name };
   obj.setActiveScene(obj);
   const tmp3 = module(38);
-  dependencyMap[name](arg1, require("00257_frozen.js") /* frozen */.coerceDisplayMode(arg2));
+  dependencyMap[name](arg1, frozen /* frozen */.coerceDisplayMode(arg2));
 };
 arg5.setSurfaceProps = function setSurfaceProps(arg0, arg1, arg2) {
   if ("LogBox" !== arg0) {
@@ -148,7 +150,7 @@ arg5.setSurfaceProps = function setSurfaceProps(arg0, arg1, arg2) {
   }
   module(38)(dependencyMap[arg0], "\"" + arg0 + "\" has not been registered. This can happen if:\n* Metro (the local dev server) is run from the wrong folder. Check if Metro is running, stop it and restart it in the current project.\n* A module failed to load due to an error and `AppRegistry.registerComponent` wasn't called.");
   const tmp4 = module(38);
-  dependencyMap[arg0](arg1, require("00257_frozen.js") /* frozen */.coerceDisplayMode(arg2));
+  dependencyMap[arg0](arg1, frozen /* frozen */.coerceDisplayMode(arg2));
 };
 arg5.unmountApplicationComponentAtRootTag = function unmountApplicationComponentAtRootTag(arg0) {
   console.error("Unexpected call to unmountApplicationComponentAtRootTag in Fabric.");
@@ -176,7 +178,7 @@ arg5.registerCancellableHeadlessTask = function registerCancellableHeadlessTask(
 };
 arg5.startHeadlessTask = function startHeadlessTask(arg0, arg1, arg2) {
   const _require = arg0;
-  const _default = _require("00259_HeadlessJsTaskSupport.js").default;
+  const _default = _HeadlessJsTaskSupport.default;
   const value = map.get(arg1);
   if (value) {
     const promise = value()(arg2);

@@ -1,3 +1,5 @@
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
+import { NativeModules } from "01001_NativeModules.js";
 // _runtime/01180_init.js
 import noop from "noop";
 
@@ -275,7 +277,7 @@ export const wrap = function wrap(displayName, profilerProps) {
   };
 };
 export const nativeCrash = function nativeCrash() {
-  const NATIVE = require("01001_NativeModules.js") /* NativeModules */.NATIVE;
+  const NATIVE = NativeModules /* NativeModules */.NATIVE;
   NATIVE.nativeCrash();
 };
 export const flush = function flush() {
@@ -424,7 +426,7 @@ export const close = function close() {
 };
 export const withScope = function withScope(arg0) {
   const _require = arg0;
-  return _require("00817_registerSpanErrorInstrumentation.js").withScope((arg0) => {
+  return _registerSpanErrorInstrumentation.withScope((arg0) => {
     try {
       return callback(arg0);
     } catch (tmp3) {

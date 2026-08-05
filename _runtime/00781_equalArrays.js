@@ -1,3 +1,4 @@
+import { SetCache } from "00782_SetCache.js";
 // _runtime/00781_equalArrays.js
 
 export default function equalArrays(arg0, arg1, arg2, arg3, arg4, get) {
@@ -17,7 +18,7 @@ export default function equalArrays(arg0, arg1, arg2, arg3, arg4, get) {
   }
   let tmp4;
   if (2 & arg2) {
-    tmp4 = new _require("00782_SetCache.js")();
+    tmp4 = new _SetCache();
   }
   let closure_4 = tmp4;
   const result = get.set(arg0, arg1);

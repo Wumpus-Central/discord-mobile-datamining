@@ -1,8 +1,9 @@
+import { NativeModules } from "01001_NativeModules.js";
 // _runtime/01116_stopProfiling.js
 import { Platform } from "get ActivityIndicator";
 
 function stopProfiling(arg0) {
-  const NATIVE = require("01001_NativeModules.js") /* NativeModules */.NATIVE;
+  const NATIVE = NativeModules /* NativeModules */.NATIVE;
   const stopProfilingResult = NATIVE.stopProfiling();
   if (stopProfilingResult) {
     const _Date = Date;
@@ -350,7 +351,7 @@ export const hermesProfilingIntegration = () => {
   };
 };
 export const startProfiling = function startProfiling(arg0) {
-  const NATIVE = require("01001_NativeModules.js") /* NativeModules */.NATIVE;
+  const NATIVE = NativeModules /* NativeModules */.NATIVE;
   let result = null;
   if (NATIVE.startProfiling(arg0)) {
     const _Date = Date;

@@ -1,9 +1,10 @@
+import { isPrimitive } from "04542_isPrimitive.js";
 // _runtime/04541_ToNumber.js
 let closure_2 = require("getEvalledConstructor")("%Number%");
 
 export default function ToNumber(arg0) {
   let tmp3 = arg0;
-  if (!require("04542_isPrimitive.js") /* isPrimitive */(arg0)) {
+  if (!isPrimitive /* isPrimitive */(arg0)) {
     tmp3 = tmp(4543)(arg0, closure_2);
   }
   if (typeof tmp3 === "symbol") {

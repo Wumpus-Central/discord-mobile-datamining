@@ -1,3 +1,6 @@
+import { isMatchingPattern } from "07384_isMatchingPattern.js";
+import { getFilenameToDebugIdMap } from "07427_getFilenameToDebugIdMap.js";
+import { 07412__ } from "metro/07412__.js";
 // _runtime/07424_applyClientOptions.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -12,7 +15,7 @@ function applyClientOptions(environment, environment2) {
   }
   let DEFAULT_ENVIRONMENT = environment.environment || environment2.environment;
   if (!DEFAULT_ENVIRONMENT) {
-    DEFAULT_ENVIRONMENT = require("metro/07412__.js").DEFAULT_ENVIRONMENT;
+    DEFAULT_ENVIRONMENT = 07412__.DEFAULT_ENVIRONMENT;
   }
   environment.environment = DEFAULT_ENVIRONMENT;
   const release2 = environment.release;
@@ -32,16 +35,16 @@ function applyClientOptions(environment, environment2) {
     environment.dist = dist;
   }
   if (environment.message) {
-    environment.message = require("07384_isMatchingPattern.js") /* isMatchingPattern */.truncate(environment.message, num);
-    const obj = require("07384_isMatchingPattern.js") /* isMatchingPattern */;
+    environment.message = isMatchingPattern /* isMatchingPattern */.truncate(environment.message, num);
+    const obj = isMatchingPattern /* isMatchingPattern */;
   }
   let value = iter;
   if (environment.exception && environment.exception.values && environment.exception.values[0]) {
     value = iter.value;
   }
   if (value) {
-    iter.value = require("07384_isMatchingPattern.js") /* isMatchingPattern */.truncate(iter.value, num);
-    const obj2 = require("07384_isMatchingPattern.js") /* isMatchingPattern */;
+    iter.value = isMatchingPattern /* isMatchingPattern */.truncate(iter.value, num);
+    const obj2 = isMatchingPattern /* isMatchingPattern */;
   }
   const request = environment.request;
   let url = request;
@@ -49,12 +52,12 @@ function applyClientOptions(environment, environment2) {
     url = request.url;
   }
   if (url) {
-    request.url = require("07384_isMatchingPattern.js") /* isMatchingPattern */.truncate(request.url, num);
-    const obj3 = require("07384_isMatchingPattern.js") /* isMatchingPattern */;
+    request.url = isMatchingPattern /* isMatchingPattern */.truncate(request.url, num);
+    const obj3 = isMatchingPattern /* isMatchingPattern */;
   }
 }
 function applyDebugIds(exception) {
-  _require = _require("07427_getFilenameToDebugIdMap.js").getFilenameToDebugIdMap(arg1);
+  _require = _getFilenameToDebugIdMap.getFilenameToDebugIdMap(arg1);
   try {
     const values = exception.exception.values;
     let item = values.forEach((stacktrace) => {

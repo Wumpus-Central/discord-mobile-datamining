@@ -1,3 +1,5 @@
+import { disabled } from "01825_disabled.js";
+import { items } from "01826_items.js";
 // _runtime/01832_onPress.js
 import "noop";
 import { jsx } from "jsxProd";
@@ -16,11 +18,11 @@ export default function _default(icon) {
   ({ disabled, button } = icon);
   ({ rippleRadius, style } = icon);
   if (button === undefined) {
-    button = require("01825_disabled.js");
+    button = disabled;
   }
   icon = icon.icon;
   if (icon === undefined) {
-    icon = require("01826_items.js");
+    icon = items;
   }
   let obj = onPress(1831);
   const toolbarContext = obj.useToolbarContext();

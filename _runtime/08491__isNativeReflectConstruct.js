@@ -1,3 +1,5 @@
+import { extractFeFlood } from "08475_extractFeFlood.js";
+import { __INTERNAL_VIEW_CONFIG } from "metro/08492___INTERNAL_VIEW_CONFIG.js";
 // _runtime/08491__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -56,9 +58,9 @@ let obj = {
         return self.refMethod(arg0);
       }
     };
-    const tmp = require("metro/08492___INTERNAL_VIEW_CONFIG.js");
+    const tmp = __INTERNAL_VIEW_CONFIG;
     const merged = Object.assign(self(8475).extractFilter(this.props));
-    const merged1 = Object.assign(require("08475_extractFeFlood.js")(this.props));
+    const merged1 = Object.assign(extractFeFlood(this.props));
     return <tmp ref={function ref(arg0) {
       return self.refMethod(arg0);
     }} />;

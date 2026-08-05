@@ -1,3 +1,6 @@
+import { spanToJSON } from "00819_spanToJSON.js";
+import { getClient } from "00848_getClient.js";
+import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
 // _runtime/00930__INTERNAL_addFeatureFlagToActiveSpan.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -11,7 +14,7 @@ arg5._INTERNAL_addFeatureFlagToActiveSpan = function _INTERNAL_addFeatureFlagToA
     num = 10;
   }
   if (typeof value === "boolean") {
-    const activeSpan = require("00819_spanToJSON.js") /* spanToJSON */.getActiveSpan();
+    const activeSpan = spanToJSON /* spanToJSON */.getActiveSpan();
     if (activeSpan) {
       const data = tmp6(819).spanToJSON(activeSpan).data;
       const _HermesInternal = HermesInternal;
@@ -28,12 +31,12 @@ arg5._INTERNAL_addFeatureFlagToActiveSpan = function _INTERNAL_addFeatureFlagToA
       }
       const tmp6Result = tmp6(819);
     }
-    const obj2 = require("00819_spanToJSON.js") /* spanToJSON */;
+    const obj2 = spanToJSON /* spanToJSON */;
     tmp6 = require;
   }
 };
 arg5._INTERNAL_copyFlagsFromScopeToEvent = function _INTERNAL_copyFlagsFromScopeToEvent(contexts) {
-  let obj = require("00848_getClient.js") /* getClient */;
+  let obj = getClient /* getClient */;
   const currentScope = obj.getCurrentScope();
   const flags = currentScope.getScopeData().contexts.flags;
   const arr = flags ? flags.values : [];
@@ -54,7 +57,7 @@ arg5._INTERNAL_insertFlagToScope = function _INTERNAL_insertFlagToScope(first, v
   if (arg2 === undefined) {
     num = 100;
   }
-  let obj = _require("00848_getClient.js");
+  let obj = _getClient;
   const currentScope = obj.getCurrentScope();
   const contexts = currentScope.getScopeData().contexts;
   if (!contexts.flags) {
@@ -90,7 +93,7 @@ arg5._INTERNAL_insertToFlagBuffer = function _INTERNAL_insertToFlagBuffer(arr, a
   const _require = arg1;
   if (typeof flag === "boolean") {
     if (arr.length > arg3) {
-      if (_require("metro/00823___SENTRY_DEBUG__.js").DEBUG_BUILD) {
+      if (___SENTRY_DEBUG__.DEBUG_BUILD) {
         const debug = tmp5(824).debug;
         const _HermesInternal = HermesInternal;
         debug.error("[Feature Flags] insertToFlagBuffer called on a buffer larger than maxSize=" + arg3);

@@ -1,3 +1,5 @@
+import { getFileChunk } from "../04869_getFileChunk.js";
+import { 04870__ } from "04870__.js";
 // _runtime/metro/04872__.js
 const self = this;
 let self2 = this;
@@ -65,7 +67,7 @@ if (self2) {
       let tmp3 = require;
       let tmp4 = dependencyMap;
       let tmp5 = dependencyMap;
-      let FileTypes = require("04870__.js").FileTypes;
+      let FileTypes = 04870__.FileTypes;
       if (typeof call === "unknown") {
         let hasOwnPropertyResult = hasOwnProperty(item10023);
       } else {
@@ -143,10 +145,10 @@ if (self2) {
       let tmp21 = require;
       let tmp22 = dependencyMap;
       let tmp23 = dependencyMap;
-      let FileTypes2 = require("04870__.js").FileTypes;
+      let FileTypes2 = 04870__.FileTypes;
       let tmp24 = items2;
       items2 = items2.concat(FileTypes2.getSignaturesByName(item10079));
-      let FILE_TYPES_REQUIRED_ADDITIONAL_CHECK = require("04870__.js").FILE_TYPES_REQUIRED_ADDITIONAL_CHECK;
+      let FILE_TYPES_REQUIRED_ADDITIONAL_CHECK = 04870__.FILE_TYPES_REQUIRED_ADDITIONAL_CHECK;
       if (FILE_TYPES_REQUIRED_ADDITIONAL_CHECK.includes(item10079.toLowerCase())) {
         let tmp25 = tmp20;
         let tmp26 = tmp22;
@@ -163,8 +165,8 @@ if (self2) {
     if (!num2) {
       num2 = 64;
     }
-    fileChunk = require("../04869_getFileChunk.js") /* getFileChunk */.getFileChunk(fileChunk, num2);
-    const FileTypes4 = require("04870__.js").FileTypes;
+    fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk, num2);
+    const FileTypes4 = 04870__.FileTypes;
     const detectSignatureResult = FileTypes4.detectSignature(fileChunk, items2);
     require = detectSignatureResult;
     if (detectSignatureResult) {

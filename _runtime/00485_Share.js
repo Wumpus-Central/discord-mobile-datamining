@@ -1,3 +1,4 @@
+import { ShareModule } from "00486_ShareModule.js";
 // _runtime/00485_Share.js
 import _classCallCheck from "_classCallCheck";
 
@@ -35,7 +36,7 @@ const items = [
       }
       tmpResult(tmp10, "Options must be a valid object");
       const tmp3 = Share(38);
-      Share(38)(require("00486_ShareModule.js"), "ShareModule should be registered on Android.");
+      Share(38)(ShareModule, "ShareModule should be registered on Android.");
       let tmp16 = null == message.title;
       const tmp13 = importDefault;
       const tmpResult1 = Share(38);

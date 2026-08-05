@@ -1,3 +1,8 @@
+import { CanonicalizeLocaleList } from "13381_CanonicalizeLocaleList.js";
+import { __exportStarResult2 } from "13383___exportStarResult2.js";
+import { getMultiInternalSlots } from "13386_getMultiInternalSlots.js";
+import { __exportStarResult4 } from "13391___exportStarResult4.js";
+import { match } from "13418_match.js";
 // _runtime/13417___exportStarResult23.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -10,11 +15,11 @@ arg5.InitializeNumberFormat = function InitializeNumberFormat(arg0, arg1, arg2, 
   let numberingSystemNames;
   ({ localeData, numberingSystemNames, getDefaultLocale } = arg3);
   ({ getInternalSlots, availableLocales, currencyDigitsData } = arg3);
-  const result = require("13381_CanonicalizeLocaleList.js") /* CanonicalizeLocaleList */.CanonicalizeLocaleList(arg1);
-  const result1 = require("13383___exportStarResult2.js") /* __exportStarResult2 */.CoerceOptionsToObject(arg2);
+  const result = CanonicalizeLocaleList /* CanonicalizeLocaleList */.CanonicalizeLocaleList(arg1);
+  const result1 = __exportStarResult2 /* __exportStarResult2 */.CoerceOptionsToObject(arg2);
   let obj = Object.create(null);
-  obj.localeMatcher = require("13391___exportStarResult4.js") /* __exportStarResult4 */.GetOption(result1, "localeMatcher", "string", ["lookup", "best fit"], "best fit");
-  const GetOptionResult = require("13391___exportStarResult4.js") /* __exportStarResult4 */.GetOption(result1, "numberingSystem", "string", undefined, undefined);
+  obj.localeMatcher = __exportStarResult4 /* __exportStarResult4 */.GetOption(result1, "localeMatcher", "string", ["lookup", "best fit"], "best fit");
+  const GetOptionResult = __exportStarResult4 /* __exportStarResult4 */.GetOption(result1, "numberingSystem", "string", undefined, undefined);
   if (undefined !== GetOptionResult) {
     if (numberingSystemNames.indexOf(GetOptionResult) < 0) {
       const _RangeError = RangeError;
@@ -23,14 +28,14 @@ arg5.InitializeNumberFormat = function InitializeNumberFormat(arg0, arg1, arg2, 
     }
   }
   obj.nu = GetOptionResult;
-  const ResolveLocaleResult = require("13418_match.js") /* match */.ResolveLocale(Array.from(availableLocales), result, obj, ["nu"], localeData, getDefaultLocale);
-  require("13386_getMultiInternalSlots.js") /* getMultiInternalSlots */.invariant(!!localeData[ResolveLocaleResult.dataLocale], "Missing locale data for ".concat(ResolveLocaleResult.dataLocale));
+  const ResolveLocaleResult = match /* match */.ResolveLocale(Array.from(availableLocales), result, obj, ["nu"], localeData, getDefaultLocale);
+  getMultiInternalSlots /* getMultiInternalSlots */.invariant(!!localeData[ResolveLocaleResult.dataLocale], "Missing locale data for ".concat(ResolveLocaleResult.dataLocale));
   const internalSlots = getInternalSlots(arg0);
   ({ locale: tmp11.locale, dataLocale: tmp11.dataLocale, nu: tmp11.numberingSystem } = ResolveLocaleResult);
   internalSlots.dataLocaleData = localeData[ResolveLocaleResult.dataLocale];
   const result2 = tmp(13432).SetNumberFormatUnitOptions(internalSlots, result1);
   const style = internalSlots.style;
-  const GetOptionResult1 = require("13391___exportStarResult4.js") /* __exportStarResult4 */.GetOption(result1, "notation", "string", ["standard", "scientific", "engineering", "compact"], "standard");
+  const GetOptionResult1 = __exportStarResult4 /* __exportStarResult4 */.GetOption(result1, "notation", "string", ["standard", "scientific", "engineering", "compact"], "standard");
   internalSlots.notation = GetOptionResult1;
   if ("currency" === style) {
     if ("standard" === GetOptionResult1) {

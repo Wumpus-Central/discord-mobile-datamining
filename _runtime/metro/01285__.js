@@ -1,3 +1,7 @@
+import { _isNativeReflectConstruct } from "../01286__isNativeReflectConstruct.js";
+import { _isNativeReflectConstruct } from "../01287__isNativeReflectConstruct.js";
+import { _isNativeReflectConstruct } from "../01288__isNativeReflectConstruct.js";
+import { _isNativeReflectConstruct } from "../01289__isNativeReflectConstruct.js";
 // _runtime/metro/01285__.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -11,45 +15,45 @@ arg5.stringFormatter = undefined;
 let obj = {
   enumerable: true,
   get() {
-    return require("../01286__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.astFormatter;
+    return _isNativeReflectConstruct /* _isNativeReflectConstruct */.astFormatter;
   }
 };
 Object.defineProperty(arg5, "astFormatter", obj);
 obj = {
   enumerable: true,
   get() {
-    return require("../01286__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.RichTextNodeType;
+    return _isNativeReflectConstruct /* _isNativeReflectConstruct */.RichTextNodeType;
   }
 };
 Object.defineProperty(arg5, "RichTextNodeType", obj);
 obj = {
   enumerable: true,
   get() {
-    return require("../01287__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.markdownFormatter;
+    return _isNativeReflectConstruct /* _isNativeReflectConstruct */.markdownFormatter;
   }
 };
 Object.defineProperty(arg5, "markdownFormatter", obj);
 Object.defineProperty(arg5, "reactFormatter", {
   enumerable: true,
   get() {
-    return require("../01289__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.reactFormatter;
+    return _isNativeReflectConstruct /* _isNativeReflectConstruct */.reactFormatter;
   }
 });
 Object.defineProperty(arg5, "makeReactFormatter", {
   enumerable: true,
   get() {
-    return require("../01289__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.makeReactFormatter;
+    return _isNativeReflectConstruct /* _isNativeReflectConstruct */.makeReactFormatter;
   }
 });
 Object.defineProperty(arg5, "DEFAULT_REACT_RICH_TEXT_ELEMENTS", {
   enumerable: true,
   get() {
-    return require("../01289__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.DEFAULT_REACT_RICH_TEXT_ELEMENTS;
+    return _isNativeReflectConstruct /* _isNativeReflectConstruct */.DEFAULT_REACT_RICH_TEXT_ELEMENTS;
   }
 });
 Object.defineProperty(arg5, "stringFormatter", {
   enumerable: true,
   get() {
-    return require("../01288__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.stringFormatter;
+    return _isNativeReflectConstruct /* _isNativeReflectConstruct */.stringFormatter;
   }
 });

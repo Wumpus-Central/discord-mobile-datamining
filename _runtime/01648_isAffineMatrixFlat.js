@@ -1,3 +1,4 @@
+import { t } from "01617_t.js";
 // _runtime/01648_isAffineMatrixFlat.js
 import _slicedToArray from "_slicedToArray";
 
@@ -812,7 +813,7 @@ function decomposeMatrix(arr) {
   }
   const require = flatResult;
   if (0 === flatResult[15]) {
-    const reanimatedError = new require("01617_t.js") /* t */.ReanimatedError("Invalid transform matrix.");
+    const reanimatedError = new t /* t */.ReanimatedError("Invalid transform matrix.");
     throw reanimatedError;
   } else {
     const item = flatResult.forEach((arg0, arg1) => {

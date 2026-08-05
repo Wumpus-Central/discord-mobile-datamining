@@ -1,3 +1,4 @@
+import { unsafeStringify } from "00517_unsafeStringify.js";
 // _runtime/00515_v1.js
 const require = arg1;
 const module = arg2;
@@ -105,8 +106,8 @@ arg5.default = function v1(arg0, arg1, arg2) {
       num10 = num10 + 1;
     } while (num10 < 6);
     if (!unsafeStringifyResult) {
-      unsafeStringifyResult = require("00517_unsafeStringify.js") /* unsafeStringify */.unsafeStringify(array);
-      const obj2 = require("00517_unsafeStringify.js") /* unsafeStringify */;
+      unsafeStringifyResult = unsafeStringify /* unsafeStringify */.unsafeStringify(array);
+      const obj2 = unsafeStringify /* unsafeStringify */;
     }
     return unsafeStringifyResult;
   }

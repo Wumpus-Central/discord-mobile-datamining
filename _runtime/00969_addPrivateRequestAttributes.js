@@ -1,11 +1,14 @@
+import { getSpanStatusFromHttpCode } from "00840_getSpanStatusFromHttpCode.js";
+import { captureCheckIn } from "00869_captureCheckIn.js";
+import { handleResponseError } from "00970_handleResponseError.js";
 // _runtime/00969_addPrivateRequestAttributes.js
 import asyncGeneratorStep from "captureCheckIn";
 
 function addPrivateRequestAttributes(setAttributes, prompt) {
-  let obj = require("00970_handleResponseError.js") /* handleResponseError */;
+  let obj = handleResponseError /* handleResponseError */;
   const messagesFromParamsResult = obj.messagesFromParams(prompt);
   const tmp = require;
-  require("00970_handleResponseError.js") /* handleResponseError */.setMessagesAttribute(setAttributes, messagesFromParamsResult);
+  handleResponseError /* handleResponseError */.setMessagesAttribute(setAttributes, messagesFromParamsResult);
   if ("prompt" in prompt) {
     obj = {};
     const _JSON = JSON;
@@ -14,12 +17,12 @@ function addPrivateRequestAttributes(setAttributes, prompt) {
   }
 }
 function handleStreamingError(arg0, isRecording, arg2) {
-  let obj = require("00869_captureCheckIn.js") /* captureCheckIn */;
+  let obj = captureCheckIn /* captureCheckIn */;
   obj = { function: arg2 };
   obj.captureException(arg0, { mechanism: { handled: false, type: "auto.ai.anthropic", data: obj } });
   if (isRecording.isRecording()) {
     obj = { code: null, message: "internal_error" };
-    obj[0] = require("00840_getSpanStatusFromHttpCode.js") /* getSpanStatusFromHttpCode */.SPAN_STATUS_ERROR;
+    obj[0] = getSpanStatusFromHttpCode /* getSpanStatusFromHttpCode */.SPAN_STATUS_ERROR;
     isRecording.setStatus(obj);
     isRecording.end();
   }

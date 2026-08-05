@@ -1,3 +1,4 @@
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 // _runtime/01085__parseCookieHeaders.js
 import _slicedToArray from "_slicedToArray";
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
@@ -63,14 +64,14 @@ function _shouldCaptureResponse(failedRequestStatusCodes) {
     });
   }
   if (someResult) {
-    const obj = _require("00817_registerSpanErrorInstrumentation.js");
-    someResult = !obj.isSentryRequestUrl(arg2, _require("00817_registerSpanErrorInstrumentation.js").getClient());
-    const obj2 = _require("00817_registerSpanErrorInstrumentation.js");
+    const obj = _registerSpanErrorInstrumentation;
+    someResult = !obj.isSentryRequestUrl(arg2, _registerSpanErrorInstrumentation.getClient());
+    const obj2 = _registerSpanErrorInstrumentation;
   }
   return someResult;
 }
 function _createEvent(error) {
-  let obj = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
+  let obj = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
   const client = obj.getClient();
   let stack;
   if (client) {
@@ -113,12 +114,12 @@ function _createEvent(error) {
   obj2[3] = parsed;
   obj[3] = { response: obj2 };
   const tmp = require;
-  const tmpResult = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
+  const tmpResult = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
   const result = tmpResult.addExceptionMechanism(obj, { type: "auto.http.client." + error.type, handled: false });
   return obj;
 }
 function _shouldSendDefaultPii() {
-  const client = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.getClient();
+  const client = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.getClient();
   let BooleanResult = client;
   if (BooleanResult) {
     const _Boolean = Boolean;

@@ -1,3 +1,4 @@
+import { toArray } from "05372_toArray.js";
 // _runtime/05439_RefreshControl.js
 import _slicedToArray from "_slicedToArray";
 import _objectWithoutProperties from "_objectWithoutProperties";
@@ -29,7 +30,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     waitFor = [];
   }
   const items = [];
-  items[HermesBuiltin.arraySpread(require("05372_toArray.js") /* toArray */.toArray(waitFor), 0)] = ref;
+  items[HermesBuiltin.arraySpread(toArray /* toArray */.toArray(waitFor), 0)] = ref;
   obj.waitFor = items;
   let cloneElementResult;
   if (refreshControl) {

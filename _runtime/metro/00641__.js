@@ -1,6 +1,7 @@
+import { 00609__ } from "00609__.js";
 // _runtime/metro/00641__.js
 
 export default () => {
-  const _Date = require("00609__.js").Date;
+  const _Date = 00609__.Date;
   return _Date.now();
 };

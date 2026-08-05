@@ -1,3 +1,4 @@
+import { _assertThisInitialized } from "../00094__assertThisInitialized.js";
 // _runtime/metro/00093__possibleConstructorReturn.js
 
 export default function _possibleConstructorReturn(arg0, fn) {
@@ -9,6 +10,6 @@ export default function _possibleConstructorReturn(arg0, fn) {
     const typeError = new TypeError("Derived constructors may only return object or undefined");
     throw typeError;
   } else {
-    return require("../00094__assertThisInitialized.js") /* _assertThisInitialized */(arg0);
+    return _assertThisInitialized /* _assertThisInitialized */(arg0);
   }
 };

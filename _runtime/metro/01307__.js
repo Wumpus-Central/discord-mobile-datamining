@@ -1,312 +1,337 @@
+import { typeofJsonValue } from "../01308_typeofJsonValue.js";
+import { parts } from "../01309_parts.js";
+import { fromCharCodes } from "../01310_fromCharCodes.js";
+import { UnknownFieldHandler } from "../01311_UnknownFieldHandler.js";
+import { binaryReadOptions } from "../01312_binaryReadOptions.js";
+import { _isNativeReflectConstruct } from "../01314__isNativeReflectConstruct.js";
+import { binaryWriteOptions } from "../01315_binaryWriteOptions.js";
+import { assert } from "../01316_assert.js";
+import { jsonReadOptions } from "../01317_jsonReadOptions.js";
+import { MessageType } from "../01319_MessageType.js";
+import { RepeatType } from "../01320_RepeatType.js";
+import { lowerCamelCase } from "../01321_lowerCamelCase.js";
+import { ReflectionTypeCheck } from "../01322_ReflectionTypeCheck.js";
+import { isOneofGroup } from "../01323_isOneofGroup.js";
+import { ReflectionJsonReader } from "../01324_ReflectionJsonReader.js";
+import { ReflectionJsonWriter } from "../01326_ReflectionJsonWriter.js";
+import { ReflectionBinaryReader } from "../01327_ReflectionBinaryReader.js";
+import { reflectionScalarDefault } from "../01328_reflectionScalarDefault.js";
+import { ReflectionBinaryWriter } from "../01329_ReflectionBinaryWriter.js";
+import { reflectionCreate } from "../01330_reflectionCreate.js";
+import { reflectionMergePartial } from "../01331_reflectionMergePartial.js";
+import { primitiveEq } from "../01332_primitiveEq.js";
+import { containsMessageType } from "../01333_containsMessageType.js";
+import { isEnumObject } from "../01334_isEnumObject.js";
+import { 01318__ } from "01318__.js";
 // _runtime/metro/01307__.js
 const require = arg1;
 const dependencyMap = arg6;
 let obj = {
   enumerable: true,
   get() {
-    return require("../01308_typeofJsonValue.js") /* typeofJsonValue */.typeofJsonValue;
+    return typeofJsonValue /* typeofJsonValue */.typeofJsonValue;
   }
 };
 Object.defineProperty(arg5, "typeofJsonValue", obj);
 obj = {
   enumerable: true,
   get() {
-    return require("../01308_typeofJsonValue.js") /* typeofJsonValue */.isJsonObject;
+    return typeofJsonValue /* typeofJsonValue */.isJsonObject;
   }
 };
 Object.defineProperty(arg5, "isJsonObject", obj);
 obj = {
   enumerable: true,
   get() {
-    return require("../01309_parts.js") /* parts */.base64decode;
+    return parts /* parts */.base64decode;
   }
 };
 Object.defineProperty(arg5, "base64decode", obj);
 Object.defineProperty(arg5, "base64encode", {
   enumerable: true,
   get() {
-    return require("../01309_parts.js") /* parts */.base64encode;
+    return parts /* parts */.base64encode;
   }
 });
 Object.defineProperty(arg5, "utf8read", {
   enumerable: true,
   get() {
-    return require("../01310_fromCharCodes.js") /* fromCharCodes */.utf8read;
+    return fromCharCodes /* fromCharCodes */.utf8read;
   }
 });
 Object.defineProperty(arg5, "WireType", {
   enumerable: true,
   get() {
-    return require("../01311_UnknownFieldHandler.js") /* UnknownFieldHandler */.WireType;
+    return UnknownFieldHandler /* UnknownFieldHandler */.WireType;
   }
 });
 Object.defineProperty(arg5, "mergeBinaryOptions", {
   enumerable: true,
   get() {
-    return require("../01311_UnknownFieldHandler.js") /* UnknownFieldHandler */.mergeBinaryOptions;
+    return UnknownFieldHandler /* UnknownFieldHandler */.mergeBinaryOptions;
   }
 });
 Object.defineProperty(arg5, "UnknownFieldHandler", {
   enumerable: true,
   get() {
-    return require("../01311_UnknownFieldHandler.js") /* UnknownFieldHandler */.UnknownFieldHandler;
+    return UnknownFieldHandler /* UnknownFieldHandler */.UnknownFieldHandler;
   }
 });
 Object.defineProperty(arg5, "BinaryReader", {
   enumerable: true,
   get() {
-    return require("../01312_binaryReadOptions.js") /* binaryReadOptions */.BinaryReader;
+    return binaryReadOptions /* binaryReadOptions */.BinaryReader;
   }
 });
 Object.defineProperty(arg5, "binaryReadOptions", {
   enumerable: true,
   get() {
-    return require("../01312_binaryReadOptions.js") /* binaryReadOptions */.binaryReadOptions;
+    return binaryReadOptions /* binaryReadOptions */.binaryReadOptions;
   }
 });
 Object.defineProperty(arg5, "BinaryWriter", {
   enumerable: true,
   get() {
-    return require("../01315_binaryWriteOptions.js") /* binaryWriteOptions */.BinaryWriter;
+    return binaryWriteOptions /* binaryWriteOptions */.BinaryWriter;
   }
 });
 Object.defineProperty(arg5, "binaryWriteOptions", {
   enumerable: true,
   get() {
-    return require("../01315_binaryWriteOptions.js") /* binaryWriteOptions */.binaryWriteOptions;
+    return binaryWriteOptions /* binaryWriteOptions */.binaryWriteOptions;
   }
 });
 Object.defineProperty(arg5, "PbLong", {
   enumerable: true,
   get() {
-    return require("../01314__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.PbLong;
+    return _isNativeReflectConstruct /* _isNativeReflectConstruct */.PbLong;
   }
 });
 Object.defineProperty(arg5, "PbULong", {
   enumerable: true,
   get() {
-    return require("../01314__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.PbULong;
+    return _isNativeReflectConstruct /* _isNativeReflectConstruct */.PbULong;
   }
 });
 Object.defineProperty(arg5, "jsonReadOptions", {
   enumerable: true,
   get() {
-    return require("../01317_jsonReadOptions.js") /* jsonReadOptions */.jsonReadOptions;
+    return jsonReadOptions /* jsonReadOptions */.jsonReadOptions;
   }
 });
 Object.defineProperty(arg5, "jsonWriteOptions", {
   enumerable: true,
   get() {
-    return require("../01317_jsonReadOptions.js") /* jsonReadOptions */.jsonWriteOptions;
+    return jsonReadOptions /* jsonReadOptions */.jsonWriteOptions;
   }
 });
 Object.defineProperty(arg5, "mergeJsonOptions", {
   enumerable: true,
   get() {
-    return require("../01317_jsonReadOptions.js") /* jsonReadOptions */.mergeJsonOptions;
+    return jsonReadOptions /* jsonReadOptions */.mergeJsonOptions;
   }
 });
 Object.defineProperty(arg5, "MESSAGE_TYPE", {
   enumerable: true,
   get() {
-    return require("01318__.js").MESSAGE_TYPE;
+    return 01318__.MESSAGE_TYPE;
   }
 });
 Object.defineProperty(arg5, "MessageType", {
   enumerable: true,
   get() {
-    return require("../01319_MessageType.js") /* MessageType */.MessageType;
+    return MessageType /* MessageType */.MessageType;
   }
 });
 Object.defineProperty(arg5, "ScalarType", {
   enumerable: true,
   get() {
-    return require("../01320_RepeatType.js") /* RepeatType */.ScalarType;
+    return RepeatType /* RepeatType */.ScalarType;
   }
 });
 Object.defineProperty(arg5, "LongType", {
   enumerable: true,
   get() {
-    return require("../01320_RepeatType.js") /* RepeatType */.LongType;
+    return RepeatType /* RepeatType */.LongType;
   }
 });
 Object.defineProperty(arg5, "RepeatType", {
   enumerable: true,
   get() {
-    return require("../01320_RepeatType.js") /* RepeatType */.RepeatType;
+    return RepeatType /* RepeatType */.RepeatType;
   }
 });
 Object.defineProperty(arg5, "normalizeFieldInfo", {
   enumerable: true,
   get() {
-    return require("../01320_RepeatType.js") /* RepeatType */.normalizeFieldInfo;
+    return RepeatType /* RepeatType */.normalizeFieldInfo;
   }
 });
 Object.defineProperty(arg5, "readFieldOptions", {
   enumerable: true,
   get() {
-    return require("../01320_RepeatType.js") /* RepeatType */.readFieldOptions;
+    return RepeatType /* RepeatType */.readFieldOptions;
   }
 });
 Object.defineProperty(arg5, "readFieldOption", {
   enumerable: true,
   get() {
-    return require("../01320_RepeatType.js") /* RepeatType */.readFieldOption;
+    return RepeatType /* RepeatType */.readFieldOption;
   }
 });
 Object.defineProperty(arg5, "readMessageOption", {
   enumerable: true,
   get() {
-    return require("../01320_RepeatType.js") /* RepeatType */.readMessageOption;
+    return RepeatType /* RepeatType */.readMessageOption;
   }
 });
 Object.defineProperty(arg5, "ReflectionTypeCheck", {
   enumerable: true,
   get() {
-    return require("../01322_ReflectionTypeCheck.js") /* ReflectionTypeCheck */.ReflectionTypeCheck;
+    return ReflectionTypeCheck /* ReflectionTypeCheck */.ReflectionTypeCheck;
   }
 });
 Object.defineProperty(arg5, "reflectionCreate", {
   enumerable: true,
   get() {
-    return require("../01330_reflectionCreate.js") /* reflectionCreate */.reflectionCreate;
+    return reflectionCreate /* reflectionCreate */.reflectionCreate;
   }
 });
 Object.defineProperty(arg5, "reflectionScalarDefault", {
   enumerable: true,
   get() {
-    return require("../01328_reflectionScalarDefault.js") /* reflectionScalarDefault */.reflectionScalarDefault;
+    return reflectionScalarDefault /* reflectionScalarDefault */.reflectionScalarDefault;
   }
 });
 Object.defineProperty(arg5, "reflectionMergePartial", {
   enumerable: true,
   get() {
-    return require("../01331_reflectionMergePartial.js") /* reflectionMergePartial */.reflectionMergePartial;
+    return reflectionMergePartial /* reflectionMergePartial */.reflectionMergePartial;
   }
 });
 Object.defineProperty(arg5, "reflectionEquals", {
   enumerable: true,
   get() {
-    return require("../01332_primitiveEq.js") /* primitiveEq */.reflectionEquals;
+    return primitiveEq /* primitiveEq */.reflectionEquals;
   }
 });
 Object.defineProperty(arg5, "ReflectionBinaryReader", {
   enumerable: true,
   get() {
-    return require("../01327_ReflectionBinaryReader.js") /* ReflectionBinaryReader */.ReflectionBinaryReader;
+    return ReflectionBinaryReader /* ReflectionBinaryReader */.ReflectionBinaryReader;
   }
 });
 Object.defineProperty(arg5, "ReflectionBinaryWriter", {
   enumerable: true,
   get() {
-    return require("../01329_ReflectionBinaryWriter.js") /* ReflectionBinaryWriter */.ReflectionBinaryWriter;
+    return ReflectionBinaryWriter /* ReflectionBinaryWriter */.ReflectionBinaryWriter;
   }
 });
 Object.defineProperty(arg5, "ReflectionJsonReader", {
   enumerable: true,
   get() {
-    return require("../01324_ReflectionJsonReader.js") /* ReflectionJsonReader */.ReflectionJsonReader;
+    return ReflectionJsonReader /* ReflectionJsonReader */.ReflectionJsonReader;
   }
 });
 Object.defineProperty(arg5, "ReflectionJsonWriter", {
   enumerable: true,
   get() {
-    return require("../01326_ReflectionJsonWriter.js") /* ReflectionJsonWriter */.ReflectionJsonWriter;
+    return ReflectionJsonWriter /* ReflectionJsonWriter */.ReflectionJsonWriter;
   }
 });
 Object.defineProperty(arg5, "containsMessageType", {
   enumerable: true,
   get() {
-    return require("../01333_containsMessageType.js") /* containsMessageType */.containsMessageType;
+    return containsMessageType /* containsMessageType */.containsMessageType;
   }
 });
 Object.defineProperty(arg5, "isOneofGroup", {
   enumerable: true,
   get() {
-    return require("../01323_isOneofGroup.js") /* isOneofGroup */.isOneofGroup;
+    return isOneofGroup /* isOneofGroup */.isOneofGroup;
   }
 });
 Object.defineProperty(arg5, "setOneofValue", {
   enumerable: true,
   get() {
-    return require("../01323_isOneofGroup.js") /* isOneofGroup */.setOneofValue;
+    return isOneofGroup /* isOneofGroup */.setOneofValue;
   }
 });
 Object.defineProperty(arg5, "getOneofValue", {
   enumerable: true,
   get() {
-    return require("../01323_isOneofGroup.js") /* isOneofGroup */.getOneofValue;
+    return isOneofGroup /* isOneofGroup */.getOneofValue;
   }
 });
 Object.defineProperty(arg5, "clearOneofValue", {
   enumerable: true,
   get() {
-    return require("../01323_isOneofGroup.js") /* isOneofGroup */.clearOneofValue;
+    return isOneofGroup /* isOneofGroup */.clearOneofValue;
   }
 });
 Object.defineProperty(arg5, "getSelectedOneofValue", {
   enumerable: true,
   get() {
-    return require("../01323_isOneofGroup.js") /* isOneofGroup */.getSelectedOneofValue;
+    return isOneofGroup /* isOneofGroup */.getSelectedOneofValue;
   }
 });
 Object.defineProperty(arg5, "listEnumValues", {
   enumerable: true,
   get() {
-    return require("../01334_isEnumObject.js") /* isEnumObject */.listEnumValues;
+    return isEnumObject /* isEnumObject */.listEnumValues;
   }
 });
 Object.defineProperty(arg5, "listEnumNames", {
   enumerable: true,
   get() {
-    return require("../01334_isEnumObject.js") /* isEnumObject */.listEnumNames;
+    return isEnumObject /* isEnumObject */.listEnumNames;
   }
 });
 Object.defineProperty(arg5, "listEnumNumbers", {
   enumerable: true,
   get() {
-    return require("../01334_isEnumObject.js") /* isEnumObject */.listEnumNumbers;
+    return isEnumObject /* isEnumObject */.listEnumNumbers;
   }
 });
 Object.defineProperty(arg5, "isEnumObject", {
   enumerable: true,
   get() {
-    return require("../01334_isEnumObject.js") /* isEnumObject */.isEnumObject;
+    return isEnumObject /* isEnumObject */.isEnumObject;
   }
 });
 Object.defineProperty(arg5, "lowerCamelCase", {
   enumerable: true,
   get() {
-    return require("../01321_lowerCamelCase.js") /* lowerCamelCase */.lowerCamelCase;
+    return lowerCamelCase /* lowerCamelCase */.lowerCamelCase;
   }
 });
 Object.defineProperty(arg5, "assert", {
   enumerable: true,
   get() {
-    return require("../01316_assert.js") /* assert */.assert;
+    return assert /* assert */.assert;
   }
 });
 Object.defineProperty(arg5, "assertNever", {
   enumerable: true,
   get() {
-    return require("../01316_assert.js") /* assert */.assertNever;
+    return assert /* assert */.assertNever;
   }
 });
 Object.defineProperty(arg5, "assertInt32", {
   enumerable: true,
   get() {
-    return require("../01316_assert.js") /* assert */.assertInt32;
+    return assert /* assert */.assertInt32;
   }
 });
 Object.defineProperty(arg5, "assertUInt32", {
   enumerable: true,
   get() {
-    return require("../01316_assert.js") /* assert */.assertUInt32;
+    return assert /* assert */.assertUInt32;
   }
 });
 Object.defineProperty(arg5, "assertFloat32", {
   enumerable: true,
   get() {
-    return require("../01316_assert.js") /* assert */.assertFloat32;
+    return assert /* assert */.assertFloat32;
   }
 });

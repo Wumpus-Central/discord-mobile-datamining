@@ -1,3 +1,5 @@
+import { NativeEventEmitter } from "00209_NativeEventEmitter.js";
+import { 00038__ } from "metro/00038__.js";
 // _runtime/00357_set.js
 import importDefaultResult from "shouldUseTurboAnimatedModule";
 import importAllResult1 from "javaScriptFlagGetter";
@@ -118,7 +120,7 @@ obj = {
     }
   },
   disableQueue() {
-    require("metro/00038__.js")(closure_4, "Native animated module is not available");
+    00038__(closure_4, "Native animated module is not available");
     const obj = importAll(27);
     if (obj.animatedShouldDebounceQueueFlush()) {
       const _clearImmediate = clearImmediate;
@@ -145,7 +147,7 @@ obj = {
     const result = obj.flattenAnimatedNodeOffset(self);
   },
   flushQueue: result ? (() => {
-    require("metro/00038__.js")(closure_4, "Native animated module is not available");
+    00038__(closure_4, "Native animated module is not available");
     let c11 = null;
     if (0 !== length.length) {
       if (!closure_14) {
@@ -188,7 +190,7 @@ obj = {
       tmp5.length = 0;
     }
   }) : (() => {
-    require("metro/00038__.js")(closure_4, "Native animated module is not available");
+    00038__(closure_4, "Native animated module is not available");
     let c11 = null;
     let arr = lib;
     if (0 !== lib.length) {
@@ -289,7 +291,7 @@ let c19 = false;
 const obj1 = {
   API: obj,
   assertNativeAnimatedModule() {
-    require("metro/00038__.js")(closure_4, "Native animated module is not available");
+    00038__(closure_4, "Native animated module is not available");
   },
   generateNewAnimationId() {
     let closure_6 = tmp + 1;
@@ -304,7 +306,7 @@ Object.defineProperty(obj1, "nativeEventEmitter", {
   get: () => {
     let tmp = closure_3;
     if (!closure_3) {
-      const tmp7 = new require("00209_NativeEventEmitter.js")(null);
+      const tmp7 = new NativeEventEmitter(null);
       closure_3 = tmp7;
       tmp = tmp7;
     }

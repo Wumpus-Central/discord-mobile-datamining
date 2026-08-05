@@ -1,3 +1,4 @@
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 // _runtime/01166_INTEGRATION_NAME.js
 import isHermesEnabled from "isHermesEnabled";
 
@@ -101,11 +102,11 @@ export const reactNativeTracingIntegration = () => {
   };
 };
 export const getCurrentReactNativeTracingIntegration = function getCurrentReactNativeTracingIntegration() {
-  const client = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.getClient();
+  const client = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.getClient();
   if (client) {
     return client.getIntegrationByName(ReactNativeTracing);
   }
-  const obj = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
+  const obj = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
 };
 export const getReactNativeTracingIntegration = function getReactNativeTracingIntegration(getIntegrationByName) {
   return getIntegrationByName.getIntegrationByName(ReactNativeTracing);

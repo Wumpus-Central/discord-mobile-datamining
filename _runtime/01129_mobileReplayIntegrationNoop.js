@@ -1,3 +1,4 @@
+import { isHermesEnabled } from "01002_isHermesEnabled.js";
 // _runtime/01129_mobileReplayIntegrationNoop.js
 let require = arg1;
 let dependencyMap = arg6;
@@ -85,7 +86,7 @@ arg5.mobileReplayIntegration = () => {
   function updateCachedReplayId(arg0, arg1, arg2, arg3) {
     let closure_1 = arg0;
   }
-  let obj = require("01002_isHermesEnabled.js") /* isHermesEnabled */;
+  let obj = isHermesEnabled /* isHermesEnabled */;
   if (obj.isExpoGo()) {
     let debug = tmp2(817).debug;
     let _HermesInternal = HermesInternal;

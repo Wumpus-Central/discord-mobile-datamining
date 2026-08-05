@@ -1,3 +1,4 @@
+import { getRoundingMethod } from "03558_getRoundingMethod.js";
 // _runtime/03772_roundToNearestMinutes.js
 import _typeof from "_typeof";
 import toInteger from "toInteger";
@@ -46,7 +47,7 @@ export default function roundToNearestMinutes(arg0, nearestTo) {
           roundingMethod = nearestTo.roundingMethod;
         }
         const _Math = Math;
-        const result = require("03558_getRoundingMethod.js") /* getRoundingMethod */.getRoundingMethod(roundingMethod)(sum / defaultResult) * defaultResult;
+        const result = getRoundingMethod /* getRoundingMethod */.getRoundingMethod(roundingMethod)(sum / defaultResult) * defaultResult;
         const _Date = Date;
         const result1 = Math.round(sum % defaultResult / defaultResult) * defaultResult;
         const fullYear = defaultResult1.getFullYear();

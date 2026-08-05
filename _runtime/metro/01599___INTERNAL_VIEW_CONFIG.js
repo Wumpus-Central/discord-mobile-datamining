@@ -1,3 +1,4 @@
+import { renderElement } from "../00114_renderElement.js";
 // _runtime/metro/01599___INTERNAL_VIEW_CONFIG.js
 import weakSet from "weakSet";
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
@@ -8,7 +9,7 @@ const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onKeybo
 obj[2] = obj;
 obj = {
   synchronizeFocusedInputLayout(current) {
-    require("../00114_renderElement.js") /* renderElement */.dispatchCommand(current, "synchronizeFocusedInputLayout", []);
+    renderElement /* renderElement */.dispatchCommand(current, "synchronizeFocusedInputLayout", []);
   }
 };
 

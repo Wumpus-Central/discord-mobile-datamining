@@ -1,3 +1,5 @@
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
+import { ignoreNextOnError } from "01028_ignoreNextOnError.js";
 // _runtime/01092_BROWSER_TRACING_INTEGRATION_ID.js
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const BrowserTracing = "BrowserTracing";
@@ -187,7 +189,7 @@ export const browserTracingIntegration = () => {
     }
   }
   let closure_3 = { name: "body", source: "useStateFromStores" };
-  document = _require("01028_ignoreNextOnError.js").WINDOW.document;
+  document = _ignoreNextOnError.WINDOW.document;
   obj = {};
   let merged = Object.assign(closure_3);
   let merged1 = Object.assign(obj);
@@ -555,7 +557,7 @@ export const browserTracingIntegration = () => {
   return obj;
 };
 export const getMetaContent = function getMetaContent(arg0) {
-  const _document = require("01028_ignoreNextOnError.js") /* ignoreNextOnError */.WINDOW.document;
+  const _document = ignoreNextOnError /* ignoreNextOnError */.WINDOW.document;
   let element;
   if (_document != null) {
     const _HermesInternal = HermesInternal;
@@ -577,7 +579,7 @@ export const startBrowserTracingNavigationSpan = function startBrowserTracingNav
   ({ url, isRedirect } = obj);
   client.emit("beforeStartNavigationSpan", name, { isRedirect });
   client.emit("startNavigationSpan", name, { isRedirect });
-  const currentScope = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.getCurrentScope();
+  const currentScope = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.getCurrentScope();
   currentScope.setTransactionName(name.name);
   let tmp6 = url;
   if (url) {
@@ -586,17 +588,17 @@ export const startBrowserTracingNavigationSpan = function startBrowserTracingNav
   if (tmp6) {
     obj = { normalizedRequest: null };
     obj = {};
-    const merged = Object.assign(require("01028_ignoreNextOnError.js") /* ignoreNextOnError */.getHttpRequestData());
+    const merged = Object.assign(ignoreNextOnError /* ignoreNextOnError */.getHttpRequestData());
     obj.url = url;
     obj[0] = obj;
     const result = currentScope.setSDKProcessingMetadata(obj);
-    const tmp3Result = require("01028_ignoreNextOnError.js") /* ignoreNextOnError */;
+    const tmp3Result = ignoreNextOnError /* ignoreNextOnError */;
   }
   return client[_sentry_idleSpan];
 };
 export const startBrowserTracingPageLoadSpan = function startBrowserTracingPageLoadSpan(f102430, result) {
   f102430.emit("startPageLoadSpan", result, arg2);
-  const currentScope = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.getCurrentScope();
+  const currentScope = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.getCurrentScope();
   currentScope.setTransactionName(result.name);
   if (f102430[_sentry_idleSpan]) {
     f102430.emit("afterStartPageLoadSpan", tmp3);

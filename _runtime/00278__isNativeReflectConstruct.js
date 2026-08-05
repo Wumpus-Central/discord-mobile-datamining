@@ -1,3 +1,4 @@
+import { _isNativeReflectConstruct } from "00189__isNativeReflectConstruct.js";
 // _runtime/00278__isNativeReflectConstruct.js
 const require = arg1;
 const module = arg2;
@@ -14,9 +15,9 @@ arg5.default = {
       } catch (err) {
       }
     } else if (typeof error === "string") {
-      let syntheticError = new require("00189__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.SyntheticError(error);
+      let syntheticError = new _isNativeReflectConstruct /* _isNativeReflectConstruct */.SyntheticError(error);
     } else {
-      syntheticError = new require("00189__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.SyntheticError("Unspecified error");
+      syntheticError = new _isNativeReflectConstruct /* _isNativeReflectConstruct */.SyntheticError("Unspecified error");
     }
   }
 };

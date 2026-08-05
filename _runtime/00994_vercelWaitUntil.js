@@ -1,3 +1,4 @@
+import { 00821__ } from "metro/00821__.js";
 // _runtime/00994_vercelWaitUntil.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -5,7 +6,7 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.vercelWaitUntil = function vercelWaitUntil(arg0) {
   if (typeof globalThis.EdgeRuntime === "string") {
     const _Symbol = Symbol;
-    const tmp7 = require("metro/00821__.js").GLOBAL_OBJ[Symbol.for(Symbol, "@vercel/request-context")];
+    const tmp7 = 00821__.GLOBAL_OBJ[Symbol.for(Symbol, "@vercel/request-context")];
     let value;
     if (tmp7 != null) {
       const get = tmp7.get;

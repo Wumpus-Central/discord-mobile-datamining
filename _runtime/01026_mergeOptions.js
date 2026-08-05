@@ -1,3 +1,4 @@
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 // _runtime/01026_mergeOptions.js
 import _slicedToArray from "_slicedToArray";
 import asyncGeneratorStep from "asyncGeneratorStep";
@@ -5094,7 +5095,7 @@ export () => ({
   }
 })
 export const getFeedback = function getFeedback() {
-  const client = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.getClient();
+  const client = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.getClient();
   let integrationByName;
   if (client != null) {
     integrationByName = client.getIntegrationByName("Feedback");

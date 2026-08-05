@@ -1,3 +1,5 @@
+import { getSpanStatusFromHttpCode } from "00840_getSpanStatusFromHttpCode.js";
+import { captureCheckIn } from "00869_captureCheckIn.js";
 // _runtime/00976_AsyncFromSyncIterator.js
 import _awaitAsyncGenerator from "_awaitAsyncGenerator";
 import AsyncGenerator from "AsyncGenerator";
@@ -104,16 +106,16 @@ function processChunk(promptFeedback, toolCalls, arg2, setStatus) {
         blockReason = promptFeedback.blockReason;
       }
       let obj = { code: null, message: null };
-      obj[0] = require("00840_getSpanStatusFromHttpCode.js") /* getSpanStatusFromHttpCode */.SPAN_STATUS_ERROR;
+      obj[0] = getSpanStatusFromHttpCode /* getSpanStatusFromHttpCode */.SPAN_STATUS_ERROR;
       const _HermesInternal = HermesInternal;
       obj[1] = "Content blocked: " + blockReason;
       setStatus.setStatus(obj);
       const _HermesInternal2 = HermesInternal;
       obj = { mechanism: null };
       obj[0] = { handled: false, type: "auto.ai.google_genai" };
-      require("00869_captureCheckIn.js") /* captureCheckIn */.captureException("Content blocked: " + blockReason, obj);
+      captureCheckIn /* captureCheckIn */.captureException("Content blocked: " + blockReason, obj);
       flag = true;
-      const obj2 = require("00869_captureCheckIn.js") /* captureCheckIn */;
+      const obj2 = captureCheckIn /* captureCheckIn */;
     }
     tmp = !flag;
   }

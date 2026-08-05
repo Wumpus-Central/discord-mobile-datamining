@@ -1,3 +1,4 @@
+import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
 // _runtime/00936_isJsonRpcNotification.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -85,7 +86,7 @@ arg5.validateMcpServerInstance = function validateMcpServerInstance(obj) {
   }
   if (!flag) {
     flag = false;
-    if (require("metro/00823___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+    if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
       const debug = tmp(824).debug;
       debug.warn("Did not patch MCP server. Interface is incompatible.");
       flag = false;

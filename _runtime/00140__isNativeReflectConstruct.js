@@ -1,3 +1,5 @@
+import { _isNativeReflectConstruct } from "00131__isNativeReflectConstruct.js";
+import { NativeDOMCxx } from "00139_NativeDOMCxx.js";
 // _runtime/00140__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -98,7 +100,7 @@ let items = [
   {
     key: "nodeType",
     get() {
-      return require("00131__isNativeReflectConstruct.js").DOCUMENT_NODE;
+      return _isNativeReflectConstruct.DOCUMENT_NODE;
     }
   },
   {
@@ -116,7 +118,7 @@ let items = [
   {
     key: "getElementById",
     value: function getElementById(c8, c8) {
-      const element = require("00139_NativeDOMCxx.js").getElementById(this._rootTag, c8);
+      const element = NativeDOMCxx.getElementById(this._rootTag, c8);
       if (null == element) {
         return null;
       } else {
@@ -127,7 +129,7 @@ let items = [
         }
         return tmp6;
       }
-      const obj = require("00139_NativeDOMCxx.js");
+      const obj = NativeDOMCxx;
       tmp = importDefault;
     }
   }

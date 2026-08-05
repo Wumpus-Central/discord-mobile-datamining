@@ -1,3 +1,6 @@
+import { getClient } from "07402_getClient.js";
+import { _flush } from "07423__flush.js";
+import { addBreadcrumb } from "07448_addBreadcrumb.js";
 // _runtime/07483_getCurrentHubShim.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -7,12 +10,12 @@ function getCurrentHubShim() {
       const currentScope = callback(7402).getCurrentScope();
       currentScope.setClient(arg0);
     },
-    withScope: require("07402_getClient.js") /* getClient */.withScope,
+    withScope: getClient /* getClient */.withScope,
     getClient() {
       return callback(7402).getClient();
     },
-    getScope: require("07402_getClient.js") /* getClient */.getCurrentScope,
-    getIsolationScope: require("07402_getClient.js") /* getClient */.getIsolationScope,
+    getScope: getClient /* getClient */.getCurrentScope,
+    getIsolationScope: getClient /* getClient */.getIsolationScope,
     captureException(arg0, arg1) {
       const currentScope = callback(7402).getCurrentScope();
       return currentScope.captureException(arg0, arg1);
@@ -21,14 +24,14 @@ function getCurrentHubShim() {
       const currentScope = callback(7402).getCurrentScope();
       return currentScope.captureMessage(arg0, arg1, arg2);
     },
-    captureEvent: require("07423__flush.js") /* _flush */.captureEvent,
-    addBreadcrumb: require("07448_addBreadcrumb.js") /* addBreadcrumb */.addBreadcrumb,
-    setUser: require("07423__flush.js") /* _flush */.setUser,
-    setTags: require("07423__flush.js") /* _flush */.setTags,
-    setTag: require("07423__flush.js") /* _flush */.setTag,
-    setExtra: require("07423__flush.js") /* _flush */.setExtra,
-    setExtras: require("07423__flush.js") /* _flush */.setExtras,
-    setContext: require("07423__flush.js") /* _flush */.setContext,
+    captureEvent: _flush /* _flush */.captureEvent,
+    addBreadcrumb: addBreadcrumb /* addBreadcrumb */.addBreadcrumb,
+    setUser: _flush /* _flush */.setUser,
+    setTags: _flush /* _flush */.setTags,
+    setTag: _flush /* _flush */.setTag,
+    setExtra: _flush /* _flush */.setExtra,
+    setExtras: _flush /* _flush */.setExtras,
+    setContext: _flush /* _flush */.setContext,
     getIntegration(id) {
       const client = callback(7402).getClient();
       let integrationByName = client;
@@ -40,8 +43,8 @@ function getCurrentHubShim() {
       }
       return integrationByName;
     },
-    startSession: require("07423__flush.js") /* _flush */.startSession,
-    endSession: require("07423__flush.js") /* _flush */.endSession,
+    startSession: _flush /* _flush */.startSession,
+    endSession: _flush /* _flush */.endSession,
     captureSession(arg0) {
       if (arg0) {
         let tmpResult = tmp(tmp2[1]);

@@ -1,3 +1,4 @@
+import { toArray } from "05372_toArray.js";
 // _runtime/05375_cancelAnimation.js
 try {
   const _module = require("cancelAnimation");
@@ -11,7 +12,7 @@ try {
   }
   if (!setGestureState) {
     const fn = function t() {
-      console.warn(require("05372_toArray.js") /* toArray */.tagMessage("Please use newer version of react-native-reanimated in order to control state of the gestures."));
+      console.warn(toArray /* toArray */.tagMessage("Please use newer version of react-native-reanimated in order to control state of the gestures."));
     };
     let obj = { tagMessage: null };
     obj = { code: "function pnpm_reanimatedWrapperTs1(){const{tagMessage}=this.__closure;console.warn(tagMessage('Please use newer version of react-native-reanimated in order to control state of the gestures.'));}" };

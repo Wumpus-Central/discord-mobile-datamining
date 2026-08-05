@@ -1,3 +1,6 @@
+import { getProto } from "00546_getProto.js";
+import { 00541__ } from "metro/00541__.js";
+import { 00542__ } from "metro/00542__.js";
 // _runtime/00540_getEvalledConstructor.js
 import bind from "bind";
 import 00556__ from "metro/00556__.js";
@@ -18,7 +21,7 @@ function getEvalledConstructor(arg0) {
   }
 }
 function throwTypeError() {
-  throw new require("metro/00541__.js")();
+  throw new 00541__();
 }
 if (require("module_542")) {
   throwTypeError = (() => {
@@ -26,7 +29,7 @@ if (require("module_542")) {
       return throwTypeError;
     } catch (err) {
       try {
-        return require("metro/00542__.js")(arguments, "callee").get;
+        return 00542__(arguments, "callee").get;
       } catch (err) {
         return throwTypeError;
       }
@@ -313,10 +316,10 @@ function doEval(arg0) {
     const tmp12 = doEval("%AsyncGenerator%");
     let tmp3 = tmp12;
     if (tmp12) {
-      tmp3 = require("00546_getProto.js") /* getProto */;
+      tmp3 = getProto /* getProto */;
     }
     if (tmp3) {
-      prototype = require("00546_getProto.js") /* getProto */(tmp12.prototype);
+      prototype = getProto /* getProto */(tmp12.prototype);
     }
   }
   obj[arg0] = prototype;

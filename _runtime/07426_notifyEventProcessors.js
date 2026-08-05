@@ -1,3 +1,4 @@
+import { SyncPromise } from "07399_SyncPromise.js";
 // _runtime/07426_notifyEventProcessors.js
 const require = arg1;
 let dependencyMap = arg6;
@@ -9,7 +10,7 @@ arg5.notifyEventProcessors = function notifyEventProcessors(arg0, arg1, arg2) {
   if (arg3 === undefined) {
     num = 0;
   }
-  return new _require("07399_SyncPromise.js").SyncPromise((arg0, arg1) => {
+  return new _SyncPromise.SyncPromise((arg0, arg1) => {
     let dependencyMap = arg0;
     if (null !== table) {
       if (typeof tmp3 === "function") {

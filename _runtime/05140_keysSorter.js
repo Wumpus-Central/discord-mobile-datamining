@@ -1,3 +1,4 @@
+import { 05142__ } from "metro/05142__.js";
 // _runtime/05140_keysSorter.js
 const require = arg1;
 let dependencyMap = arg6;
@@ -127,7 +128,7 @@ arg5.parse = (str) => {
 arg5.stringify = (arg0, arg1) => {
   let _require = arg0;
   let dependencyMap = arg1;
-  const tmp = _require("metro/05142__.js")({ encode: true, strict: true, arrayFormat: "none" }, arg1);
+  const tmp = _05142__({ encode: true, strict: true, arrayFormat: "none" }, arg1);
   dependencyMap = tmp;
   _require = tmp;
   const arrayFormat = tmp.arrayFormat;

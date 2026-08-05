@@ -1,8 +1,9 @@
+import { getNative } from "00736_getNative.js";
 // _runtime/00745_hashHas.js
 
 export default function hashHas(arg0) {
   const __data__ = this.__data__;
-  if (require("00736_getNative.js") /* getNative */) {
+  if (getNative /* getNative */) {
     let tmp2 = undefined !== __data__[arg0];
   } else {
     const call = hasOwnProperty.call;

@@ -1,9 +1,10 @@
+import { 00541__ } from "metro/00541__.js";
 // _runtime/04538_RequireObjectCoercible.js
 
 export default function RequireObjectCoercible(arg0) {
   if (null == arg0) {
     let text = arguments.length > 0;
-    let tmp3 = require("metro/00541__.js");
+    let tmp3 = 00541__;
     if (text) {
       text = arguments[1];
     }

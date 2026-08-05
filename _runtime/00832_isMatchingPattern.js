@@ -1,3 +1,4 @@
+import { isInstanceOf } from "00827_isInstanceOf.js";
 // _runtime/00832_isMatchingPattern.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -7,7 +8,7 @@ arg5.isMatchingPattern = function isMatchingPattern(arr, test) {
   if (arg2 === undefined) {
     flag = false;
   }
-  const isStringResult = require("00827_isInstanceOf.js") /* isInstanceOf */.isString(arr);
+  const isStringResult = isInstanceOf /* isInstanceOf */.isString(arr);
   if (!isStringResult) {
     return isStringResult;
   } else {
@@ -42,7 +43,7 @@ arg5.safeJoin = function safeJoin(__v_isVNode) {
           arr = push(String(tmp2));
         }
         num = num + 1;
-        obj = require("00827_isInstanceOf.js") /* isInstanceOf */;
+        obj = isInstanceOf /* isInstanceOf */;
         tmp4 = require;
       } catch (err) {
         arr.push(tmp);

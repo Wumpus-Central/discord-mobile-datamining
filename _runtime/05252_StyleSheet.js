@@ -1,3 +1,7 @@
+import { getDefaultHeaderHeight } from "05250_getDefaultHeaderHeight.js";
+import { __react_navigation__elements_contexts } from "05253___react_navigation__elements_contexts.js";
+import { HeaderBackground } from "05256_HeaderBackground.js";
+import { 01584__ } from "metro/01584__.js";
 // _runtime/05252_StyleSheet.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";
@@ -71,12 +75,12 @@ export default function Header(children) {
   let shadowOpacity;
   let shadowRadius;
   let transform;
-  let obj = require("metro/01584__.js");
+  let obj = 01584__;
   const rect = obj.useSafeAreaInsets();
-  let obj1 = require("metro/01584__.js");
+  let obj1 = 01584__;
   const safeAreaFrame = obj1.useSafeAreaFrame();
   let layout = children.layout;
-  const context = React.useContext(require("05253___react_navigation__elements_contexts.js"));
+  const context = React.useContext(__react_navigation__elements_contexts);
   if (undefined === layout) {
     layout = safeAreaFrame;
   }
@@ -151,7 +155,7 @@ export default function Header(children) {
     if (!headerTransparent) {
       const obj4 = { style: null };
       obj4[0] = items;
-      headerBackgroundResult = tmp15(require("05256_HeaderBackground.js"), obj4);
+      headerBackgroundResult = tmp15(HeaderBackground, obj4);
     }
   }
   obj2[2] = headerBackgroundResult;
@@ -197,7 +201,7 @@ export default function Header(children) {
   const tmp20 = View;
   const tmp5 = importDefault;
   const tmp7 = undefined !== modal && modal;
-  tmp8 = require("05250_getDefaultHeaderHeight.js")(layout, undefined !== modal && modal, headerStatusBarHeight);
+  tmp8 = getDefaultHeaderHeight(layout, undefined !== modal && modal, headerStatusBarHeight);
   items7[1] = { maxWidth: diff };
   items7[2] = headerTitleContainerStyle;
   items6[1] = closure_9(RN.View, { pointerEvents: "box-none", style: items7, children: headerTitle({ children: children.title, allowFontScaling: headerTitleAllowFontScaling, tintColor: headerTintColor, style: headerTitleStyle }) });

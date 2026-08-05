@@ -1,3 +1,4 @@
+import { $output } from "12333__output.js";
 // _runtime/12335_initializeContext.js
 const require = arg1;
 let exports = arg5;
@@ -26,7 +27,7 @@ function initializeContext(target) {
     metadata = target.metadata;
   }
   if (metadata == null) {
-    metadata = require("12333__output.js") /* $output */.globalRegistry;
+    metadata = $output /* $output */.globalRegistry;
   }
   obj[1] = metadata;
   obj[2] = str;

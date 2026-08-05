@@ -1,3 +1,4 @@
+import { __exportStarResult32 } from "13384___exportStarResult32.js";
 // _runtime/13383___exportStarResult2.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -6,6 +7,6 @@ arg5.CoerceOptionsToObject = function CoerceOptionsToObject(arg0) {
     const _Object = Object;
     return Object.create(null);
   } else {
-    return require("13384___exportStarResult32.js") /* __exportStarResult32 */.ToObject(arg0);
+    return __exportStarResult32 /* __exportStarResult32 */.ToObject(arg0);
   }
 };

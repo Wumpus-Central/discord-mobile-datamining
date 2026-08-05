@@ -1,3 +1,4 @@
+import { noop } from "../01570_noop.js";
 // _runtime/metro/01569__.js
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
@@ -27,5 +28,5 @@ export default importAllResult.forwardRef(function ServerContainer(arg0, fn) {
   }
   obj = { value: { location: _location }, children: null };
   obj[1] = jsx(obj(1483).CurrentRenderContext.Provider, { value: obj, children });
-  return jsx(require("../01570_noop.js").Provider, { value: { location: _location }, children: null });
+  return jsx(noop.Provider, { value: { location: _location }, children: null });
 });

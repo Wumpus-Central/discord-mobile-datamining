@@ -1,3 +1,4 @@
+import { _typeof } from "metro/00045__typeof.js";
 // _runtime/00044_toPrimitive.js
 
 export default function toPrimitive(arg0, arg1) {
@@ -18,7 +19,7 @@ export default function toPrimitive(arg0, arg1) {
           const typeError = new TypeError("@@toPrimitive must return a primitive value.");
           throw typeError;
         }
-        tmpResult = require("metro/00045__typeof.js") /* _typeof */;
+        tmpResult = _typeof /* _typeof */;
       } else {
         return "string" === str ? String : Number(arg0);
       }

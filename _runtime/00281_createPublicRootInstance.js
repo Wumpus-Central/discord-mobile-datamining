@@ -1,10 +1,11 @@
+import { _isNativeReflectConstruct } from "00140__isNativeReflectConstruct.js";
 // _runtime/00281_createPublicRootInstance.js
 const require = arg1;
 const module = arg2;
 const exports = arg3;
 const dependencyMap = arg6;
 arg5.createPublicRootInstance = function createPublicRootInstance(arg0) {
-  return require("00140__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.createReactNativeDocument(arg0);
+  return _isNativeReflectConstruct /* _isNativeReflectConstruct */.createReactNativeDocument(arg0);
 };
 arg5.createPublicInstance = function createPublicInstance(nativeTag, viewConfig, internalInstanceHandle, arg3) {
   return new module(143)(nativeTag, viewConfig, internalInstanceHandle, arg3);

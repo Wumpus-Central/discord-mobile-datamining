@@ -1,3 +1,5 @@
+import { hasTracingEnabled } from "../07407_hasTracingEnabled.js";
+import { getTraceData } from "../07446_getTraceData.js";
 // _runtime/metro/07480__addTracingHeadersToFetchRequest.js
 import _toArray from "_toArray";
 import "errorCallback";
@@ -10,7 +12,7 @@ import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__";
 function _addTracingHeadersToFetchRequest(headers, headers2, span) {
   let baggage;
   let tmp4;
-  let obj = require("../07446_getTraceData.js") /* getTraceData */;
+  let obj = getTraceData /* getTraceData */;
   obj = { span };
   const traceData = obj.getTraceData(obj);
   ({ sentry-trace: tmp4, baggage } = traceData);
@@ -168,7 +170,7 @@ export const instrumentFetchRequest = function instrumentFetchRequest(fetchData)
   if (fetchData.fetchData) {
     let setHttpStatus = require;
     let headers = dependencyMap;
-    let obj = require("../07407_hasTracingEnabled.js") /* hasTracingEnabled */;
+    let obj = hasTracingEnabled /* hasTracingEnabled */;
     let hasTracingEnabledResult = obj.hasTracingEnabled();
     if (hasTracingEnabledResult) {
       hasTracingEnabledResult = arg1(endResult.fetchData.url);

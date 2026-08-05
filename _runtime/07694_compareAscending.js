@@ -1,9 +1,10 @@
+import { isSymbol } from "00638_isSymbol.js";
 // _runtime/07694_compareAscending.js
 
 export default function compareAscending(arg0, arg1) {
   if (arg0 !== arg1) {
-    const tmp7 = require("00638_isSymbol.js") /* isSymbol */(arg0);
-    const tmp11 = require("00638_isSymbol.js") /* isSymbol */(arg1);
+    const tmp7 = isSymbol /* isSymbol */(arg0);
+    const tmp11 = isSymbol /* isSymbol */(arg1);
     if (null !== arg1) {
       if (!tmp11) {
         return 1;

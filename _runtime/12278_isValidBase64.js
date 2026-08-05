@@ -1,3 +1,4 @@
+import { mergeDefs } from "12277_mergeDefs.js";
 // _runtime/12278_isValidBase64.js
 import _slicedToArray from "_slicedToArray";
 import asyncGeneratorStep from "mergeDefs";
@@ -1014,7 +1015,7 @@ if (self2) {
     const _Object4 = Object;
     let obj = { enumerable: true, get: null };
     obj[1] = function get() {
-      return require("12277_mergeDefs.js") /* mergeDefs */.clone;
+      return mergeDefs /* mergeDefs */.clone;
     };
     Object.defineProperty(exports, "clone", obj);
     exports.$ZodString = fnResult.$constructor("$ZodString", (_zod) => {

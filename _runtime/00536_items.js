@@ -1,3 +1,4 @@
+import { 00534__ } from "metro/00534__.js";
 // _runtime/00536_items.js
 let items = [];
 let num = 0;
@@ -253,7 +254,7 @@ export default {
                             if (charCodeAtResult < 97) {
                               let tmp9 = require;
                               let tmp10 = dependencyMap;
-                              if (arg4 !== require("metro/00534__.js").RFC1738) {
+                              if (arg4 !== 00534__.RFC1738) {
                                 if (charCodeAtResult < 128) {
                                   let tmp14 = items;
                                   items[items.length] = items[charCodeAtResult];

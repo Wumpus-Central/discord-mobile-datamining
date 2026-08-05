@@ -1,9 +1,11 @@
+import { isObjectLike } from "00620_isObjectLike.js";
+import { 00770__ } from "metro/00770__.js";
 // _runtime/04424_baseIsMap.js
 
 export default function baseIsMap(arg0) {
-  let tmp3 = require("00620_isObjectLike.js") /* isObjectLike */(arg0);
+  let tmp3 = isObjectLike /* isObjectLike */(arg0);
   if (tmp3) {
-    tmp3 = "[object Map]" == require("metro/00770__.js")(arg0);
+    tmp3 = "[object Map]" == 00770__(arg0);
   }
   return tmp3;
 };

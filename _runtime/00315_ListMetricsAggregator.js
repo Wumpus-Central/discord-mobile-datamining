@@ -1,3 +1,4 @@
+import { 00038__ } from "metro/00038__.js";
 // _runtime/00315_ListMetricsAggregator.js
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
@@ -107,7 +108,7 @@ const items = [
       if (tmp5) {
         tmp5 = first < getItemCount(data);
       }
-      require("metro/00038__.js")(tmp5, `Tried to get frame for out of range index ${first}`);
+      00038__(tmp5, `Tried to get frame for out of range index ${first}`);
       return { length: self._averageCellLength, offset: sum, index: first, isMounted: false };
     }
   },
@@ -124,7 +125,7 @@ const items = [
       if (tmp3) {
         tmp3 = first < getItemCount(data);
       }
-      require("metro/00038__.js")(tmp3, `Tried to get metrics for out of range cell index ${first}`);
+      00038__(tmp3, `Tried to get metrics for out of range cell index ${first}`);
       keyExtractor = keyExtractor.keyExtractor;
       if (keyExtractor == null) {
         keyExtractor = ListMetricsAggregator(313).keyExtractor;
@@ -145,7 +146,7 @@ const items = [
       } else {
         return null;
       }
-      const tmp2 = require("metro/00038__.js");
+      const tmp2 = 00038__;
     }
   },
   {
@@ -190,7 +191,7 @@ const items = [
           if (arg1 == null) {
             _contentLength = self._contentLength;
           }
-          require("metro/00038__.js")(null != _contentLength, "ListMetricsAggregator must be notified of list content layout before resolving offsets");
+          00038__(null != _contentLength, "ListMetricsAggregator must be notified of list content layout before resolving offsets");
           return _contentLength - (self._selectOffset(layout) + self._selectLength(layout));
         }
       }
@@ -205,7 +206,7 @@ const items = [
       if (this._orientation.horizontal) {
         diff = arg0;
         if (tmp) {
-          require("metro/00038__.js")(null != self._contentLength, "ListMetricsAggregator must be notified of list content layout before resolving offsets");
+          00038__(null != self._contentLength, "ListMetricsAggregator must be notified of list content layout before resolving offsets");
           diff = self._contentLength - arg0;
         }
       }

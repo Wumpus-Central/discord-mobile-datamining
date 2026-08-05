@@ -1,3 +1,6 @@
+import { TransitionType } from "01662_TransitionType.js";
+import { convertAnimationObjectToKeyframes } from "01664_convertAnimationObjectToKeyframes.js";
+import { findDescendantWithExitingAnimation } from "01693_findDescendantWithExitingAnimation.js";
 // _runtime/01694_addPxToTransform.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
@@ -62,13 +65,13 @@ export const createCustomKeyFrameAnimation = function createCustomKeyFrameAnimat
       delete tmp2[tmp];
     }
   }
-  const result = require("01664_convertAnimationObjectToKeyframes.js") /* convertAnimationObjectToKeyframes */.convertAnimationObjectToKeyframes(obj);
-  const obj2 = require("01664_convertAnimationObjectToKeyframes.js") /* convertAnimationObjectToKeyframes */;
-  require("01693_findDescendantWithExitingAnimation.js") /* findDescendantWithExitingAnimation */.insertWebAnimation(obj.name, result);
+  const result = convertAnimationObjectToKeyframes /* convertAnimationObjectToKeyframes */.convertAnimationObjectToKeyframes(obj);
+  const obj2 = convertAnimationObjectToKeyframes /* convertAnimationObjectToKeyframes */;
+  findDescendantWithExitingAnimation /* findDescendantWithExitingAnimation */.insertWebAnimation(obj.name, result);
   return obj.name;
 };
 export const createAnimationWithInitialValues = function createAnimationWithInitialValues(presetName, initialValues) {
-  const structuredCloneResult = structuredClone(require("01662_TransitionType.js") /* TransitionType */.AnimationsData[presetName].style);
+  const structuredCloneResult = structuredClone(TransitionType /* TransitionType */.AnimationsData[presetName].style);
   const first = structuredCloneResult[0];
   const transform = initialValues.transform;
   if (transform) {
@@ -119,11 +122,11 @@ export const createAnimationWithInitialValues = function createAnimationWithInit
   const merged1 = Object.assign(callback(initialValues, closure_2));
   structuredCloneResult[0] = obj;
   const tmp30 = generateNextCustomKeyframeName();
-  obj = { name: tmp30, style: structuredCloneResult, duration: require("01662_TransitionType.js") /* TransitionType */.AnimationsData[presetName].duration };
+  obj = { name: tmp30, style: structuredCloneResult, duration: TransitionType /* TransitionType */.AnimationsData[presetName].duration };
   const tmp3 = callback(initialValues, closure_2);
-  const result2 = require("01664_convertAnimationObjectToKeyframes.js") /* convertAnimationObjectToKeyframes */.convertAnimationObjectToKeyframes(obj);
-  const obj4 = require("01664_convertAnimationObjectToKeyframes.js") /* convertAnimationObjectToKeyframes */;
-  require("01693_findDescendantWithExitingAnimation.js") /* findDescendantWithExitingAnimation */.insertWebAnimation(tmp30, result2);
+  const result2 = convertAnimationObjectToKeyframes /* convertAnimationObjectToKeyframes */.convertAnimationObjectToKeyframes(obj);
+  const obj4 = convertAnimationObjectToKeyframes /* convertAnimationObjectToKeyframes */;
+  findDescendantWithExitingAnimation /* findDescendantWithExitingAnimation */.insertWebAnimation(tmp30, result2);
   return tmp30;
 };
 export const TransitionGenerator = function TransitionGenerator(ENTRY_EXIT, easingY) {
@@ -131,7 +134,7 @@ export const TransitionGenerator = function TransitionGenerator(ENTRY_EXIT, easi
   let secondKeyframeObj;
   let closure_6 = tmp + 1;
   const transitionKeyframeName = `REA${tmp}`;
-  if (require("01662_TransitionType.js") /* TransitionType */.TransitionType.LINEAR === ENTRY_EXIT) {
+  if (TransitionType /* TransitionType */.TransitionType.LINEAR === ENTRY_EXIT) {
     let tmp3Result = tmp3(1695);
     firstKeyframeObj = tmp3Result.LinearTransition(`REA${tmp}`, easingY);
   } else if (tmp3(1662).TransitionType.SEQUENCED === ENTRY_EXIT) {
@@ -158,8 +161,8 @@ export const TransitionGenerator = function TransitionGenerator(ENTRY_EXIT, easi
     firstKeyframeObj = tmp3(1700).EntryExitTransition(`REA${tmp}`, easingY);
     const tmp3Result6 = tmp3(1700);
   }
-  const result1 = require("01664_convertAnimationObjectToKeyframes.js") /* convertAnimationObjectToKeyframes */.convertAnimationObjectToKeyframes(firstKeyframeObj);
-  const tmp3Result7 = require("01664_convertAnimationObjectToKeyframes.js") /* convertAnimationObjectToKeyframes */;
-  require("01693_findDescendantWithExitingAnimation.js") /* findDescendantWithExitingAnimation */.insertWebAnimation(transitionKeyframeName, result1);
+  const result1 = convertAnimationObjectToKeyframes /* convertAnimationObjectToKeyframes */.convertAnimationObjectToKeyframes(firstKeyframeObj);
+  const tmp3Result7 = convertAnimationObjectToKeyframes /* convertAnimationObjectToKeyframes */;
+  findDescendantWithExitingAnimation /* findDescendantWithExitingAnimation */.insertWebAnimation(transitionKeyframeName, result1);
   return { transitionKeyframeName, dummyTransitionKeyframeName };
 };

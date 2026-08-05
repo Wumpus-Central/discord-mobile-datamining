@@ -1,3 +1,5 @@
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
+import { addClsInstrumentationHandler } from "01033_addClsInstrumentationHandler.js";
 // _runtime/01088__isNativeReflectConstruct.js
 import asyncGeneratorStep from "_slicedToArray";
 import c3 from "_possibleConstructorReturn";
@@ -6113,8 +6115,8 @@ function getLargestContentfulPaint(arg0) {
     tmp3 = items;
   }
   ({ value, rating } = arg0);
-  let obj = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
-  const result = ((obj.browserPerformanceTimeOrigin() || require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.GLOBAL_OBJ.performance.timeOrigin) + value) / 1000;
+  let obj = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
+  const result = ((obj.browserPerformanceTimeOrigin() || registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.GLOBAL_OBJ.performance.timeOrigin) + value) / 1000;
   obj = { type: "web-vital", name: "largest-contentful-paint", start: result, end: result, data: null };
   obj = { value, size: value, rating, nodeIds: null, attributions: "find" };
   let mapped;
@@ -6187,8 +6189,8 @@ function getInteractionToNextPaint(arg0) {
     tmp3 = items;
   }
   ({ value, rating } = arg0);
-  let obj = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
-  const result = ((obj.browserPerformanceTimeOrigin() || require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.GLOBAL_OBJ.performance.timeOrigin) + value) / 1000;
+  let obj = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
+  const result = ((obj.browserPerformanceTimeOrigin() || registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.GLOBAL_OBJ.performance.timeOrigin) + value) / 1000;
   obj = { type: "web-vital", name: "interaction-to-next-paint", start: result, end: result, data: null };
   obj = { value, size: value, rating, nodeIds: null, attributions: "find" };
   let mapped;
@@ -6204,8 +6206,8 @@ function getInteractionToNextPaint(arg0) {
 }
 function getWebVital(rating, name, items1, items) {
   const value = rating.value;
-  let obj = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
-  const result = ((obj.browserPerformanceTimeOrigin() || require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.GLOBAL_OBJ.performance.timeOrigin) + value) / 1000;
+  let obj = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
+  const result = ((obj.browserPerformanceTimeOrigin() || registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.GLOBAL_OBJ.performance.timeOrigin) + value) / 1000;
   obj = { type: "web-vital", name, start: result, end: result, data: null };
   obj = { value, size: value, rating: rating.rating, nodeIds: null, attributions: null };
   let mapped;
@@ -6222,9 +6224,9 @@ function getWebVital(rating, name, items1, items) {
 }
 function hasSessionStorage() {
   try {
-    let sessionStorage = "sessionStorage" in require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.GLOBAL_OBJ;
+    let sessionStorage = "sessionStorage" in registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.GLOBAL_OBJ;
     if (sessionStorage) {
-      sessionStorage = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.GLOBAL_OBJ.sessionStorage;
+      sessionStorage = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.GLOBAL_OBJ.sessionStorage;
     }
     return sessionStorage;
   } catch (err) {
@@ -6246,7 +6248,7 @@ function clearSession(arg0) {
 function saveSession(arg0) {
   if (hasSessionStorage()) {
     try {
-      const sessionStorage = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.GLOBAL_OBJ.sessionStorage;
+      const sessionStorage = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.GLOBAL_OBJ.sessionStorage;
       const _JSON = JSON;
       const result = sessionStorage.setItem(sentryReplaySession, JSON.stringify(arg0));
     } catch (err) {
@@ -6257,7 +6259,7 @@ function makeSession(id) {
   const timestamp = Date.now();
   id = id.id;
   if (!id) {
-    let obj = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
+    let obj = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
     id = obj.uuid4();
   }
   obj = { id, started: tmp4, lastActivity: tmp5, segmentId: tmp6, sampled: id.sampled, previousSessionId: id.previousSessionId, dirty: tmp7 };
@@ -6288,8 +6290,8 @@ function createSession(allowBuffering, arg1) {
   const timestamp = Date.now();
   let id = obj.id;
   if (!id) {
-    id = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.uuid4();
-    const obj3 = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
+    id = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.uuid4();
+    const obj3 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
   }
   obj = { id, started: tmp7, lastActivity: tmp8, segmentId: tmp9, sampled: obj.sampled, previousSessionId: obj.previousSessionId, dirty: tmp10 };
   if (stickySession) {
@@ -6630,7 +6632,7 @@ function _addEvent3() {
   return applyArgumentsResult;
 }
 function resetReplayIdOnDynamicSamplingContext() {
-  const currentScope = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.getCurrentScope();
+  const currentScope = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.getCurrentScope();
   if (currentScope.getPropagationContext().dsc) {
     delete tmp4[tmp3];
   }
@@ -6668,9 +6670,9 @@ function addNetworkBreadcrumb(isEnabled, name) {
       isSentryRequestUrlResult = !isEnabled.getOptions()._experiments.traceInternals;
     }
     if (isSentryRequestUrlResult) {
-      const obj = _require("00817_registerSpanErrorInstrumentation.js");
-      isSentryRequestUrlResult = obj.isSentryRequestUrl(name.name, _require("00817_registerSpanErrorInstrumentation.js").getClient());
-      const obj2 = _require("00817_registerSpanErrorInstrumentation.js");
+      const obj = _registerSpanErrorInstrumentation;
+      isSentryRequestUrlResult = obj.isSentryRequestUrl(name.name, _registerSpanErrorInstrumentation.getClient());
+      const obj2 = _registerSpanErrorInstrumentation;
     }
     if (!isSentryRequestUrlResult) {
       isEnabled.addUpdate(() => {
@@ -6704,7 +6706,7 @@ function getBodySize(fetchRequestArgBody) {
         } else {
           const _FormData = FormData;
           if (fetchRequestArgBody instanceof FormData) {
-            return textEncoder.encode(require("01033_addClsInstrumentationHandler.js") /* addClsInstrumentationHandler */.serializeFormData(fetchRequestArgBody)).length;
+            return textEncoder.encode(addClsInstrumentationHandler /* addClsInstrumentationHandler */.serializeFormData(fetchRequestArgBody)).length;
           } else {
             const _Blob = Blob;
             if (fetchRequestArgBody instanceof Blob) {
@@ -6841,7 +6843,7 @@ function buildNetworkRequestOrResponse(arg0, arg1, body) {
   }
 }
 function urlMatches(str) {
-  const baseURI = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.GLOBAL_OBJ.document.baseURI;
+  const baseURI = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.GLOBAL_OBJ.document.baseURI;
   let substr = str;
   if (!str.startsWith("http://")) {
     substr = str;
@@ -6866,7 +6868,7 @@ function urlMatches(str) {
       }
     }
   }
-  return require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.stringMatchesSomePattern(substr, arg1);
+  return registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.stringMatchesSomePattern(substr, arg1);
 }
 function _captureFetchBreadcrumbToReplay() {
   let self = this;

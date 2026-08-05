@@ -1,9 +1,10 @@
+import { noop } from "04645_noop.js";
 // _runtime/04666_useTransitionProgress.js
 import noop from "noop";
 
 
 export default function useTransitionProgress() {
-  const context = React.useContext(require("04645_noop.js"));
+  const context = React.useContext(noop);
   if (undefined === context) {
     const _Error = Error;
     const error = new Error("Couldn't find values for transition progress. Are you inside a screen in Native Stack?");

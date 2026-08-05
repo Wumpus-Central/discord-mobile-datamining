@@ -1,3 +1,5 @@
+import { addNonEnumerableProperty } from "07381_addNonEnumerableProperty.js";
+import { memoBuilder } from "07421_memoBuilder.js";
 // _runtime/07420_normalize.js
 import _slicedToArray from "_slicedToArray";
 
@@ -30,8 +32,8 @@ function visit(arg0, num) {
   }
   let memoBuilderResult = arg4;
   if (arg4 === undefined) {
-    memoBuilderResult = require("07421_memoBuilder.js") /* memoBuilder */.memoBuilder();
-    let obj = require("07421_memoBuilder.js") /* memoBuilder */;
+    memoBuilderResult = memoBuilder /* memoBuilder */.memoBuilder();
+    let obj = memoBuilder /* memoBuilder */;
   }
   _slicedToArray(memoBuilderResult, 2);
   if (null != num) {
@@ -147,7 +149,7 @@ function visit(arg0, num) {
             }
             const _Array = Array;
             const tmp14 = Array.isArray(num) ? [] : {};
-            const convertToPlainObjectResult = require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */.convertToPlainObject(num);
+            const convertToPlainObjectResult = addNonEnumerableProperty /* addNonEnumerableProperty */.convertToPlainObject(num);
             let num6 = 0;
             const keys = Object.keys();
             if (keys !== undefined) {

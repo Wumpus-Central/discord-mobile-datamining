@@ -1,3 +1,5 @@
+import { dateTimestampInSeconds } from "00838_dateTimestampInSeconds.js";
+import { forEachEnvelopeItem } from "00864_forEachEnvelopeItem.js";
 // _runtime/00889_createClientReportEnvelope.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -6,7 +8,7 @@ arg5.createClientReportEnvelope = function createClientReportEnvelope(discarded_
   let result = arg2;
   const items = [{ type: "client_report" }, ];
   if (!arg2) {
-    let obj = require("00838_dateTimestampInSeconds.js") /* dateTimestampInSeconds */;
+    let obj = dateTimestampInSeconds /* dateTimestampInSeconds */;
     result = obj.dateTimestampInSeconds();
   }
   items[1] = { timestamp: result, discarded_events };
@@ -17,5 +19,5 @@ arg5.createClientReportEnvelope = function createClientReportEnvelope(discarded_
     obj = {};
   }
   const items1 = [items];
-  return require("00864_forEachEnvelopeItem.js") /* forEachEnvelopeItem */.createEnvelope(obj, items1);
+  return forEachEnvelopeItem /* forEachEnvelopeItem */.createEnvelope(obj, items1);
 };

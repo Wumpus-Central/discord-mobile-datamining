@@ -1,3 +1,4 @@
+import { addNonEnumerableProperty } from "00822_addNonEnumerableProperty.js";
 // _runtime/00865_normalize.js
 import _slicedToArray from "_slicedToArray";
 
@@ -166,7 +167,7 @@ function visit(arg0, __v_isVNode) {
             }
             const _Array = Array;
             const tmp12 = Array.isArray(__v_isVNode) ? [] : {};
-            const convertToPlainObjectResult = require("00822_addNonEnumerableProperty.js") /* addNonEnumerableProperty */.convertToPlainObject(__v_isVNode);
+            const convertToPlainObjectResult = addNonEnumerableProperty /* addNonEnumerableProperty */.convertToPlainObject(__v_isVNode);
             let num6 = 0;
             const keys = Object.keys();
             if (keys !== undefined) {

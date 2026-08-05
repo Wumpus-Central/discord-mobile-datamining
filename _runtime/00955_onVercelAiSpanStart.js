@@ -1,11 +1,15 @@
+import { spanToJSON } from "00819_spanToJSON.js";
+import { convertPromptToMessages } from "00957_convertPromptToMessages.js";
+import { 00956__ } from "metro/00956__.js";
+import { 00958__ } from "metro/00958__.js";
 // _runtime/00955_onVercelAiSpanStart.js
 const require = arg1;
 const dependencyMap = arg6;
 function onVercelAiSpanStart(setAttribute) {
   let data;
   let description;
-  const obj = require("00819_spanToJSON.js") /* spanToJSON */;
-  ({ data, description } = require("00819_spanToJSON.js") /* spanToJSON */.spanToJSON(setAttribute));
+  const obj = spanToJSON /* spanToJSON */;
+  ({ data, description } = spanToJSON /* spanToJSON */.spanToJSON(setAttribute));
   if (description) {
     if (data[tmp3(undefined, 956).AI_TOOL_CALL_NAME_ATTRIBUTE]) {
       if (data[tmp3(undefined, 956).AI_TOOL_CALL_ID_ATTRIBUTE]) {
@@ -105,7 +109,7 @@ function vercelAiEventProcessor(type) {
         let tmp9 = processEndedVercelAiSpan(item10015);
         let tmp10 = require;
         let tmp11 = dependencyMap;
-        let obj = require("00957_convertPromptToMessages.js") /* convertPromptToMessages */;
+        let obj = convertPromptToMessages /* convertPromptToMessages */;
         let result = obj.accumulateTokensForParent(item10015, map);
         continue;
       }
@@ -116,7 +120,7 @@ function vercelAiEventProcessor(type) {
         if ("gen_ai.invoke_agent" === nextResult.op) {
           let tmp18 = require;
           let tmp19 = dependencyMap;
-          let obj2 = require("00957_convertPromptToMessages.js") /* convertPromptToMessages */;
+          let obj2 = convertPromptToMessages /* convertPromptToMessages */;
           let tmp20 = nextResult;
           let result1 = obj2.applyAccumulatedTokens(tmp17, map);
         }
@@ -132,8 +136,8 @@ function vercelAiEventProcessor(type) {
         tmp24 = "gen_ai.invoke_agent" === trace.op;
       }
       if (tmp24) {
-        const result2 = require("00957_convertPromptToMessages.js") /* convertPromptToMessages */.applyAccumulatedTokens(trace, map);
-        const obj3 = require("00957_convertPromptToMessages.js") /* convertPromptToMessages */;
+        const result2 = convertPromptToMessages /* convertPromptToMessages */.applyAccumulatedTokens(trace, map);
+        const obj3 = convertPromptToMessages /* convertPromptToMessages */;
       }
     }
   }
@@ -142,9 +146,9 @@ function vercelAiEventProcessor(type) {
 function processEndedVercelAiSpan(item10015) {
   const data = item10015.data;
   if ("auto.vercelai.otel" === item10015.origin) {
-    renameAttributeKey(data, require("metro/00956__.js").AI_USAGE_COMPLETION_TOKENS_ATTRIBUTE, require("metro/00958__.js").GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE);
-    renameAttributeKey(data, require("metro/00956__.js").AI_USAGE_PROMPT_TOKENS_ATTRIBUTE, require("metro/00958__.js").GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE);
-    renameAttributeKey(data, require("metro/00956__.js").AI_USAGE_CACHED_INPUT_TOKENS_ATTRIBUTE, require("metro/00958__.js").GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE);
+    renameAttributeKey(data, 00956__.AI_USAGE_COMPLETION_TOKENS_ATTRIBUTE, 00958__.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE);
+    renameAttributeKey(data, 00956__.AI_USAGE_PROMPT_TOKENS_ATTRIBUTE, 00958__.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE);
+    renameAttributeKey(data, 00956__.AI_USAGE_CACHED_INPUT_TOKENS_ATTRIBUTE, 00958__.GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE);
     const tmp34 = data[require(undefined, 958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE];
     let tmp35 = typeof tmp34 === "number";
     if (typeof tmp34 === "number") {
@@ -170,16 +174,16 @@ function processEndedVercelAiSpan(item10015) {
       data[tmp29(956).AI_PROMPT_TOOLS_ATTRIBUTE] = tmp29(957).convertAvailableToolsToJsonString(data[tmp29(undefined, 956).AI_PROMPT_TOOLS_ATTRIBUTE]);
       const tmp29Result = tmp29(957);
     }
-    renameAttributeKey(data, require("metro/00956__.js").OPERATION_NAME_ATTRIBUTE, require("metro/00958__.js").GEN_AI_OPERATION_NAME_ATTRIBUTE);
-    renameAttributeKey(data, require("metro/00956__.js").AI_PROMPT_MESSAGES_ATTRIBUTE, require("metro/00958__.js").GEN_AI_REQUEST_MESSAGES_ATTRIBUTE);
-    renameAttributeKey(data, require("metro/00956__.js").AI_RESPONSE_TEXT_ATTRIBUTE, "gen_ai.response.text");
-    renameAttributeKey(data, require("metro/00956__.js").AI_RESPONSE_TOOL_CALLS_ATTRIBUTE, "gen_ai.response.tool_calls");
-    renameAttributeKey(data, require("metro/00956__.js").AI_RESPONSE_OBJECT_ATTRIBUTE, "gen_ai.response.object");
-    renameAttributeKey(data, require("metro/00956__.js").AI_PROMPT_TOOLS_ATTRIBUTE, "gen_ai.request.available_tools");
-    renameAttributeKey(data, require("metro/00956__.js").AI_TOOL_CALL_ARGS_ATTRIBUTE, "gen_ai.tool.input");
-    renameAttributeKey(data, require("metro/00956__.js").AI_TOOL_CALL_RESULT_ATTRIBUTE, "gen_ai.tool.output");
-    renameAttributeKey(data, require("metro/00956__.js").AI_SCHEMA_ATTRIBUTE, "gen_ai.request.schema");
-    renameAttributeKey(data, require("metro/00956__.js").AI_MODEL_ID_ATTRIBUTE, require("metro/00958__.js").GEN_AI_REQUEST_MODEL_ATTRIBUTE);
+    renameAttributeKey(data, 00956__.OPERATION_NAME_ATTRIBUTE, 00958__.GEN_AI_OPERATION_NAME_ATTRIBUTE);
+    renameAttributeKey(data, 00956__.AI_PROMPT_MESSAGES_ATTRIBUTE, 00958__.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE);
+    renameAttributeKey(data, 00956__.AI_RESPONSE_TEXT_ATTRIBUTE, "gen_ai.response.text");
+    renameAttributeKey(data, 00956__.AI_RESPONSE_TOOL_CALLS_ATTRIBUTE, "gen_ai.response.tool_calls");
+    renameAttributeKey(data, 00956__.AI_RESPONSE_OBJECT_ATTRIBUTE, "gen_ai.response.object");
+    renameAttributeKey(data, 00956__.AI_PROMPT_TOOLS_ATTRIBUTE, "gen_ai.request.available_tools");
+    renameAttributeKey(data, 00956__.AI_TOOL_CALL_ARGS_ATTRIBUTE, "gen_ai.tool.input");
+    renameAttributeKey(data, 00956__.AI_TOOL_CALL_RESULT_ATTRIBUTE, "gen_ai.tool.output");
+    renameAttributeKey(data, 00956__.AI_SCHEMA_ATTRIBUTE, "gen_ai.request.schema");
+    renameAttributeKey(data, 00956__.AI_MODEL_ID_ATTRIBUTE, 00958__.GEN_AI_REQUEST_MODEL_ATTRIBUTE);
     (function addProviderMetadataToAttributes(data) {
       const tmp3 = data[callback(undefined, table[2]).AI_RESPONSE_PROVIDER_METADATA_ATTRIBUTE];
       if (tmp3) {

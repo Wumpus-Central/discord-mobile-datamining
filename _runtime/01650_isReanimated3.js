@@ -1,3 +1,7 @@
+import { isJest } from "01609_isJest.js";
+import { ReanimatedModule } from "01614_ReanimatedModule.js";
+import { freezeObjectInDev } from "01636_freezeObjectInDev.js";
+import { SensorContainer } from "01652_SensorContainer.js";
 // _runtime/01650_isReanimated3.js
 import controlEdgeToEdgeValues from "controlEdgeToEdgeValues";
 import isJest from "isJest";
@@ -33,7 +37,7 @@ export const getViewProp = function getViewProp(arg0, arg1, arg2) {
       throw reanimatedError;
     }
   }
-  obj = _require("01609_isJest.js");
+  obj = _isJest;
   tmp = _require;
   return new Promise((arg0, arg1) => {
     let closure_0 = arg0;
@@ -64,11 +68,11 @@ export const registerEventHandler = function registerEventHandler(eventHandler) 
   handleAndFlushAnimationFrame.__closure = { eventHandler };
   handleAndFlushAnimationFrame.__workletHash = 6793284645440;
   handleAndFlushAnimationFrame.__initData = closure_5;
-  const ReanimatedModule = require("01614_ReanimatedModule.js") /* ReanimatedModule */.ReanimatedModule;
-  return ReanimatedModule.registerEventHandler(require("01636_freezeObjectInDev.js") /* freezeObjectInDev */.makeShareableCloneRecursive(handleAndFlushAnimationFrame), arg1, num);
+  const ReanimatedModule = ReanimatedModule /* ReanimatedModule */.ReanimatedModule;
+  return ReanimatedModule.registerEventHandler(freezeObjectInDev /* freezeObjectInDev */.makeShareableCloneRecursive(handleAndFlushAnimationFrame), arg1, num);
 };
 export const unregisterEventHandler = function unregisterEventHandler(arg0) {
-  const ReanimatedModule = require("01614_ReanimatedModule.js") /* ReanimatedModule */.ReanimatedModule;
+  const ReanimatedModule = ReanimatedModule /* ReanimatedModule */.ReanimatedModule;
   return ReanimatedModule.unregisterEventHandler(arg0);
 };
 export const subscribeForKeyboardEvents = function subscribeForKeyboardEvents(eventHandler, isStatusBarTranslucentAndroid) {
@@ -83,10 +87,10 @@ export const subscribeForKeyboardEvents = function subscribeForKeyboardEvents(ev
   handleAndFlushAnimationFrame.__closure = { eventHandler };
   handleAndFlushAnimationFrame.__workletHash = 11642615284685;
   handleAndFlushAnimationFrame.__initData = closure_6;
-  const ReanimatedModule = require("01614_ReanimatedModule.js") /* ReanimatedModule */.ReanimatedModule;
+  const ReanimatedModule = ReanimatedModule /* ReanimatedModule */.ReanimatedModule;
   let tmp2 = controlEdgeToEdgeValues;
   let tmp3 = controlEdgeToEdgeValues;
-  const shareableCloneRecursive = require("01636_freezeObjectInDev.js") /* freezeObjectInDev */.makeShareableCloneRecursive(handleAndFlushAnimationFrame);
+  const shareableCloneRecursive = freezeObjectInDev /* freezeObjectInDev */.makeShareableCloneRecursive(handleAndFlushAnimationFrame);
   if (!controlEdgeToEdgeValues) {
     let flag = isStatusBarTranslucentAndroid.isStatusBarTranslucentAndroid;
     if (flag == null) {
@@ -104,20 +108,20 @@ export const subscribeForKeyboardEvents = function subscribeForKeyboardEvents(ev
   return ReanimatedModule.subscribeForKeyboardEvents(shareableCloneRecursive, tmp3, tmp2);
 };
 export const unsubscribeFromKeyboardEvents = function unsubscribeFromKeyboardEvents(arg0) {
-  const ReanimatedModule = require("01614_ReanimatedModule.js") /* ReanimatedModule */.ReanimatedModule;
+  const ReanimatedModule = ReanimatedModule /* ReanimatedModule */.ReanimatedModule;
   return ReanimatedModule.unsubscribeFromKeyboardEvents(arg0);
 };
 export const registerSensor = function registerSensor(arg0, arg1, arg2) {
   if (!global.__sensorContainer) {
-    const sensorContainer = new require("01652_SensorContainer.js") /* SensorContainer */.SensorContainer();
+    const sensorContainer = new SensorContainer /* SensorContainer */.SensorContainer();
     tmp.__sensorContainer = sensorContainer;
   }
   const __sensorContainer = tmp.__sensorContainer;
-  return __sensorContainer.registerSensor(arg0, arg1, require("01636_freezeObjectInDev.js") /* freezeObjectInDev */.makeShareableCloneRecursive(arg2));
+  return __sensorContainer.registerSensor(arg0, arg1, freezeObjectInDev /* freezeObjectInDev */.makeShareableCloneRecursive(arg2));
 };
 export const initializeSensor = function initializeSensor(arg0, arg1) {
   if (!global.__sensorContainer) {
-    const sensorContainer = new require("01652_SensorContainer.js") /* SensorContainer */.SensorContainer();
+    const sensorContainer = new SensorContainer /* SensorContainer */.SensorContainer();
     tmp.__sensorContainer = sensorContainer;
   }
   const __sensorContainer = tmp.__sensorContainer;
@@ -125,7 +129,7 @@ export const initializeSensor = function initializeSensor(arg0, arg1) {
 };
 export const unregisterSensor = function unregisterSensor(arg0) {
   if (!global.__sensorContainer) {
-    const sensorContainer = new require("01652_SensorContainer.js") /* SensorContainer */.SensorContainer();
+    const sensorContainer = new SensorContainer /* SensorContainer */.SensorContainer();
     tmp.__sensorContainer = sensorContainer;
   }
   const __sensorContainer = tmp.__sensorContainer;
@@ -139,7 +143,7 @@ export const enableLayoutAnimations = function enableLayoutAnimations(enableLayo
   if (flag) {
     const obj = { enableLayoutAnimations: null, setByUser: true };
     obj[0] = enableLayoutAnimations;
-    const ReanimatedModule2 = require("01614_ReanimatedModule.js") /* ReanimatedModule */.ReanimatedModule;
+    const ReanimatedModule2 = ReanimatedModule /* ReanimatedModule */.ReanimatedModule;
     const result = ReanimatedModule2.enableLayoutAnimations(enableLayoutAnimations);
   } else {
     let setByUser = obj.setByUser;
@@ -148,30 +152,30 @@ export const enableLayoutAnimations = function enableLayoutAnimations(enableLayo
     }
     if (!setByUser) {
       obj.enableLayoutAnimations = enableLayoutAnimations;
-      const ReanimatedModule = require("01614_ReanimatedModule.js") /* ReanimatedModule */.ReanimatedModule;
+      const ReanimatedModule = ReanimatedModule /* ReanimatedModule */.ReanimatedModule;
       const result1 = ReanimatedModule.enableLayoutAnimations(enableLayoutAnimations);
     }
   }
 };
 export const configureLayoutAnimationBatch = function configureLayoutAnimationBatch(arg0) {
-  const ReanimatedModule = require("01614_ReanimatedModule.js") /* ReanimatedModule */.ReanimatedModule;
+  const ReanimatedModule = ReanimatedModule /* ReanimatedModule */.ReanimatedModule;
   const result = ReanimatedModule.configureLayoutAnimationBatch(arg0);
 };
 export const setShouldAnimateExitingForTag = function setShouldAnimateExitingForTag(arg0, arg1) {
-  const ReanimatedModule = require("01614_ReanimatedModule.js") /* ReanimatedModule */.ReanimatedModule;
+  const ReanimatedModule = ReanimatedModule /* ReanimatedModule */.ReanimatedModule;
   const result = ReanimatedModule.setShouldAnimateExitingForTag(arg0, arg1);
 };
 export const jsiConfigureProps = function jsiConfigureProps(keys, arg1) {
   if (!isJest) {
-    const ReanimatedModule = require("01614_ReanimatedModule.js") /* ReanimatedModule */.ReanimatedModule;
+    const ReanimatedModule = ReanimatedModule /* ReanimatedModule */.ReanimatedModule;
     ReanimatedModule.configureProps(keys, arg1);
   }
 };
 export const markNodeAsRemovable = function markNodeAsRemovable(arg0) {
-  const ReanimatedModule = require("01614_ReanimatedModule.js") /* ReanimatedModule */.ReanimatedModule;
+  const ReanimatedModule = ReanimatedModule /* ReanimatedModule */.ReanimatedModule;
   ReanimatedModule.markNodeAsRemovable(arg0);
 };
 export const unmarkNodeAsRemovable = function unmarkNodeAsRemovable(arg0) {
-  const ReanimatedModule = require("01614_ReanimatedModule.js") /* ReanimatedModule */.ReanimatedModule;
+  const ReanimatedModule = ReanimatedModule /* ReanimatedModule */.ReanimatedModule;
   const result = ReanimatedModule.unmarkNodeAsRemovable(arg0);
 };

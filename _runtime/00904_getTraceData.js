@@ -1,3 +1,4 @@
+import { getClient } from "00848_getClient.js";
 // _runtime/00904_getTraceData.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -15,8 +16,8 @@ arg5.getTraceData = function getTraceData() {
   }
   let client = obj.client;
   if (!client) {
-    client = require("00848_getClient.js") /* getClient */.getClient();
-    const obj2 = require("00848_getClient.js") /* getClient */;
+    client = getClient /* getClient */.getClient();
+    const obj2 = getClient /* getClient */;
   }
   let tmp3 = require;
   let spanToTraceparentHeader = dependencyMap;

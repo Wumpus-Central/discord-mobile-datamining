@@ -1,3 +1,5 @@
+import { _createForOfIteratorHelper } from "00532__createForOfIteratorHelper.js";
+import { _createForOfIteratorHelper } from "00583__createForOfIteratorHelper.js";
 // _runtime/00531__createForOfIteratorHelper.js
 import _createForOfIteratorHelper from "_createForOfIteratorHelper";
 import _createForOfIteratorHelper from "_createForOfIteratorHelper";
@@ -192,7 +194,7 @@ function pushEncodedKeyValuePair(items, key10006, value) {
             let tmp26 = require;
             let tmp27 = dependencyMap;
             let tmp25 = key10033;
-            let obj4 = require("00532__createForOfIteratorHelper.js") /* _createForOfIteratorHelper */;
+            let obj4 = _createForOfIteratorHelper /* _createForOfIteratorHelper */;
             if (!obj4.hasOwn(arg2, key10033)) {
               continue;
             } else {
@@ -214,7 +216,7 @@ function pushEncodedKeyValuePair(items, key10006, value) {
           const text = `${encodeURI(key10006)}=`;
           items.push(`${encodeURI(key10006)}=` + encodeURIComponent(value));
         }
-        obj2 = require("00532__createForOfIteratorHelper.js") /* _createForOfIteratorHelper */;
+        obj2 = _createForOfIteratorHelper /* _createForOfIteratorHelper */;
       }
     } else {
       const _encodeURI = encodeURI;
@@ -853,7 +855,7 @@ _exports.serializeObject = function serialize(obj) {
       let tmp4 = key10012;
       let tmp5 = require;
       let tmp6 = dependencyMap;
-      let obj2 = require("00532__createForOfIteratorHelper.js") /* _createForOfIteratorHelper */;
+      let obj2 = _createForOfIteratorHelper /* _createForOfIteratorHelper */;
       if (!obj2.hasOwn(arg0, key10012)) {
         continue;
       } else {
@@ -867,7 +869,7 @@ _exports.serializeObject = function serialize(obj) {
   } else {
     return obj;
   }
-  obj = require("00532__createForOfIteratorHelper.js") /* _createForOfIteratorHelper */;
+  obj = _createForOfIteratorHelper /* _createForOfIteratorHelper */;
 };
 _exports.parseString = parseString;
 _exports.types = { html: "text/html", json: "application/json", xml: "text/xml", urlencoded: "application/x-www-form-urlencoded", form: "application/x-www-form-urlencoded", "form-data": "application/x-www-form-urlencoded" };
@@ -882,7 +884,7 @@ _createForOfIteratorHelper.mixin(Request.prototype, require("RequestBase").proto
 Request.prototype.ca = Request.prototype.agent;
 Request.prototype.buffer = Request.prototype.ca;
 Request.prototype.pipe = Request.prototype.write;
-_exports.agent = () => new require("00583__createForOfIteratorHelper.js") /* _createForOfIteratorHelper */();
+_exports.agent = () => new _createForOfIteratorHelper /* _createForOfIteratorHelper */();
 let items = ["GET", "POST", "OPTIONS", "PATCH", "PUT", "DELETE"];
 let num = 0;
 let num2 = 0;

@@ -1,3 +1,6 @@
+import { getOwnPropertyDescriptor } from "../13479_getOwnPropertyDescriptor.js";
+import { isForced } from "../13516_isForced.js";
+import { 13477__ } from "13477__.js";
 // _runtime/metro/13476__.js
 
 export default (dontCallGetSet, obj) => {
@@ -5,7 +8,7 @@ export default (dontCallGetSet, obj) => {
   let stat;
   let target;
   ({ target, global: _global, stat } = dontCallGetSet);
-  const tmp3 = require("13477__.js");
+  const tmp3 = 13477__;
   if (_global) {
     let prototype = tmp3;
   } else {
@@ -29,7 +32,7 @@ export default (dontCallGetSet, obj) => {
       if (arg0.dontCallGetSet) {
         let tmp8 = require;
         let tmp9 = dependencyMap;
-        obj = require("../13479_getOwnPropertyDescriptor.js") /* getOwnPropertyDescriptor */;
+        obj = getOwnPropertyDescriptor /* getOwnPropertyDescriptor */;
         let iter = obj.f(prototype, key10024);
         let value = iter;
         if (iter) {
@@ -42,7 +45,7 @@ export default (dontCallGetSet, obj) => {
       let tmp10 = require;
       let tmp11 = dependencyMap;
       let sum = key10024;
-      let tmp12 = require("../13516_isForced.js") /* isForced */;
+      let tmp12 = isForced /* isForced */;
       if (!_global) {
         let str4 = "#";
         if (stat) {

@@ -1,3 +1,6 @@
+import { RN_GLOBAL_OBJ } from "00816_RN_GLOBAL_OBJ.js";
+import { TurboModuleRegistry } from "00997_TurboModuleRegistry.js";
+import { getExpoConstants } from "01003_getExpoConstants.js";
 // _runtime/01002_isHermesEnabled.js
 import _slicedToArray from "_slicedToArray";
 import { Platform } from "get ActivityIndicator";
@@ -5,23 +8,23 @@ import { Platform } from "get ActivityIndicator";
 const require = arg1;
 
 export const isHermesEnabled = function isHermesEnabled() {
-  return require("00816_RN_GLOBAL_OBJ.js") /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ.HermesInternal;
+  return RN_GLOBAL_OBJ /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ.HermesInternal;
 };
 export const isTurboModuleEnabled = function isTurboModuleEnabled() {
-  let tmp3 = true === require("00816_RN_GLOBAL_OBJ.js") /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ.RN$Bridgeless;
+  let tmp3 = true === RN_GLOBAL_OBJ /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ.RN$Bridgeless;
   if (!tmp3) {
-    tmp3 = null != require("00816_RN_GLOBAL_OBJ.js") /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ.__turboModuleProxy;
+    tmp3 = null != RN_GLOBAL_OBJ /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ.__turboModuleProxy;
   }
   return tmp3;
 };
 export const isFabricEnabled = function isFabricEnabled() {
-  return null != require("00816_RN_GLOBAL_OBJ.js") /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ.nativeFabricUIManager;
+  return null != RN_GLOBAL_OBJ /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ.nativeFabricUIManager;
 };
 export const getReactNativeVersion = function getReactNativeVersion() {
   let major;
   let minor;
   let patch;
-  if (require("00997_TurboModuleRegistry.js") /* TurboModuleRegistry */.ReactNativeLibraries.ReactNativeVersion) {
+  if (TurboModuleRegistry /* TurboModuleRegistry */.ReactNativeLibraries.ReactNativeVersion) {
     const version = tmp(997).ReactNativeLibraries.ReactNativeVersion.version;
     ({ major, minor, patch } = version);
     let str2 = "";
@@ -35,13 +38,13 @@ export const getReactNativeVersion = function getReactNativeVersion() {
   tmp = require;
 };
 export const isExpo = function isExpo() {
-  return null != require("00816_RN_GLOBAL_OBJ.js") /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ.expo;
+  return null != RN_GLOBAL_OBJ /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ.expo;
 };
 export const isExpoGo = function isExpoGo() {
-  return require("01003_getExpoConstants.js") /* getExpoConstants */.getExpoGo();
+  return getExpoConstants /* getExpoConstants */.getExpoGo();
 };
 export const getExpoGoVersion = function getExpoGoVersion() {
-  const expoConstants = require("01003_getExpoConstants.js") /* getExpoConstants */.getExpoConstants();
+  const expoConstants = getExpoConstants /* getExpoConstants */.getExpoConstants();
   let expoVersion;
   if (null != expoConstants) {
     expoVersion = expoConstants.expoVersion;
@@ -53,7 +56,7 @@ export const getExpoGoVersion = function getExpoGoVersion() {
   return expoVersion1;
 };
 export const getExpoSdkVersion = function getExpoSdkVersion() {
-  const expoConstants = require("01003_getExpoConstants.js") /* getExpoConstants */.getExpoConstants();
+  const expoConstants = getExpoConstants /* getExpoConstants */.getExpoConstants();
   let manifest;
   if (null != expoConstants) {
     manifest = expoConstants.manifest;
@@ -85,7 +88,7 @@ export function notMobileOs() {
   return false;
 }
 export const getHermesVersion = function getHermesVersion() {
-  const _HermesInternal = require("00816_RN_GLOBAL_OBJ.js") /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ.HermesInternal;
+  const _HermesInternal = RN_GLOBAL_OBJ /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ.HermesInternal;
   let getRuntimeProperties;
   if (null !== _HermesInternal) {
     if (undefined !== _HermesInternal) {
@@ -103,9 +106,9 @@ export function getDefaultEnvironment() {
   return "production";
 }
 export const isRunningInMetroDevServer = function isRunningInMetroDevServer() {
-  let tmp3 = undefined !== require("00816_RN_GLOBAL_OBJ.js") /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ.process;
+  let tmp3 = undefined !== RN_GLOBAL_OBJ /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ.process;
   if (tmp3) {
-    const env = require("00816_RN_GLOBAL_OBJ.js") /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ.process.env;
+    const env = RN_GLOBAL_OBJ /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ.process.env;
     let prop;
     if (null !== env) {
       if (undefined !== env) {

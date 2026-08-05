@@ -1,3 +1,4 @@
+import { calculateGPSValue } from "04935_calculateGPSValue.js";
 // _runtime/04932__isNativeReflectConstruct.js
 import _slicedToArray from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
@@ -270,7 +271,7 @@ function getDescription(arr) {
     let tmp12 = tmp11;
     if (tmp2) {
       tmp12 = tmp11;
-      if (typeof require("04935_calculateGPSValue.js")[tmp2] === "function") {
+      if (typeof calculateGPSValue[tmp2] === "function") {
         tmp12 = tmp13(4935)[tmp2](arr, tmp11);
         const tmp13Result = tmp13(4935);
       }
@@ -324,9 +325,9 @@ function getDescription(arr) {
   } else {
     try {
       if (tmp2) {
-        if (typeof require("04935_calculateGPSValue.js")[tmp2] === "function") {
-          let decodeURIComponentResult = require("04935_calculateGPSValue.js")[tmp2](arr);
-          const tmp4Result = require("04935_calculateGPSValue.js");
+        if (typeof calculateGPSValue[tmp2] === "function") {
+          let decodeURIComponentResult = calculateGPSValue[tmp2](arr);
+          const tmp4Result = calculateGPSValue;
         }
         return decodeURIComponentResult;
       }

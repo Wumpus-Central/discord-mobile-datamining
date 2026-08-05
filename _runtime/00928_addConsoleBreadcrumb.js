@@ -1,11 +1,14 @@
+import { isMatchingPattern } from "00832_isMatchingPattern.js";
+import { severityLevelFromString } from "00920_severityLevelFromString.js";
+import { 00821__ } from "metro/00821__.js";
 // _runtime/00928_addConsoleBreadcrumb.js
 import setupIntegration from "setupIntegration";
 
 function addConsoleBreadcrumb(arg0, arguments) {
   obj = { category: "console", data: obj, level: null, message: null };
   obj = { arguments, logger: "console" };
-  obj[2] = require("00920_severityLevelFromString.js") /* severityLevelFromString */.severityLevelFromString(arg0);
-  if ("util" in require("metro/00821__.js").GLOBAL_OBJ) {
+  obj[2] = severityLevelFromString /* severityLevelFromString */.severityLevelFromString(arg0);
+  if ("util" in 00821__.GLOBAL_OBJ) {
     if (typeof tmp(821).GLOBAL_OBJ.util.format === "function") {
       const util = tmp(821).GLOBAL_OBJ.util;
       const format = util.format;
@@ -41,8 +44,8 @@ function addConsoleBreadcrumb(arg0, arguments) {
     obj[1] = arg0;
     tmpResult.addBreadcrumb(obj, obj);
   }
-  const obj3 = require("00920_severityLevelFromString.js") /* severityLevelFromString */;
-  applyResult = require("00832_isMatchingPattern.js") /* isMatchingPattern */.safeJoin(arguments, " ");
+  const obj3 = severityLevelFromString /* severityLevelFromString */;
+  applyResult = isMatchingPattern /* isMatchingPattern */.safeJoin(arguments, " ");
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 

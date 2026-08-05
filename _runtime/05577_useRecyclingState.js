@@ -1,3 +1,4 @@
+import { useLayoutState } from "05529_useLayoutState.js";
 // _runtime/05577_useRecyclingState.js
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -14,8 +15,8 @@ export const useRecyclingState = function useRecyclingState(arg0, arg1, arg2) {
   const dependencyMap = arg2;
   let tmp = callback4(undefined);
   const callback = tmp;
-  const obj = _require("05529_useLayoutState.js");
-  [r10015, tmp3] = callback(_require("05529_useLayoutState.js").useLayoutState(0), 2);
+  const obj = _useLayoutState;
+  [r10015, tmp3] = callback(_useLayoutState.useLayoutState(0), 2);
   const callback2 = tmp3;
   callback3(() => {
     let tmpResult = closure_0;

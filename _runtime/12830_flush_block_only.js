@@ -1,3 +1,8 @@
+import { assign } from "12827_assign.js";
+import { StaticTreeDesc } from "12832_StaticTreeDesc.js";
+import { adler32 } from "12833_adler32.js";
+import { 12831__ } from "metro/12831__.js";
+import { 12834__ } from "metro/12834__.js";
 // _runtime/12830_flush_block_only.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -7,7 +12,7 @@ function flush_block_only(state8, arg1) {
   if (state8.block_start >= 0) {
     num = state8.block_start;
   }
-  require("12832_StaticTreeDesc.js") /* StaticTreeDesc */._tr_flush_block(state8, num, state8.strstart - state8.block_start, arg1);
+  StaticTreeDesc /* StaticTreeDesc */._tr_flush_block(state8, num, state8.strstart - state8.block_start, arg1);
   ({ strstart: state8.block_start, strm } = state8);
   const state = strm.state;
   let avail_out = state.pending;
@@ -15,7 +20,7 @@ function flush_block_only(state8, arg1) {
     avail_out = strm.avail_out;
   }
   if (0 !== avail_out) {
-    const tmpResult = require("12827_assign.js") /* assign */;
+    const tmpResult = assign /* assign */;
     tmpResult.arraySet(strm.output, state.pending_buf, state.pending_out, avail_out, strm.next_out);
     strm.next_out = strm.next_out + avail_out;
     state.pending_out = state.pending_out + avail_out;
@@ -206,7 +211,7 @@ function fill_window(state) {
     if (state.strstart >= w_size + (w_size - 262)) {
       let tmp23 = require;
       let tmp24 = dependencyMap;
-      let obj = require("12827_assign.js") /* assign */;
+      let obj = assign /* assign */;
       let tmp25 = obj;
       let tmp26 = w_size;
       let tmp27 = w_size;
@@ -291,7 +296,7 @@ function fill_window(state) {
         strm.avail_in = strm.avail_in - avail_in;
         let tmp15 = require;
         let sum3 = dependencyMap;
-        let obj2 = require("12827_assign.js") /* assign */;
+        let obj2 = assign /* assign */;
         let tmp30 = obj2;
         let tmp31 = _window;
         let tmp32 = avail_in;
@@ -373,7 +378,7 @@ function deflate_fast(lookahead) {
     if (lookahead.match_length >= 3) {
       let tmp9 = require;
       let tmp10 = dependencyMap;
-      let obj2 = require("12832_StaticTreeDesc.js") /* StaticTreeDesc */;
+      let obj2 = StaticTreeDesc /* StaticTreeDesc */;
       let _tr_tallyResult = obj2._tr_tally(lookahead, lookahead.strstart - lookahead.match_start, lookahead.match_length - 3);
       lookahead.lookahead = lookahead.lookahead - lookahead.match_length;
       if (lookahead.match_length <= lookahead.max_lazy_match) {
@@ -399,7 +404,7 @@ function deflate_fast(lookahead) {
     } else {
       let tmp6 = require;
       let tmp7 = dependencyMap;
-      let obj = require("12832_StaticTreeDesc.js") /* StaticTreeDesc */;
+      let obj = StaticTreeDesc /* StaticTreeDesc */;
       _tr_tallyResult1 = obj._tr_tally(lookahead, 0, lookahead.window[lookahead.strstart]);
       lookahead.lookahead = lookahead.lookahead - 1;
       lookahead.strstart = lookahead.strstart + 1;
@@ -433,7 +438,7 @@ function deflate_slow(lookahead) {
         if (lookahead.match_available) {
           let tmp21 = require;
           let tmp22 = dependencyMap;
-          let obj3 = require("12832_StaticTreeDesc.js") /* StaticTreeDesc */;
+          let obj3 = StaticTreeDesc /* StaticTreeDesc */;
           let _tr_tallyResult = obj3._tr_tally(lookahead, 0, lookahead.window[lookahead.strstart - 1]);
           lookahead.match_available = 0;
         }
@@ -497,7 +502,7 @@ function deflate_slow(lookahead) {
         let tmp14 = require;
         let tmp15 = dependencyMap;
         let diff = lookahead.strstart + lookahead.lookahead - 3;
-        let obj2 = require("12832_StaticTreeDesc.js") /* StaticTreeDesc */;
+        let obj2 = StaticTreeDesc /* StaticTreeDesc */;
         lookahead.lookahead = lookahead.lookahead - (lookahead.prev_length - 1);
         lookahead.prev_length = lookahead.prev_length - 2;
         let _tr_tallyResult1 = obj2._tr_tally(lookahead, lookahead.strstart - 1 - lookahead.prev_match, lookahead.prev_length - 3);
@@ -532,7 +537,7 @@ function deflate_slow(lookahead) {
     if (lookahead.match_available) {
       let tmp9 = require;
       let tmp10 = dependencyMap;
-      let obj = require("12832_StaticTreeDesc.js") /* StaticTreeDesc */;
+      let obj = StaticTreeDesc /* StaticTreeDesc */;
       if (obj._tr_tally(lookahead, 0, lookahead.window[lookahead.strstart - 1])) {
         let tmp11 = flush_block_only;
         let tmp12 = flush_block_only(lookahead, false);
@@ -561,11 +566,11 @@ class Config {
 }
 function DeflateState() {
   const obj = { strm: null, status: 0, pending_buf: null, pending_buf_size: 0, pending_out: 0, pending: 0, wrap: 0, gzhead: null, gzindex: 0, method: 8, last_flush: -1, w_size: 0, w_bits: 0, w_mask: 0, window: null, window_size: 0, prev: null, head: null, ins_h: 0, hash_size: 0, hash_bits: 0, hash_mask: 0, hash_shift: 0, block_start: 0, match_length: 0, prev_match: 0, match_available: 0, strstart: 0, match_start: 0, lookahead: 0, prev_length: 0, max_chain_length: 0, max_lazy_match: 0, level: 0, strategy: 0, good_match: 0, nice_match: 0 };
-  const buf16 = new require("12827_assign.js") /* assign */.Buf16(1146);
+  const buf16 = new assign /* assign */.Buf16(1146);
   obj.dyn_ltree = buf16;
-  const buf161 = new require("12827_assign.js") /* assign */.Buf16(122);
+  const buf161 = new assign /* assign */.Buf16(122);
   obj.dyn_dtree = buf161;
-  const buf162 = new require("12827_assign.js") /* assign */.Buf16(78);
+  const buf162 = new assign /* assign */.Buf16(78);
   obj.bl_tree = buf162;
   const dyn_ltree = obj.dyn_ltree;
   let diff = dyn_ltree.length - 1;
@@ -652,9 +657,9 @@ function deflateReset(state) {
       }
       state.adler = num5;
       state.last_flush = 0;
-      require("12832_StaticTreeDesc.js") /* StaticTreeDesc */._tr_init(state);
+      StaticTreeDesc /* StaticTreeDesc */._tr_init(state);
       let num = 0;
-      const obj = require("12832_StaticTreeDesc.js") /* StaticTreeDesc */;
+      const obj = StaticTreeDesc /* StaticTreeDesc */;
     }
     if (0 === num) {
       const state2 = state.state;
@@ -683,7 +688,7 @@ function deflateReset(state) {
     return num;
   }
   num = -2;
-  state.msg = require("metro/12831__.js")[-2];
+  state.msg = 12831__[-2];
 }
 function deflateInit2(strm, level, method, windowBits, memLevel, strategy) {
   if (strm) {
@@ -727,15 +732,15 @@ function deflateInit2(strm, level, method, windowBits, memLevel, strategy) {
                       obj.hash_size = 1 << obj.hash_bits;
                       obj.hash_mask = obj.hash_size - 1;
                       obj.hash_shift = ~~(obj.hash_bits + 3 - 1) / 3;
-                      const buf8 = new require("12827_assign.js") /* assign */.Buf8(2 * obj.w_size);
+                      const buf8 = new assign /* assign */.Buf8(2 * obj.w_size);
                       obj.window = buf8;
-                      const buf16 = new require("12827_assign.js") /* assign */.Buf16(obj.hash_size);
+                      const buf16 = new assign /* assign */.Buf16(obj.hash_size);
                       obj.head = buf16;
-                      const buf161 = new require("12827_assign.js") /* assign */.Buf16(obj.w_size);
+                      const buf161 = new assign /* assign */.Buf16(obj.w_size);
                       obj.prev = buf161;
                       obj.lit_bufsize = 1 << memLevel + 6;
                       obj.pending_buf_size = 4 * obj.lit_bufsize;
-                      const buf81 = new require("12827_assign.js") /* assign */.Buf8(obj.pending_buf_size);
+                      const buf81 = new assign /* assign */.Buf8(obj.pending_buf_size);
                       obj.pending_buf = buf81;
                       obj.d_buf = obj.lit_bufsize;
                       obj.l_buf = 3 * obj.lit_bufsize;
@@ -752,7 +757,7 @@ function deflateInit2(strm, level, method, windowBits, memLevel, strategy) {
         }
       }
     }
-    strm.msg = require("metro/12831__.js")[-2];
+    strm.msg = 12831__[-2];
     return -2;
   } else {
     return -2;
@@ -878,14 +883,14 @@ arg5.deflateResetKeep = function deflateResetKeep(state) {
       }
       state.adler = num5;
       state.last_flush = 0;
-      require("12832_StaticTreeDesc.js") /* StaticTreeDesc */._tr_init(state);
+      StaticTreeDesc /* StaticTreeDesc */._tr_init(state);
       let num = 0;
-      const obj = require("12832_StaticTreeDesc.js") /* StaticTreeDesc */;
+      const obj = StaticTreeDesc /* StaticTreeDesc */;
     }
     return num;
   }
   num = -2;
-  state.msg = require("metro/12831__.js")[-2];
+  state.msg = 12831__[-2];
 };
 arg5.deflateSetHeader = function deflateSetHeader(strm, header) {
   let num = -2;
@@ -974,7 +979,7 @@ arg5.deflate = function deflate(state, last_flush) {
                       state8.pending_buf[+state8.pending] = state8.gzhead.extra.length >> 8 & 255;
                     }
                     if (state8.gzhead.hcrc) {
-                      state.adler = require("metro/12834__.js")(state.adler, state8.pending_buf, state8.pending, 0);
+                      state.adler = 12834__(state.adler, state8.pending_buf, state8.pending, 0);
                     }
                     state8.gzindex = 0;
                     state8.status = 69;
@@ -1070,7 +1075,7 @@ arg5.deflate = function deflate(state, last_flush) {
                             let tmp37 = require;
                             let tmp38 = dependencyMap;
                             let tmp39 = tmp35;
-                            state.adler = require("metro/12834__.js")(state.adler, state8.pending_buf, state8.pending - tmp35, tmp35);
+                            state.adler = 12834__(state.adler, state8.pending_buf, state8.pending - tmp35, tmp35);
                           }
                           let state2 = state.state;
                           let avail_out2 = state2.pending;
@@ -1080,7 +1085,7 @@ arg5.deflate = function deflate(state, last_flush) {
                           if (0 !== avail_out2) {
                             diff = require;
                             diff = dependencyMap;
-                            let obj7 = require("12827_assign.js") /* assign */;
+                            let obj7 = assign /* assign */;
                             diff = obj7;
                             diff = avail_out2;
                             diff = obj7.arraySet(state.output, state2.pending_buf, state2.pending_out, avail_out2, state.next_out);
@@ -1102,7 +1107,7 @@ arg5.deflate = function deflate(state, last_flush) {
                       }
                     } else {
                       if (tmp29) {
-                        state.adler = require("metro/12834__.js")(state.adler, state8.pending_buf, state8.pending - pending, pending);
+                        state.adler = 12834__(state.adler, state8.pending_buf, state8.pending - pending, pending);
                       }
                       state = state.state;
                       let avail_out = state.pending;
@@ -1112,7 +1117,7 @@ arg5.deflate = function deflate(state, last_flush) {
                       if (0 !== avail_out) {
                         diff = require;
                         diff = dependencyMap;
-                        const obj6 = require("12827_assign.js") /* assign */;
+                        const obj6 = assign /* assign */;
                         diff = obj6;
                         diff = avail_out;
                         diff = obj6.arraySet(state.output, state.pending_buf, state.pending_out, avail_out, state.next_out);
@@ -1130,7 +1135,7 @@ arg5.deflate = function deflate(state, last_flush) {
                     }
                   }
                   if (tmp40) {
-                    state.adler = require("metro/12834__.js")(state.adler, state8.pending_buf, state8.pending - pending2, pending2);
+                    state.adler = 12834__(state.adler, state8.pending_buf, state8.pending - pending2, pending2);
                   }
                   if (state8.gzindex === state8.gzhead.extra.length) {
                     state8.gzindex = 0;
@@ -1169,7 +1174,7 @@ arg5.deflate = function deflate(state, last_flush) {
                         let tmp47 = require;
                         let tmp48 = dependencyMap;
                         let tmp49 = pending3;
-                        state.adler = require("metro/12834__.js")(state.adler, state8.pending_buf, state8.pending - pending3, tmp44);
+                        state.adler = 12834__(state.adler, state8.pending_buf, state8.pending - pending3, tmp44);
                       }
                       let state3 = state.state;
                       let avail_out3 = state3.pending;
@@ -1179,7 +1184,7 @@ arg5.deflate = function deflate(state, last_flush) {
                       if (0 !== avail_out3) {
                         diff = require;
                         diff = dependencyMap;
-                        let obj8 = require("12827_assign.js") /* assign */;
+                        let obj8 = assign /* assign */;
                         diff = obj8;
                         diff = avail_out3;
                         diff = obj8.arraySet(state.output, state3.pending_buf, state3.pending_out, avail_out3, state.next_out);
@@ -1203,7 +1208,7 @@ arg5.deflate = function deflate(state, last_flush) {
                       let tmp53 = require;
                       let tmp54 = dependencyMap;
                       let tmp55 = pending4;
-                      state.adler = require("metro/12834__.js")(state.adler, state8.pending_buf, state8.pending - pending4, pending4);
+                      state.adler = 12834__(state.adler, state8.pending_buf, state8.pending - pending4, pending4);
                     }
                     if (0 === num46) {
                       state8.gzindex = 0;
@@ -1243,7 +1248,7 @@ arg5.deflate = function deflate(state, last_flush) {
                         let tmp59 = require;
                         let tmp60 = dependencyMap;
                         let tmp61 = pending5;
-                        state.adler = require("metro/12834__.js")(state.adler, state8.pending_buf, state8.pending - pending5, tmp56);
+                        state.adler = 12834__(state.adler, state8.pending_buf, state8.pending - pending5, tmp56);
                       }
                       let state4 = state.state;
                       let avail_out4 = state4.pending;
@@ -1253,7 +1258,7 @@ arg5.deflate = function deflate(state, last_flush) {
                       if (0 !== avail_out4) {
                         diff = require;
                         diff = dependencyMap;
-                        let obj9 = require("12827_assign.js") /* assign */;
+                        let obj9 = assign /* assign */;
                         diff = obj9;
                         diff = avail_out4;
                         diff = obj9.arraySet(state.output, state4.pending_buf, state4.pending_out, avail_out4, state.next_out);
@@ -1277,7 +1282,7 @@ arg5.deflate = function deflate(state, last_flush) {
                       let tmp65 = require;
                       let tmp66 = dependencyMap;
                       let tmp67 = pending6;
-                      state.adler = require("metro/12834__.js")(state.adler, state8.pending_buf, state8.pending - pending6, pending6);
+                      state.adler = 12834__(state.adler, state8.pending_buf, state8.pending - pending6, pending6);
                     }
                     if (0 === num53) {
                       let num55 = 103;
@@ -1299,7 +1304,7 @@ arg5.deflate = function deflate(state, last_flush) {
                     if (0 !== avail_out5) {
                       diff = require;
                       diff = dependencyMap;
-                      const obj10 = require("12827_assign.js") /* assign */;
+                      const obj10 = assign /* assign */;
                       diff = obj10;
                       diff = avail_out5;
                       diff = obj10.arraySet(state.output, state9.pending_buf, state9.pending_out, avail_out5, state.next_out);
@@ -1334,7 +1339,7 @@ arg5.deflate = function deflate(state, last_flush) {
                 if (0 !== avail_out6) {
                   diff = require;
                   diff = dependencyMap;
-                  const obj11 = require("12827_assign.js") /* assign */;
+                  const obj11 = assign /* assign */;
                   diff = obj11;
                   diff = avail_out6;
                   diff = obj11.arraySet(state.output, state5.pending_buf, state5.pending_out, avail_out6, state.next_out);
@@ -1365,7 +1370,7 @@ arg5.deflate = function deflate(state, last_flush) {
                   if (4 !== last_flush) {
                     diff = require;
                     diff = dependencyMap;
-                    state.msg = require("metro/12831__.js")[-5];
+                    state.msg = 12831__[-5];
                     return -5;
                   }
                 }
@@ -1375,7 +1380,7 @@ arg5.deflate = function deflate(state, last_flush) {
                 if (0 !== state.avail_in) {
                   diff = require;
                   diff = dependencyMap;
-                  state.msg = require("metro/12831__.js")[-5];
+                  state.msg = 12831__[-5];
                   return -5;
                 }
               }
@@ -1434,7 +1439,7 @@ arg5.deflate = function deflate(state, last_flush) {
                     if (0 !== avail_out8) {
                       diff = require;
                       diff = dependencyMap;
-                      const obj14 = require("12827_assign.js") /* assign */;
+                      const obj14 = assign /* assign */;
                       diff = obj14;
                       diff = avail_out8;
                       diff = obj14.arraySet(state.output, state7.pending_buf, state7.pending_out, avail_out8, state.next_out);
@@ -1471,7 +1476,7 @@ arg5.deflate = function deflate(state, last_flush) {
                   state8.match_length = 0;
                   let tmp99 = require;
                   diff = dependencyMap;
-                  let obj4 = require("12832_StaticTreeDesc.js") /* StaticTreeDesc */;
+                  let obj4 = StaticTreeDesc /* StaticTreeDesc */;
                   state8.lookahead = state8.lookahead - 1;
                   state8.strstart = state8.strstart + 1;
                   if (!obj4._tr_tally(state8, 0, state8.window[state8.strstart])) {
@@ -1621,7 +1626,7 @@ arg5.deflate = function deflate(state, last_flush) {
                   if (state8.match_length >= 3) {
                     let tmp88 = require;
                     let tmp89 = dependencyMap;
-                    let obj3 = require("12832_StaticTreeDesc.js") /* StaticTreeDesc */;
+                    let obj3 = StaticTreeDesc /* StaticTreeDesc */;
                     let _tr_tallyResult = obj3._tr_tally(state8, 1, state8.match_length - 3);
                     state8.lookahead = state8.lookahead - state8.match_length;
                     state8.strstart = state8.strstart + state8.match_length;
@@ -1629,7 +1634,7 @@ arg5.deflate = function deflate(state, last_flush) {
                   } else {
                     let tmp85 = require;
                     let tmp86 = dependencyMap;
-                    let obj2 = require("12832_StaticTreeDesc.js") /* StaticTreeDesc */;
+                    let obj2 = StaticTreeDesc /* StaticTreeDesc */;
                     _tr_tallyResult = obj2._tr_tally(state8, 0, state8.window[state8.strstart]);
                     state8.lookahead = state8.lookahead - 1;
                     state8.strstart = state8.strstart + 1;
@@ -1663,12 +1668,12 @@ arg5.deflate = function deflate(state, last_flush) {
                     if (1 === last_flush) {
                       diff = require;
                       diff = dependencyMap;
-                      diff = require("12832_StaticTreeDesc.js") /* StaticTreeDesc */._tr_align(state8);
-                      const obj5 = require("12832_StaticTreeDesc.js") /* StaticTreeDesc */;
+                      diff = StaticTreeDesc /* StaticTreeDesc */._tr_align(state8);
+                      const obj5 = StaticTreeDesc /* StaticTreeDesc */;
                     } else if (5 !== last_flush) {
                       diff = require;
                       diff = dependencyMap;
-                      const obj12 = require("12832_StaticTreeDesc.js") /* StaticTreeDesc */;
+                      const obj12 = StaticTreeDesc /* StaticTreeDesc */;
                       diff = obj12;
                       diff = state8;
                       diff = obj12._tr_stored_block(state8, 0, 0, false);
@@ -1696,7 +1701,7 @@ arg5.deflate = function deflate(state, last_flush) {
                     if (0 !== avail_out7) {
                       diff = require;
                       diff = dependencyMap;
-                      const obj13 = require("12827_assign.js") /* assign */;
+                      const obj13 = assign /* assign */;
                       diff = obj13;
                       diff = avail_out7;
                       diff = obj13.arraySet(state.output, state6.pending_buf, state6.pending_out, avail_out7, state.next_out);
@@ -1728,7 +1733,7 @@ arg5.deflate = function deflate(state, last_flush) {
           }
           diff = require;
           diff = dependencyMap;
-          state.msg = require("metro/12831__.js")[num88];
+          state.msg = 12831__[num88];
           return num88;
         }
       }
@@ -1737,7 +1742,7 @@ arg5.deflate = function deflate(state, last_flush) {
   if (state) {
     diff = require;
     diff = dependencyMap;
-    state.msg = require("metro/12831__.js")[-2];
+    state.msg = 12831__[-2];
   }
   return -2;
 };
@@ -1752,7 +1757,7 @@ arg5.deflateEnd = function deflateEnd(state) {
           if (73 !== status) {
             if (91 !== status) {
               if (status !== 103) {
-                state.msg = require("metro/12831__.js")[-2];
+                state.msg = 12831__[-2];
                 let num10 = -2;
               }
             }
@@ -1762,7 +1767,7 @@ arg5.deflateEnd = function deflateEnd(state) {
       state.state = null;
       num10 = 0;
       if (status === 113) {
-        state.msg = require("metro/12831__.js")[-3];
+        state.msg = 12831__[-3];
         num10 = -3;
       }
     }
@@ -1781,7 +1786,7 @@ arg5.deflateSetDictionary = function deflateSetDictionary(strm, dictionary) {
         if (1 !== wrap) {
           if (!state.lookahead) {
             if (tmp23) {
-              strm.adler = require("12833_adler32.js") /* adler32 */(strm.adler, dictionary, length, 0);
+              strm.adler = adler32 /* adler32 */(strm.adler, dictionary, length, 0);
             }
             state.wrap = 0;
             let tmp5 = dictionary;
@@ -1800,8 +1805,8 @@ arg5.deflateSetDictionary = function deflateSetDictionary(strm, dictionary) {
                 state.block_start = 0;
                 state.insert = 0;
               }
-              const buf8 = new require("12827_assign.js") /* assign */.Buf8(state.w_size);
-              const obj = require("12827_assign.js") /* assign */;
+              const buf8 = new assign /* assign */.Buf8(state.w_size);
+              const obj = assign /* assign */;
               obj.arraySet(buf8, dictionary, length - state.w_size, state.w_size, 0);
               w_size = state.w_size;
               tmp5 = buf8;

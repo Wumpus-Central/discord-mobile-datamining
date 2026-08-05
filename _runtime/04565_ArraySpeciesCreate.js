@@ -1,8 +1,10 @@
+import { isInteger } from "04566_isInteger.js";
+import { 00541__ } from "metro/00541__.js";
 // _runtime/04565_ArraySpeciesCreate.js
 let closure_2 = require("getEvalledConstructor")("%Symbol.species%", true);
 
 export default function ArraySpeciesCreate(arg0, arg1) {
-  if (require("04566_isInteger.js") /* isInteger */(arg1)) {
+  if (isInteger /* isInteger */(arg1)) {
     if (arg1 >= 0) {
       if (tmp(4567)(arg0)) {
         const tmp3 = tmp(4575)(arg0, "constructor");
@@ -31,5 +33,5 @@ export default function ArraySpeciesCreate(arg0, arg1) {
       }
     }
   }
-  throw new require("metro/00541__.js")("Assertion failed: length must be an integer >= 0");
+  throw new 00541__("Assertion failed: length must be an integer >= 0");
 };

@@ -1,3 +1,5 @@
+import { bind } from "00573_bind.js";
+import { 00542__ } from "metro/00542__.js";
 // _runtime/01396_isRegex.js
 import callBoundIntrinsic from "callBoundIntrinsic";
 
@@ -18,9 +20,9 @@ if (tmp) {
   function isRegex(obj) {
     if (obj) {
       if (typeof obj === "object") {
-        const tmp8 = require("metro/00542__.js")(obj, "lastIndex");
+        const tmp8 = 00542__(obj, "lastIndex");
         if (tmp8) {
-          if (require("00573_bind.js") /* bind */(tmp8, "value")) {
+          if (bind /* bind */(tmp8, "value")) {
             try {
               callback(obj, obj);
             } catch (tmp4) {

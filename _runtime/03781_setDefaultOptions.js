@@ -1,3 +1,4 @@
+import { getDefaultOptions } from "03369_getDefaultOptions.js";
 // _runtime/03781_setDefaultOptions.js
 import requiredArgs from "requiredArgs";
 
@@ -12,7 +13,7 @@ if (!requiredArgs) {
 export default function setDefaultOptions(obj) {
   tmp3.default(1, arguments);
   obj = {};
-  const defaultOptions = require("03369_getDefaultOptions.js") /* getDefaultOptions */.getDefaultOptions();
+  const defaultOptions = getDefaultOptions /* getDefaultOptions */.getDefaultOptions();
   for (const key10017 in defaultOptions) {
     let tmp8 = key10017;
     let _Object = Object;
@@ -53,6 +54,6 @@ export default function setDefaultOptions(obj) {
     }
     continue;
   }
-  require("03369_getDefaultOptions.js") /* getDefaultOptions */.setDefaultOptions(obj);
+  getDefaultOptions /* getDefaultOptions */.setDefaultOptions(obj);
 };
 export default exports.default;

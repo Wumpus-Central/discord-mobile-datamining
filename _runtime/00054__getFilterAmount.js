@@ -1,3 +1,4 @@
+import { processColor } from "00050_processColor.js";
 // _runtime/00054__getFilterAmount.js
 import _slicedToArray from "_slicedToArray";
 
@@ -225,7 +226,7 @@ function parseDropShadow(str) {
           } else if ("color" === tmp10) {
             let tmp11 = importDefault;
             let tmp12 = dependencyMap;
-            let tmp13 = require("00050_processColor.js")(tmp2.color);
+            let tmp13 = processColor(tmp2.color);
             if (null == tmp13) {
               return null;
             } else {

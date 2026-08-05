@@ -1,3 +1,6 @@
+import { Link } from "01481_Link.js";
+import { enableScreens } from "04631_enableScreens.js";
+import { useNavigationHeaderAccessibilityRefreshKey } from "08387_useNavigationHeaderAccessibilityRefreshKey.js";
 // _runtime/08385_StyleSheet.js
 import _slicedToArray from "_slicedToArray";
 import "noop";
@@ -57,7 +60,7 @@ export default function HeaderConfig(arg0) {
   }
   ({ headerBackVisible, headerShadowVisible, headerLargeTitle, headerBackground, headerLeft, headerRight, headerTintColor, headerTitle, headerTitleAlign, headerTransparent, headerSearchBarOptions, UNSTABLE_headerInsets, canGoBack } = arg0);
   ({ headerLargeStyle, headerLargeTitleShadowVisible, headerLargeTitleStyle, headerShown, headerStyle, headerBlurEffect, headerTitleStyle, headerTopInsetEnabled, route, title } = arg0);
-  let obj = require("01481_Link.js") /* Link */;
+  let obj = Link /* Link */;
   const colors = obj.useTheme().colors;
   let text = headerTintColor;
   if (headerTintColor == null) {
@@ -114,7 +117,7 @@ export default function HeaderConfig(arg0) {
     obj2[1] = headerTitle;
     headerTitleResult = headerTitle(obj2);
   }
-  require("08387_useNavigationHeaderAccessibilityRefreshKey.js")();
+  useNavigationHeaderAccessibilityRefreshKey();
   const isSearchBarAvailableForCurrentPlatform = tmp(4631).isSearchBarAvailableForCurrentPlatform;
   let isSearchBarAvailableForCurrentPlatform2 = typeof isSearchBarAvailableForCurrentPlatform === "boolean";
   if (typeof isSearchBarAvailableForCurrentPlatform === "boolean") {
@@ -158,7 +161,7 @@ export default function HeaderConfig(arg0) {
     backgroundColor = str3;
   }
   obj3[1] = backgroundColor;
-  if (require("04631_enableScreens.js") /* enableScreens */.isNewBackTitleImplementation) {
+  if (enableScreens /* enableScreens */.isNewBackTitleImplementation) {
     let str4 = headerBackTitle;
   } else {
     str4 = " ";
@@ -299,5 +302,5 @@ export default function HeaderConfig(arg0) {
   }
   items3[3] = tmp48;
   obj3[31] = items3;
-  return closure_9(require("04631_enableScreens.js") /* enableScreens */.ScreenStackHeaderConfig, obj3);
+  return closure_9(enableScreens /* enableScreens */.ScreenStackHeaderConfig, obj3);
 };

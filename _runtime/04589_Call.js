@@ -1,3 +1,4 @@
+import { getEvalledConstructor } from "04567_getEvalledConstructor.js";
 // _runtime/04589_Call.js
 let tmp = require("getEvalledConstructor")("%Reflect.apply%", true);
 if (!tmp) {
@@ -6,7 +7,7 @@ if (!tmp) {
 
 export default function Call(arg0, arg1) {
   const tmp = arguments.length > 2 ? arguments[2] : [];
-  if (require("04567_getEvalledConstructor.js") /* getEvalledConstructor */(tmp)) {
+  if (getEvalledConstructor /* getEvalledConstructor */(tmp)) {
     return tmp(arg0, arg1, tmp);
   } else {
     const tmp6 = new tmp2(541)("Assertion failed: optional `argumentsList`, if provided, must be a List");

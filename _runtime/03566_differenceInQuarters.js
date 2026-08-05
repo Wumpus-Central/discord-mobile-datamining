@@ -1,3 +1,4 @@
+import { getRoundingMethod } from "03558_getRoundingMethod.js";
 // _runtime/03566_differenceInQuarters.js
 import differenceInMonths from "differenceInMonths";
 import requiredArgs from "requiredArgs";
@@ -25,6 +26,6 @@ export default function differenceInQuarters(arg0, arg1, roundingMethod) {
   if (null != roundingMethod) {
     roundingMethod = roundingMethod.roundingMethod;
   }
-  return require("03558_getRoundingMethod.js") /* getRoundingMethod */.getRoundingMethod(roundingMethod)(result);
+  return getRoundingMethod /* getRoundingMethod */.getRoundingMethod(roundingMethod)(result);
 };
 export default exports.default;

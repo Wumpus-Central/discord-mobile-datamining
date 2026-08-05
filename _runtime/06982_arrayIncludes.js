@@ -1,3 +1,4 @@
+import { baseIndexOf } from "06983_baseIndexOf.js";
 // _runtime/06982_arrayIncludes.js
 
 export default function arrayIncludes(arg0, arg1) {
@@ -7,7 +8,7 @@ export default function arrayIncludes(arg0, arg1) {
   }
   let tmp = num;
   if (tmp) {
-    tmp = require("06983_baseIndexOf.js") /* baseIndexOf */(arg0, arg1, 0) > -1;
+    tmp = baseIndexOf /* baseIndexOf */(arg0, arg1, 0) > -1;
   }
   return tmp;
 };

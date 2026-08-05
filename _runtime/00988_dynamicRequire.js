@@ -1,3 +1,4 @@
+import { getSDKSource } from "00989_getSDKSource.js";
 // _runtime/00988_dynamicRequire.js
 const require = arg1;
 let dependencyMap = arg4;
@@ -7,7 +8,7 @@ function dynamicRequire(require) {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.isNodeEnv = function isNodeEnv() {
-  const isBrowserBundleResult = require("00989_getSDKSource.js") /* getSDKSource */.isBrowserBundle();
+  const isBrowserBundleResult = getSDKSource /* getSDKSource */.isBrowserBundle();
   if (isBrowserBundleResult) {
     return !isBrowserBundleResult;
   } else {

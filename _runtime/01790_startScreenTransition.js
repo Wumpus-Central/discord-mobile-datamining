@@ -1,3 +1,4 @@
+import { computeEasingProgress } from "01792_computeEasingProgress.js";
 // _runtime/01790_startScreenTransition.js
 import configureProps from "configureProps";
 
@@ -47,7 +48,7 @@ function finishScreenTransition(stackTag) {
     }
     str = str2;
   }
-  require("01792_computeEasingProgress.js") /* computeEasingProgress */.getSwipeSimulator(sharedEvent.value, stackTag, str)();
+  computeEasingProgress /* computeEasingProgress */.getSwipeSimulator(sharedEvent.value, stackTag, str)();
 }
 obj = { getLockAxis, getSwipeSimulator: require("computeEasingProgress").getSwipeSimulator };
 finishScreenTransition.__closure = obj;

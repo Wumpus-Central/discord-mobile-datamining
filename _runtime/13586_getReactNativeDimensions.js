@@ -1,3 +1,4 @@
+import { getReactNativeDimensionsWithDimensions } from "13587_getReactNativeDimensionsWithDimensions.js";
 // _runtime/13586_getReactNativeDimensions.js
 import get_ActivityIndicator from "get ActivityIndicator";
 
@@ -8,7 +9,7 @@ export default function getReactNativeDimensions() {
     try {
       const Dimensions2 = get_ActivityIndicator.Dimensions;
       const value = Dimensions2.get("window");
-      return require("13587_getReactNativeDimensionsWithDimensions.js") /* getReactNativeDimensionsWithDimensions */.getReactNativeDimensionsWithDimensions(tmp2, value);
+      return getReactNativeDimensionsWithDimensions /* getReactNativeDimensionsWithDimensions */.getReactNativeDimensionsWithDimensions(tmp2, value);
     } catch (err) {
     }
   } catch (err) {

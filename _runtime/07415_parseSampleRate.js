@@ -1,3 +1,5 @@
+import { consoleSandbox } from "07375_consoleSandbox.js";
+import { __SENTRY_DEBUG__ } from "metro/07403___SENTRY_DEBUG__.js";
 // _runtime/07415_parseSampleRate.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -21,8 +23,8 @@ arg5.parseSampleRate = function parseSampleRate(flag) {
         }
       }
     }
-    if (require("metro/07403___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
-      const logger = require("07375_consoleSandbox.js") /* consoleSandbox */.logger;
+    if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+      const logger = consoleSandbox /* consoleSandbox */.logger;
       const _JSON = JSON;
       const json = JSON.stringify(flag);
       const _JSON2 = JSON;

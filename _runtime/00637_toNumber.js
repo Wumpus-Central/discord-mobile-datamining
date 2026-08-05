@@ -1,3 +1,4 @@
+import { isSymbol } from "00638_isSymbol.js";
 // _runtime/00637_toNumber.js
 const re2 = /^[-+]0x[0-9a-f]+$/i;
 const re3 = /^0b[01]+$/i;
@@ -6,7 +7,7 @@ const re4 = /^0o[0-7]+$/i;
 export default function toNumber(num) {
   if (typeof num === "number") {
     return num;
-  } else if (require("00638_isSymbol.js") /* isSymbol */(num)) {
+  } else if (isSymbol /* isSymbol */(num)) {
     return NaN;
   } else {
     let tmp = num;

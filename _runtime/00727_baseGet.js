@@ -1,7 +1,8 @@
+import { castPath } from "00728_castPath.js";
 // _runtime/00727_baseGet.js
 
 export default function baseGet(arg0, arg1) {
-  const arr = require("00728_castPath.js") /* castPath */(arg1, arg0);
+  const arr = castPath /* castPath */(arg1, arg0);
   let num = 0;
   let tmp = arg0;
   if (null != arg0) {

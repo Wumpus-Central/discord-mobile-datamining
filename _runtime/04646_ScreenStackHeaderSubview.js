@@ -1,3 +1,5 @@
+import { context } from "04647_context.js";
+import { __INTERNAL_VIEW_CONFIG } from "metro/04650___INTERNAL_VIEW_CONFIG.js";
 // _runtime/04646_ScreenStackHeaderSubview.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -17,7 +19,7 @@ const forwardRefResult = require("noop").forwardRef((disableLeftInsetApplication
   let consumeRightInset;
   let headerLeftBarButtonItems;
   let headerRightBarButtonItems;
-  let obj = require("04647_context.js") /* context */;
+  let obj = context /* context */;
   let flag = disableLeftInsetApplication.disableLeftInsetApplication;
   if (flag == null) {
     flag = false;
@@ -190,47 +192,47 @@ export const ScreenStackHeaderSubview = require("__INTERNAL_VIEW_CONFIG");
 export const ScreenStackHeaderConfig = forwardRefResult;
 export const ScreenStackHeaderBackButtonImage = (arg0) => {
   let obj = { type: "back", style: closure_9.headerSubview, synchronousShadowStateUpdatesEnabled: null, children: null };
-  obj[2] = require("04644_get_controlledBottomTabs.js").experiment.synchronousHeaderSubviewUpdatesEnabled;
+  obj[2] = require("04644_get_controlledBottomTabs.js") /* get controlledBottomTabs */.experiment.synchronousHeaderSubviewUpdatesEnabled;
   obj = { resizeMode: "center", fadeDuration: 0 };
   const merged = Object.assign(arg0);
   obj[3] = <closure_7 resizeMode="center" fadeDuration={0} />;
-  return jsx(require("metro/04650___INTERNAL_VIEW_CONFIG.js"), { resizeMode: "center", fadeDuration: 0 });
+  return jsx(__INTERNAL_VIEW_CONFIG, { resizeMode: "center", fadeDuration: 0 });
 };
 export const ScreenStackHeaderRightView = (style) => {
   const obj = {};
   const tmp = callback(style, closure_3);
   const merged = Object.assign(tmp);
   obj.type = "right";
-  obj.synchronousShadowStateUpdatesEnabled = require("04644_get_controlledBottomTabs.js").experiment.synchronousHeaderSubviewUpdatesEnabled;
+  obj.synchronousShadowStateUpdatesEnabled = require("04644_get_controlledBottomTabs.js") /* get controlledBottomTabs */.experiment.synchronousHeaderSubviewUpdatesEnabled;
   const items = [closure_9.headerSubview, style.style];
   obj.style = items;
-  return jsx(require("metro/04650___INTERNAL_VIEW_CONFIG.js"), {});
+  return jsx(__INTERNAL_VIEW_CONFIG, {});
 };
 export const ScreenStackHeaderLeftView = (style) => {
   const obj = {};
   const tmp = callback(style, closure_4);
   const merged = Object.assign(tmp);
   obj.type = "left";
-  obj.synchronousShadowStateUpdatesEnabled = require("04644_get_controlledBottomTabs.js").experiment.synchronousHeaderSubviewUpdatesEnabled;
+  obj.synchronousShadowStateUpdatesEnabled = require("04644_get_controlledBottomTabs.js") /* get controlledBottomTabs */.experiment.synchronousHeaderSubviewUpdatesEnabled;
   const items = [closure_9.headerSubview, style.style];
   obj.style = items;
-  return jsx(require("metro/04650___INTERNAL_VIEW_CONFIG.js"), {});
+  return jsx(__INTERNAL_VIEW_CONFIG, {});
 };
 export const ScreenStackHeaderCenterView = (style) => {
   const obj = {};
   const tmp = callback(style, closure_5);
   const merged = Object.assign(tmp);
   obj.type = "center";
-  obj.synchronousShadowStateUpdatesEnabled = require("04644_get_controlledBottomTabs.js").experiment.synchronousHeaderSubviewUpdatesEnabled;
+  obj.synchronousShadowStateUpdatesEnabled = require("04644_get_controlledBottomTabs.js") /* get controlledBottomTabs */.experiment.synchronousHeaderSubviewUpdatesEnabled;
   const items = [closure_9.headerSubviewCenter, style.style];
   obj.style = items;
-  return jsx(require("metro/04650___INTERNAL_VIEW_CONFIG.js"), {});
+  return jsx(__INTERNAL_VIEW_CONFIG, {});
 };
 export const ScreenStackHeaderSearchBarView = (arg0) => {
   const obj = {};
   const merged = Object.assign(arg0);
   obj.type = "searchBar";
-  obj.synchronousShadowStateUpdatesEnabled = require("04644_get_controlledBottomTabs.js").experiment.synchronousHeaderSubviewUpdatesEnabled;
+  obj.synchronousShadowStateUpdatesEnabled = require("04644_get_controlledBottomTabs.js") /* get controlledBottomTabs */.experiment.synchronousHeaderSubviewUpdatesEnabled;
   obj.style = closure_9.headerSubview;
-  return jsx(require("metro/04650___INTERNAL_VIEW_CONFIG.js"), {});
+  return jsx(__INTERNAL_VIEW_CONFIG, {});
 };

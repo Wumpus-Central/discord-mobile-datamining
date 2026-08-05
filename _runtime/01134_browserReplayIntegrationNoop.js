@@ -1,3 +1,4 @@
+import { init } from "01135_init.js";
 // _runtime/01134_browserReplayIntegrationNoop.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -48,8 +49,8 @@ arg5.browserReplayIntegration = () => {
     const items1 = [".sentry-react-native-unmask:not(.sentry-react-native-mask *) > *"];
     HermesBuiltin.arraySpread(tmp8, 1);
     obj[1] = items1;
-    replayIntegrationResult = require("01135_init.js") /* init */.replayIntegration(Object.assign(merged, obj));
-    const tmpResult = require("01135_init.js") /* init */;
+    replayIntegrationResult = init /* init */.replayIntegration(Object.assign(merged, obj));
+    const tmpResult = init /* init */;
   }
   return replayIntegrationResult;
 };

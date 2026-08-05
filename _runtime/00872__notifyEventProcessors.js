@@ -1,3 +1,5 @@
+import { SyncPromise } from "00873_SyncPromise.js";
+import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
 // _runtime/00872__notifyEventProcessors.js
 const require = arg1;
 let dependencyMap = arg6;
@@ -10,7 +12,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
       const obj = {};
       const merged = Object.assign(arg0);
       const tmpResult = tmp(obj, arg1);
-      let DEBUG_BUILD = _require("metro/00823___SENTRY_DEBUG__.js").DEBUG_BUILD;
+      let DEBUG_BUILD = ___SENTRY_DEBUG__.DEBUG_BUILD;
       if (DEBUG_BUILD) {
         DEBUG_BUILD = null === tmpResult;
       }
@@ -959,11 +961,11 @@ arg5.notifyEventProcessors = function notifyEventProcessors(arg0, arg1, arg2) {
     if (obj.isThenable(tmp7)) {
       let resolvedSyncPromiseResult = tmp7;
     } else {
-      resolvedSyncPromiseResult = require("00873_SyncPromise.js") /* SyncPromise */.resolvedSyncPromise(tmp7);
-      const tmp10Result = require("00873_SyncPromise.js") /* SyncPromise */;
+      resolvedSyncPromiseResult = SyncPromise /* SyncPromise */.resolvedSyncPromise(tmp7);
+      const tmp10Result = SyncPromise /* SyncPromise */;
     }
     return resolvedSyncPromiseResult;
   } catch (tmp17) {
-    return require("00873_SyncPromise.js") /* SyncPromise */.rejectedSyncPromise(tmp17);
+    return SyncPromise /* SyncPromise */.rejectedSyncPromise(tmp17);
   }
 };

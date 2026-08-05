@@ -1,3 +1,5 @@
+import { extractOpacity } from "08443_extractOpacity.js";
+import { extractBrush } from "08455_extractBrush.js";
 // _runtime/08475_extractFeFlood.js
 import noop from "noop";
 
@@ -11,11 +13,11 @@ export default function extractFeFlood(arg0) {
   if (null == floodColor) {
     let tmp = obj;
   } else {
-    tmp = require("08455_extractBrush.js")(floodColor);
+    tmp = extractBrush(floodColor);
   }
   obj = { floodColor: tmp };
   if (null != floodOpacity) {
-    obj.floodOpacity = require("08443_extractOpacity.js")(floodOpacity);
+    obj.floodOpacity = extractOpacity(floodOpacity);
   }
   return obj;
 };

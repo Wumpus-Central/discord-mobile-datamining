@@ -1,8 +1,12 @@
+import { addNonEnumerableProperty } from "07381_addNonEnumerableProperty.js";
+import { baggageHeaderToDynamicSamplingContext } from "07388_baggageHeaderToDynamicSamplingContext.js";
+import { getClient } from "07402_getClient.js";
+import { 07412__ } from "metro/07412__.js";
 // _runtime/07411_getDynamicSamplingContextFromSpan.js
 const require = arg1;
 const dependencyMap = arg6;
 function getDynamicSamplingContextFromSpan(spanContext) {
-  let obj = require("07402_getClient.js") /* getClient */;
+  let obj = getClient /* getClient */;
   const client = obj.getClient();
   if (client) {
     let tmpResult = tmp(7380);
@@ -65,14 +69,14 @@ function getDynamicSamplingContextFromSpan(spanContext) {
 }
 const _frozenDsc = "_frozenDsc";
 arg5.freezeDscOnSpan = function freezeDscOnSpan(arg0, arg1) {
-  const result = require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */.addNonEnumerableProperty(arg0, _frozenDsc, arg1);
+  const result = addNonEnumerableProperty /* addNonEnumerableProperty */.addNonEnumerableProperty(arg0, _frozenDsc, arg1);
 };
 arg5.getDynamicSamplingContextFromClient = function getDynamicSamplingContextFromClient(trace_id, getOptions) {
   const options = getOptions.getOptions();
-  let obj = require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */;
+  let obj = addNonEnumerableProperty /* addNonEnumerableProperty */;
   let DEFAULT_ENVIRONMENT = options.environment;
   if (!DEFAULT_ENVIRONMENT) {
-    DEFAULT_ENVIRONMENT = require("metro/07412__.js").DEFAULT_ENVIRONMENT;
+    DEFAULT_ENVIRONMENT = 07412__.DEFAULT_ENVIRONMENT;
   }
   obj = { environment: DEFAULT_ENVIRONMENT, release: options.release, public_key: getOptions.getDsn() || {}.publicKey, trace_id };
   const dropUndefinedKeysResult = obj.dropUndefinedKeys(obj);
@@ -84,7 +88,7 @@ arg5.getDynamicSamplingContextFromScope = function getDynamicSamplingContextFrom
   let dsc = propagationContext.dsc;
   if (!dsc) {
     const options = getOptions.getOptions();
-    let obj = require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */;
+    let obj = addNonEnumerableProperty /* addNonEnumerableProperty */;
     let DEFAULT_ENVIRONMENT = options.environment;
     if (!DEFAULT_ENVIRONMENT) {
       DEFAULT_ENVIRONMENT = tmp5(7412).DEFAULT_ENVIRONMENT;
@@ -105,5 +109,5 @@ arg5.getDynamicSamplingContextFromScope = function getDynamicSamplingContextFrom
 arg5.getDynamicSamplingContextFromSpan = getDynamicSamplingContextFromSpan;
 arg5.spanToBaggageHeader = function spanToBaggageHeader(arg0) {
   const tmp = getDynamicSamplingContextFromSpan(arg0);
-  return require("07388_baggageHeaderToDynamicSamplingContext.js") /* baggageHeaderToDynamicSamplingContext */.dynamicSamplingContextToSentryBaggageHeader(tmp);
+  return baggageHeaderToDynamicSamplingContext /* baggageHeaderToDynamicSamplingContext */.dynamicSamplingContextToSentryBaggageHeader(tmp);
 };

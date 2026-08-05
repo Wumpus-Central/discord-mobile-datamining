@@ -1,3 +1,5 @@
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
+import { 01158__ } from "metro/01158__.js";
 // _runtime/01160_startIdleSpan.js
 import { AppState } from "get ActivityIndicator";
 
@@ -7,7 +9,7 @@ function startIdleSpan(name) {
   let finalTimeout;
   let idleTimeout;
   ({ finalTimeout, idleTimeout } = arg1);
-  let obj = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
+  let obj = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
   const client = obj.getClient();
   if (client) {
     if ("background" === AppState.currentState) {
@@ -64,9 +66,9 @@ export const startIdleNavigationSpan = (arg0) => {
   if (flag === undefined) {
     flag = false;
   }
-  let obj1 = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
+  let obj1 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
   const client = obj1.getClient();
-  const obj3 = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
+  const obj3 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
   if (client) {
     const activeSpan = obj3.getActiveSpan();
     let isRootSpanResult = activeSpan;
@@ -130,13 +132,13 @@ export const startIdleNavigationSpan = (arg0) => {
 export { startIdleSpan };
 export const getDefaultIdleNavigationSpanOptions = function getDefaultIdleNavigationSpanOptions() {
   const obj = { name: c3, op: "navigation", forceTransaction: true, scope: null };
-  obj[3] = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.getCurrentScope();
+  obj[3] = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.getCurrentScope();
   return obj;
 };
 export const isSentryInteractionSpan = function isSentryInteractionSpan(activeSpan) {
-  const items = [require("metro/01158__.js").SPAN_ORIGIN_AUTO_INTERACTION, require("metro/01158__.js").SPAN_ORIGIN_MANUAL_INTERACTION];
-  const obj = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
-  return items.includes(require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.spanToJSON(activeSpan).origin || "");
+  const items = [01158__.SPAN_ORIGIN_AUTO_INTERACTION, 01158__.SPAN_ORIGIN_MANUAL_INTERACTION];
+  const obj = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
+  return items.includes(registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.spanToJSON(activeSpan).origin || "");
 };
 export const SCOPE_SPAN_FIELD = "_sentrySpan";
 export const clearActiveSpanFromScope = function clearActiveSpanFromScope(currentScope) {

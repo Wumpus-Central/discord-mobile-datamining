@@ -1,3 +1,6 @@
+import { getDataView } from "../04897_getDataView.js";
+import { readTag } from "../04917_readTag.js";
+import { importDefaultResult1 } from "../04918_importDefaultResult1.js";
 // _runtime/metro/04941__.js
 const require = arg1;
 const module = arg2;
@@ -9,8 +12,8 @@ arg5.default = {
     let obj = module(4902);
     const byteOrder = obj.getByteOrder(byteLength, arg1 + arg2 + 8);
     const sum = arg1 + arg2;
-    let obj1 = require("../04917_readTag.js") /* readTag */;
-    const ifd = obj1.readIfd(byteLength, require("../04918_importDefaultResult1.js") /* importDefaultResult1 */.IFD_TYPE_PENTAX, sum, sum + 10, byteOrder, arg3, true);
+    let obj1 = readTag /* readTag */;
+    const ifd = obj1.readIfd(byteLength, importDefaultResult1 /* importDefaultResult1 */.IFD_TYPE_PENTAX, sum, sum + 10, byteOrder, arg3, true);
     let LevelInfo = ifd.PentaxModelID;
     if (LevelInfo) {
       LevelInfo = ifd.PentaxModelID.value === obj.K3_III;
@@ -65,10 +68,10 @@ arg5.default = {
         obj2[1] = "" + -0.5 * int161;
         obj.PitchAngle = obj2;
       }
-      const tmp7Result = require("../04897_getDataView.js") /* getDataView */;
+      const tmp7Result = getDataView /* getDataView */;
       delete tmp[tmp2];
-      tmp10 = require("../04897_getDataView.js") /* getDataView */.objectAssign({}, ifd, obj);
-      const objectAssignResult = require("../04897_getDataView.js") /* getDataView */.objectAssign({}, ifd, obj);
+      tmp10 = getDataView /* getDataView */.objectAssign({}, ifd, obj);
+      const objectAssignResult = getDataView /* getDataView */.objectAssign({}, ifd, obj);
     }
     return tmp10;
   },

@@ -1,3 +1,4 @@
+import { ignoreNextOnError } from "01028_ignoreNextOnError.js";
 // _runtime/01091_baggageHeaderHasSentryValues.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -20,7 +21,7 @@ arg5.createHeadersSafely = function createHeadersSafely(request_headers) {
 arg5.getFullURL = function getFullURL(arg0) {
   try {
     const _URL = URL;
-    const uRL = new URL(arg0, require("01028_ignoreNextOnError.js") /* ignoreNextOnError */.WINDOW.location.origin);
+    const uRL = new URL(arg0, ignoreNextOnError /* ignoreNextOnError */.WINDOW.location.origin);
     return uRL.href;
   } catch (err) {
   }

@@ -1,3 +1,4 @@
+import { _isNativeReflectConstruct } from "00189__isNativeReflectConstruct.js";
 // _runtime/00289_getExtendedError.js
 import "noop";
 
@@ -11,19 +12,19 @@ function getExtendedError(value, componentStack) {
     } catch (err) {
     }
   } else if (typeof value === "string") {
-    let syntheticError = new require("00189__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.SyntheticError(value);
+    let syntheticError = new _isNativeReflectConstruct /* _isNativeReflectConstruct */.SyntheticError(value);
   } else {
-    syntheticError = new require("00189__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.SyntheticError("Unspecified error");
+    syntheticError = new _isNativeReflectConstruct /* _isNativeReflectConstruct */.SyntheticError("Unspecified error");
   }
 }
 
 export const onUncaughtError = function onUncaughtError(value, componentStack) {
   const tmp = getExtendedError(value, componentStack);
-  require("00189__isNativeReflectConstruct.js").handleException(tmp, true);
+  _isNativeReflectConstruct.handleException(tmp, true);
 };
 export const onCaughtError = function onCaughtError(value, componentStack) {
   const tmp = getExtendedError(value, componentStack);
-  require("00189__isNativeReflectConstruct.js").handleException(tmp, false);
+  _isNativeReflectConstruct.handleException(tmp, false);
 };
 export const onRecoverableError = function onRecoverableError(value, componentStack) {
   console.warn(getExtendedError(value, componentStack));

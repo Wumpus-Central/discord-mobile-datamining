@@ -1,3 +1,5 @@
+import { TurboModuleRegistry } from "00997_TurboModuleRegistry.js";
+import { isHermesEnabled } from "01002_isHermesEnabled.js";
 // _runtime/01196_isModalSupported.js
 import { Alert } from "get ActivityIndicator";
 
@@ -5,7 +7,7 @@ import { Alert } from "get ActivityIndicator";
 export const isModalSupported = function isModalSupported() {
   let major;
   let minor;
-  const ReactNativeVersion = require("00997_TurboModuleRegistry.js") /* TurboModuleRegistry */.ReactNativeLibraries.ReactNativeVersion;
+  const ReactNativeVersion = TurboModuleRegistry /* TurboModuleRegistry */.ReactNativeLibraries.ReactNativeVersion;
   let version;
   if (null !== ReactNativeVersion) {
     if (undefined !== ReactNativeVersion) {
@@ -16,7 +18,7 @@ export const isModalSupported = function isModalSupported() {
     version = {};
   }
   ({ minor, major } = version);
-  let isFabricEnabledResult = require("01002_isHermesEnabled.js") /* isHermesEnabled */.isFabricEnabled();
+  let isFabricEnabledResult = isHermesEnabled /* isHermesEnabled */.isFabricEnabled();
   if (isFabricEnabledResult) {
     isFabricEnabledResult = 0 === major;
   }
@@ -31,7 +33,7 @@ export const isModalSupported = function isModalSupported() {
 export const isNativeDriverSupportedForColorAnimations = function isNativeDriverSupportedForColorAnimations() {
   let major;
   let minor;
-  const ReactNativeVersion = require("00997_TurboModuleRegistry.js") /* TurboModuleRegistry */.ReactNativeLibraries.ReactNativeVersion;
+  const ReactNativeVersion = TurboModuleRegistry /* TurboModuleRegistry */.ReactNativeLibraries.ReactNativeVersion;
   let version;
   if (null !== ReactNativeVersion) {
     if (undefined !== ReactNativeVersion) {
@@ -69,7 +71,7 @@ export const base64ToUint8Array = (closure_0) => {
       const uint8Array = new Uint8Array(items.map((str) => str.charCodeAt(0)));
       return uint8Array;
     }
-    obj = require("01002_isHermesEnabled.js") /* isHermesEnabled */;
+    obj = isHermesEnabled /* isHermesEnabled */;
   }
   const error = new Error("atob is not available in this environment.");
   throw error;

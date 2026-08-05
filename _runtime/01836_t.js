@@ -1,3 +1,4 @@
+import { cancelAnimation } from "01606_cancelAnimation.js";
 // _runtime/01836_t.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -9,8 +10,8 @@ const fn = function t(arg0, arg1, arg2) {
       const items = [0, arg1];
       const _Math = Math;
       const items1 = [0, Math.max(arg1 - arg2, 0)];
-      interpolateResult = require("01606_cancelAnimation.js") /* cancelAnimation */.interpolate(arg0, items, items1);
-      const obj = require("01606_cancelAnimation.js") /* cancelAnimation */;
+      interpolateResult = cancelAnimation /* cancelAnimation */.interpolate(arg0, items, items1);
+      const obj = cancelAnimation /* cancelAnimation */;
     }
   }
   return interpolateResult;

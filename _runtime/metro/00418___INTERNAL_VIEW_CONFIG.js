@@ -1,3 +1,4 @@
+import { renderElement } from "../00114_renderElement.js";
 // _runtime/metro/00418___INTERNAL_VIEW_CONFIG.js
 import "noop";
 import processColorElement from "processColorElement";
@@ -15,7 +16,7 @@ obj[2] = obj;
 obj = {
   setNativeRefreshing(_nativeRef, refreshing) {
     const items = [refreshing];
-    require("../00114_renderElement.js") /* renderElement */.dispatchCommand(_nativeRef, "setNativeRefreshing", items);
+    renderElement /* renderElement */.dispatchCommand(_nativeRef, "setNativeRefreshing", items);
   }
 };
 

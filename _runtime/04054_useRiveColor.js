@@ -1,3 +1,6 @@
+import { c } from "04036_c.js";
+import { RiveColor } from "04044_RiveColor.js";
+import { useRiveProperty } from "04049_useRiveProperty.js";
 // _runtime/04054_useRiveColor.js
 import _slicedToArray from "_slicedToArray";
 
@@ -8,15 +11,15 @@ const f28757 = (colorProperty) => colorProperty.colorProperty(arg1);
 export const useRiveColor = function useRiveColor(FillColor, instance) {
   let tmp5;
   let tmp6;
-  let obj = require("04036_c.js") /* c */;
+  let obj = c /* c */;
   const cResult = obj.c(8);
-  const tmp4 = callback(require("04049_useRiveProperty.js") /* useRiveProperty */.useRiveProperty(instance, FillColor, f28757), 3);
+  const tmp4 = callback(useRiveProperty /* useRiveProperty */.useRiveProperty(instance, FillColor, f28757), 3);
   [tmp5, tmp6] = tmp4;
   require = tmp6;
   if (cResult[0] !== tmp5) {
     let fromIntResult;
     if (undefined !== tmp5) {
-      let RiveColor = require("04044_RiveColor.js") /* RiveColor */.RiveColor;
+      let RiveColor = RiveColor /* RiveColor */.RiveColor;
       fromIntResult = RiveColor.fromInt(tmp5);
     }
     cResult[0] = tmp5;

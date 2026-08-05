@@ -1,3 +1,4 @@
+import { consoleSandbox } from "00824_consoleSandbox.js";
 // _runtime/00837_dsnFromString.js
 import _slicedToArray from "_slicedToArray";
 
@@ -61,7 +62,7 @@ function dsnFromString(arg0) {
     obj[6] = first;
     return obj;
   } else {
-    obj = _require("00824_consoleSandbox.js");
+    obj = _consoleSandbox;
     obj.consoleSandbox(() => {
       console.error("Invalid Sentry Dsn: " + closure_0);
     });

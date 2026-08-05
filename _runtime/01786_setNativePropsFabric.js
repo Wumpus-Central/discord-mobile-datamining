@@ -1,10 +1,12 @@
+import { addLogBoxLog } from "01610_addLogBoxLog.js";
+import { call } from "01649_call.js";
 // _runtime/01786_setNativePropsFabric.js
 import isJest from "isJest";
 import isJest from "isJest";
 
 function setNativePropsFabric(arg0, arg1) {
   if (globalThis._WORKLET) {
-    let obj = require("01649_call.js") /* call */;
+    let obj = call /* call */;
     obj.processColorsInProps(arg1);
     obj = { shadowNodeWrapper: null, updates: null };
     obj[0] = arg0();
@@ -13,7 +15,7 @@ function setNativePropsFabric(arg0, arg1) {
     global._updatePropsFabric(items);
     const tmp6 = arg0();
   } else {
-    const logger = require("01610_addLogBoxLog.js") /* addLogBoxLog */.logger;
+    const logger = addLogBoxLog /* addLogBoxLog */.logger;
     logger.warn("setNativeProps() can only be used on the UI runtime.");
   }
 }
@@ -30,7 +32,7 @@ function setNativePropsPaper(viewName) {
     if (value == null) {
       value = null;
     }
-    let obj = require("01649_call.js") /* call */;
+    let obj = call /* call */;
     obj.processColorsInProps(arg1);
     obj = { tag: null, name: null, updates: null };
     obj[0] = viewName();
@@ -40,7 +42,7 @@ function setNativePropsPaper(viewName) {
     global._updatePropsPaper(items);
     const tmp5 = viewName();
   } else {
-    const logger = require("01610_addLogBoxLog.js") /* addLogBoxLog */.logger;
+    const logger = addLogBoxLog /* addLogBoxLog */.logger;
     logger.warn("setNativeProps() can only be used on the UI runtime.");
   }
 }
@@ -52,16 +54,16 @@ isJest = isJest.shouldBeUseWeb();
 if (isJest) {
   if (isJest.isJest()) {
     function setNativePropsJest() {
-      const logger = require("01610_addLogBoxLog.js") /* addLogBoxLog */.logger;
+      const logger = addLogBoxLog /* addLogBoxLog */.logger;
       logger.warn("setNativeProps() is not supported with Jest.");
     }
   } else {
     const _module2 = require("isJest");
     setNativePropsJest = _module2.isChromeDebugger() ? (function setNativePropsChromeDebugger() {
-      const logger = require("01610_addLogBoxLog.js") /* addLogBoxLog */.logger;
+      const logger = addLogBoxLog /* addLogBoxLog */.logger;
       logger.warn("setNativeProps() is not supported with Chrome Debugger.");
     }) : (function setNativePropsDefault() {
-      const logger = require("01610_addLogBoxLog.js") /* addLogBoxLog */.logger;
+      const logger = addLogBoxLog /* addLogBoxLog */.logger;
       logger.warn("setNativeProps() is not supported on this configuration.");
     });
   }

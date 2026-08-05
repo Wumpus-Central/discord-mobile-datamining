@@ -1,3 +1,4 @@
+import { extractProps } from "08452_extractProps.js";
 // _runtime/08451__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -72,7 +73,7 @@ let items = [
       const props = this.props;
       let obj = self(8452);
       const propsAndStylesResult = obj.propsAndStyles(props);
-      const tmp5 = require("08452_extractProps.js")(propsAndStylesResult, this);
+      const tmp5 = extractProps(propsAndStylesResult, this);
       const obj2 = self(8459);
       const tmp4 = importDefault;
       if (typeof hasProps !== "function") {

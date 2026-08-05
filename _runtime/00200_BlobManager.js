@@ -1,3 +1,7 @@
+import { BlobModule } from "00201_BlobModule.js";
+import { Blob } from "00203_Blob.js";
+import { map } from "00204_map.js";
+import { 00038__ } from "metro/00038__.js";
 // _runtime/00200_BlobManager.js
 import _classCallCheck from "_classCallCheck";
 
@@ -13,7 +17,7 @@ const items = [
   {
     key: "createFromParts",
     value: function createFromParts(arr, type) {
-      require("metro/00038__.js")(require("00201_BlobModule.js"), "NativeBlobModule is available.");
+      00038__(BlobModule, "NativeBlobModule is available.");
       const replaced = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (arg0) => {
         const tmp = 16 * Math.random() | 0;
         let str = tmp;
@@ -49,7 +53,7 @@ const items = [
         }
         return sum;
       }, 0);
-      let obj = require("00201_BlobModule.js");
+      let obj = BlobModule;
       const fromParts = obj.createFromParts(mapped, replaced);
       obj = { blobId: replaced, offset: 0, size: reduced, type: null, lastModified: null };
       let str = "";
@@ -70,10 +74,10 @@ const items = [
   {
     key: "createFromOptions",
     value: function createFromOptions(_response) {
-      let obj = require("00204_map.js") /* map */;
+      let obj = map /* map */;
       obj.register(_response.blobId);
       let data = _response;
-      obj = Object.create(require("00203_Blob.js") /* Blob */.default.prototype);
+      obj = Object.create(Blob /* Blob */.default.prototype);
       if (null == _response.__collector) {
         obj = {};
         const merged = Object.assign(_response);
@@ -91,11 +95,11 @@ const items = [
   {
     key: "release",
     value: function release(arg0) {
-      require("metro/00038__.js")(require("00201_BlobModule.js"), "NativeBlobModule is available.");
+      00038__(BlobModule, "NativeBlobModule is available.");
       const tmp = importDefault;
-      const tmp3 = require("metro/00038__.js");
-      require("00204_map.js") /* map */.unregister(arg0);
-      const obj = require("00204_map.js") /* map */;
+      const tmp3 = 00038__;
+      map /* map */.unregister(arg0);
+      const obj = map /* map */;
       if (!obj2.has(arg0)) {
         tmp(201).release(arg0);
         const tmpResult = tmp(201);
@@ -105,33 +109,33 @@ const items = [
   {
     key: "addNetworkingHandler",
     value: function addNetworkingHandler() {
-      require("metro/00038__.js")(require("00201_BlobModule.js"), "NativeBlobModule is available.");
-      const tmp = require("metro/00038__.js");
-      require("00201_BlobModule.js").addNetworkingHandler();
+      00038__(BlobModule, "NativeBlobModule is available.");
+      const tmp = 00038__;
+      BlobModule.addNetworkingHandler();
     }
   },
   {
     key: "addWebSocketHandler",
     value: function addWebSocketHandler(arg0) {
-      require("metro/00038__.js")(require("00201_BlobModule.js"), "NativeBlobModule is available.");
-      const tmp = require("metro/00038__.js");
-      require("00201_BlobModule.js").addWebSocketHandler(arg0);
+      00038__(BlobModule, "NativeBlobModule is available.");
+      const tmp = 00038__;
+      BlobModule.addWebSocketHandler(arg0);
     }
   },
   {
     key: "removeWebSocketHandler",
     value: function removeWebSocketHandler(arg0) {
-      require("metro/00038__.js")(require("00201_BlobModule.js"), "NativeBlobModule is available.");
-      const tmp = require("metro/00038__.js");
-      const result = require("00201_BlobModule.js").removeWebSocketHandler(arg0);
+      00038__(BlobModule, "NativeBlobModule is available.");
+      const tmp = 00038__;
+      const result = BlobModule.removeWebSocketHandler(arg0);
     }
   },
   {
     key: "sendOverSocket",
     value: function sendOverSocket(data) {
-      require("metro/00038__.js")(require("00201_BlobModule.js"), "NativeBlobModule is available.");
-      const tmp = require("metro/00038__.js");
-      require("00201_BlobModule.js").sendOverSocket(data.data, arg1);
+      00038__(BlobModule, "NativeBlobModule is available.");
+      const tmp = 00038__;
+      BlobModule.sendOverSocket(data.data, arg1);
     }
   }
 ];

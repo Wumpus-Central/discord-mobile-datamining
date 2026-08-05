@@ -1,3 +1,4 @@
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 // _runtime/01193_addGestureBreadcrumb.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -21,8 +22,8 @@ function addGestureBreadcrumb(message, event) {
     }
     obj.data = obj;
   }
-  require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.addBreadcrumb(obj);
-  const debug = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.debug;
+  registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.addBreadcrumb(obj);
+  const debug = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.debug;
   debug.log("[GestureTracing] " + obj.message);
 }
 let gesture = "gesture";

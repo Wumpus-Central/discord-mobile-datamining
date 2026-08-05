@@ -1,3 +1,4 @@
+import { GESTURE_SOURCE } from "05341_GESTURE_SOURCE.js";
 // _runtime/05359_n.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -13,7 +14,7 @@ const fn = function n(arg0) {
   }
   ({ overrideReduceMotion, onComplete } = arg0);
   if (!configs) {
-    configs = require("05341_GESTURE_SOURCE.js") /* GESTURE_SOURCE */.ANIMATION_CONFIGS;
+    configs = GESTURE_SOURCE /* GESTURE_SOURCE */.ANIMATION_CONFIGS;
   }
   if (overrideReduceMotion) {
     configs.reduceMotion = overrideReduceMotion;
@@ -21,7 +22,7 @@ const fn = function n(arg0) {
   if (!("duration" in configs)) {
     if (!("easing" in configs)) {
       let tmp3 = require;
-      let TIMING = require("05341_GESTURE_SOURCE.js") /* GESTURE_SOURCE */.ANIMATION_METHOD.SPRING;
+      let TIMING = GESTURE_SOURCE /* GESTURE_SOURCE */.ANIMATION_METHOD.SPRING;
     }
     if (TIMING === tmp3(5341).ANIMATION_METHOD.TIMING) {
       let tmp3Result = tmp3(1606);
@@ -35,7 +36,7 @@ const fn = function n(arg0) {
     }
     return withTimingResult;
   }
-  TIMING = require("05341_GESTURE_SOURCE.js") /* GESTURE_SOURCE */.ANIMATION_METHOD.TIMING;
+  TIMING = GESTURE_SOURCE /* GESTURE_SOURCE */.ANIMATION_METHOD.TIMING;
   tmp3 = require;
 };
 fn.__closure = { ANIMATION_CONFIGS: require("GESTURE_SOURCE").ANIMATION_CONFIGS, ANIMATION_METHOD: require("GESTURE_SOURCE").ANIMATION_METHOD, withTiming: require("cancelAnimation").withTiming, withSpring: require("cancelAnimation").withSpring };

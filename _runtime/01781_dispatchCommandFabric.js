@@ -1,3 +1,4 @@
+import { addLogBoxLog } from "01610_addLogBoxLog.js";
 // _runtime/01781_dispatchCommandFabric.js
 import isJest from "isJest";
 import isJest from "isJest";
@@ -12,7 +13,7 @@ function dispatchCommandFabric(arg0, arg1) {
     if (tmp3) {
       const result = global._dispatchCommandFabric(tmp3, arg1, items);
     } else {
-      const logger = require("01610_addLogBoxLog.js") /* addLogBoxLog */.logger;
+      const logger = addLogBoxLog /* addLogBoxLog */.logger;
       const _HermesInternal = HermesInternal;
       logger.warn("Tried to dispatch command \"" + arg1 + "\" with an uninitialized ref. Make sure to pass the animated ref to the component before using it.");
     }
@@ -30,7 +31,7 @@ function dispatchCommandPaper(arg0, arg1) {
   if (globalThis._WORKLET) {
     const tmp3 = arg0();
     if (tmp3 < 0) {
-      const logger = require("01610_addLogBoxLog.js") /* addLogBoxLog */.logger;
+      const logger = addLogBoxLog /* addLogBoxLog */.logger;
       const _HermesInternal = HermesInternal;
       logger.warn("Tried to dispatch command \"" + arg1 + "\" with an uninitialized ref. Make sure to pass the animated ref to the component before using it.");
     } else {
@@ -46,16 +47,16 @@ isJest = isJest.shouldBeUseWeb();
 if (isJest) {
   if (isJest.isJest()) {
     function dispatchCommandJest() {
-      const logger = require("01610_addLogBoxLog.js") /* addLogBoxLog */.logger;
+      const logger = addLogBoxLog /* addLogBoxLog */.logger;
       logger.warn("dispatchCommand() is not supported with Jest.");
     }
   } else {
     const _module2 = require("isJest");
     dispatchCommandJest = _module2.isChromeDebugger() ? (function dispatchCommandChromeDebugger() {
-      const logger = require("01610_addLogBoxLog.js") /* addLogBoxLog */.logger;
+      const logger = addLogBoxLog /* addLogBoxLog */.logger;
       logger.warn("dispatchCommand() is not supported with Chrome Debugger.");
     }) : (function dispatchCommandDefault() {
-      const logger = require("01610_addLogBoxLog.js") /* addLogBoxLog */.logger;
+      const logger = addLogBoxLog /* addLogBoxLog */.logger;
       logger.warn("dispatchCommand() is not supported on this configuration.");
     });
   }

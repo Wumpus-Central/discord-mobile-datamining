@@ -1,3 +1,4 @@
+import { isJest } from "01609_isJest.js";
 // _runtime/01647_isReducedMotionEnabledInSystem.js
 import isJest from "isJest";
 import addCompilerSafeGetAndSet from "addCompilerSafeGetAndSet";
@@ -16,13 +17,13 @@ if (isJest.isWeb()) {
 const obj = { jsValue: prop, uiValue: null, setEnabled: null };
 function isReducedMotionEnabledInSystem() {
   if (obj.isWeb()) {
-    let matches = require("01609_isJest.js") /* isJest */.isWindowAvailable();
+    let matches = isJest /* isJest */.isWindowAvailable();
     if (matches) {
       const _window = window;
       matches = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     }
     let prop = matches;
-    const tmpResult = require("01609_isJest.js") /* isJest */;
+    const tmpResult = isJest /* isJest */;
   } else {
     prop = global._REANIMATED_IS_REDUCED_MOTION;
   }

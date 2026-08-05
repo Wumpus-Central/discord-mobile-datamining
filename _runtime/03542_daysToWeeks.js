@@ -1,3 +1,4 @@
+import { keys } from "03543_keys.js";
 // _runtime/03542_daysToWeeks.js
 import requiredArgs from "requiredArgs";
 
@@ -11,6 +12,6 @@ if (!requiredArgs) {
 
 export default function daysToWeeks(arg0) {
   tmp3.default(1, arguments);
-  return Math.floor(arg0 / require("03543_keys.js") /* keys */.daysInWeek);
+  return Math.floor(arg0 / keys /* keys */.daysInWeek);
 };
 export default exports.default;

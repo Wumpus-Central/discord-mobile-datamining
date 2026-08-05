@@ -1,3 +1,5 @@
+import { cancelAnimation } from "01606_cancelAnimation.js";
+import { GESTURE_SOURCE } from "05341_GESTURE_SOURCE.js";
 // _runtime/05356_useScrollable.js
 import noop from "noop";
 
@@ -9,14 +11,14 @@ export const useScrollable = () => {
   const tmp = callback2(null);
   const require = tmp;
   const dependencyMap = callback2(null);
-  let obj = require("01606_cancelAnimation.js") /* cancelAnimation */;
-  const sharedValue = obj.useSharedValue(require("05341_GESTURE_SOURCE.js") /* GESTURE_SOURCE */.SCROLLABLE_TYPE.UNDETERMINED);
-  const sharedValue1 = require("01606_cancelAnimation.js") /* cancelAnimation */.useSharedValue(0);
-  const obj2 = require("01606_cancelAnimation.js") /* cancelAnimation */;
-  const sharedValue2 = require("01606_cancelAnimation.js") /* cancelAnimation */.useSharedValue(require("05341_GESTURE_SOURCE.js") /* GESTURE_SOURCE */.SCROLLABLE_STATE.UNDETERMINED);
-  const obj3 = require("01606_cancelAnimation.js") /* cancelAnimation */;
-  const sharedValue3 = require("01606_cancelAnimation.js") /* cancelAnimation */.useSharedValue(false);
-  const obj4 = require("01606_cancelAnimation.js") /* cancelAnimation */;
+  let obj = cancelAnimation /* cancelAnimation */;
+  const sharedValue = obj.useSharedValue(GESTURE_SOURCE /* GESTURE_SOURCE */.SCROLLABLE_TYPE.UNDETERMINED);
+  const sharedValue1 = cancelAnimation /* cancelAnimation */.useSharedValue(0);
+  const obj2 = cancelAnimation /* cancelAnimation */;
+  const sharedValue2 = cancelAnimation /* cancelAnimation */.useSharedValue(GESTURE_SOURCE /* GESTURE_SOURCE */.SCROLLABLE_STATE.UNDETERMINED);
+  const obj3 = cancelAnimation /* cancelAnimation */;
+  const sharedValue3 = cancelAnimation /* cancelAnimation */.useSharedValue(false);
+  const obj4 = cancelAnimation /* cancelAnimation */;
   obj = {
     scrollableRef: tmp,
     animatedScrollableType: sharedValue,

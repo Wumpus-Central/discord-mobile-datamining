@@ -1,3 +1,4 @@
+import { 13527__ } from "13527__.js";
 // _runtime/metro/13526__.js
 
 export default (arg0) => {
@@ -5,7 +6,7 @@ export default (arg0) => {
   {
     num = 0;
     if (0 !== tmp) {
-      num = require("13527__.js")(tmp);
+      num = 13527__(tmp);
     }
   }
   return num;

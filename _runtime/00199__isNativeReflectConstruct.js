@@ -1,3 +1,5 @@
+import { Event } from "00133_Event.js";
+import { _isNativeReflectConstruct } from "00207__isNativeReflectConstruct.js";
 // _runtime/00199__isNativeReflectConstruct.js
 import _get from "_get";
 import _classCallCheck from "_classCallCheck";
@@ -311,7 +313,7 @@ const items1 = [
         obj = { lengthComputable: true, loaded: null, total: null };
         obj[1] = arg1;
         obj[2] = arg2;
-        const tmp10 = new require("00207__isNativeReflectConstruct.js")("progress", obj);
+        const tmp10 = new _isNativeReflectConstruct("progress", obj);
         obj.dispatchTrustedEvent(tmp.upload, tmp10);
       }
     }
@@ -396,7 +398,7 @@ const items1 = [
         obj[0] = arg2 >= 0;
         obj[1] = arg1;
         obj[2] = arg2;
-        const tmp10 = new require("00207__isNativeReflectConstruct.js")("progress", obj);
+        const tmp10 = new _isNativeReflectConstruct("progress", obj);
         obj.dispatchTrustedEvent(tmp, tmp10);
       }
     }
@@ -707,7 +709,7 @@ const items1 = [
       let obj = XMLHttpRequest;
       let tmp2 = importDefault;
       const obj2 = XMLHttpRequest(135);
-      obj2.dispatchTrustedEvent(this, new require("00133_Event.js")("readystatechange"));
+      obj2.dispatchTrustedEvent(this, new Event("readystatechange"));
       if (DONE === this.DONE) {
         if (self._aborted) {
           let objResult = obj(135);

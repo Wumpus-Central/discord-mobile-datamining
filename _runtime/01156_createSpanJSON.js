@@ -1,8 +1,10 @@
+import { RN_GLOBAL_OBJ } from "00816_RN_GLOBAL_OBJ.js";
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 // _runtime/01156_createSpanJSON.js
 const require = arg1;
 const dependencyMap = arg6;
 function createSpanJSON(span_id) {
-  let obj = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
+  let obj = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
   const merged = Object.assign({ status: "ok" }, span_id);
   if (span_id.span_id) {
     span_id = span_id.span_id;
@@ -20,7 +22,7 @@ function createSpanJSON(span_id) {
   }
   obj[1] = trace_id;
   obj = { [tmp(817).SEMANTIC_ATTRIBUTE_SENTRY_OP]: span_id.op, [tmp(817).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: span_id.origin };
-  obj[2] = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.dropUndefinedKeys(Object.assign(obj, span_id.data ? span_id.data : {}));
+  obj[2] = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.dropUndefinedKeys(Object.assign(obj, span_id.data ? span_id.data : {}));
   return obj.dropUndefinedKeys(Object.assign(merged, obj));
 }
 let closure_2 = Date.now();
@@ -34,17 +36,17 @@ arg5.isNearToNow = function isNearToNow(timestamp2) {
   let tmp = timestamp2;
   if (tmp) {
     const _Math = Math;
-    tmp = Math.abs(require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.timestampInSeconds() - timestamp2) <= 0.05;
-    const obj = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
+    tmp = Math.abs(registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.timestampInSeconds() - timestamp2) <= 0.05;
+    const obj = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
   }
   return tmp;
 };
 arg5.setSpanDurationAsMeasurement = function setSpanDurationAsMeasurement(time_to_full_display, closure_1) {
   let start_timestamp;
   let timestamp;
-  const obj = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
+  const obj = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
   const tmp = require;
-  ({ timestamp, start_timestamp } = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.spanToJSON(closure_1));
+  ({ timestamp, start_timestamp } = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.spanToJSON(closure_1));
   let tmp4 = timestamp;
   if (timestamp) {
     tmp4 = start_timestamp;
@@ -57,7 +59,7 @@ arg5.setSpanDurationAsMeasurement = function setSpanDurationAsMeasurement(time_t
 arg5.setSpanDurationAsMeasurementOnSpan = function setSpanDurationAsMeasurementOnSpan(time_to_initial_display, arg1, addEvent) {
   let start_timestamp;
   let timestamp;
-  let obj = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
+  let obj = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
   ({ timestamp, start_timestamp } = obj.spanToJSON(arg1));
   let tmp4 = timestamp;
   if (timestamp) {
@@ -75,7 +77,7 @@ arg5.setSpanMeasurement = function setSpanMeasurement(addEvent, STALL_COUNT, val
   addEvent.addEvent(STALL_COUNT, { [closure_0(closure_1[0]).SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE]: value, [closure_0(closure_1[0]).SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT]: unit });
 };
 arg5.getLatestChildSpanEndTimestamp = function getLatestChildSpanEndTimestamp(activeSpan) {
-  const spanDescendants = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.getSpanDescendants(activeSpan);
+  const spanDescendants = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.getSpanDescendants(activeSpan);
   const mapped = spanDescendants.map((arg0) => callback(table[0]).spanToJSON(arg0).timestamp);
   const found = mapped.filter((arg0) => arg0);
   let applyResult;
@@ -89,7 +91,7 @@ arg5.getLatestChildSpanEndTimestamp = function getLatestChildSpanEndTimestamp(ac
   return applyResult;
 };
 arg5.getBundleStartTimestampMs = function getBundleStartTimestampMs() {
-  const __BUNDLE_START_TIME__ = require("00816_RN_GLOBAL_OBJ.js") /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ.__BUNDLE_START_TIME__;
+  const __BUNDLE_START_TIME__ = RN_GLOBAL_OBJ /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ.__BUNDLE_START_TIME__;
   if (__BUNDLE_START_TIME__) {
     let sum = __BUNDLE_START_TIME__;
     if (tmp(816).RN_GLOBAL_OBJ.nativePerformanceNow) {

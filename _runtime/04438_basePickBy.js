@@ -1,3 +1,4 @@
+import { baseGet } from "00727_baseGet.js";
 // _runtime/04438_basePickBy.js
 
 export default function basePickBy(arg0, arg1, arg2) {
@@ -6,7 +7,7 @@ export default function basePickBy(arg0, arg1, arg2) {
     let tmp = arg1[num];
     let tmp2 = require;
     let tmp3 = dependencyMap;
-    let tmp4 = require("00727_baseGet.js") /* baseGet */(arg0, tmp);
+    let tmp4 = baseGet /* baseGet */(arg0, tmp);
     let tmp5 = num;
     if (arg2(tmp4, tmp)) {
       let tmp2Result = tmp2(4439);

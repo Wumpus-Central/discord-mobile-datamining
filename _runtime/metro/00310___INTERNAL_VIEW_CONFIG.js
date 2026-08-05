@@ -1,3 +1,4 @@
+import { renderElement } from "../00114_renderElement.js";
 // _runtime/metro/00310___INTERNAL_VIEW_CONFIG.js
 import "noop";
 import weakSet from "weakSet";
@@ -10,10 +11,10 @@ const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onDrawe
 obj[2] = obj;
 obj = {
   openDrawer(arg0) {
-    require("../00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "openDrawer", []);
+    renderElement /* renderElement */.dispatchCommand(arg0, "openDrawer", []);
   },
   closeDrawer(arg0) {
-    require("../00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "closeDrawer", []);
+    renderElement /* renderElement */.dispatchCommand(arg0, "closeDrawer", []);
   }
 };
 

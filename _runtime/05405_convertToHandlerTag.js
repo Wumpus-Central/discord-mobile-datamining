@@ -1,3 +1,4 @@
+import { _isNativeReflectConstruct } from "05407__isNativeReflectConstruct.js";
 // _runtime/05405_convertToHandlerTag.js
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -9,7 +10,7 @@ const require = arg1;
 function convertToHandlerTag(num) {
   if (typeof num === "number") {
     return num;
-  } else if (num instanceof require("05407__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.BaseGesture) {
+  } else if (num instanceof _isNativeReflectConstruct /* _isNativeReflectConstruct */.BaseGesture) {
     num = num.handlerTag;
   } else {
     const current = num.current;

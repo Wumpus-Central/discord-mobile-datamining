@@ -1,3 +1,4 @@
+import { isObjectLike } from "00620_isObjectLike.js";
 // _runtime/00618_baseIsArguments.js
 import baseIsArguments from "baseIsArguments";
 
@@ -8,7 +9,7 @@ if (baseIsArguments((() => arguments)())) {
   let fn = require("baseIsArguments");
 } else {
   fn = (arg0) => {
-    const tmp = require("00620_isObjectLike.js") /* isObjectLike */(arg0);
+    const tmp = isObjectLike /* isObjectLike */(arg0);
     if (!tmp) {
       if (!tmp) {
         return tmp;

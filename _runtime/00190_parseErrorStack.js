@@ -1,3 +1,4 @@
+import { parse } from "00191_parse.js";
 // _runtime/00190_parseErrorStack.js
 const global = arg0;
 const require = arg1;
@@ -65,6 +66,6 @@ arg5.default = function parseErrorStack(arg0) {
         return obj;
       });
     }
-    obj2 = require("00191_parse.js") /* parse */;
+    obj2 = parse /* parse */;
   }
 };

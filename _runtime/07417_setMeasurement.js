@@ -1,26 +1,29 @@
+import { spanTimeInputToSeconds } from "07380_spanTimeInputToSeconds.js";
+import { 07390__ } from "metro/07390__.js";
+import { __SENTRY_DEBUG__ } from "metro/07403___SENTRY_DEBUG__.js";
 // _runtime/07417_setMeasurement.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.setMeasurement = function setMeasurement(arg0, arg1, arg2) {
   let activeSpan = arg3;
   if (arg3 === undefined) {
-    let obj = require("07380_spanTimeInputToSeconds.js") /* spanTimeInputToSeconds */;
+    let obj = spanTimeInputToSeconds /* spanTimeInputToSeconds */;
     activeSpan = obj.getActiveSpan();
   }
   let rootSpan = activeSpan;
   if (activeSpan) {
-    rootSpan = require("07380_spanTimeInputToSeconds.js") /* spanTimeInputToSeconds */.getRootSpan(activeSpan);
-    const obj3 = require("07380_spanTimeInputToSeconds.js") /* spanTimeInputToSeconds */;
+    rootSpan = spanTimeInputToSeconds /* spanTimeInputToSeconds */.getRootSpan(activeSpan);
+    const obj3 = spanTimeInputToSeconds /* spanTimeInputToSeconds */;
   }
   if (rootSpan) {
-    if (require("metro/07403___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+    if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
       const logger = tmp9(7375).logger;
       const _HermesInternal = HermesInternal;
       logger.log("[Measurement] Setting measurement on root span: " + arg0 + " = " + arg1 + " " + arg2);
     }
     obj = {};
-    obj[require("metro/07390__.js").SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = arg1;
-    obj[require("metro/07390__.js").SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = arg2;
+    obj[07390__.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = arg1;
+    obj[07390__.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = arg2;
     rootSpan.addEvent(arg0, obj);
   }
 };

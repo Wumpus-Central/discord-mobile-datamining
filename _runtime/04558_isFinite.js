@@ -1,3 +1,4 @@
+import { isNaN } from "00572_isNaN.js";
 // _runtime/04558_isFinite.js
 
 export default function isFinite(num) {
@@ -6,7 +7,7 @@ export default function isFinite(num) {
     tmp = typeof num === "bigint";
   }
   if (tmp) {
-    tmp = !require("00572_isNaN.js") /* isNaN */(num);
+    tmp = !isNaN /* isNaN */(num);
   }
   if (tmp) {
     tmp = num !== Infinity;

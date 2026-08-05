@@ -1,3 +1,7 @@
+import { measure } from "00068_measure.js";
+import { PressabilityPerformanceEventEmitter } from "00293_PressabilityPerformanceEventEmitter.js";
+import { SoundManager } from "00294_SoundManager.js";
+import { 00038__ } from "metro/00038__.js";
 // _runtime/00292_isActiveSignal.js
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
@@ -343,8 +347,8 @@ const items = [
       let closure_0 = arg0;
       const importDefault = nativeEvent;
       if (null != nativeEvent.nativeEvent.timestamp) {
-        require("00293_PressabilityPerformanceEventEmitter.js").emitEvent(() => ({ signal: closure_0, nativeTimestamp: nativeEvent.nativeEvent.timestamp }));
-        const obj = require("00293_PressabilityPerformanceEventEmitter.js");
+        PressabilityPerformanceEventEmitter.emitEvent(() => ({ signal: closure_0, nativeTimestamp: nativeEvent.nativeEvent.timestamp }));
+        const obj = PressabilityPerformanceEventEmitter;
       }
       const self = this;
       const _touchState = this._touchState;
@@ -361,12 +365,12 @@ const items = [
         if (typeof self._responderID === "number") {
           str3 = self._responderID;
         }
-        require("metro/00038__.js")(tmp10, "Pressability: Invalid signal `%s` for state `%s` on responder: %s", arg0, _touchState, str3);
+        00038__(tmp10, "Pressability: Invalid signal `%s` for state `%s` on responder: %s", arg0, _touchState, str3);
         if (_touchState !== tmp5) {
           const result = self._performTransitionSideEffects(_touchState, tmp5, arg0, nativeEvent);
           self._touchState = tmp5;
         }
-        const tmp9 = require("metro/00038__.js");
+        const tmp9 = 00038__;
       }
     }
   },
@@ -474,8 +478,8 @@ const items = [
               }
               if (!tmp26) {
                 if (true !== tmp24) {
-                  require("00294_SoundManager.js").playTouchSound();
-                  const obj = require("00294_SoundManager.js");
+                  SoundManager.playTouchSound();
+                  const obj = SoundManager;
                 }
                 onPress(nativeEvent);
               }
@@ -568,8 +572,8 @@ const items = [
       const self = this;
       if (null != this._responderID) {
         if (typeof self._responderID === "number") {
-          require("00068_measure.js").measure(self._responderID, self._measureCallback);
-          const obj = require("00068_measure.js");
+          measure.measure(self._responderID, self._measureCallback);
+          const obj = measure;
         } else {
           const _responderID = self._responderID;
           _responderID.measureAsyncOnUI(self._measureCallback);

@@ -1,3 +1,7 @@
+import { getGlobalSingleton } from "07376_getGlobalSingleton.js";
+import { addNonEnumerableProperty } from "07381_addNonEnumerableProperty.js";
+import { normalize } from "07420_normalize.js";
+import { dsnFromString } from "07422_dsnFromString.js";
 // _runtime/07419_forEachEnvelopeItem.js
 import _slicedToArray from "_slicedToArray";
 
@@ -27,7 +31,7 @@ export const createAttachmentEnvelopeItem = function createAttachmentEnvelopeIte
     data = data.data;
     let __SENTRY__ = require;
     let encodePolyfill = dependencyMap;
-    if (!require("07376_getGlobalSingleton.js") /* getGlobalSingleton */.GLOBAL_OBJ.__SENTRY__) {
+    if (!getGlobalSingleton /* getGlobalSingleton */.GLOBAL_OBJ.__SENTRY__) {
       const _TextEncoder = TextEncoder;
       const textEncoder = new TextEncoder();
       let encodeResult = textEncoder.encode(data);
@@ -40,7 +44,7 @@ export const createAttachmentEnvelopeItem = function createAttachmentEnvelopeIte
     const obj = { type: "attachment", length: null, filename: null, content_type: null, attachment_type: null };
     obj[1] = data.length;
     ({ filename: obj3[2], contentType: obj3[3], attachmentType: obj3[4] } = data);
-    const items = [require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */.dropUndefinedKeys(obj), data];
+    const items = [addNonEnumerableProperty /* addNonEnumerableProperty */.dropUndefinedKeys(obj), data];
     return items;
   }
 };
@@ -65,9 +69,9 @@ export const createEventEnvelopeHeaders = function createEventEnvelopeHeaders(ev
   let tmp4 = arg2 && arg3;
   if (tmp4) {
     obj = { dsn: null };
-    obj[0] = require("07422_dsnFromString.js") /* dsnFromString */.dsnToString(arg3);
+    obj[0] = dsnFromString /* dsnFromString */.dsnToString(arg3);
     tmp4 = obj;
-    const obj5 = require("07422_dsnFromString.js") /* dsnFromString */;
+    const obj5 = dsnFromString /* dsnFromString */;
   }
   const merged1 = Object.assign(tmp4);
   let tmp8 = tmp;
@@ -75,9 +79,9 @@ export const createEventEnvelopeHeaders = function createEventEnvelopeHeaders(ev
     const obj1 = { trace: null };
     const obj2 = {};
     const merged2 = Object.assign(tmp);
-    obj1[0] = require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */.dropUndefinedKeys(obj2);
+    obj1[0] = addNonEnumerableProperty /* addNonEnumerableProperty */.dropUndefinedKeys(obj2);
     tmp8 = obj1;
-    const obj7 = require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */;
+    const obj7 = addNonEnumerableProperty /* addNonEnumerableProperty */;
   }
   const merged3 = Object.assign(tmp8);
   return obj;
@@ -149,7 +153,7 @@ export const parseEnvelope = function parseEnvelope(arr) {
   } else {
     let __SENTRY__ = _require;
     let encodePolyfill = dependencyMap;
-    if (!_require("07376_getGlobalSingleton.js").GLOBAL_OBJ.__SENTRY__) {
+    if (!_getGlobalSingleton.GLOBAL_OBJ.__SENTRY__) {
       const _TextEncoder = TextEncoder;
       const textEncoder = new TextEncoder();
       let encodeResult = textEncoder.encode(arr);
@@ -227,8 +231,8 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
           append(json);
         } catch (err) {
           const _JSON3 = tmp2.JSON;
-          json = _JSON3.stringify(_require("07420_normalize.js").normalize(tmp3));
-          const obj = _require("07420_normalize.js");
+          json = _JSON3.stringify(_normalize.normalize(tmp3));
+          const obj = _normalize;
         }
       }
     }

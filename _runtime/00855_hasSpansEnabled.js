@@ -1,3 +1,4 @@
+import { getClient } from "00848_getClient.js";
 // _runtime/00855_hasSpansEnabled.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -10,13 +11,13 @@ arg5.hasSpansEnabled = function hasSpansEnabled(options) {
   }
   let tmp = options;
   if (!options) {
-    const client = require("00848_getClient.js") /* getClient */.getClient();
+    const client = getClient /* getClient */.getClient();
     options = undefined;
     if (client != null) {
       options = client.getOptions();
     }
     tmp = options;
-    const obj = require("00848_getClient.js") /* getClient */;
+    const obj = getClient /* getClient */;
   }
   let tmp6 = !tmp;
   if (tmp) {

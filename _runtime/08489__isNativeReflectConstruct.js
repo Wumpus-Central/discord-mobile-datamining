@@ -1,3 +1,4 @@
+import { __INTERNAL_VIEW_CONFIG } from "metro/08490___INTERNAL_VIEW_CONFIG.js";
 // _runtime/08489__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -57,7 +58,7 @@ let obj = {
         return self.refMethod(arg0);
       }
     };
-    const tmp = require("metro/08490___INTERNAL_VIEW_CONFIG.js");
+    const tmp = __INTERNAL_VIEW_CONFIG;
     const merged1 = Object.assign(self(8475).extractFilter(this.props));
     const obj2 = self(8475);
     const merged2 = Object.assign(self(8475).extractIn(this.props));

@@ -1,3 +1,5 @@
+import { getFileChunk } from "04869_getFileChunk.js";
+import { 04870__ } from "metro/04870__.js";
 // _runtime/04874_is7Z.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -6,18 +8,18 @@ arg5.isLZH = undefined;
 arg5.isRAR = undefined;
 arg5.isZIP = undefined;
 arg5.is7Z = function is7Z(fileChunk) {
-  fileChunk = require("04869_getFileChunk.js") /* getFileChunk */.getFileChunk(fileChunk);
-  const FileTypes = require("metro/04870__.js").FileTypes;
+  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  const FileTypes = 04870__.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "_7z");
 };
 arg5.isLZH = function isLZH(fileChunk) {
-  fileChunk = require("04869_getFileChunk.js") /* getFileChunk */.getFileChunk(fileChunk);
-  const FileTypes = require("metro/04870__.js").FileTypes;
+  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  const FileTypes = 04870__.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "lzh");
 };
 arg5.isRAR = function isRAR(fileChunk) {
-  fileChunk = require("04869_getFileChunk.js") /* getFileChunk */.getFileChunk(fileChunk);
-  const FileTypes = require("metro/04870__.js").FileTypes;
+  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  const FileTypes = 04870__.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "rar");
 };
 arg5.isZIP = function isZIP(fileChunk, chunkSize) {
@@ -28,7 +30,7 @@ arg5.isZIP = function isZIP(fileChunk, chunkSize) {
   if (!num) {
     num = 64;
   }
-  fileChunk = require("04869_getFileChunk.js") /* getFileChunk */.getFileChunk(fileChunk, num);
-  const FileTypes = require("metro/04870__.js").FileTypes;
+  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk, num);
+  const FileTypes = 04870__.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "zip");
 };

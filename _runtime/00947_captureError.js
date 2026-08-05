@@ -1,10 +1,11 @@
+import { getClient } from "00848_getClient.js";
 // _runtime/00947_captureError.js
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.captureError = function captureError(error, prompt_execution, arg2) {
   try {
-    let obj = require("00848_getClient.js") /* getClient */;
+    let obj = getClient /* getClient */;
     if (obj.getClient()) {
       let tmpResult = tmp(819);
       const activeSpan = tmpResult.getActiveSpan();

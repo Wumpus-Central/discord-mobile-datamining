@@ -1,3 +1,5 @@
+import { renderElement } from "00114_renderElement.js";
+import { createReactNativeDocumentInstanceHandle } from "00137_createReactNativeDocumentInstanceHandle.js";
 // _runtime/00136_getInstanceHandle.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -21,7 +23,7 @@ arg5.setOwnerDocument = function setOwnerDocument(tmp3Result, arg1) {
 };
 arg5.getPublicInstanceFromInstanceHandle = function getPublicInstanceFromInstanceHandle(element) {
   if (null == callback2) {
-    callback2 = require("00114_renderElement.js") /* renderElement */.getPublicInstanceFromInternalInstanceHandle;
+    callback2 = renderElement /* renderElement */.getPublicInstanceFromInternalInstanceHandle;
   }
   const tmp3 = callback2(element);
   if (null != tmp3) {
@@ -40,12 +42,12 @@ arg5.getPublicInstanceFromInstanceHandle = function getPublicInstanceFromInstanc
         publicInstanceFromReactNativeDocumentInstanceHandle = tmp4Result.getPublicInstanceFromReactNativeDocumentElementInstanceHandle(element);
       }
     }
-    obj = require("00137_createReactNativeDocumentInstanceHandle.js") /* createReactNativeDocumentInstanceHandle */;
+    obj = createReactNativeDocumentInstanceHandle /* createReactNativeDocumentInstanceHandle */;
   }
 };
 arg5.getNativeNodeReference = function getNativeNodeReference(target) {
   if (null == callback) {
-    callback = require("00114_renderElement.js") /* renderElement */.getNodeFromInternalInstanceHandle;
+    callback = renderElement /* renderElement */.getNodeFromInternalInstanceHandle;
   }
   const tmp4 = callback(target[closure_4]);
   if (null != tmp4) {
@@ -64,7 +66,7 @@ arg5.getNativeNodeReference = function getNativeNodeReference(target) {
         nativeNodeReferenceFromReactNativeDocumentInstanceHandle = tmp5Result.getNativeElementReferenceFromReactNativeDocumentElementInstanceHandle(tmp);
       }
     }
-    obj = require("00137_createReactNativeDocumentInstanceHandle.js") /* createReactNativeDocumentInstanceHandle */;
+    obj = createReactNativeDocumentInstanceHandle /* createReactNativeDocumentInstanceHandle */;
   }
 };
 arg5.getNativeElementReference = function getNativeElementReference(nativeElementReference3) {
@@ -97,7 +99,7 @@ arg5.getCurrentProps = function getCurrentProps(arg0) {
 };
 arg5.getNativeTextReference = function getNativeTextReference(arg0) {
   if (null == callback) {
-    callback = require("00114_renderElement.js") /* renderElement */.getNodeFromInternalInstanceHandle;
+    callback = renderElement /* renderElement */.getNodeFromInternalInstanceHandle;
   }
   return callback(arg0[closure_4]);
 };

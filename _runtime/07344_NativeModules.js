@@ -1,3 +1,4 @@
+import { 07346__ } from "metro/07346__.js";
 // _runtime/07344_NativeModules.js
 import RNIapAmazonModule from "RNIapAmazonModule";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -38,26 +39,26 @@ export const setup = () => {
     str = "STOREKIT1_MODE";
   }
   if ("STOREKIT1_MODE" === str) {
-    require("metro/07346__.js").storekit1Mode();
-    const obj4 = require("metro/07346__.js");
+    07346__.storekit1Mode();
+    const obj4 = 07346__;
   } else if ("STOREKIT2_MODE" === str) {
-    require("metro/07346__.js").storekit2Mode();
-    const obj3 = require("metro/07346__.js");
+    07346__.storekit2Mode();
+    const obj3 = 07346__;
   } else if ("STOREKIT_HYBRID_MODE" === str) {
-    require("metro/07346__.js").storekitHybridMode();
-    const obj2 = require("metro/07346__.js");
+    07346__.storekitHybridMode();
+    const obj2 = 07346__;
   }
 };
 export const initConnection = () => {
-  const nativeModule = require("metro/07346__.js").getNativeModule();
+  const nativeModule = 07346__.getNativeModule();
   return nativeModule.initConnection();
 };
 export const endConnection = () => {
-  const nativeModule = require("metro/07346__.js").getNativeModule();
+  const nativeModule = 07346__.getNativeModule();
   return nativeModule.endConnection();
 };
 export const flushFailedPurchasesCachedAsPendingAndroid = () => {
-  const androidModule = require("metro/07346__.js").getAndroidModule();
+  const androidModule = 07346__.getAndroidModule();
   return androidModule.flushFailedPurchasesCachedAsPending();
 };
 export const getProducts = (skus) => {

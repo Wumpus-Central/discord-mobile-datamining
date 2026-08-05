@@ -1,3 +1,4 @@
+import { getDefaultOptions } from "03369_getDefaultOptions.js";
 // _runtime/03596_format.js
 import isValid from "isValid";
 import subMilliseconds from "subMilliseconds";
@@ -91,7 +92,7 @@ export default function format(arg0, arg1, locale) {
   const _require = arg0;
   const dependencyMap = arg1;
   tmp17.default(2, arguments);
-  const defaultOptions = _require("03369_getDefaultOptions.js").getDefaultOptions();
+  const defaultOptions = _getDefaultOptions.getDefaultOptions();
   locale = undefined;
   if (null != locale) {
     locale = locale.locale;

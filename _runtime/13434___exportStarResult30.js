@@ -1,3 +1,4 @@
+import { getMultiInternalSlots } from "13386_getMultiInternalSlots.js";
 // _runtime/13434___exportStarResult30.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -15,7 +16,7 @@ arg5.PartitionPattern = function PartitionPattern(arr) {
         let tmp4 = dependencyMap;
         let concat = "Invalid pattern ".concat;
         let tmp5 = index1 > index;
-        let invariantResult = require("13386_getMultiInternalSlots.js") /* getMultiInternalSlots */.invariant(tmp5, "Invalid pattern ".concat(arr));
+        let invariantResult = getMultiInternalSlots /* getMultiInternalSlots */.invariant(tmp5, "Invalid pattern ".concat(arr));
         let tmp7 = num4;
         let tmp8 = index;
         if (index > num4) {

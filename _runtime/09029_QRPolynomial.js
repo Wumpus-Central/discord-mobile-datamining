@@ -1,3 +1,4 @@
+import { 09030__ } from "metro/09030__.js";
 // _runtime/09029_QRPolynomial.js
 class QRPolynomial {
   constructor(arg0, arg1) {
@@ -71,10 +72,10 @@ QRPolynomial.prototype = {
             let sum = num + num2;
             let tmp4 = require;
             let tmp5 = dependencyMap;
-            let obj = require("metro/09030__.js");
-            let obj2 = require("metro/09030__.js");
+            let obj = 09030__;
+            let obj2 = 09030__;
             let glogResult = obj2.glog(self.get(num));
-            let obj3 = require("metro/09030__.js");
+            let obj3 = 09030__;
             arr[sum] = arr[sum] ^ obj.gexp(glogResult + obj3.glog(getLength.get(num2)));
             num2 = num2 + 1;
             length1 = getLength.getLength();
@@ -128,10 +129,10 @@ QRPolynomial.prototype = {
     if (length - getLength.getLength() < 0) {
       return self;
     } else {
-      const obj4 = require("metro/09030__.js");
-      const glogResult = require("metro/09030__.js").glog(self.get(0));
+      const obj4 = 09030__;
+      const glogResult = 09030__.glog(self.get(0));
       const _Array2 = Array;
-      const diff = glogResult - require("metro/09030__.js").glog(getLength.get(0));
+      const diff = glogResult - 09030__.glog(getLength.get(0));
       const arr = new Array(self.getLength());
       let num = 0;
       if (0 < self.getLength()) {
@@ -146,8 +147,8 @@ QRPolynomial.prototype = {
         do {
           let tmp3 = require;
           let tmp4 = dependencyMap;
-          let obj = require("metro/09030__.js");
-          let obj2 = require("metro/09030__.js");
+          let obj = 09030__;
+          let obj2 = 09030__;
           arr[num2] = arr[num2] ^ obj.gexp(obj2.glog(getLength.get(num2)) + diff);
           num2 = num2 + 1;
           length2 = getLength.getLength();
@@ -188,7 +189,7 @@ QRPolynomial.prototype = {
         }
         return obj.mod(getLength);
       }
-      const obj5 = require("metro/09030__.js");
+      const obj5 = 09030__;
     }
     length = this.getLength();
   }

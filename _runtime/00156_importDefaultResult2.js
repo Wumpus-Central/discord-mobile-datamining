@@ -1,3 +1,7 @@
+import { _isNativeReflectConstruct } from "00157__isNativeReflectConstruct.js";
+import { importDefaultResult1 } from "00166_importDefaultResult1.js";
+import { importDefaultResult1 } from "00167_importDefaultResult1.js";
+import { structuredCloneInternal } from "00168_structuredCloneInternal.js";
 // _runtime/00156_importDefaultResult2.js
 import _classCallCheck from "_classCallCheck";
 import _classPrivateFieldBase from "_classPrivateFieldBase";
@@ -50,10 +54,10 @@ let items = [
         const obj = { jsHeapSizeLimit: null, totalJSHeapSize: null, usedJSHeapSize: null };
         obj[1] = hermes_heapSize;
         obj[2] = hermes_allocatedBytes;
-        const tmp12 = new require("00166_importDefaultResult1.js")(obj);
+        const tmp12 = new importDefaultResult1(obj);
         return tmp12;
       } else {
-        const tmp5 = new require("00166_importDefaultResult1.js")();
+        const tmp5 = new importDefaultResult1();
         return tmp5;
       }
     }
@@ -67,7 +71,7 @@ let items = [
       let startTime;
       const reactNativeStartupTiming = importDefaultResult2Result.getReactNativeStartupTiming();
       ({ startTime, initializeRuntimeStart, executeJavaScriptBundleEntryPointStart, endTime } = reactNativeStartupTiming);
-      return new require("00167_importDefaultResult1.js")({ startTime, initializeRuntimeStart, executeJavaScriptBundleEntryPointStart, endTime });
+      return new importDefaultResult1({ startTime, initializeRuntimeStart, executeJavaScriptBundleEntryPointStart, endTime });
     }
   },
   {
@@ -138,7 +142,7 @@ let items = [
         }
         let tmp7;
         if (undefined !== detail) {
-          tmp7 = require("00168_structuredCloneInternal.js")(detail);
+          tmp7 = structuredCloneInternal(detail);
         }
         closure_13.startTime = currentTimeStamp;
         closure_13.detail = tmp7;
@@ -210,7 +214,7 @@ let items = [
                   tmp64 = callback5(start);
                   if (null == tmp64) {
                     const _HermesInternal6 = HermesInternal;
-                    let tmp73 = require("00157__isNativeReflectConstruct.js");
+                    let tmp73 = _isNativeReflectConstruct;
                     tmp73 = new tmp73("Failed to execute 'measure' on 'Performance': The mark '" + start + "' does not exist.", "SyntaxError");
                     throw tmp73;
                   }
@@ -225,7 +229,7 @@ let items = [
                     typeError = importDefault;
                     typeError = dependencyMap;
                     const _HermesInternal8 = HermesInternal;
-                    typeError = require("00157__isNativeReflectConstruct.js");
+                    typeError = _isNativeReflectConstruct;
                     typeError = new.target;
                     typeError = new.target;
                     typeError = new typeError("Failed to execute 'measure' on 'Performance': The mark '" + StringResult + "' does not exist.", "SyntaxError");
@@ -243,7 +247,7 @@ let items = [
                   tmp80 = callback5(end);
                   if (null == tmp80) {
                     const _HermesInternal7 = HermesInternal;
-                    let tmp89 = require("00157__isNativeReflectConstruct.js");
+                    let tmp89 = _isNativeReflectConstruct;
                     tmp89 = new tmp89("Failed to execute 'measure' on 'Performance': The mark '" + end + "' does not exist.", "SyntaxError");
                     throw tmp89;
                   }
@@ -258,7 +262,7 @@ let items = [
                     typeError = importDefault;
                     typeError = dependencyMap;
                     const _HermesInternal9 = HermesInternal;
-                    typeError = require("00157__isNativeReflectConstruct.js");
+                    typeError = _isNativeReflectConstruct;
                     typeError = new.target;
                     typeError = new.target;
                     typeError = new typeError("Failed to execute 'measure' on 'Performance': The mark '" + StringResult1 + "' does not exist.", "SyntaxError");
@@ -301,7 +305,7 @@ let items = [
                   typeError = dependencyMap;
                   currentTimeStamp = tmp96;
                   num3 = tmp64;
-                  const tmp10 = require("00168_structuredCloneInternal.js")(detail);
+                  const tmp10 = structuredCloneInternal(detail);
                 }
               } else {
                 if (undefined === tmp64) {
@@ -320,7 +324,7 @@ let items = [
             const tmp42 = callback5(arg1);
             if (null == tmp42) {
               const _HermesInternal5 = HermesInternal;
-              let tmp57 = require("00157__isNativeReflectConstruct.js");
+              let tmp57 = _isNativeReflectConstruct;
               tmp57 = new tmp57("Failed to execute 'measure' on 'Performance': The mark '" + arg1 + "' does not exist.", "SyntaxError");
               throw tmp57;
             } else {
@@ -331,7 +335,7 @@ let items = [
                 const tmp41Result = tmp41(arg2);
                 if (null == tmp41Result) {
                   const _HermesInternal4 = HermesInternal;
-                  let tmp49 = require("00157__isNativeReflectConstruct.js");
+                  let tmp49 = _isNativeReflectConstruct;
                   tmp49 = new tmp49("Failed to execute 'measure' on 'Performance': The mark '" + arg2 + "' does not exist.", "SyntaxError");
                   throw tmp49;
                 } else {
@@ -357,7 +361,7 @@ let items = [
             const tmp21 = callback5(typeError);
             if (null == tmp21) {
               const _HermesInternal3 = HermesInternal;
-              let tmp35 = require("00157__isNativeReflectConstruct.js");
+              let tmp35 = _isNativeReflectConstruct;
               tmp35 = new tmp35("Failed to execute 'measure' on 'Performance': The mark '" + typeError + "' does not exist.", "SyntaxError");
               throw tmp35;
             } else {
@@ -368,7 +372,7 @@ let items = [
                 const tmp20Result = tmp20(arg2);
                 if (null == tmp20Result) {
                   const _HermesInternal2 = HermesInternal;
-                  let tmp28 = require("00157__isNativeReflectConstruct.js");
+                  let tmp28 = _isNativeReflectConstruct;
                   tmp28 = new tmp28("Failed to execute 'measure' on 'Performance': The mark '" + arg2 + "' does not exist.", "SyntaxError");
                   throw tmp28;
                 } else {
@@ -391,7 +395,7 @@ let items = [
             const tmp9 = callback5(arg2);
             if (null == tmp9) {
               const _HermesInternal = HermesInternal;
-              let tmp13 = require("00157__isNativeReflectConstruct.js");
+              let tmp13 = _isNativeReflectConstruct;
               tmp13 = new tmp13("Failed to execute 'measure' on 'Performance': The mark '" + arg2 + "' does not exist.", "SyntaxError");
               throw tmp13;
             } else {

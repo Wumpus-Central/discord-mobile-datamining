@@ -1,3 +1,4 @@
+import { useUnmountAwareTimeout } from "05556_useUnmountAwareTimeout.js";
 // _runtime/05559_useBoundDetection.js
 import noop from "noop";
 
@@ -15,7 +16,7 @@ export const useBoundDetection = function useBoundDetection(recyclerViewManager,
   const callback3 = callback4(false);
   callback4 = callback4(Date.now());
   const data = recyclerViewManager.props.data;
-  const _requestAnimationFrame = _require("05556_useUnmountAwareTimeout.js").useUnmountAwareAnimationFrame().requestAnimationFrame;
+  const _requestAnimationFrame = _useUnmountAwareTimeout.useUnmountAwareAnimationFrame().requestAnimationFrame;
   let num = 0;
   if (recyclerViewManager.hasLayout()) {
     num = recyclerViewManager.getWindowSize().height;

@@ -1,3 +1,4 @@
+import { getClient } from "00848_getClient.js";
 // _runtime/00949_captureFeedback.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -9,8 +10,8 @@ arg5.captureFeedback = function captureFeedback(tags) {
   }
   let currentScope = arg2;
   if (arg2 === undefined) {
-    currentScope = require("00848_getClient.js") /* getClient */.getCurrentScope();
-    const obj3 = require("00848_getClient.js") /* getClient */;
+    currentScope = getClient /* getClient */.getCurrentScope();
+    const obj3 = getClient /* getClient */;
   }
   obj = { contexts: { feedback: obj }, type: "feedback", level: "info", tags: tags.tags };
   obj = { contact_email: tags.email, name: tags.name, message: tags.message, url: tags.url, source: tags.source, associated_event_id: tags.associatedEventId };
@@ -19,8 +20,8 @@ arg5.captureFeedback = function captureFeedback(tags) {
     client = currentScope.getClient();
   }
   if (!client) {
-    client = require("00848_getClient.js") /* getClient */.getClient();
-    const obj6 = require("00848_getClient.js") /* getClient */;
+    client = getClient /* getClient */.getClient();
+    const obj6 = getClient /* getClient */;
   }
   if (client) {
     client.emit("beforeSendFeedback", obj, obj);

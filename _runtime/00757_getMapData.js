@@ -1,8 +1,9 @@
+import { isKeyable } from "00758_isKeyable.js";
 // _runtime/00757_getMapData.js
 
 export default function getMapData(__data__, str) {
   __data__ = __data__.__data__;
-  if (require("00758_isKeyable.js") /* isKeyable */(str)) {
+  if (isKeyable /* isKeyable */(str)) {
     str = "hash";
     if (typeof str === "string") {
       str = "string";

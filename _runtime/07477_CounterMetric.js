@@ -1,3 +1,4 @@
+import { 07472__ } from "metro/07472__.js";
 // _runtime/07477_CounterMetric.js
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
@@ -155,5 +156,5 @@ const _moduleResult3 = _createClass(SetMetric, items3);
 export const CounterMetric = _moduleResult;
 export const DistributionMetric = _moduleResult2;
 export const GaugeMetric = _moduleResult1;
-export const METRIC_MAP = { [require("metro/07472__.js").COUNTER_METRIC_TYPE]: _moduleResult, [require("metro/07472__.js").GAUGE_METRIC_TYPE]: _moduleResult1, [require("metro/07472__.js").DISTRIBUTION_METRIC_TYPE]: _moduleResult2, [require("metro/07472__.js").SET_METRIC_TYPE]: _moduleResult3 };
+export const METRIC_MAP = { [07472__.COUNTER_METRIC_TYPE]: _moduleResult, [07472__.GAUGE_METRIC_TYPE]: _moduleResult1, [07472__.DISTRIBUTION_METRIC_TYPE]: _moduleResult2, [07472__.SET_METRIC_TYPE]: _moduleResult3 };
 export const SetMetric = _moduleResult3;

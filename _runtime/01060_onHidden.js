@@ -1,3 +1,4 @@
+import { addPageListener } from "01041_addPageListener.js";
 // _runtime/01060_onHidden.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -18,7 +19,7 @@ arg5.onHidden = (arg0) => {
       callback(type);
     }
   }
-  _require("01041_addPageListener.js").addPageListener("visibilitychange", onHiddenOrPageHide, { capture: true, once: true });
-  const obj = _require("01041_addPageListener.js");
-  _require("01041_addPageListener.js").addPageListener("pagehide", onHiddenOrPageHide, { capture: true, once: true });
+  _addPageListener.addPageListener("visibilitychange", onHiddenOrPageHide, { capture: true, once: true });
+  const obj = _addPageListener;
+  _addPageListener.addPageListener("pagehide", onHiddenOrPageHide, { capture: true, once: true });
 };

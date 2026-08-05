@@ -1,3 +1,4 @@
+import { compareAscending } from "07694_compareAscending.js";
 // _runtime/07693_compareMultiple.js
 
 export default function compareMultiple(criteria, index) {
@@ -5,7 +6,7 @@ export default function compareMultiple(criteria, index) {
   let num = 0;
   let num2 = 1;
   if (0 < criteria.length) {
-    const tmp5 = require("07694_compareAscending.js") /* compareAscending */(criteria[num], tmp[num]);
+    const tmp5 = compareAscending /* compareAscending */(criteria[num], tmp[num]);
     while (!tmp5) {
       num = num + num2;
     }

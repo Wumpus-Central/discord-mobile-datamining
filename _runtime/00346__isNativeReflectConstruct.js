@@ -1,3 +1,4 @@
+import { __INTERNAL_VIEW_CONFIG } from "metro/00347___INTERNAL_VIEW_CONFIG.js";
 // _runtime/00346__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -138,8 +139,8 @@ let items = [
         obj2[2] = self.props.children;
         obj1[1] = jsx(Modal(108).default, { style: null, collapsable: false, children: null });
         obj[0] = jsx(Modal(349).default.Context.Provider, { value: null, children: null });
-        obj[18] = jsx(require("00312_get_VirtualizedList.js").VirtualizedListContextResetter, { children: null });
-        return jsx(require("metro/00347___INTERNAL_VIEW_CONFIG.js"), { children: null });
+        obj[18] = jsx(require("00312_get_VirtualizedList.js") /* get VirtualizedList */.VirtualizedListContextResetter, { children: null });
+        return jsx(__INTERNAL_VIEW_CONFIG, { children: null });
       } else {
         return null;
       }

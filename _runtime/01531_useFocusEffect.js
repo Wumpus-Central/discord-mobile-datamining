@@ -1,10 +1,11 @@
+import { useNavigation } from "01532_useNavigation.js";
 // _runtime/01531_useFocusEffect.js
 import noop from "noop";
 
 
 export default function useFocusEffect(c5) {
   const importDefault = c5;
-  let tmp = require("01532_useNavigation.js")();
+  let tmp = useNavigation();
   const dependencyMap = tmp;
   if (undefined !== arguments[1]) {
     const _console = console;

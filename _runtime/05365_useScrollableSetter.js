@@ -1,3 +1,4 @@
+import { useBottomSheetInternal } from "05348_useBottomSheetInternal.js";
 // _runtime/05365_useScrollableSetter.js
 import noop from "noop";
 
@@ -20,7 +21,7 @@ export const useScrollableSetter = (arg0, arg1, arg2, arg3) => {
   let isScrollableRefreshable;
   let setScrollableRef;
   let removeScrollableRef;
-  const bottomSheetInternal = _require("05348_useBottomSheetInternal.js").useBottomSheetInternal();
+  const bottomSheetInternal = _useBottomSheetInternal.useBottomSheetInternal();
   animatedScrollableType = bottomSheetInternal.animatedScrollableType;
   animatedScrollableContentOffsetY = bottomSheetInternal.animatedScrollableContentOffsetY;
   isContentHeightFixed = bottomSheetInternal.isContentHeightFixed;

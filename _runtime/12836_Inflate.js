@@ -1,3 +1,4 @@
+import { 12831__ } from "metro/12831__.js";
 // _runtime/12836_Inflate.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -187,7 +188,7 @@ function inflate(arg0, windowBits) {
   if (arr.err) {
     let msg = arr.msg;
     if (!msg) {
-      msg = require("metro/12831__.js")[arr.err];
+      msg = 12831__[arr.err];
     }
     throw msg;
   } else {
@@ -207,7 +208,7 @@ arg5.inflateRaw = function inflateRaw(arg0, windowBits) {
   if (arr.err) {
     let msg = arr.msg;
     if (!msg) {
-      msg = require("metro/12831__.js")[arr.err];
+      msg = 12831__[arr.err];
     }
     throw msg;
   } else {

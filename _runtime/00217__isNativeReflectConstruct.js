@@ -1,3 +1,7 @@
+import { BlobManager } from "00200_BlobManager.js";
+import { Blob } from "00203_Blob.js";
+import { WebSocketModule } from "00218_WebSocketModule.js";
+import { 00038__ } from "metro/00038__.js";
 // _runtime/00217__isNativeReflectConstruct.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _classCallCheck from "_classCallCheck";
@@ -118,7 +122,7 @@ let items = [
       }
       const self = this;
       if (!tmp2) {
-        require("metro/00038__.js")(require("00200_BlobManager.js").isAvailable, "Native module BlobModule is required for blob support");
+        00038__(BlobManager.isAvailable, "Native module BlobModule is required for blob support");
         if ("blob" === _binaryType) {
           let tmp3Result = tmp3(200);
           tmp3Result.addWebSocketHandler(self._socketId);
@@ -126,7 +130,7 @@ let items = [
           tmp3Result = tmp3(200);
           const result = tmp3Result.removeWebSocketHandler(self._socketId);
         }
-        const tmp5 = require("metro/00038__.js");
+        const tmp5 = 00038__;
       }
       self._binaryType = _binaryType;
     }
@@ -149,7 +153,7 @@ let items = [
         const _Error2 = Error;
         const error = new Error("INVALID_STATE_ERR");
         throw error;
-      } else if (str instanceof require("00203_Blob.js")) {
+      } else if (str instanceof Blob) {
         let tmp16Result = tmp16(38);
         tmp16Result(tmp16(200).isAvailable, "Native module BlobModule is required for blob support");
         tmp16Result = tmp16(200);
@@ -180,7 +184,7 @@ let items = [
         const error = new Error("INVALID_STATE_ERR");
         throw error;
       } else {
-        require("00218_WebSocketModule.js").ping(tmp._socketId);
+        WebSocketModule.ping(tmp._socketId);
       }
     }
   },
@@ -190,14 +194,14 @@ let items = [
       num = 1000;
       str = "";
       const self = this;
-      require("00218_WebSocketModule.js").close(num, str, this._socketId);
-      let isAvailable = require("00200_BlobManager.js").isAvailable;
+      WebSocketModule.close(num, str, this._socketId);
+      let isAvailable = BlobManager.isAvailable;
       if (isAvailable) {
         isAvailable = "blob" === self._binaryType;
       }
       if (isAvailable) {
-        const result = require("00200_BlobManager.js").removeWebSocketHandler(self._socketId);
-        const tmpResult = require("00200_BlobManager.js");
+        const result = BlobManager.removeWebSocketHandler(self._socketId);
+        const tmpResult = BlobManager;
       }
     }
   },

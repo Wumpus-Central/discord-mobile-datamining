@@ -1,3 +1,4 @@
+import { 12273__ } from "12273__.js";
 // _runtime/metro/12344__.js
 const self = this;
 let self2 = this;
@@ -67,13 +68,13 @@ if (self2) {
     const _Object4 = Object;
     let obj = { enumerable: true, get: null };
     obj[1] = function get() {
-      return require("12273__.js").$brand;
+      return 12273__.$brand;
     };
     Object.defineProperty(exports, "$brand", obj);
     const _Object5 = Object;
     obj = { enumerable: true, get: null };
     obj[1] = function get() {
-      return require("12273__.js").config;
+      return 12273__.config;
     };
     Object.defineProperty(exports, "config", obj);
     exports.ZodFirstPartyTypeKind = {};

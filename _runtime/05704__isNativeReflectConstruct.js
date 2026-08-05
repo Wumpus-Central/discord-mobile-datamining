@@ -1,3 +1,7 @@
+import { getInvertedMultiplier } from "05705_getInvertedMultiplier.js";
+import { Color } from "05707_Color.js";
+import { noop } from "05715_noop.js";
+import { 05716__ } from "metro/05716__.js";
 // _runtime/05704__isNativeReflectConstruct.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _classCallCheck from "_classCallCheck";
@@ -281,7 +285,7 @@ let items = [
       }
       if (gestureDirection !== layout.gestureDirection) {
         const inverted = self.inverted;
-        inverted.setValue(require("05705_getInvertedMultiplier.js")(gestureDirection));
+        inverted.setValue(getInvertedMultiplier(gestureDirection));
       }
       const animateToValue = self.getAnimateToValue(self.props);
       if (!tmp7) {
@@ -329,7 +333,7 @@ let items = [
         return obj1;
       } else {
         const sum = -layout.width + gestureResponseDistance;
-        if (1 === require("05705_getInvertedMultiplier.js")(gestureDirection)) {
+        if (1 === getInvertedMultiplier(gestureDirection)) {
           const obj3 = { minOffsetX: 5, maxDeltaY: 20, hitSlop: null, enableTrackpadTwoFingerGesture: true };
           const obj4 = { right: null };
           obj4[0] = sum;
@@ -385,8 +389,8 @@ let items = [
         const backgroundColor = StyleSheet.flatten(obj).backgroundColor;
         let tmp10 = typeof backgroundColor === "string";
         if (typeof backgroundColor === "string") {
-          tmp10 = 0 === require("05707_Color.js")(backgroundColor).alpha();
-          const obj19 = require("05707_Color.js")(backgroundColor);
+          tmp10 = 0 === Color(backgroundColor).alpha();
+          const obj19 = Color(backgroundColor);
         }
         obj = { value: null, children: null };
         obj[0] = cardAnimation;
@@ -470,7 +474,7 @@ let items = [
         obj11[2] = layout;
         obj11[3] = contentStyle;
         obj11[4] = children;
-        items9[1] = callback4(require("metro/05716__.js"), obj11);
+        items9[1] = callback4(05716__, obj11);
         obj8[2] = items9;
         obj7.children = closure_14(RN.View, obj8);
         obj6[2] = callback4(Card(5670).PanGestureHandler, obj7);
@@ -478,7 +482,7 @@ let items = [
         obj3.children = items1;
         items[2] = closure_14(View, obj3);
         obj[1] = items;
-        return closure_14(require("05715_noop.js").Provider, obj);
+        return closure_14(noop.Provider, obj);
       } else {
         if ("vertical" !== gestureDirection) {
           if ("vertical-inverted" !== gestureDirection) {

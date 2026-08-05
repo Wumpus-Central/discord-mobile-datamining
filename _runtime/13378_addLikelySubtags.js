@@ -1,3 +1,4 @@
+import { isStructurallyValidLanguageTag } from "13444_isStructurallyValidLanguageTag.js";
 // _runtime/13378_addLikelySubtags.js
 import e from "e";
 import getInternalSlots from "getInternalSlots";
@@ -7,7 +8,7 @@ function addLikelySubtags(locale) {
   let region;
   let script;
   let variants;
-  const parseUnicodeLocaleIdResult = require("13444_isStructurallyValidLanguageTag.js") /* isStructurallyValidLanguageTag */.parseUnicodeLocaleId(locale);
+  const parseUnicodeLocaleIdResult = isStructurallyValidLanguageTag /* isStructurallyValidLanguageTag */.parseUnicodeLocaleId(locale);
   ({ lang, script, region, variants } = parseUnicodeLocaleIdResult.lang);
   if (script) {
     if (region) {

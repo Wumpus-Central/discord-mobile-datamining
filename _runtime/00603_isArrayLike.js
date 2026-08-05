@@ -1,12 +1,14 @@
+import { isLength } from "00604_isLength.js";
+import { isFunction } from "00605_isFunction.js";
 // _runtime/00603_isArrayLike.js
 
 export default function isArrayLike(arg0) {
   let tmp = null != arg0;
   if (tmp) {
-    tmp = require("00604_isLength.js") /* isLength */(arg0.length);
+    tmp = isLength /* isLength */(arg0.length);
   }
   if (tmp) {
-    tmp = !require("00605_isFunction.js") /* isFunction */(arg0);
+    tmp = !isFunction /* isFunction */(arg0);
   }
   return tmp;
 };

@@ -1,3 +1,4 @@
+import { dateTimestampInSeconds } from "07389_dateTimestampInSeconds.js";
 // _runtime/07370_registerSpanErrorInstrumentation.js
 
 export const registerSpanErrorInstrumentation = require("errorCallback").registerSpanErrorInstrumentation;
@@ -256,7 +257,7 @@ export const supportsReportingObserver = require("supportsFetch").supportsReport
 export const SyncPromise = require("SyncPromise").SyncPromise;
 export const rejectedSyncPromise = require("SyncPromise").rejectedSyncPromise;
 export const resolvedSyncPromise = require("SyncPromise").resolvedSyncPromise;
-export const _browserPerformanceTimeOriginMode = require("07389_dateTimestampInSeconds.js") /* dateTimestampInSeconds */._browserPerformanceTimeOriginMode;
+export const _browserPerformanceTimeOriginMode = dateTimestampInSeconds /* dateTimestampInSeconds */._browserPerformanceTimeOriginMode;
 export const browserPerformanceTimeOrigin = require("dateTimestampInSeconds").browserPerformanceTimeOrigin;
 export const dateTimestampInSeconds = require("dateTimestampInSeconds").dateTimestampInSeconds;
 export const timestampInSeconds = require("dateTimestampInSeconds").timestampInSeconds;

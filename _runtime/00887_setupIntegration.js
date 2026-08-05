@@ -1,10 +1,12 @@
+import { getClient } from "00848_getClient.js";
+import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
 // _runtime/00887_setupIntegration.js
 const require = arg1;
 let dependencyMap = arg6;
 function setupIntegration(on, name) {
   const _require = on;
   if (arg2[name.name]) {
-    if (_require("metro/00823___SENTRY_DEBUG__.js").DEBUG_BUILD) {
+    if (___SENTRY_DEBUG__.DEBUG_BUILD) {
       const debug2 = tmp10(824).debug;
       const _HermesInternal2 = HermesInternal;
       debug2.log("Integration skipped because it was already installed: " + name.name);
@@ -33,7 +35,7 @@ function setupIntegration(on, name) {
       obj[0] = name.name;
       on.addEventProcessor(Object.assign((arg0, arg1) => callback2(arg0, arg1, closure_0), obj));
     }
-    if (_require("metro/00823___SENTRY_DEBUG__.js").DEBUG_BUILD) {
+    if (___SENTRY_DEBUG__.DEBUG_BUILD) {
       const debug = tmp6(824).debug;
       const _HermesInternal = HermesInternal;
       debug.log("Integration installed: " + name.name);
@@ -46,7 +48,7 @@ function setupIntegration(on, name) {
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let items = [];
 arg5.addIntegration = function addIntegration(name) {
-  const client = require("00848_getClient.js") /* getClient */.getClient();
+  const client = getClient /* getClient */.getClient();
   if (client) {
     client.addIntegration(name);
   } else if (tmp(823).DEBUG_BUILD) {

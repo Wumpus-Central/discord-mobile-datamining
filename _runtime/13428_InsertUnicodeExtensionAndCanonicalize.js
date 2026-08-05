@@ -1,9 +1,11 @@
+import { isMatched } from "13421_isMatched.js";
+import { CanonicalizeUnicodeLocaleId } from "13429_CanonicalizeUnicodeLocaleId.js";
 // _runtime/13428_InsertUnicodeExtensionAndCanonicalize.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.InsertUnicodeExtensionAndCanonicalize = function InsertUnicodeExtensionAndCanonicalize(arr) {
   let length;
-  require("13421_isMatched.js") /* isMatched */.invariant(-1 === arr.indexOf("-u-"), "Expected locale to not have a Unicode locale extension");
+  isMatched /* isMatched */.invariant(-1 === arr.indexOf("-u-"), "Expected locale to not have a Unicode locale extension");
   let num = 0;
   let str = "-u";
   let str2 = "-u";
@@ -37,7 +39,7 @@ arg5.InsertUnicodeExtensionAndCanonicalize = function InsertUnicodeExtensionAndC
     } while (num2 < arg2.length);
   }
   if ("-u" === tmp3) {
-    return require("13429_CanonicalizeUnicodeLocaleId.js") /* CanonicalizeUnicodeLocaleId */.CanonicalizeUnicodeLocaleId(arr);
+    return CanonicalizeUnicodeLocaleId /* CanonicalizeUnicodeLocaleId */.CanonicalizeUnicodeLocaleId(arr);
   } else {
     const index = arr.indexOf("-x-");
     if (-1 === index) {
@@ -46,6 +48,6 @@ arg5.InsertUnicodeExtensionAndCanonicalize = function InsertUnicodeExtensionAndC
       const sum3 = arr.slice(0, index) + tmp3;
       sum2 = sum3 + arr.slice(index);
     }
-    return require("13429_CanonicalizeUnicodeLocaleId.js") /* CanonicalizeUnicodeLocaleId */.CanonicalizeUnicodeLocaleId(sum2);
+    return CanonicalizeUnicodeLocaleId /* CanonicalizeUnicodeLocaleId */.CanonicalizeUnicodeLocaleId(sum2);
   }
 };

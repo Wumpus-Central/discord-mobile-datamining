@@ -1,12 +1,14 @@
+import { map } from "00066_map.js";
+import { getHandler } from "00283_getHandler.js";
 // _runtime/00282_dispatchNativeEvent.js
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
 arg5.default = function dispatchNativeEvent(self, arg1, timeStamp) {
-  let obj = require("00283_getHandler.js") /* getHandler */;
+  let obj = getHandler /* getHandler */;
   const result = obj.processResponderEvent(arg1, self, timeStamp);
-  let tmp4 = require("00066_map.js") /* map */.customBubblingEventTypes[arg1];
-  const tmp5 = require("00066_map.js") /* map */.customDirectEventTypes[arg1];
+  let tmp4 = map /* map */.customBubblingEventTypes[arg1];
+  const tmp5 = map /* map */.customDirectEventTypes[arg1];
   if (null != tmp4) {
     let tmp6 = null != tmp4;
     if (tmp6) {
@@ -32,5 +34,5 @@ arg5.default = function dispatchNativeEvent(self, arg1, timeStamp) {
     tmp(135).dispatchTrustedEvent(self, tmp9);
     const tmpResult1 = tmp(135);
   }
-  require("00283_getHandler.js") /* getHandler */.rethrowCaughtError();
+  getHandler /* getHandler */.rethrowCaughtError();
 };

@@ -1,10 +1,12 @@
+import { RN_GLOBAL_OBJ } from "00816_RN_GLOBAL_OBJ.js";
+import { isHermesEnabled } from "01002_isHermesEnabled.js";
 // _runtime/01184_createReleaseFromGlobalReleaseConstants.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.createReleaseFromGlobalReleaseConstants = function createReleaseFromGlobalReleaseConstants() {
   let name;
   let version;
-  const SENTRY_RELEASE = require("00816_RN_GLOBAL_OBJ.js") /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ.SENTRY_RELEASE;
+  const SENTRY_RELEASE = RN_GLOBAL_OBJ /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ.SENTRY_RELEASE;
   if (SENTRY_RELEASE) {
     ({ name, version } = SENTRY_RELEASE);
     if (name) {
@@ -32,6 +34,6 @@ arg5.getDefaultRelease = function getDefaultRelease() {
     }
     return combined;
   }
-  obj = require("01002_isHermesEnabled.js") /* isHermesEnabled */;
+  obj = isHermesEnabled /* isHermesEnabled */;
   tmp = require;
 };

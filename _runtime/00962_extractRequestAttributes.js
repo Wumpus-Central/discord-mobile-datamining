@@ -1,10 +1,14 @@
+import { buildMethodPath } from "00960_buildMethodPath.js";
+import { getOperationName } from "00963_getOperationName.js";
+import { 00839__ } from "metro/00839__.js";
+import { 00958__ } from "metro/00958__.js";
 // _runtime/00962_extractRequestAttributes.js
 import asyncGeneratorStep from "createChildOrRootSpan";
 
 function extractRequestAttributes(first, outer1_1) {
   let obj = { [closure_0(closure_1[1]).GEN_AI_SYSTEM_ATTRIBUTE]: "openai" };
-  obj[require("metro/00958__.js").GEN_AI_OPERATION_NAME_ATTRIBUTE] = require("00963_getOperationName.js") /* getOperationName */.getOperationName(outer1_1);
-  obj[require("metro/00839__.js").SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.openai";
+  obj[00958__.GEN_AI_OPERATION_NAME_ATTRIBUTE] = getOperationName /* getOperationName */.getOperationName(outer1_1);
+  obj[00839__.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.openai";
   if (first.length > 0) {
     if (typeof first[0] === "object") {
       if (null !== first[0]) {
@@ -38,7 +42,7 @@ function extractRequestAttributes(first, outer1_1) {
       return obj;
     }
   }
-  obj[require("metro/00958__.js").GEN_AI_REQUEST_MODEL_ATTRIBUTE] = "unknown";
+  obj[00958__.GEN_AI_REQUEST_MODEL_ATTRIBUTE] = "unknown";
 }
 function addRequestAttributes(setAttribute, input) {
   if ("input" in input) {
@@ -48,12 +52,12 @@ function addRequestAttributes(setAttribute, input) {
   }
   if (input) {
     if (0 !== length) {
-      const truncatedJsonString = require("00960_buildMethodPath.js") /* buildMethodPath */.getTruncatedJsonString(input);
-      const attr = setAttribute.setAttribute(require("metro/00958__.js").GEN_AI_REQUEST_MESSAGES_ATTRIBUTE, truncatedJsonString);
+      const truncatedJsonString = buildMethodPath /* buildMethodPath */.getTruncatedJsonString(input);
+      const attr = setAttribute.setAttribute(00958__.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE, truncatedJsonString);
       if (length) {
         const attr1 = setAttribute.setAttribute(tmp2(958).GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE, length);
       }
-      const obj = require("00960_buildMethodPath.js") /* buildMethodPath */;
+      const obj = buildMethodPath /* buildMethodPath */;
       tmp2 = require;
     }
   }

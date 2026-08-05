@@ -1,3 +1,4 @@
+import { 07377__ } from "metro/07377__.js";
 // _runtime/07376_getGlobalSingleton.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -10,7 +11,7 @@ arg5.getGlobalSingleton = function getGlobalSingleton(arg0, arg1, arg2) {
   const tmp2 = tmp.__SENTRY__ || {};
   tmp.__SENTRY__ = tmp2;
   const tmp3 = tmp2[require(undefined, 7377).SDK_VERSION] || {};
-  tmp2[require("metro/07377__.js").SDK_VERSION] = tmp3;
+  tmp2[07377__.SDK_VERSION] = tmp3;
   let tmp4 = tmp3[arg0];
   if (!tmp4) {
     const tmp6 = arg1();

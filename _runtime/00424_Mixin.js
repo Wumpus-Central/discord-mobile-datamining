@@ -1,3 +1,7 @@
+import { measure } from "00068_measure.js";
+import { SoundManager } from "00294_SoundManager.js";
+import { Position } from "00425_Position.js";
+import { BoundingDimensions } from "00427_BoundingDimensions.js";
 // _runtime/00424_Mixin.js
 import "noop";
 import { jsx } from "jsxProd";
@@ -35,7 +39,7 @@ const LONG_PRESS_DETECTED = "LONG_PRESS_DETECTED";
 let closure_18 = { NOT_RESPONDER: { DELAY: "ERROR", RESPONDER_GRANT: "RESPONDER_INACTIVE_PRESS_IN", RESPONDER_RELEASE: "ERROR", RESPONDER_TERMINATED: "ERROR", ENTER_PRESS_RECT: "ERROR", LEAVE_PRESS_RECT: "ERROR", LONG_PRESS_DETECTED: "ERROR" }, RESPONDER_INACTIVE_PRESS_IN: { DELAY: "RESPONDER_ACTIVE_PRESS_IN", RESPONDER_GRANT: "ERROR", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "RESPONDER_INACTIVE_PRESS_IN", LEAVE_PRESS_RECT: "RESPONDER_INACTIVE_PRESS_OUT", LONG_PRESS_DETECTED: "ERROR" }, RESPONDER_INACTIVE_PRESS_OUT: { DELAY: "RESPONDER_ACTIVE_PRESS_OUT", RESPONDER_GRANT: "ERROR", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "RESPONDER_INACTIVE_PRESS_IN", LEAVE_PRESS_RECT: "RESPONDER_INACTIVE_PRESS_OUT", LONG_PRESS_DETECTED: "ERROR" }, RESPONDER_ACTIVE_PRESS_IN: { DELAY: "ERROR", RESPONDER_GRANT: "ERROR", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "RESPONDER_ACTIVE_PRESS_IN", LEAVE_PRESS_RECT: "RESPONDER_ACTIVE_PRESS_OUT", LONG_PRESS_DETECTED: "RESPONDER_ACTIVE_LONG_PRESS_IN" }, RESPONDER_ACTIVE_PRESS_OUT: { DELAY: "ERROR", RESPONDER_GRANT: "ERROR", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "RESPONDER_ACTIVE_PRESS_IN", LEAVE_PRESS_RECT: "RESPONDER_ACTIVE_PRESS_OUT", LONG_PRESS_DETECTED: "ERROR" }, RESPONDER_ACTIVE_LONG_PRESS_IN: { DELAY: "ERROR", RESPONDER_GRANT: "ERROR", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "RESPONDER_ACTIVE_LONG_PRESS_IN", LEAVE_PRESS_RECT: "RESPONDER_ACTIVE_LONG_PRESS_OUT", LONG_PRESS_DETECTED: "RESPONDER_ACTIVE_LONG_PRESS_IN" }, RESPONDER_ACTIVE_LONG_PRESS_OUT: { DELAY: "ERROR", RESPONDER_GRANT: "ERROR", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "RESPONDER_ACTIVE_LONG_PRESS_IN", LEAVE_PRESS_RECT: "RESPONDER_ACTIVE_LONG_PRESS_OUT", LONG_PRESS_DETECTED: "ERROR" }, error: { DELAY: "NOT_RESPONDER", RESPONDER_GRANT: "RESPONDER_INACTIVE_PRESS_IN", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "NOT_RESPONDER", LEAVE_PRESS_RECT: "NOT_RESPONDER", LONG_PRESS_DETECTED: "NOT_RESPONDER" } };
 let obj2 = {
   componentDidMount() {
-    const isTV = require("00273_get_Version.js").isTV;
+    const isTV = require("00273_get_Version.js") /* get Version */.isTV;
   },
   componentWillUnmount() {
     const self = this;
@@ -227,8 +231,8 @@ let obj2 = {
     const responderID = this.state.touchable.responderID;
     if (null != responderID) {
       if (typeof responderID === "number") {
-        require("00068_measure.js").measure(responderID, self._handleQueryLayout);
-        const obj = require("00068_measure.js");
+        measure.measure(responderID, self._handleQueryLayout);
+        const obj = measure;
       } else {
         responderID.measure(self._handleQueryLayout);
       }
@@ -254,17 +258,17 @@ let obj2 = {
     if (tmp) {
       const self = this;
       if (this.state.touchable.positionOnActivate) {
-        require("00425_Position.js").release(self.state.touchable.positionOnActivate);
-        const obj = require("00425_Position.js");
+        Position.release(self.state.touchable.positionOnActivate);
+        const obj = Position;
       }
       if (self.state.touchable.dimensionsOnActivate) {
-        require("00427_BoundingDimensions.js").release(self.state.touchable.dimensionsOnActivate);
-        const obj2 = require("00427_BoundingDimensions.js");
+        BoundingDimensions.release(self.state.touchable.dimensionsOnActivate);
+        const obj2 = BoundingDimensions;
       }
-      self.state.touchable.positionOnActivate = require("00425_Position.js").getPooled(arg4, arg5);
-      const obj3 = require("00425_Position.js");
-      self.state.touchable.dimensionsOnActivate = require("00427_BoundingDimensions.js").getPooled(arg2, arg3);
-      const obj4 = require("00427_BoundingDimensions.js");
+      self.state.touchable.positionOnActivate = Position.getPooled(arg4, arg5);
+      const obj3 = Position;
+      self.state.touchable.dimensionsOnActivate = BoundingDimensions.getPooled(arg2, arg3);
+      const obj4 = BoundingDimensions;
     }
   },
   _handleDelay(persist) {
@@ -450,7 +454,7 @@ let obj2 = {
               self._endHighlight(nativeEvent);
             }
             if (!self.props.touchSoundDisabled) {
-              obj = require("00294_SoundManager.js");
+              obj = SoundManager;
               obj.playTouchSound();
             }
             self.touchableHandlePress(nativeEvent);

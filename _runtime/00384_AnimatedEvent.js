@@ -1,3 +1,4 @@
+import { 00038__ } from "metro/00038__.js";
 // _runtime/00384_AnimatedEvent.js
 import _classCallCheck from "_classCallCheck";
 
@@ -107,7 +108,7 @@ let items = [
   {
     key: "__detach",
     value: function __detach(arg0, arg1) {
-      require("metro/00038__.js")(this.__isNative, "Only native driven events need to be detached.");
+      00038__(this.__isNative, "Only native driven events need to be detached.");
       if (this._attachedEvent) {
         const _attachedEvent = this._attachedEvent;
         _attachedEvent.detach();

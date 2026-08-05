@@ -1,3 +1,4 @@
+import { __INTERNAL_VIEW_CONFIG } from "04652___INTERNAL_VIEW_CONFIG.js";
 // _runtime/metro/04651__.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importDefaultResult from "noop";
@@ -89,7 +90,7 @@ export default importDefaultResult.forwardRef(function SearchBar(autoCapitalize,
     obj.onSearchButtonPress = onSearchButtonPress;
     obj.onCancelButtonPress = onCancelButtonPress;
     obj.onChangeText = onChangeText;
-    return jsx(require("04652___INTERNAL_VIEW_CONFIG.js"), { ref: null });
+    return jsx(__INTERNAL_VIEW_CONFIG, { ref: null });
   } else {
     let _console = console;
     console.warn("Importing SearchBar is only valid on iOS and Android devices.");

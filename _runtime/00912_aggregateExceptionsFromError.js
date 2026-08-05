@@ -1,3 +1,4 @@
+import { isInstanceOf } from "00827_isInstanceOf.js";
 // _runtime/00912_aggregateExceptionsFromError.js
 const require = arg1;
 let dependencyMap = arg6;
@@ -87,7 +88,7 @@ arg5.applyAggregateErrorsToEvent = function applyAggregateErrorsToEvent(arg0, ar
           exception.exception.values = aggregateExceptionsFromError(arg0, arg1, arg3, originalException.originalException, arg2, exception.exception.values, tmp6, 0);
         }
       }
-      obj = require("00827_isInstanceOf.js") /* isInstanceOf */;
+      obj = isInstanceOf /* isInstanceOf */;
     }
   }
 };

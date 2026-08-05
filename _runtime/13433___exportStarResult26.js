@@ -1,3 +1,6 @@
+import { getMultiInternalSlots } from "13386_getMultiInternalSlots.js";
+import { __exportStarResult3 } from "13389___exportStarResult3.js";
+import { __exportStarResult4 } from "13391___exportStarResult4.js";
 // _runtime/13433___exportStarResult26.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -7,20 +10,20 @@ arg5.SetNumberFormatDigitOptions = function SetNumberFormatDigitOptions(internal
   let minimumSignificantDigits;
   let tmp = arg3;
   ({ minimumFractionDigits, maximumFractionDigits, minimumSignificantDigits, maximumSignificantDigits } = result1);
-  internalSlots.minimumIntegerDigits = require("13389___exportStarResult3.js") /* __exportStarResult3 */.GetNumberOption(result1, "minimumIntegerDigits", 1, 21, 1);
-  const GetNumberOptionResult = require("13389___exportStarResult3.js") /* __exportStarResult3 */.GetNumberOption(result1, "roundingIncrement", 1, 5000, 1);
+  internalSlots.minimumIntegerDigits = __exportStarResult3 /* __exportStarResult3 */.GetNumberOption(result1, "minimumIntegerDigits", 1, 21, 1);
+  const GetNumberOptionResult = __exportStarResult3 /* __exportStarResult3 */.GetNumberOption(result1, "roundingIncrement", 1, 5000, 1);
   const hasItem = set.has(GetNumberOptionResult);
   const combined = "Invalid rounding increment value: ".concat(GetNumberOptionResult, ".\nValid values are ");
-  require("13386_getMultiInternalSlots.js") /* getMultiInternalSlots */.invariant(hasItem, combined.concat(Array.from(set).join(", "), "."));
+  getMultiInternalSlots /* getMultiInternalSlots */.invariant(hasItem, combined.concat(Array.from(set).join(", "), "."));
   const arr = Array.from(set);
-  GetOptionResult1 = require("13391___exportStarResult4.js") /* __exportStarResult4 */.GetOption(result1, "roundingPriority", "string", ["auto", "morePrecision", "lessPrecision"], "auto");
-  const GetOptionResult = require("13391___exportStarResult4.js") /* __exportStarResult4 */.GetOption(result1, "roundingMode", "string", ["ceil", "floor", "expand", "trunc", "halfCeil", "halfFloor", "halfExpand", "halfTrunc", "halfEven"], "halfExpand");
+  GetOptionResult1 = __exportStarResult4 /* __exportStarResult4 */.GetOption(result1, "roundingPriority", "string", ["auto", "morePrecision", "lessPrecision"], "auto");
+  const GetOptionResult = __exportStarResult4 /* __exportStarResult4 */.GetOption(result1, "roundingMode", "string", ["ceil", "floor", "expand", "trunc", "halfCeil", "halfFloor", "halfExpand", "halfTrunc", "halfEven"], "halfExpand");
   if (1 !== GetNumberOptionResult) {
     tmp = minimumFractionDigits;
   }
   internalSlots.roundingIncrement = GetNumberOptionResult;
   internalSlots.roundingMode = GetOptionResult;
-  internalSlots.trailingZeroDisplay = require("13391___exportStarResult4.js") /* __exportStarResult4 */.GetOption(result1, "trailingZeroDisplay", "string", ["auto", "stripIfInteger"], "auto");
+  internalSlots.trailingZeroDisplay = __exportStarResult4 /* __exportStarResult4 */.GetOption(result1, "trailingZeroDisplay", "string", ["auto", "stripIfInteger"], "auto");
   let flag = true;
   let flag2 = true;
   if ("auto" === GetOptionResult1) {

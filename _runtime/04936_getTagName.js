@@ -1,3 +1,5 @@
+import { getDataView } from "04897_getDataView.js";
+import { 04914__ } from "metro/04914__.js";
 // _runtime/04936_getTagName.js
 import _slicedToArray from "_slicedToArray";
 
@@ -5,7 +7,7 @@ let error;
 let length;
 const require = arg1;
 function getTagName(dataView, sum1) {
-  let obj = require("04897_getDataView.js") /* getDataView */;
+  let obj = getDataView /* getDataView */;
   const tmp = callback(obj.getPascalStringFromDataView(dataView, sum1), 2);
   const first = tmp[0];
   obj = { tagName: tmp[1], tagNameSize: null };
@@ -24,22 +26,22 @@ let c6 = 4;
 
 export default {
   read(arg0, arg1) {
-    let obj = require("04897_getDataView.js") /* getDataView */;
+    let obj = getDataView /* getDataView */;
     const uint8Array = new Uint8Array(arg0);
     const dataView = obj.getDataView(uint8Array.buffer);
     obj = {};
     let num = 0;
     if (0 < arg0.length) {
       const sum = num + closure_7;
-      const stringFromDataView = require("04897_getDataView.js") /* getDataView */.getStringFromDataView(dataView, num, closure_7);
-      const obj3 = require("04897_getDataView.js") /* getDataView */;
-      const shortAt = require("metro/04914__.js").getShortAt(dataView, sum);
+      const stringFromDataView = getDataView /* getDataView */.getStringFromDataView(dataView, num, closure_7);
+      const obj3 = getDataView /* getDataView */;
+      const shortAt = 04914__.getShortAt(dataView, sum);
       const sum1 = sum + c5;
       const tmp15 = getTagName(dataView, sum1);
       let name = tmp15.tagName;
       const sum2 = sum1 + tmp15.tagNameSize;
-      const obj4 = require("metro/04914__.js");
-      const longAt = require("metro/04914__.js").getLongAt(dataView, sum2);
+      const obj4 = 04914__;
+      const longAt = 04914__.getLongAt(dataView, sum2);
       const sum3 = sum2 + c6;
       if (stringFromDataView === c4) {
         let tmp5Result = tmp5(4897);
@@ -65,7 +67,7 @@ export default {
         }
       }
       num = sum3 + (longAt + longAt % 2);
-      const obj5 = require("metro/04914__.js");
+      const obj5 = 04914__;
     }
     return obj;
   }

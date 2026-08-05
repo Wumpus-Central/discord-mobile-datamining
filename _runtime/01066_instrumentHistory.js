@@ -1,8 +1,10 @@
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
+import { WINDOW } from "01039_WINDOW.js";
 // _runtime/01066_instrumentHistory.js
 const require = arg1;
 const dependencyMap = arg6;
 function instrumentHistory() {
-  const WINDOW = require("01039_WINDOW.js") /* WINDOW */.WINDOW;
+  const WINDOW = WINDOW /* WINDOW */.WINDOW;
   const listener = WINDOW.addEventListener("popstate", () => {
     const href = callback(table[1]).WINDOW.location.href;
     if (href !== href) {
@@ -57,8 +59,8 @@ function instrumentHistory() {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.addHistoryInstrumentationHandler = function addHistoryInstrumentationHandler(arg0) {
-  require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.addHandler("history", arg0);
-  const obj = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
-  require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.maybeInstrument("history", instrumentHistory);
+  registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.addHandler("history", arg0);
+  const obj = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
+  registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.maybeInstrument("history", instrumentHistory);
 };
 arg5.instrumentHistory = instrumentHistory;

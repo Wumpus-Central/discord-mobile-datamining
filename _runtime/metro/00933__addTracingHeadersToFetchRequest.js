@@ -1,3 +1,6 @@
+import { getClient } from "../00848_getClient.js";
+import { hasSpansEnabled } from "../00855_hasSpansEnabled.js";
+import { getTraceData } from "../00904_getTraceData.js";
 // _runtime/metro/00933__addTracingHeadersToFetchRequest.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -6,7 +9,7 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span, propagateTrac
   let tmp5;
   let traceparent;
   let tmp = propagateTraceparent;
-  let obj = require("../00904_getTraceData.js") /* getTraceData */;
+  let obj = getTraceData /* getTraceData */;
   obj = { span, propagateTraceparent };
   const traceData = obj.getTraceData(obj);
   ({ sentry-trace: tmp5, baggage, traceparent } = traceData);
@@ -205,7 +208,7 @@ arg5.instrumentFetchRequest = function instrumentFetchRequest(fetchData, arg1, a
   let url;
   if (fetchData.fetchData) {
     ({ method, url } = fetchData.fetchData);
-    obj = require("../00855_hasSpansEnabled.js") /* hasSpansEnabled */;
+    obj = hasSpansEnabled /* hasSpansEnabled */;
     let hasSpansEnabledResult = obj.hasSpansEnabled();
     if (hasSpansEnabledResult) {
       hasSpansEnabledResult = arg1(url);
@@ -352,7 +355,7 @@ arg5.instrumentFetchRequest = function instrumentFetchRequest(fetchData, arg1, a
       const tmp27 = _addTracingHeadersToFetchRequest;
       tmp3Result8 = tmp3(855);
     }
-    const client = require("../00848_getClient.js") /* getClient */.getClient();
+    const client = getClient /* getClient */.getClient();
     if (client) {
       ({ args: obj19[0], response: obj19[1], startTimestamp: obj19[2], endTimestamp: obj19[3] } = fetchData);
       client.emit("beforeOutgoingRequestSpan", sentryNonRecordingSpan, { input: null, response: null, startTimestamp: null, endTimestamp: null });

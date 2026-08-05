@@ -1,7 +1,8 @@
+import { isPrototype } from "00630_isPrototype.js";
 // _runtime/00629_baseKeys.js
 
 export default function baseKeys(arg0) {
-  if (require("00630_isPrototype.js") /* isPrototype */(arg0)) {
+  if (isPrototype /* isPrototype */(arg0)) {
     const items = [];
     const _Object = Object;
     for (const key10016 in Object(arg0)) {

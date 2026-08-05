@@ -1,3 +1,4 @@
+import { assign } from "12827_assign.js";
 // _runtime/12838_inflate_table.js
 let closure_2 = [3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 15, 17, 19, 23, 27, 31, 35, 43, 51, 59, 67, 83, 99, 115, 131, 163, 195, 227, 258, 0, 0];
 let closure_3 = [16, 16, 16, 16, 16, 16, 16, 16, 17, 17, 17, 17, 18, 18, 18, 18, 19, 19, 19, 19, 20, 20, 20, 20, 21, 21, 21, 21, 16, 72, 78];
@@ -6,8 +7,8 @@ let closure_5 = [16, 16, 16, 16, 17, 17, 18, 18, 19, 19, 20, 20, 21, 21, 22, 22,
 
 export default function inflate_table(arg0, arg1, arg2, arg3, arg4, arg5, arg6, bits) {
   bits = bits.bits;
-  const buf16 = new require("12827_assign.js") /* assign */.Buf16(16);
-  const buf161 = new require("12827_assign.js") /* assign */.Buf16(16);
+  const buf16 = new assign /* assign */.Buf16(16);
+  const buf161 = new assign /* assign */.Buf16(16);
   let num = 0;
   do {
     buf16[num] = 0;

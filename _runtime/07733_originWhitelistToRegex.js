@@ -1,3 +1,4 @@
+import { 07734__ } from "metro/07734__.js";
 // _runtime/07733_originWhitelistToRegex.js
 import noop from "noop";
 import "noop";
@@ -64,7 +65,7 @@ if (!fn) {
   };
 }
 function originWhitelistToRegex(arg0) {
-  return "^".concat(require("metro/07734__.js")(arg0).replace(/\\\*/g, ".*"));
+  return "^".concat(07734__(arg0).replace(/\\\*/g, ".*"));
 }
 function createOnShouldStartLoadWithRequest(arg0, arg1, arg2) {
   let closure_0 = arg0;
@@ -123,16 +124,16 @@ function createOnShouldStartLoadWithRequest(arg0, arg1, arg2) {
 
 export const defaultOriginWhitelist = ["http://*", "https://*"];
 export { createOnShouldStartLoadWithRequest };
-export const defaultRenderLoading = () => callback(closure_7, { style: require("07735_get_ActivityIndicator.js").loadingOrErrorView, children: callback(closure_8, {}) });
+export const defaultRenderLoading = () => callback(closure_7, { style: require("07735_get_ActivityIndicator.js") /* get ActivityIndicator */.loadingOrErrorView, children: callback(closure_8, {}) });
 export const defaultRenderError = (arg0, arg1, arg2) => {
-  let obj = { style: require("07735_get_ActivityIndicator.js").loadingOrErrorView, children: null };
-  obj = { style: require("07735_get_ActivityIndicator.js").errorTextTitle, children: "Error loading page" };
+  let obj = { style: require("07735_get_ActivityIndicator.js") /* get ActivityIndicator */.loadingOrErrorView, children: null };
+  obj = { style: require("07735_get_ActivityIndicator.js") /* get ActivityIndicator */.errorTextTitle, children: "Error loading page" };
   const items = [callback(closure_9, obj), , , ];
-  obj = { style: require("07735_get_ActivityIndicator.js").errorText, children: "Domain: ".concat(arg0) };
+  obj = { style: require("07735_get_ActivityIndicator.js") /* get ActivityIndicator */.errorText, children: "Domain: ".concat(arg0) };
   items[1] = callback(closure_9, obj);
-  items[2] = callback(closure_9, { style: require("07735_get_ActivityIndicator.js").errorText, children: "Error Code: ".concat(arg1) });
-  const obj1 = { style: require("07735_get_ActivityIndicator.js").errorText, children: "Error Code: ".concat(arg1) };
-  items[3] = callback(closure_9, { style: require("07735_get_ActivityIndicator.js").errorText, children: "Description: ".concat(arg2) });
+  items[2] = callback(closure_9, { style: require("07735_get_ActivityIndicator.js") /* get ActivityIndicator */.errorText, children: "Error Code: ".concat(arg1) });
+  const obj1 = { style: require("07735_get_ActivityIndicator.js") /* get ActivityIndicator */.errorText, children: "Error Code: ".concat(arg1) };
+  items[3] = callback(closure_9, { style: require("07735_get_ActivityIndicator.js") /* get ActivityIndicator */.errorText, children: "Description: ".concat(arg2) });
   obj[1] = items;
   return callback2(closure_7, obj);
 };

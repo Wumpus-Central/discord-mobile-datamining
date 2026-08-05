@@ -1,18 +1,21 @@
+import { importDefaultResult1 } from "04918_importDefaultResult1.js";
+import { 04900__ } from "metro/04900__.js";
+import { 04914__ } from "metro/04914__.js";
 // _runtime/04917_readTag.js
 const require = arg1;
 function readTag(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5) {
-  let obj = require("metro/04914__.js");
+  let obj = 04914__;
   const typeSize = obj.getTypeSize("SHORT");
-  sum = typeSize + require("metro/04914__.js").getTypeSize("SHORT");
-  const obj2 = require("metro/04914__.js");
-  const sum1 = sum + require("metro/04914__.js").getTypeSize("LONG");
-  const obj3 = require("metro/04914__.js");
-  const shortAt = require("metro/04914__.js").getShortAt(byteLength, sum, byteOrder);
-  const obj4 = require("metro/04914__.js");
-  const shortAt1 = require("metro/04914__.js").getShortAt(byteLength, sum + typeSize, byteOrder);
-  const obj5 = require("metro/04914__.js");
-  const longAt = require("metro/04914__.js").getLongAt(byteLength, sum + sum, byteOrder);
-  if (undefined !== require("metro/04914__.js").typeSizes[shortAt1]) {
+  sum = typeSize + 04914__.getTypeSize("SHORT");
+  const obj2 = 04914__;
+  const sum1 = sum + 04914__.getTypeSize("LONG");
+  const obj3 = 04914__;
+  const shortAt = 04914__.getShortAt(byteLength, sum, byteOrder);
+  const obj4 = 04914__;
+  const shortAt1 = 04914__.getShortAt(byteLength, sum + typeSize, byteOrder);
+  const obj5 = 04914__;
+  const longAt = 04914__.getLongAt(byteLength, sum + sum, byteOrder);
+  if (undefined !== 04914__.typeSizes[shortAt1]) {
     if ((function tagValueFitsInOffsetSlot(shortAt1, longAt) {
       const result = callback(4914).typeSizes[shortAt1] * longAt;
       return result <= callback(4914).getTypeSize("LONG");
@@ -107,8 +110,8 @@ function getTagValue(byteLength, sum2, shortAt1, longAt, byteOrder, arg5) {
   let result = longAt;
   let BYTE = shortAt1;
   if (flag) {
-    result = longAt * require("metro/04914__.js").typeSizes[shortAt1];
-    BYTE = require("metro/04914__.js").tagTypes.BYTE;
+    result = longAt * 04914__.typeSizes[shortAt1];
+    BYTE = 04914__.tagTypes.BYTE;
   }
   let sum = sum2;
   const items = [];
@@ -117,11 +120,11 @@ function getTagValue(byteLength, sum2, shortAt1, longAt, byteOrder, arg5) {
     let arr = items.push(obj[BYTE](byteLength, sum, byteOrder));
     let tmp7 = importDefault;
     let tmp8 = dependencyMap;
-    sum = sum + require("metro/04914__.js").typeSizes[BYTE];
+    sum = sum + 04914__.typeSizes[BYTE];
   }
-  if (BYTE === require("metro/04914__.js").tagTypes.ASCII) {
-    let asciiValue = require("metro/04914__.js").getAsciiValue(items);
-    const tmp9Result = require("metro/04914__.js");
+  if (BYTE === 04914__.tagTypes.ASCII) {
+    let asciiValue = 04914__.getAsciiValue(items);
+    const tmp9Result = 04914__;
   } else {
     asciiValue = items;
     if (1 === items.length) {
@@ -142,12 +145,12 @@ obj[9] = require("module_4914").getSlongAt;
 obj[10] = require("module_4914").getSrationalAt;
 obj[13] = require("module_4914").getIfdPointerAt;
 function readIfd(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5, arg6) {
-  let obj = require("metro/04914__.js");
+  let obj = 04914__;
   const typeSize = obj.getTypeSize("SHORT");
   let num = 0;
   if (sum + obj2.getTypeSize("SHORT") <= byteLength.byteLength) {
-    num = require("metro/04914__.js").getShortAt(byteLength, sum, byteOrder);
-    const tmpResult = require("metro/04914__.js");
+    num = 04914__.getShortAt(byteLength, sum, byteOrder);
+    const tmpResult = 04914__;
   }
   obj = {};
   sum = sum + typeSize;
@@ -177,7 +180,7 @@ function readIfd(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5, arg6) {
           if (!tmp19) {
             let tmp16 = require;
             let tmp17 = dependencyMap;
-            let tmp18 = IFD_TYPE_0TH === require("04918_importDefaultResult1.js") /* importDefaultResult1 */.IFD_TYPE_PENTAX && "LevelInfo" === tmp13.name;
+            let tmp18 = IFD_TYPE_0TH === importDefaultResult1 /* importDefaultResult1 */.IFD_TYPE_PENTAX && "LevelInfo" === tmp13.name;
             tmp19 = tmp18;
           }
           if (tmp19) {
@@ -200,17 +203,17 @@ function readIfd(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5, arg6) {
       }
     }
   }
-  if (require("metro/04900__.js").USE_THUMBNAIL) {
+  if (04900__.USE_THUMBNAIL) {
     let tmp23Result = tmp23(4914);
     if (tmp5 < byteLength.byteLength - tmp23Result.getTypeSize("LONG")) {
       tmp23Result = tmp23(4914);
       const longAt = tmp23Result.getLongAt(byteLength, tmp5, byteOrder);
       let tmp26 = 0 !== longAt;
       if (tmp26) {
-        tmp26 = IFD_TYPE_0TH === require("04918_importDefaultResult1.js") /* importDefaultResult1 */.IFD_TYPE_0TH;
+        tmp26 = IFD_TYPE_0TH === importDefaultResult1 /* importDefaultResult1 */.IFD_TYPE_0TH;
       }
       if (tmp26) {
-        obj.Thumbnail = readIfd(byteLength, require("04918_importDefaultResult1.js") /* importDefaultResult1 */.IFD_TYPE_1ST, sum, sum + longAt, byteOrder, arg5);
+        obj.Thumbnail = readIfd(byteLength, importDefaultResult1 /* importDefaultResult1 */.IFD_TYPE_1ST, sum, sum + longAt, byteOrder, arg5);
       }
     }
   }
@@ -218,6 +221,6 @@ function readIfd(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5, arg6) {
 }
 
 export const get0thIfdOffset = function get0thIfdOffset(buffer, sum, byteOrder) {
-  return sum + require("metro/04914__.js").getLongAt(buffer, sum + 4, byteOrder);
+  return sum + 04914__.getLongAt(buffer, sum + 4, byteOrder);
 };
 export { readIfd };

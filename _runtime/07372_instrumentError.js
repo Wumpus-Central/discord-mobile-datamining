@@ -1,9 +1,11 @@
+import { addHandler } from "07373_addHandler.js";
+import { getGlobalSingleton } from "07376_getGlobalSingleton.js";
 // _runtime/07372_instrumentError.js
 const require = arg1;
 const dependencyMap = arg6;
 function instrumentError() {
-  const onerror = require("07376_getGlobalSingleton.js") /* getGlobalSingleton */.GLOBAL_OBJ.onerror;
-  require("07376_getGlobalSingleton.js") /* getGlobalSingleton */.GLOBAL_OBJ.onerror = function(msg, url, line, column, error) {
+  const onerror = getGlobalSingleton /* getGlobalSingleton */.GLOBAL_OBJ.onerror;
+  getGlobalSingleton /* getGlobalSingleton */.GLOBAL_OBJ.onerror = function(msg, url, line, column, error) {
     callback(table[0]).triggerHandlers("error", { column, error, line, msg, url });
     if (!onerror) {
       return tmp2;
@@ -18,11 +20,11 @@ function instrumentError() {
       const tmp3 = onerror;
     }
   };
-  require("07376_getGlobalSingleton.js") /* getGlobalSingleton */.GLOBAL_OBJ.onerror.__SENTRY_INSTRUMENTED__ = true;
+  getGlobalSingleton /* getGlobalSingleton */.GLOBAL_OBJ.onerror.__SENTRY_INSTRUMENTED__ = true;
 }
 let c2 = null;
 arg5.addGlobalErrorInstrumentationHandler = function addGlobalErrorInstrumentationHandler(arg0) {
-  require("07373_addHandler.js") /* addHandler */.addHandler("error", arg0);
-  const obj = require("07373_addHandler.js") /* addHandler */;
-  require("07373_addHandler.js") /* addHandler */.maybeInstrument("error", instrumentError);
+  addHandler /* addHandler */.addHandler("error", arg0);
+  const obj = addHandler /* addHandler */;
+  addHandler /* addHandler */.maybeInstrument("error", instrumentError);
 };

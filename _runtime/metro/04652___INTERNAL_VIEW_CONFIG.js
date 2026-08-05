@@ -1,3 +1,4 @@
+import { renderElement } from "../00114_renderElement.js";
 // _runtime/metro/04652___INTERNAL_VIEW_CONFIG.js
 import get_ActivityIndicator from "get ActivityIndicator";
 import weakSet from "weakSet";
@@ -12,24 +13,24 @@ const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSearc
 obj[2] = obj;
 obj = {
   blur(arg0) {
-    require("../00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "blur", []);
+    renderElement /* renderElement */.dispatchCommand(arg0, "blur", []);
   },
   focus(arg0) {
-    require("../00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "focus", []);
+    renderElement /* renderElement */.dispatchCommand(arg0, "focus", []);
   },
   clearText(arg0) {
-    require("../00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "clearText", []);
+    renderElement /* renderElement */.dispatchCommand(arg0, "clearText", []);
   },
   toggleCancelButton(arg0, arg1) {
     const items = [arg1];
-    require("../00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "toggleCancelButton", items);
+    renderElement /* renderElement */.dispatchCommand(arg0, "toggleCancelButton", items);
   },
   setText(arg0, arg1) {
     const items = [arg1];
-    require("../00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "setText", items);
+    renderElement /* renderElement */.dispatchCommand(arg0, "setText", items);
   },
   cancelSearch(arg0) {
-    require("../00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "cancelSearch", []);
+    renderElement /* renderElement */.dispatchCommand(arg0, "cancelSearch", []);
   }
 };
 

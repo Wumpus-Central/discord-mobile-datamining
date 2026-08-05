@@ -1,11 +1,13 @@
+import { toArray } from "05372_toArray.js";
+import { 05392__ } from "metro/05392__.js";
 // _runtime/05391_transformIntoHandlerTags.js
 import get_ActivityIndicator from "get ActivityIndicator";
 
 let Platform;
 let c3;
 function transformIntoHandlerTags(arg0) {
-  const obj = require("05372_toArray.js") /* toArray */;
-  const mapped = require("05372_toArray.js") /* toArray */.toArray(arg0).map((current) => {
+  const obj = toArray /* toArray */;
+  const mapped = toArray /* toArray */.toArray(arg0).map((current) => {
     let num = callback(table[2]).handlerIDToTag[current];
     if (!num) {
       current = current.current;
@@ -104,10 +106,10 @@ export const findNodeHandle = function findNodeHandle(current) {
 export const scheduleFlushOperations = function scheduleFlushOperations() {
   if (!c5) {
     c5 = true;
-    require("metro/05392__.js").ghQueueMicrotask(() => {
+    05392__.ghQueueMicrotask(() => {
       callback(table[4]).flushOperations();
       let c5 = false;
     });
-    const obj = require("metro/05392__.js");
+    const obj = 05392__;
   }
 };

@@ -1,3 +1,6 @@
+import { getInstanceHandle } from "00136_getInstanceHandle.js";
+import { warnOnce } from "00165_warnOnce.js";
+import { NativeMutationObserverCxx } from "00271_NativeMutationObserverCxx.js";
 // _runtime/00269_notifyMutationObservers.js
 import _slicedToArray from "_slicedToArray";
 import { createMutationRecord } from "MutationRecord";
@@ -68,7 +71,7 @@ function notifyMutationObservers() {
   }
 }
 function warnNoNativeMutationObserver() {
-  require("00165_warnOnce.js")("missing-native-mutation-observer", "Missing native implementation of MutationObserver");
+  warnOnce("missing-native-mutation-observer", "Missing native implementation of MutationObserver");
 }
 let c6 = 1;
 let c7 = false;
@@ -85,7 +88,7 @@ export const unregisterObserver = function unregisterObserver(arg0) {
     deleteResult = 0 === map.size;
   }
   if (deleteResult) {
-    const obj = require("00271_NativeMutationObserverCxx.js");
+    const obj = NativeMutationObserverCxx;
     if (obj != null) {
       obj.disconnect();
     }
@@ -97,9 +100,9 @@ export const observe = function observe(mutationObserverId) {
   let target;
   mutationObserverId = mutationObserverId.mutationObserverId;
   ({ target, subtree } = mutationObserverId);
-  if (null != require("00271_NativeMutationObserverCxx.js")) {
+  if (null != NativeMutationObserverCxx) {
     if (null != map.get(mutationObserverId)) {
-      let obj = require("00136_getInstanceHandle.js") /* getInstanceHandle */;
+      let obj = getInstanceHandle /* getInstanceHandle */;
       const nativeNodeReference = obj.getNativeNodeReference(target);
       if (null != nativeNodeReference) {
         if (!c7) {
@@ -125,7 +128,7 @@ export const observe = function observe(mutationObserverId) {
   }
 };
 export const unobserveAll = function unobserveAll(_mutationObserverId) {
-  if (null != require("00271_NativeMutationObserverCxx.js")) {
+  if (null != NativeMutationObserverCxx) {
     if (null != map.get(_mutationObserverId)) {
       tmp(271).unobserveAll(_mutationObserverId);
       const tmpResult = tmp(271);

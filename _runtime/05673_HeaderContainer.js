@@ -1,3 +1,4 @@
+import { Background } from "05674_Background.js";
 // _runtime/05673_HeaderContainer.js
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -20,7 +21,7 @@ export default function HeaderContainer(getFocusedRoute) {
   let RN;
   let closure_5;
   RN = getFocusedRoute.getFocusedRoute();
-  closure_5 = React.useContext(require("05674_Background.js") /* Background */.HeaderBackContext);
+  closure_5 = React.useContext(Background /* Background */.HeaderBackContext);
   let obj = { pointerEvents: "box-none", style: getFocusedRoute.style, children: null };
   let substr = scenes.slice(-3);
   obj[2] = substr.map((descriptor, arg1, arr) => {

@@ -1,8 +1,9 @@
+import { cloneArrayBuffer } from "04416_cloneArrayBuffer.js";
 // _runtime/04417_cloneDataView.js
 
 export default function cloneDataView(buffer) {
   if (arg1) {
-    buffer = require("04416_cloneArrayBuffer.js") /* cloneArrayBuffer */(buffer.buffer);
+    buffer = cloneArrayBuffer /* cloneArrayBuffer */(buffer.buffer);
   } else {
     buffer = buffer.buffer;
   }

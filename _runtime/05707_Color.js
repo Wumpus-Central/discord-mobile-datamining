@@ -1,3 +1,5 @@
+import { keys } from "05708_keys.js";
+import { hasOwnProperty } from "05712_hasOwnProperty.js";
 // _runtime/05707_Color.js
 import _slicedToArray from "_slicedToArray";
 import keys from "keys";
@@ -476,7 +478,7 @@ obj = {
   string(num) {
     const self = this;
     let self2 = this;
-    if (!(this.model in require("05712_hasOwnProperty.js") /* hasOwnProperty */.to)) {
+    if (!(this.model in hasOwnProperty /* hasOwnProperty */.to)) {
       self2 = self.rgb();
     }
     num = 1;
@@ -487,7 +489,7 @@ obj = {
       color = [];
       color[HermesBuiltin.arraySpread(roundResult.color, 0)] = self.valpha;
     }
-    const to = require("05712_hasOwnProperty.js") /* hasOwnProperty */.to;
+    const to = hasOwnProperty /* hasOwnProperty */.to;
     return to[roundResult.model](color);
   },
   percentString(num) {
@@ -500,7 +502,7 @@ obj = {
       items[HermesBuiltin.arraySpread(roundResult.color, 0)] = this.valpha;
       color = items;
     }
-    const rgb = require("05712_hasOwnProperty.js") /* hasOwnProperty */.to.rgb;
+    const rgb = hasOwnProperty /* hasOwnProperty */.to.rgb;
     return rgb.percent(color);
   },
   array() {
@@ -518,9 +520,9 @@ obj = {
   object() {
     const self = this;
     const obj = {};
-    const channels = require("05708_keys.js") /* keys */[this.model].channels;
+    const channels = keys /* keys */[this.model].channels;
     for (let num = 0; num < channels; num = num + 1) {
-      obj[require("05708_keys.js") /* keys */[this.model].labels[num]] = self.color[num];
+      obj[keys /* keys */[this.model].labels[num]] = self.color[num];
     }
     if (1 !== self.valpha) {
       obj.alpha = self.valpha;
@@ -600,8 +602,8 @@ obj = {
       let keywordResult = Color(color);
     } else {
       const self = this;
-      keywordResult = require("05708_keys.js") /* keys */[this.model].keyword(this.color);
-      const obj = require("05708_keys.js") /* keys */[this.model];
+      keywordResult = keys /* keys */[this.model].keyword(this.color);
+      const obj = keys /* keys */[this.model];
     }
     return keywordResult;
   },
@@ -610,7 +612,7 @@ obj = {
       let hexResult = Color(arg0);
     } else {
       const self = this;
-      const to = require("05712_hasOwnProperty.js") /* hasOwnProperty */.to;
+      const to = hasOwnProperty /* hasOwnProperty */.to;
       hexResult = to.hex(this.rgb().round().color);
       const rgbResult = this.rgb();
     }
@@ -630,7 +632,7 @@ obj = {
       if (1 === formatted.length) {
         text = `0${arr}`;
       }
-      const to = require("05712_hasOwnProperty.js") /* hasOwnProperty */.to;
+      const to = hasOwnProperty /* hasOwnProperty */.to;
       return to.hex(rgbResult.round().color) + text;
     }
   },

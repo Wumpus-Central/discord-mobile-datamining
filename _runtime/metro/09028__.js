@@ -1,3 +1,6 @@
+import { QRPolynomial } from "../09029_QRPolynomial.js";
+import { 09024__ } from "09024__.js";
+import { 09030__ } from "09030__.js";
 // _runtime/metro/09028__.js
 const obj = {
   PATTERN_POSITION_TABLE: items,
@@ -85,7 +88,7 @@ const obj = {
     }
   },
   getErrorCorrectPolynomial(diff) {
-    const tmp = new require("../09029_QRPolynomial.js") /* QRPolynomial */([1], 0);
+    const tmp = new QRPolynomial /* QRPolynomial */([1], 0);
     let multiplyResult = tmp;
     let num = 0;
     let tmp2 = tmp;
@@ -93,8 +96,8 @@ const obj = {
       do {
         let tmp3 = require;
         let tmp4 = dependencyMap;
-        let tmp5 = require("../09029_QRPolynomial.js") /* QRPolynomial */;
-        let obj2 = require("09030__.js");
+        let tmp5 = QRPolynomial /* QRPolynomial */;
+        let obj2 = 09030__;
         let items = [1, obj2.gexp(num)];
         let tmp6 = new.target;
         let tmp7 = new.target;
@@ -112,7 +115,7 @@ const obj = {
   getLengthInBits(arg0, arg1) {
     if (1 <= arg1) {
       if (arg1 < 10) {
-        if (require("09024__.js").MODE_NUMBER === arg0) {
+        if (09024__.MODE_NUMBER === arg0) {
           return 10;
         } else if (tmp20(9024).MODE_ALPHA_NUM === arg0) {
           return 9;
@@ -129,7 +132,7 @@ const obj = {
       }
     }
     if (arg1 < 27) {
-      if (require("09024__.js").MODE_NUMBER === arg0) {
+      if (09024__.MODE_NUMBER === arg0) {
         return 12;
       } else if (tmp13(9024).MODE_ALPHA_NUM === arg0) {
         return 11;
@@ -143,7 +146,7 @@ const obj = {
         throw error1;
       }
     } else if (arg1 < 41) {
-      if (require("09024__.js").MODE_NUMBER === arg0) {
+      if (09024__.MODE_NUMBER === arg0) {
         return 14;
       } else if (tmp6(9024).MODE_ALPHA_NUM === arg0) {
         return 13;

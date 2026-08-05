@@ -1,10 +1,11 @@
+import { dynamicRequire } from "07489_dynamicRequire.js";
 // _runtime/07488_isBrowser.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.isBrowser = function isBrowser() {
   let tmp = typeof window !== "undefined";
   if (typeof window !== "undefined") {
-    const isNodeEnvResult = require("07489_dynamicRequire.js") /* dynamicRequire */.isNodeEnv();
+    const isNodeEnvResult = dynamicRequire /* dynamicRequire */.isNodeEnv();
     let tmp3 = !isNodeEnvResult;
     if (isNodeEnvResult) {
       const _process = tmp4(7376).GLOBAL_OBJ.process;
@@ -15,7 +16,7 @@ arg5.isBrowser = function isBrowser() {
       tmp3 = tmp2;
     }
     tmp = tmp3;
-    const obj = require("07489_dynamicRequire.js") /* dynamicRequire */;
+    const obj = dynamicRequire /* dynamicRequire */;
     tmp4 = require;
   }
   return tmp;

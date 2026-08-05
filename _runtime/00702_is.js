@@ -1,3 +1,4 @@
+import { checkIfSnapshotChanged } from "00703_checkIfSnapshotChanged.js";
 // _runtime/00702_is.js
 import noop from "noop";
 
@@ -116,7 +117,7 @@ export const useSyncExternalStoreWithSelector = (subscribe) => {
     items[1] = fn;
     return items;
   }, items);
-  syncExternalStore = _require("00703_checkIfSnapshotChanged.js").useSyncExternalStore(subscribe, tmp2[0], tmp2[1]);
+  syncExternalStore = _checkIfSnapshotChanged.useSyncExternalStore(subscribe, tmp2[0], tmp2[1]);
   const items1 = [syncExternalStore];
   current(() => {
     current.hasValue = true;

@@ -1,3 +1,7 @@
+import { createContext } from "04159_createContext.js";
+import { PortalHost } from "04161_PortalHost.js";
+import { registerHost } from "04164_registerHost.js";
+import { 04160__ } from "metro/04160__.js";
 // _runtime/04163_memo.js
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -22,19 +26,19 @@ const memoResult = memo((rootHostName) => {
   if (flag === undefined) {
     flag = true;
   }
-  [tmp4, tmp5] = callback(callback2(require("04164_registerHost.js") /* registerHost */.reducer, require("metro/04160__.js").INITIAL_STATE), 2);
+  [tmp4, tmp5] = callback(callback2(registerHost /* registerHost */.reducer, 04160__.INITIAL_STATE), 2);
   let obj = { value: tmp5, children: null };
   obj = { value: tmp4, children: null };
   const items = [rootHostName.children, ];
   if (flag) {
     obj = { name: null };
     obj[0] = str;
-    flag = tmp6(require("04161_PortalHost.js") /* PortalHost */.PortalHost, obj);
+    flag = tmp6(PortalHost /* PortalHost */.PortalHost, obj);
   }
   items[1] = flag;
   obj[1] = items;
-  obj[1] = closure_5(require("04159_createContext.js") /* createContext */.PortalStateContext.Provider, obj);
-  return closure_4(require("04159_createContext.js") /* createContext */.PortalDispatchContext.Provider, obj);
+  obj[1] = closure_5(createContext /* createContext */.PortalStateContext.Provider, obj);
+  return closure_4(createContext /* createContext */.PortalDispatchContext.Provider, obj);
 });
 memoResult.displayName = "PortalProvider";
 

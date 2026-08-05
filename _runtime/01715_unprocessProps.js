@@ -1,8 +1,10 @@
+import { ReanimatedModule } from "01614_ReanimatedModule.js";
+import { r } from "01716_r.js";
 // _runtime/01715_unprocessProps.js
 const require = arg1;
 const dependencyMap = arg6;
 function unprocessProps(styleProps) {
-  const result = require("01716_r.js") /* r */.unprocessColorsInProps(styleProps);
+  const result = r /* r */.unprocessColorsInProps(styleProps);
   if (Array.isArray(styleProps.boxShadow)) {
     const boxShadow = styleProps.boxShadow;
     styleProps.boxShadow = boxShadow.map((color) => {
@@ -37,7 +39,7 @@ obj[4] = function unregisterView(portal) {
   }
 };
 obj[5] = function syncPropsBackToReact() {
-  const ReanimatedModule = require("01614_ReanimatedModule.js") /* ReanimatedModule */.ReanimatedModule;
+  const ReanimatedModule = ReanimatedModule /* ReanimatedModule */.ReanimatedModule;
   const settledUpdates = ReanimatedModule.getSettledUpdates();
   const iter = settledUpdates[Symbol.iterator]();
   const nextResult = iter.next();

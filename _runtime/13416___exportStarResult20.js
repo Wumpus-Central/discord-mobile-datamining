@@ -1,11 +1,13 @@
+import { __exportStarResult32 } from "13384___exportStarResult32.js";
+import { __exportStarResult24 } from "13412___exportStarResult24.js";
 // _runtime/13416___exportStarResult20.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.FormatNumericToParts = function FormatNumericToParts(arg0, isNaN, getInternalSlots) {
   let length;
-  const result = require("13412___exportStarResult24.js") /* __exportStarResult24 */.PartitionNumberPattern(getInternalSlots.getInternalSlots(arg0), isNaN);
+  const result = __exportStarResult24 /* __exportStarResult24 */.PartitionNumberPattern(getInternalSlots.getInternalSlots(arg0), isNaN);
   let num = 0;
-  const ArrayCreateResult = require("13384___exportStarResult32.js") /* __exportStarResult32 */.ArrayCreate(0);
+  const ArrayCreateResult = __exportStarResult32 /* __exportStarResult32 */.ArrayCreate(0);
   if (0 < result.length) {
     do {
       let iter = result[num];

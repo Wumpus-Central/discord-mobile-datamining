@@ -1,3 +1,4 @@
+import { getDefaultOptions } from "03369_getDefaultOptions.js";
 // _runtime/03633_getDefaultOptions.js
 import assign from "assign";
 
@@ -10,6 +11,6 @@ if (!assign) {
 }
 
 export default function getDefaultOptions() {
-  return tmp3.default({}, require("03369_getDefaultOptions.js") /* getDefaultOptions */.getDefaultOptions());
+  return tmp3.default({}, getDefaultOptions /* getDefaultOptions */.getDefaultOptions());
 };
 export default exports.default;

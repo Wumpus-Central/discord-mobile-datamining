@@ -1,3 +1,4 @@
+import { __INTERNAL_VIEW_CONFIG } from "metro/05604___INTERNAL_VIEW_CONFIG.js";
 // _runtime/05603__isNativeReflectConstruct.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _classCallCheck from "_classCallCheck";
@@ -185,7 +186,7 @@ let items = [
           obj.autoPlay = autoPlay;
           obj.resizeMode = resizeMode;
           const merged1 = Object.assign(parsePossibleSourcesResult);
-          return jsx(require("metro/05604___INTERNAL_VIEW_CONFIG.js"), { ref: null });
+          return jsx(__INTERNAL_VIEW_CONFIG, { ref: null });
         }
       }
       speed = self.props.speed;

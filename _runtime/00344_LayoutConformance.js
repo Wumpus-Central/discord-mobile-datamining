@@ -1,3 +1,4 @@
+import { LayoutConformance } from "00345_LayoutConformance.js";
 // _runtime/00344_LayoutConformance.js
 import "noop";
 import { jsx } from "jsxProd";
@@ -8,5 +9,5 @@ export default function LayoutConformance(arg0) {
   const obj = {};
   const merged = Object.assign(arg0);
   obj.style = container.container;
-  return jsx(require("00345_LayoutConformance.js"), {});
+  return jsx(LayoutConformance, {});
 };

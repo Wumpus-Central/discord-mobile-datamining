@@ -1,3 +1,4 @@
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 // _runtime/01086_applySourceContextToFrame.js
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
 
@@ -7,8 +8,8 @@ export const applySourceContextToFrame = function applySourceContextToFrame(file
   if (filename.filename === arg2) {
     if (filename.lineno) {
       if (arg1.length) {
-        require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.addContextToFrame(arg1, filename, arg3);
-        const obj = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
+        registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.addContextToFrame(arg1, filename, arg3);
+        const obj = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
       }
     }
   }

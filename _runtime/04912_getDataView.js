@@ -1,3 +1,4 @@
+import { getDataView } from "04897_getDataView.js";
 // _runtime/04912_getDataView.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -7,8 +8,8 @@ arg5.default = {
   isXMLFile(dataView) {
     let tmp = dataView;
     if (tmp) {
-      tmp = require("04897_getDataView.js") /* getDataView */.getStringFromDataView(dataView, c2, length.length) === length;
-      const obj = require("04897_getDataView.js") /* getDataView */;
+      tmp = getDataView /* getDataView */.getStringFromDataView(dataView, c2, length.length) === length;
+      const obj = getDataView /* getDataView */;
     }
     return tmp;
   },

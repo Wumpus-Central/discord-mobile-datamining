@@ -1,3 +1,4 @@
+import { renderElement } from "../00114_renderElement.js";
 // _runtime/metro/00422___INTERNAL_VIEW_CONFIG.js
 import "noop";
 import weakSet from "weakSet";
@@ -11,7 +12,7 @@ obj[2] = obj;
 obj = {
   setNativeValue(current, arg1) {
     const items = [arg1];
-    require("../00114_renderElement.js") /* renderElement */.dispatchCommand(current, "setNativeValue", items);
+    renderElement /* renderElement */.dispatchCommand(current, "setNativeValue", items);
   }
 };
 

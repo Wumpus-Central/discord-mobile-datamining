@@ -1,3 +1,4 @@
+import { I18nManager } from "00412_I18nManager.js";
 // _runtime/00411_getConstants.js
 if (require("I18nManager")) {
   const constants = require("I18nManager").getConstants();
@@ -13,21 +14,21 @@ export default {
     return obj;
   },
   allowRTL(arg0) {
-    if (require("00412_I18nManager.js")) {
-      require("00412_I18nManager.js").allowRTL(arg0);
-      const tmpResult = require("00412_I18nManager.js");
+    if (I18nManager) {
+      I18nManager.allowRTL(arg0);
+      const tmpResult = I18nManager;
     }
   },
   forceRTL(arg0) {
-    if (require("00412_I18nManager.js")) {
-      require("00412_I18nManager.js").forceRTL(arg0);
-      const tmpResult = require("00412_I18nManager.js");
+    if (I18nManager) {
+      I18nManager.forceRTL(arg0);
+      const tmpResult = I18nManager;
     }
   },
   swapLeftAndRightInRTL(arg0) {
-    if (require("00412_I18nManager.js")) {
-      const result = require("00412_I18nManager.js").swapLeftAndRightInRTL(arg0);
-      const tmpResult = require("00412_I18nManager.js");
+    if (I18nManager) {
+      const result = I18nManager.swapLeftAndRightInRTL(arg0);
+      const tmpResult = I18nManager;
     }
   },
   isRTL: obj.isRTL,

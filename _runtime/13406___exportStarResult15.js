@@ -1,10 +1,11 @@
+import { __exportStarResult32 } from "13384___exportStarResult32.js";
 // _runtime/13406___exportStarResult15.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.CurrencyDigits = function CurrencyDigits(currency, currencyDigitsData) {
   currencyDigitsData = currencyDigitsData.currencyDigitsData;
   let num = 2;
-  if (require("13384___exportStarResult32.js") /* __exportStarResult32 */.HasOwnProperty(currencyDigitsData, currency)) {
+  if (__exportStarResult32 /* __exportStarResult32 */.HasOwnProperty(currencyDigitsData, currency)) {
     num = currencyDigitsData[currency];
   }
   return num;

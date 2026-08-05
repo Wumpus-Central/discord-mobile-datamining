@@ -1,9 +1,10 @@
+import { 00599__ } from "metro/00599__.js";
 // _runtime/00722_isKey.js
 const re2 = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/;
 const re3 = /^\w*$/;
 
 export default function isKey(num) {
-  if (require("metro/00599__.js")(num)) {
+  if (00599__(num)) {
     return false;
   } else {
     let tmp3 = typeof num !== "number";

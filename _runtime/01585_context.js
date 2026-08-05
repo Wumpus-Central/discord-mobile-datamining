@@ -1,3 +1,4 @@
+import { NativeSafeAreaProvider } from "01586_NativeSafeAreaProvider.js";
 // _runtime/01585_context.js
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
@@ -113,7 +114,7 @@ export const SafeAreaProvider = function SafeAreaProvider(initialMetrics) {
     tmp15Result = tmp15(tmp4.Provider, obj1);
   }
   obj.children = tmp15Result;
-  return jsx(_require("01586_NativeSafeAreaProvider.js").NativeSafeAreaProvider, { style: items, onInsetsChange: callback });
+  return jsx(_NativeSafeAreaProvider.NativeSafeAreaProvider, { style: items, onInsetsChange: callback });
 };
 export const SafeAreaListener = function SafeAreaListener(onChange) {
   let children;

@@ -1,3 +1,5 @@
+import { c } from "04036_c.js";
+import { useRiveProperty } from "04049_useRiveProperty.js";
 // _runtime/04052_getBooleanProperty.js
 import _slicedToArray from "_slicedToArray";
 
@@ -10,10 +12,10 @@ export const useRiveBoolean = function useRiveBoolean(reducedMotion, instance) {
   let tmp3;
   let tmp4;
   let tmp5;
-  let obj = require("04036_c.js") /* c */;
+  let obj = c /* c */;
   const cResult = obj.c(4);
-  const obj2 = require("04049_useRiveProperty.js") /* useRiveProperty */;
-  [tmp3, tmp4, tmp5] = callback(require("04049_useRiveProperty.js") /* useRiveProperty */.useRiveProperty(instance, reducedMotion, getBooleanProperty), 3);
+  const obj2 = useRiveProperty /* useRiveProperty */;
+  [tmp3, tmp4, tmp5] = callback(useRiveProperty /* useRiveProperty */.useRiveProperty(instance, reducedMotion, getBooleanProperty), 3);
   if (cResult[0] === tmp5) {
     if (cResult[1] === tmp4) {
       if (cResult[2] === tmp3) {

@@ -418,7 +418,7 @@ let items = [
       }
       obj.removeClippedSubviews = removeClippedSubviews;
       const merged1 = Object.assign(tmp3(self.props.ListItemComponent, self.props.renderItem, columnWrapperStyle, numColumns, self.props.extraData));
-      return tmp4(require("00312_get_VirtualizedList.js").VirtualizedList, obj);
+      return tmp4(require("00312_get_VirtualizedList.js") /* get VirtualizedList */.VirtualizedList, obj);
     }
   }
 ];

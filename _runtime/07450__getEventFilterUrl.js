@@ -1,3 +1,4 @@
+import { __SENTRY_DEBUG__ } from "metro/07403___SENTRY_DEBUG__.js";
 // _runtime/07450__getEventFilterUrl.js
 import setupIntegration from "setupIntegration";
 
@@ -33,7 +34,7 @@ function _getEventFilterUrl(arg0) {
     }
     return tmp4;
   } catch (err) {
-    if (require("metro/07403___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+    if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
       const logger = tmp6(7375).logger;
       const _HermesInternal = HermesInternal;
       logger.error("Cannot extract url for event " + tmp6(7386).getEventDescription(tmp));

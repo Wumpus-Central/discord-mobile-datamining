@@ -1,3 +1,4 @@
+import { defineLazyObjectProperty } from "00049_defineLazyObjectProperty.js";
 // _runtime/00123_polyfillObjectProperty.js
 const global = arg0;
 const require = arg1;
@@ -14,8 +15,8 @@ arg5.polyfillObjectProperty = function polyfillObjectProperty(_navigator, produc
     obj[0] = arg2;
     obj[1] = false !== tmp2;
     obj[2] = false !== tmp3;
-    require("00049_defineLazyObjectProperty.js") /* defineLazyObjectProperty */.default(_navigator, product, obj);
-    const obj2 = require("00049_defineLazyObjectProperty.js") /* defineLazyObjectProperty */;
+    defineLazyObjectProperty /* defineLazyObjectProperty */.default(_navigator, product, obj);
+    const obj2 = defineLazyObjectProperty /* defineLazyObjectProperty */;
   } else {
     const _console = console;
     console.error(`Failed to set polyfill. ${product} is not configurable.`);
@@ -33,8 +34,8 @@ arg5.polyfillGlobal = function polyfillGlobal(arg0, arg1) {
     obj[0] = arg1;
     obj[1] = false !== tmp3;
     obj[2] = false !== tmp4;
-    require("00049_defineLazyObjectProperty.js") /* defineLazyObjectProperty */.default(global, arg0, obj);
-    const obj2 = require("00049_defineLazyObjectProperty.js") /* defineLazyObjectProperty */;
+    defineLazyObjectProperty /* defineLazyObjectProperty */.default(global, arg0, obj);
+    const obj2 = defineLazyObjectProperty /* defineLazyObjectProperty */;
   } else {
     const _console = console;
     console.error(`Failed to set polyfill. ${arg0} is not configurable.`);

@@ -1,9 +1,10 @@
+import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
 // _runtime/00861_logSpanEnd.js
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.logSpanEnd = function logSpanEnd(spanContext) {
-  if (require("metro/00823___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+  if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
     let tmpResult = tmp(819);
     const spanToJSONResult = tmpResult.spanToJSON(spanContext);
     const description = spanToJSONResult.description;
@@ -31,7 +32,7 @@ arg5.logSpanEnd = function logSpanEnd(spanContext) {
 arg5.logSpanStart = function logSpanStart(spanContext) {
   let description2;
   let op2;
-  if (require("metro/00823___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+  if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
     let tmpResult = tmp(819);
     const spanToJSONResult = tmpResult.spanToJSON(spanContext);
     const description = spanToJSONResult.description;

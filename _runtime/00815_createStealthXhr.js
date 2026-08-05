@@ -1,3 +1,4 @@
+import { RN_GLOBAL_OBJ } from "00816_RN_GLOBAL_OBJ.js";
 // _runtime/00815_createStealthXhr.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -5,7 +6,7 @@ arg5.XHR_READYSTATE_DONE = 4;
 arg5.createStealthXhr = function createStealthXhr() {
   let RN_GLOBAL_OBJ = arg0;
   if (arg0 === undefined) {
-    RN_GLOBAL_OBJ = require("00816_RN_GLOBAL_OBJ.js") /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ;
+    RN_GLOBAL_OBJ = RN_GLOBAL_OBJ /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ;
   }
   if (RN_GLOBAL_OBJ.XMLHttpRequest) {
     const xMLHttpRequest = new RN_GLOBAL_OBJ.XMLHttpRequest();

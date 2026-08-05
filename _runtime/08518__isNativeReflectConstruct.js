@@ -1,3 +1,5 @@
+import { 08515__ } from "metro/08515__.js";
+import { __INTERNAL_VIEW_CONFIG } from "metro/08520___INTERNAL_VIEW_CONFIG.js";
 // _runtime/08518__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -60,12 +62,12 @@ const items = [
       let obj = { x: props.x, y: props.y, width: props.width, height: props.height, maskUnits: null, maskContentUnits: null, maskType: null };
       let num = 0;
       if (undefined !== maskUnits) {
-        num = require("metro/08515__.js")[maskUnits];
+        num = 08515__[maskUnits];
       }
       obj[4] = num;
       let num2 = 1;
       if (undefined !== maskContentUnits) {
-        num2 = require("metro/08515__.js")[maskContentUnits];
+        num2 = 08515__[maskContentUnits];
       }
       obj[5] = num2;
       let str;
@@ -89,7 +91,7 @@ const items = [
         }
       };
       const tmp5 = self;
-      const tmp8 = require("metro/08520___INTERNAL_VIEW_CONFIG.js");
+      const tmp8 = __INTERNAL_VIEW_CONFIG;
       const merged = Object.assign(self(8452).withoutXY(this, props));
       const merged1 = Object.assign(obj);
       obj.children = props.children;

@@ -1,11 +1,17 @@
+import { t } from "01617_t.js";
+import { call } from "01649_call.js";
+import { isReanimated3 } from "01650_isReanimated3.js";
+import { useSharedValue } from "01758_useSharedValue.js";
+import { getVal } from "01775_getVal.js";
+import { convertLrgbToOklab } from "01776_convertLrgbToOklab.js";
 // _runtime/01774_o.js
 const fn = function o(arg0, arg1, h, useCorrectedHSVInterpolation) {
   useCorrectedHSVInterpolation = useCorrectedHSVInterpolation.useCorrectedHSVInterpolation;
   if (undefined !== useCorrectedHSVInterpolation) {
     if (!useCorrectedHSVInterpolation) {
       let tmp = require;
-      const obj = require("01775_getVal.js") /* getVal */;
-      let interpolateResult = obj.interpolate(arg0, arg1, h.h, require("01775_getVal.js") /* getVal */.Extrapolation.CLAMP);
+      const obj = getVal /* getVal */;
+      let interpolateResult = obj.interpolate(arg0, arg1, h.h, getVal /* getVal */.Extrapolation.CLAMP);
     }
     let tmpResult = tmp(1775);
     const interpolateResult1 = tmpResult.interpolate(arg0, arg1, h.s, tmp(1775).Extrapolation.CLAMP);
@@ -48,7 +54,7 @@ const fn = function o(arg0, arg1, h, useCorrectedHSVInterpolation) {
       let arr8 = items1.push(h[num]);
     }
   }
-  interpolateResult = (require("01775_getVal.js") /* getVal */.interpolate(arg0, items, items1, require("01775_getVal.js") /* getVal */.Extrapolation.CLAMP) + 1) % 1;
+  interpolateResult = (getVal /* getVal */.interpolate(arg0, items, items1, getVal /* getVal */.Extrapolation.CLAMP) + 1) % 1;
   tmp = require;
 };
 let obj = { interpolate: require("getVal").interpolate, Extrapolation: require("getVal").Extrapolation, hsvToColor: require("call").hsvToColor };
@@ -139,18 +145,18 @@ const fn5 = function n(arg0, arg1, l) {
   let b;
   let g;
   let r;
-  const obj = require("01775_getVal.js") /* getVal */;
-  const interpolateResult = require("01775_getVal.js") /* getVal */.interpolate(arg0, arg1, l.l, require("01775_getVal.js") /* getVal */.Extrapolation.CLAMP);
-  const obj2 = require("01775_getVal.js") /* getVal */;
-  const interpolateResult1 = require("01775_getVal.js") /* getVal */.interpolate(arg0, arg1, l.a, require("01775_getVal.js") /* getVal */.Extrapolation.CLAMP);
-  const obj3 = require("01775_getVal.js") /* getVal */;
-  const interpolateResult2 = require("01775_getVal.js") /* getVal */.interpolate(arg0, arg1, l.b, require("01775_getVal.js") /* getVal */.Extrapolation.CLAMP);
-  const obj4 = require("01775_getVal.js") /* getVal */;
-  const convert = require("01776_convertLrgbToOklab.js").oklab.convert;
-  const interpolateResult3 = require("01775_getVal.js") /* getVal */.interpolate(arg0, arg1, l.alpha, require("01775_getVal.js") /* getVal */.Extrapolation.CLAMP);
-  ({ r, g, b, alpha } = convert.toRgb({ l: interpolateResult, a: interpolateResult1, b: interpolateResult2, alpha: require("01775_getVal.js") /* getVal */.interpolate(arg0, arg1, l.alpha, require("01775_getVal.js") /* getVal */.Extrapolation.CLAMP) }));
-  const toRgbResult = convert.toRgb({ l: interpolateResult, a: interpolateResult1, b: interpolateResult2, alpha: require("01775_getVal.js") /* getVal */.interpolate(arg0, arg1, l.alpha, require("01775_getVal.js") /* getVal */.Extrapolation.CLAMP) });
-  return require("01649_call.js") /* call */.rgbaColor(r, g, b, alpha);
+  const obj = getVal /* getVal */;
+  const interpolateResult = getVal /* getVal */.interpolate(arg0, arg1, l.l, getVal /* getVal */.Extrapolation.CLAMP);
+  const obj2 = getVal /* getVal */;
+  const interpolateResult1 = getVal /* getVal */.interpolate(arg0, arg1, l.a, getVal /* getVal */.Extrapolation.CLAMP);
+  const obj3 = getVal /* getVal */;
+  const interpolateResult2 = getVal /* getVal */.interpolate(arg0, arg1, l.b, getVal /* getVal */.Extrapolation.CLAMP);
+  const obj4 = getVal /* getVal */;
+  const convert = convertLrgbToOklab.oklab.convert;
+  const interpolateResult3 = getVal /* getVal */.interpolate(arg0, arg1, l.alpha, getVal /* getVal */.Extrapolation.CLAMP);
+  ({ r, g, b, alpha } = convert.toRgb({ l: interpolateResult, a: interpolateResult1, b: interpolateResult2, alpha: getVal /* getVal */.interpolate(arg0, arg1, l.alpha, getVal /* getVal */.Extrapolation.CLAMP) }));
+  const toRgbResult = convert.toRgb({ l: interpolateResult, a: interpolateResult1, b: interpolateResult2, alpha: getVal /* getVal */.interpolate(arg0, arg1, l.alpha, getVal /* getVal */.Extrapolation.CLAMP) });
+  return call /* call */.rgbaColor(r, g, b, alpha);
 };
 obj = { interpolate: require("getVal").interpolate, Extrapolation: require("getVal").Extrapolation, culori: require("convertLrgbToOklab"), rgbaColor: require("call").rgbaColor };
 fn5.__closure = obj;
@@ -164,7 +170,7 @@ const fn6 = function l(arg0, arg1) {
   for (let num = 0; num < arg0.length; num = num + 1) {
     let tmp = require;
     let tmp2 = dependencyMap;
-    let obj = require("01649_call.js") /* call */;
+    let obj = call /* call */;
     let processColorResult = obj.processColor(arg0[num]);
     let tmp4 = num;
     if (typeof processColorResult === "number") {
@@ -261,7 +267,7 @@ function interpolateColor(arg0, arg1, arg2) {
     return fn5(arg0, arg1, obj1, obj);
   } else {
     const _HermesInternal = HermesInternal;
-    const reanimatedError = new require("01617_t.js") /* t */.ReanimatedError("Invalid color space provided: " + str + ". Supported values are: ['RGB', 'HSV', 'LAB'].");
+    const reanimatedError = new t /* t */.ReanimatedError("Invalid color space provided: " + str + ". Supported values are: ['RGB', 'HSV', 'LAB'].");
     throw reanimatedError;
   }
 }
@@ -283,8 +289,8 @@ export const useInterpolateConfig = function useInterpolateConfig(inputRange, ou
     obj = {};
   }
   obj = { inputRange, outputRange, colorSpace: RGB, cache: null, options: null };
-  obj4 = require("01650_isReanimated3.js") /* isReanimated3 */;
+  obj4 = isReanimated3 /* isReanimated3 */;
   obj[3] = obj4.makeMutable(null);
   obj[4] = obj;
-  return require("01758_useSharedValue.js") /* useSharedValue */.useSharedValue(obj);
+  return useSharedValue /* useSharedValue */.useSharedValue(obj);
 };

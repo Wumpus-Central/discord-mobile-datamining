@@ -1,13 +1,17 @@
+import { getOwnPropertyDescriptor } from "13480_getOwnPropertyDescriptor.js";
+import { 13483__ } from "metro/13483__.js";
+import { 13501__ } from "metro/13501__.js";
+import { 13530__ } from "metro/13530__.js";
 // _runtime/13541_assign.js
 let closure_4 = require("call")([].concat);
 if (!assign) {
   assign = function assign(arg0, arg1) {
-    const tmp = require("metro/13501__.js")(arg0);
-    const f = require("metro/13530__.js").f;
+    const tmp = 13501__(arg0);
+    const f = 13530__.f;
     for (let num = 1; length > num; num = num + 1) {
       let tmp3 = require;
       let tmp4 = dependencyMap;
-      let tmp5 = require("metro/13483__.js")(arguments[num]);
+      let tmp5 = 13483__(arguments[num]);
       let tmp6 = num;
       if (f) {
         let tmp7 = callback;
@@ -21,7 +25,7 @@ if (!assign) {
         let tmp9 = arr[num2];
         let tmp10 = require;
         let tmp11 = dependencyMap;
-        let tmp12 = require("13480_getOwnPropertyDescriptor.js") /* getOwnPropertyDescriptor */;
+        let tmp12 = getOwnPropertyDescriptor /* getOwnPropertyDescriptor */;
         let tmp13 = num2;
         if (tmp12) {
           tmp12 = !tmp10(13510)(tmp2, tmp5, tmp9);

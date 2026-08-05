@@ -1,10 +1,11 @@
+import { hasSpansEnabled } from "00855_hasSpansEnabled.js";
 // _runtime/00868_sampleSpan.js
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.sampleSpan = function sampleSpan(tracesSampler, parentSampled) {
   const _require = parentSampled;
-  let obj = _require("00855_hasSpansEnabled.js");
+  let obj = _hasSpansEnabled;
   if (obj.hasSpansEnabled(tracesSampler)) {
     if (typeof tracesSampler.tracesSampler === "function") {
       obj = {};

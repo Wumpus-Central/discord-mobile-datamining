@@ -1,3 +1,4 @@
+import { observe } from "01046_observe.js";
 // _runtime/01056_updateEstimate.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -30,7 +31,7 @@ arg5.getInteractionCount = () => {
 };
 arg5.initInteractionCountPolyfill = () => {
   if (!tmp) {
-    let closure_2 = require("01046_observe.js") /* observe */.observe("event", updateEstimate, { type: "event", buffered: true, durationThreshold: 0 });
-    const obj = require("01046_observe.js") /* observe */;
+    let closure_2 = observe /* observe */.observe("event", updateEstimate, { type: "event", buffered: true, durationThreshold: 0 });
+    const obj = observe /* observe */;
   }
 };

@@ -1,9 +1,10 @@
+import { toString } from "00762_toString.js";
 // _runtime/04122_escapeRegExp.js
 const tmp = /[\\^$.*+?()[\]{}|]/g;
 let closure_3 = RegExp(tmp.source);
 
 export default function escapeRegExp(arg0) {
-  const str = require("00762_toString.js") /* toString */(arg0);
+  const str = toString /* toString */(arg0);
   let replaced = str;
   if (str) {
     replaced = str;

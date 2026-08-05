@@ -1,3 +1,4 @@
+import { getDataView } from "../04897_getDataView.js";
 // _runtime/metro/04899__.js
 const require = arg1;
 const module = arg2;
@@ -11,7 +12,7 @@ arg5.default = {
         const findTiffOffsetsResult = tmpResult.findTiffOffsets();
         let obj = { fileType: null };
         obj[0] = { value: "tiff", description: "TIFF" };
-        return require("../04897_getDataView.js") /* getDataView */.objectAssign({}, findTiffOffsetsResult, obj);
+        return getDataView /* getDataView */.objectAssign({}, findTiffOffsetsResult, obj);
       }
     }
     if (module(4900).USE_JPEG) {
@@ -20,7 +21,7 @@ arg5.default = {
         const findJpegOffsetsResult = tmp(4903).findJpegOffsets(byteLength);
         obj = { fileType: null };
         obj[0] = { value: "jpeg", description: "JPEG" };
-        return require("../04897_getDataView.js") /* getDataView */.objectAssign({}, findJpegOffsetsResult, obj);
+        return getDataView /* getDataView */.objectAssign({}, findJpegOffsetsResult, obj);
       }
       tmpResult1 = tmp(4903);
     }
@@ -30,7 +31,7 @@ arg5.default = {
         const findPngOffsetsResult = tmp(4904).findPngOffsets(byteLength, flag2);
         const obj1 = { fileType: null };
         obj1[0] = { value: "png", description: "PNG" };
-        return require("../04897_getDataView.js") /* getDataView */.objectAssign({}, findPngOffsetsResult, obj1);
+        return getDataView /* getDataView */.objectAssign({}, findPngOffsetsResult, obj1);
       }
       tmpResult3 = tmp(4904);
     }
@@ -40,7 +41,7 @@ arg5.default = {
         const findHeicOffsetsResult = tmp(4905).findHeicOffsets(byteLength);
         const obj2 = { fileType: null };
         obj2[0] = { value: "heic", description: "HEIC" };
-        return require("../04897_getDataView.js") /* getDataView */.objectAssign({}, findHeicOffsetsResult, obj2);
+        return getDataView /* getDataView */.objectAssign({}, findHeicOffsetsResult, obj2);
       }
       tmpResult5 = tmp(4905);
     }
@@ -50,7 +51,7 @@ arg5.default = {
         const findAvifOffsetsResult = tmp(4909).findAvifOffsets(byteLength);
         const obj3 = { fileType: null };
         obj3[0] = { value: "avif", description: "AVIF" };
-        return require("../04897_getDataView.js") /* getDataView */.objectAssign({}, findAvifOffsetsResult, obj3);
+        return getDataView /* getDataView */.objectAssign({}, findAvifOffsetsResult, obj3);
       }
       tmpResult7 = tmp(4909);
     }
@@ -60,7 +61,7 @@ arg5.default = {
         const findOffsetsResult = tmp(4910).findOffsets(byteLength);
         const obj4 = { fileType: null };
         obj4[0] = { value: "webp", description: "WebP" };
-        return require("../04897_getDataView.js") /* getDataView */.objectAssign({}, findOffsetsResult, obj4);
+        return getDataView /* getDataView */.objectAssign({}, findOffsetsResult, obj4);
       }
       tmpResult9 = tmp(4910);
     }
@@ -70,7 +71,7 @@ arg5.default = {
         const findOffsetsResult1 = tmp(4911).findOffsets(byteLength);
         const obj5 = { fileType: null };
         obj5[0] = { value: "gif", description: "GIF" };
-        return require("../04897_getDataView.js") /* getDataView */.objectAssign({}, findOffsetsResult1, obj5);
+        return getDataView /* getDataView */.objectAssign({}, findOffsetsResult1, obj5);
       }
       tmpResult11 = tmp(4911);
     }
@@ -80,7 +81,7 @@ arg5.default = {
         const findOffsetsResult2 = tmp(4912).findOffsets(byteLength);
         const obj6 = { fileType: null };
         obj6[0] = { value: "xml", description: "XML" };
-        return require("../04897_getDataView.js") /* getDataView */.objectAssign({}, findOffsetsResult2, obj6);
+        return getDataView /* getDataView */.objectAssign({}, findOffsetsResult2, obj6);
       }
       tmpResult13 = tmp(4912);
     }

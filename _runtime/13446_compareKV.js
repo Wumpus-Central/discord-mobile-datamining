@@ -1,3 +1,5 @@
+import { e } from "01281_e.js";
+import { 13447__ } from "metro/13447__.js";
 // _runtime/13446_compareKV.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -34,7 +36,7 @@ function canonicalizeUnicodeLanguageId(lang) {
       obj[0] = lang.lang;
       const items = [variants[num3]];
       obj[1] = items;
-      const str = require("metro/13447__.js").languageAlias[require(undefined, 13445) /* emitUnicodeLanguageId */.emitUnicodeLanguageId(undefined, obj)];
+      const str = 13447__.languageAlias[require(undefined, 13445) /* emitUnicodeLanguageId */.emitUnicodeLanguageId(undefined, obj)];
       while (!str) {
         num3 = num3 + 1;
         tmp = lang;
@@ -46,7 +48,7 @@ function canonicalizeUnicodeLanguageId(lang) {
       obj[2] = lang.region || result.region;
       const variants1 = lang.variants;
       const variants2 = result.variants;
-      const __spreadArrayResult = require("01281_e.js") /* e */.__spreadArray([], variants1, true);
+      const __spreadArrayResult = e /* e */.__spreadArray([], variants1, true);
       for (let num4 = 0; num4 < variants2.length; num4 = num4 + 1) {
         let tmp6 = variants2[num4];
         let tmp7 = num4;
@@ -56,7 +58,7 @@ function canonicalizeUnicodeLanguageId(lang) {
       }
       obj[3] = __spreadArrayResult;
       tmp = obj;
-      const tmp2Result = require("01281_e.js") /* e */;
+      const tmp2Result = e /* e */;
     }
   }
   let tmp9 = tmp;
@@ -66,7 +68,7 @@ function canonicalizeUnicodeLanguageId(lang) {
       obj = { lang: null, script: null, region: null, variants: null };
       ({ lang: obj4[0], script: obj4[1], region: obj4[2] } = tmp);
       obj[3] = [];
-      const str2 = require("metro/13447__.js").languageAlias[require(undefined, 13445) /* emitUnicodeLanguageId */.emitUnicodeLanguageId(undefined, obj)];
+      const str2 = 13447__.languageAlias[require(undefined, 13445) /* emitUnicodeLanguageId */.emitUnicodeLanguageId(undefined, obj)];
       tmp9 = tmp;
       if (str2) {
         const obj1 = { lang: null, script: null, region: null, variants: null };
@@ -82,7 +84,7 @@ function canonicalizeUnicodeLanguageId(lang) {
     const obj2 = { lang: null, region: null, variants: null };
     ({ lang: obj6[0], region: obj6[1] } = tmp9);
     obj2[2] = [];
-    const str3 = require("metro/13447__.js").languageAlias[require(undefined, 13445) /* emitUnicodeLanguageId */.emitUnicodeLanguageId(undefined, obj2)];
+    const str3 = 13447__.languageAlias[require(undefined, 13445) /* emitUnicodeLanguageId */.emitUnicodeLanguageId(undefined, obj2)];
     tmp13 = tmp9;
     if (str3) {
       const obj3 = { lang: null, script: null, region: null, variants: null };
@@ -95,7 +97,7 @@ function canonicalizeUnicodeLanguageId(lang) {
     }
   }
   const obj4 = { lang: tmp13.lang, variants: [] };
-  const str4 = require("metro/13447__.js").languageAlias[require(undefined, 13445) /* emitUnicodeLanguageId */.emitUnicodeLanguageId(undefined, obj4)];
+  const str4 = 13447__.languageAlias[require(undefined, 13445) /* emitUnicodeLanguageId */.emitUnicodeLanguageId(undefined, obj4)];
   let tmp19 = tmp13;
   if (str4) {
     const obj5 = { lang: null, script: null, region: null, variants: null };
@@ -154,7 +156,7 @@ function canonicalizeUnicodeLanguageId(lang) {
       let tmp27 = require;
       let tmp28 = dependencyMap;
       let tmp29 = num7;
-      if (require("metro/13447__.js").variantAlias[formatted2]) {
+      if (13447__.variantAlias[formatted2]) {
         let tmp30 = tmp27(13447).variantAlias[formatted2];
         if (tmp27(13448).isUnicodeVariantSubtag(tmp30)) {
           tmp19.variants[num7] = tmp30;

@@ -1,3 +1,7 @@
+import { polyfillObjectProperty } from "00123_polyfillObjectProperty.js";
+import { parseErrorStack } from "00190_parseErrorStack.js";
+import { _symbolicateStackTrace } from "00998__symbolicateStackTrace.js";
+import { getDevServer } from "00999_getDevServer.js";
 // _runtime/00997_TurboModuleRegistry.js
 import get_ActivityIndicator from "get ActivityIndicator";
 
@@ -7,7 +11,7 @@ let TurboModuleRegistry;
 obj = { Devtools: obj, Promise: require("finally"), Utilities: obj, ReactNativeVersion: null, TurboModuleRegistry: null, AppRegistry: null, ReactNative: null };
 obj = {
   parseErrorStack(arg0) {
-    const obj = require("00190_parseErrorStack.js") /* parseErrorStack */;
+    const obj = parseErrorStack /* parseErrorStack */;
     if (obj.default) {
       if (typeof obj.default === "function") {
         let defaultResult = obj.default(arg0);
@@ -17,7 +21,7 @@ obj = {
     defaultResult = obj(arg0);
   },
   symbolicateStackTrace(arg0, arg1) {
-    const obj = require("00998__symbolicateStackTrace.js") /* _symbolicateStackTrace */;
+    const obj = _symbolicateStackTrace /* _symbolicateStackTrace */;
     if (obj.default) {
       if (typeof obj.default === "function") {
         let defaultResult = obj.default(arg0, arg1);
@@ -27,7 +31,7 @@ obj = {
     defaultResult = obj(arg0, arg1);
   },
   getDevServer() {
-    const obj = require("00999_getDevServer.js") /* getDevServer */;
+    const obj = getDevServer /* getDevServer */;
     if (obj.default) {
       if (typeof obj.default === "function") {
         let defaultResult = obj.default();
@@ -40,7 +44,7 @@ obj = {
 ({ AppRegistry, Platform, TurboModuleRegistry } = get_ActivityIndicator);
 obj = {
   polyfillGlobal(arg0, arg1) {
-    require("00123_polyfillObjectProperty.js") /* polyfillObjectProperty */.polyfillGlobal(arg0, arg1);
+    polyfillObjectProperty /* polyfillObjectProperty */.polyfillGlobal(arg0, arg1);
   }
 };
 const constants = Platform.constants;
@@ -55,7 +59,7 @@ obj[4] = TurboModuleRegistry;
 obj[5] = AppRegistry;
 obj[6] = {
   requireNativeComponent(APNGStickerView, importDefaultResultResult, arg2) {
-    return require("00017_get_ActivityIndicator.js") /* get ActivityIndicator */.requireNativeComponent(APNGStickerView);
+    return require("00017_get_ActivityIndicator.js") /* get ActivityIndicator */ /* get ActivityIndicator */.requireNativeComponent(APNGStickerView);
   }
 };
 

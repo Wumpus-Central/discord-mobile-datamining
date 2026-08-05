@@ -1,3 +1,7 @@
+import { extractOpacity } from "08443_extractOpacity.js";
+import { keys } from "08444_keys.js";
+import { _isNativeReflectConstruct } from "08451__isNativeReflectConstruct.js";
+import { __INTERNAL_VIEW_CONFIG } from "metro/08449___INTERNAL_VIEW_CONFIG.js";
 // _runtime/08441__isNativeReflectConstruct.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _classCallCheck from "_classCallCheck";
@@ -155,7 +159,7 @@ let items = [
       }
       let num2 = NaN;
       if (null != opacity) {
-        num2 = require("08443_extractOpacity.js")(opacity);
+        num2 = extractOpacity(opacity);
       }
       obj = {};
       let flag = false;
@@ -206,7 +210,7 @@ let items = [
       if (null != height) {
         tmp.bbHeight = height;
       }
-      require("08444_keys.js")(tmp, tmp, this);
+      keys(tmp, tmp, this);
       const merged2 = Object.assign({}, StyleSheet.flatten(style));
       if (transform) {
         if (merged2.transform) {
@@ -222,8 +226,8 @@ let items = [
         return self.refMethod(arg0);
       };
       const merged4 = Object.assign(tmp21(8450)({ viewBox, preserveAspectRatio }));
-      obj.children = jsx(require("08451__isNativeReflectConstruct.js"), { children, style: merged2, font, fill, fillOpacity, fillRule, stroke, strokeWidth, strokeOpacity, strokeDasharray, strokeDashoffset, strokeLinecap, strokeLinejoin, strokeMiterlimit, onLayout });
-      return jsx(require("metro/08449___INTERNAL_VIEW_CONFIG.js"), {});
+      obj.children = jsx(_isNativeReflectConstruct, { children, style: merged2, font, fill, fillOpacity, fillRule, stroke, strokeWidth, strokeOpacity, strokeDasharray, strokeDashoffset, strokeLinecap, strokeLinejoin, strokeMiterlimit, onLayout });
+      return jsx(__INTERNAL_VIEW_CONFIG, {});
     }
   }
 ];

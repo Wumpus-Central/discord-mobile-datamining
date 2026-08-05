@@ -1,3 +1,4 @@
+import { getClient } from "07402_getClient.js";
 // _runtime/07407_hasTracingEnabled.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -8,7 +9,7 @@ arg5.hasTracingEnabled = function hasTracingEnabled(tracesSampler) {
     }
   }
   let tmp = tracesSampler;
-  const client = require("07402_getClient.js") /* getClient */.getClient();
+  const client = getClient /* getClient */.getClient();
   if (!tracesSampler) {
     let options = client;
     if (client) {

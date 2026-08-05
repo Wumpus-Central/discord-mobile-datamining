@@ -1,3 +1,5 @@
+import { addNonEnumerableProperty } from "07381_addNonEnumerableProperty.js";
+import { getNumberOfUrlSegments } from "07457_getNumberOfUrlSegments.js";
 // _runtime/07456_extractRequestData.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -416,9 +418,9 @@ arg5.extractPathForTransaction = function extractPathForTransaction(method) {
         if (!str6) {
           str6 = "";
         }
-        str5 = require("07457_getNumberOfUrlSegments.js") /* getNumberOfUrlSegments */.stripUrlQueryAndFragment(str6);
+        str5 = getNumberOfUrlSegments /* getNumberOfUrlSegments */.stripUrlQueryAndFragment(str6);
         str4 = "url";
-        const obj2 = require("07457_getNumberOfUrlSegments.js") /* getNumberOfUrlSegments */;
+        const obj2 = getNumberOfUrlSegments /* getNumberOfUrlSegments */;
       }
       tmp = method.originalUrl || method.url;
     }
@@ -466,7 +468,7 @@ arg5.httpRequestToRequestData = function httpRequestToRequestData(headers) {
     combined = "" + str + "://" + tmp2 + tmp3;
   }
   obj = { url: combined, method: headers.method, query_string: extractQueryParamsFromUrl(obj), headers: headersToDict(tmp), cookies: headers.cookies, data: headers.body || undefined };
-  return require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */.dropUndefinedKeys(obj);
+  return addNonEnumerableProperty /* addNonEnumerableProperty */.dropUndefinedKeys(obj);
 };
 arg5.winterCGHeadersToDict = winterCGHeadersToDict;
 arg5.winterCGRequestToRequestData = function winterCGRequestToRequestData(method) {

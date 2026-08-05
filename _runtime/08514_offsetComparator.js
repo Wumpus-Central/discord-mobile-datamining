@@ -1,3 +1,6 @@
+import { extractOpacity } from "08443_extractOpacity.js";
+import { appendTransformProps } from "08445_appendTransformProps.js";
+import { 08515__ } from "metro/08515__.js";
 // _runtime/08514_offsetComparator.js
 import noop from "noop";
 import { Children } from "noop";
@@ -93,7 +96,7 @@ export default function extractGradient(arg0, arg1) {
             let _Math = Math;
             let tmp12 = importDefault;
             let tmp13 = dependencyMap;
-            let items1 = [num9, 16777215 & tmp10 | Math.round(255 * require("08443_extractOpacity.js")(stopOpacity)) << 24];
+            let items1 = [num9, 16777215 & tmp10 | Math.round(255 * extractOpacity(stopOpacity)) << 24];
             let arr = items.push(items1);
           }
           num7 = num7 + 1;
@@ -120,7 +123,7 @@ export default function extractGradient(arg0, arg1) {
     obj[2] = mapped;
     let num12 = gradientUnits;
     if (gradientUnits) {
-      num12 = require("metro/08515__.js")[gradientUnits];
+      num12 = 08515__[gradientUnits];
     }
     if (!num12) {
       num12 = 0;
@@ -132,7 +135,7 @@ export default function extractGradient(arg0, arg1) {
     if (!gradientTransform) {
       gradientTransform = arg0;
     }
-    obj[4] = require("08445_appendTransformProps.js")(gradientTransform);
+    obj[4] = appendTransformProps(gradientTransform);
     return obj;
   } else {
     return null;

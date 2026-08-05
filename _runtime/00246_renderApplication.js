@@ -1,3 +1,6 @@
+import { children } from "00251_children.js";
+import { RootTagContext } from "00253_RootTagContext.js";
+import { 00038__ } from "metro/00038__.js";
 // _runtime/00246_renderApplication.js
 import noop from "noop";
 import 00247__ from "metro/00247__.js";
@@ -17,7 +20,7 @@ export default function renderApplication(arg0) {
   let useOffscreen;
   ({ initialProps, rootTag, debugName, displayMode } = arg0);
   ({ RootComponent, WrapperComponent, rootViewStyle, isLogBox, useOffscreen } = arg0);
-  require("metro/00038__.js")(rootTag, "Expect to have a valid rootTag, instead got ", rootTag);
+  00038__(rootTag, "Expect to have a valid rootTag, instead got ", rootTag);
   let obj = { rootTag, WrapperComponent, rootViewStyle, initialProps: null, internal_excludeLogBox: null, children: null };
   let frozen = initialProps;
   if (initialProps == null) {
@@ -30,7 +33,7 @@ export default function renderApplication(arg0) {
   const merged = Object.assign(initialProps);
   obj.rootTag = rootTag;
   obj[5] = <RootComponent />;
-  let tmp4Result = tmp4(require("00251_children.js"), obj);
+  let tmp4Result = tmp4(children, obj);
   if (true === useOffscreen) {
     if (null != displayMode) {
       let str = "hidden";
@@ -44,9 +47,9 @@ export default function renderApplication(arg0) {
     }
   }
   tmp = importDefault;
-  const tmp5 = require("00251_children.js");
+  const tmp5 = children;
   const obj1 = { element: tmp4Result, rootTag: null };
   const obj4 = importAll(114);
-  obj1[1] = require("00253_RootTagContext.js") /* RootTagContext */.createRootTag(rootTag);
+  obj1[1] = RootTagContext /* RootTagContext */.createRootTag(rootTag);
   obj4.renderElement(obj1);
 };

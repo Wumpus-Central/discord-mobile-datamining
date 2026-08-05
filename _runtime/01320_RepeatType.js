@@ -1,3 +1,4 @@
+import { lowerCamelCase } from "01321_lowerCamelCase.js";
 // _runtime/01320_RepeatType.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -71,14 +72,14 @@ RepeatType[2] = "UNPACKED";
 ScalarType.normalizeFieldInfo = function normalizeFieldInfo(localName) {
   localName = localName.localName;
   if (null === localName) {
-    localName = require("01321_lowerCamelCase.js") /* lowerCamelCase */.lowerCamelCase(localName.name);
-    const obj = require("01321_lowerCamelCase.js") /* lowerCamelCase */;
+    localName = lowerCamelCase /* lowerCamelCase */.lowerCamelCase(localName.name);
+    const obj = lowerCamelCase /* lowerCamelCase */;
   }
   localName.localName = localName;
   let jsonName = localName.jsonName;
   if (null === jsonName) {
-    jsonName = require("01321_lowerCamelCase.js") /* lowerCamelCase */.lowerCamelCase(localName.name);
-    const obj2 = require("01321_lowerCamelCase.js") /* lowerCamelCase */;
+    jsonName = lowerCamelCase /* lowerCamelCase */.lowerCamelCase(localName.name);
+    const obj2 = lowerCamelCase /* lowerCamelCase */;
   }
   localName.jsonName = jsonName;
   let NO = localName.repeat;

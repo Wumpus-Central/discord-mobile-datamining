@@ -1,3 +1,6 @@
+import { addNonEnumerableProperty } from "07381_addNonEnumerableProperty.js";
+import { forEachEnvelopeItem } from "07419_forEachEnvelopeItem.js";
+import { dsnFromString } from "07422_dsnFromString.js";
 // _runtime/07436_createCheckInEnvelope.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -18,15 +21,15 @@ arg5.createCheckInEnvelope = function createCheckInEnvelope(arg0, arg1, sdk) {
     tmp = arg4;
   }
   if (tmp) {
-    obj.dsn = require("07422_dsnFromString.js") /* dsnFromString */.dsnToString(arg4);
-    const obj4 = require("07422_dsnFromString.js") /* dsnFromString */;
+    obj.dsn = dsnFromString /* dsnFromString */.dsnToString(arg4);
+    const obj4 = dsnFromString /* dsnFromString */;
   }
   if (arg1) {
-    obj.trace = require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */.dropUndefinedKeys(arg1);
-    const obj5 = require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */;
+    obj.trace = addNonEnumerableProperty /* addNonEnumerableProperty */.dropUndefinedKeys(arg1);
+    const obj5 = addNonEnumerableProperty /* addNonEnumerableProperty */;
   }
   const items = [{ type: "check_in" }, arg0];
   const date = new Date();
   const items1 = [items];
-  return require("07419_forEachEnvelopeItem.js") /* forEachEnvelopeItem */.createEnvelope(obj, items1);
+  return forEachEnvelopeItem /* forEachEnvelopeItem */.createEnvelope(obj, items1);
 };

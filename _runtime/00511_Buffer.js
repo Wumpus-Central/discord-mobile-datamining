@@ -1,3 +1,4 @@
+import { byteLength } from "00206_byteLength.js";
 // _runtime/00511_Buffer.js
 const require = arg1;
 const exports = arg5;
@@ -2914,7 +2915,7 @@ function byteLength(str) {
           while (true) {
             let tmp10 = require;
             let tmp11 = dependencyMap;
-            let obj = require("00206_byteLength.js") /* byteLength */;
+            let obj = byteLength /* byteLength */;
             str = "=";
             let str2 = str.split("=")[0];
             let str3 = str2.trim();

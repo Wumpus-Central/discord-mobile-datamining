@@ -1,3 +1,5 @@
+import { View } from "00108_View.js";
+import { RootTagContext } from "00253_RootTagContext.js";
 // _runtime/00252_children.js
 import "noop";
 import { jsx } from "jsxProd";
@@ -18,11 +20,11 @@ export default function _default(rootTag) {
     tmp2 = <WrapperComponent initialProps={null}>{null}</WrapperComponent>;
   }
   obj = { value: null, children: null };
-  obj[0] = require("00253_RootTagContext.js") /* RootTagContext */.createRootTag(rootTag.rootTag);
-  const obj3 = require("00253_RootTagContext.js") /* RootTagContext */;
+  obj[0] = RootTagContext /* RootTagContext */.createRootTag(rootTag.rootTag);
+  const obj3 = RootTagContext /* RootTagContext */;
   if (!rootViewStyle) {
     rootViewStyle = root.root;
   }
-  obj[1] = jsx(require("00108_View.js"), { style: rootViewStyle, pointerEvents: "box-none", children: tmp2 });
-  return jsx(require("00253_RootTagContext.js") /* RootTagContext */.RootTagContext.Provider, { value: null, children: null });
+  obj[1] = jsx(View, { style: rootViewStyle, pointerEvents: "box-none", children: tmp2 });
+  return jsx(RootTagContext /* RootTagContext */.RootTagContext.Provider, { value: null, children: null });
 };

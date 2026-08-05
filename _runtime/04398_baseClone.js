@@ -1,3 +1,4 @@
+import { isObject } from "00606_isObject.js";
 // _runtime/04398_baseClone.js
 let obj = {};
 obj["[object Uint32Array]"] = true;
@@ -32,7 +33,7 @@ function baseClone(arr) {
   let closure_3 = arg5;
   if (!arg2) {
     {
-      if (_require("00606_isObject.js")(arr)) {
+      if (_isObject(arr)) {
         const tmp10 = tmp32(599)(arr);
         if (tmp10) {
           const tmp18 = tmp32(4399)(arr);

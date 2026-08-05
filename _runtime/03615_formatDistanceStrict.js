@@ -1,3 +1,4 @@
+import { getDefaultOptions } from "03369_getDefaultOptions.js";
 // _runtime/03615_formatDistanceStrict.js
 import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds";
 import compareAsc from "compareAsc";
@@ -71,7 +72,7 @@ let c12 = 525600;
 export default function formatDistanceStrict(arg0, arg1, locale) {
   tmp15.default(2, arguments);
   locale = undefined;
-  const defaultOptions = require("03369_getDefaultOptions.js") /* getDefaultOptions */.getDefaultOptions();
+  const defaultOptions = getDefaultOptions /* getDefaultOptions */.getDefaultOptions();
   if (null != locale) {
     locale = locale.locale;
   }

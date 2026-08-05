@@ -9,7 +9,7 @@ if (require("get ActivityIndicator")) {
     get: () => {
         let tmp = c3;
         if (!c3) {
-          const tmp7 = new NativeEventEmitter(require("01460_get_ActivityIndicator.js"));
+          const tmp7 = new NativeEventEmitter(require("01460_get_ActivityIndicator.js") /* get ActivityIndicator */);
           c3 = tmp7;
           tmp = tmp7;
         }

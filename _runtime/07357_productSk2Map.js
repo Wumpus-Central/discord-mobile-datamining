@@ -1,3 +1,4 @@
+import { 07345__ } from "metro/07345__.js";
 // _runtime/07357_productSk2Map.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -17,7 +18,7 @@ arg5.subscriptionSk2Map = (subscription) => {
   let id;
   let price;
   subscription = subscription.subscription;
-  const obj = { platform: require("metro/07345__.js").SubscriptionPlatform.ios, title: displayName, productId: String(id), description, type: "subs", price: String(price), localizedPrice: displayPrice, currency, subscriptionPeriodNumberIOS: null, subscriptionPeriodUnitIOS: null, introductoryPriceAsAmountIOS: null, introductoryPricePaymentModeIOS: null, introductoryPriceNumberOfPeriodsIOS: null, introductoryPriceSubscriptionPeriodIOS: null };
+  const obj = { platform: 07345__.SubscriptionPlatform.ios, title: displayName, productId: String(id), description, type: "subs", price: String(price), localizedPrice: displayPrice, currency, subscriptionPeriodNumberIOS: null, subscriptionPeriodUnitIOS: null, introductoryPriceAsAmountIOS: null, introductoryPricePaymentModeIOS: null, introductoryPriceNumberOfPeriodsIOS: null, introductoryPriceSubscriptionPeriodIOS: null };
   ({ id, description, displayName, price, currency, displayPrice } = subscription);
   let value;
   if (subscription != null) {

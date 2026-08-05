@@ -1,3 +1,6 @@
+import { getSpanStatusFromHttpCode } from "00840_getSpanStatusFromHttpCode.js";
+import { captureCheckIn } from "00869_captureCheckIn.js";
+import { items } from "00964_items.js";
 // _runtime/00965_AsyncFromSyncIterator.js
 import _awaitAsyncGenerator from "_awaitAsyncGenerator";
 import AsyncGenerator from "AsyncGenerator";
@@ -200,13 +203,13 @@ function processResponsesApiEvent(obj, responsesApiToolCalls, arg2, setStatus) {
       const _Error = Error;
       if (obj instanceof Error) {
         obj = { code: null, message: "internal_error" };
-        obj[0] = require("00840_getSpanStatusFromHttpCode.js") /* getSpanStatusFromHttpCode */.SPAN_STATUS_ERROR;
+        obj[0] = getSpanStatusFromHttpCode /* getSpanStatusFromHttpCode */.SPAN_STATUS_ERROR;
         setStatus.setStatus(obj);
         obj = { mechanism: null };
         obj[0] = { handled: false, type: "auto.ai.openai.stream-response" };
-        require("00869_captureCheckIn.js") /* captureCheckIn */.captureException(obj, obj);
+        captureCheckIn /* captureCheckIn */.captureException(obj, obj);
       } else if ("type" in obj) {
-        const RESPONSE_EVENT_TYPES = require("00964_items.js") /* items */.RESPONSE_EVENT_TYPES;
+        const RESPONSE_EVENT_TYPES = items /* items */.RESPONSE_EVENT_TYPES;
         if (RESPONSE_EVENT_TYPES.includes(obj.type)) {
           let output_text = arg2;
           if (arg2) {

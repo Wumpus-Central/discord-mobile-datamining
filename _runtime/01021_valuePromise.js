@@ -1,3 +1,4 @@
+import { noop } from "01019_noop.js";
 // _runtime/01021_valuePromise.js
 import noop from "noop";
 import noop from "noop";
@@ -7,8 +8,8 @@ import noop from "noop";
 import noop from "noop";
 
 function valuePromise(_55) {
-  let tmp = require("01019_noop.js") /* noop */;
-  tmp = new tmp(require("01019_noop.js") /* noop */._61);
+  let tmp = noop /* noop */;
+  tmp = new tmp(noop /* noop */._61);
   tmp._65 = 1;
   tmp._55 = _55;
   return tmp;
@@ -32,7 +33,7 @@ noop = new noop(require("noop")._61);
 noop._65 = 1;
 noop._55 = "";
 require("noop").resolve = (self) => {
-  if (self instanceof require("01019_noop.js") /* noop */) {
+  if (self instanceof noop /* noop */) {
     return self;
   } else if (null === self) {
     return noop;
@@ -71,7 +72,7 @@ require("noop").resolve = (self) => {
 require("noop").all = (arg0) => {
   const call = slice.call;
   const _require = typeof call === "unknown" ? slice() : call(arg0);
-  return new _require("01019_noop.js")((arg0, arg1) => {
+  return new _noop((arg0, arg1) => {
     let closure_0 = arg0;
     let closure_1 = arg1;
     function res(arg0, self) {
@@ -138,13 +139,13 @@ require("noop").all = (arg0) => {
 };
 require("noop").reject = (arg0) => {
   const _require = arg0;
-  return new _require("01019_noop.js")((arg0, arg1) => {
+  return new _noop((arg0, arg1) => {
     arg1(closure_0);
   });
 };
 require("noop").race = (arg0) => {
   const _require = arg0;
-  return new _require("01019_noop.js")((arg0, arg1) => {
+  return new _noop((arg0, arg1) => {
     let closure_0 = arg0;
     let closure_1 = arg1;
     const item = closure_0.forEach((arg0) => {

@@ -1,3 +1,5 @@
+import { useUnmountFlag } from "05555_useUnmountFlag.js";
+import { useUnmountAwareTimeout } from "05556_useUnmountAwareTimeout.js";
 // _runtime/05553_useRecyclerViewController.js
 import asyncGeneratorStep from "asyncGeneratorStep";
 import _slicedToArray from "_slicedToArray";
@@ -17,13 +19,13 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
   const _require = recyclerViewManager;
   const dependencyMap = arg2;
   let asyncGeneratorStep = arg3;
-  const unmountFlag = _require("05555_useUnmountFlag.js").useUnmountFlag();
-  let obj = _require("05555_useUnmountFlag.js");
+  const unmountFlag = _useUnmountFlag.useUnmountFlag();
+  let obj = _useUnmountFlag;
   [r10016, closure_4] = unmountFlag(callback4(0), 2);
   const callback2 = _setTimeout(false);
   const callback3 = _setTimeout(recyclerViewManager.getDataLength());
   let tmp2 = unmountFlag(callback4(0), 2);
-  _setTimeout = _require("05556_useUnmountAwareTimeout.js").useUnmountAwareTimeout().setTimeout;
+  _setTimeout = _useUnmountAwareTimeout.useUnmountAwareTimeout().setTimeout;
   callback4 = _setTimeout(undefined);
   let closure_9 = _setTimeout(undefined);
   let closure_10 = _setTimeout([]);

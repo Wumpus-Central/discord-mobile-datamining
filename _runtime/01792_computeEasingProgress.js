@@ -1,3 +1,4 @@
+import { RNScreensTurboModule } from "01793_RNScreensTurboModule.js";
 // _runtime/01792_computeEasingProgress.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -51,7 +52,7 @@ function maybeScheduleNextFrame(scrollAnimation, arg1, onFinishAnimation, transl
     if (arg4) {
       result = bound / 2;
     }
-    const RNScreensTurboModule = require("01793_RNScreensTurboModule.js") /* RNScreensTurboModule */.RNScreensTurboModule;
+    const RNScreensTurboModule = RNScreensTurboModule /* RNScreensTurboModule */.RNScreensTurboModule;
     RNScreensTurboModule.updateTransition(onFinishAnimation.stackTag, result);
     const _requestAnimationFrame = requestAnimationFrame;
     const animationFrame = requestAnimationFrame(scrollAnimation);

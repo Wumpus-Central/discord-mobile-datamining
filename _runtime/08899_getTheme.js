@@ -1,3 +1,4 @@
+import { colorToHex } from "08904_colorToHex.js";
 // _runtime/08899_getTheme.js
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -56,7 +57,7 @@ export default require("noop").memo((theme) => {
     }
     str3 = str5;
   }
-  obj.textColor = require("08904_colorToHex.js") /* colorToHex */.colorToHex(str3);
+  obj.textColor = colorToHex /* colorToHex */.colorToHex(str3);
   let tmp4Result = tmp4(8904);
   if (typeof getDividerColor !== "function") {
     HermesBuiltin.throwTypeError();

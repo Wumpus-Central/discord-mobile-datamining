@@ -1,3 +1,4 @@
+import { useKeyboardManager } from "05724_useKeyboardManager.js";
 // _runtime/05723_StyleSheet.js
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
@@ -76,8 +77,8 @@ export default importAllResult.memo(function CardContainer(active) {
   ({ interpolationIndex, index, closing, gesture, modal, getFocusedRoute, headerDarkContent, hasAbsoluteFloatHeader, onHeaderHeightChange, isNextScreenTransparent, detachCurrentScreen, renderHeader, renderScene, safeAreaInsetBottom, safeAreaInsetLeft, safeAreaInsetRight, safeAreaInsetTop } = active);
   let num = importAllResult.useContext(active(5674).HeaderHeightContext);
   const items = [scene.descriptor];
-  const tmp4 = require("05724_useKeyboardManager.js");
-  ({ onPageChangeStart: c9, onPageChangeCancel: c10, onPageChangeConfirm: c11 } = require("05724_useKeyboardManager.js")(importAllResult.useCallback(() => {
+  const tmp4 = useKeyboardManager;
+  ({ onPageChangeStart: c9, onPageChangeCancel: c10, onPageChangeConfirm: c11 } = useKeyboardManager(importAllResult.useCallback(() => {
     let navigation;
     let options;
     ({ navigation, options } = scene.descriptor);
@@ -89,7 +90,7 @@ export default importAllResult.memo(function CardContainer(active) {
   }, items)));
   let obj1 = active(1481);
   let str = "box-none";
-  const tmp4Result = require("05724_useKeyboardManager.js")(importAllResult.useCallback(() => {
+  const tmp4Result = useKeyboardManager(importAllResult.useCallback(() => {
     let navigation;
     let options;
     ({ navigation, options } = scene.descriptor);

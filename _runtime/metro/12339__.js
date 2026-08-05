@@ -1,3 +1,5 @@
+import { initializeContext } from "../12335_initializeContext.js";
+import { 12273__ } from "12273__.js";
 // _runtime/metro/12339__.js
 import asyncGeneratorStep from "module_12342";
 
@@ -66,7 +68,7 @@ if (self2) {
         let obj = { type: "tuple", items: null, rest: null };
         obj[1] = input1;
         obj[2] = null;
-        const util = require("12273__.js").util;
+        const util = 12273__.util;
         const merged = Object.assign(util.normalizeParams(undefined));
         let zodTuple = new tmp.ZodTuple(obj);
       } else {
@@ -116,7 +118,7 @@ if (self2) {
       return closure_6._array(exports.ZodArray, closure_0, enc);
     }
     function union(roles, added) {
-      const util = require("12273__.js").util;
+      const util = 12273__.util;
       const merged = Object.assign(util.normalizeParams(added));
       const zodUnion = new exports.ZodUnion({ type: "union", options: roles });
       return zodUnion;
@@ -134,13 +136,13 @@ if (self2) {
       if (arg1 instanceof closure_6.$ZodType) {
         tmp3 = arg1;
       }
-      const util = require("12273__.js").util;
+      const util = 12273__.util;
       const merged = Object.assign(util.normalizeParams(tmp2));
       const zodTuple = new exports.ZodTuple({ type: "tuple", items: mapped2, rest: tmp3 });
       return zodTuple;
     }
     function record(keyType, valueType, enc) {
-      const util = require("12273__.js").util;
+      const util = 12273__.util;
       const merged = Object.assign(util.normalizeParams(enc));
       const zodRecord = new exports.ZodRecord({ type: "record", keyType, valueType });
       return zodRecord;
@@ -154,7 +156,7 @@ if (self2) {
           return items;
         }));
       }
-      const util = require("12273__.js").util;
+      const util = 12273__.util;
       const merged = Object.assign(util.normalizeParams(enc));
       const zodEnum = new exports.ZodEnum({ type: "enum", entries: fromEntriesResult });
       return zodEnum;
@@ -212,7 +214,7 @@ if (self2) {
       return zodPrefault;
     }
     function nonoptional(innerType, enc) {
-      const util = require("12273__.js").util;
+      const util = 12273__.util;
       const merged = Object.assign(util.normalizeParams(enc));
       const zodNonOptional = new exports.ZodNonOptional({ type: "nonoptional", innerType });
       return zodNonOptional;
@@ -344,7 +346,7 @@ if (self2) {
       return closure_6._url(exports.ZodURL, enc);
     };
     exports.httpUrl = function httpUrl(enc) {
-      const util = require("12273__.js").util;
+      const util = 12273__.util;
       const merged = Object.assign(util.normalizeParams(enc));
       return closure_6._url(exports.ZodURL, { protocol: /^https?$/, hostname: closure_6.regexes.domain });
     };
@@ -480,7 +482,7 @@ if (self2) {
           return items;
         }));
       }
-      const util = require("12273__.js").util;
+      const util = 12273__.util;
       const merged = Object.assign(util.normalizeParams(undefined));
       const zodEnum = new exports.ZodEnum({ type: "enum", entries: fromEntriesResult });
       return zodEnum;
@@ -491,32 +493,32 @@ if (self2) {
         obj = {};
       }
       obj = { type: "object", shape: obj };
-      const util = require("12273__.js").util;
+      const util = 12273__.util;
       const merged = Object.assign(util.normalizeParams(enc));
       const zodObject = new exports.ZodObject(obj);
       return zodObject;
     };
     exports.strictObject = function strictObject(shape, enc) {
-      const util = require("12273__.js").util;
+      const util = 12273__.util;
       const merged = Object.assign(util.normalizeParams(enc));
       const zodObject = new exports.ZodObject({ type: "object", shape, catchall: closure_6._never(exports.ZodNever, undefined) });
       return zodObject;
     };
     exports.looseObject = function looseObject(shape, enc) {
-      const util = require("12273__.js").util;
+      const util = 12273__.util;
       const merged = Object.assign(util.normalizeParams(enc));
       const zodObject = new exports.ZodObject({ type: "object", shape, catchall: closure_6._unknown(exports.ZodUnknown) });
       return zodObject;
     };
     exports.union = union;
     exports.xor = function xor(options, enc) {
-      const util = require("12273__.js").util;
+      const util = 12273__.util;
       const merged = Object.assign(util.normalizeParams(enc));
       const zodXor = new exports.ZodXor({ type: "union", options, inclusive: false });
       return zodXor;
     };
     exports.discriminatedUnion = function discriminatedUnion(discriminator, options, enc) {
-      const util = require("12273__.js").util;
+      const util = 12273__.util;
       const merged = Object.assign(util.normalizeParams(enc));
       const zodDiscriminatedUnion = new exports.ZodDiscriminatedUnion({ type: "union", options, discriminator });
       return zodDiscriminatedUnion;
@@ -527,32 +529,32 @@ if (self2) {
     exports.partialRecord = function partialRecord(z11, objectResult, enc) {
       const cloneResult = closure_6.clone(z11);
       cloneResult._zod.values = undefined;
-      const util = require("12273__.js").util;
+      const util = 12273__.util;
       const merged = Object.assign(util.normalizeParams(enc));
       const zodRecord = new exports.ZodRecord({ type: "record", keyType: cloneResult, valueType: objectResult });
       return zodRecord;
     };
     exports.looseRecord = function looseRecord(stringResult1, anyResult, enc) {
-      const util = require("12273__.js").util;
+      const util = 12273__.util;
       const merged = Object.assign(util.normalizeParams(enc));
       const zodRecord = new exports.ZodRecord({ type: "record", keyType: stringResult1, valueType: anyResult, mode: "loose" });
       return zodRecord;
     };
     exports.map = function map(keyType, valueType, enc) {
-      const util = require("12273__.js").util;
+      const util = 12273__.util;
       const merged = Object.assign(util.normalizeParams(enc));
       const zodMap = new exports.ZodMap({ type: "map", keyType, valueType });
       return zodMap;
     };
     exports.set = function set(valueType, enc) {
-      const util = require("12273__.js").util;
+      const util = 12273__.util;
       const merged = Object.assign(util.normalizeParams(enc));
       const zodSet = new exports.ZodSet({ type: "set", valueType });
       return zodSet;
     };
     exports.enum = _enum;
     exports.nativeEnum = function nativeEnum(entries, enc) {
-      const util = require("12273__.js").util;
+      const util = 12273__.util;
       const merged = Object.assign(util.normalizeParams(enc));
       const zodEnum = new exports.ZodEnum({ type: "enum", entries });
       return zodEnum;
@@ -563,7 +565,7 @@ if (self2) {
         const items = [arg0];
         tmp = items;
       }
-      const util = require("12273__.js").util;
+      const util = 12273__.util;
       const merged = Object.assign(util.normalizeParams(enc));
       const zodLiteral = new exports.ZodLiteral({ type: "literal", values: tmp });
       return zodLiteral;
@@ -600,7 +602,7 @@ if (self2) {
     };
     exports.readonly = readonly;
     exports.templateLiteral = function templateLiteral(parts, enc) {
-      const util = require("12273__.js").util;
+      const util = 12273__.util;
       const merged = Object.assign(util.normalizeParams(enc));
       const zodTemplateLiteral = new exports.ZodTemplateLiteral({ type: "template_literal", parts });
       return zodTemplateLiteral;
@@ -642,7 +644,7 @@ if (self2) {
         },
         abort: true
       };
-      const util = _require("12273__.js").util;
+      const util = _12273__.util;
       const merged = Object.assign(util.normalizeParams(obj));
       zodCustom = new zodCustom.ZodCustom(obj);
       zodCustom._zod.bag.Class = Class;
@@ -703,10 +705,10 @@ if (self2) {
       const $ZodType = closure_6.$ZodType;
       $ZodType.init(_standard, def);
       let obj = { jsonSchema: null };
-      obj = { input: _require("../12335_initializeContext.js").createStandardJSONSchemaMethod(_standard, "input"), output: _require("../12335_initializeContext.js").createStandardJSONSchemaMethod(_standard, "output") };
+      obj = { input: _initializeContext.createStandardJSONSchemaMethod(_standard, "input"), output: _initializeContext.createStandardJSONSchemaMethod(_standard, "output") };
       obj[0] = obj;
       let merged = Object.assign(_standard["~standard"], obj);
-      _standard.toJSONSchema = _require("../12335_initializeContext.js").createToJSONSchemaMethod(_standard, {});
+      _standard.toJSONSchema = _initializeContext.createToJSONSchemaMethod(_standard, {});
       _standard.def = def;
       _standard.type = def.type;
       obj = { value: def };
@@ -1673,7 +1675,7 @@ if (self2) {
       const ZodType = _exports.ZodType;
       ZodType.init(_zod, arg1);
       _zod._zod.processJSONSchema = (arg0, arg1, arg2) => outer1_7.objectProcessor(closure_0, arg0, arg1, arg2);
-      let util = _require("12273__.js").util;
+      let util = _12273__.util;
       util.defineLazy(_zod, "shape", () => closure_1.shape);
       _zod.keyof = () => {
         const keys = Object.keys(_zod._zod.def.shape);

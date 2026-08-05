@@ -1,3 +1,4 @@
+import { print } from "04165_print.js";
 // _runtime/04164_registerHost.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -14,7 +15,7 @@ function removePortal(closure_21) {
     }
     return closure_21;
   } else {
-    let obj = _require("04165_print.js");
+    let obj = _print;
     obj = { component: null, method: null, params: null };
     obj[0] = reducer.name;
     obj[1] = removePortal.name;

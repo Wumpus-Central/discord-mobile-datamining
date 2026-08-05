@@ -1,3 +1,5 @@
+import { _formatToParts } from "13380__formatToParts.js";
+import { 13464__ } from "metro/13464__.js";
 // _runtime/13463_isSupportedCurrency.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -9,7 +11,7 @@ function isSupportedCurrency(arr3, locale) {
   try {
     const obj = { style: "currency", currencyDisplay: "name", currency: null };
     obj[2] = arr3;
-    const memoizedNumberFormat = require("13380__formatToParts.js") /* _formatToParts */.createMemoizedNumberFormat(str, obj);
+    const memoizedNumberFormat = _formatToParts /* _formatToParts */.createMemoizedNumberFormat(str, obj);
     const str2 = memoizedNumberFormat.format(123);
     if (str2.substring(0, 3) !== arr3) {
       if (str3.substring(str3.length - 3) !== arr3) {
@@ -22,7 +24,7 @@ function isSupportedCurrency(arr3, locale) {
 }
 arg5.getSupportedCurrencies = function getSupportedCurrencies(locale) {
   const items = [];
-  const currencies = require("metro/13464__.js").currencies;
+  const currencies = 13464__.currencies;
   for (let num = 0; num < currencies.length; num = num + 1) {
     let arr3 = currencies[num];
     let tmp = num;

@@ -1,3 +1,5 @@
+import { getGlobalSingleton } from "00825_getGlobalSingleton.js";
+import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
 // _runtime/00824_consoleSandbox.js
 const require = arg1;
 let dependencyMap = arg6;
@@ -31,7 +33,7 @@ function _maybeLog(arg0) {
   const dependencyMap = [...arguments].slice();
   let str = _require;
   let fn = dependencyMap;
-  const DEBUG_BUILD = _require("metro/00823___SENTRY_DEBUG__.js").DEBUG_BUILD;
+  const DEBUG_BUILD = ___SENTRY_DEBUG__.DEBUG_BUILD;
   if (!DEBUG_BUILD) {
     if (DEBUG_BUILD) {
       consoleSandbox(() => {
@@ -56,27 +58,27 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let obj = {};
 obj = {
   enable() {
-    if (require("metro/00823___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
-      let globalSingleton = require("00825_getGlobalSingleton.js") /* getGlobalSingleton */.getGlobalSingleton("loggerSettings", () => ({ enabled: false }));
-      const tmpResult = require("00825_getGlobalSingleton.js") /* getGlobalSingleton */;
+    if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+      let globalSingleton = getGlobalSingleton /* getGlobalSingleton */.getGlobalSingleton("loggerSettings", () => ({ enabled: false }));
+      const tmpResult = getGlobalSingleton /* getGlobalSingleton */;
     } else {
       globalSingleton = { enabled: false };
     }
     globalSingleton.enabled = true;
   },
   disable() {
-    if (require("metro/00823___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
-      let globalSingleton = require("00825_getGlobalSingleton.js") /* getGlobalSingleton */.getGlobalSingleton("loggerSettings", () => ({ enabled: false }));
-      const tmpResult = require("00825_getGlobalSingleton.js") /* getGlobalSingleton */;
+    if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+      let globalSingleton = getGlobalSingleton /* getGlobalSingleton */.getGlobalSingleton("loggerSettings", () => ({ enabled: false }));
+      const tmpResult = getGlobalSingleton /* getGlobalSingleton */;
     } else {
       globalSingleton = { enabled: false };
     }
     globalSingleton.enabled = false;
   },
   isEnabled() {
-    if (require("metro/00823___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
-      let globalSingleton = require("00825_getGlobalSingleton.js") /* getGlobalSingleton */.getGlobalSingleton("loggerSettings", () => ({ enabled: false }));
-      const tmpResult = require("00825_getGlobalSingleton.js") /* getGlobalSingleton */;
+    if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+      let globalSingleton = getGlobalSingleton /* getGlobalSingleton */.getGlobalSingleton("loggerSettings", () => ({ enabled: false }));
+      const tmpResult = getGlobalSingleton /* getGlobalSingleton */;
     } else {
       globalSingleton = { enabled: false };
     }

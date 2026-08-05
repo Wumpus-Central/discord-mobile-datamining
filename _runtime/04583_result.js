@@ -1,3 +1,4 @@
+import { flag } from "00564_flag.js";
 // _runtime/04583_result.js
 import hasPropertyDescriptors from "hasPropertyDescriptors";
 
@@ -8,7 +9,7 @@ if (hasPropertyDescriptors) {
 let closure_4 = require("callBoundIntrinsic")("Object.prototype.propertyIsEnumerable");
 
 export default function DefineOwnProperty(arg0, arg1, arg2, arg3, arg4, __Value__) {
-  if (require("00564_flag.js") /* flag */) {
+  if (flag /* flag */) {
     if (hasPropertyDescriptors) {
       if ("length" === arg4) {
         if ("[[Value]]" in __Value__) {
@@ -22,9 +23,9 @@ export default function DefineOwnProperty(arg0, arg1, arg2, arg3, arg4, __Value_
         }
       }
     }
-    require("00564_flag.js") /* flag */(arg3, arg4, arg2(__Value__));
+    flag /* flag */(arg3, arg4, arg2(__Value__));
     flag4 = true;
-    const tmpResult = require("00564_flag.js") /* flag */;
+    const tmpResult = flag /* flag */;
   } else if (arg0(__Value__)) {
     if (__Value__["[[Configurable]]"]) {
       if (__Value__["[[Writable]]"]) {

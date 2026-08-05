@@ -1,3 +1,4 @@
+import { context } from "04656_context.js";
 // _runtime/04655_ScreenStack.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";
@@ -28,7 +29,7 @@ export default function ScreenStack(arg0) {
   const ref1 = obj.useRef(null);
   let Children = obj.Children;
   const _require = Children.count(children);
-  const context = obj.useContext(_require("04656_context.js").GHContext);
+  const context = obj.useContext(_context.GHContext);
   obj = {
     stackUseEffectCallback(ref1) {
 

@@ -1,3 +1,4 @@
+import { isObject } from "04529_isObject.js";
 // _runtime/04528_Type.js
 
 export default function Type(num) {
@@ -6,7 +7,7 @@ export default function Type(num) {
     let str2 = "Undefined";
     if (undefined !== num) {
       let str3 = "Object";
-      if (!require("04529_isObject.js") /* isObject */(num)) {
+      if (!isObject /* isObject */(num)) {
         let str4 = "Number";
         if (typeof num !== "number") {
           let str5 = "Boolean";

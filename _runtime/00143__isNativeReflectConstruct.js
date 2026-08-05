@@ -1,3 +1,5 @@
+import { NativeDOMCxx } from "00139_NativeDOMCxx.js";
+import { set } from "00144_set.js";
 // _runtime/00143__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -66,7 +68,7 @@ let items = [
       const nativeElementReference = ReactNativeElement(136).getNativeElementReference(this);
       if (null != nativeElementReference) {
         const _Math = Math;
-        return Math.round(require("00139_NativeDOMCxx.js").getOffset(nativeElementReference)[2]);
+        return Math.round(NativeDOMCxx.getOffset(nativeElementReference)[2]);
       } else {
         return 0;
       }
@@ -78,11 +80,11 @@ let items = [
     get() {
       const nativeElementReference = ReactNativeElement(136).getNativeElementReference(this);
       if (null != nativeElementReference) {
-        const offset = require("00139_NativeDOMCxx.js").getOffset(nativeElementReference);
+        const offset = NativeDOMCxx.getOffset(nativeElementReference);
         if (null != offset[0]) {
           return ReactNativeElement(136).getPublicInstanceFromInstanceHandle(offset[0]);
         }
-        const obj2 = require("00139_NativeDOMCxx.js");
+        const obj2 = NativeDOMCxx;
       }
       return null;
     }
@@ -93,7 +95,7 @@ let items = [
       const nativeElementReference = ReactNativeElement(136).getNativeElementReference(this);
       if (null != nativeElementReference) {
         const _Math = Math;
-        return Math.round(require("00139_NativeDOMCxx.js").getOffset(nativeElementReference)[1]);
+        return Math.round(NativeDOMCxx.getOffset(nativeElementReference)[1]);
       } else {
         return 0;
       }
@@ -111,8 +113,8 @@ let items = [
     value: function blur() {
       const self = this;
       if (obj.isTextInput(this)) {
-        require("00144_set.js").blurTextInput(self);
-        const tmpResult = require("00144_set.js");
+        set.blurTextInput(self);
+        const tmpResult = set;
       } else {
         if (obj2.enableImperativeFocus()) {
           const Commands = ReactNativeElement(112).Commands;
@@ -127,8 +129,8 @@ let items = [
     value: function focus() {
       const self = this;
       if (obj.isTextInput(this)) {
-        require("00144_set.js").focusTextInput(self);
-        const tmpResult = require("00144_set.js");
+        set.focusTextInput(self);
+        const tmpResult = set;
       } else {
         if (obj2.enableImperativeFocus()) {
           const Commands = ReactNativeElement(112).Commands;
@@ -143,8 +145,8 @@ let items = [
     value: function measure(arg0) {
       const nativeElementReference = ReactNativeElement(136).getNativeElementReference(this);
       if (null != nativeElementReference) {
-        require("00139_NativeDOMCxx.js").measure(nativeElementReference, arg0);
-        const obj2 = require("00139_NativeDOMCxx.js");
+        NativeDOMCxx.measure(nativeElementReference, arg0);
+        const obj2 = NativeDOMCxx;
       }
     }
   },
@@ -153,8 +155,8 @@ let items = [
     value: function measureAsyncOnUI(_measureCallback, _measureCallback) {
       const nativeElementReference = ReactNativeElement(136).getNativeElementReference(this);
       if (null != nativeElementReference) {
-        require("00139_NativeDOMCxx.js").measureAsyncOnUI(nativeElementReference, _measureCallback);
-        const obj2 = require("00139_NativeDOMCxx.js");
+        NativeDOMCxx.measureAsyncOnUI(nativeElementReference, _measureCallback);
+        const obj2 = NativeDOMCxx;
       }
     }
   },
@@ -163,8 +165,8 @@ let items = [
     value: function measureInWindow(arg0) {
       const nativeElementReference = ReactNativeElement(136).getNativeElementReference(this);
       if (null != nativeElementReference) {
-        require("00139_NativeDOMCxx.js").measureInWindow(nativeElementReference, arg0);
-        const obj2 = require("00139_NativeDOMCxx.js");
+        NativeDOMCxx.measureInWindow(nativeElementReference, arg0);
+        const obj2 = NativeDOMCxx;
       }
     }
   },
@@ -178,7 +180,7 @@ let items = [
         const nativeElementReference1 = ReactNativeElement(136).getNativeElementReference(nativeElementReference3);
         if (tmp6) {
           let tmp7 = arg2;
-          const obj3 = require("00139_NativeDOMCxx.js");
+          const obj3 = NativeDOMCxx;
           if (null == arg2) {
             tmp7 = noop;
           }
@@ -200,8 +202,8 @@ let items = [
       obj = obj.create(arg0, this.__viewConfig.validAttributes);
       const nativeElementReference = ReactNativeElement(136).getNativeElementReference(this);
       if (tmp4) {
-        require("00139_NativeDOMCxx.js").setNativeProps(nativeElementReference, obj);
-        const obj3 = require("00139_NativeDOMCxx.js");
+        NativeDOMCxx.setNativeProps(nativeElementReference, obj);
+        const obj3 = NativeDOMCxx;
       }
     }
   },

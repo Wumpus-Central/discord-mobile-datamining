@@ -1,3 +1,4 @@
+import { addNonEnumerableProperty } from "00822_addNonEnumerableProperty.js";
 // _runtime/00844__getSpanForScope.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -8,8 +9,8 @@ arg5._getSpanForScope = function _getSpanForScope(arg0) {
 };
 arg5._setSpanForScope = function _setSpanForScope(arg0, arg1) {
   if (arg1) {
-    const result = require("00822_addNonEnumerableProperty.js") /* addNonEnumerableProperty */.addNonEnumerableProperty(arg0, _sentrySpan, arg1);
-    const obj = require("00822_addNonEnumerableProperty.js") /* addNonEnumerableProperty */;
+    const result = addNonEnumerableProperty /* addNonEnumerableProperty */.addNonEnumerableProperty(arg0, _sentrySpan, arg1);
+    const obj = addNonEnumerableProperty /* addNonEnumerableProperty */;
   } else {
     delete tmp2[tmp];
   }

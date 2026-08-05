@@ -1,3 +1,4 @@
+import { createProfilePayload } from "01101_createProfilePayload.js";
 // _runtime/01102_startProfileForSpan.js
 import asyncGeneratorStep from "asyncGeneratorStep";
 
@@ -105,7 +106,7 @@ export const startProfileForSpan = function startProfileForSpan(rootSpan) {
     }
     return applyArgumentsResult;
   }
-  let obj = _require("01101_createProfilePayload.js");
+  let obj = _createProfilePayload;
   if (obj.isAutomatedPageLoadSpan(rootSpan)) {
     let tmpResult = tmp(817);
     let result = 1000 * tmpResult.timestampInSeconds();

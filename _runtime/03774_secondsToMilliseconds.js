@@ -1,3 +1,4 @@
+import { keys } from "03543_keys.js";
 // _runtime/03774_secondsToMilliseconds.js
 import requiredArgs from "requiredArgs";
 
@@ -11,6 +12,6 @@ if (!requiredArgs) {
 
 export default function secondsToMilliseconds(arg0) {
   tmp3.default(1, arguments);
-  return arg0 * require("03543_keys.js") /* keys */.millisecondsInSecond;
+  return arg0 * keys /* keys */.millisecondsInSecond;
 };
 export default exports.default;

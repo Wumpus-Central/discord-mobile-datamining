@@ -1,3 +1,5 @@
+import { call } from "13500_call.js";
+import { 13477__ } from "metro/13477__.js";
 // _runtime/13538_state.js
 import { state } from "__core-js_shared__";
 
@@ -7,7 +9,7 @@ if (!require("all")) {
     let closure_6 = tmp;
     require("module_13522")[tmp] = true;
     let fn = function t(facade) {
-      if (require("13500_call.js") /* call */(facade, closure_6)) {
+      if (call /* call */(facade, closure_6)) {
         const typeError = new tmp(13477).TypeError("Object already initialized");
         throw typeError;
       } else {
@@ -19,11 +21,11 @@ if (!require("all")) {
     };
     let fn4 = fn;
     let fn2 = function n(arg0) {
-      return require("13500_call.js") /* call */(arg0, closure_6) ? arg0[closure_6] : {};
+      return call /* call */(arg0, closure_6) ? arg0[closure_6] : {};
     };
     let fn5 = fn2;
     let fn3 = function u(arg0) {
-      return require("13500_call.js") /* call */(arg0, closure_6);
+      return call /* call */(arg0, closure_6);
     };
     let fn6 = fn3;
   }
@@ -63,7 +65,7 @@ if (!state) {
 ({ get: state.get, has: state.has, set: state.set } = state);
 fn4 = function t(facade) {
   if (state.has(facade)) {
-    const typeError = new require("metro/13477__.js").TypeError("Object already initialized");
+    const typeError = new 13477__.TypeError("Object already initialized");
     throw typeError;
   } else {
     arg1.facade = facade;

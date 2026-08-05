@@ -1,8 +1,12 @@
+import { isWorkletFunction } from "01631_isWorkletFunction.js";
+import { TransitionType } from "01662_TransitionType.js";
+import { setElementAnimation } from "01675_setElementAnimation.js";
+import { findDescendantWithExitingAnimation } from "01693_findDescendantWithExitingAnimation.js";
 // _runtime/01661_startWebLayoutAnimation.js
 const require = arg1;
 const dependencyMap = arg6;
 function startWebLayoutAnimation(props, _componentDOMRef, ENTERING, easingY) {
-  if (ENTERING === require("01631_isWorkletFunction.js") /* isWorkletFunction */.LayoutAnimationType.ENTERING) {
+  if (ENTERING === isWorkletFunction /* isWorkletFunction */.LayoutAnimationType.ENTERING) {
     let entering = props.entering;
   } else if (ENTERING === tmp(1631).LayoutAnimationType.EXITING) {
     entering = props.exiting;
@@ -53,12 +57,12 @@ function startWebLayoutAnimation(props, _componentDOMRef, ENTERING, easingY) {
     }
     const tmp8 = ENTERING === tmp(1631).LayoutAnimationType.LAYOUT || tmp5 || undefined !== entering.initialValues;
   }
-  const result = require("01675_setElementAnimation.js") /* setElementAnimation */.maybeModifyStyleForKeyframe(_componentDOMRef, props.entering);
+  const result = setElementAnimation /* setElementAnimation */.maybeModifyStyleForKeyframe(_componentDOMRef, props.entering);
   let animationName;
   if (processedConfig != null) {
     animationName = processedConfig.animationName;
   }
-  if (animationName in require("01662_TransitionType.js") /* TransitionType */.Animations) {
+  if (animationName in TransitionType /* TransitionType */.Animations) {
     let animationName1;
     if (processedConfig != null) {
       animationName1 = processedConfig.animationName;
@@ -103,7 +107,7 @@ arg5.startWebLayoutAnimation = startWebLayoutAnimation;
 arg5.tryActivateLayoutTransition = function tryActivateLayoutTransition(props, _componentDOMRef, arg2) {
   if (props.layout) {
     const size = _componentDOMRef.getBoundingClientRect();
-    let obj = require("01693_findDescendantWithExitingAnimation.js") /* findDescendantWithExitingAnimation */;
+    let obj = findDescendantWithExitingAnimation /* findDescendantWithExitingAnimation */;
     if (!obj.areDOMRectsEqual(size, arg2)) {
       const enteringV = props.layout.enteringV;
       let presetName;

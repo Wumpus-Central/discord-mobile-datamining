@@ -1,3 +1,8 @@
+import { Link } from "01481_Link.js";
+import { enableScreens } from "04631_enableScreens.js";
+import { Background } from "05674_Background.js";
+import { StyleSheet } from "08385_StyleSheet.js";
+import { 08384__ } from "metro/08384__.js";
 // _runtime/08383_NativeStackViewInner.js
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -134,7 +139,7 @@ function MaybeNestedStack(children) {
   }
   obj[1] = str2;
   obj[2] = children.children;
-  return closure_7(require("metro/08384__.js"), obj);
+  return closure_7(08384__, obj);
 }
 function SceneView(arg0) {
   let animation;
@@ -182,7 +187,7 @@ function SceneView(arg0) {
   let _require;
   ({ route, navigation, options } = descriptor);
   ({ index, onWillDisappear, onWillAppear, onAppear, onDisappear, onDismissed, onHeaderBackButtonClicked, onNativeDismissCancelled, onGestureCancel } = arg0);
-  let obj = _require("04631_enableScreens.js");
+  let obj = _enableScreens;
   const UNSTABLE_headerInsets = options.UNSTABLE_headerInsets;
   let left;
   if (UNSTABLE_headerInsets != null) {
@@ -264,8 +269,8 @@ function SceneView(arg0) {
   const tmp6 = undefined !== fullScreenGestureShadowEnabled && fullScreenGestureShadowEnabled;
   const tmp7 = undefined !== sheetGrabberVisible && sheetGrabberVisible;
   const tmp8 = undefined === sheetExpandsWhenScrolledToEdge || sheetExpandsWhenScrolledToEdge;
-  const tmpResult1 = _require("01481_Link.js");
-  let defaultHeaderHeight = _require("05674_Background.js").getDefaultHeaderHeight(safeAreaFrame, tmp12, num3);
+  const tmpResult1 = _Link;
+  let defaultHeaderHeight = _Background.getDefaultHeaderHeight(safeAreaFrame, tmp12, num3);
   const tmp16 = callback(obj3.useState(defaultHeaderHeight), 2);
   _require = tmp16[1];
   let tmp17 = statusBarTranslucent;
@@ -374,8 +379,8 @@ function SceneView(arg0) {
   const obj9 = { value: tmp18, children: null };
   const obj10 = { value: obj.useEdgeInsetApplication(false === left, false === right, false === bottom).nextContextValue, children: null };
   obj10[1] = descriptor.render();
-  obj9[1] = closure_7(_require("04631_enableScreens.js").EdgeInsetApplicationContext.Provider, obj10);
-  obj8[5] = closure_7(_require("05674_Background.js").HeaderBackContext.Provider, obj9);
+  obj9[1] = closure_7(_enableScreens.EdgeInsetApplicationContext.Provider, obj10);
+  obj8[5] = closure_7(_Background.HeaderBackContext.Provider, obj9);
   const items2 = [closure_7(MaybeNestedStack, obj8), ];
   tmp21Result = null;
   if (undefined !== header) {
@@ -404,7 +409,7 @@ function SceneView(arg0) {
   items1[1] = closure_8(View, obj7);
   const obj13 = {};
   tmp30 = closure_12;
-  const tmpResult2 = _require("05674_Background.js");
+  const tmpResult2 = _Background;
   const merged = Object.assign(options);
   obj13.route = route;
   if (undefined !== preventRemove) {
@@ -420,13 +425,13 @@ function SceneView(arg0) {
   obj13.headerBackTitle = headerBackTitle;
   obj13.headerTopInsetEnabled = tmp17;
   obj13.canGoBack = undefined !== tmp18;
-  items1[2] = closure_7(require("08385_StyleSheet.js"), obj13);
+  items1[2] = closure_7(StyleSheet, obj13);
   obj4[1] = items1;
-  obj3[1] = closure_8(_require("05674_Background.js").HeaderHeightContext.Provider, obj4);
-  obj2[1] = closure_7(_require("05674_Background.js").HeaderShownContext.Provider, obj3);
-  obj1[1] = closure_7(_require("01481_Link.js").NavigationRouteContext.Provider, obj2);
-  obj[40] = closure_7(_require("01481_Link.js").NavigationContext.Provider, obj1);
-  return closure_7(_require("04631_enableScreens.js").Screen, obj, route.key);
+  obj3[1] = closure_8(_Background.HeaderHeightContext.Provider, obj4);
+  obj2[1] = closure_7(_Background.HeaderShownContext.Provider, obj3);
+  obj1[1] = closure_7(_Link.NavigationRouteContext.Provider, obj2);
+  obj[40] = closure_7(_Link.NavigationContext.Provider, obj1);
+  return closure_7(_enableScreens.Screen, obj, route.key);
 }
 const styles = StyleSheet.create({ container: { flex: 1 }, scene: { flex: 1, flexDirection: "column-reverse" }, absolute: { position: "absolute", top: 0, left: 0, right: 0 }, translucent: { position: "absolute", top: 0, left: 0, right: 0, zIndex: 1, elevation: 1 }, background: { overflow: "hidden" } });
 
@@ -435,5 +440,5 @@ export default function NativeStackView(arg0) {
   obj = {};
   const merged = Object.assign(arg0);
   obj[0] = callback2(NativeStackViewInner, obj);
-  return callback2(require("05674_Background.js") /* Background */.SafeAreaProviderCompat, obj);
+  return callback2(Background /* Background */.SafeAreaProviderCompat, obj);
 };

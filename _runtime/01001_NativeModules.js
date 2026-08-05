@@ -1,3 +1,6 @@
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
+import { TurboModuleRegistry } from "00997_TurboModuleRegistry.js";
+import { convertToNormalizedObject } from "01014_convertToNormalizedObject.js";
 // _runtime/01001_NativeModules.js
 import _slicedToArray from "_slicedToArray";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -139,7 +142,7 @@ if (isHermesEnabled.isTurboModuleEnabled()) {
 }
 function getRNSentryModule() {
   if (obj.isTurboModuleEnabled()) {
-    const TurboModuleRegistry = require("00997_TurboModuleRegistry.js") /* TurboModuleRegistry */.ReactNativeLibraries.TurboModuleRegistry;
+    const TurboModuleRegistry = TurboModuleRegistry /* TurboModuleRegistry */.ReactNativeLibraries.TurboModuleRegistry;
     let value;
     if (null !== TurboModuleRegistry) {
       if (undefined !== TurboModuleRegistry) {
@@ -901,7 +904,7 @@ isHermesEnabled = {
         } else {
           try {
             const _JSON = JSON;
-            const json = JSON.stringify(require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.normalize(str));
+            const json = JSON.stringify(registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.normalize(str));
             if (typeof json === "string") {
               let setExtraResult = obj.setExtra(arg0, json);
             } else {
@@ -909,7 +912,7 @@ isHermesEnabled = {
             }
             return setExtraResult;
           } catch (tmp8) {
-            const debug = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.debug;
+            const debug = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.debug;
             debug.error("Extra for key ${key} not passed to native SDK, because it contains non-stringifiable values", tmp8);
           }
         }
@@ -956,16 +959,16 @@ isHermesEnabled = {
           return obj.setContext(arg0, null);
         } else {
           try {
-            const result = require("01014_convertToNormalizedObject.js") /* convertToNormalizedObject */.convertToNormalizedObject(data);
+            const result = convertToNormalizedObject /* convertToNormalizedObject */.convertToNormalizedObject(data);
             const setContext = obj.setContext;
             if (result) {
               setContext(arg0, result);
             } else {
               setContext(arg0, { error: "**non-serializable**" });
             }
-            const obj2 = require("01014_convertToNormalizedObject.js") /* convertToNormalizedObject */;
+            const obj2 = convertToNormalizedObject /* convertToNormalizedObject */;
           } catch (tmp8) {
-            const debug = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.debug;
+            const debug = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.debug;
             debug.error("Context for key ${key} not passed to native SDK, because it contains non-serializable values", tmp8);
           }
         }
@@ -1187,7 +1190,7 @@ isHermesEnabled = {
       if (self._isModuleLoaded(RNSentry)) {
         const startProfilingResult = obj.startProfiling(arg0);
         const started = startProfilingResult.started;
-        const debug = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.debug;
+        const debug = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.debug;
         if (started) {
           debug.log("[NATIVE] Start Profiling");
         } else {
@@ -1214,7 +1217,7 @@ isHermesEnabled = {
         if (profile) {
           if (!error) {
             if (!androidProfile) {
-              const debug = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.debug;
+              const debug = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.debug;
               debug.warn("[NATIVE] Stop Profiling Failed: No Android Profile");
             }
             try {
@@ -1225,13 +1228,13 @@ isHermesEnabled = {
               obj[2] = androidProfile;
               return obj;
             } catch (tmp7) {
-              const debug2 = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.debug;
+              const debug2 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.debug;
               debug2.error("[NATIVE] Failed to parse Hermes Profile JSON", tmp7);
               return null;
             }
           }
         }
-        const debug3 = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.debug;
+        const debug3 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.debug;
         debug3.error("[NATIVE] Stop Profiling Failed", error);
         return null;
       } else {
@@ -1402,14 +1405,14 @@ isHermesEnabled = {
         let tmp10 = obj.getCurrentReplayId() || null;
         const tmp11 = obj.getCurrentReplayId() || null;
       } else {
-        const debug2 = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.debug;
+        const debug2 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.debug;
         const _HermesInternal2 = HermesInternal;
         debug2.warn("[NATIVE] `" + self.getCurrentReplayId.name + "` is not available when native is not available.");
         tmp10 = null;
       }
       obj = RNSentry;
     } else {
-      const debug = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.debug;
+      const debug = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.debug;
       const _HermesInternal = HermesInternal;
       debug.warn("[NATIVE] `" + self.getCurrentReplayId.name + "` is not available when native is disabled.");
       return null;
@@ -1602,7 +1605,7 @@ isHermesEnabled = {
         try {
           return obj.popTimeToDisplayFor(arg0);
         } catch (tmp2) {
-          const debug = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.debug;
+          const debug = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.debug;
           debug.error("Error:", tmp2);
           return Promise.resolve(null);
         }
@@ -1618,7 +1621,7 @@ isHermesEnabled = {
         try {
           obj.setActiveSpanId(spanId);
         } catch (tmp3) {
-          const debug = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.debug;
+          const debug = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.debug;
           debug.error("Error:", tmp3);
         }
       }

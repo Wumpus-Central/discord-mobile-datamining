@@ -1,3 +1,4 @@
+import { getStatics } from "04119_getStatics.js";
 // _runtime/05381_gestureHandlerRootHOC.js
 import "noop";
 import { StyleSheet } from "get ActivityIndicator";
@@ -22,6 +23,6 @@ export default function gestureHandlerRootHOC(displayName) {
     }
   }
   Wrapper.displayName = "gestureHandlerRootHOC(" + displayName.displayName || displayName.name + ")";
-  require("04119_getStatics.js")(Wrapper, displayName);
+  getStatics(Wrapper, displayName);
   return Wrapper;
 };

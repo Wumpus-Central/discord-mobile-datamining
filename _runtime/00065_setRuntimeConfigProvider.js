@@ -1,3 +1,4 @@
+import { 00038__ } from "metro/00038__.js";
 // _runtime/00065_setRuntimeConfigProvider.js
 import "noop";
 
@@ -70,7 +71,7 @@ export const get = function get(arg0, arg1) {
 };
 export const getWithFallback_DEPRECATED = function getWithFallback_DEPRECATED(arg0, arg1) {
   if (null == callback) {
-    require("metro/00038__.js")(null == callback, "Unexpected invocation!");
+    00038__(null == callback, "Unexpected invocation!");
     class FallbackNativeComponent {
       constructor(arg0) {
         return null;

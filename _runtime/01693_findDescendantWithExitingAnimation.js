@@ -1,3 +1,7 @@
+import { isJest } from "01609_isJest.js";
+import { addLogBoxLog } from "01610_addLogBoxLog.js";
+import { t } from "01617_t.js";
+import { weakMap } from "01692_weakMap.js";
 // _runtime/01693_findDescendantWithExitingAnimation.js
 const require = arg1;
 let dependencyMap = arg6;
@@ -11,7 +15,7 @@ function findDescendantWithExitingAnimation(isDummy, appendChild) {
     if (isDummy) {
       const _require = isDummy;
       const dependencyMap = appendChild;
-      const snapshots = _require("01692_weakMap.js").snapshots;
+      const snapshots = _weakMap.snapshots;
       const value = snapshots.get(isDummy);
       if (value) {
         isDummy.removedAfterAnimation = true;
@@ -104,11 +108,11 @@ arg5.insertWebAnimation = function insertWebAnimation(name, result) {
           let result1 = map.set(arr[num3], value + 1);
           num3 = num3 + 1;
         }
-        const reanimatedError = new require("01617_t.js") /* t */.ReanimatedError("Failed to obtain animation index.");
+        const reanimatedError = new t /* t */.ReanimatedError("Failed to obtain animation index.");
         throw reanimatedError;
       }
     } else {
-      const logger = require("01610_addLogBoxLog.js") /* addLogBoxLog */.logger;
+      const logger = addLogBoxLog /* addLogBoxLog */.logger;
       logger.error("Failed to create layout animations stylesheet.");
     }
   }
@@ -149,8 +153,8 @@ arg5.scheduleAnimationCleanup = function scheduleAnimationCleanup(animationName,
 arg5.addHTMLMutationObserver = function addHTMLMutationObserver() {
   let isWindowAvailableResult = !c6;
   if (!c6) {
-    isWindowAvailableResult = require("01609_isJest.js") /* isJest */.isWindowAvailable();
-    const obj = require("01609_isJest.js") /* isJest */;
+    isWindowAvailableResult = isJest /* isJest */.isWindowAvailable();
+    const obj = isJest /* isJest */;
   }
   if (isWindowAvailableResult) {
     c6 = true;

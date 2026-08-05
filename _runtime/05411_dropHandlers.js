@@ -1,3 +1,6 @@
+import { map } from "05371_map.js";
+import { transformIntoHandlerTags } from "05391_transformIntoHandlerTags.js";
+import { MountRegistry } from "05393_MountRegistry.js";
 // _runtime/05411_dropHandlers.js
 const require = arg1;
 const module = arg2;
@@ -9,11 +12,11 @@ arg5.dropHandlers = function dropHandlers(closure_1) {
     let obj = module(5377);
     let dropGestureHandlerResult = obj.dropGestureHandler(item10006.handlerTag);
     let tmp5 = require;
-    let obj2 = require("05371_map.js") /* map */;
+    let obj2 = map /* map */;
     let unregisterHandlerResult = obj2.unregisterHandler(item10006.handlerTag, item10006.config.testId);
-    let MountRegistry = require("05393_MountRegistry.js") /* MountRegistry */.MountRegistry;
+    let MountRegistry = MountRegistry /* MountRegistry */.MountRegistry;
     let gestureWillUnmountResult = MountRegistry.gestureWillUnmount(item10006);
     continue;
   }
-  const result = require("05391_transformIntoHandlerTags.js") /* transformIntoHandlerTags */.scheduleFlushOperations();
+  const result = transformIntoHandlerTags /* transformIntoHandlerTags */.scheduleFlushOperations();
 };

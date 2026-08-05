@@ -1,3 +1,6 @@
+import { emitUnicodeLanguageId } from "13445_emitUnicodeLanguageId.js";
+import { compareKV } from "13446_compareKV.js";
+import { parseUnicodeLanguageId } from "13448_parseUnicodeLanguageId.js";
 // _runtime/13444_isStructurallyValidLanguageTag.js
 import e from "e";
 import e from "e";
@@ -23,7 +26,7 @@ export const getCanonicalLocales = function getCanonicalLocales(items) {
       do {
         let tmp = require;
         let tmp2 = dependencyMap;
-        let emitUnicodeLocaleIdResult = require("13445_emitUnicodeLanguageId.js") /* emitUnicodeLanguageId */.emitUnicodeLocaleId(require("13446_compareKV.js") /* compareKV */.CanonicalizeUnicodeLocaleId(require("13448_parseUnicodeLanguageId.js") /* parseUnicodeLanguageId */.parseUnicodeLocaleId(arr3[num3])));
+        let emitUnicodeLocaleIdResult = emitUnicodeLanguageId /* emitUnicodeLanguageId */.emitUnicodeLocaleId(compareKV /* compareKV */.CanonicalizeUnicodeLocaleId(parseUnicodeLanguageId /* parseUnicodeLanguageId */.parseUnicodeLocaleId(arr3[num3])));
         let tmp4 = num3;
         if (items2.indexOf(emitUnicodeLocaleIdResult) < 0) {
           let arr = items2.push(emitUnicodeLocaleIdResult);
@@ -35,9 +38,9 @@ export const getCanonicalLocales = function getCanonicalLocales(items) {
   }
   return items;
 };
-export const isStructurallyValidLanguageTag = require("13448_parseUnicodeLanguageId.js") /* parseUnicodeLanguageId */.isUnicodeLanguageSubtag;
-export const isUnicodeLanguageSubtag = require("13448_parseUnicodeLanguageId.js") /* parseUnicodeLanguageId */.isUnicodeLanguageSubtag;
-export const isUnicodeRegionSubtag = require("13448_parseUnicodeLanguageId.js") /* parseUnicodeLanguageId */.isUnicodeRegionSubtag;
-export const isUnicodeScriptSubtag = require("13448_parseUnicodeLanguageId.js") /* parseUnicodeLanguageId */.isUnicodeScriptSubtag;
-export const parseUnicodeLanguageId = require("13448_parseUnicodeLanguageId.js") /* parseUnicodeLanguageId */.parseUnicodeLanguageId;
-export const parseUnicodeLocaleId = require("13448_parseUnicodeLanguageId.js") /* parseUnicodeLanguageId */.parseUnicodeLocaleId;
+export const isStructurallyValidLanguageTag = parseUnicodeLanguageId /* parseUnicodeLanguageId */.isUnicodeLanguageSubtag;
+export const isUnicodeLanguageSubtag = parseUnicodeLanguageId /* parseUnicodeLanguageId */.isUnicodeLanguageSubtag;
+export const isUnicodeRegionSubtag = parseUnicodeLanguageId /* parseUnicodeLanguageId */.isUnicodeRegionSubtag;
+export const isUnicodeScriptSubtag = parseUnicodeLanguageId /* parseUnicodeLanguageId */.isUnicodeScriptSubtag;
+export const parseUnicodeLanguageId = parseUnicodeLanguageId /* parseUnicodeLanguageId */.parseUnicodeLanguageId;
+export const parseUnicodeLocaleId = parseUnicodeLanguageId /* parseUnicodeLanguageId */.parseUnicodeLocaleId;

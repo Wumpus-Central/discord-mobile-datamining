@@ -1,3 +1,5 @@
+import { isWorkletFunction } from "01631_isWorkletFunction.js";
+import { updateLayoutAnimations } from "01720_updateLayoutAnimations.js";
 // _runtime/01743_SharedTransition.js
 import _classCallCheck from "_classCallCheck";
 
@@ -102,12 +104,12 @@ const items = [
       if (flag === undefined) {
         flag = false;
       }
-      if (this._defaultTransitionType === require("01631_isWorkletFunction.js") /* isWorkletFunction */.SharedTransitionType.ANIMATION) {
+      if (this._defaultTransitionType === isWorkletFunction /* isWorkletFunction */.SharedTransitionType.ANIMATION) {
         let SHARED_ELEMENT_TRANSITION_PROGRESS = tmp(1631).LayoutAnimationType.SHARED_ELEMENT_TRANSITION;
       } else {
         SHARED_ELEMENT_TRANSITION_PROGRESS = tmp(1631).LayoutAnimationType.SHARED_ELEMENT_TRANSITION_PROGRESS;
       }
-      const result = require("01720_updateLayoutAnimations.js") /* updateLayoutAnimations */.updateLayoutAnimations(componentViewTag, SHARED_ELEMENT_TRANSITION_PROGRESS, undefined, undefined, flag);
+      const result = updateLayoutAnimations /* updateLayoutAnimations */.updateLayoutAnimations(componentViewTag, SHARED_ELEMENT_TRANSITION_PROGRESS, undefined, undefined, flag);
       const _progressTransitionManager = SharedTransition._progressTransitionManager;
       const result1 = _progressTransitionManager.removeProgressAnimation(componentViewTag, flag);
     }
@@ -300,7 +302,7 @@ obj = {
     obj._customAnimationFactory = null;
     obj._animation = null;
     obj._transitionDuration = 500;
-    obj._reduceMotion = require("01631_isWorkletFunction.js") /* isWorkletFunction */.ReduceMotion.System;
+    obj._reduceMotion = isWorkletFunction /* isWorkletFunction */.ReduceMotion.System;
     obj._customProgressAnimation = undefined;
     obj._progressAnimation = undefined;
     obj._defaultTransitionType = undefined;
@@ -317,7 +319,7 @@ const items1 = [
       obj._customAnimationFactory = null;
       obj._animation = null;
       obj._transitionDuration = 500;
-      obj._reduceMotion = require("01631_isWorkletFunction.js") /* isWorkletFunction */.ReduceMotion.System;
+      obj._reduceMotion = isWorkletFunction /* isWorkletFunction */.ReduceMotion.System;
       obj._customProgressAnimation = undefined;
       obj._progressAnimation = undefined;
       obj._defaultTransitionType = undefined;
@@ -332,7 +334,7 @@ const items1 = [
       obj._customAnimationFactory = null;
       obj._animation = null;
       obj._transitionDuration = 500;
-      obj._reduceMotion = require("01631_isWorkletFunction.js") /* isWorkletFunction */.ReduceMotion.System;
+      obj._reduceMotion = isWorkletFunction /* isWorkletFunction */.ReduceMotion.System;
       obj._customProgressAnimation = undefined;
       obj._progressAnimation = undefined;
       obj._defaultTransitionType = undefined;
@@ -347,7 +349,7 @@ const items1 = [
       obj._customAnimationFactory = null;
       obj._animation = null;
       obj._transitionDuration = 500;
-      obj._reduceMotion = require("01631_isWorkletFunction.js") /* isWorkletFunction */.ReduceMotion.System;
+      obj._reduceMotion = isWorkletFunction /* isWorkletFunction */.ReduceMotion.System;
       obj._customProgressAnimation = undefined;
       obj._progressAnimation = undefined;
       obj._defaultTransitionType = undefined;
@@ -362,7 +364,7 @@ const items1 = [
       obj._customAnimationFactory = null;
       obj._animation = null;
       obj._transitionDuration = 500;
-      obj._reduceMotion = require("01631_isWorkletFunction.js") /* isWorkletFunction */.ReduceMotion.System;
+      obj._reduceMotion = isWorkletFunction /* isWorkletFunction */.ReduceMotion.System;
       obj._customProgressAnimation = undefined;
       obj._progressAnimation = undefined;
       obj._defaultTransitionType = undefined;

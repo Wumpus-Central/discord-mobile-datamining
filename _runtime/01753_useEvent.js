@@ -1,3 +1,4 @@
+import { importDefaultResult1 } from "01711_importDefaultResult1.js";
 // _runtime/01753_useEvent.js
 import { useRef } from "noop";
 
@@ -13,7 +14,7 @@ export const useEvent = function useEvent(fn, closure_4, doDependenciesDiffer) {
   }
   const tmp = useRef(null);
   if (null === tmp.current) {
-    let workletEventHandler = new require("01711_importDefaultResult1.js") /* importDefaultResult1 */.WorkletEventHandler(fn, items);
+    let workletEventHandler = new importDefaultResult1 /* importDefaultResult1 */.WorkletEventHandler(fn, items);
     let obj = { workletEventHandler: null };
     obj[0] = workletEventHandler;
     tmp.current = obj;

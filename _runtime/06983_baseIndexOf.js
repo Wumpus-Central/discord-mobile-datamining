@@ -1,11 +1,14 @@
+import { baseFindIndex } from "04367_baseFindIndex.js";
+import { strictIndexOf } from "06984_strictIndexOf.js";
+import { baseIsNaN } from "06985_baseIsNaN.js";
 // _runtime/06983_baseIndexOf.js
 
 export default function baseIndexOf(arg0, arg1, arg2) {
   if (arg1 == arg1) {
-    let tmp3Result = require("06984_strictIndexOf.js") /* strictIndexOf */(arg0, arg1, arg2);
+    let tmp3Result = strictIndexOf /* strictIndexOf */(arg0, arg1, arg2);
   } else {
-    tmp3Result = require("04367_baseFindIndex.js") /* baseFindIndex */(arg0, require("06985_baseIsNaN.js") /* baseIsNaN */, arg2);
-    const tmp3 = require("04367_baseFindIndex.js") /* baseFindIndex */;
+    tmp3Result = baseFindIndex /* baseFindIndex */(arg0, baseIsNaN /* baseIsNaN */, arg2);
+    const tmp3 = baseFindIndex /* baseFindIndex */;
   }
   return tmp3Result;
 };

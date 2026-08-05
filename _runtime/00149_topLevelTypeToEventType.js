@@ -1,3 +1,4 @@
+import { map } from "00066_map.js";
 // _runtime/00149_topLevelTypeToEventType.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -21,7 +22,7 @@ arg5.getEventTypePropName = function getEventTypePropName(arg0, arg1) {
   if (undefined !== table[arg0]) {
     return arg1 ? tmp3.captured : tmp3.bubbled;
   } else {
-    for (const key10005 in require("00066_map.js") /* map */.customBubblingEventTypes) {
+    for (const key10005 in map /* map */.customBubblingEventTypes) {
       let tmp22 = key10005;
       let charCodeAtResult = key10005.charCodeAt(3);
       let formatted = key10005;
@@ -40,7 +41,7 @@ arg5.getEventTypePropName = function getEventTypePropName(arg0, arg1) {
       } else {
         let tmp5 = require;
         let tmp6 = dependencyMap;
-        let phasedRegistrationNames = require("00066_map.js") /* map */.customBubblingEventTypes[key10005].phasedRegistrationNames;
+        let phasedRegistrationNames = map /* map */.customBubblingEventTypes[key10005].phasedRegistrationNames;
         if (null == phasedRegistrationNames) {
           continue;
         } else {
@@ -94,7 +95,7 @@ arg5.getEventTypePropName = function getEventTypePropName(arg0, arg1) {
         } else {
           let tmp14 = require;
           let tmp15 = dependencyMap;
-          let tmp16 = require("00066_map.js") /* map */.customDirectEventTypes[arr];
+          let tmp16 = map /* map */.customDirectEventTypes[arr];
           if (null == tmp16.registrationName) {
             continue;
           } else {

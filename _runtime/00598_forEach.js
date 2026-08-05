@@ -1,10 +1,12 @@
+import { castFunction } from "00633_castFunction.js";
+import { 00599__ } from "metro/00599__.js";
 // _runtime/00598_forEach.js
 
 export default function forEach(arg0, arg1) {
-  if (require("metro/00599__.js")(arg0)) {
+  if (00599__(arg0)) {
     let tmpResult = tmp(600);
   } else {
     tmpResult = tmp(601);
   }
-  return tmpResult(arg0, require("00633_castFunction.js") /* castFunction */(arg1));
+  return tmpResult(arg0, castFunction /* castFunction */(arg1));
 };

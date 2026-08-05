@@ -1,3 +1,5 @@
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
+import { makeFetchTransport } from "01032_makeFetchTransport.js";
 // _runtime/01098__push.js
 import asyncGeneratorStep from "asyncGeneratorStep";
 
@@ -333,9 +335,9 @@ export const createStore = function createStore(arg0, arg1) {
 export const makeBrowserOfflineTransport = function makeBrowserOfflineTransport() {
   let makeFetchTransport = arg0;
   if (arg0 === undefined) {
-    makeFetchTransport = _require("01032_makeFetchTransport.js").makeFetchTransport;
+    makeFetchTransport = _makeFetchTransport.makeFetchTransport;
   }
-  _require = _require("00817_registerSpanErrorInstrumentation.js").makeOfflineTransport(makeFetchTransport);
+  _require = _registerSpanErrorInstrumentation.makeOfflineTransport(makeFetchTransport);
   return (arg0) => {
     let obj = {};
     const merged = Object.assign(arg0);

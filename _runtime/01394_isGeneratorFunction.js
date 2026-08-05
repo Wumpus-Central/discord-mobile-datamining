@@ -1,3 +1,4 @@
+import { getProto } from "00546_getProto.js";
 // _runtime/01394_isGeneratorFunction.js
 let closure_3 = require("regexTester")(/^\s*(?:function)?\*/);
 let closure_4 = require("hasToStringTagShams")();
@@ -10,7 +11,7 @@ export default function isGeneratorFunction(fn) {
   } else if (callback(callback3(fn))) {
     return true;
   } else if (closure_4) {
-    if (require("00546_getProto.js") /* getProto */) {
+    if (getProto /* getProto */) {
       if (undefined === closure_2) {
         const tmp6 = (() => {
           if (closure_4) {

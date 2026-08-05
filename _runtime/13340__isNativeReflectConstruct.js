@@ -1,3 +1,4 @@
+import { shallowCompare } from "13341_shallowCompare.js";
 // _runtime/13340__isNativeReflectConstruct.js
 import _slicedToArray from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
@@ -222,7 +223,7 @@ let items = [
     value: function shouldComponentUpdate(arg0, arg1) {
       let tmp2 = false === this.props.shouldOptimizeUpdates;
       if (!tmp2) {
-        tmp2 = require("13341_shallowCompare.js")(tmp, arg0, arg1);
+        tmp2 = shallowCompare(tmp, arg0, arg1);
       }
       return tmp2;
     }

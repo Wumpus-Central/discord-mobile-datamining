@@ -1,10 +1,11 @@
+import { ignoreNextOnError } from "01028_ignoreNextOnError.js";
 // _runtime/01082_checkAndWarnIfIsEmbeddedBrowserExtension.js
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.checkAndWarnIfIsEmbeddedBrowserExtension = function checkAndWarnIfIsEmbeddedBrowserExtension() {
   let flag = false;
-  if (undefined !== _require("01028_ignoreNextOnError.js").WINDOW.window) {
+  if (undefined !== _ignoreNextOnError.WINDOW.window) {
     const WINDOW = tmp(1028).WINDOW;
     flag = false;
     if (!WINDOW.nw) {

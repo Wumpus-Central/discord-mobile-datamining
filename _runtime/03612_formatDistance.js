@@ -1,3 +1,4 @@
+import { getDefaultOptions } from "03369_getDefaultOptions.js";
 // _runtime/03612_formatDistance.js
 import compareAsc from "compareAsc";
 import differenceInMonths from "differenceInMonths";
@@ -89,7 +90,7 @@ let c14 = 86400;
 export default function formatDistance(arg0, arg1, locale) {
   tmp19.default(2, arguments);
   locale = undefined;
-  const defaultOptions = require("03369_getDefaultOptions.js") /* getDefaultOptions */.getDefaultOptions();
+  const defaultOptions = getDefaultOptions /* getDefaultOptions */.getDefaultOptions();
   if (null != locale) {
     locale = locale.locale;
   }

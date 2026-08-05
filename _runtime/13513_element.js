@@ -1,3 +1,4 @@
+import { 13477__ } from "metro/13477__.js";
 // _runtime/13513_element.js
 import all from "all";
 
@@ -9,7 +10,7 @@ if (_moduleResult) {
 
 export default (arg0) => {
   if (closure_2) {
-    const _document = require("metro/13477__.js").document;
+    const _document = 13477__.document;
     let element = _document.createElement(arg0);
   } else {
     element = {};

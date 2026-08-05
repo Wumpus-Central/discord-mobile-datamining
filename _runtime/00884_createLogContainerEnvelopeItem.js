@@ -1,3 +1,5 @@
+import { dsnFromString } from "00837_dsnFromString.js";
+import { forEachEnvelopeItem } from "00864_forEachEnvelopeItem.js";
 // _runtime/00884_createLogContainerEnvelopeItem.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -23,11 +25,11 @@ arg5.createLogEnvelope = function createLogEnvelope(items, _metadata, tunnel, ds
     tmp2 = dsn;
   }
   if (tmp2) {
-    obj.dsn = require("00837_dsnFromString.js") /* dsnFromString */.dsnToString(dsn);
-    const obj3 = require("00837_dsnFromString.js") /* dsnFromString */;
+    obj.dsn = dsnFromString /* dsnFromString */.dsnToString(dsn);
+    const obj3 = dsnFromString /* dsnFromString */;
   }
   obj = { type: "log", item_count: items.length, content_type: "application/vnd.sentry.items.log+json" };
   items = [obj, { items }];
   const items1 = [items];
-  return require("00864_forEachEnvelopeItem.js") /* forEachEnvelopeItem */.createEnvelope(obj, items1);
+  return forEachEnvelopeItem /* forEachEnvelopeItem */.createEnvelope(obj, items1);
 };

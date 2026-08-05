@@ -1,3 +1,6 @@
+import { getDataView } from "../04897_getDataView.js";
+import { readTag } from "../04917_readTag.js";
+import { importDefaultResult1 } from "../04918_importDefaultResult1.js";
 // _runtime/metro/04942__.js
 const require = arg1;
 const module = arg2;
@@ -8,9 +11,9 @@ arg5.default = {
     let iter;
     let obj = module(4902);
     const byteOrder = obj.getByteOrder(buffer, sum);
-    let obj1 = require("../04917_readTag.js") /* readTag */;
-    let obj2 = require("../04917_readTag.js") /* readTag */;
-    const ifd = obj1.readIfd(buffer, require("../04918_importDefaultResult1.js") /* importDefaultResult1 */.IFD_TYPE_MPF, sum, obj2.get0thIfdOffset(buffer, sum, byteOrder), byteOrder, arg2);
+    let obj1 = readTag /* readTag */;
+    let obj2 = readTag /* readTag */;
+    const ifd = obj1.readIfd(buffer, importDefaultResult1 /* importDefaultResult1 */.IFD_TYPE_MPF, sum, obj2.get0thIfdOffset(buffer, sum, byteOrder), byteOrder, arg2);
     if (ifd.MPEntry) {
       const items = [];
       const _Math = Math;
@@ -202,7 +205,7 @@ arg5.default = {
             items[num13].image = buffer.slice(0, num22);
             let tmp33 = require;
             let tmp34 = dependencyMap;
-            let obj15 = require("../04897_getDataView.js") /* getDataView */;
+            let obj15 = getDataView /* getDataView */;
             let deferInitResult = obj15.deferInit(items[num13], "base64", function() {
               return callback(table[4]).getBase64Image(this.image);
             });

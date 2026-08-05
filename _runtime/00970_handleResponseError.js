@@ -1,3 +1,8 @@
+import { getSpanStatusFromHttpCode } from "00840_getSpanStatusFromHttpCode.js";
+import { captureCheckIn } from "00869_captureCheckIn.js";
+import { buildMethodPath } from "00960_buildMethodPath.js";
+import { 00958__ } from "metro/00958__.js";
+import { 00971__ } from "metro/00971__.js";
 // _runtime/00970_handleResponseError.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -5,14 +10,14 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.handleResponseError = function handleResponseError(setStatus, error) {
   if (error.error) {
     let obj = { code: null, message: null };
-    obj[0] = require("00840_getSpanStatusFromHttpCode.js") /* getSpanStatusFromHttpCode */.SPAN_STATUS_ERROR;
+    obj[0] = getSpanStatusFromHttpCode /* getSpanStatusFromHttpCode */.SPAN_STATUS_ERROR;
     obj[1] = error.error.type || "internal_error";
     setStatus.setStatus(obj);
     obj = { mechanism: null };
     obj[0] = { handled: false, type: "auto.ai.anthropic.anthropic_error" };
-    require("00869_captureCheckIn.js") /* captureCheckIn */.captureException(error.error, obj);
+    captureCheckIn /* captureCheckIn */.captureException(error.error, obj);
     const tmp2 = require;
-    const tmp2Result = require("00869_captureCheckIn.js") /* captureCheckIn */;
+    const tmp2Result = captureCheckIn /* captureCheckIn */;
   }
 };
 arg5.messagesFromParams = function messagesFromParams(closure_2) {
@@ -58,13 +63,13 @@ arg5.setMessagesAttribute = function setMessagesAttribute(setAttributes, message
   }
   if (0 !== length) {
     const obj = {};
-    obj[require("metro/00958__.js").GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = require("00960_buildMethodPath.js") /* buildMethodPath */.getTruncatedJsonString(messagesFromParamsResult);
-    obj[require("metro/00958__.js").GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = length;
+    obj[00958__.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = buildMethodPath /* buildMethodPath */.getTruncatedJsonString(messagesFromParamsResult);
+    obj[00958__.GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = length;
     setAttributes.setAttributes(obj);
-    const obj2 = require("00960_buildMethodPath.js") /* buildMethodPath */;
+    const obj2 = buildMethodPath /* buildMethodPath */;
   }
 };
 arg5.shouldInstrument = function shouldInstrument(arg0) {
-  const ANTHROPIC_AI_INSTRUMENTED_METHODS = require("metro/00971__.js").ANTHROPIC_AI_INSTRUMENTED_METHODS;
+  const ANTHROPIC_AI_INSTRUMENTED_METHODS = 00971__.ANTHROPIC_AI_INSTRUMENTED_METHODS;
   return ANTHROPIC_AI_INSTRUMENTED_METHODS.includes(arg0);
 };

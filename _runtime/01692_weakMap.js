@@ -1,3 +1,4 @@
+import { _makeShareableClone } from "01616__makeShareableClone.js";
 // _runtime/01692_weakMap.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -6,8 +7,8 @@ arg5.snapshots = weakMap;
 arg5.makeElementVisible = function makeElementVisible(_componentDOMRef, arg1) {
   const _require = _componentDOMRef;
   if (0 === arg1) {
-    _require("01616__makeShareableClone.js")._updatePropsJS({ visibility: "initial" }, _componentDOMRef);
-    const obj = _require("01616__makeShareableClone.js");
+    __makeShareableClone._updatePropsJS({ visibility: "initial" }, _componentDOMRef);
+    const obj = __makeShareableClone;
   } else {
     const _setTimeout = setTimeout;
     const timerId = setTimeout(() => {

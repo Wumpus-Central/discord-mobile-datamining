@@ -1,3 +1,4 @@
+import { triggerHandlers } from "01034_triggerHandlers.js";
 // _runtime/01070_map.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -82,7 +83,7 @@ function _onInp(metric) {
 }
 arg5._onInp = _onInp;
 arg5._trackINP = function _trackINP() {
-  return require("01034_triggerHandlers.js") /* triggerHandlers */.addInpInstrumentationHandler(_onInp);
+  return triggerHandlers /* triggerHandlers */.addInpInstrumentationHandler(_onInp);
 };
 arg5.registerInpInteractionListener = function registerInpInteractionListener() {
   function captureElementFromEvent(target) {

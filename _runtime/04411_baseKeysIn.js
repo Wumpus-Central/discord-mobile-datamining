@@ -1,7 +1,8 @@
+import { isObject } from "00606_isObject.js";
 // _runtime/04411_baseKeysIn.js
 
 export default function baseKeysIn(obj) {
-  if (require("00606_isObject.js") /* isObject */(obj)) {
+  if (isObject /* isObject */(obj)) {
     const tmp3 = tmp(630)(obj);
     const items = [];
     for (const key10017 in arg0) {

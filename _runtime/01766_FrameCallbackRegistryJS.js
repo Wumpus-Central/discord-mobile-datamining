@@ -1,3 +1,4 @@
+import { isReanimated3 } from "01650_isReanimated3.js";
 // _runtime/01766_FrameCallbackRegistryJS.js
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
@@ -52,7 +53,7 @@ const items = [
       fn.__closure = { callbackId };
       fn.__workletHash = 9182274559334;
       fn.__initData = closure_5;
-      require("01650_isReanimated3.js") /* isReanimated3 */.runOnUI(fn)();
+      isReanimated3 /* isReanimated3 */.runOnUI(fn)();
     }
   },
   {
@@ -66,7 +67,7 @@ const items = [
       fn.__closure = { callbackId, state };
       fn.__workletHash = 5244475777443;
       fn.__initData = closure_6;
-      _require("01650_isReanimated3.js").runOnUI(fn)();
+      _isReanimated3.runOnUI(fn)();
     }
   }
 ];

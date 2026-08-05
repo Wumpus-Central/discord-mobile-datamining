@@ -1,13 +1,18 @@
+import { getGlobalSingleton } from "00825_getGlobalSingleton.js";
+import { getClient } from "00848_getClient.js";
+import { mergeScopeData } from "00871_mergeScopeData.js";
+import { createMetricContainerEnvelopeItem } from "00886_createMetricContainerEnvelopeItem.js";
+import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
 // _runtime/00885__INTERNAL_captureSerializedMetric.js
 import _slicedToArray from "_slicedToArray";
 
 function _INTERNAL_captureSerializedMetric(closure_0) {
-  const globalSingleton = require("00825_getGlobalSingleton.js") /* getGlobalSingleton */.getGlobalSingleton("clientToMetricBufferMap", () => {
+  const globalSingleton = getGlobalSingleton /* getGlobalSingleton */.getGlobalSingleton("clientToMetricBufferMap", () => {
     const weakMap = new WeakMap();
     return weakMap;
   });
-  const obj = require("00825_getGlobalSingleton.js") /* getGlobalSingleton */;
-  const globalSingleton1 = require("00825_getGlobalSingleton.js") /* getGlobalSingleton */.getGlobalSingleton("clientToMetricBufferMap", () => {
+  const obj = getGlobalSingleton /* getGlobalSingleton */;
+  const globalSingleton1 = getGlobalSingleton /* getGlobalSingleton */.getGlobalSingleton("clientToMetricBufferMap", () => {
     const weakMap = new WeakMap();
     return weakMap;
   });
@@ -30,29 +35,29 @@ function _INTERNAL_flushMetricsBuffer(closure_0, value) {
   let tunnel;
   let items = value;
   if (value == null) {
-    const globalSingleton = require("00825_getGlobalSingleton.js") /* getGlobalSingleton */.getGlobalSingleton("clientToMetricBufferMap", () => {
+    const globalSingleton = getGlobalSingleton /* getGlobalSingleton */.getGlobalSingleton("clientToMetricBufferMap", () => {
       const weakMap = new WeakMap();
       return weakMap;
     });
     items = globalSingleton.get(closure_0);
-    const obj = require("00825_getGlobalSingleton.js") /* getGlobalSingleton */;
+    const obj = getGlobalSingleton /* getGlobalSingleton */;
   }
   if (items == null) {
     items = [];
   }
   if (0 !== items.length) {
     const options = closure_0.getOptions();
-    const obj3 = require("00886_createMetricContainerEnvelopeItem.js") /* createMetricContainerEnvelopeItem */;
+    const obj3 = createMetricContainerEnvelopeItem /* createMetricContainerEnvelopeItem */;
     ({ _metadata, tunnel } = options);
     const metricEnvelope = obj3.createMetricEnvelope(items, _metadata, tunnel, closure_0.getDsn());
-    const globalSingleton1 = require("00825_getGlobalSingleton.js") /* getGlobalSingleton */.getGlobalSingleton("clientToMetricBufferMap", () => {
+    const globalSingleton1 = getGlobalSingleton /* getGlobalSingleton */.getGlobalSingleton("clientToMetricBufferMap", () => {
       const weakMap = new WeakMap();
       return weakMap;
     });
     const result = globalSingleton1.set(closure_0, []);
     closure_0.emit("flushMetrics");
     closure_0.sendEnvelope(metricEnvelope);
-    const obj4 = require("00825_getGlobalSingleton.js") /* getGlobalSingleton */;
+    const obj4 = getGlobalSingleton /* getGlobalSingleton */;
   }
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
@@ -71,7 +76,7 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
     scope = scope.scope;
   }
   if (scope == null) {
-    let obj = require("00848_getClient.js") /* getClient */;
+    let obj = getClient /* getClient */;
     scope = obj.getCurrentScope();
   }
   let prop;
@@ -86,7 +91,7 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
     client = scope.getClient();
   }
   if (client == null) {
-    let obj1 = require("00848_getClient.js") /* getClient */;
+    let obj1 = getClient /* getClient */;
     client = obj1.getClient();
   }
   if (client) {
@@ -99,7 +104,7 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
       }
       if (enableMetrics != null) {
         if (!enableMetrics) {
-          if (require("metro/00823___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+          if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
             const debug2 = tmp13(824).debug;
             debug2.warn("metrics option not enabled, metric will not be captured.");
           }
@@ -107,8 +112,8 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
         }
       }
     }
-    let obj2 = require("00871_mergeScopeData.js") /* mergeScopeData */;
-    const combinedScopeData = obj2.getCombinedScopeData(require("00848_getClient.js") /* getClient */.getIsolationScope(), scope);
+    let obj2 = mergeScopeData /* mergeScopeData */;
+    const combinedScopeData = obj2.getCombinedScopeData(getClient /* getClient */.getIsolationScope(), scope);
     ({ user, attributes } = combinedScopeData);
     const options1 = client.getOptions();
     ({ release, environment } = options1);
@@ -252,9 +257,9 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
       const debug3 = tmp17(824).debug;
       debug3.log("`beforeSendMetric` returned `null`, will not send metric.");
     }
-    const obj4 = require("00848_getClient.js") /* getClient */;
+    const obj4 = getClient /* getClient */;
   } else {
-    if (require("metro/00823___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+    if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
       const debug = tmp8(824).debug;
       debug.warn("No client available to capture metric.");
     }
@@ -264,7 +269,7 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
 export { _INTERNAL_captureSerializedMetric };
 export { _INTERNAL_flushMetricsBuffer };
 export const _INTERNAL_getMetricBuffer = function _INTERNAL_getMetricBuffer(arg0) {
-  const globalSingleton = require("00825_getGlobalSingleton.js") /* getGlobalSingleton */.getGlobalSingleton("clientToMetricBufferMap", () => {
+  const globalSingleton = getGlobalSingleton /* getGlobalSingleton */.getGlobalSingleton("clientToMetricBufferMap", () => {
     const weakMap = new WeakMap();
     return weakMap;
   });

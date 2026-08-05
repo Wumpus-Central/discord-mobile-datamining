@@ -1,3 +1,4 @@
+import { SemVer } from "13021_SemVer.js";
 // _runtime/13029_SemVer.js
 
 export default (version, pre, major2) => {
@@ -8,8 +9,8 @@ export default (version, pre, major2) => {
     tmp2 = major2;
   }
   try {
-    let tmp7 = require("13021_SemVer.js") /* SemVer */;
-    if (version instanceof require("13021_SemVer.js") /* SemVer */) {
+    let tmp7 = SemVer /* SemVer */;
+    if (version instanceof SemVer /* SemVer */) {
       version = version.version;
     }
     tmp7 = new tmp7(version, tmp3);

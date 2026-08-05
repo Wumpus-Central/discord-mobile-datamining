@@ -1,3 +1,5 @@
+import { digitsToString } from "13385_digitsToString.js";
+import { TEN } from "13388_TEN.js";
 // _runtime/13384___exportStarResult32.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -290,7 +292,7 @@ arg5.ToNumber = ToNumber;
 arg5.TimeClip = function TimeClip(isFinite) {
   if (isFinite.isFinite()) {
     if (absResult.greaterThan(8640000000000001)) {
-      const decimal = new require("13385_digitsToString.js") /* digitsToString */.Decimal(NaN);
+      const decimal = new digitsToString /* digitsToString */.Decimal(NaN);
       return decimal;
     } else {
       const obj2 = ToNumber(isFinite);
@@ -309,11 +311,11 @@ arg5.TimeClip = function TimeClip(isFinite) {
         }
         return ZERO;
       }
-      ZERO = require("13388_TEN.js") /* TEN */.ZERO;
+      ZERO = TEN /* TEN */.ZERO;
     }
     absResult = isFinite.abs();
   } else {
-    const decimal1 = new require("13385_digitsToString.js") /* digitsToString */.Decimal(NaN);
+    const decimal1 = new digitsToString /* digitsToString */.Decimal(NaN);
     return decimal1;
   }
 };

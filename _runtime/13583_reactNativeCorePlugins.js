@@ -1,3 +1,4 @@
+import { getHostFromUrl } from "13613_getHostFromUrl.js";
 // _runtime/13583_reactNativeCorePlugins.js
 import asyncGeneratorStep from "sendToReactotron";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -122,7 +123,7 @@ const obj18 = {
         const error = new Error("Invalid non-string URL");
         throw error;
       } else {
-        return require("13613_getHostFromUrl.js") /* getHostFromUrl */.getHostFromUrl(scriptURL);
+        return getHostFromUrl /* getHostFromUrl */.getHostFromUrl(scriptURL);
       }
       const _default = tmp13.default;
     } catch (tmp8) {

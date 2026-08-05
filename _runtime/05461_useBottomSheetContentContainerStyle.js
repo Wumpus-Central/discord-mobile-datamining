@@ -1,3 +1,5 @@
+import { cancelAnimation } from "01606_cancelAnimation.js";
+import { useBottomSheetInternal } from "05348_useBottomSheetInternal.js";
 // _runtime/05461_useBottomSheetContentContainerStyle.js
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -19,7 +21,7 @@ export const useBottomSheetContentContainerStyle = function useBottomSheetConten
   const tmp = first(animatedFooterHeight(0), 2);
   first = tmp[0];
   const callback = tmp3;
-  let obj = _require("05348_useBottomSheetInternal.js");
+  let obj = _useBottomSheetInternal;
   const bottomSheetInternal = obj.useBottomSheetInternal();
   animatedFooterHeight = bottomSheetInternal.animatedFooterHeight;
   const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
@@ -90,11 +92,11 @@ export const useBottomSheetContentContainerStyle = function useBottomSheetConten
       const obj = callback(table[4]);
     }
   };
-  obj = { enableFooterMarginAdjustment: flag, runOnJS: _require("01606_cancelAnimation.js").runOnJS, setFooterHeight: tmp3, Platform: closure_5, animatedContentHeight };
+  obj = { enableFooterMarginAdjustment: flag, runOnJS: _cancelAnimation.runOnJS, setFooterHeight: tmp3, Platform: closure_5, animatedContentHeight };
   fn.__closure = obj;
   fn.__workletHash = 1149497927090;
   fn.__initData = closure_8;
   const items2 = [animatedFooterHeight, animatedContentHeight, flag];
-  const animatedReaction = _require("01606_cancelAnimation.js").useAnimatedReaction(H, fn, items2);
+  const animatedReaction = _cancelAnimation.useAnimatedReaction(H, fn, items2);
   return tmp6;
 };

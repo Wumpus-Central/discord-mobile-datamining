@@ -1,3 +1,5 @@
+import { consoleSandbox } from "00824_consoleSandbox.js";
+import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
 // _runtime/00898_set.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -5,8 +7,8 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 const set = new Set();
 arg5._INTERNAL_clearAiProviderSkips = function _INTERNAL_clearAiProviderSkips() {
   set.clear();
-  if (require("metro/00823___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
-    const debug = require("00824_consoleSandbox.js") /* consoleSandbox */.debug;
+  if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+    const debug = consoleSandbox /* consoleSandbox */.debug;
     debug.log("Cleared AI provider skip registrations");
   }
 };

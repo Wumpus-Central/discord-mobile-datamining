@@ -1,3 +1,5 @@
+import { defineDataProperty } from "01406_defineDataProperty.js";
+import { keys } from "04554_keys.js";
 // _runtime/04553_defineProperty.js
 let tmp = typeof Symbol === "function";
 if (typeof Symbol === "function") {
@@ -10,7 +12,7 @@ function defineProperty(arg0, arg1, arg2, arg3) {
 
 }
 function defineProperties(prototype, ownPropertyDescriptors) {
-  const arr = require("04554_keys.js") /* keys */(ownPropertyDescriptors);
+  const arr = keys /* keys */(ownPropertyDescriptors);
   if (!closure_2) {
     for (let num = 0; num < arr.length; num = num + 1) {
       let tmp6 = defineProperty;
@@ -26,7 +28,7 @@ function defineProperties(prototype, ownPropertyDescriptors) {
         let tmp11 = closure_5;
         let tmp12 = require;
         let tmp13 = dependencyMap;
-        let tmp14 = require("01406_defineDataProperty.js") /* defineDataProperty */;
+        let tmp14 = defineDataProperty /* defineDataProperty */;
         if (closure_5) {
           let tmp16 = prototype;
           let tmp17 = tmp7;

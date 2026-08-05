@@ -1,3 +1,4 @@
+import { feedbackAsyncIntegration } from "01024_feedbackAsyncIntegration.js";
 // _runtime/01145_tanstackRouterBrowserTracingIntegration.js
 const require = arg1;
 let dependencyMap = arg6;
@@ -15,7 +16,7 @@ arg5.tanstackRouterBrowserTracingIntegration = function tanstackRouterBrowserTra
   let merged = Object.assign(obj);
   obj.instrumentNavigation = false;
   obj.instrumentPageLoad = false;
-  let result = _require("01024_feedbackAsyncIntegration.js").browserTracingIntegration(obj);
+  let result = _feedbackAsyncIntegration.browserTracingIntegration(obj);
   dependencyMap = result;
   const instrumentPageLoad = obj.instrumentPageLoad;
   closure_2 = undefined === instrumentPageLoad || instrumentPageLoad;

@@ -1,3 +1,5 @@
+import { createSyntheticError } from "00813_createSyntheticError.js";
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 // _runtime/01016_reactNativeErrorHandlersIntegration.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -71,13 +73,13 @@ if (!fn) {
 }
 let obj = {
   onUnhandled(id, originalException) {
-    let obj = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
+    let obj = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
     obj = { data: obj, originalException, syntheticException: null, mechanism: null };
     obj = { id };
     let syntheticError;
     if (!obj4.isErrorLike(originalException)) {
-      syntheticError = require("00813_createSyntheticError.js") /* createSyntheticError */.createSyntheticError();
-      const tmpResult = require("00813_createSyntheticError.js") /* createSyntheticError */;
+      syntheticError = createSyntheticError /* createSyntheticError */.createSyntheticError();
+      const tmpResult = createSyntheticError /* createSyntheticError */;
     }
     obj[2] = syntheticError;
     obj[3] = { handled: true, type: "onunhandledrejection" };

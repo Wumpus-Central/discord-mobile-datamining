@@ -1,3 +1,5 @@
+import { getSpanStatusFromHttpCode } from "00840_getSpanStatusFromHttpCode.js";
+import { captureCheckIn } from "00869_captureCheckIn.js";
 // _runtime/00972_AsyncFromSyncIterator.js
 import _awaitAsyncGenerator from "_awaitAsyncGenerator";
 import AsyncGenerator from "AsyncGenerator";
@@ -95,7 +97,7 @@ function processEvent(type, finishReasons, arg2, setStatus) {
       }
       if (flag) {
         let obj = { code: null, message: null };
-        obj[0] = require("00840_getSpanStatusFromHttpCode.js") /* getSpanStatusFromHttpCode */.SPAN_STATUS_ERROR;
+        obj[0] = getSpanStatusFromHttpCode /* getSpanStatusFromHttpCode */.SPAN_STATUS_ERROR;
         const error = type.error;
         let str2;
         if (error != null) {
@@ -108,10 +110,10 @@ function processEvent(type, finishReasons, arg2, setStatus) {
         setStatus.setStatus(obj);
         obj = { mechanism: null };
         obj[0] = { handled: false, type: "auto.ai.anthropic.anthropic_error" };
-        require("00869_captureCheckIn.js") /* captureCheckIn */.captureException(type.error, obj);
+        captureCheckIn /* captureCheckIn */.captureException(type.error, obj);
         flag = true;
         const tmp2 = require;
-        const tmp2Result = require("00869_captureCheckIn.js") /* captureCheckIn */;
+        const tmp2Result = captureCheckIn /* captureCheckIn */;
       }
       if (!flag) {
         let tmp7 = "message_delta" === type.type && type.usage;

@@ -1,3 +1,4 @@
+import { getClient } from "07402_getClient.js";
 // _runtime/07446_getTraceData.js
 import "errorCallback";
 import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__";
@@ -13,8 +14,8 @@ export const getTraceData = function getTraceData() {
   if (arg0 === undefined) {
     obj = {};
   }
-  const client = require("07402_getClient.js") /* getClient */.getClient();
-  const obj2 = require("07402_getClient.js") /* getClient */;
+  const client = getClient /* getClient */.getClient();
+  const obj2 = getClient /* getClient */;
   if (obj3.isEnabled()) {
     if (client) {
       let tmpResult = tmp(7393);

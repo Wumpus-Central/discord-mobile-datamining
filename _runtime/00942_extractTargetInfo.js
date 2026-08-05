@@ -1,3 +1,4 @@
+import { 00940__ } from "metro/00940__.js";
 // _runtime/00942_extractTargetInfo.js
 import _slicedToArray from "_slicedToArray";
 
@@ -66,7 +67,7 @@ export const getRequestArguments = function getRequestArguments(method, uri) {
                 let tmp12 = dependencyMap;
                 let _HermesInternal = HermesInternal;
                 let _JSON = JSON;
-                let combined = "" + require("metro/00940__.js").MCP_REQUEST_ARGUMENT + "." + str.toLowerCase();
+                let combined = "" + 00940__.MCP_REQUEST_ARGUMENT + "." + str.toLowerCase();
                 obj[combined] = JSON.stringify(tmp10[1]);
                 continue;
               }
@@ -86,7 +87,7 @@ export const getRequestArguments = function getRequestArguments(method, uri) {
     if (captureUri) {
       const _HermesInternal2 = HermesInternal;
       const _JSON2 = JSON;
-      const combined1 = "" + require("metro/00940__.js").MCP_REQUEST_ARGUMENT + ".uri";
+      const combined1 = "" + 00940__.MCP_REQUEST_ARGUMENT + ".uri";
       obj[combined1] = JSON.stringify(uri.uri);
     }
     let captureName = tmp.captureName;
@@ -100,7 +101,7 @@ export const getRequestArguments = function getRequestArguments(method, uri) {
     if (captureName) {
       const _HermesInternal3 = HermesInternal;
       const _JSON3 = JSON;
-      const combined2 = "" + require("metro/00940__.js").MCP_REQUEST_ARGUMENT + ".name";
+      const combined2 = "" + 00940__.MCP_REQUEST_ARGUMENT + ".name";
       obj[combined2] = JSON.stringify(uri.name);
     }
     return obj;

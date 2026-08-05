@@ -1,3 +1,5 @@
+import { Event } from "00133_Event.js";
+import { FileReaderModule } from "00224_FileReaderModule.js";
 // _runtime/00223__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -63,7 +65,7 @@ const items = [
       const self = this;
       this._readyState = _readyState;
       let tmp = importDefault;
-      this.dispatchEvent(new require("00133_Event.js")("readystatechange"));
+      this.dispatchEvent(new Event("readystatechange"));
       if (2 === _readyState) {
         if (self._aborted) {
           let tmpResult = tmp(133);
@@ -98,7 +100,7 @@ const items = [
         const typeError = new TypeError("Failed to execute 'readAsArrayBuffer' on 'FileReader': parameter 1 is not of type 'Blob'");
         throw typeError;
       } else {
-        const asDataURL = require("00224_FileReaderModule.js").readAsDataURL(closure_0.data);
+        const asDataURL = FileReaderModule.readAsDataURL(closure_0.data);
         asDataURL.then((arg0) => {
           if (!self._aborted) {
             obj._result = self(outer1_2[7]).toByteArray(arg0.split(",")[1]).buffer;
@@ -124,7 +126,7 @@ const items = [
         const typeError = new TypeError("Failed to execute 'readAsDataURL' on 'FileReader': parameter 1 is not of type 'Blob'");
         throw typeError;
       } else {
-        const asDataURL = require("00224_FileReaderModule.js").readAsDataURL(closure_0.data);
+        const asDataURL = FileReaderModule.readAsDataURL(closure_0.data);
         asDataURL.then((_result) => {
           if (!self._aborted) {
             obj._result = _result;
@@ -153,7 +155,7 @@ const items = [
         const typeError = new TypeError("Failed to execute 'readAsText' on 'FileReader': parameter 1 is not of type 'Blob'");
         throw typeError;
       } else {
-        const asText = require("00224_FileReaderModule.js").readAsText(_bodyBlob.data, str);
+        const asText = FileReaderModule.readAsText(_bodyBlob.data, str);
         asText.then((_result) => {
           if (!self._aborted) {
             obj._result = _result;

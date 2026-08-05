@@ -1,3 +1,5 @@
+import { isTypedArray } from "01397_isTypedArray.js";
+import { 01398__ } from "metro/01398__.js";
 // _runtime/01391_checkBoxedPrimitive.js
 function checkBoxedPrimitive(obj, closure_6) {
   if (typeof obj !== "object") {
@@ -141,7 +143,7 @@ export const isArrayBufferView = function isArrayBufferView(arg0) {
     }
     return isViewResult;
   }
-  isViewResult = require("01397_isTypedArray.js") /* isTypedArray */(arg0);
+  isViewResult = isTypedArray /* isTypedArray */(arg0);
   if (!isViewResult) {
     const _DataView = DataView;
     if (typeof DataView === "undefined") {
@@ -155,37 +157,37 @@ export const isArrayBufferView = function isArrayBufferView(arg0) {
   }
 };
 export const isUint8Array = function isUint8Array(arg0) {
-  return "Uint8Array" === require("metro/01398__.js")(arg0);
+  return "Uint8Array" === 01398__(arg0);
 };
 export const isUint8ClampedArray = function isUint8ClampedArray(arg0) {
-  return "Uint8ClampedArray" === require("metro/01398__.js")(arg0);
+  return "Uint8ClampedArray" === 01398__(arg0);
 };
 export const isUint16Array = function isUint16Array(arg0) {
-  return "Uint16Array" === require("metro/01398__.js")(arg0);
+  return "Uint16Array" === 01398__(arg0);
 };
 export const isUint32Array = function isUint32Array(arg0) {
-  return "Uint32Array" === require("metro/01398__.js")(arg0);
+  return "Uint32Array" === 01398__(arg0);
 };
 export const isInt8Array = function isInt8Array(arg0) {
-  return "Int8Array" === require("metro/01398__.js")(arg0);
+  return "Int8Array" === 01398__(arg0);
 };
 export const isInt16Array = function isInt16Array(arg0) {
-  return "Int16Array" === require("metro/01398__.js")(arg0);
+  return "Int16Array" === 01398__(arg0);
 };
 export const isInt32Array = function isInt32Array(arg0) {
-  return "Int32Array" === require("metro/01398__.js")(arg0);
+  return "Int32Array" === 01398__(arg0);
 };
 export const isFloat32Array = function isFloat32Array(arg0) {
-  return "Float32Array" === require("metro/01398__.js")(arg0);
+  return "Float32Array" === 01398__(arg0);
 };
 export const isFloat64Array = function isFloat64Array(arg0) {
-  return "Float64Array" === require("metro/01398__.js")(arg0);
+  return "Float64Array" === 01398__(arg0);
 };
 export const isBigInt64Array = function isBigInt64Array(arg0) {
-  return "BigInt64Array" === require("metro/01398__.js")(arg0);
+  return "BigInt64Array" === 01398__(arg0);
 };
 export const isBigUint64Array = function isBigUint64Array(arg0) {
-  return "BigUint64Array" === require("metro/01398__.js")(arg0);
+  return "BigUint64Array" === 01398__(arg0);
 };
 export const isMap = function isMap(arg0) {
   if (typeof Map === "undefined") {

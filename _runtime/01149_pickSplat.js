@@ -1,3 +1,5 @@
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
+import { __SENTRY_DEBUG__ } from "metro/01142___SENTRY_DEBUG__.js";
 // _runtime/01149_pickSplat.js
 import _slicedToArray from "_slicedToArray";
 
@@ -401,7 +403,7 @@ export const clearNavigationContext = function clearNavigationContext(c1) {
   }
 };
 export const getActiveRootSpan = function getActiveRootSpan() {
-  const activeSpan = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.getActiveSpan();
+  const activeSpan = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.getActiveSpan();
   let rootSpan;
   if (activeSpan) {
     let tmpResult = tmp(817);
@@ -415,7 +417,7 @@ export const getActiveRootSpan = function getActiveRootSpan() {
     }
     return tmp5;
   }
-  const obj = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
+  const obj = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
 };
 export const getNavigationContext = function getNavigationContext() {
   let tmp2 = null;
@@ -475,7 +477,7 @@ export { routeIsDescendant };
 export const setNavigationContext = function setNavigationContext(outer1_1, outer1_2) {
   let arr = closure_5;
   if (closure_5.length >= 10) {
-    if (require("metro/01142___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+    if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
       const debug = tmp(817).debug;
       debug.warn("[React Router] Navigation context stack overflow - removing oldest context");
     }

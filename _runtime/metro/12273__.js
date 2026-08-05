@@ -1,3 +1,5 @@
+import { stringProcessor } from "../12336_stringProcessor.js";
+import { JSONSchemaGenerator } from "../12337_JSONSchemaGenerator.js";
 // _runtime/metro/12273__.js
 const self = this;
 let self2 = this;
@@ -105,13 +107,13 @@ if (self2) {
     const _Object4 = Object;
     let obj = { enumerable: true, get: null };
     obj[1] = function get() {
-      return require("../12336_stringProcessor.js") /* stringProcessor */.toJSONSchema;
+      return stringProcessor /* stringProcessor */.toJSONSchema;
     };
     Object.defineProperty(exports, "toJSONSchema", obj);
     const _Object5 = Object;
     obj = { enumerable: true, get: null };
     obj[1] = function get() {
-      return require("../12337_JSONSchemaGenerator.js") /* JSONSchemaGenerator */.JSONSchemaGenerator;
+      return JSONSchemaGenerator /* JSONSchemaGenerator */.JSONSchemaGenerator;
     };
     Object.defineProperty(exports, "JSONSchemaGenerator", obj);
     exports.JSONSchema = fn2(require("module_12338"));

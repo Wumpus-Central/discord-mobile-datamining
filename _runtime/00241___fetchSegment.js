@@ -1,9 +1,10 @@
+import { SegmentFetcher } from "00242_SegmentFetcher.js";
 // _runtime/00241___fetchSegment.js
 const require = arg1;
 const dependencyMap = arg6;
 arg0.__fetchSegment = function __fetchSegment(arg0, arg1, arg2) {
   const _require = arg2;
-  const segment = _require("00242_SegmentFetcher.js").default.fetchSegment(arg0, arg1, (message) => {
+  const segment = _SegmentFetcher.default.fetchSegment(arg0, arg1, (message) => {
     if (message) {
       const _Error = Error;
       const error = new Error(message.message);

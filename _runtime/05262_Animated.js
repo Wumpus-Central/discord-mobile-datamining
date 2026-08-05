@@ -1,3 +1,4 @@
+import { Link } from "01481_Link.js";
 // _runtime/05262_Animated.js
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -26,7 +27,7 @@ export default function PlatformPressable(style) {
   const merged = Object.assign(style, Object.create(null));
   let first;
   let animateTo;
-  let obj = require("01481_Link.js") /* Link */;
+  let obj = Link /* Link */;
   first = pressOpacity(first.useState(() => {
     const value = new animateTo.Value(1);
     return value;

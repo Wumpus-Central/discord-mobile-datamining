@@ -1,3 +1,5 @@
+import { isObject } from "00606_isObject.js";
+import { debounce } from "00636_debounce.js";
 // _runtime/00635_throttle.js
 
 export default function throttle(fn, arg1, leading) {
@@ -8,7 +10,7 @@ export default function throttle(fn, arg1, leading) {
   } else {
     let flag3 = true;
     let flag4 = true;
-    if (require("00606_isObject.js") /* isObject */(leading)) {
+    if (isObject /* isObject */(leading)) {
       let flag = true;
       if ("leading" in leading) {
         flag = leading.leading;
@@ -24,6 +26,6 @@ export default function throttle(fn, arg1, leading) {
     obj[0] = flag4;
     obj[1] = arg1;
     obj[2] = flag3;
-    return require("00636_debounce.js") /* debounce */(fn, arg1, obj);
+    return debounce /* debounce */(fn, arg1, obj);
   }
 };

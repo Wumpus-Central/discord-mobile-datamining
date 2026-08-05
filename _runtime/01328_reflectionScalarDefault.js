@@ -1,12 +1,13 @@
+import { RepeatType } from "01320_RepeatType.js";
 // _runtime/01328_reflectionScalarDefault.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.reflectionScalarDefault = function reflectionScalarDefault(T, L) {
   let STRING = L;
   if (L === undefined) {
-    STRING = require("01320_RepeatType.js") /* RepeatType */.LongType.STRING;
+    STRING = RepeatType /* RepeatType */.LongType.STRING;
   }
-  if (require("01320_RepeatType.js") /* RepeatType */.ScalarType.BOOL === T) {
+  if (RepeatType /* RepeatType */.ScalarType.BOOL === T) {
     return false;
   } else {
     if (tmp3(1320).ScalarType.UINT64 !== T) {

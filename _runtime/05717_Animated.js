@@ -1,3 +1,4 @@
+import { conditional } from "05718_conditional.js";
 // _runtime/05717_Animated.js
 import get_ActivityIndicator from "get ActivityIndicator";
 
@@ -139,7 +140,7 @@ export const forFadeFromBottomAndroid = function forFadeFromBottomAndroid(curren
   obj = { opacity: null, transform: null };
   const progress2 = current.progress;
   const tmp = callback(progress.interpolate({ inputRange: [0, 1], outputRange: items, extrapolate: "clamp" }), inverted);
-  obj[0] = require("05718_conditional.js")(closing, current.progress, progress2.interpolate({ inputRange: [0, 0.5, 0.9, 1], outputRange: [0, 0.25, 0.7, 1], extrapolate: "clamp" }));
+  obj[0] = conditional(closing, current.progress, progress2.interpolate({ inputRange: [0, 0.5, 0.9, 1], outputRange: [0, 0.25, 0.7, 1], extrapolate: "clamp" }));
   const items1 = [{ translateY: tmp }];
   obj[1] = items1;
   obj[0] = obj;
@@ -200,7 +201,7 @@ export const forScaleFromCenterAndroid = function forScaleFromCenterAndroid(clos
   const progress3 = current.progress;
   const interpolateResult = progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" });
   const tmp = closure_2;
-  const tmp3 = require("05718_conditional.js");
+  const tmp3 = conditional;
   obj1[0] = tmp3(closing.closing, progress3.interpolate({ inputRange: [0, 1], outputRange: [0.925, 1], extrapolate: "clamp" }), tmpResult.interpolate({ inputRange: [0, 1, 2], outputRange: [0.85, 1, 1.075] }));
   const items = [obj1];
   obj[1] = items;
@@ -218,7 +219,7 @@ export const forBottomSheetAndroid = function forBottomSheetAndroid(current) {
   obj = { opacity: null, transform: null };
   const progress2 = current.progress;
   const tmp = callback(progress.interpolate({ inputRange: [0, 1], outputRange: items, extrapolate: "clamp" }), inverted);
-  obj[0] = require("05718_conditional.js")(closing, current.progress, progress2.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }));
+  obj[0] = conditional(closing, current.progress, progress2.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }));
   const items1 = [{ translateY: tmp }];
   obj[1] = items1;
   obj[0] = obj;

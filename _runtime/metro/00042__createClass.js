@@ -1,3 +1,4 @@
+import { toPropertyKey } from "../00043_toPropertyKey.js";
 // _runtime/metro/00042__createClass.js
 
 export default function _createClass(arg0, arg1, arg2) {
@@ -17,7 +18,7 @@ export default function _createClass(arg0, arg1, arg2) {
       let _Object = Object;
       let tmp5 = require;
       let tmp6 = dependencyMap;
-      let definePropertyResult = Object.defineProperty(tmp, require("../00043_toPropertyKey.js") /* toPropertyKey */(tmp3.key), tmp3);
+      let definePropertyResult = Object.defineProperty(tmp, toPropertyKey /* toPropertyKey */(tmp3.key), tmp3);
     }
   }
   if (arg2) {
@@ -36,7 +37,7 @@ export default function _createClass(arg0, arg1, arg2) {
       let _Object2 = Object;
       let tmp11 = require;
       let tmp12 = dependencyMap;
-      let definePropertyResult1 = Object.defineProperty(arg0, require("../00043_toPropertyKey.js") /* toPropertyKey */(tmp9.key), tmp9);
+      let definePropertyResult1 = Object.defineProperty(arg0, toPropertyKey /* toPropertyKey */(tmp9.key), tmp9);
     }
   }
   Object.defineProperty(arg0, "prototype", { writable: false });

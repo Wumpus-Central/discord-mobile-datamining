@@ -1,8 +1,9 @@
+import { isSymbol } from "00638_isSymbol.js";
 // _runtime/00725_toKey.js
 
 export default function toKey(str) {
   if (typeof str !== "string") {
-    if (!require("00638_isSymbol.js") /* isSymbol */(str)) {
+    if (!isSymbol /* isSymbol */(str)) {
       const text = `${str}`;
       if ("0" !== `${str}`) {
         let str2 = text;

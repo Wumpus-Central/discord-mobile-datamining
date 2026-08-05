@@ -1,3 +1,4 @@
+import { base64Decode } from "13569_base64Decode.js";
 // _runtime/13568__isNativeReflectConstruct.js
 import _createClass from "_createClass";
 import _classCallCheck from "_classCallCheck";
@@ -120,7 +121,7 @@ if (typeof global.crypto.getRandomValues !== "function") {
       }
       const _Uint8Array2 = Uint8Array;
       uint8Array = new Uint8Array(uint8Array.buffer, uint8Array.byteOffset, uint8Array.byteLength);
-      require("13569_base64Decode.js") /* base64Decode */(randomBase64, uint8Array);
+      base64Decode /* base64Decode */(randomBase64, uint8Array);
       return uint8Array;
     }
   };

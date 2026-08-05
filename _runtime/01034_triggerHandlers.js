@@ -1,3 +1,5 @@
+import { observe } from "01046_observe.js";
+import { __SENTRY_DEBUG__ } from "metro/01035___SENTRY_DEBUG__.js";
 // _runtime/01034_triggerHandlers.js
 const require = arg1;
 let dependencyMap = arg6;
@@ -12,7 +14,7 @@ function triggerHandlers(arg0, arg1) {
       try {
         tmp14(arg1);
       } catch (tmp17) {
-        if (require("metro/01035___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+        if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
           const debug = tmp18(817).debug;
           debug.error(tmp2 + tmp6 + tmp3 + tmp18(817).getFunctionName(tmp7) + tmp4, tmp17);
           const tmp18Result = tmp18(817);
@@ -152,11 +154,11 @@ arg5.addPerformanceInstrumentationHandler = function addPerformanceInstrumentati
     if ("event" === event) {
       obj.durationThreshold = 0;
     }
-    _require("01046_observe.js").observe(event, (entries) => {
+    _observe.observe(event, (entries) => {
       outer1_8(closure_0, { entries });
     }, obj);
     tmp4[event] = true;
-    const obj2 = _require("01046_observe.js");
+    const obj2 = _observe;
   }
   _require = event;
   const dependencyMap = handleEntries;

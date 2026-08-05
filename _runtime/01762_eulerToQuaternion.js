@@ -1,3 +1,5 @@
+import { isWorkletFunction } from "01631_isWorkletFunction.js";
+import { isReanimated3 } from "01650_isReanimated3.js";
 // _runtime/01762_eulerToQuaternion.js
 import noop from "noop";
 
@@ -26,7 +28,7 @@ function adjustRotationToInterfaceOrientation(pitch) {
   let yaw;
   let yaw2;
   ({ interfaceOrientation, pitch, roll, yaw } = pitch);
-  if (interfaceOrientation === require("01631_isWorkletFunction.js") /* isWorkletFunction */.InterfaceOrientation.ROTATION_90) {
+  if (interfaceOrientation === isWorkletFunction /* isWorkletFunction */.InterfaceOrientation.ROTATION_90) {
     pitch.pitch = roll;
     pitch.roll = -pitch;
     const _Math2 = Math;
@@ -64,7 +66,7 @@ function adjustVectorToInterfaceOrientation(arg0) {
   let x;
   let y;
   ({ interfaceOrientation, x, y } = arg0);
-  if (interfaceOrientation === require("01631_isWorkletFunction.js") /* isWorkletFunction */.InterfaceOrientation.ROTATION_90) {
+  if (interfaceOrientation === isWorkletFunction /* isWorkletFunction */.InterfaceOrientation.ROTATION_90) {
     arg0.x = -y;
     arg0.y = x;
   } else if (interfaceOrientation === tmp(1631).InterfaceOrientation.ROTATION_270) {
@@ -132,7 +134,7 @@ export const useAnimatedSensor = function useAnimatedSensor(arg0, adjustToInterf
   }, items);
   const callback = tmp13;
   obj = { sensor: null, unregister: null, isAvailable: false, config: null };
-  obj[0] = _require("01650_isReanimated3.js").initializeSensor(arg0, tmp13);
+  obj[0] = _isReanimated3.initializeSensor(arg0, tmp13);
   obj[1] = function unregister() {
 
   };

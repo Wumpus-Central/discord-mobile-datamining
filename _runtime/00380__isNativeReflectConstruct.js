@@ -1,3 +1,8 @@
+import { flattenStyle } from "00148_flattenStyle.js";
+import { set } from "00357_set.js";
+import { _assertNativeAnimatedModule } from "00367__assertNativeAnimatedModule.js";
+import { _isNativeReflectConstruct } from "00381__isNativeReflectConstruct.js";
+import { 00038__ } from "metro/00038__.js";
 // _runtime/00380__isNativeReflectConstruct.js
 import _slicedToArray from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
@@ -31,7 +36,7 @@ function _isNativeReflectConstruct() {
 }
 function _connectAnimatedView2(instance) {
   const self = this;
-  require("metro/00038__.js")(this.__isNative, "Expected node to be marked as \"native\"");
+  00038__(this.__isNative, "Expected node to be marked as \"native\"");
   const findNodeHandleResult = AnimatedProps(114).findNodeHandle(instance.instance);
   if (null == findNodeHandleResult) {
     const _Error = Error;
@@ -49,7 +54,7 @@ function _connectShadowNode2(instance) {
   if (obj.cxxNativeAnimatedEnabled()) {
     if (tmpResult.useSharedAnimatedBackend()) {
       const self = this;
-      require("metro/00038__.js")(this.__isNative, "Expected node to be marked as \"native\"");
+      00038__(this.__isNative, "Expected node to be marked as \"native\"");
       const nodeFromPublicInstance = AnimatedProps(272).getNodeFromPublicInstance(instance.instance);
       if (null != nodeFromPublicInstance) {
         const API = tmp4(357).API;
@@ -63,10 +68,10 @@ function _connectShadowNode2(instance) {
 }
 function _disconnectAnimatedView2(connectedViewTag) {
   const self = this;
-  require("metro/00038__.js")(this.__isNative, "Expected node to be marked as \"native\"");
+  00038__(this.__isNative, "Expected node to be marked as \"native\"");
   connectedViewTag = connectedViewTag.connectedViewTag;
   if (null != connectedViewTag) {
-    const API = require("00357_set.js").API;
+    const API = set.API;
     const result = API.disconnectAnimatedNodeFromView(self.__getNativeTag(), connectedViewTag);
     connectedViewTag.connectedViewTag = null;
   }
@@ -180,7 +185,7 @@ let items = [
         let tmp2 = importDefault;
         let tmp3 = dependencyMap;
         let tmp4 = num;
-        if (obj2 instanceof require("00367__assertNativeAnimatedModule.js")) {
+        if (obj2 instanceof _assertNativeAnimatedModule) {
           obj[tmp] = obj2.__getValue();
         } else {
           let tmp5 = AnimatedProps;
@@ -211,8 +216,8 @@ let items = [
           if ("style" === tmp2) {
             let tmp8 = importDefault;
             let tmp9 = dependencyMap;
-            tmp10 = require("00148_flattenStyle.js")(style.style);
-            if (obj2 instanceof require("00381__isNativeReflectConstruct.js")) {
+            tmp10 = flattenStyle(style.style);
+            if (obj2 instanceof _isNativeReflectConstruct) {
               break;
             } else {
               obj[tmp2] = tmp10;
@@ -220,7 +225,7 @@ let items = [
           } else {
             let tmp4 = importDefault;
             let tmp5 = dependencyMap;
-            if (obj2 instanceof require("00367__assertNativeAnimatedModule.js")) {
+            if (obj2 instanceof _assertNativeAnimatedModule) {
               obj[tmp2] = obj2.__getValue();
             } else {
               let tmp6 = AnimatedProps;
@@ -383,7 +388,7 @@ let items = [
     value: function __restoreDefaultValues() {
       const self = this;
       if (this.__isNative) {
-        const API = require("00357_set.js").API;
+        const API = set.API;
         API.restoreDefaultValues(self.__getNativeTag());
       }
     }
@@ -419,7 +424,7 @@ let obj = {
       let tmp2 = importDefault;
       let tmp3 = dependencyMap;
       let tmp4 = num;
-      if (obj2 instanceof require("00367__assertNativeAnimatedModule.js")) {
+      if (obj2 instanceof _assertNativeAnimatedModule) {
         obj[tmp] = obj2.__getValue();
       } else {
         let tmp5 = AnimatedProps;

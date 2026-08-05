@@ -1,8 +1,9 @@
+import { getFabricUIManager } from "00071_getFabricUIManager.js";
 // _runtime/00342_configureNext.js
 const require = arg1;
 function configureNext(duration) {
   const _global = arg1;
-  if (!require("00273_get_Version.js").isDisableAnimations) {
+  if (!require("00273_get_Version.js") /* get Version */.isDisableAnimations) {
     if (closure_4) {
       const _require = false;
       let num = duration.duration;
@@ -20,7 +21,7 @@ function configureNext(duration) {
         }
       }
       importDefault = setTimeout(onAnimationComplete, num + 17);
-      const fabricUIManager = _require("00071_getFabricUIManager.js").getFabricUIManager();
+      const fabricUIManager = _getFabricUIManager.getFabricUIManager();
       let prop;
       if (fabricUIManager != null) {
         prop = fabricUIManager.configureNextLayoutAnimation;
@@ -55,7 +56,7 @@ function configureNext(duration) {
           const _default2 = tmp6(68).default;
         }
       }
-      const obj = _require("00071_getFabricUIManager.js");
+      const obj = _getFabricUIManager;
     }
   }
 }

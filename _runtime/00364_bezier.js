@@ -1,3 +1,4 @@
+import { bezier } from "00365_bezier.js";
 // _runtime/00364_bezier.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -78,7 +79,7 @@ const obj = {
     }
   },
   bezier(arg0, arg1, arg2, arg3) {
-    return require("00365_bezier.js") /* bezier */.default(arg0, arg1, arg2, arg3);
+    return bezier /* bezier */.default(arg0, arg1, arg2, arg3);
   },
   in(ease) {
     return ease;

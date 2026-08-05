@@ -1,3 +1,4 @@
+import { getFilenameToDebugIdMap } from "00874_getFilenameToDebugIdMap.js";
 // _runtime/00870_applyClientOptions.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -58,7 +59,7 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let closure_3 = ["user", "level", "extra", "contexts", "tags", "fingerprint", "propagationContext"];
 arg5.applyClientOptions = applyClientOptions;
 arg5.applyDebugIds = function applyDebugIds(exception) {
-  _require = _require("00874_getFilenameToDebugIdMap.js").getFilenameToDebugIdMap(arg1);
+  _require = _getFilenameToDebugIdMap.getFilenameToDebugIdMap(arg1);
   exception = exception.exception;
   if (exception != null) {
     const values = exception.values;

@@ -1,9 +1,12 @@
+import { consoleSandbox } from "00824_consoleSandbox.js";
+import { addHandler } from "00850_addHandler.js";
+import { 00821__ } from "metro/00821__.js";
 // _runtime/00919_instrumentConsole.js
 const require = arg1;
 const dependencyMap = arg6;
 function instrumentConsole() {
-  if ("console" in require("metro/00821__.js").GLOBAL_OBJ) {
-    const CONSOLE_LEVELS = require("00824_consoleSandbox.js") /* consoleSandbox */.CONSOLE_LEVELS;
+  if ("console" in 00821__.GLOBAL_OBJ) {
+    const CONSOLE_LEVELS = consoleSandbox /* consoleSandbox */.CONSOLE_LEVELS;
     const item = CONSOLE_LEVELS.forEach((arg0) => {
       const callback = arg0;
       if (arg0 in callback(table[1]).GLOBAL_OBJ.console) {
@@ -25,7 +28,7 @@ function instrumentConsole() {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.addConsoleInstrumentationHandler = function addConsoleInstrumentationHandler(arg0) {
-  require("00850_addHandler.js") /* addHandler */.addHandler("console", arg0);
-  const obj = require("00850_addHandler.js") /* addHandler */;
-  require("00850_addHandler.js") /* addHandler */.maybeInstrument("console", instrumentConsole);
+  addHandler /* addHandler */.addHandler("console", arg0);
+  const obj = addHandler /* addHandler */;
+  addHandler /* addHandler */.maybeInstrument("console", instrumentConsole);
 };

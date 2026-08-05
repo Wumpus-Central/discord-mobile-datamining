@@ -1,3 +1,4 @@
+import { c } from "04036_c.js";
 // _runtime/04047_useRive.js
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -11,7 +12,7 @@ let require = arg1;
 export const useRive = function useRive() {
   let dependencyMap;
   let tmp4;
-  let obj = require("04036_c.js") /* c */;
+  let obj = c /* c */;
   const cResult = obj.c(4);
   const tmp2 = callback2(null);
   require = tmp2;

@@ -1,3 +1,4 @@
+import { cancelAnimation } from "01606_cancelAnimation.js";
 // _runtime/05459_useReactiveSharedValue.js
 import noop from "noop";
 
@@ -20,13 +21,13 @@ export const useReactiveSharedValue = (obj) => {
     if (null === tmp2.current) {
       tmp.current = obj;
       if (typeof obj === "object") {
-        obj = require("01606_cancelAnimation.js") /* cancelAnimation */;
+        obj = cancelAnimation /* cancelAnimation */;
         obj = {};
         const merged = Object.assign(obj);
         let mutable = obj.makeMutable(obj);
       } else {
-        mutable = require("01606_cancelAnimation.js") /* cancelAnimation */.makeMutable(obj);
-        const obj3 = require("01606_cancelAnimation.js") /* cancelAnimation */;
+        mutable = cancelAnimation /* cancelAnimation */.makeMutable(obj);
+        const obj3 = cancelAnimation /* cancelAnimation */;
       }
       tmp2.current = mutable;
     } else if (tmp.current !== obj) {

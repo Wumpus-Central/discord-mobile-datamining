@@ -1,3 +1,4 @@
+import { isHermesEnabled } from "01002_isHermesEnabled.js";
 // _runtime/01114_processEvent.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -15,14 +16,14 @@ function processEvent(tags, originalException) {
     tmp2 = originalException1;
   }
   const obj = { turbo_module: null, fabric: null, react_native_version: null, expo: null };
-  obj[0] = require("01002_isHermesEnabled.js") /* isHermesEnabled */.isTurboModuleEnabled();
-  const obj2 = require("01002_isHermesEnabled.js") /* isHermesEnabled */;
-  obj[1] = require("01002_isHermesEnabled.js") /* isHermesEnabled */.isFabricEnabled();
-  const obj3 = require("01002_isHermesEnabled.js") /* isHermesEnabled */;
-  obj[2] = require("01002_isHermesEnabled.js") /* isHermesEnabled */.getReactNativeVersion();
-  const obj4 = require("01002_isHermesEnabled.js") /* isHermesEnabled */;
-  obj[3] = require("01002_isHermesEnabled.js") /* isHermesEnabled */.isExpo();
-  const obj5 = require("01002_isHermesEnabled.js") /* isHermesEnabled */;
+  obj[0] = isHermesEnabled /* isHermesEnabled */.isTurboModuleEnabled();
+  const obj2 = isHermesEnabled /* isHermesEnabled */;
+  obj[1] = isHermesEnabled /* isHermesEnabled */.isFabricEnabled();
+  const obj3 = isHermesEnabled /* isHermesEnabled */;
+  obj[2] = isHermesEnabled /* isHermesEnabled */.getReactNativeVersion();
+  const obj4 = isHermesEnabled /* isHermesEnabled */;
+  obj[3] = isHermesEnabled /* isHermesEnabled */.isExpo();
+  const obj5 = isHermesEnabled /* isHermesEnabled */;
   if (obj6.isHermesEnabled()) {
     obj.js_engine = "hermes";
     let tmp4Result = tmp4(1002);
@@ -111,8 +112,8 @@ function processEvent(tags, originalException) {
   if (expoGoVersion) {
     obj.expo_go_version = expoGoVersion;
   }
-  obj6 = require("01002_isHermesEnabled.js") /* isHermesEnabled */;
-  const expoSdkVersion = require("01002_isHermesEnabled.js") /* isHermesEnabled */.getExpoSdkVersion();
+  obj6 = isHermesEnabled /* isHermesEnabled */;
+  const expoSdkVersion = isHermesEnabled /* isHermesEnabled */.getExpoSdkVersion();
   if (expoSdkVersion) {
     obj.expo_sdk_version = expoSdkVersion;
   }

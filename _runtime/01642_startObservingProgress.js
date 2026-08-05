@@ -1,3 +1,4 @@
+import { isWorkletFunction } from "01631_isWorkletFunction.js";
 // _runtime/01642_startObservingProgress.js
 import isJest from "isJest";
 import runWorkletOnJS from "runWorkletOnJS";
@@ -6,7 +7,7 @@ isJest = isJest.isAndroid();
 function startObservingProgress(arg0, addListener) {
   let closure_0 = arg0;
   const _require = addListener;
-  const dependencyMap = arg2 === _require("01631_isWorkletFunction.js").LayoutAnimationType.SHARED_ELEMENT_TRANSITION;
+  const dependencyMap = arg2 === _isWorkletFunction.LayoutAnimationType.SHARED_ELEMENT_TRANSITION;
   addListener.addListener(arg0 + 1000000000, () => {
     set._notifyAboutProgress(set, set2.value, closure_2);
   });

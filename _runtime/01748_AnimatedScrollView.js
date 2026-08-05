@@ -1,3 +1,4 @@
+import { useAnimatedGestureHandler } from "01749_useAnimatedGestureHandler.js";
 // _runtime/01748_AnimatedScrollView.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import "noop";
@@ -14,12 +15,12 @@ export const AnimatedScrollView = isReactRendering.componentWithRef((scrollViewO
   scrollViewOffset = scrollViewOffset.scrollViewOffset;
   const tmp2 = callback(scrollViewOffset, closure_2);
   if (null === arg1) {
-    let obj = require("01749_useAnimatedGestureHandler.js") /* useAnimatedGestureHandler */;
+    let obj = useAnimatedGestureHandler /* useAnimatedGestureHandler */;
     animatedRef = obj.useAnimatedRef();
   }
   if (scrollViewOffset) {
-    scrollViewOffset = require("01749_useAnimatedGestureHandler.js") /* useAnimatedGestureHandler */.useScrollViewOffset(animatedRef, scrollViewOffset);
-    const obj2 = require("01749_useAnimatedGestureHandler.js") /* useAnimatedGestureHandler */;
+    scrollViewOffset = useAnimatedGestureHandler /* useAnimatedGestureHandler */.useScrollViewOffset(animatedRef, scrollViewOffset);
+    const obj2 = useAnimatedGestureHandler /* useAnimatedGestureHandler */;
   }
   if (!("scrollEventThrottle" in tmp2)) {
     tmp2.scrollEventThrottle = 1;

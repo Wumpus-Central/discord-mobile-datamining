@@ -1,3 +1,4 @@
+import { isMatchingPattern } from "00832_isMatchingPattern.js";
 // _runtime/00926_flattenIssue.js
 import setupIntegration from "setupIntegration";
 
@@ -69,7 +70,7 @@ function formatIssueMessage(issues) {
     return "Failed to validate " + str4;
   } else {
     const _HermesInternal = HermesInternal;
-    return "Failed to validate keys: " + require("00832_isMatchingPattern.js") /* isMatchingPattern */.truncate(arr.join(", "), 100);
+    return "Failed to validate keys: " + isMatchingPattern /* isMatchingPattern */.truncate(arr.join(", "), 100);
   }
   tmp = issues.issues[Symbol.iterator]();
 }

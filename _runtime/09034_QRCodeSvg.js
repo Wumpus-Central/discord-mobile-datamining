@@ -1,3 +1,4 @@
+import { inlineStyles } from "08437_inlineStyles.js";
 // _runtime/09034_QRCodeSvg.js
 import emptyFunction from "emptyFunction";
 import noop from "noop";
@@ -83,8 +84,8 @@ const forwardRefResult = noop.forwardRef((obj, ref) => {
     continue;
   }
   obj = { height: size, ref, style: { height: size, width: size }, viewBox: `0 0 ${viewBoxSize} ${viewBoxSize}`, width: size };
-  const element = tmp4.default.createElement(require("08437_inlineStyles.js") /* inlineStyles */.Path, { d: bgD, fill: bgColor });
-  return tmp4.default.createElement(require("08437_inlineStyles.js") /* inlineStyles */.Svg, fn({}, obj, obj), element, tmp4.default.createElement(require("08437_inlineStyles.js") /* inlineStyles */.Path, { d, fill }));
+  const element = tmp4.default.createElement(inlineStyles /* inlineStyles */.Path, { d: bgD, fill: bgColor });
+  return tmp4.default.createElement(inlineStyles /* inlineStyles */.Svg, fn({}, obj, obj), element, tmp4.default.createElement(inlineStyles /* inlineStyles */.Path, { d, fill }));
 });
 forwardRefResult.displayName = "QRCodeSvg";
 forwardRefResult.propTypes = obj;

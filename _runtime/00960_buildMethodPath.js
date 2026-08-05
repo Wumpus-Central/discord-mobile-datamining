@@ -1,3 +1,5 @@
+import { truncateTextByBytes } from "00961_truncateTextByBytes.js";
+import { 00958__ } from "metro/00958__.js";
 // _runtime/00960_buildMethodPath.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -54,12 +56,12 @@ arg5.getSpanOperation = function getSpanOperation(arr) {
 };
 arg5.getTruncatedJsonString = function getTruncatedJsonString(arr) {
   if (typeof arr === "string") {
-    return require("00961_truncateTextByBytes.js") /* truncateTextByBytes */.truncateGenAiStringInput(arr);
+    return truncateTextByBytes /* truncateTextByBytes */.truncateGenAiStringInput(arr);
   } else {
     const _Array = Array;
     if (Array.isArray(arr)) {
       const _JSON2 = JSON;
-      return JSON.stringify(require("00961_truncateTextByBytes.js") /* truncateTextByBytes */.truncateGenAiMessages(arr));
+      return JSON.stringify(truncateTextByBytes /* truncateTextByBytes */.truncateGenAiMessages(arr));
     } else {
       const _JSON = JSON;
       return JSON.stringify(arr);
@@ -70,13 +72,13 @@ arg5.setTokenUsageAttributes = function setTokenUsageAttributes(setAttributes) {
   let num = arg1;
   if (undefined !== arg1) {
     let obj = {};
-    obj[require("metro/00958__.js").GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = num;
+    obj[00958__.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = num;
     setAttributes.setAttributes(obj);
   }
   let num2 = arg2;
   if (undefined !== arg2) {
     obj = {};
-    obj[require("metro/00958__.js").GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = num2;
+    obj[00958__.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = num2;
     setAttributes.setAttributes(obj);
   }
   let num3 = arg3;

@@ -1,3 +1,5 @@
+import { __exportStarResult14 } from "13401___exportStarResult14.js";
+import { __exportStarResult21 } from "13402___exportStarResult21.js";
 // _runtime/13400___exportStarResult13.js
 import e from "e";
 import digitsToString from "digitsToString";
@@ -12,11 +14,11 @@ export const ComputeExponent = function ComputeExponent(internalSlots, timesResu
       negatedResult = timesResult.negated();
     }
     const floorResult = negatedResult.log(10).floor();
-    const result = require("13401___exportStarResult14.js") /* __exportStarResult14 */.ComputeExponentForMagnitude(internalSlots, floorResult);
+    const result = __exportStarResult14 /* __exportStarResult14 */.ComputeExponentForMagnitude(internalSlots, floorResult);
     const _default = digitsToString.default;
     const logResult = negatedResult.log(10);
     const tmp2 = require;
-    const result1 = require("13402___exportStarResult21.js") /* __exportStarResult21 */.FormatNumericToString(internalSlots, negatedResult.times(digitsToString.default.pow(10, -result)));
+    const result1 = __exportStarResult21 /* __exportStarResult21 */.FormatNumericToString(internalSlots, negatedResult.times(digitsToString.default.pow(10, -result)));
     const roundedNumber = result1.roundedNumber;
     if (roundedNumber.isZero()) {
       const items = [result, floorResult.toNumber()];

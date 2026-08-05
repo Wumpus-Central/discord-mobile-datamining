@@ -1,7 +1,8 @@
+import { 00599__ } from "metro/00599__.js";
 // _runtime/00728_castPath.js
 
 export default function castPath(arg0, arg1) {
-  if (require("metro/00599__.js")(arg0)) {
+  if (00599__(arg0)) {
     return arg0;
   } else if (tmp(722)(arg0, arg1)) {
     const items = [arg0];

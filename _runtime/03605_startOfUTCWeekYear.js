@@ -1,3 +1,4 @@
+import { getDefaultOptions } from "03369_getDefaultOptions.js";
 // _runtime/03605_startOfUTCWeekYear.js
 import getUTCWeekYear from "getUTCWeekYear";
 import requiredArgs from "requiredArgs";
@@ -39,7 +40,7 @@ let c5 = tmp9;
 
 export default function startOfUTCWeekYear(arg0, firstWeekContainsDate) {
   tmp5.default(1, arguments);
-  const defaultOptions = require("03369_getDefaultOptions.js") /* getDefaultOptions */.getDefaultOptions();
+  const defaultOptions = getDefaultOptions /* getDefaultOptions */.getDefaultOptions();
   let prop;
   if (null != firstWeekContainsDate) {
     prop = firstWeekContainsDate.firstWeekContainsDate;

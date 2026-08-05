@@ -1,3 +1,4 @@
+import { t } from "01617_t.js";
 // _runtime/01757_o.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -194,7 +195,7 @@ function processBoxShadow(boxShadow) {
       if (!Array.isArray(str)) {
         const _JSON = JSON;
         const _HermesInternal = HermesInternal;
-        const reanimatedError = new require("01617_t.js") /* t */.ReanimatedError("Box shadow value must be an array of shadow objects or a string. Received: " + JSON.stringify(str));
+        const reanimatedError = new t /* t */.ReanimatedError("Box shadow value must be an array of shadow objects or a string. Received: " + JSON.stringify(str));
         throw reanimatedError;
       }
     }

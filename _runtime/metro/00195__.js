@@ -1,3 +1,4 @@
+import { define } from "../00197_define.js";
 // _runtime/metro/00195__.js
 try {
   const _module = require("isNativeFunction");
@@ -40,7 +41,7 @@ try {
     const _module1 = require("polyfillObjectProperty");
     _module1.polyfillGlobal("regeneratorRuntime", () => {
       delete tmp2[tmp];
-      return require("../00197_define.js") /* define */;
+      return define /* define */;
     });
   }
 } catch (err) {

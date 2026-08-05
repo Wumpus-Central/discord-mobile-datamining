@@ -1,3 +1,4 @@
+import { Blob } from "00203_Blob.js";
 // _runtime/00210_convertRequestBody.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -6,7 +7,7 @@ arg5.default = function convertRequestBody(str) {
     let obj = { string: null };
     obj[0] = str;
     let tmp2 = obj;
-  } else if (str instanceof require("00203_Blob.js") /* Blob */.default) {
+  } else if (str instanceof Blob /* Blob */.default) {
     obj = { blob: null };
     obj[0] = str.data;
     tmp2 = obj;

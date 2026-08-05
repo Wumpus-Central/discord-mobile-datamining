@@ -1,9 +1,10 @@
+import { TurboModuleRegistry } from "00997_TurboModuleRegistry.js";
 // _runtime/00814_getDevServer.js
 const require = arg1;
 const dependencyMap = arg6;
 function getDevServer() {
   try {
-    const Devtools = require("00997_TurboModuleRegistry.js") /* TurboModuleRegistry */.ReactNativeLibraries.Devtools;
+    const Devtools = TurboModuleRegistry /* TurboModuleRegistry */.ReactNativeLibraries.Devtools;
     let devServer;
     if (null !== Devtools) {
       if (undefined !== obj) {
@@ -180,7 +181,7 @@ arg5.fetchSourceContext = function fetchSourceContext(c4) {
   });
 };
 arg5.parseErrorStack = function parseErrorStack(arg0) {
-  if (require("00997_TurboModuleRegistry.js") /* TurboModuleRegistry */.ReactNativeLibraries.Devtools) {
+  if (TurboModuleRegistry /* TurboModuleRegistry */.ReactNativeLibraries.Devtools) {
     const Devtools = tmp(997).ReactNativeLibraries.Devtools;
     return Devtools.parseErrorStack(arg0);
   } else {
@@ -191,7 +192,7 @@ arg5.parseErrorStack = function parseErrorStack(arg0) {
   tmp = require;
 };
 arg5.symbolicateStackTrace = function symbolicateStackTrace(arg0, arg1) {
-  if (require("00997_TurboModuleRegistry.js") /* TurboModuleRegistry */.ReactNativeLibraries.Devtools) {
+  if (TurboModuleRegistry /* TurboModuleRegistry */.ReactNativeLibraries.Devtools) {
     const Devtools = tmp(997).ReactNativeLibraries.Devtools;
     return Devtools.symbolicateStackTrace(arg0, arg1);
   } else {

@@ -1,3 +1,4 @@
+import { __INTERNAL_VIEW_CONFIG } from "metro/08468___INTERNAL_VIEW_CONFIG.js";
 // _runtime/08467__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -53,7 +54,7 @@ const items = [
     value: function render() {
       const props = this.props;
       const obj = { ref: this.refMethod };
-      const tmp = require("metro/08468___INTERNAL_VIEW_CONFIG.js");
+      const tmp = __INTERNAL_VIEW_CONFIG;
       const merged = Object.assign(ClipPath(8452).extract(this, props));
       obj.children = props.children;
       return <tmp ref={this.refMethod} />;

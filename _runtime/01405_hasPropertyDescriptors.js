@@ -1,11 +1,12 @@
+import { flag } from "00564_flag.js";
 // _runtime/01405_hasPropertyDescriptors.js
 function hasPropertyDescriptors(arg0) {
-  return require("00564_flag.js") /* flag */;
+  return flag /* flag */;
 }
 hasPropertyDescriptors.hasArrayLengthDefineBug = function hasArrayLengthDefineBug() {
-  if (require("00564_flag.js") /* flag */) {
+  if (flag /* flag */) {
     try {
-      return 1 !== require("00564_flag.js") /* flag */([], "length", { value: 1 }).length;
+      return 1 !== flag /* flag */([], "length", { value: 1 }).length;
     } catch (err) {
       return true;
     }

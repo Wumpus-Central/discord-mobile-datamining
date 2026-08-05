@@ -1,3 +1,4 @@
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 // _runtime/01015_breadcrumbFromObject.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -8,8 +9,8 @@ arg5.breadcrumbFromObject = function breadcrumbFromObject(type) {
     obj.type = type.type;
   }
   if (typeof type.level === "string") {
-    obj.level = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.severityLevelFromString(type.level);
-    const obj2 = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
+    obj.level = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.severityLevelFromString(type.level);
+    const obj2 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
   }
   if (typeof type.event_id === "string") {
     obj.event_id = type.event_id;

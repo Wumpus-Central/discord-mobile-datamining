@@ -1,3 +1,4 @@
+import { getDataView } from "04897_getDataView.js";
 // _runtime/04910_getDataView.js
 const require = arg1;
 const module = arg2;
@@ -6,12 +7,12 @@ arg5.default = {
   isWebpFile(dataView) {
     let tmp = dataView;
     if (tmp) {
-      tmp = require("04897_getDataView.js") /* getDataView */.getStringFromDataView(dataView, 0, 4) === "RIFF";
-      const obj = require("04897_getDataView.js") /* getDataView */;
+      tmp = getDataView /* getDataView */.getStringFromDataView(dataView, 0, 4) === "RIFF";
+      const obj = getDataView /* getDataView */;
     }
     if (tmp) {
-      tmp = require("04897_getDataView.js") /* getDataView */.getStringFromDataView(dataView, 8, 4) === "WEBP";
-      const obj2 = require("04897_getDataView.js") /* getDataView */;
+      tmp = getDataView /* getDataView */.getStringFromDataView(dataView, 8, 4) === "WEBP";
+      const obj2 = getDataView /* getDataView */;
     }
     return tmp;
   },
@@ -27,7 +28,7 @@ arg5.default = {
       while (true) {
         let tmp10 = dependencyMap;
         let tmp9 = require;
-        let obj = require("04897_getDataView.js") /* getDataView */;
+        let obj = getDataView /* getDataView */;
         let stringFromDataView = obj.getStringFromDataView(byteLength, num, 4);
         let uint32 = byteLength.getUint32(num + 4, true);
         let tmp13 = module;

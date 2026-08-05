@@ -1,3 +1,4 @@
+import { renderElement } from "../00114_renderElement.js";
 // _runtime/metro/05604___INTERNAL_VIEW_CONFIG.js
 import weakSet from "weakSet";
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
@@ -9,16 +10,16 @@ obj[2] = obj;
 obj = {
   play(arg0, arg1, arg2) {
     const items = [arg1, arg2];
-    require("../00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "play", items);
+    renderElement /* renderElement */.dispatchCommand(arg0, "play", items);
   },
   reset(arg0) {
-    require("../00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "reset", []);
+    renderElement /* renderElement */.dispatchCommand(arg0, "reset", []);
   },
   pause(arg0) {
-    require("../00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "pause", []);
+    renderElement /* renderElement */.dispatchCommand(arg0, "pause", []);
   },
   resume(arg0) {
-    require("../00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "resume", []);
+    renderElement /* renderElement */.dispatchCommand(arg0, "resume", []);
   }
 };
 

@@ -1,8 +1,9 @@
+import { hasTracingEnabled } from "07407_hasTracingEnabled.js";
 // _runtime/07414_sampleSpan.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) {
-  let obj = require("07407_hasTracingEnabled.js") /* hasTracingEnabled */;
+  let obj = hasTracingEnabled /* hasTracingEnabled */;
   if (obj.hasTracingEnabled(tracesSampler)) {
     let tmpResult = tmp(7402);
     const isolationScope = tmpResult.getIsolationScope();

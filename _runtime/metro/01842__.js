@@ -1,3 +1,5 @@
+import { useResizeMode } from "../01800_useResizeMode.js";
+import { KeyboardAvoidingView } from "../01811_KeyboardAvoidingView.js";
 // _runtime/metro/01842__.js
 import "noop";
 import { Animated } from "get ActivityIndicator";
@@ -12,8 +14,8 @@ export default function _default(children) {
   if (!tmp) {
     tmp = enabled;
   }
-  let obj = require("../01800_useResizeMode.js") /* useResizeMode */;
+  let obj = useResizeMode /* useResizeMode */;
   obj = { enabled: tmp, children: null };
   obj[1] = <closure_3 style={{ opacity: obj.useKeyboardAnimation().progress }}>{arg0.children}</closure_3>;
-  return jsx(require("../01811_KeyboardAvoidingView.js") /* KeyboardAvoidingView */.KeyboardStickyView, { enabled: tmp, children: null });
+  return jsx(KeyboardAvoidingView /* KeyboardAvoidingView */.KeyboardStickyView, { enabled: tmp, children: null });
 };

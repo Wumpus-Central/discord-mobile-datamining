@@ -1,3 +1,4 @@
+import { addLogBoxLog } from "01611_addLogBoxLog.js";
 // _runtime/01612_logToConsole.js
 const global = arg0;
 const require = arg1;
@@ -147,7 +148,7 @@ obj[1] = L;
 arg5.LogLevel = obj;
 arg5.DEFAULT_LOGGER_CONFIG = obj;
 arg5.logToLogBoxAndConsole = function logToLogBoxAndConsole(level) {
-  require("01611_addLogBoxLog.js") /* addLogBoxLog */.addLogBoxLog(level);
+  addLogBoxLog /* addLogBoxLog */.addLogBoxLog(level);
   if (typeof logToConsole !== "function") {
     HermesBuiltin.throwTypeError();
   }

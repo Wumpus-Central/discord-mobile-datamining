@@ -1,10 +1,11 @@
+import { WINDOW } from "01039_WINDOW.js";
 // _runtime/01038_whenActivated.js
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.whenActivated = (arg0) => {
   const _require = arg0;
-  const _document = _require("01039_WINDOW.js").WINDOW.document;
+  const _document = _WINDOW.WINDOW.document;
   let prerendering;
   if (_document != null) {
     prerendering = _document.prerendering;

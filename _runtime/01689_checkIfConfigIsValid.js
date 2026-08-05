@@ -1,3 +1,4 @@
+import { addLogBoxLog } from "01610_addLogBoxLog.js";
 // _runtime/01689_checkIfConfigIsValid.js
 import _slicedToArray from "_slicedToArray";
 
@@ -37,7 +38,7 @@ function checkIfConfigIsValid(duration) {
     dependencyMap = dependencyMap + ", clamp.min should be lower than clamp.max, got clamp: {min: " + duration.clamp.min + ", max: " + duration.clamp.max + "} ";
   }
   if ("" !== dependencyMap) {
-    const logger = _require("01610_addLogBoxLog.js").logger;
+    const logger = _addLogBoxLog.logger;
     logger.warn(`Invalid spring config${closure_1}`);
   }
   return "" === dependencyMap;

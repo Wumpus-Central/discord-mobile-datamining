@@ -1,3 +1,6 @@
+import { getSpanStatusFromHttpCode } from "00840_getSpanStatusFromHttpCode.js";
+import { extractClientInfo } from "00938_extractClientInfo.js";
+import { extractPromptResultAttributes } from "00946_extractPromptResultAttributes.js";
 // _runtime/00945_weakMap.js
 import _slicedToArray from "_slicedToArray";
 
@@ -15,7 +18,7 @@ export const cleanupPendingSpansForTransport = function cleanupPendingSpansForTr
       let obj = { code: null, message: "cancelled" };
       let tmp8 = require;
       let tmp9 = dependencyMap;
-      obj[0] = require("00840_getSpanStatusFromHttpCode.js") /* getSpanStatusFromHttpCode */.SPAN_STATUS_ERROR;
+      obj[0] = getSpanStatusFromHttpCode /* getSpanStatusFromHttpCode */.SPAN_STATUS_ERROR;
       let setStatusResult = span.setStatus(obj);
       let span2 = tmp7.span;
       let endResult = span2.end();
@@ -40,11 +43,11 @@ export const completeSpanWithResults = function completeSpanWithResults(closure_
     let protocolVersion = result;
     ({ span, method } = value);
     if ("initialize" === method) {
-      const result1 = require("00938_extractClientInfo.js") /* extractClientInfo */.extractSessionDataFromInitializeResponse(protocolVersion);
+      const result1 = extractClientInfo /* extractClientInfo */.extractSessionDataFromInitializeResponse(protocolVersion);
       setAttributesResult = {};
-      const obj5 = require("00938_extractClientInfo.js") /* extractClientInfo */;
+      const obj5 = extractClientInfo /* extractClientInfo */;
       const tmp10 = require;
-      const merged = Object.assign(require("00938_extractClientInfo.js") /* extractClientInfo */.buildServerAttributesFromInfo(result1.serverInfo));
+      const merged = Object.assign(extractClientInfo /* extractClientInfo */.buildServerAttributesFromInfo(result1.serverInfo));
       protocolVersion = result1.protocolVersion;
       if (protocolVersion) {
         setAttributesResult[tmp10(940).MCP_PROTOCOL_VERSION_ATTRIBUTE] = result1.protocolVersion;
@@ -52,18 +55,18 @@ export const completeSpanWithResults = function completeSpanWithResults(closure_
       setAttributesResult = span.setAttributes(setAttributesResult);
       span.end();
       value.delete(id);
-      const obj6 = require("00938_extractClientInfo.js") /* extractClientInfo */;
+      const obj6 = extractClientInfo /* extractClientInfo */;
     } else {
       setAttributesResult = self;
       if ("tools/call" !== method) {
         if ("prompts/get" === method) {
-          span.setAttributes(require("00946_extractPromptResultAttributes.js") /* extractPromptResultAttributes */.extractPromptResultAttributes(protocolVersion, setAttributesResult.recordOutputs));
-          const obj7 = require("00946_extractPromptResultAttributes.js") /* extractPromptResultAttributes */;
+          span.setAttributes(extractPromptResultAttributes /* extractPromptResultAttributes */.extractPromptResultAttributes(protocolVersion, setAttributesResult.recordOutputs));
+          const obj7 = extractPromptResultAttributes /* extractPromptResultAttributes */;
         }
       }
     }
-    setAttributesResult = span.setAttributes(require("00946_extractPromptResultAttributes.js") /* extractPromptResultAttributes */.extractToolResultAttributes(protocolVersion, setAttributesResult.recordOutputs));
-    const obj3 = require("00946_extractPromptResultAttributes.js") /* extractPromptResultAttributes */;
+    setAttributesResult = span.setAttributes(extractPromptResultAttributes /* extractPromptResultAttributes */.extractToolResultAttributes(protocolVersion, setAttributesResult.recordOutputs));
+    const obj3 = extractPromptResultAttributes /* extractPromptResultAttributes */;
   }
 };
 export const storeSpanForRequest = function storeSpanForRequest(arg0, id, startInactiveSpanResult, method) {

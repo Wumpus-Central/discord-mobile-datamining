@@ -1,6 +1,7 @@
+import { num2 } from "04117_num2.js";
 // _runtime/04119_getStatics.js
 function getStatics(arg0) {
-  const obj = require("04117_num2.js") /* num2 */;
+  const obj = num2 /* num2 */;
   if (obj.isMemo(arg0)) {
     let tmp2 = obj;
   } else {

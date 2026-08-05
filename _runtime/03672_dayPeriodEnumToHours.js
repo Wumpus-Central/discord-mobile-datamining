@@ -1,3 +1,5 @@
+import { keys } from "03543_keys.js";
+import { 03673__ } from "metro/03673__.js";
 // _runtime/03672_dayPeriodEnumToHours.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -68,7 +70,7 @@ arg5.normalizeTwoDigitYear = function normalizeTwoDigitYear(year, arg1) {
   return diff2;
 };
 arg5.parseAnyDigitsSigned = function parseAnyDigitsSigned(str) {
-  const match = str.match(require("metro/03673__.js").numericPatterns.anyDigitsSigned);
+  const match = str.match(03673__.numericPatterns.anyDigitsSigned);
   let tmp2 = null;
   if (match) {
     const obj = { value: null, rest: null };
@@ -81,7 +83,7 @@ arg5.parseAnyDigitsSigned = function parseAnyDigitsSigned(str) {
 };
 arg5.parseNDigits = function parseNDigits(length, str) {
   if (1 === length) {
-    const match = str.match(require("metro/03673__.js").numericPatterns.singleDigit);
+    const match = str.match(03673__.numericPatterns.singleDigit);
     let tmp20 = null;
     if (match) {
       let obj = { value: null, rest: null };
@@ -92,7 +94,7 @@ arg5.parseNDigits = function parseNDigits(length, str) {
     }
     return tmp20;
   } else if (2 === length) {
-    const match1 = str.match(require("metro/03673__.js").numericPatterns.twoDigits);
+    const match1 = str.match(03673__.numericPatterns.twoDigits);
     let tmp15 = null;
     if (match1) {
       obj = { value: null, rest: null };
@@ -103,7 +105,7 @@ arg5.parseNDigits = function parseNDigits(length, str) {
     }
     return tmp15;
   } else if (3 === length) {
-    const match2 = str.match(require("metro/03673__.js").numericPatterns.threeDigits);
+    const match2 = str.match(03673__.numericPatterns.threeDigits);
     let tmp10 = null;
     if (match2) {
       const obj1 = { value: null, rest: null };
@@ -114,7 +116,7 @@ arg5.parseNDigits = function parseNDigits(length, str) {
     }
     return tmp10;
   } else if (4 === length) {
-    const match3 = str.match(require("metro/03673__.js").numericPatterns.fourDigits);
+    const match3 = str.match(03673__.numericPatterns.fourDigits);
     let tmp5 = null;
     if (match3) {
       const obj2 = { value: null, rest: null };
@@ -141,7 +143,7 @@ arg5.parseNDigits = function parseNDigits(length, str) {
 };
 arg5.parseNDigitsSigned = function parseNDigitsSigned(length, str) {
   if (1 === length) {
-    const match = str.match(require("metro/03673__.js").numericPatterns.singleDigitSigned);
+    const match = str.match(03673__.numericPatterns.singleDigitSigned);
     let tmp20 = null;
     if (match) {
       let obj = { value: null, rest: null };
@@ -152,7 +154,7 @@ arg5.parseNDigitsSigned = function parseNDigitsSigned(length, str) {
     }
     return tmp20;
   } else if (2 === length) {
-    const match1 = str.match(require("metro/03673__.js").numericPatterns.twoDigitsSigned);
+    const match1 = str.match(03673__.numericPatterns.twoDigitsSigned);
     let tmp15 = null;
     if (match1) {
       obj = { value: null, rest: null };
@@ -163,7 +165,7 @@ arg5.parseNDigitsSigned = function parseNDigitsSigned(length, str) {
     }
     return tmp15;
   } else if (3 === length) {
-    const match2 = str.match(require("metro/03673__.js").numericPatterns.threeDigitsSigned);
+    const match2 = str.match(03673__.numericPatterns.threeDigitsSigned);
     let tmp10 = null;
     if (match2) {
       const obj1 = { value: null, rest: null };
@@ -174,7 +176,7 @@ arg5.parseNDigitsSigned = function parseNDigitsSigned(length, str) {
     }
     return tmp10;
   } else if (4 === length) {
-    const match3 = str.match(require("metro/03673__.js").numericPatterns.fourDigitsSigned);
+    const match3 = str.match(03673__.numericPatterns.fourDigitsSigned);
     let tmp5 = null;
     if (match3) {
       const obj2 = { value: null, rest: null };
@@ -239,9 +241,9 @@ arg5.parseTimezonePattern = function parseTimezonePattern(basic, str) {
         num6 = parseInt(match[5], 10);
       }
       obj = { value: null, rest: null };
-      const result = num2 * require("03543_keys.js") /* keys */.millisecondsInHour;
-      const sum = result + num4 * require("03543_keys.js") /* keys */.millisecondsInMinute;
-      obj[0] = num * (sum + num6 * require("03543_keys.js") /* keys */.millisecondsInSecond);
+      const result = num2 * keys /* keys */.millisecondsInHour;
+      const sum = result + num4 * keys /* keys */.millisecondsInMinute;
+      obj[0] = num * (sum + num6 * keys /* keys */.millisecondsInSecond);
       obj[1] = str.slice(match[0].length);
       return obj;
     }

@@ -1,7 +1,8 @@
+import { 00599__ } from "metro/00599__.js";
 // _runtime/00769_baseIsEqualDeep.js
 
 export default function baseIsEqualDeep(value, value2) {
-  const tmp3 = require("metro/00599__.js")(value);
+  const tmp3 = 00599__(value);
   let str = "[object Array]";
   let str2 = "[object Array]";
   if (!tmp3) {

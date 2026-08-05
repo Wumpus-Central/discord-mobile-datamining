@@ -1,3 +1,6 @@
+import { SymbolResult1 } from "../00134_SymbolResult1.js";
+import { _isNativeReflectConstruct } from "../00248__isNativeReflectConstruct.js";
+import { DeviceEventManager } from "../00249_DeviceEventManager.js";
 // _runtime/metro/00247__.js
 const require = arg1;
 let closure_3 = [];
@@ -8,10 +11,10 @@ require("_isNativeReflectConstruct").addListener("hardwareBackPress", (timeStamp
   }
   const obj = {};
   if (null != timeStamp) {
-    const result = require("../00134_SymbolResult1.js") /* SymbolResult1 */.setEventInitTimeStamp(obj, timeStamp);
-    const obj2 = require("../00134_SymbolResult1.js") /* SymbolResult1 */;
+    const result = SymbolResult1 /* SymbolResult1 */.setEventInitTimeStamp(obj, timeStamp);
+    const obj2 = SymbolResult1 /* SymbolResult1 */;
   }
-  const hardwareBackPressEvent = new require("../00248__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.HardwareBackPressEvent(obj);
+  const hardwareBackPressEvent = new _isNativeReflectConstruct /* _isNativeReflectConstruct */.HardwareBackPressEvent(obj);
   let diff = closure_3.length - 1;
   if (0 <= diff) {
     while (true) {
@@ -32,9 +35,9 @@ require("_isNativeReflectConstruct").addListener("hardwareBackPress", (timeStamp
 });
 let obj = {
   exitApp() {
-    if (require("../00249_DeviceEventManager.js")) {
-      const result = require("../00249_DeviceEventManager.js").invokeDefaultBackPressHandler();
-      const tmpResult = require("../00249_DeviceEventManager.js");
+    if (DeviceEventManager) {
+      const result = DeviceEventManager.invokeDefaultBackPressHandler();
+      const tmpResult = DeviceEventManager;
     }
   },
   addEventListener(arg0, arg1) {

@@ -1,3 +1,6 @@
+import { append } from "08446_append.js";
+import { peg$SyntaxError } from "08447_peg_SyntaxError.js";
+import { peg$SyntaxError } from "08448_peg_SyntaxError.js";
 // _runtime/08445_appendTransformProps.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -13,7 +16,7 @@ function appendTransformProps(arg0) {
   let y;
   ({ originX, originY } = arg0);
   ({ x, y, scaleX, scaleY, rotation, skewX, skewY } = arg0);
-  require("08446_append.js") /* append */.appendTransform(x + originX, y + originY, scaleX, scaleY, rotation, skewX, skewY, originX, originY);
+  append /* append */.appendTransform(x + originX, y + originY, scaleX, scaleY, rotation, skewX, skewY, originX, originY);
 }
 function universal2axis(num) {
   let num2 = num;
@@ -179,7 +182,7 @@ function transformToMatrix(arg0, arr) {
       return null;
     }
   }
-  require("08446_append.js") /* append */.reset();
+  append /* append */.reset();
   if (arg0) {
     appendTransformProps(arg0);
   }
@@ -212,8 +215,8 @@ function transformToMatrix(arg0, arr) {
       }
     }
   }
-  const obj = require("08446_append.js") /* append */;
-  return require("08446_append.js") /* append */.toArray();
+  const obj = append /* append */;
+  return append /* append */.toArray();
 }
 arg5.default = function extractTransform(arr) {
   if (Array.isArray(arr)) {
@@ -223,14 +226,14 @@ arg5.default = function extractTransform(arr) {
   }
   if (typeof arr === "string") {
     try {
-      const parsed = require("08447_peg_SyntaxError.js") /* peg$SyntaxError */.parse(arr);
+      const parsed = peg$SyntaxError /* peg$SyntaxError */.parse(arr);
       const items = [, , , , , ];
       [arr[0], arr[2], arr[4], arr[1], arr[3], arr[5]] = parsed;
       return items;
     } catch (tmp6) {
       const _console = tmp.console;
       _console.error(tmp6);
-      return require("08446_append.js") /* append */.identity;
+      return append /* append */.identity;
     }
   } else {
     let transform;
@@ -245,8 +248,8 @@ arg5.props2transform = props2transform;
 arg5.transformToMatrix = transformToMatrix;
 arg5.extractTransformSvgView = function extractTransformSvgView(transform) {
   if (typeof transform.transform === "string") {
-    transform = require("08448_peg_SyntaxError.js") /* peg$SyntaxError */.parse(transform.transform);
-    const obj = require("08448_peg_SyntaxError.js") /* peg$SyntaxError */;
+    transform = peg$SyntaxError /* peg$SyntaxError */.parse(transform.transform);
+    const obj = peg$SyntaxError /* peg$SyntaxError */;
   } else {
     transform = transform.transform;
   }

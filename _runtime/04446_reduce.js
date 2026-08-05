@@ -1,10 +1,13 @@
+import { baseForOwn } from "00601_baseForOwn.js";
+import { baseIteratee } from "00720_baseIteratee.js";
+import { 00599__ } from "metro/00599__.js";
 // _runtime/04446_reduce.js
 
 export default function reduce(arg0, arg1, arg2) {
-  if (require("metro/00599__.js")(arg0)) {
+  if (00599__(arg0)) {
     let tmpResult = tmp(4447);
   } else {
     tmpResult = tmp(4448);
   }
-  return tmpResult(arg0, require("00720_baseIteratee.js") /* baseIteratee */(arg1, 4), arg2, arguments.length < 3, require("00601_baseForOwn.js") /* baseForOwn */);
+  return tmpResult(arg0, baseIteratee /* baseIteratee */(arg1, 4), arg2, arguments.length < 3, baseForOwn /* baseForOwn */);
 };

@@ -1,3 +1,4 @@
+import { getDefaultOptions } from "03369_getDefaultOptions.js";
 // _runtime/03624_formatRelative.js
 import differenceInCalendarDays from "differenceInCalendarDays";
 import format from "format";
@@ -77,7 +78,7 @@ export default function formatRelative(arg0, arg1, locale) {
   tmp15.default(2, arguments);
   const defaultResult1 = tmp11.default(arg0);
   const defaultResult2 = tmp11.default(arg1);
-  const defaultOptions = require("03369_getDefaultOptions.js") /* getDefaultOptions */.getDefaultOptions();
+  const defaultOptions = getDefaultOptions /* getDefaultOptions */.getDefaultOptions();
   locale = undefined;
   if (null != locale) {
     locale = locale.locale;

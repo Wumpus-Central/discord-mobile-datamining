@@ -1,3 +1,5 @@
+import { SymbolResult1 } from "../13552_SymbolResult1.js";
+import { URLSearchParamsImpl } from "../13559_URLSearchParamsImpl.js";
 // _runtime/metro/13558__.js
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
@@ -42,7 +44,7 @@ obj = {
   _mixedIntoPredicates: [],
   is(arg0) {
     if (arg0) {
-      if (obj.hasOwn(arg0, require("../13552_SymbolResult1.js") /* SymbolResult1 */.implSymbol)) {
+      if (obj.hasOwn(arg0, SymbolResult1 /* SymbolResult1 */.implSymbol)) {
         if (arg0[tmp(undefined, 13552).implSymbol] instanceof tmp(13559).implementation) {
           return true;
         }
@@ -56,13 +58,13 @@ obj = {
           return true;
         }
       }
-      obj = require("../13552_SymbolResult1.js") /* SymbolResult1 */;
+      obj = SymbolResult1 /* SymbolResult1 */;
     }
     return false;
   },
   isImpl(arg0) {
     if (arg0) {
-      if (arg0 instanceof require("../13559_URLSearchParamsImpl.js") /* URLSearchParamsImpl */.implementation) {
+      if (arg0 instanceof URLSearchParamsImpl /* URLSearchParamsImpl */.implementation) {
         return true;
       } else {
         const _mixedIntoPredicates = module.exports._mixedIntoPredicates;
@@ -91,7 +93,7 @@ obj = {
     }
     const _exports = module.exports;
     if (_exports.is(arg0)) {
-      return require("../13552_SymbolResult1.js") /* SymbolResult1 */.implForWrapper(arg0);
+      return SymbolResult1 /* SymbolResult1 */.implForWrapper(arg0);
     } else {
       const _TypeError = TypeError;
       const _HermesInternal = HermesInternal;
@@ -102,7 +104,7 @@ obj = {
   createDefaultIterator(self, key) {
     let obj = Object.create(closure_6);
     obj = { target: self, kind: key, index: 0 };
-    Object.defineProperty(obj, require("../13552_SymbolResult1.js") /* SymbolResult1 */.iterInternalSymbol, { value: obj, configurable: true });
+    Object.defineProperty(obj, SymbolResult1 /* SymbolResult1 */.iterInternalSymbol, { value: obj, configurable: true });
     return obj;
   },
   create(arg0, arg1, arg2) {
@@ -125,7 +127,7 @@ obj = {
   },
   createImpl(arg0, arg1, arg2) {
     obj = obj.create(arg0, arg1, arg2);
-    obj = require("../13552_SymbolResult1.js") /* SymbolResult1 */;
+    obj = SymbolResult1 /* SymbolResult1 */;
     return obj.implForWrapper(obj);
   },
   _internalSetup(arg0) {
@@ -143,11 +145,11 @@ obj = {
     obj.wrapper = wrapper;
     obj._internalSetup(wrapper);
     obj = { value: null, configurable: true };
-    const implementation = new require("../13559_URLSearchParamsImpl.js") /* URLSearchParamsImpl */.implementation(arg1, items, obj);
+    const implementation = new URLSearchParamsImpl /* URLSearchParamsImpl */.implementation(arg1, items, obj);
     obj[0] = implementation;
-    Object.defineProperty(wrapper, require("../13552_SymbolResult1.js") /* SymbolResult1 */.implSymbol, obj);
-    wrapper[require(undefined, 13552) /* SymbolResult1 */.implSymbol][require("../13552_SymbolResult1.js") /* SymbolResult1 */.wrapperSymbol] = wrapper;
-    if (require("../13559_URLSearchParamsImpl.js") /* URLSearchParamsImpl */.init) {
+    Object.defineProperty(wrapper, SymbolResult1 /* SymbolResult1 */.implSymbol, obj);
+    wrapper[require(undefined, 13552) /* SymbolResult1 */.implSymbol][SymbolResult1 /* SymbolResult1 */.wrapperSymbol] = wrapper;
+    if (URLSearchParamsImpl /* URLSearchParamsImpl */.init) {
       tmp2(13559).init(wrapper[tmp2(undefined, 13552).implSymbol], obj);
       const tmp2Result = tmp2(13559);
     }

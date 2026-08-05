@@ -1,9 +1,10 @@
+import { checkSharedValueUsage } from "01756_checkSharedValueUsage.js";
 // _runtime/01755_useAnimatedPropsJS.js
 import isJest from "isJest";
 
 if (isJest.shouldBeUseWeb()) {
   function useAnimatedPropsJS(fn, items) {
-    return require("01756_checkSharedValueUsage.js") /* checkSharedValueUsage */.useAnimatedStyle(fn, items, arg2, true);
+    return checkSharedValueUsage /* checkSharedValueUsage */.useAnimatedStyle(fn, items, arg2, true);
   }
 } else {
   useAnimatedPropsJS = require("checkSharedValueUsage").useAnimatedStyle;

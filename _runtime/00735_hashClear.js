@@ -1,9 +1,10 @@
+import { getNative } from "00736_getNative.js";
 // _runtime/00735_hashClear.js
 
 export default function hashClear() {
   let obj = {};
-  if (require("00736_getNative.js") /* getNative */) {
-    obj = require("00736_getNative.js") /* getNative */(null);
+  if (getNative /* getNative */) {
+    obj = getNative /* getNative */(null);
   } else {
     obj = {};
   }

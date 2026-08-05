@@ -1,3 +1,5 @@
+import { isObject } from "00606_isObject.js";
+import { toNumber } from "00637_toNumber.js";
 // _runtime/00636_debounce.js
 
 export default function debounce(fn, arg1, leading) {
@@ -54,9 +56,9 @@ export default function debounce(fn, arg1, leading) {
     const typeError = new TypeError("Expected a function");
     throw typeError;
   } else {
-    let tmp = _require("00637_toNumber.js")(arg1) || 0;
+    let tmp = _toNumber(arg1) || 0;
     dependencyMap = tmp;
-    if (_require("00606_isObject.js")(leading)) {
+    if (_isObject(leading)) {
       leading = leading.leading;
       c10 = tmp3;
       let tmp5Result;

@@ -1,3 +1,4 @@
+import { getDefaultOptions } from "03369_getDefaultOptions.js";
 // _runtime/03779_setDay.js
 import addDays from "addDays";
 import _typeof from "_typeof";
@@ -39,7 +40,7 @@ let c5 = tmp9;
 
 export default function setDay(arg0, arg1, weekStartsOn) {
   tmp9.default(2, arguments);
-  const defaultOptions = require("03369_getDefaultOptions.js") /* getDefaultOptions */.getDefaultOptions();
+  const defaultOptions = getDefaultOptions /* getDefaultOptions */.getDefaultOptions();
   weekStartsOn = undefined;
   if (null != weekStartsOn) {
     weekStartsOn = weekStartsOn.weekStartsOn;

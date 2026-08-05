@@ -1,3 +1,4 @@
+import { $output } from "12333__output.js";
 // _runtime/12345_convertBaseSchema.js
 import _slicedToArray from "_slicedToArray";
 
@@ -759,7 +760,7 @@ if (self2) {
           registry = defaultTarget.registry;
         }
         if (registry == null) {
-          registry = require("12333__output.js") /* $output */.globalRegistry;
+          registry = $output /* $output */.globalRegistry;
         }
         obj[5] = registry;
         return convertSchema(flag, obj);

@@ -1,9 +1,10 @@
+import { isKey } from "00722_isKey.js";
 // _runtime/00721_baseMatchesProperty.js
 
 export default function baseMatchesProperty(arg0, arg1) {
   const _require = arg0;
   const dependencyMap = arg1;
-  if (_require("00722_isKey.js")(arg0)) {
+  if (_isKey(arg0)) {
     if (tmp(723)(arg1)) {
       let fn = tmp(724)(tmp(725)(arg0), arg1);
       const tmpResult = tmp(724);

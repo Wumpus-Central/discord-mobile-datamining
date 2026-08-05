@@ -1,3 +1,5 @@
+import { addContextToFrame } from "07386_addContextToFrame.js";
+import { dateTimestampInSeconds } from "07389_dateTimestampInSeconds.js";
 // _runtime/07398_updateSession.js
 import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__";
 import consoleSandbox from "consoleSandbox";
@@ -24,8 +26,8 @@ function updateSession(ipAddress) {
   }
   let timestamp = obj.timestamp;
   if (!timestamp) {
-    timestamp = require("07389_dateTimestampInSeconds.js") /* dateTimestampInSeconds */.timestampInSeconds();
-    const obj2 = require("07389_dateTimestampInSeconds.js") /* dateTimestampInSeconds */;
+    timestamp = dateTimestampInSeconds /* dateTimestampInSeconds */.timestampInSeconds();
+    const obj2 = dateTimestampInSeconds /* dateTimestampInSeconds */;
   }
   ipAddress.timestamp = timestamp;
   if (obj.abnormal_mechanism) {
@@ -94,8 +96,8 @@ function updateSession(ipAddress) {
     if (32 === obj.sid.length) {
       let sid = obj.sid;
     } else {
-      sid = require("07386_addContextToFrame.js") /* addContextToFrame */.uuid4();
-      const obj3 = require("07386_addContextToFrame.js") /* addContextToFrame */;
+      sid = addContextToFrame /* addContextToFrame */.uuid4();
+      const obj3 = addContextToFrame /* addContextToFrame */;
     }
     ipAddress.sid = sid;
   }

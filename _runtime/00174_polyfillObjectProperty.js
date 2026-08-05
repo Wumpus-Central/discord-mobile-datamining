@@ -1,3 +1,4 @@
+import { finally } from "00175_finally.js";
 // _runtime/00174_polyfillObjectProperty.js
 let hasPromiseResult;
 if (global != null) {
@@ -10,5 +11,5 @@ if (global != null) {
 }
 if (!hasPromiseResult) {
   const _module = require("polyfillObjectProperty");
-  _module.polyfillGlobal("Promise", () => require("00175_finally.js") /* finally */.default);
+  _module.polyfillGlobal("Promise", () => finally /* finally */.default);
 }

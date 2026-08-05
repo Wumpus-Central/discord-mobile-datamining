@@ -1,3 +1,4 @@
+import { unsafeStringify } from "00517_unsafeStringify.js";
 // _runtime/00524_v4.js
 const require = arg1;
 const module = arg2;
@@ -33,6 +34,6 @@ arg5.default = function v4(arg0, arg1, arg2) {
     } while (num4 < 16);
     return arg1;
   } else {
-    return require("00517_unsafeStringify.js") /* unsafeStringify */.unsafeStringify(random);
+    return unsafeStringify /* unsafeStringify */.unsafeStringify(random);
   }
 };

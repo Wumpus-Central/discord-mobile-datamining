@@ -1,3 +1,4 @@
+import { addHandler } from "07373_addHandler.js";
 // _runtime/07486__resolveResponse.js
 import _slicedToArray from "_slicedToArray";
 import asyncGeneratorStep from "getGlobalSingleton";
@@ -223,9 +224,9 @@ function parseFetchArgs(arg0) {
 }
 
 export const addFetchEndInstrumentationHandler = function addFetchEndInstrumentationHandler(arg0) {
-  require("07373_addHandler.js") /* addHandler */.addHandler("fetch-body-resolved", arg0);
-  let obj = require("07373_addHandler.js") /* addHandler */;
-  require("07373_addHandler.js") /* addHandler */.maybeInstrument("fetch-body-resolved", () => {
+  addHandler /* addHandler */.addHandler("fetch-body-resolved", arg0);
+  let obj = addHandler /* addHandler */;
+  addHandler /* addHandler */.maybeInstrument("fetch-body-resolved", () => {
     const callback = closure_5;
     {
       callback(7381).fill(callback(7376).GLOBAL_OBJ, "fetch", (arg0) => {
@@ -289,9 +290,9 @@ export const addFetchEndInstrumentationHandler = function addFetchEndInstrumenta
 };
 export const addFetchInstrumentationHandler = function addFetchInstrumentationHandler(arg0, arg1) {
   const _require = arg1;
-  _require("07373_addHandler.js").addHandler("fetch", arg0);
-  let obj = _require("07373_addHandler.js");
-  _require("07373_addHandler.js").maybeInstrument("fetch", () => {
+  _addHandler.addHandler("fetch", arg0);
+  let obj = _addHandler;
+  _addHandler.maybeInstrument("fetch", () => {
     let flag = callback;
     if (callback === undefined) {
       flag = false;

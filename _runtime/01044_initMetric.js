@@ -1,3 +1,4 @@
+import { getNavigationEntry } from "01043_getNavigationEntry.js";
 // _runtime/01044_initMetric.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -7,7 +8,7 @@ arg5.initMetric = (name) => {
   if (arg1 === undefined) {
     num = -1;
   }
-  let obj = require("01043_getNavigationEntry.js") /* getNavigationEntry */;
+  let obj = getNavigationEntry /* getNavigationEntry */;
   const navigationEntry = obj.getNavigationEntry();
   let str = "navigate";
   let str2 = "navigate";

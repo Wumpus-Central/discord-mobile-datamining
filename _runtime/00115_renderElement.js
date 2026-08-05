@@ -1,14 +1,16 @@
+import { ReactFabric } from "00116_ReactFabric.js";
+import { getExtendedError } from "00289_getExtendedError.js";
 // _runtime/00115_renderElement.js
 import "noop";
 
 const require = arg1;
 
 export const renderElement = function renderElement(rootTag) {
-  let obj = require("00116_ReactFabric.js");
+  let obj = ReactFabric;
   obj = { onCaughtError: null, onUncaughtError: null, onRecoverableError: null };
-  obj[0] = require("00289_getExtendedError.js") /* getExtendedError */.onCaughtError;
-  obj[1] = require("00289_getExtendedError.js") /* getExtendedError */.onUncaughtError;
-  obj[2] = require("00289_getExtendedError.js") /* getExtendedError */.onRecoverableError;
+  obj[0] = getExtendedError /* getExtendedError */.onCaughtError;
+  obj[1] = getExtendedError /* getExtendedError */.onUncaughtError;
+  obj[2] = getExtendedError /* getExtendedError */.onRecoverableError;
   obj.render(rootTag.element, Number(rootTag.rootTag), null, true, obj);
 };
 export const dispatchCommand = require("ReactFabric").dispatchCommand;

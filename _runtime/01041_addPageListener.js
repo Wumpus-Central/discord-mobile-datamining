@@ -1,16 +1,17 @@
+import { WINDOW } from "01039_WINDOW.js";
 // _runtime/01041_addPageListener.js
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.addPageListener = function addPageListener(pagehide, onVisibilityUpdate, arg2) {
-  if (require("01039_WINDOW.js") /* WINDOW */.WINDOW.document) {
-    const WINDOW = require("01039_WINDOW.js") /* WINDOW */.WINDOW;
+  if (WINDOW /* WINDOW */.WINDOW.document) {
+    const WINDOW = WINDOW /* WINDOW */.WINDOW;
     const listener = WINDOW.addEventListener(pagehide, onVisibilityUpdate, arg2);
   }
 };
 arg5.removePageListener = function removePageListener(pagehide, closure_0, arg2) {
-  if (require("01039_WINDOW.js") /* WINDOW */.WINDOW.document) {
-    const WINDOW = require("01039_WINDOW.js") /* WINDOW */.WINDOW;
+  if (WINDOW /* WINDOW */.WINDOW.document) {
+    const WINDOW = WINDOW /* WINDOW */.WINDOW;
     const removed = WINDOW.removeEventListener(pagehide, closure_0, arg2);
   }
 };

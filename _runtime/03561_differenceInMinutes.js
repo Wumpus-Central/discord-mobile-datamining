@@ -1,3 +1,5 @@
+import { keys } from "03543_keys.js";
+import { getRoundingMethod } from "03558_getRoundingMethod.js";
 // _runtime/03561_differenceInMinutes.js
 import differenceInMilliseconds from "differenceInMilliseconds";
 import requiredArgs from "requiredArgs";
@@ -20,11 +22,11 @@ let c3 = tmp5;
 
 export default function differenceInMinutes(arg0, arg1, roundingMethod) {
   tmp5.default(2, arguments);
-  const result = tmp3.default(arg0, arg1) / require("03543_keys.js") /* keys */.millisecondsInMinute;
+  const result = tmp3.default(arg0, arg1) / keys /* keys */.millisecondsInMinute;
   roundingMethod = undefined;
   if (null != roundingMethod) {
     roundingMethod = roundingMethod.roundingMethod;
   }
-  return require("03558_getRoundingMethod.js") /* getRoundingMethod */.getRoundingMethod(roundingMethod)(result);
+  return getRoundingMethod /* getRoundingMethod */.getRoundingMethod(roundingMethod)(result);
 };
 export default exports.default;

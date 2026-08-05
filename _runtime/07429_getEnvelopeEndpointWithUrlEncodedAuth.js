@@ -1,3 +1,4 @@
+import { dsnFromString } from "07422_dsnFromString.js";
 // _runtime/07429_getEnvelopeEndpointWithUrlEncodedAuth.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -39,7 +40,7 @@ arg5.getEnvelopeEndpointWithUrlEncodedAuth = function getEnvelopeEndpointWithUrl
   return combined1;
 };
 arg5.getReportDialogEndpoint = function getReportDialogEndpoint(arg0, user) {
-  const url = require("07422_dsnFromString.js") /* dsnFromString */.makeDsn(arg0);
+  const url = dsnFromString /* dsnFromString */.makeDsn(arg0);
   if (url) {
     let str = "";
     if (url.protocol) {
@@ -119,6 +120,6 @@ arg5.getReportDialogEndpoint = function getReportDialogEndpoint(arg0, user) {
   } else {
     return "";
   }
-  const obj = require("07422_dsnFromString.js") /* dsnFromString */;
+  const obj = dsnFromString /* dsnFromString */;
   tmp2 = require;
 };

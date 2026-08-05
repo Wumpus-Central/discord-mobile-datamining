@@ -1,3 +1,6 @@
+import { BlobModule } from "13548_BlobModule.js";
+import { URLSearchParams } from "13561_URLSearchParams.js";
+import { 13547__ } from "metro/13547__.js";
 // _runtime/13545_setupURLPolyfill.js
 import get_ActivityIndicator from "get ActivityIndicator";
 
@@ -13,7 +16,7 @@ for (const key10020 in require("URLSearchParams")) {
 }
 
 export const setupURLPolyfill = function setupURLPolyfill() {
-  globalThis.REACT_NATIVE_URL_POLYFILL = "" + require("metro/13547__.js").name + "@" + require("metro/13547__.js").version;
-  globalThis.URL = require("13548_BlobModule.js") /* BlobModule */.URL;
-  globalThis.URLSearchParams = require("13561_URLSearchParams.js") /* URLSearchParams */.URLSearchParams;
+  globalThis.REACT_NATIVE_URL_POLYFILL = "" + 13547__.name + "@" + 13547__.version;
+  globalThis.URL = BlobModule /* BlobModule */.URL;
+  globalThis.URLSearchParams = URLSearchParams /* URLSearchParams */.URLSearchParams;
 };

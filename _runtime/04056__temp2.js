@@ -1,3 +1,4 @@
+import { c } from "04036_c.js";
 // _runtime/04056__temp2.js
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -25,7 +26,7 @@ export const useRiveList = function useRiveList(arg0, arg1) {
   let tmp5;
   const _require = arg0;
   const dependencyMap = arg1;
-  let obj = _require("04036_c.js");
+  let obj = _c;
   const cResult = obj.c(39);
   [tmp5, _slicedToArray] = callback(disposableMemo(null), 2);
   let tmp = _require;

@@ -1,3 +1,4 @@
+import { getDataView } from "04897_getDataView.js";
 // _runtime/04911_getDataView.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -7,8 +8,8 @@ arg5.default = {
   isGifFile(dataView) {
     let hasItem = dataView;
     if (hasItem) {
-      hasItem = closure_3.includes(require("04897_getDataView.js") /* getDataView */.getStringFromDataView(dataView, 0, c2));
-      const obj = require("04897_getDataView.js") /* getDataView */;
+      hasItem = closure_3.includes(getDataView /* getDataView */.getStringFromDataView(dataView, 0, c2));
+      const obj = getDataView /* getDataView */;
     }
     return hasItem;
   },

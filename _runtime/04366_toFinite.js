@@ -1,8 +1,9 @@
+import { toNumber } from "00637_toNumber.js";
 // _runtime/04366_toFinite.js
 
 export default function toFinite(arg0) {
   if (arg0) {
-    const tmp3 = require("00637_toNumber.js") /* toNumber */(arg0);
+    const tmp3 = toNumber /* toNumber */(arg0);
     if (tmp3 !== Infinity) {
       if (tmp3 !== -Infinity) {
         let num4 = 0;

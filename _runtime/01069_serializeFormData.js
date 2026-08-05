@@ -1,3 +1,5 @@
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
+import { __SENTRY_DEBUG__ } from "metro/01035___SENTRY_DEBUG__.js";
 // _runtime/01069_serializeFormData.js
 import _slicedToArray from "_slicedToArray";
 
@@ -12,7 +14,7 @@ export const ORIGINAL_REQ_BODY = forResult;
 export const getBodyString = function getBodyString(fetchRequestArgBody, closure_133) {
   let debug = closure_133;
   if (closure_133 === undefined) {
-    debug = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.debug;
+    debug = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.debug;
   }
   try {
     if (typeof fetchRequestArgBody === "string") {
@@ -29,7 +31,7 @@ export const getBodyString = function getBodyString(fetchRequestArgBody, closure
           const items2 = [serializeFormData(fetchRequestArgBody)];
           return items2;
         } else if (fetchRequestArgBody) {
-          if (require("metro/01035___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+          if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
             debug.log("Skipping network body because of body type", fetchRequestArgBody);
           }
           const items3 = [undefined, "UNPARSEABLE_BODY_TYPE"];
@@ -41,7 +43,7 @@ export const getBodyString = function getBodyString(fetchRequestArgBody, closure
       }
     }
   } catch (tmp9) {
-    if (require("metro/01035___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+    if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
       obj.error(tmp9, "Failed to serialize body", tmp2);
     }
     const items5 = [tmp, "BODY_PARSE_ERROR"];
@@ -91,8 +93,8 @@ export const parseXhrResponseHeaders = function parseXhrResponseHeaders(xhr) {
     }
     return reduced;
   } catch (tmp5) {
-    if (require("metro/01035___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
-      const debug = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.debug;
+    if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+      const debug = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.debug;
       debug.error(tmp5, "Failed to get xhr response headers", tmp2);
     }
     return {};

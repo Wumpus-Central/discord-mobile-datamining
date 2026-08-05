@@ -1,3 +1,4 @@
+import { isInstanceOf } from "00827_isInstanceOf.js";
 // _runtime/00835_baggageHeaderToDynamicSamplingContext.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -87,7 +88,7 @@ arg5.baggageHeaderToDynamicSamplingContext = function baggageHeaderToDynamicSamp
         return arg0;
       }, {});
     }
-    obj = require("00827_isInstanceOf.js") /* isInstanceOf */;
+    obj = isInstanceOf /* isInstanceOf */;
   }
   if (undefined) {
     const _Object = Object;

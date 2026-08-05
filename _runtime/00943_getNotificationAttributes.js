@@ -1,3 +1,6 @@
+import { getHttpSpanDetailsFromUrlObject } from "00900_getHttpSpanDetailsFromUrlObject.js";
+import { extractTargetInfo } from "00942_extractTargetInfo.js";
+import { 00940__ } from "metro/00940__.js";
 // _runtime/00943_getNotificationAttributes.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -27,7 +30,7 @@ function getNotificationAttributes(arg0, requestId) {
     }
     if (level) {
       const _String5 = String;
-      obj[require("metro/00940__.js").MCP_LOGGING_LEVEL_ATTRIBUTE] = String(requestId.level);
+      obj[00940__.MCP_LOGGING_LEVEL_ATTRIBUTE] = String(requestId.level);
     }
     let logger;
     if (requestId != null) {
@@ -35,14 +38,14 @@ function getNotificationAttributes(arg0, requestId) {
     }
     if (logger) {
       const _String6 = String;
-      obj[require("metro/00940__.js").MCP_LOGGING_LOGGER_ATTRIBUTE] = String(requestId.logger);
+      obj[00940__.MCP_LOGGING_LOGGER_ATTRIBUTE] = String(requestId.logger);
     }
     let data;
     if (requestId != null) {
       data = requestId.data;
     }
     if (undefined !== data) {
-      obj[require("metro/00940__.js").MCP_LOGGING_DATA_TYPE_ATTRIBUTE] = typeof requestId.data;
+      obj[00940__.MCP_LOGGING_DATA_TYPE_ATTRIBUTE] = typeof requestId.data;
       if (arg2) {
         data = requestId.data;
         let json = data;
@@ -99,9 +102,9 @@ function getNotificationAttributes(arg0, requestId) {
     }
     if (uri) {
       const _String = String;
-      obj[require("metro/00940__.js").MCP_RESOURCE_URI_ATTRIBUTE] = String(requestId.uri);
+      obj[00940__.MCP_RESOURCE_URI_ATTRIBUTE] = String(requestId.uri);
       const _String2 = String;
-      const result = require("00900_getHttpSpanDetailsFromUrlObject.js") /* getHttpSpanDetailsFromUrlObject */.parseStringToURLObject(String(requestId.uri));
+      const result = getHttpSpanDetailsFromUrlObject /* getHttpSpanDetailsFromUrlObject */.parseStringToURLObject(String(requestId.uri));
       let tmp7 = result;
       if (result) {
         tmp7 = !tmp3(900).isURLObjectRelative(result);
@@ -111,7 +114,7 @@ function getNotificationAttributes(arg0, requestId) {
         obj["mcp.resource.protocol"] = result.protocol.replace(":", "");
         const str2 = result.protocol;
       }
-      const obj2 = require("00900_getHttpSpanDetailsFromUrlObject.js") /* getHttpSpanDetailsFromUrlObject */;
+      const obj2 = getHttpSpanDetailsFromUrlObject /* getHttpSpanDetailsFromUrlObject */;
       tmp3 = require;
     }
   } else if ("notifications/initialized" === arg0) {
@@ -124,7 +127,7 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.buildTypeSpecificAttributes = function buildTypeSpecificAttributes(request, message, params, recordInputs) {
   let obj = params;
   if ("request" === request) {
-    let obj2 = require("00942_extractTargetInfo.js") /* extractTargetInfo */;
+    let obj2 = extractTargetInfo /* extractTargetInfo */;
     if (!obj) {
       obj = {};
     }

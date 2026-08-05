@@ -1,3 +1,4 @@
+import { captureError } from "00947_captureError.js";
 // _runtime/00948_createErrorCapturingHandler.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -40,26 +41,26 @@ function captureHandlerError(name, arg1, tool_name) {
               if (!message2.includes("timed out")) {
                 const message3 = name.message;
                 if (!message3.includes("timeout")) {
-                  require("00947_captureError.js") /* captureError */.captureError(name, "tool_execution", obj);
-                  const obj3 = require("00947_captureError.js") /* captureError */;
+                  captureError /* captureError */.captureError(name, "tool_execution", obj);
+                  const obj3 = captureError /* captureError */;
                 }
               }
             }
-            require("00947_captureError.js") /* captureError */.captureError(name, "timeout", obj);
-            const obj4 = require("00947_captureError.js") /* captureError */;
+            captureError /* captureError */.captureError(name, "timeout", obj);
+            const obj4 = captureError /* captureError */;
           }
         }
       }
-      require("00947_captureError.js") /* captureError */.captureError(name, "validation", obj);
-      const obj5 = require("00947_captureError.js") /* captureError */;
+      captureError /* captureError */.captureError(name, "validation", obj);
+      const obj5 = captureError /* captureError */;
     } else if ("resource" === arg1) {
       obj.resource_uri = tool_name;
-      require("00947_captureError.js") /* captureError */.captureError(name, "resource_execution", obj);
-      const obj2 = require("00947_captureError.js") /* captureError */;
+      captureError /* captureError */.captureError(name, "resource_execution", obj);
+      const obj2 = captureError /* captureError */;
     } else if ("prompt" === arg1) {
       obj.prompt_name = tool_name;
-      require("00947_captureError.js") /* captureError */.captureError(name, "prompt_execution", obj);
-      const obj6 = require("00947_captureError.js") /* captureError */;
+      captureError /* captureError */.captureError(name, "prompt_execution", obj);
+      const obj6 = captureError /* captureError */;
     }
   } catch (err) {
   }

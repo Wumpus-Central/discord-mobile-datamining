@@ -1,3 +1,4 @@
+import { getNative } from "00736_getNative.js";
 // _runtime/00746_hashSet.js
 
 export default function hashSet(arg0, arg1) {
@@ -10,7 +11,7 @@ export default function hashSet(arg0, arg1) {
     num = 0;
   }
   self.size = size + num;
-  if (!require("00736_getNative.js") /* getNative */) {
+  if (!getNative /* getNative */) {
     let str = arg1;
   } else {
     str = "__lodash_hash_undefined__";

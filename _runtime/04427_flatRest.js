@@ -1,6 +1,9 @@
+import { shortOut } from "04428_shortOut.js";
+import { overRest } from "04432_overRest.js";
+import { flatten } from "04434_flatten.js";
 // _runtime/04427_flatRest.js
 
 export default function flatRest(arg0) {
-  const tmp = require("04428_shortOut.js") /* shortOut */;
-  return tmp(require("04432_overRest.js") /* overRest */(arg0, undefined, require("04434_flatten.js") /* flatten */), "" + arg0);
+  const tmp = shortOut /* shortOut */;
+  return tmp(overRest /* overRest */(arg0, undefined, flatten /* flatten */), "" + arg0);
 };

@@ -1,3 +1,4 @@
+import { addListenersToPropsValue } from "00388_addListenersToPropsValue.js";
 // _runtime/00387_createAnimatedComponent.js
 import _slicedToArray from "_slicedToArray";
 import "noop";
@@ -7,7 +8,7 @@ import { jsx } from "jsxProd";
 
 export default function createAnimatedComponent(displayName) {
   const importDefault = displayName;
-  const dependencyMap = require("00388_addListenersToPropsValue.js")(null);
+  const dependencyMap = addListenersToPropsValue(null);
   class AnimatedComponent {
     constructor(arg0) {
       style = undefined;
@@ -37,7 +38,7 @@ export default function createAnimatedComponent(displayName) {
 };
 export const unstable_createAnimatedComponentWithAllowlist = function unstable_createAnimatedComponentWithAllowlist(displayName) {
   const importDefault = displayName;
-  const dependencyMap = require("00388_addListenersToPropsValue.js")(arg1);
+  const dependencyMap = addListenersToPropsValue(arg1);
   class AnimatedComponent {
     constructor(arg0) {
       style = undefined;

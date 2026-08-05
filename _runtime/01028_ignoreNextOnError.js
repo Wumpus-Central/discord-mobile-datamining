@@ -1,3 +1,4 @@
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 // _runtime/01028_ignoreNextOnError.js
 function ignoreNextOnError() {
   closure_2 = closure_2 + 1;
@@ -97,12 +98,12 @@ function wrap(__sentry_wrapped__) {
 
 export const WINDOW = require("registerSpanErrorInstrumentation").GLOBAL_OBJ;
 export const getHttpRequestData = function getHttpRequestData() {
-  let obj = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
+  let obj = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
   const locationHref = obj.getLocationHref();
-  const referrer = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.GLOBAL_OBJ.document || {}.referrer;
+  const referrer = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.GLOBAL_OBJ.document || {}.referrer;
   const tmp = require;
-  const tmp4 = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.GLOBAL_OBJ.document || {};
-  const userAgent = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.GLOBAL_OBJ.navigator || {}.userAgent;
+  const tmp4 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.GLOBAL_OBJ.document || {};
+  const userAgent = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.GLOBAL_OBJ.navigator || {}.userAgent;
   obj = { url: locationHref, headers: null };
   let tmp6 = referrer;
   if (referrer) {

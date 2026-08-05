@@ -1,3 +1,7 @@
+import { decodeComponents } from "01521_decodeComponents.js";
+import { 01520__ } from "metro/01520__.js";
+import { 01522__ } from "metro/01522__.js";
+import { 01523__ } from "metro/01523__.js";
 // _runtime/01519_validateArrayFormatSeparator.js
 import _slicedToArray from "_slicedToArray";
 
@@ -8,7 +12,7 @@ function validateArrayFormatSeparator(arrayFormatSeparator) {
 function decode(arg0, decode) {
   let tmp = arg0;
   if (decode.decode) {
-    tmp = require("01521_decodeComponents.js") /* decodeComponents */(arg0);
+    tmp = decodeComponents /* decodeComponents */(arg0);
   }
   return tmp;
 }
@@ -580,9 +584,9 @@ export const parseUrl = (arr) => {
   let str;
   let tmp5;
   const merged = Object.assign({ decode: true }, arg1);
-  [str, tmp5] = _slicedToArray(require("metro/01522__.js")(arr, "#"), 2);
+  [str, tmp5] = _slicedToArray(01522__(arr, "#"), 2);
   const tmp2 = require;
-  const tmp4 = _slicedToArray(require("metro/01522__.js")(arr, "#"), 2);
+  const tmp4 = _slicedToArray(01522__(arr, "#"), 2);
   let obj = { url: str.split("?")[0] || "", query: null };
   const index = arr.indexOf("#");
   let substr = arr;
@@ -640,7 +644,7 @@ export const stringifyUrl = (url) => {
       if (!merged.encode) {
         let tmp8 = fragmentIdentifier;
       } else if (merged.strict) {
-        let encodeURIComponentResult = require("metro/01520__.js")(fragmentIdentifier);
+        let encodeURIComponentResult = 01520__(fragmentIdentifier);
       } else {
         const _encodeURIComponent = encodeURIComponent;
         encodeURIComponentResult = encodeURIComponent(fragmentIdentifier);
@@ -659,7 +663,7 @@ export const pick = (arg0, arg1, arg2) => {
   obj[closure_4] = false;
   const merged = Object.assign(obj, arg2);
   const parseUrlResult = exports.parseUrl(arg0, merged);
-  obj = { url: parseUrlResult.url, query: require("metro/01523__.js")(query, arg1), fragmentIdentifier };
+  obj = { url: parseUrlResult.url, query: 01523__(query, arg1), fragmentIdentifier };
   ({ query, fragmentIdentifier } = parseUrlResult);
   return exports.stringifyUrl(obj, merged);
 };

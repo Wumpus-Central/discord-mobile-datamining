@@ -1,3 +1,4 @@
+import { Type } from "04528_Type.js";
 // _runtime/04596_Type.js
 
 export default function Type(arg0) {
@@ -5,7 +6,7 @@ export default function Type(arg0) {
   if (typeof arg0 !== "symbol") {
     let str2 = "BigInt";
     if (typeof arg0 !== "bigint") {
-      str2 = require("04528_Type.js") /* Type */(arg0);
+      str2 = Type /* Type */(arg0);
     }
     str = str2;
   }

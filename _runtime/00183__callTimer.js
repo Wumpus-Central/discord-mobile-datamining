@@ -1,3 +1,6 @@
+import { toError } from "00184_toError.js";
+import { Timing } from "00185_Timing.js";
+import { 00038__ } from "metro/00038__.js";
 // _runtime/00183__callTimer.js
 let require = arg1;
 function _callTimer(arg0, arg1) {
@@ -37,8 +40,8 @@ function _callTimer(arg0, arg1) {
           }
           tmp23();
         } catch (tmp15) {
-          arr4.push(require("00184_toError.js") /* toError */.default(tmp15));
-          const obj2 = require("00184_toError.js") /* toError */;
+          arr4.push(toError /* toError */.default(tmp15));
+          const obj2 = toError /* toError */;
         }
       }
     }
@@ -79,9 +82,9 @@ let obj = {
       num = 0;
     }
     const timestamp = Date.now();
-    _require("metro/00038__.js")(require("00185_Timing.js"), "NativeTiming is available");
-    const tmp4 = _require("metro/00038__.js");
-    const timer = require("00185_Timing.js").createTimer(tmp, num, timestamp, false);
+    _00038__(Timing, "NativeTiming is available");
+    const tmp4 = _00038__;
+    const timer = Timing.createTimer(tmp, num, timestamp, false);
     return +closure_12;
   },
   setInterval(arg0, arg1) {
@@ -100,9 +103,9 @@ let obj = {
       num = 0;
     }
     const timestamp = Date.now();
-    _require("metro/00038__.js")(require("00185_Timing.js"), "NativeTiming is available");
-    const tmp4 = _require("metro/00038__.js");
-    const timer = require("00185_Timing.js").createTimer(tmp, num, timestamp, true);
+    _00038__(Timing, "NativeTiming is available");
+    const tmp4 = _00038__;
+    const timer = Timing.createTimer(tmp, num, timestamp, true);
     return +closure_12;
   },
   queueReactNativeMicrotask(arg0) {
@@ -128,19 +131,19 @@ let obj = {
     closure_5[length] = scrollAnimation;
     closure_6[length] = "requestAnimationFrame";
     const timestamp = Date.now();
-    require("metro/00038__.js")(require("00185_Timing.js"), "NativeTiming is available");
-    const tmp4 = require("metro/00038__.js");
-    const timer = require("00185_Timing.js").createTimer(tmp, 1, timestamp, false);
+    00038__(Timing, "NativeTiming is available");
+    const tmp4 = 00038__;
+    const timer = Timing.createTimer(tmp, 1, timestamp, false);
     return +closure_12;
   },
   requestIdleCallback(arg0, timeout) {
     let fn = arg0;
     let closure_0 = arg0;
     if (0 === arr3.length) {
-      require("metro/00038__.js")(require("00185_Timing.js"), "NativeTiming is available");
-      let obj = require("00185_Timing.js");
+      00038__(Timing, "NativeTiming is available");
+      let obj = Timing;
       obj.setSendIdleEvents(true);
-      const tmp3 = require("metro/00038__.js");
+      const tmp3 = 00038__;
     }
     if (timeout) {
       timeout = timeout.timeout;
@@ -195,10 +198,10 @@ let obj = {
           tmp3 = "requestIdleCallback" !== tmp25;
         }
         if (tmp3) {
-          require("metro/00038__.js")(require("00185_Timing.js"), "NativeTiming is available");
-          const obj = require("00185_Timing.js");
+          00038__(Timing, "NativeTiming is available");
+          const obj = Timing;
           obj.deleteTimer(closure_4);
-          const tmp6 = require("metro/00038__.js");
+          const tmp6 = 00038__;
         }
       }
       tmp22 = closure_7;
@@ -212,10 +215,10 @@ let obj = {
       delete tmp[tmp2];
     }
     if (0 === arr3.length) {
-      require("metro/00038__.js")(require("00185_Timing.js"), "NativeTiming is available");
-      const tmp18 = require("metro/00038__.js");
-      require("00185_Timing.js").setSendIdleEvents(false);
-      const obj2 = require("00185_Timing.js");
+      00038__(Timing, "NativeTiming is available");
+      const tmp18 = 00038__;
+      Timing.setSendIdleEvents(false);
+      const obj2 = Timing;
     }
   },
   clearTimeout(arg0) {
@@ -231,10 +234,10 @@ let obj = {
           tmp = "requestIdleCallback" !== tmp11;
         }
         if (tmp) {
-          require("metro/00038__.js")(require("00185_Timing.js"), "NativeTiming is available");
-          const tmp4 = require("metro/00038__.js");
-          require("00185_Timing.js").deleteTimer(arg0);
-          const obj = require("00185_Timing.js");
+          00038__(Timing, "NativeTiming is available");
+          const tmp4 = 00038__;
+          Timing.deleteTimer(arg0);
+          const obj = Timing;
         }
       }
       tmp8 = closure_7;
@@ -253,10 +256,10 @@ let obj = {
           tmp = "requestIdleCallback" !== tmp11;
         }
         if (tmp) {
-          require("metro/00038__.js")(require("00185_Timing.js"), "NativeTiming is available");
-          const tmp4 = require("metro/00038__.js");
-          require("00185_Timing.js").deleteTimer(closure_0);
-          const obj = require("00185_Timing.js");
+          00038__(Timing, "NativeTiming is available");
+          const tmp4 = 00038__;
+          Timing.deleteTimer(closure_0);
+          const obj = Timing;
         }
       }
       tmp8 = closure_7;
@@ -275,10 +278,10 @@ let obj = {
           tmp = "requestIdleCallback" !== tmp14;
         }
         if (tmp) {
-          require("metro/00038__.js")(require("00185_Timing.js"), "NativeTiming is available");
-          const tmp4 = require("metro/00038__.js");
-          require("00185_Timing.js").deleteTimer(arg0);
-          const obj = require("00185_Timing.js");
+          00038__(Timing, "NativeTiming is available");
+          const tmp4 = 00038__;
+          Timing.deleteTimer(arg0);
+          const obj = Timing;
         }
       }
       tmp11 = closure_7;
@@ -301,10 +304,10 @@ let obj = {
           tmp = "requestIdleCallback" !== tmp11;
         }
         if (tmp) {
-          require("metro/00038__.js")(require("00185_Timing.js"), "NativeTiming is available");
-          const tmp4 = require("metro/00038__.js");
-          require("00185_Timing.js").deleteTimer(_animationFrame);
-          const obj = require("00185_Timing.js");
+          00038__(Timing, "NativeTiming is available");
+          const tmp4 = 00038__;
+          Timing.deleteTimer(_animationFrame);
+          const obj = Timing;
         }
       }
       tmp8 = closure_7;
@@ -312,7 +315,7 @@ let obj = {
   },
   callTimers(arg0) {
     let length;
-    require("metro/00038__.js")(0 !== arg0.length, "Cannot call `callTimers` with an empty list of IDs.");
+    00038__(0 !== arg0.length, "Cannot call `callTimers` with an empty list of IDs.");
     arr4.length = 0;
     let num = 0;
     if (0 < arg0.length) {
@@ -361,10 +364,10 @@ let obj = {
         }
       }
       if (0 === arr3.length) {
-        require("metro/00038__.js")(require("00185_Timing.js"), "NativeTiming is available");
-        const tmp6 = require("metro/00038__.js");
-        require("00185_Timing.js").setSendIdleEvents(false);
-        const obj = require("00185_Timing.js");
+        00038__(Timing, "NativeTiming is available");
+        const tmp6 = 00038__;
+        Timing.setSendIdleEvents(false);
+        const obj = Timing;
       }
       const item = arr4.forEach((arg0) => {
         let closure_0 = arg0;

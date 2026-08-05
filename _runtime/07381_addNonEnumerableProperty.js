@@ -1,3 +1,7 @@
+import { isInstanceOf } from "07382_isInstanceOf.js";
+import { _htmlElementAsString } from "07383__htmlElementAsString.js";
+import { isMatchingPattern } from "07384_isMatchingPattern.js";
+import { __SENTRY_DEBUG__ } from "metro/07374___SENTRY_DEBUG__.js";
 // _runtime/07381_addNonEnumerableProperty.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -8,7 +12,7 @@ function addNonEnumerableProperty(arg0, arg1, arg2) {
     obj[0] = arg2;
     Object.defineProperty(arg0, arg1, obj);
   } catch (err) {
-    if (require("metro/07374___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+    if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
       const logger = tmp6(7375).logger;
       const _HermesInternal = HermesInternal;
       logger.log("Failed to add non-enumerable property \"" + tmp2 + "\" to object", tmp);
@@ -29,7 +33,7 @@ function markFunctionWrapped(arg0, arg1) {
   }
 }
 function convertToPlainObject(obj) {
-  obj = require("07382_isInstanceOf.js") /* isInstanceOf */;
+  obj = isInstanceOf /* isInstanceOf */;
   if (obj.isError(obj)) {
     obj = { message: null, name: null, stack: null };
     ({ message: obj6[0], name: obj6[1], stack: obj6[2] } = obj);
@@ -106,8 +110,8 @@ function convertToPlainObject(obj) {
 function serializeEventTarget(arg0) {
   try {
     if (obj.isElement(arg0)) {
-      let htmlTreeAsStringResult = require("07383__htmlElementAsString.js") /* _htmlElementAsString */.htmlTreeAsString(arg0);
-      const tmp2Result = require("07383__htmlElementAsString.js") /* _htmlElementAsString */;
+      let htmlTreeAsStringResult = _htmlElementAsString /* _htmlElementAsString */.htmlTreeAsString(arg0);
+      const tmp2Result = _htmlElementAsString /* _htmlElementAsString */;
     } else {
       const _Object = Object;
       const call = toString.call;
@@ -194,7 +198,7 @@ arg5.extractExceptionKeysForMessage = function extractExceptionKeysForMessage(ar
   const first = keys[0];
   if (first) {
     if (first.length >= num) {
-      return require("07384_isMatchingPattern.js") /* isMatchingPattern */.truncate(first, num);
+      return isMatchingPattern /* isMatchingPattern */.truncate(first, num);
     } else {
       let length = keys.length;
       if (length > 0) {
@@ -205,8 +209,8 @@ arg5.extractExceptionKeysForMessage = function extractExceptionKeysForMessage(ar
         }
         let truncateResult = joined;
         if (length !== keys.length) {
-          truncateResult = require("07384_isMatchingPattern.js") /* isMatchingPattern */.truncate(joined, num);
-          const obj2 = require("07384_isMatchingPattern.js") /* isMatchingPattern */;
+          truncateResult = isMatchingPattern /* isMatchingPattern */.truncate(joined, num);
+          const obj2 = isMatchingPattern /* isMatchingPattern */;
         }
         return truncateResult;
       }
@@ -225,7 +229,7 @@ arg5.fill = function fill(arg0, arg1, arg2) {
     try {
       arg0[arg1] = tmp6;
     } catch (err) {
-      if (require("metro/07374___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+      if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
         const logger = tmp7(7375).logger;
         const _HermesInternal = HermesInternal;
         logger.log("Failed to replace method \"" + tmp3 + "\" in object", tmp2);
@@ -255,7 +259,7 @@ arg5.objectify = function objectify(arg0) {
       if (obj.isPrimitive(arg0) === true) {
         string = new arg0.constructor(arg0);
       }
-      obj = require("07382_isInstanceOf.js") /* isInstanceOf */;
+      obj = isInstanceOf /* isInstanceOf */;
     }
   }
   return string;

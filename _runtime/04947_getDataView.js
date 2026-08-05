@@ -1,3 +1,4 @@
+import { getDataView } from "04897_getDataView.js";
 // _runtime/04947_getDataView.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -5,7 +6,7 @@ arg5.default = {
   read(byteLength) {
     let tmp;
     if (6 <= byteLength.byteLength) {
-      let obj = require("04897_getDataView.js") /* getDataView */;
+      let obj = getDataView /* getDataView */;
       const stringFromDataView = obj.getStringFromDataView(byteLength, 3, 3);
       obj = { value: null, description: null };
       obj[0] = stringFromDataView;

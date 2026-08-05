@@ -1,3 +1,4 @@
+import { getEasingByName } from "01665_getEasingByName.js";
 // _runtime/01664_convertAnimationObjectToKeyframes.js
 import _slicedToArray from "_slicedToArray";
 
@@ -89,7 +90,7 @@ export const convertAnimationObjectToKeyframes = function convertAnimationObject
         let tmp38 = _require;
         let tmp39 = dependencyMap;
         let tmp40 = arr;
-        if (arr in _require("01665_getEasingByName.js").WebEasings) {
+        if (arr in _getEasingByName.WebEasings) {
           str = arr;
         } else if (arr.name in tmp38(1665).WebEasings) {
           let tmp19 = arr;

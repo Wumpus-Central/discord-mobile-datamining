@@ -1,3 +1,4 @@
+import { percentTo255 } from "08456_percentTo255.js";
 // _runtime/08455_extractBrush.js
 import { processColor } from "get ActivityIndicator";
 
@@ -25,7 +26,7 @@ export default function extractBrush(str) {
       obj[1] = match[1];
       return obj;
     } else {
-      obj = require("08456_percentTo255.js") /* percentTo255 */;
+      obj = percentTo255 /* percentTo255 */;
       const tmp4 = processColor(obj.convertPercentageColor(str));
       if (typeof tmp4 === "number") {
         obj = { type: 0, payload: null };

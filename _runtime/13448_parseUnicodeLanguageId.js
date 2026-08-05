@@ -1,3 +1,4 @@
+import { e } from "01281_e.js";
 // _runtime/13448_parseUnicodeLanguageId.js
 const require = arg1;
 const exports = arg5;
@@ -142,7 +143,7 @@ arg5.parseUnicodeLanguageId = parseUnicodeLanguageId;
 arg5.parseUnicodeLocaleId = function parseUnicodeLocaleId(locale) {
   const parts = locale.split(exports.SEPARATOR);
   const lang = parseUnicodeLanguageId(parts);
-  let obj = require("01281_e.js") /* e */;
+  let obj = e /* e */;
   const items = [];
   if (parts.length) {
     obj = {};

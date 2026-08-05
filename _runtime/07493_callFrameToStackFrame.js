@@ -1,3 +1,5 @@
+import { createStackParser } from "07378_createStackParser.js";
+import { addNonEnumerableProperty } from "07381_addNonEnumerableProperty.js";
 // _runtime/07493_callFrameToStackFrame.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -14,9 +16,9 @@ arg5.callFrameToStackFrame = function callFrameToStackFrame(location, str) {
   if (location.location.lineNumber) {
     sum1 = location.location.lineNumber + 1;
   }
-  let obj = require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */;
+  let obj = addNonEnumerableProperty /* addNonEnumerableProperty */;
   obj = { filename: replaced, module: arg2(replaced), function: null, colno: null, lineno: null, in_app: null };
-  obj[2] = location.functionName || require("07378_createStackParser.js") /* createStackParser */.UNKNOWN_FUNCTION;
+  obj[2] = location.functionName || createStackParser /* createStackParser */.UNKNOWN_FUNCTION;
   obj[3] = sum;
   obj[4] = sum1;
   let filenameIsInAppResult;

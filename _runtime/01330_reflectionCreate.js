@@ -1,10 +1,12 @@
+import { reflectionScalarDefault } from "01328_reflectionScalarDefault.js";
+import { 01318__ } from "metro/01318__.js";
 // _runtime/01330_reflectionCreate.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.reflectionCreate = function reflectionCreate(value) {
   let obj = {};
   obj = { enumerable: false, value };
-  Object.defineProperty(obj, require("metro/01318__.js").MESSAGE_TYPE, obj);
+  Object.defineProperty(obj, 01318__.MESSAGE_TYPE, obj);
   const iter = value.fields[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
@@ -25,7 +27,7 @@ arg5.reflectionCreate = function reflectionCreate(value) {
           let tmp9 = localName;
           let tmp10 = require;
           let tmp11 = dependencyMap;
-          let obj3 = require("01328_reflectionScalarDefault.js") /* reflectionScalarDefault */;
+          let obj3 = reflectionScalarDefault /* reflectionScalarDefault */;
           let tmp12 = nextResult;
           obj[localName] = obj3.reflectionScalarDefault(tmp3.T, tmp3.L);
         } else if ("enum" === kind) {

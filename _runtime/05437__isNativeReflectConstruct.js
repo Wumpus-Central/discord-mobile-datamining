@@ -1,3 +1,4 @@
+import { _isNativeReflectConstruct } from "05435__isNativeReflectConstruct.js";
 // _runtime/05437__isNativeReflectConstruct.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _classCallCheck from "_classCallCheck";
@@ -108,7 +109,7 @@ let obj = {
       children = tmp2(closure_11, {});
     }
     obj.children = children;
-    return jsx(require("05435__isNativeReflectConstruct.js"), {});
+    return jsx(_isNativeReflectConstruct, {});
   }
 };
 let items = [obj];

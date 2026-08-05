@@ -1,3 +1,5 @@
+import { usePortal } from "04158_usePortal.js";
+import { usePortalState } from "04162_usePortalState.js";
 // _runtime/04161_PortalHost.js
 import noop from "noop";
 import "noop";
@@ -13,9 +15,9 @@ const memoResult = noop.memo((name) => {
   name = name.name;
   let _require;
   let dependencyMap;
-  let obj = _require("04162_usePortalState.js");
+  let obj = _usePortalState;
   const portalState = obj.usePortalState(name);
-  const portal = _require("04158_usePortal.js").usePortal(name);
+  const portal = _usePortal.usePortal(name);
   ({ registerHost: c0, deregisterHost: c1 } = portal);
   useEffect(() => {
     _undefined();

@@ -1,3 +1,5 @@
+import { getMultiInternalSlots } from "13386_getMultiInternalSlots.js";
+import { TEN } from "13388_TEN.js";
 // _runtime/13402___exportStarResult21.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -6,7 +8,7 @@ arg5.FormatNumericToString = function FormatNumericToString(roundingType, timesR
   let roundedNumber;
   if (timesResult.isZero()) {
     if (timesResult.isNegative()) {
-      let ZERO = require("13388_TEN.js") /* TEN */.ZERO;
+      let ZERO = TEN /* TEN */.ZERO;
       let str2 = "negative";
       let tmp5Result = dependencyMap;
       let tmp5 = require;
@@ -63,7 +65,7 @@ arg5.FormatNumericToString = function FormatNumericToString(roundingType, timesR
       NEGATIVE_ZERO = roundedNumber.negated();
     }
   }
-  require("13386_getMultiInternalSlots.js") /* getMultiInternalSlots */.invariant(timesResult.isFinite(), "NumberFormatDigitInternalSlots value is not finite");
+  getMultiInternalSlots /* getMultiInternalSlots */.invariant(timesResult.isFinite(), "NumberFormatDigitInternalSlots value is not finite");
   let str = "positive";
   if (timesResult.lessThan(0)) {
     str = "negative";

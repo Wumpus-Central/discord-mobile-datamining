@@ -1,3 +1,4 @@
+import { 13422__ } from "metro/13422__.js";
 // _runtime/13421_isMatched.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -113,7 +114,7 @@ function findMatchingDistance(arg0, arg1) {
   obj = { language: maximizeResult1.language, script: tmp5, region: tmp6 };
   let tmp7 = obj1;
   if (!obj1) {
-    let first = require("metro/13422__.js").data.supplemental.languageMatching["written-new"][0];
+    let first = 13422__.data.supplemental.languageMatching["written-new"][0];
     let paradigmLocales;
     if (null !== first) {
       if (undefined !== first) {

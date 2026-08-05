@@ -1,3 +1,4 @@
+import { getDataView } from "04897_getDataView.js";
 // _runtime/04949_getDataView.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -29,10 +30,10 @@ arg5.default = {
       const sum = arg2 + Compression.JPEGInterchangeFormat.value;
       buffer = buffer.buffer;
       Compression.image = buffer.slice(sum, sum + Compression.JPEGInterchangeFormatLength.value);
-      require("04897_getDataView.js") /* getDataView */.deferInit(Compression, "base64", function() {
+      getDataView /* getDataView */.deferInit(Compression, "base64", function() {
         return callback(table[0]).getBase64Image(this.image);
       });
-      const obj = require("04897_getDataView.js") /* getDataView */;
+      const obj = getDataView /* getDataView */;
     }
     return Compression;
   }

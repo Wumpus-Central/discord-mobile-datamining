@@ -1,3 +1,4 @@
+import { _isNativeReflectConstruct } from "../00143__isNativeReflectConstruct.js";
 // _runtime/metro/00441__.js
 import DEFAULT_INITIAL_NUM_TO_RENDER from "DEFAULT_INITIAL_NUM_TO_RENDER";
 
@@ -10,7 +11,7 @@ obj = {
     let thresholdRect;
     ({ target, targetRect, thresholdRect } = arg0);
     let importDefault;
-    if (target instanceof require("../00143__isNativeReflectConstruct.js")) {
+    if (target instanceof _isNativeReflectConstruct) {
       const _Math = Math;
       const _Math2 = Math;
       const bound = Math.min(targetRect.y + targetRect.height, thresholdRect.y + thresholdRect.height);

@@ -1,8 +1,11 @@
+import { instrumentError } from "07372_instrumentError.js";
+import { instrumentUnhandledRejection } from "07379_instrumentUnhandledRejection.js";
+import { spanTimeInputToSeconds } from "07380_spanTimeInputToSeconds.js";
 // _runtime/07371_errorCallback.js
 const require = arg1;
 const dependencyMap = arg6;
 function errorCallback() {
-  let obj = require("07380_spanTimeInputToSeconds.js") /* spanTimeInputToSeconds */;
+  let obj = spanTimeInputToSeconds /* spanTimeInputToSeconds */;
   const activeSpan = obj.getActiveSpan();
   let rootSpan = activeSpan;
   if (activeSpan) {
@@ -25,9 +28,9 @@ errorCallback.tag = "sentry_tracingErrorCallback";
 arg5.registerSpanErrorInstrumentation = function registerSpanErrorInstrumentation() {
   if (!c2) {
     c2 = true;
-    const result = require("07372_instrumentError.js") /* instrumentError */.addGlobalErrorInstrumentationHandler(errorCallback);
-    const obj = require("07372_instrumentError.js") /* instrumentError */;
-    const result1 = require("07379_instrumentUnhandledRejection.js") /* instrumentUnhandledRejection */.addGlobalUnhandledRejectionInstrumentationHandler(errorCallback);
-    const obj2 = require("07379_instrumentUnhandledRejection.js") /* instrumentUnhandledRejection */;
+    const result = instrumentError /* instrumentError */.addGlobalErrorInstrumentationHandler(errorCallback);
+    const obj = instrumentError /* instrumentError */;
+    const result1 = instrumentUnhandledRejection /* instrumentUnhandledRejection */.addGlobalUnhandledRejectionInstrumentationHandler(errorCallback);
+    const obj2 = instrumentUnhandledRejection /* instrumentUnhandledRejection */;
   }
 };

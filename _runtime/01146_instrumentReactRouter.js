@@ -1,3 +1,6 @@
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
+import { feedbackAsyncIntegration } from "01024_feedbackAsyncIntegration.js";
+import { getStatics } from "01140_getStatics.js";
 // _runtime/01146_instrumentReactRouter.js
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -39,21 +42,21 @@ function instrumentReactRouter(f102430, arg1, arg2, location) {
     if (location.location) {
       let pathname = location.location.pathname;
     } else {
-      if (_require("01024_feedbackAsyncIntegration.js").WINDOW.location) {
+      if (_feedbackAsyncIntegration.WINDOW.location) {
         pathname = tmp(1024).WINDOW.location.pathname;
       }
       tmp = _require;
     }
     if (pathname) {
       [tmp5, tmp6] = items(normalizeTransactionName(pathname), 2);
-      let obj = _require("01024_feedbackAsyncIntegration.js");
+      let obj = _feedbackAsyncIntegration;
       obj = { name: null, attributes: null };
       obj[0] = tmp5;
       obj = {};
-      obj[_require("00817_registerSpanErrorInstrumentation.js").SEMANTIC_ATTRIBUTE_SENTRY_OP] = "pageload";
+      obj[_registerSpanErrorInstrumentation.SEMANTIC_ATTRIBUTE_SENTRY_OP] = "pageload";
       let _HermesInternal = HermesInternal;
-      obj[_require("00817_registerSpanErrorInstrumentation.js").SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react." + arg4;
-      obj[_require("00817_registerSpanErrorInstrumentation.js").SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = tmp6;
+      obj[_registerSpanErrorInstrumentation.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react." + arg4;
+      obj[_registerSpanErrorInstrumentation.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = tmp6;
       obj[1] = obj;
       let result = obj.startBrowserTracingPageLoadSpan(f102430, obj);
       let tmp4 = items(normalizeTransactionName(pathname), 2);
@@ -215,7 +218,7 @@ export const reactRouterV4BrowserTracingIntegration = function reactRouterV4Brow
   let dependencyMap;
   let instrumentPageLoad;
   let noop;
-  let obj = require("01024_feedbackAsyncIntegration.js") /* feedbackAsyncIntegration */;
+  let obj = feedbackAsyncIntegration /* feedbackAsyncIntegration */;
   obj = {};
   const merged = Object.assign(instrumentNavigation);
   obj.instrumentPageLoad = false;
@@ -239,7 +242,7 @@ export const reactRouterV5BrowserTracingIntegration = function reactRouterV5Brow
   let dependencyMap;
   let instrumentPageLoad;
   let noop;
-  let obj = require("01024_feedbackAsyncIntegration.js") /* feedbackAsyncIntegration */;
+  let obj = feedbackAsyncIntegration /* feedbackAsyncIntegration */;
   obj = {};
   const merged = Object.assign(instrumentNavigation);
   obj.instrumentPageLoad = false;
@@ -307,6 +310,6 @@ export const withSentryRouting = function withSentryRouting(displayName) {
     }
   }
   WrappedRoute.displayName = "sentryRoute(" + displayName.displayName || displayName.name + ")";
-  _require("01140_getStatics.js").hoistNonReactStatics(WrappedRoute, displayName);
+  _getStatics.hoistNonReactStatics(WrappedRoute, displayName);
   return WrappedRoute;
 };

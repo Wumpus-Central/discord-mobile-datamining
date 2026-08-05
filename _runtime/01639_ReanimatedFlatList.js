@@ -1,3 +1,4 @@
+import { _isNativeReflectConstruct } from "01744__isNativeReflectConstruct.js";
 // _runtime/01639_ReanimatedFlatList.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";
@@ -59,7 +60,7 @@ export const ReanimatedFlatList = isReactRendering.componentWithRef((skipEnterin
   if (undefined !== skipEnteringExitingAnimations.skipEnteringExitingAnimations) {
     obj = { skipEntering: true, skipExiting: true, children: null };
     obj[2] = tmp7;
-    tmp5Result = jsx(require("01744__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.LayoutAnimationConfig, { skipEntering: true, skipExiting: true, children: null });
+    tmp5Result = jsx(_isNativeReflectConstruct /* _isNativeReflectConstruct */.LayoutAnimationConfig, { skipEntering: true, skipExiting: true, children: null });
   }
   return tmp5Result;
 });

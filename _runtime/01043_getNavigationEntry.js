@@ -1,3 +1,4 @@
+import { WINDOW } from "01039_WINDOW.js";
 // _runtime/01043_getNavigationEntry.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -7,7 +8,7 @@ arg5.getNavigationEntry = () => {
   if (arg0 === undefined) {
     flag = true;
   }
-  const _performance = require("01039_WINDOW.js") /* WINDOW */.WINDOW.performance;
+  const _performance = WINDOW /* WINDOW */.WINDOW.performance;
   let first;
   if (_performance != null) {
     const getEntriesByType = _performance.getEntriesByType;

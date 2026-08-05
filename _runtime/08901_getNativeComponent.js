@@ -1,3 +1,4 @@
+import { getInstallationErrorMessage } from "08902_getInstallationErrorMessage.js";
 // _runtime/08901_getNativeComponent.js
 import get_ActivityIndicator from "get ActivityIndicator";
 
@@ -15,7 +16,7 @@ export const getNativeComponent = () => {
       return null;
     } else {
       const _Error = Error;
-      throw Error(require("08902_getInstallationErrorMessage.js") /* getInstallationErrorMessage */.getInstallationErrorMessage());
+      throw Error(getInstallationErrorMessage /* getInstallationErrorMessage */.getInstallationErrorMessage());
     }
   }
 };
@@ -32,7 +33,7 @@ export const getNativeModule = () => {
       return null;
     } else {
       const _Error = Error;
-      throw Error(require("08902_getInstallationErrorMessage.js") /* getInstallationErrorMessage */.getInstallationErrorMessage());
+      throw Error(getInstallationErrorMessage /* getInstallationErrorMessage */.getInstallationErrorMessage());
     }
   }
 };

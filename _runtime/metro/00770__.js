@@ -1,3 +1,5 @@
+import { toStringTag } from "../00607_toStringTag.js";
+import { toSource } from "../00742_toSource.js";
 // _runtime/metro/00770__.js
 import toSource from "toSource";
 import getNative from "getNative";
@@ -53,14 +55,14 @@ if (!getNative) {
 }
 if (getNative) {
   toStringTag = function v(_module6) {
-    const tmp3 = require("../00607_toStringTag.js") /* toStringTag */(_module6);
+    const tmp3 = toStringTag /* toStringTag */(_module6);
     let constructor;
     if ("[object Object]" == tmp3) {
       constructor = _module6.constructor;
     }
     let str = "";
     if (constructor) {
-      str = require("../00742_toSource.js") /* toSource */(constructor);
+      str = toSource /* toSource */(constructor);
     }
     if (str) {
       if (getNative === str) {

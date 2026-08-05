@@ -1,3 +1,4 @@
+import { weakMap } from "01637_weakMap.js";
 // _runtime/01636_freezeObjectInDev.js
 import _slicedToArray from "_slicedToArray";
 import isJest from "isJest";
@@ -377,7 +378,7 @@ export const makeShareable = isJest ? (function makeShareableJS(arg0) {
   return arg0;
 }) : (function makeShareableNative(arg0) {
   let closure_0 = arg0;
-  const shareableMappingCache = require("01637_weakMap.js") /* weakMap */.shareableMappingCache;
+  const shareableMappingCache = weakMap /* weakMap */.shareableMappingCache;
   if (shareableMappingCache.get(arg0)) {
     return arg0;
   } else {

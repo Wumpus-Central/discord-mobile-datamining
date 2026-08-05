@@ -1,3 +1,6 @@
+import { isJsonRpcNotification } from "00936_isJsonRpcNotification.js";
+import { weakMap } from "00939_weakMap.js";
+import { 00940__ } from "metro/00940__.js";
 // _runtime/00938_extractClientInfo.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -103,21 +106,21 @@ arg5.buildServerAttributesFromInfo = function buildServerAttributesFromInfo(serv
   }
   const obj = {};
   if (name) {
-    obj[require("metro/00940__.js").MCP_SERVER_NAME_ATTRIBUTE] = serverInfo.name;
+    obj[00940__.MCP_SERVER_NAME_ATTRIBUTE] = serverInfo.name;
   }
   let title;
   if (serverInfo != null) {
     title = serverInfo.title;
   }
   if (title) {
-    obj[require("metro/00940__.js").MCP_SERVER_TITLE_ATTRIBUTE] = serverInfo.title;
+    obj[00940__.MCP_SERVER_TITLE_ATTRIBUTE] = serverInfo.title;
   }
   let version;
   if (serverInfo != null) {
     version = serverInfo.version;
   }
   if (version) {
-    obj[require("metro/00940__.js").MCP_SERVER_VERSION_ATTRIBUTE] = serverInfo.version;
+    obj[00940__.MCP_SERVER_VERSION_ATTRIBUTE] = serverInfo.version;
   }
   return obj;
 };
@@ -168,7 +171,7 @@ arg5.buildTransportAttributes = function buildTransportAttributes(transport, ext
     obj = { mcpTransport: "unknown", networkTransport: "unknown" };
   }
   ({ mcpTransport, networkTransport } = obj);
-  let obj4 = require("00939_weakMap.js") /* weakMap */;
+  let obj4 = weakMap /* weakMap */;
   const clientInfoForTransport = obj4.getClientInfoForTransport(transport);
   let name1;
   if (clientInfoForTransport != null) {
@@ -244,9 +247,9 @@ arg5.buildTransportAttributes = function buildTransportAttributes(transport, ext
     port = obj6;
   }
   const merged2 = Object.assign(port);
-  obj4[require("metro/00940__.js").MCP_TRANSPORT_ATTRIBUTE] = mcpTransport;
-  obj4[require("metro/00940__.js").NETWORK_TRANSPORT_ATTRIBUTE] = networkTransport;
-  obj4[require("metro/00940__.js").NETWORK_PROTOCOL_VERSION_ATTRIBUTE] = "2.0";
+  obj4[00940__.MCP_TRANSPORT_ATTRIBUTE] = mcpTransport;
+  obj4[00940__.NETWORK_TRANSPORT_ATTRIBUTE] = networkTransport;
+  obj4[00940__.NETWORK_PROTOCOL_VERSION_ATTRIBUTE] = "2.0";
   let tmp22 = protocolVersionForTransport;
   if (protocolVersionForTransport) {
     const obj7 = {};
@@ -280,7 +283,7 @@ arg5.extractSessionDataFromInitializeRequest = function extractSessionDataFromIn
         }
       }
       obj.clientInfo = obj;
-      tmpResult = require("00936_isJsonRpcNotification.js") /* isJsonRpcNotification */;
+      tmpResult = isJsonRpcNotification /* isJsonRpcNotification */;
     }
   }
   return obj;
@@ -306,13 +309,13 @@ arg5.extractSessionDataFromInitializeResponse = function extractSessionDataFromI
         }
       }
       obj.serverInfo = obj;
-      tmpResult = require("00936_isJsonRpcNotification.js") /* isJsonRpcNotification */;
+      tmpResult = isJsonRpcNotification /* isJsonRpcNotification */;
     }
   }
   return obj;
 };
 arg5.getClientAttributes = function getClientAttributes(transport) {
-  let obj = require("00939_weakMap.js") /* weakMap */;
+  let obj = weakMap /* weakMap */;
   const clientInfoForTransport = obj.getClientInfoForTransport(transport);
   let name;
   if (clientInfoForTransport != null) {
@@ -339,7 +342,7 @@ arg5.getClientAttributes = function getClientAttributes(transport) {
   return obj;
 };
 arg5.getServerAttributes = function getServerAttributes(transport) {
-  let obj = require("00939_weakMap.js") /* weakMap */;
+  let obj = weakMap /* weakMap */;
   const sessionDataForTransport = obj.getSessionDataForTransport(transport);
   let serverInfo;
   if (sessionDataForTransport != null) {

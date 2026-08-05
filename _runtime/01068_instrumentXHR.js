@@ -1,8 +1,10 @@
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
+import { WINDOW } from "01039_WINDOW.js";
 // _runtime/01068_instrumentXHR.js
 import _slicedToArray from "_slicedToArray";
 
 function instrumentXHR() {
-  if (require("01039_WINDOW.js") /* WINDOW */.WINDOW.XMLHttpRequest) {
+  if (WINDOW /* WINDOW */.WINDOW.XMLHttpRequest) {
     const _XMLHttpRequest = XMLHttpRequest;
     let _Proxy = Proxy;
     let obj = { apply: null };
@@ -125,8 +127,8 @@ const __sentry_xhr_v3__ = "__sentry_xhr_v3__";
 
 export const SENTRY_XHR_DATA_KEY = "__sentry_xhr_v3__";
 export const addXhrInstrumentationHandler = function addXhrInstrumentationHandler(arg0) {
-  require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.addHandler("xhr", arg0);
-  const obj = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
-  require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.maybeInstrument("xhr", instrumentXHR);
+  registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.addHandler("xhr", arg0);
+  const obj = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
+  registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.maybeInstrument("xhr", instrumentXHR);
 };
 export { instrumentXHR };

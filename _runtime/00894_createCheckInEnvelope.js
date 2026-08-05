@@ -1,3 +1,5 @@
+import { dsnFromString } from "00837_dsnFromString.js";
+import { forEachEnvelopeItem } from "00864_forEachEnvelopeItem.js";
 // _runtime/00894_createCheckInEnvelope.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -20,8 +22,8 @@ arg5.createCheckInEnvelope = function createCheckInEnvelope(arg0, trace, sdk) {
     tmp2 = arg4;
   }
   if (tmp2) {
-    obj.dsn = require("00837_dsnFromString.js") /* dsnFromString */.dsnToString(arg4);
-    const obj4 = require("00837_dsnFromString.js") /* dsnFromString */;
+    obj.dsn = dsnFromString /* dsnFromString */.dsnToString(arg4);
+    const obj4 = dsnFromString /* dsnFromString */;
   }
   if (trace) {
     obj.trace = trace;
@@ -29,5 +31,5 @@ arg5.createCheckInEnvelope = function createCheckInEnvelope(arg0, trace, sdk) {
   const items = [{ type: "check_in" }, arg0];
   const date = new Date();
   const items1 = [items];
-  return require("00864_forEachEnvelopeItem.js") /* forEachEnvelopeItem */.createEnvelope(obj, items1);
+  return forEachEnvelopeItem /* forEachEnvelopeItem */.createEnvelope(obj, items1);
 };

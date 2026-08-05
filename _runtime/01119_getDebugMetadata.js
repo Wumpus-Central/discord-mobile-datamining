@@ -1,8 +1,9 @@
+import { DEFAULT_BUNDLE_NAME } from "01120_DEFAULT_BUNDLE_NAME.js";
 // _runtime/01119_getDebugMetadata.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getDebugMetadata = function getDebugMetadata() {
-  if (require("01120_DEFAULT_BUNDLE_NAME.js") /* DEFAULT_BUNDLE_NAME */.DEFAULT_BUNDLE_NAME) {
+  if (DEFAULT_BUNDLE_NAME /* DEFAULT_BUNDLE_NAME */.DEFAULT_BUNDLE_NAME) {
     const _sentryDebugIds = tmp(817).GLOBAL_OBJ._sentryDebugIds;
     if (_sentryDebugIds) {
       const _Object = Object;

@@ -1,3 +1,4 @@
+import { Directions } from "05368_Directions.js";
 // _runtime/05497_BottomSheetDraggableScrollable.js
 import "noop";
 import { jsx } from "jsxProd";
@@ -13,7 +14,7 @@ export const BottomSheetDraggableScrollable = function BottomSheetDraggableScrol
     const obj = { gesture: null, children: null };
     obj[0] = scrollableGesture;
     obj[1] = children;
-    tmp = jsx(require("05368_Directions.js") /* Directions */.GestureDetector, { gesture: null, children: null });
+    tmp = jsx(Directions /* Directions */.GestureDetector, { gesture: null, children: null });
   }
   return tmp;
 };

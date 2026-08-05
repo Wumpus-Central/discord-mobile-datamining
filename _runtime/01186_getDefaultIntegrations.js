@@ -1,11 +1,13 @@
+import { debugSymbolicatorIntegration } from "00811_debugSymbolicatorIntegration.js";
+import { isHermesEnabled } from "01002_isHermesEnabled.js";
 // _runtime/01186_getDefaultIntegrations.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise) {
   const items = [];
-  let obj = require("01002_isHermesEnabled.js") /* isHermesEnabled */;
+  let obj = isHermesEnabled /* isHermesEnabled */;
   const push = items.push;
-  const obj2 = require("00811_debugSymbolicatorIntegration.js") /* debugSymbolicatorIntegration */;
+  const obj2 = debugSymbolicatorIntegration /* debugSymbolicatorIntegration */;
   if (notWebResult) {
     obj = { patchGlobalPromise: null };
     obj[0] = patchGlobalPromise.patchGlobalPromise;
@@ -24,25 +26,25 @@ arg5.getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise
     const tmpResult1 = tmp(811);
   }
   notWebResult = obj.notWeb();
-  items.push(require("00811_debugSymbolicatorIntegration.js") /* debugSymbolicatorIntegration */.inboundFiltersIntegration());
-  const tmpResult3 = require("00811_debugSymbolicatorIntegration.js") /* debugSymbolicatorIntegration */;
-  items.push(require("00811_debugSymbolicatorIntegration.js") /* debugSymbolicatorIntegration */.functionToStringIntegration());
-  const tmpResult4 = require("00811_debugSymbolicatorIntegration.js") /* debugSymbolicatorIntegration */;
-  items.push(require("00811_debugSymbolicatorIntegration.js") /* debugSymbolicatorIntegration */.breadcrumbsIntegration());
-  const tmpResult5 = require("00811_debugSymbolicatorIntegration.js") /* debugSymbolicatorIntegration */;
-  items.push(require("00811_debugSymbolicatorIntegration.js") /* debugSymbolicatorIntegration */.dedupeIntegration());
-  const tmpResult6 = require("00811_debugSymbolicatorIntegration.js") /* debugSymbolicatorIntegration */;
-  items.push(require("00811_debugSymbolicatorIntegration.js") /* debugSymbolicatorIntegration */.httpContextIntegration());
-  const tmpResult7 = require("00811_debugSymbolicatorIntegration.js") /* debugSymbolicatorIntegration */;
-  items.push(require("00811_debugSymbolicatorIntegration.js") /* debugSymbolicatorIntegration */.nativeReleaseIntegration());
-  const tmpResult8 = require("00811_debugSymbolicatorIntegration.js") /* debugSymbolicatorIntegration */;
-  items.push(require("00811_debugSymbolicatorIntegration.js") /* debugSymbolicatorIntegration */.eventOriginIntegration());
-  const tmpResult9 = require("00811_debugSymbolicatorIntegration.js") /* debugSymbolicatorIntegration */;
-  items.push(require("00811_debugSymbolicatorIntegration.js") /* debugSymbolicatorIntegration */.sdkInfoIntegration());
-  const tmpResult10 = require("00811_debugSymbolicatorIntegration.js") /* debugSymbolicatorIntegration */;
-  items.push(require("00811_debugSymbolicatorIntegration.js") /* debugSymbolicatorIntegration */.reactNativeInfoIntegration());
-  const tmpResult11 = require("00811_debugSymbolicatorIntegration.js") /* debugSymbolicatorIntegration */;
-  items.push(require("00811_debugSymbolicatorIntegration.js") /* debugSymbolicatorIntegration */.createReactNativeRewriteFrames());
+  items.push(debugSymbolicatorIntegration /* debugSymbolicatorIntegration */.inboundFiltersIntegration());
+  const tmpResult3 = debugSymbolicatorIntegration /* debugSymbolicatorIntegration */;
+  items.push(debugSymbolicatorIntegration /* debugSymbolicatorIntegration */.functionToStringIntegration());
+  const tmpResult4 = debugSymbolicatorIntegration /* debugSymbolicatorIntegration */;
+  items.push(debugSymbolicatorIntegration /* debugSymbolicatorIntegration */.breadcrumbsIntegration());
+  const tmpResult5 = debugSymbolicatorIntegration /* debugSymbolicatorIntegration */;
+  items.push(debugSymbolicatorIntegration /* debugSymbolicatorIntegration */.dedupeIntegration());
+  const tmpResult6 = debugSymbolicatorIntegration /* debugSymbolicatorIntegration */;
+  items.push(debugSymbolicatorIntegration /* debugSymbolicatorIntegration */.httpContextIntegration());
+  const tmpResult7 = debugSymbolicatorIntegration /* debugSymbolicatorIntegration */;
+  items.push(debugSymbolicatorIntegration /* debugSymbolicatorIntegration */.nativeReleaseIntegration());
+  const tmpResult8 = debugSymbolicatorIntegration /* debugSymbolicatorIntegration */;
+  items.push(debugSymbolicatorIntegration /* debugSymbolicatorIntegration */.eventOriginIntegration());
+  const tmpResult9 = debugSymbolicatorIntegration /* debugSymbolicatorIntegration */;
+  items.push(debugSymbolicatorIntegration /* debugSymbolicatorIntegration */.sdkInfoIntegration());
+  const tmpResult10 = debugSymbolicatorIntegration /* debugSymbolicatorIntegration */;
+  items.push(debugSymbolicatorIntegration /* debugSymbolicatorIntegration */.reactNativeInfoIntegration());
+  const tmpResult11 = debugSymbolicatorIntegration /* debugSymbolicatorIntegration */;
+  items.push(debugSymbolicatorIntegration /* debugSymbolicatorIntegration */.createReactNativeRewriteFrames());
   if (patchGlobalPromise.enableNative) {
     items.push(tmp(811).deviceContextIntegration());
     const tmpResult13 = tmp(811);
@@ -87,7 +89,7 @@ arg5.getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise
     items.push(tmp(811).appStartIntegration());
     const tmpResult20 = tmp(811);
   }
-  const tmpResult12 = require("00811_debugSymbolicatorIntegration.js") /* debugSymbolicatorIntegration */;
+  const tmpResult12 = debugSymbolicatorIntegration /* debugSymbolicatorIntegration */;
   let enableNative2 = tmp26;
   if (tmp26) {
     enableNative2 = patchGlobalPromise.enableNativeFramesTracking;
@@ -95,7 +97,7 @@ arg5.getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise
   if (enableNative2) {
     enableNative2 = patchGlobalPromise.enableNative;
   }
-  const nativeFramesIntegrations = require("00811_debugSymbolicatorIntegration.js") /* debugSymbolicatorIntegration */.createNativeFramesIntegrations(enableNative2);
+  const nativeFramesIntegrations = debugSymbolicatorIntegration /* debugSymbolicatorIntegration */.createNativeFramesIntegrations(enableNative2);
   if (nativeFramesIntegrations) {
     items.push(nativeFramesIntegrations);
   }
@@ -133,8 +135,8 @@ arg5.getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise
     items.push(tmp(811).httpClientIntegration());
     const tmpResult27 = tmp(811);
   }
-  const tmpResult21 = require("00811_debugSymbolicatorIntegration.js") /* debugSymbolicatorIntegration */;
-  items.push(require("00811_debugSymbolicatorIntegration.js") /* debugSymbolicatorIntegration */.expoContextIntegration());
+  const tmpResult21 = debugSymbolicatorIntegration /* debugSymbolicatorIntegration */;
+  items.push(debugSymbolicatorIntegration /* debugSymbolicatorIntegration */.expoContextIntegration());
   if (patchGlobalPromise.spotlight) {
     let spotlight;
     if (typeof patchGlobalPromise.spotlight === "string") {
@@ -188,7 +190,7 @@ arg5.getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise
     items.push(tmp(811).mobileReplayIntegration());
     const tmpResult31 = tmp(811);
   }
-  const tmpResult28 = require("00811_debugSymbolicatorIntegration.js") /* debugSymbolicatorIntegration */;
-  items.push(require("00811_debugSymbolicatorIntegration.js") /* debugSymbolicatorIntegration */.primitiveTagIntegration());
+  const tmpResult28 = debugSymbolicatorIntegration /* debugSymbolicatorIntegration */;
+  items.push(debugSymbolicatorIntegration /* debugSymbolicatorIntegration */.primitiveTagIntegration());
   return items;
 };

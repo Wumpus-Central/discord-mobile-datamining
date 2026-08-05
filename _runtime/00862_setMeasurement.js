@@ -1,3 +1,6 @@
+import { spanToJSON } from "00819_spanToJSON.js";
+import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
+import { 00839__ } from "metro/00839__.js";
 // _runtime/00862_setMeasurement.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -5,23 +8,23 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.setMeasurement = function setMeasurement(arg0, arg1, arg2) {
   let activeSpan = arg3;
   if (arg3 === undefined) {
-    let obj = require("00819_spanToJSON.js") /* spanToJSON */;
+    let obj = spanToJSON /* spanToJSON */;
     activeSpan = obj.getActiveSpan();
   }
   let rootSpan = activeSpan;
   if (activeSpan) {
-    rootSpan = require("00819_spanToJSON.js") /* spanToJSON */.getRootSpan(activeSpan);
-    const obj3 = require("00819_spanToJSON.js") /* spanToJSON */;
+    rootSpan = spanToJSON /* spanToJSON */.getRootSpan(activeSpan);
+    const obj3 = spanToJSON /* spanToJSON */;
   }
   if (rootSpan) {
-    if (require("metro/00823___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+    if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
       const debug = tmp9(824).debug;
       const _HermesInternal = HermesInternal;
       debug.log("[Measurement] Setting measurement on root span: " + arg0 + " = " + arg1 + " " + arg2);
     }
     obj = {};
-    obj[require("metro/00839__.js").SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = arg1;
-    obj[require("metro/00839__.js").SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = arg2;
+    obj[00839__.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = arg1;
+    obj[00839__.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = arg2;
     rootSpan.addEvent(arg0, obj);
   }
 };

@@ -1,3 +1,6 @@
+import { RNGestureHandlerModule } from "05377_RNGestureHandlerModule.js";
+import { transformIntoHandlerTags } from "05391_transformIntoHandlerTags.js";
+import { 05392__ } from "metro/05392__.js";
 // _runtime/05387__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
@@ -71,11 +74,11 @@ if (undefined === fn2) {
   };
 }
 UIManager.setJSResponder = (D, __getInternalProperties) => {
-  require("05377_RNGestureHandlerModule.js").handleSetJSResponder(D, __getInternalProperties);
+  RNGestureHandlerModule.handleSetJSResponder(D, __getInternalProperties);
   fn(D, __getInternalProperties);
 };
 UIManager.clearJSResponder = () => {
-  const result = require("05377_RNGestureHandlerModule.js").handleClearJSResponder();
+  const result = RNGestureHandlerModule.handleClearJSResponder();
   fn2();
 };
 let closure_12 = { [arg1(5373).State.UNDETERMINED]: undefined, [arg1(5373).State.BEGAN]: "onBegan", [arg1(5373).State.FAILED]: "onFailed", [arg1(5373).State.CANCELLED]: "onCancelled", [arg1(5373).State.ACTIVE]: "onActivated", [arg1(5373).State.END]: "onEnded" };
@@ -280,18 +283,18 @@ export default function createHandler(name) {
         }
         if (someResult) {
           if (someResult) {
-            require("metro/05392__.js").ghQueueMicrotask(() => {
+            05392__.ghQueueMicrotask(() => {
               self.update(1);
             });
-            const obj = require("metro/05392__.js");
+            const obj = 05392__;
           }
           const props2 = self.props;
           const items = [];
-          const obj2 = require("05391_transformIntoHandlerTags.js") /* transformIntoHandlerTags */;
+          const obj2 = transformIntoHandlerTags /* transformIntoHandlerTags */;
           HermesBuiltin.arraySpread(customNativeProps, HermesBuiltin.arraySpread(allowedProps, 0));
           self.createGestureHandler(obj2.filterConfig(outer1_3 ? outer1_3(props2) : props2, items, config));
           if (self.viewNode) {
-            self.attachGestureHandler(require("05394_get_ActivityIndicator.js")(self.viewNode));
+            self.attachGestureHandler(require("05394_get_ActivityIndicator.js") /* get ActivityIndicator */(self.viewNode));
           } else {
             const _Error = Error;
             const _HermesInternal = HermesInternal;

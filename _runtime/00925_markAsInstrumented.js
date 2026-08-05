@@ -1,3 +1,4 @@
+import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
 // _runtime/00925_markAsInstrumented.js
 import _slicedToArray from "_slicedToArray";
 import _toArray from "_toArray";
@@ -290,7 +291,7 @@ function instrumentSupabaseClient(auth) {
       }
     })(auth);
   } else {
-    if (require("metro/00823___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+    if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
       const debug = tmp(824).debug;
       debug.warn("Supabase integration was not installed because no Supabase client was provided.");
     }

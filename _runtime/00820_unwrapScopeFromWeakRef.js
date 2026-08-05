@@ -1,3 +1,4 @@
+import { addNonEnumerableProperty } from "00822_addNonEnumerableProperty.js";
 // _runtime/00820_unwrapScopeFromWeakRef.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -24,7 +25,7 @@ arg5.getCapturedScopesOnSpan = function getCapturedScopesOnSpan(scope) {
 };
 arg5.setCapturedScopesOnSpan = function setCapturedScopesOnSpan(arg0, arg1, arg2) {
   if (arg0) {
-    const result = require("00822_addNonEnumerableProperty.js") /* addNonEnumerableProperty */.addNonEnumerableProperty(arg0, _sentryIsolationScope, (function wrapScopeWithWeakRef(arg0) {
+    const result = addNonEnumerableProperty /* addNonEnumerableProperty */.addNonEnumerableProperty(arg0, _sentryIsolationScope, (function wrapScopeWithWeakRef(arg0) {
       try {
         let _WeakRef = callback(table[0]).GLOBAL_OBJ.WeakRef;
         if (typeof _WeakRef === "function") {
@@ -36,8 +37,8 @@ arg5.setCapturedScopesOnSpan = function setCapturedScopesOnSpan(arg0, arg1, arg2
       } catch (err) {
       }
     })(arg2));
-    const obj = require("00822_addNonEnumerableProperty.js") /* addNonEnumerableProperty */;
-    const result1 = require("00822_addNonEnumerableProperty.js") /* addNonEnumerableProperty */.addNonEnumerableProperty(arg0, _sentryScope, arg1);
-    const obj2 = require("00822_addNonEnumerableProperty.js") /* addNonEnumerableProperty */;
+    const obj = addNonEnumerableProperty /* addNonEnumerableProperty */;
+    const result1 = addNonEnumerableProperty /* addNonEnumerableProperty */.addNonEnumerableProperty(arg0, _sentryScope, arg1);
+    const obj2 = addNonEnumerableProperty /* addNonEnumerableProperty */;
   }
 };

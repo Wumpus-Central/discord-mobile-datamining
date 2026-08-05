@@ -1,9 +1,12 @@
+import { addHandler } from "07373_addHandler.js";
+import { consoleSandbox } from "07375_consoleSandbox.js";
+import { getGlobalSingleton } from "07376_getGlobalSingleton.js";
 // _runtime/07461_instrumentConsole.js
 const require = arg1;
 const dependencyMap = arg6;
 function instrumentConsole() {
-  if ("console" in require("07376_getGlobalSingleton.js") /* getGlobalSingleton */.GLOBAL_OBJ) {
-    const CONSOLE_LEVELS = require("07375_consoleSandbox.js") /* consoleSandbox */.CONSOLE_LEVELS;
+  if ("console" in getGlobalSingleton /* getGlobalSingleton */.GLOBAL_OBJ) {
+    const CONSOLE_LEVELS = consoleSandbox /* consoleSandbox */.CONSOLE_LEVELS;
     const item = CONSOLE_LEVELS.forEach((arg0) => {
       const callback = arg0;
       if (arg0 in callback(table[1]).GLOBAL_OBJ.console) {
@@ -24,7 +27,7 @@ function instrumentConsole() {
   }
 }
 arg5.addConsoleInstrumentationHandler = function addConsoleInstrumentationHandler(arg0) {
-  require("07373_addHandler.js") /* addHandler */.addHandler("console", arg0);
-  const obj = require("07373_addHandler.js") /* addHandler */;
-  require("07373_addHandler.js") /* addHandler */.maybeInstrument("console", instrumentConsole);
+  addHandler /* addHandler */.addHandler("console", arg0);
+  const obj = addHandler /* addHandler */;
+  addHandler /* addHandler */.maybeInstrument("console", instrumentConsole);
 };

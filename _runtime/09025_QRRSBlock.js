@@ -1,3 +1,4 @@
+import { 09026__ } from "metro/09026__.js";
 // _runtime/09025_QRRSBlock.js
 class QRRSBlock {
   constructor(arg0, arg1) {
@@ -35,7 +36,7 @@ QRRSBlock.getRSBlocks = (arg0, arg1) => {
   }
 };
 QRRSBlock.getRsBlockTable = (arg0, arg1) => {
-  if (require("metro/09026__.js").L === arg1) {
+  if (09026__.L === arg1) {
     return QRRSBlock.RS_BLOCK_TABLE[4 * (arg0 - 1)];
   } else if (tmp(9026).M === arg1) {
     return QRRSBlock.RS_BLOCK_TABLE[4 * (arg0 - 1) + 1];

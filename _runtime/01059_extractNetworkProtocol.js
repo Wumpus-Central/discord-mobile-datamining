@@ -1,3 +1,6 @@
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
+import { WINDOW } from "01039_WINDOW.js";
+import { onHidden } from "01060_onHidden.js";
 // _runtime/01059_extractNetworkProtocol.js
 import _slicedToArray from "_slicedToArray";
 
@@ -56,7 +59,7 @@ export const extractNetworkProtocol = function extractNetworkProtocol(nextHopPro
   }
 };
 export const getBrowserPerformanceAPI = function getBrowserPerformanceAPI() {
-  return require("01039_WINDOW.js") /* WINDOW */.WINDOW.addEventListener && require("01039_WINDOW.js") /* WINDOW */.WINDOW.performance;
+  return WINDOW /* WINDOW */.WINDOW.addEventListener && WINDOW /* WINDOW */.WINDOW.performance;
 };
 export const isMeasurementValue = function isMeasurementValue(deviceMemory) {
   let isFiniteResult = typeof deviceMemory === "number";
@@ -69,7 +72,7 @@ export const isMeasurementValue = function isMeasurementValue(deviceMemory) {
 export const listenForWebVitalReportEvents = function listenForWebVitalReportEvents(on, arg1) {
   const _require = arg1;
   let c2 = false;
-  _require("01060_onHidden.js").onHidden(() => {
+  _onHidden.onHidden(() => {
     let tmp = !c2;
     if (!c2) {
       tmp = closure_1;
@@ -112,7 +115,7 @@ export const startAndEndSpan = function startAndEndSpan(activeSpan, sum, sum1, a
     HermesBuiltin.throwTypeError();
   } else {
     let closure_2 = Object.assign(arg3, undefined);
-    const start_timestamp = _require("00817_registerSpanErrorInstrumentation.js").spanToJSON(activeSpan).start_timestamp;
+    const start_timestamp = _registerSpanErrorInstrumentation.spanToJSON(activeSpan).start_timestamp;
     let tmp = start_timestamp;
     if (start_timestamp) {
       tmp = start_timestamp > sum;
@@ -123,9 +126,9 @@ export const startAndEndSpan = function startAndEndSpan(activeSpan, sum, sum1, a
     if (tmp) {
       activeSpan.updateStartTime(sum);
     }
-    const obj2 = _require("00817_registerSpanErrorInstrumentation.js");
+    const obj2 = _registerSpanErrorInstrumentation;
     const tmp6 = _require;
-    return _require("00817_registerSpanErrorInstrumentation.js").withActiveSpan(activeSpan, () => {
+    return _registerSpanErrorInstrumentation.withActiveSpan(activeSpan, () => {
       let obj = sum(sum1[1]);
       obj = { startTime: sum };
       const merged = Object.assign(closure_2);
@@ -145,7 +148,7 @@ export const startStandaloneWebVitalSpan = function startStandaloneWebVitalSpan(
   let sendDefaultPii;
   let startTime;
   let transaction;
-  let obj = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
+  let obj = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
   const client = obj.getClient();
   if (client) {
     ({ attributes, name, transaction, startTime } = arg0);

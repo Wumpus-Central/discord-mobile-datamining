@@ -1,3 +1,6 @@
+import { extractFont } from "08459_extractFont.js";
+import { _isNativeReflectConstruct } from "08536__isNativeReflectConstruct.js";
+import { __INTERNAL_VIEW_CONFIG } from "metro/08540___INTERNAL_VIEW_CONFIG.js";
 // _runtime/08539__isNativeReflectConstruct.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _classCallCheck from "_classCallCheck";
@@ -111,18 +114,18 @@ let items = [
         obj[4] = side;
         obj[5] = alignmentBaseline;
         obj[6] = midLine;
-        const merged = Object.assign(withoutXYResult, require("08459_extractFont.js")(obj, true), obj);
+        const merged = Object.assign(withoutXYResult, extractFont(obj, true), obj);
         withoutXYResult.ref = self.refMethod;
         obj1 = {};
         const merged1 = Object.assign(withoutXYResult);
-        return jsx(require("metro/08540___INTERNAL_VIEW_CONFIG.js"), {});
+        return jsx(__INTERNAL_VIEW_CONFIG, {});
       } else {
         const _console = console;
         console.warn(`Invalid \`href\` prop for \`TextPath\` element, expected a href like "#id", but got: "${href}"`);
         obj = { ref: null, children: null };
         obj[0] = self.refMethod;
         obj[1] = children;
-        return jsx(require("08536__isNativeReflectConstruct.js"), { ref: null, children: null });
+        return jsx(_isNativeReflectConstruct, { ref: null, children: null });
       }
       tmp = callback(props, closure_3);
     }

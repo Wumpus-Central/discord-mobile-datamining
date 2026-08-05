@@ -1,3 +1,4 @@
+import { Link } from "01481_Link.js";
 // _runtime/05685_HeaderBackground.js
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -12,7 +13,7 @@ const styles = StyleSheet.create({ container: { flex: 1, elevation: 4 } });
 
 export default function HeaderBackground(style) {
   const merged = Object.assign(style, Object.create(null));
-  let obj = require("01481_Link.js") /* Link */;
+  let obj = Link /* Link */;
   const colors = obj.useTheme().colors;
   obj = { style: items };
   items = [container.container, { backgroundColor: colors.card, borderBottomColor: colors.border, shadowColor: colors.border }, style.style];

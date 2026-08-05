@@ -1,3 +1,4 @@
+import { 12273__ } from "12273__.js";
 // _runtime/metro/12343__.js
 const self = this;
 let self2 = this;
@@ -59,7 +60,7 @@ if (self2) {
     let closure_5 = fn(require("mergeDefs"));
     function initializer(prototype) {
       const _require = prototype;
-      const $ZodError = _require("12273__.js").$ZodError;
+      const $ZodError = _12273__.$ZodError;
       $ZodError.init(prototype, arg1);
       prototype.name = "ZodError";
       let obj = {

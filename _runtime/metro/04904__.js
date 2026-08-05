@@ -1,3 +1,4 @@
+import { getDataView } from "../04897_getDataView.js";
 // _runtime/metro/04904__.js
 const require = arg1;
 const module = arg2;
@@ -20,8 +21,8 @@ arg5.default = {
   isPngFile(dataView) {
     let tmp = dataView;
     if (tmp) {
-      tmp = require("../04897_getDataView.js") /* getDataView */.getStringFromDataView(dataView, 0, u0089PNGrnu001An.length) === u0089PNGrnu001An;
-      const obj = require("../04897_getDataView.js") /* getDataView */;
+      tmp = getDataView /* getDataView */.getStringFromDataView(dataView, 0, u0089PNGrnu001An.length) === u0089PNGrnu001An;
+      const obj = getDataView /* getDataView */;
     }
     return tmp;
   },
@@ -35,7 +36,7 @@ arg5.default = {
         let tmp3 = length;
         if (module(4900).USE_PNG_FILE) {
           let tmp4 = require;
-          let obj1 = require("../04897_getDataView.js") /* getDataView */;
+          let obj1 = getDataView /* getDataView */;
           let tmp5 = c7;
           let tmp6 = c5;
           if ("IHDR" === obj1.getStringFromDataView(byteLength, length + c7, c5)) {
@@ -54,7 +55,7 @@ arg5.default = {
         }
         if (tmp(4900).USE_XMP) {
           let tmp7 = require;
-          let obj3 = require("../04897_getDataView.js") /* getDataView */;
+          let obj3 = getDataView /* getDataView */;
           let tmp8 = c7;
           let tmp9 = c5;
           let tmp10 = iTXt;
@@ -110,7 +111,7 @@ arg5.default = {
           }
         }
         let tmp14 = require;
-        let obj5 = require("../04897_getDataView.js") /* getDataView */;
+        let obj5 = getDataView /* getDataView */;
         let tmp15 = c7;
         let tmp16 = c5;
         let stringFromDataView = obj5.getStringFromDataView(byteLength, length + c7, c5);

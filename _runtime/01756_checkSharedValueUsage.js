@@ -1,3 +1,7 @@
+import { t } from "01617_t.js";
+import { updateProps } from "01706_updateProps.js";
+import { isAnimated } from "01752_isAnimated.js";
+import { o } from "01757_o.js";
 // _runtime/01756_checkSharedValueUsage.js
 import noop from "noop";
 import { Platform } from "get ActivityIndicator";
@@ -35,7 +39,7 @@ function checkSharedValueUsage(value, nextResult) {
         if (null !== value) {
           if (undefined !== value.value) {
             const _HermesInternal = HermesInternal;
-            const reanimatedError = new require("01617_t.js") /* t */.ReanimatedError("Invalid value passed to `" + nextResult + "`, maybe you forgot to use `.value`?");
+            const reanimatedError = new t /* t */.ReanimatedError("Invalid value passed to `" + nextResult + "`, maybe you forgot to use `.value`?");
             throw reanimatedError;
           }
         }
@@ -222,8 +226,8 @@ function styleUpdater(arg0, arg1, animations) {
     boxShadow = obj.boxShadow;
   }
   if (boxShadow) {
-    _require("01757_o.js").processBoxShadow(obj);
-    const obj3 = _require("01757_o.js");
+    _o.processBoxShadow(obj);
+    const obj3 = _o;
   }
   obj = {};
   let flag2 = false;
@@ -239,7 +243,7 @@ function styleUpdater(arg0, arg1, animations) {
       let tmp29 = obj[tmp13];
       let tmp30 = _require;
       let tmp31 = dependencyMap;
-      let obj9 = _require("01752_isAnimated.js");
+      let obj9 = _isAnimated;
       if (obj9.isAnimated(tmp29)) {
         let obj5 = __frameTimestamp;
         let tmp14 = __frameTimestamp.__frameTimestamp || obj5._getAnimationTimestamp();
@@ -332,13 +336,13 @@ function styleUpdater(arg0, arg1, animations) {
       frame(tmp8);
     }
     if (flag4) {
-      _require("01706_updateProps.js").updateProps(arg0, obj);
-      const obj8 = _require("01706_updateProps.js");
+      _updateProps.updateProps(arg0, obj);
+      const obj8 = _updateProps;
     }
   } else {
     animations.isAnimationCancelled = true;
     animations.animations = [];
-    let shallowEqualResult = _require("01752_isAnimated.js").shallowEqual(last, obj);
+    let shallowEqualResult = _isAnimated.shallowEqual(last, obj);
     if (shallowEqualResult) {
       shallowEqualResult = !arg5;
     }
@@ -346,7 +350,7 @@ function styleUpdater(arg0, arg1, animations) {
       tmp19(1706).updateProps(arg0, obj, flag);
       const tmp19Result = tmp19(1706);
     }
-    const obj6 = _require("01752_isAnimated.js");
+    const obj6 = _isAnimated;
     tmp19 = _require;
   }
   animations.last = obj;

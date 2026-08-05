@@ -1,3 +1,6 @@
+import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
+import { ignoreNextOnError } from "01028_ignoreNextOnError.js";
+import { __SENTRY_DEBUG__ } from "metro/01072___SENTRY_DEBUG__.js";
 // _runtime/01101_createProfilePayload.js
 import StringResult from "registerSpanErrorInstrumentation";
 
@@ -25,10 +28,10 @@ function createProfilePayload(arg0, arg1, resources, type) {
       DEBUG_BUILD = 32 !== trace_id.length;
     }
     if (DEBUG_BUILD) {
-      DEBUG_BUILD = require("metro/01072___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD;
+      DEBUG_BUILD = __SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD;
     }
     if (DEBUG_BUILD) {
-      const debug = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.debug;
+      const debug = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.debug;
       const _HermesInternal = HermesInternal;
       debug.log("[Profiling] Invalid traceId: " + trace_id + " on profiled event");
     }
@@ -44,8 +47,8 @@ function createProfilePayload(arg0, arg1, resources, type) {
       if (typeof type.timestamp === "number") {
         let result = 1000 * type.timestamp;
       } else {
-        result = 1000 * require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.timestampInSeconds();
-        const obj14 = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
+        result = 1000 * registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.timestampInSeconds();
+        const obj14 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
       }
       let obj = { event_id: null, timestamp: null, platform: "javascript", version: "1", release: null, environment: null, runtime: null, os: null, device: null, debug_meta: null, profile: null, transactions: null };
       obj[0] = arg0;
@@ -55,11 +58,11 @@ function createProfilePayload(arg0, arg1, resources, type) {
       obj[4] = type.release || "";
       let DEFAULT_ENVIRONMENT = type.environment;
       if (!DEFAULT_ENVIRONMENT) {
-        DEFAULT_ENVIRONMENT = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.DEFAULT_ENVIRONMENT;
+        DEFAULT_ENVIRONMENT = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.DEFAULT_ENVIRONMENT;
       }
       obj[5] = DEFAULT_ENVIRONMENT;
       obj = { name: "javascript", version: null };
-      obj[1] = require("01028_ignoreNextOnError.js") /* ignoreNextOnError */.WINDOW.navigator.userAgent;
+      obj[1] = ignoreNextOnError /* ignoreNextOnError */.WINDOW.navigator.userAgent;
       obj[6] = obj;
       obj = { name: null, version: null, build_number: null };
       obj[0] = c5;
@@ -72,7 +75,7 @@ function createProfilePayload(arg0, arg1, resources, type) {
       obj1[2] = str2;
       obj1[3] = c7;
       obj[8] = obj1;
-      const client = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.getClient();
+      const client = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.getClient();
       let options;
       if (client != null) {
         options = client.getOptions();
@@ -109,8 +112,8 @@ function createProfilePayload(arg0, arg1, resources, type) {
     } else if (typeof type.start_timestamp === "number") {
       let result2 = 1000 * type.start_timestamp;
     } else {
-      result2 = 1000 * require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.timestampInSeconds();
-      const obj13 = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
+      result2 = 1000 * registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.timestampInSeconds();
+      const obj13 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
     }
   }
 }
@@ -122,7 +125,7 @@ function convertJSSelfProfileToSampledFormat(samples) {
   const first = samples.samples[0];
   if (first) {
     timestamp = first.timestamp;
-    let result = _require("00817_registerSpanErrorInstrumentation.js").browserPerformanceTimeOrigin();
+    let result = _registerSpanErrorInstrumentation.browserPerformanceTimeOrigin();
     const _performance = performance;
     if (typeof performance.timeOrigin === "number") {
       const _performance2 = performance;
@@ -218,7 +221,7 @@ function isValidSampleRate(concat) {
       let flag4 = !tmp;
       if (tmp) {
         flag4 = false;
-        if (require("metro/01072___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+        if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
           const debug = tmp2(817).debug;
           const _HermesInternal = HermesInternal;
           debug.warn("[Profiling] Invalid sample rate. Sample rate must be between 0 and 1. Got " + concat + ".");
@@ -230,8 +233,8 @@ function isValidSampleRate(concat) {
     }
   }
   flag2 = false;
-  if (require("metro/01072___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
-    const debug2 = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.debug;
+  if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+    const debug2 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.debug;
     const _JSON = JSON;
     const json = JSON.stringify(concat);
     const _JSON2 = JSON;
@@ -338,7 +341,7 @@ function enrichWithThreadInformation(samples) {
   return tmp;
 }
 function applyDebugMetadata(arg0) {
-  const client = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.getClient();
+  const client = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.getClient();
   let options;
   if (client != null) {
     options = client.getOptions();
@@ -348,8 +351,8 @@ function applyDebugMetadata(arg0) {
     stackParser = options.stackParser;
   }
   if (stackParser) {
-    let debugImagesForResources = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.getDebugImagesForResources(stackParser, arg0);
-    const tmpResult = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
+    let debugImagesForResources = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.getDebugImagesForResources(stackParser, arg0);
+    const tmpResult = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
   } else {
     debugImagesForResources = [];
   }
@@ -480,7 +483,7 @@ export const createProfileChunkPayload = function createProfileChunkPayload(clos
         items1[num2] = items2;
       }
     }
-    let obj1 = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
+    let obj1 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
     let result = obj1.browserPerformanceTimeOrigin();
     const _performance = performance;
     if (typeof performance.timeOrigin === "number") {
@@ -532,7 +535,7 @@ export const createProfileChunkPayload = function createProfileChunkPayload(clos
       }
     }
     const obj3 = { chunk_id: null, client_sdk: null, profiler_id: null, platform: "javascript", version: "2", release: null, environment: null, debug_meta: null, profile: null };
-    obj3[0] = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.uuid4();
+    obj3[0] = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.uuid4();
     str = undefined;
     if (sdk != null) {
       str = sdk.name;
@@ -594,7 +597,7 @@ export { createProfilePayload };
 export const createProfilingEvent = function createProfilingEvent(arg0, arg1, samples, type) {
   if (samples.samples.length < 2) {
     let flag = false;
-    if (require("metro/01072___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+    if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
       const debug2 = tmp4(817).debug;
       debug2.log("[Profiling] Discarding profile because it contains less than 2 samples");
       flag = false;
@@ -604,7 +607,7 @@ export const createProfilingEvent = function createProfilingEvent(arg0, arg1, sa
     flag = samples.frames.length;
     if (!flag) {
       flag = false;
-      if (require("metro/01072___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+      if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
         const debug = tmp(817).debug;
         debug.log("[Profiling] Discarding profile because it contains no frames");
         flag = false;
@@ -652,21 +655,21 @@ export const hasLegacyProfiling = function hasLegacyProfiling(options) {
   return undefined !== options.profilesSampleRate;
 };
 export const isAutomatedPageLoadSpan = function isAutomatedPageLoadSpan(rootSpan) {
-  return "pageload" === require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.spanToJSON(rootSpan).op;
+  return "pageload" === registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.spanToJSON(rootSpan).op;
 };
 export { isValidSampleRate };
 export const shouldProfileSession = function shouldProfileSession(options) {
   if (c14) {
-    if (require("metro/01072___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
-      const debug4 = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.debug;
+    if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+      const debug4 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.debug;
       debug4.log("[Profiling] Profiling has been disabled for the duration of the current user session as the JS Profiler could not be started.");
     }
     return false;
   } else {
     if ("trace" !== options.profileLifecycle) {
       if ("manual" !== options.profileLifecycle) {
-        if (require("metro/01072___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
-          const debug3 = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.debug;
+        if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+          const debug3 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.debug;
           debug3.warn("[Profiling] Session not sampled. Invalid `profileLifecycle` option.");
         }
         return false;
@@ -679,7 +682,7 @@ export const shouldProfileSession = function shouldProfileSession(options) {
         let flag2 = Math.random() <= profileSessionSampleRate;
       } else {
         flag2 = false;
-        if (require("metro/01072___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+        if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
           const debug2 = tmp6(817).debug;
           debug2.log("[Profiling] Discarding profile because profileSessionSampleRate is not defined or set to 0");
           flag2 = false;
@@ -688,8 +691,8 @@ export const shouldProfileSession = function shouldProfileSession(options) {
       }
     } else {
       let flag = false;
-      if (require("metro/01072___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
-        const debug = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.debug;
+      if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+        const debug = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.debug;
         debug.warn("[Profiling] Discarding profile because of invalid profileSessionSampleRate.");
         flag = false;
       }
@@ -699,8 +702,8 @@ export const shouldProfileSession = function shouldProfileSession(options) {
 };
 export const shouldProfileSpanLegacy = function shouldProfileSpanLegacy(rootSpan) {
   if (c14) {
-    if (require("metro/01072___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
-      const debug6 = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.debug;
+    if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+      const debug6 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.debug;
       debug6.log("[Profiling] Profiling has been disabled for the duration of the current user session.");
     }
     return false;
@@ -771,7 +774,7 @@ export const shouldProfileSpanLegacy = function shouldProfileSpanLegacy(rootSpan
   }
 };
 export const startJSSelfProfile = function startJSSelfProfile() {
-  const Profiler = require("01028_ignoreNextOnError.js") /* ignoreNextOnError */.WINDOW.Profiler;
+  const Profiler = ignoreNextOnError /* ignoreNextOnError */.WINDOW.Profiler;
   if ((function isJSProfilerSupported(Profiler) {
     return typeof Profiler === "function";
   })(Profiler)) {

@@ -1,3 +1,5 @@
+import { isValidLayoutAnimationProp } from "01646_isValidLayoutAnimationProp.js";
+import { linear } from "01658_linear.js";
 // _runtime/01657_t.js
 const require = arg1;
 let dependencyMap = arg6;
@@ -6,7 +8,7 @@ let fn = function t(toValue, userConfig, callback) {
   const _require = toValue;
   const dependencyMap = userConfig;
   let closure_2 = callback;
-  let obj = _require("01646_isValidLayoutAnimationProp.js");
+  let obj = _isValidLayoutAnimationProp;
   const fn = function u() {
     let obj = { duration: 300, easing: null };
     const Easing = toValue(userConfig[1]).Easing;
@@ -73,7 +75,7 @@ let fn = function t(toValue, userConfig, callback) {
     obj[10] = toValue(userConfig[0]).getReduceMotionForAnimation(reduceMotion);
     return obj;
   };
-  obj = { Easing: _require("01658_linear.js").Easing, userConfig, toValue, callback, getReduceMotionForAnimation: _require("01646_isValidLayoutAnimationProp.js").getReduceMotionForAnimation };
+  obj = { Easing: _linear.Easing, userConfig, toValue, callback, getReduceMotionForAnimation: _isValidLayoutAnimationProp.getReduceMotionForAnimation };
   fn.__closure = obj;
   fn.__workletHash = 16704866504175;
   fn.__initData = closure_2;

@@ -1,3 +1,4 @@
+import { getShadowNodeWrapperFromRef } from "01634_getShadowNodeWrapperFromRef.js";
 // _runtime/01632_importDefaultResult1.js
 import _classCallCheck from "_classCallCheck";
 import importDefaultResult from "_createClass";
@@ -106,8 +107,8 @@ const items = [
     value: function getViewProp(arg0, arg1, self) {
       self = this;
       if (obj.isFabric()) {
-        const tmpResult = require("01634_getShadowNodeWrapperFromRef.js") /* getShadowNodeWrapperFromRef */;
-        const shadowNodeWrapperFromRef = require("01634_getShadowNodeWrapperFromRef.js") /* getShadowNodeWrapperFromRef */.getShadowNodeWrapperFromRef(self);
+        const tmpResult = getShadowNodeWrapperFromRef /* getShadowNodeWrapperFromRef */;
+        const shadowNodeWrapperFromRef = getShadowNodeWrapperFromRef /* getShadowNodeWrapperFromRef */.getShadowNodeWrapperFromRef(self);
         let viewProp = callback2(self, closure_6)[closure_6].getViewProp(shadowNodeWrapperFromRef, arg1, arg3);
         const obj4 = callback2(self, closure_6)[closure_6];
       } else {

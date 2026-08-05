@@ -1,3 +1,4 @@
+import { trim } from "04551_trim.js";
 // _runtime/04550_getPolyfill.js
 
 export default function getPolyfill() {
@@ -17,5 +18,5 @@ export default function getPolyfill() {
       }
     }
   }
-  trim5 = require("04551_trim.js") /* trim */;
+  trim5 = trim /* trim */;
 };

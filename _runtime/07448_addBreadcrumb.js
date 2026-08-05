@@ -1,11 +1,12 @@
+import { getClient } from "07402_getClient.js";
 // _runtime/07448_addBreadcrumb.js
 const require = arg1;
 let dependencyMap = arg6;
 arg5.addBreadcrumb = function addBreadcrumb(arg0, arg1) {
   const _require = arg1;
-  let consoleSandboxResult = _require("07402_getClient.js");
+  let consoleSandboxResult = _getClient;
   const client = consoleSandboxResult.getClient();
-  const isolationScope = _require("07402_getClient.js").getIsolationScope();
+  const isolationScope = _getClient.getIsolationScope();
   if (client) {
     const options = client.getOptions();
     const beforeBreadcrumb = options.beforeBreadcrumb;

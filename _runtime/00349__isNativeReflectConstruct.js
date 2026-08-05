@@ -1,3 +1,5 @@
+import { KeyboardImpl } from "00343_KeyboardImpl.js";
+import { _combineCallbacks } from "00354__combineCallbacks.js";
 // _runtime/00349__isNativeReflectConstruct.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _classCallCheck from "_classCallCheck";
@@ -563,16 +565,16 @@ let items = [
         const _HermesInternal = HermesInternal;
         console.warn("'keyboardShouldPersistTaps={" + str + "}' is deprecated. Use 'keyboardShouldPersistTaps=\"" + str2 + "\"' instead");
       }
-      self._keyboardMetrics = require("00343_KeyboardImpl.js").metrics();
+      self._keyboardMetrics = KeyboardImpl.metrics();
       self._additionalScrollOffset = 0;
-      const obj = require("00343_KeyboardImpl.js");
-      self._subscriptionKeyboardWillShow = require("00343_KeyboardImpl.js").addListener("keyboardWillShow", self.scrollResponderKeyboardWillShow);
-      const obj2 = require("00343_KeyboardImpl.js");
-      self._subscriptionKeyboardWillHide = require("00343_KeyboardImpl.js").addListener("keyboardWillHide", self.scrollResponderKeyboardWillHide);
-      const obj3 = require("00343_KeyboardImpl.js");
-      self._subscriptionKeyboardDidShow = require("00343_KeyboardImpl.js").addListener("keyboardDidShow", self.scrollResponderKeyboardDidShow);
-      const obj4 = require("00343_KeyboardImpl.js");
-      self._subscriptionKeyboardDidHide = require("00343_KeyboardImpl.js").addListener("keyboardDidHide", self.scrollResponderKeyboardDidHide);
+      const obj = KeyboardImpl;
+      self._subscriptionKeyboardWillShow = KeyboardImpl.addListener("keyboardWillShow", self.scrollResponderKeyboardWillShow);
+      const obj2 = KeyboardImpl;
+      self._subscriptionKeyboardWillHide = KeyboardImpl.addListener("keyboardWillHide", self.scrollResponderKeyboardWillHide);
+      const obj3 = KeyboardImpl;
+      self._subscriptionKeyboardDidShow = KeyboardImpl.addListener("keyboardDidShow", self.scrollResponderKeyboardDidShow);
+      const obj4 = KeyboardImpl;
+      self._subscriptionKeyboardDidHide = KeyboardImpl.addListener("keyboardDidHide", self.scrollResponderKeyboardDidHide);
       const result = self._updateAnimatedNodeAttachment();
     }
   },
@@ -653,7 +655,7 @@ let items = [
         stickyHeaderIndices = self.props.stickyHeaderIndices.length > 0;
       }
       if (stickyHeaderIndices) {
-        let obj = require("00354__combineCallbacks.js");
+        let obj = _combineCallbacks;
         obj = { nativeEvent: null };
         obj = { contentOffset: null };
         const obj1 = { y: null };
@@ -898,16 +900,16 @@ let obj = {
       const _HermesInternal = HermesInternal;
       console.warn("'keyboardShouldPersistTaps={" + str + "}' is deprecated. Use 'keyboardShouldPersistTaps=\"" + str2 + "\"' instead");
     }
-    self._keyboardMetrics = require("00343_KeyboardImpl.js").metrics();
+    self._keyboardMetrics = KeyboardImpl.metrics();
     self._additionalScrollOffset = 0;
-    const obj = require("00343_KeyboardImpl.js");
-    self._subscriptionKeyboardWillShow = require("00343_KeyboardImpl.js").addListener("keyboardWillShow", self.scrollResponderKeyboardWillShow);
-    const obj2 = require("00343_KeyboardImpl.js");
-    self._subscriptionKeyboardWillHide = require("00343_KeyboardImpl.js").addListener("keyboardWillHide", self.scrollResponderKeyboardWillHide);
-    const obj3 = require("00343_KeyboardImpl.js");
-    self._subscriptionKeyboardDidShow = require("00343_KeyboardImpl.js").addListener("keyboardDidShow", self.scrollResponderKeyboardDidShow);
-    const obj4 = require("00343_KeyboardImpl.js");
-    self._subscriptionKeyboardDidHide = require("00343_KeyboardImpl.js").addListener("keyboardDidHide", self.scrollResponderKeyboardDidHide);
+    const obj = KeyboardImpl;
+    self._subscriptionKeyboardWillShow = KeyboardImpl.addListener("keyboardWillShow", self.scrollResponderKeyboardWillShow);
+    const obj2 = KeyboardImpl;
+    self._subscriptionKeyboardWillHide = KeyboardImpl.addListener("keyboardWillHide", self.scrollResponderKeyboardWillHide);
+    const obj3 = KeyboardImpl;
+    self._subscriptionKeyboardDidShow = KeyboardImpl.addListener("keyboardDidShow", self.scrollResponderKeyboardDidShow);
+    const obj4 = KeyboardImpl;
+    self._subscriptionKeyboardDidHide = KeyboardImpl.addListener("keyboardDidHide", self.scrollResponderKeyboardDidHide);
     const result = self._updateAnimatedNodeAttachment();
   }
 };

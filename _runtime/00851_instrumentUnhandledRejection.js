@@ -1,9 +1,11 @@
+import { addHandler } from "00850_addHandler.js";
+import { 00821__ } from "metro/00821__.js";
 // _runtime/00851_instrumentUnhandledRejection.js
 const require = arg1;
 const dependencyMap = arg6;
 function instrumentUnhandledRejection() {
-  const onunhandledrejection = require("metro/00821__.js").GLOBAL_OBJ.onunhandledrejection;
-  require("metro/00821__.js").GLOBAL_OBJ.onunhandledrejection = function(arg0) {
+  const onunhandledrejection = 00821__.GLOBAL_OBJ.onunhandledrejection;
+  00821__.GLOBAL_OBJ.onunhandledrejection = function(arg0) {
     callback(table[0]).triggerHandlers("unhandledrejection", arg0);
     if (!onunhandledrejection) {
       return !onunhandledrejection;
@@ -18,12 +20,12 @@ function instrumentUnhandledRejection() {
       const tmp2 = onunhandledrejection;
     }
   };
-  require("metro/00821__.js").GLOBAL_OBJ.onunhandledrejection.__SENTRY_INSTRUMENTED__ = true;
+  00821__.GLOBAL_OBJ.onunhandledrejection.__SENTRY_INSTRUMENTED__ = true;
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let c2 = null;
 arg5.addGlobalUnhandledRejectionInstrumentationHandler = function addGlobalUnhandledRejectionInstrumentationHandler(arg0) {
-  require("00850_addHandler.js") /* addHandler */.addHandler("unhandledrejection", arg0);
-  const obj = require("00850_addHandler.js") /* addHandler */;
-  require("00850_addHandler.js") /* addHandler */.maybeInstrument("unhandledrejection", instrumentUnhandledRejection);
+  addHandler /* addHandler */.addHandler("unhandledrejection", arg0);
+  const obj = addHandler /* addHandler */;
+  addHandler /* addHandler */.maybeInstrument("unhandledrejection", instrumentUnhandledRejection);
 };

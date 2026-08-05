@@ -1,3 +1,4 @@
+import { getDefaultOptions } from "03369_getDefaultOptions.js";
 // _runtime/03648_getWeekOfMonth.js
 import getDate from "getDate";
 import getDay from "getDay";
@@ -48,7 +49,7 @@ let closure_6 = tmp11;
 
 export default function getWeekOfMonth(arg0, weekStartsOn) {
   tmp9.default(1, arguments);
-  const defaultOptions = require("03369_getDefaultOptions.js") /* getDefaultOptions */.getDefaultOptions();
+  const defaultOptions = getDefaultOptions /* getDefaultOptions */.getDefaultOptions();
   weekStartsOn = undefined;
   if (null != weekStartsOn) {
     weekStartsOn = weekStartsOn.weekStartsOn;

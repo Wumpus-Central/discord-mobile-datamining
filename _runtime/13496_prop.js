@@ -1,9 +1,10 @@
+import { 13477__ } from "metro/13477__.js";
 // _runtime/13496_prop.js
 let prop = Object.getOwnPropertySymbols;
 if (prop) {
   prop = !require("module_13481")(() => {
     const SymbolResult = Symbol("symbol detection");
-    const StringResult = require("metro/13477__.js").String(SymbolResult);
+    const StringResult = 13477__.String(SymbolResult);
     let tmp5 = !StringResult;
     if (StringResult) {
       const _Object = Object;

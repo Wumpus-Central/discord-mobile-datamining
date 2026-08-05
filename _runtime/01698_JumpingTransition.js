@@ -1,3 +1,4 @@
+import { linear } from "01658_linear.js";
 // _runtime/01698_JumpingTransition.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -19,7 +20,7 @@ arg5.JumpingTransition = function JumpingTransition(name) {
   obj = { transform: null, easing: null };
   const items = [{ translateX: "" + translateX + "px", translateY: "" + translateY + "px", scale: "" + scaleX + "," + scaleY }];
   obj[0] = items;
-  obj[1] = require("01658_linear.js") /* linear */.Easing.exp;
+  obj[1] = linear /* linear */.Easing.exp;
   obj[0] = obj;
   const obj2 = { transform: null };
   const obj1 = { translateX: "" + translateX + "px", translateY: "" + translateY + "px", scale: "" + scaleX + "," + scaleY };

@@ -1,8 +1,9 @@
+import { getAllKeys } from "00792_getAllKeys.js";
 // _runtime/00791_equalObjects.js
 
 export default function equalObjects(arg0, arg1, arg2, arg3, arg4, get) {
-  const arr = require("00792_getAllKeys.js") /* getAllKeys */(arg0);
-  if (arr.length != require("00792_getAllKeys.js") /* getAllKeys */(arg1).length) {
+  const arr = getAllKeys /* getAllKeys */(arg0);
+  if (arr.length != getAllKeys /* getAllKeys */(arg1).length) {
     if (!tmp) {
       return false;
     }

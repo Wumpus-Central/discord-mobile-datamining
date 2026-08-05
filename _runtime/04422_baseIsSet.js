@@ -1,9 +1,11 @@
+import { isObjectLike } from "00620_isObjectLike.js";
+import { 00770__ } from "metro/00770__.js";
 // _runtime/04422_baseIsSet.js
 
 export default function baseIsSet(arg0) {
-  let tmp3 = require("00620_isObjectLike.js") /* isObjectLike */(arg0);
+  let tmp3 = isObjectLike /* isObjectLike */(arg0);
   if (tmp3) {
-    tmp3 = "[object Set]" == require("metro/00770__.js")(arg0);
+    tmp3 = "[object Set]" == 00770__(arg0);
   }
   return tmp3;
 };

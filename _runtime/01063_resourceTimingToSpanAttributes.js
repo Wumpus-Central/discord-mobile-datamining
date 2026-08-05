@@ -1,3 +1,4 @@
+import { extractNetworkProtocol } from "01059_extractNetworkProtocol.js";
 // _runtime/01063_resourceTimingToSpanAttributes.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -5,9 +6,9 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.resourceTimingToSpanAttributes = function resourceTimingToSpanAttributes(nextHopProtocol) {
   let obj = {};
   if (null != nextHopProtocol.nextHopProtocol) {
-    const result = require("01059_extractNetworkProtocol.js") /* extractNetworkProtocol */.extractNetworkProtocol(nextHopProtocol.nextHopProtocol);
+    const result = extractNetworkProtocol /* extractNetworkProtocol */.extractNetworkProtocol(nextHopProtocol.nextHopProtocol);
     ({ version: obj["network.protocol.version"], name: obj["network.protocol.name"] } = result);
-    const obj2 = require("01059_extractNetworkProtocol.js") /* extractNetworkProtocol */;
+    const obj2 = extractNetworkProtocol /* extractNetworkProtocol */;
   }
   if (obj3.browserPerformanceTimeOrigin()) {
     obj = {};

@@ -1,3 +1,4 @@
+import { normalizeColor } from "00051_normalizeColor.js";
 // _runtime/00050_processColor.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -5,7 +6,7 @@ arg5.default = function processColor(arg0) {
   if (null == arg0) {
     return arg0;
   } else {
-    const defaultResult = require("00051_normalizeColor.js") /* normalizeColor */.default(arg0);
+    const defaultResult = normalizeColor /* normalizeColor */.default(arg0);
     if (null != defaultResult) {
       if (typeof defaultResult === "object") {
         const processColorObjectResult = tmp(52).processColorObject(defaultResult);
@@ -19,7 +20,7 @@ arg5.default = function processColor(arg0) {
       }
       return tmp4;
     }
-    const obj = require("00051_normalizeColor.js") /* normalizeColor */;
+    const obj = normalizeColor /* normalizeColor */;
     tmp = require;
   }
 };

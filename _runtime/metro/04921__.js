@@ -1,3 +1,4 @@
+import { getStringValue } from "../04922_getStringValue.js";
 // _runtime/metro/04921__.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -22,7 +23,7 @@ obj[34864] = {
 obj[36864] = {
   name: "ExifVersion",
   description(value) {
-    return require("../04922_getStringValue.js") /* getStringValue */.getStringValue(value);
+    return getStringValue /* getStringValue */.getStringValue(value);
   }
 };
 const obj1 = { name: "ExposureProgram", description: require("module_4920").ExposureProgram };

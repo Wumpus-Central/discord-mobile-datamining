@@ -1,3 +1,4 @@
+import { useDisposableMemo } from "04050_useDisposableMemo.js";
 // _runtime/04055_useRiveTrigger.js
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -25,7 +26,7 @@ export const useRiveTrigger = function useRiveTrigger(startAnimation, instance, 
   const callback3 = tmp3;
   tmp3.current = onTrigger;
   const items = [instance, startAnimation];
-  disposableMemo = _require("04050_useDisposableMemo.js").useDisposableMemo(() => {
+  disposableMemo = _useDisposableMemo.useDisposableMemo(() => {
     if (closure_1) {
       return obj.triggerProperty(closure_0);
     }

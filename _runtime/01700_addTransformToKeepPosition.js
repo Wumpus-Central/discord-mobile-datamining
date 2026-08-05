@@ -1,3 +1,4 @@
+import { TransitionType } from "01662_TransitionType.js";
 // _runtime/01700_addTransformToKeepPosition.js
 import _slicedToArray from "_slicedToArray";
 
@@ -40,13 +41,13 @@ function addTransformToKeepPosition(style, style2, props, arg3) {
 
 export const EntryExitTransition = function EntryExitTransition(name, translateX) {
   let obj = { translateX: null, translateY: null, scale: null };
-  const structuredCloneResult = structuredClone(require("01662_TransitionType.js") /* TransitionType */.AnimationsData[translateX.exiting]);
+  const structuredCloneResult = structuredClone(TransitionType /* TransitionType */.AnimationsData[translateX.exiting]);
   obj[0] = "" + translateX.translateX + "px";
   obj[1] = "" + translateX.translateY + "px";
   obj[2] = "" + translateX.scaleX + "," + translateX.scaleY;
   obj = { name, style: {}, duration: 300 };
   addTransformToKeepPosition(obj.style, structuredCloneResult.style, obj, true);
-  addTransformToKeepPosition(obj.style, structuredClone(require("01662_TransitionType.js") /* TransitionType */.AnimationsData[translateX.entering]).style, { translateX: "0px", translateY: "0px", scale: "1,1" }, false);
+  addTransformToKeepPosition(obj.style, structuredClone(TransitionType /* TransitionType */.AnimationsData[translateX.entering]).style, { translateX: "0px", translateY: "0px", scale: "1,1" }, false);
   (function hideComponentBetweenAnimations(style) {
     const map = new Map();
     if (undefined === style[0].opacity) {

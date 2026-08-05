@@ -1,8 +1,9 @@
+import { getExpoConstants } from "01003_getExpoConstants.js";
 // _runtime/01127_getExpoUpdatesContext.js
 const require = arg1;
 const dependencyMap = arg6;
 function getExpoUpdatesContext() {
-  let obj = require("01003_getExpoConstants.js") /* getExpoConstants */;
+  let obj = getExpoConstants /* getExpoConstants */;
   const expoUpdates = obj.getExpoUpdates();
   if (expoUpdates) {
     obj = { is_enabled: null, is_embedded_launch: null, is_emergency_launch: null, is_using_embedded_assets: null };

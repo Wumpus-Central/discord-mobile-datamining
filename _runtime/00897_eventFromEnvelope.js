@@ -1,9 +1,10 @@
+import { forEachEnvelopeItem } from "00864_forEachEnvelopeItem.js";
 // _runtime/00897_eventFromEnvelope.js
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 function eventFromEnvelope(arg0, arg1) {
   const _require = arg1;
-  _require("00864_forEachEnvelopeItem.js").forEachEnvelopeItem(arg0, (arg0, arg1) => {
+  _forEachEnvelopeItem.forEachEnvelopeItem(arg0, (arg0, arg1) => {
     if (items.includes(arg1)) {
       const _Array = Array;
       let tmp3;

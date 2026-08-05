@@ -1,3 +1,5 @@
+import { RegExpResult1 } from "16208_RegExpResult1.js";
+import { createDateTimeFormat } from "16209_createDateTimeFormat.js";
 // _runtime/16207_CanonicalizeLocaleList.js
 let require = arg1;
 const dependencyMap = arg6;
@@ -37,7 +39,7 @@ function CanonicalizeLocaleList(str) {
                 str = String(tmp4);
                 let tmp5 = require;
                 let tmp6 = dependencyMap;
-                let expBCP47Syntax = require("16208_RegExpResult1.js") /* RegExpResult1 */.expBCP47Syntax;
+                let expBCP47Syntax = RegExpResult1 /* RegExpResult1 */.expBCP47Syntax;
                 let isMatch = expBCP47Syntax.test(str);
                 if (isMatch) {
                   let expVariantDupes = tmp5(16208).expVariantDupes;
@@ -85,7 +87,7 @@ function CanonicalizeLocaleList(str) {
                   let str8 = typeof call === "unknown" ? tmp16("-") : call(parts, "-");
                   let tmp17 = require;
                   let tmp18 = dependencyMap;
-                  let match = str8.match(require("16208_RegExpResult1.js") /* RegExpResult1 */.expExtSequences);
+                  let match = str8.match(RegExpResult1 /* RegExpResult1 */.expExtSequences);
                   let tmp19 = str8;
                   let tmp20 = match;
                   if (match) {
@@ -1393,7 +1395,7 @@ function InitializeDateTimeFormat(prototype) {
     const call6 = toString.call;
     let dateTimeFormats = formats;
     if ("[object Array]" !== (typeof call6 === "unknown" ? toString() : call6(formats))) {
-      obj2 = require("16209_createDateTimeFormat.js") /* createDateTimeFormat */;
+      obj2 = createDateTimeFormat /* createDateTimeFormat */;
       dateTimeFormats = obj2.createDateTimeFormats(formats);
     }
     obj1 = Object.create(List.prototype);
@@ -2553,7 +2555,7 @@ fn(obj, "__addLocaleData", {
   value(locale) {
     let tmp22;
     locale = locale.locale;
-    const expBCP47Syntax = require("16208_RegExpResult1.js") /* RegExpResult1 */.expBCP47Syntax;
+    const expBCP47Syntax = RegExpResult1 /* RegExpResult1 */.expBCP47Syntax;
     let isMatch = expBCP47Syntax.test(locale);
     if (isMatch) {
       const expVariantDupes = tmp(16208).expVariantDupes;

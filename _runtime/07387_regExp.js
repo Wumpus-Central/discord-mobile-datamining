@@ -1,3 +1,5 @@
+import { generatePropagationContext } from "07385_generatePropagationContext.js";
+import { baggageHeaderToDynamicSamplingContext } from "07388_baggageHeaderToDynamicSamplingContext.js";
 // _runtime/07387_regExp.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -24,13 +26,13 @@ arg5.extractTraceparentData = function extractTraceparentData(str) {
 arg5.generateSentryTraceHeader = function generateSentryTraceHeader() {
   let traceId = arg0;
   if (arg0 === undefined) {
-    traceId = require("07385_generatePropagationContext.js") /* generatePropagationContext */.generateTraceId();
-    const obj = require("07385_generatePropagationContext.js") /* generatePropagationContext */;
+    traceId = generatePropagationContext /* generatePropagationContext */.generateTraceId();
+    const obj = generatePropagationContext /* generatePropagationContext */;
   }
   let spanId = arg1;
   if (arg1 === undefined) {
-    spanId = require("07385_generatePropagationContext.js") /* generatePropagationContext */.generateSpanId();
-    const obj2 = require("07385_generatePropagationContext.js") /* generatePropagationContext */;
+    spanId = generatePropagationContext /* generatePropagationContext */.generateSpanId();
+    const obj2 = generatePropagationContext /* generatePropagationContext */;
   }
   let str = "";
   if (undefined !== arg2) {
@@ -61,7 +63,7 @@ arg5.propagationContextFromHeaders = function propagationContextFromHeaders(str)
       tmp = obj;
     }
   }
-  let result = require("07388_baggageHeaderToDynamicSamplingContext.js") /* baggageHeaderToDynamicSamplingContext */.baggageHeaderToDynamicSamplingContext(arg1);
+  let result = baggageHeaderToDynamicSamplingContext /* baggageHeaderToDynamicSamplingContext */.baggageHeaderToDynamicSamplingContext(arg1);
   if (tmp) {
     if (tmp.traceId) {
       obj = { traceId: null, parentSpanId: null, spanId: null, sampled: null, dsc: null };
@@ -79,7 +81,7 @@ arg5.propagationContextFromHeaders = function propagationContextFromHeaders(str)
   obj = { traceId: null, spanId: null };
   tmp4Result = tmp4(7385);
   obj[0] = tmp4Result.generateTraceId();
-  const obj2 = require("07388_baggageHeaderToDynamicSamplingContext.js") /* baggageHeaderToDynamicSamplingContext */;
-  obj[1] = require("07385_generatePropagationContext.js") /* generatePropagationContext */.generateSpanId();
+  const obj2 = baggageHeaderToDynamicSamplingContext /* baggageHeaderToDynamicSamplingContext */;
+  obj[1] = generatePropagationContext /* generatePropagationContext */.generateSpanId();
   return obj;
 };

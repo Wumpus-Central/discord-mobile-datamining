@@ -1,9 +1,10 @@
+import { 13462__ } from "metro/13462__.js";
 // _runtime/13461_getSupportedCollations.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getSupportedCollations = function getSupportedCollations(locale) {
   const _require = locale;
-  const collations = _require("metro/13462__.js").collations;
+  const collations = _13462__.collations;
   return collations.filter((arg0) => (function isSupported(arg0, closure_0) {
     let str = closure_0;
     if (undefined === closure_0) {

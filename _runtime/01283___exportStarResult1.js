@@ -1,3 +1,4 @@
+import { 01284__ } from "metro/01284__.js";
 // _runtime/01283___exportStarResult1.js
 const require = arg1;
 const dependencyMap = arg6;
@@ -10,7 +11,7 @@ arg5.parseNumberSkeletonFromString = function parseNumberSkeletonFromString(str)
     throw error;
   } else {
     const items = [];
-    const parts = str.split(require("metro/01284__.js").WHITE_SPACE_REGEX);
+    const parts = str.split(01284__.WHITE_SPACE_REGEX);
     const found = parts.filter((arg0) => arg0.length > 0);
     let num2 = 0;
     if (0 < found.length) {

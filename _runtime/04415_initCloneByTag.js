@@ -1,3 +1,8 @@
+import { cloneArrayBuffer } from "04416_cloneArrayBuffer.js";
+import { cloneDataView } from "04417_cloneDataView.js";
+import { cloneTypedArray } from "04418_cloneTypedArray.js";
+import { cloneRegExp } from "04419_cloneRegExp.js";
+import { valueOf } from "04420_valueOf.js";
 // _runtime/04415_initCloneByTag.js
 
 export default function initCloneByTag(arg0, arg1, arg2) {
@@ -104,7 +109,7 @@ export default function initCloneByTag(arg0, arg1, arg2) {
     case "paddingHorizontal":
     break;
     case "add":
-      return require("04416_cloneArrayBuffer.js") /* cloneArrayBuffer */(arg0);
+      return cloneArrayBuffer /* cloneArrayBuffer */(arg0);
     case "alignItems":
     break;
     case "ao":
@@ -120,59 +125,59 @@ export default function initCloneByTag(arg0, arg1, arg2) {
     case "apply":
     break;
     case "backgroundColor":
-      return require("04417_cloneDataView.js") /* cloneDataView */(arg0, arg2);
+      return cloneDataView /* cloneDataView */(arg0, arg2);
     case "round":
     break;
     case "bm":
-      let tmp16 = require("04418_cloneTypedArray.js") /* cloneTypedArray */;
+      let tmp16 = cloneTypedArray /* cloneTypedArray */;
       let tmp16Result = tmp16(arg0, arg2);
       return tmp16Result;
     case "body":
     break;
     case "borderRadius":
-      tmp16 = require("04418_cloneTypedArray.js") /* cloneTypedArray */;
+      tmp16 = cloneTypedArray /* cloneTypedArray */;
       tmp16Result = tmp16(arg0, arg2);
       return tmp16Result;
     case "bottom":
     break;
     case "call":
-      tmp16 = require("04418_cloneTypedArray.js") /* cloneTypedArray */;
+      tmp16 = cloneTypedArray /* cloneTypedArray */;
       tmp16Result = tmp16(arg0, arg2);
       return tmp16Result;
     case "channel":
     break;
     case "channelId":
-      tmp16 = require("04418_cloneTypedArray.js") /* cloneTypedArray */;
+      tmp16 = cloneTypedArray /* cloneTypedArray */;
       tmp16Result = tmp16(arg0, arg2);
       return tmp16Result;
     case "channel_id":
     break;
     case "id":
-      tmp16 = require("04418_cloneTypedArray.js") /* cloneTypedArray */;
+      tmp16 = cloneTypedArray /* cloneTypedArray */;
       tmp16Result = tmp16(arg0, arg2);
       return tmp16Result;
     case "children":
     break;
     case "cix":
-      tmp16 = require("04418_cloneTypedArray.js") /* cloneTypedArray */;
+      tmp16 = cloneTypedArray /* cloneTypedArray */;
       tmp16Result = tmp16(arg0, arg2);
       return tmp16Result;
     case "ix":
     break;
     case "unicodeVersion":
-      tmp16 = require("04418_cloneTypedArray.js") /* cloneTypedArray */;
+      tmp16 = cloneTypedArray /* cloneTypedArray */;
       tmp16Result = tmp16(arg0, arg2);
       return tmp16Result;
     case "code":
     break;
     case "color":
-      tmp16 = require("04418_cloneTypedArray.js") /* cloneTypedArray */;
+      tmp16 = cloneTypedArray /* cloneTypedArray */;
       tmp16Result = tmp16(arg0, arg2);
       return tmp16Result;
     case "colors":
     break;
     case "concat":
-      tmp16 = require("04418_cloneTypedArray.js") /* cloneTypedArray */;
+      tmp16 = cloneTypedArray /* cloneTypedArray */;
       tmp16Result = tmp16(arg0, arg2);
       return tmp16Result;
     case "constructor":
@@ -198,11 +203,11 @@ export default function initCloneByTag(arg0, arg1, arg2) {
     case "ty":
     break;
     case "current":
-      return require("04419_cloneRegExp.js") /* cloneRegExp */(arg0);
+      return cloneRegExp /* cloneRegExp */(arg0);
     case "cursor":
     break;
     case "data":
-      return require("04420_valueOf.js") /* valueOf */(arg0);
+      return valueOf /* valueOf */(arg0);
     case "ddd":
     break;
     case "default":

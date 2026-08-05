@@ -1,3 +1,4 @@
+import { 01400__ } from "metro/01400__.js";
 // _runtime/01399_availableTypedArrays.js
 if (typeof globalThis !== "undefined") {
   const global = globalThis;
@@ -7,7 +8,7 @@ export default function availableTypedArrays() {
   let tmp2;
   const items = [];
   let num = 0;
-  if (0 < require("metro/01400__.js").length) {
+  if (0 < 01400__.length) {
     do {
       let tmp = global;
       tmp2 = require;

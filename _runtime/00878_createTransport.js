@@ -1,3 +1,4 @@
+import { makePromiseBuffer } from "00877_makePromiseBuffer.js";
 // _runtime/00878_createTransport.js
 const require = arg1;
 let dependencyMap = arg6;
@@ -8,7 +9,7 @@ arg5.createTransport = function createTransport(bufferSize) {
   const dependencyMap = arg1;
   let promiseBuffer = arg2;
   if (arg2 === undefined) {
-    let obj = _require("00877_makePromiseBuffer.js");
+    let obj = _makePromiseBuffer;
     let num = bufferSize.bufferSize;
     if (!num) {
       num = 64;
