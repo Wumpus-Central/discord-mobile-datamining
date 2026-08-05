@@ -10,7 +10,7 @@ obj = {
     let thresholdRect;
     ({ target, targetRect, thresholdRect } = arg0);
     let importDefault;
-    if (target instanceof importDefault(143)) {
+    if (target instanceof require("../00143__isNativeReflectConstruct.js")) {
       const _Math = Math;
       const _Math2 = Math;
       const bound = Math.min(targetRect.y + targetRect.height, thresholdRect.y + thresholdRect.height);

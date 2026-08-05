@@ -6,7 +6,7 @@ arg5.userInteractionIntegration = () => ({ name: UserInteraction });
 arg5.startUserInteractionSpan = (arg0) => {
   let elementId;
   let op;
-  let obj = require(817) /* registerSpanErrorInstrumentation */;
+  let obj = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
   const client = obj.getClient();
   if (client) {
     let tmpResult = tmp(1166);

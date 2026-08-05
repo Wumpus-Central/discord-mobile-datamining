@@ -30,7 +30,7 @@ arg5.getInteractionCount = () => {
 };
 arg5.initInteractionCountPolyfill = () => {
   if (!tmp) {
-    let closure_2 = require(1046) /* observe */.observe("event", updateEstimate, { type: "event", buffered: true, durationThreshold: 0 });
-    const obj = require(1046) /* observe */;
+    let closure_2 = require("01046_observe.js") /* observe */.observe("event", updateEstimate, { type: "event", buffered: true, durationThreshold: 0 });
+    const obj = require("01046_observe.js") /* observe */;
   }
 };

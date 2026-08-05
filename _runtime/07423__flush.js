@@ -124,9 +124,9 @@ function _close() {
   return applyArgumentsResult;
 }
 function endSession() {
-  const isolationScope = require(7402) /* getClient */.getIsolationScope();
-  const obj = require(7402) /* getClient */;
-  const currentScope = require(7402) /* getClient */.getCurrentScope();
+  const isolationScope = require("07402_getClient.js") /* getClient */.getIsolationScope();
+  const obj = require("07402_getClient.js") /* getClient */;
+  const currentScope = require("07402_getClient.js") /* getClient */.getCurrentScope();
   const tmp3 = currentScope.getSession() || isolationScope.getSession();
   if (tmp3) {
     let tmpResult = tmp(7398);
@@ -134,10 +134,10 @@ function endSession() {
   }
   tmpResult = tmp(7402);
   const isolationScope1 = tmpResult.getIsolationScope();
-  const obj3 = require(7402) /* getClient */;
-  const currentScope1 = require(7402) /* getClient */.getCurrentScope();
-  const tmpResult1 = require(7402) /* getClient */;
-  const client = require(7402) /* getClient */.getClient();
+  const obj3 = require("07402_getClient.js") /* getClient */;
+  const currentScope1 = require("07402_getClient.js") /* getClient */.getCurrentScope();
+  const tmpResult1 = require("07402_getClient.js") /* getClient */;
+  const client = require("07402_getClient.js") /* getClient */.getClient();
   const tmp5 = currentScope1.getSession() || isolationScope1.getSession();
   let tmp6 = tmp5;
   if (tmp5) {
@@ -151,13 +151,13 @@ function endSession() {
 }
 
 export const addEventProcessor = function addEventProcessor(arg0) {
-  const isolationScope = require(7402) /* getClient */.getIsolationScope();
+  const isolationScope = require("07402_getClient.js") /* getClient */.getIsolationScope();
   isolationScope.addEventProcessor(arg0);
 };
 export const captureCheckIn = function captureCheckIn(arg0, arg1) {
-  const currentScope = require(7402) /* getClient */.getCurrentScope();
-  const obj = require(7402) /* getClient */;
-  const client = require(7402) /* getClient */.getClient();
+  const currentScope = require("07402_getClient.js") /* getClient */.getCurrentScope();
+  const obj = require("07402_getClient.js") /* getClient */;
+  const client = require("07402_getClient.js") /* getClient */.getClient();
   if (client) {
     if (client.captureCheckIn) {
       return client.captureCheckIn(arg0, arg1, currentScope);
@@ -169,17 +169,17 @@ export const captureCheckIn = function captureCheckIn(arg0, arg1) {
     const logger = tmp(7375).logger;
     logger.warn("Cannot capture check-in. No client defined.");
   }
-  const obj2 = require(7402) /* getClient */;
-  return require(7386) /* addContextToFrame */.uuid4();
+  const obj2 = require("07402_getClient.js") /* getClient */;
+  return require("07386_addContextToFrame.js") /* addContextToFrame */.uuid4();
 };
 export const captureEvent = function captureEvent(arg0, arg1) {
-  const currentScope = require(7402) /* getClient */.getCurrentScope();
+  const currentScope = require("07402_getClient.js") /* getClient */.getCurrentScope();
   return currentScope.captureEvent(arg0, arg1);
 };
 export const captureException = function captureException(arg0, arg1) {
-  const currentScope = require(7402) /* getClient */.getCurrentScope();
-  const obj = require(7402) /* getClient */;
-  return currentScope.captureException(arg0, require(7424) /* applyClientOptions */.parseEventHintOrCaptureContext(arg1));
+  const currentScope = require("07402_getClient.js") /* getClient */.getCurrentScope();
+  const obj = require("07402_getClient.js") /* getClient */;
+  return currentScope.captureException(arg0, require("07424_applyClientOptions.js") /* applyClientOptions */.parseEventHintOrCaptureContext(arg1));
 };
 export const captureMessage = function captureMessage(arg0, str) {
   let tmp;
@@ -192,7 +192,7 @@ export const captureMessage = function captureMessage(arg0, str) {
     obj[0] = str;
     tmp2 = obj;
   }
-  obj = require(7402) /* getClient */;
+  obj = require("07402_getClient.js") /* getClient */;
   const currentScope = obj.getCurrentScope();
   return currentScope.captureMessage(arg0, tmp, tmp2);
 };
@@ -204,11 +204,11 @@ export const captureSession = function captureSession() {
   if (flag) {
     endSession();
   } else {
-    const isolationScope = require(7402) /* getClient */.getIsolationScope();
-    const obj = require(7402) /* getClient */;
-    const currentScope = require(7402) /* getClient */.getCurrentScope();
-    const obj3 = require(7402) /* getClient */;
-    const client = require(7402) /* getClient */.getClient();
+    const isolationScope = require("07402_getClient.js") /* getClient */.getIsolationScope();
+    const obj = require("07402_getClient.js") /* getClient */;
+    const currentScope = require("07402_getClient.js") /* getClient */.getCurrentScope();
+    const obj3 = require("07402_getClient.js") /* getClient */;
+    const client = require("07402_getClient.js") /* getClient */.getClient();
     const tmp3 = currentScope.getSession() || isolationScope.getSession();
     let tmp4 = tmp3;
     if (tmp3) {
@@ -217,7 +217,7 @@ export const captureSession = function captureSession() {
     if (tmp4) {
       client.captureSession(tmp3);
     }
-    const obj5 = require(7402) /* getClient */;
+    const obj5 = require("07402_getClient.js") /* getClient */;
   }
 };
 export const close = function close(arg0) {
@@ -242,7 +242,7 @@ export const flush = function flush(arg0) {
   return applyArgumentsResult;
 };
 export const isEnabled = function isEnabled() {
-  const client = require(7402) /* getClient */.getClient();
+  const client = require("07402_getClient.js") /* getClient */.getClient();
   let transport = client;
   if (transport) {
     transport = false !== client.getOptions().enabled;
@@ -253,44 +253,44 @@ export const isEnabled = function isEnabled() {
   return transport;
 };
 export const isInitialized = function isInitialized() {
-  return require(7402) /* getClient */.getClient();
+  return require("07402_getClient.js") /* getClient */.getClient();
 };
 export const lastEventId = function lastEventId() {
-  const isolationScope = require(7402) /* getClient */.getIsolationScope();
+  const isolationScope = require("07402_getClient.js") /* getClient */.getIsolationScope();
   return isolationScope.lastEventId();
 };
 export const setContext = function setContext(arg0, arg1) {
-  const isolationScope = require(7402) /* getClient */.getIsolationScope();
+  const isolationScope = require("07402_getClient.js") /* getClient */.getIsolationScope();
   isolationScope.setContext(arg0, arg1);
 };
 export const setExtra = function setExtra(arg0, arg1) {
-  const isolationScope = require(7402) /* getClient */.getIsolationScope();
+  const isolationScope = require("07402_getClient.js") /* getClient */.getIsolationScope();
   isolationScope.setExtra(arg0, arg1);
 };
 export const setExtras = function setExtras(arg0) {
-  const isolationScope = require(7402) /* getClient */.getIsolationScope();
+  const isolationScope = require("07402_getClient.js") /* getClient */.getIsolationScope();
   isolationScope.setExtras(arg0);
 };
 export const setTag = function setTag(arg0, arg1) {
-  const isolationScope = require(7402) /* getClient */.getIsolationScope();
+  const isolationScope = require("07402_getClient.js") /* getClient */.getIsolationScope();
   isolationScope.setTag(arg0, arg1);
 };
 export const setTags = function setTags(arg0) {
-  const isolationScope = require(7402) /* getClient */.getIsolationScope();
+  const isolationScope = require("07402_getClient.js") /* getClient */.getIsolationScope();
   isolationScope.setTags(arg0);
 };
 export const setUser = function setUser(arg0) {
-  const isolationScope = require(7402) /* getClient */.getIsolationScope();
+  const isolationScope = require("07402_getClient.js") /* getClient */.getIsolationScope();
   isolationScope.setUser(arg0);
 };
 export const startSession = function startSession(arg0) {
   let environment;
   let release;
-  let obj = require(7402) /* getClient */;
+  let obj = require("07402_getClient.js") /* getClient */;
   const client = obj.getClient();
-  const isolationScope = require(7402) /* getClient */.getIsolationScope();
-  const obj3 = require(7402) /* getClient */;
-  const currentScope = require(7402) /* getClient */.getCurrentScope();
+  const isolationScope = require("07402_getClient.js") /* getClient */.getIsolationScope();
+  const obj3 = require("07402_getClient.js") /* getClient */;
+  const currentScope = require("07402_getClient.js") /* getClient */.getCurrentScope();
   let options = client;
   if (client) {
     options = client.getOptions();
@@ -302,11 +302,11 @@ export const startSession = function startSession(arg0) {
   if (undefined === environment) {
     environment = tmp(7412).DEFAULT_ENVIRONMENT;
   }
-  const obj5 = require(7402) /* getClient */;
-  const userAgent = require(7376) /* getGlobalSingleton */.GLOBAL_OBJ.navigator || {}.userAgent;
+  const obj5 = require("07402_getClient.js") /* getClient */;
+  const userAgent = require("07376_getGlobalSingleton.js") /* getGlobalSingleton */.GLOBAL_OBJ.navigator || {}.userAgent;
   let tmpResult = tmp(7398);
   obj = { release, environment, user: null };
-  const tmp3 = require(7376) /* getGlobalSingleton */.GLOBAL_OBJ.navigator || {};
+  const tmp3 = require("07376_getGlobalSingleton.js") /* getGlobalSingleton */.GLOBAL_OBJ.navigator || {};
   obj[2] = currentScope.getUser() || isolationScope.getUser();
   let tmp5 = userAgent;
   if (userAgent) {
@@ -355,10 +355,10 @@ export const withMonitor = function withMonitor(monitorSlug) {
     const obj4 = monitorSlug(7402);
     monitorSlug(7386).uuid4();
   }
-  let currentScope = _require(7402).getCurrentScope();
+  let currentScope = _require("07402_getClient.js").getCurrentScope();
   let obj = { monitorSlug, status: "in_progress" };
-  let obj2 = _require(7402);
-  let client = _require(7402).getClient();
+  let obj2 = _require("07402_getClient.js");
+  let client = _require("07402_getClient.js").getClient();
   if (client) {
     if (client.captureCheckIn) {
       let captureCheckInResult = client.captureCheckIn(obj, arg2, currentScope);
@@ -394,6 +394,6 @@ export const withMonitor = function withMonitor(monitorSlug) {
     let logger = tmp(7375).logger;
     logger.warn("Cannot capture check-in. No client defined.");
   }
-  let obj3 = _require(7402);
-  captureCheckInResult = _require(7386).uuid4();
+  let obj3 = _require("07402_getClient.js");
+  captureCheckInResult = _require("07386_addContextToFrame.js").uuid4();
 };

@@ -13,5 +13,5 @@ export default require("noop").forwardRef((delayLongPress, ref) => {
   }
   const merged = Object.assign(delayLongPress, Object.create(null));
   const merged1 = Object.assign(merged);
-  return jsx(importDefault(5435), { ref, delayLongPress: num, extraButtonProps });
+  return jsx(require("../05435__isNativeReflectConstruct.js"), { ref, delayLongPress: num, extraButtonProps });
 });

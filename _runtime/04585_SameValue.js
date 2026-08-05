@@ -8,7 +8,7 @@ export default function SameValue(arg0, arg1) {
     }
     let tmp3 = tmp4;
   } else {
-    tmp3 = require(572) /* isNaN */(arg0) && require(572) /* isNaN */(arg1);
+    tmp3 = require("00572_isNaN.js") /* isNaN */(arg0) && require("00572_isNaN.js") /* isNaN */(arg1);
     const tmp = require;
   }
   return tmp3;

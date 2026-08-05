@@ -5,12 +5,12 @@ const dependencyMap = arg6;
 function constructTag(decompressResult, type, items2, items1) {
   let stringFromDataView = decompressResult;
   if (decompressResult instanceof DataView) {
-    let obj = require(4897) /* getDataView */;
+    let obj = require("04897_getDataView.js") /* getDataView */;
     stringFromDataView = obj.getStringFromDataView(decompressResult, 0, decompressResult.byteLength);
   }
-  const stringValueFromArray = require(4897) /* getDataView */.getStringValueFromArray(items1);
+  const stringValueFromArray = require("04897_getDataView.js") /* getDataView */.getStringValueFromArray(items1);
   let combined = stringValueFromArray;
-  if (type !== require(4904).TYPE_TEXT) {
+  if (type !== require("metro/04904__.js").TYPE_TEXT) {
     combined = stringValueFromArray;
     if (0 !== items2.length) {
       const _HermesInternal = HermesInternal;
@@ -19,7 +19,7 @@ function constructTag(decompressResult, type, items2, items1) {
     }
   }
   obj = { name: combined, value: stringFromDataView, description: null };
-  if (type === require(4904).TYPE_ITXT) {
+  if (type === require("metro/04904__.js").TYPE_ITXT) {
     stringFromDataView = module(4930).decode("UTF-8", decompressResult);
     const obj5 = module(4930);
   }

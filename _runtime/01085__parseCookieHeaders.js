@@ -63,14 +63,14 @@ function _shouldCaptureResponse(failedRequestStatusCodes) {
     });
   }
   if (someResult) {
-    const obj = _require(817);
-    someResult = !obj.isSentryRequestUrl(arg2, _require(817).getClient());
-    const obj2 = _require(817);
+    const obj = _require("00817_registerSpanErrorInstrumentation.js");
+    someResult = !obj.isSentryRequestUrl(arg2, _require("00817_registerSpanErrorInstrumentation.js").getClient());
+    const obj2 = _require("00817_registerSpanErrorInstrumentation.js");
   }
   return someResult;
 }
 function _createEvent(error) {
-  let obj = require(817) /* registerSpanErrorInstrumentation */;
+  let obj = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
   const client = obj.getClient();
   let stack;
   if (client) {
@@ -113,12 +113,12 @@ function _createEvent(error) {
   obj2[3] = parsed;
   obj[3] = { response: obj2 };
   const tmp = require;
-  const tmpResult = require(817) /* registerSpanErrorInstrumentation */;
+  const tmpResult = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
   const result = tmpResult.addExceptionMechanism(obj, { type: "auto.http.client." + error.type, handled: false });
   return obj;
 }
 function _shouldSendDefaultPii() {
-  const client = require(817) /* registerSpanErrorInstrumentation */.getClient();
+  const client = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.getClient();
   let BooleanResult = client;
   if (BooleanResult) {
     const _Boolean = Boolean;

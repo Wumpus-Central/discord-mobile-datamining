@@ -61,7 +61,7 @@ function dsnFromString(arg0) {
     obj[6] = first;
     return obj;
   } else {
-    obj = _require(7375);
+    obj = _require("07375_consoleSandbox.js");
     obj.consoleSandbox(() => {
       console.error("Invalid Sentry Dsn: " + closure_0);
     });

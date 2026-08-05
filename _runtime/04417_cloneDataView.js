@@ -2,7 +2,7 @@
 
 export default function cloneDataView(buffer) {
   if (arg1) {
-    buffer = require(4416) /* cloneArrayBuffer */(buffer.buffer);
+    buffer = require("04416_cloneArrayBuffer.js") /* cloneArrayBuffer */(buffer.buffer);
   } else {
     buffer = buffer.buffer;
   }

@@ -1,7 +1,7 @@
 // _runtime/01401_forEach.js
 
 export default function forEach(str, call) {
-  if (require(1402) /* apply */(call)) {
+  if (require("01402_apply.js") /* apply */(call)) {
     call = toString.call;
     if ("[object Array]" === (typeof call === "unknown" ? toString() : call(str))) {
       let num4 = 0;

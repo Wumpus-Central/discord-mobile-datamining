@@ -22,7 +22,7 @@ export const getMetricSummaryJsonForSpan = function getMetricSummaryJsonForSpan(
       }
       let tmp13 = require;
       let tmp14 = dependencyMap;
-      let obj2 = require(7381) /* addNonEnumerableProperty */;
+      let obj2 = require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */;
       let tmp15 = tmp11;
       arr = arr.push(obj2.dropUndefinedKeys(tmp11));
       continue;

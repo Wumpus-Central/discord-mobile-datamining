@@ -11,33 +11,33 @@ arg5.isOGG = undefined;
 arg5.isSWF = undefined;
 arg5.isWEBM = undefined;
 arg5.isAVI = function isAVI(fileChunk) {
-  fileChunk = require(4869) /* getFileChunk */.getFileChunk(fileChunk);
-  const FileTypes = require(4870).FileTypes;
+  fileChunk = require("04869_getFileChunk.js") /* getFileChunk */.getFileChunk(fileChunk);
+  const FileTypes = require("metro/04870__.js").FileTypes;
   return FileTypes.checkByFileType(fileChunk, "avi");
 };
 arg5.isFLV = function isFLV(fileChunk) {
-  fileChunk = require(4869) /* getFileChunk */.getFileChunk(fileChunk);
-  const FileTypes = require(4870).FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "flv") && require(4869) /* getFileChunk */.isFlvStringIncluded(fileChunk);
+  fileChunk = require("04869_getFileChunk.js") /* getFileChunk */.getFileChunk(fileChunk);
+  const FileTypes = require("metro/04870__.js").FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "flv") && require("04869_getFileChunk.js") /* getFileChunk */.isFlvStringIncluded(fileChunk);
 };
 arg5.isM4V = function isM4V(fileChunk) {
-  fileChunk = require(4869) /* getFileChunk */.getFileChunk(fileChunk);
-  const FileTypes = require(4870).FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "m4v") && require(4869) /* getFileChunk */.isftypStringIncluded(fileChunk);
+  fileChunk = require("04869_getFileChunk.js") /* getFileChunk */.getFileChunk(fileChunk);
+  const FileTypes = require("metro/04870__.js").FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "m4v") && require("04869_getFileChunk.js") /* getFileChunk */.isftypStringIncluded(fileChunk);
 };
 arg5.isMKV = function isMKV(fileChunk) {
-  fileChunk = require(4869) /* getFileChunk */.getFileChunk(fileChunk, 64);
-  const FileTypes = require(4870).FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "mkv") && "mkv" === require(4869) /* getFileChunk */.findMatroskaDocTypeElements(fileChunk);
+  fileChunk = require("04869_getFileChunk.js") /* getFileChunk */.getFileChunk(fileChunk, 64);
+  const FileTypes = require("metro/04870__.js").FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "mkv") && "mkv" === require("04869_getFileChunk.js") /* getFileChunk */.findMatroskaDocTypeElements(fileChunk);
 };
 arg5.isMOV = function isMOV(fileChunk) {
-  fileChunk = require(4869) /* getFileChunk */.getFileChunk(fileChunk);
-  const FileTypes = require(4870).FileTypes;
+  fileChunk = require("04869_getFileChunk.js") /* getFileChunk */.getFileChunk(fileChunk);
+  const FileTypes = require("metro/04870__.js").FileTypes;
   return FileTypes.checkByFileType(fileChunk, "mov");
 };
 arg5.isMP4 = function isMP4(fileChunk, excludeSimilarTypes) {
-  fileChunk = require(4869) /* getFileChunk */.getFileChunk(fileChunk);
-  const FileTypes = require(4870).FileTypes;
+  fileChunk = require("04869_getFileChunk.js") /* getFileChunk */.getFileChunk(fileChunk);
+  const FileTypes = require("metro/04870__.js").FileTypes;
   let checkByFileTypeResult = FileTypes.checkByFileType(fileChunk, "mp4");
   if (!checkByFileTypeResult) {
     excludeSimilarTypes = undefined;
@@ -56,17 +56,17 @@ arg5.isMP4 = function isMP4(fileChunk, excludeSimilarTypes) {
   return checkByFileTypeResult;
 };
 arg5.isOGG = function isOGG(fileChunk) {
-  fileChunk = require(4869) /* getFileChunk */.getFileChunk(fileChunk);
-  const FileTypes = require(4870).FileTypes;
+  fileChunk = require("04869_getFileChunk.js") /* getFileChunk */.getFileChunk(fileChunk);
+  const FileTypes = require("metro/04870__.js").FileTypes;
   return FileTypes.checkByFileType(fileChunk, "ogg");
 };
 arg5.isSWF = function isSWF(fileChunk) {
-  fileChunk = require(4869) /* getFileChunk */.getFileChunk(fileChunk);
-  const FileTypes = require(4870).FileTypes;
+  fileChunk = require("04869_getFileChunk.js") /* getFileChunk */.getFileChunk(fileChunk);
+  const FileTypes = require("metro/04870__.js").FileTypes;
   return FileTypes.checkByFileType(fileChunk, "swf");
 };
 arg5.isWEBM = function isWEBM(fileChunk) {
-  fileChunk = require(4869) /* getFileChunk */.getFileChunk(fileChunk, 64);
-  const FileTypes = require(4870).FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "webm") && "webm" === require(4869) /* getFileChunk */.findMatroskaDocTypeElements(fileChunk);
+  fileChunk = require("04869_getFileChunk.js") /* getFileChunk */.getFileChunk(fileChunk, 64);
+  const FileTypes = require("metro/04870__.js").FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "webm") && "webm" === require("04869_getFileChunk.js") /* getFileChunk */.findMatroskaDocTypeElements(fileChunk);
 };

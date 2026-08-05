@@ -17,7 +17,7 @@ export default function _createClass(arg0, arg1, arg2) {
       let _Object = Object;
       let tmp5 = require;
       let tmp6 = dependencyMap;
-      let definePropertyResult = Object.defineProperty(tmp, require(5522) /* toPropertyKey */(tmp3.key), tmp3);
+      let definePropertyResult = Object.defineProperty(tmp, require("../05522_toPropertyKey.js") /* toPropertyKey */(tmp3.key), tmp3);
     }
   }
   if (arg2) {
@@ -36,7 +36,7 @@ export default function _createClass(arg0, arg1, arg2) {
       let _Object2 = Object;
       let tmp11 = require;
       let tmp12 = dependencyMap;
-      let definePropertyResult1 = Object.defineProperty(arg0, require(5522) /* toPropertyKey */(tmp9.key), tmp9);
+      let definePropertyResult1 = Object.defineProperty(arg0, require("../05522_toPropertyKey.js") /* toPropertyKey */(tmp9.key), tmp9);
     }
   }
   Object.defineProperty(arg0, "prototype", { writable: false });

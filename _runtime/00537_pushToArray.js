@@ -70,14 +70,14 @@ function stringify(parts1, arg1, fn, arg3, arg4, arg5, arg6, arg7, arg8, fn2, ar
       }
       str2 = parts1;
       if (tmp5) {
-        str2 = _require(536).maybeMap(parts1, (arg0) => {
+        str2 = _require("00536_items.js").maybeMap(parts1, (arg0) => {
           let tmp = arg0;
           if (arg0 instanceof Date) {
             tmp = callback(arg0);
           }
           return tmp;
         });
-        const obj2 = _require(536);
+        const obj2 = _require("00536_items.js");
       }
     }
   }
@@ -193,7 +193,7 @@ function stringify(parts1, arg1, fn, arg3, arg4, arg5, arg6, arg7, arg8, fn2, ar
                           let result = get.set(parts1, num2);
                           let tmp33 = _require;
                           let tmp34 = dependencyMap;
-                          let obj7 = _require(538)();
+                          let obj7 = _require("00538_getSideChannel.js")();
                           let tmp35 = closure_9;
                           let result1 = obj7.set(closure_9, get);
                           if (tmp86) {
@@ -267,7 +267,7 @@ function stringify(parts1, arg1, fn, arg3, arg4, arg5, arg6, arg7, arg8, fn2, ar
         tmp13 = isArray;
       }
     }
-    obj3 = _require(536);
+    obj3 = _require("00536_items.js");
     tmp10 = _require;
   }
   if (arg8) {
@@ -328,7 +328,7 @@ export default (arg0, allowEmptyArrays) => {
         }
       }
     }
-    let format = require(534).default;
+    let format = require("metro/00534__.js").default;
     if (undefined !== allowEmptyArrays.format) {
       const call = hasOwnProperty.call;
       const formatters = tmp3(534).formatters;
@@ -395,7 +395,7 @@ export default (arg0, allowEmptyArrays) => {
     obj[11] = typeof allowEmptyArrays.encodeValuesOnly === "boolean" ? allowEmptyArrays.encodeValuesOnly : obj.encodeValuesOnly;
     obj[12] = filter;
     obj[13] = format;
-    obj[14] = require(534).formatters[format];
+    obj[14] = require("metro/00534__.js").formatters[format];
     obj[15] = typeof allowEmptyArrays.serializeDate === "function" ? allowEmptyArrays.serializeDate : obj.serializeDate;
     obj[16] = typeof allowEmptyArrays.skipNulls === "boolean" ? allowEmptyArrays.skipNulls : obj.skipNulls;
     let sort = null;
@@ -424,7 +424,7 @@ export default (arg0, allowEmptyArrays) => {
           const sorted = filter.sort(arr.sort);
         }
         const items = [];
-        const tmp25 = require(538) /* getSideChannel */();
+        const tmp25 = require("00538_getSideChannel.js") /* getSideChannel */();
         for (let num3 = 0; num3 < filter.length; num3 = num3 + 1) {
           let tmp26 = filter[num3];
           let tmp27 = found[tmp26];

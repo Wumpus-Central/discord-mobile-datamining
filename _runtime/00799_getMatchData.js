@@ -2,7 +2,7 @@
 
 export default function getMatchData(arg0) {
   let tmp7;
-  const arr = require(616) /* keys */(arg0);
+  const arr = require("00616_keys.js") /* keys */(arg0);
   let diff = tmp - 1;
   if (+arr.length) {
     do {
@@ -11,7 +11,7 @@ export default function getMatchData(arg0) {
       let items = [tmp3, tmp4, ];
       let tmp5 = require;
       let tmp6 = dependencyMap;
-      items[2] = require(723) /* isStrictComparable */(tmp4);
+      items[2] = require("00723_isStrictComparable.js") /* isStrictComparable */(tmp4);
       arr[diff] = items;
       tmp7 = +diff;
       diff = tmp7 - 1;

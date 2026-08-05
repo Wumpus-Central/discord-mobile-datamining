@@ -5,7 +5,7 @@ const dependencyMap = arg6;
 __turboModuleProxy = __turboModuleProxy.__turboModuleProxy;
 arg5.get = function get(arg0) {
   if (null == __turboModuleProxy) {
-    const tmp5 = require(31) /* genModule */.default[arg0];
+    const tmp5 = require("00031_genModule.js") /* genModule */.default[arg0];
     let tmp6 = null;
     if (null != tmp5) {
       tmp6 = tmp5;
@@ -18,7 +18,7 @@ arg5.get = function get(arg0) {
 };
 arg5.getEnforcing = function getEnforcing(StatusBarManager) {
   if (null == __turboModuleProxy) {
-    const tmp5 = require(31) /* genModule */.default[StatusBarManager];
+    const tmp5 = require("00031_genModule.js") /* genModule */.default[StatusBarManager];
     let tmp6 = null;
     if (null != tmp5) {
       tmp6 = tmp5;

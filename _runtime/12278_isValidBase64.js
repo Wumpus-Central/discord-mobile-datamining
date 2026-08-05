@@ -1014,7 +1014,7 @@ if (self2) {
     const _Object4 = Object;
     let obj = { enumerable: true, get: null };
     obj[1] = function get() {
-      return require(12277) /* mergeDefs */.clone;
+      return require("12277_mergeDefs.js") /* mergeDefs */.clone;
     };
     Object.defineProperty(exports, "clone", obj);
     exports.$ZodString = fnResult.$constructor("$ZodString", (_zod) => {

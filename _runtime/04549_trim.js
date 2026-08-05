@@ -4,7 +4,7 @@ import defineProperty from "defineProperty";
 
 let closure_2 = callBind(require("getPolyfill")());
 function trim(arg0) {
-  require(4538) /* RequireObjectCoercible */(arg0);
+  require("04538_RequireObjectCoercible.js") /* RequireObjectCoercible */(arg0);
   return callback(arg0);
 }
 const obj = { getPolyfill: null, implementation: null, shim: null };

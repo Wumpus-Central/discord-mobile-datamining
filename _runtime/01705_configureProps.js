@@ -2,11 +2,11 @@
 import isJest from "isJest";
 
 function configureProps() {
-  for (const key10008 in require(1619).PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST) {
+  for (const key10008 in require("metro/01619__.js").PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST) {
     let tmp8 = key10008;
     let tmp9 = require;
     let tmp10 = dependencyMap;
-    if (!(key10008 in require(1619).PropsAllowlists.UI_THREAD_PROPS_WHITELIST)) {
+    if (!(key10008 in require("metro/01619__.js").PropsAllowlists.UI_THREAD_PROPS_WHITELIST)) {
       continue;
     } else {
       let tmp = globalThis;
@@ -20,8 +20,8 @@ function configureProps() {
       throw reanimatedError;
     }
   }
-  const keys = Object.keys(require(1619).PropsAllowlists.UI_THREAD_PROPS_WHITELIST);
-  require(1650) /* isReanimated3 */.jsiConfigureProps(keys, Object.keys(require(1619).PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST));
+  const keys = Object.keys(require("metro/01619__.js").PropsAllowlists.UI_THREAD_PROPS_WHITELIST);
+  require("01650_isReanimated3.js") /* isReanimated3 */.jsiConfigureProps(keys, Object.keys(require("metro/01619__.js").PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST));
 }
 isJest = isJest.shouldBeUseWeb();
 const set = new Set();
@@ -29,23 +29,23 @@ configureProps();
 
 export { configureProps };
 export const addWhitelistedNativeProps = function addWhitelistedNativeProps(arg0) {
-  const merged = Object.assign(require(1619).PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST);
+  const merged = Object.assign(require("metro/01619__.js").PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST);
   const merged1 = Object.assign(arg0);
-  require(1619).PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST = {};
-  if (Object.keys(require(1619).PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST).length !== Object.keys(require(1619).PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST).length) {
+  require("metro/01619__.js").PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST = {};
+  if (Object.keys(require("metro/01619__.js").PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST).length !== Object.keys(require("metro/01619__.js").PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST).length) {
     configureProps();
   }
 };
 export const addWhitelistedUIProps = function addWhitelistedUIProps(arg0) {
-  const merged = Object.assign(require(1619).PropsAllowlists.UI_THREAD_PROPS_WHITELIST);
+  const merged = Object.assign(require("metro/01619__.js").PropsAllowlists.UI_THREAD_PROPS_WHITELIST);
   const merged1 = Object.assign(arg0);
-  require(1619).PropsAllowlists.UI_THREAD_PROPS_WHITELIST = {};
-  if (Object.keys(require(1619).PropsAllowlists.UI_THREAD_PROPS_WHITELIST).length !== Object.keys(require(1619).PropsAllowlists.UI_THREAD_PROPS_WHITELIST).length) {
+  require("metro/01619__.js").PropsAllowlists.UI_THREAD_PROPS_WHITELIST = {};
+  if (Object.keys(require("metro/01619__.js").PropsAllowlists.UI_THREAD_PROPS_WHITELIST).length !== Object.keys(require("metro/01619__.js").PropsAllowlists.UI_THREAD_PROPS_WHITELIST).length) {
     configureProps();
   }
 };
 export const configureReanimatedLogger = function configureReanimatedLogger(level) {
-  require(1610) /* addLogBoxLog */.updateLoggerConfig(level);
+  require("01610_addLogBoxLog.js") /* addLogBoxLog */.updateLoggerConfig(level);
   if (!isJest) {
     tmp(1650).executeOnUIRuntimeSync(tmp(1610).updateLoggerConfig)(level);
     const tmpResult = tmp(1650);

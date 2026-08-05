@@ -14,9 +14,9 @@ arg5.default = {
       } catch (err) {
       }
     } else if (typeof error === "string") {
-      let syntheticError = new require(189) /* _isNativeReflectConstruct */.SyntheticError(error);
+      let syntheticError = new require("00189__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.SyntheticError(error);
     } else {
-      syntheticError = new require(189) /* _isNativeReflectConstruct */.SyntheticError("Unspecified error");
+      syntheticError = new require("00189__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.SyntheticError("Unspecified error");
     }
   }
 };

@@ -149,7 +149,7 @@ let items = [
         obj[2] = self._separators;
         tmp7 = renderItem(obj);
       } else {
-        importDefault(38)(false, "VirtualizedList: Either ListItemComponent or renderItem props are required but none were found.");
+        require("metro/00038__.js")(false, "VirtualizedList: Either ListItemComponent or renderItem props are required but none were found.");
       }
       return tmp7;
     }

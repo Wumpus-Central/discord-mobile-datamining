@@ -13,7 +13,7 @@ const items = [
   {
     key: "createFromParts",
     value: function createFromParts(arr, type) {
-      importDefault(38)(importDefault(201), "NativeBlobModule is available.");
+      require("metro/00038__.js")(require("00201_BlobModule.js"), "NativeBlobModule is available.");
       const replaced = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (arg0) => {
         const tmp = 16 * Math.random() | 0;
         let str = tmp;
@@ -49,7 +49,7 @@ const items = [
         }
         return sum;
       }, 0);
-      let obj = importDefault(201);
+      let obj = require("00201_BlobModule.js");
       const fromParts = obj.createFromParts(mapped, replaced);
       obj = { blobId: replaced, offset: 0, size: reduced, type: null, lastModified: null };
       let str = "";
@@ -70,10 +70,10 @@ const items = [
   {
     key: "createFromOptions",
     value: function createFromOptions(_response) {
-      let obj = require(204) /* map */;
+      let obj = require("00204_map.js") /* map */;
       obj.register(_response.blobId);
       let data = _response;
-      obj = Object.create(require(203) /* Blob */.default.prototype);
+      obj = Object.create(require("00203_Blob.js") /* Blob */.default.prototype);
       if (null == _response.__collector) {
         obj = {};
         const merged = Object.assign(_response);
@@ -91,11 +91,11 @@ const items = [
   {
     key: "release",
     value: function release(arg0) {
-      importDefault(38)(importDefault(201), "NativeBlobModule is available.");
+      require("metro/00038__.js")(require("00201_BlobModule.js"), "NativeBlobModule is available.");
       const tmp = importDefault;
-      const tmp3 = importDefault(38);
-      require(204) /* map */.unregister(arg0);
-      const obj = require(204) /* map */;
+      const tmp3 = require("metro/00038__.js");
+      require("00204_map.js") /* map */.unregister(arg0);
+      const obj = require("00204_map.js") /* map */;
       if (!obj2.has(arg0)) {
         tmp(201).release(arg0);
         const tmpResult = tmp(201);
@@ -105,33 +105,33 @@ const items = [
   {
     key: "addNetworkingHandler",
     value: function addNetworkingHandler() {
-      importDefault(38)(importDefault(201), "NativeBlobModule is available.");
-      const tmp = importDefault(38);
-      importDefault(201).addNetworkingHandler();
+      require("metro/00038__.js")(require("00201_BlobModule.js"), "NativeBlobModule is available.");
+      const tmp = require("metro/00038__.js");
+      require("00201_BlobModule.js").addNetworkingHandler();
     }
   },
   {
     key: "addWebSocketHandler",
     value: function addWebSocketHandler(arg0) {
-      importDefault(38)(importDefault(201), "NativeBlobModule is available.");
-      const tmp = importDefault(38);
-      importDefault(201).addWebSocketHandler(arg0);
+      require("metro/00038__.js")(require("00201_BlobModule.js"), "NativeBlobModule is available.");
+      const tmp = require("metro/00038__.js");
+      require("00201_BlobModule.js").addWebSocketHandler(arg0);
     }
   },
   {
     key: "removeWebSocketHandler",
     value: function removeWebSocketHandler(arg0) {
-      importDefault(38)(importDefault(201), "NativeBlobModule is available.");
-      const tmp = importDefault(38);
-      const result = importDefault(201).removeWebSocketHandler(arg0);
+      require("metro/00038__.js")(require("00201_BlobModule.js"), "NativeBlobModule is available.");
+      const tmp = require("metro/00038__.js");
+      const result = require("00201_BlobModule.js").removeWebSocketHandler(arg0);
     }
   },
   {
     key: "sendOverSocket",
     value: function sendOverSocket(data) {
-      importDefault(38)(importDefault(201), "NativeBlobModule is available.");
-      const tmp = importDefault(38);
-      importDefault(201).sendOverSocket(data.data, arg1);
+      require("metro/00038__.js")(require("00201_BlobModule.js"), "NativeBlobModule is available.");
+      const tmp = require("metro/00038__.js");
+      require("00201_BlobModule.js").sendOverSocket(data.data, arg1);
     }
   }
 ];

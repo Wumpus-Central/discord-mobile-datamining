@@ -225,7 +225,7 @@ function parseDropShadow(str) {
           } else if ("color" === tmp10) {
             let tmp11 = importDefault;
             let tmp12 = dependencyMap;
-            let tmp13 = importDefault(50)(tmp2.color);
+            let tmp13 = require("00050_processColor.js")(tmp2.color);
             if (null == tmp13) {
               return null;
             } else {

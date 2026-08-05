@@ -1,5 +1,5 @@
 // _runtime/metro/13474__.js
-import module_13475 from "module_13475";
+import 13475__ from "13475__.js";
 
 
 export default require("module_13543").Object.assign;

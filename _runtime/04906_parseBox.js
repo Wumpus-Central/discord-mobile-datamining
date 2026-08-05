@@ -27,7 +27,7 @@ function parseBox(getUint32, sum) {
     const uint321 = getUint32.getUint32(sum + 4);
     if (1718909296 === uint321) {
       const obj1 = { type: "ftyp", majorBrand: null, length: null };
-      obj1[1] = require(4897) /* getDataView */.getStringFromDataView(getUint32, contentOffset, 4);
+      obj1[1] = require("04897_getDataView.js") /* getDataView */.getStringFromDataView(getUint32, contentOffset, 4);
       obj1[2] = length;
       return obj1;
     } else if (1768977008 === uint321) {
@@ -83,7 +83,7 @@ function parseBox(getUint32, sum) {
       obj3[2] = length;
       return obj3;
     } else if (1668246642 === uint321) {
-      const stringFromDataView = require(4897) /* getDataView */.getStringFromDataView(getUint32, contentOffset, 4);
+      const stringFromDataView = require("04897_getDataView.js") /* getDataView */.getStringFromDataView(getUint32, contentOffset, 4);
       if ("prof" === stringFromDataView) {
         const obj4 = { offset: null, length: null, chunkNumber: 1, chunksTotal: 1 };
         obj4[0] = contentOffset + 4;
@@ -123,7 +123,7 @@ function parseBox(getUint32, sum) {
         obj6[2] = length;
         let parseItemLocationBoxResult = obj6;
       } else if (1768714083 === uint321) {
-        const obj13 = require(4907) /* parseItemLocationBox */;
+        const obj13 = require("04907_parseItemLocationBox.js") /* parseItemLocationBox */;
         parseItemLocationBoxResult = obj13.parseItemLocationBox(getUint32, uint8, contentOffset + 1, length);
       } else if (1768517222 === uint321) {
         const obj7 = { entryCount: null };
@@ -175,7 +175,7 @@ function parseBox(getUint32, sum) {
           const sum7 = sum6 + 2;
           obj10.itemProtectionIndex = getUint32.getUint16(sum7);
           const sum8 = sum7 + 2;
-          obj5 = require(4897) /* getDataView */;
+          obj5 = require("04897_getDataView.js") /* getDataView */;
           obj10.itemName = obj5.getNullTerminatedStringFromDataView(getUint32, sum8);
           sum9 = sum8 + (obj10.itemName.length + 1);
         }
@@ -195,7 +195,7 @@ function parseBox(getUint32, sum) {
           const sum11 = sum10 + 2;
           obj10.itemType = getUint32.getUint32(sum11);
           const sum12 = sum11 + 4;
-          obj6 = require(4897) /* getDataView */;
+          obj6 = require("04897_getDataView.js") /* getDataView */;
           obj10.itemName = obj6.getNullTerminatedStringFromDataView(getUint32, sum12);
           const sum13 = sum12 + (obj10.itemName.length + 1);
           if (obj10.itemType === c4) {

@@ -4,9 +4,9 @@ const dependencyMap = arg6;
 let AppRegistry = "AppRegistry";
 function patchAppRegistryRunApplication(arg0) {
   const _require = arg0;
-  const AppRegistry = _require(997).ReactNativeLibraries.AppRegistry;
+  const AppRegistry = _require("00997_TurboModuleRegistry.js").ReactNativeLibraries.AppRegistry;
   if (AppRegistry) {
-    _require(1154).fillTyped(AppRegistry, "runApplication", (arg0) => {
+    _require("01154_fillTyped.js").fillTyped(AppRegistry, "runApplication", (arg0) => {
       let closure_0 = arg0;
       return () => {
         const items = [...arguments];
@@ -14,7 +14,7 @@ function patchAppRegistryRunApplication(arg0) {
         return lib(...items);
       };
     });
-    const tmpResult = _require(1154);
+    const tmpResult = _require("01154_fillTyped.js");
   }
 }
 arg5.INTEGRATION_NAME = "AppRegistry";
@@ -57,8 +57,8 @@ arg5.patchAppRegistryRunApplication = patchAppRegistryRunApplication;
 arg5.getAppRegistryIntegration = () => {
   let client = arg0;
   if (arg0 === undefined) {
-    client = require(817) /* registerSpanErrorInstrumentation */.getClient();
-    const obj2 = require(817) /* registerSpanErrorInstrumentation */;
+    client = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.getClient();
+    const obj2 = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
   }
   if (client) {
     return client.getIntegrationByName(AppRegistry);

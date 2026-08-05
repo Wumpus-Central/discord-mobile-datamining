@@ -21,8 +21,8 @@ arg5.parseSampleRate = function parseSampleRate(flag) {
         }
       }
     }
-    if (require(7403) /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
-      const logger = require(7375) /* consoleSandbox */.logger;
+    if (require("metro/07403___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+      const logger = require("07375_consoleSandbox.js") /* consoleSandbox */.logger;
       const _JSON = JSON;
       const json = JSON.stringify(flag);
       const _JSON2 = JSON;

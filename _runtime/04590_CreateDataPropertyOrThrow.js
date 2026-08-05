@@ -1,7 +1,7 @@
 // _runtime/04590_CreateDataPropertyOrThrow.js
 
 export default function CreateDataPropertyOrThrow(arg0, arg1, arg2) {
-  if (require(4529) /* isObject */(arg0)) {
+  if (require("04529_isObject.js") /* isObject */(arg0)) {
     if (tmp(4576)(arg1)) {
       if (!tmp(4591)(arg0, arg1, arg2)) {
         const tmp15 = new tmp(541)("unable to create data property");

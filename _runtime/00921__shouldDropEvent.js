@@ -13,9 +13,9 @@ function _shouldDropEvent(message, message2) {
           if (message === message2) {
             flag = false;
             if (_isSameFingerprint(message, message2)) {
-              const framesFromEvent = require(833) /* createStackParser */.getFramesFromEvent(message);
-              const obj = require(833) /* createStackParser */;
-              const framesFromEvent1 = require(833) /* createStackParser */.getFramesFromEvent(message2);
+              const framesFromEvent = require("00833_createStackParser.js") /* createStackParser */.getFramesFromEvent(message);
+              const obj = require("00833_createStackParser.js") /* createStackParser */;
+              const framesFromEvent1 = require("00833_createStackParser.js") /* createStackParser */.getFramesFromEvent(message2);
               if (framesFromEvent) {
                 if (!framesFromEvent) {
                   if (framesFromEvent) {
@@ -63,7 +63,7 @@ function _shouldDropEvent(message, message2) {
               if (flag2) {
                 flag = true;
               }
-              const obj2 = require(833) /* createStackParser */;
+              const obj2 = require("00833_createStackParser.js") /* createStackParser */;
             }
           }
         } else {
@@ -99,9 +99,9 @@ function _shouldDropEvent(message, message2) {
             if (first.value === iter.value) {
               flag3 = false;
               if (_isSameFingerprint(message, message2)) {
-                const framesFromEvent2 = require(833) /* createStackParser */.getFramesFromEvent(message);
-                const obj3 = require(833) /* createStackParser */;
-                const framesFromEvent3 = require(833) /* createStackParser */.getFramesFromEvent(message2);
+                const framesFromEvent2 = require("00833_createStackParser.js") /* createStackParser */.getFramesFromEvent(message);
+                const obj3 = require("00833_createStackParser.js") /* createStackParser */;
+                const framesFromEvent3 = require("00833_createStackParser.js") /* createStackParser */.getFramesFromEvent(message2);
                 if (framesFromEvent2) {
                   if (!framesFromEvent2) {
                     if (framesFromEvent2) {
@@ -149,7 +149,7 @@ function _shouldDropEvent(message, message2) {
                 if (flag4) {
                   flag3 = true;
                 }
-                const obj4 = require(833) /* createStackParser */;
+                const obj4 = require("00833_createStackParser.js") /* createStackParser */;
               }
             }
           }

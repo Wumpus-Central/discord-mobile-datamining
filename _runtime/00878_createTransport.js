@@ -8,7 +8,7 @@ arg5.createTransport = function createTransport(bufferSize) {
   const dependencyMap = arg1;
   let promiseBuffer = arg2;
   if (arg2 === undefined) {
-    let obj = _require(877);
+    let obj = _require("00877_makePromiseBuffer.js");
     let num = bufferSize.bufferSize;
     if (!num) {
       num = 64;

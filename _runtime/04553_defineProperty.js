@@ -10,7 +10,7 @@ function defineProperty(arg0, arg1, arg2, arg3) {
 
 }
 function defineProperties(prototype, ownPropertyDescriptors) {
-  const arr = require(4554) /* keys */(ownPropertyDescriptors);
+  const arr = require("04554_keys.js") /* keys */(ownPropertyDescriptors);
   if (!closure_2) {
     for (let num = 0; num < arr.length; num = num + 1) {
       let tmp6 = defineProperty;
@@ -26,7 +26,7 @@ function defineProperties(prototype, ownPropertyDescriptors) {
         let tmp11 = closure_5;
         let tmp12 = require;
         let tmp13 = dependencyMap;
-        let tmp14 = require(1406) /* defineDataProperty */;
+        let tmp14 = require("01406_defineDataProperty.js") /* defineDataProperty */;
         if (closure_5) {
           let tmp16 = prototype;
           let tmp17 = tmp7;

@@ -142,7 +142,7 @@ arg5.parseUnicodeLanguageId = parseUnicodeLanguageId;
 arg5.parseUnicodeLocaleId = function parseUnicodeLocaleId(locale) {
   const parts = locale.split(exports.SEPARATOR);
   const lang = parseUnicodeLanguageId(parts);
-  let obj = require(1281) /* e */;
+  let obj = require("01281_e.js") /* e */;
   const items = [];
   if (parts.length) {
     obj = {};

@@ -759,7 +759,7 @@ if (self2) {
           registry = defaultTarget.registry;
         }
         if (registry == null) {
-          registry = require(12333) /* $output */.globalRegistry;
+          registry = require("12333__output.js") /* $output */.globalRegistry;
         }
         obj[5] = registry;
         return convertSchema(flag, obj);

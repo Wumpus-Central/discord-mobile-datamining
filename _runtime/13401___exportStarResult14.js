@@ -18,7 +18,7 @@ export const ComputeExponentForMagnitude = function ComputeExponentForMagnitude(
     floorResult = floorResult.div(3).floor();
     return floorResult.div(3).floor().times(3).toNumber();
   } else {
-    require(13386) /* getMultiInternalSlots */.invariant("compact" === notation, "Invalid notation");
+    require("13386_getMultiInternalSlots.js") /* getMultiInternalSlots */.invariant("compact" === notation, "Invalid notation");
     if ("currency" === style.style) {
       let str = "name";
       if ("name" !== tmp11) {

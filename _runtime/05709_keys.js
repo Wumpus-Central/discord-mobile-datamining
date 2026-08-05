@@ -162,14 +162,14 @@ obj.rgb.keyword = (arg0) => {
   } else {
     let num = Infinity;
     const _Object = Object;
-    const keys = Object.keys(require(5710) /* keys */);
+    const keys = Object.keys(require("05710_keys.js") /* keys */);
     const iter = keys[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp11 = nextResult;
       let tmp12 = require;
       let tmp13 = dependencyMap;
-      let tmp14 = require(5710) /* keys */[nextResult];
+      let tmp14 = require("05710_keys.js") /* keys */[nextResult];
       let num3 = 2;
       let sum = (arg0[0] - tmp14[0]) ** 2 + (arg0[1] - tmp14[1]) ** 2 + (arg0[2] - tmp14[2]) ** 2;
       let tmp16 = sum;
@@ -183,7 +183,7 @@ obj.rgb.keyword = (arg0) => {
     return tmp;
   }
 };
-obj.keyword.rgb = (arg0) => require(5710) /* keys */[arg0];
+obj.keyword.rgb = (arg0) => require("05710_keys.js") /* keys */[arg0];
 obj.rgb.xyz = (arg0) => {
   const result = arg0[0] / 255;
   const result1 = arg0[1] / 255;

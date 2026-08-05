@@ -12,7 +12,7 @@ function addPrivateRequestAttributes(setAttributes, config) {
   const items = [];
   if (systemInstruction) {
     const push = items.push;
-    let obj = require(975) /* contentUnionToMessages */;
+    let obj = require("00975_contentUnionToMessages.js") /* contentUnionToMessages */;
     const items1 = [];
     HermesBuiltin.arraySpread(obj.contentUnionToMessages(config.config.systemInstruction, "system"), 0);
     HermesBuiltin.apply(items1, items);
@@ -20,31 +20,31 @@ function addPrivateRequestAttributes(setAttributes, config) {
   if ("history" in config) {
     const push2 = items.push;
     const items2 = [];
-    HermesBuiltin.arraySpread(require(975) /* contentUnionToMessages */.contentUnionToMessages(config.history, "user"), 0);
+    HermesBuiltin.arraySpread(require("00975_contentUnionToMessages.js") /* contentUnionToMessages */.contentUnionToMessages(config.history, "user"), 0);
     HermesBuiltin.apply(items2, items);
-    const obj2 = require(975) /* contentUnionToMessages */;
+    const obj2 = require("00975_contentUnionToMessages.js") /* contentUnionToMessages */;
   }
   if ("contents" in config) {
     const push3 = items.push;
     const items3 = [];
-    HermesBuiltin.arraySpread(require(975) /* contentUnionToMessages */.contentUnionToMessages(config.contents, "user"), 0);
+    HermesBuiltin.arraySpread(require("00975_contentUnionToMessages.js") /* contentUnionToMessages */.contentUnionToMessages(config.contents, "user"), 0);
     HermesBuiltin.apply(items3, items);
-    const obj3 = require(975) /* contentUnionToMessages */;
+    const obj3 = require("00975_contentUnionToMessages.js") /* contentUnionToMessages */;
   }
   if ("message" in config) {
     const push4 = items.push;
     const items4 = [];
-    HermesBuiltin.arraySpread(require(975) /* contentUnionToMessages */.contentUnionToMessages(config.message, "user"), 0);
+    HermesBuiltin.arraySpread(require("00975_contentUnionToMessages.js") /* contentUnionToMessages */.contentUnionToMessages(config.message, "user"), 0);
     HermesBuiltin.apply(items4, items);
-    const obj4 = require(975) /* contentUnionToMessages */;
+    const obj4 = require("00975_contentUnionToMessages.js") /* contentUnionToMessages */;
   }
   if (tmp33) {
     obj = {};
-    obj[require(958).GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = items.length;
+    obj[require("metro/00958__.js").GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = items.length;
     const _JSON = JSON;
-    obj[require(958).GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = JSON.stringify(require(961) /* truncateTextByBytes */.truncateGenAiMessages(items));
+    obj[require("metro/00958__.js").GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = JSON.stringify(require("00961_truncateTextByBytes.js") /* truncateTextByBytes */.truncateGenAiMessages(items));
     setAttributes.setAttributes(obj);
-    const obj6 = require(961) /* truncateTextByBytes */;
+    const obj6 = require("00961_truncateTextByBytes.js") /* truncateTextByBytes */;
   }
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

@@ -15,7 +15,7 @@ obj[2] = obj;
 obj = {
   setNativeRefreshing(_nativeRef, refreshing) {
     const items = [refreshing];
-    require(114) /* renderElement */.dispatchCommand(_nativeRef, "setNativeRefreshing", items);
+    require("../00114_renderElement.js") /* renderElement */.dispatchCommand(_nativeRef, "setNativeRefreshing", items);
   }
 };
 

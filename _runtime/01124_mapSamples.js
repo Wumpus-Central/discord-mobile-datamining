@@ -22,7 +22,7 @@ function mapSamples(samples) {
       if (result >= tmp) {
         let tmp18 = require;
         let tmp19 = dependencyMap;
-        let debug2 = require(817) /* registerSpanErrorInstrumentation */.debug;
+        let debug2 = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.debug;
         let tmp20 = result;
         let _HermesInternal = HermesInternal;
         let str2 = "ns.";
@@ -50,7 +50,7 @@ function mapSamples(samples) {
     }
     NumberResult = Number(first.ts);
   } else {
-    const debug = require(817) /* registerSpanErrorInstrumentation */.debug;
+    const debug = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.debug;
     debug.warn("[Profiling] No samples found in profile.");
     const obj1 = { samples: null, hermesStacks: null, jsThreads: null };
     obj1[0] = items;
@@ -74,7 +74,7 @@ function parseHermesJSStackFrame(category) {
       if (undefined !== category.offset) {
         const obj1 = { function: null, abs_path: null, lineno: 1, colno: null };
         obj1[0] = category.name;
-        obj1[1] = require(1120) /* DEFAULT_BUNDLE_NAME */.DEFAULT_BUNDLE_NAME;
+        obj1[1] = require("01120_DEFAULT_BUNDLE_NAME.js") /* DEFAULT_BUNDLE_NAME */.DEFAULT_BUNDLE_NAME;
         const _Number3 = Number;
         const _Number4 = Number;
         obj1[3] = Number(category.funcVirtAddr) + Number(category.offset) + 1;
@@ -92,7 +92,7 @@ function parseHermesJSStackFrame(category) {
     }
     obj = { function: null, abs_path: null, lineno: null, colno: null };
     obj[0] = name;
-    obj[1] = require(1120) /* DEFAULT_BUNDLE_NAME */.DEFAULT_BUNDLE_NAME;
+    obj[1] = require("01120_DEFAULT_BUNDLE_NAME.js") /* DEFAULT_BUNDLE_NAME */.DEFAULT_BUNDLE_NAME;
     let NumberResult1;
     if (undefined !== category.line) {
       const _Number = Number;
@@ -115,7 +115,7 @@ export const convertToSentryProfile = function convertToSentryProfile(hermesProf
   let jsThreads;
   let samples;
   if (0 === hermesProfile.samples.length) {
-    const debug2 = require(817) /* registerSpanErrorInstrumentation */.debug;
+    const debug2 = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.debug;
     debug2.warn("[Profiling] No samples found in profile.");
     return null;
   } else {
@@ -198,7 +198,7 @@ export const convertToSentryProfile = function convertToSentryProfile(hermesProf
       if (undefined === value) {
         let tmp9 = require;
         let tmp10 = dependencyMap;
-        let debug = require(817) /* registerSpanErrorInstrumentation */.debug;
+        let debug = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.debug;
         let tmp11 = nextResult;
         let _HermesInternal = HermesInternal;
         let errorResult = debug.error("[Profiling] Hermes Stack ID " + tmp4.stack_id + " not found when mapping to Sentry Stack ID.");

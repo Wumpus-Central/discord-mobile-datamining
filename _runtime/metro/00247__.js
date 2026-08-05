@@ -8,10 +8,10 @@ require("_isNativeReflectConstruct").addListener("hardwareBackPress", (timeStamp
   }
   const obj = {};
   if (null != timeStamp) {
-    const result = require(134) /* SymbolResult1 */.setEventInitTimeStamp(obj, timeStamp);
-    const obj2 = require(134) /* SymbolResult1 */;
+    const result = require("../00134_SymbolResult1.js") /* SymbolResult1 */.setEventInitTimeStamp(obj, timeStamp);
+    const obj2 = require("../00134_SymbolResult1.js") /* SymbolResult1 */;
   }
-  const hardwareBackPressEvent = new require(248) /* _isNativeReflectConstruct */.HardwareBackPressEvent(obj);
+  const hardwareBackPressEvent = new require("../00248__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.HardwareBackPressEvent(obj);
   let diff = closure_3.length - 1;
   if (0 <= diff) {
     while (true) {
@@ -32,9 +32,9 @@ require("_isNativeReflectConstruct").addListener("hardwareBackPress", (timeStamp
 });
 let obj = {
   exitApp() {
-    if (importDefault(249)) {
-      const result = importDefault(249).invokeDefaultBackPressHandler();
-      const tmpResult = importDefault(249);
+    if (require("../00249_DeviceEventManager.js")) {
+      const result = require("../00249_DeviceEventManager.js").invokeDefaultBackPressHandler();
+      const tmpResult = require("../00249_DeviceEventManager.js");
     }
   },
   addEventListener(arg0, arg1) {

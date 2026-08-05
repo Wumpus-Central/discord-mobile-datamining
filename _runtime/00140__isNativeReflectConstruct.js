@@ -98,7 +98,7 @@ let items = [
   {
     key: "nodeType",
     get() {
-      return importDefault(131).DOCUMENT_NODE;
+      return require("00131__isNativeReflectConstruct.js").DOCUMENT_NODE;
     }
   },
   {
@@ -116,7 +116,7 @@ let items = [
   {
     key: "getElementById",
     value: function getElementById(c8, c8) {
-      const element = importDefault(139).getElementById(this._rootTag, c8);
+      const element = require("00139_NativeDOMCxx.js").getElementById(this._rootTag, c8);
       if (null == element) {
         return null;
       } else {
@@ -127,7 +127,7 @@ let items = [
         }
         return tmp6;
       }
-      const obj = importDefault(139);
+      const obj = require("00139_NativeDOMCxx.js");
       tmp = importDefault;
     }
   }

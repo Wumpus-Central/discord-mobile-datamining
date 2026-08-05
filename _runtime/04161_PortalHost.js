@@ -13,9 +13,9 @@ const memoResult = noop.memo((name) => {
   name = name.name;
   let _require;
   let dependencyMap;
-  let obj = _require(4162);
+  let obj = _require("04162_usePortalState.js");
   const portalState = obj.usePortalState(name);
-  const portal = _require(4158).usePortal(name);
+  const portal = _require("04158_usePortal.js").usePortal(name);
   ({ registerHost: c0, deregisterHost: c1 } = portal);
   useEffect(() => {
     _undefined();

@@ -8,7 +8,7 @@ arg5.ApplyUnsignedRoundingMode = function ApplyUnsignedRoundingMode(eq, timesRes
     const concat = "x should be between r1 and r2 but x=".concat;
     const combined = "x should be between r1 and r2 but x=".concat(eq, ", r1=");
     const combined1 = combined.concat(timesResult, ", r2=");
-    require(13386) /* getMultiInternalSlots */.invariant(timesResult.lessThan(eq) && eq.lessThan(roundedNumber), combined1.concat(roundedNumber));
+    require("13386_getMultiInternalSlots.js") /* getMultiInternalSlots */.invariant(timesResult.lessThan(eq) && eq.lessThan(roundedNumber), combined1.concat(roundedNumber));
     if ("zero" === result) {
       return timesResult;
     } else if ("infinity" === result) {

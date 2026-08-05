@@ -107,7 +107,7 @@ const items = [
       if (tmp5) {
         tmp5 = first < getItemCount(data);
       }
-      importDefault(38)(tmp5, `Tried to get frame for out of range index ${first}`);
+      require("metro/00038__.js")(tmp5, `Tried to get frame for out of range index ${first}`);
       return { length: self._averageCellLength, offset: sum, index: first, isMounted: false };
     }
   },
@@ -124,7 +124,7 @@ const items = [
       if (tmp3) {
         tmp3 = first < getItemCount(data);
       }
-      importDefault(38)(tmp3, `Tried to get metrics for out of range cell index ${first}`);
+      require("metro/00038__.js")(tmp3, `Tried to get metrics for out of range cell index ${first}`);
       keyExtractor = keyExtractor.keyExtractor;
       if (keyExtractor == null) {
         keyExtractor = ListMetricsAggregator(313).keyExtractor;
@@ -145,7 +145,7 @@ const items = [
       } else {
         return null;
       }
-      const tmp2 = importDefault(38);
+      const tmp2 = require("metro/00038__.js");
     }
   },
   {
@@ -190,7 +190,7 @@ const items = [
           if (arg1 == null) {
             _contentLength = self._contentLength;
           }
-          importDefault(38)(null != _contentLength, "ListMetricsAggregator must be notified of list content layout before resolving offsets");
+          require("metro/00038__.js")(null != _contentLength, "ListMetricsAggregator must be notified of list content layout before resolving offsets");
           return _contentLength - (self._selectOffset(layout) + self._selectLength(layout));
         }
       }
@@ -205,7 +205,7 @@ const items = [
       if (this._orientation.horizontal) {
         diff = arg0;
         if (tmp) {
-          importDefault(38)(null != self._contentLength, "ListMetricsAggregator must be notified of list content layout before resolving offsets");
+          require("metro/00038__.js")(null != self._contentLength, "ListMetricsAggregator must be notified of list content layout before resolving offsets");
           diff = self._contentLength - arg0;
         }
       }

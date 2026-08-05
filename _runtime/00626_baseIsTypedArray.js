@@ -26,7 +26,7 @@ obj["[object Array]"] = false;
 obj["[object Arguments]"] = false;
 
 export default function baseIsTypedArray(arg0) {
-  let tmp3 = require(620) /* isObjectLike */(arg0) && tmp(604)(arg0.length);
+  let tmp3 = require("00620_isObjectLike.js") /* isObjectLike */(arg0) && tmp(604)(arg0.length);
   if (tmp3) {
     tmp3 = obj[tmp(undefined, 607)(undefined, arg0)];
   }

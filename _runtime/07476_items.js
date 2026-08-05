@@ -4,7 +4,7 @@ import _slicedToArray from "_slicedToArray";
 let items = [["\n", "\\n"], ["\r", "\\r"], ["\t", "\\t"], ["\\", "\\\\"], ["|", "\\u{7c}"], [",", "\\u{2c}"]];
 
 export const getBucketKey = function getBucketKey(arg0, sanitizeMetricKeyResult, sanitizeUnitResult, sanitizeTagsResult) {
-  const entries = Object.entries(require(7381) /* addNonEnumerableProperty */.dropUndefinedKeys(sanitizeTagsResult));
+  const entries = Object.entries(require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */.dropUndefinedKeys(sanitizeTagsResult));
   return "" + arg0 + sanitizeMetricKeyResult + sanitizeUnitResult + entries.sort((arg0, arg1) => {
     const first = arg0[0];
     return first.localeCompare(arg1[0]);

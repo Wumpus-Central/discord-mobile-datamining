@@ -45,7 +45,7 @@ function processColor(arg0) {
     if (tmp) {
       return arg0;
     } else {
-      const tmp4 = importDefault(51)(arg0);
+      const tmp4 = require("00051_normalizeColor.js")(arg0);
       if (null == tmp4) {
         return null;
       } else {

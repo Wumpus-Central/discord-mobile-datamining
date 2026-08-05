@@ -14,7 +14,7 @@ arg5.safeDateNow = function safeDateNow() {
   } else {
     const _Symbol = Symbol;
     const forResult = Symbol.for("__SENTRY_SAFE_RANDOM_ID_WRAPPER__");
-    const GLOBAL_OBJ = require(821).GLOBAL_OBJ;
+    const GLOBAL_OBJ = require("metro/00821__.js").GLOBAL_OBJ;
     if (forResult in GLOBAL_OBJ) {
       if (typeof GLOBAL_OBJ[forResult] === "function") {
         c2 = tmp8;
@@ -39,7 +39,7 @@ arg5.safeMathRandom = function safeMathRandom() {
   } else {
     const _Symbol = Symbol;
     const forResult = Symbol.for("__SENTRY_SAFE_RANDOM_ID_WRAPPER__");
-    const GLOBAL_OBJ = require(821).GLOBAL_OBJ;
+    const GLOBAL_OBJ = require("metro/00821__.js").GLOBAL_OBJ;
     if (forResult in GLOBAL_OBJ) {
       if (typeof GLOBAL_OBJ[forResult] === "function") {
         c2 = tmp8;
@@ -58,7 +58,7 @@ arg5.withRandomSafeContext = function withRandomSafeContext(arg0) {
   } else {
     const _Symbol = Symbol;
     const forResult = Symbol.for("__SENTRY_SAFE_RANDOM_ID_WRAPPER__");
-    const GLOBAL_OBJ = require(821).GLOBAL_OBJ;
+    const GLOBAL_OBJ = require("metro/00821__.js").GLOBAL_OBJ;
     if (forResult in GLOBAL_OBJ) {
       if (typeof GLOBAL_OBJ[forResult] === "function") {
         c2 = tmp8;

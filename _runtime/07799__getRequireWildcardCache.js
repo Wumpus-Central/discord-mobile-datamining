@@ -1,5 +1,5 @@
 // _runtime/07799__getRequireWildcardCache.js
-import module_7800 from "module_7800";
+import 07800__ from "metro/07800__.js";
 import _slicedToArray from "_slicedToArray";
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";

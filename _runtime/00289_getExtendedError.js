@@ -11,19 +11,19 @@ function getExtendedError(value, componentStack) {
     } catch (err) {
     }
   } else if (typeof value === "string") {
-    let syntheticError = new require(189) /* _isNativeReflectConstruct */.SyntheticError(value);
+    let syntheticError = new require("00189__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.SyntheticError(value);
   } else {
-    syntheticError = new require(189) /* _isNativeReflectConstruct */.SyntheticError("Unspecified error");
+    syntheticError = new require("00189__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.SyntheticError("Unspecified error");
   }
 }
 
 export const onUncaughtError = function onUncaughtError(value, componentStack) {
   const tmp = getExtendedError(value, componentStack);
-  importDefault(189).handleException(tmp, true);
+  require("00189__isNativeReflectConstruct.js").handleException(tmp, true);
 };
 export const onCaughtError = function onCaughtError(value, componentStack) {
   const tmp = getExtendedError(value, componentStack);
-  importDefault(189).handleException(tmp, false);
+  require("00189__isNativeReflectConstruct.js").handleException(tmp, false);
 };
 export const onRecoverableError = function onRecoverableError(value, componentStack) {
   console.warn(getExtendedError(value, componentStack));

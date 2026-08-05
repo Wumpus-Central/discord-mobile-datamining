@@ -2,7 +2,7 @@
 let require = arg1;
 let dependencyMap = arg6;
 function instrumentDOM() {
-  if (require(1039) /* WINDOW */.WINDOW.document) {
+  if (require("01039_WINDOW.js") /* WINDOW */.WINDOW.document) {
     const bindResult = tmp(817).triggerHandlers.bind(null, "dom");
     require = bindResult;
     require = bindResult;
@@ -290,8 +290,8 @@ function makeDOMEventHandler(arg0) {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.addClickKeypressInstrumentationHandler = function addClickKeypressInstrumentationHandler(arg0) {
-  require(817) /* registerSpanErrorInstrumentation */.addHandler("dom", arg0);
-  const obj = require(817) /* registerSpanErrorInstrumentation */;
-  require(817) /* registerSpanErrorInstrumentation */.maybeInstrument("dom", instrumentDOM);
+  require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.addHandler("dom", arg0);
+  const obj = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
+  require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.maybeInstrument("dom", instrumentDOM);
 };
 arg5.instrumentDOM = instrumentDOM;

@@ -10,5 +10,5 @@ export default function TabsAccessoryContent(style) {
   obj.collapsable = false;
   const items = [style.style, StyleSheet.absoluteFill];
   obj.style = items;
-  return jsx(importDefault(4674), {});
+  return jsx(require("metro/04674___INTERNAL_VIEW_CONFIG.js"), {});
 };

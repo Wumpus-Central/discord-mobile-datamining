@@ -3,8 +3,8 @@ const require = arg1;
 const dependencyMap = arg6;
 function getFilenameToDebugIdMap(arg0) {
   const _require = arg0;
-  const _sentryDebugIds = _require(821).GLOBAL_OBJ._sentryDebugIds;
-  const _debugIds = _require(821).GLOBAL_OBJ._debugIds;
+  const _sentryDebugIds = _require("metro/00821__.js").GLOBAL_OBJ._sentryDebugIds;
+  const _debugIds = _require("metro/00821__.js").GLOBAL_OBJ._debugIds;
   if (!_sentryDebugIds) {
     if (!_debugIds) {
       return {};
@@ -126,7 +126,7 @@ arg5.getDebugImagesForResources = function getDebugImagesForResources(arg0, arg1
       let tmp8 = require;
       let tmp9 = dependencyMap;
       let tmp7 = nextResult;
-      let obj = require(833) /* createStackParser */;
+      let obj = require("00833_createStackParser.js") /* createStackParser */;
       let result = obj.normalizeStackTracePath(nextResult);
       let tmp11 = result;
       if (result) {

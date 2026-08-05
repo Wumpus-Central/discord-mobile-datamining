@@ -3,7 +3,7 @@ import noop from "noop";
 
 function setString(arg0) {
   const _require = arg0;
-  const Clipboard = _require(5641).Clipboard;
+  const Clipboard = _require("05641_get_ActivityIndicator.js").Clipboard;
   Clipboard.setString(arg0);
   const item = set.forEach((arg0) => arg0(closure_0));
 }

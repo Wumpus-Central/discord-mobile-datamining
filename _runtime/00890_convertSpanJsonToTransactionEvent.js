@@ -10,14 +10,14 @@ arg5.convertSpanJsonToTransactionEvent = function convertSpanJsonToTransactionEv
   let profile_id = beforeSendSpanResult.profile_id;
   if (profile_id) {
     const obj1 = {};
-    obj1[require(839).SEMANTIC_ATTRIBUTE_PROFILE_ID] = beforeSendSpanResult.profile_id;
+    obj1[require("metro/00839__.js").SEMANTIC_ATTRIBUTE_PROFILE_ID] = beforeSendSpanResult.profile_id;
     profile_id = obj1;
   }
   const merged1 = Object.assign(profile_id);
   let exclusive_time = beforeSendSpanResult.exclusive_time;
   if (exclusive_time) {
     const obj2 = {};
-    obj2[require(839).SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME] = beforeSendSpanResult.exclusive_time;
+    obj2[require("metro/00839__.js").SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME] = beforeSendSpanResult.exclusive_time;
     exclusive_time = obj2;
   }
   const obj3 = { trace: null };

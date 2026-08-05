@@ -3,7 +3,7 @@ let closure_2 = require("callBoundIntrinsic")("RegExp.prototype.exec");
 
 export default function regexTester(arg0) {
   const _require = arg0;
-  if (_require(1396)(arg0)) {
+  if (_require("01396_isRegex.js")(arg0)) {
     return function test(arg0) {
       return null !== outer1_2(closure_0, arg0);
     };

@@ -9,7 +9,7 @@ arg5.notifyEventProcessors = function notifyEventProcessors(arg0, arg1, arg2) {
   if (arg3 === undefined) {
     num = 0;
   }
-  return new _require(7399).SyncPromise((arg0, arg1) => {
+  return new _require("07399_SyncPromise.js").SyncPromise((arg0, arg1) => {
     let dependencyMap = arg0;
     if (null !== table) {
       if (typeof tmp3 === "function") {

@@ -18,11 +18,11 @@ export default function _default(rootTag) {
     tmp2 = <WrapperComponent initialProps={null}>{null}</WrapperComponent>;
   }
   obj = { value: null, children: null };
-  obj[0] = require(253) /* RootTagContext */.createRootTag(rootTag.rootTag);
-  const obj3 = require(253) /* RootTagContext */;
+  obj[0] = require("00253_RootTagContext.js") /* RootTagContext */.createRootTag(rootTag.rootTag);
+  const obj3 = require("00253_RootTagContext.js") /* RootTagContext */;
   if (!rootViewStyle) {
     rootViewStyle = root.root;
   }
-  obj[1] = jsx(importDefault(108), { style: rootViewStyle, pointerEvents: "box-none", children: tmp2 });
-  return jsx(require(253) /* RootTagContext */.RootTagContext.Provider, { value: null, children: null });
+  obj[1] = jsx(require("00108_View.js"), { style: rootViewStyle, pointerEvents: "box-none", children: tmp2 });
+  return jsx(require("00253_RootTagContext.js") /* RootTagContext */.RootTagContext.Provider, { value: null, children: null });
 };

@@ -29,7 +29,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     waitFor = [];
   }
   const items = [];
-  items[HermesBuiltin.arraySpread(require(5372) /* toArray */.toArray(waitFor), 0)] = ref;
+  items[HermesBuiltin.arraySpread(require("05372_toArray.js") /* toArray */.toArray(waitFor), 0)] = ref;
   obj.waitFor = items;
   let cloneElementResult;
   if (refreshControl) {

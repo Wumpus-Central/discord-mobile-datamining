@@ -9,11 +9,11 @@ arg5.breadcrumbsIntegration = () => {
   let _fetch = obj.fetch;
   const merged = Object.assign({ xhr: true, console: true, sentry: true }, obj);
   if (null === _fetch) {
-    _fetch = require(1002) /* isHermesEnabled */.isWeb();
-    const obj2 = require(1002) /* isHermesEnabled */;
+    _fetch = require("01002_isHermesEnabled.js") /* isHermesEnabled */.isWeb();
+    const obj2 = require("01002_isHermesEnabled.js") /* isHermesEnabled */;
   }
   obj = { fetch: _fetch, dom: null, history: null };
-  let isWebResult = require(1002) /* isHermesEnabled */.isWeb();
+  let isWebResult = require("01002_isHermesEnabled.js") /* isHermesEnabled */.isWeb();
   if (isWebResult) {
     const dom = obj.dom;
     isWebResult = null === dom || undefined === dom || dom;

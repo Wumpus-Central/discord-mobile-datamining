@@ -54,7 +54,7 @@ function getCommonStyles(arg0) {
   ({ snapDirection, validLength, value, opacityInterval } = arg0);
   if ("left" === snapDirection) {
     const _Math = Math;
-    let obj = require(1606) /* cancelAnimation */;
+    let obj = require("01606_cancelAnimation.js") /* cancelAnimation */;
     const _Number = Number;
     const items = [-1.5, -1, -1 + Number.MIN_VALUE, 0, validLength];
     const _Number2 = Number;
@@ -62,8 +62,8 @@ function getCommonStyles(arg0) {
     let result = Math.floor(10000 * obj.interpolate(value, items, items1)) / 100;
     const items2 = [-1, 0, validLength - 1, validLength];
     const items3 = [0.25, 1, 1 - (validLength - 1) * opacityInterval, 0.25];
-    let interpolateResult = require(1606) /* cancelAnimation */.interpolate(value, items2, items3);
-    const obj2 = require(1606) /* cancelAnimation */;
+    let interpolateResult = require("01606_cancelAnimation.js") /* cancelAnimation */.interpolate(value, items2, items3);
+    const obj2 = require("01606_cancelAnimation.js") /* cancelAnimation */;
   } else if ("right" !== snapDirection) {
     const _Error = Error;
     const error = new Error("snapDirection must be set to either left or right");
@@ -78,12 +78,12 @@ function getCommonStyles(arg0) {
     const items5 = [1, validLength - 1, validLength, validLength];
     const _Number4 = Number;
     items5[4] = Number.MIN_VALUE;
-    result = Math.floor(10000 * require(1606) /* cancelAnimation */.interpolate(value, items4, items5)) / 100;
-    const obj4 = require(1606) /* cancelAnimation */;
+    result = Math.floor(10000 * require("01606_cancelAnimation.js") /* cancelAnimation */.interpolate(value, items4, items5)) / 100;
+    const obj4 = require("01606_cancelAnimation.js") /* cancelAnimation */;
     const items6 = [-validLength, 1 - validLength, 0, 1];
     const items7 = [0.25, 1 - (validLength - 1) * opacityInterval, 1, 0.25];
-    interpolateResult = require(1606) /* cancelAnimation */.interpolate(value, items6, items7);
-    const obj5 = require(1606) /* cancelAnimation */;
+    interpolateResult = require("01606_cancelAnimation.js") /* cancelAnimation */.interpolate(value, items6, items7);
+    const obj5 = require("01606_cancelAnimation.js") /* cancelAnimation */;
   }
   obj = { zIndex: Math.round(result), opacity: interpolateResult };
   return obj;

@@ -9,7 +9,7 @@ if (_moduleResult) {
 
 export default (arg0) => {
   if (closure_2) {
-    const _document = require(13477).document;
+    const _document = require("metro/13477__.js").document;
     let element = _document.createElement(arg0);
   } else {
     element = {};

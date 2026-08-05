@@ -17,10 +17,10 @@ function shouldSkipNavigation(locationKey, arg1, arr) {
     if (locationKey.locationKey === arg1) {
       let result = locationKey.routeName;
       if (result) {
-        let obj = require(1149) /* pickSplat */;
+        let obj = require("01149_pickSplat.js") /* pickSplat */;
         result = obj.transactionNameHasWildcard(locationKey.routeName);
       }
-      const result1 = require(1149) /* pickSplat */.transactionNameHasWildcard(arr);
+      const result1 = require("01149_pickSplat.js") /* pickSplat */.transactionNameHasWildcard(arr);
       let routeName = locationKey.routeName;
       if (routeName) {
         routeName = locationKey.routeName;
@@ -110,11 +110,11 @@ function processResolvedRoutes(arr, children, arg2, activeRootSpan) {
     }
   }
   if (activeRootSpan == null) {
-    let obj = require(1149) /* pickSplat */;
+    let obj = require("01149_pickSplat.js") /* pickSplat */;
     activeRootSpan = obj.getActiveRootSpan();
   }
   if (activeRootSpan) {
-    let obj1 = require(817) /* registerSpanErrorInstrumentation */;
+    let obj1 = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
     const spanToJSONResult = obj1.spanToJSON(activeRootSpan);
     if (spanToJSONResult.timestamp) {
       if (tmp12(1142).DEBUG_BUILD) {
@@ -170,7 +170,7 @@ function updateNavigationSpan(activeRootSpan, _location, arg2, arg3, closure_8) 
   if (arg3 === undefined) {
     flag = false;
   }
-  const spanToJSONResult = require(817) /* registerSpanErrorInstrumentation */.spanToJSON(activeRootSpan);
+  const spanToJSONResult = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.spanToJSON(activeRootSpan);
   const description = spanToJSONResult.description;
   let prop;
   if (activeRootSpan != null) {
@@ -237,8 +237,8 @@ function setupRouterSubscription(subscribe) {
   let c3 = false;
   let tmp = arg4;
   if (tmp) {
-    tmp = "pageload" === _require(817).spanToJSON(arg4).op;
-    let obj = _require(817);
+    tmp = "pageload" === _require("00817_registerSpanErrorInstrumentation.js").spanToJSON(arg4).op;
+    let obj = _require("00817_registerSpanErrorInstrumentation.js");
   }
   let closure_4 = tmp;
   let c5 = false;
@@ -615,7 +615,7 @@ function handleNavigation(arg0) {
     tmp4Result = closure_8(tmp5, _location, basename);
     const tmp4 = closure_8;
   }
-  let obj1 = require(817) /* registerSpanErrorInstrumentation */;
+  let obj1 = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
   const client = obj1.getClient();
   if (client) {
     if (weakSet.has(client)) {
@@ -1020,7 +1020,7 @@ function tryUpdateSpanNameBeforeEnd(updateName, data, description, _location, ar
     }
     if ("route" === tmp4) {
       if (description) {
-        let obj = require(1149) /* pickSplat */;
+        let obj = require("01149_pickSplat.js") /* pickSplat */;
       }
     }
     let tmp15 = arg4;
@@ -1031,7 +1031,7 @@ function tryUpdateSpanNameBeforeEnd(updateName, data, description, _location, ar
     }
     const tmp23 = callback(tmp15, _location, basename);
     if (tmp23) {
-      let obj2 = require(1149) /* pickSplat */;
+      let obj2 = require("01149_pickSplat.js") /* pickSplat */;
       const tmp37 = _slicedToArray(obj2.resolveRouteNameAndSource(_location, tmp21, tmp21, tmp24, basename), 2);
       const first = tmp37[0];
       let tmp46 = (function shouldUpdateWildcardSpanName(description, arg1, first, arg3, arg4) {
@@ -1078,12 +1078,12 @@ function tryUpdateSpanNameBeforeEnd(updateName, data, description, _location, ar
       }
       if (tmp46) {
         updateName.updateName(first);
-        const attr = updateName.setAttribute(require(817) /* registerSpanErrorInstrumentation */.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE, tmp40);
+        const attr = updateName.setAttribute(require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE, tmp40);
       }
     }
     tmp10 = tmp4;
   } catch (tmp54) {
-    if (require(1142) /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+    if (require("metro/01142___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
       const debug = tmp55(817).debug;
       const _HermesInternal = HermesInternal;
       debug.warn("Error updating span details before ending: " + tmp54);
@@ -1264,8 +1264,8 @@ function patchSpanEnd(result2, _location, routes, basename, allRoutes, navigatio
           const tmp3Result1 = callback(table[6]);
         }
       };
-      const result = _require(817).addNonEnumerableProperty(result2, combined, true);
-      let obj = _require(817);
+      const result = _require("00817_registerSpanErrorInstrumentation.js").addNonEnumerableProperty(result2, combined, true);
+      let obj = _require("00817_registerSpanErrorInstrumentation.js");
     }
   }
 }
@@ -1311,7 +1311,7 @@ export const createReactRouterV6CompatibleTracingIntegration = function createRe
   let enableAsyncRouteHandlers;
   const _require = instrumentPageLoad;
   const dependencyMap = _6;
-  let obj = _require(1024);
+  let obj = _require("01024_feedbackAsyncIntegration.js");
   obj = {};
   const merged = Object.assign(instrumentPageLoad);
   obj.instrumentPageLoad = false;
@@ -1431,14 +1431,14 @@ export const createV6CompatibleWithSentryReactRouterRouting = function createV6C
                 return outer1_9.createElement(closure_0, obj);
               }
             }
-            _require(1140).hoistNonReactStatics(SentryRoutes, arg0);
+            _require("01140_getStatics.js").hoistNonReactStatics(SentryRoutes, arg0);
             return SentryRoutes;
           }
         }
       }
     }
   }
-  if (_require(1142).DEBUG_BUILD) {
+  if (_require("metro/01142___SENTRY_DEBUG__.js").DEBUG_BUILD) {
     class SentryRoutes {
       constructor(arg0) {
         closure_0 = arg0;
@@ -1506,8 +1506,8 @@ export const createV6CompatibleWrapCreateBrowserRouter = function createV6Compat
     }
   }
   fn = arg0;
-  if (_require(1142).DEBUG_BUILD) {
-    const debug = _require(817).debug;
+  if (_require("metro/01142___SENTRY_DEBUG__.js").DEBUG_BUILD) {
+    const debug = _require("00817_registerSpanErrorInstrumentation.js").debug;
     const _HermesInternal = HermesInternal;
     debug.warn("reactRouterV" + _6 + "Instrumentation was unable to wrap the `createRouter` function because of one or more missing parameters.");
     fn = arg0;
@@ -1586,8 +1586,8 @@ export const createV6CompatibleWrapCreateMemoryRouter = function createV6Compati
     }
   }
   fn = arg0;
-  if (_require(1142).DEBUG_BUILD) {
-    const debug = _require(817).debug;
+  if (_require("metro/01142___SENTRY_DEBUG__.js").DEBUG_BUILD) {
+    const debug = _require("00817_registerSpanErrorInstrumentation.js").debug;
     const _HermesInternal = HermesInternal;
     debug.warn("reactRouterV" + _6 + "Instrumentation was unable to wrap the `createMemoryRouter` function because of one or more missing parameters.");
     fn = arg0;
@@ -1680,8 +1680,8 @@ export const createV6CompatibleWrapUseRoutes = function createV6CompatibleWrapUs
       }
     }
   }
-  if (_require(1142).DEBUG_BUILD) {
-    const debug = _require(817).debug;
+  if (_require("metro/01142___SENTRY_DEBUG__.js").DEBUG_BUILD) {
+    const debug = _require("00817_registerSpanErrorInstrumentation.js").debug;
     debug.warn("reactRouterV6Instrumentation was unable to wrap `useRoutes` because of one or more missing parameters.");
   }
   return arg0;

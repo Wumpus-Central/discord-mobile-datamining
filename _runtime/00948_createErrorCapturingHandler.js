@@ -40,26 +40,26 @@ function captureHandlerError(name, arg1, tool_name) {
               if (!message2.includes("timed out")) {
                 const message3 = name.message;
                 if (!message3.includes("timeout")) {
-                  require(947) /* captureError */.captureError(name, "tool_execution", obj);
-                  const obj3 = require(947) /* captureError */;
+                  require("00947_captureError.js") /* captureError */.captureError(name, "tool_execution", obj);
+                  const obj3 = require("00947_captureError.js") /* captureError */;
                 }
               }
             }
-            require(947) /* captureError */.captureError(name, "timeout", obj);
-            const obj4 = require(947) /* captureError */;
+            require("00947_captureError.js") /* captureError */.captureError(name, "timeout", obj);
+            const obj4 = require("00947_captureError.js") /* captureError */;
           }
         }
       }
-      require(947) /* captureError */.captureError(name, "validation", obj);
-      const obj5 = require(947) /* captureError */;
+      require("00947_captureError.js") /* captureError */.captureError(name, "validation", obj);
+      const obj5 = require("00947_captureError.js") /* captureError */;
     } else if ("resource" === arg1) {
       obj.resource_uri = tool_name;
-      require(947) /* captureError */.captureError(name, "resource_execution", obj);
-      const obj2 = require(947) /* captureError */;
+      require("00947_captureError.js") /* captureError */.captureError(name, "resource_execution", obj);
+      const obj2 = require("00947_captureError.js") /* captureError */;
     } else if ("prompt" === arg1) {
       obj.prompt_name = tool_name;
-      require(947) /* captureError */.captureError(name, "prompt_execution", obj);
-      const obj6 = require(947) /* captureError */;
+      require("00947_captureError.js") /* captureError */.captureError(name, "prompt_execution", obj);
+      const obj6 = require("00947_captureError.js") /* captureError */;
     }
   } catch (err) {
   }

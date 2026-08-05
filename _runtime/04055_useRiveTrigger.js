@@ -25,7 +25,7 @@ export const useRiveTrigger = function useRiveTrigger(startAnimation, instance, 
   const callback3 = tmp3;
   tmp3.current = onTrigger;
   const items = [instance, startAnimation];
-  disposableMemo = _require(4050).useDisposableMemo(() => {
+  disposableMemo = _require("04050_useDisposableMemo.js").useDisposableMemo(() => {
     if (closure_1) {
       return obj.triggerProperty(closure_0);
     }

@@ -3,7 +3,7 @@ const require = arg1;
 const dependencyMap = arg6;
 arg5.getSupportedCollations = function getSupportedCollations(locale) {
   const _require = locale;
-  const collations = _require(13462).collations;
+  const collations = _require("metro/13462__.js").collations;
   return collations.filter((arg0) => (function isSupported(arg0, closure_0) {
     let str = closure_0;
     if (undefined === closure_0) {

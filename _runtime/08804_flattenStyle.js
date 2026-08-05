@@ -27,7 +27,7 @@ function flattenStyle(obj) {
 }
 
 export default function DeprecatedStyleSheetPropType(arg0) {
-  _require = _require(8805)(arg0);
+  _require = _require("08805_deprecatedCreateStrictShapeTypeChecker.js")(arg0);
   return (arg0, arg1, arg2, arg3) => {
     const substr = [...arguments].slice();
     if (arg0[arg1]) {

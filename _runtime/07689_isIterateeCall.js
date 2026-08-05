@@ -1,7 +1,7 @@
 // _runtime/07689_isIterateeCall.js
 
 export default function isIterateeCall(arg0, num) {
-  if (require(606) /* isObject */(arg2)) {
+  if (require("00606_isObject.js") /* isObject */(arg2)) {
     if (typeof num === "number") {
       let tmp5 = tmp(603)(arg2) && tmp(628)(num, arg2.length);
       const tmp4 = tmp(603)(arg2) && tmp(628)(num, arg2.length);

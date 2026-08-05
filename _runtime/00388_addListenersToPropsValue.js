@@ -10,7 +10,7 @@ let error;
 let metroImportAll;
 const require = arg1;
 function addListenersToPropsValue(addListener, arr) {
-  if (addListener instanceof importDefault(356)) {
+  if (addListener instanceof require("00356__isNativeReflectConstruct.js")) {
     const obj = { propValue: null, listenerId: null };
     obj[0] = addListener;
     obj[1] = addListener.addListener(() => {
@@ -45,8 +45,8 @@ function addListenersToPropsValue(addListener, arr) {
 
 export default function createAnimatedPropsHook(arg0) {
   const _require = arg0;
-  let closure_1 = _require(389).createAnimatedPropsMemoHook(arg0);
-  let obj = _require(389);
+  let closure_1 = _require("00389_createCompositeKeyForProps.js").createAnimatedPropsMemoHook(arg0);
+  let obj = _require("00389_createCompositeKeyForProps.js");
   importAll = importAll(27).shouldUseSetNativePropsInFabric();
   return function useAnimatedProps(fn, items) {
     let obj = fn;

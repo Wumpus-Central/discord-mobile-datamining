@@ -5,8 +5,8 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 const set = new Set();
 arg5._INTERNAL_clearAiProviderSkips = function _INTERNAL_clearAiProviderSkips() {
   set.clear();
-  if (require(823) /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
-    const debug = require(824) /* consoleSandbox */.debug;
+  if (require("metro/00823___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+    const debug = require("00824_consoleSandbox.js") /* consoleSandbox */.debug;
     debug.log("Cleared AI provider skip registrations");
   }
 };

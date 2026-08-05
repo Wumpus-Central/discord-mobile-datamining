@@ -16,7 +16,7 @@ export default {
   trigger() {
     let selection = arg0;
     if (arg0 === undefined) {
-      selection = require(4258) /* isRingerSilent */.HapticFeedbackTypes.selection;
+      selection = require("04258_isRingerSilent.js") /* isRingerSilent */.HapticFeedbackTypes.selection;
     }
     let obj = arg1;
     if (arg1 === undefined) {
@@ -27,8 +27,8 @@ export default {
         obj = {};
         const merged = Object.assign(closure_5);
         const merged1 = Object.assign(obj);
-        importDefault(4259).trigger(selection, obj);
-        const obj2 = importDefault(4259);
+        require("04259_RNHapticFeedback.js").trigger(selection, obj);
+        const obj2 = require("04259_RNHapticFeedback.js");
       } catch (tmp12) {
         const _console = console;
         console.warn("RNReactNativeHapticFeedback: trigger failed \u2013", tmp12);
@@ -38,8 +38,8 @@ export default {
   stop() {
     if (c6) {
       try {
-        importDefault(4259).stop();
-        const obj = importDefault(4259);
+        require("04259_RNHapticFeedback.js").stop();
+        const obj = require("04259_RNHapticFeedback.js");
       } catch (tmp4) {
         const _console = console;
         console.warn("RNReactNativeHapticFeedback: stop failed \u2013", tmp4);
@@ -48,7 +48,7 @@ export default {
   },
   isSupported() {
     try {
-      return importDefault(4259).isSupported();
+      return require("04259_RNHapticFeedback.js").isSupported();
     } catch (err) {
       return false;
     }
@@ -63,8 +63,8 @@ export default {
         obj = {};
         const merged = Object.assign(closure_5);
         const merged1 = Object.assign(obj);
-        importDefault(4259).triggerPattern(arg0, obj);
-        const obj2 = importDefault(4259);
+        require("04259_RNHapticFeedback.js").triggerPattern(arg0, obj);
+        const obj2 = require("04259_RNHapticFeedback.js");
       } catch (tmp11) {
         const _console = console;
         console.warn("RNReactNativeHapticFeedback: triggerPattern failed \u2013", tmp11);
@@ -74,7 +74,7 @@ export default {
   playAHAP(arg0) {
     if (c6) {
       try {
-        return importDefault(4259).playAHAP(arg0);
+        return require("04259_RNHapticFeedback.js").playAHAP(arg0);
       } catch (err) {
         return Promise.resolve();
       }
@@ -85,7 +85,7 @@ export default {
   impact() {
     let impactMedium = arg0;
     if (arg0 === undefined) {
-      impactMedium = require(4258) /* isRingerSilent */.HapticFeedbackTypes.impactMedium;
+      impactMedium = require("04258_isRingerSilent.js") /* isRingerSilent */.HapticFeedbackTypes.impactMedium;
     }
     let obj = arg2;
     if (arg2 === undefined) {
@@ -106,8 +106,8 @@ export default {
         obj = {};
         const merged = Object.assign(closure_5);
         const merged1 = Object.assign(obj);
-        importDefault(4259).triggerPattern(items, obj);
-        const obj2 = importDefault(4259);
+        require("04259_RNHapticFeedback.js").triggerPattern(items, obj);
+        const obj2 = require("04259_RNHapticFeedback.js");
       } catch (tmp17) {
         const _console = tmp.console;
         _console.warn("RNReactNativeHapticFeedback: impact failed \u2013", tmp17);

@@ -2,8 +2,8 @@
 
 export default function hashClear() {
   let obj = {};
-  if (require(736) /* getNative */) {
-    obj = require(736) /* getNative */(null);
+  if (require("00736_getNative.js") /* getNative */) {
+    obj = require("00736_getNative.js") /* getNative */(null);
   } else {
     obj = {};
   }

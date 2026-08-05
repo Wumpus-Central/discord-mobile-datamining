@@ -32,7 +32,7 @@ const fn = (toString, toString2) => {
   if (setter) {
     text2 = `set ${tmp4}`;
   }
-  const tmp8 = require(13500) /* call */(toString, "name");
+  const tmp8 = require("13500_call.js") /* call */(toString, "name");
   let tmp9 = !tmp8;
   if (tmp8) {
     tmp9 = tmp6(13537).CONFIGURABLE && toString.name !== text2;
@@ -91,10 +91,10 @@ const fn = (toString, toString2) => {
 };
 function toString() {
   const self = this;
-  let source = require(13503) /* all */(this);
+  let source = require("13503_all.js") /* all */(this);
   if (source) {
-    source = require(13538) /* state */.get(self).source;
-    const tmpResult = require(13538) /* state */;
+    source = require("13538_state.js") /* state */.get(self).source;
+    const tmpResult = require("13538_state.js") /* state */;
   }
   if (!source) {
     source = __core_js_shared__(self);

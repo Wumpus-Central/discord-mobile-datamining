@@ -3,7 +3,7 @@ import _slicedToArray from "_slicedToArray";
 
 function exceptionFromError(arg0, name) {
   let obj = { type: name.name || name.constructor.name, value: null };
-  let isErrorResult = require(827) /* isInstanceOf */.isError(name);
+  let isErrorResult = require("00827_isInstanceOf.js") /* isInstanceOf */.isError(name);
   if (isErrorResult) {
     isErrorResult = "__sentry_fetch_url_host__" in name;
   }
@@ -29,7 +29,7 @@ function exceptionFromError(arg0, name) {
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const _enhanceErrorWithSentryInfo = function _enhanceErrorWithSentryInfo(__sentry_fetch_url_host__) {
-  let isErrorResult = require(827) /* isInstanceOf */.isError(__sentry_fetch_url_host__);
+  let isErrorResult = require("00827_isInstanceOf.js") /* isInstanceOf */.isError(__sentry_fetch_url_host__);
   if (isErrorResult) {
     isErrorResult = "__sentry_fetch_url_host__" in __sentry_fetch_url_host__;
   }
@@ -72,8 +72,8 @@ export const eventFromMessage = function eventFromMessage(arg0, message, arg2, e
         const items = [obj];
         obj[0] = items;
         obj.exception = obj;
-        const result = require(830) /* addContextToFrame */.addExceptionMechanism(obj, { synthetic: true });
-        const obj5 = require(830) /* addContextToFrame */;
+        const result = require("00830_addContextToFrame.js") /* addContextToFrame */.addExceptionMechanism(obj, { synthetic: true });
+        const obj5 = require("00830_addContextToFrame.js") /* addContextToFrame */;
       }
       const tmp3 = event_id.syntheticException.stack || "";
     }
@@ -86,7 +86,7 @@ export const eventFromMessage = function eventFromMessage(arg0, message, arg2, e
     obj.message = message;
     return obj;
   }
-  obj6 = require(827) /* isInstanceOf */;
+  obj6 = require("00827_isInstanceOf.js") /* isInstanceOf */;
 };
 export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, arg1, name, data) {
   data = undefined;
@@ -99,7 +99,7 @@ export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, 
   if (!data) {
     data = { handled: true, type: "generic" };
   }
-  let obj1 = require(827) /* isInstanceOf */;
+  let obj1 = require("00827_isInstanceOf.js") /* isInstanceOf */;
   if (obj1.isError(name)) {
     const items = [name, undefined];
     let items3 = items;
@@ -167,8 +167,8 @@ export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, 
             message = name.message;
           }
         }
-        const result = require(822) /* addNonEnumerableProperty */.extractExceptionKeysForMessage(name);
-        const obj6 = require(822) /* addNonEnumerableProperty */;
+        const result = require("00822_addNonEnumerableProperty.js") /* addNonEnumerableProperty */.extractExceptionKeysForMessage(name);
+        const obj6 = require("00822_addNonEnumerableProperty.js") /* addNonEnumerableProperty */;
         if (obj7.isErrorEvent(name)) {
           const _HermesInternal4 = HermesInternal;
           message = "Event `ErrorEvent` captured as exception with message `" + name.message + "`";
@@ -197,7 +197,7 @@ export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, 
           const _HermesInternal3 = HermesInternal;
           message = "" + str5 + " captured as exception with keys: " + result;
         }
-        obj7 = require(827) /* isInstanceOf */;
+        obj7 = require("00827_isInstanceOf.js") /* isInstanceOf */;
       }
     } else {
       let syntheticException1;
@@ -222,9 +222,9 @@ export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, 
   if (tmp29[1]) {
     obj.extra = tmp30;
   }
-  const result1 = require(830) /* addContextToFrame */.addExceptionTypeValue(obj, undefined, undefined);
-  const obj10 = require(830) /* addContextToFrame */;
-  const result2 = require(830) /* addContextToFrame */.addExceptionMechanism(obj, data);
+  const result1 = require("00830_addContextToFrame.js") /* addContextToFrame */.addExceptionTypeValue(obj, undefined, undefined);
+  const obj10 = require("00830_addContextToFrame.js") /* addContextToFrame */;
+  const result2 = require("00830_addContextToFrame.js") /* addContextToFrame */.addExceptionMechanism(obj, data);
   const obj2 = {};
   const merged = Object.assign(obj);
   let event_id;

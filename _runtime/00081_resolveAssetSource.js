@@ -2,7 +2,7 @@
 function resolveAssetSource(source) {
   if (null != source) {
     if (typeof source !== "object") {
-      const assetByID = require(84).getAssetByID(source);
+      const assetByID = require("metro/00084__.js").getAssetByID(source);
       if (assetByID) {
         const _default = new tmp12(85).default((function getDevServerURL() {
           let tmp = first;
@@ -62,7 +62,7 @@ function resolveAssetSource(source) {
       } else {
         return null;
       }
-      const obj3 = require(84);
+      const obj3 = require("metro/00084__.js");
       tmp12 = require;
     }
   }

@@ -26,7 +26,7 @@ export default function PlatformPressable(style) {
   const merged = Object.assign(style, Object.create(null));
   let first;
   let animateTo;
-  let obj = require(1481) /* Link */;
+  let obj = require("01481_Link.js") /* Link */;
   first = pressOpacity(first.useState(() => {
     const value = new animateTo.Value(1);
     return value;

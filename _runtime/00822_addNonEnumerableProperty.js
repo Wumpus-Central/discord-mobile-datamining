@@ -8,7 +8,7 @@ function addNonEnumerableProperty(arg0, arg1, arg2) {
     obj[0] = arg2;
     Object.defineProperty(arg0, arg1, obj);
   } catch (err) {
-    if (require(823) /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+    if (require("metro/00823___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
       const debug = tmp6(824).debug;
       const _HermesInternal = HermesInternal;
       debug.log("Failed to add non-enumerable property \"" + tmp2 + "\" to object", tmp);
@@ -29,7 +29,7 @@ function markFunctionWrapped(arg0, arg1) {
   }
 }
 function convertToPlainObject(obj) {
-  obj = require(827) /* isInstanceOf */;
+  obj = require("00827_isInstanceOf.js") /* isInstanceOf */;
   if (obj.isError(obj)) {
     obj = { message: null, name: null, stack: null };
     ({ message: obj6[0], name: obj6[1], stack: obj6[2] } = obj);
@@ -106,8 +106,8 @@ function convertToPlainObject(obj) {
 function serializeEventTarget(arg0) {
   try {
     if (obj.isElement(arg0)) {
-      let htmlTreeAsStringResult = require(828) /* _htmlElementAsString */.htmlTreeAsString(arg0);
-      const tmp2Result = require(828) /* _htmlElementAsString */;
+      let htmlTreeAsStringResult = require("00828__htmlElementAsString.js") /* _htmlElementAsString */.htmlTreeAsString(arg0);
+      const tmp2Result = require("00828__htmlElementAsString.js") /* _htmlElementAsString */;
     } else {
       const _Object = Object;
       const call = toString.call;
@@ -1215,7 +1215,7 @@ arg5.fill = function fill(arg0, arg1, arg2) {
       try {
         arg0[arg1] = tmp10;
       } catch (err) {
-        if (require(823) /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+        if (require("metro/00823___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
           const debug = tmp5(824).debug;
           const _HermesInternal = HermesInternal;
           debug.log("Failed to replace method \"" + tmp3 + "\" in object", tmp2);
@@ -1246,7 +1246,7 @@ arg5.objectify = function objectify(arg0) {
       if (obj.isPrimitive(arg0) === true) {
         string = new arg0.constructor(arg0);
       }
-      obj = require(827) /* isInstanceOf */;
+      obj = require("00827_isInstanceOf.js") /* isInstanceOf */;
     }
   }
   return string;

@@ -7,14 +7,14 @@ export default baseRest((arg0, arg1) => {
     return [];
   } else {
     if (arg1.length > 1) {
-      if (require(7689) /* isIterateeCall */(arg0, arg1[0], arg1[1])) {
+      if (require("../07689_isIterateeCall.js") /* isIterateeCall */(arg0, arg1[0], arg1[1])) {
         let items = [];
       }
-      return require(7690) /* baseOrderBy */(arg0, require(4435) /* baseFlatten */(items, 1), []);
+      return require("../07690_baseOrderBy.js") /* baseOrderBy */(arg0, require("../04435_baseFlatten.js") /* baseFlatten */(items, 1), []);
     }
     let tmp3 = length > 2;
     if (tmp3) {
-      tmp3 = require(7689) /* isIterateeCall */(arg1[0], arg1[1], arg1[2]);
+      tmp3 = require("../07689_isIterateeCall.js") /* isIterateeCall */(arg1[0], arg1[1], arg1[2]);
     }
     items = arg1;
     if (tmp3) {

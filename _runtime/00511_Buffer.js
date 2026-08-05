@@ -2914,7 +2914,7 @@ function byteLength(str) {
           while (true) {
             let tmp10 = require;
             let tmp11 = dependencyMap;
-            let obj = require(206) /* byteLength */;
+            let obj = require("00206_byteLength.js") /* byteLength */;
             str = "=";
             let str2 = str.split("=")[0];
             let str3 = str2.trim();

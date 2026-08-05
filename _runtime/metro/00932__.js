@@ -4,7 +4,7 @@ const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.profiler = {
   startProfiler() {
-    const client = require(848) /* getClient */.getClient();
+    const client = require("../00848_getClient.js") /* getClient */.getClient();
     if (client) {
       const integrationByName = client.getIntegrationByName("ProfilingIntegration");
       if (integrationByName) {
@@ -26,7 +26,7 @@ arg5.profiler = {
     }
   },
   stopProfiler() {
-    const client = require(848) /* getClient */.getClient();
+    const client = require("../00848_getClient.js") /* getClient */.getClient();
     if (client) {
       const integrationByName = client.getIntegrationByName("ProfilingIntegration");
       if (integrationByName) {

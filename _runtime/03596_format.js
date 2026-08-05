@@ -91,7 +91,7 @@ export default function format(arg0, arg1, locale) {
   const _require = arg0;
   const dependencyMap = arg1;
   tmp17.default(2, arguments);
-  const defaultOptions = _require(3369).getDefaultOptions();
+  const defaultOptions = _require("03369_getDefaultOptions.js").getDefaultOptions();
   locale = undefined;
   if (null != locale) {
     locale = locale.locale;

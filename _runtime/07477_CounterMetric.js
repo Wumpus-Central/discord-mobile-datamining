@@ -155,5 +155,5 @@ const _moduleResult3 = _createClass(SetMetric, items3);
 export const CounterMetric = _moduleResult;
 export const DistributionMetric = _moduleResult2;
 export const GaugeMetric = _moduleResult1;
-export const METRIC_MAP = { [require(7472).COUNTER_METRIC_TYPE]: _moduleResult, [require(7472).GAUGE_METRIC_TYPE]: _moduleResult1, [require(7472).DISTRIBUTION_METRIC_TYPE]: _moduleResult2, [require(7472).SET_METRIC_TYPE]: _moduleResult3 };
+export const METRIC_MAP = { [require("metro/07472__.js").COUNTER_METRIC_TYPE]: _moduleResult, [require("metro/07472__.js").GAUGE_METRIC_TYPE]: _moduleResult1, [require("metro/07472__.js").DISTRIBUTION_METRIC_TYPE]: _moduleResult2, [require("metro/07472__.js").SET_METRIC_TYPE]: _moduleResult3 };
 export const SetMetric = _moduleResult3;

@@ -13,7 +13,7 @@ function appendTransformProps(arg0) {
   let y;
   ({ originX, originY } = arg0);
   ({ x, y, scaleX, scaleY, rotation, skewX, skewY } = arg0);
-  require(8446) /* append */.appendTransform(x + originX, y + originY, scaleX, scaleY, rotation, skewX, skewY, originX, originY);
+  require("08446_append.js") /* append */.appendTransform(x + originX, y + originY, scaleX, scaleY, rotation, skewX, skewY, originX, originY);
 }
 function universal2axis(num) {
   let num2 = num;
@@ -179,7 +179,7 @@ function transformToMatrix(arg0, arr) {
       return null;
     }
   }
-  require(8446) /* append */.reset();
+  require("08446_append.js") /* append */.reset();
   if (arg0) {
     appendTransformProps(arg0);
   }
@@ -212,8 +212,8 @@ function transformToMatrix(arg0, arr) {
       }
     }
   }
-  const obj = require(8446) /* append */;
-  return require(8446) /* append */.toArray();
+  const obj = require("08446_append.js") /* append */;
+  return require("08446_append.js") /* append */.toArray();
 }
 arg5.default = function extractTransform(arr) {
   if (Array.isArray(arr)) {
@@ -223,14 +223,14 @@ arg5.default = function extractTransform(arr) {
   }
   if (typeof arr === "string") {
     try {
-      const parsed = require(8447) /* peg$SyntaxError */.parse(arr);
+      const parsed = require("08447_peg_SyntaxError.js") /* peg$SyntaxError */.parse(arr);
       const items = [, , , , , ];
       [arr[0], arr[2], arr[4], arr[1], arr[3], arr[5]] = parsed;
       return items;
     } catch (tmp6) {
       const _console = tmp.console;
       _console.error(tmp6);
-      return require(8446) /* append */.identity;
+      return require("08446_append.js") /* append */.identity;
     }
   } else {
     let transform;
@@ -245,8 +245,8 @@ arg5.props2transform = props2transform;
 arg5.transformToMatrix = transformToMatrix;
 arg5.extractTransformSvgView = function extractTransformSvgView(transform) {
   if (typeof transform.transform === "string") {
-    transform = require(8448) /* peg$SyntaxError */.parse(transform.transform);
-    const obj = require(8448) /* peg$SyntaxError */;
+    transform = require("08448_peg_SyntaxError.js") /* peg$SyntaxError */.parse(transform.transform);
+    const obj = require("08448_peg_SyntaxError.js") /* peg$SyntaxError */;
   } else {
     transform = transform.transform;
   }

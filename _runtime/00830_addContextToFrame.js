@@ -21,11 +21,11 @@ arg5.addContextToFrame = function addContextToFrame(arr, lineno) {
     if (!num2) {
       num2 = 0;
     }
-    lineno.context_line = require(832) /* isMatchingPattern */.snipLine(arr[bound1], num2);
+    lineno.context_line = require("00832_isMatchingPattern.js") /* isMatchingPattern */.snipLine(arr[bound1], num2);
     const _Math = Math;
     const substr1 = arr.slice(Math.min(bound + 1, length), bound + 1 + num);
     lineno.post_context = substr1.map((arg0) => callback(832).snipLine(arg0, 0));
-    const obj = require(832) /* isMatchingPattern */;
+    const obj = require("00832_isMatchingPattern.js") /* isMatchingPattern */;
   }
 };
 arg5.addExceptionMechanism = function addExceptionMechanism(exception, data) {
@@ -89,7 +89,7 @@ arg5.checkOrSetAlreadyCaught = function checkOrSetAlreadyCaught(__sentry_capture
     return true;
   } else {
     try {
-      const result = require(822) /* addNonEnumerableProperty */.addNonEnumerableProperty(__sentry_captured__, "__sentry_captured__", true);
+      const result = require("00822_addNonEnumerableProperty.js") /* addNonEnumerableProperty */.addNonEnumerableProperty(__sentry_captured__, "__sentry_captured__", true);
       return false;
     } catch (err) {
     }
@@ -180,8 +180,8 @@ arg5.uuid4 = function uuid4() {
       randomUUID = tmp.randomUUID;
     }
     if (randomUUID) {
-      let obj = require(831) /* safeDateNow */;
-      return require(831) /* safeDateNow */.withRandomSafeContext(() => tmp.randomUUID()).replace(/-/g, "");
+      let obj = require("00831_safeDateNow.js") /* safeDateNow */;
+      return require("00831_safeDateNow.js") /* safeDateNow */.withRandomSafeContext(() => tmp.randomUUID()).replace(/-/g, "");
     } else {
       let str3 = c2;
       if (!c2) {

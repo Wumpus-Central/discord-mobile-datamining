@@ -71,11 +71,11 @@ if (undefined === fn2) {
   };
 }
 UIManager.setJSResponder = (D, __getInternalProperties) => {
-  importDefault(5377).handleSetJSResponder(D, __getInternalProperties);
+  require("05377_RNGestureHandlerModule.js").handleSetJSResponder(D, __getInternalProperties);
   fn(D, __getInternalProperties);
 };
 UIManager.clearJSResponder = () => {
-  const result = importDefault(5377).handleClearJSResponder();
+  const result = require("05377_RNGestureHandlerModule.js").handleClearJSResponder();
   fn2();
 };
 let closure_12 = { [arg1(5373).State.UNDETERMINED]: undefined, [arg1(5373).State.BEGAN]: "onBegan", [arg1(5373).State.FAILED]: "onFailed", [arg1(5373).State.CANCELLED]: "onCancelled", [arg1(5373).State.ACTIVE]: "onActivated", [arg1(5373).State.END]: "onEnded" };
@@ -280,18 +280,18 @@ export default function createHandler(name) {
         }
         if (someResult) {
           if (someResult) {
-            require(5392).ghQueueMicrotask(() => {
+            require("metro/05392__.js").ghQueueMicrotask(() => {
               self.update(1);
             });
-            const obj = require(5392);
+            const obj = require("metro/05392__.js");
           }
           const props2 = self.props;
           const items = [];
-          const obj2 = require(5391) /* transformIntoHandlerTags */;
+          const obj2 = require("05391_transformIntoHandlerTags.js") /* transformIntoHandlerTags */;
           HermesBuiltin.arraySpread(customNativeProps, HermesBuiltin.arraySpread(allowedProps, 0));
           self.createGestureHandler(obj2.filterConfig(outer1_3 ? outer1_3(props2) : props2, items, config));
           if (self.viewNode) {
-            self.attachGestureHandler(importDefault(5394)(self.viewNode));
+            self.attachGestureHandler(require("05394_get_ActivityIndicator.js")(self.viewNode));
           } else {
             const _Error = Error;
             const _HermesInternal = HermesInternal;

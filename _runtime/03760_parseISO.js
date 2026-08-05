@@ -148,8 +148,8 @@ export default function parseISO(claimedAt) {
             }
             num28 = NaN;
             if (tmp63) {
-              const result = num29 * require(3543) /* keys */.millisecondsInHour;
-              num28 = result + num30 * require(3543) /* keys */.millisecondsInMinute + 1000 * num31;
+              const result = num29 * require("03543_keys.js") /* keys */.millisecondsInHour;
+              num28 = result + num30 * require("03543_keys.js") /* keys */.millisecondsInMinute + 1000 * num31;
             }
           }
           const _isNaN2 = isNaN;
@@ -187,8 +187,8 @@ export default function parseISO(claimedAt) {
               }
               num38 = NaN;
               if (tmp83) {
-                const result1 = parsed * require(3543) /* keys */.millisecondsInHour;
-                num38 = num * (result1 + num39 * require(3543) /* keys */.millisecondsInMinute);
+                const result1 = parsed * require("03543_keys.js") /* keys */.millisecondsInHour;
+                num38 = num * (result1 + num39 * require("03543_keys.js") /* keys */.millisecondsInMinute);
               }
             }
           }

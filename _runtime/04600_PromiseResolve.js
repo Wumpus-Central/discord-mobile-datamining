@@ -9,7 +9,7 @@ export default function PromiseResolve(arg0, arg1) {
   if (closure_2) {
     return tmp(arg0, arg1);
   } else {
-    const tmp6 = new require(562)("This environment does not support Promises.");
+    const tmp6 = new require("metro/00562__.js")("This environment does not support Promises.");
     throw tmp6;
   }
 };

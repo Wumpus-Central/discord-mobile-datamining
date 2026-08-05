@@ -3,6 +3,6 @@ const require = arg1;
 const dependencyMap = arg6;
 arg5.isKnownType = function isKnownType(kind, value) {
   ({ kind, value } = kind);
-  const NativeDocumentPicker = require(10083) /* NativeDocumentPicker */.NativeDocumentPicker;
+  const NativeDocumentPicker = require("10083_NativeDocumentPicker.js") /* NativeDocumentPicker */.NativeDocumentPicker;
   return NativeDocumentPicker.isKnownType(kind, value);
 };

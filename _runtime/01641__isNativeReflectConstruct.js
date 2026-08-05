@@ -177,8 +177,8 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
         return tmp3Result;
       }
     }
-    importDefault(38)(tmp4, "Looks like you're passing a function component `" + fn.name + "` to `createAnimatedComponent` function which supports only class components. Please wrap your function component with `React.forwardRef()` or use a class component instead.");
-    let tmp3 = importDefault(38);
+    require("metro/00038__.js")(tmp4, "Looks like you're passing a function component `" + fn.name + "` to `createAnimatedComponent` function which supports only class components. Please wrap your function component with `React.forwardRef()` or use a class component instead.");
+    let tmp3 = require("metro/00038__.js");
   }
   class AnimatedComponent {
     constructor(arg0) {
@@ -876,7 +876,7 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
         if (!isJest) {
           if (exiting !== exiting2) {
             const self = this;
-            const obj = require(1720) /* updateLayoutAnimations */;
+            const obj = require("01720_updateLayoutAnimations.js") /* updateLayoutAnimations */;
             if (obj2.isFabric()) {
               if (EXITING === tmp5(1631).LayoutAnimationType.ENTERING) {
                 let reanimatedID = self.reanimatedID;
@@ -898,7 +898,7 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
               const result = obj.updateLayoutAnimations(reanimatedID, EXITING, maybeBuildResult);
             }
             reanimatedID = self.getComponentViewTag();
-            obj2 = require(1609) /* isJest */;
+            obj2 = require("01609_isJest.js") /* isJest */;
           }
         }
       }

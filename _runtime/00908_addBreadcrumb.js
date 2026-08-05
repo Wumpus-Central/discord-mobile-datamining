@@ -4,9 +4,9 @@ let dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.addBreadcrumb = function addBreadcrumb(arg0, arg1) {
   const _require = arg1;
-  let consoleSandboxResult = _require(848);
+  let consoleSandboxResult = _require("00848_getClient.js");
   const client = consoleSandboxResult.getClient();
-  const isolationScope = _require(848).getIsolationScope();
+  const isolationScope = _require("00848_getClient.js").getIsolationScope();
   if (client) {
     const options = client.getOptions();
     const beforeBreadcrumb = options.beforeBreadcrumb;

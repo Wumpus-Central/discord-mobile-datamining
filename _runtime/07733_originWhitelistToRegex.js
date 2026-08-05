@@ -64,7 +64,7 @@ if (!fn) {
   };
 }
 function originWhitelistToRegex(arg0) {
-  return "^".concat(importDefault(7734)(arg0).replace(/\\\*/g, ".*"));
+  return "^".concat(require("metro/07734__.js")(arg0).replace(/\\\*/g, ".*"));
 }
 function createOnShouldStartLoadWithRequest(arg0, arg1, arg2) {
   let closure_0 = arg0;
@@ -123,16 +123,16 @@ function createOnShouldStartLoadWithRequest(arg0, arg1, arg2) {
 
 export const defaultOriginWhitelist = ["http://*", "https://*"];
 export { createOnShouldStartLoadWithRequest };
-export const defaultRenderLoading = () => callback(closure_7, { style: importDefault(7735).loadingOrErrorView, children: callback(closure_8, {}) });
+export const defaultRenderLoading = () => callback(closure_7, { style: require("07735_get_ActivityIndicator.js").loadingOrErrorView, children: callback(closure_8, {}) });
 export const defaultRenderError = (arg0, arg1, arg2) => {
-  let obj = { style: importDefault(7735).loadingOrErrorView, children: null };
-  obj = { style: importDefault(7735).errorTextTitle, children: "Error loading page" };
+  let obj = { style: require("07735_get_ActivityIndicator.js").loadingOrErrorView, children: null };
+  obj = { style: require("07735_get_ActivityIndicator.js").errorTextTitle, children: "Error loading page" };
   const items = [callback(closure_9, obj), , , ];
-  obj = { style: importDefault(7735).errorText, children: "Domain: ".concat(arg0) };
+  obj = { style: require("07735_get_ActivityIndicator.js").errorText, children: "Domain: ".concat(arg0) };
   items[1] = callback(closure_9, obj);
-  items[2] = callback(closure_9, { style: importDefault(7735).errorText, children: "Error Code: ".concat(arg1) });
-  const obj1 = { style: importDefault(7735).errorText, children: "Error Code: ".concat(arg1) };
-  items[3] = callback(closure_9, { style: importDefault(7735).errorText, children: "Description: ".concat(arg2) });
+  items[2] = callback(closure_9, { style: require("07735_get_ActivityIndicator.js").errorText, children: "Error Code: ".concat(arg1) });
+  const obj1 = { style: require("07735_get_ActivityIndicator.js").errorText, children: "Error Code: ".concat(arg1) };
+  items[3] = callback(closure_9, { style: require("07735_get_ActivityIndicator.js").errorText, children: "Description: ".concat(arg2) });
   obj[1] = items;
   return callback2(closure_7, obj);
 };

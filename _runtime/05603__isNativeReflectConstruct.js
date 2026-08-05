@@ -185,7 +185,7 @@ let items = [
           obj.autoPlay = autoPlay;
           obj.resizeMode = resizeMode;
           const merged1 = Object.assign(parsePossibleSourcesResult);
-          return jsx(importDefault(5604), { ref: null });
+          return jsx(require("metro/05604___INTERNAL_VIEW_CONFIG.js"), { ref: null });
         }
       }
       speed = self.props.speed;

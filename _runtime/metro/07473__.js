@@ -3,7 +3,7 @@ const require = arg1;
 const dependencyMap = arg6;
 arg5.profiler = {
   startProfiler() {
-    const client = require(7402) /* getClient */.getClient();
+    const client = require("../07402_getClient.js") /* getClient */.getClient();
     if (client) {
       const integrationByName = client.getIntegrationByName("ProfilingIntegration");
       if (integrationByName) {
@@ -25,7 +25,7 @@ arg5.profiler = {
     }
   },
   stopProfiler() {
-    const client = require(7402) /* getClient */.getClient();
+    const client = require("../07402_getClient.js") /* getClient */.getClient();
     if (client) {
       const integrationByName = client.getIntegrationByName("ProfilingIntegration");
       if (integrationByName) {

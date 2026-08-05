@@ -208,7 +208,7 @@ let items = [
       obj[6] = tmp27;
       obj[7] = angle;
       obj[8] = items;
-      const items1 = [tmp17(importDefault(4708), obj), children];
+      const items1 = [tmp17(require("04708_LinearGradient.js"), obj), children];
       obj.children = items1;
       return tmp14(tmp15, obj);
     }

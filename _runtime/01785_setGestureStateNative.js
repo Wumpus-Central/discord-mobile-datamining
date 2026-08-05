@@ -5,7 +5,7 @@ function setGestureStateNative(arg0, arg1) {
   if (globalThis._WORKLET) {
     global._setGestureState(arg0, arg1);
   } else {
-    const logger = require(1610) /* addLogBoxLog */.logger;
+    const logger = require("01610_addLogBoxLog.js") /* addLogBoxLog */.logger;
     logger.warn("You can not use setGestureState in non-worklet function.");
   }
 }
@@ -18,16 +18,16 @@ if (!isJest.shouldBeUseWeb()) {
   const _module1 = require("isJest");
   if (_module1.isJest()) {
     function setGestureStateJest() {
-      const logger = require(1610) /* addLogBoxLog */.logger;
+      const logger = require("01610_addLogBoxLog.js") /* addLogBoxLog */.logger;
       logger.warn("setGestureState() cannot be used with Jest.");
     }
   } else {
     const _module2 = require("isJest");
     setGestureStateJest = _module2.isChromeDebugger() ? (function setGestureStateChromeDebugger() {
-      const logger = require(1610) /* addLogBoxLog */.logger;
+      const logger = require("01610_addLogBoxLog.js") /* addLogBoxLog */.logger;
       logger.warn("setGestureState() cannot be used with Chrome Debugger.");
     }) : (function setGestureStateDefault() {
-      const logger = require(1610) /* addLogBoxLog */.logger;
+      const logger = require("01610_addLogBoxLog.js") /* addLogBoxLog */.logger;
       logger.warn("setGestureState() is not supported on this configuration.");
     });
   }

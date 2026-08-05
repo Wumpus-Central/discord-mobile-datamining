@@ -62,7 +62,7 @@ function getProgressFromGesture(interpolate, width, options) {
   }
   const gestureDirection = options.gestureDirection;
   if (undefined !== gestureDirection) {
-    const tmp10 = importDefault(5706)(obj, gestureDirection);
+    const tmp10 = require("05706_getDistanceForDirection.js")(obj, gestureDirection);
     if (tmp10 > 0) {
       obj = { inputRange: null, outputRange: null };
       const items = [0, tmp10];
@@ -301,7 +301,7 @@ let obj = {
             let tmp11 = !isModalPresentation;
             if (isModalPresentation) {
               let tmp12 = importDefault;
-              tmp11 = diff !== importDefault(5721)(scenes, (descriptor) => {
+              tmp11 = diff !== require("05721_findLastIndex.js")(scenes, (descriptor) => {
                 const cardStyleInterpolator = descriptor.descriptor.options.cardStyleInterpolator;
                 let tmp = cardStyleInterpolator === v1(closure_2[13]).forModalPresentationIOS;
                 if (!tmp) {

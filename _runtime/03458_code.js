@@ -3,7 +3,7 @@ import formatDistance from "formatDistance";
 import buildFormatLongFn from "buildFormatLongFn";
 import formatRelative from "formatRelative";
 import buildLocalizeFn from "buildLocalizeFn";
-import module_3463 from "module_3463";
+import 03463__ from "metro/03463__.js";
 
 if (!formatDistance) {
   let obj = { default: null };

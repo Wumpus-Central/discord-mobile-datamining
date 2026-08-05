@@ -59,25 +59,25 @@ export default {
     }
     return str;
   },
-  (joined) => importDefault(4920).ResolutionUnit(parseInt(joined, 10)),
+  (joined) => require("metro/04920__.js").ResolutionUnit(parseInt(joined, 10)),
   (str) => {
     let XResolutionResult = str;
     if (obj.test(str)) {
-      XResolutionResult = importDefault(4920).XResolution(str.split("/"));
+      XResolutionResult = require("metro/04920__.js").XResolution(str.split("/"));
     }
     return XResolutionResult;
   },
   (str) => {
     let YResolutionResult = str;
     if (obj.test(str)) {
-      YResolutionResult = importDefault(4920).YResolution(str.split("/"));
+      YResolutionResult = require("metro/04920__.js").YResolution(str.split("/"));
     }
     return YResolutionResult;
   },
   (str) => {
     let ApertureValueResult = str;
     if (obj.test(str)) {
-      ApertureValueResult = importDefault(4920).ApertureValue(str.split("/"));
+      ApertureValueResult = require("metro/04920__.js").ApertureValue(str.split("/"));
     }
     return ApertureValueResult;
   },
@@ -86,18 +86,18 @@ export default {
   (str) => {
     let FNumberResult = str;
     if (obj.test(str)) {
-      FNumberResult = importDefault(4920).FNumber(str.split("/"));
+      FNumberResult = require("metro/04920__.js").FNumber(str.split("/"));
     }
     return FNumberResult;
   },
   (str) => {
     let FocalLengthResult = str;
     if (obj.test(str)) {
-      FocalLengthResult = importDefault(4920).FocalLength(str.split("/"));
+      FocalLengthResult = require("metro/04920__.js").FocalLength(str.split("/"));
     }
     return FocalLengthResult;
   },
-  (joined) => importDefault(4920).FocalPlaneResolutionUnit(parseInt(joined, 10)),
+  (joined) => require("metro/04920__.js").FocalPlaneResolutionUnit(parseInt(joined, 10)),
   (joined) => {
     if ("0x" === joined.substring(0, 2)) {
       const _parseInt2 = parseInt;
@@ -106,41 +106,41 @@ export default {
       const _parseInt = parseInt;
       parsed = parseInt(joined, 10);
     }
-    return importDefault(4920).ColorSpace(parsed);
+    return require("metro/04920__.js").ColorSpace(parsed);
   },
   (arg0, str) => {
     if (obj.test(str)) {
       const parts = str.split(", ");
       const mapped = parts.map((str) => str.charCodeAt(0));
-      return importDefault(4920).ComponentsConfiguration(mapped);
+      return require("metro/04920__.js").ComponentsConfiguration(mapped);
     } else {
       return str;
     }
     obj = /^\d, \d, \d, \d$/;
   },
-  (joined) => importDefault(4920).Contrast(parseInt(joined, 10)),
-  (joined) => importDefault(4920).CustomRendered(parseInt(joined, 10)),
-  (joined) => importDefault(4920).ExposureMode(parseInt(joined, 10)),
-  (joined) => importDefault(4920).ExposureProgram(parseInt(joined, 10)),
+  (joined) => require("metro/04920__.js").Contrast(parseInt(joined, 10)),
+  (joined) => require("metro/04920__.js").CustomRendered(parseInt(joined, 10)),
+  (joined) => require("metro/04920__.js").ExposureMode(parseInt(joined, 10)),
+  (joined) => require("metro/04920__.js").ExposureProgram(parseInt(joined, 10)),
   (str) => {
     let ExposureTimeResult = str;
     if (obj.test(str)) {
       const parts = str.split("/");
-      ExposureTimeResult = importDefault(4920).ExposureTime(parts.map((joined) => parseInt(joined, 10)));
-      const obj2 = importDefault(4920);
+      ExposureTimeResult = require("metro/04920__.js").ExposureTime(parts.map((joined) => parseInt(joined, 10)));
+      const obj2 = require("metro/04920__.js");
     }
     return ExposureTimeResult;
   },
-  (joined) => importDefault(4920).MeteringMode(parseInt(joined, 10)),
-  (joined) => importDefault(4920).Saturation(parseInt(joined, 10)),
-  (joined) => importDefault(4920).SceneCaptureType(parseInt(joined, 10)),
-  (joined) => importDefault(4920).Sharpness(parseInt(joined, 10)),
+  (joined) => require("metro/04920__.js").MeteringMode(parseInt(joined, 10)),
+  (joined) => require("metro/04920__.js").Saturation(parseInt(joined, 10)),
+  (joined) => require("metro/04920__.js").SceneCaptureType(parseInt(joined, 10)),
+  (joined) => require("metro/04920__.js").Sharpness(parseInt(joined, 10)),
   (str) => {
     let ShutterSpeedValueResult = str;
     if (obj.test(str)) {
-      ShutterSpeedValueResult = importDefault(4920).ShutterSpeedValue(str.split("/"));
+      ShutterSpeedValueResult = require("metro/04920__.js").ShutterSpeedValue(str.split("/"));
     }
     return ShutterSpeedValueResult;
   },
-  (joined) => importDefault(4920).WhiteBalance(parseInt(joined, 10))
+  (joined) => require("metro/04920__.js").WhiteBalance(parseInt(joined, 10))
 };

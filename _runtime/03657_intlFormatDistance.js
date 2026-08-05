@@ -162,7 +162,7 @@ export default function intlFormatDistance(arg0, arg1, unit) {
   obj = tmp17;
   const defaultResult3 = tmp17.default(defaultResult1, defaultResult2);
   const absolute = Math.abs(defaultResult3);
-  if (absolute < require(3543) /* keys */.secondsInMinute) {
+  if (absolute < require("03543_keys.js") /* keys */.secondsInMinute) {
     num2 = obj.default(defaultResult1, defaultResult2);
     str = "second";
   } else {

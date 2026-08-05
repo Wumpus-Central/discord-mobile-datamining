@@ -10,7 +10,7 @@ if (prototype) {
 function baseToString(str) {
   if (typeof str === "string") {
     return str;
-  } else if (require(599)(str)) {
+  } else if (require("metro/00599__.js")(str)) {
     return "" + tmp5(764)(str, baseToString);
   } else if (tmp5(638)(str)) {
     if (!toString) {

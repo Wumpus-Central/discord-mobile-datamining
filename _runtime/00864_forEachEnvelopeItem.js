@@ -26,8 +26,8 @@ export const addItemToEnvelope = function addItemToEnvelope(arg0, arg1) {
 export const createAttachmentEnvelopeItem = function createAttachmentEnvelopeItem(data) {
   if (typeof data.data === "string") {
     data = data.data;
-    let obj = require(825) /* getGlobalSingleton */;
-    const sentryCarrier = obj.getSentryCarrier(require(821).GLOBAL_OBJ);
+    let obj = require("00825_getGlobalSingleton.js") /* getGlobalSingleton */;
+    const sentryCarrier = obj.getSentryCarrier(require("metro/00821__.js").GLOBAL_OBJ);
     if (sentryCarrier.encodePolyfill) {
       let encodePolyfillResult = sentryCarrier.encodePolyfill(data);
     } else {
@@ -70,9 +70,9 @@ export const createEventEnvelopeHeaders = function createEventEnvelopeHeaders(ev
   let tmp4 = arg2 && arg3;
   if (tmp4) {
     obj = { dsn: null };
-    obj[0] = require(837) /* dsnFromString */.dsnToString(arg3);
+    obj[0] = require("00837_dsnFromString.js") /* dsnFromString */.dsnToString(arg3);
     tmp4 = obj;
-    const obj5 = require(837) /* dsnFromString */;
+    const obj5 = require("00837_dsnFromString.js") /* dsnFromString */;
   }
   const merged1 = Object.assign(tmp4);
   let tmp8 = prop;
@@ -151,7 +151,7 @@ export const parseEnvelope = function parseEnvelope(arr) {
     const items2 = [json, items];
     return items2;
   } else {
-    let sentryCarrier = _require(825).getSentryCarrier(_require(821).GLOBAL_OBJ);
+    let sentryCarrier = _require("00825_getGlobalSingleton.js").getSentryCarrier(_require("metro/00821__.js").GLOBAL_OBJ);
     if (sentryCarrier.encodePolyfill) {
       let encodePolyfillResult = sentryCarrier.encodePolyfill(arr);
     } else {
@@ -159,7 +159,7 @@ export const parseEnvelope = function parseEnvelope(arr) {
       const textEncoder = new TextEncoder();
       encodePolyfillResult = textEncoder.encode(arr);
     }
-    const obj2 = _require(825);
+    const obj2 = _require("00825_getGlobalSingleton.js");
   }
 };
 export const serializeEnvelope = function serializeEnvelope(arg0) {
@@ -229,8 +229,8 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
           append(json);
         } catch (err) {
           const _JSON3 = tmp2.JSON;
-          json = _JSON3.stringify(_require(865).normalize(tmp3));
-          const obj = _require(865);
+          json = _JSON3.stringify(_require("00865_normalize.js").normalize(tmp3));
+          const obj = _require("00865_normalize.js");
         }
       }
     }

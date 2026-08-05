@@ -3,7 +3,7 @@ import noop from "noop";
 
 
 export default function usePreventRemoveContext() {
-  const context = React.useContext(importDefault(1527));
+  const context = React.useContext(require("01527_noop.js"));
   if (null == context) {
     const _Error = Error;
     const error = new Error("Couldn't find the prevent remove context. Is your component inside NavigationContent?");

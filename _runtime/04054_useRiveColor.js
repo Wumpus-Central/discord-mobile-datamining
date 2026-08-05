@@ -8,15 +8,15 @@ const f28757 = (colorProperty) => colorProperty.colorProperty(arg1);
 export const useRiveColor = function useRiveColor(FillColor, instance) {
   let tmp5;
   let tmp6;
-  let obj = require(4036) /* c */;
+  let obj = require("04036_c.js") /* c */;
   const cResult = obj.c(8);
-  const tmp4 = callback(require(4049) /* useRiveProperty */.useRiveProperty(instance, FillColor, f28757), 3);
+  const tmp4 = callback(require("04049_useRiveProperty.js") /* useRiveProperty */.useRiveProperty(instance, FillColor, f28757), 3);
   [tmp5, tmp6] = tmp4;
   require = tmp6;
   if (cResult[0] !== tmp5) {
     let fromIntResult;
     if (undefined !== tmp5) {
-      let RiveColor = require(4044) /* RiveColor */.RiveColor;
+      let RiveColor = require("04044_RiveColor.js") /* RiveColor */.RiveColor;
       fromIntResult = RiveColor.fromInt(tmp5);
     }
     cResult[0] = tmp5;

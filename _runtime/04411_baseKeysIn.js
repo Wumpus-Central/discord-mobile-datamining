@@ -1,7 +1,7 @@
 // _runtime/04411_baseKeysIn.js
 
 export default function baseKeysIn(obj) {
-  if (require(606) /* isObject */(obj)) {
+  if (require("00606_isObject.js") /* isObject */(obj)) {
     const tmp3 = tmp(630)(obj);
     const items = [];
     for (const key10017 in arg0) {

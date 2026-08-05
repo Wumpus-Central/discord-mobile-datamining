@@ -101,11 +101,11 @@ export const reactNativeTracingIntegration = () => {
   };
 };
 export const getCurrentReactNativeTracingIntegration = function getCurrentReactNativeTracingIntegration() {
-  const client = require(817) /* registerSpanErrorInstrumentation */.getClient();
+  const client = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.getClient();
   if (client) {
     return client.getIntegrationByName(ReactNativeTracing);
   }
-  const obj = require(817) /* registerSpanErrorInstrumentation */;
+  const obj = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
 };
 export const getReactNativeTracingIntegration = function getReactNativeTracingIntegration(getIntegrationByName) {
   return getIntegrationByName.getIntegrationByName(ReactNativeTracing);

@@ -7,7 +7,7 @@ function dynamicRequire(require) {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.isNodeEnv = function isNodeEnv() {
-  const isBrowserBundleResult = require(989) /* getSDKSource */.isBrowserBundle();
+  const isBrowserBundleResult = require("00989_getSDKSource.js") /* getSDKSource */.isBrowserBundle();
   if (isBrowserBundleResult) {
     return !isBrowserBundleResult;
   } else {

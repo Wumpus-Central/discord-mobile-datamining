@@ -65,8 +65,8 @@ const items = [
       const nativeElementReference = ReadOnlyElement(136).getNativeElementReference(this);
       let num = 0;
       if (null != nativeElementReference) {
-        num = importDefault(139).getInnerSize(nativeElementReference)[1];
-        const obj2 = importDefault(139);
+        num = require("00139_NativeDOMCxx.js").getInnerSize(nativeElementReference)[1];
+        const obj2 = require("00139_NativeDOMCxx.js");
       }
       return num;
     }
@@ -77,8 +77,8 @@ const items = [
       const nativeElementReference = ReadOnlyElement(136).getNativeElementReference(this);
       let num = 0;
       if (null != nativeElementReference) {
-        num = importDefault(139).getBorderWidth(nativeElementReference)[3];
-        const obj2 = importDefault(139);
+        num = require("00139_NativeDOMCxx.js").getBorderWidth(nativeElementReference)[3];
+        const obj2 = require("00139_NativeDOMCxx.js");
       }
       return num;
     }
@@ -89,8 +89,8 @@ const items = [
       const nativeElementReference = ReadOnlyElement(136).getNativeElementReference(this);
       let num = 0;
       if (null != nativeElementReference) {
-        num = importDefault(139).getBorderWidth(nativeElementReference)[0];
-        const obj2 = importDefault(139);
+        num = require("00139_NativeDOMCxx.js").getBorderWidth(nativeElementReference)[0];
+        const obj2 = require("00139_NativeDOMCxx.js");
       }
       return num;
     }
@@ -101,8 +101,8 @@ const items = [
       const nativeElementReference = ReadOnlyElement(136).getNativeElementReference(this);
       let num = 0;
       if (null != nativeElementReference) {
-        num = importDefault(139).getInnerSize(nativeElementReference)[0];
-        const obj2 = importDefault(139);
+        num = require("00139_NativeDOMCxx.js").getInnerSize(nativeElementReference)[0];
+        const obj2 = require("00139_NativeDOMCxx.js");
       }
       return num;
     }
@@ -159,7 +159,7 @@ const items = [
   {
     key: "nodeType",
     get() {
-      return importDefault(131).ELEMENT_NODE;
+      return require("00131__isNativeReflectConstruct.js").ELEMENT_NODE;
     }
   },
   {
@@ -183,8 +183,8 @@ const items = [
       const nativeElementReference = ReadOnlyElement(136).getNativeElementReference(this);
       let num = 0;
       if (null != nativeElementReference) {
-        num = importDefault(139).getScrollSize(nativeElementReference)[1];
-        const obj2 = importDefault(139);
+        num = require("00139_NativeDOMCxx.js").getScrollSize(nativeElementReference)[1];
+        const obj2 = require("00139_NativeDOMCxx.js");
       }
       return num;
     }
@@ -195,8 +195,8 @@ const items = [
       const nativeElementReference = ReadOnlyElement(136).getNativeElementReference(this);
       let num = 0;
       if (null != nativeElementReference) {
-        num = importDefault(139).getScrollPosition(nativeElementReference)[0];
-        const obj2 = importDefault(139);
+        num = require("00139_NativeDOMCxx.js").getScrollPosition(nativeElementReference)[0];
+        const obj2 = require("00139_NativeDOMCxx.js");
       }
       return num;
     }
@@ -207,8 +207,8 @@ const items = [
       const nativeElementReference = ReadOnlyElement(136).getNativeElementReference(this);
       let num = 0;
       if (null != nativeElementReference) {
-        num = importDefault(139).getScrollPosition(nativeElementReference)[1];
-        const obj2 = importDefault(139);
+        num = require("00139_NativeDOMCxx.js").getScrollPosition(nativeElementReference)[1];
+        const obj2 = require("00139_NativeDOMCxx.js");
       }
       return num;
     }
@@ -219,8 +219,8 @@ const items = [
       const nativeElementReference = ReadOnlyElement(136).getNativeElementReference(this);
       let num = 0;
       if (null != nativeElementReference) {
-        num = importDefault(139).getScrollSize(nativeElementReference)[0];
-        const obj2 = importDefault(139);
+        num = require("00139_NativeDOMCxx.js").getScrollSize(nativeElementReference)[0];
+        const obj2 = require("00139_NativeDOMCxx.js");
       }
       return num;
     }
@@ -231,8 +231,8 @@ const items = [
       const nativeElementReference = ReadOnlyElement(136).getNativeElementReference(this);
       let str = "";
       if (null != nativeElementReference) {
-        str = importDefault(139).getTagName(nativeElementReference);
-        const obj2 = importDefault(139);
+        str = require("00139_NativeDOMCxx.js").getTagName(nativeElementReference);
+        const obj2 = require("00139_NativeDOMCxx.js");
       }
       return str;
     }
@@ -243,8 +243,8 @@ const items = [
       const nativeElementReference = ReadOnlyElement(136).getNativeElementReference(this);
       let str = "";
       if (null != nativeElementReference) {
-        str = importDefault(139).getTextContent(nativeElementReference);
-        const obj2 = importDefault(139);
+        str = require("00139_NativeDOMCxx.js").getTextContent(nativeElementReference);
+        const obj2 = require("00139_NativeDOMCxx.js");
       }
       return str;
     }
@@ -254,11 +254,11 @@ const items = [
     value: function getBoundingClientRect(nativeElementReference, includeTransform) {
       nativeElementReference = ReadOnlyElement(136).getNativeElementReference(this);
       if (null != nativeElementReference) {
-        const boundingClientRect = importDefault(139).getBoundingClientRect(nativeElementReference, true);
-        let tmp6 = new importDefault(124)(boundingClientRect[0], boundingClientRect[1], boundingClientRect[2], boundingClientRect[3]);
-        const obj2 = importDefault(139);
+        const boundingClientRect = require("00139_NativeDOMCxx.js").getBoundingClientRect(nativeElementReference, true);
+        let tmp6 = new require("00124__isNativeReflectConstruct.js")(boundingClientRect[0], boundingClientRect[1], boundingClientRect[2], boundingClientRect[3]);
+        const obj2 = require("00139_NativeDOMCxx.js");
       } else {
-        tmp6 = new importDefault(124)(0, 0, 0, 0);
+        tmp6 = new require("00124__isNativeReflectConstruct.js")(0, 0, 0, 0);
       }
       return tmp6;
     }
@@ -269,8 +269,8 @@ const items = [
       nativeElementReference = ReadOnlyElement(136).getNativeElementReference(this);
       let hasPointerCaptureResult = null != nativeElementReference;
       if (hasPointerCaptureResult) {
-        hasPointerCaptureResult = importDefault(139).hasPointerCapture(nativeElementReference, nativeElementReference);
-        const obj2 = importDefault(139);
+        hasPointerCaptureResult = require("00139_NativeDOMCxx.js").hasPointerCapture(nativeElementReference, nativeElementReference);
+        const obj2 = require("00139_NativeDOMCxx.js");
       }
       return hasPointerCaptureResult;
     }
@@ -280,8 +280,8 @@ const items = [
     value: function setPointerCapture(nativeElementReference, nativeElementReference) {
       nativeElementReference = ReadOnlyElement(136).getNativeElementReference(this);
       if (null != nativeElementReference) {
-        importDefault(139).setPointerCapture(nativeElementReference, nativeElementReference);
-        const obj2 = importDefault(139);
+        require("00139_NativeDOMCxx.js").setPointerCapture(nativeElementReference, nativeElementReference);
+        const obj2 = require("00139_NativeDOMCxx.js");
       }
     }
   },
@@ -290,8 +290,8 @@ const items = [
     value: function releasePointerCapture(nativeElementReference, nativeElementReference) {
       nativeElementReference = ReadOnlyElement(136).getNativeElementReference(this);
       if (null != nativeElementReference) {
-        const result = importDefault(139).releasePointerCapture(nativeElementReference, nativeElementReference);
-        const obj2 = importDefault(139);
+        const result = require("00139_NativeDOMCxx.js").releasePointerCapture(nativeElementReference, nativeElementReference);
+        const obj2 = require("00139_NativeDOMCxx.js");
       }
     }
   }
@@ -301,11 +301,11 @@ export default importDefaultResult(ReadOnlyElement, items);
 export const getBoundingClientRect = function _getBoundingClientRect(nativeElementReference3, includeTransform) {
   const nativeElementReference = ReadOnlyElement(136).getNativeElementReference(nativeElementReference3);
   if (null != nativeElementReference) {
-    const boundingClientRect = importDefault(139).getBoundingClientRect(nativeElementReference, includeTransform.includeTransform);
-    const tmp12 = new importDefault(124)(boundingClientRect[0], boundingClientRect[1], boundingClientRect[2], boundingClientRect[3]);
+    const boundingClientRect = require("00139_NativeDOMCxx.js").getBoundingClientRect(nativeElementReference, includeTransform.includeTransform);
+    const tmp12 = new require("00124__isNativeReflectConstruct.js")(boundingClientRect[0], boundingClientRect[1], boundingClientRect[2], boundingClientRect[3]);
     return tmp12;
   } else {
-    const tmp6 = new importDefault(124)(0, 0, 0, 0);
+    const tmp6 = new require("00124__isNativeReflectConstruct.js")(0, 0, 0, 0);
     return tmp6;
   }
   const obj = ReadOnlyElement(136);

@@ -54,86 +54,86 @@ if (self2) {
   const _Object3 = Object;
   let obj = { enumerable: true, get: null };
   obj[1] = function get() {
-    return require(1275) /* makeDataFormatters */.makeDataFormatters;
+    return require("../01275_makeDataFormatters.js") /* makeDataFormatters */.makeDataFormatters;
   };
   Object.defineProperty(exports, "makeDataFormatters", obj);
   const _Object4 = Object;
   obj = { enumerable: true, get: null };
   obj[1] = function get() {
-    return require(1277) /* dataFormatterCache */.dataFormatterCache;
+    return require("../01277_dataFormatterCache.js") /* dataFormatterCache */.dataFormatterCache;
   };
   Object.defineProperty(exports, "dataFormatterCache", obj);
   const _Object5 = Object;
   obj = { enumerable: true, get: null };
   obj[1] = function get() {
-    return require(1278) /* _isNativeReflectConstruct */.FormatBuilder;
+    return require("../01278__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.FormatBuilder;
   };
   Object.defineProperty(exports, "FormatBuilder", obj);
   const _Object6 = Object;
   const obj1 = { enumerable: true, get: null };
   obj1[1] = function get() {
-    return require(1278) /* _isNativeReflectConstruct */.bindFormatValues;
+    return require("../01278__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.bindFormatValues;
   };
   Object.defineProperty(exports, "bindFormatValues", obj1);
   fn(require("module_1285"), exports);
   const _Object7 = Object;
   const obj2 = { enumerable: true, get: null };
   obj2[1] = function get() {
-    return require(1290) /* runtimeHashMessageKey */.runtimeHashMessageKey;
+    return require("../01290_runtimeHashMessageKey.js") /* runtimeHashMessageKey */.runtimeHashMessageKey;
   };
   Object.defineProperty(exports, "runtimeHashMessageKey", obj2);
   const _Object8 = Object;
   const obj3 = { enumerable: true, get: null };
   obj3[1] = function get() {
-    return require(1292) /* DEFAULT_LOCALE */.IntlManager;
+    return require("../01292_DEFAULT_LOCALE.js") /* DEFAULT_LOCALE */.IntlManager;
   };
   Object.defineProperty(exports, "IntlManager", obj3);
   const _Object9 = Object;
   const obj4 = { enumerable: true, get: null };
   obj4[1] = function get() {
-    return require(1292) /* DEFAULT_LOCALE */.DEFAULT_LOCALE;
+    return require("../01292_DEFAULT_LOCALE.js") /* DEFAULT_LOCALE */.DEFAULT_LOCALE;
   };
   Object.defineProperty(exports, "DEFAULT_LOCALE", obj4);
   const _Object10 = Object;
   const obj5 = { enumerable: true, get: null };
   obj5[1] = function get() {
-    return require(1293) /* serializeAst */.InternalIntlMessage;
+    return require("../01293_serializeAst.js") /* serializeAst */.InternalIntlMessage;
   };
   Object.defineProperty(exports, "InternalIntlMessage", obj5);
   const _Object11 = Object;
   const obj6 = { enumerable: true, get: null };
   obj6[1] = function get() {
-    return require(1294) /* MessageLoader */.createLoader;
+    return require("../01294_MessageLoader.js") /* MessageLoader */.createLoader;
   };
   Object.defineProperty(exports, "createLoader", obj6);
   const _Object12 = Object;
   const obj7 = { enumerable: true, get: null };
   obj7[1] = function get() {
-    return require(1294) /* MessageLoader */.loadAllMessagesInLocale;
+    return require("../01294_MessageLoader.js") /* MessageLoader */.loadAllMessagesInLocale;
   };
   Object.defineProperty(exports, "loadAllMessagesInLocale", obj7);
   const _Object13 = Object;
   const obj8 = { enumerable: true, get: null };
   obj8[1] = function get() {
-    return require(1294) /* MessageLoader */.waitForAllDefaultIntlMessagesLoaded;
+    return require("../01294_MessageLoader.js") /* MessageLoader */.waitForAllDefaultIntlMessagesLoaded;
   };
   Object.defineProperty(exports, "waitForAllDefaultIntlMessagesLoaded", obj8);
   const _Object14 = Object;
   const obj9 = { enumerable: true, get: null };
   obj9[1] = function get() {
-    return require(1294) /* MessageLoader */.MessageLoader;
+    return require("../01294_MessageLoader.js") /* MessageLoader */.MessageLoader;
   };
   Object.defineProperty(exports, "MessageLoader", obj9);
   const _Object15 = Object;
   const obj10 = { enumerable: true, get: null };
   obj10[1] = function get() {
-    return require(1295) /* chainMessagesObjects */.chainMessagesObjects;
+    return require("../01295_chainMessagesObjects.js") /* chainMessagesObjects */.chainMessagesObjects;
   };
   Object.defineProperty(exports, "chainMessagesObjects", obj10);
   const _Object16 = Object;
   const obj11 = { enumerable: true, get: null };
   obj11[1] = function get() {
-    return require(1295) /* chainMessagesObjects */.makeMessagesProxy;
+    return require("../01295_chainMessagesObjects.js") /* chainMessagesObjects */.makeMessagesProxy;
   };
   Object.defineProperty(exports, "makeMessagesProxy", obj11);
 } else {

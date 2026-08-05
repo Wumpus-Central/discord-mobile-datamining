@@ -5,7 +5,7 @@ arg5.IsWellFormedUnitIdentifier = function IsWellFormedUnitIdentifier(GetOptionR
   let tmp3;
   let tmp4;
   const str = GetOptionResult3.replace(/([A-Z])/g, (arg0, str) => str.toLowerCase());
-  if (require(13394) /* __exportStarResult7 */.IsSanctionedSimpleUnitIdentifier(str)) {
+  if (require("13394___exportStarResult7.js") /* __exportStarResult7 */.IsSanctionedSimpleUnitIdentifier(str)) {
     return true;
   } else {
     const parts = str.split("-per-");

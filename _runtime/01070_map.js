@@ -82,7 +82,7 @@ function _onInp(metric) {
 }
 arg5._onInp = _onInp;
 arg5._trackINP = function _trackINP() {
-  return require(1034) /* triggerHandlers */.addInpInstrumentationHandler(_onInp);
+  return require("01034_triggerHandlers.js") /* triggerHandlers */.addInpInstrumentationHandler(_onInp);
 };
 arg5.registerInpInteractionListener = function registerInpInteractionListener() {
   function captureElementFromEvent(target) {

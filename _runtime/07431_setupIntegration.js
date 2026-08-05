@@ -4,7 +4,7 @@ import _slicedToArray from "_slicedToArray";
 function setupIntegration(on, name) {
   const _require = on;
   if (arg2[name.name]) {
-    if (_require(7403).DEBUG_BUILD) {
+    if (_require("metro/07403___SENTRY_DEBUG__.js").DEBUG_BUILD) {
       const logger2 = tmp10(7375).logger;
       const _HermesInternal2 = HermesInternal;
       logger2.log("Integration skipped because it was already installed: " + name.name);
@@ -33,7 +33,7 @@ function setupIntegration(on, name) {
       obj[0] = name.name;
       on.addEventProcessor(Object.assign((arg0, arg1) => callback2(arg0, arg1, closure_0), obj));
     }
-    if (_require(7403).DEBUG_BUILD) {
+    if (_require("metro/07403___SENTRY_DEBUG__.js").DEBUG_BUILD) {
       const logger = tmp6(7375).logger;
       const _HermesInternal = HermesInternal;
       logger.log("Integration installed: " + name.name);
@@ -46,7 +46,7 @@ function setupIntegration(on, name) {
 let items = [];
 
 export const addIntegration = function addIntegration(name) {
-  const client = require(7402) /* getClient */.getClient();
+  const client = require("07402_getClient.js") /* getClient */.getClient();
   if (client) {
     client.addIntegration(name);
   } else if (tmp(7403).DEBUG_BUILD) {

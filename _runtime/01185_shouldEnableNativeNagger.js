@@ -5,8 +5,8 @@ import { Platform } from "get ActivityIndicator";
 export const shouldEnableNativeNagger = function shouldEnableNativeNagger(enableNativeNagger) {
   let tmp = enableNativeNagger;
   if (typeof enableNativeNagger !== "boolean") {
-    tmp = !require(1002) /* isHermesEnabled */.isExpoGo();
-    const obj = require(1002) /* isHermesEnabled */;
+    tmp = !require("01002_isHermesEnabled.js") /* isHermesEnabled */.isExpoGo();
+    const obj = require("01002_isHermesEnabled.js") /* isHermesEnabled */;
   }
   return tmp;
 };

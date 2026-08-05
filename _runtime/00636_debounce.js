@@ -54,9 +54,9 @@ export default function debounce(fn, arg1, leading) {
     const typeError = new TypeError("Expected a function");
     throw typeError;
   } else {
-    let tmp = _require(637)(arg1) || 0;
+    let tmp = _require("00637_toNumber.js")(arg1) || 0;
     dependencyMap = tmp;
-    if (_require(606)(leading)) {
+    if (_require("00606_isObject.js")(leading)) {
       leading = leading.leading;
       c10 = tmp3;
       let tmp5Result;

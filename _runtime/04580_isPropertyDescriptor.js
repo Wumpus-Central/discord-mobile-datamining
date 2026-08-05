@@ -8,7 +8,7 @@ export default function isPropertyDescriptor(obj) {
         let tmp11 = key10001;
         let tmp12 = require;
         let tmp13 = dependencyMap;
-        if (!require(573) /* bind */(arg0, key10001)) {
+        if (!require("00573_bind.js") /* bind */(arg0, key10001)) {
           continue;
         } else {
           let tmp = table;
@@ -21,7 +21,7 @@ export default function isPropertyDescriptor(obj) {
         }
         continue;
       }
-      let tmp4 = require(573) /* bind */(obj, "[[Value]]");
+      let tmp4 = require("00573_bind.js") /* bind */(obj, "[[Value]]");
       if (!tmp4) {
         tmp4 = tmp2(573)(obj, "[[Writable]]");
       }

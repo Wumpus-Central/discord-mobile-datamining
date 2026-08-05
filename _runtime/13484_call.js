@@ -1,5 +1,5 @@
 // _runtime/13484_call.js
-import module_13485 from "module_13485";
+import 13485__ from "metro/13485__.js";
 
 const call = prototype.call;
 if (module_13485) {

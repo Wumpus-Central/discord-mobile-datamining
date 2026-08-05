@@ -27,5 +27,5 @@ export default importAllResult.forwardRef(function ServerContainer(arg0, fn) {
   }
   obj = { value: { location: _location }, children: null };
   obj[1] = jsx(obj(1483).CurrentRenderContext.Provider, { value: obj, children });
-  return jsx(importDefault(1570).Provider, { value: { location: _location }, children: null });
+  return jsx(require("../01570_noop.js").Provider, { value: { location: _location }, children: null });
 });

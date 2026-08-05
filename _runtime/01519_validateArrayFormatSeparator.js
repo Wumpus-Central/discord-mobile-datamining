@@ -8,7 +8,7 @@ function validateArrayFormatSeparator(arrayFormatSeparator) {
 function decode(arg0, decode) {
   let tmp = arg0;
   if (decode.decode) {
-    tmp = require(1521) /* decodeComponents */(arg0);
+    tmp = require("01521_decodeComponents.js") /* decodeComponents */(arg0);
   }
   return tmp;
 }
@@ -580,9 +580,9 @@ export const parseUrl = (arr) => {
   let str;
   let tmp5;
   const merged = Object.assign({ decode: true }, arg1);
-  [str, tmp5] = _slicedToArray(require(1522)(arr, "#"), 2);
+  [str, tmp5] = _slicedToArray(require("metro/01522__.js")(arr, "#"), 2);
   const tmp2 = require;
-  const tmp4 = _slicedToArray(require(1522)(arr, "#"), 2);
+  const tmp4 = _slicedToArray(require("metro/01522__.js")(arr, "#"), 2);
   let obj = { url: str.split("?")[0] || "", query: null };
   const index = arr.indexOf("#");
   let substr = arr;
@@ -640,7 +640,7 @@ export const stringifyUrl = (url) => {
       if (!merged.encode) {
         let tmp8 = fragmentIdentifier;
       } else if (merged.strict) {
-        let encodeURIComponentResult = require(1520)(fragmentIdentifier);
+        let encodeURIComponentResult = require("metro/01520__.js")(fragmentIdentifier);
       } else {
         const _encodeURIComponent = encodeURIComponent;
         encodeURIComponentResult = encodeURIComponent(fragmentIdentifier);
@@ -659,7 +659,7 @@ export const pick = (arg0, arg1, arg2) => {
   obj[closure_4] = false;
   const merged = Object.assign(obj, arg2);
   const parseUrlResult = exports.parseUrl(arg0, merged);
-  obj = { url: parseUrlResult.url, query: require(1523)(query, arg1), fragmentIdentifier };
+  obj = { url: parseUrlResult.url, query: require("metro/01523__.js")(query, arg1), fragmentIdentifier };
   ({ query, fragmentIdentifier } = parseUrlResult);
   return exports.stringifyUrl(obj, merged);
 };

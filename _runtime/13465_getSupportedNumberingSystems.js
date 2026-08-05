@@ -3,7 +3,7 @@ const require = arg1;
 const dependencyMap = arg6;
 arg5.getSupportedNumberingSystems = function getSupportedNumberingSystems(locale) {
   const _require = locale;
-  const numberingSystemNames = _require(13466).numberingSystemNames;
+  const numberingSystemNames = _require("metro/13466__.js").numberingSystemNames;
   return numberingSystemNames.filter((arg0) => (function isSupportedNumberingSystem(arg0, closure_0) {
     let str = closure_0;
     if (undefined === closure_0) {

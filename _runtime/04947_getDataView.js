@@ -5,7 +5,7 @@ arg5.default = {
   read(byteLength) {
     let tmp;
     if (6 <= byteLength.byteLength) {
-      let obj = require(4897) /* getDataView */;
+      let obj = require("04897_getDataView.js") /* getDataView */;
       const stringFromDataView = obj.getStringFromDataView(byteLength, 3, 3);
       obj = { value: null, description: null };
       obj[0] = stringFromDataView;

@@ -6,10 +6,10 @@ import getReactNativeVersion from "getReactNativeVersion";
 import getReactNativeDimensions from "getReactNativeDimensions";
 import sendToReactotron from "sendToReactotron";
 import OverlayCreator from "OverlayCreator";
-import module_13592 from "module_13592";
+import 13592__ from "metro/13592__.js";
 import objectifyError from "objectifyError";
 import onSend from "onSend";
-import module_13608 from "module_13608";
+import 13608__ from "metro/13608__.js";
 import getDevMenu from "getDevMenu";
 import keys from "keys";
 import getReactNativePlatformConstants from "getReactNativePlatformConstants";
@@ -122,7 +122,7 @@ const obj18 = {
         const error = new Error("Invalid non-string URL");
         throw error;
       } else {
-        return require(13613) /* getHostFromUrl */.getHostFromUrl(scriptURL);
+        return require("13613_getHostFromUrl.js") /* getHostFromUrl */.getHostFromUrl(scriptURL);
       }
       const _default = tmp13.default;
     } catch (tmp8) {

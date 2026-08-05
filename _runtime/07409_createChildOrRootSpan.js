@@ -10,7 +10,7 @@ function createChildOrRootSpan(forceTransaction) {
   let traceId;
   let traceId2;
   ({ parentSpan, spanArguments, scope } = forceTransaction);
-  let obj = require(7407) /* hasTracingEnabled */;
+  let obj = require("07407_hasTracingEnabled.js") /* hasTracingEnabled */;
   if (obj.hasTracingEnabled()) {
     let tmpResult = tmp(7402);
     const isolationScope = tmpResult.getIsolationScope();
@@ -93,7 +93,7 @@ function createChildOrRootSpan(forceTransaction) {
 function _startRootSpan(name) {
   let tmp6;
   let tmp7;
-  let obj = require(7402) /* getClient */;
+  let obj = require("07402_getClient.js") /* getClient */;
   const client = obj.getClient();
   let options = client;
   if (client) {
@@ -127,7 +127,7 @@ function _startRootSpan(name) {
   const merged = Object.assign(name);
   const tmp5 = _slicedToArray(sampleSpanResult, 2);
   const merged1 = Object.assign(name.attributes);
-  obj1.attributes = { [require(7390).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE]: "custom" };
+  obj1.attributes = { [require("metro/07390__.js").SEMANTIC_ATTRIBUTE_SENTRY_SOURCE]: "custom" };
   obj1.sampled = tmp6;
   const sentrySpan = new tmp(7416).SentrySpan(obj1);
   if (undefined !== tmp7) {
@@ -144,10 +144,10 @@ export const continueTrace = (arg0, arg1) => {
   let _slicedToArray;
   let dependencyMap;
   const _require = arg1;
-  const mainCarrier = _require(7393).getMainCarrier();
-  const obj = _require(7393);
+  const mainCarrier = _require("07393_getMainCarrier.js").getMainCarrier();
+  const obj = _require("07393_getMainCarrier.js");
   const tmp = _require;
-  const asyncContextStrategy = _require(7394).getAsyncContextStrategy(mainCarrier);
+  const asyncContextStrategy = _require("07394_getAsyncContextStrategy.js").getAsyncContextStrategy(mainCarrier);
   if (asyncContextStrategy.continueTrace) {
     return asyncContextStrategy.continueTrace(arg0, arg1);
   } else {
@@ -157,15 +157,15 @@ export const continueTrace = (arg0, arg1) => {
       return callback();
     });
   }
-  const obj2 = _require(7394);
+  const obj2 = _require("07394_getAsyncContextStrategy.js");
 };
 export const startInactiveSpan = function startInactiveSpan(experimental) {
   let _slicedToArray;
   let parentSpan;
   const _require = experimental;
-  let obj = _require(7393);
+  let obj = _require("07393_getMainCarrier.js");
   let mainCarrier = obj.getMainCarrier();
-  let asyncContextStrategy = _require(7394).getAsyncContextStrategy(mainCarrier);
+  let asyncContextStrategy = _require("07394_getAsyncContextStrategy.js").getAsyncContextStrategy(mainCarrier);
   if (asyncContextStrategy.startInactiveSpan) {
     return asyncContextStrategy.startInactiveSpan(experimental);
   } else {
@@ -236,12 +236,12 @@ export const startInactiveSpan = function startInactiveSpan(experimental) {
       sentryNonRecordingSpan = outer1_4(obj);
     });
   }
-  const obj2 = _require(7394);
+  const obj2 = _require("07394_getAsyncContextStrategy.js");
   tmp3 = _require;
 };
 export const startNewTrace = function startNewTrace(arg0) {
   const _require = arg0;
-  return _require(7402).withScope((setPropagationContext) => {
+  return _require("07402_getClient.js").withScope((setPropagationContext) => {
     const obj = { traceId: null };
     obj[0] = callback(outer1_1[10]).generateTraceId();
     const result = setPropagationContext.setPropagationContext(obj);
@@ -273,9 +273,9 @@ export const startSpan = function startSpan(experimental) {
   let createChildOrRootSpan;
   const _require = experimental;
   const dependencyMap = arg1;
-  let obj = _require(7393);
+  let obj = _require("07393_getMainCarrier.js");
   const mainCarrier = obj.getMainCarrier();
-  const asyncContextStrategy = _require(7394).getAsyncContextStrategy(mainCarrier);
+  const asyncContextStrategy = _require("07394_getAsyncContextStrategy.js").getAsyncContextStrategy(mainCarrier);
   if (asyncContextStrategy.startSpan) {
     return asyncContextStrategy.startSpan(experimental, arg1);
   } else {
@@ -364,16 +364,16 @@ export const startSpan = function startSpan(experimental) {
       });
     });
   }
-  const obj2 = _require(7394);
+  const obj2 = _require("07394_getAsyncContextStrategy.js");
 };
 export const startSpanManual = function startSpanManual(experimental) {
   let __SENTRY_SUPPRESS_TRACING__;
   let createChildOrRootSpan;
   const _require = experimental;
   const dependencyMap = arg1;
-  let obj = _require(7393);
+  let obj = _require("07393_getMainCarrier.js");
   let mainCarrier = obj.getMainCarrier();
-  let asyncContextStrategy = _require(7394).getAsyncContextStrategy(mainCarrier);
+  let asyncContextStrategy = _require("07394_getAsyncContextStrategy.js").getAsyncContextStrategy(mainCarrier);
   if (asyncContextStrategy.startSpanManual) {
     return asyncContextStrategy.startSpanManual(experimental, arg1);
   } else {
@@ -465,14 +465,14 @@ export const startSpanManual = function startSpanManual(experimental) {
       });
     });
   }
-  const obj2 = _require(7394);
+  const obj2 = _require("07394_getAsyncContextStrategy.js");
 };
 export const suppressTracing = function suppressTracing(arg0) {
   const _require = arg0;
-  const mainCarrier = _require(7393).getMainCarrier();
-  const obj = _require(7393);
+  const mainCarrier = _require("07393_getMainCarrier.js").getMainCarrier();
+  const obj = _require("07393_getMainCarrier.js");
   const tmp = _require;
-  const asyncContextStrategy = _require(7394).getAsyncContextStrategy(mainCarrier);
+  const asyncContextStrategy = _require("07394_getAsyncContextStrategy.js").getAsyncContextStrategy(mainCarrier);
   if (asyncContextStrategy.suppressTracing) {
     let suppressTracingResult = asyncContextStrategy.suppressTracing(arg0);
   } else {
@@ -487,10 +487,10 @@ export const suppressTracing = function suppressTracing(arg0) {
 export const withActiveSpan = function withActiveSpan(arg0, arg1) {
   const _require = arg0;
   const dependencyMap = arg1;
-  const mainCarrier = _require(7393).getMainCarrier();
-  const obj = _require(7393);
+  const mainCarrier = _require("07393_getMainCarrier.js").getMainCarrier();
+  const obj = _require("07393_getMainCarrier.js");
   const tmp = _require;
-  const asyncContextStrategy = _require(7394).getAsyncContextStrategy(mainCarrier);
+  const asyncContextStrategy = _require("07394_getAsyncContextStrategy.js").getAsyncContextStrategy(mainCarrier);
   if (asyncContextStrategy.withActiveSpan) {
     let withActiveSpanResult = asyncContextStrategy.withActiveSpan(arg0, arg1);
   } else {

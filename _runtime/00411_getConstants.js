@@ -13,21 +13,21 @@ export default {
     return obj;
   },
   allowRTL(arg0) {
-    if (importDefault(412)) {
-      importDefault(412).allowRTL(arg0);
-      const tmpResult = importDefault(412);
+    if (require("00412_I18nManager.js")) {
+      require("00412_I18nManager.js").allowRTL(arg0);
+      const tmpResult = require("00412_I18nManager.js");
     }
   },
   forceRTL(arg0) {
-    if (importDefault(412)) {
-      importDefault(412).forceRTL(arg0);
-      const tmpResult = importDefault(412);
+    if (require("00412_I18nManager.js")) {
+      require("00412_I18nManager.js").forceRTL(arg0);
+      const tmpResult = require("00412_I18nManager.js");
     }
   },
   swapLeftAndRightInRTL(arg0) {
-    if (importDefault(412)) {
-      const result = importDefault(412).swapLeftAndRightInRTL(arg0);
-      const tmpResult = importDefault(412);
+    if (require("00412_I18nManager.js")) {
+      const result = require("00412_I18nManager.js").swapLeftAndRightInRTL(arg0);
+      const tmpResult = require("00412_I18nManager.js");
     }
   },
   isRTL: obj.isRTL,

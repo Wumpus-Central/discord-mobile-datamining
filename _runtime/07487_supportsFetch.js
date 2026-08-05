@@ -2,7 +2,7 @@
 const require = arg1;
 const dependencyMap = arg6;
 function supportsFetch() {
-  if ("fetch" in require(7376) /* getGlobalSingleton */.GLOBAL_OBJ) {
+  if ("fetch" in require("07376_getGlobalSingleton.js") /* getGlobalSingleton */.GLOBAL_OBJ) {
     try {
       const _Headers = Headers;
       const headers = new Headers();
@@ -56,7 +56,7 @@ arg5.supportsNativeFetch = function supportsNativeFetch() {
   if (typeof globalThis.EdgeRuntime === "string") {
     return true;
   } else if (supportsFetch()) {
-    if (isNativeFunction(require(7376) /* getGlobalSingleton */.GLOBAL_OBJ.fetch)) {
+    if (isNativeFunction(require("07376_getGlobalSingleton.js") /* getGlobalSingleton */.GLOBAL_OBJ.fetch)) {
       return true;
     } else {
       let flag2 = false;
@@ -107,5 +107,5 @@ arg5.supportsReferrerPolicy = function supportsReferrerPolicy() {
   }
 };
 arg5.supportsReportingObserver = function supportsReportingObserver() {
-  return "ReportingObserver" in require(7376) /* getGlobalSingleton */.GLOBAL_OBJ;
+  return "ReportingObserver" in require("07376_getGlobalSingleton.js") /* getGlobalSingleton */.GLOBAL_OBJ;
 };

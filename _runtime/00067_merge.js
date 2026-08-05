@@ -43,7 +43,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
   let bubblingEventTypes2;
   let directEventTypes;
   let bubblingEventTypes = arg0;
-  let _default = require(68) /* measure */.default;
+  let _default = require("00068_measure.js") /* measure */.default;
   const viewManagerConfig = _default.getViewManagerConfig(arg0);
   if (null == viewManagerConfig) {
     return null;
@@ -74,7 +74,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
         if (`CATransform3D` === tmp99) {
           let tmp37 = require;
           let tmp38 = dependencyMap;
-          let obj2 = require(77) /* matricesDiffer */;
+          let obj2 = require("00077_matricesDiffer.js") /* matricesDiffer */;
           _default = obj2.default;
         } else {
           if (`CGPoint` !== tmp99) {
@@ -82,12 +82,12 @@ arg5.default = function getNativeComponentAttributes(arg0) {
               if ("CGSize" === tmp99) {
                 let tmp33 = require;
                 let tmp34 = dependencyMap;
-                obj2 = require(64) /* sizesDiffer */;
+                obj2 = require("00064_sizesDiffer.js") /* sizesDiffer */;
                 _default = obj2.default;
               } else if (`UIEdgeInsets` === tmp99) {
                 let tmp31 = require;
                 let tmp32 = dependencyMap;
-                obj2 = require(79) /* insetsDiffer */;
+                obj2 = require("00079_insetsDiffer.js") /* insetsDiffer */;
                 _default = obj2.default;
               } else {
                 _default = null;
@@ -96,7 +96,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           }
           let tmp35 = require;
           let tmp36 = dependencyMap;
-          obj2 = require(78) /* pointsDiffer */;
+          obj2 = require("00078_pointsDiffer.js") /* pointsDiffer */;
           _default = obj2.default;
         }
         let _default1 = null;
@@ -248,7 +248,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           case "code":
             obj2 = require;
             let tmp40 = dependencyMap;
-            let tmp41 = require(57) /* getValidLengthPercentageSizeOrNull */;
+            let tmp41 = require("00057_getValidLengthPercentageSizeOrNull.js") /* getValidLengthPercentageSizeOrNull */;
             _default1 = tmp41.default;
             if (null == _default) {
               obj2 = null == _default1;
@@ -907,7 +907,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           case "li":
             obj2 = require;
             let tmp52 = dependencyMap;
-            let tmp53 = require(50) /* processColor */;
+            let tmp53 = require("00050_processColor.js") /* processColor */;
             _default1 = tmp53.default;
           break;
           case "lim":
@@ -915,7 +915,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           case "limited":
             obj2 = require;
             tmp52 = dependencyMap;
-            tmp53 = require(50) /* processColor */;
+            tmp53 = require("00050_processColor.js") /* processColor */;
             _default1 = tmp53.default;
           break;
           case "limitedTimeBadge":
@@ -923,7 +923,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           case "mi":
             obj2 = require;
             tmp52 = dependencyMap;
-            tmp53 = require(50) /* processColor */;
+            tmp53 = require("00050_processColor.js") /* processColor */;
             _default1 = tmp53.default;
           break;
           case "mit":
@@ -931,7 +931,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           case "getAppStartInfo":
             obj2 = require;
             let tmp50 = dependencyMap;
-            let tmp51 = require(80) /* processColorElement */;
+            let tmp51 = require("00080_processColorElement.js") /* processColorElement */;
             _default1 = tmp51.default;
           break;
           case "AppStartInfo":
@@ -939,7 +939,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           case "forModalPresentationIOS":
             obj2 = require;
             tmp50 = dependencyMap;
-            tmp51 = require(80) /* processColorElement */;
+            tmp51 = require("00080_processColorElement.js") /* processColorElement */;
             _default1 = tmp51.default;
           break;
           case "$ZodMap":
@@ -947,7 +947,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           case "ZodMap":
             obj2 = require;
             tmp50 = dependencyMap;
-            tmp51 = require(80) /* processColorElement */;
+            tmp51 = require("00080_processColorElement.js") /* processColorElement */;
             _default1 = tmp51.default;
           break;
           case "M":
@@ -955,7 +955,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           case "ap":
             obj2 = require;
             let tmp48 = dependencyMap;
-            let tmp49 = require(81) /* resolveAssetSource */;
+            let tmp49 = require("00081_resolveAssetSource.js") /* resolveAssetSource */;
             _default1 = tmp49.default;
           break;
           case "$ZodCheckGreaterThan":
@@ -963,7 +963,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           case "fetchMediaPostEmbed":
             obj2 = require;
             tmp48 = dependencyMap;
-            tmp49 = require(81) /* resolveAssetSource */;
+            tmp49 = require("00081_resolveAssetSource.js") /* resolveAssetSource */;
             _default1 = tmp49.default;
           break;
           case "ToIntlMathematicalValue":
@@ -971,7 +971,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           case "th":
             obj2 = require;
             tmp48 = dependencyMap;
-            tmp49 = require(81) /* resolveAssetSource */;
+            tmp49 = require("00081_resolveAssetSource.js") /* resolveAssetSource */;
             _default1 = tmp49.default;
           break;
           case "ValueSetter":
@@ -979,7 +979,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           case "$ZodCheckNumberFormat":
             obj2 = require;
             tmp48 = dependencyMap;
-            tmp49 = require(81) /* resolveAssetSource */;
+            tmp49 = require("00081_resolveAssetSource.js") /* resolveAssetSource */;
             _default1 = tmp49.default;
           break;
           case "N":
@@ -1001,7 +1001,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           case "$ZodObject":
             obj2 = require;
             let tmp45 = dependencyMap;
-            let tmp46 = require(54) /* _getFilterAmount */;
+            let tmp46 = require("00054__getFilterAmount.js") /* _getFilterAmount */;
             _default1 = tmp46.default;
           break;
           case "$ZodObjectJIT":
@@ -1009,7 +1009,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           case "ZodObject":
             obj2 = require;
             tmp45 = dependencyMap;
-            tmp46 = require(54) /* _getFilterAmount */;
+            tmp46 = require("00054__getFilterAmount.js") /* _getFilterAmount */;
             _default1 = tmp46.default;
           break;
           case "O":
@@ -1017,28 +1017,28 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           case "j":
             obj2 = require;
             let tmp44 = dependencyMap;
-            _default1 = require(56) /* processColorStops */.default;
+            _default1 = require("00056_processColorStops.js") /* processColorStops */.default;
           break;
           case "je":
           break;
           case "IT":
             obj2 = require;
             let tmp43 = dependencyMap;
-            _default1 = require(58) /* getPositionFromCSSValue */.default;
+            _default1 = require("00058_getPositionFromCSSValue.js") /* getPositionFromCSSValue */.default;
           break;
           case "MEDIA_PICKER_SEND_BUTTON_SPRING":
           break;
           case "marginHorizontal":
             obj2 = require;
             let tmp42 = dependencyMap;
-            _default1 = require(59) /* isBackgroundRepeatKeyword */.default;
+            _default1 = require("00059_isBackgroundRepeatKeyword.js") /* isBackgroundRepeatKeyword */.default;
           break;
           case "Direction":
           break;
           case "rect":
             obj2 = require;
             tmp40 = dependencyMap;
-            tmp41 = require(57) /* getValidLengthPercentageSizeOrNull */;
+            tmp41 = require("00057_getValidLengthPercentageSizeOrNull.js") /* getValidLengthPercentageSizeOrNull */;
             _default1 = tmp41.default;
             if (null == _default) {
               obj2 = null == _default1;
@@ -2911,7 +2911,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
         }
       }
-      prop.style = require(26) /* result */.default;
+      prop.style = require("00026_result.js") /* result */.default;
       const _Object = Object;
       const obj3 = { uiViewClassName: null, validAttributes: null, bubblingEventTypes: null, directEventTypes: null };
       obj3[0] = bubblingEventTypes;
@@ -2919,7 +2919,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
       obj3[2] = keys3;
       obj3[3] = tmp4;
       const merged = Object.assign(viewManagerConfig, obj3);
-      str = require(68) /* measure */.default.getConstants();
+      str = require("00068_measure.js") /* measure */.default.getConstants();
       if (!str.ViewManagerNames) {
         if (!str.LazyViewManagersEnabled) {
           bubblingEventTypes = viewManagerConfig.bubblingEventTypes;
@@ -2934,8 +2934,8 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           }
         }
       }
-      const _default3 = require(68) /* measure */.default;
-      const obj13 = require(70) /* nullthrows */(require(68) /* measure */.default.getDefaultEventTypes)();
+      const _default3 = require("00068_measure.js") /* measure */.default;
+      const obj13 = require("00070_nullthrows.js") /* nullthrows */(require("00068_measure.js") /* measure */.default.getDefaultEventTypes)();
       if (obj13) {
         if (viewManagerConfig) {
           for (const key10171 in obj13) {
@@ -3000,9 +3000,9 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           }
         }
       }
-      const tmp54Result = require(70) /* nullthrows */;
+      const tmp54Result = require("00070_nullthrows.js") /* nullthrows */;
     }
-    const viewManagerConfig1 = require(68) /* measure */.default.getViewManagerConfig(baseModuleName);
+    const viewManagerConfig1 = require("00068_measure.js") /* measure */.default.getViewManagerConfig(baseModuleName);
     obj2 = str2;
     let tmp11 = str2;
     let tmp12 = str;
@@ -3026,6 +3026,6 @@ arg5.default = function getNativeComponentAttributes(arg0) {
     str2 = tmp11;
     str = tmp12;
     str3 = tmp13;
-    const _default2 = require(68) /* measure */.default;
+    const _default2 = require("00068_measure.js") /* measure */.default;
   }
 };

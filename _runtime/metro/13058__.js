@@ -3,8 +3,8 @@
 export default (arg0, arg1, arg2, arg3) => {
   let obj;
   let _require = arg3;
-  const tmp3 = new _require(13021)(arg0, arg3);
-  const tmp4 = new _require(13050)(arg1, arg3);
+  const tmp3 = new _require("../13021_SemVer.js")(arg0, arg3);
+  const tmp4 = new _require("../13050_Range.js")(arg1, arg3);
   if (">" === arg2) {
     let dependencyMap = tmp(13041);
     let tmpResult = tmp(13046);
@@ -27,7 +27,7 @@ export default (arg0, arg1, arg2, arg3) => {
       throw typeError;
     }
   }
-  if (_require(13052)(tmp3, tmp4, arg3)) {
+  if (_require("../13052_Range.js")(tmp3, tmp4, arg3)) {
     return false;
   } else {
     let num = 0;
@@ -39,8 +39,8 @@ export default (arg0, arg1, arg2, arg3) => {
         dependencyMap = null;
         let item = arr.forEach((semver) => {
           let tmp = semver;
-          if (semver.semver === require(13049) /* Comparator */.ANY) {
-            tmp = new require(13049) /* Comparator */(">=0.0.0");
+          if (semver.semver === require("../13049_Comparator.js") /* Comparator */.ANY) {
+            tmp = new require("../13049_Comparator.js") /* Comparator */(">=0.0.0");
           }
           let tmp6 = _null;
           if (!_null) {

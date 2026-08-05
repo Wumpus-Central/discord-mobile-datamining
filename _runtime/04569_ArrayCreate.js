@@ -2,7 +2,7 @@
 let closure_2 = require("getEvalledConstructor")("%Array.prototype%");
 
 export default function ArrayCreate(arg0) {
-  if (require(4566) /* isInteger */(arg0)) {
+  if (require("04566_isInteger.js") /* isInteger */(arg0)) {
     if (arg0 >= 0) {
       if (arg0 > tmp(4570)) {
         const tmp12 = new tmp(560)("length is greater than (2**32 - 1)");
@@ -25,5 +25,5 @@ export default function ArrayCreate(arg0) {
       }
     }
   }
-  throw new require(541)("Assertion failed: `length` must be an integer Number >= 0");
+  throw new require("metro/00541__.js")("Assertion failed: `length` must be an integer Number >= 0");
 };

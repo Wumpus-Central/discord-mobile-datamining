@@ -204,7 +204,7 @@ function parseFetchArgs(arg0) {
         }
         tmp15 = str4 && typeof str4 === "object" && str4.method;
       }
-      obj3 = require(827) /* isInstanceOf */;
+      obj3 = require("00827_isInstanceOf.js") /* isInstanceOf */;
     }
     obj[1] = str7;
     return obj;
@@ -256,16 +256,16 @@ function getHeadersFromFetchArgs(arg0) {
       const headers1 = new Headers(tmp2.headers);
       return headers1;
     }
-    obj = require(827) /* isInstanceOf */;
+    obj = require("00827_isInstanceOf.js") /* isInstanceOf */;
   } catch (err) {
   }
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const addFetchEndInstrumentationHandler = function addFetchEndInstrumentationHandler(arg0) {
-  require(850) /* addHandler */.addHandler("fetch-body-resolved", arg0);
-  let obj = require(850) /* addHandler */;
-  require(850) /* addHandler */.maybeInstrument("fetch-body-resolved", () => {
+  require("00850_addHandler.js") /* addHandler */.addHandler("fetch-body-resolved", arg0);
+  let obj = require("00850_addHandler.js") /* addHandler */;
+  require("00850_addHandler.js") /* addHandler */.maybeInstrument("fetch-body-resolved", () => {
     const callback = closure_5;
     {
       callback(822).fill(callback(821).GLOBAL_OBJ, "fetch", (arg0) => {
@@ -356,9 +356,9 @@ export const addFetchEndInstrumentationHandler = function addFetchEndInstrumenta
 };
 export const addFetchInstrumentationHandler = function addFetchInstrumentationHandler(arg0, arg1) {
   const _require = arg1;
-  _require(850).addHandler("fetch", arg0);
-  let obj = _require(850);
-  _require(850).maybeInstrument("fetch", () => {
+  _require("00850_addHandler.js").addHandler("fetch", arg0);
+  let obj = _require("00850_addHandler.js");
+  _require("00850_addHandler.js").maybeInstrument("fetch", () => {
     let flag = callback;
     if (callback === undefined) {
       flag = false;

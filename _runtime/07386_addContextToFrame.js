@@ -20,11 +20,11 @@ arg5.addContextToFrame = function addContextToFrame(arr, lineno) {
     if (!num2) {
       num2 = 0;
     }
-    lineno.context_line = require(7384) /* isMatchingPattern */.snipLine(arr[bound1], num2);
+    lineno.context_line = require("07384_isMatchingPattern.js") /* isMatchingPattern */.snipLine(arr[bound1], num2);
     const _Math = Math;
     const substr1 = arr.slice(Math.min(bound + 1, length), bound + 1 + num);
     lineno.post_context = substr1.map((arg0) => callback(7384).snipLine(arg0, 0));
-    const obj = require(7384) /* isMatchingPattern */;
+    const obj = require("07384_isMatchingPattern.js") /* isMatchingPattern */;
   }
 };
 arg5.addExceptionMechanism = function addExceptionMechanism(exception, data) {
@@ -94,7 +94,7 @@ arg5.checkOrSetAlreadyCaught = function checkOrSetAlreadyCaught(__sentry_capture
     return true;
   } else {
     try {
-      const result = require(7381) /* addNonEnumerableProperty */.addNonEnumerableProperty(__sentry_captured__, "__sentry_captured__", true);
+      const result = require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */.addNonEnumerableProperty(__sentry_captured__, "__sentry_captured__", true);
       return false;
     } catch (err) {
     }

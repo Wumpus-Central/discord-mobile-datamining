@@ -1,8 +1,8 @@
 // _runtime/13030_SemVer.js
 
 export default (arg0, arg1) => {
-  const obj = require(13020) /* SemVer */(arg0, null, true);
-  const tmp = require(13020) /* SemVer */(arg1, null, true);
+  const obj = require("13020_SemVer.js") /* SemVer */(arg0, null, true);
+  const tmp = require("13020_SemVer.js") /* SemVer */(arg1, null, true);
   const compareResult = obj.compare(tmp);
   if (0 === compareResult) {
     return null;

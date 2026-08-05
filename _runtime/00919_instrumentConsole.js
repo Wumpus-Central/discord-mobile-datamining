@@ -2,8 +2,8 @@
 const require = arg1;
 const dependencyMap = arg6;
 function instrumentConsole() {
-  if ("console" in require(821).GLOBAL_OBJ) {
-    const CONSOLE_LEVELS = require(824) /* consoleSandbox */.CONSOLE_LEVELS;
+  if ("console" in require("metro/00821__.js").GLOBAL_OBJ) {
+    const CONSOLE_LEVELS = require("00824_consoleSandbox.js") /* consoleSandbox */.CONSOLE_LEVELS;
     const item = CONSOLE_LEVELS.forEach((arg0) => {
       const callback = arg0;
       if (arg0 in callback(table[1]).GLOBAL_OBJ.console) {
@@ -25,7 +25,7 @@ function instrumentConsole() {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.addConsoleInstrumentationHandler = function addConsoleInstrumentationHandler(arg0) {
-  require(850) /* addHandler */.addHandler("console", arg0);
-  const obj = require(850) /* addHandler */;
-  require(850) /* addHandler */.maybeInstrument("console", instrumentConsole);
+  require("00850_addHandler.js") /* addHandler */.addHandler("console", arg0);
+  const obj = require("00850_addHandler.js") /* addHandler */;
+  require("00850_addHandler.js") /* addHandler */.maybeInstrument("console", instrumentConsole);
 };

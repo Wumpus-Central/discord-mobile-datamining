@@ -9,11 +9,11 @@ arg5.dropHandlers = function dropHandlers(closure_1) {
     let obj = module(5377);
     let dropGestureHandlerResult = obj.dropGestureHandler(item10006.handlerTag);
     let tmp5 = require;
-    let obj2 = require(5371) /* map */;
+    let obj2 = require("05371_map.js") /* map */;
     let unregisterHandlerResult = obj2.unregisterHandler(item10006.handlerTag, item10006.config.testId);
-    let MountRegistry = require(5393) /* MountRegistry */.MountRegistry;
+    let MountRegistry = require("05393_MountRegistry.js") /* MountRegistry */.MountRegistry;
     let gestureWillUnmountResult = MountRegistry.gestureWillUnmount(item10006);
     continue;
   }
-  const result = require(5391) /* transformIntoHandlerTags */.scheduleFlushOperations();
+  const result = require("05391_transformIntoHandlerTags.js") /* transformIntoHandlerTags */.scheduleFlushOperations();
 };

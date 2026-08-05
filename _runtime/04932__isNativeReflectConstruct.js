@@ -270,7 +270,7 @@ function getDescription(arr) {
     let tmp12 = tmp11;
     if (tmp2) {
       tmp12 = tmp11;
-      if (typeof importDefault(4935)[tmp2] === "function") {
+      if (typeof require("04935_calculateGPSValue.js")[tmp2] === "function") {
         tmp12 = tmp13(4935)[tmp2](arr, tmp11);
         const tmp13Result = tmp13(4935);
       }
@@ -324,9 +324,9 @@ function getDescription(arr) {
   } else {
     try {
       if (tmp2) {
-        if (typeof importDefault(4935)[tmp2] === "function") {
-          let decodeURIComponentResult = importDefault(4935)[tmp2](arr);
-          const tmp4Result = importDefault(4935);
+        if (typeof require("04935_calculateGPSValue.js")[tmp2] === "function") {
+          let decodeURIComponentResult = require("04935_calculateGPSValue.js")[tmp2](arr);
+          const tmp4Result = require("04935_calculateGPSValue.js");
         }
         return decodeURIComponentResult;
       }

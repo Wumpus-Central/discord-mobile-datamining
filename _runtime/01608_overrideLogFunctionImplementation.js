@@ -10,11 +10,11 @@ isJest = isJest.shouldBeUseWeb();
 isJest = isJest.isChromeDebugger();
 let obj = { code: "function pnpm_initializersTs2(data){const{runOnJS,logToLogBoxAndConsole}=this.__closure;runOnJS(logToLogBoxAndConsole)(data);}" };
 function overrideLogFunctionImplementation() {
-  let obj = require(1610) /* addLogBoxLog */;
+  let obj = require("01610_addLogBoxLog.js") /* addLogBoxLog */;
   const fn = function e(arg0) {
     callback(1613).runOnJS(callback(1610).logToLogBoxAndConsole)(arg0);
   };
-  obj = { runOnJS: require(1613) /* runWorkletOnJS */.runOnJS, logToLogBoxAndConsole: require(1610) /* addLogBoxLog */.logToLogBoxAndConsole };
+  obj = { runOnJS: require("01613_runWorkletOnJS.js") /* runWorkletOnJS */.runOnJS, logToLogBoxAndConsole: require("01610_addLogBoxLog.js") /* addLogBoxLog */.logToLogBoxAndConsole };
   fn.__closure = obj;
   fn.__workletHash = 10834450741065;
   fn.__initData = obj;
@@ -99,19 +99,19 @@ let c9 = fromEntriesResult;
 function setupConsole() {
   if (!isJest) {
     const obj = { assert: null, debug: null, log: null, warn: null, error: null, info: null };
-    obj[0] = require(1613) /* runWorkletOnJS */.runOnJS(closure_9.assert);
-    const obj2 = require(1613) /* runWorkletOnJS */;
-    obj[1] = require(1613) /* runWorkletOnJS */.runOnJS(closure_9.debug);
-    const obj3 = require(1613) /* runWorkletOnJS */;
-    obj[2] = require(1613) /* runWorkletOnJS */.runOnJS(closure_9.log);
-    const obj4 = require(1613) /* runWorkletOnJS */;
-    obj[3] = require(1613) /* runWorkletOnJS */.runOnJS(closure_9.warn);
-    const obj5 = require(1613) /* runWorkletOnJS */;
-    obj[4] = require(1613) /* runWorkletOnJS */.runOnJS(closure_9.error);
-    const obj6 = require(1613) /* runWorkletOnJS */;
-    obj[5] = require(1613) /* runWorkletOnJS */.runOnJS(closure_9.info);
+    obj[0] = require("01613_runWorkletOnJS.js") /* runWorkletOnJS */.runOnJS(closure_9.assert);
+    const obj2 = require("01613_runWorkletOnJS.js") /* runWorkletOnJS */;
+    obj[1] = require("01613_runWorkletOnJS.js") /* runWorkletOnJS */.runOnJS(closure_9.debug);
+    const obj3 = require("01613_runWorkletOnJS.js") /* runWorkletOnJS */;
+    obj[2] = require("01613_runWorkletOnJS.js") /* runWorkletOnJS */.runOnJS(closure_9.log);
+    const obj4 = require("01613_runWorkletOnJS.js") /* runWorkletOnJS */;
+    obj[3] = require("01613_runWorkletOnJS.js") /* runWorkletOnJS */.runOnJS(closure_9.warn);
+    const obj5 = require("01613_runWorkletOnJS.js") /* runWorkletOnJS */;
+    obj[4] = require("01613_runWorkletOnJS.js") /* runWorkletOnJS */.runOnJS(closure_9.error);
+    const obj6 = require("01613_runWorkletOnJS.js") /* runWorkletOnJS */;
+    obj[5] = require("01613_runWorkletOnJS.js") /* runWorkletOnJS */.runOnJS(closure_9.info);
     global.console = obj;
-    const obj7 = require(1613) /* runWorkletOnJS */;
+    const obj7 = require("01613_runWorkletOnJS.js") /* runWorkletOnJS */;
   }
 }
 let obj2 = { callGuardDEV, runOnJS: require("runWorkletOnJS").runOnJS, reportFatalErrorOnJS: require("t").reportFatalErrorOnJS };
@@ -151,7 +151,7 @@ export { callGuardDEV };
 export { setupCallGuard };
 export { setupConsole };
 export const initializeUIRuntime = function initializeUIRuntime(ReanimatedModule) {
-  let obj = require(1609) /* isJest */;
+  let obj = require("01609_isJest.js") /* isJest */;
   if (!obj.isWeb()) {
     if (ReanimatedModule) {
       if (isJest) {

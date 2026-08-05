@@ -9,6 +9,6 @@ export default function _possibleConstructorReturn(arg0, fn) {
     const typeError = new TypeError("Derived constructors may only return object or undefined");
     throw typeError;
   } else {
-    return require(94) /* _assertThisInitialized */(arg0);
+    return require("../00094__assertThisInitialized.js") /* _assertThisInitialized */(arg0);
   }
 };

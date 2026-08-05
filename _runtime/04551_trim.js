@@ -5,5 +5,5 @@ let closure_3 = isMatch ? /^[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u200
 let closure_4 = isMatch ? /[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+$/ : /[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+$/;
 
 export default function trim() {
-  return callback(callback(require(4552) /* ToString */(require(4538) /* RequireObjectCoercible */(this)), closure_3, ""), closure_4, "");
+  return callback(callback(require("04552_ToString.js") /* ToString */(require("04538_RequireObjectCoercible.js") /* RequireObjectCoercible */(this)), closure_3, ""), closure_4, "");
 };

@@ -12,8 +12,8 @@ export default function _default(children) {
   if (!tmp) {
     tmp = enabled;
   }
-  let obj = require(1800) /* useResizeMode */;
+  let obj = require("../01800_useResizeMode.js") /* useResizeMode */;
   obj = { enabled: tmp, children: null };
   obj[1] = <closure_3 style={{ opacity: obj.useKeyboardAnimation().progress }}>{arg0.children}</closure_3>;
-  return jsx(require(1811) /* KeyboardAvoidingView */.KeyboardStickyView, { enabled: tmp, children: null });
+  return jsx(require("../01811_KeyboardAvoidingView.js") /* KeyboardAvoidingView */.KeyboardStickyView, { enabled: tmp, children: null });
 };

@@ -116,7 +116,7 @@ export const useSyncExternalStoreWithSelector = (subscribe) => {
     items[1] = fn;
     return items;
   }, items);
-  syncExternalStore = _require(703).useSyncExternalStore(subscribe, tmp2[0], tmp2[1]);
+  syncExternalStore = _require("00703_checkIfSnapshotChanged.js").useSyncExternalStore(subscribe, tmp2[0], tmp2[1]);
   const items1 = [syncExternalStore];
   current(() => {
     current.hasValue = true;

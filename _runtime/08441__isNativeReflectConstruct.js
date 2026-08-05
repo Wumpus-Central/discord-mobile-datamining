@@ -155,7 +155,7 @@ let items = [
       }
       let num2 = NaN;
       if (null != opacity) {
-        num2 = importDefault(8443)(opacity);
+        num2 = require("08443_extractOpacity.js")(opacity);
       }
       obj = {};
       let flag = false;
@@ -206,7 +206,7 @@ let items = [
       if (null != height) {
         tmp.bbHeight = height;
       }
-      importDefault(8444)(tmp, tmp, this);
+      require("08444_keys.js")(tmp, tmp, this);
       const merged2 = Object.assign({}, StyleSheet.flatten(style));
       if (transform) {
         if (merged2.transform) {
@@ -222,8 +222,8 @@ let items = [
         return self.refMethod(arg0);
       };
       const merged4 = Object.assign(tmp21(8450)({ viewBox, preserveAspectRatio }));
-      obj.children = jsx(importDefault(8451), { children, style: merged2, font, fill, fillOpacity, fillRule, stroke, strokeWidth, strokeOpacity, strokeDasharray, strokeDashoffset, strokeLinecap, strokeLinejoin, strokeMiterlimit, onLayout });
-      return jsx(importDefault(8449), {});
+      obj.children = jsx(require("08451__isNativeReflectConstruct.js"), { children, style: merged2, font, fill, fillOpacity, fillRule, stroke, strokeWidth, strokeOpacity, strokeDasharray, strokeDashoffset, strokeLinecap, strokeLinejoin, strokeMiterlimit, onLayout });
+      return jsx(require("metro/08449___INTERNAL_VIEW_CONFIG.js"), {});
     }
   }
 ];

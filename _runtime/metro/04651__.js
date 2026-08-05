@@ -89,7 +89,7 @@ export default importDefaultResult.forwardRef(function SearchBar(autoCapitalize,
     obj.onSearchButtonPress = onSearchButtonPress;
     obj.onCancelButtonPress = onCancelButtonPress;
     obj.onChangeText = onChangeText;
-    return jsx(importDefault(4652), { ref: null });
+    return jsx(require("04652___INTERNAL_VIEW_CONFIG.js"), { ref: null });
   } else {
     let _console = console;
     console.warn("Importing SearchBar is only valid on iOS and Android devices.");

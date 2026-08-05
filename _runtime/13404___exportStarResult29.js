@@ -9,8 +9,8 @@ export const ToRawPrecision = function ToRawPrecision(ZERO, minimumSignificantDi
   let timesResult;
   let tmp4;
   if (ZERO.isZero()) {
-    let repeatResult = require(13386) /* getMultiInternalSlots */.repeat("0", maximumSignificantDigits);
-    let roundedNumber = require(13388) /* TEN */.ZERO;
+    let repeatResult = require("13386_getMultiInternalSlots.js") /* getMultiInternalSlots */.repeat("0", maximumSignificantDigits);
+    let roundedNumber = require("13388_TEN.js") /* TEN */.ZERO;
     let roundingMagnitude = 0;
     let tmp16 = require;
   } else {
@@ -71,7 +71,7 @@ export const ToRawPrecision = function ToRawPrecision(ZERO, minimumSignificantDi
       floorResult1 = floorResult1.plus(1);
       continue;
     }
-    result = require(13398) /* __exportStarResult11 */.ApplyUnsignedRoundingMode(ZERO, timesResult, roundedNumber, result);
+    result = require("13398___exportStarResult11.js") /* __exportStarResult11 */.ApplyUnsignedRoundingMode(ZERO, timesResult, roundedNumber, result);
     if (result.eq(timesResult)) {
       roundingMagnitude = ceilResult.toNumber();
       let str = floorResult;

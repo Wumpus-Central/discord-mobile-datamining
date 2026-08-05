@@ -2,14 +2,14 @@
 let closure_2 = require("call")([].push);
 
 export default (arg0, arg1) => {
-  const tmp = require(13482)(arg0);
+  const tmp = require("metro/13482__.js")(arg0);
   const items = [];
   for (const key10010 in tmp) {
     let tmp11 = key10010;
     let tmp12 = require;
     let tmp13 = dependencyMap;
-    let tmp14 = require(13500) /* call */;
-    let tmp14Result = tmp14(require(13522), key10010);
+    let tmp14 = require("13500_call.js") /* call */;
+    let tmp14Result = tmp14(require("metro/13522__.js"), key10010);
     let tmp2 = !tmp14Result;
     if (!tmp14Result) {
       tmp2 = tmp12(13500)(tmp, key10010);
@@ -28,7 +28,7 @@ export default (arg0, arg1) => {
     let tmp6 = dependencyMap;
     let tmp7 = arg1[num];
     let tmp8 = num;
-    if (require(13500) /* call */(tmp, tmp7)) {
+    if (require("13500_call.js") /* call */(tmp, tmp7)) {
       let tmp5Result = tmp5(13523);
       if (!~tmp5Result.indexOf(items, tmp7)) {
         let tmp9 = callback;

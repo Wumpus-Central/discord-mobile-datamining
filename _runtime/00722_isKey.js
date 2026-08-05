@@ -3,7 +3,7 @@ const re2 = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/;
 const re3 = /^\w*$/;
 
 export default function isKey(num) {
-  if (require(599)(num)) {
+  if (require("metro/00599__.js")(num)) {
     return false;
   } else {
     let tmp3 = typeof num !== "number";

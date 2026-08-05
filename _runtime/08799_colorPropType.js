@@ -13,7 +13,7 @@ function colorPropType(arg0, arg1, arg2, arg3, arg4, arg5) {
     let error1 = error;
   } else if (typeof tmp2 !== "number") {
     if (typeof tmp2 === "string") {
-      if (null === require(8800) /* hslToRgb */(tmp2)) {
+      if (null === require("08800_hslToRgb.js") /* hslToRgb */(tmp2)) {
         let tmp5 = tmp;
         const text1 = `Invalid ${arg4}`;
         if (!tmp) {

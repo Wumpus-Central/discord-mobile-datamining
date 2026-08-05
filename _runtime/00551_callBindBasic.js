@@ -3,9 +3,9 @@
 export default function callBindBasic(items) {
   if (items.length >= 1) {
     if (typeof items[0] === "function") {
-      const tmp4 = require(552);
-      return tmp4(require(554) /* bind */, require(556), items);
+      const tmp4 = require("metro/00552__.js");
+      return tmp4(require("00554_bind.js") /* bind */, require("metro/00556__.js"), items);
     }
   }
-  throw new require(541)("a function is required");
+  throw new require("metro/00541__.js")("a function is required");
 };

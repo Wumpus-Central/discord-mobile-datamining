@@ -60,12 +60,12 @@ const items = [
       let obj = { x: props.x, y: props.y, width: props.width, height: props.height, maskUnits: null, maskContentUnits: null, maskType: null };
       let num = 0;
       if (undefined !== maskUnits) {
-        num = importDefault(8515)[maskUnits];
+        num = require("metro/08515__.js")[maskUnits];
       }
       obj[4] = num;
       let num2 = 1;
       if (undefined !== maskContentUnits) {
-        num2 = importDefault(8515)[maskContentUnits];
+        num2 = require("metro/08515__.js")[maskContentUnits];
       }
       obj[5] = num2;
       let str;
@@ -89,7 +89,7 @@ const items = [
         }
       };
       const tmp5 = self;
-      const tmp8 = importDefault(8520);
+      const tmp8 = require("metro/08520___INTERNAL_VIEW_CONFIG.js");
       const merged = Object.assign(self(8452).withoutXY(this, props));
       const merged1 = Object.assign(obj);
       obj.children = props.children;

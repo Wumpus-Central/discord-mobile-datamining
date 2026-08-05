@@ -36,17 +36,17 @@ arg5.detectFile = function detectFile(uint8Array, chunkSize) {
   if (!num3) {
     num3 = 64;
   }
-  const fileChunk = require(4869) /* getFileChunk */.getFileChunk(uint8Array, num3);
+  const fileChunk = require("04869_getFileChunk.js") /* getFileChunk */.getFileChunk(uint8Array, num3);
   if (0 !== fileChunk.length) {
     const items = [];
     const items1 = [];
-    for (const key10027 in require(4870).FileTypes) {
+    for (const key10027 in require("metro/04870__.js").FileTypes) {
       let tmp22 = key10027;
       let _Object4 = Object;
       let call2 = hasOwnProperty2.call;
       let tmp23 = require;
       let tmp24 = dependencyMap;
-      let FileTypes5 = require(4870).FileTypes;
+      let FileTypes5 = require("metro/04870__.js").FileTypes;
       if (typeof call2 === "unknown") {
         let hasOwnProperty2Result = hasOwnProperty2(key10027);
       } else {
@@ -90,7 +90,7 @@ arg5.detectFile = function detectFile(uint8Array, chunkSize) {
           return items[0];
         }
       }
-      const FileTypes4 = require(4870).FileTypes;
+      const FileTypes4 = require("metro/04870__.js").FileTypes;
       const result = FileTypes4.detectTypeByAdditionalCheck(fileChunk, items);
       require = result;
       if (result) {

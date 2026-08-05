@@ -104,16 +104,16 @@ function processChunk(promptFeedback, toolCalls, arg2, setStatus) {
         blockReason = promptFeedback.blockReason;
       }
       let obj = { code: null, message: null };
-      obj[0] = require(840) /* getSpanStatusFromHttpCode */.SPAN_STATUS_ERROR;
+      obj[0] = require("00840_getSpanStatusFromHttpCode.js") /* getSpanStatusFromHttpCode */.SPAN_STATUS_ERROR;
       const _HermesInternal = HermesInternal;
       obj[1] = "Content blocked: " + blockReason;
       setStatus.setStatus(obj);
       const _HermesInternal2 = HermesInternal;
       obj = { mechanism: null };
       obj[0] = { handled: false, type: "auto.ai.google_genai" };
-      require(869) /* captureCheckIn */.captureException("Content blocked: " + blockReason, obj);
+      require("00869_captureCheckIn.js") /* captureCheckIn */.captureException("Content blocked: " + blockReason, obj);
       flag = true;
-      const obj2 = require(869) /* captureCheckIn */;
+      const obj2 = require("00869_captureCheckIn.js") /* captureCheckIn */;
     }
     tmp = !flag;
   }

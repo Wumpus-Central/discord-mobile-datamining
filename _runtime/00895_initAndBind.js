@@ -4,8 +4,8 @@ const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.initAndBind = function initAndBind(arg0, debug) {
   if (true === debug.debug) {
-    const obj = require(824) /* consoleSandbox */;
-    if (require(823) /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+    const obj = require("00824_consoleSandbox.js") /* consoleSandbox */;
+    if (require("metro/00823___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
       debug = obj.debug;
       debug.enable();
     } else {
@@ -14,16 +14,16 @@ arg5.initAndBind = function initAndBind(arg0, debug) {
       });
     }
   }
-  const currentScope = require(848) /* getClient */.getCurrentScope();
+  const currentScope = require("00848_getClient.js") /* getClient */.getCurrentScope();
   currentScope.update(debug.initialScope);
   const obj4 = new arg0(debug);
-  const obj2 = require(848) /* getClient */;
-  const currentScope1 = require(848) /* getClient */.getCurrentScope();
+  const obj2 = require("00848_getClient.js") /* getClient */;
+  const currentScope1 = require("00848_getClient.js") /* getClient */.getCurrentScope();
   currentScope1.setClient(obj4);
   obj4.init();
   return obj4;
 };
 arg5.setCurrentClient = function setCurrentClient(arg0) {
-  const currentScope = require(848) /* getClient */.getCurrentScope();
+  const currentScope = require("00848_getClient.js") /* getClient */.getCurrentScope();
   currentScope.setClient(arg0);
 };

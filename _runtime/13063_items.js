@@ -12,7 +12,7 @@ function simpleSubset(arg0, item10015, includePrerelease) {
     let tmp9 = arg0;
     if (1 === arg0.length) {
       tmp9 = arg0;
-      if (arg0[0].semver === require(13049) /* Comparator */.ANY) {
+      if (arg0[0].semver === require("13049_Comparator.js") /* Comparator */.ANY) {
         if (1 === item10015.length) {
           if (item10015[0].semver === tmp6(13049).ANY) {
             return true;
@@ -26,7 +26,7 @@ function simpleSubset(arg0, item10015, includePrerelease) {
     let tmp13 = item10015;
     if (1 === item10015.length) {
       tmp13 = item10015;
-      if (item10015[0].semver === require(13049) /* Comparator */.ANY) {
+      if (item10015[0].semver === require("13049_Comparator.js") /* Comparator */.ANY) {
         if (includePrerelease.includePrerelease) {
           return true;
         } else {
@@ -69,7 +69,7 @@ function simpleSubset(arg0, item10015, includePrerelease) {
     } else {
       if (tmp) {
         if (tmp2) {
-          const tmp46 = require(13035) /* SemVer */(tmp.semver, tmp2.semver, includePrerelease);
+          const tmp46 = require("13035_SemVer.js") /* SemVer */(tmp.semver, tmp2.semver, includePrerelease);
           if (tmp46 > 0) {
             tmp = null;
             return null;
@@ -189,7 +189,7 @@ function simpleSubset(arg0, item10015, includePrerelease) {
                   tmp = dependencyMap;
                   let _String4 = String;
                   tmp = nextResult2;
-                  tmp = require(13052) /* Range */;
+                  tmp = require("13052_Range.js") /* Range */;
                   if (!tmp(tmp.semver, String(tmp97), includePrerelease)) {
                     tmp = iter3;
                     iter3.return();
@@ -251,7 +251,7 @@ function simpleSubset(arg0, item10015, includePrerelease) {
                   tmp = tmp2;
                   let _String5 = String;
                   tmp = nextResult2;
-                  tmp = require(13052) /* Range */;
+                  tmp = require("13052_Range.js") /* Range */;
                   if (!tmp(tmp2.semver, String(tmp97), includePrerelease)) {
                     tmp = iter3;
                     iter3.return();
@@ -324,7 +324,7 @@ function simpleSubset(arg0, item10015, includePrerelease) {
             iter2.return();
             return null;
           }
-          tmp57 = require(13052) /* Range */;
+          tmp57 = require("13052_Range.js") /* Range */;
         }
         if (tmp2) {
           const _String2 = String;
@@ -332,7 +332,7 @@ function simpleSubset(arg0, item10015, includePrerelease) {
             iter2.return();
             return null;
           }
-          tmp67 = require(13052) /* Range */;
+          tmp67 = require("13052_Range.js") /* Range */;
         }
         for (const item10134 of tmp13) {
           let tmp74 = require;
@@ -341,7 +341,7 @@ function simpleSubset(arg0, item10015, includePrerelease) {
           let tmp77 = dependencyMap;
           let tmp79 = nextResult1;
           let _String3 = String;
-          let tmp78 = require(13052) /* Range */;
+          let tmp78 = require("13052_Range.js") /* Range */;
           if (tmp78(tmp51, String(item10134), arg2)) {
             continue;
           } else {
@@ -362,7 +362,7 @@ function simpleSubset(arg0, item10015, includePrerelease) {
 }
 function higherGT(semver, semver2, includePrerelease) {
   if (semver) {
-    const tmp4 = require(13035) /* SemVer */(semver.semver, semver2.semver, includePrerelease);
+    const tmp4 = require("13035_SemVer.js") /* SemVer */(semver.semver, semver2.semver, includePrerelease);
     let tmp5 = semver;
     if (tmp4 <= 0) {
       if (tmp4 < 0) {
@@ -382,7 +382,7 @@ function higherGT(semver, semver2, includePrerelease) {
 }
 function lowerLT(semver, semver2, includePrerelease) {
   if (semver) {
-    const tmp4 = require(13035) /* SemVer */(semver.semver, semver2.semver, includePrerelease);
+    const tmp4 = require("13035_SemVer.js") /* SemVer */(semver.semver, semver2.semver, includePrerelease);
     let tmp5 = semver;
     if (tmp4 >= 0) {
       if (tmp4 > 0) {
@@ -409,8 +409,8 @@ export default (arg0, arg1, includePrerelease) => {
   if (arg0 === arg1) {
     return true;
   } else {
-    const tmp22 = new require(13050) /* Range */(arg0, obj);
-    const tmp27 = new require(13050) /* Range */(arg1, obj);
+    const tmp22 = new require("13050_Range.js") /* Range */(arg0, obj);
+    const tmp27 = new require("13050_Range.js") /* Range */(arg1, obj);
     let flag = false;
     const iter = tmp22.set[Symbol.iterator]();
     while (iter !== undefined) {

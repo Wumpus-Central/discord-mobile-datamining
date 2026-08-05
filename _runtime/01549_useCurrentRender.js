@@ -6,7 +6,7 @@ export default function useCurrentRender(arg0) {
   let navigation;
   let state;
   ({ state, navigation } = arg0);
-  const context = React.useContext(importDefault(1512));
+  const context = React.useContext(require("01512_noop.js"));
   let isFocusedResult = context;
   if (context) {
     isFocusedResult = navigation.isFocused();

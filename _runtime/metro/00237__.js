@@ -27,7 +27,7 @@ const obj = {
   },
   logToConsole(arg0) {
     const substr = [...arguments].slice();
-    const tmp3 = require(38);
+    const tmp3 = require("00038__.js");
     tmp3(table[arg0], `${`Level "${arg0}`}" not one of ${Object.keys(table).toString()}`);
     const items = [...substr];
     console[table[arg0]].apply(items);

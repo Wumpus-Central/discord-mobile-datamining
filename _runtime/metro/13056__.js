@@ -2,8 +2,8 @@
 
 export default (arg0, arg1) => {
   let require;
-  let obj = new require(13050) /* Range */(arg0, arg1);
-  const tmp3 = new require(13021) /* SemVer */("0.0.0");
+  let obj = new require("../13050_Range.js") /* Range */(arg0, arg1);
+  const tmp3 = new require("../13021_SemVer.js") /* SemVer */("0.0.0");
   if (obj.test(tmp3)) {
     return tmp3;
   } else {
@@ -59,7 +59,7 @@ export default (arg0, arg1) => {
               let tmp17 = require;
               let tmp18 = dependencyMap;
               let tmp19 = require;
-              tmp16 = !require(13041) /* SemVer */(tmp14, require);
+              tmp16 = !require("../13041_SemVer.js") /* SemVer */(tmp14, require);
             }
             tmp13 = tmp16;
           }

@@ -60,7 +60,7 @@ function _enhanceEventWithSdkInfo(sdk, name) {
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5._enhanceEventWithSdkInfo = _enhanceEventWithSdkInfo;
 arg5.createEventEnvelope = function createEventEnvelope(type, arg1, sdk) {
-  const sdkMetadataForEnvelopeHeader = require(864) /* forEachEnvelopeItem */.getSdkMetadataForEnvelopeHeader(sdk);
+  const sdkMetadataForEnvelopeHeader = require("00864_forEachEnvelopeItem.js") /* forEachEnvelopeItem */.getSdkMetadataForEnvelopeHeader(sdk);
   let str = "event";
   if (type.type) {
     str = "event";
@@ -82,7 +82,7 @@ arg5.createEventEnvelope = function createEventEnvelope(type, arg1, sdk) {
   return tmp3Result.createEnvelope(eventEnvelopeHeaders, items1);
 };
 arg5.createSessionEnvelope = function createSessionEnvelope(toJSON) {
-  let obj = require(864) /* forEachEnvelopeItem */;
+  let obj = require("00864_forEachEnvelopeItem.js") /* forEachEnvelopeItem */;
   const sdkMetadataForEnvelopeHeader = obj.getSdkMetadataForEnvelopeHeader(arg2);
   obj = { sent_at: null };
   obj[0] = new Date().toISOString();

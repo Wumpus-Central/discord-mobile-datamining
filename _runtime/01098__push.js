@@ -333,9 +333,9 @@ export const createStore = function createStore(arg0, arg1) {
 export const makeBrowserOfflineTransport = function makeBrowserOfflineTransport() {
   let makeFetchTransport = arg0;
   if (arg0 === undefined) {
-    makeFetchTransport = _require(1032).makeFetchTransport;
+    makeFetchTransport = _require("01032_makeFetchTransport.js").makeFetchTransport;
   }
-  _require = _require(817).makeOfflineTransport(makeFetchTransport);
+  _require = _require("00817_registerSpanErrorInstrumentation.js").makeOfflineTransport(makeFetchTransport);
   return (arg0) => {
     let obj = {};
     const merged = Object.assign(arg0);

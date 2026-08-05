@@ -25,6 +25,6 @@ export default function differenceInQuarters(arg0, arg1, roundingMethod) {
   if (null != roundingMethod) {
     roundingMethod = roundingMethod.roundingMethod;
   }
-  return require(3558) /* getRoundingMethod */.getRoundingMethod(roundingMethod)(result);
+  return require("03558_getRoundingMethod.js") /* getRoundingMethod */.getRoundingMethod(roundingMethod)(result);
 };
 export default exports.default;

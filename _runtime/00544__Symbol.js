@@ -17,7 +17,7 @@ export default function hasNativeSymbols() {
         const SymbolResult = Symbol("bar");
         let tmp8 = typeof SymbolResult === "symbol";
         if (typeof SymbolResult === "symbol") {
-          tmp8 = require(545) /* hasSymbols */();
+          tmp8 = require("00545_hasSymbols.js") /* hasSymbols */();
         }
         tmp3 = tmp8;
       }

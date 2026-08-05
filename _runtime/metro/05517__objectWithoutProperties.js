@@ -4,7 +4,7 @@ export default function _objectWithoutProperties(arg0, arr) {
   if (null == arg0) {
     return {};
   } else {
-    const tmp8 = require(5518) /* _objectWithoutPropertiesLoose */(arg0, arr);
+    const tmp8 = require("../05518__objectWithoutPropertiesLoose.js") /* _objectWithoutPropertiesLoose */(arg0, arr);
     const _Object2 = Object;
     if (Object.getOwnPropertySymbols) {
       const _Object = Object;

@@ -59,7 +59,7 @@ const items = [
           return self.refMethod(arg0);
         }
       };
-      const tmp = importDefault(8531);
+      const tmp = require("metro/08531___INTERNAL_VIEW_CONFIG.js");
       const merged = Object.assign(self(8452).withoutXY(this, props));
       const merged1 = Object.assign(obj);
       return <tmp ref={function ref(arg0) {

@@ -5,8 +5,8 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.getTraceMetaTags = function getTraceMetaTags(arg0) {
   let traceData = arg0;
   if (!arg0) {
-    traceData = require(904) /* getTraceData */.getTraceData();
-    const obj = require(904) /* getTraceData */;
+    traceData = require("00904_getTraceData.js") /* getTraceData */.getTraceData();
+    const obj = require("00904_getTraceData.js") /* getTraceData */;
   }
   const entries = Object.entries(traceData);
   const mapped = entries.map((arg0) => {

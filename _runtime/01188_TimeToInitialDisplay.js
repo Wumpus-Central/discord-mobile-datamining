@@ -40,7 +40,7 @@ class TimeToFullDisplay {
   }
 }
 function TimeToDisplay(initialDisplay) {
-  let obj = require(1189) /* _isNativeReflectConstruct */;
+  let obj = require("01189__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */;
   obj = { initialDisplay: initialDisplay.initialDisplay, fullDisplay: initialDisplay.fullDisplay, parentSpanId: initialDisplay.parentSpanId };
   return <>{React.createElement(obj.getRNSentryOnDrawReporter(), { initialDisplay: arg0.initialDisplay, fullDisplay: arg0.fullDisplay, parentSpanId: arg0.parentSpanId })}{arg0.children}</>;
 }

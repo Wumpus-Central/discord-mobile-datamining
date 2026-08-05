@@ -10,7 +10,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
       const obj = {};
       const merged = Object.assign(arg0);
       const tmpResult = tmp(obj, arg1);
-      let DEBUG_BUILD = _require(823).DEBUG_BUILD;
+      let DEBUG_BUILD = _require("metro/00823___SENTRY_DEBUG__.js").DEBUG_BUILD;
       if (DEBUG_BUILD) {
         DEBUG_BUILD = null === tmpResult;
       }
@@ -959,11 +959,11 @@ arg5.notifyEventProcessors = function notifyEventProcessors(arg0, arg1, arg2) {
     if (obj.isThenable(tmp7)) {
       let resolvedSyncPromiseResult = tmp7;
     } else {
-      resolvedSyncPromiseResult = require(873) /* SyncPromise */.resolvedSyncPromise(tmp7);
-      const tmp10Result = require(873) /* SyncPromise */;
+      resolvedSyncPromiseResult = require("00873_SyncPromise.js") /* SyncPromise */.resolvedSyncPromise(tmp7);
+      const tmp10Result = require("00873_SyncPromise.js") /* SyncPromise */;
     }
     return resolvedSyncPromiseResult;
   } catch (tmp17) {
-    return require(873) /* SyncPromise */.rejectedSyncPromise(tmp17);
+    return require("00873_SyncPromise.js") /* SyncPromise */.rejectedSyncPromise(tmp17);
   }
 };

@@ -1,7 +1,7 @@
 // _runtime/metro/13048__.js
 
 export default (num) => {
-  if (num instanceof require(13021) /* SemVer */) {
+  if (num instanceof require("../13021_SemVer.js") /* SemVer */) {
     return num;
   } else {
     let StringResult = num;
@@ -92,7 +92,7 @@ export default (num) => {
           }
         }
         const _HermesInternal3 = HermesInternal;
-        return require(13020) /* SemVer */("" + match2[2] + "." + match2[3] || "0" + "." + match2[4] || "0" + str2 + str4, obj);
+        return require("../13020_SemVer.js") /* SemVer */("" + match2[2] + "." + match2[3] || "0" + "." + match2[4] || "0" + str2 + str4, obj);
       }
     }
   }

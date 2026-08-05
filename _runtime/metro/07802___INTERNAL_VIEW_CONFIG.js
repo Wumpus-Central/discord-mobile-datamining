@@ -1,5 +1,5 @@
 // _runtime/metro/07802___INTERNAL_VIEW_CONFIG.js
-import module_7800 from "module_7800";
+import 07800__ from "07800__.js";
 import codegenNativeComponent from "codegenNativeComponent";
 import weakSet from "weakSet";
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";

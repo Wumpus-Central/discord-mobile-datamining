@@ -8,5 +8,5 @@ export default function LayoutConformance(arg0) {
   const obj = {};
   const merged = Object.assign(arg0);
   obj.style = container.container;
-  return jsx(importDefault(345), {});
+  return jsx(require("00345_LayoutConformance.js"), {});
 };

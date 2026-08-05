@@ -32,7 +32,7 @@ function baseClone(arr) {
   let closure_3 = arg5;
   if (!arg2) {
     {
-      if (_require(606)(arr)) {
+      if (_require("00606_isObject.js")(arr)) {
         const tmp10 = tmp32(599)(arr);
         if (tmp10) {
           const tmp18 = tmp32(4399)(arr);

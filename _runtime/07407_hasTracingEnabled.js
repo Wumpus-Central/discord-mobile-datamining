@@ -8,7 +8,7 @@ arg5.hasTracingEnabled = function hasTracingEnabled(tracesSampler) {
     }
   }
   let tmp = tracesSampler;
-  const client = require(7402) /* getClient */.getClient();
+  const client = require("07402_getClient.js") /* getClient */.getClient();
   if (!tracesSampler) {
     let options = client;
     if (client) {

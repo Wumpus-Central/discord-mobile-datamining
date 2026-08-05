@@ -13,7 +13,7 @@ export const BottomSheetDraggableScrollable = function BottomSheetDraggableScrol
     const obj = { gesture: null, children: null };
     obj[0] = scrollableGesture;
     obj[1] = children;
-    tmp = jsx(require(5368) /* Directions */.GestureDetector, { gesture: null, children: null });
+    tmp = jsx(require("05368_Directions.js") /* Directions */.GestureDetector, { gesture: null, children: null });
   }
   return tmp;
 };

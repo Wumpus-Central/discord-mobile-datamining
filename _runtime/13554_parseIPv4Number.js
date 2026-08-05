@@ -47,7 +47,7 @@ function parseHost(buffer, arg1) {
       let tmp27 = closure_4;
     } else {
       const substr = buffer.substring(1, buffer.length - 1);
-      const ucs22 = require(13555) /* error */.ucs2;
+      const ucs22 = require("13555_error.js") /* error */.ucs2;
       const decodeResult = ucs22.decode(substr);
       let num7 = 0;
       let num8 = null;
@@ -102,7 +102,7 @@ function parseHost(buffer, arg1) {
           if (58 !== decodeResult[num7]) {
             let tmp28 = require;
             let tmp29 = dependencyMap;
-            let obj4 = require(13556);
+            let obj4 = require("metro/13556__.js");
             let num14 = 0;
             let num15 = 0;
             let tmp30 = num7;
@@ -133,7 +133,7 @@ function parseHost(buffer, arg1) {
                 } else {
                   let tmp41 = require;
                   let tmp42 = dependencyMap;
-                  let obj5 = require(13556);
+                  let obj5 = require("metro/13556__.js");
                   num14 = sum2;
                   num15 = sum;
                   tmp30 = sum1;
@@ -178,7 +178,7 @@ function parseHost(buffer, arg1) {
                       if (0 >= num18) {
                         let tmp49 = require;
                         let tmp50 = dependencyMap;
-                        let obj6 = require(13556);
+                        let obj6 = require("metro/13556__.js");
                         if (obj6.isASCIIDigit(decodeResult[sum7])) {
                           let tmp49Result = tmp49(13556);
                           let tmp51 = null;
@@ -221,7 +221,7 @@ function parseHost(buffer, arg1) {
                                   let sum5 = tmp52 + 1;
                                   let tmp80 = require;
                                   let tmp81 = dependencyMap;
-                                  let obj8 = require(13556);
+                                  let obj8 = require("metro/13556__.js");
                                   tmp51 = sum6;
                                   tmp52 = sum5;
                                   tmp53 = sum6;
@@ -289,7 +289,7 @@ function parseHost(buffer, arg1) {
     if (-1 !== buffer.search(/\u0000|\u0009|\u000A|\u000D|\u0020|#|\/|:|\?|@|\[|\\|\]/)) {
       let str5 = closure_4;
     } else {
-      const ucs2 = require(13555) /* error */.ucs2;
+      const ucs2 = require("13555_error.js") /* error */.ucs2;
       const decodeResult1 = ucs2.decode(buffer);
       let num5 = 0;
       let str4 = "";
@@ -309,7 +309,7 @@ function parseHost(buffer, arg1) {
           if (tmp8) {
             let tmp12 = require;
             let tmp13 = dependencyMap;
-            let _Buffer2 = require(511) /* Buffer */.Buffer;
+            let _Buffer2 = require("00511_Buffer.js") /* Buffer */.Buffer;
             let fromResult = _Buffer2.from(fromCodePointResult2);
             let num4 = 0;
             let str2 = "";
@@ -318,7 +318,7 @@ function parseHost(buffer, arg1) {
               do {
                 let tmp14 = require;
                 let tmp15 = dependencyMap;
-                let obj3 = require(13557) /* replaceByteInByteSequence */;
+                let obj3 = require("13557_replaceByteInByteSequence.js") /* replaceByteInByteSequence */;
                 str2 = `${obj3.percentEncode(arr[num4])}`;
                 num4 = num4 + 1;
                 str3 = str2;
@@ -335,8 +335,8 @@ function parseHost(buffer, arg1) {
     }
     return str5;
   } else {
-    const _Buffer = require(511) /* Buffer */.Buffer;
-    let str = require(13557) /* replaceByteInByteSequence */.percentDecode(_Buffer.from(buffer));
+    const _Buffer = require("00511_Buffer.js") /* Buffer */.Buffer;
+    let str = require("13557_replaceByteInByteSequence.js") /* replaceByteInByteSequence */.percentDecode(_Buffer.from(buffer));
     str = str.toString();
     if (null === str) {
       str = closure_4;
@@ -410,7 +410,7 @@ function parseHost(buffer, arg1) {
       }
       return str;
     }
-    const obj = require(13557) /* replaceByteInByteSequence */;
+    const obj = require("13557_replaceByteInByteSequence.js") /* replaceByteInByteSequence */;
   }
 }
 function serializeHost(host) {
@@ -2149,7 +2149,7 @@ exports.exports.basicURLParse = (input) => {
 };
 exports.exports.setTheUsername = (username) => {
   username.username = "";
-  const ucs2 = require(13555) /* error */.ucs2;
+  const ucs2 = require("13555_error.js") /* error */.ucs2;
   const decodeResult = ucs2.decode(arg1);
   for (let num = 0; num < decodeResult.length; num = num + 1) {
     let tmp = decodeResult[num];
@@ -2176,7 +2176,7 @@ exports.exports.setTheUsername = (username) => {
     if (hasItem) {
       let tmp9 = require;
       let tmp10 = dependencyMap;
-      let _Buffer = require(511) /* Buffer */.Buffer;
+      let _Buffer = require("00511_Buffer.js") /* Buffer */.Buffer;
       let fromResult = _Buffer.from(fromCodePointResult);
       let num2 = 0;
       let str = "";
@@ -2185,7 +2185,7 @@ exports.exports.setTheUsername = (username) => {
         do {
           let tmp11 = require;
           let tmp12 = dependencyMap;
-          let obj = require(13557) /* replaceByteInByteSequence */;
+          let obj = require("13557_replaceByteInByteSequence.js") /* replaceByteInByteSequence */;
           str = `${obj.percentEncode(arr2[num2])}`;
           num2 = num2 + 1;
           str2 = str;
@@ -2199,7 +2199,7 @@ exports.exports.setTheUsername = (username) => {
 };
 exports.exports.setThePassword = (password) => {
   password.password = "";
-  const ucs2 = require(13555) /* error */.ucs2;
+  const ucs2 = require("13555_error.js") /* error */.ucs2;
   const decodeResult = ucs2.decode(arg1);
   for (let num = 0; num < decodeResult.length; num = num + 1) {
     let tmp = decodeResult[num];
@@ -2226,7 +2226,7 @@ exports.exports.setThePassword = (password) => {
     if (hasItem) {
       let tmp9 = require;
       let tmp10 = dependencyMap;
-      let _Buffer = require(511) /* Buffer */.Buffer;
+      let _Buffer = require("00511_Buffer.js") /* Buffer */.Buffer;
       let fromResult = _Buffer.from(fromCodePointResult);
       let num2 = 0;
       let str = "";
@@ -2235,7 +2235,7 @@ exports.exports.setThePassword = (password) => {
         do {
           let tmp11 = require;
           let tmp12 = dependencyMap;
-          let obj = require(13557) /* replaceByteInByteSequence */;
+          let obj = require("13557_replaceByteInByteSequence.js") /* replaceByteInByteSequence */;
           str = `${obj.percentEncode(arr2[num2])}`;
           num2 = num2 + 1;
           str2 = str;

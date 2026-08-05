@@ -3,7 +3,7 @@
 export default function IsDataDescriptor(arg0) {
   if (undefined === arg0) {
     return false;
-  } else if (require(4580) /* isPropertyDescriptor */(arg0)) {
+  } else if (require("04580_isPropertyDescriptor.js") /* isPropertyDescriptor */(arg0)) {
     const tmp7 = tmp(573)(arg0, "[[Value]]");
     let tmp8 = !tmp7;
     if (!tmp7) {

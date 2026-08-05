@@ -125,7 +125,7 @@ let items = [
       obj.style = items;
       obj.onStateChange = self.onStateChange;
       obj.children = self.renderChildren();
-      return jsx(importDefault(5435), {});
+      return jsx(require("05435__isNativeReflectConstruct.js"), {});
     }
   }
 ];

@@ -44,7 +44,7 @@ export const adjustTransactionDuration = (on, activeSpan) => {
       }
     });
   } else {
-    const debug = _require(817).debug;
+    const debug = _require("00817_registerSpanErrorInstrumentation.js").debug;
     debug.warn("Not sampling empty back spans only works for Sentry Transactions (Root Spans).");
   }
 };

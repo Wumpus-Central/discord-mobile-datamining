@@ -26,9 +26,9 @@ arg5.registerSpanErrorInstrumentation = function registerSpanErrorInstrumentatio
     }
     errorCallback.tag = "sentry_tracingErrorCallback";
     c2 = true;
-    const result = require(849) /* instrumentError */.addGlobalErrorInstrumentationHandler(errorCallback);
-    let obj = require(849) /* instrumentError */;
-    const result1 = require(851) /* instrumentUnhandledRejection */.addGlobalUnhandledRejectionInstrumentationHandler(errorCallback);
-    const obj2 = require(851) /* instrumentUnhandledRejection */;
+    const result = require("00849_instrumentError.js") /* instrumentError */.addGlobalErrorInstrumentationHandler(errorCallback);
+    let obj = require("00849_instrumentError.js") /* instrumentError */;
+    const result1 = require("00851_instrumentUnhandledRejection.js") /* instrumentUnhandledRejection */.addGlobalUnhandledRejectionInstrumentationHandler(errorCallback);
+    const obj2 = require("00851_instrumentUnhandledRejection.js") /* instrumentUnhandledRejection */;
   }
 };

@@ -76,7 +76,7 @@ export const extractPromptResultAttributes = function extractPromptResultAttribu
   obj2 = obj(messages[2]);
 };
 export const extractToolResultAttributes = function extractToolResultAttributes(protocolVersion, recordOutputs) {
-  let obj = require(936) /* isJsonRpcNotification */;
+  let obj = require("00936_isJsonRpcNotification.js") /* isJsonRpcNotification */;
   if (obj.isValidContentItem(protocolVersion)) {
     const _Array = Array;
     if (Array.isArray(protocolVersion.content)) {

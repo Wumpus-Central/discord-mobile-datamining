@@ -10,7 +10,7 @@ export default function isGeneratorFunction(fn) {
   } else if (callback(callback3(fn))) {
     return true;
   } else if (closure_4) {
-    if (require(546) /* getProto */) {
+    if (require("00546_getProto.js") /* getProto */) {
       if (undefined === closure_2) {
         const tmp6 = (() => {
           if (closure_4) {

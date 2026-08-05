@@ -5,14 +5,14 @@ arg5.ResolveLocale = function ResolveLocale(arg0, arg1, localeMatcher) {
   let require;
   if ("lookup" === localeMatcher.localeMatcher) {
     const _Array2 = Array;
-    let LookupMatcherResult = require(13420) /* LookupMatcher */.LookupMatcher(Array.from(arg0), arg1, arg5);
+    let LookupMatcherResult = require("13420_LookupMatcher.js") /* LookupMatcher */.LookupMatcher(Array.from(arg0), arg1, arg5);
     let tmp5 = require;
     let tmp7 = require;
   } else {
     const _Array = Array;
     tmp5 = require;
     tmp7 = require;
-    LookupMatcherResult = require(13425) /* BestFitMatcher */.BestFitMatcher(Array.from(arg0), arg1, arg5);
+    LookupMatcherResult = require("13425_BestFitMatcher.js") /* BestFitMatcher */.BestFitMatcher(Array.from(arg0), arg1, arg5);
   }
   if (null == LookupMatcherResult) {
     let obj = { locale: null, extension: "" };
@@ -45,14 +45,14 @@ arg5.ResolveLocale = function ResolveLocale(arg0, arg1, localeMatcher) {
       let _Array3 = Array;
       let concat = "keyLocaleData for ".concat;
       let isArray = Array.isArray(items1);
-      let invariantResult = require(13421) /* isMatched */.invariant(isArray, "keyLocaleData for ".concat(str, " must be an array"));
+      let invariantResult = require("13421_isMatched.js") /* isMatched */.invariant(isArray, "keyLocaleData for ".concat(str, " must be an array"));
       let first = items1[0];
       let tmp19 = undefined === first;
       let tmp20 = items1;
       if (!tmp19) {
         tmp19 = typeof first === "string";
       }
-      let invariantResult1 = require(13421) /* isMatched */.invariant(tmp19, "value must be a string or undefined");
+      let invariantResult1 = require("13421_isMatched.js") /* isMatched */.invariant(tmp19, "value must be a string or undefined");
       let iter = keywords.find((key) => key.key === closure_0);
       let tmp22;
       let str2 = first;

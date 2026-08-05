@@ -26,7 +26,7 @@ export const ItemRenderer = (arg0) => {
   ({ data, offsetX: require, rawDataLength: dependencyMap, loop } = arg0);
   ({ autoFillData: noop, layoutConfig: closure_4, renderItem: closure_5, customAnimation: closure_6 } = arg0);
   ({ size, windowSize, handlerOffset, dataLength } = arg0);
-  let obj = require(9990) /* isArraysEqual */;
+  let obj = require("09990_isArraysEqual.js") /* isArraysEqual */;
   const visibleRanges = obj.useVisibleRanges({ total: dataLength, viewSize: size, translation: handlerOffset, windowSize, loop });
   const tmp2 = loop(React.useState(null), 2);
   const first = tmp2[0];
@@ -40,12 +40,12 @@ export const ItemRenderer = (arg0) => {
   const fn2 = function c(arg0) {
     return outer1_0(outer1_1[4]).runOnJS(closure_9)(arg0);
   };
-  obj = { runOnJS: require(1606) /* cancelAnimation */.runOnJS, setDisplayedItems: tmp4 };
+  obj = { runOnJS: require("01606_cancelAnimation.js") /* cancelAnimation */.runOnJS, setDisplayedItems: tmp4 };
   fn2.__closure = obj;
   fn2.__workletHash = 13763650073050;
   fn2.__initData = visibleRanges;
   const items = [visibleRanges];
-  const animatedReaction = require(1606) /* cancelAnimation */.useAnimatedReaction(fn, fn2, items);
+  const animatedReaction = require("01606_cancelAnimation.js") /* cancelAnimation */.useAnimatedReaction(fn, fn2, items);
   let tmp6 = null;
   if (first) {
     obj = { children: null };

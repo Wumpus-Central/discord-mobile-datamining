@@ -47,7 +47,7 @@ function finishScreenTransition(stackTag) {
     }
     str = str2;
   }
-  require(1792) /* computeEasingProgress */.getSwipeSimulator(sharedEvent.value, stackTag, str)();
+  require("01792_computeEasingProgress.js") /* computeEasingProgress */.getSwipeSimulator(sharedEvent.value, stackTag, str)();
 }
 obj = { getLockAxis, getSwipeSimulator: require("computeEasingProgress").getSwipeSimulator };
 finishScreenTransition.__closure = obj;

@@ -17,18 +17,18 @@ function _addMeasureSpans(activeSpan, entryType) {
   })(entryType)) {
     const items = ["mark", "measure"];
     if (!items.includes(entryType.entryType)) {
-      const navigationEntry = require(1043) /* getNavigationEntry */.getNavigationEntry(false);
-      let obj2 = require(1043) /* getNavigationEntry */;
+      const navigationEntry = require("01043_getNavigationEntry.js") /* getNavigationEntry */.getNavigationEntry(false);
+      let obj2 = require("01043_getNavigationEntry.js") /* getNavigationEntry */;
       let num = 0;
       if (navigationEntry) {
         num = navigationEntry.requestStart;
       }
       const _Math = Math;
-      const sum = arg4 + Math.max(arg2, require(1059) /* extractNetworkProtocol */.msToSec(num));
+      const sum = arg4 + Math.max(arg2, require("01059_extractNetworkProtocol.js") /* extractNetworkProtocol */.msToSec(num));
       const sum1 = arg4 + arg2;
       const sum2 = sum1 + arg3;
       let obj = {};
-      obj[require(817) /* registerSpanErrorInstrumentation */.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.resource.browser.metrics";
+      obj[require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.resource.browser.metrics";
       if (sum !== sum1) {
         obj["sentry.browser.measure_happened_before_request"] = true;
         obj["sentry.browser.measure_start_time"] = sum;
@@ -86,9 +86,9 @@ function _addMeasureSpans(activeSpan, entryType) {
         obj[2] = obj;
         tmp4Result.startAndEndSpan(activeSpan, sum, sum2, obj);
       }
-      const obj3 = require(1059) /* extractNetworkProtocol */;
+      const obj3 = require("01059_extractNetworkProtocol.js") /* extractNetworkProtocol */;
     } else {
-      obj = require(817) /* registerSpanErrorInstrumentation */;
+      obj = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
     }
   }
 }
@@ -103,11 +103,11 @@ function _addNavigationSpans(activeSpan, requestStart) {
   _addPerformanceNavigationTiming(activeSpan, requestStart, "secureConnection", arg2, "TLS/SSL");
   _addPerformanceNavigationTiming(activeSpan, requestStart, "fetch", arg2, "cache");
   _addPerformanceNavigationTiming(activeSpan, requestStart, "domainLookup", arg2, "DNS");
-  let obj = _require(1059);
+  let obj = _require("01059_extractNetworkProtocol.js");
   const sum = arg2 + obj.msToSec(requestStart.requestStart);
-  let obj1 = _require(1059);
+  let obj1 = _require("01059_extractNetworkProtocol.js");
   const sum1 = arg2 + obj1.msToSec(requestStart.responseEnd);
-  let obj2 = _require(1059);
+  let obj2 = _require("01059_extractNetworkProtocol.js");
   const sum2 = arg2 + obj2.msToSec(requestStart.responseStart);
   if (requestStart.responseEnd) {
     let tmp5Result = tmp5(1059);
@@ -146,17 +146,17 @@ function _addPerformanceNavigationTiming(activeSpan, requestStart, domainLookup,
     tmp5 = tmp3;
   }
   if (tmp5) {
-    let obj = require(1059) /* extractNetworkProtocol */;
-    let obj1 = require(1059) /* extractNetworkProtocol */;
+    let obj = require("01059_extractNetworkProtocol.js") /* extractNetworkProtocol */;
+    let obj1 = require("01059_extractNetworkProtocol.js") /* extractNetworkProtocol */;
     const sum = arg3 + obj1.msToSec(tmp4);
-    let obj2 = require(1059) /* extractNetworkProtocol */;
+    let obj2 = require("01059_extractNetworkProtocol.js") /* extractNetworkProtocol */;
     const sum1 = arg3 + obj2.msToSec(tmp3);
     obj = { op: null, name: null, attributes: null };
     const _HermesInternal2 = HermesInternal;
     obj[0] = "browser." + tmp;
     obj[1] = redirectCount.name;
     obj = {};
-    obj[require(817) /* registerSpanErrorInstrumentation */.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.browser.metrics";
+    obj[require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.browser.metrics";
     if ("redirect" !== domainLookup) {
       obj1 = {};
       const merged = Object.assign(obj1);
@@ -267,9 +267,9 @@ export const addPerformanceEntries = function addPerformanceEntries(setAttribute
   let responseStart;
   let _require = setAttribute;
   const dependencyMap = recordClsOnPageloadSpan;
-  let obj = _require(1059);
+  let obj = _require("01059_extractNetworkProtocol.js");
   const browserPerformanceAPI = obj.getBrowserPerformanceAPI();
-  const result = _require(817).browserPerformanceTimeOrigin();
+  const result = _require("00817_registerSpanErrorInstrumentation.js").browserPerformanceTimeOrigin();
   let getEntries;
   if (browserPerformanceAPI != null) {
     getEntries = browserPerformanceAPI.getEntries;
@@ -427,7 +427,7 @@ export const addPerformanceEntries = function addPerformanceEntries(setAttribute
   }
 };
 export const startTrackingInteractions = function startTrackingInteractions() {
-  const result = require(1034) /* triggerHandlers */.addPerformanceInstrumentationHandler("event", (arg0) => {
+  const result = require("01034_triggerHandlers.js") /* triggerHandlers */.addPerformanceInstrumentationHandler("event", (arg0) => {
     const entries = arg0.entries;
     let obj = callback(817);
     const activeSpan = obj.getActiveSpan();
@@ -560,7 +560,7 @@ export const startTrackingLongAnimationFrames = function startTrackingLongAnimat
   performanceObserver.observe({ type: "long-animation-frame", buffered: true });
 };
 export const startTrackingLongTasks = function startTrackingLongTasks() {
-  const result = require(1034) /* triggerHandlers */.addPerformanceInstrumentationHandler("longtask", (arg0) => {
+  const result = require("01034_triggerHandlers.js") /* triggerHandlers */.addPerformanceInstrumentationHandler("longtask", (arg0) => {
     const entries = arg0.entries;
     let obj = callback(817);
     const activeSpan = obj.getActiveSpan();
@@ -618,7 +618,7 @@ export const startTrackingWebVitals = function startTrackingWebVitals(client) {
   let dependencyMap;
   let result1;
   ({ recordClsStandaloneSpans, recordLcpStandaloneSpans } = client);
-  const browserPerformanceAPI = _require(1059).getBrowserPerformanceAPI();
+  const browserPerformanceAPI = _require("01059_extractNetworkProtocol.js").getBrowserPerformanceAPI();
   if (browserPerformanceAPI) {
     let tmpResult = tmp(817);
     if (tmpResult.browserPerformanceTimeOrigin()) {

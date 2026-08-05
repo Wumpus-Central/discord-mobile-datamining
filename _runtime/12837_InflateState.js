@@ -3,9 +3,9 @@ const require = arg1;
 const dependencyMap = arg6;
 function InflateState() {
   const obj = { mode: 0, last: false, wrap: 0, havedict: false, flags: 0, dmax: 0, check: 0, total: 0, head: null, wbits: 0, wsize: 0, whave: 0, wnext: 0, window: null, hold: 0, bits: 0, length: 0, offset: 0, extra: 0, lencode: null, distcode: null, lenbits: 0, distbits: 0, ncode: 0, nlen: 0, ndist: 0, have: 0, next: null };
-  const buf16 = new require(12827) /* assign */.Buf16(320);
+  const buf16 = new require("12827_assign.js") /* assign */.Buf16(320);
   obj.lens = buf16;
-  const buf161 = new require(12827) /* assign */.Buf16(288);
+  const buf161 = new require("12827_assign.js") /* assign */.Buf16(288);
   obj.work = buf161;
   obj.lendyn = null;
   obj.distdyn = null;
@@ -41,10 +41,10 @@ function inflateReset(state) {
           state2.head = null;
           state2.hold = 0;
           state2.bits = 0;
-          const buf32 = new require(12827) /* assign */.Buf32(852);
+          const buf32 = new require("12827_assign.js") /* assign */.Buf32(852);
           state2.lendyn = buf32;
           state2.lencode = buf32;
-          const buf321 = new require(12827) /* assign */.Buf32(592);
+          const buf321 = new require("12827_assign.js") /* assign */.Buf32(592);
           state2.distdyn = buf321;
           state2.distcode = buf321;
           state2.sane = 1;
@@ -112,11 +112,11 @@ function updatewindow(state, output3, length, length2) {
     state.wsize = 1 << state.wbits;
     state.wnext = 0;
     state.whave = 0;
-    const buf8 = new require(12827) /* assign */.Buf8(state.wsize);
+    const buf8 = new require("12827_assign.js") /* assign */.Buf8(state.wsize);
     state.window = buf8;
   }
   if (length2 >= state.wsize) {
-    const obj3 = require(12827) /* assign */;
+    const obj3 = require("12827_assign.js") /* assign */;
     obj3.arraySet(state.window, output3, length - state.wsize, state.wsize, 0);
     state.wnext = 0;
     state.whave = state.wsize;
@@ -125,7 +125,7 @@ function updatewindow(state, output3, length, length2) {
     if (diff > length2) {
       diff = length2;
     }
-    const obj = require(12827) /* assign */;
+    const obj = require("12827_assign.js") /* assign */;
     obj.arraySet(state.window, output3, length - length2, diff, state.wnext);
     const diff1 = length2 - diff;
     if (diff1) {
@@ -205,10 +205,10 @@ arg5.inflateResetKeep = function inflateResetKeep(state) {
       state.head = null;
       state.hold = 0;
       state.bits = 0;
-      const buf32 = new require(12827) /* assign */.Buf32(852);
+      const buf32 = new require("12827_assign.js") /* assign */.Buf32(852);
       state.lendyn = buf32;
       state.lencode = buf32;
-      const buf321 = new require(12827) /* assign */.Buf32(592);
+      const buf321 = new require("12827_assign.js") /* assign */.Buf32(592);
       state.distdyn = buf321;
       state.distcode = buf321;
       state.sane = 1;
@@ -241,7 +241,7 @@ arg5.inflate = function inflate(state) {
   let next_out2;
   let output;
   let output2;
-  let buf8 = new require(12827) /* assign */.Buf8(4);
+  let buf8 = new require("12827_assign.js") /* assign */.Buf8(4);
   const items = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
   if (state) {
     if (state.state) {
@@ -295,7 +295,7 @@ arg5.inflate = function inflate(state) {
                     buf8 = check10;
                     num = 2;
                     num = 0;
-                    state.check = require(12834)(check10, tmp2, 2, 0);
+                    state.check = require("metro/12834__.js")(check10, tmp2, 2, 0);
                     state.mode = 2;
                     bits = 0;
                     hold = 0;
@@ -418,7 +418,7 @@ arg5.inflate = function inflate(state) {
                     buf8 = check3;
                     let num89 = 2;
                     let num90 = 0;
-                    state.check = require(12834)(check3, tmp2, 2, 0);
+                    state.check = require("metro/12834__.js")(check3, tmp2, 2, 0);
                   }
                   state.mode = 3;
                   let num91 = 0;
@@ -490,7 +490,7 @@ arg5.inflate = function inflate(state) {
                             }
                             buf8 = require;
                             buf8 = dependencyMap;
-                            let obj3 = require(12827) /* assign */;
+                            let obj3 = require("12827_assign.js") /* assign */;
                             let extra3 = state.head.extra;
                             buf8 = extra3;
                             buf8 = obj3;
@@ -507,7 +507,7 @@ arg5.inflate = function inflate(state) {
                             buf8 = input;
                             buf8 = length4;
                             buf8 = tmp14;
-                            state.check = require(12834)(check7, tmp16, length4, buf8);
+                            state.check = require("metro/12834__.js")(check7, tmp16, length4, buf8);
                           }
                           buf8 = tmp12 - length4;
                           buf8 = tmp14 + length4;
@@ -571,7 +571,7 @@ arg5.inflate = function inflate(state) {
                                 buf8 = check9;
                                 buf8 = input;
                                 buf8 = tmp14;
-                                state.check = require(12834)(check9, tmp16, buf8, buf8);
+                                state.check = require("metro/12834__.js")(check9, tmp16, buf8, buf8);
                               }
                               buf8 = tmp12 - buf8;
                               buf8 = tmp14 + buf8;
@@ -1284,7 +1284,7 @@ arg5.inflate = function inflate(state) {
                                                     state.bits = buf8;
                                                     buf8 = require;
                                                     buf8 = dependencyMap;
-                                                    buf8 = require(12839) /* inflate_fast */(state, avail_out);
+                                                    buf8 = require("12839_inflate_fast.js") /* inflate_fast */(state, avail_out);
                                                     ({ next_out: next_out2, output: output2, avail_out: avail_out2, next_in: next_in2, input: input2, avail_in: avail_in2 } = state);
                                                     ({ hold: hold2, bits: bits2 } = state);
                                                     num56 = buf8;
@@ -1450,7 +1450,7 @@ arg5.inflate = function inflate(state) {
                                                   num = 0;
                                                   num = 0;
                                                   buf8 = obj;
-                                                  buf8 = require(12838) /* inflate_table */(1, lens5, 0, state.nlen, state.lencode, 0, state.work, obj);
+                                                  buf8 = require("12838_inflate_table.js") /* inflate_table */(1, lens5, 0, state.nlen, state.lencode, 0, state.work, obj);
                                                   state.lenbits = obj.bits;
                                                   if (buf8) {
                                                     state.msg = "invalid literal/lengths set";
@@ -1720,7 +1720,7 @@ arg5.inflate = function inflate(state) {
                                           let num70 = 19;
                                           let num71 = 0;
                                           buf8 = obj;
-                                          buf8 = require(12838) /* inflate_table */(0, lens, 0, 19, state.lencode, 0, state.work, obj);
+                                          buf8 = require("12838_inflate_table.js") /* inflate_table */(0, lens, 0, 19, state.lencode, 0, state.work, obj);
                                           state.lenbits = obj.bits;
                                           if (buf8) {
                                             state.msg = "invalid code lengths set";
@@ -1758,7 +1758,7 @@ arg5.inflate = function inflate(state) {
                                         if (0 !== length3) {
                                           buf8 = require;
                                           buf8 = dependencyMap;
-                                          let obj5 = require(12827) /* assign */;
+                                          let obj5 = require("12827_assign.js") /* assign */;
                                           buf8 = obj5;
                                           buf8 = output;
                                           buf8 = input;
@@ -1811,11 +1811,11 @@ arg5.inflate = function inflate(state) {
                                       buf8 = new.target;
                                       buf8 = new.target;
                                       let num77 = 512;
-                                      buf8 = new require(12827) /* assign */.Buf32(512);
+                                      buf8 = new require("12827_assign.js") /* assign */.Buf32(512);
                                       buf8 = new.target;
                                       buf8 = new.target;
                                       let num78 = 32;
-                                      buf8 = new require(12827) /* assign */.Buf32(32);
+                                      buf8 = new require("12827_assign.js") /* assign */.Buf32(32);
                                       let num79 = 0;
                                       do {
                                         buf8 = num79 + 1;
@@ -1848,7 +1848,7 @@ arg5.inflate = function inflate(state) {
                                       let num81 = 0;
                                       let num82 = 288;
                                       let num83 = 0;
-                                      buf8 = require(12838) /* inflate_table */(1, lens3, 0, 288, buf8, 0, state.work, { bits: 9 });
+                                      buf8 = require("12838_inflate_table.js") /* inflate_table */(1, lens3, 0, 288, buf8, 0, state.work, { bits: 9 });
                                       let num84 = 0;
                                       do {
                                         buf8 = num84 + 1;
@@ -1863,7 +1863,7 @@ arg5.inflate = function inflate(state) {
                                       let num86 = 0;
                                       let num87 = 32;
                                       let num88 = 0;
-                                      buf8 = require(12838) /* inflate_table */(2, lens4, 0, 32, buf8, 0, state.work, { bits: 5 });
+                                      buf8 = require("12838_inflate_table.js") /* inflate_table */(2, lens4, 0, 32, buf8, 0, state.work, { bits: 5 });
                                       c7 = false;
                                     }
                                     state.lencode = buf8;
@@ -1981,7 +1981,7 @@ arg5.inflate = function inflate(state) {
                           let check8 = state.check;
                           buf8 = check8;
                           buf8 = input;
-                          state.check = require(12834)(check8, tmp16, buf8, buf8);
+                          state.check = require("metro/12834__.js")(check8, tmp16, buf8, buf8);
                         }
                         buf8 = buf8 - buf8;
                         buf8 = buf8 + buf8;
@@ -2035,7 +2035,7 @@ arg5.inflate = function inflate(state) {
                     buf8 = check6;
                     num = 2;
                     num = 0;
-                    num = require(12834)(check6, tmp2, 2, 0);
+                    num = require("metro/12834__.js")(check6, tmp2, 2, 0);
                     state.check = num;
                     num = 0;
                     num = 0;
@@ -2067,7 +2067,7 @@ arg5.inflate = function inflate(state) {
                   buf8 = check5;
                   let num97 = 2;
                   let num98 = 0;
-                  state.check = require(12834)(check5, tmp2, 2, 0);
+                  state.check = require("metro/12834__.js")(check5, tmp2, 2, 0);
                 }
                 state.mode = 5;
                 num99 = 0;
@@ -2107,7 +2107,7 @@ arg5.inflate = function inflate(state) {
                 buf8 = check4;
                 let num93 = 4;
                 let num94 = 0;
-                state.check = require(12834)(check4, tmp2, 4, 0);
+                state.check = require("metro/12834__.js")(check4, tmp2, 4, 0);
               }
               state.mode = 4;
               num95 = 0;

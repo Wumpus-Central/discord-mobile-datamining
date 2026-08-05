@@ -7,8 +7,8 @@ arg5.default = {
   isGifFile(dataView) {
     let hasItem = dataView;
     if (hasItem) {
-      hasItem = closure_3.includes(require(4897) /* getDataView */.getStringFromDataView(dataView, 0, c2));
-      const obj = require(4897) /* getDataView */;
+      hasItem = closure_3.includes(require("04897_getDataView.js") /* getDataView */.getStringFromDataView(dataView, 0, c2));
+      const obj = require("04897_getDataView.js") /* getDataView */;
     }
     return hasItem;
   },

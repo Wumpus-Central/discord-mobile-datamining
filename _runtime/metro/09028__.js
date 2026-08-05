@@ -85,7 +85,7 @@ const obj = {
     }
   },
   getErrorCorrectPolynomial(diff) {
-    const tmp = new require(9029) /* QRPolynomial */([1], 0);
+    const tmp = new require("../09029_QRPolynomial.js") /* QRPolynomial */([1], 0);
     let multiplyResult = tmp;
     let num = 0;
     let tmp2 = tmp;
@@ -93,8 +93,8 @@ const obj = {
       do {
         let tmp3 = require;
         let tmp4 = dependencyMap;
-        let tmp5 = require(9029) /* QRPolynomial */;
-        let obj2 = require(9030);
+        let tmp5 = require("../09029_QRPolynomial.js") /* QRPolynomial */;
+        let obj2 = require("09030__.js");
         let items = [1, obj2.gexp(num)];
         let tmp6 = new.target;
         let tmp7 = new.target;
@@ -112,7 +112,7 @@ const obj = {
   getLengthInBits(arg0, arg1) {
     if (1 <= arg1) {
       if (arg1 < 10) {
-        if (require(9024).MODE_NUMBER === arg0) {
+        if (require("09024__.js").MODE_NUMBER === arg0) {
           return 10;
         } else if (tmp20(9024).MODE_ALPHA_NUM === arg0) {
           return 9;
@@ -129,7 +129,7 @@ const obj = {
       }
     }
     if (arg1 < 27) {
-      if (require(9024).MODE_NUMBER === arg0) {
+      if (require("09024__.js").MODE_NUMBER === arg0) {
         return 12;
       } else if (tmp13(9024).MODE_ALPHA_NUM === arg0) {
         return 11;
@@ -143,7 +143,7 @@ const obj = {
         throw error1;
       }
     } else if (arg1 < 41) {
-      if (require(9024).MODE_NUMBER === arg0) {
+      if (require("09024__.js").MODE_NUMBER === arg0) {
         return 14;
       } else if (tmp6(9024).MODE_ALPHA_NUM === arg0) {
         return 13;

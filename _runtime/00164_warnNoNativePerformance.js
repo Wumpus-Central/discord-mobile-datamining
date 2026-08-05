@@ -13,6 +13,6 @@ if (fn == null) {
 }
 
 export const warnNoNativePerformance = function warnNoNativePerformance() {
-  importDefault(165)("missing-native-performance", "Missing native implementation of Performance");
+  require("00165_warnOnce.js")("missing-native-performance", "Missing native implementation of Performance");
 };
 export const getCurrentTimeStamp = fn;

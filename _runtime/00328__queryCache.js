@@ -100,10 +100,10 @@ function _BaseImage(arg0) {
   ({ alt, accessible, aria-labelledby: tmp, aria-busy: tmp2, aria-checked: tmp3, aria-disabled: tmp4, aria-expanded: tmp5, aria-label: tmp7, aria-selected: tmp8, accessibilityLabel, accessibilityLabelledBy, accessibilityState, defaultSource, loadingIndicatorSource, style, onLoadStart, onLoad, onLoadEnd, onError, width, height } = arg0);
   ({ ref, aria-hidden: tmp6, children, source, src, crossOrigin, referrerPolicy, srcSet, resizeMode } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  let obj = require(331) /* getImageSourcesFromImageProps */;
+  let obj = require("00331_getImageSourcesFromImageProps.js") /* getImageSourcesFromImageProps */;
   const arr = obj.getImageSourcesFromImageProps({ crossOrigin, referrerPolicy, src, srcSet, width, height, source }) || closure_8;
-  const tmp13 = importDefault(81)(defaultSource);
-  const tmp14 = importDefault(81)(loadingIndicatorSource);
+  const tmp13 = require("00081_resolveAssetSource.js")(defaultSource);
+  const tmp14 = require("00081_resolveAssetSource.js")(loadingIndicatorSource);
   if (null != children) {
     const _Error2 = Error;
     const error = new Error("The <Image> component cannot contain children. If you want to render content on top of the image, consider using the <ImageBackground> component or absolute positioning.");
@@ -275,7 +275,7 @@ resultResult.displayName = "Image";
 resultResult.getSize = function getSize(arg0, fn) {
   let closure_0 = arg0;
   const importDefault = fn;
-  const size = importDefault(329).getSize(arg0);
+  const size = require("00329_ImageLoader.js").getSize(arg0);
   if (typeof fn !== "function") {
     return size;
   } else {
@@ -287,12 +287,12 @@ resultResult.getSize = function getSize(arg0, fn) {
     }
     size.then((width) => callback(width.width, width.height)).catch(fn);
   }
-  const obj = importDefault(329);
+  const obj = require("00329_ImageLoader.js");
 };
 resultResult.getSizeWithHeaders = function getSizeWithHeaders(arg0, arg1, fn) {
   let closure_0 = arg0;
   const importDefault = fn;
-  const sizeWithHeaders = importDefault(329).getSizeWithHeaders(arg0, arg1);
+  const sizeWithHeaders = require("00329_ImageLoader.js").getSizeWithHeaders(arg0, arg1);
   if (typeof fn !== "function") {
     return sizeWithHeaders;
   } else {
@@ -304,24 +304,24 @@ resultResult.getSizeWithHeaders = function getSizeWithHeaders(arg0, arg1, fn) {
     }
     sizeWithHeaders.then((width) => callback(width.width, width.height)).catch(fn);
   }
-  const obj = importDefault(329);
+  const obj = require("00329_ImageLoader.js");
 };
 resultResult.prefetch = function prefetch(closure_0) {
   let closure_6 = tmp + 1;
   if (arg1) {
     arg1(tmp);
   }
-  return importDefault(329).prefetchImage(closure_0, +closure_6);
+  return require("00329_ImageLoader.js").prefetchImage(closure_0, +closure_6);
 };
 resultResult.prefetchWithMetadata = function prefetchWithMetadata(arg0, arg1, arg2, arg3) {
   let closure_6 = tmp + 1;
   if (arg3) {
     arg3(tmp);
   }
-  return importDefault(329).prefetchImage(arg0, +closure_6);
+  return require("00329_ImageLoader.js").prefetchImage(arg0, +closure_6);
 };
 resultResult.abortPrefetch = function abortPrefetch(_requestId) {
-  importDefault(329).abortRequest(_requestId);
+  require("00329_ImageLoader.js").abortRequest(_requestId);
 };
 resultResult.queryCache = function queryCache(closure_0) {
   const self = this;

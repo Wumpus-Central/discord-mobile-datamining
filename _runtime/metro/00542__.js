@@ -1,5 +1,5 @@
 // _runtime/metro/00542__.js
-import module_543 from "module_543";
+import 00543__ from "00543__.js";
 
 if (module_543) {
   try {

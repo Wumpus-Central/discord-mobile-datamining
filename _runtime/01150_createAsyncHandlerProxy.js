@@ -86,7 +86,7 @@ function createAsyncHandlerProxy(arg0, item10034, item10008, outer1_18) {
       return applyResult;
     }
   });
-  const result = _require(817).addNonEnumerableProperty(proxy, "__sentry_proxied__", true);
+  const result = _require("00817_registerSpanErrorInstrumentation.js").addNonEnumerableProperty(proxy, "__sentry_proxied__", true);
   return proxy;
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

@@ -107,7 +107,7 @@ let items = [
   {
     key: "__detach",
     value: function __detach(arg0, arg1) {
-      importDefault(38)(this.__isNative, "Only native driven events need to be detached.");
+      require("metro/00038__.js")(this.__isNative, "Only native driven events need to be detached.");
       if (this._attachedEvent) {
         const _attachedEvent = this._attachedEvent;
         _attachedEvent.detach();

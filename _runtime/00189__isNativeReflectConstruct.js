@@ -80,11 +80,11 @@ function reportException(stack) {
     componentStack = stack.componentStack;
   }
   obj[3] = componentStack;
-  obj[4] = require(190) /* parseErrorStack */.default(stack);
+  obj[4] = require("00190_parseErrorStack.js") /* parseErrorStack */.default(stack);
   obj[5] = sum;
   obj[6] = arg1;
   obj[7] = obj;
-  const defaultResult = require(190) /* parseErrorStack */.default(stack);
+  const defaultResult = require("00190_parseErrorStack.js") /* parseErrorStack */.default(stack);
   const tmp = require;
   tmp10 = null != stack.cause && typeof stack.cause === "object";
   if (arg2) {
@@ -130,7 +130,7 @@ function reactConsoleErrorHandler() {
           stack = error.stack;
         }
         if (!stack) {
-          SyntheticError = require(48) /* replacer */.default;
+          SyntheticError = require("00048_replacer.js") /* replacer */.default;
           const mapped = items.map((str) => {
             let tmp = str;
             if (typeof str !== "string") {

@@ -20,7 +20,7 @@ export default function HeaderContainer(getFocusedRoute) {
   let RN;
   let closure_5;
   RN = getFocusedRoute.getFocusedRoute();
-  closure_5 = React.useContext(require(5674) /* Background */.HeaderBackContext);
+  closure_5 = React.useContext(require("05674_Background.js") /* Background */.HeaderBackContext);
   let obj = { pointerEvents: "box-none", style: getFocusedRoute.style, children: null };
   let substr = scenes.slice(-3);
   obj[2] = substr.map((descriptor, arg1, arr) => {

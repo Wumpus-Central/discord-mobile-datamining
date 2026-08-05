@@ -15,7 +15,7 @@ function structuredCloneInternal(style) {
               tmp = dependencyMap;
               tmp = globalThis;
               const _String2 = String;
-              tmp = importDefault(157);
+              tmp = require("00157__isNativeReflectConstruct.js");
               const _HermesInternal2 = HermesInternal;
               tmp = new.target;
               tmp = new.target;
@@ -110,7 +110,7 @@ function structuredCloneInternal(style) {
                           const result6 = map.set(style, regExp);
                           return regExp;
                         } else {
-                          obj = require(126) /* setPlatformObject */;
+                          obj = require("00126_setPlatformObject.js") /* setPlatformObject */;
                           const platformObjectClone = obj.getPlatformObjectClone(style);
                           if (null != platformObjectClone) {
                             const platformObjectCloneResult = platformObjectClone(style);
@@ -155,7 +155,7 @@ function structuredCloneInternal(style) {
                                 tmp14Result = tmp14(126);
                               }
                               const _String = String;
-                              let tmp25 = importDefault(157);
+                              let tmp25 = require("00157__isNativeReflectConstruct.js");
                               const _HermesInternal = HermesInternal;
                               tmp25 = new tmp25("Failed to execute 'structuredClone' on 'Window': " + String(style) + " could not be cloned.", "DataCloneError");
                               throw tmp25;

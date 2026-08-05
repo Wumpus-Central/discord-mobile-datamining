@@ -187,7 +187,7 @@ function inflate(arg0, windowBits) {
   if (arr.err) {
     let msg = arr.msg;
     if (!msg) {
-      msg = require(12831)[arr.err];
+      msg = require("metro/12831__.js")[arr.err];
     }
     throw msg;
   } else {
@@ -207,7 +207,7 @@ arg5.inflateRaw = function inflateRaw(arg0, windowBits) {
   if (arr.err) {
     let msg = arr.msg;
     if (!msg) {
-      msg = require(12831)[arr.err];
+      msg = require("metro/12831__.js")[arr.err];
     }
     throw msg;
   } else {

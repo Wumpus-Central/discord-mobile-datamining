@@ -32,7 +32,7 @@ const memoResult = noop.memo(function BottomSheetHostingContainerComponent(botto
   const tmp = num(null);
   c6 = tmp;
   let items = [style, detached, topInset, num];
-  let obj = require(5345) /* useBottomSheet */;
+  let obj = require("05345_useBottomSheet.js") /* useBottomSheet */;
   obj = { ref: tmp, pointerEvents: "box-none", onLayout: null, style: null, collapsable: true, children: null };
   let stableCallback;
   if (flag) {

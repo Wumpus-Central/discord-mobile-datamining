@@ -14,11 +14,11 @@ function addToMetricsAggregator(arg0, SET_METRIC_TYPE, arg2, arg3, arg4) {
   }
   let client = obj.client;
   if (!client) {
-    client = require(7402) /* getClient */.getClient();
-    const obj2 = require(7402) /* getClient */;
+    client = require("07402_getClient.js") /* getClient */.getClient();
+    const obj2 = require("07402_getClient.js") /* getClient */;
   }
   if (client) {
-    const activeSpan = require(7380) /* spanTimeInputToSeconds */.getActiveSpan();
+    const activeSpan = require("07380_spanTimeInputToSeconds.js") /* spanTimeInputToSeconds */.getActiveSpan();
     let rootSpan;
     if (activeSpan) {
       let tmp3Result = tmp3(7380);
@@ -42,13 +42,13 @@ function addToMetricsAggregator(arg0, SET_METRIC_TYPE, arg2, arg3, arg4) {
     if (description) {
       obj.transaction = description;
     }
-    if (require(7403) /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+    if (require("metro/07403___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
       const logger = tmp3(7375).logger;
       const _HermesInternal = HermesInternal;
       logger.log("Adding value of " + arg3 + " to " + SET_METRIC_TYPE + " metric " + arg2);
     }
-    const obj3 = require(7380) /* spanTimeInputToSeconds */;
-    const globalSingleton = require(7376) /* getGlobalSingleton */.getGlobalSingleton("globalMetricsAggregators", () => {
+    const obj3 = require("07380_spanTimeInputToSeconds.js") /* spanTimeInputToSeconds */;
+    const globalSingleton = require("07376_getGlobalSingleton.js") /* getGlobalSingleton */.getGlobalSingleton("globalMetricsAggregators", () => {
       const weakMap = new WeakMap();
       return weakMap;
     });
@@ -65,7 +65,7 @@ function addToMetricsAggregator(arg0, SET_METRIC_TYPE, arg2, arg3, arg4) {
     const merged = Object.assign(obj);
     const merged1 = Object.assign(tags);
     value.add(SET_METRIC_TYPE, arg2, arg3, unit, obj, timestamp);
-    const tmp3Result1 = require(7376) /* getGlobalSingleton */;
+    const tmp3Result1 = require("07376_getGlobalSingleton.js") /* getGlobalSingleton */;
   }
 }
 
@@ -80,7 +80,7 @@ export const metrics = {
       const _parseInt = parseInt;
       parsed = parseInt(num);
     }
-    addToMetricsAggregator(arg0, require(7472).COUNTER_METRIC_TYPE, arg1, parsed, arg3);
+    addToMetricsAggregator(arg0, require("metro/07472__.js").COUNTER_METRIC_TYPE, arg1, parsed, arg3);
   },
   distribution(arg0, arg1, joined) {
     let parsed = joined;
@@ -88,10 +88,10 @@ export const metrics = {
       const _parseInt = parseInt;
       parsed = parseInt(joined);
     }
-    addToMetricsAggregator(arg0, require(7472).DISTRIBUTION_METRIC_TYPE, arg1, parsed, arg3);
+    addToMetricsAggregator(arg0, require("metro/07472__.js").DISTRIBUTION_METRIC_TYPE, arg1, parsed, arg3);
   },
   set(arg0, arg1, arg2, arg3) {
-    addToMetricsAggregator(arg0, require(7472).SET_METRIC_TYPE, arg1, arg2, arg3);
+    addToMetricsAggregator(arg0, require("metro/07472__.js").SET_METRIC_TYPE, arg1, arg2, arg3);
   },
   gauge(arg0, arg1, joined) {
     let parsed = joined;
@@ -99,7 +99,7 @@ export const metrics = {
       const _parseInt = parseInt;
       parsed = parseInt(joined);
     }
-    addToMetricsAggregator(arg0, require(7472).GAUGE_METRIC_TYPE, arg1, parsed, arg3);
+    addToMetricsAggregator(arg0, require("metro/07472__.js").GAUGE_METRIC_TYPE, arg1, parsed, arg3);
   },
   timing(arg0, arg1, fn) {
     const _require = arg0;
@@ -112,13 +112,13 @@ export const metrics = {
     let closure_3 = arg4;
     let c4;
     if (typeof fn === "function") {
-      let obj = _require(7389);
+      let obj = _require("07389_dateTimestampInSeconds.js");
       let timestampInSecondsResult = obj.timestampInSeconds();
       c4 = timestampInSecondsResult;
       obj = { op: "metrics.timing", name: null, startTime: null, onlyIfParent: true };
       obj[1] = arg1;
       obj[2] = timestampInSecondsResult;
-      return _require(7409).startSpanManual(obj, (arg0) => {
+      return _require("07409_createChildOrRootSpan.js").startSpanManual(obj, (arg0) => {
         const callback = arg0;
         return callback(table[10]).handleCallbackErrors(() => callback(), () => {
 
@@ -142,7 +142,7 @@ export const metrics = {
       obj = {};
       let merged = Object.assign(arg4);
       obj.unit = str;
-      const DISTRIBUTION_METRIC_TYPE = _require(7472).DISTRIBUTION_METRIC_TYPE;
+      const DISTRIBUTION_METRIC_TYPE = _require("metro/07472__.js").DISTRIBUTION_METRIC_TYPE;
       let parsed = fn;
       if (typeof fn === "string") {
         let _parseInt = parseInt;
@@ -152,7 +152,7 @@ export const metrics = {
     }
   },
   getMetricsAggregatorForClient(on) {
-    const globalSingleton = require(7376) /* getGlobalSingleton */.getGlobalSingleton("globalMetricsAggregators", () => {
+    const globalSingleton = require("07376_getGlobalSingleton.js") /* getGlobalSingleton */.getGlobalSingleton("globalMetricsAggregators", () => {
       const weakMap = new WeakMap();
       return weakMap;
     });
@@ -167,6 +167,6 @@ export const metrics = {
       const result = globalSingleton.set(on, tmp6);
       return tmp6;
     }
-    const obj = require(7376) /* getGlobalSingleton */;
+    const obj = require("07376_getGlobalSingleton.js") /* getGlobalSingleton */;
   }
 };

@@ -1,5 +1,5 @@
 // _runtime/metro/14628__.js
-import module_7800 from "module_7800";
+import 07800__ from "07800__.js";
 import _getRequireWildcardCache from "_getRequireWildcardCache";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

@@ -38,5 +38,5 @@ export const useWrapRefWithImageAttachedCallbacks = function useWrapRefWithImage
       }
     };
   }
-  return importDefault(334)(ref, tmp.current);
+  return require("00334_useMergeRefs.js")(ref, tmp.current);
 };

@@ -33,6 +33,6 @@ arg5.default = function v4(arg0, arg1, arg2) {
     } while (num4 < 16);
     return arg1;
   } else {
-    return require(517) /* unsafeStringify */.unsafeStringify(random);
+    return require("00517_unsafeStringify.js") /* unsafeStringify */.unsafeStringify(random);
   }
 };

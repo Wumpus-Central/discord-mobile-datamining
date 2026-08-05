@@ -65,6 +65,6 @@ arg5.default = function parseErrorStack(arg0) {
         return obj;
       });
     }
-    obj2 = require(191) /* parse */;
+    obj2 = require("00191_parse.js") /* parse */;
   }
 };

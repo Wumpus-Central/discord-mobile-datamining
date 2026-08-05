@@ -1,5 +1,5 @@
 // _runtime/07806_SliderTrackMark.js
-import module_7800 from "module_7800";
+import 07800__ from "metro/07800__.js";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -15,7 +15,7 @@ export const SliderTrackMark = function SliderTrackMark(arg0) {
   let thumbImage;
   ({ isTrue, thumbImage, StepMarker } = arg0);
   let obj = jsxProd;
-  obj = { style: require(7804) /* styles */.styles.trackMarkContainer, children: null };
+  obj = { style: require("07804_styles.js") /* styles */.styles.trackMarkContainer, children: null };
   ({ index, currentValue, min, max } = arg0);
   let jsxResult = null;
   if (StepMarker) {
@@ -43,5 +43,5 @@ export const SliderTrackMark = function SliderTrackMark(arg0) {
   }
   items[1] = jsxResult1;
   obj[1] = items;
-  return <get ActivityIndicator.View style={require(7804) /* styles */.styles.trackMarkContainer}>{null}</get ActivityIndicator.View>;
+  return <get ActivityIndicator.View style={require("07804_styles.js") /* styles */.styles.trackMarkContainer}>{null}</get ActivityIndicator.View>;
 };

@@ -14,7 +14,7 @@ arg5.maybeInstrument = function maybeInstrument(arg0, arg1) {
     try {
       arg1();
     } catch (tmp5) {
-      if (require(7374) /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+      if (require("metro/07374___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
         const logger = tmp6(7375).logger;
         const _HermesInternal = HermesInternal;
         logger.error("Error while instrumenting " + tmp, tmp5);
@@ -40,7 +40,7 @@ arg5.triggerHandlers = function triggerHandlers(arg0, arg1) {
       try {
         tmp15(arg1);
       } catch (tmp18) {
-        if (require(7374) /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+        if (require("metro/07374___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
           const logger = tmp19(7375).logger;
           logger.error(tmp2 + tmp6 + tmp3 + tmp19(7378).getFunctionName(tmp7) + tmp4, tmp18);
           const tmp19Result = tmp19(7378);

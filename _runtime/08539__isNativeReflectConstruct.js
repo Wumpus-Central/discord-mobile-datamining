@@ -111,18 +111,18 @@ let items = [
         obj[4] = side;
         obj[5] = alignmentBaseline;
         obj[6] = midLine;
-        const merged = Object.assign(withoutXYResult, importDefault(8459)(obj, true), obj);
+        const merged = Object.assign(withoutXYResult, require("08459_extractFont.js")(obj, true), obj);
         withoutXYResult.ref = self.refMethod;
         obj1 = {};
         const merged1 = Object.assign(withoutXYResult);
-        return jsx(importDefault(8540), {});
+        return jsx(require("metro/08540___INTERNAL_VIEW_CONFIG.js"), {});
       } else {
         const _console = console;
         console.warn(`Invalid \`href\` prop for \`TextPath\` element, expected a href like "#id", but got: "${href}"`);
         obj = { ref: null, children: null };
         obj[0] = self.refMethod;
         obj[1] = children;
-        return jsx(importDefault(8536), { ref: null, children: null });
+        return jsx(require("08536__isNativeReflectConstruct.js"), { ref: null, children: null });
       }
       tmp = callback(props, closure_3);
     }

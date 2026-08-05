@@ -10,7 +10,7 @@ import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__";
 function _addTracingHeadersToFetchRequest(headers, headers2, span) {
   let baggage;
   let tmp4;
-  let obj = require(7446) /* getTraceData */;
+  let obj = require("../07446_getTraceData.js") /* getTraceData */;
   obj = { span };
   const traceData = obj.getTraceData(obj);
   ({ sentry-trace: tmp4, baggage } = traceData);
@@ -168,7 +168,7 @@ export const instrumentFetchRequest = function instrumentFetchRequest(fetchData)
   if (fetchData.fetchData) {
     let setHttpStatus = require;
     let headers = dependencyMap;
-    let obj = require(7407) /* hasTracingEnabled */;
+    let obj = require("../07407_hasTracingEnabled.js") /* hasTracingEnabled */;
     let hasTracingEnabledResult = obj.hasTracingEnabled();
     if (hasTracingEnabledResult) {
       hasTracingEnabledResult = arg1(endResult.fetchData.url);

@@ -31,7 +31,7 @@ let obj = {
     fn.__closure = { viewTag, progressAnimation };
     fn.__workletHash = 1345064651573;
     fn.__initData = closure_4;
-    _require(1613).runOnUIImmediately(fn)();
+    _require("01613_runWorkletOnJS.js").runOnUIImmediately(fn)();
     const result = this.registerEventHandlers();
   }
 };
@@ -63,7 +63,7 @@ const items = [
       if (!this._eventHandler.isRegistered) {
         _eventHandler.isRegistered = true;
         let c0 = -1;
-        let obj = require(1650) /* isReanimated3 */;
+        let obj = require("01650_isReanimated3.js") /* isReanimated3 */;
         const fn = function o(progress) {
           progress = progress.progress;
           if (progress !== progress) {
@@ -84,8 +84,8 @@ const items = [
         fn2.__closure = {};
         fn2.__workletHash = 10114828892519;
         fn2.__initData = closure_7;
-        _eventHandler.onAppear = require(1650) /* isReanimated3 */.registerEventHandler(fn2, "onAppear");
-        const obj3 = require(1650) /* isReanimated3 */;
+        _eventHandler.onAppear = require("01650_isReanimated3.js") /* isReanimated3 */.registerEventHandler(fn2, "onAppear");
+        const obj3 = require("01650_isReanimated3.js") /* isReanimated3 */;
         const fn3 = function n() {
           const ProgressTransitionRegister = v1.ProgressTransitionRegister;
           const result = ProgressTransitionRegister.onAndroidFinishTransitioning();
@@ -93,8 +93,8 @@ const items = [
         fn3.__closure = {};
         fn3.__workletHash = 13733013860161;
         fn3.__initData = closure_8;
-        _eventHandler.onDisappear = require(1650) /* isReanimated3 */.registerEventHandler(fn3, "onFinishTransitioning");
-        const obj4 = require(1650) /* isReanimated3 */;
+        _eventHandler.onDisappear = require("01650_isReanimated3.js") /* isReanimated3 */.registerEventHandler(fn3, "onFinishTransitioning");
+        const obj4 = require("01650_isReanimated3.js") /* isReanimated3 */;
       }
     }
   },
@@ -105,24 +105,24 @@ const items = [
       if (0 === this._sharedElementCount) {
         this._eventHandler.isRegistered = false;
         if (-1 !== this._eventHandler.onTransitionProgress) {
-          const result = require(1650) /* isReanimated3 */.unregisterEventHandler(_eventHandler.onTransitionProgress);
+          const result = require("01650_isReanimated3.js") /* isReanimated3 */.unregisterEventHandler(_eventHandler.onTransitionProgress);
           _eventHandler.onTransitionProgress = -1;
-          const obj = require(1650) /* isReanimated3 */;
+          const obj = require("01650_isReanimated3.js") /* isReanimated3 */;
         }
         if (-1 !== this._eventHandler.onAppear) {
-          const result1 = require(1650) /* isReanimated3 */.unregisterEventHandler(_eventHandler.onAppear);
+          const result1 = require("01650_isReanimated3.js") /* isReanimated3 */.unregisterEventHandler(_eventHandler.onAppear);
           _eventHandler.onAppear = -1;
-          const obj2 = require(1650) /* isReanimated3 */;
+          const obj2 = require("01650_isReanimated3.js") /* isReanimated3 */;
         }
         if (-1 !== this._eventHandler.onDisappear) {
-          const result2 = require(1650) /* isReanimated3 */.unregisterEventHandler(_eventHandler.onDisappear);
+          const result2 = require("01650_isReanimated3.js") /* isReanimated3 */.unregisterEventHandler(_eventHandler.onDisappear);
           _eventHandler.onDisappear = -1;
-          const obj3 = require(1650) /* isReanimated3 */;
+          const obj3 = require("01650_isReanimated3.js") /* isReanimated3 */;
         }
         if (-1 !== this._eventHandler.onSwipeDismiss) {
-          const result3 = require(1650) /* isReanimated3 */.unregisterEventHandler(_eventHandler.onSwipeDismiss);
+          const result3 = require("01650_isReanimated3.js") /* isReanimated3 */.unregisterEventHandler(_eventHandler.onSwipeDismiss);
           _eventHandler.onSwipeDismiss = -1;
-          const obj4 = require(1650) /* isReanimated3 */;
+          const obj4 = require("01650_isReanimated3.js") /* isReanimated3 */;
         }
       }
     }
@@ -227,7 +227,7 @@ if (isJest.shouldBeUseWeb()) {
       const reanimatedError = new tmp(1617).ReanimatedError("`ProgressTransitionRegister` is not available on non-native platform.");
       throw reanimatedError;
     }
-    obj = require(1609) /* isJest */;
+    obj = require("01609_isJest.js") /* isJest */;
     tmp = require;
   }
   const _Proxy = Proxy;
@@ -243,7 +243,7 @@ if (isJest.shouldBeUseWeb()) {
       const reanimatedError = new tmp(1617).ReanimatedError("`ProgressTransitionRegister` is not available on non-native platform.");
       throw reanimatedError;
     }
-    obj = require(1609) /* isJest */;
+    obj = require("01609_isJest.js") /* isJest */;
     tmp = require;
   };
   const proxy = new Proxy({}, obj);

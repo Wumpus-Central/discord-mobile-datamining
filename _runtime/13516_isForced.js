@@ -12,7 +12,7 @@ function isForced(arg0, arg1) {
       tmp3 = tmp5;
     } else {
       let tmp7Result = dependencyMap;
-      if (require(13503) /* all */(arg1)) {
+      if (require("13503_all.js") /* all */(arg1)) {
         tmp7Result = tmp7(13481);
         let tmp7ResultResult = tmp7Result(arg1);
       } else {

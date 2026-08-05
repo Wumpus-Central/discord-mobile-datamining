@@ -4,11 +4,11 @@ import "noop";
 const require = arg1;
 
 export const renderElement = function renderElement(rootTag) {
-  let obj = importDefault(116);
+  let obj = require("00116_ReactFabric.js");
   obj = { onCaughtError: null, onUncaughtError: null, onRecoverableError: null };
-  obj[0] = require(289) /* getExtendedError */.onCaughtError;
-  obj[1] = require(289) /* getExtendedError */.onUncaughtError;
-  obj[2] = require(289) /* getExtendedError */.onRecoverableError;
+  obj[0] = require("00289_getExtendedError.js") /* getExtendedError */.onCaughtError;
+  obj[1] = require("00289_getExtendedError.js") /* getExtendedError */.onUncaughtError;
+  obj[2] = require("00289_getExtendedError.js") /* getExtendedError */.onRecoverableError;
   obj.render(rootTag.element, Number(rootTag.rootTag), null, true, obj);
 };
 export const dispatchCommand = require("ReactFabric").dispatchCommand;

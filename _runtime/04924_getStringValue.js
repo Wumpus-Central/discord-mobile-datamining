@@ -5,7 +5,7 @@ const obj = { 1: "InteroperabilityIndex", 2: null, 4096: "RelatedImageFileFormat
 obj[2] = {
   name: "InteroperabilityVersion",
   description(value) {
-    return require(4922) /* getStringValue */.getStringValue(value);
+    return require("04922_getStringValue.js") /* getStringValue */.getStringValue(value);
   }
 };
 arg5.default = obj;

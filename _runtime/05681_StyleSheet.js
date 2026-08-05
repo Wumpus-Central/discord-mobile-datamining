@@ -71,12 +71,12 @@ export default function Header(children) {
   let shadowOpacity;
   let shadowRadius;
   let transform;
-  let obj = require(1584);
+  let obj = require("metro/01584__.js");
   const rect = obj.useSafeAreaInsets();
-  let obj1 = require(1584);
+  let obj1 = require("metro/01584__.js");
   const safeAreaFrame = obj1.useSafeAreaFrame();
   let layout = children.layout;
-  const context = React.useContext(importDefault(5682));
+  const context = React.useContext(require("05682___react_navigation__elements_contexts.js"));
   if (undefined === layout) {
     layout = safeAreaFrame;
   }
@@ -151,7 +151,7 @@ export default function Header(children) {
     if (!headerTransparent) {
       const obj4 = { style: null };
       obj4[0] = items;
-      headerBackgroundResult = tmp15(importDefault(5685), obj4);
+      headerBackgroundResult = tmp15(require("05685_HeaderBackground.js"), obj4);
     }
   }
   obj2[2] = headerBackgroundResult;
@@ -197,7 +197,7 @@ export default function Header(children) {
   const tmp20 = View;
   const tmp5 = importDefault;
   const tmp7 = undefined !== modal && modal;
-  tmp8 = importDefault(5679)(layout, undefined !== modal && modal, headerStatusBarHeight);
+  tmp8 = require("05679_getDefaultHeaderHeight.js")(layout, undefined !== modal && modal, headerStatusBarHeight);
   items7[1] = { maxWidth: diff };
   items7[2] = headerTitleContainerStyle;
   items6[1] = closure_9(RN.View, { pointerEvents: "box-none", style: items7, children: headerTitle({ children: children.title, allowFontScaling: headerTitleAllowFontScaling, tintColor: headerTintColor, style: headerTitleStyle }) });

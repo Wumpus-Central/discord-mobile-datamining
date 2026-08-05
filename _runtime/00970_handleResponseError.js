@@ -5,14 +5,14 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.handleResponseError = function handleResponseError(setStatus, error) {
   if (error.error) {
     let obj = { code: null, message: null };
-    obj[0] = require(840) /* getSpanStatusFromHttpCode */.SPAN_STATUS_ERROR;
+    obj[0] = require("00840_getSpanStatusFromHttpCode.js") /* getSpanStatusFromHttpCode */.SPAN_STATUS_ERROR;
     obj[1] = error.error.type || "internal_error";
     setStatus.setStatus(obj);
     obj = { mechanism: null };
     obj[0] = { handled: false, type: "auto.ai.anthropic.anthropic_error" };
-    require(869) /* captureCheckIn */.captureException(error.error, obj);
+    require("00869_captureCheckIn.js") /* captureCheckIn */.captureException(error.error, obj);
     const tmp2 = require;
-    const tmp2Result = require(869) /* captureCheckIn */;
+    const tmp2Result = require("00869_captureCheckIn.js") /* captureCheckIn */;
   }
 };
 arg5.messagesFromParams = function messagesFromParams(closure_2) {
@@ -58,13 +58,13 @@ arg5.setMessagesAttribute = function setMessagesAttribute(setAttributes, message
   }
   if (0 !== length) {
     const obj = {};
-    obj[require(958).GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = require(960) /* buildMethodPath */.getTruncatedJsonString(messagesFromParamsResult);
-    obj[require(958).GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = length;
+    obj[require("metro/00958__.js").GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = require("00960_buildMethodPath.js") /* buildMethodPath */.getTruncatedJsonString(messagesFromParamsResult);
+    obj[require("metro/00958__.js").GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = length;
     setAttributes.setAttributes(obj);
-    const obj2 = require(960) /* buildMethodPath */;
+    const obj2 = require("00960_buildMethodPath.js") /* buildMethodPath */;
   }
 };
 arg5.shouldInstrument = function shouldInstrument(arg0) {
-  const ANTHROPIC_AI_INSTRUMENTED_METHODS = require(971).ANTHROPIC_AI_INSTRUMENTED_METHODS;
+  const ANTHROPIC_AI_INSTRUMENTED_METHODS = require("metro/00971__.js").ANTHROPIC_AI_INSTRUMENTED_METHODS;
   return ANTHROPIC_AI_INSTRUMENTED_METHODS.includes(arg0);
 };

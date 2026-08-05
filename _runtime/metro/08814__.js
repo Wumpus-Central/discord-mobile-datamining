@@ -1,6 +1,6 @@
 // _runtime/metro/08814__.js
 import flattenStyle from "flattenStyle";
-import module_8815 from "module_8815";
+import 08815__ from "08815__.js";
 import emptyFunction from "emptyFunction";
 import emptyFunction from "emptyFunction";
 import emptyFunction from "emptyFunction";

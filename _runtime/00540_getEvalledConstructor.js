@@ -1,14 +1,14 @@
 // _runtime/00540_getEvalledConstructor.js
 import bind from "bind";
-import module_556 from "module_556";
+import 00556__ from "metro/00556__.js";
 import bind from "bind";
-import module_557 from "module_557";
+import 00557__ from "metro/00557__.js";
 import bind from "bind";
-import module_556 from "module_556";
+import 00556__ from "metro/00556__.js";
 import bind from "bind";
-import module_556 from "module_556";
+import 00556__ from "metro/00556__.js";
 import bind from "bind";
-import module_556 from "module_556";
+import 00556__ from "metro/00556__.js";
 
 function getEvalledConstructor(arg0) {
   try {
@@ -18,7 +18,7 @@ function getEvalledConstructor(arg0) {
   }
 }
 function throwTypeError() {
-  throw new require(541)();
+  throw new require("metro/00541__.js")();
 }
 if (require("module_542")) {
   throwTypeError = (() => {
@@ -26,7 +26,7 @@ if (require("module_542")) {
       return throwTypeError;
     } catch (err) {
       try {
-        return require(542)(arguments, "callee").get;
+        return require("metro/00542__.js")(arguments, "callee").get;
       } catch (err) {
         return throwTypeError;
       }
@@ -313,10 +313,10 @@ function doEval(arg0) {
     const tmp12 = doEval("%AsyncGenerator%");
     let tmp3 = tmp12;
     if (tmp12) {
-      tmp3 = require(546) /* getProto */;
+      tmp3 = require("00546_getProto.js") /* getProto */;
     }
     if (tmp3) {
-      prototype = require(546) /* getProto */(tmp12.prototype);
+      prototype = require("00546_getProto.js") /* getProto */(tmp12.prototype);
     }
   }
   obj[arg0] = prototype;

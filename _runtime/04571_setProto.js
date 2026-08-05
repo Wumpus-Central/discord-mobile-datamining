@@ -1,7 +1,7 @@
 // _runtime/04571_setProto.js
 if (require("setPrototypeOf")) {
   function setProto(arg0, arg1) {
-    if (require(4572) /* setPrototypeOf */(arg0, arg1)) {
+    if (require("04572_setPrototypeOf.js") /* setPrototypeOf */(arg0, arg1)) {
       return arg0;
     } else {
       const tmp5 = new tmp(541)("Reflect.setPrototypeOf: failed to set [[Prototype]]");
@@ -15,7 +15,7 @@ if (require("setPrototypeOf")) {
     let setProto2 = null;
     if (require("module_4574")) {
       setProto2 = function setProto(arg0, arg1) {
-        require(4574)(arg0, arg1);
+        require("metro/04574__.js")(arg0, arg1);
         return arg0;
       };
     }

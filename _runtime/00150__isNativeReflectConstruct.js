@@ -64,8 +64,8 @@ const items = [
       const nativeTextReference = ReadOnlyCharacterData(136).getNativeTextReference(this);
       let str = "";
       if (null != nativeTextReference) {
-        str = importDefault(139).getTextContent(nativeTextReference);
-        const obj2 = importDefault(139);
+        str = require("00139_NativeDOMCxx.js").getTextContent(nativeTextReference);
+        const obj2 = require("00139_NativeDOMCxx.js");
       }
       return str;
     }

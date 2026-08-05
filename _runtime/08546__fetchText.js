@@ -115,7 +115,7 @@ function decodeBase64Image(arg0) {
   const parts = decodeURIComponent(arg0).split(";")[1].split(",");
   const substr = parts.slice(1);
   const joined = substr.join(",");
-  const _Buffer = require(511) /* Buffer */.Buffer;
+  const _Buffer = require("00511_Buffer.js") /* Buffer */.Buffer;
   const str2 = decodeURIComponent(arg0).split(";")[1];
   return _Buffer.from(joined, parts[0]).toString("utf-8");
 }

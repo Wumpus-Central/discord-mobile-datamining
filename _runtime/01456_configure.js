@@ -2,21 +2,21 @@
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { Platform } from "get ActivityIndicator";
-import module_1457 from "module_1457";
+import 01457__ from "metro/01457__.js";
 
 let c4;
 let c5;
 let closure_6;
 function configure(arg0) {
   const obj = {};
-  const merged = Object.assign(importDefault(1457));
+  const merged = Object.assign(require("metro/01457__.js"));
   const merged1 = Object.assign(arg0);
   if (c8) {
     c8.tearDown();
     if (typeof createState !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const tmp10 = new importDefault(1458)(obj);
+    const tmp10 = new require("01458_State.js")(obj);
     c8 = tmp10;
   }
 }
@@ -26,7 +26,7 @@ function fetch(arg0) {
     if (typeof createState !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const tmp7 = new importDefault(1458)(module_1457);
+    const tmp7 = new require("01458_State.js")(module_1457);
     c8 = tmp7;
     obj = tmp7;
   }
@@ -38,7 +38,7 @@ function refresh() {
     if (typeof createState !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const tmp7 = new importDefault(1458)(module_1457);
+    const tmp7 = new require("01458_State.js")(module_1457);
     c8 = tmp7;
     obj = tmp7;
   }
@@ -71,7 +71,7 @@ function addEventListener(arg0) {
     if (typeof createState !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const tmp7 = new importDefault(1458)(module_1457);
+    const tmp7 = new require("01458_State.js")(module_1457);
     c8 = tmp7;
     obj = tmp7;
   }
@@ -85,7 +85,7 @@ function addEventListener(arg0) {
 function useNetInfo(arg0) {
   if (arg0) {
     let obj = {};
-    const merged = Object.assign(importDefault(1457));
+    const merged = Object.assign(require("metro/01457__.js"));
     const merged1 = Object.assign(arg0);
     if (c8) {
       obj2.tearDown();

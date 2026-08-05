@@ -5,5 +5,5 @@ import { jsx } from "jsxProd";
 
 export default function ScreenContentWrapper(arg0) {
   const merged = Object.assign(arg0);
-  return jsx(importDefault(4661), { collapsable: false });
+  return jsx(require("metro/04661___INTERNAL_VIEW_CONFIG.js"), { collapsable: false });
 };

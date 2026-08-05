@@ -10,5 +10,5 @@ if (global != null) {
 }
 if (!hasPromiseResult) {
   const _module = require("polyfillObjectProperty");
-  _module.polyfillGlobal("Promise", () => require(175) /* finally */.default);
+  _module.polyfillGlobal("Promise", () => require("00175_finally.js") /* finally */.default);
 }

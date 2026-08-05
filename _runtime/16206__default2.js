@@ -1,5 +1,5 @@
 // _runtime/16206__default2.js
-import module_576 from "module_576";
+import 00576__ from "metro/00576__.js";
 import { default as _default2 } from "CanonicalizeLocaleList";
 
 global.IntlPolyfill = require("CanonicalizeLocaleList").default;

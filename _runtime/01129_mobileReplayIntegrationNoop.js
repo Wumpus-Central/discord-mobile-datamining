@@ -85,7 +85,7 @@ arg5.mobileReplayIntegration = () => {
   function updateCachedReplayId(arg0, arg1, arg2, arg3) {
     let closure_1 = arg0;
   }
-  let obj = require(1002) /* isHermesEnabled */;
+  let obj = require("01002_isHermesEnabled.js") /* isHermesEnabled */;
   if (obj.isExpoGo()) {
     let debug = tmp2(817).debug;
     let _HermesInternal = HermesInternal;

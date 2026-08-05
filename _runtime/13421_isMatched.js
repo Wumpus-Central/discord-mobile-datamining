@@ -113,7 +113,7 @@ function findMatchingDistance(arg0, arg1) {
   obj = { language: maximizeResult1.language, script: tmp5, region: tmp6 };
   let tmp7 = obj1;
   if (!obj1) {
-    let first = require(13422).data.supplemental.languageMatching["written-new"][0];
+    let first = require("metro/13422__.js").data.supplemental.languageMatching["written-new"][0];
     let paradigmLocales;
     if (null !== first) {
       if (undefined !== first) {

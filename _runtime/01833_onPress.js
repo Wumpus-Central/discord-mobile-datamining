@@ -16,11 +16,11 @@ export default function _default(icon) {
   ({ disabled, button } = icon);
   ({ rippleRadius, style } = icon);
   if (button === undefined) {
-    button = importDefault(1825);
+    button = require("01825_disabled.js");
   }
   icon = icon.icon;
   if (icon === undefined) {
-    icon = importDefault(1826);
+    icon = require("01826_items.js");
   }
   let obj = onPress(1831);
   const toolbarContext = obj.useToolbarContext();

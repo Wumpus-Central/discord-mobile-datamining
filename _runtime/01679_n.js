@@ -5,7 +5,7 @@ let closure_2 = { code: "function pnpm_clampTs2(){const{_animationToClamp,config
 let fn = function n(config, _animationToClamp) {
   const _require = config;
   const dependencyMap = _animationToClamp;
-  let obj = _require(1646);
+  let obj = _require("01646_isValidLayoutAnimationProp.js");
   const fn = function u() {
     let tmpResult = strippedValue;
     if (typeof strippedValue === "function") {
@@ -92,7 +92,7 @@ let fn = function n(config, _animationToClamp) {
     obj[6] = config(1646).getReduceMotionForAnimation(config.reduceMotion);
     return obj;
   };
-  obj = { _animationToClamp, config, recognizePrefixSuffix: _require(1646).recognizePrefixSuffix, logger: _require(1610).logger, getReduceMotionForAnimation: _require(1646).getReduceMotionForAnimation };
+  obj = { _animationToClamp, config, recognizePrefixSuffix: _require("01646_isValidLayoutAnimationProp.js").recognizePrefixSuffix, logger: _require("01610_addLogBoxLog.js").logger, getReduceMotionForAnimation: _require("01646_isValidLayoutAnimationProp.js").getReduceMotionForAnimation };
   fn.__closure = obj;
   fn.__workletHash = 9293031098818;
   fn.__initData = closure_2;

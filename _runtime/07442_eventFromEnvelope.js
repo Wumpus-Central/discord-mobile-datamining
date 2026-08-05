@@ -3,7 +3,7 @@ import asyncGeneratorStep from "asyncGeneratorStep";
 
 function eventFromEnvelope(arg0, arg1) {
   const _require = arg1;
-  _require(7419).forEachEnvelopeItem(arg0, (arg0, arg1) => {
+  _require("07419_forEachEnvelopeItem.js").forEachEnvelopeItem(arg0, (arg0, arg1) => {
     if (items.includes(arg1)) {
       const _Array = Array;
       let tmp3;

@@ -3,8 +3,8 @@ import noop from "noop";
 
 
 export default function useNavigation() {
-  const context = React.useContext(importDefault(1503));
-  let context1 = React.useContext(importDefault(1508));
+  const context = React.useContext(require("01503_noop.js"));
+  let context1 = React.useContext(require("01508_noop.js"));
   if (undefined === context1) {
     if (undefined === context) {
       const _Error = Error;

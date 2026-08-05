@@ -11,11 +11,11 @@ export default function extractFeFlood(arg0) {
   if (null == floodColor) {
     let tmp = obj;
   } else {
-    tmp = importDefault(8455)(floodColor);
+    tmp = require("08455_extractBrush.js")(floodColor);
   }
   obj = { floodColor: tmp };
   if (null != floodOpacity) {
-    obj.floodOpacity = importDefault(8443)(floodOpacity);
+    obj.floodOpacity = require("08443_extractOpacity.js")(floodOpacity);
   }
   return obj;
 };

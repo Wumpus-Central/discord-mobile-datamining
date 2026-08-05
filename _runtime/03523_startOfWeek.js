@@ -29,7 +29,7 @@ let c4 = tmp7;
 
 export default function startOfWeek(arg0, weekStartsOn) {
   tmp7.default(1, arguments);
-  const defaultOptions = require(3369) /* getDefaultOptions */.getDefaultOptions();
+  const defaultOptions = require("03369_getDefaultOptions.js") /* getDefaultOptions */.getDefaultOptions();
   weekStartsOn = undefined;
   if (null != weekStartsOn) {
     weekStartsOn = weekStartsOn.weekStartsOn;

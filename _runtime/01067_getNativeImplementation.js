@@ -5,7 +5,7 @@ function getNativeImplementation(fetch) {
   if (table[fetch]) {
     return tmp6;
   } else {
-    const tmp9 = require(1039) /* WINDOW */.WINDOW[fetch];
+    const tmp9 = require("01039_WINDOW.js") /* WINDOW */.WINDOW[fetch];
     let obj = tmp9;
     if (obj2.isNativeFunction(tmp9)) {
       const bindResult = obj.bind(tmp7(1039).WINDOW);
@@ -48,7 +48,7 @@ function getNativeImplementation(fetch) {
       }
       return tmp24;
     }
-    obj2 = require(817) /* registerSpanErrorInstrumentation */;
+    obj2 = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
   }
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

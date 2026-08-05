@@ -67,13 +67,13 @@ if (self2) {
     const _Object4 = Object;
     let obj = { enumerable: true, get: null };
     obj[1] = function get() {
-      return require(12273).$brand;
+      return require("12273__.js").$brand;
     };
     Object.defineProperty(exports, "$brand", obj);
     const _Object5 = Object;
     obj = { enumerable: true, get: null };
     obj[1] = function get() {
-      return require(12273).config;
+      return require("12273__.js").config;
     };
     Object.defineProperty(exports, "config", obj);
     exports.ZodFirstPartyTypeKind = {};

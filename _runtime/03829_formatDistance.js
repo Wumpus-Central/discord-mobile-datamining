@@ -17,7 +17,7 @@ export default function formatDistance(arg0, arg1, addSuffix) {
   } else if (1 === arg1) {
     let one = tmp.one;
   } else {
-    one = tmp.other.replace("{{count}}", require(3830) /* localeToNumber */.numberToLocale(arg1));
+    one = tmp.other.replace("{{count}}", require("03830_localeToNumber.js") /* localeToNumber */.numberToLocale(arg1));
     const str = tmp.other;
   }
 };

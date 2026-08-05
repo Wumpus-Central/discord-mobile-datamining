@@ -53,7 +53,7 @@ const items = [
     value: function render() {
       const props = this.props;
       const obj = { ref: this.refMethod };
-      const tmp = importDefault(8468);
+      const tmp = require("metro/08468___INTERNAL_VIEW_CONFIG.js");
       const merged = Object.assign(ClipPath(8452).extract(this, props));
       obj.children = props.children;
       return <tmp ref={this.refMethod} />;

@@ -3,8 +3,8 @@ import asyncGeneratorStep from "createChildOrRootSpan";
 
 function extractRequestAttributes(first, outer1_1) {
   let obj = { [closure_0(closure_1[1]).GEN_AI_SYSTEM_ATTRIBUTE]: "openai" };
-  obj[require(958).GEN_AI_OPERATION_NAME_ATTRIBUTE] = require(963) /* getOperationName */.getOperationName(outer1_1);
-  obj[require(839).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.openai";
+  obj[require("metro/00958__.js").GEN_AI_OPERATION_NAME_ATTRIBUTE] = require("00963_getOperationName.js") /* getOperationName */.getOperationName(outer1_1);
+  obj[require("metro/00839__.js").SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.openai";
   if (first.length > 0) {
     if (typeof first[0] === "object") {
       if (null !== first[0]) {
@@ -38,7 +38,7 @@ function extractRequestAttributes(first, outer1_1) {
       return obj;
     }
   }
-  obj[require(958).GEN_AI_REQUEST_MODEL_ATTRIBUTE] = "unknown";
+  obj[require("metro/00958__.js").GEN_AI_REQUEST_MODEL_ATTRIBUTE] = "unknown";
 }
 function addRequestAttributes(setAttribute, input) {
   if ("input" in input) {
@@ -48,12 +48,12 @@ function addRequestAttributes(setAttribute, input) {
   }
   if (input) {
     if (0 !== length) {
-      const truncatedJsonString = require(960) /* buildMethodPath */.getTruncatedJsonString(input);
-      const attr = setAttribute.setAttribute(require(958).GEN_AI_REQUEST_MESSAGES_ATTRIBUTE, truncatedJsonString);
+      const truncatedJsonString = require("00960_buildMethodPath.js") /* buildMethodPath */.getTruncatedJsonString(input);
+      const attr = setAttribute.setAttribute(require("metro/00958__.js").GEN_AI_REQUEST_MESSAGES_ATTRIBUTE, truncatedJsonString);
       if (length) {
         const attr1 = setAttribute.setAttribute(tmp2(958).GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE, length);
       }
-      const obj = require(960) /* buildMethodPath */;
+      const obj = require("00960_buildMethodPath.js") /* buildMethodPath */;
       tmp2 = require;
     }
   }

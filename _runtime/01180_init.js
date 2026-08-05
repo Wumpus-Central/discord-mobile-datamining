@@ -275,7 +275,7 @@ export const wrap = function wrap(displayName, profilerProps) {
   };
 };
 export const nativeCrash = function nativeCrash() {
-  const NATIVE = require(1001) /* NativeModules */.NATIVE;
+  const NATIVE = require("01001_NativeModules.js") /* NativeModules */.NATIVE;
   NATIVE.nativeCrash();
 };
 export const flush = function flush() {
@@ -424,7 +424,7 @@ export const close = function close() {
 };
 export const withScope = function withScope(arg0) {
   const _require = arg0;
-  return _require(817).withScope((arg0) => {
+  return _require("00817_registerSpanErrorInstrumentation.js").withScope((arg0) => {
     try {
       return callback(arg0);
     } catch (tmp3) {

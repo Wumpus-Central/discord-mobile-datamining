@@ -25,13 +25,13 @@ arg5.extractTraceparentData = function extractTraceparentData(str) {
 arg5.generateSentryTraceHeader = function generateSentryTraceHeader() {
   let traceId = arg0;
   if (arg0 === undefined) {
-    traceId = require(829) /* generateSpanId */.generateTraceId();
-    const obj = require(829) /* generateSpanId */;
+    traceId = require("00829_generateSpanId.js") /* generateSpanId */.generateTraceId();
+    const obj = require("00829_generateSpanId.js") /* generateSpanId */;
   }
   let spanId = arg1;
   if (arg1 === undefined) {
-    spanId = require(829) /* generateSpanId */.generateSpanId();
-    const obj2 = require(829) /* generateSpanId */;
+    spanId = require("00829_generateSpanId.js") /* generateSpanId */.generateSpanId();
+    const obj2 = require("00829_generateSpanId.js") /* generateSpanId */;
   }
   let str = "";
   if (undefined !== arg2) {
@@ -45,13 +45,13 @@ arg5.generateSentryTraceHeader = function generateSentryTraceHeader() {
 };
 arg5.generateTraceparentHeader = function generateTraceparentHeader(traceId, propagationSpanId2, sampled2) {
   if (traceId === undefined) {
-    traceId = require(829) /* generateSpanId */.generateTraceId();
-    const obj = require(829) /* generateSpanId */;
+    traceId = require("00829_generateSpanId.js") /* generateSpanId */.generateTraceId();
+    const obj = require("00829_generateSpanId.js") /* generateSpanId */;
   }
   let spanId = propagationSpanId2;
   if (propagationSpanId2 === undefined) {
-    spanId = require(829) /* generateSpanId */.generateSpanId();
-    const obj2 = require(829) /* generateSpanId */;
+    spanId = require("00829_generateSpanId.js") /* generateSpanId */.generateSpanId();
+    const obj2 = require("00829_generateSpanId.js") /* generateSpanId */;
   }
   let str = "00";
   if (sampled2) {
@@ -77,7 +77,7 @@ arg5.propagationContextFromHeaders = function propagationContextFromHeaders(str)
       tmp = obj;
     }
   }
-  let result = require(835) /* baggageHeaderToDynamicSamplingContext */.baggageHeaderToDynamicSamplingContext(arg1);
+  let result = require("00835_baggageHeaderToDynamicSamplingContext.js") /* baggageHeaderToDynamicSamplingContext */.baggageHeaderToDynamicSamplingContext(arg1);
   let traceId;
   if (tmp != null) {
     traceId = tmp.traceId;
@@ -134,7 +134,7 @@ arg5.propagationContextFromHeaders = function propagationContextFromHeaders(str)
   }
 };
 arg5.shouldContinueTrace = function shouldContinueTrace(client, org_id) {
-  const result = require(837) /* dsnFromString */.extractOrgIdFromClient(client);
+  const result = require("00837_dsnFromString.js") /* dsnFromString */.extractOrgIdFromClient(client);
   if (org_id) {
     if (result) {
       if (org_id !== result) {

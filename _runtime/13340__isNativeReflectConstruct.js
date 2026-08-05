@@ -222,7 +222,7 @@ let items = [
     value: function shouldComponentUpdate(arg0, arg1) {
       let tmp2 = false === this.props.shouldOptimizeUpdates;
       if (!tmp2) {
-        tmp2 = importDefault(13341)(tmp, arg0, arg1);
+        tmp2 = require("13341_shallowCompare.js")(tmp, arg0, arg1);
       }
       return tmp2;
     }

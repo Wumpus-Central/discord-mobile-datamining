@@ -1,7 +1,7 @@
 // _runtime/04591_CreateDataProperty.js
 
 export default function CreateDataProperty(arg0, arg1, arg2) {
-  if (require(4529) /* isObject */(arg0)) {
+  if (require("04529_isObject.js") /* isObject */(arg0)) {
     if (tmp(4576)(arg1)) {
       const obj = { "[[Configurable]]": true, "[[Enumerable]]": true, "[[Value]]": null, "[[Writable]]": true };
       obj[2] = arg2;

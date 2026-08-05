@@ -398,5 +398,5 @@ export const stopMapper = function stopMapper(_inlinePropsMapperId) {
   fn.__closure = { mapperID: _inlinePropsMapperId };
   fn.__workletHash = 1696829263429;
   fn.__initData = closure_7;
-  require(1613) /* runWorkletOnJS */.runOnUI(fn)();
+  require("01613_runWorkletOnJS.js") /* runWorkletOnJS */.runOnUI(fn)();
 };

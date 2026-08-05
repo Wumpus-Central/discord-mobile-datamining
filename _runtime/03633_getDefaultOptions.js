@@ -10,6 +10,6 @@ if (!assign) {
 }
 
 export default function getDefaultOptions() {
-  return tmp3.default({}, require(3369) /* getDefaultOptions */.getDefaultOptions());
+  return tmp3.default({}, require("03369_getDefaultOptions.js") /* getDefaultOptions */.getDefaultOptions());
 };
 export default exports.default;

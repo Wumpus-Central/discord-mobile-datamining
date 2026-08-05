@@ -35,7 +35,7 @@ const items = [
       }
       tmpResult(tmp10, "Options must be a valid object");
       const tmp3 = Share(38);
-      Share(38)(importDefault(486), "ShareModule should be registered on Android.");
+      Share(38)(require("00486_ShareModule.js"), "ShareModule should be registered on Android.");
       let tmp16 = null == message.title;
       const tmp13 = importDefault;
       const tmpResult1 = Share(38);

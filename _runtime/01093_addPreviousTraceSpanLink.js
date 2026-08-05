@@ -13,7 +13,7 @@ function addPreviousTraceSpanLink(spanContext, spanContext2, sampleRand) {
   let spanId;
   let traceId;
   const _require = sampleRand;
-  let obj = _require(817);
+  let obj = _require("00817_registerSpanErrorInstrumentation.js");
   const spanToJSONResult = obj.spanToJSON(spanContext2);
   const dependencyMap = spanToJSONResult;
   obj = {
@@ -84,11 +84,11 @@ function addPreviousTraceSpanLink(spanContext, spanContext2, sampleRand) {
 }
 function storePreviousTraceInSessionStorage(arg0) {
   try {
-    const sessionStorage = require(1028) /* ignoreNextOnError */.WINDOW.sessionStorage;
+    const sessionStorage = require("01028_ignoreNextOnError.js") /* ignoreNextOnError */.WINDOW.sessionStorage;
     const _JSON = JSON;
     const result = sessionStorage.setItem(sentry_previous_trace, JSON.stringify(arg0));
   } catch (tmp9) {
-    if (require(1072) /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+    if (require("metro/01072___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
       const debug = tmp10(817).debug;
       debug.warn("Could not store previous trace in sessionStorage", tmp9);
     }
@@ -98,7 +98,7 @@ function storePreviousTraceInSessionStorage(arg0) {
 function getPreviousTraceFromSessionStorage() {
   try {
     let value;
-    const sessionStorage = require(1028) /* ignoreNextOnError */.WINDOW.sessionStorage;
+    const sessionStorage = require("01028_ignoreNextOnError.js") /* ignoreNextOnError */.WINDOW.sessionStorage;
     if (sessionStorage != null) {
       value = sessionStorage.getItem(sentry_previous_trace);
     }

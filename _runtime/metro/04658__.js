@@ -100,7 +100,7 @@ export default importAllResult.forwardRef(function ScreenStackItem(unstable_shee
   if (flag5) {
     flag5 = false;
   }
-  importDefault(4640)(flag5, "[RNScreens] Using both `blurEffect` and `scrollEdgeEffects` simultaneously may cause overlapping effects.");
+  require("../04640_warnOnce.js")(flag5, "[RNScreens] Using both `blurEffect` and `scrollEdgeEffects` simultaneously may cause overlapping effects.");
   if ("formSheet" !== stackPresentation) {
     let container = closure_8.container;
   } else if ("fitToContents" === sheetAllowedDetents) {
@@ -109,7 +109,7 @@ export default importAllResult.forwardRef(function ScreenStackItem(unstable_shee
     container = closure_8.container;
   }
   obj = { value: obj1.useEdgeInsetApplication(flag, flag2, flag3).nextContextValue, children: null };
-  obj[1] = callback(importDefault(4659), { contentStyle, style: container, stackPresentation, children });
+  obj[1] = callback(require("../04659_style.js"), { contentStyle, style: container, stackPresentation, children });
   const items1 = [callback(screenId(4647).EdgeInsetApplicationContext.Provider, obj), , ];
   obj = {};
   const merged1 = Object.assign(headerConfig);
@@ -121,7 +121,7 @@ export default importAllResult.forwardRef(function ScreenStackItem(unstable_shee
     tmp18Result = tmp18(tmp2(4662).FooterComponent, obj1);
   }
   items1[2] = tmp18Result;
-  const tmp11 = importDefault(4640);
+  const tmp11 = require("../04640_warnOnce.js");
   const tmp16 = closure_7;
   const tmp17 = closure_6;
   const obj2 = {
@@ -166,5 +166,5 @@ export default importAllResult.forwardRef(function ScreenStackItem(unstable_shee
   obj2[10] = onHeaderHeightChange;
   const merged2 = Object.assign(merged);
   obj2.children = tmp16Result;
-  return callback(importDefault(4635), obj2);
+  return callback(require("../04635_Animated.js"), obj2);
 });

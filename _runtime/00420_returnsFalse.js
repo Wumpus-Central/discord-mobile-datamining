@@ -99,7 +99,7 @@ export default function Switch(ref) {
   let tmp2 = callback2;
   const tmp21 = jsx;
   const tmp7 = importDefault;
-  const tmp9 = importDefault(334)(tmp6, ref.ref);
+  const tmp9 = require("00334_useMergeRefs.js")(tmp6, ref.ref);
   const merged2 = Object.assign(tmp2Result);
   const merged3 = Object.assign(obj);
   let str = merged.accessibilityRole;
@@ -119,5 +119,5 @@ export default function Switch(ref) {
   obj.onResponderTerminationRequest = returnsFalse;
   obj.onStartShouldSetResponder = returnsTrue;
   obj.ref = tmp9;
-  return tmp21(importDefault(421), obj);
+  return tmp21(require("metro/00421___INTERNAL_VIEW_CONFIG.js"), obj);
 };

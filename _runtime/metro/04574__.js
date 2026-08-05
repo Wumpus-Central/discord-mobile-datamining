@@ -20,7 +20,7 @@ try {
     if (!setDunder) {
       setDunder = function setDunder(arg0, arg1) {
         if (null == arg0) {
-          const tmp6 = new require(541)("set Object.prototype.__proto__ called on null or undefined");
+          const tmp6 = new require("00541__.js")("set Object.prototype.__proto__ called on null or undefined");
           throw tmp6;
         } else {
           arg0.__proto__ = arg1;

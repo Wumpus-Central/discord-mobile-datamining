@@ -19,7 +19,7 @@ export const useBottomSheetContentContainerStyle = function useBottomSheetConten
   const tmp = first(animatedFooterHeight(0), 2);
   first = tmp[0];
   const callback = tmp3;
-  let obj = _require(5348);
+  let obj = _require("05348_useBottomSheetInternal.js");
   const bottomSheetInternal = obj.useBottomSheetInternal();
   animatedFooterHeight = bottomSheetInternal.animatedFooterHeight;
   const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
@@ -90,11 +90,11 @@ export const useBottomSheetContentContainerStyle = function useBottomSheetConten
       const obj = callback(table[4]);
     }
   };
-  obj = { enableFooterMarginAdjustment: flag, runOnJS: _require(1606).runOnJS, setFooterHeight: tmp3, Platform: closure_5, animatedContentHeight };
+  obj = { enableFooterMarginAdjustment: flag, runOnJS: _require("01606_cancelAnimation.js").runOnJS, setFooterHeight: tmp3, Platform: closure_5, animatedContentHeight };
   fn.__closure = obj;
   fn.__workletHash = 1149497927090;
   fn.__initData = closure_8;
   const items2 = [animatedFooterHeight, animatedContentHeight, flag];
-  const animatedReaction = _require(1606).useAnimatedReaction(H, fn, items2);
+  const animatedReaction = _require("01606_cancelAnimation.js").useAnimatedReaction(H, fn, items2);
   return tmp6;
 };

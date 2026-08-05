@@ -5,11 +5,11 @@ function pbkdf2Init(sha256, B, B, arg3) {
   let asyncTick;
   let c;
   let dkLen;
-  require(9123) /* number */.hash(sha256);
-  ({ c, dkLen, asyncTick } = require(9122) /* _asyncLoop */.checkOpts({ dkLen: 32, asyncTick: 10 }, arg3));
-  require(9123) /* number */.number(c);
-  require(9123) /* number */.number(dkLen);
-  require(9123) /* number */.number(asyncTick);
+  require("09123_number.js") /* number */.hash(sha256);
+  ({ c, dkLen, asyncTick } = require("09122__asyncLoop.js") /* _asyncLoop */.checkOpts({ dkLen: 32, asyncTick: 10 }, arg3));
+  require("09123_number.js") /* number */.number(c);
+  require("09123_number.js") /* number */.number(dkLen);
+  require("09123_number.js") /* number */.number(asyncTick);
   if (c < 1) {
     const _Error = Error;
     const error = new Error("PBKDF2: iterations (c) should be >= 1");
@@ -30,7 +30,7 @@ function pbkdf2Init(sha256, B, B, arg3) {
     obj[5] = obj._cloneInto().update(toBytesResult1);
     return obj;
   }
-  const checkOptsResult = require(9122) /* _asyncLoop */.checkOpts({ dkLen: 32, asyncTick: 10 }, arg3);
+  const checkOptsResult = require("09122__asyncLoop.js") /* _asyncLoop */.checkOpts({ dkLen: 32, asyncTick: 10 }, arg3);
 }
 function pbkdf2Output(destroy, destroy2, arg2, destroy3, arr) {
   destroy.destroy();
@@ -294,7 +294,7 @@ export const pbkdf2 = function pbkdf2(sha256, B, B, arg3) {
   let dkLen;
   ({ c, dkLen, DK, PRF, PRFSalt } = pbkdf2Init(sha256, B, B, arg3));
   const uint8Array = new Uint8Array(4);
-  const view = require(9122) /* _asyncLoop */.createView(uint8Array);
+  const view = require("09122__asyncLoop.js") /* _asyncLoop */.createView(uint8Array);
   const uint8Array1 = new Uint8Array(PRF.outputLen);
   let num = 0;
   let num2 = 1;

@@ -18,15 +18,15 @@ arg5.callFrameToStackFrame = function callFrameToStackFrame(location, str) {
   const obj = { filename: replaced, module: arg2(replaced), function: null, colno: null, lineno: null, in_app: null };
   let UNKNOWN_FUNCTION = location.functionName;
   if (!UNKNOWN_FUNCTION) {
-    UNKNOWN_FUNCTION = require(833) /* createStackParser */.UNKNOWN_FUNCTION;
+    UNKNOWN_FUNCTION = require("00833_createStackParser.js") /* createStackParser */.UNKNOWN_FUNCTION;
   }
   obj[2] = UNKNOWN_FUNCTION;
   obj[3] = sum;
   obj[4] = sum1;
   let filenameIsInAppResult;
   if (replaced) {
-    filenameIsInAppResult = require(991) /* filenameIsInApp */.filenameIsInApp(replaced);
-    const obj2 = require(991) /* filenameIsInApp */;
+    filenameIsInAppResult = require("00991_filenameIsInApp.js") /* filenameIsInApp */.filenameIsInApp(replaced);
+    const obj2 = require("00991_filenameIsInApp.js") /* filenameIsInApp */;
   }
   obj[5] = filenameIsInAppResult;
   return obj;

@@ -39,7 +39,7 @@ arg5.getEnvelopeEndpointWithUrlEncodedAuth = function getEnvelopeEndpointWithUrl
   return combined1;
 };
 arg5.getReportDialogEndpoint = function getReportDialogEndpoint(arg0, user) {
-  const url = require(7422) /* dsnFromString */.makeDsn(arg0);
+  const url = require("07422_dsnFromString.js") /* dsnFromString */.makeDsn(arg0);
   if (url) {
     let str = "";
     if (url.protocol) {
@@ -119,6 +119,6 @@ arg5.getReportDialogEndpoint = function getReportDialogEndpoint(arg0, user) {
   } else {
     return "";
   }
-  const obj = require(7422) /* dsnFromString */;
+  const obj = require("07422_dsnFromString.js") /* dsnFromString */;
   tmp2 = require;
 };

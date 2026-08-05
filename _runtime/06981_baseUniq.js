@@ -1,7 +1,7 @@
 // _runtime/06981_baseUniq.js
 
 export default function baseUniq(arg0, arg1, arg2) {
-  let tmpResult = require(6982) /* arrayIncludes */;
+  let tmpResult = require("06982_arrayIncludes.js") /* arrayIncludes */;
   const items = [];
   if (arg2) {
     tmpResult = tmp(6986);

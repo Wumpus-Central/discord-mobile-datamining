@@ -2,10 +2,10 @@
 const require = arg1;
 const dependencyMap = arg6;
 arg5.isSentrySpan = function isSentrySpan(c4) {
-  return c4 instanceof require(817) /* registerSpanErrorInstrumentation */.SentrySpan;
+  return c4 instanceof require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.SentrySpan;
 };
 arg5.isRootSpan = function isRootSpan(activeSpan) {
-  return activeSpan === require(817) /* registerSpanErrorInstrumentation */.getRootSpan(activeSpan);
+  return activeSpan === require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.getRootSpan(activeSpan);
 };
 arg5.setEndTimeValue = function setEndTimeValue(outer1_2, _endTime) {
   outer1_2._endTime = _endTime;

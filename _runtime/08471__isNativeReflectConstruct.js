@@ -71,7 +71,7 @@ const items = [
       };
       const obj2 = self(8452);
       const merged1 = Object.assign(obj);
-      return jsx(importDefault(8472), {
+      return jsx(require("metro/08472___INTERNAL_VIEW_CONFIG.js"), {
         ref(arg0) {
           return self.refMethod(arg0);
         }

@@ -26,7 +26,7 @@ function initializeContext(target) {
     metadata = target.metadata;
   }
   if (metadata == null) {
-    metadata = require(12333) /* $output */.globalRegistry;
+    metadata = require("12333__output.js") /* $output */.globalRegistry;
   }
   obj[1] = metadata;
   obj[2] = str;

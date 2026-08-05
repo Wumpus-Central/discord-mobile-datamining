@@ -3,8 +3,8 @@ const require = arg1;
 const dependencyMap = arg6;
 arg5.initAndBind = function initAndBind(arg0, debug) {
   if (true === debug.debug) {
-    const obj = require(7375) /* consoleSandbox */;
-    if (require(7403) /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+    const obj = require("07375_consoleSandbox.js") /* consoleSandbox */;
+    if (require("metro/07403___SENTRY_DEBUG__.js") /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
       const logger = obj.logger;
       logger.enable();
     } else {
@@ -13,16 +13,16 @@ arg5.initAndBind = function initAndBind(arg0, debug) {
       });
     }
   }
-  const currentScope = require(7402) /* getClient */.getCurrentScope();
+  const currentScope = require("07402_getClient.js") /* getClient */.getCurrentScope();
   currentScope.update(debug.initialScope);
   const obj4 = new arg0(debug);
-  const obj2 = require(7402) /* getClient */;
-  const currentScope1 = require(7402) /* getClient */.getCurrentScope();
+  const obj2 = require("07402_getClient.js") /* getClient */;
+  const currentScope1 = require("07402_getClient.js") /* getClient */.getCurrentScope();
   currentScope1.setClient(obj4);
   obj4.init();
   return obj4;
 };
 arg5.setCurrentClient = function setCurrentClient(arg0) {
-  const currentScope = require(7402) /* getClient */.getCurrentScope();
+  const currentScope = require("07402_getClient.js") /* getClient */.getCurrentScope();
   currentScope.setClient(arg0);
 };

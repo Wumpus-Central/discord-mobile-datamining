@@ -2,7 +2,7 @@
 
 export default (arg0, arg1, arg2) => {
   try {
-    const tmp7 = new require(13050) /* Range */(arg1, arg2);
+    const tmp7 = new require("13050_Range.js") /* Range */(arg1, arg2);
     return tmp7.test(arg0);
   } catch (err) {
     return false;

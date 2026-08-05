@@ -13,7 +13,7 @@ for (const key10020 in require("URLSearchParams")) {
 }
 
 export const setupURLPolyfill = function setupURLPolyfill() {
-  globalThis.REACT_NATIVE_URL_POLYFILL = "" + importDefault(13547).name + "@" + importDefault(13547).version;
-  globalThis.URL = require(13548) /* BlobModule */.URL;
-  globalThis.URLSearchParams = require(13561) /* URLSearchParams */.URLSearchParams;
+  globalThis.REACT_NATIVE_URL_POLYFILL = "" + require("metro/13547__.js").name + "@" + require("metro/13547__.js").version;
+  globalThis.URL = require("13548_BlobModule.js") /* BlobModule */.URL;
+  globalThis.URLSearchParams = require("13561_URLSearchParams.js") /* URLSearchParams */.URLSearchParams;
 };

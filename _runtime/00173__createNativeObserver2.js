@@ -160,7 +160,7 @@ obj = {
       tmpResult[tmp4] = tmpResult[closure_12]();
     }
     const tmp2 = callback2(this, closure_13);
-    const tmp9Result = importDefault(70)(callback2(self, closure_8)[closure_8]);
+    const tmp9Result = require("00070_nullthrows.js")(callback2(self, closure_8)[closure_8]);
     if (entryTypes.entryTypes) {
       tmp(self, closure_10)[closure_10] = "multiple";
       let obj = { entryTypes: null };

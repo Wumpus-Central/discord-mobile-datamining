@@ -3,13 +3,13 @@ const require = arg1;
 const dependencyMap = arg6;
 function getOperationName(outer1_1) {
   if (outer1_1.includes("chat.completions")) {
-    let CONVERSATIONS = require(958).OPENAI_OPERATIONS.CHAT;
+    let CONVERSATIONS = require("metro/00958__.js").OPENAI_OPERATIONS.CHAT;
   } else if (outer1_1.includes("responses")) {
-    CONVERSATIONS = require(958).OPENAI_OPERATIONS.RESPONSES;
+    CONVERSATIONS = require("metro/00958__.js").OPENAI_OPERATIONS.RESPONSES;
   } else if (outer1_1.includes("embeddings")) {
-    CONVERSATIONS = require(958).OPENAI_OPERATIONS.EMBEDDINGS;
+    CONVERSATIONS = require("metro/00958__.js").OPENAI_OPERATIONS.EMBEDDINGS;
   } else if (outer1_1.includes("conversations")) {
-    CONVERSATIONS = require(958).OPENAI_OPERATIONS.CONVERSATIONS;
+    CONVERSATIONS = require("metro/00958__.js").OPENAI_OPERATIONS.CONVERSATIONS;
   } else {
     const parts = outer1_1.split(".");
     CONVERSATIONS = parts.pop() || "unknown";
@@ -24,7 +24,7 @@ arg5.addChatCompletionAttributes = function addChatCompletionAttributes(setAttri
   setAttributes.setAttributes({ [closure_0(closure_1[0]).OPENAI_RESPONSE_ID_ATTRIBUTE]: id, [closure_0(closure_1[0]).GEN_AI_RESPONSE_ID_ATTRIBUTE]: id });
   setAttributes.setAttributes({ [closure_0(closure_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: model, [closure_0(closure_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: model });
   let obj = {};
-  obj[require(958).OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = new Date(1000 * created.created).toISOString();
+  obj[require("metro/00958__.js").OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = new Date(1000 * created.created).toISOString();
   setAttributes.setAttributes(obj);
   if (created.usage) {
     const prompt_tokens = created.usage.prompt_tokens;
@@ -94,7 +94,7 @@ arg5.addConversationAttributes = function addConversationAttributes(setAttribute
     const obj = {};
     const _Date = Date;
     const date = new Date(1000 * created_at);
-    obj[require(958).OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = date.toISOString();
+    obj[require("metro/00958__.js").OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = date.toISOString();
     setAttributes.setAttributes(obj);
   }
 };
@@ -124,7 +124,7 @@ arg5.addResponsesApiAttributes = function addResponsesApiAttributes(setAttribute
   setAttributes.setAttributes({ [closure_0(closure_1[0]).OPENAI_RESPONSE_ID_ATTRIBUTE]: id, [closure_0(closure_1[0]).GEN_AI_RESPONSE_ID_ATTRIBUTE]: id });
   setAttributes.setAttributes({ [closure_0(closure_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: model, [closure_0(closure_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: model });
   let obj = {};
-  obj[require(958).OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = new Date(1000 * created_at.created_at).toISOString();
+  obj[require("metro/00958__.js").OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = new Date(1000 * created_at.created_at).toISOString();
   setAttributes.setAttributes(obj);
   if (created_at.status) {
     obj = {};
@@ -194,7 +194,7 @@ arg5.extractRequestParameters = function extractRequestParameters(first) {
     str = "unknown";
   }
   const obj = {};
-  obj[require(958).GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str;
+  obj[require("metro/00958__.js").GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str;
   if ("temperature" in first) {
     obj[tmp(958).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = first.temperature;
   }
@@ -311,29 +311,29 @@ arg5.setCommonResponseAttributes = function setCommonResponseAttributes(closure_
   obj = { [closure_0(closure_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: responseModel, [closure_0(closure_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: responseModel };
   closure_0.setAttributes(obj);
   obj = {};
-  obj[require(958).OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = new Date(1000 * responseTimestamp).toISOString();
+  obj[require("metro/00958__.js").OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = new Date(1000 * responseTimestamp).toISOString();
   closure_0.setAttributes(obj);
 };
 arg5.setTokenUsageAttributes = function setTokenUsageAttributes(setAttributes) {
   if (undefined !== arg1) {
     let obj = {};
-    obj[require(958).OPENAI_USAGE_PROMPT_TOKENS_ATTRIBUTE] = arg1;
-    obj[require(958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = arg1;
+    obj[require("metro/00958__.js").OPENAI_USAGE_PROMPT_TOKENS_ATTRIBUTE] = arg1;
+    obj[require("metro/00958__.js").GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = arg1;
     setAttributes.setAttributes(obj);
   }
   if (undefined !== arg2) {
     obj = {};
-    obj[require(958).OPENAI_USAGE_COMPLETION_TOKENS_ATTRIBUTE] = arg2;
-    obj[require(958).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = arg2;
+    obj[require("metro/00958__.js").OPENAI_USAGE_COMPLETION_TOKENS_ATTRIBUTE] = arg2;
+    obj[require("metro/00958__.js").GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = arg2;
     setAttributes.setAttributes(obj);
   }
   if (undefined !== arg3) {
     obj = {};
-    obj[require(958).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = arg3;
+    obj[require("metro/00958__.js").GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = arg3;
     setAttributes.setAttributes(obj);
   }
 };
 arg5.shouldInstrument = function shouldInstrument(arg0) {
-  const INSTRUMENTED_METHODS = require(964) /* items */.INSTRUMENTED_METHODS;
+  const INSTRUMENTED_METHODS = require("00964_items.js") /* items */.INSTRUMENTED_METHODS;
   return INSTRUMENTED_METHODS.includes(arg0);
 };

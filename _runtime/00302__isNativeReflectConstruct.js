@@ -121,7 +121,7 @@ let obj = {
     }
     items1[1] = tmp8;
     obj[3] = items1;
-    let tmp3Result = tmp3(importDefault(108), obj);
+    let tmp3Result = tmp3(require("00108_View.js"), obj);
     obj = { style: tmp7.mainSubview, collapsable: false, children: null };
     let tmp12 = tmp2;
     let tmp4Result = tmp4(108);
@@ -166,50 +166,50 @@ let items = [
     key: "openDrawer",
     value: function openDrawer() {
       const Commands = DrawerLayoutAndroid(309).Commands;
-      Commands.openDrawer(importDefault(70)(this._nativeRef.current));
+      Commands.openDrawer(require("00070_nullthrows.js")(this._nativeRef.current));
     }
   },
   {
     key: "closeDrawer",
     value: function closeDrawer() {
       const Commands = DrawerLayoutAndroid(309).Commands;
-      Commands.closeDrawer(importDefault(70)(this._nativeRef.current));
+      Commands.closeDrawer(require("00070_nullthrows.js")(this._nativeRef.current));
     }
   },
   {
     key: "blur",
     value: function blur() {
-      importDefault(70)(this._nativeRef.current).blur();
+      require("00070_nullthrows.js")(this._nativeRef.current).blur();
     }
   },
   {
     key: "focus",
     value: function focus() {
-      importDefault(70)(this._nativeRef.current).focus();
+      require("00070_nullthrows.js")(this._nativeRef.current).focus();
     }
   },
   {
     key: "measure",
     value: function measure(arg0) {
-      importDefault(70)(this._nativeRef.current).measure(arg0);
+      require("00070_nullthrows.js")(this._nativeRef.current).measure(arg0);
     }
   },
   {
     key: "measureInWindow",
     value: function measureInWindow(arg0) {
-      importDefault(70)(this._nativeRef.current).measureInWindow(arg0);
+      require("00070_nullthrows.js")(this._nativeRef.current).measureInWindow(arg0);
     }
   },
   {
     key: "measureLayout",
     value: function measureLayout(arg0, arg1, arg2) {
-      importDefault(70)(this._nativeRef.current).measureLayout(arg0, arg1, arg2);
+      require("00070_nullthrows.js")(this._nativeRef.current).measureLayout(arg0, arg1, arg2);
     }
   },
   {
     key: "setNativeProps",
     value: function setNativeProps(arg0) {
-      importDefault(70)(this._nativeRef.current).setNativeProps(arg0);
+      require("00070_nullthrows.js")(this._nativeRef.current).setNativeProps(arg0);
     }
   }
 ];

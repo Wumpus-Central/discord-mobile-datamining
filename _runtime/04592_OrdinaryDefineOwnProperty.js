@@ -1,7 +1,7 @@
 // _runtime/04592_OrdinaryDefineOwnProperty.js
 
 export default function OrdinaryDefineOwnProperty(arg0, arg1, __Writable__) {
-  if (require(4529) /* isObject */(arg0)) {
+  if (require("04529_isObject.js") /* isObject */(arg0)) {
     if (tmp(4576)(arg1)) {
       if (tmp(4580)(__Writable__)) {
         if (tmp(542)) {

@@ -20,7 +20,7 @@ if (!hasOwnPropertyResult) {
   const item = keys.forEach((key10009) => {
     if ("default" === key10009) {
       if (!tmp) {
-        exports[key10009] = require(1024) /* feedbackAsyncIntegration */[key10009];
+        exports[key10009] = require("01024_feedbackAsyncIntegration.js") /* feedbackAsyncIntegration */[key10009];
       }
     } else {
       const _Object = Object;

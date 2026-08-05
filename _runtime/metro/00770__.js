@@ -53,14 +53,14 @@ if (!getNative) {
 }
 if (getNative) {
   toStringTag = function v(_module6) {
-    const tmp3 = require(607) /* toStringTag */(_module6);
+    const tmp3 = require("../00607_toStringTag.js") /* toStringTag */(_module6);
     let constructor;
     if ("[object Object]" == tmp3) {
       constructor = _module6.constructor;
     }
     let str = "";
     if (constructor) {
-      str = require(742) /* toSource */(constructor);
+      str = require("../00742_toSource.js") /* toSource */(constructor);
     }
     if (str) {
       if (getNative === str) {

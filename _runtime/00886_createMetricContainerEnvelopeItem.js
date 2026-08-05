@@ -23,11 +23,11 @@ arg5.createMetricEnvelope = function createMetricEnvelope(item_count, sdk) {
     tmp2 = arg3;
   }
   if (tmp2) {
-    obj.dsn = require(837) /* dsnFromString */.dsnToString(arg3);
-    const obj3 = require(837) /* dsnFromString */;
+    obj.dsn = require("00837_dsnFromString.js") /* dsnFromString */.dsnToString(arg3);
+    const obj3 = require("00837_dsnFromString.js") /* dsnFromString */;
   }
   obj = { type: "trace_metric", item_count: item_count.length, content_type: "application/vnd.sentry.items.trace-metric+json" };
   const items = [obj, { items: item_count }];
   const items1 = [items];
-  return require(864) /* forEachEnvelopeItem */.createEnvelope(obj, items1);
+  return require("00864_forEachEnvelopeItem.js") /* forEachEnvelopeItem */.createEnvelope(obj, items1);
 };

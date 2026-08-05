@@ -25,7 +25,7 @@ export const useRiveList = function useRiveList(arg0, arg1) {
   let tmp5;
   const _require = arg0;
   const dependencyMap = arg1;
-  let obj = _require(4036);
+  let obj = _require("04036_c.js");
   const cResult = obj.c(39);
   [tmp5, _slicedToArray] = callback(disposableMemo(null), 2);
   let tmp = _require;

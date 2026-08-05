@@ -1,5 +1,5 @@
 // _runtime/metro/08813__.js
-import module_8803 from "module_8803";
+import 08803__ from "08803__.js";
 import emptyFunction from "emptyFunction";
 import emptyFunction from "emptyFunction";
 import emptyFunction from "emptyFunction";

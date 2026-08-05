@@ -281,7 +281,7 @@ let items = [
       }
       if (gestureDirection !== layout.gestureDirection) {
         const inverted = self.inverted;
-        inverted.setValue(importDefault(5705)(gestureDirection));
+        inverted.setValue(require("05705_getInvertedMultiplier.js")(gestureDirection));
       }
       const animateToValue = self.getAnimateToValue(self.props);
       if (!tmp7) {
@@ -329,7 +329,7 @@ let items = [
         return obj1;
       } else {
         const sum = -layout.width + gestureResponseDistance;
-        if (1 === importDefault(5705)(gestureDirection)) {
+        if (1 === require("05705_getInvertedMultiplier.js")(gestureDirection)) {
           const obj3 = { minOffsetX: 5, maxDeltaY: 20, hitSlop: null, enableTrackpadTwoFingerGesture: true };
           const obj4 = { right: null };
           obj4[0] = sum;
@@ -385,8 +385,8 @@ let items = [
         const backgroundColor = StyleSheet.flatten(obj).backgroundColor;
         let tmp10 = typeof backgroundColor === "string";
         if (typeof backgroundColor === "string") {
-          tmp10 = 0 === importDefault(5707)(backgroundColor).alpha();
-          const obj19 = importDefault(5707)(backgroundColor);
+          tmp10 = 0 === require("05707_Color.js")(backgroundColor).alpha();
+          const obj19 = require("05707_Color.js")(backgroundColor);
         }
         obj = { value: null, children: null };
         obj[0] = cardAnimation;
@@ -470,7 +470,7 @@ let items = [
         obj11[2] = layout;
         obj11[3] = contentStyle;
         obj11[4] = children;
-        items9[1] = callback4(importDefault(5716), obj11);
+        items9[1] = callback4(require("metro/05716__.js"), obj11);
         obj8[2] = items9;
         obj7.children = closure_14(RN.View, obj8);
         obj6[2] = callback4(Card(5670).PanGestureHandler, obj7);
@@ -478,7 +478,7 @@ let items = [
         obj3.children = items1;
         items[2] = closure_14(View, obj3);
         obj[1] = items;
-        return closure_14(importDefault(5715).Provider, obj);
+        return closure_14(require("05715_noop.js").Provider, obj);
       } else {
         if ("vertical" !== gestureDirection) {
           if ("vertical-inverted" !== gestureDirection) {

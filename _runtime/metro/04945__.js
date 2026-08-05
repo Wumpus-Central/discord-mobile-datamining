@@ -10,12 +10,12 @@ arg5.default = {
       let tmp2 = dependencyMap;
       let obj1 = module(4914);
       let tmp3 = require;
-      let longAt = obj1.getLongAt(byteLength, arg1[num] + require(4904).PNG_CHUNK_LENGTH_OFFSET);
-      let obj2 = require(4897) /* getDataView */;
-      let sum = arg1[num] + require(4904).PNG_CHUNK_TYPE_OFFSET;
-      let stringFromDataView = obj2.getStringFromDataView(byteLength, sum, require(4904).PNG_CHUNK_TYPE_SIZE);
+      let longAt = obj1.getLongAt(byteLength, arg1[num] + require("04904__.js").PNG_CHUNK_LENGTH_OFFSET);
+      let obj2 = require("../04897_getDataView.js") /* getDataView */;
+      let sum = arg1[num] + require("04904__.js").PNG_CHUNK_TYPE_OFFSET;
+      let stringFromDataView = obj2.getStringFromDataView(byteLength, sum, require("04904__.js").PNG_CHUNK_TYPE_SIZE);
       let tmp7 = num;
-      if (stringFromDataView === require(4904).TYPE_PHYS) {
+      if (stringFromDataView === require("04904__.js").TYPE_PHYS) {
         let tmp22 = arg1[num];
         let tmp23 = 4 <= longAt && tmp22 + tmp3(4904).PNG_CHUNK_DATA_OFFSET + 4 <= byteLength.byteLength;
         let tmp24;

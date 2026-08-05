@@ -105,13 +105,13 @@ if (self2) {
     const _Object4 = Object;
     let obj = { enumerable: true, get: null };
     obj[1] = function get() {
-      return require(12336) /* stringProcessor */.toJSONSchema;
+      return require("../12336_stringProcessor.js") /* stringProcessor */.toJSONSchema;
     };
     Object.defineProperty(exports, "toJSONSchema", obj);
     const _Object5 = Object;
     obj = { enumerable: true, get: null };
     obj[1] = function get() {
-      return require(12337) /* JSONSchemaGenerator */.JSONSchemaGenerator;
+      return require("../12337_JSONSchemaGenerator.js") /* JSONSchemaGenerator */.JSONSchemaGenerator;
     };
     Object.defineProperty(exports, "JSONSchemaGenerator", obj);
     exports.JSONSchema = fn2(require("module_12338"));

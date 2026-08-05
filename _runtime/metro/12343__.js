@@ -59,7 +59,7 @@ if (self2) {
     let closure_5 = fn(require("mergeDefs"));
     function initializer(prototype) {
       const _require = prototype;
-      const $ZodError = _require(12273).$ZodError;
+      const $ZodError = _require("12273__.js").$ZodError;
       $ZodError.init(prototype, arg1);
       prototype.name = "ZodError";
       let obj = {

@@ -5,7 +5,7 @@ let obj = { accentBackground: "rgba(88, 74, 192, 1)", accentForeground: "#ffffff
 obj = { accentBackground: "rgba(88, 74, 192, 1)", accentForeground: "#ffffff", foreground: "#ebe6ef", background: "#29232f", border: "rgba(235, 230, 239, 0.15)", feedbackIcon: "#ffffff", sentryLogo: "#ffffff" };
 
 export const getTheme = function getTheme() {
-  const obj = require(1133) /* _getClientIntegration */;
+  const obj = require("01133__getClientIntegration.js") /* _getClientIntegration */;
   let colorScheme = obj.getColorScheme();
   if ("system" === colorScheme) {
     colorScheme = Appearance.getColorScheme();

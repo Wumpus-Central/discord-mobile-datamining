@@ -4,7 +4,7 @@ const dependencyMap = arg6;
 function primitiveEq(arg0, arg1, arg2) {
   if (arg1 === arg2) {
     return true;
-  } else if (arg0 !== require(1320) /* RepeatType */.ScalarType.BYTES) {
+  } else if (arg0 !== require("01320_RepeatType.js") /* RepeatType */.ScalarType.BYTES) {
     return false;
   } else if (arg1.length !== arg2.length) {
     return false;
@@ -34,7 +34,7 @@ function repeatedPrimitiveEq(arg0, arg1, arg2) {
           let tmp2 = require;
           let tmp3 = dependencyMap;
           flag = false;
-          if (arg0 === require(1320) /* RepeatType */.ScalarType.BYTES) {
+          if (arg0 === require("01320_RepeatType.js") /* RepeatType */.ScalarType.BYTES) {
             flag = false;
             if (arr.length === arr2.length) {
               let num = 0;
@@ -132,7 +132,7 @@ arg5.reflectionEquals = function reflectionEquals(fields, arg1, arg2) {
                   if ("enum" == obj.V.kind) {
                     let tmp31 = require;
                     let tmp32 = dependencyMap;
-                    let T = require(1320) /* RepeatType */.ScalarType.INT32;
+                    let T = require("01320_RepeatType.js") /* RepeatType */.ScalarType.INT32;
                   } else {
                     let tmp30 = nextResult;
                     T = obj.V.T;
@@ -178,7 +178,7 @@ arg5.reflectionEquals = function reflectionEquals(fields, arg1, arg2) {
           if ("enum" == obj.kind) {
             let tmp48 = require;
             let tmp49 = dependencyMap;
-            let T2 = require(1320) /* RepeatType */.ScalarType.INT32;
+            let T2 = require("01320_RepeatType.js") /* RepeatType */.ScalarType.INT32;
           } else {
             let tmp47 = nextResult;
             T2 = obj.T;

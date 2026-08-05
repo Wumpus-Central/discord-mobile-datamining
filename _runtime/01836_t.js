@@ -9,8 +9,8 @@ const fn = function t(arg0, arg1, arg2) {
       const items = [0, arg1];
       const _Math = Math;
       const items1 = [0, Math.max(arg1 - arg2, 0)];
-      interpolateResult = require(1606) /* cancelAnimation */.interpolate(arg0, items, items1);
-      const obj = require(1606) /* cancelAnimation */;
+      interpolateResult = require("01606_cancelAnimation.js") /* cancelAnimation */.interpolate(arg0, items, items1);
+      const obj = require("01606_cancelAnimation.js") /* cancelAnimation */;
     }
   }
   return interpolateResult;

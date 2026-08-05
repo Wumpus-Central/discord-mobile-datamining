@@ -11,6 +11,6 @@ if (!requiredArgs) {
 
 export default function secondsToMilliseconds(arg0) {
   tmp3.default(1, arguments);
-  return arg0 * require(3543) /* keys */.millisecondsInSecond;
+  return arg0 * require("03543_keys.js") /* keys */.millisecondsInSecond;
 };
 export default exports.default;

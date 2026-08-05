@@ -1,7 +1,7 @@
 // _runtime/04597_isFullyPopulatedPropertyDescriptor.js
 
 export default function isFullyPopulatedPropertyDescriptor(IsAccessorDescriptor) {
-  let tmp = require(4580) /* isPropertyDescriptor */(arg1);
+  let tmp = require("04580_isPropertyDescriptor.js") /* isPropertyDescriptor */(arg1);
   if (tmp) {
     tmp = "[[Enumerable]]" in arg1;
   }

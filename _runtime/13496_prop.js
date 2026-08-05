@@ -3,7 +3,7 @@ let prop = Object.getOwnPropertySymbols;
 if (prop) {
   prop = !require("module_13481")(() => {
     const SymbolResult = Symbol("symbol detection");
-    const StringResult = require(13477).String(SymbolResult);
+    const StringResult = require("metro/13477__.js").String(SymbolResult);
     let tmp5 = !StringResult;
     if (StringResult) {
       const _Object = Object;

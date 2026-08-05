@@ -3,7 +3,7 @@ const require = arg1;
 const dependencyMap = arg6;
 arg5.getSupportedCalendars = function getSupportedCalendars(locale) {
   const _require = locale;
-  const calendars = _require(13460).calendars;
+  const calendars = _require("metro/13460__.js").calendars;
   return calendars.filter((arg0) => (function isSupportedCalendar(arg0, closure_0) {
     let str = closure_0;
     if (undefined === closure_0) {

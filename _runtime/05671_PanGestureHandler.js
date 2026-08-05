@@ -10,8 +10,8 @@ export const PanGestureHandler = function PanGestureHandler(arg0) {
   obj = {};
   const merged = Object.assign(arg0);
   obj.ref = ref;
-  obj[1] = jsx(require(5368) /* Directions */.PanGestureHandler, {});
-  return jsx(importDefault(5672).Provider, {});
+  obj[1] = jsx(require("05368_Directions.js") /* Directions */.PanGestureHandler, {});
+  return jsx(require("05672_noop.js").Provider, {});
 };
 export const GestureHandlerRootView = require("Directions").GestureHandlerRootView;
 export const GestureState = require("Directions").State;

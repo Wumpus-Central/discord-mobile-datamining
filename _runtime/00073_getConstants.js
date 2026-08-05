@@ -4,15 +4,15 @@ import merged from "UIManager";
 const require = arg1;
 function getConstants() {
   if (!c7) {
-    const constants = importDefault(74).getConstants();
+    const constants = require("00074_UIManager.js").getConstants();
     c7 = true;
-    const obj = importDefault(74);
+    const obj = require("00074_UIManager.js");
   }
   return constants;
 }
 function getViewManagerConfig(arg0) {
   if (undefined === dependencyMap[arg0]) {
-    if (importDefault(74).getConstantsForViewManager) {
+    if (require("00074_UIManager.js").getConstantsForViewManager) {
       try {
         tmp3[arg0] = tmp4(74).getConstantsForViewManager(arg0);
         const tmp4Result = tmp4(74);
@@ -27,7 +27,7 @@ function getViewManagerConfig(arg0) {
   if (dependencyMap[arg0]) {
     return tmp10;
   } else if (global.nativeCallSyncHook) {
-    if (importDefault(74).lazilyLoadView) {
+    if (require("00074_UIManager.js").lazilyLoadView) {
       if (!set.has(arg0)) {
         const tmp15 = tmp12(70)(tmp12(74).lazilyLoadView)(arg0);
         obj2.add(arg0);
@@ -98,13 +98,13 @@ let arr = {};
 let c7 = false;
 let obj = {};
 obj.createView = function createView(arg0, arg1, arg2, arg3) {
-  const view = importDefault(74).createView(arg0, arg1, arg2, arg3);
+  const view = require("00074_UIManager.js").createView(arg0, arg1, arg2, arg3);
 };
 obj.getConstants = function getConstants() {
   if (!c7) {
-    const constants = importDefault(74).getConstants();
+    const constants = require("00074_UIManager.js").getConstants();
     c7 = true;
-    const obj = importDefault(74);
+    const obj = require("00074_UIManager.js");
   }
   return constants;
 };
@@ -124,13 +124,13 @@ if (arr.ViewManagerNames) {
   const ViewManagerNames = require("UIManager").getConstants().ViewManagerNames;
   let item = ViewManagerNames.forEach((arg0) => {
     let closure_0 = arg0;
-    let obj = require(49) /* defineLazyObjectProperty */;
+    let obj = require("00049_defineLazyObjectProperty.js") /* defineLazyObjectProperty */;
     obj = {
       get() {
         return outer1_2(outer1_3[1])(outer1_2(outer1_3[0]).getConstantsForViewManager)(closure_0);
       }
     };
-    obj.default(importDefault(74), arg0, obj);
+    obj.default(require("00074_UIManager.js"), arg0, obj);
   });
   const importDefaultResult1 = require("UIManager");
 }
@@ -146,7 +146,7 @@ if (!global.nativeCallSyncHook) {
     if (!_default.includes(arg0)) {
       if (!dependencyMap[arg0]) {
         if (!c7) {
-          let obj = importDefault(74);
+          let obj = require("00074_UIManager.js");
           const table = obj.getConstants();
           c7 = true;
         }
@@ -157,8 +157,8 @@ if (!global.nativeCallSyncHook) {
         console.warn("Accessing view manager configs directly off UIManager via UIManager['" + closure_0 + "'] is no longer supported. Use UIManager.getViewManagerConfig('" + closure_0 + "') instead.");
         return outer1_10.getViewManagerConfig(closure_0);
       };
-      require(49) /* defineLazyObjectProperty */.default(importDefault(74), arg0, obj);
-      const tmpResult = require(49) /* defineLazyObjectProperty */;
+      require("00049_defineLazyObjectProperty.js") /* defineLazyObjectProperty */.default(require("00074_UIManager.js"), arg0, obj);
+      const tmpResult = require("00049_defineLazyObjectProperty.js") /* defineLazyObjectProperty */;
     }
   });
 }

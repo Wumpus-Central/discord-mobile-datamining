@@ -6,7 +6,7 @@ export default function isFinite(num) {
     tmp = typeof num === "bigint";
   }
   if (tmp) {
-    tmp = !require(572) /* isNaN */(num);
+    tmp = !require("00572_isNaN.js") /* isNaN */(num);
   }
   if (tmp) {
     tmp = num !== Infinity;

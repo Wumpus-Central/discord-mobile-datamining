@@ -71,10 +71,10 @@ QRPolynomial.prototype = {
             let sum = num + num2;
             let tmp4 = require;
             let tmp5 = dependencyMap;
-            let obj = require(9030);
-            let obj2 = require(9030);
+            let obj = require("metro/09030__.js");
+            let obj2 = require("metro/09030__.js");
             let glogResult = obj2.glog(self.get(num));
-            let obj3 = require(9030);
+            let obj3 = require("metro/09030__.js");
             arr[sum] = arr[sum] ^ obj.gexp(glogResult + obj3.glog(getLength.get(num2)));
             num2 = num2 + 1;
             length1 = getLength.getLength();
@@ -128,10 +128,10 @@ QRPolynomial.prototype = {
     if (length - getLength.getLength() < 0) {
       return self;
     } else {
-      const obj4 = require(9030);
-      const glogResult = require(9030).glog(self.get(0));
+      const obj4 = require("metro/09030__.js");
+      const glogResult = require("metro/09030__.js").glog(self.get(0));
       const _Array2 = Array;
-      const diff = glogResult - require(9030).glog(getLength.get(0));
+      const diff = glogResult - require("metro/09030__.js").glog(getLength.get(0));
       const arr = new Array(self.getLength());
       let num = 0;
       if (0 < self.getLength()) {
@@ -146,8 +146,8 @@ QRPolynomial.prototype = {
         do {
           let tmp3 = require;
           let tmp4 = dependencyMap;
-          let obj = require(9030);
-          let obj2 = require(9030);
+          let obj = require("metro/09030__.js");
+          let obj2 = require("metro/09030__.js");
           arr[num2] = arr[num2] ^ obj.gexp(obj2.glog(getLength.get(num2)) + diff);
           num2 = num2 + 1;
           length2 = getLength.getLength();
@@ -188,7 +188,7 @@ QRPolynomial.prototype = {
         }
         return obj.mod(getLength);
       }
-      const obj5 = require(9030);
+      const obj5 = require("metro/09030__.js");
     }
     length = this.getLength();
   }

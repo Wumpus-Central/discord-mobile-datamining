@@ -2,7 +2,7 @@
 const require = arg1;
 const dependencyMap = arg6;
 function getHandler(arg0, onBegin) {
-  if (require(5407) /* _isNativeReflectConstruct */.CALLBACK_TYPE.BEGAN === arg0) {
+  if (require("05407__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.CALLBACK_TYPE.BEGAN === arg0) {
     return onBegin.onBegin;
   } else if (tmp(5407).CALLBACK_TYPE.START === arg0) {
     return onBegin.onStart;
@@ -29,7 +29,7 @@ getHandler.__closure = obj;
 getHandler.__workletHash = 12174736290982;
 getHandler.__initData = { code: "function getHandler_Pnpm_useAnimatedGestureTs1(type,gesture){const{CALLBACK_TYPE}=this.__closure;switch(type){case CALLBACK_TYPE.BEGAN:return gesture.onBegin;case CALLBACK_TYPE.START:return gesture.onStart;case CALLBACK_TYPE.UPDATE:return gesture.onUpdate;case CALLBACK_TYPE.CHANGE:return gesture.onChange;case CALLBACK_TYPE.END:return gesture.onEnd;case CALLBACK_TYPE.FINALIZE:return gesture.onFinalize;case CALLBACK_TYPE.TOUCHES_DOWN:return gesture.onTouchesDown;case CALLBACK_TYPE.TOUCHES_MOVE:return gesture.onTouchesMove;case CALLBACK_TYPE.TOUCHES_UP:return gesture.onTouchesUp;case CALLBACK_TYPE.TOUCHES_CANCELLED:return gesture.onTouchesCancelled;}}" };
 function touchEventTypeToCallbackType(arg0) {
-  if (require(5376).TouchEventType.TOUCHES_DOWN === arg0) {
+  if (require("metro/05376__.js").TouchEventType.TOUCHES_DOWN === arg0) {
     return tmp(5407).CALLBACK_TYPE.TOUCHES_DOWN;
   } else if (tmp(5376).TouchEventType.TOUCHES_MOVE === arg0) {
     return tmp(5407).CALLBACK_TYPE.TOUCHES_MOVE;
@@ -56,8 +56,8 @@ function runWorklet(arg0, arg1, arg2) {
     }
   } else if (tmp2) {
     const _console = console;
-    console.warn(require(5372) /* toArray */.tagMessage("Animated gesture callback must be a worklet"));
-    const obj = require(5372) /* toArray */;
+    console.warn(require("05372_toArray.js") /* toArray */.tagMessage("Animated gesture callback must be a worklet"));
+    const obj = require("05372_toArray.js") /* toArray */;
   }
 }
 obj = { getHandler, tagMessage: require("toArray").tagMessage };

@@ -72,7 +72,7 @@ let items = [
       const props = this.props;
       let obj = self(8452);
       const propsAndStylesResult = obj.propsAndStyles(props);
-      const tmp5 = importDefault(8452)(propsAndStylesResult, this);
+      const tmp5 = require("08452_extractProps.js")(propsAndStylesResult, this);
       const obj2 = self(8459);
       const tmp4 = importDefault;
       if (typeof hasProps !== "function") {

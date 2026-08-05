@@ -13,8 +13,8 @@ export const getTraceData = function getTraceData() {
   if (arg0 === undefined) {
     obj = {};
   }
-  const client = require(7402) /* getClient */.getClient();
-  const obj2 = require(7402) /* getClient */;
+  const client = require("07402_getClient.js") /* getClient */.getClient();
+  const obj2 = require("07402_getClient.js") /* getClient */;
   if (obj3.isEnabled()) {
     if (client) {
       let tmpResult = tmp(7393);

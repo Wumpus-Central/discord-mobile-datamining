@@ -4,7 +4,7 @@ import noop from "noop";
 
 export default function useFocusEffect(c5) {
   const importDefault = c5;
-  let tmp = importDefault(1532)();
+  let tmp = require("01532_useNavigation.js")();
   const dependencyMap = tmp;
   if (undefined !== arguments[1]) {
     const _console = console;

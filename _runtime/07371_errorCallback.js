@@ -2,7 +2,7 @@
 const require = arg1;
 const dependencyMap = arg6;
 function errorCallback() {
-  let obj = require(7380) /* spanTimeInputToSeconds */;
+  let obj = require("07380_spanTimeInputToSeconds.js") /* spanTimeInputToSeconds */;
   const activeSpan = obj.getActiveSpan();
   let rootSpan = activeSpan;
   if (activeSpan) {
@@ -25,9 +25,9 @@ errorCallback.tag = "sentry_tracingErrorCallback";
 arg5.registerSpanErrorInstrumentation = function registerSpanErrorInstrumentation() {
   if (!c2) {
     c2 = true;
-    const result = require(7372) /* instrumentError */.addGlobalErrorInstrumentationHandler(errorCallback);
-    const obj = require(7372) /* instrumentError */;
-    const result1 = require(7379) /* instrumentUnhandledRejection */.addGlobalUnhandledRejectionInstrumentationHandler(errorCallback);
-    const obj2 = require(7379) /* instrumentUnhandledRejection */;
+    const result = require("07372_instrumentError.js") /* instrumentError */.addGlobalErrorInstrumentationHandler(errorCallback);
+    const obj = require("07372_instrumentError.js") /* instrumentError */;
+    const result1 = require("07379_instrumentUnhandledRejection.js") /* instrumentUnhandledRejection */.addGlobalUnhandledRejectionInstrumentationHandler(errorCallback);
+    const obj2 = require("07379_instrumentUnhandledRejection.js") /* instrumentUnhandledRejection */;
   }
 };

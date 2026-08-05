@@ -3,7 +3,7 @@ import formatDistance from "formatDistance";
 import buildFormatLongFn from "buildFormatLongFn";
 import formatRelative from "formatRelative";
 import localeToNumber from "localeToNumber";
-import module_3833 from "module_3833";
+import 03833__ from "metro/03833__.js";
 
 if (!formatDistance) {
   let obj = { default: null };

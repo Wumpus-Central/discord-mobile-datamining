@@ -1,5 +1,5 @@
 // _runtime/01606_cancelAnimation.js
-import module_1607 from "module_1607";
+import 01607__ from "metro/01607__.js";
 import overrideLogFunctionImplementation from "overrideLogFunctionImplementation";
 
 overrideLogFunctionImplementation.initializeUIRuntime(require("ReanimatedModule").ReanimatedModule);

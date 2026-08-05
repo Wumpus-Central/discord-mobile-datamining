@@ -8,7 +8,7 @@ export const debug = function debug(message, attributes, attributes) {
     obj = {};
   }
   obj = { level: "debug", message, attributes, severityNumber: "accessibilityRole" };
-  require(880) /* _INTERNAL_captureSerializedLog */._INTERNAL_captureLog(obj, obj.scope);
+  require("00880__INTERNAL_captureSerializedLog.js") /* _INTERNAL_captureSerializedLog */._INTERNAL_captureLog(obj, obj.scope);
 };
 export const error = function error(message, attributes, attributes) {
   let obj = attributes;
@@ -16,7 +16,7 @@ export const error = function error(message, attributes, attributes) {
     obj = {};
   }
   obj = { level: "error", message, attributes, severityNumber: "HermesInternal" };
-  require(880) /* _INTERNAL_captureSerializedLog */._INTERNAL_captureLog(obj, obj.scope);
+  require("00880__INTERNAL_captureSerializedLog.js") /* _INTERNAL_captureSerializedLog */._INTERNAL_captureLog(obj, obj.scope);
 };
 export const fatal = function fatal(message, attributes, attributes) {
   let obj = attributes;
@@ -24,7 +24,7 @@ export const fatal = function fatal(message, attributes, attributes) {
     obj = {};
   }
   obj = { level: "fatal", message, attributes, severityNumber: "e" };
-  require(880) /* _INTERNAL_captureSerializedLog */._INTERNAL_captureLog(obj, obj.scope);
+  require("00880__INTERNAL_captureSerializedLog.js") /* _INTERNAL_captureSerializedLog */._INTERNAL_captureLog(obj, obj.scope);
 };
 export const info = function info(message, attributes, attributes) {
   let obj = attributes;
@@ -32,7 +32,7 @@ export const info = function info(message, attributes, attributes) {
     obj = {};
   }
   obj = { level: "info", message, attributes, severityNumber: "accessibilityRole" };
-  require(880) /* _INTERNAL_captureSerializedLog */._INTERNAL_captureLog(obj, obj.scope);
+  require("00880__INTERNAL_captureSerializedLog.js") /* _INTERNAL_captureSerializedLog */._INTERNAL_captureLog(obj, obj.scope);
 };
 export const trace = function trace(message, attributes, attributes) {
   let obj = attributes;
@@ -40,7 +40,7 @@ export const trace = function trace(message, attributes, attributes) {
     obj = {};
   }
   obj = { level: "trace", message, attributes, severityNumber: "accessibilityRole" };
-  require(880) /* _INTERNAL_captureSerializedLog */._INTERNAL_captureLog(obj, obj.scope);
+  require("00880__INTERNAL_captureSerializedLog.js") /* _INTERNAL_captureSerializedLog */._INTERNAL_captureLog(obj, obj.scope);
 };
 export const warn = function warn(message, attributes, attributes) {
   let obj = attributes;
@@ -48,5 +48,5 @@ export const warn = function warn(message, attributes, attributes) {
     obj = {};
   }
   obj = { level: "warn", message, attributes, severityNumber: "channel_id" };
-  require(880) /* _INTERNAL_captureSerializedLog */._INTERNAL_captureLog(obj, obj.scope);
+  require("00880__INTERNAL_captureSerializedLog.js") /* _INTERNAL_captureSerializedLog */._INTERNAL_captureLog(obj, obj.scope);
 };

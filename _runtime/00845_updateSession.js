@@ -22,8 +22,8 @@ function updateSession(ipAddress) {
   }
   let timestamp = obj.timestamp;
   if (!timestamp) {
-    timestamp = require(838) /* dateTimestampInSeconds */.timestampInSeconds();
-    const obj2 = require(838) /* dateTimestampInSeconds */;
+    timestamp = require("00838_dateTimestampInSeconds.js") /* dateTimestampInSeconds */.timestampInSeconds();
+    const obj2 = require("00838_dateTimestampInSeconds.js") /* dateTimestampInSeconds */;
   }
   ipAddress.timestamp = timestamp;
   if (obj.abnormal_mechanism) {
@@ -92,8 +92,8 @@ function updateSession(ipAddress) {
     if (32 === obj.sid.length) {
       let sid = obj.sid;
     } else {
-      sid = require(830) /* addContextToFrame */.uuid4();
-      const obj3 = require(830) /* addContextToFrame */;
+      sid = require("00830_addContextToFrame.js") /* addContextToFrame */.uuid4();
+      const obj3 = require("00830_addContextToFrame.js") /* addContextToFrame */;
     }
     ipAddress.sid = sid;
   }

@@ -120,7 +120,7 @@ if (typeof global.crypto.getRandomValues !== "function") {
       }
       const _Uint8Array2 = Uint8Array;
       uint8Array = new Uint8Array(uint8Array.buffer, uint8Array.byteOffset, uint8Array.byteLength);
-      require(13569) /* base64Decode */(randomBase64, uint8Array);
+      require("13569_base64Decode.js") /* base64Decode */(randomBase64, uint8Array);
       return uint8Array;
     }
   };

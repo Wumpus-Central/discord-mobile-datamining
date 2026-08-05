@@ -10,10 +10,10 @@ const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onDrawe
 obj[2] = obj;
 obj = {
   openDrawer(arg0) {
-    require(114) /* renderElement */.dispatchCommand(arg0, "openDrawer", []);
+    require("../00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "openDrawer", []);
   },
   closeDrawer(arg0) {
-    require(114) /* renderElement */.dispatchCommand(arg0, "closeDrawer", []);
+    require("../00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "closeDrawer", []);
   }
 };
 

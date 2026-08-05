@@ -8,9 +8,9 @@ arg5.default = {
     let iter;
     let obj = module(4902);
     const byteOrder = obj.getByteOrder(buffer, sum);
-    let obj1 = require(4917) /* readTag */;
-    let obj2 = require(4917) /* readTag */;
-    const ifd = obj1.readIfd(buffer, require(4918) /* importDefaultResult1 */.IFD_TYPE_MPF, sum, obj2.get0thIfdOffset(buffer, sum, byteOrder), byteOrder, arg2);
+    let obj1 = require("../04917_readTag.js") /* readTag */;
+    let obj2 = require("../04917_readTag.js") /* readTag */;
+    const ifd = obj1.readIfd(buffer, require("../04918_importDefaultResult1.js") /* importDefaultResult1 */.IFD_TYPE_MPF, sum, obj2.get0thIfdOffset(buffer, sum, byteOrder), byteOrder, arg2);
     if (ifd.MPEntry) {
       const items = [];
       const _Math = Math;
@@ -202,7 +202,7 @@ arg5.default = {
             items[num13].image = buffer.slice(0, num22);
             let tmp33 = require;
             let tmp34 = dependencyMap;
-            let obj15 = require(4897) /* getDataView */;
+            let obj15 = require("../04897_getDataView.js") /* getDataView */;
             let deferInitResult = obj15.deferInit(items[num13], "base64", function() {
               return callback(table[4]).getBase64Image(this.image);
             });

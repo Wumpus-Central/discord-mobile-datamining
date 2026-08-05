@@ -1,6 +1,6 @@
 // _runtime/09021_QRCode.js
 import QRCode from "QRCode";
-import module_9026 from "module_9026";
+import 09026__ from "metro/09026__.js";
 import emptyFunction from "emptyFunction";
 import noop from "noop";
 import QRCodeSvg from "QRCodeSvg";

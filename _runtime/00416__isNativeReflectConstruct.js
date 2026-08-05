@@ -98,7 +98,7 @@ let items = [
       const tmp = callback(props, closure_3);
       const merged = Object.assign(tmp);
       ({ _setNativeRef: obj.ref, _onRefresh: obj.onRefresh } = this);
-      return jsx(importDefault(417), {});
+      return jsx(require("metro/00417___INTERNAL_VIEW_CONFIG.js"), {});
     }
   }
 ];

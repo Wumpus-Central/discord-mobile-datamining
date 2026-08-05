@@ -4,7 +4,7 @@ import digitsToString from "digitsToString";
 
 
 export const ToIntlMathematicalValue = function ToIntlMathematicalValue(arg0) {
-  const ToPrimitiveResult = require(13384) /* __exportStarResult32 */.ToPrimitive(arg0, "number");
+  const ToPrimitiveResult = require("13384___exportStarResult32.js") /* __exportStarResult32 */.ToPrimitive(arg0, "number");
   if (typeof ToPrimitiveResult === "bigint") {
     const _default = new digitsToString.default(ToPrimitiveResult);
     return _default;

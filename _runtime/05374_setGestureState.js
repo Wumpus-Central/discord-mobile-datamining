@@ -38,7 +38,7 @@ function create(handlerTag) {
       return;
     }
   }
-  obj = { REANIMATED_AVAILABLE: closure_3, setGestureState, handlerTag, State: _require(5373).State, warningMessage: closure_2 };
+  obj = { REANIMATED_AVAILABLE: closure_3, setGestureState, handlerTag, State: _require("metro/05373__.js").State, warningMessage: closure_2 };
   T.__closure = obj;
   T.__workletHash = 4799367197403;
   T.__initData = closure_5;
@@ -60,7 +60,7 @@ function create(handlerTag) {
       return;
     }
   }
-  obj = { REANIMATED_AVAILABLE: closure_3, setGestureState, handlerTag, State: _require(5373).State, warningMessage: closure_2 };
+  obj = { REANIMATED_AVAILABLE: closure_3, setGestureState, handlerTag, State: _require("metro/05373__.js").State, warningMessage: closure_2 };
   S.__closure = obj;
   S.__workletHash = 7932903515929;
   S.__initData = closure_6;
@@ -73,7 +73,7 @@ function create(handlerTag) {
       console.warn(outer1_2);
     }
   };
-  fn.__closure = { REANIMATED_AVAILABLE: closure_3, setGestureState, handlerTag, State: _require(5373).State, warningMessage: closure_2 };
+  fn.__closure = { REANIMATED_AVAILABLE: closure_3, setGestureState, handlerTag, State: _require("metro/05373__.js").State, warningMessage: closure_2 };
   fn.__workletHash = 6492077607729;
   fn.__initData = closure_7;
   obj[3] = fn;
@@ -85,8 +85,8 @@ function create(handlerTag) {
       console.warn(outer1_2);
     }
   };
-  const obj1 = { REANIMATED_AVAILABLE: closure_3, setGestureState, handlerTag, State: _require(5373).State, warningMessage: closure_2 };
-  fn2.__closure = { REANIMATED_AVAILABLE: closure_3, setGestureState, handlerTag, State: _require(5373).State, warningMessage: closure_2 };
+  const obj1 = { REANIMATED_AVAILABLE: closure_3, setGestureState, handlerTag, State: _require("metro/05373__.js").State, warningMessage: closure_2 };
+  fn2.__closure = { REANIMATED_AVAILABLE: closure_3, setGestureState, handlerTag, State: _require("metro/05373__.js").State, warningMessage: closure_2 };
   fn2.__workletHash = 2856860112444;
   fn2.__initData = closure_8;
   obj[4] = fn2;

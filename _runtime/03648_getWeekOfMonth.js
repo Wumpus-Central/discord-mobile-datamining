@@ -48,7 +48,7 @@ let closure_6 = tmp11;
 
 export default function getWeekOfMonth(arg0, weekStartsOn) {
   tmp9.default(1, arguments);
-  const defaultOptions = require(3369) /* getDefaultOptions */.getDefaultOptions();
+  const defaultOptions = require("03369_getDefaultOptions.js") /* getDefaultOptions */.getDefaultOptions();
   weekStartsOn = undefined;
   if (null != weekStartsOn) {
     weekStartsOn = weekStartsOn.weekStartsOn;

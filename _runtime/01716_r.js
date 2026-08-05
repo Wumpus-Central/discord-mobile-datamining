@@ -125,8 +125,8 @@ fn4.__closure = {};
 fn4.__workletHash = 13235944247491;
 fn4.__initData = { code: "function pnpm_colorsTs8(){return'DynamicColorIOS is not available on this platform.';}" };
 function processColorNumber(arr) {
-  const result = require(1649) /* call */.processColorInitially(arr);
-  const obj = require(1649) /* call */;
+  const result = require("01649_call.js") /* call */.processColorInitially(arr);
+  const obj = require("01649_call.js") /* call */;
   let tmp3 = result;
   if (tmp2) {
     tmp3 = result | 0;
@@ -191,7 +191,7 @@ function processColor(arr, target) {
   if (typeof processColorNumber !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj = require(1649) /* call */;
+  const obj = require("01649_call.js") /* call */;
   const result = obj.processColorInitially(arr);
   let tmp5 = result;
   if (tmp4) {
@@ -256,7 +256,7 @@ function processColor(arr, target) {
       }
     }
   }
-  tmp4 = require(1717) /* JEST_WORKER_ID */.IS_ANDROID && typeof result === "number";
+  tmp4 = require("01717_JEST_WORKER_ID.js") /* JEST_WORKER_ID */.IS_ANDROID && typeof result === "number";
 }
 processColor.__closure = { processColorNumber, ValueProcessorTarget: require("module_1718").ValueProcessorTarget, isPlatformColorObject, isDynamicColorObjectIOS, IS_IOS: require("JEST_WORKER_ID").IS_IOS, ERROR_MESSAGES: obj, processDynamicColorObjectIOS };
 processColor.__workletHash = 3532980737440;
@@ -316,7 +316,7 @@ function processColorsInProps(obj) {
     let tmp3 = key10005;
     let tmp4 = require;
     let tmp5 = dependencyMap;
-    let ColorProperties = require(1649) /* call */.ColorProperties;
+    let ColorProperties = require("01649_call.js") /* call */.ColorProperties;
     if (!ColorProperties.includes(key10005)) {
       continue;
     } else {
@@ -343,7 +343,7 @@ function unprocessColorsInProps(styleProps) {
     let tmp3 = key10005;
     let tmp4 = require;
     let tmp5 = dependencyMap;
-    let ColorProperties = require(1649) /* call */.ColorProperties;
+    let ColorProperties = require("01649_call.js") /* call */.ColorProperties;
     if (!ColorProperties.includes(key10005)) {
       continue;
     } else {

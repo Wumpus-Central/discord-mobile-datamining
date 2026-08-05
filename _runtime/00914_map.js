@@ -69,7 +69,7 @@ arg5.addMetadataToStackFrames = function addMetadataToStackFrames(arg0, exceptio
 };
 arg5.getFilenameToMetadataMap = function getFilenameToMetadataMap(arg0) {
   const obj = {};
-  if (require(821).GLOBAL_OBJ._sentryModuleMetadata) {
+  if (require("metro/00821__.js").GLOBAL_OBJ._sentryModuleMetadata) {
     const _Object = Object;
     const keys = Object.keys(tmp2(821).GLOBAL_OBJ._sentryModuleMetadata);
     for (const item10026 of keys) {
@@ -77,7 +77,7 @@ arg5.getFilenameToMetadataMap = function getFilenameToMetadataMap(arg0) {
       let tmp12 = require;
       let tmp13 = dependencyMap;
       let tmp14 = dependencyMap;
-      let tmp15 = require(821).GLOBAL_OBJ._sentryModuleMetadata[item10026];
+      let tmp15 = require("metro/00821__.js").GLOBAL_OBJ._sentryModuleMetadata[item10026];
       let obj2 = arg0(item10026);
       let reversed = obj2.reverse();
       let tmp17 = reversed;

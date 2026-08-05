@@ -5,7 +5,7 @@ import defineProperty from "defineProperty";
 let closure_2 = callBind.apply(require("getPolyfill")());
 let closure_3 = require("callBoundIntrinsic")("Array.prototype.slice");
 function map(arg0, arg1) {
-  require(4538) /* RequireObjectCoercible */(arg0);
+  require("04538_RequireObjectCoercible.js") /* RequireObjectCoercible */(arg0);
   return callback(arg0, callback2(arguments, 1));
 }
 const obj = { getPolyfill: null, implementation: null, shim: null };

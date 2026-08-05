@@ -37,7 +37,7 @@ function checkIfConfigIsValid(duration) {
     dependencyMap = dependencyMap + ", clamp.min should be lower than clamp.max, got clamp: {min: " + duration.clamp.min + ", max: " + duration.clamp.max + "} ";
   }
   if ("" !== dependencyMap) {
-    const logger = _require(1610).logger;
+    const logger = _require("01610_addLogBoxLog.js").logger;
     logger.warn(`Invalid spring config${closure_1}`);
   }
   return "" === dependencyMap;

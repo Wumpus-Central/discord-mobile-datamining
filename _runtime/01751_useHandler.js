@@ -11,7 +11,7 @@ export const useHandler = function useHandler(handler, items10) {
   const tmp = callback2(null);
   const require = tmp;
   if (null === tmp.current) {
-    let obj = require(1636) /* freezeObjectInDev */;
+    let obj = require("01636_freezeObjectInDev.js") /* freezeObjectInDev */;
     obj = { context: null, savedDependencies: null };
     obj[0] = obj.makeShareable({});
     obj[1] = [];
@@ -25,7 +25,7 @@ export const useHandler = function useHandler(handler, items10) {
     let tmp13 = key10024;
     let tmp14 = require;
     let tmp15 = dependencyMap;
-    let obj8 = require(1631) /* isWorkletFunction */;
+    let obj8 = require("01631_isWorkletFunction.js") /* isWorkletFunction */;
     if (obj8.isWorkletFunction(arg0[key10024])) {
       continue;
     } else {
@@ -37,13 +37,13 @@ export const useHandler = function useHandler(handler, items10) {
       throw reanimatedError;
     }
   }
-  const dependencies = require(1752) /* isAnimated */.buildDependencies(items10, handler);
-  const obj3 = require(1752) /* isAnimated */;
+  const dependencies = require("01752_isAnimated.js") /* isAnimated */.buildDependencies(items10, handler);
+  const obj3 = require("01752_isAnimated.js") /* isAnimated */;
   const tmp9 = require;
   tmp.current.savedDependencies = dependencies;
-  obj = { context, doDependenciesDiffer: !require(1752) /* isAnimated */.areDependenciesEqual(dependencies, savedDependencies), useWeb: null };
-  const obj4 = require(1752) /* isAnimated */;
-  let isWebResult = require(1609) /* isJest */.isWeb();
+  obj = { context, doDependenciesDiffer: !require("01752_isAnimated.js") /* isAnimated */.areDependenciesEqual(dependencies, savedDependencies), useWeb: null };
+  const obj4 = require("01752_isAnimated.js") /* isAnimated */;
+  let isWebResult = require("01609_isJest.js") /* isJest */.isWeb();
   if (!isWebResult) {
     isWebResult = tmp9(1609).isJest();
     const tmp9Result = tmp9(1609);

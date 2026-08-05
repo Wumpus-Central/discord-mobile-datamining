@@ -48,7 +48,7 @@ arg5.isStreamingMethod = function isStreamingMethod(arr) {
   return arr.includes("Stream");
 };
 arg5.shouldInstrument = function shouldInstrument(str) {
-  const GOOGLE_GENAI_INSTRUMENTED_METHODS = require(974).GOOGLE_GENAI_INSTRUMENTED_METHODS;
+  const GOOGLE_GENAI_INSTRUMENTED_METHODS = require("metro/00974__.js").GOOGLE_GENAI_INSTRUMENTED_METHODS;
   if (GOOGLE_GENAI_INSTRUMENTED_METHODS.includes(str)) {
     return true;
   } else {

@@ -9,7 +9,7 @@ const require = arg1;
 function convertToHandlerTag(num) {
   if (typeof num === "number") {
     return num;
-  } else if (num instanceof require(5407) /* _isNativeReflectConstruct */.BaseGesture) {
+  } else if (num instanceof require("05407__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.BaseGesture) {
     num = num.handlerTag;
   } else {
     const current = num.current;

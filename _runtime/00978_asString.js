@@ -20,10 +20,10 @@ function baseRequestAttributes(arg0, arg1, arg2, kwargs, temperature, ls_tempera
     str = "langchain";
   }
   let obj = {};
-  obj[require(958).GEN_AI_SYSTEM_ATTRIBUTE] = asString(str);
-  obj[require(958).GEN_AI_OPERATION_NAME_ATTRIBUTE] = arg2;
-  obj[require(958).GEN_AI_REQUEST_MODEL_ATTRIBUTE] = asString(arg1);
-  obj[require(839).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = require(979).LANGCHAIN_ORIGIN;
+  obj[require("metro/00958__.js").GEN_AI_SYSTEM_ATTRIBUTE] = asString(str);
+  obj[require("metro/00958__.js").GEN_AI_OPERATION_NAME_ATTRIBUTE] = arg2;
+  obj[require("metro/00958__.js").GEN_AI_REQUEST_MODEL_ATTRIBUTE] = asString(arg1);
+  obj[require("metro/00839__.js").SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = require("metro/00979__.js").LANGCHAIN_ORIGIN;
   if ("kwargs" in kwargs) {
     kwargs = kwargs.kwargs;
   }
@@ -316,11 +316,11 @@ arg5.extractChatModelRequestAttributes = function extractChatModelRequestAttribu
           HermesBuiltin.throwTypeError();
         }
         if (null != mapped.length) {
-          tmpResult[require(958).GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = length;
+          tmpResult[require("metro/00958__.js").GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = length;
         }
         const flatResult = arr.flat();
         const tmp11 = setIfDefined;
-        const result = require(961) /* truncateTextByBytes */.truncateGenAiMessages(mapped);
+        const result = require("00961_truncateTextByBytes.js") /* truncateTextByBytes */.truncateGenAiMessages(mapped);
         const tmp10 = asString(result);
         if (typeof tmp11 !== "function") {
           HermesBuiltin.throwTypeError();
@@ -328,7 +328,7 @@ arg5.extractChatModelRequestAttributes = function extractChatModelRequestAttribu
         if (null != tmp10) {
           tmpResult[tmp12(958).GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = tmp10;
         }
-        const tmp12Result = require(961) /* truncateTextByBytes */;
+        const tmp12Result = require("00961_truncateTextByBytes.js") /* truncateTextByBytes */;
       }
     }
   }
@@ -362,7 +362,7 @@ arg5.extractLLMRequestAttributes = function extractLLMRequestAttributes(arg0, ar
           HermesBuiltin.throwTypeError();
         }
         if (null != arr.length) {
-          tmp2Result[require(958).GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = length;
+          tmp2Result[require("metro/00958__.js").GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = length;
         }
         const mapped = arr.map((content) => ({ role: "user", content }));
         const tmp9 = asString(mapped);
@@ -417,7 +417,7 @@ arg5.extractLlmResponseAttributes = function extractLlmResponseAttributes(genera
           HermesBuiltin.throwTypeError();
         }
         if (null != tmp6) {
-          obj[require(958).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = tmp6;
+          obj[require("metro/00958__.js").GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = tmp6;
         }
       }
       (function addToolCallsAttributes(generations, arg1) {
@@ -469,7 +469,7 @@ arg5.extractLlmResponseAttributes = function extractLlmResponseAttributes(genera
             HermesBuiltin.throwTypeError();
           }
           if (null != tmp14) {
-            obj[require(958).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = tmp14;
+            obj[require("metro/00958__.js").GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = tmp14;
           }
         }
         const flatResult1 = generations2.flat();
@@ -487,7 +487,7 @@ arg5.extractLlmResponseAttributes = function extractLlmResponseAttributes(genera
         const NumberResult = Number(tokenUsage.promptTokens);
         const _Number16 = Number;
         if (!Number.isNaN(NumberResult)) {
-          obj[require(958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = NumberResult;
+          obj[require("metro/00958__.js").GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = NumberResult;
         }
         if (typeof setNumberIfDefined !== "function") {
           HermesBuiltin.throwTypeError();
@@ -515,7 +515,7 @@ arg5.extractLlmResponseAttributes = function extractLlmResponseAttributes(genera
         const NumberResult3 = Number(usage.input_tokens);
         const _Number2 = Number;
         if (!Number.isNaN(NumberResult3)) {
-          obj[require(958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = NumberResult3;
+          obj[require("metro/00958__.js").GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = NumberResult3;
         }
         if (typeof setNumberIfDefined !== "function") {
           HermesBuiltin.throwTypeError();
@@ -613,7 +613,7 @@ arg5.extractLlmResponseAttributes = function extractLlmResponseAttributes(genera
         HermesBuiltin.throwTypeError();
       }
       if (null != model_name) {
-        obj[require(958).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = model_name;
+        obj[require("metro/00958__.js").GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = model_name;
       }
     }
     let id;
@@ -632,7 +632,7 @@ arg5.extractLlmResponseAttributes = function extractLlmResponseAttributes(genera
         HermesBuiltin.throwTypeError();
       }
       if (null != id) {
-        obj[require(958).GEN_AI_RESPONSE_ID_ATTRIBUTE] = id;
+        obj[require("metro/00958__.js").GEN_AI_RESPONSE_ID_ATTRIBUTE] = id;
       }
     }
     let stop_reason;
@@ -655,7 +655,7 @@ arg5.extractLlmResponseAttributes = function extractLlmResponseAttributes(genera
         HermesBuiltin.throwTypeError();
       }
       if (null != tmp53) {
-        obj[require(958).GEN_AI_RESPONSE_STOP_REASON_ATTRIBUTE] = tmp53;
+        obj[require("metro/00958__.js").GEN_AI_RESPONSE_STOP_REASON_ATTRIBUTE] = tmp53;
       }
     }
     return obj;

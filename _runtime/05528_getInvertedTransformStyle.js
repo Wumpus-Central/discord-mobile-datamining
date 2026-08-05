@@ -2,6 +2,6 @@
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getInvertedTransformStyle = function getInvertedTransformStyle(horizontal) {
-  const PlatformConfig = require(5526) /* PlatformConfig */.PlatformConfig;
+  const PlatformConfig = require("05526_PlatformConfig.js") /* PlatformConfig */.PlatformConfig;
   return horizontal ? PlatformConfig.invertedTransformStyleHorizontal : PlatformConfig.invertedTransformStyle;
 };

@@ -7,5 +7,5 @@ export default function ThemeProvider(arg0) {
   let children;
   let value;
   ({ value, children } = arg0);
-  return jsx(importDefault(1568).Provider, { value, children });
+  return jsx(require("01568_context.js").Provider, { value, children });
 };

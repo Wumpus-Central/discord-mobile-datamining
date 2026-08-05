@@ -13,20 +13,20 @@ let closure_3 = ["enabled", "hasTwoStates"];
 export default function ScreenContainer(enabled) {
   enabled = enabled.enabled;
   if (undefined === enabled) {
-    let obj = require(4634) /* isNativePlatformSupported */;
+    let obj = require("04634_isNativePlatformSupported.js") /* isNativePlatformSupported */;
     enabled = obj.screensEnabled();
   }
   const tmp3 = callback(enabled, closure_3);
   if (enabled) {
-    if (require(4634) /* isNativePlatformSupported */.isNativePlatformSupported) {
+    if (require("04634_isNativePlatformSupported.js") /* isNativePlatformSupported */.isNativePlatformSupported) {
       if (enabled.hasTwoStates) {
         obj = {};
         const merged = Object.assign(tmp3);
-        return jsx(importDefault(4654), {});
+        return jsx(require("metro/04654___INTERNAL_VIEW_CONFIG.js"), {});
       } else {
         obj = {};
         const merged1 = Object.assign(tmp3);
-        return jsx(importDefault(4654), {});
+        return jsx(require("metro/04654___INTERNAL_VIEW_CONFIG.js"), {});
       }
     }
   }

@@ -7,7 +7,7 @@ arg5.initMetric = (name) => {
   if (arg1 === undefined) {
     num = -1;
   }
-  let obj = require(1043) /* getNavigationEntry */;
+  let obj = require("01043_getNavigationEntry.js") /* getNavigationEntry */;
   const navigationEntry = obj.getNavigationEntry();
   let str = "navigate";
   let str2 = "navigate";

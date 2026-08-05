@@ -15,10 +15,10 @@ export default function baseGetTag(arg0) {
     if (toStringTag) {
       const _Object = Object;
       if (tmp in Object(arg0)) {
-        tmp5 = require(611) /* toStringTag */(arg0);
+        tmp5 = require("00611_toStringTag.js") /* toStringTag */(arg0);
       }
     }
-    tmp5 = require(612) /* objectToString */(arg0);
+    tmp5 = require("00612_objectToString.js") /* objectToString */(arg0);
   }
   return tmp5;
 };

@@ -9,7 +9,7 @@ arg5.getCalendarPreferenceDataForRegion = function getCalendarPreferenceDataForR
   if (!str) {
     str = "";
   }
-  return require(13452).calendars[str] || require(13452).calendars["001"].map((arg0) => {
+  return require("metro/13452__.js").calendars[str] || require("metro/13452__.js").calendars["001"].map((arg0) => {
     let str = "gregory";
     if ("gregorian" !== arg0) {
       let str2 = "islamicc";
@@ -27,7 +27,7 @@ arg5.getHourCyclesPreferenceDataForLocaleOrRegion = function getHourCyclesPrefer
   if (region) {
     str = region.toUpperCase();
   }
-  let v001 = require(13453).hourCycles[formatted] || tmp2(13453).hourCycles[str];
+  let v001 = require("metro/13453__.js").hourCycles[formatted] || tmp2(13453).hourCycles[str];
   if (!v001) {
     const concat = "".concat;
     v001 = tmp2(13453).hourCycles["".concat("", formatted, "-001")];
@@ -35,12 +35,12 @@ arg5.getHourCyclesPreferenceDataForLocaleOrRegion = function getHourCyclesPrefer
   if (!v001) {
     v001 = tmp2(13453).hourCycles["001"];
   }
-  return require(1281) /* e */.__spreadArray([], v001, true);
+  return require("01281_e.js") /* e */.__spreadArray([], v001, true);
 };
 arg5.getTimeZonePreferenceForRegion = function getTimeZonePreferenceForRegion(region) {
   const formatted = region.toLowerCase();
   const items = [];
-  if (require(13454).timezones[formatted]) {
+  if (require("metro/13454__.js").timezones[formatted]) {
     return tmp2(1281).__spreadArray(items, tmp2(13454).timezones[formatted], true);
   } else {
     return items;
@@ -54,5 +54,5 @@ arg5.getWeekDataForRegion = function getWeekDataForRegion(region) {
   if (!str) {
     str = "001";
   }
-  return require(13455).weekData[str] || require(13455).weekData["001"];
+  return require("metro/13455__.js").weekData[str] || require("metro/13455__.js").weekData["001"];
 };

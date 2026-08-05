@@ -1,6 +1,6 @@
 // _runtime/04119_getStatics.js
 function getStatics(arg0) {
-  const obj = require(4117) /* num2 */;
+  const obj = require("04117_num2.js") /* num2 */;
   if (obj.isMemo(arg0)) {
     let tmp2 = obj;
   } else {

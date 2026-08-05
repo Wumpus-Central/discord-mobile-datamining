@@ -77,7 +77,7 @@ export default function HeaderBackButton(accessibilityLabel) {
   }
   let dependencyMap;
   ({ testID, style } = accessibilityLabel);
-  let obj = require(1481) /* Link */;
+  let obj = require("01481_Link.js") /* Link */;
   [tmp6, c2] = callback(React.useState(undefined), 2);
   if (undefined === tintColor) {
     tintColor = obj.useTheme().colors.text;
@@ -188,5 +188,5 @@ export default function HeaderBackButton(accessibilityLabel) {
   }
   items2[1] = tmp7Result;
   obj[11] = closure_9(tmp4.Fragment, { children: items2 });
-  return closure_8(importDefault(5689), obj);
+  return closure_8(require("05689_Animated.js"), obj);
 };

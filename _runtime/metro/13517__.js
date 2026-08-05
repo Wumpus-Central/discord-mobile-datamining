@@ -1,12 +1,12 @@
 // _runtime/metro/13517__.js
 
 export default (arg0, arg1, arg2) => {
-  const arr = require(13518)(arg1);
+  const arr = require("13518__.js")(arg1);
   for (let num = 0; num < arr.length; num = num + 1) {
     let tmp3 = arr[num];
     let tmp4 = require;
     let tmp5 = dependencyMap;
-    let tmp6 = require(13500) /* call */(arg0, tmp3);
+    let tmp6 = require("../13500_call.js") /* call */(arg0, tmp3);
     let tmp7 = num;
     if (!tmp6) {
       let tmp8 = arg2;

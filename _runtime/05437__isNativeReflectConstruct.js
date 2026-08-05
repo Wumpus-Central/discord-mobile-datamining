@@ -108,7 +108,7 @@ let obj = {
       children = tmp2(closure_11, {});
     }
     obj.children = children;
-    return jsx(importDefault(5435), {});
+    return jsx(require("05435__isNativeReflectConstruct.js"), {});
   }
 };
 let items = [obj];

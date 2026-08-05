@@ -5,7 +5,7 @@ obj = {};
 Object.defineProperty(obj, "hairlineWidth", {
   get: () => {
     if (null == closure_3) {
-      const _default = require(87) /* PixelRatio */.default;
+      const _default = require("00087_PixelRatio.js") /* PixelRatio */.default;
       const roundToNearestPixelResult = _default.roundToNearestPixel(0.4);
       closure_3 = roundToNearestPixelResult;
       if (0 === roundToNearestPixelResult) {
@@ -21,7 +21,7 @@ obj.absoluteFillObject = obj;
 obj.compose = require("composeStyles");
 obj.flatten = require("flattenStyle");
 obj.setStyleAttributePreprocessor = function setStyleAttributePreprocessor(arg0, process) {
-  if (true === importDefault(26)[arg0]) {
+  if (true === require("00026_result.js")[arg0]) {
     let obj = { process: null };
     obj[0] = process;
   } else if (typeof tmp(26)[arg0] !== "object") {
@@ -33,7 +33,7 @@ obj.setStyleAttributePreprocessor = function setStyleAttributePreprocessor(arg0,
     const merged = Object.assign(tmp(26)[arg0]);
     obj.process = process;
   }
-  importDefault(26)[arg0] = obj;
+  require("00026_result.js")[arg0] = obj;
 };
 obj.create = function create(arg0) {
   return arg0;

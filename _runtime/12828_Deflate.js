@@ -189,7 +189,7 @@ arg5.deflate = function deflate(arg0, arg1) {
   if (arr.err) {
     let msg = arr.msg;
     if (!msg) {
-      msg = require(12831)[arr.err];
+      msg = require("metro/12831__.js")[arr.err];
     }
     throw msg;
   } else {
@@ -207,7 +207,7 @@ arg5.deflateRaw = function deflateRaw(arg0, arg1) {
   if (arr.err) {
     let msg = arr.msg;
     if (!msg) {
-      msg = require(12831)[arr.err];
+      msg = require("metro/12831__.js")[arr.err];
     }
     throw msg;
   } else {
@@ -225,7 +225,7 @@ arg5.gzip = function gzip(arg0, arg1) {
   if (arr.err) {
     let msg = arr.msg;
     if (!msg) {
-      msg = require(12831)[arr.err];
+      msg = require("metro/12831__.js")[arr.err];
     }
     throw msg;
   } else {

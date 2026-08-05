@@ -20,12 +20,12 @@ function dispatch(self, bubbles) {
     }
     return items;
   })(self);
-  require(134) /* SymbolResult1 */.setComposedPath(bubbles, arr);
-  const obj = require(134) /* SymbolResult1 */;
+  require("00134_SymbolResult1.js") /* SymbolResult1 */.setComposedPath(bubbles, arr);
+  const obj = require("00134_SymbolResult1.js") /* SymbolResult1 */;
   const tmp2 = require;
   let tmp3 = require;
   let tmp4 = dependencyMap;
-  require(134) /* SymbolResult1 */.setTarget(bubbles, self);
+  require("00134_SymbolResult1.js") /* SymbolResult1 */.setTarget(bubbles, self);
   let diff = arr.length - 1;
   if (0 <= diff) {
     if (!tmp3Result.getStopPropagationFlag(bubbles)) {
@@ -35,18 +35,18 @@ function dispatch(self, bubbles) {
         let tmp13 = dependencyMap;
         let tmp10 = require;
         let tmp11 = require;
-        let obj3 = require(134) /* SymbolResult1 */;
+        let obj3 = require("00134_SymbolResult1.js") /* SymbolResult1 */;
         let tmp14 = diff;
         if (tmp9 === self) {
           let tmp18 = importDefault;
           let tmp16 = importDefault;
           let tmp19 = tmp12;
-          let CAPTURING_PHASE = importDefault(133).AT_TARGET;
+          let CAPTURING_PHASE = require("00133_Event.js").AT_TARGET;
         } else {
           let tmp15 = importDefault;
           tmp16 = importDefault;
           let tmp17 = tmp12;
-          CAPTURING_PHASE = importDefault(133).CAPTURING_PHASE;
+          CAPTURING_PHASE = require("00133_Event.js").CAPTURING_PHASE;
         }
         let setEventPhaseResult = obj3.setEventPhase(bubbles, CAPTURING_PHASE);
         let tmp21 = invoke;
@@ -75,7 +75,7 @@ function dispatch(self, bubbles) {
     let tmp32 = dependencyMap;
     let tmp29 = require;
     let tmp30 = require;
-    let obj6 = require(134) /* SymbolResult1 */;
+    let obj6 = require("00134_SymbolResult1.js") /* SymbolResult1 */;
     if (obj6.getStopPropagationFlag(arg1)) {
       let tmp49 = obj5;
       obj5.return();
@@ -98,12 +98,12 @@ function dispatch(self, bubbles) {
         let tmp41 = importDefault;
         let tmp39 = importDefault;
         let tmp42 = tmp31;
-        let BUBBLING_PHASE = importDefault(133).AT_TARGET;
+        let BUBBLING_PHASE = require("00133_Event.js").AT_TARGET;
       } else {
         let tmp38 = importDefault;
         tmp39 = importDefault;
         let tmp40 = tmp31;
-        BUBBLING_PHASE = importDefault(133).BUBBLING_PHASE;
+        BUBBLING_PHASE = require("00133_Event.js").BUBBLING_PHASE;
       }
       let setEventPhaseResult1 = tmp30Result.setEventPhase(arg1, BUBBLING_PHASE);
       let tmp44 = invoke;
@@ -117,27 +117,27 @@ function dispatch(self, bubbles) {
     let tmp51 = require;
     let tmp52 = dependencyMap;
     let tmp53 = dependencyMap;
-    let obj8 = require(134) /* SymbolResult1 */;
+    let obj8 = require("00134_SymbolResult1.js") /* SymbolResult1 */;
     let tmp54 = importDefault;
     let tmp55 = importDefault;
-    let setEventPhaseResult2 = obj8.setEventPhase(arg1, importDefault(133).NONE);
-    let obj9 = require(134) /* SymbolResult1 */;
+    let setEventPhaseResult2 = obj8.setEventPhase(arg1, require("00133_Event.js").NONE);
+    let obj9 = require("00134_SymbolResult1.js") /* SymbolResult1 */;
     let tmp57 = null;
     let setCurrentTargetResult = obj9.setCurrentTarget(arg1, null);
-    let obj10 = require(134) /* SymbolResult1 */;
+    let obj10 = require("00134_SymbolResult1.js") /* SymbolResult1 */;
     let setComposedPathResult1 = obj10.setComposedPath(arg1, []);
     let tmp60 = setEventDispatchFlag;
     let flag = false;
     let tmp61 = setEventDispatchFlag(arg1, false);
-    let obj11 = require(134) /* SymbolResult1 */;
+    let obj11 = require("00134_SymbolResult1.js") /* SymbolResult1 */;
     let result = obj11.setStopImmediatePropagationFlag(arg1, false);
-    let obj12 = require(134) /* SymbolResult1 */;
+    let obj12 = require("00134_SymbolResult1.js") /* SymbolResult1 */;
     let result1 = obj12.setStopPropagationFlag(arg1, false);
   }
 }
 function invoke(arg0, type) {
-  const tmp3 = arg2 === importDefault(133).CAPTURING_PHASE;
-  let obj = require(134) /* SymbolResult1 */;
+  const tmp3 = arg2 === require("00133_Event.js").CAPTURING_PHASE;
+  let obj = require("00134_SymbolResult1.js") /* SymbolResult1 */;
   obj.setCurrentTarget(type, arg0);
   if (obj2.enableNativeEventTargetEventDispatching()) {
     const tmp14 = arg0[tmp5(undefined, 135).EVENT_TARGET_GET_DECLARATIVE_LISTENER_KEY](type.type, tmp3);
@@ -357,14 +357,14 @@ let items = [
   {
     key: "dispatchEvent",
     value: function dispatchEvent(defaultPrevented) {
-      if (defaultPrevented instanceof importDefault(133)) {
+      if (defaultPrevented instanceof require("00133_Event.js")) {
         if (defaultPrevented[closure_11]) {
           const _Error = Error;
           const error = new Error("Failed to execute 'dispatchEvent' on 'EventTarget': The event is already being dispatched.");
           throw error;
         } else {
           const self = this;
-          require(134) /* SymbolResult1 */.setIsTrusted(defaultPrevented, false);
+          require("00134_SymbolResult1.js") /* SymbolResult1 */.setIsTrusted(defaultPrevented, false);
           dispatch(this, defaultPrevented);
           return !defaultPrevented.defaultPrevented;
         }

@@ -3,15 +3,15 @@ import _slicedToArray from "_slicedToArray";
 
 const require = arg1;
 global._makeShareableClone = () => {
-  const reanimatedError = new require(1617) /* t */.ReanimatedError("`_makeShareableClone` should never be called from React runtime.");
+  const reanimatedError = new require("01617_t.js") /* t */.ReanimatedError("`_makeShareableClone` should never be called from React runtime.");
   throw reanimatedError;
 };
 global._scheduleHostFunctionOnJS = () => {
-  const reanimatedError = new require(1617) /* t */.ReanimatedError("`_scheduleOnJS` should never be called from React runtime.");
+  const reanimatedError = new require("01617_t.js") /* t */.ReanimatedError("`_scheduleOnJS` should never be called from React runtime.");
   throw reanimatedError;
 };
 global._scheduleOnRuntime = () => {
-  const reanimatedError = new require(1617) /* t */.ReanimatedError("`_scheduleOnRuntime` should never be called from React runtime.");
+  const reanimatedError = new require("01617_t.js") /* t */.ReanimatedError("`_scheduleOnRuntime` should never be called from React runtime.");
   throw reanimatedError;
 };
 function setNativeProps(arg0, arg1, arg2) {

@@ -8,8 +8,8 @@ arg5.breadcrumbFromObject = function breadcrumbFromObject(type) {
     obj.type = type.type;
   }
   if (typeof type.level === "string") {
-    obj.level = require(817) /* registerSpanErrorInstrumentation */.severityLevelFromString(type.level);
-    const obj2 = require(817) /* registerSpanErrorInstrumentation */;
+    obj.level = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.severityLevelFromString(type.level);
+    const obj2 = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
   }
   if (typeof type.event_id === "string") {
     obj.event_id = type.event_id;

@@ -11,7 +11,7 @@ arg5.GetStringOrBooleanOption = function GetStringOrBooleanOption(result1, useGr
     if (false === Boolean(tmp)) {
       return arg4;
     } else {
-      let str = require(13384) /* __exportStarResult32 */.ToString(tmp);
+      let str = require("13384___exportStarResult32.js") /* __exportStarResult32 */.ToString(tmp);
       str = "true";
       if ("true" !== str) {
         if ("false" !== str) {

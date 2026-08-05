@@ -2,7 +2,7 @@
 
 export default (arg0, arg1) => {
   try {
-    const tmp8 = new require(13050) /* Range */(arg0, arg1);
+    const tmp8 = new require("13050_Range.js") /* Range */(arg0, arg1);
     let str = tmp8.range;
     if (!str) {
       str = "*";

@@ -11,6 +11,6 @@ if (!requiredArgs) {
 
 export default function weeksToDays(arg0) {
   tmp3.default(1, arguments);
-  return Math.floor(arg0 * require(3543) /* keys */.daysInWeek);
+  return Math.floor(arg0 * require("03543_keys.js") /* keys */.daysInWeek);
 };
 export default exports.default;

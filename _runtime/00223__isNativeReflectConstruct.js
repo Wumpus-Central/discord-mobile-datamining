@@ -63,7 +63,7 @@ const items = [
       const self = this;
       this._readyState = _readyState;
       let tmp = importDefault;
-      this.dispatchEvent(new importDefault(133)("readystatechange"));
+      this.dispatchEvent(new require("00133_Event.js")("readystatechange"));
       if (2 === _readyState) {
         if (self._aborted) {
           let tmpResult = tmp(133);
@@ -98,7 +98,7 @@ const items = [
         const typeError = new TypeError("Failed to execute 'readAsArrayBuffer' on 'FileReader': parameter 1 is not of type 'Blob'");
         throw typeError;
       } else {
-        const asDataURL = importDefault(224).readAsDataURL(closure_0.data);
+        const asDataURL = require("00224_FileReaderModule.js").readAsDataURL(closure_0.data);
         asDataURL.then((arg0) => {
           if (!self._aborted) {
             obj._result = self(outer1_2[7]).toByteArray(arg0.split(",")[1]).buffer;
@@ -124,7 +124,7 @@ const items = [
         const typeError = new TypeError("Failed to execute 'readAsDataURL' on 'FileReader': parameter 1 is not of type 'Blob'");
         throw typeError;
       } else {
-        const asDataURL = importDefault(224).readAsDataURL(closure_0.data);
+        const asDataURL = require("00224_FileReaderModule.js").readAsDataURL(closure_0.data);
         asDataURL.then((_result) => {
           if (!self._aborted) {
             obj._result = _result;
@@ -153,7 +153,7 @@ const items = [
         const typeError = new TypeError("Failed to execute 'readAsText' on 'FileReader': parameter 1 is not of type 'Blob'");
         throw typeError;
       } else {
-        const asText = importDefault(224).readAsText(_bodyBlob.data, str);
+        const asText = require("00224_FileReaderModule.js").readAsText(_bodyBlob.data, str);
         asText.then((_result) => {
           if (!self._aborted) {
             obj._result = _result;

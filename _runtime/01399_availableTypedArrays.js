@@ -7,7 +7,7 @@ export default function availableTypedArrays() {
   let tmp2;
   const items = [];
   let num = 0;
-  if (0 < require(1400).length) {
+  if (0 < require("metro/01400__.js").length) {
     do {
       let tmp = global;
       tmp2 = require;

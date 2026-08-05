@@ -105,7 +105,7 @@ export const startProfileForSpan = function startProfileForSpan(rootSpan) {
     }
     return applyArgumentsResult;
   }
-  let obj = _require(1101);
+  let obj = _require("01101_createProfilePayload.js");
   if (obj.isAutomatedPageLoadSpan(rootSpan)) {
     let tmpResult = tmp(817);
     let result = 1000 * tmpResult.timestampInSeconds();

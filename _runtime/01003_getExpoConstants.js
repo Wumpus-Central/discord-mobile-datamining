@@ -2,7 +2,7 @@
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getExpoConstants = function getExpoConstants() {
-  const expo = require(816) /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ.expo;
+  const expo = require("00816_RN_GLOBAL_OBJ.js") /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ.expo;
   let modules;
   if (null !== expo) {
     if (undefined !== expo) {
@@ -24,7 +24,7 @@ arg5.getExpoConstants = function getExpoConstants() {
   return tmp3;
 };
 arg5.getExpoDevice = function getExpoDevice() {
-  const expo = require(816) /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ.expo;
+  const expo = require("00816_RN_GLOBAL_OBJ.js") /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ.expo;
   let modules;
   if (null !== expo) {
     if (undefined !== expo) {
@@ -46,7 +46,7 @@ arg5.getExpoDevice = function getExpoDevice() {
   return tmp3;
 };
 arg5.getExpoUpdates = function getExpoUpdates() {
-  const expo = require(816) /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ.expo;
+  const expo = require("00816_RN_GLOBAL_OBJ.js") /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ.expo;
   let modules;
   if (null !== expo) {
     if (undefined !== expo) {
@@ -68,7 +68,7 @@ arg5.getExpoUpdates = function getExpoUpdates() {
   return tmp3;
 };
 arg5.getExpoGo = function getExpoGo() {
-  const expo = require(816) /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ.expo;
+  const expo = require("00816_RN_GLOBAL_OBJ.js") /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ.expo;
   let modules;
   if (null !== expo) {
     if (undefined !== expo) {

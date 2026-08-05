@@ -12,7 +12,7 @@ if (!requiredArgs) {
 export default function setDefaultOptions(obj) {
   tmp3.default(1, arguments);
   obj = {};
-  const defaultOptions = require(3369) /* getDefaultOptions */.getDefaultOptions();
+  const defaultOptions = require("03369_getDefaultOptions.js") /* getDefaultOptions */.getDefaultOptions();
   for (const key10017 in defaultOptions) {
     let tmp8 = key10017;
     let _Object = Object;
@@ -53,6 +53,6 @@ export default function setDefaultOptions(obj) {
     }
     continue;
   }
-  require(3369) /* getDefaultOptions */.setDefaultOptions(obj);
+  require("03369_getDefaultOptions.js") /* getDefaultOptions */.setDefaultOptions(obj);
 };
 export default exports.default;

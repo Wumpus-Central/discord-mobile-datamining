@@ -3,9 +3,9 @@ const require = arg1;
 let dependencyMap = arg6;
 arg5.addBreadcrumb = function addBreadcrumb(arg0, arg1) {
   const _require = arg1;
-  let consoleSandboxResult = _require(7402);
+  let consoleSandboxResult = _require("07402_getClient.js");
   const client = consoleSandboxResult.getClient();
-  const isolationScope = _require(7402).getIsolationScope();
+  const isolationScope = _require("07402_getClient.js").getIsolationScope();
   if (client) {
     const options = client.getOptions();
     const beforeBreadcrumb = options.beforeBreadcrumb;

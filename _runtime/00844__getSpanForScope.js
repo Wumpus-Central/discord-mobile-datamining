@@ -8,8 +8,8 @@ arg5._getSpanForScope = function _getSpanForScope(arg0) {
 };
 arg5._setSpanForScope = function _setSpanForScope(arg0, arg1) {
   if (arg1) {
-    const result = require(822) /* addNonEnumerableProperty */.addNonEnumerableProperty(arg0, _sentrySpan, arg1);
-    const obj = require(822) /* addNonEnumerableProperty */;
+    const result = require("00822_addNonEnumerableProperty.js") /* addNonEnumerableProperty */.addNonEnumerableProperty(arg0, _sentrySpan, arg1);
+    const obj = require("00822_addNonEnumerableProperty.js") /* addNonEnumerableProperty */;
   } else {
     delete tmp2[tmp];
   }

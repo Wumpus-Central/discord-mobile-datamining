@@ -10,7 +10,7 @@ export default (arg0, arg1, arg2, arg3) => {
   if (undefined !== obj.name) {
     name = obj.name;
   }
-  if (require(13503) /* all */(arg2)) {
+  if (require("../13503_all.js") /* all */(arg2)) {
     tmp3(13535)(arg2, name, obj);
   }
   if (obj.global) {

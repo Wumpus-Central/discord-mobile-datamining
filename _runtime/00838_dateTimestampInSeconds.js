@@ -2,7 +2,7 @@
 const require = arg1;
 const dependencyMap = arg6;
 function dateTimestampInSeconds() {
-  return require(831) /* safeDateNow */.safeDateNow() / 1000;
+  return require("00831_safeDateNow.js") /* safeDateNow */.safeDateNow() / 1000;
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let c4 = null;

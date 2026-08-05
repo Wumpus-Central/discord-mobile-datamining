@@ -37,7 +37,7 @@ function validateType(str) {
         obj.extrapolateRight = str;
         return obj;
       } else {
-        const reanimatedError = new require(1617) /* t */.ReanimatedError("Unsupported value for \"interpolate\" \nSupported values: [\"extend\", \"clamp\", \"identity\", Extrapolatation.CLAMP, Extrapolatation.EXTEND, Extrapolatation.IDENTITY]\n Valid example:\n        interpolate(value, [inputRange], [outputRange], \"clamp\")");
+        const reanimatedError = new require("01617_t.js") /* t */.ReanimatedError("Unsupported value for \"interpolate\" \nSupported values: [\"extend\", \"clamp\", \"identity\", Extrapolatation.CLAMP, Extrapolatation.EXTEND, Extrapolatation.IDENTITY]\n Valid example:\n        interpolate(value, [inputRange], [outputRange], \"clamp\")");
         throw reanimatedError;
       }
       tmp15 = str === tmp.EXTEND || str === tmp.CLAMP || str === tmp.IDENTITY;
@@ -60,7 +60,7 @@ function validateType(str) {
         }
         const tmp3 = extrapolateLeft === tmp.EXTEND || extrapolateLeft === tmp.CLAMP || extrapolateLeft === tmp.IDENTITY;
       }
-      const reanimatedError1 = new require(1617) /* t */.ReanimatedError("Unsupported value for \"interpolate\" \nSupported values: [\"extend\", \"clamp\", \"identity\", Extrapolatation.CLAMP, Extrapolatation.EXTEND, Extrapolatation.IDENTITY]\n Valid example:\n      interpolate(value, [inputRange], [outputRange], {\n        extrapolateLeft: Extrapolation.CLAMP,\n        extrapolateRight: Extrapolation.IDENTITY\n      }})");
+      const reanimatedError1 = new require("01617_t.js") /* t */.ReanimatedError("Unsupported value for \"interpolate\" \nSupported values: [\"extend\", \"clamp\", \"identity\", Extrapolatation.CLAMP, Extrapolatation.EXTEND, Extrapolatation.IDENTITY]\n Valid example:\n      interpolate(value, [inputRange], [outputRange], {\n        extrapolateLeft: Extrapolation.CLAMP,\n        extrapolateRight: Extrapolation.IDENTITY\n      }})");
       throw reanimatedError1;
     }
   } else {
@@ -156,7 +156,7 @@ function interpolate(arg0, arg1, arg2, arg3) {
       return internalInterpolate(arg0, obj, validateType(arg3));
     }
   }
-  const reanimatedError = new require(1617) /* t */.ReanimatedError("Interpolation input and output ranges should contain at least two values.");
+  const reanimatedError = new require("01617_t.js") /* t */.ReanimatedError("Interpolation input and output ranges should contain at least two values.");
   throw reanimatedError;
 }
 interpolate.__closure = { validateType, internalInterpolate };

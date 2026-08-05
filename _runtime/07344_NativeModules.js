@@ -38,26 +38,26 @@ export const setup = () => {
     str = "STOREKIT1_MODE";
   }
   if ("STOREKIT1_MODE" === str) {
-    require(7346).storekit1Mode();
-    const obj4 = require(7346);
+    require("metro/07346__.js").storekit1Mode();
+    const obj4 = require("metro/07346__.js");
   } else if ("STOREKIT2_MODE" === str) {
-    require(7346).storekit2Mode();
-    const obj3 = require(7346);
+    require("metro/07346__.js").storekit2Mode();
+    const obj3 = require("metro/07346__.js");
   } else if ("STOREKIT_HYBRID_MODE" === str) {
-    require(7346).storekitHybridMode();
-    const obj2 = require(7346);
+    require("metro/07346__.js").storekitHybridMode();
+    const obj2 = require("metro/07346__.js");
   }
 };
 export const initConnection = () => {
-  const nativeModule = require(7346).getNativeModule();
+  const nativeModule = require("metro/07346__.js").getNativeModule();
   return nativeModule.initConnection();
 };
 export const endConnection = () => {
-  const nativeModule = require(7346).getNativeModule();
+  const nativeModule = require("metro/07346__.js").getNativeModule();
   return nativeModule.endConnection();
 };
 export const flushFailedPurchasesCachedAsPendingAndroid = () => {
-  const androidModule = require(7346).getAndroidModule();
+  const androidModule = require("metro/07346__.js").getAndroidModule();
   return androidModule.flushFailedPurchasesCachedAsPending();
 };
 export const getProducts = (skus) => {

@@ -10,10 +10,10 @@ export const useRiveNumber = function useRiveNumber(AnimationState, instance) {
   let tmp3;
   let tmp4;
   let tmp5;
-  let obj = require(4036) /* c */;
+  let obj = require("04036_c.js") /* c */;
   const cResult = obj.c(4);
-  const obj2 = require(4049) /* useRiveProperty */;
-  [tmp3, tmp4, tmp5] = callback(require(4049) /* useRiveProperty */.useRiveProperty(instance, AnimationState, getNumberProperty), 3);
+  const obj2 = require("04049_useRiveProperty.js") /* useRiveProperty */;
+  [tmp3, tmp4, tmp5] = callback(require("04049_useRiveProperty.js") /* useRiveProperty */.useRiveProperty(instance, AnimationState, getNumberProperty), 3);
   if (cResult[0] === tmp5) {
     if (cResult[1] === tmp4) {
       if (cResult[2] === tmp3) {

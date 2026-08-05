@@ -7,7 +7,7 @@ if (typeof Symbol === "function") {
 
 export default function ToPrimitive(arg0) {
   let tmp22;
-  if (require(4545) /* isPrimitive */(arg0)) {
+  if (require("04545_isPrimitive.js") /* isPrimitive */(arg0)) {
     return arg0;
   } else {
     let str2 = "default";
@@ -53,7 +53,7 @@ export default function ToPrimitive(arg0) {
                 let tmp19 = require;
                 let tmp20 = dependencyMap;
                 let tmp21 = num2;
-                if (require(1402) /* apply */(tmp18)) {
+                if (require("01402_apply.js") /* apply */(tmp18)) {
                   let call = tmp18.call;
                   tmp22 = typeof call === "unknown" ? tmp18() : call(arg0);
                   if (tmp19(4545)(tmp22)) {

@@ -20,8 +20,8 @@ arg5.createCheckInEnvelope = function createCheckInEnvelope(arg0, trace, sdk) {
     tmp2 = arg4;
   }
   if (tmp2) {
-    obj.dsn = require(837) /* dsnFromString */.dsnToString(arg4);
-    const obj4 = require(837) /* dsnFromString */;
+    obj.dsn = require("00837_dsnFromString.js") /* dsnFromString */.dsnToString(arg4);
+    const obj4 = require("00837_dsnFromString.js") /* dsnFromString */;
   }
   if (trace) {
     obj.trace = trace;
@@ -29,5 +29,5 @@ arg5.createCheckInEnvelope = function createCheckInEnvelope(arg0, trace, sdk) {
   const items = [{ type: "check_in" }, arg0];
   const date = new Date();
   const items1 = [items];
-  return require(864) /* forEachEnvelopeItem */.createEnvelope(obj, items1);
+  return require("00864_forEachEnvelopeItem.js") /* forEachEnvelopeItem */.createEnvelope(obj, items1);
 };

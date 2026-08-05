@@ -632,7 +632,7 @@ function _tr_stored_block(state8, state8, arg2, arg3) {
   state8.pending_buf[+state8.pending] = 255 & ~arg2;
   state8.pending = +state8.pending + 1;
   state8.pending_buf[+state8.pending] = ~arg2 >>> 8 & 255;
-  require(12827) /* assign */.arraySet(state8.pending_buf, state8.window, state8, arg2, state8.pending);
+  require("12827_assign.js") /* assign */.arraySet(state8.pending_buf, state8.window, state8, arg2, state8.pending);
   state8.pending = state8.pending + arg2;
 }
 let closure_2 = [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 0];

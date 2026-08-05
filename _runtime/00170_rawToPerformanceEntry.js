@@ -9,22 +9,22 @@ arg5.rawToPerformanceEntry = function rawToPerformanceEntry(entryType) {
   if (obj.EVENT === entryType) {
     obj = { name: null, startTime: null, duration: null, processingStart: null, processingEnd: null, interactionId: null };
     ({ name: obj6[0], startTime: obj6[1], duration: obj6[2], processingStart: obj6[3], processingEnd: obj6[4], interactionId: obj6[5] } = entryType);
-    const performanceEventTiming = new require(162) /* _isNativeReflectConstruct */.PerformanceEventTiming(obj);
+    const performanceEventTiming = new require("00162__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.PerformanceEventTiming(obj);
     return performanceEventTiming;
   } else if (tmp.LONGTASK === entryType) {
     obj = { name: null, startTime: null, duration: null };
     ({ name: obj5[0], startTime: obj5[1], duration: obj5[2] } = entryType);
-    const performanceLongTaskTiming = new require(171) /* _isNativeReflectConstruct */.PerformanceLongTaskTiming(obj);
+    const performanceLongTaskTiming = new require("00171__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.PerformanceLongTaskTiming(obj);
     return performanceLongTaskTiming;
   } else if (tmp.MARK === entryType) {
     const obj1 = { startTime: null };
     obj1[0] = entryType.startTime;
-    const performanceMark = new require(169) /* _isNativeReflectConstruct */.PerformanceMark(entryType.name, obj1);
+    const performanceMark = new require("00169__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.PerformanceMark(entryType.name, obj1);
     return performanceMark;
   } else if (tmp.MEASURE === entryType) {
     const obj2 = { name: null, startTime: null, duration: null };
     ({ name: obj3[0], startTime: obj3[1], duration: obj3[2] } = entryType);
-    const performanceMeasure = new require(169) /* _isNativeReflectConstruct */.PerformanceMeasure(obj2);
+    const performanceMeasure = new require("00169__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.PerformanceMeasure(obj2);
     return performanceMeasure;
   } else if (tmp.RESOURCE === entryType) {
     const obj3 = { name: null, startTime: null, duration: null, fetchStart: null, requestStart: null, connectStart: null, connectEnd: null, responseStart: null, responseEnd: null, responseStatus: null, contentType: null, encodedBodySize: null, decodedBodySize: null };
@@ -78,7 +78,7 @@ arg5.rawToPerformanceEntry = function rawToPerformanceEntry(entryType) {
       num8 = 0;
     }
     obj3[12] = num8;
-    const performanceResourceTiming = new require(172) /* _isNativeReflectConstruct */.PerformanceResourceTiming(obj3);
+    const performanceResourceTiming = new require("00172__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.PerformanceResourceTiming(obj3);
     return performanceResourceTiming;
   } else {
     const entryType2 = entryType.entryType;
@@ -103,7 +103,7 @@ arg5.rawToPerformanceEntry = function rawToPerformanceEntry(entryType) {
     }
     obj = { name: null, startTime: null, duration: null };
     ({ name: obj[0], startTime: obj[1], duration: obj[2] } = entryType);
-    const performanceEntry = new require(163) /* PerformanceEntry */.PerformanceEntry(str, obj);
+    const performanceEntry = new require("00163_PerformanceEntry.js") /* PerformanceEntry */.PerformanceEntry(str, obj);
     return performanceEntry;
   }
 };

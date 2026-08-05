@@ -2,7 +2,7 @@
 const require = arg1;
 const dependencyMap = arg6;
 function _isFetchSupported() {
-  if ("fetch" in require(821).GLOBAL_OBJ) {
+  if ("fetch" in require("metro/00821__.js").GLOBAL_OBJ) {
     try {
       const _Headers = Headers;
       const headers = new Headers();
@@ -54,13 +54,13 @@ arg5.supportsErrorEvent = function supportsErrorEvent() {
 };
 arg5.supportsFetch = _isFetchSupported;
 arg5.supportsHistory = function supportsHistory() {
-  return "history" in require(821).GLOBAL_OBJ && require(821).GLOBAL_OBJ.history;
+  return "history" in require("metro/00821__.js").GLOBAL_OBJ && require("metro/00821__.js").GLOBAL_OBJ.history;
 };
 arg5.supportsNativeFetch = function supportsNativeFetch() {
   if (typeof globalThis.EdgeRuntime === "string") {
     return true;
   } else if (_isFetchSupported()) {
-    if (isNativeFunction(require(821).GLOBAL_OBJ.fetch)) {
+    if (isNativeFunction(require("metro/00821__.js").GLOBAL_OBJ.fetch)) {
       return true;
     } else {
       let flag2 = false;
@@ -113,5 +113,5 @@ arg5.supportsReferrerPolicy = function supportsReferrerPolicy() {
   }
 };
 arg5.supportsReportingObserver = function supportsReportingObserver() {
-  return "ReportingObserver" in require(821).GLOBAL_OBJ;
+  return "ReportingObserver" in require("metro/00821__.js").GLOBAL_OBJ;
 };

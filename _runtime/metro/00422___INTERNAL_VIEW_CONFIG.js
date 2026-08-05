@@ -11,7 +11,7 @@ obj[2] = obj;
 obj = {
   setNativeValue(current, arg1) {
     const items = [arg1];
-    require(114) /* renderElement */.dispatchCommand(current, "setNativeValue", items);
+    require("../00114_renderElement.js") /* renderElement */.dispatchCommand(current, "setNativeValue", items);
   }
 };
 

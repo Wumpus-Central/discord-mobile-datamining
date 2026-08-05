@@ -118,7 +118,7 @@ let items = [
       }
       const self = this;
       if (!tmp2) {
-        importDefault(38)(importDefault(200).isAvailable, "Native module BlobModule is required for blob support");
+        require("metro/00038__.js")(require("00200_BlobManager.js").isAvailable, "Native module BlobModule is required for blob support");
         if ("blob" === _binaryType) {
           let tmp3Result = tmp3(200);
           tmp3Result.addWebSocketHandler(self._socketId);
@@ -126,7 +126,7 @@ let items = [
           tmp3Result = tmp3(200);
           const result = tmp3Result.removeWebSocketHandler(self._socketId);
         }
-        const tmp5 = importDefault(38);
+        const tmp5 = require("metro/00038__.js");
       }
       self._binaryType = _binaryType;
     }
@@ -149,7 +149,7 @@ let items = [
         const _Error2 = Error;
         const error = new Error("INVALID_STATE_ERR");
         throw error;
-      } else if (str instanceof importDefault(203)) {
+      } else if (str instanceof require("00203_Blob.js")) {
         let tmp16Result = tmp16(38);
         tmp16Result(tmp16(200).isAvailable, "Native module BlobModule is required for blob support");
         tmp16Result = tmp16(200);
@@ -180,7 +180,7 @@ let items = [
         const error = new Error("INVALID_STATE_ERR");
         throw error;
       } else {
-        importDefault(218).ping(tmp._socketId);
+        require("00218_WebSocketModule.js").ping(tmp._socketId);
       }
     }
   },
@@ -190,14 +190,14 @@ let items = [
       num = 1000;
       str = "";
       const self = this;
-      importDefault(218).close(num, str, this._socketId);
-      let isAvailable = importDefault(200).isAvailable;
+      require("00218_WebSocketModule.js").close(num, str, this._socketId);
+      let isAvailable = require("00200_BlobManager.js").isAvailable;
       if (isAvailable) {
         isAvailable = "blob" === self._binaryType;
       }
       if (isAvailable) {
-        const result = importDefault(200).removeWebSocketHandler(self._socketId);
-        const tmpResult = importDefault(200);
+        const result = require("00200_BlobManager.js").removeWebSocketHandler(self._socketId);
+        const tmpResult = require("00200_BlobManager.js");
       }
     }
   },

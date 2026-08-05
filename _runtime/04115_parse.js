@@ -96,7 +96,7 @@ function tokensToRegExp(arg0, items, arg2) {
   let combined;
   let str3;
   let obj = arg2;
-  if (!require(4116)(items)) {
+  if (!require("metro/04116__.js")(items)) {
     let tmp = items;
     if (!items) {
       tmp = arg2;
@@ -181,7 +181,7 @@ function pathToRegexp(source, items, arg2) {
   let length;
   let length2;
   let obj = arg2;
-  if (!require(4116)(items)) {
+  if (!require("metro/04116__.js")(items)) {
     let tmp3 = items;
     if (!items) {
       tmp3 = arg2;
@@ -209,7 +209,7 @@ function pathToRegexp(source, items, arg2) {
     source.keys = items;
     let tmp6 = source;
     const str5 = source.source;
-  } else if (require(4116)(source)) {
+  } else if (require("metro/04116__.js")(source)) {
     const items1 = [];
     let num = 0;
     if (0 < source.length) {

@@ -14,12 +14,12 @@ export const AnimatedScrollView = isReactRendering.componentWithRef((scrollViewO
   scrollViewOffset = scrollViewOffset.scrollViewOffset;
   const tmp2 = callback(scrollViewOffset, closure_2);
   if (null === arg1) {
-    let obj = require(1749) /* useAnimatedGestureHandler */;
+    let obj = require("01749_useAnimatedGestureHandler.js") /* useAnimatedGestureHandler */;
     animatedRef = obj.useAnimatedRef();
   }
   if (scrollViewOffset) {
-    scrollViewOffset = require(1749) /* useAnimatedGestureHandler */.useScrollViewOffset(animatedRef, scrollViewOffset);
-    const obj2 = require(1749) /* useAnimatedGestureHandler */;
+    scrollViewOffset = require("01749_useAnimatedGestureHandler.js") /* useAnimatedGestureHandler */.useScrollViewOffset(animatedRef, scrollViewOffset);
+    const obj2 = require("01749_useAnimatedGestureHandler.js") /* useAnimatedGestureHandler */;
   }
   if (!("scrollEventThrottle" in tmp2)) {
     tmp2.scrollEventThrottle = 1;

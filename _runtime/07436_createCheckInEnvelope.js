@@ -18,15 +18,15 @@ arg5.createCheckInEnvelope = function createCheckInEnvelope(arg0, arg1, sdk) {
     tmp = arg4;
   }
   if (tmp) {
-    obj.dsn = require(7422) /* dsnFromString */.dsnToString(arg4);
-    const obj4 = require(7422) /* dsnFromString */;
+    obj.dsn = require("07422_dsnFromString.js") /* dsnFromString */.dsnToString(arg4);
+    const obj4 = require("07422_dsnFromString.js") /* dsnFromString */;
   }
   if (arg1) {
-    obj.trace = require(7381) /* addNonEnumerableProperty */.dropUndefinedKeys(arg1);
-    const obj5 = require(7381) /* addNonEnumerableProperty */;
+    obj.trace = require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */.dropUndefinedKeys(arg1);
+    const obj5 = require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */;
   }
   const items = [{ type: "check_in" }, arg0];
   const date = new Date();
   const items1 = [items];
-  return require(7419) /* forEachEnvelopeItem */.createEnvelope(obj, items1);
+  return require("07419_forEachEnvelopeItem.js") /* forEachEnvelopeItem */.createEnvelope(obj, items1);
 };

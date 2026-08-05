@@ -3,7 +3,7 @@ import setupIntegration from "setupIntegration";
 
 
 export const sessionTimingIntegration = setupIntegration.defineIntegration(() => {
-  let obj = _require(7389);
+  let obj = _require("07389_dateTimestampInSeconds.js");
   _require = 1000 * obj.timestampInSeconds();
   obj = {
     name: "SessionTiming",

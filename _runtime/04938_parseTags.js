@@ -14,12 +14,12 @@ function parseTags(buffer) {
   } else {
     let obj = {};
     const _Object = Object;
-    const keys = Object.keys(require(4939).iccProfile);
+    const keys = Object.keys(require("metro/04939__.js").iccProfile);
     for (let num = 0; num < keys.length; num = num + 1) {
       let tmp = keys[num];
       let tmp2 = require;
       let tmp3 = dependencyMap;
-      let iter = require(4939).iccProfile[tmp];
+      let iter = require("metro/04939__.js").iccProfile[tmp];
       let _parseInt = parseInt;
       let valueResult = iter.value(buffer, parseInt(tmp, 10));
       let tmp5 = num;
@@ -50,7 +50,7 @@ function parseTags(buffer) {
           while (buffer.length >= num6 + c8) {
             let tmp55 = require;
             let tmp56 = dependencyMap;
-            let obj17 = require(4897) /* getDataView */;
+            let obj17 = require("04897_getDataView.js") /* getDataView */;
             let stringFromDataView = obj17.getStringFromDataView(buffer, num6, 4);
             let uint321 = buffer.getUint32(num6 + 4);
             let uint322 = buffer.getUint32(num6 + 8);
@@ -97,13 +97,13 @@ function parseTags(buffer) {
                     do {
                       let tmp26 = require;
                       let tmp27 = dependencyMap;
-                      let obj5 = require(4897) /* getDataView */;
+                      let obj5 = require("04897_getDataView.js") /* getDataView */;
                       let stringFromDataView2 = obj5.getStringFromDataView(buffer, sum, 2);
-                      let obj6 = require(4897) /* getDataView */;
+                      let obj6 = require("04897_getDataView.js") /* getDataView */;
                       let stringFromDataView3 = obj6.getStringFromDataView(buffer, sum + 2, 2);
                       let uint325 = buffer.getUint32(sum + 4);
                       let uint326 = buffer.getUint32(sum + 8);
-                      let obj7 = require(4897) /* getDataView */;
+                      let obj7 = require("04897_getDataView.js") /* getDataView */;
                       let obj2 = { languageCode: null, countryCode: null, text: null };
                       obj2[0] = stringFromDataView2;
                       obj2[1] = stringFromDataView3;
@@ -141,7 +141,7 @@ function parseTags(buffer) {
                     }
                     let tmp33 = require;
                     let tmp34 = dependencyMap;
-                    if (require(4939).iccTags[stringFromDataView]) {
+                    if (require("metro/04939__.js").iccTags[stringFromDataView]) {
                       obj6 = { value: null, description: null };
                       obj6[0] = obj5;
                       obj6[1] = obj5;
@@ -220,7 +220,7 @@ let c8 = 12;
 arg5.default = {
   read(buffer, arr) {
     if (arg2) {
-      if (arr[0].compressionMethod !== require(4897) /* getDataView */.COMPRESSION_METHOD_NONE) {
+      if (arr[0].compressionMethod !== require("04897_getDataView.js") /* getDataView */.COMPRESSION_METHOD_NONE) {
         if (arr[0].compressionMethod === tmp(4897).COMPRESSION_METHOD_DEFLATE) {
           let _DataView = DataView;
           buffer = buffer.buffer;

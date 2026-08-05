@@ -96,7 +96,7 @@ const items = [
         }
       };
       const tmp7 = self(8450).alignEnum[tmp2] || "xMidYMid";
-      const tmp11 = importDefault(8509);
+      const tmp11 = require("metro/08509___INTERNAL_VIEW_CONFIG.js");
       const merged = Object.assign(self(8452).withoutXY(this, props));
       const merged1 = Object.assign(obj);
       return <tmp11 ref={function ref(arg0) {

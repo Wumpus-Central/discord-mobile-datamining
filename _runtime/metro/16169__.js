@@ -1,5 +1,5 @@
 // _runtime/metro/16169__.js
-import module_576 from "module_576";
+import 00576__ from "00576__.js";
 import { default as _default } from "MessageFormat";
 
 _default.default = _default;

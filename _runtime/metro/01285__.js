@@ -11,45 +11,45 @@ arg5.stringFormatter = undefined;
 let obj = {
   enumerable: true,
   get() {
-    return require(1286) /* _isNativeReflectConstruct */.astFormatter;
+    return require("../01286__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.astFormatter;
   }
 };
 Object.defineProperty(arg5, "astFormatter", obj);
 obj = {
   enumerable: true,
   get() {
-    return require(1286) /* _isNativeReflectConstruct */.RichTextNodeType;
+    return require("../01286__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.RichTextNodeType;
   }
 };
 Object.defineProperty(arg5, "RichTextNodeType", obj);
 obj = {
   enumerable: true,
   get() {
-    return require(1287) /* _isNativeReflectConstruct */.markdownFormatter;
+    return require("../01287__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.markdownFormatter;
   }
 };
 Object.defineProperty(arg5, "markdownFormatter", obj);
 Object.defineProperty(arg5, "reactFormatter", {
   enumerable: true,
   get() {
-    return require(1289) /* _isNativeReflectConstruct */.reactFormatter;
+    return require("../01289__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.reactFormatter;
   }
 });
 Object.defineProperty(arg5, "makeReactFormatter", {
   enumerable: true,
   get() {
-    return require(1289) /* _isNativeReflectConstruct */.makeReactFormatter;
+    return require("../01289__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.makeReactFormatter;
   }
 });
 Object.defineProperty(arg5, "DEFAULT_REACT_RICH_TEXT_ELEMENTS", {
   enumerable: true,
   get() {
-    return require(1289) /* _isNativeReflectConstruct */.DEFAULT_REACT_RICH_TEXT_ELEMENTS;
+    return require("../01289__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.DEFAULT_REACT_RICH_TEXT_ELEMENTS;
   }
 });
 Object.defineProperty(arg5, "stringFormatter", {
   enumerable: true,
   get() {
-    return require(1288) /* _isNativeReflectConstruct */.stringFormatter;
+    return require("../01288__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.stringFormatter;
   }
 });

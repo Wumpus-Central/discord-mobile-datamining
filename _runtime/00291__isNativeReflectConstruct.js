@@ -351,7 +351,7 @@ const importDefaultResultResult = importDefaultResult(TouchableNativeFeedback, i
 const unpackModuleId = importDefaultResultResult;
 importDefaultResultResult.SelectableBackground = (rippleRadius) => ({ type: "ThemeAttrAndroid", attribute: "selectableItemBackground", rippleRadius });
 importDefaultResultResult.SelectableBackgroundBorderless = (rippleRadius) => ({ type: "ThemeAttrAndroid", attribute: "selectableItemBackgroundBorderless", rippleRadius });
-importDefaultResultResult.Ripple = (arg0, borderless, rippleRadius) => ({ type: "RippleAndroid", color: importDefault(50)(arg0), borderless, rippleRadius });
+importDefaultResultResult.Ripple = (arg0, borderless, rippleRadius) => ({ type: "RippleAndroid", color: require("00050_processColor.js")(arg0), borderless, rippleRadius });
 importDefaultResultResult.canUseNativeForeground = () => true;
 function getBackgroundProp(arg0, arg1) {
 

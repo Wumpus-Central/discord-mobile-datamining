@@ -25,7 +25,7 @@ if (tmp) {
       require("forEach")(tmp2, (arg0) => {
         const tmp = new global[arg0]();
         if (Symbol.toStringTag in tmp) {
-          if (require(546) /* getProto */) {
+          if (require("../00546_getProto.js") /* getProto */) {
             const tmp4 = tmp2(546)(tmp);
             const _Symbol = Symbol;
             const tmp5 = tmp2(542)(tmp4, Symbol.toStringTag);
@@ -49,10 +49,10 @@ if (tmp) {
         if (typeof obj === "object") {
           if (closure_3) {
             let tmp14 = null;
-            if (_require(542)) {
+            if (_require("00542__.js")) {
               _require = obj;
               let dependencyMap = false;
-              _require(1401)(closure_8, (arg0, arg1) => {
+              _require("../01401_forEach.js")(closure_8, (arg0, arg1) => {
                 if (!closure_1) {
                   try {
                     if ("$" + arg0(closure_0) === arg1) {
@@ -73,7 +73,7 @@ if (tmp) {
               if (tmp7) {
                 _require = obj;
                 dependencyMap = false;
-                _require(1401)(closure_8, (arg0, arg1) => {
+                _require("../01401_forEach.js")(closure_8, (arg0, arg1) => {
                   if (!closure_1) {
                     try {
                       arg0(closure_0);
@@ -98,6 +98,6 @@ require("forEach")(tmp2, (arg0) => {
   const arr = new global[arg0]();
   if (arr.slice || arr.set) {
     const text = `$${arg0}`;
-    closure_8[`$${arg0}`] = require(1403) /* callBind */(tmp);
+    closure_8[`$${arg0}`] = require("../01403_callBind.js") /* callBind */(tmp);
   }
 });

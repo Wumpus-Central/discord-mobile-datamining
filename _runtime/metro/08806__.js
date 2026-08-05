@@ -1,5 +1,5 @@
 // _runtime/metro/08806__.js
-import module_8807 from "module_8807";
+import 08807__ from "08807__.js";
 import merged1 from "merged1";
 import merged2 from "merged2";
 import emptyFunction from "emptyFunction";

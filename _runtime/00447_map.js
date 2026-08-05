@@ -122,7 +122,7 @@ arg5.default = {
     module(279)(arg0, "focus");
   },
   sendAccessibilityEvent(arg0, arg1) {
-    const result = require(114) /* renderElement */.sendAccessibilityEvent(arg0, arg1);
+    const result = require("00114_renderElement.js") /* renderElement */.sendAccessibilityEvent(arg0, arg1);
   },
   announceForAccessibility(intl) {
     const obj = module(448);

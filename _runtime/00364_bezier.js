@@ -78,7 +78,7 @@ const obj = {
     }
   },
   bezier(arg0, arg1, arg2, arg3) {
-    return require(365) /* bezier */.default(arg0, arg1, arg2, arg3);
+    return require("00365_bezier.js") /* bezier */.default(arg0, arg1, arg2, arg3);
   },
   in(ease) {
     return ease;

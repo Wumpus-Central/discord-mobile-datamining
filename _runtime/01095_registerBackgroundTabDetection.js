@@ -3,7 +3,7 @@ const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.registerBackgroundTabDetection = function registerBackgroundTabDetection() {
-  if (require(1028) /* ignoreNextOnError */.WINDOW.document) {
+  if (require("01028_ignoreNextOnError.js") /* ignoreNextOnError */.WINDOW.document) {
     const _document = tmp(1028).WINDOW.document;
     const listener = _document.addEventListener("visibilitychange", () => {
       let op;

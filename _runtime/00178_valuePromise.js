@@ -7,8 +7,8 @@ import noop from "noop";
 import noop from "noop";
 
 function valuePromise(_z) {
-  let tmp = require(177) /* noop */;
-  tmp = new tmp(require(177) /* noop */._D);
+  let tmp = require("00177_noop.js") /* noop */;
+  tmp = new tmp(require("00177_noop.js") /* noop */._D);
   tmp._y = 1;
   tmp._z = _z;
   return tmp;
@@ -22,7 +22,7 @@ function onSettledReject(reason) {
 function mapAllSettled(value) {
   if (value) {
     if (typeof value === "object") {
-      if (value instanceof require(177) /* noop */) {
+      if (value instanceof require("00177_noop.js") /* noop */) {
         if (value.then === tmp(177).prototype.then) {
           return value.then(onSettledFulfill, onSettledReject);
         }
@@ -56,7 +56,7 @@ noop = new noop(require("noop")._D);
 noop._y = 1;
 noop._z = "";
 require("noop").resolve = (self) => {
-  if (self instanceof require(177) /* noop */) {
+  if (self instanceof require("00177_noop.js") /* noop */) {
     return self;
   } else if (null === self) {
     return noop;
@@ -111,7 +111,7 @@ function iterableToArray(arg0) {
 }
 require("noop").all = (arg0) => {
   const _require = iterableToArray(arg0);
-  return new _require(177)((arg0, arg1) => {
+  return new _require("00177_noop.js")((arg0, arg1) => {
     let closure_0 = arg0;
     let closure_1 = arg1;
     function res(arg0, self) {
@@ -177,18 +177,18 @@ require("noop").all = (arg0) => {
   });
 };
 require("noop").allSettled = (arg0) => {
-  const obj = require(177) /* noop */;
+  const obj = require("00177_noop.js") /* noop */;
   return obj.all(iterableToArray(arg0).map(mapAllSettled));
 };
 require("noop").reject = (arg0) => {
   const _require = arg0;
-  return new _require(177)((arg0, arg1) => {
+  return new _require("00177_noop.js")((arg0, arg1) => {
     arg1(closure_0);
   });
 };
 require("noop").race = (arg0) => {
   const _require = arg0;
-  return new _require(177)((arg0, arg1) => {
+  return new _require("00177_noop.js")((arg0, arg1) => {
     let closure_0 = arg0;
     let closure_1 = arg1;
     const item = outer1_9(closure_0).forEach((arg0) => {
@@ -202,7 +202,7 @@ require("noop").prototype.catch = function(arg0) {
 };
 require("noop").any = function promiseAny(arg0) {
   const _require = arg0;
-  return new _require(177)((arg0, arg1) => {
+  return new _require("00177_noop.js")((arg0, arg1) => {
     let closure_0 = arg0;
     let closure_1 = arg1;
     function resolveOnce(arg0) {

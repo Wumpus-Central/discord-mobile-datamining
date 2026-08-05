@@ -62,7 +62,7 @@ arg5.default = {
     return -1;
   },
   clearInteractionHandle(interactionHandle) {
-    require(38)(interactionHandle, "InteractionManager: Must provide a handle to clear.");
+    require("metro/00038__.js")(interactionHandle, "InteractionManager: Must provide a handle to clear.");
   },
   addListener(arg0, arg1, arg2) {
     return {

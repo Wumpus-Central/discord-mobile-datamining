@@ -19,7 +19,7 @@ export const ToRawFixed = function ToRawFixed(ZERO, minimumFractionDigits, maxim
   const divResult1 = ZERO.times(digitsToString.default.pow(10, maximumFractionDigits)).ceil().div(roundingIncrement);
   let str = ZERO.times(digitsToString.default.pow(10, maximumFractionDigits)).ceil().div(roundingIncrement).ceil().times(roundingIncrement);
   let timesResult4 = str.times(digitsToString.default.pow(10, -maximumFractionDigits));
-  result = require(13398) /* __exportStarResult11 */.ApplyUnsignedRoundingMode(ZERO, timesResult2, timesResult4, result);
+  result = require("13398___exportStarResult11.js") /* __exportStarResult11 */.ApplyUnsignedRoundingMode(ZERO, timesResult2, timesResult4, result);
   if (result.eq(timesResult2)) {
     timesResult4 = timesResult2;
     str = timesResult1;
@@ -32,7 +32,7 @@ export const ToRawFixed = function ToRawFixed(ZERO, minimumFractionDigits, maxim
     let sum = str2;
     let sum1 = length2;
     if (str2.length <= maximumFractionDigits) {
-      sum = require(13386) /* getMultiInternalSlots */.repeat("0", maximumFractionDigits - length2 + 1) + str2;
+      sum = require("13386_getMultiInternalSlots.js") /* getMultiInternalSlots */.repeat("0", maximumFractionDigits - length2 + 1) + str2;
       sum1 = maximumFractionDigits + 1;
     }
     const substr = sum.slice(0, sum1 - maximumFractionDigits);

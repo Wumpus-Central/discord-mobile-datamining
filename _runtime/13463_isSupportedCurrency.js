@@ -9,7 +9,7 @@ function isSupportedCurrency(arr3, locale) {
   try {
     const obj = { style: "currency", currencyDisplay: "name", currency: null };
     obj[2] = arr3;
-    const memoizedNumberFormat = require(13380) /* _formatToParts */.createMemoizedNumberFormat(str, obj);
+    const memoizedNumberFormat = require("13380__formatToParts.js") /* _formatToParts */.createMemoizedNumberFormat(str, obj);
     const str2 = memoizedNumberFormat.format(123);
     if (str2.substring(0, 3) !== arr3) {
       if (str3.substring(str3.length - 3) !== arr3) {
@@ -22,7 +22,7 @@ function isSupportedCurrency(arr3, locale) {
 }
 arg5.getSupportedCurrencies = function getSupportedCurrencies(locale) {
   const items = [];
-  const currencies = require(13464).currencies;
+  const currencies = require("metro/13464__.js").currencies;
   for (let num = 0; num < currencies.length; num = num + 1) {
     let arr3 = currencies[num];
     let tmp = num;

@@ -20,7 +20,7 @@ export const useScrollableSetter = (arg0, arg1, arg2, arg3) => {
   let isScrollableRefreshable;
   let setScrollableRef;
   let removeScrollableRef;
-  const bottomSheetInternal = _require(5348).useBottomSheetInternal();
+  const bottomSheetInternal = _require("05348_useBottomSheetInternal.js").useBottomSheetInternal();
   animatedScrollableType = bottomSheetInternal.animatedScrollableType;
   animatedScrollableContentOffsetY = bottomSheetInternal.animatedScrollableContentOffsetY;
   isContentHeightFixed = bottomSheetInternal.isContentHeightFixed;

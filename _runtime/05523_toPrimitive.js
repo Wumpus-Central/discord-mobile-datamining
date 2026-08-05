@@ -18,7 +18,7 @@ export default function toPrimitive(arg0, arg1) {
           const typeError = new TypeError("@@toPrimitive must return a primitive value.");
           throw typeError;
         }
-        tmpResult = require(5524) /* _typeof */;
+        tmpResult = require("metro/05524__typeof.js") /* _typeof */;
       } else {
         return "string" === str ? String : Number(arg0);
       }

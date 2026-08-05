@@ -29,10 +29,10 @@ arg5.default = {
       const sum = arg2 + Compression.JPEGInterchangeFormat.value;
       buffer = buffer.buffer;
       Compression.image = buffer.slice(sum, sum + Compression.JPEGInterchangeFormatLength.value);
-      require(4897) /* getDataView */.deferInit(Compression, "base64", function() {
+      require("04897_getDataView.js") /* getDataView */.deferInit(Compression, "base64", function() {
         return callback(table[0]).getBase64Image(this.image);
       });
-      const obj = require(4897) /* getDataView */;
+      const obj = require("04897_getDataView.js") /* getDataView */;
     }
     return Compression;
   }

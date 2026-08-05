@@ -22,6 +22,6 @@ export default function gestureHandlerRootHOC(displayName) {
     }
   }
   Wrapper.displayName = "gestureHandlerRootHOC(" + displayName.displayName || displayName.name + ")";
-  importDefault(4119)(Wrapper, displayName);
+  require("04119_getStatics.js")(Wrapper, displayName);
   return Wrapper;
 };

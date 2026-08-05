@@ -40,7 +40,7 @@ try {
     const _module1 = require("polyfillObjectProperty");
     _module1.polyfillGlobal("regeneratorRuntime", () => {
       delete tmp2[tmp];
-      return require(197) /* define */;
+      return require("../00197_define.js") /* define */;
     });
   }
 } catch (err) {

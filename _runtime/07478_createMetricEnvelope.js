@@ -18,19 +18,19 @@ function createMetricEnvelope(arg0, arg1, sdk) {
     tmp = arg1;
   }
   if (tmp) {
-    obj.dsn = require(7422) /* dsnFromString */.dsnToString(arg1);
-    const obj4 = require(7422) /* dsnFromString */;
+    obj.dsn = require("07422_dsnFromString.js") /* dsnFromString */.dsnToString(arg1);
+    const obj4 = require("07422_dsnFromString.js") /* dsnFromString */;
   }
   const date = new Date();
-  const result = require(7476) /* items */.serializeMetricBuckets(arg0);
+  const result = require("07476_items.js") /* items */.serializeMetricBuckets(arg0);
   obj = { type: "statsd", length: result.length };
   const items = [obj, result];
-  const obj5 = require(7476) /* items */;
+  const obj5 = require("07476_items.js") /* items */;
   const items1 = [items];
-  return require(7419) /* forEachEnvelopeItem */.createEnvelope(obj, items1);
+  return require("07419_forEachEnvelopeItem.js") /* forEachEnvelopeItem */.createEnvelope(obj, items1);
 }
 arg5.captureAggregateMetrics = function captureAggregateMetrics(_client, arr) {
-  const logger = require(7375) /* consoleSandbox */.logger;
+  const logger = require("07375_consoleSandbox.js") /* consoleSandbox */.logger;
   logger.log("Flushing aggregated metrics, number of metrics: " + arr.length);
   const dsn = _client.getDsn();
   const sdkMetadata = _client.getSdkMetadata();

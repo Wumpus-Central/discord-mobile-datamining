@@ -1,6 +1,6 @@
 // _runtime/07688_baseRest.js
 
 export default function baseRest(arg0, arg1) {
-  const tmp = require(4428) /* shortOut */;
-  return tmp(require(4432) /* overRest */(arg0, arg1, require(634) /* identity */), "" + arg0);
+  const tmp = require("04428_shortOut.js") /* shortOut */;
+  return tmp(require("04432_overRest.js") /* overRest */(arg0, arg1, require("00634_identity.js") /* identity */), "" + arg0);
 };

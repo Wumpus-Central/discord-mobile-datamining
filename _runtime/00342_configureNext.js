@@ -2,7 +2,7 @@
 const require = arg1;
 function configureNext(duration) {
   const _global = arg1;
-  if (!importDefault(273).isDisableAnimations) {
+  if (!require("00273_get_Version.js").isDisableAnimations) {
     if (closure_4) {
       const _require = false;
       let num = duration.duration;
@@ -20,7 +20,7 @@ function configureNext(duration) {
         }
       }
       importDefault = setTimeout(onAnimationComplete, num + 17);
-      const fabricUIManager = _require(71).getFabricUIManager();
+      const fabricUIManager = _require("00071_getFabricUIManager.js").getFabricUIManager();
       let prop;
       if (fabricUIManager != null) {
         prop = fabricUIManager.configureNextLayoutAnimation;
@@ -55,7 +55,7 @@ function configureNext(duration) {
           const _default2 = tmp6(68).default;
         }
       }
-      const obj = _require(71);
+      const obj = _require("00071_getFabricUIManager.js");
     }
   }
 }

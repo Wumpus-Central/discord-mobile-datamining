@@ -13,7 +13,7 @@ const styles = StyleSheet.create({ title: { fontSize: 20, fontFamily: "sans-seri
 export default function HeaderTitle(tintColor) {
   let text = tintColor.tintColor;
   const merged = Object.assign(tintColor, Object.create(null));
-  let obj = require(1481) /* Link */;
+  let obj = require("01481_Link.js") /* Link */;
   obj = { accessibilityRole: "header", "aria-level": "1", numberOfLines: 1 };
   const merged1 = Object.assign(merged);
   const items = [title.title, , ];

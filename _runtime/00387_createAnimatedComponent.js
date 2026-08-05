@@ -7,7 +7,7 @@ import { jsx } from "jsxProd";
 
 export default function createAnimatedComponent(displayName) {
   const importDefault = displayName;
-  const dependencyMap = importDefault(388)(null);
+  const dependencyMap = require("00388_addListenersToPropsValue.js")(null);
   class AnimatedComponent {
     constructor(arg0) {
       style = undefined;
@@ -37,7 +37,7 @@ export default function createAnimatedComponent(displayName) {
 };
 export const unstable_createAnimatedComponentWithAllowlist = function unstable_createAnimatedComponentWithAllowlist(displayName) {
   const importDefault = displayName;
-  const dependencyMap = importDefault(388)(arg1);
+  const dependencyMap = require("00388_addListenersToPropsValue.js")(arg1);
   class AnimatedComponent {
     constructor(arg0) {
       style = undefined;

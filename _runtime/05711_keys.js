@@ -3,7 +3,7 @@
 export default (arg0) => {
   let require;
   let obj = {};
-  const keys = Object.keys(require(5709) /* keys */);
+  const keys = Object.keys(require("05709_keys.js") /* keys */);
   for (let num = 0; num < length; num = num + 1) {
     obj[keys[num]] = { distance: -1, parent: null };
   }
@@ -14,7 +14,7 @@ export default (arg0) => {
     let _Object = Object;
     let tmp2 = require;
     let tmp3 = dependencyMap;
-    let keys1 = Object.keys(require(5709) /* keys */[arr]);
+    let keys1 = Object.keys(require("05709_keys.js") /* keys */[arr]);
     let length2 = keys1.length;
     for (let num2 = 0; num2 < length2; num2 = num2 + 1) {
       let tmp4 = keys1[num2];
@@ -36,7 +36,7 @@ export default (arg0) => {
       let items1 = [obj[tmp8].parent, tmp8];
       let tmp14 = require;
       let tmp15 = dependencyMap;
-      let fn = require(5709) /* keys */[obj[tmp8].parent][tmp8];
+      let fn = require("05709_keys.js") /* keys */[obj[tmp8].parent][tmp8];
       let parent3 = obj[tmp8].parent;
       let tmp13 = fn;
       if (obj[parent3].parent) {
@@ -44,7 +44,7 @@ export default (arg0) => {
           let arr1 = items1.unshift(obj[parent3].parent);
           let tmp11 = require;
           let tmp12 = dependencyMap;
-          require = require(5709) /* keys */[obj[parent3].parent][parent3];
+          require = require("05709_keys.js") /* keys */[obj[parent3].parent][parent3];
           dependencyMap = fn;
           fn = (arg0) => closure_1(closure_0(arg0));
           let parent = obj[parent3].parent;

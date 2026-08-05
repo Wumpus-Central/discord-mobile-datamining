@@ -56,9 +56,9 @@ let obj = {
         return self.refMethod(arg0);
       }
     };
-    const tmp = importDefault(8492);
+    const tmp = require("metro/08492___INTERNAL_VIEW_CONFIG.js");
     const merged = Object.assign(self(8475).extractFilter(this.props));
-    const merged1 = Object.assign(importDefault(8475)(this.props));
+    const merged1 = Object.assign(require("08475_extractFeFlood.js")(this.props));
     return <tmp ref={function ref(arg0) {
       return self.refMethod(arg0);
     }} />;

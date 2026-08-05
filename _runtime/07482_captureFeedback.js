@@ -15,13 +15,13 @@ arg5.captureFeedback = function captureFeedback(arg0) {
   }
   let currentScope = arg2;
   if (arg2 === undefined) {
-    currentScope = require(7402) /* getClient */.getCurrentScope();
-    const obj3 = require(7402) /* getClient */;
+    currentScope = require("07402_getClient.js") /* getClient */.getCurrentScope();
+    const obj3 = require("07402_getClient.js") /* getClient */;
   }
   obj = { contexts: null, type: "feedback", level: "info", tags: null };
   obj = { feedback: null };
   ({ message, name, email, url, source, associatedEventId, tags } = arg0);
-  obj[0] = require(7381) /* addNonEnumerableProperty */.dropUndefinedKeys({ contact_email: email, name, message, url, source, associated_event_id: associatedEventId });
+  obj[0] = require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */.dropUndefinedKeys({ contact_email: email, name, message, url, source, associated_event_id: associatedEventId });
   obj[0] = obj;
   obj[3] = tags;
   let client = currentScope;
@@ -29,8 +29,8 @@ arg5.captureFeedback = function captureFeedback(arg0) {
     client = currentScope.getClient();
   }
   if (!client) {
-    client = require(7402) /* getClient */.getClient();
-    const tmp3Result = require(7402) /* getClient */;
+    client = require("07402_getClient.js") /* getClient */.getClient();
+    const tmp3Result = require("07402_getClient.js") /* getClient */;
   }
   if (client) {
     client.emit("beforeSendFeedback", obj, obj);

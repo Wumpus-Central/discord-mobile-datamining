@@ -3,7 +3,7 @@
 export default function RequireObjectCoercible(arg0) {
   if (null == arg0) {
     let text = arguments.length > 0;
-    let tmp3 = require(541);
+    let tmp3 = require("metro/00541__.js");
     if (text) {
       text = arguments[1];
     }

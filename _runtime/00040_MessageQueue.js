@@ -161,7 +161,7 @@ let items = [
           const result = obj.nativeFlushQueueImmediate(self._queue);
         }
       }
-      require(46) /* isEnabled */.counterEvent("pending_js_to_native_queue", self._queue[0].length);
+      require("00046_isEnabled.js") /* isEnabled */.counterEvent("pending_js_to_native_queue", self._queue[0].length);
       if (self.__spy) {
         obj = { type: 1, module: null, method: null, args: null };
         obj[1] = "" + closure_0;
@@ -192,8 +192,8 @@ let items = [
         try {
           arg0();
         } catch (tmp2) {
-          require(47).default.reportFatalError(tmp2);
-          const _default = require(47).default;
+          require("metro/00047__.js").default.reportFatalError(tmp2);
+          const _default = require("metro/00047__.js").default;
         }
       }
     }
@@ -211,13 +211,13 @@ let items = [
   {
     key: "__callReactNativeMicrotasks",
     value: function __callReactNativeMicrotasks() {
-      require(46) /* isEnabled */.beginEvent("JSTimers.callReactNativeMicrotasks()");
+      require("00046_isEnabled.js") /* isEnabled */.beginEvent("JSTimers.callReactNativeMicrotasks()");
       try {
         const self = this;
         if (null != this._reactNativeMicrotasksCallback) {
           const result = self._reactNativeMicrotasksCallback();
         }
-        require(46) /* isEnabled */.endEvent();
+        require("00046_isEnabled.js") /* isEnabled */.endEvent();
       } catch (tmp10) {
         tmp3(tmp[2]).endEvent();
         throw tmp10;
@@ -230,7 +230,7 @@ let items = [
       const self = this;
       this._lastFlush = Date.now();
       this._eventLoopStartTime = this._lastFlush;
-      const beginEvent = require(46) /* isEnabled */.beginEvent;
+      const beginEvent = require("00046_isEnabled.js") /* isEnabled */.beginEvent;
       if (this.__spy) {
         const _HermesInternal2 = HermesInternal;
         beginEvent("" + closure_1 + "." + closure_2 + "(" + tmp4(48).default(closure_0) + ")");

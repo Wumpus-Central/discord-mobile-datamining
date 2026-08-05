@@ -17,5 +17,5 @@ export default function getPolyfill() {
       }
     }
   }
-  trim5 = require(4551) /* trim */;
+  trim5 = require("04551_trim.js") /* trim */;
 };

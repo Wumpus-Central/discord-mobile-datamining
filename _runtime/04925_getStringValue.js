@@ -5,7 +5,7 @@ const obj = { 45056: null, 45057: "NumberOfImages", 45058: "MPEntry", 45059: "Im
 obj[45056] = {
   name: "MPFVersion",
   description(value) {
-    return require(4922) /* getStringValue */.getStringValue(value);
+    return require("04922_getStringValue.js") /* getStringValue */.getStringValue(value);
   }
 };
 arg5.default = obj;

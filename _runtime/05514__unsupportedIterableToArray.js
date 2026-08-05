@@ -3,7 +3,7 @@
 export default function _unsupportedIterableToArray(str) {
   if (str) {
     if (typeof str === "string") {
-      return require(5515) /* _arrayLikeToArray */(str, arg1);
+      return require("05515__arrayLikeToArray.js") /* _arrayLikeToArray */(str, arg1);
     } else {
       const toString = {}.toString;
       const call = toString.call;
@@ -16,7 +16,7 @@ export default function _unsupportedIterableToArray(str) {
       if ("Map" !== name) {
         if ("Set" !== name) {
           if ("Arguments" === name) {
-            arr = require(5515) /* _arrayLikeToArray */(str, arg1);
+            arr = require("05515__arrayLikeToArray.js") /* _arrayLikeToArray */(str, arg1);
           } else {
             const obj = /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/;
           }

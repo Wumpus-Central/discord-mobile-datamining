@@ -15,7 +15,7 @@ export const getNativeComponent = () => {
       return null;
     } else {
       const _Error = Error;
-      throw Error(require(8902) /* getInstallationErrorMessage */.getInstallationErrorMessage());
+      throw Error(require("08902_getInstallationErrorMessage.js") /* getInstallationErrorMessage */.getInstallationErrorMessage());
     }
   }
 };
@@ -32,7 +32,7 @@ export const getNativeModule = () => {
       return null;
     } else {
       const _Error = Error;
-      throw Error(require(8902) /* getInstallationErrorMessage */.getInstallationErrorMessage());
+      throw Error(require("08902_getInstallationErrorMessage.js") /* getInstallationErrorMessage */.getInstallationErrorMessage());
     }
   }
 };

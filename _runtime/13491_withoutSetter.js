@@ -18,7 +18,7 @@ if (prop) {
 
 export default (arg0) => {
   let _Symbol = dependencyMap;
-  if (require(13500) /* call */(closure_2, arg0)) {
+  if (require("13500_call.js") /* call */(closure_2, arg0)) {
     return tmp2[arg0];
   } else {
     if (!tmp(13496)) {

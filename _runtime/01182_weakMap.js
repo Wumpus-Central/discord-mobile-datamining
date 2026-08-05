@@ -6,7 +6,7 @@ arg5.enableSyncToNative = function enableSyncToNative(globalScope) {
   const _require = globalScope;
   if (!weakMap.has(globalScope)) {
     let result = weakMap.set(globalScope, true);
-    _require(1154).fillTyped(globalScope, "setUser", (arg0) => {
+    _require("01154_fillTyped.js").fillTyped(globalScope, "setUser", (arg0) => {
       let closure_0 = arg0;
       return (arg0) => {
         const NATIVE = callback(outer2_1[1]).NATIVE;
@@ -15,8 +15,8 @@ arg5.enableSyncToNative = function enableSyncToNative(globalScope) {
         return typeof call === "unknown" ? callback(arg0) : call(callback, arg0);
       };
     });
-    let obj2 = _require(1154);
-    _require(1154).fillTyped(globalScope, "setTag", (arg0) => {
+    let obj2 = _require("01154_fillTyped.js");
+    _require("01154_fillTyped.js").fillTyped(globalScope, "setTag", (arg0) => {
       let closure_0 = arg0;
       return (arg0, arg1) => {
         const NATIVE = callback(outer2_1[1]).NATIVE;
@@ -26,8 +26,8 @@ arg5.enableSyncToNative = function enableSyncToNative(globalScope) {
         return typeof call === "unknown" ? callback(arg0, arg1) : call(callback, arg0, arg1);
       };
     });
-    const obj3 = _require(1154);
-    _require(1154).fillTyped(globalScope, "setTags", (arg0) => {
+    const obj3 = _require("01154_fillTyped.js");
+    _require("01154_fillTyped.js").fillTyped(globalScope, "setTags", (arg0) => {
       let closure_0 = arg0;
       return (arg0) => {
         let closure_0 = arg0;
@@ -41,8 +41,8 @@ arg5.enableSyncToNative = function enableSyncToNative(globalScope) {
         return typeof call === "unknown" ? closure_0(arg0) : call(closure_0, arg0);
       };
     });
-    const obj4 = _require(1154);
-    _require(1154).fillTyped(globalScope, "setExtras", (arg0) => {
+    const obj4 = _require("01154_fillTyped.js");
+    _require("01154_fillTyped.js").fillTyped(globalScope, "setExtras", (arg0) => {
       let closure_0 = arg0;
       return (arg0) => {
         let closure_0 = arg0;
@@ -55,8 +55,8 @@ arg5.enableSyncToNative = function enableSyncToNative(globalScope) {
         return typeof call === "unknown" ? closure_0(arg0) : call(closure_0, arg0);
       };
     });
-    const obj5 = _require(1154);
-    _require(1154).fillTyped(globalScope, "setExtra", (arg0) => {
+    const obj5 = _require("01154_fillTyped.js");
+    _require("01154_fillTyped.js").fillTyped(globalScope, "setExtra", (arg0) => {
       let closure_0 = arg0;
       return (arg0, arg1) => {
         const NATIVE = callback(outer2_1[1]).NATIVE;
@@ -65,8 +65,8 @@ arg5.enableSyncToNative = function enableSyncToNative(globalScope) {
         return typeof call === "unknown" ? callback(arg0, arg1) : call(callback, arg0, arg1);
       };
     });
-    const obj6 = _require(1154);
-    _require(1154).fillTyped(globalScope, "addBreadcrumb", (arg0) => {
+    const obj6 = _require("01154_fillTyped.js");
+    _require("01154_fillTyped.js").fillTyped(globalScope, "addBreadcrumb", (arg0) => {
       let closure_0 = arg0;
       return (level) => {
         let DEFAULT_BREADCRUMB_LEVEL = level.level;
@@ -99,8 +99,8 @@ arg5.enableSyncToNative = function enableSyncToNative(globalScope) {
         return callback;
       };
     });
-    const obj7 = _require(1154);
-    _require(1154).fillTyped(globalScope, "clearBreadcrumbs", (arg0) => {
+    const obj7 = _require("01154_fillTyped.js");
+    _require("01154_fillTyped.js").fillTyped(globalScope, "clearBreadcrumbs", (arg0) => {
       let closure_0 = arg0;
       return () => {
         const NATIVE = callback(outer2_1[1]).NATIVE;
@@ -109,8 +109,8 @@ arg5.enableSyncToNative = function enableSyncToNative(globalScope) {
         return typeof call === "unknown" ? callback() : call(callback);
       };
     });
-    const obj8 = _require(1154);
-    _require(1154).fillTyped(globalScope, "setContext", (arg0) => {
+    const obj8 = _require("01154_fillTyped.js");
+    _require("01154_fillTyped.js").fillTyped(globalScope, "setContext", (arg0) => {
       let closure_0 = arg0;
       return (arg0, arg1) => {
         const NATIVE = callback(outer2_1[1]).NATIVE;
@@ -119,6 +119,6 @@ arg5.enableSyncToNative = function enableSyncToNative(globalScope) {
         return typeof call === "unknown" ? callback(arg0, arg1) : call(callback, arg0, arg1);
       };
     });
-    const obj9 = _require(1154);
+    const obj9 = _require("01154_fillTyped.js");
   }
 };

@@ -5,7 +5,7 @@ export default function Type(arg0) {
   if (typeof arg0 !== "symbol") {
     let str2 = "BigInt";
     if (typeof arg0 !== "bigint") {
-      str2 = require(4528) /* Type */(arg0);
+      str2 = require("04528_Type.js") /* Type */(arg0);
     }
     str = str2;
   }

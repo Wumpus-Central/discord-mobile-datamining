@@ -2,7 +2,7 @@
 const require = arg1;
 const dependencyMap = arg6;
 function instrumentHistory() {
-  const WINDOW = require(1039) /* WINDOW */.WINDOW;
+  const WINDOW = require("01039_WINDOW.js") /* WINDOW */.WINDOW;
   const listener = WINDOW.addEventListener("popstate", () => {
     const href = callback(table[1]).WINDOW.location.href;
     if (href !== href) {
@@ -57,8 +57,8 @@ function instrumentHistory() {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.addHistoryInstrumentationHandler = function addHistoryInstrumentationHandler(arg0) {
-  require(817) /* registerSpanErrorInstrumentation */.addHandler("history", arg0);
-  const obj = require(817) /* registerSpanErrorInstrumentation */;
-  require(817) /* registerSpanErrorInstrumentation */.maybeInstrument("history", instrumentHistory);
+  require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.addHandler("history", arg0);
+  const obj = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
+  require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.maybeInstrument("history", instrumentHistory);
 };
 arg5.instrumentHistory = instrumentHistory;

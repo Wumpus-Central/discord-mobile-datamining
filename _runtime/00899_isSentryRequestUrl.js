@@ -9,7 +9,7 @@ arg5.isSentryRequestUrl = function isSentryRequestUrl(arr, getDsn) {
   if (getDsn != null) {
     const tunnel = getDsn.getOptions().tunnel;
   }
-  const result = require(900) /* getHttpSpanDetailsFromUrlObject */.parseStringToURLObject(arr);
+  const result = require("00900_getHttpSpanDetailsFromUrlObject.js") /* getHttpSpanDetailsFromUrlObject */.parseStringToURLObject(arr);
   let flag = false;
   if (result) {
     flag = false;
@@ -26,7 +26,7 @@ arg5.isSentryRequestUrl = function isSentryRequestUrl(arr, getDsn) {
       }
       flag = tmp5;
     }
-    tmp2Result = require(900) /* getHttpSpanDetailsFromUrlObject */;
+    tmp2Result = require("00900_getHttpSpanDetailsFromUrlObject.js") /* getHttpSpanDetailsFromUrlObject */;
   }
   if (!flag) {
     let flag2 = false;

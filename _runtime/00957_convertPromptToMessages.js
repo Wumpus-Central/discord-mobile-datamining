@@ -30,11 +30,11 @@ function convertPromptToMessages(data) {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5._INTERNAL_cleanupToolCallSpan = function _INTERNAL_cleanupToolCallSpan(arg0) {
-  const toolCallSpanMap = require(959) /* map */.toolCallSpanMap;
+  const toolCallSpanMap = require("00959_map.js") /* map */.toolCallSpanMap;
   toolCallSpanMap.delete(arg0);
 };
 arg5._INTERNAL_getSpanForToolCallId = function _INTERNAL_getSpanForToolCallId(arg0) {
-  const toolCallSpanMap = require(959) /* map */.toolCallSpanMap;
+  const toolCallSpanMap = require("00959_map.js") /* map */.toolCallSpanMap;
   return toolCallSpanMap.get(arg0);
 };
 arg5.accumulateTokensForParent = function accumulateTokensForParent(item10015, map) {
@@ -62,10 +62,10 @@ arg5.applyAccumulatedTokens = function applyAccumulatedTokens(trace, map) {
   }
   if (data) {
     if (value.inputTokens > 0) {
-      trace.data[require(958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = value.inputTokens;
+      trace.data[require("metro/00958__.js").GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = value.inputTokens;
     }
     if (value.outputTokens > 0) {
-      trace.data[require(958).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = value.outputTokens;
+      trace.data[require("metro/00958__.js").GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = value.outputTokens;
     }
     if (tmp6) {
       trace.data["gen_ai.usage.total_tokens"] = value.inputTokens + value.outputTokens;
@@ -221,61 +221,61 @@ arg5.getSpanOpFromName = function getSpanOpFromName(description) {
     case "bm":
     break;
     case "body":
-      let tmp17 = require(958);
+      let tmp17 = require("metro/00958__.js");
       return tmp17.GEN_AI_INVOKE_AGENT_OPERATION_ATTRIBUTE;
     case "borderRadius":
     break;
     case "bottom":
-      tmp17 = require(958);
+      tmp17 = require("metro/00958__.js");
       return tmp17.GEN_AI_INVOKE_AGENT_OPERATION_ATTRIBUTE;
     case "call":
     break;
     case "channel":
-      tmp17 = require(958);
+      tmp17 = require("metro/00958__.js");
       return tmp17.GEN_AI_INVOKE_AGENT_OPERATION_ATTRIBUTE;
     case "channelId":
     break;
     case "channel_id":
-      tmp17 = require(958);
+      tmp17 = require("metro/00958__.js");
       return tmp17.GEN_AI_INVOKE_AGENT_OPERATION_ATTRIBUTE;
     case "id":
     break;
     case "children":
-      tmp17 = require(958);
+      tmp17 = require("metro/00958__.js");
       return tmp17.GEN_AI_INVOKE_AGENT_OPERATION_ATTRIBUTE;
     case "cix":
     break;
     case "ix":
-      tmp17 = require(958);
+      tmp17 = require("metro/00958__.js");
       return tmp17.GEN_AI_INVOKE_AGENT_OPERATION_ATTRIBUTE;
     case "unicodeVersion":
     break;
     case "code":
-      return require(958).GEN_AI_GENERATE_TEXT_DO_GENERATE_OPERATION_ATTRIBUTE;
+      return require("metro/00958__.js").GEN_AI_GENERATE_TEXT_DO_GENERATE_OPERATION_ATTRIBUTE;
     case "color":
     break;
     case "colors":
-      return require(958).GEN_AI_STREAM_TEXT_DO_STREAM_OPERATION_ATTRIBUTE;
+      return require("metro/00958__.js").GEN_AI_STREAM_TEXT_DO_STREAM_OPERATION_ATTRIBUTE;
     case "concat":
     break;
     case "constructor":
-      return require(958).GEN_AI_GENERATE_OBJECT_DO_GENERATE_OPERATION_ATTRIBUTE;
+      return require("metro/00958__.js").GEN_AI_GENERATE_OBJECT_DO_GENERATE_OPERATION_ATTRIBUTE;
     case "container":
     break;
     case "content":
-      return require(958).GEN_AI_STREAM_OBJECT_DO_STREAM_OPERATION_ATTRIBUTE;
+      return require("metro/00958__.js").GEN_AI_STREAM_OBJECT_DO_STREAM_OPERATION_ATTRIBUTE;
     case "context":
     break;
     case "text":
-      return require(958).GEN_AI_EMBED_DO_EMBED_OPERATION_ATTRIBUTE;
+      return require("metro/00958__.js").GEN_AI_EMBED_DO_EMBED_OPERATION_ATTRIBUTE;
     case "count":
     break;
     case "create":
-      return require(958).GEN_AI_EMBED_MANY_DO_EMBED_OPERATION_ATTRIBUTE;
+      return require("metro/00958__.js").GEN_AI_EMBED_MANY_DO_EMBED_OPERATION_ATTRIBUTE;
     case "createStyles":
     break;
     case "ty":
-      return require(958).GEN_AI_EXECUTE_TOOL_OPERATION_ATTRIBUTE;
+      return require("metro/00958__.js").GEN_AI_EXECUTE_TOOL_OPERATION_ATTRIBUTE;
     case "current":
     break;
     case "cursor":

@@ -4,7 +4,7 @@ let closure_3 = require("getEvalledConstructor")("%Math.floor%");
 
 export default function setFunctionLength(fn, num) {
   if (typeof fn !== "function") {
-    const tmp25 = new require(541)("`fn` is not a function");
+    const tmp25 = new require("metro/00541__.js")("`fn` is not a function");
     throw tmp25;
   } else {
     if (typeof num === "number") {
@@ -16,7 +16,7 @@ export default function setFunctionLength(fn, num) {
             if ("length" in fn) {
               flag = true;
               flag2 = true;
-              if (require(542)) {
+              if (require("metro/00542__.js")) {
                 const tmp4 = tmp2(542)(fn, "length");
                 let tmp5 = tmp4;
                 if (tmp4) {
@@ -46,7 +46,7 @@ export default function setFunctionLength(fn, num) {
               flag2 = !tmp;
             }
             if (flag2) {
-              const tmp10 = require(1406) /* defineDataProperty */;
+              const tmp10 = require("01406_defineDataProperty.js") /* defineDataProperty */;
               if (closure_2) {
                 tmp10(fn, "length", num, true, true);
               } else {
@@ -58,7 +58,7 @@ export default function setFunctionLength(fn, num) {
         }
       }
     }
-    const tmp19 = new require(541)("`length` must be a positive 32-bit integer");
+    const tmp19 = new require("metro/00541__.js")("`length` must be a positive 32-bit integer");
     throw tmp19;
   }
 };

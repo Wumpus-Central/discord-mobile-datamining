@@ -1,7 +1,7 @@
 // _runtime/04575_Get.js
 
 export default function Get(arg0, arg1) {
-  if (require(4529) /* isObject */(arg0)) {
+  if (require("04529_isObject.js") /* isObject */(arg0)) {
     if (tmp(4576)(arg1)) {
       return arg0[arg1];
     } else {

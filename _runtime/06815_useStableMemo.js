@@ -9,7 +9,7 @@ export default function useStableMemo(arg0, items) {
   if (tmp2.current === closure_3) {
     tmp.current = arg0();
     tmp2.current = items;
-  } else if (!importDefault(6816)(items, tmp2.current)) {
+  } else if (!require("06816_areHookInputsEqual.js")(items, tmp2.current)) {
     tmp.current = arg0();
     tmp2.current = items;
   }

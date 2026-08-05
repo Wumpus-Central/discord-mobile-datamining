@@ -5,7 +5,7 @@ export default (arg0) => {
   {
     num = 0;
     if (0 !== tmp) {
-      num = require(13527)(tmp);
+      num = require("13527__.js")(tmp);
     }
   }
   return num;

@@ -58,7 +58,7 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let closure_3 = ["user", "level", "extra", "contexts", "tags", "fingerprint", "propagationContext"];
 arg5.applyClientOptions = applyClientOptions;
 arg5.applyDebugIds = function applyDebugIds(exception) {
-  _require = _require(874).getFilenameToDebugIdMap(arg1);
+  _require = _require("00874_getFilenameToDebugIdMap.js").getFilenameToDebugIdMap(arg1);
   exception = exception.exception;
   if (exception != null) {
     const values = exception.values;

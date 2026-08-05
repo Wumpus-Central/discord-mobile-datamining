@@ -89,7 +89,7 @@ export const convertAnimationObjectToKeyframes = function convertAnimationObject
         let tmp38 = _require;
         let tmp39 = dependencyMap;
         let tmp40 = arr;
-        if (arr in _require(1665).WebEasings) {
+        if (arr in _require("01665_getEasingByName.js").WebEasings) {
           str = arr;
         } else if (arr.name in tmp38(1665).WebEasings) {
           let tmp19 = arr;

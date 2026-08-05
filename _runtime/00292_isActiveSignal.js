@@ -343,8 +343,8 @@ const items = [
       let closure_0 = arg0;
       const importDefault = nativeEvent;
       if (null != nativeEvent.nativeEvent.timestamp) {
-        importDefault(293).emitEvent(() => ({ signal: closure_0, nativeTimestamp: nativeEvent.nativeEvent.timestamp }));
-        const obj = importDefault(293);
+        require("00293_PressabilityPerformanceEventEmitter.js").emitEvent(() => ({ signal: closure_0, nativeTimestamp: nativeEvent.nativeEvent.timestamp }));
+        const obj = require("00293_PressabilityPerformanceEventEmitter.js");
       }
       const self = this;
       const _touchState = this._touchState;
@@ -361,12 +361,12 @@ const items = [
         if (typeof self._responderID === "number") {
           str3 = self._responderID;
         }
-        importDefault(38)(tmp10, "Pressability: Invalid signal `%s` for state `%s` on responder: %s", arg0, _touchState, str3);
+        require("metro/00038__.js")(tmp10, "Pressability: Invalid signal `%s` for state `%s` on responder: %s", arg0, _touchState, str3);
         if (_touchState !== tmp5) {
           const result = self._performTransitionSideEffects(_touchState, tmp5, arg0, nativeEvent);
           self._touchState = tmp5;
         }
-        const tmp9 = importDefault(38);
+        const tmp9 = require("metro/00038__.js");
       }
     }
   },
@@ -474,8 +474,8 @@ const items = [
               }
               if (!tmp26) {
                 if (true !== tmp24) {
-                  importDefault(294).playTouchSound();
-                  const obj = importDefault(294);
+                  require("00294_SoundManager.js").playTouchSound();
+                  const obj = require("00294_SoundManager.js");
                 }
                 onPress(nativeEvent);
               }
@@ -568,8 +568,8 @@ const items = [
       const self = this;
       if (null != this._responderID) {
         if (typeof self._responderID === "number") {
-          importDefault(68).measure(self._responderID, self._measureCallback);
-          const obj = importDefault(68);
+          require("00068_measure.js").measure(self._responderID, self._measureCallback);
+          const obj = require("00068_measure.js");
         } else {
           const _responderID = self._responderID;
           _responderID.measureAsyncOnUI(self._measureCallback);

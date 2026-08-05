@@ -2,7 +2,7 @@
 import formatDistance from "formatDistance";
 import formatRelative from "formatRelative";
 import buildLocalizeFn from "buildLocalizeFn";
-import module_1955 from "module_1955";
+import 01955__ from "metro/01955__.js";
 import buildFormatLongFn from "buildFormatLongFn";
 
 if (!formatDistance) {

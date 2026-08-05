@@ -11,9 +11,9 @@ if (require("flag")) {
 export default function callBind(arg0) {
   const diff = arg0.length - (arguments.length - 1);
   let num = 0;
-  const tmp = require(551) /* callBindBasic */(arguments);
+  const tmp = require("00551_callBindBasic.js") /* callBindBasic */(arguments);
   if (0 < diff) {
     num = diff;
   }
-  return require(1404) /* setFunctionLength */(tmp, 1 + num, true);
+  return require("01404_setFunctionLength.js") /* setFunctionLength */(tmp, 1 + num, true);
 };

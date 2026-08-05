@@ -70,7 +70,7 @@ export const get = function get(arg0, arg1) {
 };
 export const getWithFallback_DEPRECATED = function getWithFallback_DEPRECATED(arg0, arg1) {
   if (null == callback) {
-    importDefault(38)(null == callback, "Unexpected invocation!");
+    require("metro/00038__.js")(null == callback, "Unexpected invocation!");
     class FallbackNativeComponent {
       constructor(arg0) {
         return null;

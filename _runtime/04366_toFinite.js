@@ -2,7 +2,7 @@
 
 export default function toFinite(arg0) {
   if (arg0) {
-    const tmp3 = require(637) /* toNumber */(arg0);
+    const tmp3 = require("00637_toNumber.js") /* toNumber */(arg0);
     if (tmp3 !== Infinity) {
       if (tmp3 !== -Infinity) {
         let num4 = 0;

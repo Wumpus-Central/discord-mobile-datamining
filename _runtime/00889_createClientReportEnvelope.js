@@ -6,7 +6,7 @@ arg5.createClientReportEnvelope = function createClientReportEnvelope(discarded_
   let result = arg2;
   const items = [{ type: "client_report" }, ];
   if (!arg2) {
-    let obj = require(838) /* dateTimestampInSeconds */;
+    let obj = require("00838_dateTimestampInSeconds.js") /* dateTimestampInSeconds */;
     result = obj.dateTimestampInSeconds();
   }
   items[1] = { timestamp: result, discarded_events };
@@ -17,5 +17,5 @@ arg5.createClientReportEnvelope = function createClientReportEnvelope(discarded_
     obj = {};
   }
   const items1 = [items];
-  return require(864) /* forEachEnvelopeItem */.createEnvelope(obj, items1);
+  return require("00864_forEachEnvelopeItem.js") /* forEachEnvelopeItem */.createEnvelope(obj, items1);
 };

@@ -10,13 +10,13 @@ arg5.hasSpansEnabled = function hasSpansEnabled(options) {
   }
   let tmp = options;
   if (!options) {
-    const client = require(848) /* getClient */.getClient();
+    const client = require("00848_getClient.js") /* getClient */.getClient();
     options = undefined;
     if (client != null) {
       options = client.getOptions();
     }
     tmp = options;
-    const obj = require(848) /* getClient */;
+    const obj = require("00848_getClient.js") /* getClient */;
   }
   let tmp6 = !tmp;
   if (tmp) {

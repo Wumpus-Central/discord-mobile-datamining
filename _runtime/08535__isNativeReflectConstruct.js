@@ -79,13 +79,13 @@ let items = [
       const merged = Object.assign(propsAndStylesResult);
       obj.x = null;
       obj.y = null;
-      const tmp2Result = importDefault(8452)(obj, this);
-      const merged1 = Object.assign(tmp2Result, importDefault(8459)(propsAndStylesResult, true));
+      const tmp2Result = require("08452_extractProps.js")(obj, this);
+      const merged1 = Object.assign(tmp2Result, require("08459_extractFont.js")(propsAndStylesResult, true));
       tmp2Result.ref = this.refMethod;
       obj = {};
-      const tmp2 = importDefault(8452);
+      const tmp2 = require("08452_extractProps.js");
       const merged2 = Object.assign(tmp2Result);
-      return jsx(importDefault(8538), {});
+      return jsx(require("metro/08538___INTERNAL_VIEW_CONFIG.js"), {});
     }
   }
 ];

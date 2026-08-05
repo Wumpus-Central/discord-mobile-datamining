@@ -71,14 +71,14 @@ RepeatType[2] = "UNPACKED";
 ScalarType.normalizeFieldInfo = function normalizeFieldInfo(localName) {
   localName = localName.localName;
   if (null === localName) {
-    localName = require(1321) /* lowerCamelCase */.lowerCamelCase(localName.name);
-    const obj = require(1321) /* lowerCamelCase */;
+    localName = require("01321_lowerCamelCase.js") /* lowerCamelCase */.lowerCamelCase(localName.name);
+    const obj = require("01321_lowerCamelCase.js") /* lowerCamelCase */;
   }
   localName.localName = localName;
   let jsonName = localName.jsonName;
   if (null === jsonName) {
-    jsonName = require(1321) /* lowerCamelCase */.lowerCamelCase(localName.name);
-    const obj2 = require(1321) /* lowerCamelCase */;
+    jsonName = require("01321_lowerCamelCase.js") /* lowerCamelCase */.lowerCamelCase(localName.name);
+    const obj2 = require("01321_lowerCamelCase.js") /* lowerCamelCase */;
   }
   localName.jsonName = jsonName;
   let NO = localName.repeat;

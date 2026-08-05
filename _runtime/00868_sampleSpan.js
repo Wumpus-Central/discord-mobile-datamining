@@ -4,7 +4,7 @@ const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.sampleSpan = function sampleSpan(tracesSampler, parentSampled) {
   const _require = parentSampled;
-  let obj = _require(855);
+  let obj = _require("00855_hasSpansEnabled.js");
   if (obj.hasSpansEnabled(tracesSampler)) {
     if (typeof tracesSampler.tracesSampler === "function") {
       obj = {};

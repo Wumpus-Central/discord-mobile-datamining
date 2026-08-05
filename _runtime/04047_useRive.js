@@ -11,7 +11,7 @@ let require = arg1;
 export const useRive = function useRive() {
   let dependencyMap;
   let tmp4;
-  let obj = require(4036) /* c */;
+  let obj = require("04036_c.js") /* c */;
   const cResult = obj.c(4);
   const tmp2 = callback2(null);
   require = tmp2;

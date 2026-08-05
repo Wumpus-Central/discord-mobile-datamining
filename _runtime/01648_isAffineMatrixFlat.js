@@ -812,7 +812,7 @@ function decomposeMatrix(arr) {
   }
   const require = flatResult;
   if (0 === flatResult[15]) {
-    const reanimatedError = new require(1617) /* t */.ReanimatedError("Invalid transform matrix.");
+    const reanimatedError = new require("01617_t.js") /* t */.ReanimatedError("Invalid transform matrix.");
     throw reanimatedError;
   } else {
     const item = flatResult.forEach((arg0, arg1) => {

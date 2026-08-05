@@ -2,7 +2,7 @@
 const require = arg1;
 const dependencyMap = arg6;
 function getExpoUpdatesContext() {
-  let obj = require(1003) /* getExpoConstants */;
+  let obj = require("01003_getExpoConstants.js") /* getExpoConstants */;
   const expoUpdates = obj.getExpoUpdates();
   if (expoUpdates) {
     obj = { is_enabled: null, is_embedded_launch: null, is_emergency_launch: null, is_using_embedded_assets: null };

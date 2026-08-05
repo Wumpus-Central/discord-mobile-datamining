@@ -71,13 +71,13 @@ if (!fn) {
 }
 let obj = {
   onUnhandled(id, originalException) {
-    let obj = require(817) /* registerSpanErrorInstrumentation */;
+    let obj = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
     obj = { data: obj, originalException, syntheticException: null, mechanism: null };
     obj = { id };
     let syntheticError;
     if (!obj4.isErrorLike(originalException)) {
-      syntheticError = require(813) /* createSyntheticError */.createSyntheticError();
-      const tmpResult = require(813) /* createSyntheticError */;
+      syntheticError = require("00813_createSyntheticError.js") /* createSyntheticError */.createSyntheticError();
+      const tmpResult = require("00813_createSyntheticError.js") /* createSyntheticError */;
     }
     obj[2] = syntheticError;
     obj[3] = { handled: true, type: "onunhandledrejection" };

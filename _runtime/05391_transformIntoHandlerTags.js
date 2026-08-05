@@ -4,8 +4,8 @@ import get_ActivityIndicator from "get ActivityIndicator";
 let Platform;
 let c3;
 function transformIntoHandlerTags(arg0) {
-  const obj = require(5372) /* toArray */;
-  const mapped = require(5372) /* toArray */.toArray(arg0).map((current) => {
+  const obj = require("05372_toArray.js") /* toArray */;
+  const mapped = require("05372_toArray.js") /* toArray */.toArray(arg0).map((current) => {
     let num = callback(table[2]).handlerIDToTag[current];
     if (!num) {
       current = current.current;
@@ -104,10 +104,10 @@ export const findNodeHandle = function findNodeHandle(current) {
 export const scheduleFlushOperations = function scheduleFlushOperations() {
   if (!c5) {
     c5 = true;
-    require(5392).ghQueueMicrotask(() => {
+    require("metro/05392__.js").ghQueueMicrotask(() => {
       callback(table[4]).flushOperations();
       let c5 = false;
     });
-    const obj = require(5392);
+    const obj = require("metro/05392__.js");
   }
 };

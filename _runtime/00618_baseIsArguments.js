@@ -8,7 +8,7 @@ if (baseIsArguments((() => arguments)())) {
   let fn = require("baseIsArguments");
 } else {
   fn = (arg0) => {
-    const tmp = require(620) /* isObjectLike */(arg0);
+    const tmp = require("00620_isObjectLike.js") /* isObjectLike */(arg0);
     if (!tmp) {
       if (!tmp) {
         return tmp;

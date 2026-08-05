@@ -7,7 +7,7 @@ export default {
     return tmp2.addListener(arg0, arg1, arg2);
   },
   sendRequest(arg0, trackingName, arg2, obj) {
-    const tmp3 = importDefault(210)(arg4);
+    const tmp3 = require("00210_convertRequestBody.js")(arg4);
     let formData = tmp3;
     if (tmp3) {
       formData = tmp3.formData;
@@ -46,13 +46,13 @@ export default {
     let merged = Object.assign(tmp3);
     obj.trackingName = trackingName;
     obj.devToolsRequestId = devToolsRequestId;
-    importDefault(213).sendRequest(arg0, arg2, +closure_3, items, obj, arg5, arg6, arg7, arg9);
+    require("00213_Networking.js").sendRequest(arg0, arg2, +closure_3, items, obj, arg5, arg6, arg7, arg9);
     arg8(+closure_3);
   },
   abortRequest(_requestId) {
-    importDefault(213).abortRequest(_requestId);
+    require("00213_Networking.js").abortRequest(_requestId);
   },
   clearCookies(arg0) {
-    importDefault(213).clearCookies(arg0);
+    require("00213_Networking.js").clearCookies(arg0);
   }
 };

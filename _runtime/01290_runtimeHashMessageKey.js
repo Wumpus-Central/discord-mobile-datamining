@@ -3,7 +3,7 @@ const require = arg1;
 const dependencyMap = arg6;
 arg5.runtimeHashMessageKey = function runtimeHashMessageKey(code) {
   let num = 0;
-  const BigIntResult = BigInt(require(1291) /* textEncoder */.hash(code, 0));
+  const BigIntResult = BigInt(require("01291_textEncoder.js") /* textEncoder */.hash(code, 0));
   const items = [];
   const rounded = Math.ceil(Math.floor(Math.log2(Number(BigIntResult)) + 1) / 8);
   if (0 < rounded) {

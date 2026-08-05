@@ -20,13 +20,13 @@ export const useReactiveSharedValue = (obj) => {
     if (null === tmp2.current) {
       tmp.current = obj;
       if (typeof obj === "object") {
-        obj = require(1606) /* cancelAnimation */;
+        obj = require("01606_cancelAnimation.js") /* cancelAnimation */;
         obj = {};
         const merged = Object.assign(obj);
         let mutable = obj.makeMutable(obj);
       } else {
-        mutable = require(1606) /* cancelAnimation */.makeMutable(obj);
-        const obj3 = require(1606) /* cancelAnimation */;
+        mutable = require("01606_cancelAnimation.js") /* cancelAnimation */.makeMutable(obj);
+        const obj3 = require("01606_cancelAnimation.js") /* cancelAnimation */;
       }
       tmp2.current = mutable;
     } else if (tmp.current !== obj) {

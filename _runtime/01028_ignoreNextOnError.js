@@ -97,12 +97,12 @@ function wrap(__sentry_wrapped__) {
 
 export const WINDOW = require("registerSpanErrorInstrumentation").GLOBAL_OBJ;
 export const getHttpRequestData = function getHttpRequestData() {
-  let obj = require(817) /* registerSpanErrorInstrumentation */;
+  let obj = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
   const locationHref = obj.getLocationHref();
-  const referrer = require(817) /* registerSpanErrorInstrumentation */.GLOBAL_OBJ.document || {}.referrer;
+  const referrer = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.GLOBAL_OBJ.document || {}.referrer;
   const tmp = require;
-  const tmp4 = require(817) /* registerSpanErrorInstrumentation */.GLOBAL_OBJ.document || {};
-  const userAgent = require(817) /* registerSpanErrorInstrumentation */.GLOBAL_OBJ.navigator || {}.userAgent;
+  const tmp4 = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.GLOBAL_OBJ.document || {};
+  const userAgent = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.GLOBAL_OBJ.navigator || {}.userAgent;
   obj = { url: locationHref, headers: null };
   let tmp6 = referrer;
   if (referrer) {

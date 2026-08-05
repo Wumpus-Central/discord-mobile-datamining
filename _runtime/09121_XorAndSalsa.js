@@ -59,38 +59,38 @@ function XorAndSalsa(B32, sum, V, result1, B322, sum13) {
   do {
     let tmp63 = require;
     let tmp64 = dependencyMap;
-    let tmp65 = tmp58 ^ require(9122) /* _asyncLoop */.rotl(tmp62 + tmp50 | 0, 7);
-    let tmp66 = tmp54 ^ require(9122) /* _asyncLoop */.rotl(tmp65 + tmp62 | 0, 9);
-    let tmp67 = tmp50 ^ require(9122) /* _asyncLoop */.rotl(tmp66 + tmp65 | 0, 13);
-    let tmp68 = tmp62 ^ require(9122) /* _asyncLoop */.rotl(tmp67 + tmp66 | 0, 18);
-    let tmp69 = tmp53 ^ require(9122) /* _asyncLoop */.rotl(tmp57 + tmp61 | 0, 7);
-    let tmp70 = tmp49 ^ require(9122) /* _asyncLoop */.rotl(tmp69 + tmp57 | 0, 9);
-    let tmp71 = tmp61 ^ require(9122) /* _asyncLoop */.rotl(tmp70 + tmp69 | 0, 13);
-    let tmp72 = tmp57 ^ require(9122) /* _asyncLoop */.rotl(tmp71 + tmp70 | 0, 18);
-    let tmp73 = tmp48 ^ require(9122) /* _asyncLoop */.rotl(tmp52 + tmp56 | 0, 7);
-    let tmp74 = tmp60 ^ require(9122) /* _asyncLoop */.rotl(tmp73 + tmp52 | 0, 9);
-    let tmp75 = tmp56 ^ require(9122) /* _asyncLoop */.rotl(tmp74 + tmp73 | 0, 13);
-    let tmp76 = tmp52 ^ require(9122) /* _asyncLoop */.rotl(tmp75 + tmp74 | 0, 18);
-    let tmp77 = tmp59 ^ require(9122) /* _asyncLoop */.rotl(tmp47 + tmp51 | 0, 7);
-    let tmp78 = tmp55 ^ require(9122) /* _asyncLoop */.rotl(tmp77 + tmp47 | 0, 9);
-    let tmp79 = tmp51 ^ require(9122) /* _asyncLoop */.rotl(tmp78 + tmp77 | 0, 13);
-    let tmp80 = tmp47 ^ require(9122) /* _asyncLoop */.rotl(tmp79 + tmp78 | 0, 18);
-    tmp81 = tmp71 ^ require(9122) /* _asyncLoop */.rotl(tmp68 + tmp77 | 0, 7);
-    tmp82 = tmp74 ^ require(9122) /* _asyncLoop */.rotl(tmp81 + tmp68 | 0, 9);
-    tmp83 = tmp77 ^ require(9122) /* _asyncLoop */.rotl(tmp82 + tmp81 | 0, 13);
-    tmp84 = tmp68 ^ require(9122) /* _asyncLoop */.rotl(tmp83 + tmp82 | 0, 18);
-    tmp85 = tmp75 ^ require(9122) /* _asyncLoop */.rotl(tmp72 + tmp65 | 0, 7);
-    tmp86 = tmp78 ^ require(9122) /* _asyncLoop */.rotl(tmp85 + tmp72 | 0, 9);
-    tmp87 = tmp65 ^ require(9122) /* _asyncLoop */.rotl(tmp86 + tmp85 | 0, 13);
-    tmp88 = tmp72 ^ require(9122) /* _asyncLoop */.rotl(tmp87 + tmp86 | 0, 18);
-    tmp89 = tmp79 ^ require(9122) /* _asyncLoop */.rotl(tmp76 + tmp69 | 0, 7);
-    tmp90 = tmp66 ^ require(9122) /* _asyncLoop */.rotl(tmp89 + tmp76 | 0, 9);
-    tmp91 = tmp69 ^ require(9122) /* _asyncLoop */.rotl(tmp90 + tmp89 | 0, 13);
-    tmp92 = tmp76 ^ require(9122) /* _asyncLoop */.rotl(tmp91 + tmp90 | 0, 18);
-    tmp93 = tmp67 ^ require(9122) /* _asyncLoop */.rotl(tmp80 + tmp73 | 0, 7);
-    tmp94 = tmp70 ^ require(9122) /* _asyncLoop */.rotl(tmp93 + tmp80 | 0, 9);
-    tmp95 = tmp73 ^ require(9122) /* _asyncLoop */.rotl(tmp94 + tmp93 | 0, 13);
-    tmp96 = tmp80 ^ require(9122) /* _asyncLoop */.rotl(tmp95 + tmp94 | 0, 18);
+    let tmp65 = tmp58 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp62 + tmp50 | 0, 7);
+    let tmp66 = tmp54 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp65 + tmp62 | 0, 9);
+    let tmp67 = tmp50 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp66 + tmp65 | 0, 13);
+    let tmp68 = tmp62 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp67 + tmp66 | 0, 18);
+    let tmp69 = tmp53 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp57 + tmp61 | 0, 7);
+    let tmp70 = tmp49 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp69 + tmp57 | 0, 9);
+    let tmp71 = tmp61 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp70 + tmp69 | 0, 13);
+    let tmp72 = tmp57 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp71 + tmp70 | 0, 18);
+    let tmp73 = tmp48 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp52 + tmp56 | 0, 7);
+    let tmp74 = tmp60 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp73 + tmp52 | 0, 9);
+    let tmp75 = tmp56 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp74 + tmp73 | 0, 13);
+    let tmp76 = tmp52 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp75 + tmp74 | 0, 18);
+    let tmp77 = tmp59 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp47 + tmp51 | 0, 7);
+    let tmp78 = tmp55 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp77 + tmp47 | 0, 9);
+    let tmp79 = tmp51 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp78 + tmp77 | 0, 13);
+    let tmp80 = tmp47 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp79 + tmp78 | 0, 18);
+    tmp81 = tmp71 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp68 + tmp77 | 0, 7);
+    tmp82 = tmp74 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp81 + tmp68 | 0, 9);
+    tmp83 = tmp77 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp82 + tmp81 | 0, 13);
+    tmp84 = tmp68 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp83 + tmp82 | 0, 18);
+    tmp85 = tmp75 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp72 + tmp65 | 0, 7);
+    tmp86 = tmp78 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp85 + tmp72 | 0, 9);
+    tmp87 = tmp65 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp86 + tmp85 | 0, 13);
+    tmp88 = tmp72 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp87 + tmp86 | 0, 18);
+    tmp89 = tmp79 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp76 + tmp69 | 0, 7);
+    tmp90 = tmp66 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp89 + tmp76 | 0, 9);
+    tmp91 = tmp69 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp90 + tmp89 | 0, 13);
+    tmp92 = tmp76 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp91 + tmp90 | 0, 18);
+    tmp93 = tmp67 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp80 + tmp73 | 0, 7);
+    tmp94 = tmp70 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp93 + tmp80 | 0, 9);
+    tmp95 = tmp73 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp94 + tmp93 | 0, 13);
+    tmp96 = tmp80 ^ require("09122__asyncLoop.js") /* _asyncLoop */.rotl(tmp95 + tmp94 | 0, 18);
     num = num + 2;
     tmp47 = tmp96;
     tmp48 = tmp95;
@@ -288,7 +288,7 @@ function scryptOutput(B, dkLen, arr, arr2, arr3) {
   arr.fill(0);
   arr2.fill(0);
   arr3.fill(0);
-  return require(9125) /* pbkdf2Init */.pbkdf2(require(9127) /* _isNativeReflectConstruct */.sha256, B, arr, { c: 1, dkLen });
+  return require("09125_pbkdf2Init.js") /* pbkdf2Init */.pbkdf2(require("09127__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.sha256, B, arr, { c: 1, dkLen });
 }
 function _scryptAsync() {
   const self = this;
@@ -670,8 +670,8 @@ export const scrypt = function scrypt(B, B) {
   let tmp2;
   const tmp = scryptInit(B, B, arg2);
   ({ N, r, p, blockSize32, V, B32, B, tmp: tmp2, blockMixCb } = tmp);
-  if (!require(9122) /* _asyncLoop */.isLE) {
-    require(9122) /* _asyncLoop */.byteSwap32(B32);
+  if (!require("09122__asyncLoop.js") /* _asyncLoop */.isLE) {
+    require("09122__asyncLoop.js") /* _asyncLoop */.byteSwap32(B32);
   }
   for (let num = 0; num < p; num = num + 1) {
     let result = blockSize32 * num;
@@ -829,13 +829,13 @@ export const scrypt = function scrypt(B, B) {
       let blockMixCbResult2 = blockMixCb();
     }
   }
-  if (!require(9122) /* _asyncLoop */.isLE) {
+  if (!require("09122__asyncLoop.js") /* _asyncLoop */.isLE) {
     tmp87(9122).byteSwap32(B32);
   }
   B.fill(0);
   V.fill(0);
   tmp2.fill(0);
-  return require(9125) /* pbkdf2Init */.pbkdf2(require(9127) /* _isNativeReflectConstruct */.sha256, B, B, { c: 1, dkLen: tmp.dkLen });
+  return require("09125_pbkdf2Init.js") /* pbkdf2Init */.pbkdf2(require("09127__isNativeReflectConstruct.js") /* _isNativeReflectConstruct */.sha256, B, B, { c: 1, dkLen: tmp.dkLen });
 };
 export const scryptAsync = function scryptAsync(uint8Array, closure_3, closure_4) {
   const self = this;

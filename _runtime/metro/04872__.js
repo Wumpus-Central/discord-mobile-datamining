@@ -65,7 +65,7 @@ if (self2) {
       let tmp3 = require;
       let tmp4 = dependencyMap;
       let tmp5 = dependencyMap;
-      let FileTypes = require(4870).FileTypes;
+      let FileTypes = require("04870__.js").FileTypes;
       if (typeof call === "unknown") {
         let hasOwnPropertyResult = hasOwnProperty(item10023);
       } else {
@@ -143,10 +143,10 @@ if (self2) {
       let tmp21 = require;
       let tmp22 = dependencyMap;
       let tmp23 = dependencyMap;
-      let FileTypes2 = require(4870).FileTypes;
+      let FileTypes2 = require("04870__.js").FileTypes;
       let tmp24 = items2;
       items2 = items2.concat(FileTypes2.getSignaturesByName(item10079));
-      let FILE_TYPES_REQUIRED_ADDITIONAL_CHECK = require(4870).FILE_TYPES_REQUIRED_ADDITIONAL_CHECK;
+      let FILE_TYPES_REQUIRED_ADDITIONAL_CHECK = require("04870__.js").FILE_TYPES_REQUIRED_ADDITIONAL_CHECK;
       if (FILE_TYPES_REQUIRED_ADDITIONAL_CHECK.includes(item10079.toLowerCase())) {
         let tmp25 = tmp20;
         let tmp26 = tmp22;
@@ -163,8 +163,8 @@ if (self2) {
     if (!num2) {
       num2 = 64;
     }
-    fileChunk = require(4869) /* getFileChunk */.getFileChunk(fileChunk, num2);
-    const FileTypes4 = require(4870).FileTypes;
+    fileChunk = require("../04869_getFileChunk.js") /* getFileChunk */.getFileChunk(fileChunk, num2);
+    const FileTypes4 = require("04870__.js").FileTypes;
     const detectSignatureResult = FileTypes4.detectSignature(fileChunk, items2);
     require = detectSignatureResult;
     if (detectSignatureResult) {

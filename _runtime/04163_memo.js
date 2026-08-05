@@ -22,19 +22,19 @@ const memoResult = memo((rootHostName) => {
   if (flag === undefined) {
     flag = true;
   }
-  [tmp4, tmp5] = callback(callback2(require(4164) /* registerHost */.reducer, require(4160).INITIAL_STATE), 2);
+  [tmp4, tmp5] = callback(callback2(require("04164_registerHost.js") /* registerHost */.reducer, require("metro/04160__.js").INITIAL_STATE), 2);
   let obj = { value: tmp5, children: null };
   obj = { value: tmp4, children: null };
   const items = [rootHostName.children, ];
   if (flag) {
     obj = { name: null };
     obj[0] = str;
-    flag = tmp6(require(4161) /* PortalHost */.PortalHost, obj);
+    flag = tmp6(require("04161_PortalHost.js") /* PortalHost */.PortalHost, obj);
   }
   items[1] = flag;
   obj[1] = items;
-  obj[1] = closure_5(require(4159) /* createContext */.PortalStateContext.Provider, obj);
-  return closure_4(require(4159) /* createContext */.PortalDispatchContext.Provider, obj);
+  obj[1] = closure_5(require("04159_createContext.js") /* createContext */.PortalStateContext.Provider, obj);
+  return closure_4(require("04159_createContext.js") /* createContext */.PortalDispatchContext.Provider, obj);
 });
 memoResult.displayName = "PortalProvider";
 

@@ -7,7 +7,7 @@ function addLikelySubtags(locale) {
   let region;
   let script;
   let variants;
-  const parseUnicodeLocaleIdResult = require(13444) /* isStructurallyValidLanguageTag */.parseUnicodeLocaleId(locale);
+  const parseUnicodeLocaleIdResult = require("13444_isStructurallyValidLanguageTag.js") /* isStructurallyValidLanguageTag */.parseUnicodeLocaleId(locale);
   ({ lang, script, region, variants } = parseUnicodeLocaleIdResult.lang);
   if (script) {
     if (region) {

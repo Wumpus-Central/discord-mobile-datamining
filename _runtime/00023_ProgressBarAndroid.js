@@ -20,5 +20,5 @@ export default function ProgressBarAndroid(styleAttr) {
   const obj = { styleAttr: str, indeterminate: flag, animating: flag2 };
   const merged1 = Object.assign(merged);
   obj.ref = styleAttr.ref;
-  return jsx(importDefault(24), { styleAttr: str, indeterminate: flag, animating: flag2 });
+  return jsx(require("metro/00024___INTERNAL_VIEW_CONFIG.js"), { styleAttr: str, indeterminate: flag, animating: flag2 });
 };

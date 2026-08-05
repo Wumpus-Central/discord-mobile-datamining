@@ -18,9 +18,9 @@ if (tmp) {
   function isRegex(obj) {
     if (obj) {
       if (typeof obj === "object") {
-        const tmp8 = require(542)(obj, "lastIndex");
+        const tmp8 = require("metro/00542__.js")(obj, "lastIndex");
         if (tmp8) {
-          if (require(573) /* bind */(tmp8, "value")) {
+          if (require("00573_bind.js") /* bind */(tmp8, "value")) {
             try {
               callback(obj, obj);
             } catch (tmp4) {

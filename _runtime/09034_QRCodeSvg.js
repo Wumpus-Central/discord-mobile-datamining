@@ -83,8 +83,8 @@ const forwardRefResult = noop.forwardRef((obj, ref) => {
     continue;
   }
   obj = { height: size, ref, style: { height: size, width: size }, viewBox: `0 0 ${viewBoxSize} ${viewBoxSize}`, width: size };
-  const element = tmp4.default.createElement(require(8437) /* inlineStyles */.Path, { d: bgD, fill: bgColor });
-  return tmp4.default.createElement(require(8437) /* inlineStyles */.Svg, fn({}, obj, obj), element, tmp4.default.createElement(require(8437) /* inlineStyles */.Path, { d, fill }));
+  const element = tmp4.default.createElement(require("08437_inlineStyles.js") /* inlineStyles */.Path, { d: bgD, fill: bgColor });
+  return tmp4.default.createElement(require("08437_inlineStyles.js") /* inlineStyles */.Svg, fn({}, obj, obj), element, tmp4.default.createElement(require("08437_inlineStyles.js") /* inlineStyles */.Path, { d, fill }));
 });
 forwardRefResult.displayName = "QRCodeSvg";
 forwardRefResult.propTypes = obj;

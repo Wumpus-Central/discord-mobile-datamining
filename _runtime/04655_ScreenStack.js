@@ -28,7 +28,7 @@ export default function ScreenStack(arg0) {
   const ref1 = obj.useRef(null);
   let Children = obj.Children;
   const _require = Children.count(children);
-  const context = obj.useContext(_require(4656).GHContext);
+  const context = obj.useContext(_require("04656_context.js").GHContext);
   obj = {
     stackUseEffectCallback(ref1) {
 

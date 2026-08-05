@@ -8,9 +8,9 @@ arg5.getCapturedScopesOnSpan = function getCapturedScopesOnSpan(scope) {
 };
 arg5.setCapturedScopesOnSpan = function setCapturedScopesOnSpan(arg0, arg1, arg2) {
   if (arg0) {
-    const result = require(7381) /* addNonEnumerableProperty */.addNonEnumerableProperty(arg0, _sentryIsolationScope, arg2);
-    const obj = require(7381) /* addNonEnumerableProperty */;
-    const result1 = require(7381) /* addNonEnumerableProperty */.addNonEnumerableProperty(arg0, _sentryScope, arg1);
-    const obj2 = require(7381) /* addNonEnumerableProperty */;
+    const result = require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */.addNonEnumerableProperty(arg0, _sentryIsolationScope, arg2);
+    const obj = require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */;
+    const result1 = require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */.addNonEnumerableProperty(arg0, _sentryScope, arg1);
+    const obj2 = require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */;
   }
 };

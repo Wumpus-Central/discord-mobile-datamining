@@ -30,14 +30,14 @@ function onVisibilityUpdate(type) {
         if ("visibilitychange" === type.type) {
           num2 = type.timeStamp;
         }
-        require(1041) /* addPageListener */.removePageListener("prerenderingchange", onVisibilityUpdate, true);
-        const obj = require(1041) /* addPageListener */;
+        require("01041_addPageListener.js") /* addPageListener */.removePageListener("prerenderingchange", onVisibilityUpdate, true);
+        const obj = require("01041_addPageListener.js") /* addPageListener */;
       }
     }
   }
 }
 arg5.getVisibilityWatcher = () => {
-  if (_require(1039).WINDOW.document) {
+  if (_require("01039_WINDOW.js").WINDOW.document) {
     if (c2 < 0) {
       let tmpResult = tmp(1042);
       _require = tmpResult.getActivationStart();

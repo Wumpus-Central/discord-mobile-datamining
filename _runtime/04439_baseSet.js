@@ -1,13 +1,13 @@
 // _runtime/04439_baseSet.js
 
 export default function baseSet(arg0, arg1, arg2, arg3) {
-  if (require(606) /* isObject */(arg0)) {
+  if (require("00606_isObject.js") /* isObject */(arg0)) {
     const arr = tmp(728)(arg1, arg0);
     if (null != arg0) {
       let num2 = 0;
       let tmp17 = arg0;
       if (0 < length) {
-        const tmp8 = require(725) /* toKey */(arr[num2]);
+        const tmp8 = require("00725_toKey.js") /* toKey */(arr[num2]);
         while ("__proto__" !== tmp8) {
           if ("constructor" === tmp8) {
             break;

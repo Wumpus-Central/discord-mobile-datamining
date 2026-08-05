@@ -10,7 +10,7 @@ arg5.parseNumberSkeletonFromString = function parseNumberSkeletonFromString(str)
     throw error;
   } else {
     const items = [];
-    const parts = str.split(require(1284).WHITE_SPACE_REGEX);
+    const parts = str.split(require("metro/01284__.js").WHITE_SPACE_REGEX);
     const found = parts.filter((arg0) => arg0.length > 0);
     let num2 = 0;
     if (0 < found.length) {

@@ -9,16 +9,16 @@ obj[2] = obj;
 obj = {
   play(arg0, arg1, arg2) {
     const items = [arg1, arg2];
-    require(114) /* renderElement */.dispatchCommand(arg0, "play", items);
+    require("../00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "play", items);
   },
   reset(arg0) {
-    require(114) /* renderElement */.dispatchCommand(arg0, "reset", []);
+    require("../00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "reset", []);
   },
   pause(arg0) {
-    require(114) /* renderElement */.dispatchCommand(arg0, "pause", []);
+    require("../00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "pause", []);
   },
   resume(arg0) {
-    require(114) /* renderElement */.dispatchCommand(arg0, "resume", []);
+    require("../00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "resume", []);
   }
 };
 

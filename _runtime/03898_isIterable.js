@@ -4,14 +4,14 @@ const dependencyMap = arg6;
 let obj = {
   enumerable: true,
   get() {
-    return require(3899) /* isIterable */.shallow;
+    return require("03899_isIterable.js") /* isIterable */.shallow;
   }
 };
 Object.defineProperty(arg5, "shallow", obj);
 obj = {
   enumerable: true,
   get() {
-    return require(3900) /* useShallow */.useShallow;
+    return require("03900_useShallow.js") /* useShallow */.useShallow;
   }
 };
 Object.defineProperty(arg5, "useShallow", obj);

@@ -10,7 +10,7 @@ arg5.useAnimatedSnapPoints = (snapPoints, containerHeight, contentHeight, handle
   let closure_3 = handleHeight;
   let closure_4 = enableDynamicSizing;
   let closure_5 = maxDynamicContentSize;
-  let obj = _require(1606);
+  let obj = _require("01606_cancelAnimation.js");
   const sharedValue = obj.useSharedValue(-1);
   class P {
     constructor() {
@@ -70,13 +70,13 @@ arg5.useAnimatedSnapPoints = (snapPoints, containerHeight, contentHeight, handle
       }
     }
   }
-  obj = { containerHeight, INITIAL_CONTAINER_HEIGHT: _require(5344).INITIAL_CONTAINER_HEIGHT, INITIAL_SNAP_POINT: _require(5344).INITIAL_SNAP_POINT, snapPoints, normalizeSnapPoint: _require(5357).normalizeSnapPoint, enableDynamicSizing, handleHeight, INITIAL_HANDLE_HEIGHT: _require(5344).INITIAL_HANDLE_HEIGHT, contentHeight, maxDynamicContentSize, dynamicSnapPointIndex: sharedValue };
+  obj = { containerHeight, INITIAL_CONTAINER_HEIGHT: _require("05344_DEFAULT_HANDLE_HEIGHT.js").INITIAL_CONTAINER_HEIGHT, INITIAL_SNAP_POINT: _require("05344_DEFAULT_HANDLE_HEIGHT.js").INITIAL_SNAP_POINT, snapPoints, normalizeSnapPoint: _require("05357_normalizeSnapPoint.js").normalizeSnapPoint, enableDynamicSizing, handleHeight, INITIAL_HANDLE_HEIGHT: _require("05344_DEFAULT_HANDLE_HEIGHT.js").INITIAL_HANDLE_HEIGHT, contentHeight, maxDynamicContentSize, dynamicSnapPointIndex: sharedValue };
   P.__closure = obj;
   P.__workletHash = 15015207820492;
   P.__initData = closure_2;
   let items = [snapPoints, containerHeight, handleHeight, contentHeight, arg4, enableDynamicSizing, maxDynamicContentSize, sharedValue];
-  const derivedValue = _require(1606).useDerivedValue(P, items);
-  const obj2 = _require(1606);
+  const derivedValue = _require("01606_cancelAnimation.js").useDerivedValue(P, items);
+  const obj2 = _require("01606_cancelAnimation.js");
   class N {
     constructor() {
       if (closure_4) {
@@ -106,6 +106,6 @@ arg5.useAnimatedSnapPoints = (snapPoints, containerHeight, contentHeight, handle
   N.__closure = { enableDynamicSizing, snapPoints };
   N.__workletHash = 4816362093278;
   N.__initData = closure_3;
-  let items1 = [derivedValue, sharedValue, _require(1606).useDerivedValue(N)];
+  let items1 = [derivedValue, sharedValue, _require("01606_cancelAnimation.js").useDerivedValue(N)];
   return items1;
 };

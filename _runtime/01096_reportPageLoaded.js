@@ -5,8 +5,8 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.reportPageLoaded = function reportPageLoaded() {
   let client = arg0;
   if (arg0 === undefined) {
-    client = require(817) /* registerSpanErrorInstrumentation */.getClient();
-    const obj2 = require(817) /* registerSpanErrorInstrumentation */;
+    client = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.getClient();
+    const obj2 = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
   }
   if (client != null) {
     client.emit("endPageloadSpan");

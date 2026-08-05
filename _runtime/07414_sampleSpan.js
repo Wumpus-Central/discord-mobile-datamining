@@ -2,7 +2,7 @@
 const require = arg1;
 const dependencyMap = arg6;
 arg5.sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) {
-  let obj = require(7407) /* hasTracingEnabled */;
+  let obj = require("07407_hasTracingEnabled.js") /* hasTracingEnabled */;
   if (obj.hasTracingEnabled(tracesSampler)) {
     let tmpResult = tmp(7402);
     const isolationScope = tmpResult.getIsolationScope();

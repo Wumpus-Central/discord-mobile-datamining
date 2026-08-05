@@ -5,8 +5,8 @@ const items = [ReferenceError, TypeError, RangeError];
 let c3 = false;
 arg5.disable = function disable() {
   let c3 = false;
-  require(1019) /* noop */._37 = null;
-  require(1019) /* noop */._87 = null;
+  require("01019_noop.js") /* noop */._37 = null;
+  require("01019_noop.js") /* noop */._87 = null;
 };
 arg5.enable = function enable(arg0) {
   let obj = arg0;

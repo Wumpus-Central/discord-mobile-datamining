@@ -21,7 +21,7 @@ function applyStyleForTopScreen(screenTransition) {
   const items = [createViewDescriptorPaper(screenTransition.topScreenId)];
   obj[0] = items;
   const topScreenStyleResult = screenTransition.screenTransition.topScreenStyle(arg1, screenTransition.screenDimensions);
-  require(1706) /* updateProps */.updateProps(obj, topScreenStyleResult, undefined);
+  require("01706_updateProps.js") /* updateProps */.updateProps(obj, topScreenStyleResult, undefined);
 }
 let obj = { createViewDescriptor: createViewDescriptorPaper, updateProps: require("updateProps").updateProps };
 applyStyleForTopScreen.__closure = obj;
@@ -32,7 +32,7 @@ function applyStyleForBelowTopScreen(screenTransition, arg1) {
   const items = [createViewDescriptorPaper(screenTransition.belowTopScreenId)];
   obj[0] = items;
   const belowTopScreenStyleResult = screenTransition.screenTransition.belowTopScreenStyle(arg1, screenTransition.screenDimensions);
-  require(1706) /* updateProps */.updateProps(obj, belowTopScreenStyleResult, undefined);
+  require("01706_updateProps.js") /* updateProps */.updateProps(obj, belowTopScreenStyleResult, undefined);
 }
 obj = { createViewDescriptor: createViewDescriptorPaper, updateProps: require("updateProps").updateProps };
 applyStyleForBelowTopScreen.__closure = obj;
@@ -48,12 +48,12 @@ function applyStyle(closure_1, value) {
   const tmp2 = createViewDescriptorPaper;
   const tmp3 = require;
   const topScreenStyleResult = closure_1.screenTransition.topScreenStyle(value, closure_1.screenDimensions);
-  require(1706) /* updateProps */.updateProps(obj, topScreenStyleResult, undefined);
+  require("01706_updateProps.js") /* updateProps */.updateProps(obj, topScreenStyleResult, undefined);
   if (typeof applyStyleForBelowTopScreen !== "function") {
     HermesBuiltin.throwTypeError();
   }
   obj = { value: null };
-  const obj2 = require(1706) /* updateProps */;
+  const obj2 = require("01706_updateProps.js") /* updateProps */;
   const items1 = [tmp2(closure_1.belowTopScreenId)];
   obj[0] = items1;
   const belowTopScreenStyleResult = closure_1.screenTransition.belowTopScreenStyle(value, closure_1.screenDimensions);

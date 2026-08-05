@@ -2,7 +2,7 @@
 import { DeviceEventEmitter } from "get ActivityIndicator";
 
 function onGestureHandlerEvent(handlerTag) {
-  let obj = require(5371) /* map */;
+  let obj = require("05371_map.js") /* map */;
   const findHandlerResult = obj.findHandler(handlerTag.handlerTag);
   if (findHandlerResult) {
     if (null != handlerTag.oldState) {

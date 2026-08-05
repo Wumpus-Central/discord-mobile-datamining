@@ -5094,7 +5094,7 @@ export () => ({
   }
 })
 export const getFeedback = function getFeedback() {
-  const client = require(817) /* registerSpanErrorInstrumentation */.getClient();
+  const client = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.getClient();
   let integrationByName;
   if (client != null) {
     integrationByName = client.getIntegrationByName("Feedback");

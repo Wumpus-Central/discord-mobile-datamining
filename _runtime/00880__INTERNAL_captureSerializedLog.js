@@ -2,12 +2,12 @@
 import _slicedToArray from "_slicedToArray";
 
 function _INTERNAL_captureSerializedLog(closure_0) {
-  const globalSingleton = require(825) /* getGlobalSingleton */.getGlobalSingleton("clientToLogBufferMap", () => {
+  const globalSingleton = require("00825_getGlobalSingleton.js") /* getGlobalSingleton */.getGlobalSingleton("clientToLogBufferMap", () => {
     const weakMap = new WeakMap();
     return weakMap;
   });
-  const obj = require(825) /* getGlobalSingleton */;
-  const globalSingleton1 = require(825) /* getGlobalSingleton */.getGlobalSingleton("clientToLogBufferMap", () => {
+  const obj = require("00825_getGlobalSingleton.js") /* getGlobalSingleton */;
+  const globalSingleton1 = require("00825_getGlobalSingleton.js") /* getGlobalSingleton */.getGlobalSingleton("clientToLogBufferMap", () => {
     const weakMap = new WeakMap();
     return weakMap;
   });
@@ -30,29 +30,29 @@ function _INTERNAL_flushLogsBuffer(closure_0, value) {
   let tunnel;
   let items = value;
   if (value == null) {
-    const globalSingleton = require(825) /* getGlobalSingleton */.getGlobalSingleton("clientToLogBufferMap", () => {
+    const globalSingleton = require("00825_getGlobalSingleton.js") /* getGlobalSingleton */.getGlobalSingleton("clientToLogBufferMap", () => {
       const weakMap = new WeakMap();
       return weakMap;
     });
     items = globalSingleton.get(closure_0);
-    const obj = require(825) /* getGlobalSingleton */;
+    const obj = require("00825_getGlobalSingleton.js") /* getGlobalSingleton */;
   }
   if (items == null) {
     items = [];
   }
   if (0 !== items.length) {
     const options = closure_0.getOptions();
-    const obj3 = require(884) /* createLogContainerEnvelopeItem */;
+    const obj3 = require("00884_createLogContainerEnvelopeItem.js") /* createLogContainerEnvelopeItem */;
     ({ _metadata, tunnel } = options);
     const logEnvelope = obj3.createLogEnvelope(items, _metadata, tunnel, closure_0.getDsn());
-    const globalSingleton1 = require(825) /* getGlobalSingleton */.getGlobalSingleton("clientToLogBufferMap", () => {
+    const globalSingleton1 = require("00825_getGlobalSingleton.js") /* getGlobalSingleton */.getGlobalSingleton("clientToLogBufferMap", () => {
       const weakMap = new WeakMap();
       return weakMap;
     });
     const result = globalSingleton1.set(closure_0, []);
     closure_0.emit("flushLogs");
     closure_0.sendEnvelope(logEnvelope);
-    const obj4 = require(825) /* getGlobalSingleton */;
+    const obj4 = require("00825_getGlobalSingleton.js") /* getGlobalSingleton */;
   }
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
@@ -290,7 +290,7 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes, sc
 export { _INTERNAL_captureSerializedLog };
 export { _INTERNAL_flushLogsBuffer };
 export const _INTERNAL_getLogBuffer = function _INTERNAL_getLogBuffer(arg0) {
-  const globalSingleton = require(825) /* getGlobalSingleton */.getGlobalSingleton("clientToLogBufferMap", () => {
+  const globalSingleton = require("00825_getGlobalSingleton.js") /* getGlobalSingleton */.getGlobalSingleton("clientToLogBufferMap", () => {
     const weakMap = new WeakMap();
     return weakMap;
   });

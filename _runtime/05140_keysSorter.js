@@ -127,7 +127,7 @@ arg5.parse = (str) => {
 arg5.stringify = (arg0, arg1) => {
   let _require = arg0;
   let dependencyMap = arg1;
-  const tmp = _require(5142)({ encode: true, strict: true, arrayFormat: "none" }, arg1);
+  const tmp = _require("metro/05142__.js")({ encode: true, strict: true, arrayFormat: "none" }, arg1);
   dependencyMap = tmp;
   _require = tmp;
   const arrayFormat = tmp.arrayFormat;

@@ -3,7 +3,7 @@ import futureSeconds from "futureSeconds";
 import buildFormatLongFn from "buildFormatLongFn";
 import formatRelative from "formatRelative";
 import buildLocalizeFn from "buildLocalizeFn";
-import module_3409 from "module_3409";
+import 03409__ from "metro/03409__.js";
 
 if (!futureSeconds) {
   let obj = { default: null };

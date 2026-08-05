@@ -6,7 +6,7 @@ if (!tmp) {
 
 export default function Call(arg0, arg1) {
   const tmp = arguments.length > 2 ? arguments[2] : [];
-  if (require(4567) /* getEvalledConstructor */(tmp)) {
+  if (require("04567_getEvalledConstructor.js") /* getEvalledConstructor */(tmp)) {
     return tmp(arg0, arg1, tmp);
   } else {
     const tmp6 = new tmp2(541)("Assertion failed: optional `argumentsList`, if provided, must be a List");

@@ -5,9 +5,9 @@ const writable = "writable";
 if (require("getOwnPropertyDescriptor")) {
   if (require("getOwnPropertyDescriptor")) {
     defineProperty = function defineProperty(fn, arg1, value) {
-      require(13529) /* all */(fn);
-      const tmp2 = require(13489) /* text */(arg1);
-      require(13529) /* all */(value);
+      require("13529_all.js") /* all */(fn);
+      const tmp2 = require("13489_text.js") /* text */(arg1);
+      require("13529_all.js") /* all */(value);
       let tmp4 = value;
       if (typeof fn === "function") {
         tmp4 = value;
@@ -41,10 +41,10 @@ if (require("getOwnPropertyDescriptor")) {
   let defineProperty2 = defineProperty;
 } else {
   defineProperty2 = function defineProperty(arg0, arg1, value) {
-    require(13529) /* all */(arg0);
-    const tmp2 = require(13489) /* text */(arg1);
-    require(13529) /* all */(value);
-    if (!require(13512)) {
+    require("13529_all.js") /* all */(arg0);
+    const tmp2 = require("13489_text.js") /* text */(arg1);
+    require("13529_all.js") /* all */(value);
+    if (!require("metro/13512__.js")) {
       if (!("get" in value)) {
         if (!("set" in value)) {
           if ("value" in value) {

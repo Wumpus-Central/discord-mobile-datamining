@@ -7,8 +7,8 @@ export const applySourceContextToFrame = function applySourceContextToFrame(file
   if (filename.filename === arg2) {
     if (filename.lineno) {
       if (arg1.length) {
-        require(817) /* registerSpanErrorInstrumentation */.addContextToFrame(arg1, filename, arg3);
-        const obj = require(817) /* registerSpanErrorInstrumentation */;
+        require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.addContextToFrame(arg1, filename, arg3);
+        const obj = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
       }
     }
   }

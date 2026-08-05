@@ -20,7 +20,7 @@ export default function baseSortedIndexBy(arg0, arg1, arg2, arg3) {
         let tmp4 = tmp3 == tmp3;
         let tmp5 = require;
         let tmp6 = dependencyMap;
-        let tmp7 = require(638) /* isSymbol */(tmp3);
+        let tmp7 = require("00638_isSymbol.js") /* isSymbol */(tmp3);
         let tmp8 = tmp22;
         let sum = num2;
         if (tmp28) {

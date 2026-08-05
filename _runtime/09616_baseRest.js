@@ -2,4 +2,4 @@
 import baseRest from "baseRest";
 
 
-export default baseRest((arg0, arg1) => require(9617) /* baseDelay */(arg0, 1, arg1));
+export default baseRest((arg0, arg1) => require("09617_baseDelay.js") /* baseDelay */(arg0, 1, arg1));

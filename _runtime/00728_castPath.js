@@ -1,7 +1,7 @@
 // _runtime/00728_castPath.js
 
 export default function castPath(arg0, arg1) {
-  if (require(599)(arg0)) {
+  if (require("metro/00599__.js")(arg0)) {
     return arg0;
   } else if (tmp(722)(arg0, arg1)) {
     const items = [arg0];

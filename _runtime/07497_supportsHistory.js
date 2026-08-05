@@ -2,7 +2,7 @@
 const require = arg1;
 const dependencyMap = arg6;
 arg5.supportsHistory = function supportsHistory() {
-  const chrome = require(7376) /* getGlobalSingleton */.GLOBAL_OBJ.chrome;
+  const chrome = require("07376_getGlobalSingleton.js") /* getGlobalSingleton */.GLOBAL_OBJ.chrome;
   let runtime = chrome;
   if (chrome) {
     runtime = chrome.app;

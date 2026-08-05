@@ -147,7 +147,7 @@ class VirtualizedList {
         if (str == null) {
           str = "undefined";
         }
-        importDefault(38)(typeof onRefresh.refreshing === "boolean", `\`refreshing\` prop must be set as a boolean in order to use \`onRefresh\`, but got \`${tmp11(str)}\``);
+        require("metro/00038__.js")(typeof onRefresh.refreshing === "boolean", `\`refreshing\` prop must be set as a boolean in order to use \`onRefresh\`, but got \`${tmp11(str)}\``);
         obj = {};
         const merged1 = Object.assign(onRefresh);
         if (null == onRefresh.refreshControl) {
@@ -165,7 +165,7 @@ class VirtualizedList {
         const tmp13 = typeof onRefresh.refreshing === "boolean";
         const tmp15 = outer2_18;
         const tmp16 = outer2_14;
-        const tmp8 = importDefault(38);
+        const tmp8 = require("metro/00038__.js");
       } else {
         obj = {};
         const merged2 = Object.assign(onRefresh);
@@ -291,7 +291,7 @@ class VirtualizedList {
         obj[0] = num2;
         obj[1] = obj._scrollMetrics.dt;
         obj[2] = contentLength;
-        importDefault(317)("VirtualizedList: You have a large list that is slow to update - make sure your renderItem function renders components that follow React performance best practices like PureComponent, shouldComponentUpdate, etc.", obj);
+        require("00317_infoLog.js")("VirtualizedList: You have a large list that is slow to update - make sure your renderItem function renders components that follow React performance best practices like PureComponent, shouldComponentUpdate, etc.", obj);
         obj._hasWarned.perf = true;
       }
       let num4 = 1;
@@ -546,14 +546,14 @@ let items = [
       const props = this.props;
       ({ data, getItemCount, onScrollToIndexFailed } = props);
       ({ index, viewOffset, viewPosition } = animated);
-      importDefault(38)(index >= 0, "scrollToIndex out of range: requested index " + index + " but minimum is 0");
+      require("metro/00038__.js")(index >= 0, "scrollToIndex out of range: requested index " + index + " but minimum is 0");
       const tmp = importDefault;
-      const tmp3 = importDefault(38);
+      const tmp3 = require("metro/00038__.js");
       const tmp4 = index >= 0;
-      const tmp6 = importDefault(38);
+      const tmp6 = require("metro/00038__.js");
       tmp6(getItemCount(data) >= 1, "scrollToIndex out of range: item length " + getItemCount(data) + " but minimum is 1");
       const tmp7 = getItemCount(data) >= 1;
-      const tmp9 = importDefault(38);
+      const tmp9 = require("metro/00038__.js");
       tmp9(index < getItemCount(data), "scrollToIndex out of range: requested index " + index + " is out of 0 to " + getItemCount(data) - 1);
       if (!props.getItemLayout) {
         const _listMetrics = self._listMetrics;
@@ -769,11 +769,11 @@ let items = [
         tmp4 = !onScroll.__isNative;
       }
       const self = this;
-      importDefault(38)(tmp4, "Components based on VirtualizedList must be wrapped with Animated.createAnimatedComponent to support native onScroll events with useNativeDriver");
-      const tmp3 = importDefault(38);
-      const tmpResult = importDefault(38);
+      require("metro/00038__.js")(tmp4, "Components based on VirtualizedList must be wrapped with Animated.createAnimatedComponent to support native onScroll events with useNativeDriver");
+      const tmp3 = require("metro/00038__.js");
+      const tmpResult = require("metro/00038__.js");
       tmpResult(VirtualizedList(320).windowSizeOrDefault(windowSize) > 0, "VirtualizedList: The windowSize prop must be present and set to a value greater than 0.");
-      importDefault(38)(getItemCount, "VirtualizedList: The \"getItemCount\" prop must be provided");
+      require("metro/00038__.js")(getItemCount, "VirtualizedList: The \"getItemCount\" prop must be provided");
       const itemCount = getItemCount(data);
       let initialScrollIndex2 = null == initialScrollIndex || self._hasTriggeredInitialScrollToIndex;
       if (!initialScrollIndex2) {
@@ -832,8 +832,8 @@ let items = [
             const tmpResult1 = tmp(320);
             windowedRenderLimits = tmpResult.computeWindowedRenderLimits(onEndReachedThreshold, result2, tmp(320).windowSizeOrDefault(onEndReachedThreshold.windowSize), cellsAroundViewport, self._listMetrics, self._scrollMetrics);
             const tmpResult2 = tmp(320);
-            importDefault(38)(windowedRenderLimits.last < getItemCount(data), "computeWindowedRenderLimits() should return range in-bounds");
-            const tmp20 = importDefault(38);
+            require("metro/00038__.js")(windowedRenderLimits.last < getItemCount(data), "computeWindowedRenderLimits() should return range in-bounds");
+            const tmp20 = require("metro/00038__.js");
           }
           const _nestedChildLists = self._nestedChildLists;
           if (_nestedChildLists.size() > 0) {
@@ -959,7 +959,7 @@ let items = [
           let obj = { CellRendererComponent: null, ItemSeparatorComponent: null, ListItemComponent: null, cellKey: null, horizontal: null, index: null, inversionStyle: null, item: null, prevCellKey: null, onUpdateSeparators: null, onCellFocusCapture: null, onUnmount: null, ref: null, renderItem: null };
           obj[0] = CellRendererComponent;
           let tmp19;
-          let tmp18 = importDefault(321);
+          let tmp18 = require("00321__isNativeReflectConstruct.js");
           if (sum < diff) {
             tmp19 = ItemSeparatorComponent;
           }
@@ -1099,7 +1099,7 @@ let items = [
                     let tmp46 = dependencyMap;
                     let tmp48 = nextResult;
                     let _listMetrics = self._listMetrics;
-                    let tmp47 = importDefault(323);
+                    let tmp47 = require("00323_clamp.js");
                     let diff = tmp36.first - 1;
                     let last = tmp47(diff, tmp36.last, _listMetrics.getHighestMeasuredCellIndex());
                   }
@@ -1488,7 +1488,7 @@ let items = [
           }
         }
         const obj = { animated: false, index: null };
-        obj[1] = importDefault(70)(self.props.initialScrollIndex);
+        obj[1] = require("00070_nullthrows.js")(self.props.initialScrollIndex);
         self.scrollToIndex(obj);
       }
     }
@@ -1688,7 +1688,7 @@ let items1 = [
       if (tmp4) {
         tmp4 = _initialRenderRegionResult.last < itemCount;
       }
-      importDefault(38)(tmp4, "Invalid cells around viewport \"[" + _initialRenderRegionResult.first + ", " + _initialRenderRegionResult.last + "]\" was passed to VirtualizedList._createRenderMask");
+      require("metro/00038__.js")(tmp4, "Invalid cells around viewport \"[" + _initialRenderRegionResult.first + ", " + _initialRenderRegionResult.last + "]\" was passed to VirtualizedList._createRenderMask");
       const cellRenderMask = new VirtualizedList(324).CellRenderMask(itemCount);
       if (itemCount > 0) {
         let items1 = closure_0;
@@ -1818,7 +1818,7 @@ let items1 = [
       let obj = VirtualizedList(320);
       obj = { first: null, last: null };
       const bound = Math.max(0, diff - obj.maxToRenderPerBatchOrDefault(getItemCount.maxToRenderPerBatch));
-      obj[0] = importDefault(323)(0, first.first, bound);
+      obj[0] = require("00323_clamp.js")(0, first.first, bound);
       obj[1] = Math.min(diff, first.last);
       return obj;
     }

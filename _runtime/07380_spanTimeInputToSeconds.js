@@ -22,8 +22,8 @@ function spanTimeInputToSeconds(num) {
         }
         sum = result1;
       } else {
-        sum = require(7389) /* dateTimestampInSeconds */.timestampInSeconds();
-        const obj = require(7389) /* dateTimestampInSeconds */;
+        sum = require("07389_dateTimestampInSeconds.js") /* dateTimestampInSeconds */.timestampInSeconds();
+        const obj = require("07389_dateTimestampInSeconds.js") /* dateTimestampInSeconds */;
       }
     }
   }
@@ -61,8 +61,8 @@ function spanToJSON(getSpanJSON) {
         obj[7] = getStatusMessage(status);
         obj[8] = attributes[require(undefined, 7390).SEMANTIC_ATTRIBUTE_SENTRY_OP];
         obj[9] = attributes[require(undefined, 7390).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN];
-        const obj2 = require(7381) /* addNonEnumerableProperty */;
-        obj[10] = require(7391) /* getMetricSummaryJsonForSpan */.getMetricSummaryJsonForSpan(getSpanJSON);
+        const obj2 = require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */;
+        obj[10] = require("07391_getMetricSummaryJsonForSpan.js") /* getMetricSummaryJsonForSpan */.getMetricSummaryJsonForSpan(getSpanJSON);
         return obj2.dropUndefinedKeys(obj);
       } else {
         obj = { span_id: null, trace_id: null };
@@ -81,7 +81,7 @@ function spanIsSampled(spanContext) {
 }
 function getStatusMessage(code) {
   if (code) {
-    if (code.code !== require(7392) /* getSpanStatusFromHttpCode */.SPAN_STATUS_UNSET) {
+    if (code.code !== require("07392_getSpanStatusFromHttpCode.js") /* getSpanStatusFromHttpCode */.SPAN_STATUS_UNSET) {
       let str = "ok";
       if (code.code !== tmp(7392).SPAN_STATUS_OK) {
         str = code.message || "unknown_error";
@@ -102,7 +102,7 @@ arg5.addChildSpanToSpan = function addChildSpanToSpan(arg0, arg1) {
   if (!tmp2) {
     tmp2 = arg0;
   }
-  const result = require(7381) /* addNonEnumerableProperty */.addNonEnumerableProperty(arg1, _sentryRootSpan, tmp2);
+  const result = require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */.addNonEnumerableProperty(arg1, _sentryRootSpan, tmp2);
   if (arg0[_sentryChildSpans]) {
     arg0[tmp6].add(arg1);
     const obj3 = arg0[tmp6];
@@ -110,14 +110,14 @@ arg5.addChildSpanToSpan = function addChildSpanToSpan(arg0, arg1) {
     const _Set = Set;
     const items = [arg1];
     const set = new Set(items);
-    const result1 = require(7381) /* addNonEnumerableProperty */.addNonEnumerableProperty(arg0, tmp6, set);
-    const tmp3Result = require(7381) /* addNonEnumerableProperty */;
+    const result1 = require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */.addNonEnumerableProperty(arg0, tmp6, set);
+    const tmp3Result = require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */;
   }
 };
 arg5.getActiveSpan = function getActiveSpan() {
-  const mainCarrier = require(7393) /* getMainCarrier */.getMainCarrier();
-  const obj = require(7393) /* getMainCarrier */;
-  const asyncContextStrategy = require(7394) /* getAsyncContextStrategy */.getAsyncContextStrategy(mainCarrier);
+  const mainCarrier = require("07393_getMainCarrier.js") /* getMainCarrier */.getMainCarrier();
+  const obj = require("07393_getMainCarrier.js") /* getMainCarrier */;
+  const asyncContextStrategy = require("07394_getAsyncContextStrategy.js") /* getAsyncContextStrategy */.getAsyncContextStrategy(mainCarrier);
   if (asyncContextStrategy.getActiveSpan) {
     let activeSpan = asyncContextStrategy.getActiveSpan();
   } else {
@@ -160,11 +160,11 @@ arg5.removeChildSpanFromSpan = function removeChildSpanFromSpan(arg0, arg1) {
 };
 arg5.showSpanDropWarning = function showSpanDropWarning() {
   if (!c2) {
-    require(7375) /* consoleSandbox */.consoleSandbox(() => {
+    require("07375_consoleSandbox.js") /* consoleSandbox */.consoleSandbox(() => {
       console.warn("[Sentry] Deprecation warning: Returning null from `beforeSendSpan` will be disallowed from SDK version 9.0.0 onwards. The callback will only support mutating spans. To drop certain spans, configure the respective integrations directly.");
     });
     c2 = true;
-    const obj = require(7375) /* consoleSandbox */;
+    const obj = require("07375_consoleSandbox.js") /* consoleSandbox */;
   }
 };
 arg5.spanIsSampled = spanIsSampled;
@@ -180,17 +180,17 @@ arg5.spanToTraceContext = function spanToTraceContext(spanContext) {
     parent_span_id = spanToJSON(spanContext).parent_span_id;
   }
   if (isRemote) {
-    span_id = require(7385) /* generatePropagationContext */.generateSpanId();
-    const obj = require(7385) /* generatePropagationContext */;
+    span_id = require("07385_generatePropagationContext.js") /* generatePropagationContext */.generateSpanId();
+    const obj = require("07385_generatePropagationContext.js") /* generatePropagationContext */;
   }
-  return require(7381) /* addNonEnumerableProperty */.dropUndefinedKeys({ parent_span_id, span_id, trace_id: trace_id.traceId });
+  return require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */.dropUndefinedKeys({ parent_span_id, span_id, trace_id: trace_id.traceId });
 };
 arg5.spanToTraceHeader = function spanToTraceHeader(spanContext) {
   let spanId;
   let traceId;
   ({ traceId, spanId } = spanContext.spanContext());
   const spanContextResult = spanContext.spanContext();
-  return require(7387) /* regExp */.generateSentryTraceHeader(traceId, spanId, 1 === spanContext.spanContext().traceFlags);
+  return require("07387_regExp.js") /* regExp */.generateSentryTraceHeader(traceId, spanId, 1 === spanContext.spanContext().traceFlags);
 };
 arg5.spanToTransactionTraceContext = function spanToTransactionTraceContext(spanContext) {
   let data;
@@ -204,12 +204,12 @@ arg5.spanToTransactionTraceContext = function spanToTransactionTraceContext(span
   const spanContextResult = spanContext.spanContext();
   ({ data, op, parent_span_id, status, origin } = spanToJSON(spanContext));
   const tmp2 = spanToJSON(spanContext);
-  return require(7381) /* addNonEnumerableProperty */.dropUndefinedKeys({ parent_span_id, span_id, trace_id, data, op, status, origin });
+  return require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */.dropUndefinedKeys({ parent_span_id, span_id, trace_id, data, op, status, origin });
 };
 arg5.updateMetricSummaryOnActiveSpan = function updateMetricSummaryOnActiveSpan(arg0, sanitizeMetricKeyResult, diff, sanitizeUnitResult, arg4, bucketKey) {
-  const mainCarrier = require(7393) /* getMainCarrier */.getMainCarrier();
-  const obj = require(7393) /* getMainCarrier */;
-  const asyncContextStrategy = require(7394) /* getAsyncContextStrategy */.getAsyncContextStrategy(mainCarrier);
+  const mainCarrier = require("07393_getMainCarrier.js") /* getMainCarrier */.getMainCarrier();
+  const obj = require("07393_getMainCarrier.js") /* getMainCarrier */;
+  const asyncContextStrategy = require("07394_getAsyncContextStrategy.js") /* getAsyncContextStrategy */.getAsyncContextStrategy(mainCarrier);
   if (asyncContextStrategy.getActiveSpan) {
     let activeSpan = asyncContextStrategy.getActiveSpan();
   } else {

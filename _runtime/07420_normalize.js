@@ -30,8 +30,8 @@ function visit(arg0, num) {
   }
   let memoBuilderResult = arg4;
   if (arg4 === undefined) {
-    memoBuilderResult = require(7421) /* memoBuilder */.memoBuilder();
-    let obj = require(7421) /* memoBuilder */;
+    memoBuilderResult = require("07421_memoBuilder.js") /* memoBuilder */.memoBuilder();
+    let obj = require("07421_memoBuilder.js") /* memoBuilder */;
   }
   _slicedToArray(memoBuilderResult, 2);
   if (null != num) {
@@ -147,7 +147,7 @@ function visit(arg0, num) {
             }
             const _Array = Array;
             const tmp14 = Array.isArray(num) ? [] : {};
-            const convertToPlainObjectResult = require(7381) /* addNonEnumerableProperty */.convertToPlainObject(num);
+            const convertToPlainObjectResult = require("07381_addNonEnumerableProperty.js") /* addNonEnumerableProperty */.convertToPlainObject(num);
             let num6 = 0;
             const keys = Object.keys();
             if (keys !== undefined) {

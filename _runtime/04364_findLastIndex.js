@@ -8,9 +8,9 @@ export default function findLastIndex(arg0, arg1, arg2) {
   if (num) {
     const diff = num - 1;
     if (undefined === arg2) {
-      return require(4367) /* baseFindIndex */(arg0, require(720) /* baseIteratee */(arg1, 3), diff, true);
+      return require("04367_baseFindIndex.js") /* baseFindIndex */(arg0, require("00720_baseIteratee.js") /* baseIteratee */(arg1, 3), diff, true);
     } else {
-      let sum = require(4365) /* toInteger */(arg2);
+      let sum = require("04365_toInteger.js") /* toInteger */(arg2);
       if (arg2 < 0) {
         sum = num + sum;
         let tmp7 = max(sum, 0);

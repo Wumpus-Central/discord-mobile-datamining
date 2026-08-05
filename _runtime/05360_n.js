@@ -4,25 +4,25 @@ const dependencyMap = arg6;
 const fn = function n(arg0, arg1) {
   if ("easeIn" === arg0) {
     let obj = { easing: null, duration: null };
-    const Easing3 = require(1606) /* cancelAnimation */.Easing;
-    obj[0] = Easing3.in(require(1606) /* cancelAnimation */.Easing.ease);
+    const Easing3 = require("01606_cancelAnimation.js") /* cancelAnimation */.Easing;
+    obj[0] = Easing3.in(require("01606_cancelAnimation.js") /* cancelAnimation */.Easing.ease);
     obj[1] = arg1;
     return obj;
   } else if ("easeOut" === arg0) {
     obj = { easing: null, duration: null };
-    const Easing2 = require(1606) /* cancelAnimation */.Easing;
-    obj[0] = Easing2.out(require(1606) /* cancelAnimation */.Easing.ease);
+    const Easing2 = require("01606_cancelAnimation.js") /* cancelAnimation */.Easing;
+    obj[0] = Easing2.out(require("01606_cancelAnimation.js") /* cancelAnimation */.Easing.ease);
     obj[1] = arg1;
     return obj;
   } else if ("easeInEaseOut" === arg0) {
     const obj1 = { easing: null, duration: null };
-    const Easing = require(1606) /* cancelAnimation */.Easing;
-    obj1[0] = Easing.inOut(require(1606) /* cancelAnimation */.Easing.ease);
+    const Easing = require("01606_cancelAnimation.js") /* cancelAnimation */.Easing;
+    obj1[0] = Easing.inOut(require("01606_cancelAnimation.js") /* cancelAnimation */.Easing.ease);
     obj1[1] = arg1;
     return obj1;
   } else if ("linear" === arg0) {
     obj = { easing: null, duration: null };
-    obj[0] = require(1606) /* cancelAnimation */.Easing.linear;
+    obj[0] = require("01606_cancelAnimation.js") /* cancelAnimation */.Easing.linear;
     obj[1] = arg1;
     return obj;
   } else if ("keyboard" === arg0) {

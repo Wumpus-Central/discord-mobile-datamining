@@ -138,8 +138,8 @@ let items = [
         obj2[2] = self.props.children;
         obj1[1] = jsx(Modal(108).default, { style: null, collapsable: false, children: null });
         obj[0] = jsx(Modal(349).default.Context.Provider, { value: null, children: null });
-        obj[18] = jsx(importDefault(312).VirtualizedListContextResetter, { children: null });
-        return jsx(importDefault(347), { children: null });
+        obj[18] = jsx(require("00312_get_VirtualizedList.js").VirtualizedListContextResetter, { children: null });
+        return jsx(require("metro/00347___INTERNAL_VIEW_CONFIG.js"), { children: null });
       } else {
         return null;
       }

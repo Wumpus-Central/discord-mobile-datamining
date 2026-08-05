@@ -2,7 +2,7 @@
 const require = arg1;
 const dependencyMap = arg6;
 function shouldAttachHeaders(str) {
-  const locationHref = require(817) /* registerSpanErrorInstrumentation */.getLocationHref();
+  const locationHref = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.getLocationHref();
   if (locationHref) {
     try {
       const _URL = URL;
@@ -79,7 +79,7 @@ arg5.instrumentOutgoingRequests = function instrumentOutgoingRequests(getOptions
       return type;
     });
     if (trackFetchStreamPerformance) {
-      let result = require(817) /* registerSpanErrorInstrumentation */.addFetchEndInstrumentationHandler((response) => {
+      let result = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.addFetchEndInstrumentationHandler((response) => {
         if (response.response) {
           const value = closure_2.get(response.response);
           let endTimestamp = value;
@@ -91,9 +91,9 @@ arg5.instrumentOutgoingRequests = function instrumentOutgoingRequests(getOptions
           }
         }
       });
-      let obj2 = require(817) /* registerSpanErrorInstrumentation */;
+      let obj2 = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
     }
-    let result1 = require(817) /* registerSpanErrorInstrumentation */.addFetchInstrumentationHandler((response) => {
+    let result1 = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.addFetchInstrumentationHandler((response) => {
       let obj = outer1_0(outer1_1[0]);
       obj = { propagateTraceparent, onRequestSpanEnd: closure_3 };
       const result = obj.instrumentFetchRequest(response, shouldCreateSpanForRequest, shouldAttachHeadersWithTargets, closure_6, obj);
@@ -150,10 +150,10 @@ arg5.instrumentOutgoingRequests = function instrumentOutgoingRequests(getOptions
         }
       }
     });
-    let obj3 = require(817) /* registerSpanErrorInstrumentation */;
+    let obj3 = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */;
   }
   if (traceXHR) {
-    const result2 = require(1033) /* addClsInstrumentationHandler */.addXhrInstrumentationHandler((xhr) => {
+    const result2 = require("01033_addClsInstrumentationHandler.js") /* addClsInstrumentationHandler */.addXhrInstrumentationHandler((xhr) => {
       let baggage;
       let method;
       let tmp65;
@@ -378,7 +378,7 @@ arg5.instrumentOutgoingRequests = function instrumentOutgoingRequests(getOptions
         }
       }
     });
-    let obj4 = require(1033) /* addClsInstrumentationHandler */;
+    let obj4 = require("01033_addClsInstrumentationHandler.js") /* addClsInstrumentationHandler */;
   }
 };
 arg5.shouldAttachHeaders = shouldAttachHeaders;

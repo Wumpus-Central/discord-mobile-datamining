@@ -2,7 +2,7 @@
 
 export default function sign(arg0) {
   let tmp = arg0;
-  if (!require(572) /* isNaN */(arg0)) {
+  if (!require("00572_isNaN.js") /* isNaN */(arg0)) {
     tmp = arg0;
     if (0 !== arg0) {
       let num2 = 1;

@@ -6,8 +6,8 @@ let closure_5 = [16, 16, 16, 16, 17, 17, 18, 18, 19, 19, 20, 20, 21, 21, 22, 22,
 
 export default function inflate_table(arg0, arg1, arg2, arg3, arg4, arg5, arg6, bits) {
   bits = bits.bits;
-  const buf16 = new require(12827) /* assign */.Buf16(16);
-  const buf161 = new require(12827) /* assign */.Buf16(16);
+  const buf16 = new require("12827_assign.js") /* assign */.Buf16(16);
+  const buf161 = new require("12827_assign.js") /* assign */.Buf16(16);
   let num = 0;
   do {
     buf16[num] = 0;

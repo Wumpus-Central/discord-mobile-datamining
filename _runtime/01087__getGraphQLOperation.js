@@ -146,10 +146,10 @@ export const getRequestPayloadXhrOrFetch = function getRequestPayloadXhrOrFetch(
     let first1 = first;
     tmp5 = require;
   } else {
-    const fetchRequestArgBody = require(1033) /* addClsInstrumentationHandler */.getFetchRequestArgBody(input.input);
-    const obj = require(1033) /* addClsInstrumentationHandler */;
-    first1 = require(1033) /* addClsInstrumentationHandler */.getBodyString(fetchRequestArgBody)[0];
-    const obj2 = require(1033) /* addClsInstrumentationHandler */;
+    const fetchRequestArgBody = require("01033_addClsInstrumentationHandler.js") /* addClsInstrumentationHandler */.getFetchRequestArgBody(input.input);
+    const obj = require("01033_addClsInstrumentationHandler.js") /* addClsInstrumentationHandler */;
+    first1 = require("01033_addClsInstrumentationHandler.js") /* addClsInstrumentationHandler */.getBodyString(fetchRequestArgBody)[0];
+    const obj2 = require("01033_addClsInstrumentationHandler.js") /* addClsInstrumentationHandler */;
   }
   return first1;
 };

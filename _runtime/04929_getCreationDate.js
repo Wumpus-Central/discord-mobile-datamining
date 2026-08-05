@@ -2,7 +2,7 @@
 const require = arg1;
 const dependencyMap = arg6;
 function getCreationDate(value) {
-  const stringValue = require(4922) /* getStringValue */.getStringValue(value);
+  const stringValue = require("04922_getStringValue.js") /* getStringValue */.getStringValue(value);
   let text2 = stringValue;
   if (stringValue.length >= 8) {
     const text = `${arr.substr(0, 4)}-`;
@@ -12,7 +12,7 @@ function getCreationDate(value) {
   return text2;
 }
 function getCreationTime(value) {
-  const stringValue = require(4922) /* getStringValue */.getStringValue(value);
+  const stringValue = require("04922_getStringValue.js") /* getStringValue */.getStringValue(value);
   let tmp = stringValue;
   if (stringValue.length >= 6) {
     const text = `${arr.substr(0, 2)}:`;
@@ -29,7 +29,7 @@ function getCreationTime(value) {
   return tmp;
 }
 function getEncodingName(value) {
-  const stringValue = require(4922) /* getStringValue */.getStringValue(value);
+  const stringValue = require("04922_getStringValue.js") /* getStringValue */.getStringValue(value);
   let str = "UTF-8";
   if ("\u001B%G" !== stringValue) {
     let str19 = "Windows-1252";
@@ -140,8 +140,8 @@ obj[524] = {
   name: "Subject Reference",
   repeatable: true,
   description(value) {
-    const obj = require(4922) /* getStringValue */;
-    const parts = require(4922) /* getStringValue */.getStringValue(value).split(":");
+    const obj = require("04922_getStringValue.js") /* getStringValue */;
+    const parts = require("04922_getStringValue.js") /* getStringValue */.getStringValue(value).split(":");
     let str2 = "";
     let str3 = "";
     if (parts[3]) {
@@ -161,7 +161,7 @@ obj[539] = { name: "Content Location Name", repeatable: true };
 obj[554] = {
   name: "Action Advised",
   description(value) {
-    const stringValue = require(4922) /* getStringValue */.getStringValue(value);
+    const stringValue = require("04922_getStringValue.js") /* getStringValue */.getStringValue(value);
     let str = "Object Kill";
     if ("01" !== stringValue) {
       let str2 = "Object Replace";
@@ -191,7 +191,7 @@ obj[575] = { name: "Digital Creation Time", description: getCreationTime };
 obj[587] = {
   name: "Object Cycle",
   description(value) {
-    const stringValue = require(4922) /* getStringValue */.getStringValue(value);
+    const stringValue = require("04922_getStringValue.js") /* getStringValue */.getStringValue(value);
     let str = "morning";
     if ("a" !== stringValue) {
       let str2 = "evening";
@@ -220,7 +220,7 @@ obj[637] = {
 obj[643] = {
   name: "Image Orientation",
   description(value) {
-    const stringValue = require(4922) /* getStringValue */.getStringValue(value);
+    const stringValue = require("04922_getStringValue.js") /* getStringValue */.getStringValue(value);
     let str = "Portrait";
     if ("P" !== stringValue) {
       let str2 = "Landscape";
@@ -239,7 +239,7 @@ obj[643] = {
 obj[662] = {
   name: "Audio Type",
   description(value) {
-    let str = require(4922) /* getStringValue */.getStringValue(value);
+    let str = require("04922_getStringValue.js") /* getStringValue */.getStringValue(value);
     const charAtResult = str.charAt(0);
     const charAtResult1 = str.charAt(1);
     let str2 = "Mono";
@@ -278,13 +278,13 @@ obj[662] = {
 obj[663] = {
   name: "Audio Sampling Rate",
   description(value) {
-    return parseInt(require(4922) /* getStringValue */.getStringValue(value), 10) + " Hz";
+    return parseInt(require("04922_getStringValue.js") /* getStringValue */.getStringValue(value), 10) + " Hz";
   }
 };
 obj[664] = {
   name: "Audio Sampling Resolution",
   description(value) {
-    const parsed = parseInt(require(4922) /* getStringValue */.getStringValue(value), 10);
+    const parsed = parseInt(require("04922_getStringValue.js") /* getStringValue */.getStringValue(value), 10);
     let str = " bits";
     if (1 === parsed) {
       str = " bit";
@@ -295,7 +295,7 @@ obj[664] = {
 obj[665] = {
   name: "Audio Duration",
   description(value) {
-    const stringValue = require(4922) /* getStringValue */.getStringValue(value);
+    const stringValue = require("04922_getStringValue.js") /* getStringValue */.getStringValue(value);
     let text2 = stringValue;
     if (stringValue.length >= 6) {
       const text = `${arr.substr(0, 2)}:`;
@@ -439,7 +439,7 @@ obj[712] = {
       }
       return str;
     } else {
-      return require(4922) /* getStringValue */.getStringValue(value);
+      return require("04922_getStringValue.js") /* getStringValue */.getStringValue(value);
     }
   }
 };
@@ -450,15 +450,15 @@ obj[713] = {
     obj[11] = { "01": "1.02" };
     obj[20] = { "01": "3.1", "02": "4.0", "03": "5.0", "04": "5.5" };
     obj[21] = { "02": "2.0" };
-    const stringValue = require(4922) /* getStringValue */.getStringValue(value);
+    const stringValue = require("04922_getStringValue.js") /* getStringValue */.getStringValue(value);
     if (ObjectData_Preview_File_Format["ObjectData Preview File Format"]) {
-      const stringValue1 = require(4922) /* getStringValue */.getStringValue(ObjectData_Preview_File_Format["ObjectData Preview File Format"].value);
+      const stringValue1 = require("04922_getStringValue.js") /* getStringValue */.getStringValue(ObjectData_Preview_File_Format["ObjectData Preview File Format"].value);
       if (obj[stringValue1]) {
         if (obj[stringValue1][stringValue]) {
           return obj[stringValue1][stringValue];
         }
       }
-      const tmpResult = require(4922) /* getStringValue */;
+      const tmpResult = require("04922_getStringValue.js") /* getStringValue */;
     }
     return stringValue;
   }

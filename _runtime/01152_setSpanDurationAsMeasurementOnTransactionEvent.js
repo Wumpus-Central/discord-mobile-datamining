@@ -11,7 +11,7 @@ function setSpanDurationAsMeasurementOnTransactionEvent(measurements, arg1, time
       const tmp3 = measurements.measurements || {};
     }
   }
-  const debug = require(817) /* registerSpanErrorInstrumentation */.debug;
+  const debug = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.debug;
   debug.warn("Span is missing start or end timestamp. Cam not set measurement on transaction event.");
 }
 let fn = this;
@@ -89,7 +89,7 @@ let c6;
 let c7 = false;
 function _setAppStartEndData(arg0) {
   if (closure_4) {
-    const debug = require(817) /* registerSpanErrorInstrumentation */.debug;
+    const debug = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.debug;
     debug.warn("Overwriting already set app start end data.");
   }
   closure_4 = arg0;
@@ -333,11 +333,11 @@ arg5.setRootComponentCreationTimestampMs = function setRootComponentCreationTime
     timestampMs = _undefined.timestampMs;
   }
   if (timestampMs) {
-    const debug = require(817) /* registerSpanErrorInstrumentation */.debug;
+    const debug = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.debug;
     debug.warn("Setting Root component creation timestamp after app start end is set.");
   }
   if (closure_6) {
-    const debug2 = require(817) /* registerSpanErrorInstrumentation */.debug;
+    const debug2 = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.debug;
     debug2.warn("Overwriting already set root component creation timestamp.");
   }
   closure_6 = arg0;
@@ -349,11 +349,11 @@ arg5._setRootComponentCreationTimestampMs = function _setRootComponentCreationTi
     timestampMs = _undefined.timestampMs;
   }
   if (timestampMs) {
-    const debug = require(817) /* registerSpanErrorInstrumentation */.debug;
+    const debug = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.debug;
     debug.warn("Setting Root component creation timestamp after app start end is set.");
   }
   if (closure_6) {
-    const debug2 = require(817) /* registerSpanErrorInstrumentation */.debug;
+    const debug2 = require("00817_registerSpanErrorInstrumentation.js") /* registerSpanErrorInstrumentation */.debug;
     debug2.warn("Overwriting already set root component creation timestamp.");
   }
   closure_6 = arg0;

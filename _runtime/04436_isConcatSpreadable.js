@@ -5,7 +5,7 @@ if (require("module_608")) {
 }
 
 export default function isFlattenable(arg0) {
-  let tmp3 = require(599)(arg0) || require(618) /* baseIsArguments */(arg0);
+  let tmp3 = require("metro/00599__.js")(arg0) || require("00618_baseIsArguments.js") /* baseIsArguments */(arg0);
   if (!tmp3) {
     let tmp5 = isConcatSpreadable;
     if (isConcatSpreadable) {

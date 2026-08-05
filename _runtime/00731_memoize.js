@@ -23,7 +23,7 @@ function memoize(fn, fn2) {
     }
     let Cache = memoized.Cache;
     if (!Cache) {
-      Cache = _require(732);
+      Cache = _require("00732_MapCache.js");
     }
     let cache = new Cache();
     memoized.cache = cache;

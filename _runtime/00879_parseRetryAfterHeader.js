@@ -4,8 +4,8 @@ import _slicedToArray from "_slicedToArray";
 function parseRetryAfterHeader(arg0) {
   let safeDateNowResult = arg1;
   if (arg1 === undefined) {
-    safeDateNowResult = require(831) /* safeDateNow */.safeDateNow();
-    const obj = require(831) /* safeDateNow */;
+    safeDateNowResult = require("00831_safeDateNow.js") /* safeDateNow */.safeDateNow();
+    const obj = require("00831_safeDateNow.js") /* safeDateNow */;
   }
   const parsed = parseInt("" + arg0, 10);
   if (isNaN(parsed)) {
@@ -31,8 +31,8 @@ export const disabledUntil = function disabledUntil(all) {
 export const isRateLimited = function isRateLimited(all) {
   let safeDateNowResult = arg2;
   if (arg2 === undefined) {
-    safeDateNowResult = require(831) /* safeDateNow */.safeDateNow();
-    const obj = require(831) /* safeDateNow */;
+    safeDateNowResult = require("00831_safeDateNow.js") /* safeDateNow */.safeDateNow();
+    const obj = require("00831_safeDateNow.js") /* safeDateNow */;
   }
   return (all[arg1] || all.all || 0) > safeDateNowResult;
 };
@@ -41,7 +41,7 @@ export const updateRateLimits = function updateRateLimits(arg0, headers) {
   headers = headers.headers;
   let safeDateNowResult = arg2;
   if (arg2 === undefined) {
-    let obj = require(831) /* safeDateNow */;
+    let obj = require("00831_safeDateNow.js") /* safeDateNow */;
     safeDateNowResult = obj.safeDateNow();
   }
   obj = {};

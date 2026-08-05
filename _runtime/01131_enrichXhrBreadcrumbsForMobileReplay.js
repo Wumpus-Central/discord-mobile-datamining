@@ -19,7 +19,7 @@ arg5.enrichXhrBreadcrumbsForMobileReplay = function enrichXhrBreadcrumbsForMobil
         xhr = xhr.xhr;
         let tmp2 = require;
         let dropUndefinedKeys = dependencyMap;
-        const bodySize = require(1132) /* parseContentLengthHeader */.getBodySize(xhr.input);
+        const bodySize = require("01132_parseContentLengthHeader.js") /* parseContentLengthHeader */.getBodySize(xhr.input);
         if (xhr.getResponseHeader("content-length")) {
           let result = tmp2(1132).parseContentLengthHeader(xhr.getResponseHeader("content-length"));
           const tmp2Result = tmp2(1132);
@@ -51,7 +51,7 @@ arg5.enrichXhrBreadcrumbsForMobileReplay = function enrichXhrBreadcrumbsForMobil
         obj[2] = bodySize;
         obj[3] = result;
         category.data = dropUndefinedKeys(_Object.assign(obj, category.data));
-        const obj2 = require(1132) /* parseContentLengthHeader */;
+        const obj2 = require("01132_parseContentLengthHeader.js") /* parseContentLengthHeader */;
       }
     }
   }

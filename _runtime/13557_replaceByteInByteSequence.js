@@ -20,7 +20,7 @@ function percentEncode(arg0) {
   return "%" + text;
 }
 function percentDecode(_Buffer) {
-  _Buffer = require(511) /* Buffer */.Buffer;
+  _Buffer = require("00511_Buffer.js") /* Buffer */.Buffer;
   const allocResult = _Buffer.alloc(_Buffer.byteLength);
   let num = 0;
   let num2 = 0;
@@ -32,7 +32,7 @@ function percentDecode(_Buffer) {
       if (37 === _Buffer[num]) {
         let tmp3 = require;
         let tmp4 = dependencyMap;
-        let obj = require(13556);
+        let obj = require("metro/13556__.js");
         let sum = num + 1;
         if (obj.isASCIIHex(_Buffer[sum])) {
           let tmp3Result = tmp3(13556);
@@ -114,7 +114,7 @@ export default {
   percentEncode,
   percentDecode,
   parseUrlencoded(arg0) {
-    let _Buffer = require(511) /* Buffer */.Buffer;
+    let _Buffer = require("00511_Buffer.js") /* Buffer */.Buffer;
     return (function parseUrlencoded(_Buffer) {
       let items = [];
       const iter = (function strictlySplitByteSequence(arr, arg1) {
@@ -199,7 +199,7 @@ export default {
       let tmp9 = serializeUrlencodedByte;
       let tmp10 = require;
       let tmp11 = dependencyMap;
-      let _Buffer = require(511) /* Buffer */.Buffer;
+      let _Buffer = require("00511_Buffer.js") /* Buffer */.Buffer;
       let tmp12 = serializeUrlencodedByte(_Buffer.from(arr[0]));
       let name = arr[1];
       let tmp13 = arr.length > 2;

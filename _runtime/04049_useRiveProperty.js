@@ -16,7 +16,7 @@ export const useRiveProperty = function useRiveProperty(instance, FillColor, f28
   let tmp = first(undefined);
   const callback2 = tmp;
   const items = [instance, FillColor];
-  const disposableMemo = _require(4050).useDisposableMemo(() => {
+  const disposableMemo = _require("04050_useDisposableMemo.js").useDisposableMemo(() => {
     if (closure_0) {
       return callback(tmp, closure_1);
     }

@@ -7,7 +7,7 @@ arg5.getNavigationEntry = () => {
   if (arg0 === undefined) {
     flag = true;
   }
-  const _performance = require(1039) /* WINDOW */.WINDOW.performance;
+  const _performance = require("01039_WINDOW.js") /* WINDOW */.WINDOW.performance;
   let first;
   if (_performance != null) {
     const getEntriesByType = _performance.getEntriesByType;

@@ -7,7 +7,7 @@ class QRCode {
 const prototype = QRCode.prototype;
 prototype.addData = function(arg0) {
   const dataList = this.dataList;
-  dataList.push(new require(9023) /* QR8bitByte */(arg0));
+  dataList.push(new require("09023_QR8bitByte.js") /* QR8bitByte */(arg0));
   this.dataCache = null;
 };
 prototype.isDark = function(arg0, arg1) {
@@ -35,11 +35,11 @@ prototype.make = function() {
     while (true) {
       let tmp = require;
       let tmp2 = dependencyMap;
-      let obj = require(9025) /* QRRSBlock */;
+      let obj = require("09025_QRRSBlock.js") /* QRRSBlock */;
       let rSBlocks = obj.getRSBlocks(num, self.errorCorrectLevel);
       let tmp3 = new.target;
       let tmp4 = new.target;
-      let obj2 = new require(9027) /* QRBitBuffer */();
+      let obj2 = new require("09027_QRBitBuffer.js") /* QRBitBuffer */();
       let tmp5 = num;
       let num2 = 0;
       let num3 = 0;
@@ -61,7 +61,7 @@ prototype.make = function() {
           let tmp9 = require;
           let tmp10 = dependencyMap;
           length = obj3.getLength();
-          let obj4 = require(9028);
+          let obj4 = require("metro/09028__.js");
           let putResult1 = obj2.put(length, obj4.getLengthInBits(obj3.mode, num));
           let writeResult = obj3.write(obj2);
           num5 = num5 + 1;
@@ -196,7 +196,7 @@ prototype.getBestMaskPattern = function() {
     let impl = self.makeImpl(true, num);
     let tmp2 = require;
     let tmp3 = dependencyMap;
-    let obj = require(9028);
+    let obj = require("metro/09028__.js");
     let lostPoint = obj.getLostPoint(self);
     let tmp5 = 0 === num;
     let tmp6 = num;
@@ -268,7 +268,7 @@ prototype.setupTimingPattern = function() {
 };
 prototype.setupPositionAdjustPattern = function() {
   const self = this;
-  const patternPosition = require(9028).getPatternPosition(this.typeNumber);
+  const patternPosition = require("metro/09028__.js").getPatternPosition(this.typeNumber);
   for (let num = 0; num < patternPosition.length; num = num + 1) {
     let tmp = num;
     for (let num2 = 0; num2 < patternPosition.length; num2 = num2 + 1) {
@@ -312,7 +312,7 @@ prototype.setupPositionAdjustPattern = function() {
 prototype.setupTypeNumber = function(arg0) {
   let num2;
   const self = this;
-  const bCHTypeNumber = require(9028).getBCHTypeNumber(this.typeNumber);
+  const bCHTypeNumber = require("metro/09028__.js").getBCHTypeNumber(this.typeNumber);
   let num = 0;
   do {
     let tmp2 = !arg0;
@@ -339,7 +339,7 @@ prototype.setupTypeNumber = function(arg0) {
 prototype.setupTypeInfo = function(arg0, arg1) {
   let num2;
   const self = this;
-  const bCHTypeInfo = require(9028).getBCHTypeInfo(this.errorCorrectLevel << 3 | arg1);
+  const bCHTypeInfo = require("metro/09028__.js").getBCHTypeInfo(this.errorCorrectLevel << 3 | arg1);
   let num = 0;
   do {
     let tmp3 = !arg0;
@@ -415,7 +415,7 @@ prototype.mapData = function(arg0, arg1) {
             }
             let tmp21 = require;
             let tmp22 = dependencyMap;
-            let obj = require(9028);
+            let obj = require("metro/09028__.js");
             let tmp23 = flag;
             if (obj.getMask(arg1, tmp10, diff3)) {
               tmp23 = !flag;
@@ -453,8 +453,8 @@ QRCode.createData = (arg0, arg1, arg2) => {
   let length;
   let length2;
   let result1;
-  const rSBlocks = require(9025) /* QRRSBlock */.getRSBlocks(arg0, arg1);
-  const obj2 = new require(9027) /* QRBitBuffer */();
+  const rSBlocks = require("09025_QRRSBlock.js") /* QRRSBlock */.getRSBlocks(arg0, arg1);
+  const obj2 = new require("09027_QRBitBuffer.js") /* QRBitBuffer */();
   let num = 0;
   if (0 < arg2.length) {
     do {
@@ -463,7 +463,7 @@ QRCode.createData = (arg0, arg1, arg2) => {
       let tmp3 = require;
       let tmp4 = dependencyMap;
       length = obj3.getLength();
-      let obj4 = require(9028);
+      let obj4 = require("metro/09028__.js");
       let putResult1 = obj2.put(length, obj4.getLengthInBits(obj3.mode, arg0));
       let writeResult = obj3.write(obj2);
       num = num + 1;
@@ -511,7 +511,7 @@ QRCode.createData = (arg0, arg1, arg2) => {
     }
     return QRCode.createBytes(obj2, rSBlocks);
   }
-  const obj = require(9025) /* QRRSBlock */;
+  const obj = require("09025_QRRSBlock.js") /* QRRSBlock */;
 };
 QRCode.createBytes = (arg0, arg1) => {
   let length2;
@@ -551,9 +551,9 @@ QRCode.createBytes = (arg0, arg1) => {
       let tmp14 = require;
       let tmp15 = dependencyMap;
       let sum = num4 + dataCount;
-      let obj = require(9028);
+      let obj = require("metro/09028__.js");
       let errorCorrectPolynomial = obj.getErrorCorrectPolynomial(diff);
-      let tmp16 = require(9029) /* QRPolynomial */;
+      let tmp16 = require("09029_QRPolynomial.js") /* QRPolynomial */;
       let tmp17 = new.target;
       let tmp18 = new.target;
       tmp16 = new tmp16(array[num], errorCorrectPolynomial.getLength() - 1);

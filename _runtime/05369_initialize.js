@@ -4,10 +4,10 @@ const module = arg2;
 const dependencyMap = arg6;
 let c3 = false;
 arg5.initialize = function initialize() {
-  require(5370) /* onGestureHandlerEvent */.startListening();
+  require("05370_onGestureHandlerEvent.js") /* onGestureHandlerEvent */.startListening();
 };
 arg5.maybeInitializeFabric = function maybeInitializeFabric() {
-  let isFabricResult = require(5372) /* toArray */.isFabric();
+  let isFabricResult = require("05372_toArray.js") /* toArray */.isFabric();
   if (isFabricResult) {
     isFabricResult = !c3;
   }

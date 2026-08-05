@@ -19,7 +19,7 @@ const tmp4 = (() => {
   function ease(arg0) {
     return callback(table[1]).Bezier(0.42, 0, 1, 1)(arg0);
   }
-  ease.__closure = { Bezier: require(1659) /* calcBezier */.Bezier };
+  ease.__closure = { Bezier: require("01659_calcBezier.js") /* calcBezier */.Bezier };
   ease.__workletHash = 1401633715672;
   ease.__initData = closure_3;
   return ease;
@@ -177,7 +177,7 @@ const tmp14 = (() => {
     obj[0] = fn;
     return obj;
   }
-  bezier.__closure = { Bezier: require(1659) /* calcBezier */.Bezier };
+  bezier.__closure = { Bezier: require("01659_calcBezier.js") /* calcBezier */.Bezier };
   bezier.__workletHash = 9084654739329;
   bezier.__initData = closure_16;
   return bezier;
@@ -188,7 +188,7 @@ const tmp15 = (() => {
   function bezierFn(closure_0, closure_1, closure_2, closure_3) {
     return callback(table[1]).Bezier(closure_0, closure_1, closure_2, closure_3);
   }
-  bezierFn.__closure = { Bezier: require(1659) /* calcBezier */.Bezier };
+  bezierFn.__closure = { Bezier: require("01659_calcBezier.js") /* calcBezier */.Bezier };
   bezierFn.__workletHash = 13829274299696;
   bezierFn.__initData = closure_18;
   return bezierFn;

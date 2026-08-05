@@ -9,13 +9,13 @@ const require = arg1;
 let closure_2 = ["onError", "hybridRef"];
 ({ useEffect: c4, useRef: c5 } = noop);
 function defaultOnError(message) {
-  return console.error("[" + require(4035).RiveErrorType[message.type] + "] " + message.message);
+  return console.error("[" + require("metro/04035__.js").RiveErrorType[message.type] + "] " + message.message);
 }
 
 export const RiveView = function RiveView(arg0) {
   let hybridRef;
   let onError;
-  let obj = _require(4036);
+  let obj = _require("04036_c.js");
   const cResult = obj.c(16);
   if (cResult[0] !== arg0) {
     ({ onError, hybridRef } = arg0);
@@ -103,7 +103,7 @@ export const RiveView = function RiveView(arg0) {
   const merged = Object.assign(tmp5);
   obj1.onError = tmp14;
   obj1.hybridRef = tmp15;
-  const tmp18 = jsx(_require(4016).NitroRiveView, {});
+  const tmp18 = jsx(_require("04016_NitroRiveView.js").NitroRiveView, {});
   cResult[12] = tmp5;
   cResult[13] = tmp14;
   cResult[14] = tmp15;

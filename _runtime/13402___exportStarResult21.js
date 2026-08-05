@@ -6,7 +6,7 @@ arg5.FormatNumericToString = function FormatNumericToString(roundingType, timesR
   let roundedNumber;
   if (timesResult.isZero()) {
     if (timesResult.isNegative()) {
-      let ZERO = require(13388) /* TEN */.ZERO;
+      let ZERO = require("13388_TEN.js") /* TEN */.ZERO;
       let str2 = "negative";
       let tmp5Result = dependencyMap;
       let tmp5 = require;
@@ -63,7 +63,7 @@ arg5.FormatNumericToString = function FormatNumericToString(roundingType, timesR
       NEGATIVE_ZERO = roundedNumber.negated();
     }
   }
-  require(13386) /* getMultiInternalSlots */.invariant(timesResult.isFinite(), "NumberFormatDigitInternalSlots value is not finite");
+  require("13386_getMultiInternalSlots.js") /* getMultiInternalSlots */.invariant(timesResult.isFinite(), "NumberFormatDigitInternalSlots value is not finite");
   let str = "positive";
   if (timesResult.lessThan(0)) {
     str = "negative";

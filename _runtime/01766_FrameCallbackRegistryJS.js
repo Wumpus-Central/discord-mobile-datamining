@@ -52,7 +52,7 @@ const items = [
       fn.__closure = { callbackId };
       fn.__workletHash = 9182274559334;
       fn.__initData = closure_5;
-      require(1650) /* isReanimated3 */.runOnUI(fn)();
+      require("01650_isReanimated3.js") /* isReanimated3 */.runOnUI(fn)();
     }
   },
   {
@@ -66,7 +66,7 @@ const items = [
       fn.__closure = { callbackId, state };
       fn.__workletHash = 5244475777443;
       fn.__initData = closure_6;
-      _require(1650).runOnUI(fn)();
+      _require("01650_isReanimated3.js").runOnUI(fn)();
     }
   }
 ];

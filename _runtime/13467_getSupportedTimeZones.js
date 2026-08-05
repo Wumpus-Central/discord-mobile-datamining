@@ -3,7 +3,7 @@ const require = arg1;
 const dependencyMap = arg6;
 arg5.getSupportedTimeZones = function getSupportedTimeZones(locale) {
   const _require = locale;
-  const timezones = _require(13468).timezones;
+  const timezones = _require("metro/13468__.js").timezones;
   return timezones.filter((arg0) => (function isSupported(arg0, closure_0) {
     let str = closure_0;
     if (undefined === closure_0) {

@@ -5,7 +5,7 @@ let c2 = false;
 arg5.default = function setUpIntersectionObserver() {
   if (!c2) {
     c2 = true;
-    require(123) /* polyfillObjectProperty */.polyfillGlobal("IntersectionObserver", () => callback(table[1]).default);
-    const obj = require(123) /* polyfillObjectProperty */;
+    require("00123_polyfillObjectProperty.js") /* polyfillObjectProperty */.polyfillGlobal("IntersectionObserver", () => callback(table[1]).default);
+    const obj = require("00123_polyfillObjectProperty.js") /* polyfillObjectProperty */;
   }
 };

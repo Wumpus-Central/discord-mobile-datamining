@@ -138,7 +138,7 @@ obj.get.rgb = (str) => {
                 items1 = tmp15;
               }
               tmp10 = require;
-              tmp12 = require(5710) /* keys */;
+              tmp12 = require("05710_keys.js") /* keys */;
               tmp9 = hasOwnProperty;
             }
           }
@@ -229,7 +229,7 @@ obj.get.hwb = (str) => {
   }
 };
 obj.to.hex = () => {
-  const tmp = require(5713) /* swizzle */(arguments);
+  const tmp = require("05713_swizzle.js") /* swizzle */(arguments);
   const str = Math.round(tmp[0]);
   const formatted = Math.round(tmp[0]).toString(16).toUpperCase();
   let text = formatted;
@@ -269,7 +269,7 @@ obj.to.hex = () => {
   return sum1 + str10;
 };
 obj.to.rgb = () => {
-  const arr = require(5713) /* swizzle */(arguments);
+  const arr = require("05713_swizzle.js") /* swizzle */(arguments);
   if (arr.length >= 4) {
     if (1 !== arr[3]) {
       const _Math = Math;
@@ -286,7 +286,7 @@ obj.to.rgb = () => {
   text2 = `${tmp6 + ", " + Math.round(arr[2])})`;
 };
 obj.to.rgb.percent = () => {
-  const arr = require(5713) /* swizzle */(arguments);
+  const arr = require("05713_swizzle.js") /* swizzle */(arguments);
   const rounded = Math.round(arr[0] / 255 * 100);
   const rounded1 = Math.round(arr[1] / 255 * 100);
   const rounded2 = Math.round(arr[2] / 255 * 100);
@@ -299,7 +299,7 @@ obj.to.rgb.percent = () => {
   text = `${"rgb(" + tmp + "%, " + tmp2 + "%, " + tmp3}%)`;
 };
 obj.to.hsl = () => {
-  const arr = require(5713) /* swizzle */(arguments);
+  const arr = require("05713_swizzle.js") /* swizzle */(arguments);
   if (arr.length >= 4) {
     if (1 !== arr[3]) {
       let text = `${"hsla(" + arr[0] + ", " + arr[1] + "%, " + arr[2] + "%, " + arr[3]})`;
@@ -309,7 +309,7 @@ obj.to.hsl = () => {
   text = `${"hsl(" + arr[0] + ", " + arr[1] + "%, " + arr[2]}%)`;
 };
 obj.to.hwb = () => {
-  const arr = require(5713) /* swizzle */(arguments);
+  const arr = require("05713_swizzle.js") /* swizzle */(arguments);
   let tmp = arr.length >= 4;
   if (tmp) {
     tmp = 1 !== arr[3];

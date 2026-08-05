@@ -2,10 +2,10 @@
 import { useSyncExternalStore } from "noop";
 
 function subscribe(onChange) {
-  _require = _require(453).addChangeListener(onChange);
+  _require = _require("00453_getColorScheme.js").addChangeListener(onChange);
   return () => closure_0.remove();
 }
 
 export default function useColorScheme() {
-  return useSyncExternalStore(subscribe, require(453) /* getColorScheme */.getColorScheme);
+  return useSyncExternalStore(subscribe, require("00453_getColorScheme.js") /* getColorScheme */.getColorScheme);
 };

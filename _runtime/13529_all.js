@@ -1,7 +1,7 @@
 // _runtime/13529_all.js
 
 export default (arg0) => {
-  if (require(13502) /* all */(arg0)) {
+  if (require("13502_all.js") /* all */(arg0)) {
     return arg0;
   } else {
     const tmp5 = new TypeError(String(arg0) + " is not an object");

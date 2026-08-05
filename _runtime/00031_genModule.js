@@ -17,7 +17,7 @@ function genModule(arg0, arg1) {
     if (!startsWithResult) {
       tmp9 = !obj.startsWith("RK");
     }
-    require(38)(tmp9, `Module name prefixes should've been stripped by the native side but wasn't for ${obj}`);
+    require("metro/00038__.js")(tmp9, `Module name prefixes should've been stripped by the native side but wasn't for ${obj}`);
     if (!tmp4) {
       if (!arr) {
         obj = { name: null };

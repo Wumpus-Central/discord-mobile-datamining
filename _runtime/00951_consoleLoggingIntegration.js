@@ -2,7 +2,7 @@
 import setupIntegration from "setupIntegration";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
-let closure_2 = { [require(839).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.log.console" };
+let closure_2 = { [require("metro/00839__.js").SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.log.console" };
 
 export const consoleLoggingIntegration = setupIntegration.defineIntegration(() => {
   let obj = arg0;

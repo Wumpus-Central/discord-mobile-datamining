@@ -223,9 +223,9 @@ function parseFetchArgs(arg0) {
 }
 
 export const addFetchEndInstrumentationHandler = function addFetchEndInstrumentationHandler(arg0) {
-  require(7373) /* addHandler */.addHandler("fetch-body-resolved", arg0);
-  let obj = require(7373) /* addHandler */;
-  require(7373) /* addHandler */.maybeInstrument("fetch-body-resolved", () => {
+  require("07373_addHandler.js") /* addHandler */.addHandler("fetch-body-resolved", arg0);
+  let obj = require("07373_addHandler.js") /* addHandler */;
+  require("07373_addHandler.js") /* addHandler */.maybeInstrument("fetch-body-resolved", () => {
     const callback = closure_5;
     {
       callback(7381).fill(callback(7376).GLOBAL_OBJ, "fetch", (arg0) => {
@@ -289,9 +289,9 @@ export const addFetchEndInstrumentationHandler = function addFetchEndInstrumenta
 };
 export const addFetchInstrumentationHandler = function addFetchInstrumentationHandler(arg0, arg1) {
   const _require = arg1;
-  _require(7373).addHandler("fetch", arg0);
-  let obj = _require(7373);
-  _require(7373).maybeInstrument("fetch", () => {
+  _require("07373_addHandler.js").addHandler("fetch", arg0);
+  let obj = _require("07373_addHandler.js");
+  _require("07373_addHandler.js").maybeInstrument("fetch", () => {
     let flag = callback;
     if (callback === undefined) {
       flag = false;

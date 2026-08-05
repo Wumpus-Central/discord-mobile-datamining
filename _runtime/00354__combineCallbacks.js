@@ -991,7 +991,7 @@ arg5.default = {
     return obj;
   },
   event(items, useNativeDriver) {
-    const animatedEvent = new require(384) /* AnimatedEvent */.AnimatedEvent(items, useNativeDriver);
+    const animatedEvent = new require("00384_AnimatedEvent.js") /* AnimatedEvent */.AnimatedEvent(items, useNativeDriver);
     let __getHandlerResult = animatedEvent;
     if (!animatedEvent.__isNative) {
       __getHandlerResult = animatedEvent.__getHandler();
@@ -1005,7 +1005,7 @@ arg5.default = {
     let closure_1 = listener;
     if (!__addListener) {
       return listener;
-    } else if (__addListener instanceof _require(384).AnimatedEvent) {
+    } else if (__addListener instanceof _require("00384_AnimatedEvent.js").AnimatedEvent) {
       __addListener.__addListener(listener);
       let fn = __addListener;
     } else {
@@ -1023,7 +1023,7 @@ arg5.default = {
   unforkEvent: function unforkEventImpl(__removeListener) {
     let tmp = __removeListener;
     if (__removeListener) {
-      tmp = __removeListener instanceof require(384) /* AnimatedEvent */.AnimatedEvent;
+      tmp = __removeListener instanceof require("00384_AnimatedEvent.js") /* AnimatedEvent */.AnimatedEvent;
     }
     if (tmp) {
       __removeListener.__removeListener(arg1);
